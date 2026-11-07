@@ -1,0 +1,3460 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>精神病学 第十五章 物质使用及成瘾行为所致障碍 · 学习指南</title>
+<style>
+:root{
+  --primary:#0EA5E9; --accent:#10B981; --symptom:#EF4444; --treatment:#10B981;
+  --cause:#3B82F6; --diagnosis:#F59E0B; --memory:#8B5CF6; --danger:#DC2626;
+  --quiz:#EC4899; --flashcard:#06B6D4; --bg:#F0F7FA; --card:#FFFFFF;
+  --ink:#0F172A; --muted:#64748B; --border:#E2E8F0; --accent2:#10B981; --accent3:#06B6D4;
+  --shadow:0 4px 18px rgba(15,23,42,.06); --radius:14px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:'Microsoft YaHei','PingFang SC','Hiragino Sans GB',system-ui,-apple-system,sans-serif;font-size:16px;line-height:1.75;-webkit-font-smoothing:antialiased}
+#readbar{position:fixed;top:0;left:0;height:4px;width:0;background:linear-gradient(135deg,#0EA5E9 0%,#06B6D4 50%,#10B981 100%);z-index:300;transition:width .12s linear}
+a{color:var(--primary);text-decoration:none}
+a:hover{text-decoration:underline}
+.sidebar{position:fixed;top:0;left:0;width:272px;height:100vh;background:#fff;border-right:1px solid var(--border);overflow-y:auto;padding:20px 16px 40px;z-index:120}
+.sidebar h2{font-size:17px;margin:0 0 4px;line-height:1.5}
+.sidebar .sub{font-size:12px;color:var(--muted);line-height:1.6;margin-bottom:14px}
+.toc-group{font-size:12px;letter-spacing:.08em;color:var(--muted);margin:16px 0 6px;font-weight:700}
+.sidebar a.toc{display:block;padding:7px 10px;border-radius:8px;font-size:14px;color:var(--ink);line-height:1.5;margin:2px 0}
+.sidebar a.toc:hover{background:#E0F2FE;text-decoration:none}
+.sidebar a.toc .n{display:inline-block;min-width:26px;color:var(--primary);font-weight:700}
+.sidebar .unitlink{font-weight:600}
+.sidebar .sub2{padding-left:26px;font-size:13px;color:var(--muted)}
+.overlay{display:none}
+.menu-btn{display:none;position:fixed;top:14px;left:14px;z-index:200;width:46px;height:46px;border-radius:12px;border:1px solid var(--border);background:#fff;box-shadow:var(--shadow);font-size:22px;line-height:1;color:var(--primary);cursor:pointer}
+.main{margin-left:272px;padding:0 40px 90px;max-width:1240px}
+.wrap{max-width:980px;margin:0 auto}
+.hero{background:linear-gradient(135deg,#0EA5E9 0%,#06B6D4 50%,#10B981 100%);color:#fff;border-radius:0 0 26px 26px;padding:52px 44px 40px;margin:0 -40px 30px;box-shadow:0 12px 30px rgba(14,165,233,.18)}
+.hero .chap{display:inline-block;font-size:13px;letter-spacing:.22em;background:rgba(255,255,255,.18);padding:5px 14px;border-radius:999px;margin-bottom:16px}
+.hero h1{font-size:42px;line-height:1.25;margin:0 0 10px;font-weight:800}
+.hero .tagline{font-size:18px;opacity:.96;margin:0 0 6px}
+.hero .meta{font-size:13px;opacity:.85}
+.goalbox{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.28);border-radius:14px;padding:18px 20px;margin-top:22px}
+.goalbox h3{margin:0 0 10px;font-size:15px;letter-spacing:.06em}
+.goalbox ul{margin:0;padding-left:20px}
+.goalbox li{margin:4px 0;font-size:14.5px;line-height:1.65}
+.lv{display:inline-block;font-size:11px;font-weight:700;padding:1px 8px;border-radius:999px;background:#fff;color:#0369A1;margin-right:6px;vertical-align:1px}
+.lv.l2{color:#047857}.lv.l3{color:#B45309}.lv.l4{color:#B91C1C}
+section{scroll-margin-top:18px;margin:0 0 46px}
+.sec-head{display:flex;align-items:center;gap:12px;margin:0 0 8px}
+.sec-head .badge{flex:0 0 auto;width:44px;height:44px;border-radius:13px;background:linear-gradient(135deg,#0EA5E9,#06B6D4);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:17px;box-shadow:0 6px 14px rgba(14,165,233,.25)}
+.sec-head h2{font-size:27px;margin:0;line-height:1.35;font-weight:800}
+.sec-head .en{font-size:13px;color:var(--muted);font-weight:400;margin-left:6px}
+.sec-lead{color:#334155;background:#fff;border-left:4px solid var(--primary);border-radius:0 12px 12px 0;padding:13px 18px;margin:12px 0 22px;box-shadow:var(--shadow);font-size:15px}
+.card{background:var(--card);border:1px solid var(--border);border-left:6px solid var(--primary);border-radius:var(--radius);padding:20px 22px;margin:16px 0;box-shadow:var(--shadow)}
+.card.red{border-left-color:var(--symptom)} .card.green{border-left-color:var(--treatment)}
+.card.blue{border-left-color:var(--cause)} .card.orange{border-left-color:var(--diagnosis)}
+.card.purple{border-left-color:var(--memory)} .card.cyan{border-left-color:var(--flashcard)}
+.card.danger{border-left-color:var(--danger)} .card.pink{border-left-color:var(--quiz)}
+.card h3,.col-title{font-size:19px;margin:0 0 10px;line-height:1.45;display:flex;align-items:center;gap:9px;flex-wrap:wrap}
+.col-title .idx{font-size:12px;font-weight:800;color:#fff;background:var(--primary);padding:2px 9px;border-radius:999px;letter-spacing:.03em}
+.card p{margin:8px 0}
+.card ul,.card ol{margin:8px 0;padding-left:22px}
+.card li{margin:5px 0}
+.quote{background:#EFF8FF;border:1px dashed #7DD3FC;border-radius:10px;padding:12px 16px;margin:10px 0;font-size:15px;color:#0C4A6E}
+.quote .lab{display:inline-block;font-size:11px;font-weight:800;background:#0EA5E9;color:#fff;padding:1px 7px;border-radius:5px;margin-right:7px;vertical-align:1px}
+.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.grid4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.grid2>*,.grid3>*,.grid4>*{min-width:0}
+.mini{background:#F8FAFC;border:1px solid var(--border);border-radius:11px;padding:12px 14px}
+.mini h4{margin:0 0 5px;font-size:15px;color:#0F172A}
+.mini p,.mini ul{font-size:14px;color:#334155;margin:4px 0}
+.mini ul{padding-left:18px}
+.stat{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0}
+.stat span{font-size:13px;background:#E0F2FE;color:#075985;border-radius:999px;padding:3px 11px;font-weight:600}
+.table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:12px 0;border-radius:12px;border:1px solid var(--border)}
+table{border-collapse:collapse;width:100%;min-width:560px;background:#fff;font-size:14px}
+th{background:#0F172A;color:#fff;font-weight:700;padding:10px 12px;text-align:left;line-height:1.5;font-size:13.5px}
+td{padding:10px 12px;border-top:1px solid var(--border);vertical-align:top;line-height:1.65}
+tbody tr:nth-child(even){background:#F8FAFC}
+td strong{color:#0C4A6E}
+.callout{border-radius:12px;padding:13px 16px;margin:12px 0;border:1px solid;font-size:14.5px}
+.callout .ct{font-weight:800;display:block;margin-bottom:4px;font-size:14.5px}
+.callout.tip{background:#F5F3FF;border-color:#C4B5FD;color:#4C1D95}
+.callout.warn{background:#FEF2F2;border-color:#FCA5A5;color:#7F1D1D}
+.callout.key{background:#ECFDF5;border-color:#6EE7B7;color:#065F46}
+.callout.book{background:#EFF6FF;border-color:#93C5FD;color:#1E3A8A}
+.callout.quiz{background:#FDF2F8;border-color:#F9A8D4;color:#831843}
+.callout.ext{background:#F0F9FF;border-color:#7DD3FC;color:#0C4A6E}
+.timeline{border-left:3px solid #BAE6FD;margin:14px 0 6px 8px;padding-left:20px}
+.tl-item{position:relative;margin:0 0 16px}
+.tl-item:before{content:"";position:absolute;left:-28px;top:5px;width:13px;height:13px;border-radius:50%;background:#fff;border:3px solid var(--primary)}
+.tl-item h4{margin:0 0 3px;font-size:15px;color:#075985}
+.tl-item p{margin:0;font-size:14px;color:#334155}
+.bar{background:#E2E8F0;border-radius:999px;height:9px;overflow:hidden;margin:6px 0 10px}
+.bar i{display:block;height:100%;border-radius:999px;background:linear-gradient(90deg,#0EA5E9,#10B981)}
+.bar-label{display:flex;justify-content:space-between;font-size:13px;color:#334155}
+.tabs{margin:14px 0}
+.tabbar{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:12px}
+.tabbar button{border:1px solid var(--border);background:#fff;border-radius:999px;padding:7px 15px;font-size:14px;font-family:inherit;cursor:pointer;color:#334155}
+.tabbar button.on{background:var(--primary);color:#fff;border-color:var(--primary)}
+.panel{display:none}
+.panel.on{display:block;animation:fade .25s ease}
+@keyframes fade{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}
+details{background:#fff;border:1px solid var(--border);border-radius:11px;margin:10px 0;overflow:hidden}
+summary{cursor:pointer;padding:11px 15px;font-weight:700;color:#075985;list-style:none;font-size:14.5px;background:#F8FAFC}
+summary::-webkit-details-marker{display:none}
+summary:before{content:"▸";display:inline-block;margin-right:7px;color:var(--primary);transition:transform .2s}
+details[open] summary:before{transform:rotate(90deg)}
+details[open] summary{border-bottom:1px solid var(--border)}
+.dbody{padding:13px 16px;font-size:14.5px;color:#1E293B}
+.flashcard-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin:16px 0}
+.flashcard{perspective:1200px;height:200px;cursor:pointer}
+.fc-inner{position:relative;width:100%;height:100%;transition:transform .55s;transform-style:preserve-3d}
+.flashcard.flipped .fc-inner{transform:rotateY(180deg)}
+.fc-front,.fc-back{position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;border-radius:14px;padding:14px 16px;display:flex;flex-direction:column;justify-content:center;box-shadow:var(--shadow);overflow:auto}
+.fc-front{background:#fff;border:1px solid var(--border);border-top:5px solid var(--flashcard)}
+.fc-back{background:#ECFEFF;border:1px solid #A5F3FC;transform:rotateY(180deg);font-size:13.5px;line-height:1.65;color:#164E63}
+.tag{display:inline-block;align-self:flex-start;font-size:11px;font-weight:800;padding:1px 8px;border-radius:999px;margin-bottom:8px;letter-spacing:.04em}
+.tag.concept{background:#DBEAFE;color:#1E40AF}
+.tag.diag{background:#FFEDD5;color:#9A3412}
+.tag.treat{background:#D1FAE5;color:#065F46}
+.tag.data{background:#FCE7F3;color:#9D174D}
+.tag.risk{background:#FEE2E2;color:#991B1B}
+.fc-front p{margin:0;font-size:14.5px;font-weight:700;line-height:1.6}
+.fc-hint{position:absolute;bottom:10px;left:16px;font-size:11px;color:#94A3B8}
+.quiz-q{background:#fff;border:1px solid var(--border);border-left:5px solid var(--quiz);border-radius:12px;padding:16px 18px;margin:16px 0;box-shadow:var(--shadow)}
+.quiz-q .qh{display:flex;justify-content:space-between;gap:10px;align-items:flex-start;margin-bottom:8px;flex-wrap:wrap}
+.quiz-q .qno{font-size:12px;font-weight:800;color:#fff;background:var(--quiz);border-radius:999px;padding:2px 9px;letter-spacing:.04em}
+.diff{font-size:12px;color:#B45309;background:#FEF3C7;border-radius:999px;padding:2px 10px;font-weight:700;white-space:nowrap}
+.qtype{font-size:12px;color:#6B21A8;background:#F3E8FF;border-radius:999px;padding:2px 10px;font-weight:700;white-space:nowrap}
+.opts{margin:10px 0 4px;display:grid;gap:7px}
+.opt{border:1px solid var(--border);border-radius:9px;padding:8px 12px;font-size:14.5px;background:#F8FAFC}
+.opt.correct{border-color:#6EE7B7;background:#ECFDF5;color:#065F46;font-weight:600}
+.opt .l{font-weight:800;color:var(--primary);margin-right:7px}
+.opt.correct .l{color:#047857}
+.brief{font-size:14px;color:#334155;margin-top:4px}
+.case{border:1px solid var(--border);border-top:5px solid var(--danger);border-radius:14px;background:#fff;padding:20px 22px;margin:18px 0;box-shadow:var(--shadow)}
+.case h3{font-size:19px;margin:0 0 8px;color:#7F1D1D}
+.case .ctag{font-size:11.5px;font-weight:800;background:#FEE2E2;color:#991B1B;padding:2px 9px;border-radius:999px;display:inline-block;margin-bottom:10px}
+.case .scene{background:#FFF7ED;border-left:4px solid #FB923C;border-radius:0 10px 10px 0;padding:12px 16px;font-size:14.5px;margin:8px 0 14px}
+.case .ques{margin:8px 0;padding-left:2px}
+.case .ques li{margin:5px 0;font-size:14.5px}
+.top{position:fixed;right:24px;bottom:26px;width:48px;height:48px;border-radius:50%;background:var(--primary);color:#fff;border:none;font-size:20px;cursor:pointer;box-shadow:0 8px 20px rgba(14,165,233,.35);z-index:150;display:none;font-family:inherit}
+.top.show{display:block}
+.hr{height:1px;background:var(--border);margin:26px 0}
+.note{font-size:13px;color:var(--muted);margin-top:6px}
+.kv{display:flex;gap:10px;flex-wrap:wrap;margin:8px 0}
+.kv .k{font-size:12px;font-weight:800;color:#0369A1;background:#E0F2FE;border-radius:6px;padding:2px 8px;white-space:nowrap}
+.kv .v{font-size:14px;color:#334155}
+.starme{font-size:12.5px;color:#B45309;white-space:nowrap}
+@media (max-width:1100px){
+  .main{padding:0 22px 80px}
+  .hero{margin:0 -22px 26px;padding:44px 26px 34px}
+  .hero h1{font-size:34px}
+  .flashcard-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .grid4{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width:900px){
+  .sidebar{transform:translateX(-100%);transition:transform .25s ease;width:280px;box-shadow:0 0 30px rgba(0,0,0,.18)}
+  .sidebar.open{transform:none}
+  .overlay{display:none;position:fixed;inset:0;background:rgba(15,23,42,.42);z-index:110}
+  .overlay.show{display:block}
+  .menu-btn{display:block}
+  .main{margin-left:0;padding:0 18px 80px}
+  .hero{margin:0 -18px 24px;padding:64px 22px 30px;border-radius:0 0 20px 20px}
+  .hero h1{font-size:30px}
+  .sec-head h2{font-size:23px}
+}
+@media (max-width:680px){
+  .grid2,.grid3,.grid4{grid-template-columns:minmax(0,1fr)}
+  .flashcard-grid{grid-template-columns:minmax(0,1fr)}
+  .flashcard{height:190px}
+  table{min-width:500px}
+}
+</style>
+<style data-refactor="v1">
+/* ============================================================
+   精神病学学习指南 · 统一交互层增量覆盖样式 v1
+   构建期由 apply-refactor.ps1 注入 </head> 前，仅追加修正，
+   不改动 A/B 两族基础样式。全部使用字面色值，兼容两族设计变量。
+   ============================================================ */
+
+/* ---- 1. 全局键盘焦点可见 ---- */
+:focus-visible{outline:2px solid #0EA5E9;outline-offset:2px}
+
+/* ---- 2. 章节导航条（胶囊式三段：上一章 / 目录 / 下一章） ---- */
+.chapter-pager{display:flex;align-items:stretch;justify-content:center;gap:10px;margin:36px 0 10px;flex-wrap:wrap}
+.chapter-pager a,.chapter-pager span{flex:1 1 200px;display:flex;align-items:center;justify-content:center;min-height:44px;padding:10px 18px;border:1px solid #E2E8F0;border-radius:999px;background:#FFFFFF;color:#0F172A;font-size:14px;font-weight:600;line-height:1.4;text-decoration:none;text-align:center;box-shadow:0 1px 2px rgba(15,23,42,.06);transition:border-color .15s ease,box-shadow .15s ease,color .15s ease}
+.chapter-pager a:hover{border-color:#0EA5E9;color:#0EA5E9;box-shadow:0 4px 14px rgba(14,165,233,.18);text-decoration:none}
+.chapter-pager .cp-toc{flex:0 0 auto;min-width:104px;background:linear-gradient(135deg,#0EA5E9,#10B981);border-color:transparent;color:#FFFFFF}
+.chapter-pager .cp-toc:hover{border-color:transparent;color:#FFFFFF;opacity:.92}
+.chapter-pager .cp-disabled{opacity:.45;background:#F8FAFC;box-shadow:none;cursor:default}
+@media (max-width:680px){.chapter-pager{gap:8px;margin:28px 0 8px}.chapter-pager a,.chapter-pager span{flex:1 1 100%}}
+
+/* ---- 3. 自测题交互态（兼容 A 族 .opt 与 B 族 .quiz-options li） ---- */
+/* 3.1 基础可点击 */
+.quiz-q .opt{cursor:pointer}
+.quiz-item .quiz-options li{cursor:pointer}
+/* 3.2 hover / 焦点态 */
+.quiz-q .opt:hover,.quiz-q .opt:focus-visible{border-color:#7DD3FC;background:#F0F9FF}
+.quiz-item .quiz-options li:hover,.quiz-item .quiz-options li:focus-visible{background:#FFFFFF;box-shadow:inset 0 0 0 1px #7DD3FC}
+/* 3.3 判定结果态 */
+.quiz-q .opt.is-right{border-color:#34D399;background:#ECFDF5;color:#065F46;font-weight:600}
+.quiz-q .opt.is-right::after{content:" ✓";color:#059669;font-weight:800}
+.quiz-q .opt.is-right .l{color:#047857}
+.quiz-item .quiz-options li.is-right{background:#DCFCE7;box-shadow:inset 0 0 0 1px #34D399;font-weight:600}
+.quiz-item .quiz-options li.is-right::after{content:" ✓";color:#15803D;font-weight:800}
+.quiz-q .opt.is-wrong{border-color:#FCA5A5;background:#FEF2F2;color:#B91C1C;font-weight:600}
+.quiz-q .opt.is-wrong::after{content:" ✗";color:#DC2626;font-weight:800}
+.quiz-q .opt.is-wrong .l{color:#B91C1C}
+.quiz-item .quiz-options li.is-wrong{background:#FEE2E2;box-shadow:inset 0 0 0 1px #FCA5A5;font-weight:600}
+.quiz-item .quiz-options li.is-wrong::after{content:" ✗";color:#DC2626;font-weight:800}
+.quiz-q .opt.is-reveal{border-color:#6EE7B7;background:#ECFDF5;color:#065F46}
+.quiz-q .opt.is-reveal .l{color:#047857}
+.quiz-item .quiz-options li.is-reveal{background:#ECFDF5;box-shadow:inset 0 0 0 1px #6EE7B7;color:#065F46}
+/* 3.4 已锁定禁用态 */
+.quiz-q.is-locked .opt,.quiz-item.is-locked .quiz-options li{cursor:default;pointer-events:none}
+.quiz-q.is-locked .opt:not(.is-right):not(.is-wrong):not(.is-reveal){opacity:.55}
+.quiz-item.is-locked .quiz-options li:not(.is-right):not(.is-wrong):not(.is-reveal){opacity:.55}
+/* 3.5 计分行（运行时注入） */
+.quiz-score{display:flex;align-items:center;gap:12px;margin:14px 0 18px;padding:12px 18px;border:1px dashed #7DD3FC;border-radius:12px;background:#F0F9FF;font-size:14px;font-weight:700;color:#0F172A}
+.quiz-score .qs-label{white-space:nowrap}
+.quiz-score .qs-num{white-space:nowrap;color:#0284C7;font-size:16px}
+.quiz-score .qs-bar{flex:1 1 60px;min-width:60px;height:8px;border-radius:999px;background:#E2E8F0;overflow:hidden}
+.quiz-score .qs-bar i{display:block;height:100%;width:0;border-radius:999px;background:linear-gradient(90deg,#0EA5E9,#10B981);transition:width .35s ease}
+
+/* ---- 4. 速记卡可达性与长内容 ---- */
+.fc-hint,.flip-hint{color:#64748B}
+.flashcard-face{overflow:auto}
+.flashcard[tabindex]{outline:none}
+.flashcard[tabindex]:focus-visible{outline:3px solid #0EA5E9;outline-offset:3px}
+
+/* ---- 5. 侧栏目录 ---- */
+/* B 族 sticky 侧栏内目录限高滚动（A 族 aside 本身已可滚动，此规则空匹配无害） */
+.sidebar .sidebar-nav{max-height:calc(100vh - 60px);overflow-y:auto;scrollbar-width:thin}
+/* A 族 scroll spy 高亮（B 族高亮由其基础样式提供） */
+.sidebar a.toc.active{background:#E0F2FE;color:#0369A1;font-weight:600}
+
+/* ---- 6. 响应式补充：681–900px 时 grid3 降为两列 ---- */
+@media (min-width:681px) and (max-width:900px){
+  .grid3{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+
+/* ---- 7. 打印样式补充（A 族新增；B 族已有 print，重复声明无害） ---- */
+@media print{
+  .sidebar,.overlay,.sidebar-overlay,#menuBtn,#navToggle,#overlay,#sidebarOverlay,#readbar,#topBtn,#backTop,.chapter-pager,.quiz-score{display:none!important}
+}
+
+/* ---- 8. 手机端增强 v2（触控体验 / 防溢出 / 抽屉滚动锁定） ---- */
+/* 8.1 触控体验：去点按高亮、消除双击缩放延迟（flashcard 高 190-200px 天然达标，不另设 min-height） */
+.opt,.tabbar button,.tab-btn,.quiz-options li,.flashcard,.chapter-pager a,.chapter-pager span,.menu-btn,.mobile-nav-toggle{-webkit-tap-highlight-color:transparent;touch-action:manipulation}
+/* 8.2 触控目标最小 44px（自测选项与 tab 胶囊原高约 33px） */
+.opt,.tabbar button,.tab-btn,.quiz-options li{min-height:44px}
+/* 8.3 防溢出：内容图自适应；svg 不设 height:auto，避免定尺寸图标塌陷 */
+img{max-width:100%;height:auto}
+svg{max-width:100%}
+/* 8.4 长词/URL 断行 */
+body{overflow-wrap:break-word}
+/* 8.5 表格容器触摸惯性滚动（A 族已有同值规则，重复声明无害） */
+.table-wrap{-webkit-overflow-scrolling:touch}
+/* 8.6 抽屉打开时锁定背景滚动（两族抽屉断点均为 900px；类由统一脚本增删） */
+@media (max-width:900px){
+  body.nav-locked{overflow:hidden}
+}
+</style>
+</head>
+<body>
+<div id="readbar"></div>
+<button class="menu-btn" id="menuBtn" aria-label="打开目录">☰</button>
+<div class="overlay" id="overlay"></div>
+<aside class="sidebar" id="sidebar">
+  <h2>第十五章 物质使用及成瘾行为所致障碍</h2>
+  <div class="sub">精神病学（第9版）· 印刷页 179–196<br>学习指南 · 技能标准版</div>
+  <div class="toc-group">开篇</div>
+  <a class="toc" href="#cover"><span class="n">00</span>章节封面与学习目标</a>
+  <a class="toc" href="#status"><span class="n">01</span>本章地位速览</a>
+  <a class="toc" href="#navmap"><span class="n">02</span>章节导航图</a>
+  <a class="toc" href="#mindmap"><span class="n">03</span>本章知识地图</a>
+  <a class="toc" href="#route"><span class="n">04</span>学习路线图</a>
+  <div class="toc-group">正文（主题/物质单元八栏）</div>
+  <a class="toc unitlink" href="#u1"><span class="n">05</span>概述：基本概念与共同机制</a>
+  <a class="toc sub2" href="#u1-6">└ 治疗方案工具箱</a>
+  <a class="toc unitlink" href="#u2"><span class="n">06</span>阿片类物质</a>
+  <a class="toc sub2" href="#u2-6">└ 治疗方案工具箱</a>
+  <a class="toc unitlink" href="#u3"><span class="n">07</span>大麻</a>
+  <a class="toc sub2" href="#u3-6">└ 治疗方案工具箱</a>
+  <a class="toc unitlink" href="#u4"><span class="n">08</span>镇静催眠、抗焦虑药</a>
+  <a class="toc sub2" href="#u4-6">└ 治疗方案工具箱</a>
+  <a class="toc unitlink" href="#u5"><span class="n">09</span>中枢兴奋剂、致幻剂、吸入剂</a>
+  <a class="toc sub2" href="#u5-6">└ 治疗方案工具箱</a>
+  <a class="toc unitlink" href="#u6"><span class="n">10</span>酒精</a>
+  <a class="toc sub2" href="#u6-6">└ 治疗方案工具箱</a>
+  <a class="toc unitlink" href="#u7"><span class="n">11</span>尼古丁</a>
+  <a class="toc sub2" href="#u7-6">└ 治疗方案工具箱</a>
+  <a class="toc unitlink" href="#u8"><span class="n">12</span>咖啡因</a>
+  <a class="toc unitlink" href="#u9"><span class="n">13</span>成瘾行为所致障碍</a>
+  <a class="toc sub2" href="#u9-5">└ 鉴别诊断对对碰</a>
+  <div class="toc-group">结尾</div>
+  <a class="toc" href="#summary"><span class="n">14</span>全章核心要点速览</a>
+  <a class="toc" href="#pitfalls"><span class="n">15</span>易混易错点警示</a>
+  <a class="toc" href="#quiz"><span class="n">16</span>章节自测系统</a>
+  <a class="toc" href="#cards"><span class="n">17</span>考点速记卡</a>
+  <a class="toc" href="#cases"><span class="n">18</span>病例挑战</a>
+  <a class="toc" href="#ext"><span class="n">19</span>拓展延伸</a>
+</aside>
+<main class="main">
+<div class="wrap">
+
+<!-- ===== 00 封面 ===== -->
+<section id="cover">
+  <div class="hero">
+    <span class="chap">第十五章 · CHAPTER 15</span>
+    <h1>物质使用及成瘾行为所致障碍</h1>
+    <p class="tagline">从"用一次"到"停不下来"：把依赖、耐受、戒断、中毒串成一条线，再按物质逐一落地。</p>
+    <p class="meta">教材：精神病学（第9版）｜印刷页 179–196｜全章 9 节：概述、阿片类、大麻、镇静催眠抗焦虑药、中枢兴奋剂/致幻剂/吸入剂、酒精、尼古丁、咖啡因、成瘾行为所致障碍</p>
+    <div class="goalbox">
+      <h3>学习目标（四级分层）</h3>
+      <ul>
+        <li><span class="lv">了解</span>说出精神活性物质、毒品、新精神活性物质的定义与六类药理分类；了解本章各物质的流行病学概况与教材引用的报告数据。</li>
+        <li><span class="lv l2">理解</span>解释依赖、滥用、耐受性、戒断状态、强化五个概念之间的逻辑；理解"奖赏系统（VTA-NAc）+ 正/负强化"如何解释成瘾的形成与维持。</li>
+        <li><span class="lv l3">掌握</span>掌握 ICD-11 物质依赖的 3 条核心症状（满足 2 条即可诊断）；掌握阿片类急性中毒三联征与纳洛酮使用；掌握酒精戒断三型的时间轴与苯二氮䓬类处理；掌握 BZD 撤药方案与尼古丁三种替代/药物方案。</li>
+        <li><span class="lv l4">重点</span>酒精震颤谵妄、酒精性癫痫、Wernicke 脑病与 Korsakoff 综合征；阿片类与 BZD 的戒断风险；大麻"迄今无致死病例"≠安全；ATS 中毒的三度分层；赌博障碍与游戏障碍的 ICD-11 诊断要件——高频考点与临床安全底线。</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 01 地位 ===== -->
+<section id="status">
+  <div class="sec-head"><div class="badge">01</div><h2>本章地位速览<span class="en">Why this chapter matters</span></h2></div>
+  <p class="sec-lead">本章把"外源性化学物质"与"内在奖赏系统"接在一起：一边是药理与中毒，一边是行为与心理；诊断靠 ICD-11 的三条核心，处置靠"急性中毒—戒断—维持—防复发"四段。</p>
+  <div class="grid3">
+    <div class="card blue">
+      <h3>章节定位与重要性</h3>
+      <p>本章位于教材第十五章（印刷页 179–196），属于"物质相关及成瘾障碍"模块，共 9 节。教材把<strong>赌博障碍</strong>从原冲动控制障碍章节移入本章，并<strong>首次将游戏障碍</strong>纳入诊断标准，二者均分在线与离线两种模式。</p>
+      <p class="note">考试权重：概念辨析（依赖/滥用/耐受/戒断）、各物质中毒与戒断的时间轴、替代与维持治疗的药名与方案、酒精神经系统并发症。</p>
+    </div>
+    <div class="card red">
+      <h3>临床意义</h3>
+      <p>教材开篇即定性：成瘾是<strong>慢性复发性脑疾病</strong>。其危害不仅是中毒死亡，还包括躯体并发症（肝硬化、感染、周围神经病）、精神共病、家庭功能破坏与违法犯罪。</p>
+      <p>本章的"保命知识"集中在三处：阿片类急性中毒的<strong>针尖样瞳孔、呼吸抑制、昏迷</strong>三联征；酒精戒断性谵妄（教材称处理不当死亡率约 <strong>5%</strong>）；BZD 与酒精的呼吸抑制叠加。</p>
+    </div>
+    <div class="card green">
+      <h3>与前后章节关联</h3>
+      <p><strong>前置：</strong>精神分裂症、抑郁障碍、焦虑障碍的症状学与鉴别思路，是判断"物质所致"还是"原发性"精神障碍的基础。</p>
+      <p><strong>后续延伸：</strong>物质所致精神病性障碍、情绪障碍的处理原则，与后续躯体治疗、康复章节衔接。</p>
+      <p><strong>横向交叉：</strong>药理学（受体与递质）、内科学（肝病、心血管、感染）、神经病学（Wernicke/Korsakoff、周围神经病）、公共卫生与法律（毒品管制、烟草控制）。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 02 导航 ===== -->
+<section id="navmap">
+  <div class="sec-head"><div class="badge">02</div><h2>章节导航图<span class="en">Section map</span></h2></div>
+  <p class="sec-lead">按教材 9 节顺序排列，每节对应一个学习单元，单元内固定八栏。点击卡片直接跳转。</p>
+  <div class="grid3">
+    <a class="card cyan" href="#u1" style="display:block;color:inherit">
+      <h3>第一节 · 概述</h3>
+      <p>精神活性物质、依赖、滥用、耐受、戒断、强化；六类分类；生物-心理-社会因素；ICD-11 诊断标准。</p>
+      <p class="note">关键词：三条核心取两条 · 奖赏系统 · 正/负强化</p>
+    </a>
+    <a class="card red" href="#u2" style="display:block;color:inherit">
+      <h3>第二节 · 阿片类物质</h3>
+      <p>来源三类、μ 受体、戒断时间轴、急性中毒三联征、纳洛酮、美沙酮/丁丙诺啡替代与维持。</p>
+      <p class="note">关键词：8～12 小时 · 1～3 天 · 纳洛酮</p>
+    </a>
+    <a class="card green" href="#u3" style="display:block;color:inherit">
+      <h3>第三节 · 大麻</h3>
+      <p>THC 含量、精神/心血管/精神运动效应、致死毒性、急性中毒与精神病性症状处理。</p>
+      <p class="note">关键词：0.5%～5% · 15%～50% · 无致死病例</p>
+    </a>
+    <a class="card blue" href="#u4" style="display:block;color:inherit">
+      <h3>第四节 · 镇静催眠、抗焦虑药</h3>
+      <p>巴比妥类、非选择性 BZD、选择性 BZRA（"Z"类）；GABAA 机制；过量与撤药。</p>
+      <p class="note">关键词：2～4 周 · 每周减 50% · 氟马西尼</p>
+    </a>
+    <a class="card orange" href="#u5" style="display:block;color:inherit">
+      <h3>第五节 · 兴奋剂、致幻剂、吸入剂</h3>
+      <p>ATS 药理与三度中毒、苯丙胺沮丧期、致幻剂分类、笑气与维生素 B12。</p>
+      <p class="note">关键词：甲基苯丙胺 · 恶性高热 · 氧化亚氮</p>
+    </a>
+    <a class="card red" href="#u6" style="display:block;color:inherit">
+      <h3>第六节 · 酒精</h3>
+      <p>吸收代谢、急性中毒、依赖、戒断三型、精神病性障碍、Wernicke/Korsakoff、戒酒硫与纳曲酮。</p>
+      <p class="note">关键词：6～12 小时 · 3～4 天 · 5% 死亡率</p>
+    </a>
+    <a class="card purple" href="#u7" style="display:block;color:inherit">
+      <h3>第七节 · 尼古丁</h3>
+      <p>nAChRs 机制、燃烟有害成分、NRT、安非他酮、伐尼克兰、可乐定、疫苗与心理干预。</p>
+      <p class="note">关键词：8～12 周 · 150mg/d · 1mg bid</p>
+    </a>
+    <a class="card cyan" href="#u8" style="display:block;color:inherit">
+      <h3>第八节 · 咖啡因</h3>
+      <p>黄嘌呤类、吸收与分布、睡眠影响、1.5g/d 中毒阈值、耐受与戒断。</p>
+      <p class="note">关键词：15～20 分钟 · 100mg · 750～1200mg</p>
+    </a>
+    <a class="card pink" href="#u9" style="display:block;color:inherit">
+      <h3>第九节 · 成瘾行为所致障碍</h3>
+      <p>赌博障碍与游戏障碍：定义、诊断、危害、心理特征与治疗现状。</p>
+      <p class="note">关键词：终生患病率 0.2%～2.0% · 4.7%～6.0% · 12 个月</p>
+    </a>
+  </div>
+  <div class="callout book">
+    <span class="ct">📖 单元划分说明（八栏适配）</span>
+    ① 第一节"概述"不是具体疾病，按<strong>主题单元</strong>承载八栏，栏目内容对应改写为"概念画像/机制探秘/概念辨析"等，标题与顺序不变。<br>
+    ② 第五节把<strong>中枢神经系统兴奋剂、致幻剂、吸入剂</strong>放在同一节内叙述，故合并为一个单元；其中致幻剂教材未给治疗方案，第六栏如实标注。<br>
+    ③ 第九节内含<strong>赌博障碍</strong>与<strong>游戏障碍</strong>两目，同属"成瘾行为所致障碍"，按教材节结构合并为一个单元，两目内容均完整呈现，不遗漏。<br>
+    ④ 全章共 <strong>9 个学习单元</strong>，每单元均保留完整八栏，不因资料多寡删栏。
+  </div>
+</section>
+
+<!-- ===== 03 知识地图 ===== -->
+<section id="mindmap">
+  <div class="sec-head"><div class="badge">03</div><h2>本章知识地图<span class="en">Knowledge map</span></h2></div>
+  <p class="sec-lead">全章可用一条主线串起：<strong>物质进入 → 奖赏系统被劫持 → 依赖形成 → 停用出现戒断 → 中毒或戒断危及生命 → 替代/维持 + 心理社会干预</strong>。不同物质只是把这条线上的节点换成了不同的时间与症状。</p>
+  <div class="stat">
+    <span>9 节</span><span>9 个学习单元</span><span>6 类精神活性物质</span><span>2 种成瘾行为</span><span>3 条 ICD-11 核心症状</span><span>3 型酒精戒断</span><span>0 个教材原案例</span>
+  </div>
+  <p class="note">统计口径：精神活性物质按教材药理分类为 6 类（中枢抑制剂、中枢兴奋剂、大麻、致幻剂、挥发性溶剂、其他如尼古丁/氯胺酮等）；成瘾行为 2 种（赌博障碍、游戏障碍）。教材本章未提供具体临床案例，各单元第四栏均如实标注。</p>
+  <div class="grid3">
+    <div class="card blue">
+      <h3>① 总论底座</h3>
+      <ul>
+        <li>依赖 = 失控 + 优先 + 生理特征</li>
+        <li>滥用 = 有不良后果、无耐受/戒断</li>
+        <li>耐受 = 需加量才有效</li>
+        <li>戒断 = 停药/减量/拮抗后的反跳</li>
+        <li>机制 = VTA-NAc 奖赏 + 正/负强化</li>
+      </ul>
+    </div>
+    <div class="card red">
+      <h3>② 阿片类</h3>
+      <ul>
+        <li>μ 受体：镇痛、欣快、呼吸抑制、缩瞳</li>
+        <li>中毒三联征：针尖瞳 + 呼吸抑制 + 昏迷</li>
+        <li>短效戒断 8～12 小时起、持续 7～10 天</li>
+        <li>长效（美沙酮）1～3 天起、极期 3～8 天</li>
+        <li>替代：美沙酮、丁丙诺啡、复方制剂</li>
+      </ul>
+    </div>
+    <div class="card green">
+      <h3>③ 大麻</h3>
+      <ul>
+        <li>THC：大麻烟 0.5%～5%，大麻油 15%～50%</li>
+        <li>精神效应：欣快、时空变形、短时记忆受损</li>
+        <li>心血管：心率↑、血管扩张</li>
+        <li>迄今无使用大麻致死病例</li>
+        <li>无公认有效治疗药物，个体化</li>
+      </ul>
+    </div>
+    <div class="card orange">
+      <h3>④ 镇静催眠药</h3>
+      <ul>
+        <li>BZD 增强 GABA 与 GABAA 受体效应</li>
+        <li>短期 2～4 周相对安全</li>
+        <li>撤药：每周减 50%，再每 2 周减 10%～25%</li>
+        <li>过量：过度镇静、共济失调；氟马西尼</li>
+        <li>"Z"类选择性 α1，仍存成瘾风险</li>
+      </ul>
+    </div>
+    <div class="card purple">
+      <h3>⑤ 兴奋剂/致幻剂/吸入剂</h3>
+      <ul>
+        <li>ATS 促释放、阻再摄取、抑 MAO</li>
+        <li>轻/中/重三度中毒，重度可致死</li>
+        <li>更易精神依赖、较难躯体依赖</li>
+        <li>致幻剂效应取决于预期与环境</li>
+        <li>笑气：急性缺氧 + B12 缺乏神经损害</li>
+      </ul>
+    </div>
+    <div class="card red">
+      <h3>⑥ 酒精</h3>
+      <ul>
+        <li>先抑皮质 → 皮质下 → 脑干</li>
+        <li>单纯戒断 6～12 小时起、48～72 小时高峰</li>
+        <li>酒精性癫痫：约 30% 戒酒者</li>
+        <li>震颤谵妄：断酒后 3～4 天，死亡率约 5%</li>
+        <li>戒酒硫、纳曲酮 25～50mg/d</li>
+      </ul>
+    </div>
+    <div class="card cyan">
+      <h3>⑦ 尼古丁</h3>
+      <ul>
+        <li>作用于 nAChRs，阳离子内流</li>
+        <li>COHb↑ → 运氧能力↓</li>
+        <li>NRT 疗程 8～12 周</li>
+        <li>安非他酮 150mg/d、7～12 周</li>
+        <li>伐尼克兰 1mg bid、疗程 12 周</li>
+      </ul>
+    </div>
+    <div class="card blue">
+      <h3>⑧ 咖啡因</h3>
+      <ul>
+        <li>黄嘌呤类：兴奋、利尿、兴奋心肌</li>
+        <li>口服 15～20 分钟达峰</li>
+        <li>每天 1.5g 以上可中毒</li>
+        <li>低至 100mg/d 也可产生耐受</li>
+        <li>戒断头痛最常见，1～2 天高峰</li>
+      </ul>
+    </div>
+    <div class="card pink">
+      <h3>⑨ 成瘾行为</h3>
+      <ul>
+        <li>赌博障碍：终生患病率 0.2%～2.0%</li>
+        <li>诊断需 ≥12 个月，严重者可放宽</li>
+        <li>游戏障碍：全球 3%～8%，我国 4.7%～6.0%</li>
+        <li>心理特征：渴求↑、冲动控制↓、决策受损</li>
+        <li>均无公认指南/干预措施</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 04 路线 ===== -->
+<section id="route">
+  <div class="sec-head"><div class="badge">04</div><h2>学习路线图<span class="en">Study route</span></h2></div>
+  <p class="sec-lead">本章信息量大但结构极规整：<strong>先建概念底座，再按"中枢抑制剂—兴奋剂—其他—行为成瘾"分组，最后用三条时间轴收口</strong>。不要按页码平推。</p>
+  <div class="grid2">
+    <div class="card blue">
+      <h3>推荐学习路径</h3>
+      <div class="timeline">
+        <div class="tl-item"><h4>第 1 步 · 概念底座（约 30 分钟）</h4><p>把依赖、滥用、耐受、戒断、强化五个词分清；背下 ICD-11 三条核心症状（取 2 条即可诊断）。这是全章所有单元的"共同语言"。</p></div>
+        <div class="tl-item"><h4>第 2 步 · 阿片类（约 40 分钟）</h4><p>抓"μ 受体—三联征—纳洛酮"和"短效/长效两条戒断时间轴"，再记美沙酮、丁丙诺啡、复方制剂三套递减方案。</p></div>
+        <div class="tl-item"><h4>第 3 步 · 大麻 + 镇静催眠药（约 40 分钟）</h4><p>大麻记"有精神效应、无致死病例、无特效药"；BZD 记"2～4 周安全窗 + 撤药四步"，两者都属"看似温和、实则易依赖"。</p></div>
+        <div class="tl-item"><h4>第 4 步 · 兴奋剂/致幻剂/吸入剂（约 30 分钟）</h4><p>ATS 记三度中毒与"苯丙胺沮丧期"；致幻剂只记分类与代表药；吸入剂记笑气的缺氧与 B12。</p></div>
+        <div class="tl-item"><h4>第 5 步 · 酒精（约 50 分钟，重中之重）</h4><p>按"6～12 小时 → 24～36 小时 → 48～72 小时 → 3～4 天"画出戒断时间轴，再把癫痫、震颤谵妄、幻觉症、Wernicke/Korsakoff 挂上去。</p></div>
+        <div class="tl-item"><h4>第 6 步 · 尼古丁 + 咖啡因 + 行为成瘾（约 40 分钟）</h4><p>尼古丁记三种药方案与疗程；咖啡因记 1.5g/d 与 100mg 两个阈值；行为成瘾记两个患病率与 12 个月病程。</p></div>
+      </div>
+      <p class="note">总时长约 3.5～4 小时；建议分 2 次完成，次日用速记卡 + 自测复习 25 分钟。</p>
+    </div>
+    <div class="card purple">
+      <h3>重点优先级与记忆策略</h3>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>内容</th><th>优先级</th><th>推荐记忆法</th></tr></thead>
+          <tbody>
+            <tr><td>依赖 vs 滥用 vs 耐受 vs 戒断</td><td class="starme">⭐⭐⭐</td><td>对比记忆法</td></tr>
+            <tr><td>ICD-11 三条核心症状</td><td class="starme">⭐⭐⭐</td><td>数字编码法</td></tr>
+            <tr><td>阿片类急性中毒三联征与纳洛酮</td><td class="starme">⭐⭐⭐</td><td>画面联想法</td></tr>
+            <tr><td>阿片类戒断两条时间轴</td><td class="starme">⭐⭐⭐</td><td>时间线记忆</td></tr>
+            <tr><td>酒精戒断三型与时间轴</td><td class="starme">⭐⭐⭐</td><td>数字锚定 + 时间线</td></tr>
+            <tr><td>酒精性癫痫、震颤谵妄处理</td><td class="starme">⭐⭐⭐</td><td>危险信号记忆</td></tr>
+            <tr><td>Wernicke 脑病 vs Korsakoff 综合征</td><td class="starme">⭐⭐⭐</td><td>对比表</td></tr>
+            <tr><td>BZD 撤药方案与"Z"类</td><td class="starme">⭐⭐</td><td>步骤口诀</td></tr>
+            <tr><td>尼古丁三种药物与疗程</td><td class="starme">⭐⭐</td><td>归类 + 数字</td></tr>
+            <tr><td>赌博/游戏障碍诊断要件</td><td class="starme">⭐⭐</td><td>关键词提取</td></tr>
+            <tr><td>大麻 THC 含量与"无致死病例"</td><td class="starme">⭐⭐</td><td>反差记忆</td></tr>
+            <tr><td>咖啡因两个剂量阈值</td><td class="starme">⭐</td><td>数字锚定</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="note">记忆策略总原则：<strong>概念先对比，物质先分类，处置先时间轴</strong>。凡教材给了具体剂量与疗程的，必须原样记；教材没给的，答"教材未涉及"。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 05 概述 ===== -->
+<section id="u1">
+  <div class="sec-head"><div class="badge">05</div><h2>概述：基本概念与共同机制<span class="en">第一节 · 概述（p.179–182）</span></h2></div>
+  <p class="sec-lead">本节是全章的"语法书"：定义五个概念、列出六类物质、给出三因素模型与 ICD-11 三条核心症状。后面八节都在用这套语法。</p>
+
+  <div class="card blue" id="u1-1">
+    <h3 class="col-title"><span class="idx">第一栏</span>疾病画像</h3>
+    <div class="quote"><span class="lab">教材原文</span>精神活性物质指能够影响人类情绪和行为、改变意识状态，并有致依赖作用的一类化学物质，人们使用这些物质的目的在于取得或保持某些特殊的心理、生理状态。精神活性物质又被称为成瘾物质、药物。</div>
+    <p><strong>一句话画像：</strong>这是一类"能改写情绪、意识并让人离不开"的外源化学物质；本章研究的不是物质本身，而是<strong>人与物质之间形成的那段控制关系</strong>。<span class="note">（此句为对教材定义的通俗复述，非新增医学事实）</span></p>
+    <div class="grid3">
+      <div class="mini"><h4>毒品（社会学概念）</h4><p>指具有很强成瘾性并在社会上禁止使用的化学物质。我国主要指阿片类、大麻、可卡因及国家规定管制的其他麻醉药品和精神药品。</p></div>
+      <div class="mini"><h4>新精神活性物质</h4><p>又称"策划药""实验室药品"，为逃避打击对管制毒品进行化学结构修饰得到的类似物；教材称其已成为继海洛因和冰毒之后的"第三代毒品"。</p></div>
+      <div class="mini"><h4>本章范围</h4><p>阿片类、大麻、镇静催眠抗焦虑药、中枢兴奋剂/致幻剂/吸入剂、酒精、尼古丁、咖啡因，以及赌博障碍与游戏障碍。</p></div>
+    </div>
+    <div class="stat">
+      <span>2021 全球使用毒品 &gt;2.96 亿</span><span>较 10 年前高 23%</span><span>全球滥用毒品 3 950 万</span><span>10 年增 45%</span><span>我国现有吸毒人员 89.6 万</span><span>占人口 0.64‰</span><span>同比下降 20.3%</span>
+    </div>
+    <p class="note">以上数字均取自教材引用的 UNODC 报道与《2023 年中国毒情形势报告》。教材同时提醒：数字下降"并不意味着毒品问题日趋好转"。</p>
+    <div class="callout warn"><span class="ct">⚠️ 教材特别提醒</span>烟草、酒精以及镇静催眠药等<strong>处方药滥用</strong>依然存在；这类物质<strong>可获得性强、公众防范意识弱</strong>，因此更需关注。</div>
+  </div>
+
+  <div class="card blue" id="u1-2">
+    <h3 class="col-title"><span class="idx">第二栏</span>病因探秘</h3>
+    <p><strong>教材的判断：</strong>药物滥用和依赖是生物、心理、社会因素<strong>相互作用</strong>的结果；药物的存在和药理特性是必要条件，但是否成为"瘾君子"还与个体人格特征、生物易感性有关，社会文化因素起<strong>诱发</strong>作用。</p>
+    <div class="grid3">
+      <div class="mini">
+        <h4>社会因素</h4>
+        <ul>
+          <li>成瘾物质的可获得性</li>
+          <li>家庭矛盾、单亲、长期寄养、缺乏沟通、家庭成员犯罪吸毒或有精神疾病史</li>
+          <li>同伴影响与同伴压力</li>
+          <li>文化背景与社会环境</li>
+        </ul>
+        <p class="note">教材称家庭因素为"青少年吸毒的重要危险因素"。</p>
+      </div>
+      <div class="mini">
+        <h4>心理因素</h4>
+        <ul>
+          <li>个性问题：反社会性、情绪控制较差、易冲动、缺乏有效防御机制、追求即刻满足</li>
+          <li>行为理论：正性强化（"酒逢知己千杯少"、吸毒后的快感）</li>
+          <li>负性强化：为缓解戒断症状而反复使用</li>
+        </ul>
+        <p class="note">教材明确：尚无前瞻性研究说明是个性问题导致成瘾，还是使用成瘾物质导致个性改变。</p>
+      </div>
+      <div class="mini">
+        <h4>生物学因素</h4>
+        <ul>
+          <li>奖赏系统：VTA、NAc、前额叶、海马、杏仁核；以 VTA-NAc 通路最关键</li>
+          <li>多巴胺 D1/D2 受体激活，形成奖赏相关学习与记忆</li>
+          <li>成瘾记忆与中脑边缘多巴胺系统神经可塑性相关</li>
+          <li>代谢速度：乙醛脱氢酶缺乏者不易成为酒依赖</li>
+          <li>遗传：家系、双生子、寄养子研究均支持易感性</li>
+        </ul>
+      </div>
+    </div>
+    <div class="callout book">
+      <span class="ct">📖 教材举例（生物学）</span>
+      ① 动物在缺乏社会、心理因素时同样有主动获得精神活性物质的倾向，故有学者把依赖行为定义为<strong>慢性脑部疾病</strong>。<br>
+      ② 吸烟者试验：非条件性刺激尼古丁暴露后给予 β-肾上腺素受体拮抗剂<strong>普萘洛尔</strong>，能抑制尼古丁记忆的再巩固，环境线索诱导的心理渴求明显减弱。<br>
+      ③ 天生缺乏乙醛脱氢酶者，饮酒后乙醛堆积出现严重不良反应，从而阻止继续饮酒。
+    </div>
+    <p class="note">说明：以上均为教材明确写出的机制或举例，未补充教材外研究。</p>
+  </div>
+
+  <div class="card red" id="u1-3">
+    <h3 class="col-title"><span class="idx">第三栏</span>临床表现拼图</h3>
+    <p><strong>本单元不是疾病，故"表现"落在五个概念的临床表现上。</strong>用标签切换逐项看：</p>
+    <div class="tabs" data-tabs>
+      <div class="tabbar">
+        <button class="on" data-tab="c1">依赖</button>
+        <button data-tab="c2">滥用</button>
+        <button data-tab="c3">耐受</button>
+        <button data-tab="c4">戒断</button>
+      </div>
+      <div class="panel on" data-panel="c1">
+        <div class="quote"><span class="lab">教材原文</span>依赖是一组认知、行为和生理症状群，使用者尽管明白滥用成瘾物质会带来问题，但仍然继续使用。自我用药导致了耐受性增加、戒断症状和强制性觅药行为。</div>
+        <ul>
+          <li><strong>躯体依赖（生理依赖）：</strong>反复用药造成的病理性适应状态，主要表现为<strong>耐受性增加和戒断症状</strong>。</li>
+          <li><strong>心理依赖（精神依赖）：</strong>产生愉快满足或欣快感，驱使使用者为寻求这种感觉而反复用药，表现为<strong>渴求状态</strong>。</li>
+          <li><strong>强制性觅药行为：</strong>冲动性使用药物，不顾一切后果，是自我失去控制的表现。</li>
+        </ul>
+      </div>
+      <div class="panel" data-panel="c2">
+        <div class="quote"><span class="lab">教材原文</span>滥用在 ICD-11 分类系统中称为有害使用，是一种适应不良方式。患者由于反复使用药物导致了明显的不良后果……滥用强调的是不良后果。滥用者没有明显的耐受性增加或戒断症状，反之就是依赖状态。</div>
+        <ul>
+          <li>不良后果举例：不能完成重要的工作、学业；损害躯体和心理健康；导致法律上的问题。</li>
+          <li>关键否定条件：<strong>没有明显的耐受性增加或戒断症状</strong>。</li>
+        </ul>
+      </div>
+      <div class="panel" data-panel="c3">
+        <div class="quote"><span class="lab">教材原文</span>耐受性是一种状态。指药物使用者必须增加使用剂量方能获得所需的效果，使用原来的剂量则达不到使用者所追求的效果。</div>
+        <p>耐受性本身是<strong>生理适应</strong>的表现，可与依赖并存，也可单独出现在某些药物长期使用中。</p>
+      </div>
+      <div class="panel" data-panel="c4">
+        <div class="quote"><span class="lab">教材原文</span>戒断状态指停止使用药物、减少使用剂量或使用拮抗剂占据受体后所出现的特殊的心理生理症状群。其机制是长期用药后，突然停药引起的适应性的反跳。</div>
+        <ul>
+          <li>不同药物戒断症状因药理特性不同而不同。</li>
+          <li>一般表现为<strong>与所使用药物药理作用相反</strong>的症状。</li>
+          <li>教材举例：酒精（中枢抑制剂）戒断后出现<strong>兴奋、不眠，甚至癫痫样发作</strong>。</li>
+        </ul>
+      </div>
+    </div>
+    <div class="callout key">
+      <span class="ct">📌 ICD-11 物质依赖诊断标准（教材原文要点）</span>
+      在过去 <strong>12 个月</strong>中反复出现，或在既往 <strong>1 个月</strong>中持续出现下述 3 条核心症状中的<strong>至少 2 条</strong>：<br>
+      ① 对物质使用行为难以控制（开始、停止、用量、使用环境等控制力受损），通常伴强烈渴求；<br>
+      ② 物质使用在日常生活中处于优先地位，超过其他兴趣、日常活动、自身责任、健康及自我照顾，即使已有不良后果仍坚持使用；<br>
+      ③ 生理特征（神经适应性）：主要表现为耐受性；停止或减少使用后出现戒断症状；再次使用原物质或药理作用相似物质可避免或减轻戒断症状。
+    </div>
+  </div>
+
+  <div class="card orange" id="u1-4">
+    <h3 class="col-title"><span class="idx">第四栏</span>教材典型案例</h3>
+    <div class="callout book">
+      <span class="ct">📖 教材未提供具体临床案例</span>
+      本节为概念、分类与机制的总论，教材未给出患者案例、病史或检查数据。可用的"情境举例"仅为：酒逢知己千杯少、吸毒后的快感、吸烟者普萘洛尔试验、乙醛脱氢酶缺乏者饮酒后不良反应，已分别呈现在第二、三栏。
+    </div>
+    <p><strong>可迁移的诊断思路（据教材标准整理，非教材原文病例）：</strong></p>
+    <ol>
+      <li>先问<strong>使用史</strong>：用了什么、多久、量是否增加、是否停过、停后出现什么。</li>
+      <li>再判<strong>是否有不良后果</strong>：工作学业、躯体心理、法律问题——有后果但无耐受/戒断，落在"滥用（有害使用）"。</li>
+      <li>最后数<strong>三条核心</strong>：控制受损、优先地位、生理特征，满足 2 条即达依赖诊断阈值。</li>
+      <li>若出现意识障碍、瞳孔改变、呼吸抑制等，先按<strong>急性中毒</strong>处理，再谈依赖诊断。</li>
+    </ol>
+    <p class="note">以上为按教材标准整理的学习思路，不是教材原文病例，也不含虚构化验值。</p>
+  </div>
+
+  <div class="card orange" id="u1-5">
+    <h3 class="col-title"><span class="idx">第五栏</span>鉴别诊断对对碰</h3>
+    <p><strong>表 1　五个核心概念的"一句话鉴别"</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>概念</th><th>核心判断</th><th>有无耐受/戒断</th><th>教材原话抓手</th></tr></thead>
+        <tbody>
+          <tr><td>依赖</td><td>认知、行为、生理症状群；明知有问题仍继续</td><td><strong>有</strong>耐受性增加、戒断症状、强制性觅药</td><td>"自我失去控制"</td></tr>
+          <tr><td>滥用（有害使用）</td><td>适应不良方式，已造成明显不良后果</td><td><strong>无</strong>明显耐受或戒断</td><td>"强调的是不良后果"</td></tr>
+          <tr><td>耐受性</td><td>必须加量才能达到原有效果</td><td>本身即生理适应</td><td>"原剂量达不到追求的效果"</td></tr>
+          <tr><td>戒断状态</td><td>停药、减量或拮抗剂占受体后出现的症状群</td><td>是依赖的生理特征之一</td><td>"适应性的反跳"</td></tr>
+          <tr><td>强化</td><td>行为后果有利则重复，不利则减弱</td><td>不涉及</td><td>正强化 / 负强化</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout key"><span class="ct">📌 一句话鉴别总结</span>滥用与依赖的分水岭只有一条：<strong>有没有明显的耐受性增加或戒断症状</strong>——有就是依赖，没有就是滥用。</div>
+    <p><strong>表 2　躯体依赖与心理依赖</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>维度</th><th>躯体依赖（生理依赖）</th><th>心理依赖（精神依赖）</th></tr></thead>
+        <tbody>
+          <tr><td>本质</td><td>反复用药造成的病理性适应状态</td><td>追求愉快满足或欣快感</td></tr>
+          <tr><td>表现</td><td>耐受性增加、戒断症状</td><td>渴求状态、反复用药</td></tr>
+          <tr><td>典型物质</td><td>阿片类、酒精、BZD（戒断明显）</td><td>教材指出 ATS 较难产生躯体依赖、更易产生精神依赖</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p><strong>表 3　ICD-11 相对 ICD-10 的五处修订（教材原文）</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>修订点</th><th>内容</th></tr></thead>
+        <tbody>
+          <tr><td>急性中毒</td><td>对严重程度进行了<strong>分层</strong></td></tr>
+          <tr><td>新增分类</td><td>引入"<strong>单次有害性使用</strong>"</td></tr>
+          <tr><td>命名调整</td><td>原"有害性使用"改为"<strong>有害使用模式</strong>"，强调持续性</td></tr>
+          <tr><td>依赖标准</td><td><strong>简化</strong>为 3 条核心症状取 2 条</td></tr>
+          <tr><td>章节调整</td><td>引入<strong>成瘾行为所致障碍</strong>；赌博障碍移入本章；首次纳入<strong>游戏障碍</strong>，二者分在线/离线</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="card green" id="u1-6">
+    <h3 class="col-title"><span class="idx">第六栏</span>治疗方案工具箱</h3>
+    <div class="callout warn">
+      <span class="ct">⚠️ 先说明</span>
+      教材<strong>概述一节没有给出统一的治疗方案</strong>，也未给任何剂量或疗程。治疗内容分散在后续各节。本栏只做"框架汇总"，每一格的依据都来自本章后文，具体方案请回到对应单元。
+    </div>
+    <p><strong>全章处置的四段式框架（据各节内容归纳）</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>阶段</th><th>目标</th><th>教材对应手段</th><th>出处</th></tr></thead>
+        <tbody>
+          <tr><td>① 急性中毒</td><td>保气道、保呼吸、保循环，必要时用拮抗剂</td><td>纳洛酮（阿片类）、氟马西尼/纳洛酮（BZD）、对症支持</td><td>第二、四节</td></tr>
+          <tr><td>② 戒断</td><td>控制戒断症状，防止癫痫、谵妄等危及生命</td><td>同类替代递减（美沙酮、丁丙诺啡）、BZD（酒精/BZD）、对症</td><td>第二、四、六节</td></tr>
+          <tr><td>③ 维持</td><td>用合法药物替代非法物质，防复发</td><td>美沙酮、丁丙诺啡及复方制剂维持治疗</td><td>第二节</td></tr>
+          <tr><td>④ 防复发</td><td>降低渴求、减少复饮/复吸</td><td>纳曲酮、戒酒硫；动机强化、CBT、正念防复吸、团体、家庭</td><td>第二、六节</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="timeline">
+      <div class="tl-item"><h4>社会心理干预一 · 动机强化治疗</h4><p>通过反馈、责任、建议、提供改变菜单、共情、增强自我效能感等步骤，帮助不愿改变或犹豫不决者认识问题并做出决定。</p></div>
+      <div class="tl-item"><h4>社会心理干预二 · 复吸预防</h4><p>基于 CBT：改变适应不良的认知与行为方式、应对急慢性渴求、恢复社会技能、强化不吸毒行为；另有正念防复吸（MBRP）。</p></div>
+      <div class="tl-item"><h4>社会心理干预三 · 团体治疗</h4><p>发现共同问题、相互理解与监督、交流成功与失败经验，促进与医师保持接触。</p></div>
+      <div class="tl-item"><h4>社会心理干预四 · 家庭治疗</h4><p>修复人际与家庭成员间的不良关系，打破否认与阻抗，促进感情交流。</p></div>
+    </div>
+    <p class="note">以上四类干预的表述均来自教材第二节"社会心理干预"部分，教材称其"能针对某些问题（如复发等）起到良好的治疗效果"。</p>
+  </div>
+
+  <div class="card purple" id="u1-7">
+    <h3 class="col-title"><span class="idx">第七栏</span>记忆工具箱</h3>
+    <div class="callout tip">
+      <span class="ct">🔧 方法一：数字编码法（ICD-11 三条核心）</span>
+      口诀：<strong>"控、优、生——三条取两条"</strong>。<br>
+      ① <strong>控</strong>：控制力受损 + 渴求；② <strong>优</strong>：使用优先于其他一切；③ <strong>生</strong>：生理特征（耐受、戒断、再用缓解）。<br>
+      <em>为什么这样记：</em>三个字各对应一条，先记"三选二"这个数字规则，再往里填内容，比逐句背诵更抗遗忘；考试常考"几条中满足几条"。
+    </div>
+    <div class="callout tip">
+      <span class="ct">🔧 方法二：对比记忆法（滥用 vs 依赖）</span>
+      画一条数轴：左端"有不良后果、<strong>无</strong>耐受/戒断"= 滥用；右端"有不良后果、<strong>有</strong>耐受/戒断"= 依赖。<br>
+      <em>为什么这样记：</em>两者只差"耐受/戒断"这一格，把它当成开关而不是两个独立名词，最不容易答反——教材原话就是"反之就是依赖状态"。
+    </div>
+    <div class="callout tip">
+      <span class="ct">🔧 方法三：类比理解（标注：类比理解，非医学事实）</span>
+      把奖赏系统想成公司的<strong>奖金回路</strong>：VTA 是"发奖部门"，NAc 是"领奖窗口"，前额叶是"做预算的经理"。物质让发奖部门<strong>绕过业绩直接发钱</strong>，经理（前额叶）逐渐失去否决权——于是"控制受损、优先地位"出现。<br>
+      <em>为什么这样记：</em>用一张组织图绑住 VTA、NAc、前额叶三个结构与"控制受损"这一核心症状，机制题和概念题能一起答。
+    </div>
+    <div class="callout tip">
+      <span class="ct">🔧 方法四：口诀歌谣法（分类六类）</span>
+      口诀：<strong>"抑、兴、麻、幻、溶，外加尼古丁"</strong>。<br>
+      抑=中枢抑制剂（酒精、阿片、镇静催眠/抗焦虑）；兴=中枢兴奋剂（咖啡因、苯丙胺类、可卡因）；麻=大麻；幻=致幻剂；溶=挥发性溶剂；外加尼古丁（及氯胺酮、苯环己哌啶等）。<br>
+      <em>为什么这样记：</em>六个字覆盖教材分类主干，先有抽屉再装药，避免把具体物质记成散沙。
+    </div>
+  </div>
+
+  <div class="card cyan" id="u1-8">
+    <h3 class="col-title"><span class="idx">第八栏</span>知识联动</h3>
+    <ul>
+      <li><strong>与精神分裂症章：</strong>苯丙胺类长期使用可出现类偏执型精神分裂症表现（妄想、幻听），是"物质所致"与"原发性"精神病性障碍鉴别的核心依据。</li>
+      <li><strong>与抑郁/双相障碍章：</strong>酒精、尼古丁、ATS 的戒断均可出现抑郁、焦虑、失眠；教材要求在酒精治疗目标中明确"治疗共病的精神障碍"。</li>
+      <li><strong>与焦虑障碍章：</strong>BZD 既是抗焦虑药，也是本章的成瘾物质；"治疗工具"与"致病物质"身份重叠，是本章最需要警惕的交叉点。</li>
+      <li><strong>与器质性精神障碍章：</strong>Wernicke 脑病、Korsakoff 综合征、酒精性痴呆均属物质所致神经系统损害，需与原发性认知障碍鉴别。</li>
+      <li><strong>与药理学：</strong>μ/κ/δ 阿片受体、GABAA 受体、nAChRs、多巴胺 D1/D2——本章所有机制题的底层。</li>
+      <li><strong>与公共卫生/法律：</strong>毒品管制、烟草控制、酒类管理；教材强调提高公众认识、限制广告、提高烟税等群体层面措施。</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===== 06 阿片类 ===== -->
+<section id="u2">
+  <div class="sec-head"><div class="badge">06</div><h2>阿片类物质<span class="en">第二节 · Opioids（p.182–184）</span></h2></div>
+  <p class="sec-lead">全章治疗写得最细的一节：从受体到三联征，从两条戒断时间轴到三套替代递减方案。抓住"μ 受体—呼吸抑制—纳洛酮"这条命脉。</p>
+
+  <div class="card red" id="u2-1">
+    <h3 class="col-title"><span class="idx">第一栏</span>疾病画像</h3>
+    <div class="quote"><span class="lab">教材原文</span>阿片类物质（opioid）是指任何天然的或合成的、对机体产生类似吗啡效应的一类药物。</div>
+    <p><strong>一句话画像：</strong>阿片类是"最强止痛、也最容易停不下来"的一类物质：镇痛与欣快来自 μ 受体，呼吸抑制与缩瞳也来自同一套受体——所以"舒服"和"致命"只差一个剂量。<span class="note">（此句为机制性总结，受体依据见第二栏）</span></p>
+    <div class="grid3">
+      <div class="mini"><h4>天然阿片生物碱</h4><p>吗啡、可待因等。</p></div>
+      <div class="mini"><h4>半合成衍生物</h4><p>海洛因（二乙酰吗啡）、双氢可待因等。</p></div>
+      <div class="mini"><h4>合成阿片类镇痛药</h4><p>哌替啶、美沙酮等。</p></div>
+    </div>
+    <div class="stat">
+      <span>2021 全球 6 000 万人使用</span><span>约占全球人口 1.2%</span><span>致死占毒品直接相关死亡 2/3</span><span>我国现有吸毒人员 89.6 万</span><span>滥用海洛因 30.5 万</span>
+    </div>
+    <p class="note">教材指出：虽阿片类滥用有逐年下降趋势，但"还远未达到控制的程度"；芬太尼在北美、曲马多在中东和西南亚流行，我国查处曲马多滥用增加。</p>
+  </div>
+
+  <div class="card blue" id="u2-2">
+    <h3 class="col-title"><span class="idx">第二栏</span>病因探秘 → 药理机制</h3>
+    <p><strong>受体分布：</strong>1973 年以来在脑内和脊髓内发现阿片受体，分布在痛觉传导区以及与情绪和行为相关的区域，集中分布于<strong>脑室周围灰质、中脑边缘系统和脊髓罗氏胶质区</strong>。已知有 μ、κ、δ、σ 等多型，<strong>μ 受体</strong>与镇痛和欣快关系最密切，中枢分布也最广。</p>
+    <p><strong>内源性配体：</strong>β-内啡肽、脑啡肽、强啡肽，均能与特异受体结合发挥不同生物效应。</p>
+    <div class="grid2">
+      <div class="mini">
+        <h4>急性效应（教材原文）</h4>
+        <p>抑制腺苷酸环化酶、激活 K<sup>+</sup> 传导、抑制 Ca<sup>2+</sup> 传导和递质释放。</p>
+      </div>
+      <div class="mini">
+        <h4>药理作用谱</h4>
+        <p>镇痛、镇静；抑制呼吸中枢、咳嗽中枢及胃肠蠕动；兴奋呕吐中枢；缩瞳；作用于中脑边缘系统产生强烈快感。</p>
+      </div>
+    </div>
+    <p><strong>药代动力学（决定"为什么要定期给药"）：</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>环节</th><th>教材要点</th><th>临床含义</th></tr></thead>
+        <tbody>
+          <tr><td>口服吸收</td><td>胃内以非脂溶性形式存在，吸收延缓，大部分从肠道吸收；吸收不完全</td><td>口服血药浓度一般只有同剂量注射的<strong>一半或更少</strong></td></tr>
+          <tr><td>血中形式</td><td>以非脂溶性形式存在，难以透过血脑屏障</td><td>吗啡乙酰化为海洛因后较易透过血脑屏障，可解释静注海洛因快感更强</td></tr>
+          <tr><td>分布</td><td>分布到所有组织，可通过胎盘影响胎儿</td><td>孕妇使用即影响胎儿</td></tr>
+          <tr><td>代谢</td><td>大部分由肝脏代谢，较迅速，平均代谢时间 <strong>4～5 小时</strong></td><td>依赖者需定期给药，否则出现戒断症状</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="card red" id="u2-3">
+    <h3 class="col-title"><span class="idx">第三栏</span>临床表现拼图</h3>
+    <p><strong>（一）戒断反应：两条时间轴必须先分清</strong>（强度取决于剂量与种类、中枢作用程度、使用时间、途径、停药速度）</p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>药物类型</th><th>代表</th><th>症状出现</th><th>时程</th></tr></thead>
+        <tbody>
+          <tr><td>短效</td><td>吗啡、海洛因</td><td>停药后 <strong>8～12 小时</strong></td><td>持续 <strong>7～10 天</strong></td></tr>
+          <tr><td>长效</td><td>美沙酮</td><td>停药后 <strong>1～3 天</strong></td><td>极期 <strong>3～8 天</strong>，症状持续数周</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>最初表现：<strong>打哈欠、流涕、流泪、寒战、出汗</strong>，随后各种症状陆续出现。</p>
+    <div class="grid2">
+      <div class="mini">
+        <h4>精神症状</h4>
+        <ul>
+          <li>意识障碍、注意力不集中、内感性不适</li>
+          <li>幻觉或错觉、妄想、记忆减退、判断力减退</li>
+          <li>情绪改变：烦躁不安、焦虑、静坐不能、虚弱感、抑郁、易激惹、情感脆弱</li>
+          <li>精神运动性兴奋或抑制；不能忍受挫折或打击</li>
+          <li>睡眠障碍（失眠）；人格改变</li>
+        </ul>
+      </div>
+      <div class="mini">
+        <h4>躯体症状或体征</h4>
+        <ul>
+          <li>寒战、体温升高；出汗、心率过速或过缓</li>
+          <li>手颤加重；流泪、流涕、打哈欠</li>
+          <li>瞳孔扩大或缩小；全身疼痛</li>
+          <li>恶心、呕吐、厌食，或食欲增加</li>
+          <li>腹痛、腹泻；粗大震颤或抽搐</li>
+        </ul>
+      </div>
+    </div>
+    <p><strong>（二）过量与急性中毒</strong>：机体大量摄入超过耐受能力后极易发生，<strong>大多源于意外，以静脉注射较为多见</strong>。注射量超过个体耐受量或注入速度过快，可很快达到中毒、致死浓度。</p>
+    <div class="quote"><span class="lab">教材原文</span>常表现为三联症，即针尖样瞳孔、呼吸抑制及昏迷。</div>
+    <ul>
+      <li>意识不清，可致深度昏迷；呼吸极慢。</li>
+      <li>皮肤冰凉，体温下降，血压下降。</li>
+      <li>瞳孔呈针尖样，同时对光反射消失、双眼球固定。</li>
+      <li><strong>例外：</strong>缺氧严重或合用其他药物中毒时，可出现<strong>瞳孔散大</strong>。</li>
+    </ul>
+  </div>
+
+  <div class="card orange" id="u2-4">
+    <h3 class="col-title"><span class="idx">第四栏</span>教材典型案例</h3>
+    <div class="callout book">
+      <span class="ct">📖 教材未提供具体临床案例</span>
+      本节以药理、戒断与治疗为主，教材未给出患者案例、病史或检查数据，也未给出具体剂量案例。诊断线索以"注射痕迹、瘢痕、立毛肌竖起、瞳孔扩大、流泪流涕"等体征形式出现，已在第三栏呈现。
+    </div>
+    <p><strong>可迁移的接诊思路（据教材"治疗"开头的评估要求整理）：</strong></p>
+    <ol>
+      <li><strong>问病史：</strong>药物使用史及相关问题（肝炎、结核、精神障碍、人格障碍），以及心理社会史。</li>
+      <li><strong>查体征：</strong>一般情况、<strong>注射痕迹、瘢痕、皮肤各种感染、立毛肌竖起、瞳孔扩大、流泪、流涕</strong>。</li>
+      <li><strong>做实验室：</strong>常规检查之外，注意<strong>性病检查、HIV 检测、肝炎病毒检测</strong>。</li>
+      <li><strong>分路径：</strong>瞳孔针尖 + 呼吸慢 + 昏迷 → 按急性中毒抢救；打哈欠流涕出汗 + 瞳孔扩大 → 按戒断处理。</li>
+    </ol>
+    <p class="note">以上为按教材评估条目整理的学习思路，不是教材原文病例，不含虚构化验值。</p>
+  </div>
+
+  <div class="card orange" id="u2-5">
+    <h3 class="col-title"><span class="idx">第五栏</span>鉴别诊断对对碰</h3>
+    <p><strong>表 1　急性中毒 vs 戒断状态（同一物质、两个方向）</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>维度</th><th>急性中毒</th><th>戒断状态</th></tr></thead>
+        <tbody>
+          <tr><td>诱因</td><td>大量摄入超过耐受能力，静注多见，多属意外</td><td>停药、减量或拮抗剂占据受体</td></tr>
+          <tr><td>意识</td><td>不清，可深昏迷</td><td>可有意识障碍，但以烦躁、焦虑、失眠为主</td></tr>
+          <tr><td>瞳孔</td><td><strong>针尖样</strong>，对光反射消失、双眼球固定</td><td><strong>扩大或缩小</strong>（教材两向均列）</td></tr>
+          <tr><td>呼吸/循环</td><td>呼吸极慢；体温下降、血压下降、皮肤冰凉</td><td>寒战、体温升高；心率过速或过缓</td></tr>
+          <tr><td>其他</td><td>—</td><td>打哈欠、流涕、流泪、出汗、全身疼痛、腹痛腹泻、粗大震颤或抽搐</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout key"><span class="ct">📌 一句话鉴别总结</span>看瞳孔与呼吸：<strong>针尖瞳 + 呼吸慢 = 中毒；流泪流涕打哈欠 + 瞳孔扩大 = 戒断</strong>。但记住教材的例外——缺氧严重或混用其他药物时中毒也可瞳孔散大。</div>
+    <p><strong>表 2　三种替代/维持药物的"身份对比"</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>药物</th><th>受体/制剂特点</th><th>起始时机</th><th>教材给的递减框架</th></tr></thead>
+        <tbody>
+          <tr><td>美沙酮</td><td>合成阿片类镇痛药，口服</td><td>替代递减，未限定距末次用药时间</td><td>首次 20～40mg/d；4 小时后可加 5～10mg/d；稳定 1～2 天；逐日减前日 20%；至 5～10mg/d 时每 1～3 天减 1mg</td></tr>
+          <tr><td>丁丙诺啡</td><td>μ 受体<strong>部分激动剂</strong>；镇痛为吗啡 25～50 倍；舌下含片</td><td>末次使用后 <strong>12～24 小时</strong>开始；出现早期或轻微戒断时给药更佳</td><td>首次 1～6mg；2 小时后可追加首剂 30%～60%；2～3 天后每天减 20%～30%；疗程 10～14 天</td></tr>
+          <tr><td>复方丁丙诺啡/纳洛酮</td><td>加纳洛酮的目的是<strong>防止静脉滥用</strong></td><td>出现客观且明显戒断体征才用；距末次至少 <strong>6 小时</strong></td><td>首次 4mg，2～4 小时后可再加 4mg；2～3 天增至 12～16mg/d；稳定至少 2 天；10～14 天减完，每 2～3 天减 2mg</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p><strong>表 3　阿片类中毒与其他中枢抑制剂中毒</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>对比项</th><th>阿片类</th><th>酒精</th><th>BZD</th></tr></thead>
+        <tbody>
+          <tr><td>特征性体征</td><td>针尖样瞳孔</td><td>兴奋期→麻痹期（教材原文分期）</td><td>过度镇静、口齿不清、步态不稳</td></tr>
+          <tr><td>呼吸抑制</td><td>突出，可极慢</td><td>重症可抑制</td><td>单纯 BZD 过量<strong>极少</strong>出现</td></tr>
+          <tr><td>拮抗剂</td><td><strong>纳洛酮</strong>为首选</td><td>重症可用纳洛酮</td><td>必要时<strong>氟马西尼</strong>、纳洛酮</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="card green" id="u2-6">
+    <h3 class="col-title"><span class="idx">第六栏</span>治疗方案工具箱</h3>
+    <p><strong>（一）急性中毒</strong></p>
+    <div class="grid2">
+      <div class="mini">
+        <h4>一般治疗措施</h4>
+        <ul>
+          <li>清理和保持呼吸道通畅、有效供氧</li>
+          <li>建立静脉通道、及时给药</li>
+          <li>注意生命体征变化、对症支持治疗</li>
+        </ul>
+      </div>
+      <div class="mini">
+        <h4>拮抗剂：纳洛酮</h4>
+        <ul>
+          <li>阿片类过量与中毒的<strong>首选药物</strong></li>
+          <li>要求<strong>尽早、及时、足量和足疗程</strong>使用</li>
+          <li><strong>无固定剂量范围</strong>，依据拮抗效果、中毒症状缓解程度与生命体征改善确定</li>
+          <li>可皮下注射、肌内注射或静脉注射；已有 FDA 批准的非处方鼻喷剂</li>
+        </ul>
+      </div>
+    </div>
+    <div class="callout warn"><span class="ct">⚠️ 易错点</span>教材明确纳洛酮"在抢救时并无固定剂量范围"，凡给出"首剂 X mg"的说法都不属于本章内容。答题要写"按拮抗效果个体化"。</div>
+    <p><strong>（二）戒断症状治疗</strong>：急性戒断以<strong>同类药物替代治疗</strong>为主；稽延性戒断以对症治疗为主，主要作用在于<strong>防止复发</strong>；轻者可不使用药物，仅对症处理。</p>
+    <div class="tabs" data-tabs>
+      <div class="tabbar">
+        <button class="on" data-tab="m1">美沙酮</button>
+        <button data-tab="m2">丁丙诺啡</button>
+        <button data-tab="m3">复方制剂</button>
+        <button data-tab="m4">非替代</button>
+      </div>
+      <div class="panel on" data-panel="m1">
+        <p><strong>治疗原则：</strong>"控制症状、逐日递减、先快后慢、只减不加、停药坚决"。</p>
+        <ol>
+          <li>首次剂量 <strong>20～40mg/d</strong>（口服）。</li>
+          <li>4 小时后若症状控制不理想，可酌情增加 <strong>5～10mg/d</strong>。</li>
+          <li>稳定控制戒断症状后，维持原剂量 <strong>1～2 天</strong>。</li>
+          <li>逐日递减前日剂量的 <strong>20%</strong>。</li>
+          <li>减至 <strong>5～10mg/d</strong> 时，改为每 <strong>1～3 天</strong>减 <strong>1mg</strong>，直至停药。</li>
+        </ol>
+      </div>
+      <div class="panel" data-panel="m2">
+        <ol>
+          <li>末次使用阿片类物质后 <strong>12～24 小时</strong>开始；出现早期或轻微戒断症状时给药效果更佳。</li>
+          <li>最初 <strong>1～3 天</strong>剂量应尽量充分。</li>
+          <li>第一次给药 <strong>1～6mg</strong>；首次用药 2 小时后，按戒断控制情况决定是否追加，追加量为首剂的 <strong>30%～60%</strong>。</li>
+          <li><strong>2～3 天</strong>后可酌情逐渐减量，每天减少 <strong>20%～30%</strong>，直至停药。</li>
+          <li>治疗周期 <strong>10～14 天</strong>。</li>
+        </ol>
+      </div>
+      <div class="panel" data-panel="m3">
+        <div class="callout warn"><span class="ct">⚠️ 使用前提</span>加入纳洛酮是为防止静脉滥用；为避免促发戒断症状，<strong>只有出现客观且明显的戒断体征时才可使用</strong>，首次给药距末次使用至少 <strong>6 小时</strong>。</div>
+        <ol>
+          <li>诱导期：首次 <strong>4mg</strong>，2～4 小时后可再增加 <strong>4mg</strong>。</li>
+          <li>随后 2～3 天逐步增至 <strong>12～16mg/d</strong>，至少稳定治疗 <strong>2 天</strong>后进入减量期。</li>
+          <li>减量停药时间 <strong>10～14 天</strong>；如从 8～16mg/d 的稳定剂量，按每 <strong>2～3 天减少 2mg</strong> 递减至停药。</li>
+        </ol>
+      </div>
+      <div class="panel" data-panel="m4">
+        <p><strong>非替代治疗：</strong>中枢 α2-肾上腺素受体激动剂（<strong>可乐定、洛非西定</strong>）以及某些中药及中成药等非阿片类药物。</p>
+        <p><strong>适用边界：</strong>临床上<strong>仅适用于轻至中度</strong>阿片类物质使用障碍者。</p>
+      </div>
+    </div>
+    <p><strong>（三）维持治疗</strong>：长期应用作用机制相同的合法药物替代非法阿片类物质的滥用，防止复发或通过非法手段获取非法物质。教材列出的维持方式为<strong>美沙酮维持、丁丙诺啡维持、丁丙诺啡/纳洛酮复方制剂维持</strong>。</p>
+    <p><strong>（四）社会心理干预</strong>：动机强化治疗、复吸预防（CBT + 正念防复吸 MBRP）、团体治疗、家庭治疗（详见概述单元第六栏）。</p>
+    <p class="note">教材未给出上述药物的具体维持剂量与维持疗程，也未给出纳洛酮的具体剂量——均标"教材未涉及"。</p>
+  </div>
+
+  <div class="card purple" id="u2-7">
+    <h3 class="col-title"><span class="idx">第七栏</span>记忆工具箱</h3>
+    <div class="callout tip">
+      <span class="ct">🔧 方法一：画面联想法（中毒三联征）</span>
+      想象一个静脉注射过量的人躺在急救床上：<strong>眼睛缩成针尖、胸口几乎不动、怎么叫都不醒</strong>——"瞳针尖、呼吸慢、叫不醒"。<br>
+      <em>为什么这样记：</em>三联征是三个<strong>可直视的体征</strong>，用"一眼、一胸、一呼唤"三个动作锁定，比背名词更牢固；同时把"缺氧严重可瞳孔散大"作为反例单独记。
+    </div>
+    <div class="callout tip">
+      <span class="ct">🔧 方法二：时间线记忆（两条戒断轴）</span>
+      短效：<strong>8～12 小时起，7～10 天止</strong>；长效：<strong>1～3 天起，极期 3～8 天，持续数周</strong>。<br>
+      <em>为什么这样记：</em>"短效快起快落、长效慢起拖尾"符合药物半衰期直觉；把四个数字按"起—极—止"排成一条线，避免把美沙酮的 1～3 天误记成 8～12 小时。
+    </div>
+    <div class="callout tip">
+      <span class="ct">🔧 方法三：口诀歌谣法（美沙酮五步）</span>
+      口诀：<strong>"控、递减、先快后慢、只减不加、停药坚决"</strong>。<br>
+      展开：20～40 起 → 4 小时可加 5～10 → 稳定 1～2 天 → 每日减 20% → 到 5～10mg 时每 1～3 天减 1mg。<br>
+      <em>为什么这样记：</em>教材把治疗原则写成五句短句，本身就是口诀；先背原则再填数字，答题时不会漏掉"只减不加"这条安全底线。
+    </div>
+    <div class="callout tip">
+      <span class="ct">🔧 方法四：对比记忆法（三种替代药）</span>
+      一句话：<strong>美沙酮"全激动、口服、慢慢减"；丁丙诺啡"部分激动、舌下、12～24 小时起"；复方"加纳洛酮、必须见戒断体征、6 小时后起"</strong>。<br>
+      <em>为什么这样记：</em>三者的差异集中在"受体角色、给药途径、起始时机"三格，用同一句式并排记，最不易混。
+    </div>
+  </div>
+
+  <div class="card cyan" id="u2-8">
+    <h3 class="col-title"><span class="idx">第八栏</span>知识联动</h3>
+    <ul>
+      <li><strong>与总论：</strong>阿片类是"躯体依赖"的典型：耐受性增加 + 戒断症状齐全，且心理依赖（欣快、渴求）同样突出。</li>
+      <li><strong>与麻醉/疼痛治疗：</strong>阿片受体 μ 介导镇痛，是临床镇痛的基础；本章关注的是<strong>非医疗使用</strong>与依赖。</li>
+      <li><strong>与感染科：</strong>静注滥用与 HIV、肝炎、性病相关，教材要求实验室检查覆盖这些项目。</li>
+      <li><strong>与急诊医学：</strong>针尖瞳 + 呼吸抑制 + 昏迷是急诊识别阿片中毒的经典组合；纳洛酮是首选拮抗剂。</li>
+      <li><strong>与公共卫生：</strong>美沙酮/丁丙诺啡维持治疗是"用合法药物替代非法物质"的减害思路，教材明确其目的是防止复发与非法获取。</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===== 07 大麻 ===== -->
+<section id="u3">
+  <div class="sec-head"><div class="badge">07</div><h2>大麻<span class="en">第三节 · Cannabis（p.184–186）</span></h2></div>
+  <p class="sec-lead">本章最容易被"安全"假象骗过的一节：教材明确"迄今未发现使用大麻致死的病例"，但紧接着说——它的危害在于<strong>破坏正常的生产和生活</strong>，而不是中毒死亡。</p>
+
+  <div class="card red" id="u3-1">
+    <h3 class="col-title"><span class="idx">第一栏</span>疾病画像</h3>
+    <p><strong>植物学身份：</strong>大麻是原产于印度的一年生桑科草本植物，在绝大部分热带和温带地区可以生长。</p>
+    <div class="quote"><span class="lab">教材原文</span>四氢大麻酚（tetrahydrocannabinol，THC）是大麻中的主要精神活性成分，不同类型的大麻中四氢大麻酚含量也不相同，大麻烟中含量约为0.5%～5%，而大麻油中四氢大麻酚含量可以高达15%～50%。</div>
+    <p><strong>一句话画像：</strong>大麻是"最古老的致幻剂"，却以"欣快、放松"面目出现；它几乎不会直接把人毒死，但会慢慢拿走一个人的记忆、反应速度与正常生活。<span class="note">（此句为教材效应的通俗复述，非新增医学事实）</span></p>
+    <div class="grid3">
+      <div class="mini"><h4>成分规模</h4><p>大麻中提取的化合物多达 <strong>400 多种</strong>，其中约 <strong>60 种</strong>属于大麻酚类。</p></div>
+      <div class="mini"><h4>代谢产物</h4><p>THC 的活性代谢产物为 <strong>11-羟-四氢大麻酚</strong>，在体内迅速转化为共轭的 11-去甲-9-羧基-四氢大麻酚。</p></div>
+      <div class="mini"><h4>为何尿检久阳性</h4><p>THC 为脂溶性，长期慢性使用者大量代谢物残留于脂肪组织，停用<strong>数周甚至数月</strong>后尿液检查仍可阳性。</p></div>
+    </div>
+    <p><strong>流行病学：</strong>大麻滥用在全球范围内非常普遍；随着医用大麻合法化的逐渐增加，教材判断未来使用大麻的人数将呈逐年递增趋势。教材<strong>未给出</strong>全球或我国大麻滥用的具体患病率数字。</p>
+  </div>
+
+  <div class="card blue" id="u3-2">
+    <h3 class="col-title"><span class="idx">第二栏</span>病因探秘 → 药理与代谢探秘</h3>
+    <p><strong>教材给出的是"成分—代谢—效应"链，而不是成瘾易感性的基因机制。</strong>以下为教材明确写出的内容：</p>
+    <div class="timeline">
+      <div class="tl-item"><h4>① 摄入</h4><p>吸食大麻，THC 随烟雾进入体内；不同制品 THC 含量差异极大（大麻烟 0.5%～5%，大麻油 15%～50%）。</p></div>
+      <div class="tl-item"><h4>② 代谢</h4><p>THC → 活性代谢物 11-羟-THC → 共轭的 11-去甲-9-羧基-THC。</p></div>
+      <div class="tl-item"><h4>③ 储存</h4><p>THC 脂溶性，长期慢性使用者代谢物大量残留于脂肪组织，缓慢释放，故停药后尿检长期阳性。</p></div>
+      <div class="tl-item"><h4>④ 效应</h4><p>意识状态改变、认知与精神运动能力受损、心血管负荷增加；大剂量可出现谵妄、幻觉。</p></div>
+    </div>
+    <p><strong>影响效应强弱与后果的因素（教材明确提及）：</strong></p>
+    <div class="grid3">
+      <div class="mini"><h4>剂量与 THC 含量</h4><p>增加剂量可产生幻觉；既往长期使用者偶尔使用高含量制剂也可出现精神症状。</p></div>
+      <div class="mini"><h4>使用经验</h4><p>初次使用者更易出现焦虑、紧张、恐惧等不适反应。</p></div>
+      <div class="mini"><h4>躯体基础</h4><p>有冠状动脉或脑血管疾病者，因儿茶酚胺水平与心脏负荷增加，更易出现严重不良反应。</p></div>
+      <div class="mini"><h4>合并饮酒</h4><p>长期使用、剂量递增并伴饮酒的年轻男性，更容易出现危险驾驶行为。</p></div>
+      <div class="mini"><h4>给药途径</h4><p>水溶性低，除静脉注射外，一般在周围循环中很难达到致死量。</p></div>
+      <div class="mini"><h4>教材未涉及</h4><p>大麻素受体亚型、成瘾遗传易感性、戒断的神经生物学机制——教材未展开。</p></div>
+    </div>
+    <div class="callout warn"><span class="ct">⚠️ 概念校正</span>教材把大麻归入"大麻"类，同时称其为"世界上最古老的致幻剂"。它与致幻剂、中枢抑制剂、中枢兴奋剂<strong>并列</strong>，不是同一类，答题时不要混入致幻剂单元。</div>
+  </div>
+
+  <div class="card red" id="u3-3">
+    <h3 class="col-title"><span class="idx">第三栏</span>临床表现拼图</h3>
+    <div class="tabs" data-tabs>
+      <div class="tabbar">
+        <button class="on" data-tab="h1">精神效应</button>
+        <button data-tab="h2">心血管</button>
+        <button data-tab="h3">精神运动</button>
+        <button data-tab="h4">其他与致死性</button>
+      </div>
+      <div class="panel on" data-panel="h1">
+        <p><strong>正性体验：</strong>轻度欣快、幸福感、放松感；对音乐的敏感性增强；时间和空间感觉变形；正常的感觉体验变得异常强烈；有些使用者性欲增强。</p>
+        <p><strong>负性/认知：</strong>认知功能障碍、短时记忆力受损、运动技巧和时间反应能力下降。</p>
+        <p><strong>不适反应：</strong>初次使用者可出现精神和情感上的不适，部分出现焦虑、紧张、恐惧。</p>
+        <p><strong>精神病性：</strong>少数大剂量使用者出现<strong>谵妄和幻觉</strong>；有长期使用史者偶尔使用高 THC 制剂也可出现上述症状。</p>
+      </div>
+      <div class="panel" data-panel="h2">
+        <ul>
+          <li>心率增加、血管扩张。</li>
+          <li>健康年轻个体通常不会导致严重后果。</li>
+          <li>有冠状动脉或脑血管疾病者，大麻可增加<strong>儿茶酚胺水平和心脏负荷</strong>，更易出现严重不良反应。</li>
+        </ul>
+      </div>
+      <div class="panel" data-panel="h3">
+        <p>注意力、反应时间、短期记忆、协调能力、空间距离的判断能力都会受损，并导致<strong>操作能力受损</strong>。</p>
+        <p>教材引用的文献总结显示：长期使用大麻、使用剂量逐渐递增并伴有饮酒行为的年轻男性，更容易出现<strong>危险驾驶行为</strong>。</p>
+      </div>
+      <div class="panel" data-panel="h4">
+        <ul>
+          <li>口干、结膜充血、眼压降低、手脚忽冷忽热。</li>
+          <li>增进食欲、增加进食后的愉悦感。</li>
+          <li><strong>致死毒性：</strong>除静脉注射外很难达到致死量，<strong>迄今未发现有使用大麻致死的病例报告</strong>。</li>
+        </ul>
+        <div class="callout warn"><span class="ct">⚠️ 教材点破的误区</span>正因如此，人们常误认为大麻是"安全、无不良反应"的物质。教材明确：大麻所致危害在于<strong>破坏正常的生产和生活</strong>，并非中毒死亡。</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card orange" id="u3-4">
+    <h3 class="col-title"><span class="idx">第四栏</span>教材典型案例</h3>
+    <div class="callout book">
+      <span class="ct">📖 教材未提供具体临床案例</span>
+      本节只有成分、效应与治疗原则的叙述，教材未给出患者案例、病史或检查数据。教材提到的"人群层面的观察结论"（长期使用 + 剂量递增 + 饮酒的年轻男性更易危险驾驶）已写入第三栏，但它不是个案。
+    </div>
+    <p><strong>可迁移的识别思路（据教材要点整理，非教材原文病例）：</strong></p>
+    <ol>
+      <li>年轻人出现<strong>短时记忆下降 + 时间空间感变形 + 结膜充血 + 口干 + 食欲增加</strong>，要想到大麻。</li>
+      <li>出现<strong>谵妄、幻觉</strong>时，追问剂量与制品 THC 含量，以及是否有长期使用史——教材明确这两点会抬高精神症状风险。</li>
+      <li>有胸痛、心悸者，追问冠状动脉/脑血管病史——这类人更易出现严重心血管不良反应。</li>
+      <li>尿检阳性不能等同于"近期使用"：脂溶性代谢物可在脂肪组织残留，停药数周至数月仍可阳性。</li>
+    </ol>
+    <p class="note">以上为按教材要点整理的学习思路，不是教材原文病例，也不含虚构化验值。</p>
+  </div>
+
+  <div class="card orange" id="u3-5">
+    <h3 class="col-title"><span class="idx">第五栏</span>鉴别诊断对对碰</h3>
+    <p><strong>表 1　大麻 vs 致幻剂 vs 苯丙胺类兴奋剂</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>维度</th><th>大麻</th><th>致幻剂</th><th>ATS</th></tr></thead>
+        <tbody>
+          <tr><td>教材归类</td><td>单列一类，"最古老的致幻剂"</td><td>致幻剂（单胺类代表 LSD、MDMA）</td><td>中枢神经系统兴奋剂</td></tr>
+          <tr><td>核心体验</td><td>轻度欣快、放松、时空变形、感觉增强</td><td>产生幻觉体验，伴认知与情绪明显变化</td><td>警觉、精力充沛、能力感增强、强烈快感</td></tr>
+          <tr><td>效应可预测性</td><td>与剂量、THC 含量、使用经验相关</td><td>教材强调"难以预测"，取决于心理预期与环境</td><td>与剂量相关，剂量越高焦虑、偏执越明显</td></tr>
+          <tr><td>致死性</td><td>迄今无致死病例报告</td><td>教材未给致死性数据</td><td>重度中毒可心律失常、循环衰竭、昏迷甚至死亡</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout key"><span class="ct">📌 一句话鉴别总结</span>大麻"改变感受"、致幻剂"改变知觉"、ATS"提高警觉与精力"——三者的主观体验方向不同，问诊时抓住"是放松变形、还是看见不存在的东西、还是不知疲倦"。</div>
+    <p><strong>表 2　大麻所致精神症状 vs 原发性精神病性障碍</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>鉴别点</th><th>大麻所致</th><th>原发性精神病性障碍</th></tr></thead>
+        <tbody>
+          <tr><td>时间关系</td><td>症状与使用在时间上相关；大剂量或高含量制品后出现</td><td>教材未给时间界限，需结合病程判断</td></tr>
+          <tr><td>症状内容</td><td>谵妄、幻觉，可伴焦虑恐惧</td><td>教材本节未展开</td></tr>
+          <tr><td>处理反应</td><td>对症处理，幻觉妄想消失后抗精神病药<strong>逐渐停用</strong></td><td>教材未涉及本章范围</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p><strong>表 3　大麻戒断早期的情绪表现 vs 其他原因的情绪障碍</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>线索</th><th>大麻戒断早期</th><th>需追问的鉴别点</th></tr></thead>
+        <tbody>
+          <tr><td>情绪</td><td>比较明显的焦虑或抑郁情绪，部分伴睡眠障碍</td><td>症状是否紧接停用出现、既往有无独立抑郁发作</td></tr>
+          <tr><td>躯体</td><td>教材称大麻<strong>躯体戒断症状比较轻微</strong>，通常不需特殊处理</td><td>有无震颤、癫痫等提示酒精/BZD 戒断的表现</td></tr>
+          <tr><td>用药选择</td><td>伴情绪障碍可用 SSRIs（舍曲林或西酞普兰）；睡眠可用米氮平或曲唑酮；<strong>不建议首选苯二氮䓬类</strong></td><td>是否有 BZD 依赖风险</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="card green" id="u3-6">
+    <h3 class="col-title"><span class="idx">第六栏</span>治疗方案工具箱</h3>
+    <div class="quote"><span class="lab">教材原文</span>对于大麻滥用或者依赖患者，目前还没有公认的或经证实有效的短期或长期治疗药物。应针对患者具体情况，采用个体化的治疗措施。</div>
+    <div class="grid2">
+      <div class="mini">
+        <h4>① 急性中毒处理</h4>
+        <ul>
+          <li>对症处理：止吐、止泻、静脉输液、大量饮水促进排泄。</li>
+          <li>监测生命体征，维持水电解质平衡。</li>
+          <li>出现呼吸抑制应高度重视，严重时可气管插管或呼吸机辅助呼吸。</li>
+          <li>躯体戒断症状轻微，通常不需要特殊处理。</li>
+        </ul>
+      </div>
+      <div class="mini">
+        <h4>② 抑郁、焦虑情绪处理</h4>
+        <ul>
+          <li>伴情绪障碍可用 5-羟色胺再摄取抑制剂，教材举例<strong>舍曲林或西酞普兰</strong>；剂量按症状严重程度调整。</li>
+          <li>睡眠障碍可用<strong>米氮平或盐酸曲唑酮片</strong>。</li>
+          <li><strong>不建议首选苯二氮䓬类</strong>：个体对大麻成瘾后亦容易对 BZD 成瘾。</li>
+        </ul>
+      </div>
+    </div>
+    <div class="grid2">
+      <div class="mini">
+        <h4>③ 精神病性症状处理</h4>
+        <ul>
+          <li>兴奋躁动：<strong>氟哌啶醇 5～10mg</strong> 合并<strong>东莨菪碱 0.3mg</strong> 肌内注射；或第二代抗精神病药针剂<strong>齐拉西酮</strong>注射，直至症状控制。</li>
+          <li>幻觉、妄想：<strong>奥氮平或喹硫平</strong>对症，剂量按症状调整至稳定剂量。</li>
+          <li>幻觉、妄想消失后，抗精神病药应<strong>逐渐停止使用</strong>。</li>
+        </ul>
+      </div>
+      <div class="mini">
+        <h4>④ 心理行为治疗</h4>
+        <ul>
+          <li>教材称"尚无公认的针对大麻成瘾的药物治疗，因此心理治疗显得尤其重要"。</li>
+          <li>包括行为列联管理（contingency management）、动机强化治疗、防复吸训练。</li>
+          <li>按患者所处阶段与现有资源选择合适干预方式。</li>
+        </ul>
+      </div>
+    </div>
+    <p class="note">教材未给出上述药物的具体疗程，也未给出大麻戒断的替代治疗方案——均标"教材未涉及"。</p>
+  </div>
+
+  <div class="card purple" id="u3-7">
+    <h3 class="col-title"><span class="idx">第七栏</span>记忆工具箱</h3>
+    <div class="callout tip">
+      <span class="ct">🔧 方法一：数字编码法（三个含量/三个时间）</span>
+      记 <strong>"0.5～5 / 15～50 / 400 与 60"</strong>：大麻烟 THC 0.5%～5%，大麻油 15%～50%，化合物 400 多种、大麻酚类约 60 种；再记"停用<strong>数周至数月</strong>尿检仍阳性"。<br>
+      <em>为什么这样记：</em>本节数字最密，用"两个区间 + 两个计数 + 一个时长"打包，答题时按序清点，不易漏。
+    </div>
+    <div class="callout tip">
+      <span class="ct">🔧 方法二：反差记忆法（"无致死"≠"无害"）</span>
+      先记结论 A："迄今未发现使用大麻致死的病例报告"；再立刻接结论 B："危害在于<strong>破坏正常的生产和生活</strong>"。<br>
+      <em>为什么这样记：</em>这两句在教材中紧挨着出现，是典型的"先立后破"；把反差成对记，既不会漏掉"无致死"，也不会误答"安全"。
+    </div>
+    <div class="callout tip">
+      <span class="ct">🔧 方法三：场景联想法（四条效应）</span>
+      想象一个吸食大麻后的年轻人：<strong>听着音乐觉得格外好听（精神）→ 心跳变快、眼睛发红（心血管/其他）→ 开车时判断不好距离（精神运动）→ 口干、想吃东西（其他）</strong>。<br>
+      <em>为什么这样记：</em>把散落的效应串成一段"从沙发到方向盘"的场景，回忆时按场景走一遍即可覆盖四类效应。
+    </div>
+    <div class="callout tip">
+      <span class="ct">🔧 方法四：对比记忆法（治疗"三不用"）</span>
+      大麻治疗记三个"不"：<strong>无公认有效药物</strong>、<strong>不首选 BZD</strong>（易交叉成瘾）、<strong>精神病症状消失后不长期维持抗精神病药</strong>。<br>
+      <em>为什么这样记：</em>本节治疗以"否定句"为主，用"三不"打包，比正面罗列更贴合教材原意。
+    </div>
+  </div>
+
+  <div class="card cyan" id="u3-8">
+    <h3 class="col-title"><span class="idx">第八栏</span>知识联动</h3>
+    <ul>
+      <li><strong>与总论：</strong>大麻是"心理依赖突出、躯体戒断轻微"的代表；教材明确其躯体戒断通常不需特殊处理。</li>
+      <li><strong>与精神分裂症章：</strong>大剂量可出现谵妄、幻觉，需与原发性精神病性障碍鉴别；教材要求症状消失后抗精神病药逐渐停用。</li>
+      <li><strong>与焦虑/抑郁障碍章：</strong>戒断早期可出现焦虑、抑郁与睡眠障碍，教材给出 SSRI、米氮平、曲唑酮的具体选择。</li>
+      <li><strong>与心血管内科：</strong>心率增加、血管扩张、儿茶酚胺升高；冠心病/脑血管病者风险更高。</li>
+      <li><strong>与交通医学/法律：</strong>操作能力受损与危险驾驶；教材引用文献指出"长期使用 + 剂量递增 + 饮酒"的年轻男性风险最高。</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===== 08 镇静催眠、抗焦虑药 ===== -->
+<section id="u4">
+  <div class="sec-head"><div class="badge">08</div><h2>镇静催眠、抗焦虑药<span class="en">第四节 · Sedative-hypnotics &amp; anxiolytics（p.186–187）</span></h2></div>
+  <p class="sec-lead">这是"药"与"毒品"身份重叠最严重的一节：BZD 既是临床最常用的抗焦虑/催眠药，也是本章要处理的成瘾物质。核心是"安全窗 + 撤药方案"。</p>
+
+  <div class="card red" id="u4-1">
+    <h3 class="col-title"><span class="idx">第一栏</span>疾病画像</h3>
+    <p><strong>教材的分类骨架（按上市时间及药理作用）：</strong></p>
+    <div class="grid3">
+      <div class="mini">
+        <h4>第一代</h4>
+        <p>巴比妥类药物及其他经典镇静催眠药（<strong>水合氯醛、副醛</strong>）。教材明确：目前已极少用于镇静催眠。</p>
+      </div>
+      <div class="mini">
+        <h4>第二代（本节重点）</h4>
+        <p>苯二氮䓬受体激动剂（BZRA）：<br>① 非选择性 nBZRA：地西泮、阿普唑仑、奥沙西泮等；<br>② 选择性 sBZRA：唑吡坦、扎来普隆、佐匹克隆、右佐匹克隆。</p>
+      </div>
+      <div class="mini">
+        <h4>其他</h4>
+        <p>具有镇静催眠效应的其他类药物，如<strong>抗组胺药</strong>。</p>
+      </div>
+    </div>
+    <p><strong>一句话画像：</strong>这类药靠"放大 GABA 的刹车"让人镇静、入睡、抗焦虑；刹车踩得越久，身体越依赖这只脚——突然松开就会出现反跳。<span class="note">（"刹车"为类比理解，机制见第二栏）</span></p>
+    <div class="stat">
+      <span>1960 年首个 BZD 氯氮䓬上市</span><span>1977 年 BZD 成全球处方量最多</span><span>短期 2～4 周相对安全</span><span>撤药持续 4～8 周</span>
+    </div>
+    <p class="note">教材未给出各类镇静催眠药滥用或依赖的患病率数据。</p>
+  </div>
+
+  <div class="card blue" id="u4-2">
+    <h3 class="col-title"><span class="idx">第二栏</span>病因探秘 → 药理与药代</h3>
+    <p><strong>（一）BZD 的受体机制（教材原文链条）</strong></p>
+    <div class="timeline">
+      <div class="tl-item"><h4>① 身份</h4><p>BZD 是 BZD-GABA<sub>A</sub> 受体复合物的<strong>非选择性完全激动剂</strong>；它<strong>不直接激活</strong> GABA<sub>A</sub> 受体，而是增强 GABA 与受体的效应。</p></div>
+      <div class="tl-item"><h4>② 构型改变</h4><p>与受体结合后引起 GABA<sub>A</sub> 受体构型改变，显著增加 GABA <strong>氯离子通道的开放强度</strong>。</p></div>
+      <div class="tl-item"><h4>③ 超极化</h4><p>大量氯离子流入神经元，细胞膜超极化，使兴奋时的去极化更加困难。</p></div>
+      <div class="tl-item"><h4>④ 结果</h4><p>受 GABA 支配的中枢性神经元放电率降低，神经活动被抑制；产生镇静、催眠、抗焦虑、抗惊厥（抗癫痫）及肌肉松弛作用。</p></div>
+    </div>
+    <div class="callout warn"><span class="ct">⚠️ 教材特别提示</span>一些<strong>短效 BZD 在高剂量</strong>时可引起<strong>顺行性遗忘和分离（dissociation）状态</strong>。</div>
+    <p><strong>（二）药代动力学：为什么"起效快慢"差别大</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>环节</th><th>教材要点</th></tr></thead>
+        <tbody>
+          <tr><td>口服吸收</td><td>绝大多数 BZD（除氯氮䓬外）在肠道快速、完全吸收；生物利用度 <strong>80%～100%</strong>；达峰时间从数十分钟至数小时不等</td></tr>
+          <tr><td>氯氮䓬</td><td>在胃内被代谢为活性代谢产物后吸收</td></tr>
+          <tr><td>脂溶性</td><td>脂溶性较高者肠道吸收更快、更易通过血脑屏障、临床起效更迅速</td></tr>
+          <tr><td>肌内注射</td><td>吸收比口服慢；只有<strong>劳拉西泮和咪达唑仑</strong>肌注后能很好地被吸收</td></tr>
+          <tr><td>静脉注射</td><td>高效价 BZD 静注可立即起效，如<strong>咪达唑仑</strong></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p><strong>（三）巴比妥类：为什么会被淘汰</strong></p>
+    <ul>
+      <li>按半衰期分超短效、短效、中效、长效；短效/中效主要有<strong>司可巴比妥、戊巴比妥</strong>，临床主要用于失眠。</li>
+      <li>剂量—效应关系陡：小剂量抑制大脑皮质产生镇静催眠；较大剂量感觉迟钝、活动减少、困倦嗜睡；<strong>中毒剂量可致昏迷乃至死亡</strong>。</li>
+      <li>能缩短快速眼动睡眠，故服药后做梦减少；长期用药一旦减药或突然停药，引起 <strong>REM 睡眠反跳</strong>，多梦、噩梦频繁，严重干扰睡眠，患者只好再次服药而产生依赖。</li>
+      <li>BZD 问世后巴比妥类处方锐减，"已逐渐退出历史舞台"。</li>
+    </ul>
+  </div>
+
+  <div class="card red" id="u4-3">
+    <h3 class="col-title"><span class="idx">第三栏</span>临床表现拼图</h3>
+    <p><strong>（一）危害：短期与长期是两套问题</strong></p>
+    <div class="grid2">
+      <div class="mini">
+        <h4>短期使用</h4>
+        <p>耐受性好、安全有效；常见不良反应为<strong>困倦、镇静、肌力降低和共济失调</strong>。</p>
+      </div>
+      <div class="mini">
+        <h4>长期使用</h4>
+        <p>存在心理和生理的不良反应、<strong>耐受性增加、有效性降低</strong>，以及<strong>依赖和撤药（戒断）症状</strong>。</p>
+      </div>
+    </div>
+    <p><strong>（二）过量（中毒）的四种常见原因（教材原文）</strong></p>
+    <ol>
+      <li>一次大剂量使用 BZD（用于自杀）。</li>
+      <li>长期较大剂量服用 BZD 在体内蓄积过量。</li>
+      <li>严重肝、肾功能不全等导致药物在体内蓄积过量。</li>
+      <li>与酒精或阿片类药物等混合使用。</li>
+    </ol>
+    <p><strong>（三）过量的表现</strong></p>
+    <ul>
+      <li>过度镇静、精神运动性抑制：<strong>口齿不清、定向力障碍、姿势失衡、步态不稳</strong>。</li>
+      <li><strong>单纯 BZD 过量引起的呼吸抑制极少出现</strong>。</li>
+      <li>罕见情况下可产生一种特殊的、潜在的、致命的<strong>房室传导阻滞</strong>。</li>
+      <li>多药合用，尤其与酒精、阿片类、肌肉松弛药等合用，可增加药物过量和<strong>猝死</strong>风险。</li>
+    </ul>
+    <p><strong>（四）选择性 BZRA（"Z"类）</strong></p>
+    <div class="quote"><span class="lab">教材原文</span>它们选择性地与 GABA<sub>A</sub> 的 α1 亚基结合产生镇静作用，与苯二氮䓬类药物相比，其起效速度快、副作用小。虽然如此，其长期或过量使用仍存在一定的成瘾风险。</div>
+    <p>在存在非医疗性使用、滥用或依赖的情况下，使用较长时间后突然停药会出现戒断症状，应予以戒断治疗。教材明确：目前<strong>尚无治疗"Z"类药物滥用和依赖的权威指南推荐</strong>，临床上可参照 BZDs 依赖的治疗措施。</p>
+  </div>
+
+  <div class="card orange" id="u4-4">
+    <h3 class="col-title"><span class="idx">第四栏</span>教材典型案例</h3>
+    <div class="callout book">
+      <span class="ct">📖 教材未提供具体临床案例</span>
+      本节为药理、危害与治疗原则的叙述，教材未给出患者案例、病史或检查数据。教材提到的情境仅为"一次大剂量用于自杀""长期较大剂量蓄积""肝肾功能不全蓄积""与酒精或阿片类混合使用"四类过量原因，已写入第三栏。
+    </div>
+    <p><strong>可迁移的评估思路（据教材"治疗"部分整理）：</strong></p>
+    <ol>
+      <li>先问<strong>用了多久</strong>：短期（2～4 周）内相对安全，超出则安全性"仍有待确认"。</li>
+      <li>再问<strong>怎么用</strong>：是否连续每晚用药、是否多种镇静催眠药合并使用。</li>
+      <li>判断<strong>是否依赖</strong>：有无耐受性增加、有效性降低、撤药症状。</li>
+      <li>制定<strong>撤药计划</strong>：先向患者解释计划与注意事项，再按剂量递减法执行；多种药合并者先转换为一种（通常地西泮）。</li>
+    </ol>
+    <p class="note">以上为按教材治疗原则整理的学习思路，不是教材原文病例，不含虚构剂量与化验值。</p>
+  </div>
+
+  <div class="card orange" id="u4-5">
+    <h3 class="col-title"><span class="idx">第五栏</span>鉴别诊断对对碰</h3>
+    <p><strong>表 1　三代镇静催眠药的"身份对比"</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>维度</th><th>巴比妥类</th><th>非选择性 BZD</th><th>选择性 BZRA（"Z"类）</th></tr></thead>
+        <tbody>
+          <tr><td>代表</td><td>司可巴比妥、戊巴比妥；水合氯醛、副醛</td><td>地西泮、阿普唑仑、奥沙西泮、艾司唑仑、劳拉西泮、咪达唑仑、氯硝西泮</td><td>唑吡坦、扎来普隆、佐匹克隆、右佐匹克隆</td></tr>
+          <tr><td>受体</td><td>教材未展开</td><td>BZD-GABA<sub>A</sub> 复合物非选择性完全激动剂</td><td>选择性 GABA<sub>A</sub> α1 亚基</td></tr>
+          <tr><td>突出风险</td><td>中毒剂量可致昏迷乃至死亡；REM 反跳致依赖</td><td>困倦、共济失调；长期依赖与撤药症状；与酒精/阿片合用猝死风险</td><td>起效快、副作用小，但长期或过量仍有成瘾风险</td></tr>
+          <tr><td>现状</td><td>已极少用于镇静催眠，逐渐退出历史舞台</td><td>应用范围远超巴比妥类</td><td>相对较新的催眠药</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout key"><span class="ct">📌 一句话鉴别总结</span>巴比妥"窄窗、易致死"；BZD"宽窗、易依赖"；"Z"类"起效快、仍成瘾"——三者都不是"绝对安全"的安眠药。</div>
+    <p><strong>表 2　BZD 过量 vs 酒精中毒 vs 阿片类中毒</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>维度</th><th>BZD 过量</th><th>酒精急性中毒</th><th>阿片类中毒</th></tr></thead>
+        <tbody>
+          <tr><td>意识/精神运动</td><td>过度镇静、口齿不清、定向力障碍、姿势失衡、步态不稳</td><td>兴奋期→麻痹期，言语零乱、步态不稳、困倦嗜睡</td><td>意识不清至深昏迷</td></tr>
+          <tr><td>呼吸</td><td>单纯过量<strong>极少</strong>呼吸抑制</td><td>重症可抑制</td><td>呼吸极慢，突出</td></tr>
+          <tr><td>瞳孔</td><td>教材未列特征性改变</td><td>教材未列特征性改变</td><td><strong>针尖样</strong></td></tr>
+          <tr><td>拮抗</td><td>必要时<strong>氟马西尼</strong>、纳洛酮</td><td>重症可用纳洛酮</td><td><strong>纳洛酮</strong>为首选</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p><strong>表 3　依赖 vs 撤药症状（同一药物的两个阶段）</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>维度</th><th>依赖</th><th>撤药（戒断）症状</th></tr></thead>
+        <tbody>
+          <tr><td>出现条件</td><td>长期使用后形成心理与生理依赖、耐受性增加、有效性降低</td><td>停药或减量后出现</td></tr>
+          <tr><td>教材强调</td><td>BZD 有成瘾性，治疗过程中要定期评估、及早识别</td><td><strong>即使是治疗剂量</strong>，较长时间使用后突然停药也会出现</td></tr>
+          <tr><td>处理方向</td><td>识别高危者、规范疗程、按时撤药</td><td>剂量递减，必要时临时加小剂量后减慢速度</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="card green" id="u4-6">
+    <h3 class="col-title"><span class="idx">第六栏</span>治疗方案工具箱</h3>
+    <p><strong>（一）BZD 的临床使用原则（教材原文要点）</strong></p>
+    <div class="quote"><span class="lab">教材原文</span>BZDs 使用应严格掌握适应证，根据患者的疾病特点、躯体状况等来选择合适的药物，掌握短期、低剂量、间断给药的治疗原则。</div>
+    <div class="grid3">
+      <div class="mini"><h4>疗程</h4><p>短期（<strong>2～4 周</strong>）使用相对安全；超出这一时间范围，安全性仍有待确认。</p></div>
+      <div class="mini"><h4>剂量</h4><p>从<strong>最低有效剂量</strong>开始治疗，规范治疗疗程，定期评估，按时撤药。</p></div>
+      <div class="mini"><h4>间断给药</h4><p>指<strong>每周服药 3～5 天</strong>，而不是连续每晚用药；需长期治疗者宜<strong>按需服药</strong>。</p></div>
+    </div>
+    <p><strong>（二）撤药方案（教材原文，逐字对应）</strong></p>
+    <div class="timeline">
+      <div class="tl-item"><h4>第 0 步 · 沟通</h4><p>停止治疗前向患者解释治疗计划，告知停药过程中可能出现的问题及注意事项。</p></div>
+      <div class="tl-item"><h4>第 1 步 · 转换</h4><p>多种镇静催眠药合并使用者，建议转换为 <strong>1 种</strong>镇静催眠药进行替代递减，通常推荐<strong>地西泮</strong>。</p></div>
+      <div class="tl-item"><h4>第 2 步 · 起始</h4><p>起始剂量以<strong>第一个 24 小时内患者能够耐受戒断症状的最低日总剂量</strong>为准。</p></div>
+      <div class="tl-item"><h4>第 3 步 · 递减</h4><p>大约<strong>每周减少 50% 的起始剂量</strong>，继以<strong>每 2 周减少 10%～25%</strong>，直到停用。</p></div>
+      <div class="tl-item"><h4>第 4 步 · 时程与调整</h4><p>持续时间通常 <strong>4～8 周</strong>；减量中出现戒断症状，可<strong>临时增加小剂量</strong>药物，待症状稳定后再减慢减量速度。</p></div>
+    </div>
+    <div class="callout warn"><span class="ct">⚠️ 安全提醒</span>存在依赖者建议<strong>固定剂量每周减量</strong>；不要突然停药。教材明确"即使是治疗剂量，较长时间使用后突然停药也会出现撤药症状"。</div>
+    <p><strong>（三）BZD 过量（中毒）处理</strong></p>
+    <ol>
+      <li><strong>常规处理：</strong>保持呼吸道通畅、纠正缺氧，维持血压，对症支持治疗。</li>
+      <li><strong>拮抗剂：</strong>必要时使用<strong>氟马西尼、纳洛酮</strong>。</li>
+    </ol>
+    <p><strong>（四）"Z"类药物的处理</strong></p>
+    <ul>
+      <li>无权威指南推荐，临床<strong>参照 BZDs 依赖的治疗措施</strong>。</li>
+      <li>教材提到一种提高依从性的做法：先用长效 BZD（<strong>地西泮、氯硝西泮</strong>）替代"Z"类药物，再逐步减量 BZD。</li>
+    </ul>
+    <p class="note">教材未给出 BZD 各具体药物的 mg 剂量，也未给出"Z"类的具体撤药剂量——均标"教材未涉及"，不要用课外资料补齐。</p>
+  </div>
+
+  <div class="card purple" id="u4-7">
+    <h3 class="col-title"><span class="idx">第七栏</span>记忆工具箱</h3>
+    <div class="callout tip">
+      <span class="ct">🔧 方法一：口诀歌谣法（四个作用）</span>
+      口诀：<strong>"抗、静、抽、松"</strong>——抗焦虑、镇静催眠、抗惊厥（抗癫痫）、肌肉松弛。<br>
+      <em>为什么这样记：</em>四个字对应四个临床应用，先记作用再推导用途；考试常问"下列哪项不是 BZD 的作用"，有这四个字就能排除。
+    </div>
+    <div class="callout tip">
+      <span class="ct">🔧 方法二：数字编码法（撤药"2-4-50-10~25-4~8"）</span>
+      记五组数字：安全窗 <strong>2～4 周</strong>；起始量取"24 小时内可耐受的最低日总量"；先每周减 <strong>50%</strong>；再每 2 周减 <strong>10%～25%</strong>；总时程 <strong>4～8 周</strong>。<br>
+      <em>为什么这样记：</em>撤药方案是本节最可能出计算/顺序题的地方，用一串数字当"路线图"，比背整段话更稳。
+    </div>
+    <div class="callout tip">
+      <span class="ct">🔧 方法三：对比记忆法（"宽窗 vs 窄窗"）</span>
+      巴比妥：治疗窗窄、中毒可昏迷死亡、REM 反跳；BZD：治疗窗宽、单纯过量呼吸抑制极少、但依赖与撤药突出。<br>
+      <em>为什么这样记：</em>把"致死风险"和"依赖风险"当作两条相反的轴，一边一个，最不易把"BZD 过量很危险"答成"BZD 过量几乎不抑制呼吸"。
+    </div>
+    <div class="callout tip">
+      <span class="ct">🔧 方法四：类比理解（标注：类比理解，非医学事实）</span>
+      把 GABA 想成<strong>刹车踏板</strong>，BZD 不是自己踩刹车，而是<strong>把刹车助力调大</strong>——所以教材说它"不直接激活受体，而是增强 GABA 的效应"。长期靠助力，脚本身变懒，突然撤掉助力就"刹不住"（反跳）。<br>
+      <em>为什么这样记：</em>这一句同时解释了机制（增强而非直接激活）与戒断（适应性反跳），是本节最划算的一次类比。
+    </div>
+  </div>
+
+  <div class="card cyan" id="u4-8">
+    <h3 class="col-title"><span class="idx">第八栏</span>知识联动</h3>
+    <ul>
+      <li><strong>与焦虑障碍章：</strong>BZD 是抗焦虑药，但教材要求"短期、低剂量、间断"，不能当作长期抗焦虑方案。</li>
+      <li><strong>与睡眠障碍章：</strong>"Z"类起效快、副作用小，但长期或过量仍有成瘾风险，突然停药可戒断。</li>
+      <li><strong>与酒精单元：</strong>酒精戒断的治疗首选 BZD——同一类药物，在这里是"解药"，在第四节是"成瘾物"，取决于使用场景与疗程。</li>
+      <li><strong>与老年医学：</strong>共济失调、跌倒、认知影响；教材提到短效 BZD 高剂量可致顺行性遗忘与分离状态。</li>
+      <li><strong>与急诊/毒理：</strong>多药合用（酒精、阿片、肌松药）显著增加过量与猝死风险；氟马西尼是 BZD 拮抗剂。</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===== 09 兴奋剂、致幻剂、吸入剂 ===== -->
+<section id="u5">
+  <div class="sec-head"><div class="badge">09</div><h2>中枢兴奋剂、致幻剂、吸入剂<span class="en">第五节 · Stimulants, hallucinogens &amp; inhalants（p.188–189）</span></h2></div>
+  <p class="sec-lead">教材把三类"作用方向完全不同"的物质放在同一节：ATS 踩油门，致幻剂改知觉，吸入剂直接换掉肺里的氧。三者的共同点是——都可能要命。</p>
+
+  <div class="card red" id="u5-1">
+    <h3 class="col-title"><span class="idx">第一栏</span>疾病画像</h3>
+    <div class="quote"><span class="lab">教材原文</span>中枢神经系统兴奋剂，或称精神兴奋剂（psychostimulants），是指主要通过增加单胺类神经递质活性而发挥主要效用的药物，主要包括可卡因和苯丙胺类兴奋剂。</div>
+    <div class="grid3">
+      <div class="mini">
+        <h4>苯丙胺类兴奋剂（ATS）</h4>
+        <p>苯丙胺（安非他明）、甲基苯丙胺（冰毒）、亚甲二氧甲基苯丙胺（摇头丸，MDMA）、麻黄碱、芬氟拉明、西布曲明、哌甲酯、匹莫林、伪麻黄碱等。</p>
+      </div>
+      <div class="mini">
+        <h4>致幻剂</h4>
+        <p>使人产生幻觉体验，并可能伴认知和情绪明显变化。分类：抗胆碱类（东莨菪碱）、单胺类（儿茶酚胺类与吲哚类）、谷氨酰胺能 NMDA 受体拮抗剂（右美沙芬）、κ-阿片类受体激动剂（salvinorin A）。代表为 <strong>LSD</strong> 与 <strong>MDMA</strong>。</p>
+      </div>
+      <div class="mini">
+        <h4>吸入剂</h4>
+        <p>可吸入、具精神活性作用的挥发性物质，<strong>毒性强且具有致命性</strong>。特指只能用吸入方式使用的物质：三氯甲烷、丁烷、甲苯、氟碳化合物、氧化亚氮、乙醚、氟烷等。</p>
+      </div>
+    </div>
+    <p><strong>一句话画像：</strong>ATS 是"透支精力"的物质——先给你几小时腾云驾雾，再把你扔进沮丧期；致幻剂是"改写知觉"的物质；吸入剂则是"用气体把氧气挤走"的物质。<span class="note">（此句为教材效应的比喻式总结，标注为类比理解）</span></p>
+    <p><strong>我国语境：</strong>教材明确可卡因滥用远低于西方国家，但合成毒品日益成为主导，<strong>苯丙胺类物质已成为我国主要新增滥用物质</strong>；甲基苯丙胺是世界上最主要的非法制造合成毒品。</p>
+  </div>
+
+  <div class="card blue" id="u5-2">
+    <h3 class="col-title"><span class="idx">第二栏</span>病因探秘 → 药理机制</h3>
+    <p><strong>（一）ATS 的三重作用（教材原文）</strong></p>
+    <div class="grid3">
+      <div class="mini"><h4>① 促进释放</h4><p>作用于儿茶酚胺神经细胞<strong>突触前膜</strong>，促进突触前膜内单胺类递质（去甲肾上腺素、多巴胺、5-羟色胺）释放。</p></div>
+      <div class="mini"><h4>② 阻止再摄取</h4><p>阻止递质再摄取，使递质在突触间隙停留更久。</p></div>
+      <div class="mini"><h4>③ 抑制 MAO</h4><p>抑制单胺氧化酶活性，减少递质降解。</p></div>
+    </div>
+    <p class="note">教材定性：毒性作用在很大程度上可认为是<strong>药理作用的加剧</strong>。</p>
+    <p><strong>（二）剂量—效应阶梯（教材原文分层）</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>剂量</th><th>效应</th></tr></thead>
+        <tbody>
+          <tr><td>低剂量</td><td>警觉性增加、保持清醒、减轻疲劳感、抑制食欲、提升情绪、增加语言和言语活动、增加掌控感</td></tr>
+          <tr><td>中等剂量</td><td>刺激呼吸系统；轻微震颤、躁动不安、运动增加、失眠及易激惹</td></tr>
+          <tr><td>剂量继续增加</td><td>焦虑症状恶化或再次产生；可从躁动不安、非特异性焦虑发展为<strong>强迫行为、惊恐发作、偏执甚至偏执性精神障碍</strong></td></tr>
+          <tr><td>长期使用</td><td>刻板性行为或类偏执型精神分裂症表现：妄想（被害、关系多见）、幻视或幻听（<strong>幻听多见</strong>）、敌对性与冲动性行为、躁狂-抑郁状态、人格和现实解体、认知功能损害、焦虑状态；部分缺乏自知力者可出现暴力、伤害和杀人犯罪倾向</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p><strong>（三）耐受与依赖特点</strong></p>
+    <ul>
+      <li>ATS 毒性剂量差异很大，<strong>即使低剂量也可能发生严重中毒反应</strong>。</li>
+      <li>对苯丙胺耐受的群体可以耐受 <strong>400～500mg</strong> 的剂量，长期使用者可以耐受更大剂量。</li>
+      <li>一般认为，ATS <strong>较难产生躯体依赖而更容易产生精神依赖</strong>。</li>
+    </ul>
+    <p><strong>（四）致幻剂与吸入剂的机制要点</strong></p>
+    <div class="grid2">
+      <div class="mini">
+        <h4>致幻剂</h4>
+        <p>教材未展开受体层面的机制，只给出分类与代表药，并强调其效应"难以预测，常常取决于使用者自身的心理预期以及所处的环境"；目前我国致幻剂滥用所占比例较小。</p>
+      </div>
+      <div class="mini">
+        <h4>吸入剂（以氧化亚氮为例）</h4>
+        <p>急性致死原因是<strong>急性缺氧</strong>：肺部氧气被氧化亚氮等气体置换，不及时供氧可致严重缺氧和死亡。长期使用致神经系统并发症，与氧化亚氮引起<strong>维生素 B12 缺乏或失活</strong>有关。</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="card red" id="u5-3">
+    <h3 class="col-title"><span class="idx">第三栏</span>临床表现拼图</h3>
+    <p><strong>（一）ATS 的体验曲线：先上后下</strong></p>
+    <div class="timeline">
+      <div class="tl-item"><h4>用药后 · 正性体验</h4><p>头脑活跃、精力充沛、能力感增强，可体验到难以言表的快感，即"腾云驾雾感"或"全身电流传导般的快感"。</p></div>
+      <div class="tl-item"><h4>数小时后 · 负性体验</h4><p>全身乏力、精神压抑、倦怠、沮丧，进入所谓的<strong>苯丙胺沮丧期</strong>。</p></div>
+      <div class="tl-item"><h4>恶性循环</h4><p>正性与负性体验交替，使吸毒者陷入反复使用的恶性循环，这是形成<strong>精神依赖</strong>的重要原因之一。</p></div>
+    </div>
+    <p><strong>（二）ATS 急性中毒的三度分层（教材原文）</strong></p>
+    <div class="grid3">
+      <div class="mini">
+        <h4>轻度</h4>
+        <p>瞳孔扩大、血压升高、脉搏加快、出汗、口渴、呼吸困难、震颤、反射亢进、头痛、兴奋躁动。</p>
+      </div>
+      <div class="mini">
+        <h4>中度</h4>
+        <p>精神错乱、谵妄、幻听、幻视、被害妄想等精神症状。</p>
+      </div>
+      <div class="mini">
+        <h4>重度</h4>
+        <p>心律失常、痉挛、循环衰竭、出血或凝血、高热、胸痛、昏迷甚至死亡。</p>
+      </div>
+    </div>
+    <div class="callout warn"><span class="ct">⚠️ 死亡机制</span>教材明确：<strong>恶性高热</strong>是骨骼肌代谢亢进所致，多数中毒者是由于恶性高热和高乳酸血症以及最终出现的<strong>循环衰竭或休克</strong>而死亡。</div>
+    <p><strong>（三）致幻剂与吸入剂的临床表现</strong></p>
+    <div class="grid2">
+      <div class="mini">
+        <h4>致幻剂</h4>
+        <ul>
+          <li>产生幻觉体验，可能伴认知和情绪明显变化。</li>
+          <li>效应难以预测，取决于心理预期与环境。</li>
+          <li>教材未给出致幻剂急性中毒的分度与具体处理。</li>
+        </ul>
+      </div>
+      <div class="mini">
+        <h4>吸入剂（氧化亚氮/"笑气"）</h4>
+        <ul>
+          <li>急性：缺氧，严重者死亡。</li>
+          <li>长期：周围神经病、脊髓病变。</li>
+          <li>临床：肢体麻木无力、共济失调。</li>
+          <li>机制：维生素 B12 缺乏或失活。</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="card orange" id="u5-4">
+    <h3 class="col-title"><span class="idx">第四栏</span>教材典型案例</h3>
+    <div class="callout book">
+      <span class="ct">📖 教材未提供具体临床案例</span>
+      本节为药理、中毒分层与治疗原则的叙述，教材未给出患者案例、病史或检查数据。教材提及的"人群观察"（笑气滥用逐渐递增，特别是在青少年群体）已写入病例画像相关段落，但不是个案。
+    </div>
+    <p><strong>可迁移的急诊识别思路（据教材要点整理，非教材原文病例）：</strong></p>
+    <ol>
+      <li><strong>瞳孔扩大 + 血压升高 + 脉搏加快 + 出汗 + 兴奋躁动</strong>：先想到 ATS 轻度中毒。</li>
+      <li>若出现<strong>精神错乱、谵妄、幻听幻视、被害妄想</strong>：进入中度中毒，按精神病性症状处理。</li>
+      <li>若出现<strong>高热、心律失常、循环衰竭、昏迷</strong>：重度中毒，按恶性高热与循环支持抢救。</li>
+      <li>年轻人出现<strong>肢体麻木无力、共济失调</strong>且有"笑气"使用史：想到氧化亚氮所致神经损害与 B12 缺乏。</li>
+    </ol>
+    <p class="note">以上为按教材要点整理的学习思路，不是教材原文病例，不含虚构剂量与化验值。</p>
+  </div>
+
+  <div class="card orange" id="u5-5">
+    <h3 class="col-title"><span class="idx">第五栏</span>鉴别诊断对对碰</h3>
+    <p><strong>表 1　ATS 中毒三度分层（考点高发）</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>程度</th><th>核心表现</th><th>处理重心</th></tr></thead>
+        <tbody>
+          <tr><td>轻度</td><td>瞳孔扩大、血压升高、脉搏加快、出汗、口渴、呼吸困难、震颤、反射亢进、头痛、兴奋躁动</td><td>支持、监测、补液</td></tr>
+          <tr><td>中度</td><td>精神错乱、谵妄、幻听、幻视、被害妄想</td><td>抗精神病药对症、镇静</td></tr>
+          <tr><td>重度</td><td>心律失常、痉挛、循环衰竭、出血或凝血、高热、胸痛、昏迷甚至死亡</td><td>降温、肌松、循环支持、透析（有条件）</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout key"><span class="ct">📌 一句话鉴别总结</span>看<strong>意识与循环</strong>：清醒但兴奋 → 轻度；谵妄幻觉 → 中度；高热、心律失常、循环衰竭 → 重度。</div>
+    <p><strong>表 2　ATS 所致精神病性症状 vs 原发性精神分裂症</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>鉴别点</th><th>ATS 所致</th><th>原发性精神分裂症</th></tr></thead>
+        <tbody>
+          <tr><td>用药关系</td><td>用药期间或用药后立即出现；长期使用也可出现类似偏执型表现</td><td>教材本节未展开</td></tr>
+          <tr><td>症状内容</td><td>幻觉、妄想、意识障碍、伤人行为；幻听多见，被害/关系妄想多见</td><td>教材本节未展开</td></tr>
+          <tr><td>病程与转归</td><td>绝大部分停止吸食后逐渐缓解消失，<strong>一般不超过 1 个月</strong>，并在 <strong>6 个月内痊愈</strong></td><td>教材本节未展开</td></tr>
+          <tr><td>用药策略</td><td>症状严重而持续者用非经典抗精神病药；症状消失后<strong>不主张继续使用</strong></td><td>需长期维持（见精神分裂症章）</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p><strong>表 3　三类物质的"一句话身份"</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>物质</th><th>作用方向</th><th>标志性风险</th><th>教材治疗覆盖</th></tr></thead>
+        <tbody>
+          <tr><td>ATS</td><td>兴奋中枢、增加单胺活性</td><td>恶性高热、循环衰竭、类偏执表现</td><td>有（急性中毒、精神病性症状、戒断、心理干预）</td></tr>
+          <tr><td>致幻剂</td><td>改变意识状态与感知觉</td><td>效应不可预测，取决于预期与环境</td><td><strong>教材未涉及</strong></td></tr>
+          <tr><td>吸入剂</td><td>挥发性物质，经吸入起效</td><td>急性缺氧致死；B12 缺乏致神经损害</td><td>有（补充高剂量 B12、神经生长因子、对症）</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="card green" id="u5-6">
+    <h3 class="col-title"><span class="idx">第六栏</span>治疗方案工具箱</h3>
+    <p><strong>（一）ATS：先明确一个前提</strong></p>
+    <div class="quote"><span class="lab">教材原文</span>ATS 滥用者在突然停吸后一般不会出现类似阿片类药物依赖者、酒精依赖者的严重躯体戒断症状，因此在药物上主要是针对急性中毒和精神障碍的对症治疗。</div>
+    <p><strong>1. 急性中毒治疗</strong></p>
+    <div class="grid2">
+      <div class="mini">
+        <h4>基础处理</h4>
+        <ul>
+          <li>足量补液，维持水电解质平衡，利尿促进排泄。</li>
+          <li>畅通呼吸道、给氧、气管插管止痉。</li>
+          <li>有条件者可行<strong>透析治疗</strong>。</li>
+        </ul>
+      </div>
+      <div class="mini">
+        <h4>降温与肌松</h4>
+        <ul>
+          <li>物理降温：<strong>冰敷、醇浴</strong>。</li>
+          <li>肌肉松弛是控制高体温的有效方法：可静脉缓注<strong>硫喷妥钠</strong>或肌松剂<strong>琥珀胆碱</strong>。</li>
+          <li>注意观察呼吸和肌肉松弛情况，必要时可重复。</li>
+        </ul>
+      </div>
+    </div>
+    <p><strong>2. 精神病性症状的治疗</strong></p>
+    <ul>
+      <li>症状严重而持续者：非经典抗精神病药，如<strong>奥氮平、喹硫平、利培酮</strong>。</li>
+      <li>教材指出大量临床报告证实<strong>氟哌啶醇</strong>效果良好：为 D2 受体阻断剂，能特异性阻断 ATS 的中枢神经系统作用，常用量 <strong>2～5mg 肌内注射</strong>，视病情调整。</li>
+      <li><strong>地西泮等 BZD</strong> 也能起到良好的镇静作用。</li>
+      <li>精神病性症状存续时间较短者，一般<strong>症状消失后不主张继续使用抗精神病药</strong>。</li>
+    </ul>
+    <p><strong>3. 戒断症状的治疗</strong></p>
+    <div class="callout warn"><span class="ct">⚠️ 教材原文</span>目前<strong>尚无可推荐的替代药物</strong>。保证充足睡眠和营养，大部分症状可在几天后逐渐消失，不需要特殊处理。</div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>症状</th><th>教材处理</th></tr></thead>
+        <tbody>
+          <tr><td>抑郁明显</td><td>选择性 5-羟色胺再摄取抑制剂等新型抗抑郁药，或三环类抗抑郁药</td></tr>
+          <tr><td>焦虑明显</td><td>苯二氮䓬类，如口服<strong>劳拉西泮</strong></td></tr>
+          <tr><td>焦虑持续存在</td><td><strong>丁螺环酮、坦度螺酮</strong>等非苯二氮䓬类</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p><strong>4. 社会心理干预：</strong>动机强化治疗、防复吸干预（教材注明"详见前章"）。</p>
+    <hr class="hr">
+    <p><strong>（二）致幻剂</strong></p>
+    <div class="callout book"><span class="ct">📖 教材未提供治疗方案</span>本节只给出致幻剂的分类、代表药与效应特点（难以预测、取决于心理预期与环境），<strong>未给出急性中毒或依赖的治疗方案</strong>，也未给出任何剂量。本指南不补写。</div>
+    <p><strong>（三）吸入剂（氧化亚氮/"笑气"）</strong></p>
+    <ul>
+      <li>治疗上需<strong>补充高剂量的维生素 B12</strong>，同时<strong>增补神经生长因子</strong>等。</li>
+      <li>其他症状<strong>对症处理</strong>。</li>
+      <li>急性缺氧者需及时供氧（教材以"如果不及时供氧则会导致严重的缺氧和死亡"强调其紧迫性）。</li>
+    </ul>
+    <p class="note">教材未给出维生素 B12 的具体剂量与疗程、硫喷妥钠与琥珀胆碱的具体剂量——均标"教材未涉及"。</p>
+  </div>
+
+  <div class="card purple" id="u5-7">
+    <h3 class="col-title"><span class="idx">第七栏</span>记忆工具箱</h3>
+    <div class="callout tip">
+      <span class="ct">🔧 方法一：三字口诀（ATS 三重机制）</span>
+      口诀：<strong>"放、堵、抑"</strong>——促<strong>放</strong>递质、<strong>堵</strong>再摄取、<strong>抑</strong>制 MAO。<br>
+      <em>为什么这样记：</em>三个动词对应教材三句话，先把机制压缩成三个动作，再展开成"去甲肾上腺素、多巴胺、5-羟色胺"三种递质，机制题不易漏项。
+    </div>
+    <div class="callout tip">
+      <span class="ct">🔧 方法二：数字编码法（中毒三度与三个时间）</span>
+      记 <strong>"轻—中—重 = 兴奋—谵妄—循环"</strong>；再记 <strong>"1 个月缓解、6 个月痊愈"</strong>；剂量耐受记 <strong>400～500mg</strong>。<br>
+      <em>为什么这样记：</em>ATS 是本章数字最"散"的一节，用"三度 + 两个时间 + 一个剂量"打包，答题按组回忆。
+    </div>
+    <div class="callout tip">
+      <span class="ct">🔧 方法三：故事串联法（苯丙胺的一天）</span>
+      早上服药 → <strong>头脑活跃、精力充沛、觉得无所不能</strong>（正性）→ 几小时后 <strong>全身乏力、压抑、沮丧</strong>（沮丧期）→ 为了摆脱沮丧再吸一次 → 进入恶性循环。<br>
+      <em>为什么这样记：</em>教材把"正性—负性—复吸"写成一条时间线，用一天的叙事串起来，既记住"苯丙胺沮丧期"，也理解精神依赖如何形成。
+    </div>
+    <div class="callout tip">
+      <span class="ct">🔧 方法四：对比记忆法（三种物质"三句话"）</span>
+      ATS＝<strong>踩油门</strong>（兴奋、耗竭）；致幻剂＝<strong>换镜头</strong>（改变感知，效果看心情与环境）；吸入剂＝<strong>换空气</strong>（把氧气挤走，急性缺氧）。<br>
+      <em>为什么这样记：</em>每类物质只留一个动作意象，先分清"是哪一类"，再往里填细节，避免把笑气当成兴奋剂、把 LSD 当成大麻。
+    </div>
+  </div>
+
+  <div class="card cyan" id="u5-8">
+    <h3 class="col-title"><span class="idx">第八栏</span>知识联动</h3>
+    <ul>
+      <li><strong>与精神分裂症章：</strong>ATS 长期使用可呈类偏执型精神分裂症表现，但停药后多在 1 个月内缓解、6 个月内痊愈——病程是重要鉴别点。</li>
+      <li><strong>与急诊/重症医学：</strong>恶性高热、横纹肌代谢亢进、循环衰竭是 ATS 重度中毒的死亡链条；降温与肌松是关键。</li>
+      <li><strong>与神经病学：</strong>氧化亚氮所致周围神经病、脊髓病变，需与其它原因的营养性神经病鉴别；B12 缺乏是抓手。</li>
+      <li><strong>与儿少精神医学：</strong>哌甲酯、匹莫林等被批准用于儿童多动症，但本章关注的是其<strong>非医疗、非法娱乐性使用</strong>的后果。</li>
+      <li><strong>与公共卫生：</strong>合成毒品主导市场、新精神活性物质不断出现，是本章开篇强调的形势判断。</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===== 10 酒精 ===== -->
+<section id="u6">
+  <div class="sec-head"><div class="badge">10</div><h2>酒精<span class="en">第六节 · Alcohol（p.189–192）</span></h2></div>
+  <p class="sec-lead">全章临床风险最高的一节：戒断可以在几小时内开始，也可以在第 3～4 天变成要命的震颤谵妄。把"6～12 小时 → 24～36 小时 → 48～72 小时 → 3～4 天"这条轴背下来，本节就立住了。</p>
+
+  <div class="card red" id="u6-1">
+    <h3 class="col-title"><span class="idx">第一栏</span>疾病画像</h3>
+    <div class="quote"><span class="lab">教材原文</span>酒精使用障碍已经成为全球范围严重的公共卫生问题和社会问题。</div>
+    <p><strong>一句话画像：</strong>酒精是"合法、易得、被文化包裹"的中枢抑制剂；它先让人话多冲动，再让人站不稳、睡过去，长期则把肝、神经和记忆一起拖下水。<span class="note">（此句为教材药理与后果的通俗复述，非新增医学事实）</span></p>
+    <div class="stat">
+      <span>全球每年约 300 万人死于饮酒</span><span>占全部死亡 5.3%</span><span>每 20 个死者有 1 人死于饮酒</span><span>饮酒相关死亡男性占 3/4</span><span>中国终身戒酒率 50.9%→42.1%</span><span>6% 男性、1% 女性死于酒精相关疾病</span>
+    </div>
+    <p class="note">以上数字均取自教材引用的 WHO《2018 全球酒精与健康报告》。教材同时指出：全球饮酒人数呈下降趋势，<strong>中国却呈相反趋势</strong>，人均酒精消耗量增加、戒酒率下降。</p>
+    <p><strong>教材列出的酒精相关障碍谱（本节骨架）：</strong></p>
+    <div class="grid3">
+      <div class="mini"><h4>急性与依赖</h4><p>急性酒精中毒；酒精依赖。</p></div>
+      <div class="mini"><h4>戒断与精神病性</h4><p>单纯性戒断反应、酒精性癫痫、戒断性谵妄；酒精性幻觉症、酒精所致妄想、酒精所致人格障碍。</p></div>
+      <div class="mini"><h4>神经系统</h4><p>韦尼克（Wernicke）脑病；科尔萨科夫（Korsakoff）综合征。</p></div>
+    </div>
+  </div>
+
+  <div class="card blue" id="u6-2">
+    <h3 class="col-title"><span class="idx">第二栏</span>病因探秘 → 吸收、代谢与药理</h3>
+    <p><strong>（一）吸收与分布</strong></p>
+    <ul>
+      <li>酒精被吸收后<strong>均匀地分布在所有体液和组织中</strong>，可以自由通过血脑屏障；到达大脑时几乎立即穿过。</li>
+      <li>孕妇饮酒时酒精可自由通过胎盘屏障，很容易进入发育中的胎儿大脑；<strong>胎儿血中酒精含量与母亲体内基本相同</strong>。</li>
+    </ul>
+    <p><strong>（二）代谢：95% 与 5%</strong></p>
+    <div class="grid2">
+      <div class="mini">
+        <h4>95% 的路径</h4>
+        <p>大约 95% 通过<strong>乙醇脱氢酶</strong>代谢，以二氧化碳和水的形式排出体外。</p>
+      </div>
+      <div class="mini">
+        <h4>5% 的路径</h4>
+        <p>其余 5% 不发生变化，主要通过<strong>肺部</strong>排出，极少量通过尿液排出。</p>
+      </div>
+    </div>
+    <p><strong>影响血中浓度的因素：</strong>胃排空速度增加（空腹饮酒或减肥手术史）可减少酒精在胃内代谢时间，导致血中酒精含量增加；饱腹饮酒可延长酒精在胃中的时间，增加与胃内乙醇脱氢酶的接触时间，<strong>降低血中酒精浓度峰值</strong>。</p>
+    <p><strong>（三）代谢的"副产品"与长期后果</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>中间产物/机制</th><th>临床后果</th></tr></thead>
+        <tbody>
+          <tr><td>氢离子、嘌呤类物质</td><td>大量饮酒后可见<strong>高乳酸血症、高尿酸症（痛风发作）</strong></td></tr>
+          <tr><td>脂肪氧化受阻，脂肪酸与中性脂肪在肝内堆积</td><td><strong>脂肪肝、高脂血症、动脉硬化</strong></td></tr>
+          <tr><td>大量酒精损害肝细胞</td><td><strong>酒精性肝炎、肝硬化</strong></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p><strong>（四）药理作用：一条"从上到下"的抑制线</strong></p>
+    <div class="quote"><span class="lab">教材原文</span>酒精的基本药理作用是中枢神经系统的抑制，对中枢不同部位有不同的作用。一般来说，首先抑制皮质，然后抑制皮质下的结构，最后抑制脑干。</div>
+    <ul>
+      <li><strong>急性醉酒：</strong>首先损害<strong>前额叶</strong>功能 → 判断受损 → 冲动性决策和攻击行为、语言不清不连贯。</li>
+      <li><strong>大量饮酒：</strong>作用于<strong>脑干</strong> → 觉醒度下降，甚至昏迷、死亡。</li>
+      <li><strong>躯体作用：</strong>急性主要为急性消化道出血等；慢性为中枢及周围神经系统、肌肉、心脏、肝脏、消化道等受损。</li>
+    </ul>
+  </div>
+
+  <div class="card red" id="u6-3">
+    <h3 class="col-title"><span class="idx">第三栏</span>临床表现拼图</h3>
+    <p><strong>（一）急性酒精中毒</strong></p>
+    <div class="grid2">
+      <div class="mini">
+        <h4>兴奋期</h4>
+        <p>一次大量饮酒后出现自制力差、兴奋话多、言行轻佻、不加考虑等<strong>类似轻躁狂</strong>的兴奋期症状。</p>
+      </div>
+      <div class="mini">
+        <h4>麻痹期</h4>
+        <p>随后出现言语零乱、步态不稳、困倦嗜睡等麻痹期症状。</p>
+      </div>
+    </div>
+    <p>可伴轻度意识障碍，但<strong>记忆力和定向力多保持完整</strong>，多数经数小时或睡眠后恢复正常。中毒程度与血中酒精浓度有关：<strong>上升越快、浓度越高，症状越重</strong>，但存在个体差异。</p>
+    <p><strong>（二）酒精依赖（教材原文）</strong></p>
+    <p>长期饮酒后出现的特定饮酒模式：特定饮酒方式、特征性觅酒行为、耐受性增加、戒断症状、<strong>晨饮</strong>、对酒精的渴求、多次戒断屡戒屡败等。</p>
+    <p><strong>（三）酒精戒断综合征：三型 + 一条时间轴</strong></p>
+    <div class="tabs" data-tabs>
+      <div class="tabbar">
+        <button class="on" data-tab="w1">单纯性戒断</button>
+        <button data-tab="w2">酒精性癫痫</button>
+        <button data-tab="w3">戒断性谵妄</button>
+      </div>
+      <div class="panel on" data-panel="w1">
+        <div class="timeline">
+          <div class="tl-item"><h4>断酒后 6～12 小时</h4><p>手抖、出汗、恶心，继之焦虑不安、无力等精神症状，患者有强烈饮酒渴望。</p></div>
+          <div class="tl-item"><h4>断酒后 24～36 小时</h4><p>发热、心悸、唾液分泌增加、恶心呕吐；体征可见眼球震颤、瞳孔散大、血压升高。</p></div>
+          <div class="tl-item"><h4>断酒后 48～72 小时</h4><p>戒断反应达到高峰，继之症状逐渐减轻。</p></div>
+          <div class="tl-item"><h4>4～5 天</h4><p>躯体反应基本消失。</p></div>
+        </div>
+      </div>
+      <div class="panel" data-panel="w2">
+        <p>大约 <strong>30%</strong> 的患者在戒酒期间出现癫痫样痉挛发作。</p>
+        <ul>
+          <li>表现：意识丧失、四肢抽搐、两眼上翻、角弓反张、口吐白沫。</li>
+          <li>持续时间不定，一般 <strong>5～15 分钟</strong>后意识恢复。</li>
+          <li>教材定性：<strong>这种情况危急，存在生命危险，需要住院观察</strong>。</li>
+        </ul>
+      </div>
+      <div class="panel" data-panel="w3">
+        <p>严重慢性酒精中毒患者突然断酒，大概在断酒后 <strong>3～4 天</strong>出现震颤谵妄。</p>
+        <ul>
+          <li>意识清晰度下降、定向力差；大量知觉异常，常看见形象歪曲而恐怖的毒蛇猛兽、"妖魔鬼怪"。</li>
+          <li>极不安宁、情绪激越、大叫大喊。</li>
+          <li><strong>最重要的特征：全身肌肉伴有粗大的震颤</strong>；上述症状<strong>昼轻夜重</strong>。</li>
+          <li>自主神经症状：发热、大汗淋漓、心搏加快、血压升高。</li>
+          <li>辅助检查：白细胞升高、脑电图异常、肝功能异常。</li>
+          <li>预后：处理不当常因高热、脱水、衰竭、感染、外伤而死亡，<strong>死亡率大概在 5%</strong>。</li>
+        </ul>
+      </div>
+    </div>
+    <p><strong>（四）酒精所致精神病性障碍</strong></p>
+    <div class="grid3">
+      <div class="mini"><h4>酒精性幻觉症</h4><p>慢性酒精依赖患者出现的持久精神病性障碍；也可能是突然停饮后（一般 <strong>48 小时后</strong>）出现的器质性幻觉。表现为<strong>意识清晰状态下</strong>生动的、持续性的<strong>视听幻觉</strong>。</p></div>
+      <div class="mini"><h4>酒精所致妄想</h4><p>慢性酒精中毒或酒精依赖患者出现的关系妄想或其他类型妄想，其中以<strong>嫉妒妄想</strong>多见，坚信配偶对自己不贞。</p></div>
+      <div class="mini"><h4>酒精所致人格障碍</h4><p>与饮酒前比较，习惯的行为模式发生显著改变，尤其是情感、需要和冲动行为的变化；除长期饮酒史外，还需<strong>排除其他脑病或功能障碍的病史</strong>。</p></div>
+    </div>
+    <p><strong>（五）酒精所致神经系统障碍</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>综合征</th><th>病因</th><th>三大/核心表现</th><th>治疗反应</th></tr></thead>
+        <tbody>
+          <tr><td>Wernicke 脑病</td><td><strong>维生素 B1 缺乏</strong></td><td>眼球震颤、眼球外展不能、明显的意识障碍，伴定向力障碍、记忆障碍、震颤谵妄</td><td>大量补充维生素 B1 可使<strong>眼震症状很快消失</strong>，但<strong>记忆障碍恢复较为困难</strong></td></tr>
+          <tr><td>Korsakoff 综合征</td><td>教材未单列病因，与长期饮酒相关</td><td><strong>记忆障碍、虚构、定向力障碍</strong>三大特征；近记忆几乎完全丧失；对往事的时间、地点、情节回忆错误（张冠李戴）；用随意想出的内容填补记忆空白，称为<strong>虚构</strong></td><td>教材未给具体治疗</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="card orange" id="u6-4">
+    <h3 class="col-title"><span class="idx">第四栏</span>教材典型案例</h3>
+    <div class="callout book">
+      <span class="ct">📖 教材未提供具体临床案例</span>
+      本节为流行病学、代谢、障碍谱与治疗原则的叙述，教材未给出患者案例、病史或检查数据。教材中的"场景式描述"（如震颤谵妄患者看见恐怖形象、Korsakoff 患者张冠李戴）属于症状学举例，已写入第三栏，并非个案报告。
+    </div>
+    <p><strong>可迁移的戒断风险评估思路（据教材要点整理，非教材原文病例）：</strong></p>
+    <ol>
+      <li><strong>算时间：</strong>末次饮酒到现在多久？6～12 小时 → 单纯戒断可能；24～36 小时 → 症状加重；48～72 小时 → 高峰；3～4 天 → 警惕震颤谵妄。</li>
+      <li><strong>看危险信号：</strong>四肢抽搐、意识丧失（酒精性癫痫，需住院观察）；意识清晰度下降 + 粗大震颤 + 昼轻夜重（震颤谵妄）。</li>
+      <li><strong>查躯体：</strong>发热、大汗、心搏加快、血压升高；白细胞、脑电图、肝功能异常提示谵妄可能。</li>
+      <li><strong>问饮酒史：</strong>是否有晨饮、渴求、多次戒断失败——提示酒精依赖，戒断风险更高。</li>
+    </ol>
+    <p class="note">以上为按教材要点整理的学习思路，不是教材原文病例，不含虚构剂量与化验值。</p>
+  </div>
+
+  <div class="card orange" id="u6-5">
+    <h3 class="col-title"><span class="idx">第五栏</span>鉴别诊断对对碰</h3>
+    <p><strong>表 1　三型酒精戒断的"时间—表现—风险"对照</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>类型</th><th>出现时间</th><th>核心表现</th><th>风险等级</th></tr></thead>
+        <tbody>
+          <tr><td>单纯性戒断反应</td><td>6～12 小时起；24～36 小时加重；48～72 小时高峰；4～5 天躯体反应基本消失</td><td>手抖、出汗、恶心；焦虑不安、无力；发热、心悸、唾液增加、眼球震颤、瞳孔散大、血压升高；强烈饮酒渴望</td><td>需处理；教材未列死亡风险</td></tr>
+          <tr><td>酒精性癫痫</td><td>戒酒期间，约 30% 患者</td><td>意识丧失、四肢抽搐、两眼上翻、角弓反张、口吐白沫；5～15 分钟意识恢复</td><td><strong>危急、有生命危险，需住院观察</strong></td></tr>
+          <tr><td>戒断性谵妄（震颤谵妄）</td><td>断酒后 3～4 天</td><td>意识清晰度下降、定向力差、恐怖性知觉异常、情绪激越；<strong>全身粗大震颤</strong>、昼轻夜重；发热、大汗、心搏加快、血压升高</td><td><strong>处理不当死亡率约 5%</strong></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout key"><span class="ct">📌 一句话鉴别总结</span>单纯戒断"手抖出汗想喝酒"；酒精性癫痫"抽一次、几分钟醒"；震颤谵妄"认不清人、看见鬼怪、全身粗颤、昼轻夜重"。</div>
+    <p><strong>表 2　Wernicke 脑病 vs Korsakoff 综合征</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>维度</th><th>Wernicke 脑病</th><th>Korsakoff 综合征</th></tr></thead>
+        <tbody>
+          <tr><td>核心三联</td><td>眼球震颤、眼球外展不能、明显意识障碍（伴定向力障碍、记忆障碍、震颤谵妄）</td><td>记忆障碍、虚构、定向力障碍</td></tr>
+          <tr><td>病因抓手</td><td><strong>维生素 B1 缺乏</strong></td><td>教材未单列，长期饮酒背景</td></tr>
+          <tr><td>治疗反应</td><td>大量补充 B1 后眼震很快消失，记忆障碍恢复困难</td><td>教材未给具体治疗</td></tr>
+          <tr><td>记忆点</td><td>"眼震 + 外展不能 + 意识障碍"</td><td>"记不住 + 编故事 + 分不清方向"</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p><strong>表 3　酒精性幻觉症 vs 震颤谵妄</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>维度</th><th>酒精性幻觉症</th><th>震颤谵妄</th></tr></thead>
+        <tbody>
+          <tr><td>意识</td><td><strong>意识清晰</strong></td><td>意识清晰度下降、定向力差</td></tr>
+          <tr><td>幻觉</td><td>生动的、持续性的<strong>视听幻觉</strong></td><td>大量恐怖性知觉异常（毒蛇猛兽、妖魔鬼怪）</td></tr>
+          <tr><td>震颤</td><td>教材未列粗大震颤</td><td><strong>全身肌肉粗大震颤</strong>，昼轻夜重</td></tr>
+          <tr><td>自主神经</td><td>教材未列</td><td>发热、大汗、心搏加快、血压升高</td></tr>
+          <tr><td>时间</td><td>慢性依赖者的持久障碍；或停饮后约 48 小时</td><td>断酒后 3～4 天</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p><strong>表 4　酒精所致妄想 vs 其他妄想性障碍</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>鉴别点</th><th>酒精所致妄想</th><th>需排除的方向</th></tr></thead>
+        <tbody>
+          <tr><td>妄想类型</td><td>关系妄想或其他类型，<strong>嫉妒妄想多见</strong></td><td>其他器质性或原发性妄想障碍</td></tr>
+          <tr><td>背景</td><td>慢性酒精中毒或酒精依赖</td><td>教材强调酒精所致人格障碍需排除其他脑病或功能障碍病史</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="card green" id="u6-6">
+    <h3 class="col-title"><span class="idx">第六栏</span>治疗方案工具箱</h3>
+    <p><strong>治疗的四项目标（教材原文）</strong></p>
+    <ol>
+      <li>逆转酒精的急性药理作用。</li>
+      <li>治疗和预防戒断症状和并发症。</li>
+      <li>保持戒酒、防止复发或减少主动饮酒天数。</li>
+      <li>治疗共病的精神障碍。</li>
+    </ol>
+    <p><strong>（一）急性酒精中毒治疗</strong></p>
+    <ul>
+      <li>救治原则基本同其他中枢神经抑制剂中毒：<strong>催吐、洗胃</strong>，维持生命体征，加强代谢等一般措施。</li>
+      <li>轻度：无须特殊治疗，卧床、休息、保暖、饮水、注意<strong>防止吸入性肺炎</strong>。</li>
+      <li>严重者可用中枢阿片受体拮抗剂<strong>纳洛酮</strong>。</li>
+      <li>重症昏迷、呼吸抑制、低血压休克：<strong>纳洛酮 0.4～0.8mg 静脉推注</strong>，必要时可 <strong>20 分钟</strong>重复一次。</li>
+      <li>也可用<strong>纳洛酮 1.2～2.0mg 加入液体中持续静滴</strong>，可重复使用，直至患者清醒。</li>
+    </ul>
+    <p><strong>（二）戒断症状的治疗</strong></p>
+    <div class="quote"><span class="lab">教材原文</span>急性酒精戒断或戒酒的主要治疗目标是通过降低谷氨酸活性或增加 GABA 活性来阻止失控的兴奋。传统上这是通过使用苯二氮䓬类药物来实现的。</div>
+    <div class="grid2">
+      <div class="mini">
+        <h4>药物与剂量</h4>
+        <ul>
+          <li>长效 BZD 可预防或抑制戒断症状，使其维持在一个足够低的水平，让患者可以正常活动或逐渐完全戒断。</li>
+          <li>临床选用<strong>地西泮 10mg/次，3～4 次/天</strong>，首次剂量可加大，口服或静脉给药。</li>
+        </ul>
+      </div>
+      <div class="mini">
+        <h4>疗程红线</h4>
+        <ul>
+          <li>由于酒精依赖者的成瘾素质，<strong>用药时间不宜超过 5～7 天</strong>，以免发生对 BZD 的依赖。</li>
+          <li>戒断后期如有焦虑、睡眠障碍，可试用<strong>抗抑郁药或助眠药物</strong>对症处理。</li>
+        </ul>
+      </div>
+    </div>
+    <p><strong>两种给药方案（教材原文）：</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>方案</th><th>做法</th><th>特点</th></tr></thead>
+        <tbody>
+          <tr><td>固定给药法（fixed-dose）</td><td>开始根据病史及症状决定治疗剂量与大致时间，制定相对固定的给药方案</td><td>事先定方案</td></tr>
+          <tr><td>对症给药法（symptom-triggered）</td><td>不事先制定方案，依据定期症状评定，症状严重时临时对症给药</td><td>按症状触发</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p><strong>（三）酒精性幻觉、妄想</strong></p>
+    <ul>
+      <li>持续时间不长，用抗精神病药治疗有效；一般推荐新型抗精神病药（<strong>喹硫平、奥氮平、利培酮</strong>等）。</li>
+      <li>应尽量与 BZD <strong>联合使用</strong>，以达最佳效果。</li>
+      <li>幻觉、妄想被控制后可考虑<strong>逐渐减药</strong>，<strong>无须像治疗精神分裂症那样长期维持用药</strong>。</li>
+    </ul>
+    <p><strong>（四）酒精戒断性癫痫</strong></p>
+    <div class="callout warn"><span class="ct">⚠️ 教材原文</span>首选<strong>苯二氮䓬类药物</strong>。对于可能发生酒精戒断性癫痫的患者，要<strong>尽早</strong>给予 BZD 治疗；用药前将治疗总体方案向患者解释清楚。</div>
+    <p>根据国外经验，患者戒断症状较重，或有出现酒精戒断性癫痫的风险，<strong>首次可给予 2mg 劳拉西泮或 10mg 地西泮口服</strong>。</p>
+    <p><strong>（五）预防复发治疗</strong></p>
+    <div class="tabs" data-tabs>
+      <div class="tabbar">
+        <button class="on" data-tab="r1">戒酒硫</button>
+        <button data-tab="r2">纳曲酮</button>
+        <button data-tab="r3">心理社会干预</button>
+      </div>
+      <div class="panel on" data-panel="r1">
+        <p>又称双硫醒、酒畏等；20 世纪 90 年代以前戒酒的主要药物。同类还有柠檬酸氰氨化钙、硝法唑；<strong>呋喃唑酮</strong>也有类似作用。</p>
+        <ul>
+          <li>预先 <strong>3～4 天</strong>服用足够剂量，饮酒后 <strong>15～20 分钟</strong>出现显著体征或症状。</li>
+          <li>表现：面部发热、潮红、血管扩张；头颈部强烈搏动、搏动性头痛；呼吸困难、恶心、呕吐、出汗、口渴、低血压、直立性晕厥、极度不适、软弱无力；严重者可精神错乱和休克。</li>
+          <li>敏感者仅 <strong>7ml</strong> 酒精即会引起症状；轻微者持续 30 分钟，严重者持续数小时。</li>
+          <li>原理：以不愉快感觉与身体反应让嗜酒者"望而却步"。</li>
+        </ul>
+      </div>
+      <div class="panel" data-panel="r2">
+        <p>动物实验表明内源性阿片类物质在酒精依赖的强化作用中起一定作用，阿片受体拮抗剂纳曲酮能减少实验动物饮酒量。</p>
+        <ul>
+          <li>Volpicelli 等的双盲研究：完成急性期脱毒后进入门诊康复随访；第 1 个月每天日间来院 1 次，第 2～3 个月每周 1 次；<strong>纳曲酮 50mg/d</strong>。</li>
+          <li>结果：研究组自评渴求较轻、总饮酒天数较少；<strong>复发率 23%，对照组 54%</strong>，差异有统计学意义。</li>
+          <li><strong>1994 年美国 FDA 批准</strong>用于治疗酒精依赖。</li>
+          <li>临床可减少饮酒量和复发率，<strong>特别是与心理治疗联合使用时</strong>；应用剂量 <strong>25～50mg/d</strong>。</li>
+        </ul>
+      </div>
+      <div class="panel" data-panel="r3">
+        <p>教材明确：酒精成瘾原因复杂，<strong>不能靠任何单一手段解决所有问题</strong>，心理社会干预是帮助患者保持戒断状态的必要手段。</p>
+        <ul>
+          <li>动机强化治疗</li>
+          <li>正念防复发治疗</li>
+          <li>认知行为疗法</li>
+          <li>其他常用心理治疗技术</li>
+        </ul>
+        <p>目的：帮助患者保持稳定情绪、降低复饮风险。</p>
+      </div>
+    </div>
+    <p class="note">教材未给出戒酒硫的具体剂量与疗程，也未给出"Z"类以外的助眠药具体名称——均标"教材未涉及"。</p>
+  </div>
+
+  <div class="card purple" id="u6-7">
+    <h3 class="col-title"><span class="idx">第七栏</span>记忆工具箱</h3>
+    <div class="callout tip">
+      <span class="ct">🔧 方法一：时间线记忆（戒断四节点）</span>
+      画一条横轴：<strong>6～12 小时（手抖出汗）→ 24～36 小时（发热心悸眼震）→ 48～72 小时（高峰）→ 3～4 天（震颤谵妄）→ 4～5 天（躯体反应基本消失）</strong>。<br>
+      <em>为什么这样记：</em>酒精戒断的所有考点都挂在这条轴上；先记节点，再把"癫痫可发生在戒酒期间、约 30%"单独标注，避免与谵妄混淆。
+    </div>
+    <div class="callout tip">
+      <span class="ct">🔧 方法二：对比记忆法（Wernicke vs Korsakoff）</span>
+      Wernicke＝<strong>"眼、外展、意识"</strong>（眼震、眼球外展不能、意识障碍）；Korsakoff＝<strong>"记、虚、向"</strong>（记忆障碍、虚构、定向力障碍）。<br>
+      <em>为什么这样记：</em>两个综合征同源于长期饮酒与 B1 缺乏，最容易混；用两串三字标签一一对应，答题时按"眼/记"第一个字就能分开。
+    </div>
+    <div class="callout tip">
+      <span class="ct">🔧 方法三：数字编码法（治疗"10-5~7-25~50"）</span>
+      <strong>地西泮 10mg/次、3～4 次/天</strong>；BZD 用药<strong>不超过 5～7 天</strong>；纳曲酮<strong>25～50mg/d</strong>（研究中 50mg/d）；戒酒硫饮酒后<strong>15～20 分钟</strong>起反应、敏感者<strong>7ml</strong> 即触发。<br>
+      <em>为什么这样记：</em>本节剂量与时间点密集，用一串数字作"药盒标签"，比整段背诵更可靠；同时提醒"BZD 只用于戒断、不能长期"。
+    </div>
+    <div class="callout tip">
+      <span class="ct">🔧 方法四：类比理解（标注：类比理解，非医学事实）</span>
+      把酒精比作<strong>先关前额叶的灯、再关脑干的电</strong>：灯一关，人先冲动话多（兴奋期）；电一断，人就站不稳、睡过去（麻痹期）；长期反复拉闸，线路（肝、神经、记忆）就烧坏了。<br>
+      <em>为什么这样记：</em>"先皮质、再皮质下、最后脑干"是教材原文的抑制顺序，用"关灯—断电"的画面记，比背解剖层次更直观。
+    </div>
+  </div>
+
+  <div class="card cyan" id="u6-8">
+    <h3 class="col-title"><span class="idx">第八栏</span>知识联动</h3>
+    <ul>
+      <li><strong>与总论：</strong>酒精是"躯体依赖 + 心理依赖"俱全的典型；戒断症状与药理作用<strong>相反</strong>（抑制药停用后出现兴奋、不眠、癫痫样发作）。</li>
+      <li><strong>与神经病学：</strong>Wernicke 脑病、Korsakoff 综合征、酒精性周围神经病、酒精性癫痫，均需与原发性神经系统疾病鉴别。</li>
+      <li><strong>与消化内科/肝病：</strong>酒精性肝炎、肝硬化、脂肪肝、急性消化道出血；治疗目标中"治疗和预防并发症"即指向这些。</li>
+      <li><strong>与急诊医学：</strong>急性中毒的催吐、洗胃、纳洛酮；戒断性谵妄的降温、补液、BZD；酒精性癫痫的尽早 BZD。</li>
+      <li><strong>与精神科共病：</strong>教材明确治疗目标包括"治疗共病的精神障碍"；酒精性幻觉、妄想需与精神分裂症鉴别，且不需长期维持抗精神病药。</li>
+      <li><strong>与营养学：</strong>维生素 B1 缺乏是 Wernicke 脑病的关键；治疗反应（眼震快消、记忆难复）提示早期识别的重要性。</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===== 11 尼古丁 ===== -->
+<section id="u7">
+  <div class="sec-head"><div class="badge">11</div><h2>尼古丁<span class="en">第七节 · Nicotine（p.192–194）</span></h2></div>
+  <p class="sec-lead">本章唯一"治疗写得比危害更细"的物质：5 种 NRT、3 种处方药、1 种疫苗思路，再加心理与中医。重点是把<strong>药名—机制—剂量—疗程—禁忌</strong>配成对。</p>
+
+  <div class="card red" id="u7-1">
+    <h3 class="col-title"><span class="idx">第一栏</span>疾病画像</h3>
+    <div class="quote"><span class="lab">教材原文</span>尼古丁是全球使用最广泛的三种精神活性物质之一，另外两种是咖啡因和酒精。</div>
+    <p><strong>一句话画像：</strong>尼古丁是"最快建立依赖、也最容易反复"的合法成瘾物：一支烟几秒钟就把药物送进脑，戒断时唾液增多、头痛、失眠、易激惹，让人再点一支。<span class="note">（此句为教材药理与戒断表现的通俗复述）</span></p>
+    <div class="stat">
+      <span>我国吸烟人数 &gt;3 亿</span><span>2018 年 15 岁以上吸烟率 26.6%</span><span>男性吸烟率 50.5%</span><span>全球每年 400 万人丧生</span><span>70% 来自发展中国家</span><span>25 年内将升至 1 000 万</span>
+    </div>
+    <p class="note">以上数字取自教材引用的 WHO 统计与《中国吸烟危害健康报告 2020》。教材另称：我国香烟产量是第二产烟大国美国的三倍。</p>
+    <p><strong>依赖的维持方式（教材原文）：</strong>尼古丁依赖者通过改变<strong>吸烟量、频度、吸进呼吸道的深度</strong>等来维持体内尼古丁的水平。</p>
+  </div>
+
+  <div class="card blue" id="u7-2">
+    <h3 class="col-title"><span class="idx">第二栏</span>病因探秘 → 药理机制</h3>
+    <p><strong>（一）受体：nAChRs</strong></p>
+    <div class="quote"><span class="lab">教材原文</span>尼古丁通过作用于脑内的尼古丁乙酰胆碱受体（nicotinic acetylcholine receptors，nAChRs）发挥生理及行为作用。</div>
+    <ul>
+      <li>nAChRs 位于细胞膜上，可作为阳离子（Na<sup>+</sup>、K<sup>+</sup>、Ca<sup>2+</sup>）的通道；尼古丁作用后<strong>阳离子内流</strong>，神经细胞兴奋性增加。</li>
+      <li>外周：受体分布在<strong>肌肉和自主神经末梢</strong>上。</li>
+      <li>中枢：同样作用于<strong>中脑边缘系统</strong>，产生强化效应。</li>
+    </ul>
+    <p><strong>（二）剂量—效应：先兴奋后抑制</strong></p>
+    <div class="grid2">
+      <div class="mini">
+        <h4>小剂量</h4>
+        <ul>
+          <li>兴奋肾上腺髓质，释放肾上腺素。</li>
+          <li>兴奋颈动脉体及主动脉化学感受器，反射性引起<strong>呼吸兴奋、血压升高</strong>，增加心血管负担。</li>
+        </ul>
+      </div>
+      <div class="mini">
+        <h4>大剂量</h4>
+        <ul>
+          <li>神经节细胞<strong>先兴奋，而后迅速转为抑制</strong>。</li>
+          <li>对中枢神经系统的作用同样是<strong>先兴奋后抑制</strong>。</li>
+        </ul>
+      </div>
+    </div>
+    <p><strong>（三）戒断症状（教材原文）</strong></p>
+    <p>依赖形成后突然戒断，会出现<strong>唾液分泌增加、头痛、失眠、易激惹</strong>等戒断症状，使吸烟者难以摆脱尼古丁的控制。</p>
+    <p class="note">教材未展开尼古丁戒断的时间进程（何时开始、持续多久），也未给出戒断症状的完整清单——本指南不补写。</p>
+  </div>
+
+  <div class="card red" id="u7-3">
+    <h3 class="col-title"><span class="idx">第三栏</span>临床表现拼图</h3>
+    <p><strong>（一）燃烟中的有害物质（教材给出的"成分账"）</strong></p>
+    <div class="grid3">
+      <div class="mini"><h4>总量</h4><p>香烟燃烟中所含化学物质多达 <strong>4 000 种</strong>。</p></div>
+      <div class="mini"><h4>气相</h4><p>含近 <strong>20 种</strong>有害物质；致癌物有二甲基亚硝胺、二乙基亚硝胺、联氨、乙烯氯化物；其他有害物质有氮氧化物（<strong>95% 为一氧化氮</strong>）、吡啶、一氧化碳。</p></div>
+      <div class="mini"><h4>粒相</h4><p>有害物质达 <strong>30 余种</strong>；促癌物有芘、1-甲基吲哚类、9-甲基咔唑类等。</p></div>
+    </div>
+    <p><strong>（二）一氧化碳的"抢座"机制</strong></p>
+    <div class="quote"><span class="lab">教材原文</span>CO 对血红蛋白（Hb）的亲和性很强。吸烟会出现大量 COHb 而使心血管系统受累，尤其使运送氧的能力减弱，容易导致缺血性心脏病、心绞痛和呼吸困难。</div>
+    <p><strong>（三）躯体疾病谱</strong>：吸烟还可能导致多种躯体疾病，主要包括<strong>呼吸道、消化道、心血管疾病、中枢神经系统疾病及各种癌症</strong>等。</p>
+    <p><strong>（四）成瘾与戒断的临床面貌</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>阶段</th><th>表现</th></tr></thead>
+        <tbody>
+          <tr><td>依赖维持</td><td>通过改变吸烟量、频度、吸入深度维持体内尼古丁水平</td></tr>
+          <tr><td>突然戒断</td><td>唾液分泌增加、头痛、失眠、易激惹</td></tr>
+          <tr><td>治疗中的戒断</td><td>NRT 可减轻注意力不集中、焦虑、易怒、情绪低落等戒断症状（教材在 NRT 段落列出）</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="card orange" id="u7-4">
+    <h3 class="col-title"><span class="idx">第四栏</span>教材典型案例</h3>
+    <div class="callout book">
+      <span class="ct">📖 教材未提供具体临床案例</span>
+      本节为流行病学、药理、危害与戒烟治疗的叙述，教材未给出患者案例、病史或检查数据。教材提到的"吸烟者临床试验"（普萘洛尔抑制尼古丁记忆再巩固）见于概述一节，属机制研究举例，不是临床个案。
+    </div>
+    <p><strong>可迁移的戒烟评估思路（据教材治疗部分整理）：</strong></p>
+    <ol>
+      <li><strong>评估依赖程度：</strong>教材在安非他酮段落提到"尼古丁严重依赖的吸烟者"，但<strong>未给出依赖程度的量表或切点</strong>。</li>
+      <li><strong>查禁忌：</strong>近期心肌梗死（2 周内）、严重心律失常、不稳定心绞痛者慎用 NRT；癫痫、厌食症、14 天内用过 MAOI 者禁用安非他酮；严重肾功能不全者慎用伐尼克兰。</li>
+      <li><strong>选方案：</strong>NRT（5 种剂型）／安非他酮／伐尼克兰／可乐定／疫苗；严重依赖者可 NRT 联合安非他酮。</li>
+      <li><strong>配心理干预：</strong>心理教育、行为技巧训练、认知行为干预。</li>
+    </ol>
+    <p class="note">以上为按教材治疗原则整理的学习思路，不是教材原文病例，不含虚构剂量与化验值。</p>
+  </div>
+
+  <div class="card orange" id="u7-5">
+    <h3 class="col-title"><span class="idx">第五栏</span>鉴别诊断对对碰</h3>
+    <p><strong>表 1　五种戒烟药物的"机制—剂量—疗程—禁忌"对照</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>方案</th><th>机制/剂型</th><th>剂量与疗程（教材）</th><th>关键禁忌/慎用</th></tr></thead>
+        <tbody>
+          <tr><td>NRT</td><td>向人体提供尼古丁，替代或部分替代烟草中的尼古丁；5 种剂型：贴剂、口胶剂、喷鼻剂、吸入剂、舌下含片</td><td>疗程 <strong>8～12 周</strong>；少数需更长（<strong>5% 可能长达一年</strong>）；5 种剂型疗效无差别</td><td>心肌梗死后近期（<strong>2 周内</strong>）、严重心律失常、不稳定心绞痛<strong>慎用</strong></td></tr>
+          <tr><td>安非他酮（缓释剂）</td><td>抗抑郁药；可能抑制多巴胺及去甲肾上腺素再摄取、阻断 nAChR；口服</td><td><strong>150mg/d</strong>；至少在戒烟前 <strong>1 周</strong>开始；疗程 <strong>7～12 周</strong></td><td><strong>禁用</strong>：癫痫、厌食症或不正常食欲旺盛、现服含安非他酮成分药物、近 <strong>14 天</strong>内用过 MAOI</td></tr>
+          <tr><td>伐尼克兰</td><td>α4β2 nAChR 高亲和力、选择性<strong>部分激动剂</strong>；激动 + 拮抗双重调节；0.5mg 与 1mg 两种剂型</td><td>戒烟日前 <strong>1～2 周</strong>开始；疗程 <strong>12 周</strong>，12 周后可考虑减量；FDA 推荐 <strong>1mg，每天 2 次</strong></td><td>严重肾功能不全（肌酐清除率 &lt;30mg/min）<strong>慎用</strong>；<strong>不推荐与 NRT 联用</strong></td></tr>
+          <tr><td>可乐定</td><td>α2 受体激动剂，对抗去甲肾上腺素兴奋，抑制/缓解戒断</td><td>教材未给戒烟的具体剂量与疗程</td><td>不良反应眩晕、口渴、思睡；有降血压作用，<strong>一般只用于症状较重者</strong></td></tr>
+          <tr><td>疫苗</td><td>尼古丁需偶联蛋白载体才能产生抗体；抗体结合后尼古丁无法穿过血脑屏障</td><td>教材未给剂量与疗程</td><td>疫苗<strong>不能减少渴求</strong>，只阻止药物进入大脑</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout key"><span class="ct">📌 一句话鉴别总结</span>"替代（NRT）—抗抑郁（安非他酮）—部分激动（伐尼克兰）—降压（可乐定）—免疫（疫苗）"，五条路各记住一个关键词，再挂剂量与禁忌。</div>
+    <p><strong>表 2　尼古丁戒断 vs 焦虑/抑郁状态</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>线索</th><th>尼古丁戒断</th><th>焦虑/抑郁障碍</th></tr></thead>
+        <tbody>
+          <tr><td>时间关系</td><td>紧接停烟出现（教材未给具体时程）</td><td>与吸烟无关，或独立病程</td></tr>
+          <tr><td>核心表现</td><td>唾液分泌增加、头痛、失眠、易激惹；NRT 段落另列注意力不集中、焦虑、易怒、情绪低落</td><td>教材本节未展开</td></tr>
+          <tr><td>处理</td><td>NRT 替代、安非他酮、伐尼克兰；心理干预</td><td>按相应疾病治疗</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p><strong>表 3　NRT vs 伐尼克兰（能否联用是考点）</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>维度</th><th>NRT</th><th>伐尼克兰</th></tr></thead>
+        <tbody>
+          <tr><td>是否含尼古丁</td><td><strong>含</strong>，属替代疗法</td><td><strong>非尼古丁</strong>戒烟药</td></tr>
+          <tr><td>受体作用</td><td>直接提供尼古丁，减轻戒断</td><td>部分激动 + 拮抗，减少渴求与吸烟快感</td></tr>
+          <tr><td>联用</td><td colspan="2">教材明确：伐尼克兰有部分尼古丁拮抗作用，<strong>不推荐与 NRT 联合使用</strong>；而严重依赖者<strong>可 NRT 联合安非他酮</strong>。</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="card green" id="u7-6">
+    <h3 class="col-title"><span class="idx">第六栏</span>治疗方案工具箱</h3>
+    <p><strong>（一）群体层面（教材原文）</strong>：提高公众对吸烟危害的认识；制定法律限制烟草产品各类广告（特别是针对青少年的广告）和各类推销活动；规范烟草工业行为；提高烟税。</p>
+    <p><strong>（二）个体层面</strong>：药物治疗、心理治疗、中医中药治疗。</p>
+    <p><strong>1. 尼古丁替代疗法（NRT）</strong></p>
+    <ul>
+      <li>通过向人体提供尼古丁，代替或部分代替从烟草中获得的尼古丁，减轻戒断症状（注意力不集中、焦虑、易怒、情绪低落等）。</li>
+      <li>5 种产品（贴剂、口胶剂、喷鼻剂、吸入剂、舌下含片），<strong>目前尚无证据表明彼此疗效上的差别</strong>。</li>
+      <li>疗程 <strong>8～12 周</strong>；少数需要更长时间（<strong>5% 可能需要继续疗程长达一年</strong>）。</li>
+      <li><strong>慎用：</strong>心肌梗死后近期（2 周内）、严重心律失常、不稳定心绞痛。</li>
+    </ul>
+    <p><strong>2. 安非他酮（缓释剂）</strong></p>
+    <ul>
+      <li>抗抑郁药；机制可能包括抑制多巴胺及去甲肾上腺素重摄取、阻断 nAChR。</li>
+      <li>口服 <strong>150mg/d</strong>；至少在戒烟前 <strong>1 周</strong>开始服用；疗程 <strong>7～12 周</strong>。</li>
+      <li>不良反应：口干、易激惹、失眠、头痛和眩晕。</li>
+      <li><strong>禁用：</strong>癫痫患者、厌食症或不正常食欲旺盛者、现服用含安非他酮成分药物者、近 14 天内服用过 MAOI 者。</li>
+      <li>严重依赖者<strong>联合 NRT</strong> 可增加戒烟效果；为处方药；长期（&gt;5 个月）戒烟率为安慰剂组的<strong>两倍</strong>。</li>
+    </ul>
+    <p><strong>3. 伐尼克兰</strong></p>
+    <ul>
+      <li>对 α4β2 nAChR 高度亲和力及选择性，是<strong>部分激动剂</strong>，同时具有激动及拮抗的双重调节作用。</li>
+      <li>激动：刺激受体释放多巴胺，缓解渴求与戒断；拮抗：阻止尼古丁与受体结合，减少吸烟快感、降低对吸烟的期待，从而减少复吸。</li>
+      <li>0.5mg 和 1mg 两种剂型；戒烟日前 <strong>1～2 周</strong>开始；疗程 <strong>12 周</strong>，12 周后可考虑减量；FDA 推荐 <strong>1mg，每天 2 次</strong>。</li>
+      <li>常见不良反应为消化道和神经系统症状，<strong>恶心最常见</strong>，多为轻至中度，仅 <strong>3%</strong> 因恶心停药。</li>
+      <li>最近有报告可能导致抑郁等精神问题，但<strong>尚没有建立因果关系</strong>。</li>
+      <li>几乎以原形经尿液排泄，严重肾功能不全（肌酐清除率 &lt;30mg/min）应慎用；为处方药；<strong>不推荐与 NRT 联合</strong>。</li>
+    </ul>
+    <p><strong>4. 可乐定</strong></p>
+    <ul>
+      <li>α2 受体激动剂，有效对抗去甲肾上腺素的兴奋，从而抑制或缓解戒断症状；<strong>多用于阿片类药物脱毒治疗</strong>。</li>
+      <li>多项研究表明，同安慰剂相比可明显减轻戒烟后的焦虑不安、紧张、烦躁、吸烟渴求等症状。</li>
+      <li>主要不良反应：眩晕、口渴、思睡；约 <strong>7%</strong> 服药者因忍受不了戒断症状而停药。</li>
+      <li>有降血压作用，限制其使用，<strong>一般只用于症状较重的尼古丁依赖者</strong>。</li>
+    </ul>
+    <p><strong>5. 疫苗疗法</strong></p>
+    <p>尼古丁本身是非免疫原性分子，必须偶联（附着）在蛋白质载体上才能产生抗体。原理：尼古丁一旦与抗体结合，就无法穿过血脑屏障，减少奖赏作用。但<strong>疫苗并不能减少对药物的渴求，只会阻止药物进入大脑</strong>。</p>
+    <p><strong>6. 心理治疗</strong>：心理教育干预（吸烟与健康关系、戒烟策略、保持戒烟中可能遇到的问题及集体讨论）；行为技巧训练（吸烟场所自我监控、回想拒绝吸烟的方法与技巧、随时提醒自己放松）；认知行为干预（改变对吸烟及戒烟的认识、改变对与吸烟有关的生理状态和情绪体验的认识）。教材指出实际操作中三者往往同时进行。</p>
+    <p><strong>7. 中医中药治疗</strong></p>
+    <ul>
+      <li>中药：戒烟片、戒烟茶、戒烟酒等制剂中多含<strong>鱼腥草、薄荷</strong>；鱼腥草腥味引起恶心，形成恶性刺激，可视为<strong>厌恶疗法</strong>的一种手段。教材同时指出：目前尚缺乏可缓解或消除戒断症状类型的制剂。</li>
+      <li>针灸：多采用<strong>耳针</strong>，可选"<strong>神门</strong>""<strong>肾</strong>""<strong>肺</strong>""<strong>交感</strong>"等穴位；可减少渴求、坐立不安、焦虑和体重增加。已有电针仪、电刺激仪、激光穴位治疗仪可替代传统针灸。</li>
+      <li>气功、太极拳和穴位按摩：缓解紧张、焦虑情绪，克服戒断症状；配合其他治疗可起较好疗效。</li>
+    </ul>
+  </div>
+
+  <div class="card purple" id="u7-7">
+    <h3 class="col-title"><span class="idx">第七栏</span>记忆工具箱</h3>
+    <div class="callout tip">
+      <span class="ct">🔧 方法一：首字母/关键词缩拼（五种方案）</span>
+      口诀：<strong>"替、抑、激、降、疫"</strong>——<strong>替</strong>代（NRT）、抗<strong>抑</strong>郁（安非他酮）、部分<strong>激</strong>动（伐尼克兰）、<strong>降</strong>压（可乐定）、<strong>疫</strong>苗。<br>
+      <em>为什么这样记：</em>五种方案机制各异，最容易"记混名、对不上机制"；用五个动词锁定机制，再把剂量挂上去，问"哪个是部分激动剂"时能秒答伐尼克兰。
+    </div>
+    <div class="callout tip">
+      <span class="ct">🔧 方法二：数字编码法（三组核心数字）</span>
+      NRT：<strong>5 种剂型、8～12 周、5% 可长达一年</strong>；安非他酮：<strong>150mg/d、提前 1 周、7～12 周、14 天 MAOI</strong>；伐尼克兰：<strong>1mg bid、提前 1～2 周、12 周</strong>。<br>
+      <em>为什么这样记：</em>三种方案的数字结构相似（起始时点 + 剂量 + 疗程），并排记能形成"模板"，避免把 150mg 安到伐尼克兰头上。
+    </div>
+    <div class="callout tip">
+      <span class="ct">🔧 方法三：对比记忆法（两个"不推荐/禁用"）</span>
+      伐尼克兰<strong>不推荐与 NRT 联用</strong>（因有部分拮抗）；安非他酮在<strong>癫痫、厌食症、近 14 天 MAOI</strong> 时禁用。<br>
+      <em>为什么这样记：</em>禁忌题最爱设"能不能联合"的陷阱；把两条否定句单独拎出来，与"严重依赖者可 NRT + 安非他酮"形成对照，一次记牢。
+    </div>
+    <div class="callout tip">
+      <span class="ct">🔧 方法四：场景联想法（CO 抢座）</span>
+      想象血红蛋白是一辆<strong>运氧的班车</strong>，CO 的"亲和力"极强，一上车就占座不下——真正需要运的氧气没位置，心脏和大脑就缺氧（缺血性心脏病、心绞痛、呼吸困难）。<br>
+      <em>为什么这样记：</em>"COHb↑ → 运氧能力↓"是本节最常考的机制链，用"抢座"画面一次记住因果方向。
+    </div>
+  </div>
+
+  <div class="card cyan" id="u7-8">
+    <h3 class="col-title"><span class="idx">第八栏</span>知识联动</h3>
+    <ul>
+      <li><strong>与总论：</strong>尼古丁属"其他"类精神活性物质，与咖啡因、酒精并称全球使用最广泛的三种。</li>
+      <li><strong>与心血管内科：</strong>COHb 升高、运氧能力下降；NRT 在近期心梗（2 周内）、严重心律失常、不稳定心绞痛者慎用。</li>
+      <li><strong>与肿瘤学：</strong>烟气含多种致癌物与促癌物；吸烟与呼吸道、消化道及各种癌症相关。</li>
+      <li><strong>与呼吸科：</strong>吸烟导致呼吸道疾病与呼吸困难；戒烟是唯一可逆的干预。</li>
+      <li><strong>与精神科：</strong>安非他酮本身是抗抑郁药；伐尼克兰可能有精神方面不良反应但因果关系未建立；戒烟过程中的焦虑、易怒、情绪低落需识别。</li>
+      <li><strong>与公共卫生：</strong>提高烟税、限制广告、规范烟草工业——教材把群体策略写在个体治疗之前。</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===== 12 咖啡因 ===== -->
+<section id="u8">
+  <div class="sec-head"><div class="badge">12</div><h2>咖啡因<span class="en">第八节 · Caffeine（p.194–195）</span></h2></div>
+  <p class="sec-lead">本章篇幅最短、却最贴近日常的一节：教材只写"药理 + 危害"，<strong>没有治疗章节</strong>。两个数字必须记牢：每天 1.5g 以上可中毒，低至 100mg/d 也能产生耐受。</p>
+
+  <div class="card red" id="u8-1">
+    <h3 class="col-title"><span class="idx">第一栏</span>疾病画像</h3>
+    <div class="quote"><span class="lab">教材原文</span>咖啡因是世界上使用最广泛的精神活性物质之一。</div>
+    <p><strong>一句话画像：</strong>咖啡因是"最合法的兴奋剂"：提神、利尿、兴奋心肌，也会偷走睡眠；量不大时是习惯，量大时是中毒，停用时是头痛。<span class="note">（此句为教材药理与危害的通俗复述）</span></p>
+    <div class="stat">
+      <span>美国 80% 以上成年人每天使用</span><span>中国咖啡市场规模 2021 年增长 27.2%</span><span>女性消费金额占 65%</span><span>以 25～40 岁职业女性为主</span>
+    </div>
+    <p class="note">以上为教材引用的行业数据；教材未给出咖啡因使用障碍的患病率，也未给出我国的饮用人数。</p>
+    <p><strong>教材本节的结构只有两块：</strong>① 咖啡因的药理作用；② 相关危害。没有"治疗"小节，这一点在第六栏会明确标注。</p>
+  </div>
+
+  <div class="card blue" id="u8-2">
+    <h3 class="col-title"><span class="idx">第二栏</span>病因探秘 → 药理与药代</h3>
+    <p><strong>（一）药理作用谱</strong></p>
+    <div class="grid2">
+      <div class="mini">
+        <h4>中枢与肾脏</h4>
+        <ul>
+          <li>属于<strong>黄嘌呤类</strong>物质。</li>
+          <li>刺激中枢神经系统，产生<strong>欣快、兴奋</strong>。</li>
+          <li>作用于肾脏，产生<strong>利尿</strong>作用。</li>
+        </ul>
+      </div>
+      <div class="mini">
+        <h4>心血管与平滑肌</h4>
+        <ul>
+          <li>兴奋心肌。</li>
+          <li>松弛平滑肌。</li>
+        </ul>
+      </div>
+    </div>
+    <p><strong>（二）药代动力学：为什么"喝下去很快就清醒"</strong></p>
+    <div class="timeline">
+      <div class="tl-item"><h4>口服吸收</h4><p>可以迅速、完全吸收。</p></div>
+      <div class="tl-item"><h4>15～20 分钟</h4><p>咖啡因在血液中含量<strong>达峰</strong>。</p></div>
+      <div class="tl-item"><h4>45 分钟</h4><p><strong>99%</strong> 的咖啡因会被吸收。</p></div>
+      <div class="tl-item"><h4>分布</h4><p>可溶于水和油，因此可<strong>均匀地分布在全身（包括大脑）</strong>。</p></div>
+    </div>
+    <p class="note">教材未涉及咖啡因的受体机制（如腺苷受体拮抗），也未给出半衰期——本指南不补写。</p>
+  </div>
+
+  <div class="card red" id="u8-3">
+    <h3 class="col-title"><span class="idx">第三栏</span>临床表现拼图</h3>
+    <p><strong>（一）对睡眠的影响：教材称"最令人担忧的副作用"</strong></p>
+    <ul>
+      <li>咖啡因可以减少疲劳、提高注意力，但<strong>会干扰睡眠</strong>。</li>
+      <li>即使在<strong>白天和睡前</strong>服用，也可能影响睡眠时长和质量，并导致<strong>觉醒次数增多</strong>。</li>
+      <li>与年轻人相比，<strong>中年人</strong>通常对高剂量咖啡因所致睡眠时间和质量的影响更敏感。</li>
+    </ul>
+    <p><strong>（二）咖啡因中毒</strong></p>
+    <div class="quote"><span class="lab">教材原文</span>大量饮用咖啡（每天 1.5g 以上咖啡因）可能导致咖啡因中毒。</div>
+    <div class="grid2">
+      <div class="mini">
+        <h4>中枢神经系统症状</h4>
+        <p>焦虑增加、躁动、失眠以及情绪变化。</p>
+      </div>
+      <div class="mini">
+        <h4>其他症状</h4>
+        <p>心动过速、高血压、心律失常和胃肠道功能紊乱。</p>
+      </div>
+    </div>
+    <p><strong>（三）耐受性</strong></p>
+    <ul>
+      <li>长期使用咖啡因，<strong>即使每天常规剂量低至 100mg</strong>，也会养成习惯、产生耐受性，停用可能产生轻度戒断症状。</li>
+      <li>个体可能对咖啡因的几种作用产生耐受性：<strong>利尿、血压升高、睡眠障碍</strong>和其他生理反应，以及主观感受。</li>
+      <li><strong>750～1 200mg</strong> 的高剂量咖啡因更有可能导致个体产生耐受性。</li>
+    </ul>
+    <p><strong>（四）戒断症状</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>维度</th><th>教材要点</th></tr></thead>
+        <tbody>
+          <tr><td>核心症状</td><td><strong>头痛（最常见）</strong>、困倦、疲劳、情绪欠佳、注意力难以集中、对咖啡因渴求</td></tr>
+          <tr><td>时间进程</td><td>通常<strong>缓慢产生</strong>，<strong>1～2 天</strong>后达到高峰，然后在<strong>几天内消失</strong></td></tr>
+          <tr><td>缓解方式</td><td>再次服用咖啡因能<strong>迅速缓解</strong>戒断症状</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="card orange" id="u8-4">
+    <h3 class="col-title"><span class="idx">第四栏</span>教材典型案例</h3>
+    <div class="callout book">
+      <span class="ct">📖 教材未提供具体临床案例</span>
+      本节篇幅很短，只有药理与危害的叙述，教材未给出患者案例、病史或检查数据，也未给出任何个案化的饮用剂量。
+    </div>
+    <p><strong>可迁移的识别思路（据教材要点整理，非教材原文病例）：</strong></p>
+    <ol>
+      <li>主诉<strong>失眠、觉醒次数增多</strong>：问白天与睡前是否摄入咖啡因——教材明确两者都可能影响睡眠。</li>
+      <li>主诉<strong>心悸、心动过速、焦虑、躁动</strong>：估算每日咖啡因总量，是否达到"每天 1.5g 以上"。</li>
+      <li>主诉<strong>头痛、困倦、注意力不集中</strong>且正在减少咖啡摄入：想到咖啡因戒断，症状多在 1～2 天达峰、几天内消失。</li>
+      <li>判断<strong>耐受</strong>：是否需不断增加量才能达到原来的提神效果；教材提示高剂量（750～1 200mg）更易产生耐受。</li>
+    </ol>
+    <p class="note">以上为按教材要点整理的学习思路，不是教材原文病例，不含虚构剂量与化验值。</p>
+  </div>
+
+  <div class="card orange" id="u8-5">
+    <h3 class="col-title"><span class="idx">第五栏</span>鉴别诊断对对碰</h3>
+    <p><strong>表 1　咖啡因中毒 vs 焦虑障碍</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>线索</th><th>咖啡因中毒</th><th>焦虑障碍</th></tr></thead>
+        <tbody>
+          <tr><td>摄入关系</td><td>大量饮用（每天 1.5g 以上咖啡因）后出现</td><td>与摄入无关</td></tr>
+          <tr><td>症状组合</td><td>焦虑增加、躁动、失眠、情绪变化；<strong>同时伴</strong>心动过速、高血压、心律失常、胃肠道功能紊乱</td><td>教材本节未展开</td></tr>
+          <tr><td>处理方向</td><td>减少/停止摄入，对症处理（教材未给具体方案）</td><td>按焦虑障碍治疗</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout key"><span class="ct">📌 一句话鉴别总结</span>咖啡因中毒"有明确的摄入量 + 有心脏和胃肠的躯体症状"；单纯焦虑障碍缺少这组"剂量—躯体"对应关系。</div>
+    <p><strong>表 2　耐受 vs 戒断（同一物质的两端）</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>维度</th><th>耐受</th><th>戒断</th></tr></thead>
+        <tbody>
+          <tr><td>表现</td><td>需要更大剂量才能达到原效果；利尿、升压、睡眠障碍等作用及主观感受均可耐受</td><td>头痛、困倦、疲劳、情绪欠佳、注意力难集中、渴求</td></tr>
+          <tr><td>剂量线索</td><td>低至 <strong>100mg/d</strong> 即可产生；<strong>750～1 200mg</strong> 更易耐受</td><td>长期使用后停用</td></tr>
+          <tr><td>时间</td><td>长期使用过程中形成</td><td>缓慢产生，<strong>1～2 天</strong>达峰，几天内消失</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p><strong>表 3　咖啡因与酒精、尼古丁的"成瘾面貌"对比</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>物质</th><th>主要效应</th><th>戒断核心</th><th>教材是否给治疗方案</th></tr></thead>
+        <tbody>
+          <tr><td>咖啡因</td><td>欣快、兴奋、利尿、兴奋心肌</td><td>头痛（最常见）、困倦、疲劳</td><td><strong>教材未提供</strong></td></tr>
+          <tr><td>酒精</td><td>中枢抑制，先皮质后脑干</td><td>手抖出汗、癫痫、震颤谵妄</td><td>有（BZD、纳洛酮、纳曲酮、戒酒硫）</td></tr>
+          <tr><td>尼古丁</td><td>nAChRs 兴奋，先兴奋后抑制</td><td>唾液增加、头痛、失眠、易激惹</td><td>有（NRT、安非他酮、伐尼克兰等）</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="card green" id="u8-6">
+    <h3 class="col-title"><span class="idx">第六栏</span>治疗方案工具箱</h3>
+    <div class="callout book">
+      <span class="ct">📖 教材未提供治疗方案</span>
+      本节只有"药理作用"与"相关危害"两部分，<strong>没有治疗小节</strong>，也未给出任何药物、剂量或疗程。教材唯一与处理相关的一句是：再次服用咖啡因能迅速缓解戒断症状——这是描述性事实，不是治疗方案。
+    </div>
+    <div class="grid2">
+      <div class="mini">
+        <h4>教材明确写出的"可用信息"</h4>
+        <ul>
+          <li>减少饮用可降低中毒风险（中毒阈值为每天 1.5g 以上咖啡因）。</li>
+          <li>戒断症状通常缓慢产生、1～2 天达峰、几天内消失。</li>
+          <li>再次服用咖啡因可迅速缓解戒断症状。</li>
+        </ul>
+      </div>
+      <div class="mini">
+        <h4>教材未涉及（不补写）</h4>
+        <ul>
+          <li>咖啡因使用障碍的诊断标准与患病率</li>
+          <li>咖啡因戒断的药物治疗</li>
+          <li>咖啡因中毒的具体处理流程与剂量</li>
+          <li>咖啡因与药物相互作用</li>
+        </ul>
+      </div>
+    </div>
+    <p class="note">按 BRIEF 要求：教材未给的内容一律标"教材未涉及"，不以课外资料补齐。若考试问"咖啡因戒断如何处理"，应答"教材未提供具体方案"。</p>
+  </div>
+
+  <div class="card purple" id="u8-7">
+    <h3 class="col-title"><span class="idx">第七栏</span>记忆工具箱</h3>
+    <div class="callout tip">
+      <span class="ct">🔧 方法一：数字编码法（"15-45-1.5-100-750"）</span>
+      口服 <strong>15～20 分钟</strong>达峰、<strong>45 分钟</strong>吸收 99%；<strong>1.5g/d</strong> 以上可中毒；低至 <strong>100mg/d</strong> 可产生耐受；<strong>750～1 200mg</strong> 更易耐受。<br>
+      <em>为什么这样记：</em>本节全部是数字型考点，按"吸收—中毒—耐受"三组串起来，比散记五个数字更稳。
+    </div>
+    <div class="callout tip">
+      <span class="ct">🔧 方法二：对比记忆法（"耐受要加量，戒断要再喝"）</span>
+      耐受＝<strong>同样效果需要更多</strong>；戒断＝<strong>停掉后头痛困倦，再喝就缓解</strong>。<br>
+      <em>为什么这样记：</em>这两句几乎是对称的，把"加"与"再"两个动作绑定，能同时记住耐受与戒断的临床表现和剂量线索。
+    </div>
+    <div class="callout tip">
+      <span class="ct">🔧 方法三：场景联想法（一杯咖啡的一天）</span>
+      早上喝 → 15～20 分钟清醒（达峰）→ 白天提神但夜里<strong>觉醒次数增多</strong>→ 越喝越多（耐受）→ 突然停掉 → <strong>第二天头痛最明显</strong>，几天后消失。<br>
+      <em>为什么这样记：</em>用一天的生活场景把"吸收—睡眠—耐受—戒断"四个考点串起来，最适合本节这种"无病例、纯要点"的内容。
+    </div>
+  </div>
+
+  <div class="card cyan" id="u8-8">
+    <h3 class="col-title"><span class="idx">第八栏</span>知识联动</h3>
+    <ul>
+      <li><strong>与总论：</strong>咖啡因属中枢神经系统兴奋剂；教材把它与尼古丁、酒精并列为全球使用最广泛的三种精神活性物质。</li>
+      <li><strong>与睡眠障碍章：</strong>咖啡因干扰睡眠时长与质量、增加觉醒次数；中年人更敏感——是失眠问诊的常规排查项。</li>
+      <li><strong>与心血管内科：</strong>心动过速、高血压、心律失常；咖啡因中毒可表现为这些躯体症状。</li>
+      <li><strong>与消化内科：</strong>胃肠道功能紊乱是中毒表现之一。</li>
+      <li><strong>与焦虑障碍章：</strong>焦虑增加、躁动、失眠与情绪变化，需与原发性焦虑鉴别，摄入量是重要线索。</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===== 13 成瘾行为所致障碍 ===== -->
+<section id="u9">
+  <div class="sec-head"><div class="badge">13</div><h2>成瘾行为所致障碍<span class="en">第九节 · Gambling &amp; gaming disorder（p.195–196）</span></h2></div>
+  <p class="sec-lead">本章的"新大陆"：ICD-11 把赌博障碍移入本章，并首次纳入游戏障碍。二者没有外源化学物质，却共享同一套"控制受损—优先地位—持续升级"的成瘾逻辑。</p>
+
+  <div class="card red" id="u9-1">
+    <h3 class="col-title"><span class="idx">第一栏</span>疾病画像</h3>
+    <div class="quote"><span class="lab">教材原文</span>赌博是指参与以赢钱为目的，由机会决定其结局的游戏或类似游戏的活动。赌博障碍（gambling disorder）是一种持续或反复的赌博行为模式，它不仅是一种简单的不良行为，还是一种持续性和复发性的脑病。</div>
+    <div class="quote"><span class="lab">教材原文</span>游戏障碍（gaming disorder，GD）是一种行为成瘾，好发于亚洲、青少年、男性群体。</div>
+    <div class="grid2">
+      <div class="mini">
+        <h4>赌博障碍</h4>
+        <ul>
+          <li>普通人群<strong>终生患病率约 0.2%～2.0%</strong>。</li>
+          <li>可带来严重的个人和社会不良后果。</li>
+          <li>ICD-11 中分为<strong>在线</strong>与<strong>线下</strong>两种模式。</li>
+        </ul>
+      </div>
+      <div class="mini">
+        <h4>游戏障碍</h4>
+        <ul>
+          <li>全球发病率 <strong>3%～8%</strong>；我国 <strong>4.7%～6.0%</strong>。</li>
+          <li>好发<strong>亚洲、青少年、男性</strong>群体。</li>
+          <li>ICD-11 首次纳入诊断标准，同样分在线/离线。</li>
+        </ul>
+      </div>
+    </div>
+    <p><strong>一句话画像：</strong>赌博障碍是"以赢钱为目的、由机会决定结局"的行为被成瘾逻辑接管；游戏障碍是"娱乐"被成瘾逻辑接管——两者都不靠外源物质，却同样会吞掉时间、金钱与功能。<span class="note">（此句为教材定义的通俗复述，非新增医学事实）</span></p>
+  </div>
+
+  <div class="card blue" id="u9-2">
+    <h3 class="col-title"><span class="idx">第二栏</span>病因探秘 → 机制探秘</h3>
+    <p><strong>（一）赌博障碍：教材未给出成瘾机制</strong></p>
+    <div class="callout book">
+      <span class="ct">📖 教材未涉及</span>
+      教材对赌博障碍只写"危害—诊断—治疗"三块，<strong>没有展开奖赏系统、遗传或神经机制</strong>。本指南不补写。
+    </div>
+    <p><strong>（二）游戏障碍：教材给出的三条心理机制</strong></p>
+    <div class="grid3">
+      <div class="mini">
+        <h4>① 渴求增加</h4>
+        <p>奖赏系统在成瘾的形成和维持中发挥重要作用。游戏成瘾与传统成瘾个体在奖赏系统上表现出极高的一致性：<strong>渴求增加、耐受性增强、戒断反应</strong>。组成奖赏系统的大多数脑区（<strong>纹状体、杏仁核、腹侧被盖区</strong>等）在游戏成瘾个体上表现出<strong>高激活</strong>特征。</p>
+      </div>
+      <div class="mini">
+        <h4>② 冲动控制能力下降</h4>
+        <p>成瘾的核心要素是对自身冲动控制能力的降低。游戏成瘾个体表现出<strong>行为控制能力受损</strong>，容易被游戏吸引、沉溺其中无法自拔；游戏快感进一步削弱控制能力，形成恶性循环。</p>
+      </div>
+      <div class="mini">
+        <h4>③ 决策能力受损</h4>
+        <p>决策是权衡利弊的过程。游戏成瘾者不能很好地考虑现有条件与结果，<strong>宁愿选择当前即刻能满足的短暂快感，也不愿为长远的大的收益而等待</strong>。</p>
+      </div>
+    </div>
+    <p><strong>（三）危害形成的社会心理链条（教材原文要点）</strong></p>
+    <ul>
+      <li>沉溺游戏伴随<strong>长时间连续上网</strong>，正常社交、学习和工作时间减少。</li>
+      <li>对现实刺激缺乏相应情感反应、对亲友冷淡、对周围日常事物失去兴趣、家庭关系紧张、不能正常学习和工作。</li>
+      <li>对正处于生长发育期的<strong>青少年</strong>尤为严重。</li>
+      <li>游戏应用往往不是免费的，若正常渠道无法满足金钱需要，<strong>可能诱发采取非法手段获取费用</strong>。</li>
+    </ul>
+  </div>
+
+  <div class="card red" id="u9-3">
+    <h3 class="col-title"><span class="idx">第三栏</span>临床表现拼图</h3>
+    <p><strong>（一）赌博障碍的 ICD-11 诊断要件（教材原文）</strong></p>
+    <p>表现为持续而反复的赌博行为模式（包括在线或线下），同时有以下表现：</p>
+    <ol>
+      <li><strong>控制赌博行为的能力受损</strong>：例如对开始赌博、赌博频率、赌博强度、赌博持续时间、结束赌博、赌博行为的背景失去控制。</li>
+      <li><strong>赌博在生活中的优先程度不断增加</strong>，超出其他的兴趣或日常活动。</li>
+      <li><strong>虽然已出现负面后果，但赌博行为仍持续或不断升级</strong>。</li>
+    </ol>
+    <p>这种行为模式必须<strong>足够严重</strong>，导致个人、家庭、社交、学业、职业或其他重要领域功能的<strong>显著损害</strong>。行为模式可以是持续性的、发作性的或反复性的。</p>
+    <div class="callout key">
+      <span class="ct">📌 病程门槛</span>
+      诊断赌博障碍要求存在明显的赌博行为及其他相关特征，并且持续了一段时间（<strong>至少 12 个月</strong>）。如果在满足所有其他诊断需求的基础上<strong>症状十分严重</strong>，则持续时间的要求可<strong>适当放宽</strong>。
+    </div>
+    <p><strong>（二）赌博障碍的危害</strong></p>
+    <ul>
+      <li>赌博者本人的生活往往受控于赌博行为，包括<strong>试图弥补以前损失</strong>，以及<strong>渴求下一次赌博</strong>。</li>
+      <li>给家庭带来巨额经济负担，使其无法维持正常工作与生活。</li>
+      <li>甚至走上<strong>自杀或者违法犯罪</strong>的道路。</li>
+    </ul>
+    <p><strong>（三）游戏障碍的心理特征与危害</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>维度</th><th>教材要点</th></tr></thead>
+        <tbody>
+          <tr><td>渴求与奖赏</td><td>渴求增加、耐受性增强、戒断反应；纹状体、杏仁核、VTA 等高激活</td></tr>
+          <tr><td>冲动控制</td><td>行为控制能力受损，容易被游戏吸引、沉溺其中</td></tr>
+          <tr><td>决策</td><td>只顾即刻短暂快感，不愿为学业、人际关系、事业发展等长远目标努力</td></tr>
+          <tr><td>社会功能</td><td>社交/学习/工作时间减少；对亲友冷淡、家庭关系紧张、不能正常学习和工作</td></tr>
+          <tr><td>继发风险</td><td>可能诱发青少年犯罪（为获取游戏费用采取非法手段）</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="card orange" id="u9-4">
+    <h3 class="col-title"><span class="idx">第四栏</span>教材典型案例</h3>
+    <div class="callout book">
+      <span class="ct">📖 教材未提供具体临床案例</span>
+      本节为定义、诊断标准、危害与治疗现状的叙述，教材未给出赌博者或游戏成瘾者的个案、病史或检查数据。教材中的"行为描述"（试图弥补损失、渴求下一次赌博、对亲友冷淡）属于症状学概括，已写入第三栏，不是个案报告。
+    </div>
+    <p><strong>可迁移的诊断思路（据教材标准整理，非教材原文病例）：</strong></p>
+    <ol>
+      <li><strong>先看行为模式：</strong>是否能控制开始/频率/强度/持续时间/结束/背景？赌博或游戏是否已优先于其他兴趣与日常活动？有负面后果是否仍持续或升级？</li>
+      <li><strong>再看功能损害：</strong>个人、家庭、社交、学业、职业或其他重要领域是否<strong>显著损害</strong>——这是"障碍"与"爱好"的分界。</li>
+      <li><strong>最后看病程：</strong>是否持续<strong>至少 12 个月</strong>；若症状十分严重且其他条件均满足，可适当放宽。</li>
+      <li><strong>做鉴别：</strong>赌博要排除打赌、躁狂患者的过度赌博、人格障碍、精神活性物质滥用伴发赌博行为。</li>
+    </ol>
+    <p class="note">以上为按教材诊断标准整理的学习思路，不是教材原文病例，不含虚构金额、化验值。</p>
+  </div>
+
+  <div class="card orange" id="u9-5">
+    <h3 class="col-title"><span class="idx">第五栏</span>鉴别诊断对对碰</h3>
+    <p><strong>表 1　赌博障碍的四组鉴别（教材点名）</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>需鉴别的情况</th><th>核心区别点</th><th>教材依据</th></tr></thead>
+        <tbody>
+          <tr><td>打赌</td><td>教材仅列为需鉴别的情况，未给出具体条目；关键仍看是否达到赌博障碍的控制、优先、后果与病程要件</td><td>教材将"打赌"列为鉴别对象</td></tr>
+          <tr><td>躁狂患者的过度赌博</td><td>赌博行为是躁狂发作的一部分，而非独立、持续的赌博障碍</td><td>教材明确需与"躁狂患者的过度赌博"鉴别</td></tr>
+          <tr><td>人格障碍</td><td>赌博行为需与人格障碍本身的行为模式区分</td><td>教材列为鉴别对象</td></tr>
+          <tr><td>精神活性物质滥用伴发赌博行为</td><td>赌博行为与物质滥用同时存在，需判断是否为伴发</td><td>教材列为鉴别对象</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout key"><span class="ct">📌 一句话鉴别总结</span>赌博障碍的关键不是"赌没赌"，而是<strong>控制是否受损、优先是否升级、功能是否显著损害、是否持续≥12 个月</strong>；再排除打赌、躁狂、人格障碍与物质滥用伴发。</div>
+    <p><strong>表 2　赌博障碍 vs 游戏障碍（同章两类行为成瘾）</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>维度</th><th>赌博障碍</th><th>游戏障碍</th></tr></thead>
+        <tbody>
+          <tr><td>行为核心</td><td>以赢钱为目的、由机会决定结局</td><td>游戏行为成瘾（教材称"行为成瘾"）</td></tr>
+          <tr><td>患病率</td><td>终生患病率约 0.2%～2.0%</td><td>全球 3%～8%；我国 4.7%～6.0%</td></tr>
+          <tr><td>好发人群</td><td>教材未给人群特征</td><td>亚洲、青少年、男性</td></tr>
+          <tr><td>在线/离线</td><td>ICD-11 分在线与线下</td><td>ICD-11 分在线与离线</td></tr>
+          <tr><td>诊断要件</td><td>控制受损、优先增加、负面后果仍持续；≥12 个月（严重可放宽）</td><td>教材未给出独立诊断条目，只给心理特征与干预现状</td></tr>
+          <tr><td>治疗现状</td><td>尚无治疗指南；研究 FDA 已批准用于物质滥用的治疗</td><td>尚无较为公认的干预措施</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p><strong>表 3　游戏障碍 vs 正常游戏行为</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>维度</th><th>游戏障碍</th><th>正常游戏行为</th></tr></thead>
+        <tbody>
+          <tr><td>控制</td><td>无法有效控制过度游戏行为</td><td>可自行控制时长与频度</td></tr>
+          <tr><td>优先</td><td>游戏压倒学习、工作、社交</td><td>游戏让位于学习、工作与社交</td></tr>
+          <tr><td>后果</td><td>躯体与精神行为异常、认知功能下降、社会功能受损</td><td>无明显功能损害</td></tr>
+          <tr><td>干预</td><td>专业干预与治疗非常必要</td><td>不需要治疗</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="card green" id="u9-6">
+    <h3 class="col-title"><span class="idx">第六栏</span>治疗方案工具箱</h3>
+    <p><strong>（一）赌博障碍</strong></p>
+    <div class="quote"><span class="lab">教材原文</span>迄今为止，尚未有针对赌博障碍的治疗指南。考虑到赌博障碍和其他成瘾性疾病的相似性，多项临床研究试验关注 FDA 批准的用于物质滥用的治疗方法。</div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>治疗方向</th><th>教材列出的具体类别</th><th>说明</th></tr></thead>
+        <tbody>
+          <tr><td>药物</td><td><strong>阿片受体拮抗剂、心境稳定剂、抗抑郁药、谷氨酸能药物</strong></td><td>教材只写"关注"这些方向，<strong>未给具体药名、剂量或疗程</strong></td></tr>
+          <tr><td>心理治疗</td><td><strong>认知行为疗法、厌恶治疗、动机强化治疗</strong>等</td><td>教材未展开具体操作与疗程</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p><strong>（二）游戏障碍</strong></p>
+    <div class="quote"><span class="lab">教材原文</span>由于游戏障碍的个体已经无法有效控制自己的过度游戏行为，因此，专业的干预与治疗是非常必要的。但目前尚未有较为公认的针对游戏障碍的干预措施。</div>
+    <p>教材给出的干预框架只有三类：<strong>药物疗法、心理疗法以及综合治疗策略</strong>。教材说明：不同的研究者从各自专业角度出发，提出了不同的干预措施和干预流程；<strong>未给出具体药物、剂量或疗程</strong>。</p>
+    <p class="note">本节所有治疗内容均停留在"方向"层面。凡教材没写的药名、剂量、疗程，一律标"教材未涉及"，不补写。</p>
+  </div>
+
+  <div class="card purple" id="u9-7">
+    <h3 class="col-title"><span class="idx">第七栏</span>记忆工具箱</h3>
+    <div class="callout tip">
+      <span class="ct">🔧 方法一：关键词提取法（赌博诊断"三加一"）</span>
+      三个行为特征：<strong>失控、优先、升级</strong>；一个门槛：<strong>≥12 个月</strong>（严重可放宽）；一个总条件：<strong>功能显著损害</strong>。<br>
+      <em>为什么这样记：</em>教材的诊断条目就是"三条表现 + 功能损害 + 病程"，用"三加一加一"编号，答题时逐条清点，不会漏掉"12 个月"这个高频考点。
+    </div>
+    <div class="callout tip">
+      <span class="ct">🔧 方法二：数字锚定法（两个患病率）</span>
+      赌博障碍：<strong>0.2%～2.0%</strong>（终生患病率）；游戏障碍：<strong>3%～8%</strong>（全球）、<strong>4.7%～6.0%</strong>（我国）。<br>
+      <em>为什么这样记：</em>两个数量级差别明显——赌博是"千分之几到百分之二"，游戏是"百分之几"；先记量级再记区间，避免张冠李戴。
+    </div>
+    <div class="callout tip">
+      <span class="ct">🔧 方法三：三联记忆法（游戏障碍三机制）</span>
+      记 <strong>"渴求↑、控制↓、决策差"</strong>：渴求增加（奖赏系统高激活）、冲动控制能力下降、决策能力受损。<br>
+      <em>为什么这样记：</em>三条机制各用一个箭头方向表示"升/降/差"，把抽象机制变成一张趋势图；再挂上纹状体、杏仁核、VTA 三个脑区，机制题就能答全。
+    </div>
+    <div class="callout tip">
+      <span class="ct">🔧 方法四：对比记忆法（"有指南 / 无指南"）</span>
+      赌博障碍：<strong>尚无治疗指南</strong>，但可借鉴物质滥用的治疗方向（阿片受体拮抗剂、心境稳定剂、抗抑郁药、谷氨酸能药物）；游戏障碍：<strong>尚无公认干预措施</strong>，只有药物、心理、综合治疗三类框架。<br>
+      <em>为什么这样记：</em>两句"尚无"最易混；用"赌博有研究方向、游戏只有框架"区分，答题时不会把两者写成同一句。
+    </div>
+  </div>
+
+  <div class="card cyan" id="u9-8">
+    <h3 class="col-title"><span class="idx">第八栏</span>知识联动</h3>
+    <ul>
+      <li><strong>与总论：</strong>ICD-11 把"成瘾行为所致障碍"引入本章，赌博障碍由冲动控制障碍章节移入，游戏障碍首次纳入——这是分类体系的改动，不是新增疾病。</li>
+      <li><strong>与冲动控制障碍：</strong>赌博障碍原属该章，现移入本章；鉴别时仍需注意"打赌"与人格障碍。</li>
+      <li><strong>与双相障碍章：</strong>躁狂患者的过度赌博是鉴别重点，不能直接诊断为赌博障碍。</li>
+      <li><strong>与物质使用障碍：</strong>教材明确赌博障碍与物质滥用可伴发；游戏成瘾在奖赏系统上与"传统成瘾"表现高度一致。</li>
+      <li><strong>与儿少精神医学：</strong>游戏障碍好发于青少年男性，对学习、生活与社会功能影响严重，可能诱发犯罪。</li>
+      <li><strong>与公共卫生：</strong>互联网普及使在线赌博与游戏人数增加，给个人、家庭、社会带来严重不良后果。</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===== 14 核心要点 ===== -->
+<section id="summary">
+  <div class="sec-head"><div class="badge">14</div><h2>全章核心要点速览<span class="en">18 key points</span></h2></div>
+  <p class="sec-lead">考前最后一遍只看这里。每条都能独立成题，建议逐条自问"为什么"。</p>
+  <div class="card blue">
+    <div class="grid2">
+      <ol>
+        <li>精神活性物质是能影响情绪行为、改变意识状态并有致依赖作用的化学物质，又称成瘾物质、药物；毒品是社会学概念。</li>
+        <li>依赖＝认知、行为、生理症状群；明知有害仍继续，出现耐受性增加、戒断症状和<strong>强制性觅药行为</strong>。</li>
+        <li>滥用（ICD-11 称有害使用）强调<strong>不良后果</strong>，<strong>没有</strong>明显耐受或戒断；有耐受/戒断即为依赖。</li>
+        <li>耐受性＝必须增加剂量才能获得原有效果；戒断＝停药、减量或拮抗剂占受体后的<strong>适应性反跳</strong>，症状通常与药理作用相反。</li>
+        <li>ICD-11：过去 12 个月反复出现或既往 1 个月持续出现 3 条核心症状中<strong>至少 2 条</strong>即可诊断依赖。</li>
+        <li>三因素模型：社会（可获得性、家庭、同伴、文化）为<strong>诱发</strong>；心理（个性、正/负强化）；生物（奖赏系统、代谢速度、遗传）。</li>
+        <li>奖赏系统以 <strong>VTA-NAc</strong> 通路最关键；多巴胺经 D1/D2 受体引发奖赏相关学习与记忆。</li>
+        <li>阿片类急性中毒三联征：<strong>针尖样瞳孔、呼吸抑制、昏迷</strong>；缺氧严重或混用其他药物时瞳孔可散大。</li>
+        <li>阿片戒断：短效（吗啡、海洛因）<strong>8～12 小时</strong>起、持续 <strong>7～10 天</strong>；长效（美沙酮）<strong>1～3 天</strong>起、极期 <strong>3～8 天</strong>、持续数周。</li>
+      </ol>
+      <ol start="10">
+        <li>纳洛酮是阿片类过量/中毒的<strong>首选</strong>，要求尽早、及时、足量、足疗程；<strong>无固定剂量范围</strong>，按拮抗效果与生命体征个体化。</li>
+        <li>美沙酮替代递减原则：<strong>控制症状、逐日递减、先快后慢、只减不加、停药坚决</strong>；首次 20～40mg/d，逐日减前日 20%。</li>
+        <li>大麻 THC：大麻烟 0.5%～5%，大麻油 15%～50%；脂溶性致停药数周至数月尿检仍阳性；<strong>迄今无致死病例报告</strong>，但危害在于破坏正常生产生活。</li>
+        <li>大麻无公认有效治疗药物；急性中毒对症；伴情绪障碍用 SSRIs（舍曲林/西酞普兰）、睡眠用米氮平/曲唑酮，<strong>不首选 BZD</strong>。</li>
+        <li>BZD 增强 GABA 与 GABA<sub>A</sub> 受体效应（不直接激活）；短期 <strong>2～4 周</strong>相对安全；间断给药指每周 3～5 天。</li>
+        <li>BZD 撤药：起始取 24 小时内可耐受的最低日总量 → 每周减 <strong>50%</strong> → 每 2 周减 <strong>10%～25%</strong> → 总时程 <strong>4～8 周</strong>；多药合用先转地西泮。</li>
+        <li>酒精戒断时间轴：<strong>6～12 小时</strong>手抖出汗 → <strong>24～36 小时</strong>发热心悸眼震 → <strong>48～72 小时</strong>高峰 → <strong>3～4 天</strong>震颤谵妄 → <strong>4～5 天</strong>躯体反应基本消失；酒精性癫痫约 <strong>30%</strong>，需住院观察。</li>
+        <li>震颤谵妄最重要特征是<strong>全身粗大震颤</strong>、昼轻夜重，处理不当死亡率约 <strong>5%</strong>；Wernicke 补 B1 后眼震快消、记忆难复；Korsakoff 为记忆障碍、虚构、定向力障碍。</li>
+        <li>尼古丁：NRT 疗程 8～12 周；安非他酮 150mg/d、提前 1 周、7～12 周；伐尼克兰 1mg 每天 2 次、疗程 12 周、<strong>不与 NRT 联用</strong>；咖啡因每天 1.5g 以上可中毒、低至 100mg/d 也可耐受；赌博障碍终生患病率 0.2%～2.0%、需≥12 个月，游戏障碍我国 4.7%～6.0%。</li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 15 易混 ===== -->
+<section id="pitfalls">
+  <div class="sec-head"><div class="badge">15</div><h2>易混易错点警示<span class="en">Common traps</span></h2></div>
+  <p class="sec-lead">这些点不是"没背到"，而是"背反了"。逐条核对你的第一反应。</p>
+  <div class="card danger">
+    <details open>
+      <summary>① 滥用 ≠ 依赖：分水岭只有"耐受/戒断"</summary>
+      <div class="dbody">教材原话：滥用强调不良后果，"滥用者没有明显的耐受性增加或戒断症状，<strong>反之就是依赖状态</strong>"。凡题干只给"影响工作、损害健康、法律问题"，而<strong>没有</strong>耐受或戒断，应答滥用（有害使用）。</div>
+    </details>
+    <details>
+      <summary>② 有耐受 ≠ 一定是依赖</summary>
+      <div class="dbody">耐受性只是依赖的<strong>生理特征之一</strong>；诊断依赖要数三条核心（控制受损、优先地位、生理特征）中的至少两条。把"耐受"单独等同于"依赖"，会漏掉另外两条。</div>
+    </details>
+    <details>
+      <summary>③ "大麻迄今无致死病例" ≠ "大麻无害"</summary>
+      <div class="dbody">教材紧接着写："大麻所致危害在于<strong>破坏正常的生产和生活</strong>，并非中毒死亡"。同时大麻可致认知障碍、短时记忆受损、操作能力下降、心血管负荷增加，长期使用还可致依赖。前半句是事实，后半句才是结论。</div>
+    </details>
+    <details>
+      <summary>④ 阿片中毒不是永远"针尖瞳"</summary>
+      <div class="dbody">教材明确例外：<strong>缺氧严重或合用其他药物中毒时，可出现瞳孔散大</strong>。答题时若把"瞳孔散大"直接排除阿片中毒，就会掉进陷阱。</div>
+    </details>
+    <details>
+      <summary>⑤ 纳洛酮"没有固定剂量范围"</summary>
+      <div class="dbody">教材原文：抢救时"并无固定剂量范围，主要依据用药后的拮抗效果和个体中毒症状的缓解程度，并结合生命体征改善情况而确定"。凡给出"首剂 X mg"的标准答案，都不属于本章。</div>
+    </details>
+    <details>
+      <summary>⑥ 阿片戒断的两条时间轴最易记反</summary>
+      <div class="dbody">短效（吗啡、海洛因）<strong>8～12 小时</strong>起、7～10 天；长效（美沙酮）<strong>1～3 天</strong>起、极期 3～8 天、持续数周。规律是"短效快起快落、长效慢起拖尾"，不要把它们对调。</div>
+    </details>
+    <details>
+      <summary>⑦ 酒精性癫痫与震颤谵妄：时间与表现都不同</summary>
+      <div class="dbody">酒精性癫痫可发生在戒酒期间，约 <strong>30%</strong> 患者，表现为意识丧失、四肢抽搐、两眼上翻、角弓反张、口吐白沫，一般 5～15 分钟意识恢复，<strong>需住院观察</strong>；震颤谵妄在断酒后 <strong>3～4 天</strong>，核心是意识清晰度下降 + 恐怖性知觉异常 + <strong>全身粗大震颤</strong>、昼轻夜重。</div>
+    </details>
+    <details>
+      <summary>⑧ 震颤谵妄的"5%"是死亡率，不是患病率</summary>
+      <div class="dbody">教材原文："如果处理不当，患者常因高热、脱水、衰竭、感染、外伤而死亡，死亡率大概在 5%"。这是<strong>处理不当条件下的死亡风险</strong>，不是人群中 5% 的人会得震颤谵妄。</div>
+    </details>
+    <details>
+      <summary>⑨ Wernicke 补 B1：眼震快消，记忆难复</summary>
+      <div class="dbody">教材明确：大量补充维生素 B1 可使<strong>眼震症状很快消失</strong>，但<strong>记忆障碍的恢复较为困难</strong>。不要把"补 B1 就能全部恢复"当作答案；Korsakoff 的三大特征是记忆障碍、虚构、定向力障碍。</div>
+    </details>
+    <details>
+      <summary>⑩ 单纯 BZD 过量呼吸抑制极少 ≠ BZD 过量安全</summary>
+      <div class="dbody">教材说"单纯 BZDs 过量引起的呼吸抑制极少出现"，但紧接着强调：与酒精、阿片类、肌肉松弛药合用可<strong>增加药物过量和猝死风险</strong>；罕见情况下还可产生致命的房室传导阻滞。要看"是否多药合用"。</div>
+    </details>
+    <details>
+      <summary>⑪ 伐尼克兰不与 NRT 联用，安非他酮却可联合 NRT</summary>
+      <div class="dbody">教材：伐尼克兰有部分尼古丁拮抗作用，<strong>不推荐与 NRT 药物联合使用</strong>；而"对于尼古丁严重依赖的吸烟者，联合应用 NRT（与安非他酮）可使戒烟效果增加"。两个"联合"方向相反。</div>
+    </details>
+    <details>
+      <summary>⑫ 咖啡因"低至 100mg/d"也会产生耐受</summary>
+      <div class="dbody">教材原文：长期使用咖啡因，"即使每天常规剂量低至 <strong>100mg</strong>，也会养成习惯，产生耐受性，停用可能会产生轻度戒断症状"。不要以为只有高剂量才有依赖风险；<strong>750～1 200mg</strong> 只是"更有可能"产生耐受。</div>
+    </details>
+  </div>
+</section>
+
+<!-- ===== 16 自测 ===== -->
+<section id="quiz">
+  <div class="sec-head"><div class="badge">16</div><h2>章节自测系统<span class="en">14 questions · 6 types</span></h2></div>
+  <p class="sec-lead">覆盖单选、多选、判断、名词解释、简答、案例分析六种题型，按易→中→难排列。先作答，再展开解析。</p>
+
+  <div class="quiz-q">
+    <div class="qh"><span class="qno">第 1 题</span><span class="qtype">单选题</span><span class="diff">易</span></div>
+    <p class="brief">区分"滥用（有害使用）"与"依赖"的关键点是？</p>
+    <div class="opts">
+      <div class="opt"><span class="l">A.</span>是否出现不良后果</div>
+      <div class="opt"><span class="l">B.</span>是否有明显的耐受性增加或戒断症状</div>
+      <div class="opt"><span class="l">C.</span>使用物质的时间长短</div>
+      <div class="opt"><span class="l">D.</span>是否被家人发现</div>
+    </div>
+    <details><summary>查看答案与解析</summary><div class="dbody"><strong>答案：B</strong><br>教材原文：滥用"强调的是不良后果。滥用者没有明显的耐受性增加或戒断症状，反之就是依赖状态"。A 是两者的共同背景，不是分界；C、D 教材未作为判断标准。</div></details>
+  </div>
+
+  <div class="quiz-q">
+    <div class="qh"><span class="qno">第 2 题</span><span class="qtype">单选题</span><span class="diff">中</span></div>
+    <p class="brief">海洛因依赖者突然停药，戒断症状通常在何时出现、持续多久？</p>
+    <div class="opts">
+      <div class="opt"><span class="l">A.</span>停药后 1～3 天出现，持续数周</div>
+      <div class="opt"><span class="l">B.</span>停药后 8～12 小时出现，持续 7～10 天</div>
+      <div class="opt"><span class="l">C.</span>停药后 3～4 天出现，持续 4～5 天</div>
+      <div class="opt"><span class="l">D.</span>停药后立即出现，持续 24 小时</div>
+    </div>
+    <details><summary>查看答案与解析</summary><div class="dbody"><strong>答案：B</strong><br>教材：短效药物（吗啡、海洛因）一般在停药后 8～12 小时出现戒断症状，持续 7～10 天。A 是长效药物美沙酮的时程（1～3 天出现，极期 3～8 天，持续数周）；C 是酒精戒断性谵妄的时间，不要混用。</div></details>
+  </div>
+
+  <div class="quiz-q">
+    <div class="qh"><span class="qno">第 3 题</span><span class="qtype">单选题</span><span class="diff">难</span></div>
+    <p class="brief">关于 ICD-11 物质依赖诊断标准，下列哪项是<strong>错误</strong>的？</p>
+    <div class="opts">
+      <div class="opt"><span class="l">A.</span>要求在过去 12 个月中反复出现，或既往 1 个月中持续出现</div>
+      <div class="opt"><span class="l">B.</span>三条核心症状中至少满足 2 条</div>
+      <div class="opt"><span class="l">C.</span>三条核心症状中必须同时满足 3 条</div>
+      <div class="opt"><span class="l">D.</span>核心症状包括控制受损、使用优先、生理特征</div>
+    </div>
+    <details><summary>查看答案与解析</summary><div class="dbody"><strong>答案：C</strong><br>教材明确：ICD-11 简化了依赖诊断标准，<strong>3 条核心症状中至少 2 条</strong>即可诊断。C 把"至少 2 条"说成"必须 3 条"，是典型错误。</div></details>
+  </div>
+
+  <div class="quiz-q">
+    <div class="qh"><span class="qno">第 4 题</span><span class="qtype">多选题</span><span class="diff">中</span></div>
+    <p class="brief">阿片类物质急性中毒的典型表现包括？</p>
+    <div class="opts">
+      <div class="opt"><span class="l">A.</span>针尖样瞳孔</div>
+      <div class="opt"><span class="l">B.</span>呼吸抑制</div>
+      <div class="opt"><span class="l">C.</span>昏迷</div>
+      <div class="opt"><span class="l">D.</span>血压升高、体温升高</div>
+    </div>
+    <details><summary>查看答案与解析</summary><div class="dbody"><strong>答案：ABC</strong><br>教材原文："常表现为三联症，即针尖样瞳孔、呼吸抑制及昏迷"。中毒者皮肤冰凉、<strong>体温下降、血压下降</strong>，故 D 错。另需记住例外：缺氧严重或合用其他药物时可瞳孔散大。</div></details>
+  </div>
+
+  <div class="quiz-q">
+    <div class="qh"><span class="qno">第 5 题</span><span class="qtype">多选题</span><span class="diff">中</span></div>
+    <p class="brief">关于苯二氮䓬类的撤药，下列哪些符合教材？</p>
+    <div class="opts">
+      <div class="opt"><span class="l">A.</span>多种镇静催眠药合并使用者，可转换为 1 种进行替代递减，通常推荐地西泮</div>
+      <div class="opt"><span class="l">B.</span>起始剂量取第一个 24 小时内能耐受戒断症状的最低日总剂量</div>
+      <div class="opt"><span class="l">C.</span>大约每周减少 50% 起始剂量，继以每 2 周减少 10%～25%</div>
+      <div class="opt"><span class="l">D.</span>一旦开始减量就必须严格按计划，出现戒断症状也不能调整</div>
+    </div>
+    <details><summary>查看答案与解析</summary><div class="dbody"><strong>答案：ABC</strong><br>D 错：教材明确"在减量过程中如出现戒断症状，可临时增加小剂量药物，待症状稳定后再减慢减量速度"。总时程通常 4～8 周。</div></details>
+  </div>
+
+  <div class="quiz-q">
+    <div class="qh"><span class="qno">第 6 题</span><span class="qtype">多选题</span><span class="diff">难</span></div>
+    <p class="brief">关于酒精戒断，下列哪些说法正确？</p>
+    <div class="opts">
+      <div class="opt"><span class="l">A.</span>单纯性戒断反应一般在断酒后 6～12 小时开始，48～72 小时达高峰</div>
+      <div class="opt"><span class="l">B.</span>酒精性癫痫首选苯二氮䓬类，应尽早给药</div>
+      <div class="opt"><span class="l">C.</span>震颤谵妄最重要特征是全身肌肉粗大震颤，症状昼轻夜重</div>
+      <div class="opt"><span class="l">D.</span>酒精戒断后出现兴奋、不眠，说明用错了药</div>
+    </div>
+    <details><summary>查看答案与解析</summary><div class="dbody"><strong>答案：ABC</strong><br>D 错：教材在戒断定义中明确"一般表现为与所使用药物的药理作用相反的症状"，并举例"酒精（中枢神经系统抑制剂）戒断后出现的是<strong>兴奋、不眠，甚至癫痫样发作</strong>"，这是预期现象，不是用错药。</div></details>
+  </div>
+
+  <div class="quiz-q">
+    <div class="qh"><span class="qno">第 7 题</span><span class="qtype">判断题</span><span class="diff">易</span></div>
+    <p class="brief">教材指出，迄今未发现使用大麻致死的病例报告，因此可以认为大麻是一种安全、无不良反应的物质。</p>
+    <div class="opts">
+      <div class="opt"><span class="l">A.</span>正确</div>
+      <div class="opt"><span class="l">B.</span>错误</div>
+    </div>
+    <details><summary>查看答案与解析</summary><div class="dbody"><strong>答案：B（错误）</strong><br>教材原文紧接着指出："正因如此，人们常误认为大麻是一种安全、无不良反应的物质。而大麻所致危害在于<strong>破坏正常的生产和生活</strong>，并非中毒死亡。"前半句成立，后半句的推论不成立。</div></details>
+  </div>
+
+  <div class="quiz-q">
+    <div class="qh"><span class="qno">第 8 题</span><span class="qtype">判断题</span><span class="diff">中</span></div>
+    <p class="brief">一般认为，苯丙胺类兴奋剂较难产生躯体依赖，而更容易产生精神依赖。</p>
+    <div class="opts">
+      <div class="opt"><span class="l">A.</span>正确</div>
+      <div class="opt"><span class="l">B.</span>错误</div>
+    </div>
+    <details><summary>查看答案与解析</summary><div class="dbody"><strong>答案：A（正确）</strong><br>教材原文："一般认为，ATS 较难产生躯体依赖而更容易产生精神依赖。"这也是其戒断"一般不会出现类似阿片类、酒精依赖者的严重躯体戒断症状"的原因。</div></details>
+  </div>
+
+  <div class="quiz-q">
+    <div class="qh"><span class="qno">第 9 题</span><span class="qtype">判断题</span><span class="diff">难</span></div>
+    <p class="brief">单纯苯二氮䓬类过量引起的呼吸抑制极少出现，因此 BZD 过量不会增加猝死风险。</p>
+    <div class="opts">
+      <div class="opt"><span class="l">A.</span>正确</div>
+      <div class="opt"><span class="l">B.</span>错误</div>
+    </div>
+    <details><summary>查看答案与解析</summary><div class="dbody"><strong>答案：B（错误）</strong><br>前半句对，后半句错。教材明确：多药合用，尤其与酒精、阿片类药物、肌肉松弛药合用，可<strong>增加药物过量和猝死的风险</strong>；罕见情况下 BZD 还可产生潜在的、致命的房室传导阻滞。</div></details>
+  </div>
+
+  <div class="quiz-q">
+    <div class="qh"><span class="qno">第 10 题</span><span class="qtype">名词解释</span><span class="diff">中</span></div>
+    <p class="brief">请解释"耐受性"。</p>
+    <details><summary>查看答案与解析</summary><div class="dbody"><strong>参考答案：</strong>耐受性是一种状态，指药物使用者必须<strong>增加使用剂量方能获得所需的效果</strong>，使用原来的剂量则达不到使用者所追求的效果。它属于依赖的生理特征之一，可与依赖并存，但单独出现耐受并不等于依赖。</div></details>
+  </div>
+
+  <div class="quiz-q">
+    <div class="qh"><span class="qno">第 11 题</span><span class="qtype">名词解释</span><span class="diff">中</span></div>
+    <p class="brief">请解释"戒断状态"。</p>
+    <details><summary>查看答案与解析</summary><div class="dbody"><strong>参考答案：</strong>指停止使用药物、减少使用剂量或使用拮抗剂占据受体后所出现的特殊的心理生理症状群。其机制是长期用药后突然停药引起的<strong>适应性的反跳</strong>。不同药物戒断症状因其药理特性不同而不同，一般表现为<strong>与所使用药物药理作用相反</strong>的症状，例如酒精戒断后出现兴奋、不眠，甚至癫痫样发作。</div></details>
+  </div>
+
+  <div class="quiz-q">
+    <div class="qh"><span class="qno">第 12 题</span><span class="qtype">简答题</span><span class="diff">难</span></div>
+    <p class="brief">简述酒精戒断综合征的三种类型及其时间特点与处理原则。</p>
+    <details><summary>查看答案与解析</summary><div class="dbody">
+      <strong>参考答案：</strong>
+      <ol>
+        <li><strong>单纯性酒精戒断反应：</strong>断酒后 6～12 小时出现手抖、出汗、恶心，继之焦虑不安、无力、强烈饮酒渴望；24～36 小时可见发热、心悸、唾液分泌增加、恶心呕吐，体征有眼球震颤、瞳孔散大、血压升高；48～72 小时达高峰；4～5 天后躯体反应基本消失。处理以苯二氮䓬类为主，地西泮 10mg/次、3～4 次/天，首次可加大，用药不超过 5～7 天。</li>
+        <li><strong>酒精性癫痫：</strong>约 30% 患者在戒酒期间出现癫痫样痉挛发作，表现为意识丧失、四肢抽搐、两眼上翻、角弓反张、口吐白沫，一般 5～15 分钟意识恢复；情况危急，需住院观察。治疗首选苯二氮䓬类，尽早给药；重症或有风险者首次可给 2mg 劳拉西泮或 10mg 地西泮口服。</li>
+        <li><strong>酒精戒断性谵妄（震颤谵妄）：</strong>断酒后 3～4 天出现，意识清晰度下降、定向力差、恐怖性知觉异常、情绪激越；最重要的特征是全身肌肉粗大震颤，昼轻夜重；伴发热、大汗、心搏加快、血压升高，可有白细胞升高、脑电图异常、肝功能异常；处理不当死亡率约 5%。</li>
+      </ol>
+      <span class="note">教材未给出震颤谵妄的独立治疗段落，其处理原则与"急性酒精戒断"一致（BZD 降低谷氨酸活性/增加 GABA 活性）；未补充教材外方案。</span>
+    </div></details>
+  </div>
+
+  <div class="quiz-q">
+    <div class="qh"><span class="qno">第 13 题</span><span class="qtype">案例分析题</span><span class="diff">难</span></div>
+    <p class="brief">某青年被送至急诊，呼之不应，呼吸极慢，双侧瞳孔针尖样、对光反射消失。家属称其"最近在注射一种白色粉末"。请回答：最可能的诊断、最关键的抢救药物及其使用原则、还需警惕哪种"瞳孔例外"。</p>
+    <details><summary>查看答案与解析</summary><div class="dbody">
+      <strong>1. 最可能诊断：</strong>阿片类物质急性中毒。依据教材三联征——<strong>针尖样瞳孔、呼吸抑制、昏迷</strong>；静注是常见途径，且"一旦注射量超过个体耐受量或注入速度过快，可很快达到中毒、致死浓度"。<br>
+      <strong>2. 关键药物：</strong><strong>纳洛酮</strong>，是阿片类过量与中毒的首选药物。使用原则为<strong>尽早、及时、足量和足疗程</strong>；教材明确"在抢救时并无固定剂量范围"，主要依据用药后的拮抗效果、个体中毒症状的缓解程度并结合生命体征改善情况确定；可皮下、肌内或静脉注射。<br>
+      <strong>3. 一般措施：</strong>清理并保持呼吸道通畅、有效供氧，建立静脉通道、及时给药，注意生命体征变化、对症支持治疗。<br>
+      <strong>4. 瞳孔例外：</strong>缺氧严重或合用其他药物中毒时，可出现<strong>瞳孔散大</strong>，不能因瞳孔不呈针尖样就排除阿片类中毒。<br>
+      <span class="note">本例为按教材三联征与处理原则构建的模拟情境，不是教材原案例；未虚构具体剂量与化验值。</span>
+    </div></details>
+  </div>
+
+  <div class="quiz-q">
+    <div class="qh"><span class="qno">第 14 题</span><span class="qtype">案例分析题</span><span class="diff">难</span></div>
+    <p class="brief">某患者长期每晚服用地西泮助眠，因担心成瘾而自行突然停药。2 天后出现焦虑、失眠、手抖、出汗，并要求"再开一种更强的安眠药"。请回答：最可能发生了什么、为什么不能突然停药、下一步的撤药原则。</p>
+    <details><summary>查看答案与解析</summary><div class="dbody">
+      <strong>1. 最可能：</strong>BZD 撤药（戒断）症状。教材明确："<strong>即使是治疗剂量，在较长时间的使用后突然停药也会出现撤药症状（戒断症状）</strong>"。<br>
+      <strong>2. 为什么不能突然停药：</strong>长期使用存在依赖和撤药症状；突然停药可诱发上述症状，且患者可能因难以耐受而重新用药，形成反复。<br>
+      <strong>3. 撤药原则：</strong>① 停药前向患者解释治疗计划，告知可能出现的问题及注意事项；② 采用<strong>剂量递减法</strong>；③ 起始剂量以第一个 24 小时内能耐受戒断症状的最低日总剂量为准；④ 大约每周减少 <strong>50%</strong> 起始剂量，继以每 2 周减少 <strong>10%～25%</strong>，直到停用；⑤ 总时程通常 <strong>4～8 周</strong>；⑥ 减量中出现戒断症状可临时增加小剂量，稳定后再减慢速度；⑦ 若多种镇静催眠药合并使用，先转换为 1 种（通常地西泮）再递减。<br>
+      <span class="note">本例为按教材撤药方案构建的模拟情境，不是教材原案例；未虚构具体 mg 剂量（教材未给 BZD 各药的具体剂量）。</span>
+    </div></details>
+  </div>
+</section>
+
+<!-- ===== 17 速记卡 ===== -->
+<section id="cards">
+  <div class="sec-head"><div class="badge">17</div><h2>考点速记卡<span class="en">20 flip cards</span></h2></div>
+  <p class="sec-lead">正面是问题，点击翻面看答案。建议按"概念→物质→处置"三轮刷，每轮只追求快速反应。</p>
+  <div class="flashcard-grid">
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag concept">概念</span><p>什么是依赖？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">一组认知、行为和生理症状群：使用者明知滥用会带来问题仍继续使用；自我用药导致耐受性增加、戒断症状和强制性觅药行为。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag diag">鉴别</span><p>滥用与依赖的分水岭？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">有无明显的耐受性增加或戒断症状：无 → 滥用（有害使用）；有 → 依赖。滥用强调的是不良后果。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag concept">概念</span><p>耐受性与戒断状态分别是什么？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">耐受性：必须增加剂量才能获得原有效果。戒断状态：停药、减量或拮抗剂占受体后出现的心理生理症状群，机制为适应性反跳，表现通常与药理作用相反。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag diag">诊断</span><p>ICD-11 依赖的 3 条核心症状？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">① 控制受损（常伴渴求）；② 使用优先于其他兴趣、责任、健康；③ 生理特征（耐受、戒断、再用缓解）。12 个月内反复或 1 个月内持续，满足至少 2 条。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag concept">机制</span><p>奖赏系统的关键通路与结构？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">以腹侧被盖区（VTA）与伏隔核（NAc）构成的通路最关键；还包括前额叶、海马、杏仁核。多巴胺经 D1/D2 受体引发奖赏相关行为与学习。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag risk">风险</span><p>阿片类急性中毒三联征？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">针尖样瞳孔、呼吸抑制、昏迷。例外：缺氧严重或合用其他药物中毒时瞳孔可散大。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag data">时间</span><p>阿片类戒断的两条时间轴？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">短效（吗啡、海洛因）：停药 8～12 小时出现，持续 7～10 天。长效（美沙酮）：1～3 天出现，极期 3～8 天，持续数周。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag treat">治疗</span><p>美沙酮替代递减的五步方案？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">首次 20～40mg/d；4 小时后可加 5～10mg/d；稳定 1～2 天；逐日减前日 20%；减至 5～10mg/d 时每 1～3 天减 1mg 至停药。原则：控制症状、逐日递减、先快后慢、只减不加、停药坚决。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag treat">治疗</span><p>丁丙诺啡与复方制剂的起始时机？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">丁丙诺啡：末次使用后 12～24 小时开始，首次 1～6mg，疗程 10～14 天。复方丁丙诺啡/纳洛酮：必须出现客观明显戒断体征，距末次至少 6 小时，首次 4mg。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag data">数据</span><p>大麻中 THC 的含量范围？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">大麻烟约 0.5%～5%；大麻油可高达 15%～50%。化合物 400 多种，其中约 60 种为大麻酚类。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag risk">风险</span><p>大麻的致死性与真正危害？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">除静脉注射外很难达到致死量，迄今未发现使用大麻致死的病例报告；但危害在于破坏正常的生产和生活，并非中毒死亡。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag treat">治疗</span><p>BZD 的撤药方案？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">起始取 24 小时内能耐受戒断的最低日总剂量；每周减 50% 起始量；继以每 2 周减 10%～25%；总时程 4～8 周；多药合用先转地西泮。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag treat">治疗</span><p>BZD 过量的处理与拮抗剂？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">常规：保持呼吸道通畅、纠正缺氧、维持血压、对症支持；必要时使用氟马西尼、纳洛酮。单纯 BZD 过量呼吸抑制极少，但多药合用猝死风险增加。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag data">时间</span><p>单纯性酒精戒断的时间轴？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">6～12 小时：手抖、出汗、恶心、焦虑、渴求；24～36 小时：发热、心悸、唾液增加、眼震、瞳孔散大、血压升高；48～72 小时高峰；4～5 天躯体反应基本消失。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag risk">风险</span><p>震颤谵妄的时间、特征与死亡率？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">断酒后 3～4 天；意识清晰度下降、定向力差、恐怖性知觉异常、情绪激越；最重要特征是全身肌肉粗大震颤，昼轻夜重；处理不当死亡率约 5%。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag diag">鉴别</span><p>Wernicke 脑病与 Korsakoff 综合征的核心表现？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">Wernicke：维生素 B1 缺乏，眼球震颤、眼球外展不能、明显意识障碍；补 B1 后眼震快消、记忆难复。Korsakoff：记忆障碍、虚构、定向力障碍三大特征。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag treat">治疗</span><p>戒酒硫与纳曲酮的要点？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">戒酒硫：预先 3～4 天服用，饮酒后 15～20 分钟出现潮红、头痛、恶心、低血压等，敏感者仅 7ml 酒精即触发。纳曲酮：25～50mg/d，可减少饮酒量与复发率，1994 年 FDA 批准。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag data">数据</span><p>尼古丁三种主要药物方案的剂量与疗程？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">NRT：5 种剂型，疗程 8～12 周，5% 可长达一年。安非他酮：150mg/d，提前 1 周，7～12 周。伐尼克兰：1mg 每天 2 次，提前 1～2 周，疗程 12 周，不与 NRT 联用。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag data">数据</span><p>咖啡因的两个关键剂量阈值？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">每天 1.5g 以上咖啡因可能导致中毒；长期使用即使低至 100mg/d 也可产生耐受，750～1 200mg 更易产生耐受。戒断以头痛最常见，1～2 天达峰。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag diag">诊断</span><p>赌博障碍与游戏障碍的关键数字？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">赌博障碍：终生患病率约 0.2%～2.0%，诊断需持续至少 12 个月（症状十分严重可放宽）。游戏障碍：全球 3%～8%，我国 4.7%～6.0%，好发亚洲、青少年、男性。</div>
+    </div></div>
+  </div>
+</section>
+
+<!-- ===== 18 病例挑战 ===== -->
+<section id="cases">
+  <div class="sec-head"><div class="badge">18</div><h2>病例挑战<span class="en">3 cases · increasing difficulty</span></h2></div>
+  <p class="sec-lead">以下为<strong>模拟临床情境</strong>：依据教材所述典型表现与处理原则构建，用于训练临床推理，<strong>不是教材原案例</strong>，也不含虚构的化验数值与教材未给的剂量。</p>
+
+  <div class="case">
+    <span class="ctag">难度 ★ · 识别与即刻处理</span>
+    <h3>案例 1：注射后叫不醒的年轻人</h3>
+    <div class="scene">某青年被朋友送至急诊，呼之不应。朋友称其"刚注射了一种白色粉末"。查体：呼吸极慢，双侧瞳孔呈针尖样、对光反射消失、双眼球固定，皮肤冰凉，血压偏低。</div>
+    <ol class="ques">
+      <li>最可能的诊断是什么？教材的三联征是哪三项？</li>
+      <li>首选的拮抗剂是什么？教材对其使用原则与剂量如何表述？</li>
+      <li>除拮抗剂外，一般治疗措施包括哪些？</li>
+      <li>什么情况下瞳孔可能不呈针尖样？</li>
+    </ol>
+    <details><summary>查看答案与解析</summary><div class="dbody">
+      <strong>1.</strong>阿片类物质急性中毒。三联征：<strong>针尖样瞳孔、呼吸抑制、昏迷</strong>。教材指出急性中毒大多源于意外，以静脉注射较为多见。<br>
+      <strong>2.</strong><strong>纳洛酮</strong>，是阿片类过量与中毒的首选药物；要求<strong>尽早、及时、足量和足疗程</strong>使用。教材明确"在抢救时并无固定剂量范围"，主要依据拮抗效果、中毒症状缓解程度并结合生命体征改善确定；可皮下、肌内或静脉注射。<br>
+      <strong>3.</strong>清理并保持呼吸道通畅、有效供氧；建立静脉通道、及时给药；注意生命体征变化、对症支持治疗。<br>
+      <strong>4.</strong>缺氧严重或合用其他药物中毒时，可出现<strong>瞳孔散大</strong>。<br>
+      <span class="note">本案例为模拟情境，依据教材三联征与治疗原则构建，不是教材原案例。</span>
+    </div></details>
+  </div>
+
+  <div class="case">
+    <span class="ctag">难度 ★★ · 戒断风险与时间判断</span>
+    <h3>案例 2：停酒第三天看见"蛇"的人</h3>
+    <div class="scene">某中年男性长期大量饮酒，有晨饮习惯，多次自行戒酒失败。因"想彻底戒掉"而突然停止饮酒。第 3 天家属发现他认不清人、说墙上有毒蛇猛兽，情绪激动、大喊大叫，全身明显抖动，伴发热、大汗。此前第 1 天曾出现手抖、出汗、恶心。</div>
+    <ol class="ques">
+      <li>最可能的诊断是什么？教材对其时间与核心特征如何描述？</li>
+      <li>该状态的最大风险是什么？教材给出的死亡率是多少？</li>
+      <li>若患者在戒酒期间出现四肢抽搐、意识丧失，应考虑什么？如何处理？</li>
+      <li>为什么不能只给抗精神病药"压住幻觉"？</li>
+    </ol>
+    <details><summary>查看答案与解析</summary><div class="dbody">
+      <strong>1.</strong>酒精戒断性谵妄（震颤谵妄）。教材：严重慢性酒精中毒患者突然断酒，大概在断酒后 <strong>3～4 天</strong>出现；表现为意识清晰度下降、定向力差，大量知觉异常（毒蛇猛兽、"妖魔鬼怪"），极不安宁、情绪激越；<strong>最重要的特征是全身肌肉伴有粗大的震颤</strong>，症状昼轻夜重；伴发热、大汗、心搏加快、血压升高。<br>
+      <strong>2.</strong>处理不当可因高热、脱水、衰竭、感染、外伤而死亡，教材给出<strong>死亡率大概 5%</strong>。<br>
+      <strong>3.</strong>考虑<strong>酒精性癫痫</strong>（约 30% 患者在戒酒期间出现）。处理：首选<strong>苯二氮䓬类</strong>，应<strong>尽早</strong>给药；重症或有癫痫风险者，教材引国外经验首次可给 <strong>2mg 劳拉西泮或 10mg 地西泮口服</strong>；并需住院观察。<br>
+      <strong>4.</strong>戒断的本质是"降低谷氨酸活性或增加 GABA 活性来阻止失控的兴奋"，传统上用<strong>苯二氮䓬类</strong>实现；抗精神病药只控制幻觉妄想，不能替代 BZD 对戒断兴奋的处理。教材对酒精性幻觉、妄想推荐新型抗精神病药并<strong>尽量与 BZD 联合</strong>。<br>
+      <span class="note">本案例为模拟情境，依据教材戒断三型与处理原则构建，不是教材原案例；未虚构化验值。</span>
+    </div></details>
+  </div>
+
+  <div class="case">
+    <span class="ctag">难度 ★★★ · 长期用药与撤药方案</span>
+    <h3>案例 3："越吃越不管用"的安眠药</h3>
+    <div class="scene">某患者因失眠长期每晚服用地西泮，起初效果良好，后来自行加量才能入睡。近期又自行加用另一种催眠药。因担心成瘾，他一次性停掉所有药物，随后出现严重失眠、焦虑、手抖、出汗，遂要求"换一种更强的药"。既往无癫痫史，无酒精及其他物质使用史。</div>
+    <ol class="ques">
+      <li>该患者存在耐受还是依赖？依据教材如何判断？</li>
+      <li>为什么不能一次性停掉所有药物？教材对"多种镇静催眠药合并使用"有何建议？</li>
+      <li>请按教材给出完整的撤药计划要点。</li>
+      <li>如果患者在减量过程中再次出现戒断症状，应如何处理？</li>
+    </ol>
+    <details><summary>查看答案与解析</summary><div class="dbody">
+      <strong>1.</strong>两者都存在。教材：耐受性指必须增加剂量才能获得原效果（患者"自行加量才能入睡"）；依赖表现为长期使用后的心理和生理不良反应、耐受性增加、有效性降低，以及<strong>依赖和撤药症状</strong>。教材还明确：<strong>即使是治疗剂量，较长时间使用后突然停药也会出现撤药症状</strong>。<br>
+      <strong>2.</strong>突然停药会诱发撤药（戒断）症状。教材建议：存在依赖者使用<strong>固定剂量每周进行减量</strong>；如果是多种镇静催眠药合并使用，建议<strong>转换为 1 种镇静催眠药进行替代递减，通常推荐地西泮</strong>。<br>
+      <strong>3.</strong>① 停药前向患者解释治疗计划，告知可能出现的问题及注意事项；② 起始剂量以<strong>第一个 24 小时内能耐受戒断症状的最低日总剂量</strong>为准；③ 大约<strong>每周减少 50% 的起始剂量</strong>；④ 继以<strong>每 2 周减少 10%～25%</strong>，直到停用；⑤ 持续时间通常<strong>4～8 周</strong>；⑥ 减量中如出现戒断症状，可临时增加小剂量，待症状稳定后再减慢减量速度。<br>
+      <strong>4.</strong>按教材：<strong>可临时增加小剂量药物</strong>，待症状稳定后再<strong>减慢减量速度</strong>；不要因一次波动就恢复原剂量长期维持。<br>
+      <span class="note">本案例为模拟情境，依据教材 BZD 危害与撤药方案构建，不是教材原案例；教材未给 BZD 各药具体 mg 剂量，故本答案不写具体剂量。</span>
+    </div></details>
+  </div>
+</section>
+
+<!-- ===== 19 拓展 ===== -->
+<section id="ext">
+  <div class="sec-head"><div class="badge">19</div><h2>拓展延伸<span class="en">Beyond the chapter</span></h2></div>
+  <p class="sec-lead">本章教材已提及但未展开的内容，集中列在这里；同时明确标出"教材未涉及"的空白，避免把课外知识误当成教材结论。</p>
+  <div class="grid2">
+    <div class="card cyan">
+      <h3>教材提及、但仅一笔带过的内容</h3>
+      <ul>
+        <li><strong>新精神活性物质：</strong>又称"策划药""实验室药品"；教材称其已成为继海洛因和冰毒之后的"第三代毒品"，但未展开具体品种与检测方法。</li>
+        <li><strong>成瘾记忆的消除：</strong>教材提到"非条件性刺激唤起-消退"心理学范式，以及普萘洛尔抑制尼古丁记忆再巩固的临床试验，但未给出临床操作方案。</li>
+        <li><strong>尼古丁疫苗：</strong>教材说明其原理（抗体阻止尼古丁过血脑屏障）与局限（不能减少渴求），但未给剂量、疗程与临床推广情况。</li>
+        <li><strong>中医中药戒烟：</strong>提到戒烟片/茶/酒（含鱼腥草、薄荷）、耳针穴位（神门、肾、肺、交感）、电针仪与激光穴位治疗仪，但未给具体疗程与疗效数据。</li>
+        <li><strong>游戏障碍的干预研究：</strong>教材称不同研究者提出不同干预措施与流程，但"尚未有较为公认的干预措施"。</li>
+        <li><strong>赌博障碍的药物治疗：</strong>教材只列方向（阿片受体拮抗剂、心境稳定剂、抗抑郁药、谷氨酸能药物），未给具体药名与剂量。</li>
+      </ul>
+    </div>
+    <div class="card orange">
+      <h3>教材未涉及 / 本指南不补写的内容</h3>
+      <ul>
+        <li><strong>纳洛酮的具体剂量</strong>——教材明确"无固定剂量范围"，按拮抗效果个体化。</li>
+        <li><strong>BZD 各药的具体 mg 剂量与"Z"类的撤药剂量</strong>——教材只给撤药比例与时程。</li>
+        <li><strong>大麻戒断的替代治疗方案</strong>——教材称躯体戒断轻微、通常不需特殊处理。</li>
+        <li><strong>致幻剂的治疗</strong>——教材只给分类、代表药与效应特点。</li>
+        <li><strong>咖啡因中毒与戒断的治疗方案</strong>——本节无治疗小节。</li>
+        <li><strong>赌博障碍与游戏障碍的权威治疗指南</strong>——教材明确"尚未有"。</li>
+        <li><strong>各物质的成瘾遗传基因、受体亚型细节</strong>——教材只给结论性表述。</li>
+        <li><strong>本章的患病率数据</strong>——除教材明确引用的数字外，不补写其他流行病学数据。</li>
+      </ul>
+    </div>
+  </div>
+  <div class="callout ext">
+    <span class="ct">📖 使用提醒</span>
+    本指南所有数值、剂量、疗程、药名与诊断要件均取自教材第十五章原文；凡标注"教材未涉及/未给/未展开"的地方，不要用其他资料的数字替代，以免与教材答案冲突。
+  </div>
+  <div class="hr"></div>
+  <p class="note" style="text-align:center">精神病学（第9版）· 第十五章 物质使用及成瘾行为所致障碍 · 印刷页 179–196 · 学习指南完</p>
+</section>
+
+</div>
+<nav class="chapter-pager" aria-label="章节间导航"><a class="cp-prev" href="精神病学_第十四章_进食与排泄障碍_学习指南.html">← 上一章：第十四章</a><a class="cp-toc" href="index.html">目录</a><a class="cp-next" href="精神病学_第十六章_冲动控制障碍、破坏性行为或去社会障碍_学习指南.html">下一章：第十六章 →</a></nav>
+</main>
+
+<button class="top" id="topBtn" aria-label="回到顶部">↑</button>
+<script>
+/* ============================================================
+   精神病学学习指南 · 统一交互层 v1（构建期注入，整体替换原 IIFE）
+   兼容 A 族（.tabbar button + [data-panel] + .panel.on）与
+   B 族（.tab-nav + .tab-panel.active）两套 DOM 约定。
+   特性检测 + 防御式查询 + 幂等；不引入任何外部依赖。
+   ============================================================ */
+(function () {
+  'use strict';
+  if (window.__PSY_GUIDE_APP__) { return; }
+  window.__PSY_GUIDE_APP__ = true;
+
+  var d = document;
+
+  function all(sel, root) {
+    return Array.prototype.slice.call((root || d).querySelectorAll(sel));
+  }
+  function on(el, ev, fn, opt) {
+    if (el) { el.addEventListener(ev, fn, opt || false); }
+  }
+  function norm(s) {
+    return String(s || '').replace(/\s+/g, '').toUpperCase();
+  }
+
+  /* ---------- 1. Tab 切换（两族约定都支持） ---------- */
+  function initTabs() {
+    all('.tabs, [data-tabs]').forEach(function (g) {
+      if (g.__psyTabs) { return; }
+      g.__psyTabs = true;
+      var isA = !!g.querySelector('.tabbar button');
+      var btns = all(isA ? '.tabbar button' : '.tab-nav .tab-btn', g);
+      if (!btns.length) { return; }
+      var cls = isA ? 'on' : 'active';
+      var nav = btns[0].closest('.tabbar') || btns[0].closest('.tab-nav');
+      if (nav && !nav.hasAttribute('role')) { nav.setAttribute('role', 'tablist'); }
+      all(isA ? '.panel' : '.tab-panel', g).forEach(function (p) {
+        if (!p.hasAttribute('role')) { p.setAttribute('role', 'tabpanel'); }
+      });
+      function activate(btn) {
+        btns.forEach(function (b) {
+          b.classList.remove(cls);
+          b.setAttribute('aria-selected', 'false');
+        });
+        btn.classList.add(cls);
+        btn.setAttribute('aria-selected', 'true');
+        var id = btn.getAttribute('data-tab');
+        if (!id) { return; }
+        var target = isA
+          ? g.querySelector('[data-panel="' + id + '"]')
+          : (g.querySelector('.tab-panel#' + id) || d.getElementById(id));
+        all(isA ? '.panel' : '.tab-panel', g).forEach(function (p) {
+          var show = isA ? (p.getAttribute('data-panel') === id) : (p === target);
+          p.classList.toggle(cls, show);
+        });
+      }
+      btns.forEach(function (btn, i) {
+        if (!btn.hasAttribute('role')) { btn.setAttribute('role', 'tab'); }
+        btn.setAttribute('aria-selected', btn.classList.contains(cls) ? 'true' : 'false');
+        if (!btn.hasAttribute('tabindex') && !btn.classList.contains(cls)) { btn.setAttribute('tabindex', '0'); }
+        on(btn, 'click', function () { activate(btn); });
+        on(btn, 'keydown', function (e) {
+          if (e.key !== 'ArrowRight' && e.key !== 'ArrowLeft') { return; }
+          e.preventDefault();
+          var nx = btns[(i + (e.key === 'ArrowRight' ? 1 : btns.length - 1)) % btns.length];
+          if (nx) { nx.focus(); activate(nx); }
+        });
+      });
+    });
+  }
+
+  /* ---------- 2. 速记卡：点击/键盘翻转 + 可达性 ---------- */
+  function initCards() {
+    all('.flashcard').forEach(function (card) {
+      if (card.__psyCard) { return; }
+      card.__psyCard = true;
+      card.setAttribute('tabindex', '0');
+      card.setAttribute('role', 'button');
+      function sync() {
+        card.setAttribute('aria-pressed', card.classList.contains('flipped') ? 'true' : 'false');
+      }
+      function flip() { card.classList.toggle('flipped'); sync(); }
+      on(card, 'click', flip);
+      on(card, 'keydown', function (e) {
+        if (e.key === 'Enter' || e.key === ' ' || e.key === 'Spacebar') {
+          e.preventDefault();
+          flip();
+        }
+      });
+      sync();
+    });
+  }
+
+  /* ---------- 3. 自测题交互化（核心新功能） ---------- */
+  function initQuiz() {
+    var questions = all('.quiz-q, .quiz-item');
+    if (!questions.length) { return; }
+    var groups = {};
+
+    function keyOf(o) {
+      var L = o.getAttribute('data-letter');
+      if (L && String(L).replace(/\s+/g, '') !== '') { return norm(L); }
+      var sp = o.querySelector('.l');
+      if (sp) {
+        var t = norm(sp.textContent).replace(/[.．、:：]/g, '');
+        if (t !== '') { return t; }
+      }
+      var txt = norm(o.textContent);
+      if (txt.indexOf('正确') >= 0 || txt.indexOf('错误') >= 0) { return txt; }
+      return txt.charAt(0);
+    }
+
+    function getGroup(q) {
+      var sec = q.closest('.quiz-block') || q.closest('section') || d.body;
+      if (!groups[sec.__psyGid]) {
+        sec.__psyGid = 'g' + (Object.keys(groups).length + 1);
+        groups[sec.__psyGid] = { sec: sec, total: 0, score: 0, row: null, first: null };
+      }
+      var g = groups[sec.__psyGid];
+      if (!g.first) { g.first = q; }
+      return g;
+    }
+
+    function ensureRow(g) {
+      if (g.row) { return g.row; }
+      var row = d.createElement('div');
+      row.className = 'quiz-score';
+      row.setAttribute('role', 'status');
+      row.setAttribute('aria-live', 'polite');
+      row.innerHTML = '<span class="qs-label">自测计分</span>' +
+        '<span class="qs-num">得分 0 / ' + g.total + '</span>' +
+        '<span class="qs-bar"><i></i></span>';
+      g.first.parentNode.insertBefore(row, g.first);
+      g.row = row;
+      return row;
+    }
+
+    function updateRow(g) {
+      var row = ensureRow(g);
+      var num = row.querySelector('.qs-num');
+      var bar = row.querySelector('.qs-bar i');
+      if (num) { num.textContent = '得分 ' + g.score + ' / ' + g.total; }
+      if (bar) { bar.style.width = (g.total ? Math.round(g.score / g.total * 100) : 0) + '%'; }
+    }
+
+    questions.forEach(function (q) {
+      if (q.__psyQuiz) { return; }
+      q.__psyQuiz = true;
+      var opts = all('.opt', q);
+      if (!opts.length) { opts = all('.quiz-options > li', q); }
+      if (!opts.length) { return; }
+
+      /* 正确答案先记入内存：预标 correct 优先（记录后立即移除，消除剧透），
+         否则从解析文本「答案：X / 答案 X」提取（不改动任何文字） */
+      var ansKeys = [];
+      var preset = opts.filter(function (o) { return o.classList.contains('correct'); });
+      preset.forEach(function (o) { o.classList.remove('correct'); });
+      if (preset.length) {
+        ansKeys = preset.map(keyOf);
+      } else {
+        var dt = q.querySelector('details');
+        var txt = dt ? dt.textContent : '';
+        var m = txt.match(/答案\s*[:：]?\s*([A-Za-z](?:[\s、,，·和及]*[A-Za-z])*)/);
+        if (m) {
+          ansKeys = m[1].match(/[A-Za-z]/g) || [];
+        } else {
+          var m2 = txt.match(/答案\s*[:：]?\s*(正确|错误)/);
+          if (m2) { ansKeys = [m2[1]]; }
+        }
+      }
+      if (!ansKeys.length) { return; } /* 无可判定答案（名词解释等），保持原样 */
+
+      var g = getGroup(q);
+      g.total += 1;
+      var multi = ansKeys.length > 1;
+      var ansSet = ansKeys.map(norm);
+      var locked = false;
+      var picked = [];
+
+      function revealAll() {
+        opts.forEach(function (o) {
+          if (ansSet.indexOf(keyOf(o)) >= 0) { o.classList.add('is-reveal'); }
+        });
+      }
+      function finish(ok) {
+        locked = true;
+        q.classList.add('is-locked');
+        var dt = q.querySelector('details');
+        if (dt) { dt.open = true; }
+        if (ok) { g.score += 1; }
+        updateRow(g);
+      }
+
+      opts.forEach(function (o) {
+        o.setAttribute('tabindex', '0');
+        function pick() {
+          if (locked) { return; }
+          var k = keyOf(o);
+          if (ansSet.indexOf(k) >= 0) {
+            o.classList.add('is-right');
+            if (picked.indexOf(k) < 0) { picked.push(k); }
+            if (multi) {
+              if (picked.length === ansSet.length) { finish(true); }
+            } else {
+              finish(true);
+            }
+          } else {
+            o.classList.add('is-wrong');
+            revealAll();
+            finish(false);
+          }
+        }
+        on(o, 'click', pick);
+        on(o, 'keydown', function (e) {
+          if (e.key === 'Enter' || e.key === ' ' || e.key === 'Spacebar') {
+            e.preventDefault();
+            pick();
+          }
+        });
+      });
+    });
+
+    Object.keys(groups).forEach(function (id) {
+      if (groups[id].total > 0) { updateRow(groups[id]); }
+    });
+  }
+
+  /* ---------- 4. 侧栏 scroll spy（本页锚点高亮） ---------- */
+  function initSpy() {
+    var links = all('#sidebar a[href^="#"]');
+    if (!links.length || !('IntersectionObserver' in window)) { return; }
+    var map = {};
+    links.forEach(function (a) {
+      var id = a.getAttribute('href').slice(1);
+      if (id) { map[id] = a; }
+    });
+    var secs = [];
+    Object.keys(map).forEach(function (id) {
+      var s = d.getElementById(id);
+      if (s) { secs.push(s); }
+    });
+    if (!secs.length) { return; }
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting && map[e.target.id]) {
+          links.forEach(function (a) { a.classList.remove('active'); });
+          map[e.target.id].classList.add('active');
+        }
+      });
+    }, { rootMargin: '-15% 0px -70% 0px', threshold: 0 });
+    secs.forEach(function (s) { io.observe(s); });
+  }
+
+  /* ---------- 5. 阅读进度条 + 回顶 ---------- */
+  function initScroll() {
+    var bar = d.getElementById('readbar');
+    var topBtn = d.getElementById('topBtn') || d.getElementById('backTop');
+    var ticking = false;
+    function step() {
+      ticking = false;
+      var h = d.documentElement;
+      var y = window.pageYOffset || h.scrollTop || 0;
+      if (bar) {
+        var max = h.scrollHeight - h.clientHeight;
+        bar.style.width = (max > 0 ? (y / max) * 100 : 0) + '%';
+      }
+      if (topBtn) {
+        topBtn.classList.toggle('show', y > 400);     /* A 族类名 */
+        topBtn.classList.toggle('visible', y > 400);  /* B 族类名 */
+      }
+    }
+    on(window, 'scroll', function () {
+      if (!ticking) { ticking = true; window.requestAnimationFrame(step); }
+    }, { passive: true });
+    step();
+    on(topBtn, 'click', function () {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
+
+  /* ---------- 6. 侧栏开合（存在才绑定；抽屉打开时锁定背景滚动） ---------- */
+  function initSidebar() {
+    var sidebar = d.getElementById('sidebar');
+    if (!sidebar) { return; }
+    var btn = d.getElementById('menuBtn') || d.getElementById('navToggle');
+    var ov = d.getElementById('overlay') || d.getElementById('sidebarOverlay');
+    function lock(open) {
+      /* 仅移动抽屉断点（≤900px）锁滚动；宽屏兜底解除，防布局残留 */
+      d.body.classList.toggle('nav-locked', !!open && window.innerWidth <= 900);
+    }
+    function close() {
+      sidebar.classList.remove('open');
+      if (ov) { ov.classList.remove('show'); }
+      lock(false);
+    }
+    on(btn, 'click', function () {
+      var open = !sidebar.classList.contains('open');
+      sidebar.classList.toggle('open');
+      if (ov) { ov.classList.toggle('show'); }
+      lock(open);
+    });
+    on(ov, 'click', close);
+    all('a', sidebar).forEach(function (a) {
+      on(a, 'click', function () {
+        if (window.innerWidth <= 900) { close(); }
+      });
+    });
+    on(window, 'resize', function () {
+      if (window.innerWidth > 900) { lock(false); }
+    });
+  }
+
+  /* ---------- 启动（脚本位于 body 末尾，DOM 已就绪；防御兜底） ---------- */
+  function boot() {
+    initTabs();
+    initCards();
+    initQuiz();
+    initSpy();
+    initScroll();
+    initSidebar();
+  }
+  if (d.readyState === 'loading') {
+    on(d, 'DOMContentLoaded', boot);
+  } else {
+    boot();
+  }
+})();
+</script>
+
+</body>
+</html>

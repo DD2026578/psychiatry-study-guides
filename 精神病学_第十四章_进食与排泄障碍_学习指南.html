@@ -1,0 +1,2604 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>精神病学 第十四章 进食与排泄障碍 · 学习指南</title>
+<style>
+:root{
+  --primary:#0EA5E9; --accent:#10B981; --symptom:#EF4444; --treatment:#10B981;
+  --cause:#3B82F6; --diagnosis:#F59E0B; --memory:#8B5CF6; --danger:#DC2626;
+  --quiz:#EC4899; --flashcard:#06B6D4; --bg:#F0F7FA; --card:#FFFFFF;
+  --ink:#0F172A; --muted:#64748B; --border:#E2E8F0; --accent2:#10B981; --accent3:#06B6D4;
+  --shadow:0 4px 18px rgba(15,23,42,.06); --radius:14px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:'Microsoft YaHei','PingFang SC','Hiragino Sans GB',system-ui,-apple-system,sans-serif;font-size:16px;line-height:1.75;-webkit-font-smoothing:antialiased}
+#readbar{position:fixed;top:0;left:0;height:4px;width:0;background:linear-gradient(135deg,#0EA5E9 0%,#06B6D4 50%,#10B981 100%);z-index:300;transition:width .12s linear}
+a{color:var(--primary);text-decoration:none}
+a:hover{text-decoration:underline}
+.sidebar{position:fixed;top:0;left:0;width:272px;height:100vh;background:#fff;border-right:1px solid var(--border);overflow-y:auto;padding:20px 16px 40px;z-index:120}
+.sidebar h2{font-size:17px;margin:0 0 4px;line-height:1.5}
+.sidebar .sub{font-size:12px;color:var(--muted);line-height:1.6;margin-bottom:14px}
+.toc-group{font-size:12px;letter-spacing:.08em;color:var(--muted);margin:16px 0 6px;font-weight:700}
+.sidebar a.toc{display:block;padding:7px 10px;border-radius:8px;font-size:14px;color:var(--ink);line-height:1.5;margin:2px 0}
+.sidebar a.toc:hover{background:#E0F2FE;text-decoration:none}
+.sidebar a.toc .n{display:inline-block;min-width:26px;color:var(--primary);font-weight:700}
+.sidebar .unitlink{font-weight:600}
+.sidebar .sub2{padding-left:26px;font-size:13px;color:var(--muted)}
+.overlay{display:none}
+.menu-btn{display:none;position:fixed;top:14px;left:14px;z-index:200;width:46px;height:46px;border-radius:12px;border:1px solid var(--border);background:#fff;box-shadow:var(--shadow);font-size:22px;line-height:1;color:var(--primary);cursor:pointer}
+.main{margin-left:272px;padding:0 40px 90px;max-width:1240px}
+.wrap{max-width:980px;margin:0 auto}
+.hero{background:linear-gradient(135deg,#0EA5E9 0%,#06B6D4 50%,#10B981 100%);color:#fff;border-radius:0 0 26px 26px;padding:52px 44px 40px;margin:0 -40px 30px;box-shadow:0 12px 30px rgba(14,165,233,.18)}
+.hero .chap{display:inline-block;font-size:13px;letter-spacing:.22em;background:rgba(255,255,255,.18);padding:5px 14px;border-radius:999px;margin-bottom:16px}
+.hero h1{font-size:42px;line-height:1.25;margin:0 0 10px;font-weight:800}
+.hero .tagline{font-size:18px;opacity:.96;margin:0 0 6px}
+.hero .meta{font-size:13px;opacity:.85}
+.goalbox{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.28);border-radius:14px;padding:18px 20px;margin-top:22px}
+.goalbox h3{margin:0 0 10px;font-size:15px;letter-spacing:.06em}
+.goalbox ul{margin:0;padding-left:20px}
+.goalbox li{margin:4px 0;font-size:14.5px;line-height:1.65}
+.lv{display:inline-block;font-size:11px;font-weight:700;padding:1px 8px;border-radius:999px;background:#fff;color:#0369A1;margin-right:6px;vertical-align:1px}
+.lv.l2{color:#047857}.lv.l3{color:#B45309}.lv.l4{color:#B91C1C}
+section{scroll-margin-top:18px;margin:0 0 46px}
+.sec-head{display:flex;align-items:center;gap:12px;margin:0 0 8px}
+.sec-head .badge{flex:0 0 auto;width:44px;height:44px;border-radius:13px;background:linear-gradient(135deg,#0EA5E9,#06B6D4);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:17px;box-shadow:0 6px 14px rgba(14,165,233,.25)}
+.sec-head h2{font-size:27px;margin:0;line-height:1.35;font-weight:800}
+.sec-head .en{font-size:13px;color:var(--muted);font-weight:400;margin-left:6px}
+.sec-lead{color:#334155;background:#fff;border-left:4px solid var(--primary);border-radius:0 12px 12px 0;padding:13px 18px;margin:12px 0 22px;box-shadow:var(--shadow);font-size:15px}
+.card{background:var(--card);border:1px solid var(--border);border-left:6px solid var(--primary);border-radius:var(--radius);padding:20px 22px;margin:16px 0;box-shadow:var(--shadow)}
+.card.red{border-left-color:var(--symptom)} .card.green{border-left-color:var(--treatment)}
+.card.blue{border-left-color:var(--cause)} .card.orange{border-left-color:var(--diagnosis)}
+.card.purple{border-left-color:var(--memory)} .card.cyan{border-left-color:var(--flashcard)}
+.card.danger{border-left-color:var(--danger)} .card.pink{border-left-color:var(--quiz)}
+.card h3,.col-title{font-size:19px;margin:0 0 10px;line-height:1.45;display:flex;align-items:center;gap:9px;flex-wrap:wrap}
+.col-title .idx{font-size:12px;font-weight:800;color:#fff;background:var(--primary);padding:2px 9px;border-radius:999px;letter-spacing:.03em}
+.card p{margin:8px 0}
+.card ul,.card ol{margin:8px 0;padding-left:22px}
+.card li{margin:5px 0}
+.quote{background:#EFF8FF;border:1px dashed #7DD3FC;border-radius:10px;padding:12px 16px;margin:10px 0;font-size:15px;color:#0C4A6E}
+.quote .lab{display:inline-block;font-size:11px;font-weight:800;background:#0EA5E9;color:#fff;padding:1px 7px;border-radius:5px;margin-right:7px;vertical-align:1px}
+.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.grid4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.grid2>*,.grid3>*,.grid4>*{min-width:0}
+.mini{background:#F8FAFC;border:1px solid var(--border);border-radius:11px;padding:12px 14px}
+.mini h4{margin:0 0 5px;font-size:15px;color:#0F172A}
+.mini p,.mini ul{font-size:14px;color:#334155;margin:4px 0}
+.mini ul{padding-left:18px}
+.stat{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0}
+.stat span{font-size:13px;background:#E0F2FE;color:#075985;border-radius:999px;padding:3px 11px;font-weight:600}
+.table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:12px 0;border-radius:12px;border:1px solid var(--border)}
+table{border-collapse:collapse;width:100%;min-width:560px;background:#fff;font-size:14px}
+th{background:#0F172A;color:#fff;font-weight:700;padding:10px 12px;text-align:left;line-height:1.5;font-size:13.5px}
+td{padding:10px 12px;border-top:1px solid var(--border);vertical-align:top;line-height:1.65}
+tbody tr:nth-child(even){background:#F8FAFC}
+td strong{color:#0C4A6E}
+.callout{border-radius:12px;padding:13px 16px;margin:12px 0;border:1px solid;font-size:14.5px}
+.callout .ct{font-weight:800;display:block;margin-bottom:4px;font-size:14.5px}
+.callout.tip{background:#F5F3FF;border-color:#C4B5FD;color:#4C1D95}
+.callout.warn{background:#FEF2F2;border-color:#FCA5A5;color:#7F1D1D}
+.callout.key{background:#ECFDF5;border-color:#6EE7B7;color:#065F46}
+.callout.book{background:#EFF6FF;border-color:#93C5FD;color:#1E3A8A}
+.callout.quiz{background:#FDF2F8;border-color:#F9A8D4;color:#831843}
+.callout.ext{background:#F0F9FF;border-color:#7DD3FC;color:#0C4A6E}
+.timeline{border-left:3px solid #BAE6FD;margin:14px 0 6px 8px;padding-left:20px}
+.tl-item{position:relative;margin:0 0 16px}
+.tl-item:before{content:"";position:absolute;left:-28px;top:5px;width:13px;height:13px;border-radius:50%;background:#fff;border:3px solid var(--primary)}
+.tl-item h4{margin:0 0 3px;font-size:15px;color:#075985}
+.tl-item p{margin:0;font-size:14px;color:#334155}
+.bar{background:#E2E8F0;border-radius:999px;height:9px;overflow:hidden;margin:6px 0 10px}
+.bar i{display:block;height:100%;border-radius:999px;background:linear-gradient(90deg,#0EA5E9,#10B981)}
+.bar-label{display:flex;justify-content:space-between;font-size:13px;color:#334155}
+.tabs{margin:14px 0}
+.tabbar{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:12px}
+.tabbar button{border:1px solid var(--border);background:#fff;border-radius:999px;padding:7px 15px;font-size:14px;font-family:inherit;cursor:pointer;color:#334155}
+.tabbar button.on{background:var(--primary);color:#fff;border-color:var(--primary)}
+.panel{display:none}
+.panel.on{display:block;animation:fade .25s ease}
+@keyframes fade{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}
+details{background:#fff;border:1px solid var(--border);border-radius:11px;margin:10px 0;overflow:hidden}
+summary{cursor:pointer;padding:11px 15px;font-weight:700;color:#075985;list-style:none;font-size:14.5px;background:#F8FAFC}
+summary::-webkit-details-marker{display:none}
+summary:before{content:"▸";display:inline-block;margin-right:7px;color:var(--primary);transition:transform .2s}
+details[open] summary:before{transform:rotate(90deg)}
+details[open] summary{border-bottom:1px solid var(--border)}
+.dbody{padding:13px 16px;font-size:14.5px;color:#1E293B}
+.flashcard-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin:16px 0}
+.flashcard{perspective:1200px;height:200px;cursor:pointer}
+.fc-inner{position:relative;width:100%;height:100%;transition:transform .55s;transform-style:preserve-3d}
+.flashcard.flipped .fc-inner{transform:rotateY(180deg)}
+.fc-front,.fc-back{position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;border-radius:14px;padding:14px 16px;display:flex;flex-direction:column;justify-content:center;box-shadow:var(--shadow);overflow:auto}
+.fc-front{background:#fff;border:1px solid var(--border);border-top:5px solid var(--flashcard)}
+.fc-back{background:#ECFEFF;border:1px solid #A5F3FC;transform:rotateY(180deg);font-size:13.5px;line-height:1.65;color:#164E63}
+.tag{display:inline-block;align-self:flex-start;font-size:11px;font-weight:800;padding:1px 8px;border-radius:999px;margin-bottom:8px;letter-spacing:.04em}
+.tag.concept{background:#DBEAFE;color:#1E40AF}
+.tag.diag{background:#FFEDD5;color:#9A3412}
+.tag.treat{background:#D1FAE5;color:#065F46}
+.tag.data{background:#FCE7F3;color:#9D174D}
+.tag.risk{background:#FEE2E2;color:#991B1B}
+.fc-front p{margin:0;font-size:14.5px;font-weight:700;line-height:1.6}
+.fc-hint{position:absolute;bottom:10px;left:16px;font-size:11px;color:#94A3B8}
+.quiz-q{background:#fff;border:1px solid var(--border);border-left:5px solid var(--quiz);border-radius:12px;padding:16px 18px;margin:16px 0;box-shadow:var(--shadow)}
+.quiz-q .qh{display:flex;justify-content:space-between;gap:10px;align-items:flex-start;margin-bottom:8px;flex-wrap:wrap}
+.quiz-q .qno{font-size:12px;font-weight:800;color:#fff;background:var(--quiz);border-radius:999px;padding:2px 9px;letter-spacing:.04em}
+.diff{font-size:12px;color:#B45309;background:#FEF3C7;border-radius:999px;padding:2px 10px;font-weight:700;white-space:nowrap}
+.qtype{font-size:12px;color:#6B21A8;background:#F3E8FF;border-radius:999px;padding:2px 10px;font-weight:700;white-space:nowrap}
+.opts{margin:10px 0 4px;display:grid;gap:7px}
+.opt{border:1px solid var(--border);border-radius:9px;padding:8px 12px;font-size:14.5px;background:#F8FAFC}
+.opt.correct{border-color:#6EE7B7;background:#ECFDF5;color:#065F46;font-weight:600}
+.opt .l{font-weight:800;color:var(--primary);margin-right:7px}
+.opt.correct .l{color:#047857}
+.brief{font-size:14px;color:#334155;margin-top:4px}
+.case{border:1px solid var(--border);border-top:5px solid var(--danger);border-radius:14px;background:#fff;padding:20px 22px;margin:18px 0;box-shadow:var(--shadow)}
+.case h3{font-size:19px;margin:0 0 8px;color:#7F1D1D}
+.case .ctag{font-size:11.5px;font-weight:800;background:#FEE2E2;color:#991B1B;padding:2px 9px;border-radius:999px;display:inline-block;margin-bottom:10px}
+.case .scene{background:#FFF7ED;border-left:4px solid #FB923C;border-radius:0 10px 10px 0;padding:12px 16px;font-size:14.5px;margin:8px 0 14px}
+.case .ques{margin:8px 0;padding-left:2px}
+.case .ques li{margin:5px 0;font-size:14.5px}
+.top{position:fixed;right:24px;bottom:26px;width:48px;height:48px;border-radius:50%;background:var(--primary);color:#fff;border:none;font-size:20px;cursor:pointer;box-shadow:0 8px 20px rgba(14,165,233,.35);z-index:150;display:none;font-family:inherit}
+.top.show{display:block}
+.hr{height:1px;background:var(--border);margin:26px 0}
+.note{font-size:13px;color:var(--muted);margin-top:6px}
+.kv{display:flex;gap:10px;flex-wrap:wrap;margin:8px 0}
+.kv .k{font-size:12px;font-weight:800;color:#0369A1;background:#E0F2FE;border-radius:6px;padding:2px 8px;white-space:nowrap}
+.kv .v{font-size:14px;color:#334155}
+.starme{font-size:12.5px;color:#B45309;white-space:nowrap}
+@media (max-width:1100px){
+  .main{padding:0 22px 80px}
+  .hero{margin:0 -22px 26px;padding:44px 26px 34px}
+  .hero h1{font-size:34px}
+  .flashcard-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .grid4{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width:900px){
+  .sidebar{transform:translateX(-100%);transition:transform .25s ease;width:280px;box-shadow:0 0 30px rgba(0,0,0,.18)}
+  .sidebar.open{transform:none}
+  .overlay{display:none;position:fixed;inset:0;background:rgba(15,23,42,.42);z-index:110}
+  .overlay.show{display:block}
+  .menu-btn{display:block}
+  .main{margin-left:0;padding:0 18px 80px}
+  .hero{margin:0 -18px 24px;padding:64px 22px 30px;border-radius:0 0 20px 20px}
+  .hero h1{font-size:30px}
+  .sec-head h2{font-size:23px}
+}
+@media (max-width:680px){
+  .grid2,.grid3,.grid4{grid-template-columns:minmax(0,1fr)}
+  .flashcard-grid{grid-template-columns:minmax(0,1fr)}
+  .flashcard{height:190px}
+  table{min-width:500px}
+}
+</style>
+<style data-refactor="v1">
+/* ============================================================
+   精神病学学习指南 · 统一交互层增量覆盖样式 v1
+   构建期由 apply-refactor.ps1 注入 </head> 前，仅追加修正，
+   不改动 A/B 两族基础样式。全部使用字面色值，兼容两族设计变量。
+   ============================================================ */
+
+/* ---- 1. 全局键盘焦点可见 ---- */
+:focus-visible{outline:2px solid #0EA5E9;outline-offset:2px}
+
+/* ---- 2. 章节导航条（胶囊式三段：上一章 / 目录 / 下一章） ---- */
+.chapter-pager{display:flex;align-items:stretch;justify-content:center;gap:10px;margin:36px 0 10px;flex-wrap:wrap}
+.chapter-pager a,.chapter-pager span{flex:1 1 200px;display:flex;align-items:center;justify-content:center;min-height:44px;padding:10px 18px;border:1px solid #E2E8F0;border-radius:999px;background:#FFFFFF;color:#0F172A;font-size:14px;font-weight:600;line-height:1.4;text-decoration:none;text-align:center;box-shadow:0 1px 2px rgba(15,23,42,.06);transition:border-color .15s ease,box-shadow .15s ease,color .15s ease}
+.chapter-pager a:hover{border-color:#0EA5E9;color:#0EA5E9;box-shadow:0 4px 14px rgba(14,165,233,.18);text-decoration:none}
+.chapter-pager .cp-toc{flex:0 0 auto;min-width:104px;background:linear-gradient(135deg,#0EA5E9,#10B981);border-color:transparent;color:#FFFFFF}
+.chapter-pager .cp-toc:hover{border-color:transparent;color:#FFFFFF;opacity:.92}
+.chapter-pager .cp-disabled{opacity:.45;background:#F8FAFC;box-shadow:none;cursor:default}
+@media (max-width:680px){.chapter-pager{gap:8px;margin:28px 0 8px}.chapter-pager a,.chapter-pager span{flex:1 1 100%}}
+
+/* ---- 3. 自测题交互态（兼容 A 族 .opt 与 B 族 .quiz-options li） ---- */
+/* 3.1 基础可点击 */
+.quiz-q .opt{cursor:pointer}
+.quiz-item .quiz-options li{cursor:pointer}
+/* 3.2 hover / 焦点态 */
+.quiz-q .opt:hover,.quiz-q .opt:focus-visible{border-color:#7DD3FC;background:#F0F9FF}
+.quiz-item .quiz-options li:hover,.quiz-item .quiz-options li:focus-visible{background:#FFFFFF;box-shadow:inset 0 0 0 1px #7DD3FC}
+/* 3.3 判定结果态 */
+.quiz-q .opt.is-right{border-color:#34D399;background:#ECFDF5;color:#065F46;font-weight:600}
+.quiz-q .opt.is-right::after{content:" ✓";color:#059669;font-weight:800}
+.quiz-q .opt.is-right .l{color:#047857}
+.quiz-item .quiz-options li.is-right{background:#DCFCE7;box-shadow:inset 0 0 0 1px #34D399;font-weight:600}
+.quiz-item .quiz-options li.is-right::after{content:" ✓";color:#15803D;font-weight:800}
+.quiz-q .opt.is-wrong{border-color:#FCA5A5;background:#FEF2F2;color:#B91C1C;font-weight:600}
+.quiz-q .opt.is-wrong::after{content:" ✗";color:#DC2626;font-weight:800}
+.quiz-q .opt.is-wrong .l{color:#B91C1C}
+.quiz-item .quiz-options li.is-wrong{background:#FEE2E2;box-shadow:inset 0 0 0 1px #FCA5A5;font-weight:600}
+.quiz-item .quiz-options li.is-wrong::after{content:" ✗";color:#DC2626;font-weight:800}
+.quiz-q .opt.is-reveal{border-color:#6EE7B7;background:#ECFDF5;color:#065F46}
+.quiz-q .opt.is-reveal .l{color:#047857}
+.quiz-item .quiz-options li.is-reveal{background:#ECFDF5;box-shadow:inset 0 0 0 1px #6EE7B7;color:#065F46}
+/* 3.4 已锁定禁用态 */
+.quiz-q.is-locked .opt,.quiz-item.is-locked .quiz-options li{cursor:default;pointer-events:none}
+.quiz-q.is-locked .opt:not(.is-right):not(.is-wrong):not(.is-reveal){opacity:.55}
+.quiz-item.is-locked .quiz-options li:not(.is-right):not(.is-wrong):not(.is-reveal){opacity:.55}
+/* 3.5 计分行（运行时注入） */
+.quiz-score{display:flex;align-items:center;gap:12px;margin:14px 0 18px;padding:12px 18px;border:1px dashed #7DD3FC;border-radius:12px;background:#F0F9FF;font-size:14px;font-weight:700;color:#0F172A}
+.quiz-score .qs-label{white-space:nowrap}
+.quiz-score .qs-num{white-space:nowrap;color:#0284C7;font-size:16px}
+.quiz-score .qs-bar{flex:1 1 60px;min-width:60px;height:8px;border-radius:999px;background:#E2E8F0;overflow:hidden}
+.quiz-score .qs-bar i{display:block;height:100%;width:0;border-radius:999px;background:linear-gradient(90deg,#0EA5E9,#10B981);transition:width .35s ease}
+
+/* ---- 4. 速记卡可达性与长内容 ---- */
+.fc-hint,.flip-hint{color:#64748B}
+.flashcard-face{overflow:auto}
+.flashcard[tabindex]{outline:none}
+.flashcard[tabindex]:focus-visible{outline:3px solid #0EA5E9;outline-offset:3px}
+
+/* ---- 5. 侧栏目录 ---- */
+/* B 族 sticky 侧栏内目录限高滚动（A 族 aside 本身已可滚动，此规则空匹配无害） */
+.sidebar .sidebar-nav{max-height:calc(100vh - 60px);overflow-y:auto;scrollbar-width:thin}
+/* A 族 scroll spy 高亮（B 族高亮由其基础样式提供） */
+.sidebar a.toc.active{background:#E0F2FE;color:#0369A1;font-weight:600}
+
+/* ---- 6. 响应式补充：681–900px 时 grid3 降为两列 ---- */
+@media (min-width:681px) and (max-width:900px){
+  .grid3{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+
+/* ---- 7. 打印样式补充（A 族新增；B 族已有 print，重复声明无害） ---- */
+@media print{
+  .sidebar,.overlay,.sidebar-overlay,#menuBtn,#navToggle,#overlay,#sidebarOverlay,#readbar,#topBtn,#backTop,.chapter-pager,.quiz-score{display:none!important}
+}
+
+/* ---- 8. 手机端增强 v2（触控体验 / 防溢出 / 抽屉滚动锁定） ---- */
+/* 8.1 触控体验：去点按高亮、消除双击缩放延迟（flashcard 高 190-200px 天然达标，不另设 min-height） */
+.opt,.tabbar button,.tab-btn,.quiz-options li,.flashcard,.chapter-pager a,.chapter-pager span,.menu-btn,.mobile-nav-toggle{-webkit-tap-highlight-color:transparent;touch-action:manipulation}
+/* 8.2 触控目标最小 44px（自测选项与 tab 胶囊原高约 33px） */
+.opt,.tabbar button,.tab-btn,.quiz-options li{min-height:44px}
+/* 8.3 防溢出：内容图自适应；svg 不设 height:auto，避免定尺寸图标塌陷 */
+img{max-width:100%;height:auto}
+svg{max-width:100%}
+/* 8.4 长词/URL 断行 */
+body{overflow-wrap:break-word}
+/* 8.5 表格容器触摸惯性滚动（A 族已有同值规则，重复声明无害） */
+.table-wrap{-webkit-overflow-scrolling:touch}
+/* 8.6 抽屉打开时锁定背景滚动（两族抽屉断点均为 900px；类由统一脚本增删） */
+@media (max-width:900px){
+  body.nav-locked{overflow:hidden}
+}
+</style>
+</head>
+<body>
+<div id="readbar"></div>
+<button class="menu-btn" id="menuBtn" aria-label="打开目录">☰</button>
+<div class="overlay" id="overlay"></div>
+<aside class="sidebar" id="sidebar">
+  <h2>第十四章 进食与排泄障碍</h2>
+  <div class="sub">精神病学（第9版）· 印刷页 167–178<br>学习指南 · 技能标准版</div>
+  <div class="toc-group">开篇</div>
+  <a class="toc" href="#cover"><span class="n">00</span>章节封面与学习目标</a>
+  <a class="toc" href="#status"><span class="n">01</span>本章地位速览</a>
+  <a class="toc" href="#navmap"><span class="n">02</span>章节导航图</a>
+  <a class="toc" href="#mindmap"><span class="n">03</span>本章知识地图</a>
+  <a class="toc" href="#route"><span class="n">04</span>学习路线图</a>
+  <div class="toc-group">正文（疾病单元八栏）</div>
+  <a class="toc unitlink" href="#u1"><span class="n">05</span>神经性厌食</a>
+  <a class="toc sub2" href="#u1-3">└ 临床表现拼图</a>
+  <a class="toc unitlink" href="#u2"><span class="n">06</span>神经性贪食</a>
+  <a class="toc sub2" href="#u2-3">└ 临床表现拼图</a>
+  <a class="toc unitlink" href="#u3"><span class="n">07</span>暴食障碍</a>
+  <a class="toc sub2" href="#u3-3">└ 临床表现拼图</a>
+  <a class="toc unitlink" href="#u4"><span class="n">08</span>回避-限制性摄食障碍</a>
+  <a class="toc sub2" href="#u4-3">└ 临床表现拼图</a>
+  <a class="toc unitlink" href="#u5"><span class="n">09</span>异食癖</a>
+  <a class="toc sub2" href="#u5-3">└ 临床表现拼图</a>
+  <a class="toc unitlink" href="#u6"><span class="n">10</span>反刍-反流障碍</a>
+  <a class="toc sub2" href="#u6-3">└ 临床表现拼图</a>
+  <a class="toc unitlink" href="#u7"><span class="n">11</span>排泄障碍</a>
+  <a class="toc sub2" href="#u7-3">└ 临床表现拼图</a>
+  <div class="toc-group">结尾</div>
+  <a class="toc" href="#summary"><span class="n">12</span>全章核心要点速览</a>
+  <a class="toc" href="#pitfalls"><span class="n">13</span>易混易错点警示</a>
+  <a class="toc" href="#quiz"><span class="n">14</span>章节自测系统</a>
+  <a class="toc" href="#cards"><span class="n">15</span>考点速记卡</a>
+  <a class="toc" href="#cases"><span class="n">16</span>病例挑战</a>
+  <a class="toc" href="#ext"><span class="n">17</span>拓展延伸</a>
+</aside>
+<main class="main">
+<div class="wrap">
+
+<!-- ===== 00 封面 ===== -->
+<section id="cover">
+  <div class="hero">
+    <span class="chap">第十四章 · CHAPTER 14</span>
+    <h1>进食与排泄障碍</h1>
+    <p class="tagline">从“吃什么、吃多少”到“排不排得出”：以心理社会因素为主因、以进食与排泄行为为出口的一类障碍。</p>
+    <p class="meta">教材：精神病学（第9版）｜印刷页 167–178｜全章 7 节：神经性厌食、神经性贪食、暴食障碍、回避-限制性摄食障碍、异食癖、反刍-反流障碍、排泄障碍</p>
+    <div class="goalbox">
+      <h3>学习目标（四级分层）</h3>
+      <ul>
+        <li><span class="lv">了解</span>说出本章 6 种进食障碍与 2 种排泄障碍的名称、英文与教材定位；了解进食障碍的流行病学概况。</li>
+        <li><span class="lv l2">理解</span>解释神经性厌食“体象歪曲 + 对控制的需求”这一核心心理机制；理解暴食-代偿-恐惧发胖的恶性循环。</li>
+        <li><span class="lv l3">掌握</span>掌握神经性厌食的 BMI/年龄百分位阈值与 ICD-11 分型、神经性贪食与暴食障碍的诊断频率标准、遗尿症与遗粪症的年龄阈值。</li>
+        <li><span class="lv l4">重点</span>神经性厌食与神经性贪食/暴食障碍的鉴别、神经性厌食的两阶段治疗与综合治疗原则、排泄障碍的一线处理——高频考点与临床安全底线。</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 01 地位 ===== -->
+<section id="status">
+  <div class="sec-head"><div class="badge">01</div><h2>本章地位速览<span class="en">Why this chapter matters</span></h2></div>
+  <p class="sec-lead">本章把“心理因素如何变成躯体后果”讲得最直观：一边是吃与不吃，一边是排与不排；诊断靠行为与体重，治疗靠营养、心理与家庭的联合。</p>
+  <div class="grid3">
+    <div class="card blue">
+      <h3>章节定位与重要性</h3>
+      <p>本章位于教材第十四章（印刷页 167–178），属于“心身相关障碍”模块。教材以 7 节展开：前 6 节为进食障碍，第 7 节把遗尿症与遗粪症合并为排泄障碍。</p>
+      <p class="note">考试权重集中于：神经性厌食的 BMI 阈值与分型、神经性贪食/暴食障碍的频率标准与代偿行为、遗尿/遗粪的年龄与频率阈值。</p>
+    </div>
+    <div class="card red">
+      <h3>临床意义</h3>
+      <p>进食障碍几乎都常见于年轻女性，男性少见；教材明确指出神经性厌食和神经性贪食都可能带来 <strong>5 倍或更高的死亡风险</strong>。神经性厌食可因极度营养不良、并发症或自杀死亡。</p>
+      <p>排泄障碍虽多见于儿童且预后良好，但遗尿、遗粪会带来羞耻与家庭冲突，处理的第一步往往是<strong>寻找原因、消除责备</strong>，而不是急着用药。</p>
+    </div>
+    <div class="card green">
+      <h3>与前后章节关联</h3>
+      <p><strong>前置：</strong>抑郁障碍、焦虑障碍、强迫及相关障碍的症状学，是本章鉴别与共病判断的基础。</p>
+      <p><strong>后续延伸：</strong>ICD-11 诊断体系在具体障碍中的落地，尤其是“频率 + 病程 + 排除”三要素。</p>
+      <p><strong>横向交叉：</strong>营养学与内分泌（闭经、瘦素、甲状腺轴）、消化内科（反刍、食管炎）、儿科与泌尿外科（遗尿、遗粪）、家庭治疗。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 02 导航 ===== -->
+<section id="navmap">
+  <div class="sec-head"><div class="badge">02</div><h2>章节导航图<span class="en">Section map</span></h2></div>
+  <p class="sec-lead">按教材 7 节顺序排列，每节对应一个疾病单元，单元内固定八栏。点击卡片可直接跳转。</p>
+  <div class="grid3">
+    <a class="card red" href="#u1" style="display:block;color:inherit">
+      <h3>第一节 · 神经性厌食</h3>
+      <p>有意节制饮食 → 体重显著低于正常；体象歪曲、怕胖、闭经、营养不良。</p>
+      <p class="note">关键词：BMI 18.5/14.0 · 体象障碍 · 两阶段治疗</p>
+    </a>
+    <a class="card orange" href="#u2" style="display:block;color:inherit">
+      <h3>第二节 · 神经性贪食</h3>
+      <p>反复暴食 + 不适当代偿；每周至少 1 次、持续至少 1 个月。</p>
+      <p class="note">关键词：暴食-恐肥-诱吐循环 · 自我催吐 · 低血钾</p>
+    </a>
+    <a class="card green" href="#u3" style="display:block;color:inherit">
+      <h3>第三节 · 暴食障碍</h3>
+      <p>反复暴食但<strong>无</strong>规律代偿；2013 年 DSM-5 才独立设病。</p>
+      <p class="note">关键词：无代偿 · 肥胖 · 代谢综合征</p>
+    </a>
+    <a class="card blue" href="#u4" style="display:block;color:inherit">
+      <h3>第四节 · 回避-限制性摄食障碍</h3>
+      <p>摄入不足导致体重/营养/功能损害，但<strong>不是</strong>怕胖。</p>
+      <p class="note">关键词：ARFID · 男性较多 · 行为与营养方法</p>
+    </a>
+    <a class="card purple" href="#u5" style="display:block;color:inherit">
+      <h3>第五节 · 异食癖</h3>
+      <p>持续食用非营养物质，已达到能区分食物的发育年龄（约 2 岁）。</p>
+      <p class="note">关键词：2 岁 · 铅中毒 · 肠梗阻</p>
+    </a>
+    <a class="card cyan" href="#u6" style="display:block;color:inherit">
+      <h3>第六节 · 反刍-反流障碍</h3>
+      <p>无器质性疾病前提下，有意反复把食物反刍到口腔；每周至少数次、持续数周。</p>
+      <p class="note">关键词：非呕吐 · 2 岁 · 横膈膜呼吸</p>
+    </a>
+    <a class="card pink" href="#u7" style="display:block;color:inherit">
+      <h3>第七节 · 排泄障碍</h3>
+      <p>遗尿症（&gt;5 岁）与遗粪症（&gt;4 岁）：非器质性病变引起的排泄控制障碍。</p>
+      <p class="note">关键词：5 岁/4 岁 · 每周 2 次/每月 1 次 · 去氨升压素</p>
+    </a>
+  </div>
+  <div class="callout book">
+    <span class="ct">📖 单元划分说明</span>
+    教材第 7 节把<strong>遗尿症</strong>与<strong>遗粪症</strong>放在同一节内叙述，故本指南按教材节结构合并为“排泄障碍”一个单元；其余 6 节各自独立成单元，共 <strong>7 个疾病单元</strong>。每单元均保留完整八栏，不因资料多寡删栏。
+  </div>
+</section>
+
+<!-- ===== 03 知识地图 ===== -->
+<section id="mindmap">
+  <div class="sec-head"><div class="badge">03</div><h2>本章知识地图<span class="en">Knowledge map</span></h2></div>
+  <p class="sec-lead">按“行为异常 → 躯体后果 → 诊断阈值 → 鉴别 → 联合治疗”的逻辑重组。全章的主线是：<strong>先判断是“怕胖”还是“不怕胖”，再判断有没有代偿，最后看年龄与病程阈值</strong>。</p>
+  <div class="stat">
+    <span>7 节</span><span>7 个疾病单元</span><span>6 种进食障碍</span><span>2 种排泄障碍</span><span>4 组核心阈值</span><span>2 个教材原案例</span>
+  </div>
+  <p class="note">统计口径：进食障碍 6 种（神经性厌食、神经性贪食、暴食障碍、回避-限制性摄食障碍、异食癖、反刍-反流障碍）；排泄障碍 2 种（遗尿症、遗粪症）。教材原案例仅见于神经性厌食与神经性贪食两节。</p>
+  <div class="grid3">
+    <div class="card red">
+      <h3>① 神经性厌食</h3>
+      <ul>
+        <li>核心：体形/体重超价观念 + 体象歪曲</li>
+        <li>阈值：成人 BMI &lt;18.5；儿童 &lt;第 5 百分位</li>
+        <li>分型：显著低体重 / 危险低体重 / 恢复期正常体重</li>
+        <li>表现：限制摄入、怕胖、闭经、营养不良</li>
+        <li>治疗：先营养，再心理 + 药物</li>
+      </ul>
+    </div>
+    <div class="card orange">
+      <h3>② 神经性贪食</h3>
+      <ul>
+        <li>核心：暴食 + 代偿 + 怕胖</li>
+        <li>频率：每周 ≥1 次，持续 ≥1 个月</li>
+        <li>最常见代偿：自我催吐（暴食后 1 小时内）</li>
+        <li>并发症：低血钾、碱中毒、心律失常</li>
+        <li>治疗：CBT/行为/生物反馈 + 抗抑郁药</li>
+      </ul>
+    </div>
+    <div class="card green">
+      <h3>③ 暴食障碍</h3>
+      <ul>
+        <li>核心：暴食但无规律代偿</li>
+        <li>频率同神经性贪食：每周 ≥1 次、≥1 个月</li>
+        <li>人群：肥胖、女性多，男女约 1:1.75</li>
+        <li>后果：代谢综合征、焦虑抑郁、自杀观念</li>
+        <li>治疗：CBT + 氟西汀/舍曲林/托吡酯等</li>
+      </ul>
+    </div>
+    <div class="card blue">
+      <h3>④ 回避-限制性摄食障碍</h3>
+      <ul>
+        <li>核心：摄入不足 + 营养/体重/功能损害</li>
+        <li>关键否定：动机<strong>不是</strong>怕胖</li>
+        <li>人群：男性比例较高、年龄较小、病程较长</li>
+        <li>表现：回避食物、食欲减退、腹痛、恐惧性呕吐</li>
+        <li>治疗：CBT/家庭治疗 + 行为营养方法</li>
+      </ul>
+    </div>
+    <div class="card purple">
+      <h3>⑤ 异食癖</h3>
+      <ul>
+        <li>核心：吃非营养物质，需临床关注</li>
+        <li>年龄：已达区分食物的发育年龄（约 2 岁）</li>
+        <li>并发症随异物而异：铅中毒、寄生虫、肠梗阻</li>
+        <li>治疗：心理治疗 + 并发症处理</li>
+        <li>病程：随年龄增长多缓解</li>
+      </ul>
+    </div>
+    <div class="card cyan">
+      <h3>⑥ 反刍-反流障碍</h3>
+      <ul>
+        <li>核心：有意反复反刍，非器质性疾病所致</li>
+        <li>频率：每周至少数次，持续至少数周</li>
+        <li>与呕吐区别：无须用力、不伴恶心干呕</li>
+        <li>一线：横膈膜呼吸（深腹式呼吸）</li>
+        <li>预后：多数较好，部分自然缓解</li>
+      </ul>
+    </div>
+    <div class="card pink">
+      <h3>⑦ 排泄障碍</h3>
+      <ul>
+        <li>遗尿：&gt;5 岁，每周 ≥2 次、连续 ≥3 个月</li>
+        <li>遗粪：&gt;4 岁，每月 ≥1 次、连续 ≥3 个月</li>
+        <li>先排除器质性：脊柱裂、尿道狭窄、巨结肠等</li>
+        <li>遗尿一线：去氨升压素 + 遗尿报警器</li>
+        <li>预后：随年龄增长多消失</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 04 路线 ===== -->
+<section id="route">
+  <div class="sec-head"><div class="badge">04</div><h2>学习路线图<span class="en">Study route</span></h2></div>
+  <p class="sec-lead">本章疾病多、数字密。建议先抓“怕胖 / 不怕胖”与“有无代偿”两条分叉，再背阈值，最后用表格横向对比。</p>
+  <div class="grid2">
+    <div class="card blue">
+      <h3>推荐学习路径</h3>
+      <div class="timeline">
+        <div class="tl-item"><h4>第 1 步 · 建分叉（约 20 分钟）</h4><p>先分清神经性厌食（低体重 + 怕胖）、神经性贪食（暴食 + 代偿 + 怕胖）、暴食障碍（暴食但无代偿）、ARFID（摄入不足但不怕胖）。</p></div>
+        <div class="tl-item"><h4>第 2 步 · 攻神经性厌食（约 45 分钟）</h4><p>背 BMI 18.5/14.0 与儿童百分位；理解体象歪曲、闭经、营养不良；记住“先纠正营养不良，再心理 + 药物”的两阶段。</p></div>
+        <div class="tl-item"><h4>第 3 步 · 神经性贪食 + 暴食障碍（约 40 分钟）</h4><p>把“每周 1 次、至少 1 个月”与“有无代偿”作为对比轴，配合两个教材案例记诊断思路。</p></div>
+        <div class="tl-item"><h4>第 4 步 · 三种“小众”进食障碍（约 30 分钟）</h4><p>ARFID、异食癖、反刍-反流障碍各抓一条“年龄 + 否定条件”：2 岁、不是怕胖、不是呕吐。</p></div>
+        <div class="tl-item"><h4>第 5 步 · 排泄障碍 + 自测（约 30 分钟）</h4><p>背 5 岁/4 岁、每周 2 次/每月 1 次、连续 3 个月；随后做自测、翻闪卡、看病例。</p></div>
+      </div>
+      <p class="note">总时长约 2.5～3 小时；建议分 2 次完成，次日用速记卡 + 自测复习 20 分钟。</p>
+    </div>
+    <div class="card purple">
+      <h3>重点优先级与记忆策略</h3>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>内容</th><th>优先级</th><th>推荐记忆法</th></tr></thead>
+          <tbody>
+            <tr><td>神经性厌食 BMI/百分位阈值与分型</td><td class="starme">⭐⭐⭐</td><td>数字编码法</td></tr>
+            <tr><td>神经性贪食 vs 暴食障碍（有无代偿）</td><td class="starme">⭐⭐⭐</td><td>对比记忆法</td></tr>
+            <tr><td>神经性厌食“先营养后心理”两阶段</td><td class="starme">⭐⭐⭐</td><td>时间线 + 口诀</td></tr>
+            <tr><td>遗尿/遗粪年龄与频率阈值</td><td class="starme">⭐⭐⭐</td><td>数字锚定 + 对比表</td></tr>
+            <tr><td>神经性厌食与抑郁障碍、躯体疾病鉴别</td><td class="starme">⭐⭐⭐</td><td>鉴别表 + 一句话总结</td></tr>
+            <tr><td>ARFID 的“不是怕胖”</td><td class="starme">⭐⭐</td><td>否定条件记忆</td></tr>
+            <tr><td>异食癖并发症与异物对应</td><td class="starme">⭐⭐</td><td>因果配对</td></tr>
+            <tr><td>反刍与呕吐的区别</td><td class="starme">⭐⭐</td><td>场景联想</td></tr>
+            <tr><td>ICD-11 亚型名称</td><td class="starme">⭐</td><td>归类记忆</td></tr>
+            <tr><td>流行病学具体百分比</td><td class="starme">⭐</td><td>选择性记忆</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="note">记忆策略总原则：先记“分叉”（怕不怕胖、有没有代偿），再记“数字”（BMI、频率、年龄），最后用鉴别表查漏。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 05 神经性厌食 ===== -->
+<section id="u1">
+  <div class="sec-head"><div class="badge">05</div><h2>神经性厌食<span class="en">第一节 · Anorexia Nervosa（p.167–170）</span></h2></div>
+  <p class="sec-lead">本章的“锚点疾病”：低体重 + 怕胖 + 体象歪曲三件套。抓住它，才能把神经性贪食、暴食障碍和 ARFID 分开。</p>
+
+  <div class="card red" id="u1-1">
+    <h3 class="col-title"><span class="idx">第一栏</span>疾病画像</h3>
+    <div class="quote"><span class="lab">教材原文</span>神经性厌食（anorexia nervosa）是指有意节制饮食，导致体重明显低于正常标准的一种进食障碍。……其核心的心理特征是特有的关于体形和体重的超价观念。</div>
+    <p><strong>一句话画像：</strong>不是“吃不下”，而是“不敢吃、不能让自己胖”——即使已经骨瘦如柴，患者仍觉得自己过胖，并用过度运动、引吐、导泻等方式继续减重。<span class="note">（此句为教材症状的通俗复述，非新增医学事实）</span></p>
+    <p><strong>历史节点：</strong>1868 年由英国医师威廉·格尔（William Gull）正式命名。</p>
+    <div class="stat">
+      <span>年轻女性终生患病率 0.8%～6.3%</span>
+      <span>年轻男性 0.1%～0.3%</span>
+      <span>国内 6～16 岁 0.1%</span>
+      <span>死亡风险 5 倍或更高（与神经性贪食并列）</span>
+    </div>
+    <p class="note">教材说明：进食障碍患病率数据多来自西方国家，不同研究差异较大；性别差异是重要特征，几乎所有的进食障碍均常见于年轻女性。</p>
+  </div>
+
+  <div class="card blue" id="u1-2">
+    <h3 class="col-title"><span class="idx">第二栏</span>病因探秘</h3>
+    <p><strong>教材定性：</strong>神经性厌食的病因<strong>至今仍不明确</strong>，可能与生物学、心理、社会文化多方面的因素有关。</p>
+    <div class="grid3">
+      <div class="mini">
+        <h4>生物学因素</h4>
+        <ul>
+          <li><strong>遗传：</strong>单卵双生子同病率 56%，双卵双生子仅 7%；遗传率 33%～84%；易感基因可能位于染色体 1p33-36；女性一级亲属患病率比一般人群高 8 倍。</li>
+          <li><strong>神经递质：</strong>研究集中在单胺类（多巴胺、去甲肾上腺素、5-HT），尤其 5-HT。低体重患者脑脊液 5-HIAA 显著低于健康对照，5-HT 摄取和更新减少，突触后受体敏感性降低。</li>
+          <li><strong>神经内分泌：</strong>下丘脑-垂体-性腺轴、肾上腺轴、甲状腺轴异常；GH、CRH、NPY、CCK、瘦素等异常；基础瘦素水平较正常人群低。</li>
+        </ul>
+      </div>
+      <div class="mini">
+        <h4>心理因素</h4>
+        <ul>
+          <li><strong>个性：</strong>内向、敏感、缺乏自信、自我评价低、低自尊、完美主义、刻板主义、强迫、易焦虑、易冲动。</li>
+          <li><strong>核心心理：</strong>害怕发胖、对体象歪曲的认识与期望、对身体羞耻感；心理因素的核心要素是<strong>对控制的需求</strong>，通过控制饮食来表达。</li>
+          <li><strong>家庭特征：</strong>纠纷多、关系紧张；对孩子过分溺爱、缺乏独立性；家长专制、缺乏灵活性；缺乏解决冲突技能、常回避冲突。</li>
+        </ul>
+      </div>
+      <div class="mini">
+        <h4>社会文化因素</h4>
+        <ul>
+          <li>本病具有浓厚的文化色彩，发生与所处社会的文化观念有关。</li>
+          <li>现代社会文化观念中，女性身材苗条被认为代表自信和成功。</li>
+          <li>大量媒体宣传把追求苗条作为社会时尚，部分人过度推崇“以瘦为美”。</li>
+        </ul>
+      </div>
+    </div>
+    <div class="callout tip">
+      <span class="ct">💡 5-HT 的“双向表述”不要记成单向</span>
+      教材一方面写“低体重患者 5-HIAA 显著低于对照、5-HT 摄取和更新减少、突触后受体敏感性降低、5-HT 活性降低”；另一方面又写“也有学者认为大脑 5-HT 活性增高可能是发病的病理生理学机制，因为脑脊液 5-HIAA 在低体重时降低，但在体重恢复一段时间后升高”。<strong>这是教材并列的两种解释，不是让你二选一。</strong>
+    </div>
+  </div>
+
+  <div class="card red" id="u1-3">
+    <h3 class="col-title"><span class="idx">第三栏</span>临床表现拼图</h3>
+    <div class="tabs" data-tabs>
+      <div class="tabbar">
+        <button class="on" data-tab="an1">核心行为</button>
+        <button data-tab="an2">躯体与内分泌</button>
+        <button data-tab="an3">精神与营养</button>
+      </div>
+      <div class="panel on" data-panel="an1">
+        <ul>
+          <li><strong>① 故意限制能量摄入：</strong>常为本病<strong>首发症状</strong>。主动节食、限制必需能量，导致体重明显低于正常标准。</li>
+          <li><strong>② 担心体重增加或变胖：</strong>恐惧体重增加、担心发胖或自觉太胖；伴持续防止体重回升的行为——减少能量摄入（限制性摄食）、清除行为（自我催吐、滥用泻药）、增加能量消耗（过度运动）。</li>
+          <li><strong>③ 体象障碍：</strong>对体象有歪曲认识，虽然骨瘦如柴，仍认为自己过胖。</li>
+        </ul>
+      </div>
+      <div class="panel" data-panel="an2">
+        <ul>
+          <li><strong>④ 神经内分泌改变：</strong>女性闭经，男性性功能减退，青春期前起病者第二性征发育延迟。</li>
+          <li>闭经是常见症状，可出现在体重减轻<strong>之前、之后或同时</strong>；青春期后起病的女孩，闭经可作为起病后出现的<strong>第一个症状</strong>。</li>
+        </ul>
+      </div>
+      <div class="panel" data-panel="an3">
+        <ul>
+          <li><strong>⑤ 营养不良和代谢紊乱：</strong>皮肤干燥、苍白、皮下脂肪少、失去弹性与光泽；毛发稀疏脱落；低血压、低体温、心动过缓、贫血、水肿、无症状性低血糖。</li>
+          <li>呕吐和滥用泻药可致血脂、水电解质和酸碱平衡紊乱，<strong>最严重的是低血钾</strong>；实验室可见白细胞减少和肝肾功能改变。</li>
+          <li>随疾病发展出现营养不良、消瘦、疲劳、肌肉无力，严重者恶病质甚至死亡；<strong>体重低于正常体重的 60% 时，死亡率较高</strong>。</li>
+          <li><strong>⑥ 精神症状：</strong>常有抑郁、焦虑情绪和强迫症状，心境不稳定、易激惹、社交退缩；部分患者有自杀倾向。</li>
+        </ul>
+      </div>
+    </div>
+    <p><strong>ICD-11 分型（按低体重状况）</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>亚型</th><th>成人 BMI</th><th>儿童青少年</th><th>备注</th></tr></thead>
+        <tbody>
+          <tr><td>伴显著低体重</td><td>18.5～14.0kg/m<sup>2</sup></td><td>相应年龄 BMI 第 5 个百分位至 0.3 个百分位之间（低于 95% 同龄人，但达不到 99.7%）</td><td>可再分限制性模式、暴食-清除模式、未特定</td></tr>
+          <tr><td>伴危险低体重</td><td>低于 14.0kg/m<sup>2</sup></td><td>低于相应年龄 BMI 的第 0.3 个百分位</td><td>同样可分限制性、暴食-清除、未特定</td></tr>
+          <tr><td>恢复期伴正常体重</td><td>高于 18.5kg/m<sup>2</sup></td><td>高于相应年龄 BMI 的第 5 个百分位</td><td>其余为“其他特定”与“未特定”</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note">记忆抓手：<strong>18.5 / 14.0 / 第 5 / 0.3</strong> 四个数字，就是神经性厌食分型的“坐标轴”。</p>
+  </div>
+
+  <div class="card orange" id="u1-4">
+    <h3 class="col-title"><span class="idx">第四栏</span>教材典型案例</h3>
+    <div class="quote">
+      <span class="lab">教材原文</span>
+      患者，女，15 岁，进食极少，逐渐消瘦近 2 年。身高 1.62m，学习刻苦、成绩优秀，父母均是小学老师，父亲管教严厉。初二时无意间听到一个同学说她长得胖，从此开始关注自己的体形并开始主动节食，体重下降……目前面临初三，学习紧张、压力很大。常常不吃早餐就去上学，午餐、晚餐进食很少……基本不吃肉食……经常吃完就会呕吐。一年中体重从 50kg 降到 35kg 但仍觉得自己太胖，仍在继续节食。自觉精力还好，皮肤干燥、脱发，月经已停止 12 个月。家人曾带其到综合医院检查，生理指标均正常，未发现器质性疾病，建议来专科就诊。
+    </div>
+    <p><strong>教材诊断：</strong>神经性厌食。</p>
+    <p><strong>教材治疗经过：</strong>入院后给予氟西汀 20mg/d 起始，逐渐加至 60mg/d，同时合并运用认知行为疗法，纠正其怕胖的观念，引导健康的饮食和认知。2 周后治疗渐配合，进食量增加；6 周后体重增加 2kg，因初三要求回去上学出院，门诊继续随访；3 月后体重增加至 40kg，月经仍未恢复，面色开始红润；半年后体重恢复至 45kg，月经恢复正常，中考成绩优秀。</p>
+    <p><strong>诊断思路拆解：</strong></p>
+    <div class="timeline">
+      <div class="tl-item"><h4>线索 1 · 青少年女性 + 慢性起病</h4><p>15 岁女性，消瘦近 2 年，起病与“被同学说胖”这一社会心理诱因相关。</p></div>
+      <div class="tl-item"><h4>线索 2 · 主动限制 + 体重显著下降</h4><p>主动节食、不吃早餐、基本不吃肉；一年内从 50kg 降至 35kg，符合“有意节制饮食导致体重明显低于正常标准”。</p></div>
+      <div class="tl-item"><h4>线索 3 · 体象歪曲 + 怕胖</h4><p>已明显消瘦仍“觉得自己太胖，仍在继续节食”，是核心心理特征。</p></div>
+      <div class="tl-item"><h4>线索 4 · 躯体后果 + 排除器质性疾病</h4><p>皮肤干燥、脱发、闭经 12 个月；综合医院检查未发现器质性疾病。</p></div>
+      <div class="tl-item"><h4>线索 5 · 治疗反应</h4><p>氟西汀 + 认知行为疗法后体重、月经逐步恢复，反向支持诊断。</p></div>
+    </div>
+    <div class="callout warn">
+      <span class="ct">⚠️ 剂量提醒</span>
+      教材正文<strong>没有给出神经性厌食的标准化药物剂量与疗程</strong>；上文氟西汀 20mg/d 起始、加至 60mg/d 是<strong>该病例的具体用药</strong>，不能当作所有患者的通用方案。
+    </div>
+  </div>
+
+  <div class="card orange" id="u1-5">
+    <h3 class="col-title"><span class="idx">第五栏</span>鉴别诊断对对碰</h3>
+    <p><strong>表 1　神经性厌食 vs 躯体疾病 vs 抑郁障碍 vs 精神分裂症</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>鉴别对象</th><th>核心症状</th><th>对体重/体形的态度</th><th>关键鉴别点</th></tr></thead>
+        <tbody>
+          <tr><td>躯体疾病（慢性消耗性疾病、肠道感染、肿瘤等）</td><td>厌食、体重下降</td><td><strong>很少</strong>表现怕胖的超价观念、故意限制饮食及体象障碍</td><td>有明确躯体疾病证据；无“怕胖 + 体象歪曲”</td></tr>
+          <tr><td>抑郁障碍</td><td>食欲减退、进食减少，可伴抑郁焦虑情绪</td><td><strong>没有</strong>对体重增加的过分恐惧</td><td>抑郁障碍有情感低落、思维迟缓、意志活动减退、自我评价过低、悲观、自责和睡眠障碍</td></tr>
+          <tr><td>精神分裂症</td><td>可表现进食减少</td><td>不以怕胖为核心</td><td>有明显思维、情感和行为异常，社会功能损害明显，自知力常不完整</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note"><strong>一句话鉴别总结：</strong>有怕胖的超价观念 + 体象歪曲 + 故意限制饮食，才把“消瘦”指向神经性厌食；否则先查躯体病与抑郁。</p>
+    <p><strong>表 2　神经性厌食 vs 神经性贪食（提前对比，防止混淆）</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>维度</th><th>神经性厌食</th><th>神经性贪食</th></tr></thead>
+        <tbody>
+          <tr><td>体重</td><td>明显低于正常标准（成人 BMI &lt;18.5）</td><td>体重常在正常范围</td></tr>
+          <tr><td>核心行为</td><td>限制摄入为主，可有暴食-清除模式</td><td>反复暴食 + 规律的不适当代偿</td></tr>
+          <tr><td>诊断关系</td><td>符合低体重及其他标准时，即使有暴食也诊断“神经性厌食，暴食-清除模式”</td><td>不符合神经性厌食诊断要求；厌食体重恢复后仍暴食，可在一年后改诊断</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note"><strong>一句话鉴别总结：</strong>同样有暴食与催吐，<strong>体重是否低到符合神经性厌食</strong>是分水岭。</p>
+  </div>
+
+  <div class="card green" id="u1-6">
+    <h3 class="col-title"><span class="idx">第六栏</span>治疗方案工具箱</h3>
+    <div class="quote"><span class="lab">教材原文</span>神经性厌食的治疗原则是首先应纠正营养不良，同时或稍后开展心理治疗和药物治疗……综合治疗是治疗此疾病的最佳手段。</div>
+    <div class="timeline">
+      <div class="tl-item"><h4>第一阶段 · 恢复体重，挽救生命</h4><p>先纠正营养不良及水电解质平衡紊乱，给予足够维持生命的能量；制定合理饮食计划，通过增加饮食、加强营养，逐渐恢复正常体重和身体健康。</p></div>
+      <div class="tl-item"><h4>第二阶段 · 改善心理功能，预防复发</h4><p>在营养状况稳定的基础上开展心理治疗与药物治疗，处理体象歪曲、怕胖观念与家庭功能问题。</p></div>
+    </div>
+    <div class="grid3">
+      <div class="mini">
+        <h4>躯体治疗（先手）</h4>
+        <p>纠正营养不良、水电解质紊乱；保证维持生命的能量；合理饮食计划，逐渐恢复体重。</p>
+      </div>
+      <div class="mini">
+        <h4>心理治疗（四条）</h4>
+        <ul>
+          <li><strong>心理健康教育：</strong>让患者认识到拒食可导致营养不良和躯体功能损害，取得信任与合作。</li>
+          <li><strong>支持性心理治疗：</strong>倾听、解释、指导、鼓励、安慰，建立良好医患关系。</li>
+          <li><strong>认知行为疗法：</strong>改变对体形、体重及进食的态度和行为；认知重建纠正歪曲看法；行为治疗用阳性强化法，达到目标体重给予奖励。</li>
+          <li><strong>家庭治疗：</strong>改变患者本身，也改变家庭功能系统。</li>
+        </ul>
+      </div>
+      <div class="mini">
+        <h4>药物治疗（辅助）</h4>
+        <ul>
+          <li>抗抑郁药、抗焦虑药、少量抗精神病药，用于改善抑郁、焦虑、强迫和体象障碍。</li>
+          <li>抗抑郁药包括三环类与 SSRIs，<strong>目前多采用后者</strong>；教材点名<strong>氟西汀、舍曲林</strong>对多数患者效果良好。</li>
+          <li>小剂量抗精神病药如<strong>舒必利、奥氮平</strong>有一定疗效。</li>
+        </ul>
+      </div>
+    </div>
+    <div class="callout warn">
+      <span class="ct">⚠️ 教材未涉及</span>
+      神经性厌食的<strong>标准化热量方案、增重速度、药物统一剂量与疗程</strong>，教材正文均未给出；仅病例中出现氟西汀 20→60mg/d。答题时不要套用其他章节或课外数字。
+    </div>
+    <p><strong>病程与预后（教材原文数据）：</strong>病程常为慢性迁延性，有周期性缓解和复发，常有持久存在的营养不良和消瘦。约 <strong>50%</strong> 治疗效果较好（体重增加、躯体情况改善、社会适应能力提高）；<strong>20%</strong> 时好时坏反复发作；<strong>25%</strong> 始终达不到正常体重、迁延不愈；<strong>5%～10%</strong> 死于极度营养不良、其他并发症或情绪障碍所致的自杀。</p>
+  </div>
+
+  <div class="card purple" id="u1-7">
+    <h3 class="col-title"><span class="idx">第七栏</span>记忆工具箱</h3>
+    <div class="callout tip">
+      <span class="ct">🔧 方法一：数字编码法（记阈值）</span>
+      记 <strong>“18.5—14.0—5—0.3”</strong>：成人 BMI 低于 18.5 为低体重；低于 14.0 为危险低体重；儿童青少年低于相应年龄 BMI 第 5 百分位为低体重；低于第 0.3 百分位为危险低体重。<br>
+      <em>为什么这样记：</em>四个数字构成一条从“显著”到“危险”的刻度尺，先记刻度，再填亚型名称，避免把 14.0 与 18.5 弄反。
+    </div>
+    <div class="callout tip">
+      <span class="ct">🔧 方法二：口诀歌谣法（记六组表现）</span>
+      口诀：<strong>“一限食、二怕胖、三体象、四闭经、五营养、六情绪”</strong>。<br>
+      解释：①故意限制能量摄入；②担心体重增加/变胖；③体象障碍；④神经内分泌改变（闭经等）；⑤营养不良和代谢紊乱；⑥精神症状（抑郁、焦虑、强迫、自杀倾向）。<br>
+      <em>为什么这样记：</em>六个短句把教材临床表现的六条标题压缩成一条顺口溜，回忆时按序号清点，不容易漏“闭经”或“体象”。
+    </div>
+    <div class="callout tip">
+      <span class="ct">🔧 方法三：对比记忆法（AN vs BN）</span>
+      画一条“体重轴”：<strong>低体重端 = 神经性厌食；正常体重端 = 神经性贪食</strong>。两端都可能出现暴食与催吐，但只有低体重端能诊断神经性厌食；厌食恢复体重后仍暴食，<strong>一年后</strong>才改诊断神经性贪食。<br>
+      <em>为什么这样记：</em>把“体重”当成一条连续轴，比孤立背两条诊断标准更容易处理“暴食-清除模式”这个易混点。
+    </div>
+    <div class="callout tip">
+      <span class="ct">🔧 方法四：故事串联法（记发病链条）</span>
+      想象一个被说“胖”的女孩：<strong>被评价 → 关注体形 → 主动节食 → 体重下降 → 仍觉得自己胖 → 变本加厉限制/催吐 → 闭经、脱发、低血压</strong>。<br>
+      <em>为什么这样记：</em>把社会心理诱因、体象歪曲和躯体后果串成一条因果链，比单记“病因三分类”更符合临床叙事。
+    </div>
+  </div>
+
+  <div class="card cyan" id="u1-8">
+    <h3 class="col-title"><span class="idx">第八栏</span>知识联动</h3>
+    <ul>
+      <li><strong>与神经性贪食：</strong>两者可交替出现，可能有相似病理心理机制；厌食的“暴食-清除模式”与贪食的边界由体重决定。</li>
+      <li><strong>与抑郁障碍：</strong>厌食常有抑郁、焦虑情绪，抑郁障碍也可食欲减退；鉴别的关键是<strong>有无对体重增加的过分恐惧</strong>。</li>
+      <li><strong>与强迫及相关障碍：</strong>患者常有强迫症状与完美主义、刻板主义个性，认知行为治疗同样针对歪曲认知。</li>
+      <li><strong>与内分泌/营养学：</strong>闭经、瘦素降低、下丘脑-垂体-性腺/肾上腺/甲状腺轴异常，提示需要躯体监测与营养支持。</li>
+      <li><strong>与儿科/青少年医学：</strong>儿童青少年用“相应年龄 BMI 百分位”而非成人 BMI，评估时必须带生长曲线。</li>
+      <li><strong>与家庭治疗：</strong>教材把家庭模式（纠缠、过度保护、僵化、缺乏冲突解决能力）列为治疗靶点，说明本病的“系统”视角。</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===== 06 神经性贪食 ===== -->
+<section id="u2">
+  <div class="sec-head"><div class="badge">06</div><h2>神经性贪食<span class="en">第二节 · Bulimia Nervosa（p.170–172）</span></h2></div>
+  <p class="sec-lead">与神经性厌食“同源不同相”：同样怕胖，但体重多在正常范围；核心是“暴食—代偿”的循环，而不是持续的低体重。</p>
+
+  <div class="card red" id="u2-1">
+    <h3 class="col-title"><span class="idx">第一栏</span>疾病画像</h3>
+    <div class="quote"><span class="lab">教材原文</span>神经性贪食（bulimia nervosa）是指具有反复发作的不可抗拒的进食欲望，及多食或暴食行为，进食后又因担心发胖而采用各种方法减轻体重的一种进食障碍。此病可与神经性厌食交替出现，两者可能具有相似的病理心理机制。</div>
+    <p><strong>一句话画像：</strong>“失控地吃，再拼命地清”——短时间内吃掉大量食物，随后用催吐、泻药、剧烈运动等方式抵消，事后又陷入羞耻与情绪低落。</p>
+    <div class="stat">
+      <span>年轻女性终生患病率 0.8%～2.6%</span>
+      <span>年轻男性 0.1%～0.16%</span>
+      <span>国内 6～16 岁 0.9%</span>
+      <span>女性发病高峰 20～29 岁</span>
+    </div>
+    <p class="note">教材说明：神经性贪食发病年龄较神经性厌食晚；多数患者的贪食症状是神经性厌食症状的延续。性少数群体罹患风险较高。</p>
+  </div>
+
+  <div class="card blue" id="u2-2">
+    <h3 class="col-title"><span class="idx">第二栏</span>病因探秘</h3>
+    <p><strong>教材定性：</strong>病因并不明确，可能起因于心理、社会和生物学诸方面因素。</p>
+    <div class="grid3">
+      <div class="mini">
+        <h4>心理因素</h4>
+        <ul>
+          <li>患者往往存在<strong>追求完美</strong>、调整心理冲突能力较差的心理特点。</li>
+          <li>常用不恰当的暴食行为解除内心的压力和矛盾。</li>
+          <li>在社会“以瘦为美”的畸形审美趋势和目标影响下，担心肥胖。</li>
+        </ul>
+      </div>
+      <div class="mini">
+        <h4>恶性循环链</h4>
+        <p>教材原文给出的链条：<strong>暴食 → 恐肥 → 关注 → 诱吐 → 暴食</strong>。每一次代偿都暂时缓解了怕胖，却强化了下一次暴食。</p>
+        <p class="note">类比理解：像“刷卡—还款”的循环，短暂的解脱换来下一次更强的冲动；但这是类比，不是教材机制表述。</p>
+      </div>
+      <div class="mini">
+        <h4>生物学因素</h4>
+        <ul>
+          <li>单卵孪生子中的同病率比双卵孪生子高。</li>
+          <li>中枢神经系统存在单胺类神经递质代谢异常。</li>
+          <li>多巴胺能系统和内啡肽等代谢异常的现象。</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="card red" id="u2-3">
+    <h3 class="col-title"><span class="idx">第三栏</span>临床表现拼图</h3>
+    <div class="tabs" data-tabs>
+      <div class="tabbar">
+        <button class="on" data-tab="bn1">暴食发作</button>
+        <button data-tab="bn2">代偿行为</button>
+        <button data-tab="bn3">并发症与情绪</button>
+      </div>
+      <div class="panel on" data-panel="bn1">
+        <ul>
+          <li><strong>反复发作性大量进食：</strong>有难以控制的进食欲望，吃到难以忍受的腹胀为止。</li>
+          <li>发作时感到对进食行为<strong>失去控制</strong>，进食明显多于或不同于平时。</li>
+          <li>暴食行为常<strong>偷偷进行</strong>，有时可伴有其他偷窃和欺骗行为。</li>
+          <li>患者往往过分关注自己的体重和体形，存在担心发胖的恐惧心理。</li>
+        </ul>
+      </div>
+      <div class="panel" data-panel="bn2">
+        <ul>
+          <li>为避免体重增加，常反复采用不适当的代偿方式：<strong>自我诱发呕吐、滥用泻药、间歇进食、使用厌食剂</strong>等。</li>
+          <li>最常见的补偿行为是<strong>自我催吐</strong>，通常发生在暴饮暴食后 <strong>1 小时内</strong>。</li>
+          <li>诊断要求代偿行为反复出现：每周 1 次或更多，持续至少 1 个月。</li>
+        </ul>
+      </div>
+      <div class="panel" data-panel="bn3">
+        <ul>
+          <li>暴食与代偿行为一起出现，长时间持续可能很危险。</li>
+          <li>可造成水电解质紊乱：<strong>低血钾、低血钠、代谢性碱中毒、代谢性酸中毒、心律失常、胃肠道损害</strong>等。</li>
+          <li>患者常伴有<strong>情绪低落状态</strong>。</li>
+        </ul>
+      </div>
+    </div>
+    <p class="note">临床表现的记忆轴：<strong>吃得多 → 控不住 → 偷偷吃 → 清得狠 → 电解质乱 → 情绪低落</strong>。</p>
+  </div>
+
+  <div class="card orange" id="u2-4">
+    <h3 class="col-title"><span class="idx">第四栏</span>教材典型案例</h3>
+    <div class="quote">
+      <span class="lab">教材原文</span>
+      患者，女，16 岁，学生，一年来进食量剧增且无法控制而来就诊。患者因为在班级里被同学嘲笑身材较胖，就开始节制饮食。节食后肚内空空，感到心里发慌而出现抗拒不了的“暴食冲动”，每周发作 3～4 次，有时一餐可食一斤多米饭，还有肉食、蔬菜等。饭后，又吃整盒饼干、冰淇淋和其他糖果，要吃得肚胀难忍或呕吐出来为止。患者诉说自己有时突然很想吃，哪怕肚子胀得痛，心里还想吃，明知这样贪食不好，怕变胖，想少吃一些，但无法控制自己。由于对进食感到害臊而不敢在其他人面前进食，但又控制不住，所以经常在下课时躲在宿舍里暴食。有时自己的食物没有了就偷同学书桌里的东西吃。因为怕胖又经常吃泻药以防止营养过剩。最近就诊过内科，未发现有任何躯体疾病。
+    </div>
+    <p><strong>教材诊断：</strong>神经性贪食。</p>
+    <p><strong>诊断思路拆解：</strong></p>
+    <div class="timeline">
+      <div class="tl-item"><h4>线索 1 · 暴食频率达标</h4><p>每周发作 3～4 次，持续一年，远超“每周至少 1 次、持续至少 1 个月”的门槛。</p></div>
+      <div class="tl-item"><h4>线索 2 · 失控感</h4><p>“无法控制自己”“哪怕肚子胀得痛，心里还想吃”，符合暴食的核心体验。</p></div>
+      <div class="tl-item"><h4>线索 3 · 代偿行为</h4><p>怕胖而经常吃泻药；文中还描述吃到“呕吐出来为止”，提示清除行为。</p></div>
+      <div class="tl-item"><h4>线索 4 · 怕胖与羞耻</h4><p>被嘲笑身材后开始节食，随后出现暴食；对进食感到害臊、躲着吃，符合对体重体形的过度关注与痛苦。</p></div>
+      <div class="tl-item"><h4>线索 5 · 排除躯体疾病</h4><p>内科检查未发现躯体疾病，排除器质性原因。</p></div>
+    </div>
+    <div class="callout book">
+      <span class="ct">📖 教材未提供治疗经过</span>
+      本节案例只给出诊断，没有给出具体用药剂量、疗程或随访结果；因此本单元治疗栏只写教材原则，不虚构该例的治疗方案。
+    </div>
+  </div>
+
+  <div class="card orange" id="u2-5">
+    <h3 class="col-title"><span class="idx">第五栏</span>鉴别诊断对对碰</h3>
+    <p><strong>表 1　神经性贪食 vs 器质性/继发性暴食</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>鉴别对象</th><th>暴食特点</th><th>伴随线索</th><th>关键鉴别点</th></tr></thead>
+        <tbody>
+          <tr><td>间脑病变</td><td>可有贪食症状</td><td>嗜睡、体温调节障碍、水盐代谢紊乱或精神症状</td><td>存在间脑病变的躯体/神经系统证据</td></tr>
+          <tr><td>颞叶癫痫</td><td>可有暴食</td><td>抽搐史；脑电图或 CT 的特殊改变</td><td>癫痫病史与脑电图/影像证据</td></tr>
+          <tr><td>精神分裂症继发暴食</td><td>暴食以精神病症状为首发背景</td><td>思维、情感、行为异常，社会功能损害</td><td>精神病性症状先于暴食；体重常不低</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note"><strong>一句话鉴别总结：</strong>先排除“脑子/癫痫”引起的暴食，再看有没有怕胖与规律代偿，才落到神经性贪食。</p>
+    <p><strong>表 2　神经性贪食 vs 神经性厌食 vs 暴食障碍</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>维度</th><th>神经性贪食</th><th>神经性厌食（暴食-清除模式）</th><th>暴食障碍</th></tr></thead>
+        <tbody>
+          <tr><td>体重</td><td>常在正常范围</td><td>低体重，符合神经性厌食标准</td><td>可在正常或肥胖范围</td></tr>
+          <tr><td>暴食</td><td>有</td><td>有</td><td>有</td></tr>
+          <tr><td>规律代偿</td><td>有（每周 ≥1 次、≥1 个月）</td><td>有</td><td><strong>无</strong>规律代偿</td></tr>
+          <tr><td>诊断归属</td><td>不符合神经性厌食诊断要求</td><td>符合低体重及其他标准 → 神经性厌食</td><td>暴食不伴规律代偿 → 暴食障碍</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note"><strong>一句话鉴别总结：</strong>先看体重（低不低），再看代偿（有没有）；<strong>低体重 + 暴食清除 = 神经性厌食</strong>，<strong>正常体重 + 暴食无代偿 = 暴食障碍</strong>。</p>
+  </div>
+
+  <div class="card green" id="u2-6">
+    <h3 class="col-title"><span class="idx">第六栏</span>治疗方案工具箱</h3>
+    <div class="quote"><span class="lab">教材原文</span>治疗的基本过程是纠正营养状况，控制暴食行为，打破恶性循环，建立正常进食行为。</div>
+    <div class="grid2">
+      <div class="mini">
+        <h4>心理治疗（主力）</h4>
+        <ul>
+          <li>可采用<strong>认知疗法、行为疗法及生物反馈疗法</strong>。</li>
+          <li>目标：改变患者对自己体形的错误认知和过分关注，建立合理的、有计划的饮食行为。</li>
+          <li>治疗应持之以恒，并对患者家人进行指导；必要时可做家庭治疗。</li>
+        </ul>
+      </div>
+      <div class="mini">
+        <h4>药物治疗（辅助）</h4>
+        <ul>
+          <li>可采用各类抗抑郁药，包括 SSRIs、三环类药物等。</li>
+          <li>教材点名：<strong>氟西汀对暴食伴有情绪障碍的患者效果较好</strong>。</li>
+          <li>躯体支持治疗可针对不同并发症进行对症处理（如电解质紊乱）。</li>
+        </ul>
+      </div>
+    </div>
+    <div class="callout warn">
+      <span class="ct">⚠️ 教材未涉及</span>
+      神经性贪食的<strong>具体药物剂量、疗程、心理治疗次数与频次</strong>，教材均未给出。不要用其他章节的数字补齐。
+    </div>
+    <p><strong>病程与预后：</strong>教材明确，本病的自然病程和预期后果<strong>目前没有流行病学统计资料</strong>；一些回顾性资料显示经治疗后症状可以缓解，但<strong>治愈率并不乐观</strong>，常有反复发作，也有久治不愈者。</p>
+  </div>
+
+  <div class="card purple" id="u2-7">
+    <h3 class="col-title"><span class="idx">第七栏</span>记忆工具箱</h3>
+    <div class="callout tip">
+      <span class="ct">🔧 方法一：数字锚定法（记诊断门槛）</span>
+      记 <strong>“1 + 1 + 1”</strong>：暴食每周至少 <strong>1</strong> 次、代偿每周至少 <strong>1</strong> 次、两者持续至少 <strong>1</strong> 个月；再加一个“1 小时”——自我催吐通常发生在暴食后 1 小时内。<br>
+      <em>为什么这样记：</em>三个“1”把诊断标准压缩成一个节奏，最后一个“1 小时”把最常见的代偿行为钉在时间轴上。
+    </div>
+    <div class="callout tip">
+      <span class="ct">🔧 方法二：循环图记忆法（记恶性循环）</span>
+      画一个闭环箭头：<strong>暴食 → 恐肥 → 关注 → 诱吐 → 暴食</strong>。每转一圈，代偿暂时缓解恐惧，却让下一次暴食更近。<br>
+      <em>为什么这样记：</em>教材原文就是“恶性循环链”，用箭头图记比背句子更接近机制，也能解释“为什么治疗要打破循环”。
+    </div>
+    <div class="callout tip">
+      <span class="ct">🔧 方法三：对比表记忆法（BN vs BED）</span>
+      只问一句：<strong>“吃完以后清不清？”</strong> 清（催吐、泻药、剧烈运动）→ 神经性贪食；不清 → 暴食障碍。再把体重加进来：低体重 → 神经性厌食。<br>
+      <em>为什么这样记：</em>用一个动作问题替代两条标准的背诵，先判断“代偿”，再判断“体重”，两步就能排除大多数混淆。
+    </div>
+    <div class="callout tip">
+      <span class="ct">🔧 方法四：场景联想法（记临床表现）</span>
+      想象宿舍里躲着吃一大袋零食的女孩：<strong>吃得停不下来（失控）→ 怕被看见（羞耻）→ 吃完去卫生间（催吐）→ 第二天腿软心慌（低血钾）→ 情绪更低落</strong>。<br>
+      <em>为什么这样记：</em>把“暴食—代偿—并发症—情绪”串成一条日常场景，回忆时按画面顺序提取。
+    </div>
+  </div>
+
+  <div class="card cyan" id="u2-8">
+    <h3 class="col-title"><span class="idx">第八栏</span>知识联动</h3>
+    <ul>
+      <li><strong>与神经性厌食：</strong>可交替出现、病理心理机制相似；厌食恢复体重后仍暴食，一年后可改诊断神经性贪食。</li>
+      <li><strong>与暴食障碍：</strong>同有暴食，分水岭是“有无规律的不适当代偿”。</li>
+      <li><strong>与抑郁障碍：</strong>患者常伴情绪低落；氟西汀对“暴食伴情绪障碍”效果较好，体现“情绪—行为”的双向关系。</li>
+      <li><strong>与消化内科/急诊：</strong>反复催吐、滥用泻药可致低血钾、代谢性碱中毒/酸中毒、心律失常与胃肠道损害，需躯体监测。</li>
+      <li><strong>与癫痫/神经科：</strong>颞叶癫痫、间脑病变可继发暴食，鉴别时要问抽搐史、看脑电图/CT。</li>
+      <li><strong>与家庭治疗：</strong>教材要求对家人进行指导，必要时家庭治疗，说明维持因素在家庭互动中。</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===== 07 暴食障碍 ===== -->
+<section id="u3">
+  <div class="sec-head"><div class="badge">07</div><h2>暴食障碍<span class="en">第三节 · Binge-Eating Disorder（p.172–173）</span></h2></div>
+  <p class="sec-lead">“会暴食，但不会清”——这是它与神经性贪食最省力的分界线。教材特别提醒：它到 2013 年 DSM-5 才成为独立疾病单元。</p>
+
+  <div class="card red" id="u3-1">
+    <h3 class="col-title"><span class="idx">第一栏</span>疾病画像</h3>
+    <div class="quote"><span class="lab">教材原文</span>暴食障碍（binge-eating disorder）是一种以周期性出现的暴食行为为特征的进食障碍。患者在短时间（一般在 2 小时以内）进食超出常人量的大量食物，发作时感到无法控制进食，进食后心里感到痛苦，通常不会出现代偿行为如引吐、导泻、过度运动等。</div>
+    <p><strong>一句话画像：</strong>反复“失控地大吃”，吃完痛苦、羞耻，却<strong>不会</strong>用催吐、泻药或过度运动去抵消；长期下来常与肥胖和代谢问题相伴。</p>
+    <div class="stat">
+      <span>WHO 14 国终生患病率 1.9%</span>
+      <span>美国 1.9%～3.5%</span>
+      <span>男女比例约 1:1.75</span>
+      <span>多起病于 20 岁左右</span>
+      <span>1992 年首次报道 · 2013 年 DSM-5 独立设病</span>
+    </div>
+    <p class="note">教材说明：患病率高于神经性贪食；多见于肥胖人群，女性多于男性，可持续到中年以后。</p>
+  </div>
+
+  <div class="card blue" id="u3-2">
+    <h3 class="col-title"><span class="idx">第二栏</span>病因探秘</h3>
+    <p><strong>教材定性：</strong>确切的病因和发病机制目前仍不清楚；研究报道暴食行为的发病机制可能和<strong>物质成瘾的机制类似</strong>，个体和环境因素均起作用。</p>
+    <div class="grid3">
+      <div class="mini">
+        <h4>心理因素</h4>
+        <ul>
+          <li><strong>压力大</strong>是导致暴食行为的重要心理因素。</li>
+          <li>研究发现进食行为可使大脑<strong>犒赏系统</strong>获得满足，从而缓解压力。</li>
+        </ul>
+      </div>
+      <div class="mini">
+        <h4>环境与文化</h4>
+        <ul>
+          <li>个体和环境因素均在本病发病过程中起作用。</li>
+          <li>不同种族对胖瘦及饮食文化的理解，也会影响暴食障碍的发病率。</li>
+        </ul>
+      </div>
+      <div class="mini">
+        <h4>遗传/基因多态性</h4>
+        <ul>
+          <li>与暴食行为相关的候选基因：<strong>人类肥胖基因（FTO）、多巴胺受体基因、μ阿片受体基因</strong>。</li>
+          <li class="note">教材只列“相关”，未给出具体的效应量或机制细节。</li>
+        </ul>
+      </div>
+    </div>
+    <div class="callout tip">
+      <span class="ct">💡 为什么把暴食和“成瘾”放一起理解</span>
+      教材说“可能和物质成瘾的机制类似”，强调的是<strong>犒赏系统 + 压力缓解 + 失控感</strong>这三件事，而不是说暴食就是成瘾。引用时要保留“可能类似”的限定。
+    </div>
+  </div>
+
+  <div class="card red" id="u3-3">
+    <h3 class="col-title"><span class="idx">第三栏</span>临床表现拼图</h3>
+    <div class="grid2">
+      <div class="mini">
+        <h4>① 反复发作性暴食</h4>
+        <ul>
+          <li>与神经性贪食的暴食行为基本一致：不可抗拒的进食欲望，进食比正常情况快，一次进食大量食物，进食量远远超过正常。</li>
+          <li>因进食过多觉得尴尬，常常<strong>独自进食</strong>。</li>
+          <li><strong>关键不同：</strong>没有为了抵消体重增加而采取引吐、导泻、过度运动等不适当代偿。</li>
+        </ul>
+      </div>
+      <div class="mini">
+        <h4>② 失控感</h4>
+        <ul>
+          <li>暴食发作时感觉对进食不能控制，停不下来。</li>
+          <li>对吃什么、吃多少都难以控制。</li>
+          <li>是<strong>青少年期的主要表现</strong>。</li>
+        </ul>
+      </div>
+      <div class="mini">
+        <h4>③ 躯体症状</h4>
+        <ul>
+          <li>暴食障碍患者中<strong>肥胖的比例较高</strong>，美国研究数据显示为 <strong>38.9%</strong>。</li>
+          <li>可表现为高血压、高甘油三酯血症、空腹血糖升高及<strong>代谢综合征</strong>。</li>
+        </ul>
+      </div>
+      <div class="mini">
+        <h4>④ 精神症状</h4>
+        <ul>
+          <li><strong>30%～80%</strong> 的患者出现焦虑、抑郁症状。</li>
+          <li>其中 <strong>27.5%</strong> 会出现自杀观念。</li>
+          <li>还会合并赌博障碍、注意缺陷多动障碍、物质滥用等。</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="card orange" id="u3-4">
+    <h3 class="col-title"><span class="idx">第四栏</span>教材典型案例</h3>
+    <div class="callout book">
+      <span class="ct">📖 教材未提供具体临床案例</span>
+      本节教材只给出定义、流行病学、病因、临床表现、诊断与治疗原则，<strong>没有附典型病例</strong>，也没有患者病史、检查或随访资料。本指南不虚构案例、不编造化验值。
+    </div>
+    <p><strong>可迁移的诊断思路（由教材标准推演，不是教材原案例）：</strong></p>
+    <ol>
+      <li>先确认：暴食发作<strong>每周至少 1 次、持续至少 1 个月</strong>，且发作时有失控感。</li>
+      <li>再确认：<strong>没有</strong>规律使用引吐、泻药、过度运动等代偿行为。</li>
+      <li>再排除：不是躯体疾病、其他精神障碍所致，也不是物质/药物对中枢神经系统的影响（包括戒断）。</li>
+      <li>最后评估：患者是否因暴食模式感到痛苦，或在个人、家庭、社交、教育、职业等领域出现明显损害。</li>
+    </ol>
+    <p class="note">以上为按教材诊断条目整理的学习路径；教材未提供该病的具体案例。</p>
+  </div>
+
+  <div class="card orange" id="u3-5">
+    <h3 class="col-title"><span class="idx">第五栏</span>鉴别诊断对对碰</h3>
+    <p><strong>表 1　暴食障碍 vs 神经性贪食（核心表）</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>维度</th><th>暴食障碍</th><th>神经性贪食</th></tr></thead>
+        <tbody>
+          <tr><td>暴食发作</td><td>有，每周 ≥1 次、持续 ≥1 个月</td><td>有，每周 ≥1 次、持续 ≥1 个月</td></tr>
+          <tr><td>代偿行为</td><td><strong>不会</strong>出现规律代偿</td><td>反复不适当代偿：自我催吐、泻药/灌肠、剧烈运动等</td></tr>
+          <tr><td>体重</td><td>可在正常或肥胖范围</td><td>常在正常范围</td></tr>
+          <tr><td>诊断关系</td><td>暴食不伴规律代偿 → 暴食障碍</td><td>不符合神经性厌食诊断要求，且有规律代偿</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note"><strong>一句话鉴别总结：</strong>同样是暴食，<strong>“吃完清不清”</strong>决定诊断：清 = 神经性贪食，不清 = 暴食障碍。</p>
+    <p><strong>表 2　暴食障碍 vs 神经性厌食（暴食-清除模式）</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>维度</th><th>暴食障碍</th><th>神经性厌食（暴食-清除模式）</th></tr></thead>
+        <tbody>
+          <tr><td>体重</td><td>多不低，常与肥胖相关</td><td>显著低体重，符合神经性厌食标准</td></tr>
+          <tr><td>代偿</td><td>无规律代偿</td><td>有清除行为</td></tr>
+          <tr><td>核心心理</td><td>暴食后的痛苦与失控</td><td>体象歪曲 + 怕胖 + 对控制的需求</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note"><strong>一句话鉴别总结：</strong>暴食障碍“吃而不清”，厌食暴食-清除模式“又清又瘦”；体重是最快的分流器。</p>
+  </div>
+
+  <div class="card green" id="u3-6">
+    <h3 class="col-title"><span class="idx">第六栏</span>治疗方案工具箱</h3>
+    <div class="quote"><span class="lab">教材原文</span>暴食障碍治疗的基本原则是改善认知，减少暴食行为和减轻体重。</div>
+    <div class="grid3">
+      <div class="mini">
+        <h4>心理治疗</h4>
+        <ul>
+          <li>教材明确：心理治疗<strong>尚无足够的循证医学证据</strong>。</li>
+          <li>开展最多的是<strong>认知行为疗法</strong>：纠正负性认知，减少负性情绪和不当的进食行为，能有效控制暴食行为。</li>
+        </ul>
+      </div>
+      <div class="mini">
+        <h4>躯体治疗</h4>
+        <ul>
+          <li>主要针对<strong>心血管问题、2 型糖尿病和代谢综合征</strong>。</li>
+          <li>与减轻体重、代谢监测相配合。</li>
+        </ul>
+      </div>
+      <div class="mini">
+        <h4>药物治疗</h4>
+        <ul>
+          <li><strong>氟西汀、舍曲林</strong>能有效减少暴食行为发作和进食冲动。</li>
+          <li>中枢兴奋剂<strong>二甲磺酸赖右旋安非他明</strong>、抗癫痫药<strong>托吡酯</strong>也有效。</li>
+          <li class="note">教材未给出上述药物的具体剂量与疗程。</li>
+        </ul>
+      </div>
+    </div>
+    <p><strong>病程与预后：</strong>一年随访显示经治疗后暴食行为明显改善；但中长期随访显示，3 年后每周大于 2 次暴食行为发作的比例是 <strong>16%</strong>，6 年后上升到 <strong>34%</strong>。影响预后的因素包括：暴食发作的频率、严重程度、冲动和其他精神疾病共病问题。</p>
+    <div class="callout warn">
+      <span class="ct">⚠️ 教材未涉及</span>
+      暴食障碍的<strong>具体药物剂量、疗程、心理治疗次数</strong>，教材均未给出；治疗栏只保留教材点名的药名与原则。
+    </div>
+  </div>
+
+  <div class="card purple" id="u3-7">
+    <h3 class="col-title"><span class="idx">第七栏</span>记忆工具箱</h3>
+    <div class="callout tip">
+      <span class="ct">🔧 方法一：一句话对比法（BED vs BN）</span>
+      口诀：<strong>“暴食不清是暴食，暴食又清是贪食”</strong>。前半句指暴食障碍（binge-eating disorder），后半句指神经性贪食（bulimia nervosa）。<br>
+      <em>为什么这样记：</em>两个病名都含“暴食/贪食”，最容易混；用一个“清不清”的动作差异，直接把两条诊断标准压成一句。
+    </div>
+    <div class="callout tip">
+      <span class="ct">🔧 方法二：数字编码法（记流行病学）</span>
+      记 <strong>“1.9 / 1:1.75 / 20 / 38.9 / 27.5”</strong>：WHO 14 国终生患病率 1.9%；男女比例约 1:1.75；多起病于 20 岁左右；美国肥胖比例 38.9%；自杀观念 27.5%。<br>
+      <em>为什么这样记：</em>把散落的数字按“患病率—性别—起病年龄—躯体—精神”排序，形成一条数字链，比孤立背更稳。
+    </div>
+    <div class="callout tip">
+      <span class="ct">🔧 方法三：病因联想图（记“成瘾类似”）</span>
+      画三个圈：<strong>压力 → 犒赏系统满足 → 暴食失控</strong>；旁边再挂三张基因卡片：FTO、多巴胺受体基因、μ阿片受体基因。<br>
+      <em>为什么这样记：</em>教材把暴食机制类比物质成瘾，核心就是“压力—犒赏—失控”；基因卡片则补上“个体易感”这一角。
+    </div>
+    <div class="callout tip">
+      <span class="ct">🔧 方法四：预后数字阶梯法</span>
+      记 <strong>“3 年 16%，6 年 34%”</strong>：每周大于 2 次暴食发作的比例，随时间翻倍上升。<br>
+      <em>为什么这样记：</em>用“3/6 年 + 16/34%”两组数字搭一个阶梯，能同时记住时间点和比例，也能理解“为什么要长期随访”。
+    </div>
+  </div>
+
+  <div class="card cyan" id="u3-8">
+    <h3 class="col-title"><span class="idx">第八栏</span>知识联动</h3>
+    <ul>
+      <li><strong>与神经性贪食：</strong>暴食行为“基本一致”，区别只在代偿；二者是本章最需要成对记忆的一组。</li>
+      <li><strong>与肥胖/代谢医学：</strong>肥胖比例较高，可伴高血压、高甘油三酯、空腹血糖升高及代谢综合征，治疗需躯体与心理并行。</li>
+      <li><strong>与抑郁/焦虑障碍：</strong>30%～80% 有焦虑抑郁症状，27.5% 有自杀观念；评估时必须问情绪与自杀风险。</li>
+      <li><strong>与注意缺陷多动障碍、赌博障碍、物质滥用：</strong>教材明确列为常见共病，提示冲动性是一条共同线索。</li>
+      <li><strong>与药物治疗学：</strong>氟西汀、舍曲林、二甲磺酸赖右旋安非他明、托吡酯均被教材点名，但剂量需回到相应章节/说明书，本章未给。</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===== 08 回避-限制性摄食障碍 ===== -->
+<section id="u4">
+  <div class="sec-head"><div class="badge">08</div><h2>回避-限制性摄食障碍<span class="en">第四节 · ARFID（p.173–174）</span></h2></div>
+  <p class="sec-lead">本章最容易被误认成“厌食”的疾病。分水岭只有一句话：<strong>摄入不足，但不是因为怕胖</strong>。</p>
+
+  <div class="card red" id="u4-1">
+    <h3 class="col-title"><span class="idx">第一栏</span>疾病画像</h3>
+    <div class="quote"><span class="lab">教材原文</span>回避-限制性摄食障碍（avoidant-restrictive food intake disorder，ARFID）是一种持续性的喂食和进食障碍，可导致严重营养不良、体重显著减轻或无法增长、生长发育障碍和/或明显影响社会心理功能。</div>
+    <p><strong>一句话画像：</strong>不是“想瘦”，而是“吃不下、不敢吃、只吃少数几样”——吃到能量和营养都不够，体重掉、长不高、社交受困，但患者并<strong>不</strong>担心自己胖。</p>
+    <div class="stat">
+      <span>占进食障碍 5%～22.5%</span>
+      <span>日本 4～7 岁 1.3%</span>
+      <span>瑞典 8～13 岁约 3.2%</span>
+      <span>男性比例较高 · 年龄较小 · 病程较长</span>
+    </div>
+    <p class="note">教材原文列出的常见特殊进食行为与症状：<strong>回避食物、食欲减退、腹痛和恐惧性呕吐</strong>。与神经性厌食、神经性贪食相比，ARFID 更易合并其他躯体或精神疾病。</p>
+  </div>
+
+  <div class="card blue" id="u4-2">
+    <h3 class="col-title"><span class="idx">第二栏</span>病因探秘</h3>
+    <div class="callout book">
+      <span class="ct">📖 教材未提供病因与发病机制</span>
+      本节教材只设“流行病学、临床表现、诊断与鉴别诊断、治疗、病程与预后”，<strong>没有单独的病因与发病机制段落</strong>，也没有给出遗传、神经递质或心理社会的具体病因。本栏不补写课外病因。
+    </div>
+    <p><strong>教材在“临床表现/诊断”中划出的边界，可视为对本病“不是什么”的界定：</strong></p>
+    <div class="grid2">
+      <div class="mini">
+        <h4>不是“怕胖”</h4>
+        <p>这种异常的进食行为模式<strong>并不反映出对体重、身材的担忧</strong>；诊断第 2 条明确：动机不是对体重或体形的过分关注。</p>
+      </div>
+      <div class="mini">
+        <h4>不是“没食物”</h4>
+        <p>限制性摄食及随之发生的体重效应或功能损害，<strong>并非由无法得到食物、药物或物质的效应或某种健康情况所致</strong>。</p>
+      </div>
+      <div class="mini">
+        <h4>不是“别的病”</h4>
+        <p>不是其他疾病（如食物过敏、甲状腺功能亢进）或精神障碍的表现；也不是某种物质或药物的影响，包括戒断反应。</p>
+      </div>
+      <div class="mini">
+        <h4>可能是“情绪”</h4>
+        <p>年龄较大的儿童和青少年中，回避或限制食物可能与更广泛的情绪障碍有关，但这些情绪障碍不符合焦虑、抑郁或双相障碍的诊断标准，有时被称作<strong>“食物回避性情绪障碍”</strong>。</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="card red" id="u4-3">
+    <h3 class="col-title"><span class="idx">第三栏</span>临床表现拼图</h3>
+    <div class="tabs" data-tabs>
+      <div class="tabbar">
+        <button class="on" data-tab="ar1">摄入与后果</button>
+        <button data-tab="ar2">年龄差异</button>
+        <button data-tab="ar3">功能损害</button>
+      </div>
+      <div class="panel on" data-panel="ar1">
+        <ul>
+          <li>异常的进食或喂养行为，导致摄入食物的<strong>量或种类不足</strong>，无法充分满足个体的能量和/或营养需要。</li>
+          <li>限制性进食模式导致：明显体重减轻、童年期或孕期不能达到预期体重、临床上特定营养素的显著缺乏。</li>
+          <li>可需依赖<strong>口服营养补充剂或导管（胃肠管）喂养</strong>。</li>
+          <li>也可对健康有其他负面影响，或导致显著的功能损害。</li>
+        </ul>
+      </div>
+      <div class="panel" data-panel="ar2">
+        <ul>
+          <li><strong>婴儿：</strong>可表现为过度困倦、痛苦或对喂食烦躁不安。</li>
+          <li><strong>婴儿和幼儿：</strong>喂食期间可能无法与主要照料者交流，或在从事其他活动时无进食需求。</li>
+          <li><strong>年龄较大的儿童和青少年：</strong>回避或限制食物可能与更广泛的情绪障碍有关，但不符合焦虑、抑郁或双相障碍的诊断标准。</li>
+        </ul>
+      </div>
+      <div class="panel" data-panel="ar3">
+        <ul>
+          <li>在个人、家庭、社交、教育、职业或其他重要领域的功能严重受损。</li>
+          <li>教材举例：参与涉及进食的社交活动导致的回避或痛苦。</li>
+          <li>这种进食行为模式的动机<strong>不是</strong>对体重或体形的过分关注。</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="card orange" id="u4-4">
+    <h3 class="col-title"><span class="idx">第四栏</span>教材典型案例</h3>
+    <div class="callout book">
+      <span class="ct">📖 教材未提供具体临床案例</span>
+      本节教材没有附典型病例，也没有患者年龄、进食种类、体重曲线或化验数据。本指南不虚构案例。
+    </div>
+    <p><strong>可迁移的识别路径（依据教材诊断条目整理）：</strong></p>
+    <ol>
+      <li>看到“吃得少、长得慢、体重不增”的儿童青少年，先问<strong>“他/她怕不怕胖？”</strong>——若不怕，考虑 ARFID。</li>
+      <li>确认摄入不足已造成一种或两种后果：营养/体重受损，或社会心理功能严重受损。</li>
+      <li>排除“没食物”“食物过敏/甲亢等躯体病”“物质或药物影响”。</li>
+      <li>再与神经性厌食、孤独症谱系障碍、特定恐惧症、社交焦虑障碍等鉴别。</li>
+    </ol>
+    <p class="note">以上为按教材标准整理的门诊思路，不是教材原案例。</p>
+  </div>
+
+  <div class="card orange" id="u4-5">
+    <h3 class="col-title"><span class="idx">第五栏</span>鉴别诊断对对碰</h3>
+    <p><strong>表 1　ARFID 与四类易混情况</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>鉴别对象</th><th>核心表现</th><th>与 ARFID 的关键区别</th></tr></thead>
+        <tbody>
+          <tr><td>神经性厌食</td><td>低体重 + 怕胖 + 体象歪曲</td><td>ARFID 的动机<strong>不是</strong>对体重/体形的过分关注；无体象歪曲</td></tr>
+          <tr><td>孤独症谱系障碍</td><td>刻板行为、社交沟通障碍，可伴极度挑食</td><td>ARFID 以摄入不足/营养后果为核心；若进食问题可完全由孤独症解释，则归因于孤独症</td></tr>
+          <tr><td>特定恐惧症/社交焦虑障碍</td><td>对进食相关情境的恐惧或回避</td><td>ARFID 的回避可由多种原因（回避食物、腹痛、恐惧性呕吐等）驱动，不限于社交评价</td></tr>
+          <tr><td>其他躯体疾病导致的回避/限制性食物摄入</td><td>食物过敏、甲状腺功能亢进等</td><td>ARFID 的诊断要求排除这些躯体疾病</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note"><strong>一句话鉴别总结：</strong>ARFID 与神经性厌食的分界线是<strong>“怕不怕胖”</strong>；与孤独症/焦虑障碍的分界线是<strong>“进食问题能否完全由原障碍解释”</strong>。</p>
+  </div>
+
+  <div class="card green" id="u4-6">
+    <h3 class="col-title"><span class="idx">第六栏</span>治疗方案工具箱</h3>
+    <div class="quote"><span class="lab">教材原文</span>以心理治疗为主，目前开展最多的是认知行为疗法和家庭治疗。与治疗其他进食障碍相比，ARFID 的治疗必须更加注重行为和营养方法。</div>
+    <div class="grid3">
+      <div class="mini">
+        <h4>心理治疗</h4>
+        <ul>
+          <li>以心理治疗为主。</li>
+          <li>目前开展最多：<strong>认知行为疗法、家庭治疗</strong>。</li>
+          <li>针对不同患者有不同的治疗和管理需求，取决于病情、年龄以及伴随症状。</li>
+        </ul>
+      </div>
+      <div class="mini">
+        <h4>行为与营养方法</h4>
+        <ul>
+          <li>教材强调：与治疗其他进食障碍相比，ARFID 的治疗必须<strong>更加注重行为和营养方法</strong>。</li>
+          <li>摄入不足者可依赖口服营养补充剂或管饲（见临床表现栏）。</li>
+        </ul>
+      </div>
+      <div class="mini">
+        <h4>药物治疗</h4>
+        <ul>
+          <li>包括<strong>抗抑郁药、抗焦虑药和非典型抗精神病药</strong>。</li>
+          <li>“创伤后”亚型（窒息事件后拒绝进食和饮水）：<strong>艾司西酞普兰或氟西汀</strong>治疗后情绪和行为明显改善。</li>
+          <li><strong>米氮平、奥氮平或利培酮</strong>在改善食欲、行为和增加体重方面效果良好。</li>
+        </ul>
+      </div>
+    </div>
+    <div class="callout warn">
+      <span class="ct">⚠️ 教材未涉及</span>
+      ARFID 的<strong>具体药物剂量、疗程、营养补充方案与心理治疗频次</strong>，教材均未给出。药名可用，数字不可编。
+    </div>
+  </div>
+
+  <div class="card purple" id="u4-7">
+    <h3 class="col-title"><span class="idx">第七栏</span>记忆工具箱</h3>
+    <div class="callout tip">
+      <span class="ct">🔧 方法一：否定条件记忆法（最重要）</span>
+      记 <strong>“三不是”</strong>：<strong>不是怕胖</strong>、<strong>不是没食物</strong>、<strong>不是别的病/物质</strong>。三个“不是”排除完，才轮到 ARFID。<br>
+      <em>为什么这样记：</em>ARFID 的诊断核心是“排除式”的；先记否定条件，比先记阳性表现更能防止把它误诊成神经性厌食。
+    </div>
+    <div class="callout tip">
+      <span class="ct">🔧 方法二：首字母缩拼法</span>
+      ARFID 拆成四块：<strong>A</strong>void（回避食物）、<strong>R</strong>estrict（限制摄入）、<strong>F</strong>ailure to grow（体重不增/生长障碍）、<strong>I</strong>ntake insufficient（摄入不足）、<strong>D</strong>istress/functional impairment（痛苦/功能损害）。<br>
+      <em>为什么这样记：</em>把英文缩写拆成五个临床关键词，看到“挑食 + 不长个 + 不怕胖”就能拼回 ARFID。
+    </div>
+    <div class="callout tip">
+      <span class="ct">🔧 方法三：对比锚点法（ARFID vs AN）</span>
+      画两把椅子：一把写“怕胖”，一把写“不怕胖”。<strong>怕胖椅 = 神经性厌食；不怕胖椅 = ARFID</strong>。再把“体重”放中间：两者都可以低体重，所以体重不能单独区分。<br>
+      <em>为什么这样记：</em>用“动机”而不是“体重”做锚点，正好对应教材第 2 条诊断要求，能纠正“瘦就是厌食”的直觉。
+    </div>
+    <div class="callout tip">
+      <span class="ct">🔧 方法四：人群画像法</span>
+      记 <strong>“男多、年幼、病程长、共病多”</strong>：与神经性厌食/贪食相比，ARFID 男性比例较高、年龄较小、病程较长，且更易合并其他躯体或精神疾病。<br>
+      <em>为什么这样记：</em>四个“更”构成一张人群速写，题干出现“小男孩、长期挑食、合并焦虑/孤独症”时能快速触发 ARFID。
+    </div>
+  </div>
+
+  <div class="card cyan" id="u4-8">
+    <h3 class="col-title"><span class="idx">第八栏</span>知识联动</h3>
+    <ul>
+      <li><strong>与神经性厌食：</strong>最需要鉴别的一组；核心是动机（怕不怕胖）与有无体象歪曲。</li>
+      <li><strong>与孤独症谱系障碍：</strong>教材明确列入鉴别对象；ARFID 也常合并孤独症谱系障碍、焦虑症、强迫症、注意缺陷多动障碍和智力发育障碍。</li>
+      <li><strong>与焦虑障碍：</strong>特定恐惧症、社交焦虑障碍可导致进食回避；ARFID 的“恐惧性呕吐”也提示恐惧机制。</li>
+      <li><strong>与儿科/营养科：</strong>体重不增、生长障碍、特定营养素缺乏、管饲依赖，均需儿科与营养科协作。</li>
+      <li><strong>与消化内科：</strong>腹痛是教材列出的常见症状之一，但诊断前必须排除躯体疾病（食物过敏、甲亢等）。</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===== 09 异食癖 ===== -->
+<section id="u5">
+  <div class="sec-head"><div class="badge">09</div><h2>异食癖<span class="en">第五节 · Pica（p.174–175）</span></h2></div>
+  <p class="sec-lead">“吃不是食物的东西”，且严重到需要临床关注。诊断前先确认：孩子已经过了“分不清食物”的发育年龄（大约 2 岁）。</p>
+
+  <div class="card red" id="u5-1">
+    <h3 class="col-title"><span class="idx">第一栏</span>疾病画像</h3>
+    <div class="quote"><span class="lab">教材原文</span>异食癖（pica）是一种进食障碍，患者经常食用非营养物质，这种行为持续或严重到需要临床关注的程度，而这些患者已经达到可以区分食用和非食用物质的发育年龄（大约 2 岁）。</div>
+    <p><strong>一句话画像：</strong>反复吃灰泥、纸张、泥土、头发等“非食物”，吃到出现贫血、寄生虫、铅中毒甚至肠梗阻；它不是“调皮”，而是需要临床评估的行为障碍。</p>
+    <div class="stat">
+      <span>可贯穿一生</span>
+      <span>常见于儿童时期</span>
+      <span>随年龄增长发病率降低</span>
+      <span>2～3 岁婴幼儿中 15% 出现异食行为</span>
+    </div>
+    <p class="note">教材说明：年龄大的儿童和少年少见；关于异食癖的流行病学研究较少。</p>
+  </div>
+
+  <div class="card blue" id="u5-2">
+    <h3 class="col-title"><span class="idx">第二栏</span>病因探秘</h3>
+    <p><strong>教材定性：</strong>虽然有一些理论解释，但<strong>确切病因和发病机制目前还不清楚</strong>。现有研究表明以下因素与异食症的发生有关：</p>
+    <div class="grid2">
+      <div class="mini">
+        <h4>营养与代谢</h4>
+        <ul>
+          <li>营养缺乏。</li>
+          <li>体内<strong>铁、锌和钙缺乏</strong>。</li>
+        </ul>
+      </div>
+      <div class="mini">
+        <h4>家庭与社会环境</h4>
+        <ul>
+          <li>贫穷、混乱的家庭环境。</li>
+          <li>缺乏父母有效监管。</li>
+          <li>忽视、虐待、情感剥夺。</li>
+          <li>家庭功能有问题。</li>
+        </ul>
+      </div>
+      <div class="mini">
+        <h4>心理因素</h4>
+        <ul>
+          <li>对无营养物质的<strong>心理渴求</strong>。</li>
+        </ul>
+      </div>
+      <div class="mini">
+        <h4>教材的限定</h4>
+        <p>以上均为“有关因素”，不是已证实的单一病因；不要写成“缺铁导致异食癖”这样的绝对因果。</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="card red" id="u5-3">
+    <h3 class="col-title"><span class="idx">第三栏</span>临床表现拼图</h3>
+    <div class="grid2">
+      <div class="mini">
+        <h4>吃什么：按年龄分</h4>
+        <ul>
+          <li><strong>年龄小的儿童：</strong>多进食灰泥、油漆、绳子、衣服或头发。</li>
+          <li><strong>年长的儿童：</strong>多进食纸张、动物粪便、沙子、石头或污物等。</li>
+          <li>教材列出的非营养物质还包括泥土、沙子等。</li>
+        </ul>
+      </div>
+      <div class="mini">
+        <h4>后果：并发症广谱</h4>
+        <ul>
+          <li>常见并发症：贫血、腹泻、便秘、寄生虫感染、弓形虫病、铅中毒、营养缺乏、肠梗阻等。</li>
+          <li>严重并发症不及时治疗可导致死亡（见病程与预后）。</li>
+        </ul>
+      </div>
+    </div>
+    <p><strong>表 1　“吃什么”与“出什么问题”的配对（教材原文对应）</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>摄入物</th><th>典型并发症</th></tr></thead>
+        <tbody>
+          <tr><td>油漆</td><td>铅中毒</td></tr>
+          <tr><td>粪便和泥土</td><td>寄生虫感染</td></tr>
+          <tr><td>黏土</td><td>贫血和缺锌</td></tr>
+          <tr><td>淀粉</td><td>缺铁</td></tr>
+          <tr><td>头发和石头</td><td>肠梗阻</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note">这张表是本章性价比最高的“因果配对”考点：题干给异物，答案给并发症。</p>
+  </div>
+
+  <div class="card orange" id="u5-4">
+    <h3 class="col-title"><span class="idx">第四栏</span>教材典型案例</h3>
+    <div class="callout book">
+      <span class="ct">📖 教材未提供具体临床案例</span>
+      本节教材没有附典型病例，也没有患儿的年龄、异食种类、并发症或化验数据。本指南不虚构案例、不编造血铅或血红蛋白数值。
+    </div>
+    <p><strong>可迁移的评估路径（依据教材诊断条目整理）：</strong></p>
+    <ol>
+      <li>确认“经常食用非营养物质”，包括非食物的物体/材料或食物原料（如大量盐或玉米粉）。</li>
+      <li>确认持续或严重到需要临床关注：健康损害、功能受损，或因摄入物的频率、数量、性质造成重大风险。</li>
+      <li>确认患者已达到能区分可食/不可食的发育年龄（正常发育约 2 岁）。</li>
+      <li>排除精神障碍或其他疾病（如营养缺乏）所致的异食。</li>
+      <li>评估并发症：贫血、寄生虫、铅中毒、肠梗阻等（按摄入物对应）。</li>
+    </ol>
+  </div>
+
+  <div class="card orange" id="u5-5">
+    <h3 class="col-title"><span class="idx">第五栏</span>鉴别诊断对对碰</h3>
+    <p><strong>表 1　异食癖 vs 四类可出现异食行为的疾病</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>鉴别对象</th><th>核心特征</th><th>关键鉴别点</th></tr></thead>
+        <tbody>
+          <tr><td>精神发育迟滞</td><td>智力/发育水平低于年龄</td><td>异食行为可由发育水平解释；需评估智力与适应功能</td></tr>
+          <tr><td>孤独症谱系障碍</td><td>社交沟通障碍、刻板行为</td><td>异食可作为刻板/感觉寻求行为的一部分；需看核心孤独症特征</td></tr>
+          <tr><td>器质性精神障碍</td><td>躯体/脑器质性疾病背景下的精神症状</td><td>有明确器质性病因；异食不是独立原发症状</td></tr>
+          <tr><td>精神分裂症</td><td>思维、情感、行为异常，社会功能损害</td><td>异食可继发于精神病性症状；需看精神病性症状群</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note"><strong>一句话鉴别总结：</strong>原发异食癖要先排除“发育、孤独症、器质性、精神病性”四类解释；有原发病时，异食只是症状而不是独立诊断。</p>
+  </div>
+
+  <div class="card green" id="u5-6">
+    <h3 class="col-title"><span class="idx">第六栏</span>治疗方案工具箱</h3>
+    <div class="quote"><span class="lab">教材原文</span>治疗以心理治疗为主，同时要积极治疗贫血、寄生虫感染、铅中毒、肠梗阻等并发症。心理治疗主要包括心理健康教育和行为治疗。</div>
+    <div class="grid2">
+      <div class="mini">
+        <h4>心理治疗</h4>
+        <ul>
+          <li><strong>心理健康教育。</strong></li>
+          <li><strong>行为治疗：</strong>能有效改善异食症状。</li>
+          <li>常用方法：<strong>厌恶疗法、阳性强化法、行为塑造法、矫枉过正法</strong>。</li>
+          <li>快速起效的方法为<strong>厌恶疗法</strong>，可采用轻微电刺激、不愉快的声音或催吐药物。</li>
+        </ul>
+      </div>
+      <div class="mini">
+        <h4>并发症治疗</h4>
+        <ul>
+          <li>积极治疗<strong>贫血、寄生虫感染、铅中毒、肠梗阻</strong>等并发症。</li>
+          <li>按摄入物不同，并发症不同（见第三栏配对表）。</li>
+        </ul>
+      </div>
+    </div>
+    <div class="callout warn">
+      <span class="ct">⚠️ 教材未涉及</span>
+      异食癖的<strong>具体药物、剂量、疗程</strong>，以及行为治疗的操作频次，教材均未给出；本栏只保留教材点名的治疗类别与方法。
+    </div>
+  </div>
+
+  <div class="card purple" id="u5-7">
+    <h3 class="col-title"><span class="idx">第七栏</span>记忆工具箱</h3>
+    <div class="callout tip">
+      <span class="ct">🔧 方法一：因果配对表（记并发症）</span>
+      口诀：<strong>“漆铅、粪虫、土锌、粉铁、发石堵”</strong>——油漆→铅中毒；粪便/泥土→寄生虫；黏土→贫血和缺锌；淀粉→缺铁；头发/石头→肠梗阻。<br>
+      <em>为什么这样记：</em>把“异物—并发症”压成五个双字词组，考题干给异物时能条件反射出答案。
+    </div>
+    <div class="callout tip">
+      <span class="ct">🔧 方法二：年龄锚定法</span>
+      记 <strong>“2 岁才能诊断”</strong>：正常发育过程中，大约 2 岁具备区分可食用与不可食用物质的能力；未达到这个发育年龄的婴幼儿吃非食物，不能轻易贴异食癖标签。<br>
+      <em>为什么这样记：</em>“2 岁”是异食癖与反刍-反流障碍共用的发育门槛，把两节串起来记，省一个数字。
+    </div>
+    <div class="callout tip">
+      <span class="ct">🔧 方法三：治疗四法首字母法</span>
+      记 <strong>“厌、强、塑、矫”</strong>：厌恶疗法、阳性强化法、行为塑造法、矫枉过正法。<br>
+      <em>为什么这样记：</em>四个动词式名称首字成串，先记全四法，再记“厌恶疗法最快起效”这一细节。
+    </div>
+    <div class="callout tip">
+      <span class="ct">🔧 方法四：人群—病程联想法</span>
+      联想：<strong>“小时候多、长大少；多数数月、少数到成年；半数少年有情绪/人格/物质问题”</strong>。<br>
+      <em>为什么这样记：</em>把流行病学、病程、预后三组“随时间变化”的信息绑在一条时间线上，避免把“随年龄缓解”误记成“绝不持续到成年”。
+    </div>
+  </div>
+
+  <div class="card cyan" id="u5-8">
+    <h3 class="col-title"><span class="idx">第八栏</span>知识联动</h3>
+    <ul>
+      <li><strong>与儿童精神障碍：</strong>精神发育迟滞、孤独症谱系障碍是教材点名的鉴别对象，也是常见共病背景。</li>
+      <li><strong>与器质性精神障碍/精神分裂症：</strong>异食可作为继发症状，诊断原发异食癖前必须排除。</li>
+      <li><strong>与儿科/消化科：</strong>贫血、腹泻、便秘、寄生虫、铅中毒、肠梗阻——治疗必须“心理 + 并发症”双线。</li>
+      <li><strong>与营养学：</strong>铁、锌、钙缺乏与异食行为相关，但教材只说“有关”，不能写成单向因果。</li>
+      <li><strong>与公共卫生/家庭干预：</strong>贫穷、混乱家庭环境、缺乏监管、忽视虐待等社会因素，提示预防需要家庭与社区层面介入。</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===== 10 反刍-反流障碍 ===== -->
+<section id="u6">
+  <div class="sec-head"><div class="badge">10</div><h2>反刍-反流障碍<span class="en">第六节 · Rumination-Regurgitation Disorder（p.175–176）</span></h2></div>
+  <p class="sec-lead">最容易被误当“呕吐”的进食障碍：食物上来但<strong>不用力、不恶心</strong>，甚至带愉快感；诊断前必须排除消化道器质性疾病。</p>
+
+  <div class="card red" id="u6-1">
+    <h3 class="col-title"><span class="idx">第一栏</span>疾病画像</h3>
+    <div class="quote"><span class="lab">教材原文</span>反刍-反流障碍（rumination-regurgitation disorder）是一种相对罕见的进食行为障碍，其特征是在无器质性疾病（如食管狭窄、影响食管功能的神经肌肉疾病或幽门狭窄）的情况下，有意和反复地将先前吞下的食物反刍到口腔（即反流），这些食物可能会被再次咀嚼和吞下（即反刍），也可能被故意吐出（但不同于呕吐）；同时，反刍行为是频繁的（每周至少几次），并持续了至少数周时间。</div>
+    <p><strong>一句话画像：</strong>吃下去的食物“自己上来”，患者可以再嚼再咽，也可以吐掉；这不是恶心呕吐，而是一种<strong>有意、反复、可带愉快感</strong>的行为。</p>
+    <div class="stat">
+      <span>婴儿到成人各年龄段均可发生</span>
+      <span>男女无明显差异</span>
+      <span>既往社区样本患病率 0.8%～10.6%</span>
+      <span>具体发病率不清楚 · 可能严重诊断不足</span>
+    </div>
+    <p class="note">教材说明：由于研究较少、临床使用的诊断标准不同，可能存在严重诊断不足。</p>
+  </div>
+
+  <div class="card blue" id="u6-2">
+    <h3 class="col-title"><span class="idx">第二栏</span>病因探秘</h3>
+    <p><strong>教材定性：</strong>具体病因及发病机制<strong>目前尚不明确</strong>。现有研究表明以下因素与发病有关：</p>
+    <div class="grid3">
+      <div class="mini">
+        <h4>生物学因素</h4>
+        <ul>
+          <li>遗传因素。</li>
+          <li><strong>食管括约肌和胃内压力失衡</strong>。</li>
+          <li>发育性障碍疾病。</li>
+        </ul>
+      </div>
+      <div class="mini">
+        <h4>心理因素</h4>
+        <ul>
+          <li>焦虑、抑郁。</li>
+          <li>孤独。</li>
+          <li><strong>阳性/阴性强化</strong>（行为因后果而被维持）。</li>
+        </ul>
+      </div>
+      <div class="mini">
+        <h4>关系/环境因素</h4>
+        <ul>
+          <li>母婴关系不良。</li>
+          <li>家庭关系不和。</li>
+        </ul>
+      </div>
+    </div>
+    <div class="callout tip">
+      <span class="ct">💡 把“阳性/阴性强化”翻译成临床话</span>
+      反刍可能带来某种<strong>愉快感或紧张缓解</strong>（阳性强化），也可能<strong>避免不愉快的进食/社交情境</strong>（阴性强化）；教材把它列为相关因素，但没有展开具体机制。
+    </div>
+  </div>
+
+  <div class="card red" id="u6-3">
+    <h3 class="col-title"><span class="idx">第三栏</span>临床表现拼图</h3>
+    <div class="tabs" data-tabs>
+      <div class="tabbar">
+        <button class="on" data-tab="ru1">反刍特征</button>
+        <button data-tab="ru2">时间与场合</button>
+        <button data-tab="ru3">并发症</button>
+      </div>
+      <div class="panel on" data-panel="ru1">
+        <ul>
+          <li>常在进食时或进食结束后不久，把刚摄入的食物又从胃反刍至口腔。</li>
+          <li>反刍物中有<strong>可辨认的食物</strong>，味道与进食时相同。</li>
+          <li>反流食物经咀嚼或不经咀嚼再次下咽或吐出。</li>
+          <li>反刍发生时<strong>无须用力</strong>，往往<strong>不伴腹部不适、恶心、干呕或厌恶情绪</strong>，与呕吐行为有明显区别。</li>
+          <li>反刍是一种<strong>自觉自愿</strong>的过程，并可伴有愉快感。</li>
+        </ul>
+      </div>
+      <div class="panel" data-panel="ru2">
+        <ul>
+          <li>一般发生在进餐开始后 <strong>15 分钟内</strong>，可持续<strong>数小时</strong>；当反刍的食物变酸时，反刍就会停止。</li>
+          <li>反刍时如被人看到，患者会感到尴尬，并试图隐瞒其症状。</li>
+          <li>可扩展到回避进食及进食的社交场所：回避工作场所或学校、因可能伴有反流而回避早餐。</li>
+        </ul>
+      </div>
+      <div class="panel" data-panel="ru3">
+        <ul>
+          <li>常见并发症：<strong>营养不良、脱水、食管炎</strong>。</li>
+          <li>若发生呕吐物吸入，可能导致反复的支气管炎或肺炎、反流性喉痉挛、支气管痉挛或哮喘，以及食管上皮的癌前病变。</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="card orange" id="u6-4">
+    <h3 class="col-title"><span class="idx">第四栏</span>教材典型案例</h3>
+    <div class="callout book">
+      <span class="ct">📖 教材未提供具体临床案例</span>
+      本节教材没有附典型病例，也没有患者年龄、反刍频率、内镜或食管测压资料。本指南不虚构案例与检查结果。
+    </div>
+    <p><strong>可迁移的识别路径（依据教材诊断条目整理）：</strong></p>
+    <ol>
+      <li>问“食物是怎么上来的”：<strong>有意、反复、无须用力、不伴恶心干呕</strong>——更像反刍而不是呕吐。</li>
+      <li>问频率与病程：<strong>每周至少数次，持续至少数周</strong>。</li>
+      <li>问发育年龄：只能在<strong>发育年龄至少 2 岁</strong>的个体中诊断。</li>
+      <li>先排除消化道疾病：食管狭窄、胃食管反流、幽门狭窄等。</li>
+      <li>评估并发症：营养不良、脱水、食管炎、吸入性肺炎等。</li>
+    </ol>
+  </div>
+
+  <div class="card orange" id="u6-5">
+    <h3 class="col-title"><span class="idx">第五栏</span>鉴别诊断对对碰</h3>
+    <p><strong>表 1　反刍-反流障碍 vs 消化道疾病 vs 神经性厌食/贪食 vs 呕吐</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>鉴别对象</th><th>核心表现</th><th>关键鉴别点</th></tr></thead>
+        <tbody>
+          <tr><td>消化道疾病（胃轻瘫、幽门狭窄、食管裂孔疝等）</td><td>可有反流、呕吐、腹胀等</td><td>有明确消化道疾病证据；反刍-反流障碍的诊断要求<strong>不能归因于</strong>这些疾病</td></tr>
+          <tr><td>神经性厌食</td><td>低体重、怕胖、体象歪曲、限制摄入</td><td>反刍障碍不以怕胖/体象歪曲为核心；体重可低但动机不同</td></tr>
+          <tr><td>神经性贪食</td><td>暴食 + 规律代偿（自我催吐等）</td><td>反刍是<strong>无须用力、不伴恶心</strong>的反流，不是暴食后的主动催吐</td></tr>
+          <tr><td>呕吐（作为症状）</td><td>用力、伴恶心/干呕、厌恶感</td><td>反刍<strong>不伴</strong>腹部不适、恶心、干呕或厌恶情绪，且可带愉快感</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note"><strong>一句话鉴别总结：</strong>“上来得轻松、不恶心、还可能是自愿的” → 反刍；“用力吐、恶心难受” → 呕吐；有消化道病 → 先归因消化道。</p>
+  </div>
+
+  <div class="card green" id="u6-6">
+    <h3 class="col-title"><span class="idx">第六栏</span>治疗方案工具箱</h3>
+    <div class="quote"><span class="lab">教材原文</span>反刍-反流障碍的治疗主要包括解释和教育、认知行为疗法、行为矫正等方法，必要时可尝试使用药物、手术等方式进行治疗，以减少反流的发生。其中横膈膜呼吸，即深腹式呼吸，是反刍障碍的一线治疗方法，可有效缓解反刍行为。</div>
+    <div class="grid3">
+      <div class="mini">
+        <h4>一线：横膈膜呼吸</h4>
+        <p><strong>深腹式呼吸</strong>是反刍障碍的一线治疗，可有效缓解反刍行为。</p>
+      </div>
+      <div class="mini">
+        <h4>心理/行为治疗</h4>
+        <ul>
+          <li>解释和教育。</li>
+          <li>认知行为疗法。</li>
+          <li>行为矫正。</li>
+        </ul>
+      </div>
+      <div class="mini">
+        <h4>必要时</h4>
+        <ul>
+          <li>可尝试<strong>药物、手术</strong>等方式，以减少反流发生。</li>
+          <li class="note">教材未给出具体药物名称、剂量或手术指征。</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="card purple" id="u6-7">
+    <h3 class="col-title"><span class="idx">第七栏</span>记忆工具箱</h3>
+    <div class="callout tip">
+      <span class="ct">🔧 方法一：与呕吐的“四不一有”对比法</span>
+      记 <strong>“不用力、不恶心、不干呕、不厌恶，可有愉快感”</strong>：这是反刍与呕吐最关键的分界线。<br>
+      <em>为什么这样记：</em>四个“不”加一个“有”，正好覆盖教材描述的核心差异；考试常以“是否伴恶心/用力”设干扰项。
+    </div>
+    <div class="callout tip">
+      <span class="ct">🔧 方法二：数字编码法（记诊断三要素）</span>
+      记 <strong>“2 岁 / 数次 / 数周”</strong>：发育年龄至少 2 岁；每周至少数次；持续至少数周。<br>
+      <em>为什么这样记：</em>三个“数”把年龄、频率、病程串成一条门槛线；与异食癖共用的“2 岁”还能一起记。
+    </div>
+    <div class="callout tip">
+      <span class="ct">🔧 方法三：时间轴记忆法</span>
+      记 <strong>“餐后 15 分钟开始 → 持续数小时 → 食物变酸就停”</strong>。再补一句“常被看到就尴尬、会隐瞒”。<br>
+      <em>为什么这样记：</em>把发作的时间过程画成一条轴，比背整段描述更容易在病例题里抓“餐后不久”这个线索。
+    </div>
+    <div class="callout tip">
+      <span class="ct">🔧 方法四：一线治疗锚定法</span>
+      一句话：<strong>“反刍一线，横膈膜呼吸（深腹式呼吸）”</strong>。<br>
+      <em>为什么这样记：</em>本章治疗栏里唯一被教材明确标为“一线”的非药物手段，单独锚定，避免与神经性厌食的“先营养”或遗尿的“去氨升压素”混淆。
+    </div>
+  </div>
+
+  <div class="card cyan" id="u6-8">
+    <h3 class="col-title"><span class="idx">第八栏</span>知识联动</h3>
+    <ul>
+      <li><strong>与消化内科：</strong>必须先排除胃轻瘫、幽门狭窄、食管裂孔疝、食管狭窄等；反刍障碍的诊断是“排除器质性”之后的行为诊断。</li>
+      <li><strong>与神经性厌食/贪食：</strong>教材把两者列为鉴别对象；反刍不是暴食后的主动催吐，也不以怕胖为核心。</li>
+      <li><strong>与儿科/发育医学：</strong>只能在发育年龄至少 2 岁的个体中诊断；婴儿反刍需与正常反流、喂养问题区分。</li>
+      <li><strong>与呼吸科：</strong>呕吐物吸入可致反复支气管炎/肺炎、喉痉挛、支气管痉挛或哮喘，需跨科评估。</li>
+      <li><strong>与心理治疗：</strong>解释教育、CBT、行为矫正与深腹式呼吸，体现“行为—生理”双向干预。</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===== 11 排泄障碍 ===== -->
+<section id="u7">
+  <div class="sec-head"><div class="badge">11</div><h2>排泄障碍<span class="en">第七节 · Elimination Disorders（p.176–178）</span></h2></div>
+  <p class="sec-lead">教材把遗尿症与遗粪症合并为一节：一个是“尿控制”晚于年龄，一个是“粪控制”晚于年龄；核心都是<strong>排除器质性病因 + 家庭支持 + 行为训练</strong>。</p>
+
+  <div class="card red" id="u7-1">
+    <h3 class="col-title"><span class="idx">第一栏</span>疾病画像</h3>
+    <div class="quote"><span class="lab">教材原文</span>排泄障碍是指并非由器质性病变引起的儿童期常见的遗尿症（enuresis）以及不常见的遗粪症（encopresis）。遗尿症是指年龄大于 5 岁的儿童反复出现不能自主控制的排尿，白天夜晚均可出现，以夜间居多。遗粪症是指 4 岁以上儿童反复随意或不随意地在社会文化背景不认可的地方大便，一般多发生在白天。</div>
+    <p><strong>一句话画像：</strong>不是“故意尿床/拉裤子”，而是“到了该能控制的年龄还控制不住”，且找不到器质性病因；处理要先找原因、再训练、必要时用药。</p>
+    <div class="stat">
+      <span>遗尿症 5 岁患病率最高 16%</span>
+      <span>7 岁 10% · 9 岁 5%</span>
+      <span>0.5%～2% 可持续到成年</span>
+      <span>遗粪症 10 岁最高约 5.4%</span>
+      <span>10～16 岁 2% · 很少持续到成年</span>
+    </div>
+    <p class="note">教材说明：无论遗尿症还是遗粪症，随着年龄增长，患病率逐渐下降。</p>
+  </div>
+
+  <div class="card blue" id="u7-2">
+    <h3 class="col-title"><span class="idx">第二栏</span>病因探秘</h3>
+    <p><strong>教材定性：</strong>目前确切的病因和发病机制<strong>还不清楚</strong>，可能与以下因素有关：</p>
+    <div class="grid4">
+      <div class="mini"><h4>遗传因素</h4><p>教材列为可能相关因素之一，未展开具体基因或遗传模式。</p></div>
+      <div class="mini"><h4>排便训练不良</h4><p>训练方式不当或过早、过严，可能影响控制能力的建立。</p></div>
+      <div class="mini"><h4>心理创伤</h4><p>教材列为可能相关因素，提示评估时要问家庭与心理事件。</p></div>
+      <div class="mini"><h4>生物学因素</h4><p>教材列为可能相关因素，未给出具体机制。</p></div>
+    </div>
+    <div class="callout tip">
+      <span class="ct">💡 记忆提醒</span>
+      教材对排泄障碍病因的表述是“还不清楚，可能与……有关”，<strong>没有</strong>给出“膀胱容量小”“抗利尿激素不足”等具体机制。答题时保留“可能相关”的限定，不要补成确定病因。
+    </div>
+  </div>
+
+  <div class="card red" id="u7-3">
+    <h3 class="col-title"><span class="idx">第三栏</span>临床表现拼图</h3>
+    <div class="tabs" data-tabs>
+      <div class="tabbar">
+        <button class="on" data-tab="el1">遗尿症</button>
+        <button data-tab="el2">遗粪症</button>
+        <button data-tab="el3">ICD-11 分类</button>
+      </div>
+      <div class="panel on" data-panel="el1">
+        <ul>
+          <li><strong>原发性遗尿：</strong>多见；一般从出生一直持续到 5 岁，从未间断。</li>
+          <li><strong>继发性遗尿：</strong>在完全自主排尿<strong>半年</strong>后再次出现遗尿现象。</li>
+          <li>遗尿多发生在<strong>夜间</strong>，常发生在<strong>睡眠的前 1/3 阶段</strong>。</li>
+          <li>ICD-11 根据遗尿在睡眠和/或清醒时间发生，分为夜间遗尿、日间遗尿、日间与夜间遗尿、未特定的遗尿。</li>
+        </ul>
+      </div>
+      <div class="panel" data-panel="el2">
+        <ul>
+          <li><strong>原发性遗粪：</strong>儿童 5 岁以后每月至少有 1 次遗粪。</li>
+          <li><strong>继发性遗粪：</strong>在完全自主控制大便<strong>1 年以上</strong>后再次出现遗粪。</li>
+          <li>遗粪多发生在<strong>白天</strong>，常在不适当的场所排出<strong>正常形状</strong>的大便，一般多排在内裤里。</li>
+          <li>ICD-11 根据是否伴便秘或充溢性尿失禁，分为遗粪伴便秘或充溢性尿失禁、遗粪不伴便秘或充溢性尿失禁、未特定的遗粪症。</li>
+        </ul>
+      </div>
+      <div class="panel" data-panel="el3">
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>障碍</th><th>ICD-11 分类</th></tr></thead>
+            <tbody>
+              <tr><td>遗尿症</td><td>夜间遗尿 / 日间遗尿 / 日间与夜间遗尿 / 未特定的遗尿</td></tr>
+              <tr><td>遗粪症</td><td>伴便秘或充溢性尿失禁 / 不伴便秘或充溢性尿失禁 / 未特定的遗粪症</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <p class="note">易错点：遗尿“原发/继发”的时间分界是<strong>半年</strong>；遗粪“原发/继发”的时间分界是<strong>1 年</strong>。不要互换。</p>
+  </div>
+
+  <div class="card orange" id="u7-4">
+    <h3 class="col-title"><span class="idx">第四栏</span>教材典型案例</h3>
+    <div class="callout book">
+      <span class="ct">📖 教材未提供具体临床案例</span>
+      本节教材没有附遗尿症或遗粪症的典型病例，也没有患儿年龄、排尿/排便日记、尿常规或影像资料。本指南不虚构案例与检查结果。
+    </div>
+    <p><strong>可迁移的评估路径（依据教材诊断要点整理）：</strong></p>
+    <ol>
+      <li>先看年龄：遗尿 <strong>≥5 周岁</strong>，遗粪 <strong>≥4 周岁</strong>。</li>
+      <li>再看频率与病程：遗尿<strong>每周至少 2 次、连续至少 3 个月</strong>；遗粪<strong>每月至少 1 次、连续至少 3 个月</strong>。</li>
+      <li>再排除器质性病因：遗尿排除脊柱裂、尿道狭窄、泌尿系感染或结构异常；遗粪排除泻药、先天性巨结肠、甲状腺功能减退、结肠肿块、肠道感染性疾病。</li>
+      <li>最后评估心理与家庭：有无心理创伤、排便训练不良、家庭责备模式。</li>
+    </ol>
+  </div>
+
+  <div class="card orange" id="u7-5">
+    <h3 class="col-title"><span class="idx">第五栏</span>鉴别诊断对对碰</h3>
+    <p><strong>表 1　遗尿症 vs 遗粪症（阈值对比）</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>维度</th><th>遗尿症</th><th>遗粪症</th></tr></thead>
+        <tbody>
+          <tr><td>年龄阈值</td><td><strong>≥5 周岁</strong></td><td><strong>≥4 周岁</strong></td></tr>
+          <tr><td>频率/病程</td><td>每周至少 2 次，连续至少 3 个月</td><td>每月至少 1 次，连续至少 3 个月</td></tr>
+          <tr><td>主要时间</td><td>夜间居多；常发生在睡眠前 1/3 阶段</td><td>多发生在白天；多排在内裤里</td></tr>
+          <tr><td>原发性定义</td><td>从出生持续到 5 岁，从未间断</td><td>5 岁以后每月至少 1 次遗粪</td></tr>
+          <tr><td>继发性定义</td><td>完全自主排尿半年后再次出现</td><td>完全自主控制大便 1 年以上后再次出现</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note"><strong>一句话鉴别总结：</strong>年龄 5 vs 4、频率每周 2 次 vs 每月 1 次、时间夜 vs 昼——三组对照把两个病分开。</p>
+    <p><strong>表 2　功能性排泄障碍 vs 器质性病因（排除清单）</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>障碍</th><th>必须排除的器质性/其他原因</th></tr></thead>
+        <tbody>
+          <tr><td>遗尿症</td><td>脊柱裂、尿道狭窄、泌尿系感染或结构异常；还需排除精神发育迟滞、尿路梗阻、泌尿系统感染或畸形引起的遗尿</td></tr>
+          <tr><td>遗粪症</td><td>泻药、先天性巨结肠、甲状腺功能减退、结肠肿块、肠道感染性疾病；还需排除精神症状或智力低下出现的遗粪</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note"><strong>一句话鉴别总结：</strong>先排除“结构/感染/内分泌/药物”原因，剩下的才按功能性排泄障碍处理。</p>
+  </div>
+
+  <div class="card green" id="u7-6">
+    <h3 class="col-title"><span class="idx">第六栏</span>治疗方案工具箱</h3>
+    <div class="quote"><span class="lab">教材原文</span>治疗应首先寻找遗尿、遗粪的原因，多表扬、鼓励儿童积极参与治疗，循序渐进掌握排尿、排便技巧，养成良好的生活和排便习惯。</div>
+    <div class="grid2">
+      <div class="mini">
+        <h4>基础管理（共同）</h4>
+        <ul>
+          <li>夜间睡前少饮水，白天避免过度兴奋和疲劳。</li>
+          <li>养成定期排便习惯，不食不易消化的食物。</li>
+          <li>指导家长创造温馨环境，<strong>切忌打骂责罚儿童</strong>。</li>
+        </ul>
+      </div>
+      <div class="mini">
+        <h4>遗尿症</h4>
+        <ul>
+          <li>可给予<strong>去氨升压素、抗胆碱能药和三环类抗抑郁药物</strong>。</li>
+          <li><strong>去氨升压素和遗尿报警器可作为一线治疗。</strong></li>
+          <li>抗胆碱能药和三环类抗抑郁药物可出现<strong>口干、便秘</strong>等副作用，需在专科医师指导下使用。</li>
+        </ul>
+      </div>
+      <div class="mini">
+        <h4>遗粪症</h4>
+        <ul>
+          <li>合并功能性便秘者：给予<strong>大便软化、导泻灌肠</strong>治疗。</li>
+          <li>合并焦虑、抑郁的儿童：可给予<strong>小剂量抗焦虑药、抗抑郁药</strong>。</li>
+        </ul>
+      </div>
+      <div class="mini">
+        <h4>治疗顺序</h4>
+        <p>寻找原因 → 表扬鼓励 + 家庭支持 → 生活/排便习惯训练 → 按病种用药或报警器 → 共病情绪问题处理。</p>
+      </div>
+    </div>
+    <div class="callout warn">
+      <span class="ct">⚠️ 教材未涉及</span>
+      去氨升压素、抗胆碱能药、三环类抗抑郁药的<strong>具体剂量与疗程</strong>，以及遗尿报警器的使用参数，教材均未给出；只给了“一线/可在专科指导下使用”的定位。
+    </div>
+    <p><strong>病程与预后：</strong>本病预后良好，随着年龄的增长，遗尿、遗粪现象逐渐消失，仅少数遗尿症儿童可持续到成年。</p>
+  </div>
+
+  <div class="card purple" id="u7-7">
+    <h3 class="col-title"><span class="idx">第七栏</span>记忆工具箱</h3>
+    <div class="callout tip">
+      <span class="ct">🔧 方法一：数字对照法（5/4 · 2/1 · 3）</span>
+      记 <strong>“遗尿 5 岁、每周 2 次；遗粪 4 岁、每月 1 次；两者都连续 3 个月”</strong>。<br>
+      <em>为什么这样记：</em>先记年龄（5 对 4），再记频率（2 对 1），最后记共同病程（3 个月）；三组数字一摆，表格题直接秒杀。
+    </div>
+    <div class="callout tip">
+      <span class="ct">🔧 方法二：昼夜间联想法</span>
+      联想：<strong>“尿在夜里多，粪在白天多”</strong>；再补“尿床常在前 1/3 夜”。<br>
+      <em>为什么这样记：</em>用生活画面把“夜间遗尿、白天遗粪”钉住，避免把两者的时间特征互换。
+    </div>
+    <div class="callout tip">
+      <span class="ct">🔧 方法三：一线治疗锚定法</span>
+      记 <strong>“遗尿一线 = 去氨升压素 + 遗尿报警器”</strong>；遗粪合并便秘 = <strong>大便软化、导泻灌肠</strong>。<br>
+      <em>为什么这样记：</em>把两个病的一线处理分别锚定，防止把“去氨升压素”错答成遗粪症治疗。
+    </div>
+    <div class="callout tip">
+      <span class="ct">🔧 方法四：家庭态度口诀</span>
+      口诀：<strong>“找原因、多表扬、少责罚、慢慢练”</strong>。<br>
+      <em>为什么这样记：</em>教材把家庭环境与“切忌打骂责罚”写进治疗首段，说明行为训练能否成功很大程度取决于家长态度；四句话覆盖治疗基调。
+    </div>
+  </div>
+
+  <div class="card cyan" id="u7-8">
+    <h3 class="col-title"><span class="idx">第八栏</span>知识联动</h3>
+    <ul>
+      <li><strong>与儿童精神障碍：</strong>遗尿需排除精神发育迟滞；遗粪需排除精神症状或智力低下所致，提示发育评估的必要性。</li>
+      <li><strong>与泌尿外科/肾内科：</strong>脊柱裂、尿道狭窄、泌尿系感染或结构异常，是遗尿症的首要排除清单。</li>
+      <li><strong>与消化内科/内分泌：</strong>先天性巨结肠、甲状腺功能减退、结肠肿块、肠道感染，是遗粪症的排除清单。</li>
+      <li><strong>与家庭治疗/行为儿科：</strong>排便训练不良、心理创伤、家庭责罚，都是可干预的维持因素。</li>
+      <li><strong>与药物治疗学：</strong>去氨升压素、抗胆碱能药、三环类抗抑郁药、小剂量抗焦虑/抗抑郁药均被教材点名，但剂量需遵专科指导。</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===== 12 核心要点 ===== -->
+<section id="summary">
+  <div class="sec-head"><div class="badge">12</div><h2>全章核心要点速览<span class="en">18 key points</span></h2></div>
+  <p class="sec-lead">考前最后一遍只看这里。每条都能独立成题，建议逐条自问“为什么”。</p>
+  <div class="card blue">
+    <div class="grid2">
+      <ol>
+        <li>本章 7 节：神经性厌食、神经性贪食、暴食障碍、ARFID、异食癖、反刍-反流障碍、排泄障碍（遗尿症 + 遗粪症）。</li>
+        <li>神经性厌食的核心心理特征是<strong>关于体形和体重的超价观念</strong>，伴体象歪曲；1868 年由 William Gull 命名。</li>
+        <li>神经性厌食成人 BMI <strong>低于 18.5kg/m<sup>2</sup></strong>；儿童青少年低于相应年龄 BMI 第 5 百分位；快速减重（6 个月内超过总体重 20%）可取代低体重标准。</li>
+        <li>ICD-11 分型：伴显著低体重（18.5～14.0）、伴危险低体重（&lt;14.0）、恢复期伴正常体重（&gt;18.5）；儿童对应第 5～0.3 百分位、&lt;0.3 百分位、&gt;第 5 百分位。</li>
+        <li>神经性厌食的临床表现六条：限制能量摄入、怕胖、体象障碍、神经内分泌改变（闭经）、营养不良和代谢紊乱、精神症状。</li>
+        <li>神经性厌食治疗：<strong>先纠正营养不良</strong>，同时或稍后心理治疗 + 药物；两阶段为“恢复体重、挽救生命”与“改善心理功能、预防复发”。</li>
+        <li>神经性厌食预后：约 50% 较好、20% 反复、25% 迁延不愈、5%～10% 死亡；体重低于正常体重 60% 时死亡率较高。</li>
+        <li>神经性贪食诊断：暴食与不适当代偿均<strong>每周至少 1 次、持续至少 1 个月</strong>；最常见代偿是自我催吐，常发生在暴食后 1 小时内。</li>
+        <li>神经性贪食并发症：低血钾、低血钠、代谢性碱中毒/酸中毒、心律失常、胃肠道损害；常伴情绪低落。</li>
+      </ol>
+      <ol start="10">
+        <li>神经性贪食与神经性厌食：体重是分水岭；厌食体重恢复后仍暴食，可在<strong>一年后</strong>改诊断神经性贪食。</li>
+        <li>暴食障碍：反复暴食但<strong>无规律代偿</strong>；WHO 14 国终生患病率 1.9%，美国 1.9%～3.5%，男女约 1:1.75，多起病 20 岁左右。</li>
+        <li>暴食障碍治疗：改善认知、减少暴食、减轻体重；CBT 开展最多；氟西汀、舍曲林、二甲磺酸赖右旋安非他明、托吡酯可减少暴食。</li>
+        <li>ARFID：摄入不足导致营养/体重/功能损害，但动机<strong>不是</strong>怕胖；治疗以心理治疗为主，更注重行为和营养方法。</li>
+        <li>异食癖：持续食用非营养物质并需临床关注；已达区分食物的发育年龄（约 2 岁）；并发症随异物而异。</li>
+        <li>反刍-反流障碍：有意反复反刍、无须用力、不伴恶心干呕；每周至少数次、持续至少数周；发育年龄至少 2 岁；一线为横膈膜呼吸。</li>
+        <li>遗尿症：<strong>&gt;5 岁</strong>，每周至少 2 次、连续至少 3 个月；排除脊柱裂、尿道狭窄、泌尿系感染或结构异常。</li>
+        <li>遗粪症：<strong>&gt;4 岁</strong>，每月至少 1 次、连续至少 3 个月；排除泻药、先天性巨结肠、甲减、结肠肿块、肠道感染。</li>
+        <li>排泄障碍治疗：先找原因、表扬鼓励、家庭支持、习惯训练；遗尿一线为去氨升压素 + 遗尿报警器；遗粪合并便秘用大便软化、导泻灌肠。</li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 13 易混 ===== -->
+<section id="pitfalls">
+  <div class="sec-head"><div class="badge">13</div><h2>易混易错点警示<span class="en">Common traps</span></h2></div>
+  <p class="sec-lead">这些点不是“没背到”，而是“背反了”。逐条核对你的第一反应。</p>
+  <div class="card danger">
+    <details open>
+      <summary>① “怕胖”不是神经性厌食的绝对诊断门槛</summary>
+      <div class="dbody">教材在 ICD-11 附加临床特征中明确：<strong>对体重增加的恐惧并不是诊断的绝对要求</strong>，前提是维持低体重状态的行为似乎是故意的，并且有对体重或体形的过度关注行为（如反复检查、监测或极端回避）。不要把“怕胖”当成一票否决。</div>
+    </details>
+    <details>
+      <summary>② BMI 三个数字别混：18.5、14.0、第 0.3 百分位</summary>
+      <div class="dbody">成人 BMI 低于 18.5 为低体重；<strong>低于 14.0</strong> 才是“伴危险低体重”；儿童青少年“伴危险低体重”是低于相应年龄 BMI 的<strong>第 0.3 个百分位</strong>，不是第 5 个百分位。第 5 个百分位是“显著低体重”的下界。</div>
+    </details>
+    <details>
+      <summary>③ 暴食 + 清除 ≠ 一定是神经性贪食</summary>
+      <div class="dbody">若体重已低到符合神经性厌食，即使有暴食与清除，也诊断<strong>“神经性厌食，暴食-清除模式”</strong>；神经性贪食的诊断第 5 条要求“不符合神经性厌食的诊断要求”。厌食体重恢复后仍暴食，可在<strong>一年后</strong>改诊断神经性贪食。</div>
+    </details>
+    <details>
+      <summary>④ 神经性贪食与暴食障碍：只看“有无规律代偿”</summary>
+      <div class="dbody">两者暴食频率标准相同（每周至少 1 次、持续至少 1 个月）；区别在代偿：有自我催吐、泻药/灌肠、剧烈运动等规律代偿 → 神经性贪食；<strong>没有</strong> → 暴食障碍。不要把“体重正常”当作唯一区分。</div>
+    </details>
+    <details>
+      <summary>⑤ 四个“频率/病程”数字别串台</summary>
+      <div class="dbody">神经性贪食/暴食障碍：<strong>每周 ≥1 次、≥1 个月</strong>；遗尿症：<strong>每周 ≥2 次、连续 ≥3 个月</strong>；遗粪症：<strong>每月 ≥1 次、连续 ≥3 个月</strong>。把“1 个月”套到遗尿、或把“3 个月”套到贪食，都是典型错误。</div>
+    </details>
+    <details>
+      <summary>⑥ ARFID 不是“怕胖的厌食”</summary>
+      <div class="dbody">ARFID 的诊断第 2 条明确：进食行为模式的动机<strong>不是</strong>对体重或体形的过分关注。它也不是“没食物”或“食物过敏/甲亢”所致；这三条否定必须同时成立。</div>
+    </details>
+    <details>
+      <summary>⑦ “2 岁”是异食癖与反刍障碍的共同发育门槛</summary>
+      <div class="dbody">异食癖要求患者已达到能区分食用/非食用物质的发育年龄（大约 2 岁）；反刍-反流障碍只能在发育年龄至少 2 岁的个体中诊断。两个“2 岁”含义相近但诊断对象不同：一个看“能否区分食物”，一个看“能否诊断反刍”。</div>
+    </details>
+    <details>
+      <summary>⑧ 反刍不是呕吐，也不是贪食的“自我催吐”</summary>
+      <div class="dbody">反刍：无须用力、不伴腹部不适/恶心/干呕/厌恶，可带愉快感，常在餐后 15 分钟内开始、持续数小时，食物变酸时停止。呕吐：用力、伴恶心干呕、厌恶感。神经性贪食的自我催吐是暴食后的主动清除行为。<strong>三者不能混答。</strong></div>
+    </details>
+    <details>
+      <summary>⑨ 遗尿看 5 岁，遗粪看 4 岁；原发/继发的时间分界也不同</summary>
+      <div class="dbody">遗尿症 ≥5 周岁；原发指从出生持续到 5 岁从未间断，继发指完全自主排尿<strong>半年</strong>后再次出现。遗粪症 ≥4 周岁；原发指 5 岁以后每月至少 1 次，继发指完全自主控制大便<strong>1 年以上</strong>后再次出现。不要把“半年”与“1 年”对调。</div>
+    </details>
+    <details>
+      <summary>⑩ 教材没给剂量，就不要“补数字”</summary>
+      <div class="dbody">本章除神经性厌食病例中出现<strong>氟西汀 20mg/d 起始、加至 60mg/d</strong>外，其余药物（舍曲林、舒必利、奥氮平、艾司西酞普兰、米氮平、利培酮、托吡酯、二甲磺酸赖右旋安非他明、去氨升压素等）教材<strong>均未给出具体剂量与疗程</strong>。答题时写药名与原则即可。</div>
+    </details>
+    <details>
+      <summary>⑪ “体重低于正常体重的 60%”不等于 BMI 14.0</summary>
+      <div class="dbody">教材在临床表现中写“当体重低于正常体重的 60% 时，死亡率较高”，这是<strong>相对正常体重的比例</strong>；BMI 14.0 是 ICD-11 分型的“危险低体重”阈值。两个数字来源与含义不同，不能互相替代。</div>
+    </details>
+  </div>
+</section>
+
+<!-- ===== 14 自测 ===== -->
+<section id="quiz">
+  <div class="sec-head"><div class="badge">14</div><h2>章节自测系统<span class="en">12 questions · 6 types</span></h2></div>
+  <p class="sec-lead">覆盖单选、多选、判断、名词解释、简答、案例分析六种题型，按易→中→难排列。先作答，再展开解析。</p>
+
+  <div class="quiz-q">
+    <div class="qh"><span class="qno">第 1 题</span><span class="qtype">单选题</span><span class="diff">易</span></div>
+    <p class="brief">神经性厌食的<strong>核心心理特征</strong>是？</p>
+    <div class="opts">
+      <div class="opt"><span class="l">A.</span>对食物味道的过度挑剔</div>
+      <div class="opt"><span class="l">B.</span>关于体形和体重的超价观念</div>
+      <div class="opt"><span class="l">C.</span>对社交场合的恐惧</div>
+      <div class="opt"><span class="l">D.</span>对排便控制的焦虑</div>
+    </div>
+    <details><summary>查看答案与解析</summary><div class="dbody"><strong>答案：B</strong><br>教材原文：神经性厌食“核心的心理特征是特有的关于体形和体重的超价观念”。患者对体象有歪曲认识，即使体重过低仍认为自己过胖。A、C、D 均非本病核心。</div></details>
+  </div>
+
+  <div class="quiz-q">
+    <div class="qh"><span class="qno">第 2 题</span><span class="qtype">单选题</span><span class="diff">中</span></div>
+    <p class="brief">神经性贪食的诊断要求，暴食发作与不适当代偿行为的频率和病程是？</p>
+    <div class="opts">
+      <div class="opt"><span class="l">A.</span>每周至少 1 次，持续至少 1 个月</div>
+      <div class="opt"><span class="l">B.</span>每周至少 2 次，连续至少 3 个月</div>
+      <div class="opt"><span class="l">C.</span>每月至少 1 次，连续至少 3 个月</div>
+      <div class="opt"><span class="l">D.</span>每周至少 3 次，持续至少 6 个月</div>
+    </div>
+    <details><summary>查看答案与解析</summary><div class="dbody"><strong>答案：A</strong><br>教材：频繁、反复出现暴食发作（每周 1 次或更多，持续至少 1 个月）；伴有反复的（每周 1 次或更多，持续至少 1 个月）不适当代偿行为。B 是遗尿症的频率/病程；C 是遗粪症；D 无依据。</div></details>
+  </div>
+
+  <div class="quiz-q">
+    <div class="qh"><span class="qno">第 3 题</span><span class="qtype">单选题</span><span class="diff">中</span></div>
+    <p class="brief">暴食障碍与神经性贪食最关键的鉴别点是？</p>
+    <div class="opts">
+      <div class="opt"><span class="l">A.</span>暴食发作的频率</div>
+      <div class="opt"><span class="l">B.</span>是否出现规律的不适当代偿行为</div>
+      <div class="opt"><span class="l">C.</span>患者的性别</div>
+      <div class="opt"><span class="l">D.</span>是否合并抑郁</div>
+    </div>
+    <details><summary>查看答案与解析</summary><div class="dbody"><strong>答案：B</strong><br>教材：暴食障碍“暴食发作时不会出现防止体重增加的代偿行为”；与神经性贪食的鉴别是“不会出现自我引吐、滥用泻药、间断禁食和过度运动”。两者暴食频率标准相同，性别与抑郁共病都不是关键鉴别点。</div></details>
+  </div>
+
+  <div class="quiz-q">
+    <div class="qh"><span class="qno">第 4 题</span><span class="qtype">多选题</span><span class="diff">中</span></div>
+    <p class="brief">下列哪些属于神经性厌食的临床表现？</p>
+    <div class="opts">
+      <div class="opt"><span class="l">A.</span>故意限制能量摄入，体重明显低于正常标准</div>
+      <div class="opt"><span class="l">B.</span>体象障碍，骨瘦如柴仍认为自己过胖</div>
+      <div class="opt"><span class="l">C.</span>女性闭经，可出现于体重减轻之前、之后或同时</div>
+      <div class="opt"><span class="l">D.</span>营养不良和代谢紊乱，最严重的电解质紊乱是低血钾</div>
+    </div>
+    <details><summary>查看答案与解析</summary><div class="dbody"><strong>答案：ABCD</strong><br>四项均见于教材“临床表现”：①故意限制能量摄入常为首发症状；②体象障碍；③女性闭经可出现在体重减轻之前、之后或同时；④呕吐和滥用泻药可致多种紊乱，最严重的是低血钾。</div></details>
+  </div>
+
+  <div class="quiz-q">
+    <div class="qh"><span class="qno">第 5 题</span><span class="qtype">多选题</span><span class="diff">难</span></div>
+    <p class="brief">关于回避-限制性摄食障碍（ARFID），下列哪些说法正确？</p>
+    <div class="opts">
+      <div class="opt"><span class="l">A.</span>可导致严重营养不良、体重显著减轻或无法增长</div>
+      <div class="opt"><span class="l">B.</span>进食行为模式的动机不是对体重或体形的过分关注</div>
+      <div class="opt"><span class="l">C.</span>与神经性厌食/贪食相比，男性比例较高、年龄较小、病程较长</div>
+      <div class="opt"><span class="l">D.</span>治疗以心理治疗为主，必须更加注重行为和营养方法</div>
+    </div>
+    <details><summary>查看答案与解析</summary><div class="dbody"><strong>答案：ABCD</strong><br>A 见定义；B 见诊断第 2 条；C 见流行病学；D 见治疗。注意 ARFID 的“不是怕胖”是核心否定条件，不能与神经性厌食混为一谈。</div></details>
+  </div>
+
+  <div class="quiz-q">
+    <div class="qh"><span class="qno">第 6 题</span><span class="qtype">判断题</span><span class="diff">易</span></div>
+    <p class="brief">遗尿症的诊断年龄阈值是 ≥5 周岁，遗粪症的诊断年龄阈值是 ≥4 周岁。</p>
+    <div class="opts">
+      <div class="opt"><span class="l">A.</span>正确</div>
+      <div class="opt"><span class="l">B.</span>错误</div>
+    </div>
+    <details><summary>查看答案与解析</summary><div class="dbody"><strong>答案：A（正确）</strong><br>教材遗尿症定义“年龄大于 5 岁”，诊断要点“年龄≥5 周岁仍不能自主排尿”；遗粪症定义“4 岁以上”，诊断要点“年龄≥4 周岁仍不能自主控制排便”。两个年龄阈值不要对调。</div></details>
+  </div>
+
+  <div class="quiz-q">
+    <div class="qh"><span class="qno">第 7 题</span><span class="qtype">判断题</span><span class="diff">中</span></div>
+    <p class="brief">反刍-反流障碍可以在任何年龄的个体中诊断，包括发育年龄不足 2 岁的婴幼儿。</p>
+    <div class="opts">
+      <div class="opt"><span class="l">A.</span>正确</div>
+      <div class="opt"><span class="l">B.</span>错误</div>
+    </div>
+    <details><summary>查看答案与解析</summary><div class="dbody"><strong>答案：B（错误）</strong><br>教材诊断第 3 条明确：反刍-反流障碍<strong>只能在发育年龄至少达到 2 岁的个体中诊断</strong>。虽然本病可发生于婴儿到成人各年龄段，但“可发生”不等于“可在不足 2 岁时作出该诊断”。</div></details>
+  </div>
+
+  <div class="quiz-q">
+    <div class="qh"><span class="qno">第 8 题</span><span class="qtype">名词解释</span><span class="diff">中</span></div>
+    <p class="brief">请解释“体象障碍”（神经性厌食语境）。</p>
+    <details><summary>查看答案与解析</summary><div class="dbody"><strong>参考答案：</strong>神经性厌食患者存在对体象的<strong>歪曲认识</strong>，虽然已经骨瘦如柴，仍认为自己过胖。它是本病核心心理特征“关于体形和体重的超价观念”的具体表现之一，也是诊断要点中“对体重或体形的过度关注”的临床基础。</div></details>
+  </div>
+
+  <div class="quiz-q">
+    <div class="qh"><span class="qno">第 9 题</span><span class="qtype">名词解释</span><span class="diff">中</span></div>
+    <p class="brief">请按教材解释“暴食”（用于神经性贪食/暴食障碍的诊断）。</p>
+    <details><summary>查看答案与解析</summary><div class="dbody"><strong>参考答案：</strong>暴食是指在一个特定时间段内（例如 <strong>2 小时</strong>），个体体验到<strong>对进食行为失去控制</strong>，进食明显多于或不同于平时。对饮食失去控制可以被描述为个体感觉无法停止或限制食物的类型或数量。</div></details>
+  </div>
+
+  <div class="quiz-q">
+    <div class="qh"><span class="qno">第 10 题</span><span class="qtype">简答题</span><span class="diff">难</span></div>
+    <p class="brief">简述神经性厌食的治疗原则与两个阶段的目标。</p>
+    <details><summary>查看答案与解析</summary><div class="dbody">
+      <strong>参考答案：</strong>
+      <ol>
+        <li><strong>治疗原则：</strong>首先纠正营养不良，同时或稍后开展心理治疗和药物治疗；多种治疗方式联合应用的综合治疗是最佳手段。</li>
+        <li><strong>第一阶段：</strong>目标是恢复体重、挽救生命——纠正营养不良及水电解质平衡紊乱，给予足够维持生命的能量，制定合理饮食计划，逐渐恢复正常体重和身体健康。</li>
+        <li><strong>第二阶段：</strong>目标是改善心理功能、预防复发——开展心理健康教育、支持性心理治疗、认知行为疗法、家庭治疗，必要时用抗抑郁药、抗焦虑药或少量抗精神病药改善抑郁、焦虑、强迫和体象障碍。</li>
+      </ol>
+      <span class="note">教材未给出具体的增重速度、热量方案与药物疗程，答题时不要补数字。</span>
+    </div></details>
+  </div>
+
+  <div class="quiz-q">
+    <div class="qh"><span class="qno">第 11 题</span><span class="qtype">案例分析题</span><span class="diff">中</span></div>
+    <p class="brief">某 17 岁女性，近一年反复出现无法控制的暴食，每周 3～4 次，吃到腹胀难受为止；暴食后常自行催吐，并间断服用泻药。她非常怕胖，体重一直在正常范围。内科检查未发现躯体疾病。请回答：最可能的诊断是什么？需要与哪些情况鉴别？治疗原则是什么？</p>
+    <details><summary>查看答案与解析</summary><div class="dbody">
+      <strong>1. 最可能诊断：</strong>神经性贪食。依据：暴食与不适当代偿均达到“每周至少 1 次、持续至少 1 个月”；有怕胖与对体重体形的过度关注；体重在正常范围；不符合神经性厌食的低体重标准；内科未发现躯体疾病。<br>
+      <strong>2. 鉴别：</strong>①神经性厌食（暴食-清除模式）——若体重低到符合神经性厌食则改诊断；②暴食障碍——若没有规律代偿则诊断暴食障碍；③间脑病变、颞叶癫痫等器质性/继发性暴食——问嗜睡、体温调节、水盐代谢、抽搐史，查脑电图/CT；④精神分裂症继发暴食——看有无精神病性症状。<br>
+      <strong>3. 治疗原则：</strong>纠正营养状况，控制暴食行为，打破恶性循环，建立正常进食行为；心理治疗可用认知疗法、行为疗法、生物反馈疗法，必要时家庭治疗；药物可用各类抗抑郁药（SSRIs、三环类），氟西汀对暴食伴情绪障碍效果较好；躯体支持治疗针对并发症。<br>
+      <span class="note">本例为依据教材诊断条目构建的模拟情境，不是教材原案例；未虚构化验值。教材未给出具体药物剂量与疗程。</span>
+    </div></details>
+  </div>
+
+  <div class="quiz-q">
+    <div class="qh"><span class="qno">第 12 题</span><span class="qtype">案例分析题</span><span class="diff">难</span></div>
+    <p class="brief">某 7 岁男孩，近半年反复夜间尿床，每周约 3 次，持续超过 3 个月；白天排尿正常，无发热、尿痛，无脊柱外伤史。家长常因尿床责骂他。请回答：最可能的诊断及诊断依据？需要排除哪些器质性疾病？处理原则与一线治疗是什么？</p>
+    <details><summary>查看答案与解析</summary><div class="dbody">
+      <strong>1. 诊断：</strong>遗尿症（夜间遗尿）。依据：年龄≥5 周岁仍不能自主排尿；遗尿每周至少 2 次、连续至少 3 个月；以夜间为主；无尿痛、发热等提示感染的表现；无脊柱外伤史。<br>
+      <strong>2. 排除：</strong>脊柱裂、尿道狭窄、泌尿系感染或结构异常；还需排除精神发育迟滞、尿路梗阻、泌尿系统感染或畸形引起的遗尿。<br>
+      <strong>3. 处理原则：</strong>首先寻找原因；多表扬、鼓励儿童积极参与治疗，循序渐进掌握排尿技巧，养成良好生活和排便习惯；夜间睡前少饮水，白天避免过度兴奋和疲劳；指导家长创造温馨环境，<strong>切忌打骂责罚</strong>。<br>
+      <strong>4. 一线治疗：</strong>去氨升压素和遗尿报警器可作为一线治疗；抗胆碱能药和三环类抗抑郁药物可出现口干、便秘等副作用，需在专科医师指导下使用。<br>
+      <span class="note">本例为依据教材诊断要点构建的模拟情境，不是教材原案例；未虚构化验值。教材未给出具体药物剂量与疗程。</span>
+    </div></details>
+  </div>
+</section>
+
+<!-- ===== 15 速记卡 ===== -->
+<section id="cards">
+  <div class="sec-head"><div class="badge">15</div><h2>考点速记卡<span class="en">19 flip cards</span></h2></div>
+  <p class="sec-lead">正面是问题，点击翻面看答案。建议按“概念→阈值→治疗”三轮刷，每轮只追求快速反应。</p>
+  <div class="flashcard-grid">
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag concept">概念</span><p>神经性厌食的核心心理特征是什么？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">关于体形和体重的<strong>超价观念</strong>；患者对体象有歪曲认识，即使体重过低仍认为自己过胖，并常采取过度运动、引吐、导泻等方法减轻体重。</div>
+    </div></div>
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag diag">诊断</span><p>神经性厌食成人与儿童青少年的低体重阈值？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">成人 BMI <strong>&lt;18.5kg/m²</strong>；儿童青少年体重低于相应年龄 BMI 的<strong>第 5 个百分位</strong>。快速减重（6 个月内超过总体重 20%）可取代低体重标准。</div>
+    </div></div>
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag diag">诊断</span><p>ICD-11 神经性厌食“伴危险低体重”的阈值？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">成人 BMI <strong>低于 14.0kg/m²</strong>；儿童青少年 BMI 低于相应年龄 BMI 的<strong>第 0.3 个百分位</strong>。</div>
+    </div></div>
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag concept">概念</span><p>神经性厌食的“体象障碍”指什么？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">患者对体象存在<strong>歪曲认识</strong>：虽然骨瘦如柴，仍认为自己过胖。</div>
+    </div></div>
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag diag">鉴别</span><p>神经性厌食与抑郁障碍的关键区别？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">抑郁障碍患者<strong>没有对体重增加的过分恐惧</strong>，并具有情感低落、思维迟缓、意志活动减退、自我评价过低、悲观、自责和睡眠障碍等特点。</div>
+    </div></div>
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag treat">治疗</span><p>神经性厌食的治疗原则与两个阶段？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back"><strong>先纠正营养不良</strong>，同时或稍后心理治疗 + 药物治疗，综合治疗最佳。第一阶段：恢复体重、挽救生命；第二阶段：改善心理功能、预防复发。</div>
+    </div></div>
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag concept">概念</span><p>神经性贪食的定义？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">具有反复发作的<strong>不可抗拒的进食欲望</strong>及多食或暴食行为，进食后又因担心发胖而采用各种方法减轻体重的一种进食障碍。</div>
+    </div></div>
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag diag">诊断</span><p>神经性贪食的暴食与代偿频率标准？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">均要求<strong>每周 1 次或更多，持续至少 1 个月</strong>。暴食定义：特定时间段（如 2 小时）内失控，进食明显多于或不同于平时。</div>
+    </div></div>
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag concept">概念</span><p>神经性贪食最常见的代偿行为及时间？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back"><strong>自我催吐</strong>，通常发生在暴饮暴食后 <strong>1 小时内</strong>。</div>
+    </div></div>
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag risk">风险</span><p>神经性贪食常见的水电解质并发症？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">低血钾、低血钠、代谢性碱中毒、代谢性酸中毒、心律失常、胃肠道损害等。</div>
+    </div></div>
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag diag">鉴别</span><p>神经性贪食与暴食障碍的核心区别？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">神经性贪食有<strong>规律的不适当代偿</strong>（自我催吐、泻药/灌肠、剧烈运动等）；暴食障碍<strong>不会</strong>出现这些代偿。</div>
+    </div></div>
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag data">数据</span><p>暴食障碍的流行病学关键数字？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">WHO 14 国终生患病率 <strong>1.9%</strong>；美国 <strong>1.9%～3.5%</strong>；男女比例约 <strong>1:1.75</strong>；多起病于 <strong>20 岁左右</strong>；美国研究肥胖比例 <strong>38.9%</strong>。</div>
+    </div></div>
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag concept">概念</span><p>ARFID 的核心否定条件是什么？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">进食行为模式的动机<strong>不是</strong>对体重或体形的过分关注；也不是无法获得食物、其他疾病或物质/药物所致。</div>
+    </div></div>
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag treat">治疗</span><p>ARFID 的治疗原则与常用药物？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">以心理治疗为主（CBT、家庭治疗），更注重行为和营养方法。药物包括抗抑郁药、抗焦虑药、非典型抗精神病药；教材点名艾司西酞普兰/氟西汀、米氮平/奥氮平/利培酮。</div>
+    </div></div>
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag diag">诊断</span><p>异食癖的发育年龄门槛与并发症配对？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">已达能区分食用/非食用物质的发育年龄（大约 <strong>2 岁</strong>）。油漆→铅中毒；粪便/泥土→寄生虫；黏土→贫血和缺锌；淀粉→缺铁；头发/石头→肠梗阻。</div>
+    </div></div>
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag diag">诊断</span><p>反刍-反流障碍的诊断门槛？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">有意、反复反刍；频繁（<strong>每周至少数次</strong>）并持续<strong>至少数周</strong>；只能在发育年龄<strong>至少 2 岁</strong>的个体中诊断；不能归因于消化道疾病或其他躯体疾病。</div>
+    </div></div>
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag treat">治疗</span><p>反刍-反流障碍的一线治疗是什么？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back"><strong>横膈膜呼吸（深腹式呼吸）</strong>，可有效缓解反刍行为。</div>
+    </div></div>
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag diag">诊断</span><p>遗尿症与遗粪症的年龄/频率阈值？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">遗尿：<strong>≥5 周岁</strong>，每周至少 <strong>2 次</strong>、连续至少 3 个月；遗粪：<strong>≥4 周岁</strong>，每月至少 <strong>1 次</strong>、连续至少 3 个月。</div>
+    </div></div>
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag treat">治疗</span><p>遗尿症的一线治疗是什么？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back"><strong>去氨升压素和遗尿报警器</strong>可作为一线治疗；抗胆碱能药和三环类抗抑郁药需在专科医师指导下使用，注意口干、便秘等副作用。</div>
+    </div></div>
+  </div>
+</section>
+
+<!-- ===== 16 病例挑战 ===== -->
+<section id="cases">
+  <div class="sec-head"><div class="badge">16</div><h2>病例挑战<span class="en">3 cases · increasing difficulty</span></h2></div>
+  <p class="sec-lead">以下均为<strong>模拟临床情境</strong>：依据教材所述典型表现与处理原则构建，用于训练临床推理，<strong>不是教材原案例</strong>，也不含虚构的化验数值。</p>
+
+  <div class="case">
+    <span class="ctag">难度 ★ · 识别与诊断</span>
+    <h3>案例 1：被说“胖”之后越来越瘦的女孩</h3>
+    <div class="scene">14 岁女孩，近一年主动节食，几乎不吃主食和肉，体重明显下降，但总说自己“还是胖”。她每天称体重多次，拒绝穿紧身衣服，家中镜子被收起来。近 8 个月月经未至。父母带她就诊，综合医院检查未发现器质性疾病。她否认催吐，但承认会通过长时间跑步“消耗掉”吃下的东西。</div>
+    <ol class="ques">
+      <li>最可能的诊断是什么？诊断依据有哪些？</li>
+      <li>需要与哪些疾病鉴别？关键鉴别点是什么？</li>
+      <li>治疗的第一步与总体原则是什么？</li>
+    </ol>
+    <details><summary>查看答案与解析</summary><div class="dbody">
+      <strong>1.</strong>最可能为<strong>神经性厌食</strong>。依据：青少年女性、主动限制能量摄入导致体重明显下降；持续怕胖与体象歪曲（“还是胖”、反复称重、极端回避镜子/紧身衣）；过度运动作为防止体重回升的行为；闭经 8 个月；已排除器质性疾病。<br>
+      <strong>2.</strong>鉴别：①躯体疾病（慢性消耗性疾病、肠道感染、肿瘤）——很少出现怕胖的超价观念、故意限制饮食及体象障碍；②抑郁障碍——没有对体重增加的过分恐惧，而有情感低落、思维迟缓、意志减退、自我评价过低、悲观、自责、睡眠障碍；③精神分裂症——有明显思维、情感、行为异常，社会功能损害，自知力常不完整。<br>
+      <strong>3.</strong><strong>第一步是纠正营养不良</strong>（恢复体重、挽救生命），同时或稍后开展心理治疗与药物治疗；心理治疗包括心理健康教育、支持性心理治疗、CBT、家庭治疗；药物可改善抑郁、焦虑、强迫和体象障碍。<br>
+      <span class="note">模拟情境，依据教材知识点构建；未提供化验值；教材未给出本例的具体药物剂量与疗程。</span>
+    </div></details>
+  </div>
+
+  <div class="case">
+    <span class="ctag">难度 ★★ · 鉴别与治疗</span>
+    <h3>案例 2：正常体重的“暴食—催吐”女生</h3>
+    <div class="scene">18 岁女生，近半年反复暴食，每周 4～5 次，一次可吃下大量主食和甜食，吃到腹胀难受；吃完后常自行催吐，有时用泻药。她非常怕胖，体重一直在正常范围。因怕被同学看见，常独自在宿舍进食。近来自觉情绪低落，学习效率下降。内科检查未发现躯体疾病。</div>
+    <ol class="ques">
+      <li>最可能的诊断是什么？与暴食障碍、神经性厌食如何鉴别？</li>
+      <li>需要重点警惕哪些躯体并发症？</li>
+      <li>治疗的基本过程与可选手段有哪些？</li>
+    </ol>
+    <details><summary>查看答案与解析</summary><div class="dbody">
+      <strong>1.</strong>最可能为<strong>神经性贪食</strong>。暴食与代偿均达到每周至少 1 次、持续至少 1 个月；体重正常，不符合神经性厌食低体重标准。与<strong>暴食障碍</strong>鉴别：后者没有规律代偿；与<strong>神经性厌食（暴食-清除模式）</strong>鉴别：若体重低到符合神经性厌食，则诊断神经性厌食；厌食体重恢复后仍暴食，一年后可改诊断神经性贪食。<br>
+      <strong>2.</strong>水电解质紊乱（低血钾、低血钠、代谢性碱中毒/酸中毒）、心律失常、胃肠道损害；患者已情绪低落，还需评估抑郁与自杀风险。<br>
+      <strong>3.</strong>基本过程：纠正营养状况，控制暴食行为，打破恶性循环，建立正常进食行为。心理治疗可用认知疗法、行为疗法、生物反馈疗法，必要时家庭治疗并指导家人；药物可用各类抗抑郁药（SSRIs、三环类），氟西汀对暴食伴情绪障碍效果较好；躯体支持治疗针对并发症。<br>
+      <span class="note">模拟情境，依据教材知识点构建；未提供化验值；教材未给出具体药物剂量与疗程。</span>
+    </div></details>
+  </div>
+
+  <div class="case">
+    <span class="ctag">难度 ★★★ · 综合处理</span>
+    <h3>案例 3：被责骂后仍尿床的 7 岁男孩</h3>
+    <div class="scene">7 岁男孩，近 5 个月反复夜间尿床，每周约 3 次；白天排尿正常，无尿痛、发热，无脊柱外伤史。家长非常焦虑，常在清晨责骂孩子，孩子变得沉默、不愿参加同学家的过夜活动。因“遗尿”就诊，医生首先安排评估以排除器质性疾病。</div>
+    <ol class="ques">
+      <li>遗尿症的诊断要点有哪些？本例是否满足？</li>
+      <li>需要排除哪些器质性疾病与其他原因？</li>
+      <li>处理原则与一线治疗是什么？家长教育的关键一句话是什么？</li>
+      <li>如果患儿同时存在便秘、白天漏粪，应考虑什么？其诊断阈值与遗尿有何不同？</li>
+    </ol>
+    <details><summary>查看答案与解析</summary><div class="dbody">
+      <strong>1.</strong>诊断要点：①年龄 <strong>≥5 周岁</strong>仍不能自主排尿；②遗尿<strong>每周至少 2 次、连续至少 3 个月</strong>；③排除器质性疾病引起的遗尿。本例 7 岁、每周约 3 次、持续 5 个月，已满足年龄与频率/病程条件，待排除器质性疾病后可诊断。<br>
+      <strong>2.</strong>排除脊柱裂、尿道狭窄、泌尿系感染或结构异常；还需排除精神发育迟滞、尿路梗阻、泌尿系统感染或畸形引起的遗尿。<br>
+      <strong>3.</strong>原则：首先寻找原因；多表扬、鼓励儿童积极参与治疗，循序渐进掌握排尿技巧，养成良好生活和排便习惯；夜间睡前少饮水，白天避免过度兴奋和疲劳；指导家长创造温馨环境，<strong>切忌打骂责罚儿童</strong>。一线：<strong>去氨升压素和遗尿报警器</strong>；抗胆碱能药、三环类抗抑郁药需专科指导。<br>
+      <strong>4.</strong>应考虑<strong>遗粪症</strong>。诊断阈值：年龄 <strong>≥4 周岁</strong>；遗粪<strong>每月至少 1 次、连续至少 3 个月</strong>；排除泻药、先天性巨结肠、甲状腺功能减退、结肠肿块、肠道感染性疾病，以及精神症状或智力低下所致遗粪。与遗尿的差别：年龄 4 vs 5 岁、频率每月 1 次 vs 每周 2 次、时间白天 vs 夜间居多。<br>
+      <span class="note">模拟情境，依据教材知识点构建；未提供化验值；教材未给出具体药物剂量与疗程。</span>
+    </div></details>
+  </div>
+</section>
+
+<!-- ===== 17 拓展 ===== -->
+<section id="ext">
+  <div class="sec-head"><div class="badge">17</div><h2>拓展延伸<span class="en">Beyond the chapter</span></h2></div>
+  <p class="sec-lead">本章教材已提及但未展开的内容，集中列在这里；同时明确标出“教材未涉及”的空白，避免把课外知识误当成教材结论。</p>
+  <div class="grid2">
+    <div class="card cyan">
+      <h3>教材提及、但仅一笔带过的内容（拓展补充）</h3>
+      <ul>
+        <li><strong>遗传易感位点：</strong>教材提到神经性厌食易感基因可能位于染色体 1p33-36，但未给出具体基因名称与机制。</li>
+        <li><strong>5-HT 的矛盾表述：</strong>低体重时 5-HIAA 降低、5-HT 活性降低；体重恢复后 5-HIAA 升高；另有学者认为 5-HT 活性增高可能是发病机制。教材并列呈现，未作定论。</li>
+        <li><strong>瘦素：</strong>教材解释“体重增加时瘦素分泌增加、体重降低时减少”，并指出患者基础瘦素水平较低，但未展开其治疗意义。</li>
+        <li><strong>ICD-11 亚型：</strong>神经性厌食按低体重分三型并可再分限制性/暴食-清除/未特定；遗尿、遗粪也各有 ICD-11 亚型，教材只列名称。</li>
+        <li><strong>暴食的“成瘾类似”机制：</strong>教材只说“可能和物质成瘾的机制类似”，并提到犒赏系统、FTO、多巴胺受体基因、μ阿片受体基因，未展开具体通路。</li>
+      </ul>
+    </div>
+    <div class="card orange">
+      <h3>教材未涉及 / 本指南不补写的内容</h3>
+      <ul>
+        <li>除神经性厌食病例中的氟西汀 20→60mg/d 外，本章所有药物的<strong>具体剂量、疗程、滴定方案</strong>均未给出。</li>
+        <li>神经性厌食的<strong>具体热量方案、增重速度、再喂养监测指标</strong>——教材未涉及。</li>
+        <li>神经性贪食/暴食障碍的<strong>心理治疗次数、频次、疗程</strong>——教材未涉及。</li>
+        <li>ARFID 的<strong>营养补充剂种类与管饲方案</strong>——教材只提“依赖口服营养补充剂或管饲”，未给具体方案。</li>
+        <li>异食癖行为治疗的<strong>操作频次与电刺激参数</strong>——教材只列方法名称。</li>
+        <li>反刍-反流障碍的<strong>具体药物与手术指征</strong>——教材只写“必要时可尝试”。</li>
+        <li>遗尿报警器的<strong>使用参数</strong>、去氨升压素的<strong>剂量与疗程</strong>——教材未涉及。</li>
+      </ul>
+    </div>
+  </div>
+  <div class="callout ext">
+    <span class="ct">📖 使用提醒</span>
+    本指南所有数值、阈值、药名与治疗定位均取自教材第十四章原文；凡标注“教材未涉及”的地方，不要用其他资料的数字替代，以免与教材答案冲突。
+  </div>
+  <div class="hr"></div>
+  <p class="note" style="text-align:center">精神病学（第9版）· 第十四章 进食与排泄障碍 · 印刷页 167–178 · 学习指南完</p>
+</section>
+
+</div>
+<nav class="chapter-pager" aria-label="章节间导航"><a class="cp-prev" href="精神病学_第十三章_躯体痛苦及躯体体验障碍_学习指南.html">← 上一章：第十三章</a><a class="cp-toc" href="index.html">目录</a><a class="cp-next" href="精神病学_第十五章_物质使用及成瘾行为所致障碍_学习指南.html">下一章：第十五章 →</a></nav>
+</main>
+
+<button class="top" id="topBtn" aria-label="回到顶部">↑</button>
+<script>
+/* ============================================================
+   精神病学学习指南 · 统一交互层 v1（构建期注入，整体替换原 IIFE）
+   兼容 A 族（.tabbar button + [data-panel] + .panel.on）与
+   B 族（.tab-nav + .tab-panel.active）两套 DOM 约定。
+   特性检测 + 防御式查询 + 幂等；不引入任何外部依赖。
+   ============================================================ */
+(function () {
+  'use strict';
+  if (window.__PSY_GUIDE_APP__) { return; }
+  window.__PSY_GUIDE_APP__ = true;
+
+  var d = document;
+
+  function all(sel, root) {
+    return Array.prototype.slice.call((root || d).querySelectorAll(sel));
+  }
+  function on(el, ev, fn, opt) {
+    if (el) { el.addEventListener(ev, fn, opt || false); }
+  }
+  function norm(s) {
+    return String(s || '').replace(/\s+/g, '').toUpperCase();
+  }
+
+  /* ---------- 1. Tab 切换（两族约定都支持） ---------- */
+  function initTabs() {
+    all('.tabs, [data-tabs]').forEach(function (g) {
+      if (g.__psyTabs) { return; }
+      g.__psyTabs = true;
+      var isA = !!g.querySelector('.tabbar button');
+      var btns = all(isA ? '.tabbar button' : '.tab-nav .tab-btn', g);
+      if (!btns.length) { return; }
+      var cls = isA ? 'on' : 'active';
+      var nav = btns[0].closest('.tabbar') || btns[0].closest('.tab-nav');
+      if (nav && !nav.hasAttribute('role')) { nav.setAttribute('role', 'tablist'); }
+      all(isA ? '.panel' : '.tab-panel', g).forEach(function (p) {
+        if (!p.hasAttribute('role')) { p.setAttribute('role', 'tabpanel'); }
+      });
+      function activate(btn) {
+        btns.forEach(function (b) {
+          b.classList.remove(cls);
+          b.setAttribute('aria-selected', 'false');
+        });
+        btn.classList.add(cls);
+        btn.setAttribute('aria-selected', 'true');
+        var id = btn.getAttribute('data-tab');
+        if (!id) { return; }
+        var target = isA
+          ? g.querySelector('[data-panel="' + id + '"]')
+          : (g.querySelector('.tab-panel#' + id) || d.getElementById(id));
+        all(isA ? '.panel' : '.tab-panel', g).forEach(function (p) {
+          var show = isA ? (p.getAttribute('data-panel') === id) : (p === target);
+          p.classList.toggle(cls, show);
+        });
+      }
+      btns.forEach(function (btn, i) {
+        if (!btn.hasAttribute('role')) { btn.setAttribute('role', 'tab'); }
+        btn.setAttribute('aria-selected', btn.classList.contains(cls) ? 'true' : 'false');
+        if (!btn.hasAttribute('tabindex') && !btn.classList.contains(cls)) { btn.setAttribute('tabindex', '0'); }
+        on(btn, 'click', function () { activate(btn); });
+        on(btn, 'keydown', function (e) {
+          if (e.key !== 'ArrowRight' && e.key !== 'ArrowLeft') { return; }
+          e.preventDefault();
+          var nx = btns[(i + (e.key === 'ArrowRight' ? 1 : btns.length - 1)) % btns.length];
+          if (nx) { nx.focus(); activate(nx); }
+        });
+      });
+    });
+  }
+
+  /* ---------- 2. 速记卡：点击/键盘翻转 + 可达性 ---------- */
+  function initCards() {
+    all('.flashcard').forEach(function (card) {
+      if (card.__psyCard) { return; }
+      card.__psyCard = true;
+      card.setAttribute('tabindex', '0');
+      card.setAttribute('role', 'button');
+      function sync() {
+        card.setAttribute('aria-pressed', card.classList.contains('flipped') ? 'true' : 'false');
+      }
+      function flip() { card.classList.toggle('flipped'); sync(); }
+      on(card, 'click', flip);
+      on(card, 'keydown', function (e) {
+        if (e.key === 'Enter' || e.key === ' ' || e.key === 'Spacebar') {
+          e.preventDefault();
+          flip();
+        }
+      });
+      sync();
+    });
+  }
+
+  /* ---------- 3. 自测题交互化（核心新功能） ---------- */
+  function initQuiz() {
+    var questions = all('.quiz-q, .quiz-item');
+    if (!questions.length) { return; }
+    var groups = {};
+
+    function keyOf(o) {
+      var L = o.getAttribute('data-letter');
+      if (L && String(L).replace(/\s+/g, '') !== '') { return norm(L); }
+      var sp = o.querySelector('.l');
+      if (sp) {
+        var t = norm(sp.textContent).replace(/[.．、:：]/g, '');
+        if (t !== '') { return t; }
+      }
+      var txt = norm(o.textContent);
+      if (txt.indexOf('正确') >= 0 || txt.indexOf('错误') >= 0) { return txt; }
+      return txt.charAt(0);
+    }
+
+    function getGroup(q) {
+      var sec = q.closest('.quiz-block') || q.closest('section') || d.body;
+      if (!groups[sec.__psyGid]) {
+        sec.__psyGid = 'g' + (Object.keys(groups).length + 1);
+        groups[sec.__psyGid] = { sec: sec, total: 0, score: 0, row: null, first: null };
+      }
+      var g = groups[sec.__psyGid];
+      if (!g.first) { g.first = q; }
+      return g;
+    }
+
+    function ensureRow(g) {
+      if (g.row) { return g.row; }
+      var row = d.createElement('div');
+      row.className = 'quiz-score';
+      row.setAttribute('role', 'status');
+      row.setAttribute('aria-live', 'polite');
+      row.innerHTML = '<span class="qs-label">自测计分</span>' +
+        '<span class="qs-num">得分 0 / ' + g.total + '</span>' +
+        '<span class="qs-bar"><i></i></span>';
+      g.first.parentNode.insertBefore(row, g.first);
+      g.row = row;
+      return row;
+    }
+
+    function updateRow(g) {
+      var row = ensureRow(g);
+      var num = row.querySelector('.qs-num');
+      var bar = row.querySelector('.qs-bar i');
+      if (num) { num.textContent = '得分 ' + g.score + ' / ' + g.total; }
+      if (bar) { bar.style.width = (g.total ? Math.round(g.score / g.total * 100) : 0) + '%'; }
+    }
+
+    questions.forEach(function (q) {
+      if (q.__psyQuiz) { return; }
+      q.__psyQuiz = true;
+      var opts = all('.opt', q);
+      if (!opts.length) { opts = all('.quiz-options > li', q); }
+      if (!opts.length) { return; }
+
+      /* 正确答案先记入内存：预标 correct 优先（记录后立即移除，消除剧透），
+         否则从解析文本「答案：X / 答案 X」提取（不改动任何文字） */
+      var ansKeys = [];
+      var preset = opts.filter(function (o) { return o.classList.contains('correct'); });
+      preset.forEach(function (o) { o.classList.remove('correct'); });
+      if (preset.length) {
+        ansKeys = preset.map(keyOf);
+      } else {
+        var dt = q.querySelector('details');
+        var txt = dt ? dt.textContent : '';
+        var m = txt.match(/答案\s*[:：]?\s*([A-Za-z](?:[\s、,，·和及]*[A-Za-z])*)/);
+        if (m) {
+          ansKeys = m[1].match(/[A-Za-z]/g) || [];
+        } else {
+          var m2 = txt.match(/答案\s*[:：]?\s*(正确|错误)/);
+          if (m2) { ansKeys = [m2[1]]; }
+        }
+      }
+      if (!ansKeys.length) { return; } /* 无可判定答案（名词解释等），保持原样 */
+
+      var g = getGroup(q);
+      g.total += 1;
+      var multi = ansKeys.length > 1;
+      var ansSet = ansKeys.map(norm);
+      var locked = false;
+      var picked = [];
+
+      function revealAll() {
+        opts.forEach(function (o) {
+          if (ansSet.indexOf(keyOf(o)) >= 0) { o.classList.add('is-reveal'); }
+        });
+      }
+      function finish(ok) {
+        locked = true;
+        q.classList.add('is-locked');
+        var dt = q.querySelector('details');
+        if (dt) { dt.open = true; }
+        if (ok) { g.score += 1; }
+        updateRow(g);
+      }
+
+      opts.forEach(function (o) {
+        o.setAttribute('tabindex', '0');
+        function pick() {
+          if (locked) { return; }
+          var k = keyOf(o);
+          if (ansSet.indexOf(k) >= 0) {
+            o.classList.add('is-right');
+            if (picked.indexOf(k) < 0) { picked.push(k); }
+            if (multi) {
+              if (picked.length === ansSet.length) { finish(true); }
+            } else {
+              finish(true);
+            }
+          } else {
+            o.classList.add('is-wrong');
+            revealAll();
+            finish(false);
+          }
+        }
+        on(o, 'click', pick);
+        on(o, 'keydown', function (e) {
+          if (e.key === 'Enter' || e.key === ' ' || e.key === 'Spacebar') {
+            e.preventDefault();
+            pick();
+          }
+        });
+      });
+    });
+
+    Object.keys(groups).forEach(function (id) {
+      if (groups[id].total > 0) { updateRow(groups[id]); }
+    });
+  }
+
+  /* ---------- 4. 侧栏 scroll spy（本页锚点高亮） ---------- */
+  function initSpy() {
+    var links = all('#sidebar a[href^="#"]');
+    if (!links.length || !('IntersectionObserver' in window)) { return; }
+    var map = {};
+    links.forEach(function (a) {
+      var id = a.getAttribute('href').slice(1);
+      if (id) { map[id] = a; }
+    });
+    var secs = [];
+    Object.keys(map).forEach(function (id) {
+      var s = d.getElementById(id);
+      if (s) { secs.push(s); }
+    });
+    if (!secs.length) { return; }
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting && map[e.target.id]) {
+          links.forEach(function (a) { a.classList.remove('active'); });
+          map[e.target.id].classList.add('active');
+        }
+      });
+    }, { rootMargin: '-15% 0px -70% 0px', threshold: 0 });
+    secs.forEach(function (s) { io.observe(s); });
+  }
+
+  /* ---------- 5. 阅读进度条 + 回顶 ---------- */
+  function initScroll() {
+    var bar = d.getElementById('readbar');
+    var topBtn = d.getElementById('topBtn') || d.getElementById('backTop');
+    var ticking = false;
+    function step() {
+      ticking = false;
+      var h = d.documentElement;
+      var y = window.pageYOffset || h.scrollTop || 0;
+      if (bar) {
+        var max = h.scrollHeight - h.clientHeight;
+        bar.style.width = (max > 0 ? (y / max) * 100 : 0) + '%';
+      }
+      if (topBtn) {
+        topBtn.classList.toggle('show', y > 400);     /* A 族类名 */
+        topBtn.classList.toggle('visible', y > 400);  /* B 族类名 */
+      }
+    }
+    on(window, 'scroll', function () {
+      if (!ticking) { ticking = true; window.requestAnimationFrame(step); }
+    }, { passive: true });
+    step();
+    on(topBtn, 'click', function () {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
+
+  /* ---------- 6. 侧栏开合（存在才绑定；抽屉打开时锁定背景滚动） ---------- */
+  function initSidebar() {
+    var sidebar = d.getElementById('sidebar');
+    if (!sidebar) { return; }
+    var btn = d.getElementById('menuBtn') || d.getElementById('navToggle');
+    var ov = d.getElementById('overlay') || d.getElementById('sidebarOverlay');
+    function lock(open) {
+      /* 仅移动抽屉断点（≤900px）锁滚动；宽屏兜底解除，防布局残留 */
+      d.body.classList.toggle('nav-locked', !!open && window.innerWidth <= 900);
+    }
+    function close() {
+      sidebar.classList.remove('open');
+      if (ov) { ov.classList.remove('show'); }
+      lock(false);
+    }
+    on(btn, 'click', function () {
+      var open = !sidebar.classList.contains('open');
+      sidebar.classList.toggle('open');
+      if (ov) { ov.classList.toggle('show'); }
+      lock(open);
+    });
+    on(ov, 'click', close);
+    all('a', sidebar).forEach(function (a) {
+      on(a, 'click', function () {
+        if (window.innerWidth <= 900) { close(); }
+      });
+    });
+    on(window, 'resize', function () {
+      if (window.innerWidth > 900) { lock(false); }
+    });
+  }
+
+  /* ---------- 启动（脚本位于 body 末尾，DOM 已就绪；防御兜底） ---------- */
+  function boot() {
+    initTabs();
+    initCards();
+    initQuiz();
+    initSpy();
+    initScroll();
+    initSidebar();
+  }
+  if (d.readyState === 'loading') {
+    on(d, 'DOMContentLoaded', boot);
+  } else {
+    boot();
+  }
+})();
+</script>
+
+</body>
+</html>

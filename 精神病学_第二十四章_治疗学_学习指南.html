@@ -1,0 +1,2712 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>精神病学 第二十四章 治疗学 · 学习指南</title>
+<style>
+:root{
+  --primary:#0EA5E9; --accent:#10B981; --symptom:#EF4444; --treatment:#10B981;
+  --cause:#3B82F6; --diagnosis:#F59E0B; --memory:#8B5CF6; --danger:#DC2626;
+  --quiz:#EC4899; --flashcard:#06B6D4; --bg:#F0F7FA; --card:#FFFFFF;
+  --ink:#0F172A; --muted:#64748B; --border:#E2E8F0; --accent2:#10B981; --accent3:#06B6D4;
+  --shadow:0 4px 18px rgba(15,23,42,.06); --radius:14px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:'Microsoft YaHei','PingFang SC','Hiragino Sans GB',system-ui,-apple-system,sans-serif;font-size:16px;line-height:1.75;-webkit-font-smoothing:antialiased}
+#readbar{position:fixed;top:0;left:0;height:4px;width:0;background:linear-gradient(135deg,#0EA5E9 0%,#06B6D4 50%,#10B981 100%);z-index:300;transition:width .12s linear}
+a{color:var(--primary);text-decoration:none}
+a:hover{text-decoration:underline}
+.sidebar{position:fixed;top:0;left:0;width:272px;height:100vh;background:#fff;border-right:1px solid var(--border);overflow-y:auto;padding:20px 16px 40px;z-index:120}
+.sidebar h2{font-size:17px;margin:0 0 4px;line-height:1.5}
+.sidebar .sub{font-size:12px;color:var(--muted);line-height:1.6;margin-bottom:14px}
+.toc-group{font-size:12px;letter-spacing:.08em;color:var(--muted);margin:16px 0 6px;font-weight:700}
+.sidebar a.toc{display:block;padding:7px 10px;border-radius:8px;font-size:14px;color:var(--ink);line-height:1.5;margin:2px 0}
+.sidebar a.toc:hover{background:#E0F2FE;text-decoration:none}
+.sidebar a.toc .n{display:inline-block;min-width:26px;color:var(--primary);font-weight:700}
+.sidebar .unitlink{font-weight:600}
+.sidebar .sub2{padding-left:26px;font-size:13px;color:var(--muted)}
+.overlay{display:none}
+.menu-btn{display:none;position:fixed;top:14px;left:14px;z-index:200;width:46px;height:46px;border-radius:12px;border:1px solid var(--border);background:#fff;box-shadow:var(--shadow);font-size:22px;line-height:1;color:var(--primary);cursor:pointer}
+.main{margin-left:272px;padding:0 40px 90px;max-width:1240px}
+.wrap{max-width:980px;margin:0 auto}
+.hero{background:linear-gradient(135deg,#0EA5E9 0%,#06B6D4 50%,#10B981 100%);color:#fff;border-radius:0 0 26px 26px;padding:52px 44px 40px;margin:0 -40px 30px;box-shadow:0 12px 30px rgba(14,165,233,.18)}
+.hero .chap{display:inline-block;font-size:13px;letter-spacing:.22em;background:rgba(255,255,255,.18);padding:5px 14px;border-radius:999px;margin-bottom:16px}
+.hero h1{font-size:42px;line-height:1.25;margin:0 0 10px;font-weight:800}
+.hero .tagline{font-size:18px;opacity:.96;margin:0 0 6px}
+.hero .meta{font-size:13px;opacity:.85}
+.goalbox{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.28);border-radius:14px;padding:18px 20px;margin-top:22px}
+.goalbox h3{margin:0 0 10px;font-size:15px;letter-spacing:.06em}
+.goalbox ul{margin:0;padding-left:20px}
+.goalbox li{margin:4px 0;font-size:14.5px;line-height:1.65}
+.lv{display:inline-block;font-size:11px;font-weight:700;padding:1px 8px;border-radius:999px;background:#fff;color:#0369A1;margin-right:6px;vertical-align:1px}
+.lv.l2{color:#047857}.lv.l3{color:#B45309}.lv.l4{color:#B91C1C}
+section{scroll-margin-top:18px;margin:0 0 46px}
+.sec-head{display:flex;align-items:center;gap:12px;margin:0 0 8px}
+.sec-head .badge{flex:0 0 auto;width:44px;height:44px;border-radius:13px;background:linear-gradient(135deg,#0EA5E9,#06B6D4);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:17px;box-shadow:0 6px 14px rgba(14,165,233,.25)}
+.sec-head h2{font-size:27px;margin:0;line-height:1.35;font-weight:800}
+.sec-head .en{font-size:13px;color:var(--muted);font-weight:400;margin-left:6px}
+.sec-lead{color:#334155;background:#fff;border-left:4px solid var(--primary);border-radius:0 12px 12px 0;padding:13px 18px;margin:12px 0 22px;box-shadow:var(--shadow);font-size:15px}
+.card{background:var(--card);border:1px solid var(--border);border-left:6px solid var(--primary);border-radius:var(--radius);padding:20px 22px;margin:16px 0;box-shadow:var(--shadow)}
+.card.red{border-left-color:var(--symptom)} .card.green{border-left-color:var(--treatment)}
+.card.blue{border-left-color:var(--cause)} .card.orange{border-left-color:var(--diagnosis)}
+.card.purple{border-left-color:var(--memory)} .card.cyan{border-left-color:var(--flashcard)}
+.card.danger{border-left-color:var(--danger)} .card.pink{border-left-color:var(--quiz)}
+.card h3,.col-title{font-size:19px;margin:0 0 10px;line-height:1.45;display:flex;align-items:center;gap:9px;flex-wrap:wrap}
+.col-title .idx{font-size:12px;font-weight:800;color:#fff;background:var(--primary);padding:2px 9px;border-radius:999px;letter-spacing:.03em}
+.card p{margin:8px 0}
+.card ul,.card ol{margin:8px 0;padding-left:22px}
+.card li{margin:5px 0}
+.quote{background:#EFF8FF;border:1px dashed #7DD3FC;border-radius:10px;padding:12px 16px;margin:10px 0;font-size:15px;color:#0C4A6E}
+.quote .lab{display:inline-block;font-size:11px;font-weight:800;background:#0EA5E9;color:#fff;padding:1px 7px;border-radius:5px;margin-right:7px;vertical-align:1px}
+.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.grid4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.grid2>*,.grid3>*,.grid4>*{min-width:0}
+.mini{background:#F8FAFC;border:1px solid var(--border);border-radius:11px;padding:12px 14px}
+.mini h4{margin:0 0 5px;font-size:15px;color:#0F172A}
+.mini p,.mini ul{font-size:14px;color:#334155;margin:4px 0}
+.mini ul{padding-left:18px}
+.stat{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0}
+.stat span{font-size:13px;background:#E0F2FE;color:#075985;border-radius:999px;padding:3px 11px;font-weight:600}
+.table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:12px 0;border-radius:12px;border:1px solid var(--border)}
+table{border-collapse:collapse;width:100%;min-width:560px;background:#fff;font-size:14px}
+th{background:#0F172A;color:#fff;font-weight:700;padding:10px 12px;text-align:left;line-height:1.5;font-size:13.5px}
+td{padding:10px 12px;border-top:1px solid var(--border);vertical-align:top;line-height:1.65}
+tbody tr:nth-child(even){background:#F8FAFC}
+td strong{color:#0C4A6E}
+.callout{border-radius:12px;padding:13px 16px;margin:12px 0;border:1px solid;font-size:14.5px}
+.callout .ct{font-weight:800;display:block;margin-bottom:4px;font-size:14.5px}
+.callout.tip{background:#F5F3FF;border-color:#C4B5FD;color:#4C1D95}
+.callout.warn{background:#FEF2F2;border-color:#FCA5A5;color:#7F1D1D}
+.callout.key{background:#ECFDF5;border-color:#6EE7B7;color:#065F46}
+.callout.book{background:#EFF6FF;border-color:#93C5FD;color:#1E3A8A}
+.callout.quiz{background:#FDF2F8;border-color:#F9A8D4;color:#831843}
+.callout.ext{background:#F0F9FF;border-color:#7DD3FC;color:#0C4A6E}
+.timeline{border-left:3px solid #BAE6FD;margin:14px 0 6px 8px;padding-left:20px}
+.tl-item{position:relative;margin:0 0 16px}
+.tl-item:before{content:"";position:absolute;left:-28px;top:5px;width:13px;height:13px;border-radius:50%;background:#fff;border:3px solid var(--primary)}
+.tl-item h4{margin:0 0 3px;font-size:15px;color:#075985}
+.tl-item p{margin:0;font-size:14px;color:#334155}
+.bar{background:#E2E8F0;border-radius:999px;height:9px;overflow:hidden;margin:6px 0 10px}
+.bar i{display:block;height:100%;border-radius:999px;background:linear-gradient(90deg,#0EA5E9,#10B981)}
+.bar-label{display:flex;justify-content:space-between;font-size:13px;color:#334155}
+.tabs{margin:14px 0}
+.tabbar{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:12px}
+.tabbar button{border:1px solid var(--border);background:#fff;border-radius:999px;padding:7px 15px;font-size:14px;font-family:inherit;cursor:pointer;color:#334155}
+.tabbar button.on{background:var(--primary);color:#fff;border-color:var(--primary)}
+.panel{display:none}
+.panel.on{display:block;animation:fade .25s ease}
+@keyframes fade{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}
+details{background:#fff;border:1px solid var(--border);border-radius:11px;margin:10px 0;overflow:hidden}
+summary{cursor:pointer;padding:11px 15px;font-weight:700;color:#075985;list-style:none;font-size:14.5px;background:#F8FAFC}
+summary::-webkit-details-marker{display:none}
+summary:before{content:"▸";display:inline-block;margin-right:7px;color:var(--primary);transition:transform .2s}
+details[open] summary:before{transform:rotate(90deg)}
+details[open] summary{border-bottom:1px solid var(--border)}
+.dbody{padding:13px 16px;font-size:14.5px;color:#1E293B}
+.flashcard-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin:16px 0}
+.flashcard{perspective:1200px;height:200px;cursor:pointer}
+.fc-inner{position:relative;width:100%;height:100%;transition:transform .55s;transform-style:preserve-3d}
+.flashcard.flipped .fc-inner{transform:rotateY(180deg)}
+.fc-front,.fc-back{position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;border-radius:14px;padding:14px 16px;display:flex;flex-direction:column;justify-content:center;box-shadow:var(--shadow);overflow:auto}
+.fc-front{background:#fff;border:1px solid var(--border);border-top:5px solid var(--flashcard)}
+.fc-back{background:#ECFEFF;border:1px solid #A5F3FC;transform:rotateY(180deg);font-size:13.5px;line-height:1.65;color:#164E63}
+.tag{display:inline-block;align-self:flex-start;font-size:11px;font-weight:800;padding:1px 8px;border-radius:999px;margin-bottom:8px;letter-spacing:.04em}
+.tag.concept{background:#DBEAFE;color:#1E40AF}
+.tag.diag{background:#FFEDD5;color:#9A3412}
+.tag.treat{background:#D1FAE5;color:#065F46}
+.tag.data{background:#FCE7F3;color:#9D174D}
+.tag.risk{background:#FEE2E2;color:#991B1B}
+.fc-front p{margin:0;font-size:14.5px;font-weight:700;line-height:1.6}
+.fc-hint{position:absolute;bottom:10px;left:16px;font-size:11px;color:#94A3B8}
+.quiz-q{background:#fff;border:1px solid var(--border);border-left:5px solid var(--quiz);border-radius:12px;padding:16px 18px;margin:16px 0;box-shadow:var(--shadow)}
+.quiz-q .qh{display:flex;justify-content:space-between;gap:10px;align-items:flex-start;margin-bottom:8px;flex-wrap:wrap}
+.quiz-q .qno{font-size:12px;font-weight:800;color:#fff;background:var(--quiz);border-radius:999px;padding:2px 9px;letter-spacing:.04em}
+.diff{font-size:12px;color:#B45309;background:#FEF3C7;border-radius:999px;padding:2px 10px;font-weight:700;white-space:nowrap}
+.qtype{font-size:12px;color:#6B21A8;background:#F3E8FF;border-radius:999px;padding:2px 10px;font-weight:700;white-space:nowrap}
+.opts{margin:10px 0 4px;display:grid;gap:7px}
+.opt{border:1px solid var(--border);border-radius:9px;padding:8px 12px;font-size:14.5px;background:#F8FAFC}
+.opt.correct{border-color:#6EE7B7;background:#ECFDF5;color:#065F46;font-weight:600}
+.opt .l{font-weight:800;color:var(--primary);margin-right:7px}
+.opt.correct .l{color:#047857}
+.brief{font-size:14px;color:#334155;margin-top:4px}
+.case{border:1px solid var(--border);border-top:5px solid var(--danger);border-radius:14px;background:#fff;padding:20px 22px;margin:18px 0;box-shadow:var(--shadow)}
+.case h3{font-size:19px;margin:0 0 8px;color:#7F1D1D}
+.case .ctag{font-size:11.5px;font-weight:800;background:#FEE2E2;color:#991B1B;padding:2px 9px;border-radius:999px;display:inline-block;margin-bottom:10px}
+.case .scene{background:#FFF7ED;border-left:4px solid #FB923C;border-radius:0 10px 10px 0;padding:12px 16px;font-size:14.5px;margin:8px 0 14px}
+.case .ques{margin:8px 0;padding-left:2px}
+.case .ques li{margin:5px 0;font-size:14.5px}
+.top{position:fixed;right:24px;bottom:26px;width:48px;height:48px;border-radius:50%;background:var(--primary);color:#fff;border:none;font-size:20px;cursor:pointer;box-shadow:0 8px 20px rgba(14,165,233,.35);z-index:150;display:none;font-family:inherit}
+.top.show{display:block}
+.hr{height:1px;background:var(--border);margin:26px 0}
+.note{font-size:13px;color:var(--muted);margin-top:6px}
+.kv{display:flex;gap:10px;flex-wrap:wrap;margin:8px 0}
+.kv .k{font-size:12px;font-weight:800;color:#0369A1;background:#E0F2FE;border-radius:6px;padding:2px 8px;white-space:nowrap}
+.kv .v{font-size:14px;color:#334155}
+.starme{font-size:12.5px;color:#B45309;white-space:nowrap}
+@media (max-width:1100px){
+  .main{padding:0 22px 80px}
+  .hero{margin:0 -22px 26px;padding:44px 26px 34px}
+  .hero h1{font-size:34px}
+  .flashcard-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .grid4{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width:900px){
+  .sidebar{transform:translateX(-100%);transition:transform .25s ease;width:280px;box-shadow:0 0 30px rgba(0,0,0,.18)}
+  .sidebar.open{transform:none}
+  .overlay{display:none;position:fixed;inset:0;background:rgba(15,23,42,.42);z-index:110}
+  .overlay.show{display:block}
+  .menu-btn{display:block}
+  .main{margin-left:0;padding:0 18px 80px}
+  .hero{margin:0 -18px 24px;padding:64px 22px 30px;border-radius:0 0 20px 20px}
+  .hero h1{font-size:30px}
+  .sec-head h2{font-size:23px}
+}
+@media (max-width:680px){
+  .grid2,.grid3,.grid4{grid-template-columns:minmax(0,1fr)}
+  .flashcard-grid{grid-template-columns:minmax(0,1fr)}
+  .flashcard{height:190px}
+  table{min-width:500px}
+}
+</style>
+<style data-refactor="v1">
+/* ============================================================
+   精神病学学习指南 · 统一交互层增量覆盖样式 v1
+   构建期由 apply-refactor.ps1 注入 </head> 前，仅追加修正，
+   不改动 A/B 两族基础样式。全部使用字面色值，兼容两族设计变量。
+   ============================================================ */
+
+/* ---- 1. 全局键盘焦点可见 ---- */
+:focus-visible{outline:2px solid #0EA5E9;outline-offset:2px}
+
+/* ---- 2. 章节导航条（胶囊式三段：上一章 / 目录 / 下一章） ---- */
+.chapter-pager{display:flex;align-items:stretch;justify-content:center;gap:10px;margin:36px 0 10px;flex-wrap:wrap}
+.chapter-pager a,.chapter-pager span{flex:1 1 200px;display:flex;align-items:center;justify-content:center;min-height:44px;padding:10px 18px;border:1px solid #E2E8F0;border-radius:999px;background:#FFFFFF;color:#0F172A;font-size:14px;font-weight:600;line-height:1.4;text-decoration:none;text-align:center;box-shadow:0 1px 2px rgba(15,23,42,.06);transition:border-color .15s ease,box-shadow .15s ease,color .15s ease}
+.chapter-pager a:hover{border-color:#0EA5E9;color:#0EA5E9;box-shadow:0 4px 14px rgba(14,165,233,.18);text-decoration:none}
+.chapter-pager .cp-toc{flex:0 0 auto;min-width:104px;background:linear-gradient(135deg,#0EA5E9,#10B981);border-color:transparent;color:#FFFFFF}
+.chapter-pager .cp-toc:hover{border-color:transparent;color:#FFFFFF;opacity:.92}
+.chapter-pager .cp-disabled{opacity:.45;background:#F8FAFC;box-shadow:none;cursor:default}
+@media (max-width:680px){.chapter-pager{gap:8px;margin:28px 0 8px}.chapter-pager a,.chapter-pager span{flex:1 1 100%}}
+
+/* ---- 3. 自测题交互态（兼容 A 族 .opt 与 B 族 .quiz-options li） ---- */
+/* 3.1 基础可点击 */
+.quiz-q .opt{cursor:pointer}
+.quiz-item .quiz-options li{cursor:pointer}
+/* 3.2 hover / 焦点态 */
+.quiz-q .opt:hover,.quiz-q .opt:focus-visible{border-color:#7DD3FC;background:#F0F9FF}
+.quiz-item .quiz-options li:hover,.quiz-item .quiz-options li:focus-visible{background:#FFFFFF;box-shadow:inset 0 0 0 1px #7DD3FC}
+/* 3.3 判定结果态 */
+.quiz-q .opt.is-right{border-color:#34D399;background:#ECFDF5;color:#065F46;font-weight:600}
+.quiz-q .opt.is-right::after{content:" ✓";color:#059669;font-weight:800}
+.quiz-q .opt.is-right .l{color:#047857}
+.quiz-item .quiz-options li.is-right{background:#DCFCE7;box-shadow:inset 0 0 0 1px #34D399;font-weight:600}
+.quiz-item .quiz-options li.is-right::after{content:" ✓";color:#15803D;font-weight:800}
+.quiz-q .opt.is-wrong{border-color:#FCA5A5;background:#FEF2F2;color:#B91C1C;font-weight:600}
+.quiz-q .opt.is-wrong::after{content:" ✗";color:#DC2626;font-weight:800}
+.quiz-q .opt.is-wrong .l{color:#B91C1C}
+.quiz-item .quiz-options li.is-wrong{background:#FEE2E2;box-shadow:inset 0 0 0 1px #FCA5A5;font-weight:600}
+.quiz-item .quiz-options li.is-wrong::after{content:" ✗";color:#DC2626;font-weight:800}
+.quiz-q .opt.is-reveal{border-color:#6EE7B7;background:#ECFDF5;color:#065F46}
+.quiz-q .opt.is-reveal .l{color:#047857}
+.quiz-item .quiz-options li.is-reveal{background:#ECFDF5;box-shadow:inset 0 0 0 1px #6EE7B7;color:#065F46}
+/* 3.4 已锁定禁用态 */
+.quiz-q.is-locked .opt,.quiz-item.is-locked .quiz-options li{cursor:default;pointer-events:none}
+.quiz-q.is-locked .opt:not(.is-right):not(.is-wrong):not(.is-reveal){opacity:.55}
+.quiz-item.is-locked .quiz-options li:not(.is-right):not(.is-wrong):not(.is-reveal){opacity:.55}
+/* 3.5 计分行（运行时注入） */
+.quiz-score{display:flex;align-items:center;gap:12px;margin:14px 0 18px;padding:12px 18px;border:1px dashed #7DD3FC;border-radius:12px;background:#F0F9FF;font-size:14px;font-weight:700;color:#0F172A}
+.quiz-score .qs-label{white-space:nowrap}
+.quiz-score .qs-num{white-space:nowrap;color:#0284C7;font-size:16px}
+.quiz-score .qs-bar{flex:1 1 60px;min-width:60px;height:8px;border-radius:999px;background:#E2E8F0;overflow:hidden}
+.quiz-score .qs-bar i{display:block;height:100%;width:0;border-radius:999px;background:linear-gradient(90deg,#0EA5E9,#10B981);transition:width .35s ease}
+
+/* ---- 4. 速记卡可达性与长内容 ---- */
+.fc-hint,.flip-hint{color:#64748B}
+.flashcard-face{overflow:auto}
+.flashcard[tabindex]{outline:none}
+.flashcard[tabindex]:focus-visible{outline:3px solid #0EA5E9;outline-offset:3px}
+
+/* ---- 5. 侧栏目录 ---- */
+/* B 族 sticky 侧栏内目录限高滚动（A 族 aside 本身已可滚动，此规则空匹配无害） */
+.sidebar .sidebar-nav{max-height:calc(100vh - 60px);overflow-y:auto;scrollbar-width:thin}
+/* A 族 scroll spy 高亮（B 族高亮由其基础样式提供） */
+.sidebar a.toc.active{background:#E0F2FE;color:#0369A1;font-weight:600}
+
+/* ---- 6. 响应式补充：681–900px 时 grid3 降为两列 ---- */
+@media (min-width:681px) and (max-width:900px){
+  .grid3{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+
+/* ---- 7. 打印样式补充（A 族新增；B 族已有 print，重复声明无害） ---- */
+@media print{
+  .sidebar,.overlay,.sidebar-overlay,#menuBtn,#navToggle,#overlay,#sidebarOverlay,#readbar,#topBtn,#backTop,.chapter-pager,.quiz-score{display:none!important}
+}
+
+/* ---- 8. 手机端增强 v2（触控体验 / 防溢出 / 抽屉滚动锁定） ---- */
+/* 8.1 触控体验：去点按高亮、消除双击缩放延迟（flashcard 高 190-200px 天然达标，不另设 min-height） */
+.opt,.tabbar button,.tab-btn,.quiz-options li,.flashcard,.chapter-pager a,.chapter-pager span,.menu-btn,.mobile-nav-toggle{-webkit-tap-highlight-color:transparent;touch-action:manipulation}
+/* 8.2 触控目标最小 44px（自测选项与 tab 胶囊原高约 33px） */
+.opt,.tabbar button,.tab-btn,.quiz-options li{min-height:44px}
+/* 8.3 防溢出：内容图自适应；svg 不设 height:auto，避免定尺寸图标塌陷 */
+img{max-width:100%;height:auto}
+svg{max-width:100%}
+/* 8.4 长词/URL 断行 */
+body{overflow-wrap:break-word}
+/* 8.5 表格容器触摸惯性滚动（A 族已有同值规则，重复声明无害） */
+.table-wrap{-webkit-overflow-scrolling:touch}
+/* 8.6 抽屉打开时锁定背景滚动（两族抽屉断点均为 900px；类由统一脚本增删） */
+@media (max-width:900px){
+  body.nav-locked{overflow:hidden}
+}
+</style>
+</head>
+<body>
+<div id="readbar"></div>
+<button class="menu-btn" id="menuBtn" aria-label="打开目录">☰</button>
+<div class="overlay" id="overlay"></div>
+<aside class="sidebar" id="sidebar">
+  <h2>第二十四章 治疗学</h2>
+  <div class="sub">精神病学（第9版）· 印刷页 290–306<br>学习指南 · 技能标准版</div>
+  <div class="toc-group">开篇</div>
+  <a class="toc" href="#cover"><span class="n">00</span>章节封面与学习目标</a>
+  <a class="toc" href="#status"><span class="n">01</span>本章地位速览</a>
+  <a class="toc" href="#navmap"><span class="n">02</span>章节导航图</a>
+  <a class="toc" href="#mindmap"><span class="n">03</span>本章知识地图</a>
+  <a class="toc" href="#route"><span class="n">04</span>学习路线图</a>
+  <div class="toc-group">正文（治疗单元八栏）</div>
+  <a class="toc unitlink" href="#u1"><span class="n">05</span>治疗总论</a>
+  <a class="toc unitlink" href="#u2"><span class="n">06</span>抗精神病药</a>
+  <a class="toc sub2" href="#u2-6">└ 治疗方案工具箱</a>
+  <a class="toc unitlink" href="#u3"><span class="n">07</span>抗抑郁药</a>
+  <a class="toc sub2" href="#u3-6">└ 治疗方案工具箱</a>
+  <a class="toc unitlink" href="#u4"><span class="n">08</span>心境稳定剂</a>
+  <a class="toc unitlink" href="#u5"><span class="n">09</span>抗焦虑药</a>
+  <a class="toc unitlink" href="#u6"><span class="n">10</span>物理治疗</a>
+  <div class="toc-group">结尾</div>
+  <a class="toc" href="#summary"><span class="n">11</span>全章核心要点速览</a>
+  <a class="toc" href="#pitfalls"><span class="n">12</span>易混易错点警示</a>
+  <a class="toc" href="#quiz"><span class="n">13</span>章节自测系统</a>
+  <a class="toc" href="#cards"><span class="n">14</span>考点速记卡</a>
+  <a class="toc" href="#cases"><span class="n">15</span>病例挑战</a>
+  <a class="toc" href="#ext"><span class="n">16</span>拓展延伸</a>
+</aside>
+<main class="main">
+<div class="wrap">
+<!-- ===== 00 封面 ===== -->
+<section id="cover">
+  <div class="hero">
+    <span class="chap">第二十四章 · CHAPTER 24</span>
+    <h1>治疗学</h1>
+    <p class="tagline">把诊断落到处置：精神药物的分类、机制、剂量、疗程与不良反应，加上物理治疗的适应证与边界。</p>
+    <p class="meta">教材：精神病学（第9版）｜印刷页 290–306｜全章 6 节：概述、抗精神病药、抗抑郁药、心境稳定剂、抗焦虑药、物理治疗</p>
+    <div class="goalbox">
+      <h3>学习目标（四级分层）</h3>
+      <ul>
+        <li><span class="lv">了解</span>说出精神药物的四大临床分类及药代动力学共同特点；列出本章涉及的物理治疗手段。</li>
+        <li><span class="lv l2">理解</span>解释抗精神病药受体阻断与不良反应的对应关系；解释抗抑郁药"再摄取抑制立即发生、临床起效滞后2～3周"的机制。</li>
+        <li><span class="lv l3">掌握</span>各类药物的适应证、禁忌证、常用剂量范围与疗程节点；识别锥体外系反应四型并给出处理。</li>
+        <li><span class="lv l4">重点</span>氯氮平的血象监测、锂盐血浓度与中毒识别、TCAs 过量三联征、MECT 的适应证与禁忌证——高频考点与临床安全底线。</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 01 地位 ===== -->
+<section id="status">
+  <div class="sec-head"><div class="badge">01</div><h2>本章地位速览<span class="en">Why this chapter matters</span></h2></div>
+  <p class="sec-lead">前面的章节回答"是什么病"，本章回答"怎么治"。它是全书的处置出口，也是考试中数据、剂量、禁忌最密集的一章。</p>
+  <div class="grid3">
+    <div class="card blue">
+      <h3>章节定位与重要性</h3>
+      <p>本章位于教材后部（第二十四章，印刷页 290–306），是继各章疾病学之后集中论述治疗手段的章节。全章不计独立疾病，而以"治疗单元"组织：4 类精神药物 + 1 组物理治疗。</p>
+      <p class="note">考试权重集中于：药物分类、受体与副作用、剂量/疗程、禁忌、中毒处理。</p>
+    </div>
+    <div class="card red">
+      <h3>临床意义</h3>
+      <p>精神障碍治疗以药物治疗、物理治疗、心理治疗为主，选择各有所侧重。教材坦言药物治疗仍以<strong>对症性、经验性</strong>为主要特点，因此"选对药、用对量、盯住不良反应"就是临床安全的核心。</p>
+      <p>药物过量、恶性综合征、锂中毒、5-HT 综合征均可能致命，本章的处理要点属于必须掌握的"保命知识"。</p>
+    </div>
+    <div class="card green">
+      <h3>与前后章节关联</h3>
+      <p><strong>前置：</strong>精神分裂症、抑郁障碍、双相障碍、焦虑障碍等各章的诊断与症状学，是本章选药依据。</p>
+      <p><strong>后续延伸：</strong>电抽搐、经颅磁刺激等物理手段在难治性病例中的联合应用。</p>
+      <p><strong>横向交叉：</strong>与药理学（CYP450、受体）、内科学（心血管/内分泌/肝脏）、神经科学（神经调控）交叉。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 02 导航 ===== -->
+<section id="navmap">
+  <div class="sec-head"><div class="badge">02</div><h2>章节导航图<span class="en">Section map</span></h2></div>
+  <p class="sec-lead">按教材六节顺序排列。点击卡片可直接跳到对应治疗单元。</p>
+  <div class="grid3">
+    <a class="card cyan" href="#u1" style="display:block;color:inherit">
+      <h3>第一节 · 概述</h3>
+      <p>精神药物分类、药代动力学、相互作用总则、物理治疗谱系。</p>
+      <p class="note">关键词：亲脂性 · CYP450 · 治疗指数 · 5-HT 综合征</p>
+    </a>
+    <a class="card red" href="#u2" style="display:block;color:inherit">
+      <h3>第二节 · 抗精神病药</h3>
+      <p>FGA/SGA 分类、D2 四通路、17 个常用药、急性期/维持治疗、8 类不良反应。</p>
+      <p class="note">关键词：EPS 四型 · 恶性综合征 · 氯氮平 · 催乳素</p>
+    </a>
+    <a class="card green" href="#u3" style="display:block;color:inherit">
+      <h3>第三节 · 抗抑郁药</h3>
+      <p>11 类分类、SSRIs 六药、SNRIs、NaSSA、NDRI、SARI、TCAs、MAOIs。</p>
+      <p class="note">关键词：2～3 周起效 · 5-HT 综合征 · 1.25g 致死量</p>
+    </a>
+    <a class="card orange" href="#u4" style="display:block;color:inherit">
+      <h3>第四节 · 心境稳定剂</h3>
+      <p>碳酸锂、丙戊酸盐、卡马西平/奥卡西平、拉莫三嗪。</p>
+      <p class="note">关键词：0.6～1.2 · &gt;1.4 中毒 · 4～12mg/L · 药疹</p>
+    </a>
+    <a class="card purple" href="#u5" style="display:block;color:inherit">
+      <h3>第五节 · 抗焦虑药</h3>
+      <p>苯二氮䓬类四作用、选药、依赖与戒断；丁螺环酮/坦度螺酮。</p>
+      <p class="note">关键词：GABA · ≤1 个月 · 短半衰期易依赖</p>
+    </a>
+    <a class="card pink" href="#u6" style="display:block;color:inherit">
+      <h3>第六节 · 物理治疗</h3>
+      <p>MECT、TMS、DBS，以及 VNS/MST/tDCS 的研究定位。</p>
+      <p class="note">关键词：6～12 次 · 80～120mA · 胼胝体下扣带回</p>
+    </a>
+  </div>
+  <div class="callout book">
+    <span class="ct">📖 关于"每病八栏"的适配说明</span>
+    本章为治疗学，教材未设置独立疾病单元。为遵守技能"栏目顺序固定、不得删栏"的要求，正文以<strong>治疗单元</strong>为单位套用八栏：疾病画像→治疗单元画像、病因探秘→机制探秘、临床表现拼图→治疗效应与不良反应图谱、教材典型案例→教材案例核查、鉴别诊断→药物/不良反应/疗法鉴别、治疗方案工具箱、记忆工具箱、知识联动。不适用栏目保留标题并注明原因。
+  </div>
+</section>
+<!-- ===== 03 知识地图 ===== -->
+<section id="mindmap">
+  <div class="sec-head"><div class="badge">03</div><h2>本章知识地图<span class="en">Knowledge map</span></h2></div>
+  <p class="sec-lead">按"总论 → 四类药 → 物理治疗"的逻辑重组，而非目录复制。全章可压缩为一条主线：<strong>分类决定机制，机制决定疗效与副作用，疗效与副作用决定监测与处理</strong>。</p>
+  <div class="stat">
+    <span>6 节</span><span>5 大治疗单元</span><span>4 类精神药物</span><span>教材点名药物约 47 个</span><span>6 种物理治疗</span><span>8 类抗精神病药不良反应</span>
+  </div>
+  <p class="note">统计口径：抗精神病药 17 个（FGA 5 + SGA 12）；抗抑郁药 24 个（SSRIs 6、SNRIs 3、NaSSA 2、NDRI 1、NRI 1、SARI 1、褪黑素受体激动剂 1、多模式 1、TCAs 5、MAOIs 1、植物药 3）；心境稳定剂 4 个；非苯二氮䓬抗焦虑药 2 个；苯二氮䓬类按类计。教材未给出统一计数，此处为按原文点名的整理。</p>
+  <div class="grid3">
+    <div class="card cyan">
+      <h3>① 治疗总论</h3>
+      <ul>
+        <li>四大分类 + 精神兴奋药、益智药</li>
+        <li>亲脂性、蛋白结合、肝脏 CYP450 代谢、乳汁排泄</li>
+        <li>治疗指数：多数高，锂盐低</li>
+        <li>药效学互动：5-HT 综合征、胆碱能危象</li>
+        <li>物理治疗谱系与定位</li>
+      </ul>
+    </div>
+    <div class="card red">
+      <h3>② 抗精神病药</h3>
+      <ul>
+        <li>FGA（低/中/高效价）vs SGA（4 类）</li>
+        <li>D2 四条通路 → 疗效与四组副作用</li>
+        <li>α1/M1/H1/5-HT2A 的副作用映射</li>
+        <li>急性期 → 巩固 ≥6 个月 → 维持</li>
+        <li>EPS 四型、恶性综合征、代谢/心脏/血象</li>
+      </ul>
+    </div>
+    <div class="card green">
+      <h3>③ 抗抑郁药</h3>
+      <ul>
+        <li>11 类（含植物药），新型 9 类 + 传统 2 类</li>
+        <li>单胺再摄取抑制 → 受体下调 → 2～3 周起效</li>
+        <li>SSRIs 六药与酶抑制差异</li>
+        <li>TCAs 二线、抗胆碱/心血管毒性、过量三联征</li>
+        <li>MAOIs 二线，吗氯贝胺可逆</li>
+      </ul>
+    </div>
+    <div class="card orange">
+      <h3>④ 心境稳定剂</h3>
+      <ul>
+        <li>锂：首选双相，治疗窗窄</li>
+        <li>丙戊酸：混合/快速循环</li>
+        <li>卡马西平：锂无效/不能耐受</li>
+        <li>拉莫三嗪：双相抑郁相更优</li>
+        <li>血药浓度监测是共同主线</li>
+      </ul>
+    </div>
+    <div class="card purple">
+      <h3>⑤ 抗焦虑药</h3>
+      <ul>
+        <li>BZD：GABA-A/氯通道复合物，四作用</li>
+        <li>长短半衰期选药逻辑</li>
+        <li>耐受、依赖、戒断、≤1 个月</li>
+        <li>丁螺环酮/坦度螺酮：5-HT1A 部分激动</li>
+        <li>无镇静、无依赖、起效慢</li>
+      </ul>
+    </div>
+    <div class="card pink">
+      <h3>⑥ 物理治疗</h3>
+      <ul>
+        <li>MECT：适应证 4 条、禁忌 9 条</li>
+        <li>MECT 参数与疗程 6～12 次</li>
+        <li>TMS：低频抑制、高频兴奋</li>
+        <li>DBS：胼胝体下扣带回，难治性抑郁</li>
+        <li>VNS/MST/tDCS 仍属研究/辅助</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 04 路线 ===== -->
+<section id="route">
+  <div class="sec-head"><div class="badge">04</div><h2>学习路线图<span class="en">Study route</span></h2></div>
+  <p class="sec-lead">建议按"先框架、再药物、后物理、最后刷题"的顺序推进。本章数值多，切忌一次通读硬背。</p>
+  <div class="grid2">
+    <div class="card blue">
+      <h3>推荐学习路径</h3>
+      <div class="timeline">
+        <div class="tl-item"><h4>第 1 步 · 建框架（约 25 分钟）</h4><p>读概述 + 本章知识地图，先记住 4 类药和 6 种物理治疗的名字与定位。</p></div>
+        <div class="tl-item"><h4>第 2 步 · 攻抗精神病药（约 60 分钟）</h4><p>先掌握 D2 四通路与受体-副作用映射，再记 17 个药的"一句话特点"，最后攻 EPS 四型与恶性综合征。</p></div>
+        <div class="tl-item"><h4>第 3 步 · 抗抑郁药（约 50 分钟）</h4><p>抓住"SSRIs 六药 + 酶抑制差异 + TCAs 过量"三条主线，其余新型药按机制归类记忆。</p></div>
+        <div class="tl-item"><h4>第 4 步 · 心境稳定剂 + 抗焦虑药（约 40 分钟）</h4><p>以血药浓度和疗程为轴，对比四种心境稳定剂；BZD 抓住四作用、依赖与戒断。</p></div>
+        <div class="tl-item"><h4>第 5 步 · 物理治疗 + 自测（约 35 分钟）</h4><p>背 MECT 适应证/禁忌与参数，随后做自测、翻速记卡、看病例挑战。</p></div>
+      </div>
+      <p class="note">总时长约 3.5 小时；建议分 2 次完成，次日用速记卡 + 自测复习 30 分钟。</p>
+    </div>
+    <div class="card purple">
+      <h3>重点优先级与记忆策略</h3>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>内容</th><th>优先级</th><th>推荐记忆法</th></tr></thead>
+          <tbody>
+            <tr><td>抗精神病药受体-副作用映射</td><td class="starme">⭐⭐⭐</td><td>图解记忆法 + 因果链</td></tr>
+            <tr><td>EPS 四型识别与处理</td><td class="starme">⭐⭐⭐</td><td>对比记忆法 + 时间轴</td></tr>
+            <tr><td>氯氮平监测与恶性综合征</td><td class="starme">⭐⭐⭐</td><td>危险信号清单</td></tr>
+            <tr><td>SSRIs 六药与酶抑制</td><td class="starme">⭐⭐⭐</td><td>首字母缩拼 + 对比表</td></tr>
+            <tr><td>锂盐血浓度与中毒</td><td class="starme">⭐⭐⭐</td><td>数字编码法</td></tr>
+            <tr><td>TCAs 过量三联征</td><td class="starme">⭐⭐⭐</td><td>数字编码 + 故事串联</td></tr>
+            <tr><td>MECT 适应证/禁忌</td><td class="starme">⭐⭐⭐</td><td>归类记忆法</td></tr>
+            <tr><td>抗抑郁药分类与代表药</td><td class="starme">⭐⭐</td><td>归类 + 首字母</td></tr>
+            <tr><td>BZD 四作用与依赖</td><td class="starme">⭐⭐</td><td>口诀 + 数字锚定</td></tr>
+            <tr><td>TMS/DBS 原理与定位</td><td class="starme">⭐</td><td>类比理解</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="note">记忆策略总原则：先理解"为什么"（受体/机制），再记"是什么"（药名/数值），最后用对比表查漏。</p>
+    </div>
+  </div>
+</section>
+<!-- ===== 05 治疗总论 ===== -->
+<section id="u1">
+  <div class="sec-head"><div class="badge">05</div><h2>治疗总论<span class="en">第一节 · 概述（p.290）</span></h2></div>
+  <p class="sec-lead">总论只做三件事：给药物分类、讲药物在体内怎么走、提醒哪些合用会出事。它是后面所有药物单元的"公共底座"。</p>
+
+  <!-- 第一栏 -->
+  <div class="card cyan" id="u1-1">
+    <h3 class="col-title"><span class="idx">第一栏</span>疾病画像 → 治疗单元画像</h3>
+    <div class="quote"><span class="lab">教材原文</span>精神障碍的药物治疗是指通过应用精神药物来改变病态思维、心境或行为的一种治疗手段。</div>
+    <p><strong>一句话画像：</strong>精神药物治疗不是"对因治疗"，而是用化学手段调节病态的思维、情绪与行为；它像给失调的神经系统"调音"，而不是换掉整台乐器。<span class="note">（此句为类比理解，非教材原文）</span></p>
+    <p><strong>教材对现状的定性：</strong></p>
+    <div class="quote"><span class="lab">教材原文</span>受限于对精神障碍本质了解的局限性，精神障碍的药物治疗仍然以对症性、经验性为主要特点。</div>
+    <div class="grid2">
+      <div class="mini">
+        <h4>传统四大分类</h4>
+        <ul>
+          <li>抗精神病药（antipsychotics）</li>
+          <li>抗抑郁药（antidepressants）</li>
+          <li>心境稳定剂（mood stabilizers）或抗躁狂药</li>
+          <li>抗焦虑药（anxiolytics）</li>
+        </ul>
+      </div>
+      <div class="mini">
+        <h4>教材另行提及</h4>
+        <ul>
+          <li>精神兴奋药（psychostimulants）：用于儿童注意缺陷多动障碍</li>
+          <li>益智药（nootropic drugs）：改善脑循环和神经细胞代谢</li>
+        </ul>
+      </div>
+    </div>
+    <p class="note">流行病学：教材在本节未提供各类精神药物使用率或处方率的统计数据，故不列具体数字。</p>
+  </div>
+
+  <!-- 第二栏 -->
+  <div class="card blue" id="u1-2">
+    <h3 class="col-title"><span class="idx">第二栏</span>病因探秘 → 机制探秘</h3>
+    <p><strong>为什么精神药物能进脑子、又为什么难排出去？</strong>教材用一组药代动力学特点回答：</p>
+    <div class="grid3">
+      <div class="mini"><h4>① 亲脂性</h4><p>易于肠道吸收、通过血脑屏障，最终到达脑部起作用。</p></div>
+      <div class="mini"><h4>② 蛋白结合率高</h4><p>除锂盐外多数药物血浆蛋白结合率高，过量中毒<strong>不易通过血液透析清除</strong>。</p></div>
+      <div class="mini"><h4>③ 肝脏代谢</h4><p>经肝脏代谢后极性增强、亲水性增加，利于肾脏排泄；CYP450 亚型包括 CYP1A2、CYP2C19、CYP2D6、CYP3A4。</p></div>
+      <div class="mini"><h4>④ 乳汁排泄</h4><p>药物可通过乳汁排泄，服药哺乳期妇女常需停止哺乳。</p></div>
+      <div class="mini"><h4>⑤ 半衰期较长</h4><p>稳定期或维持期往往一日一次给药即可。</p></div>
+      <div class="mini"><h4>⑥ 特殊人群</h4><p>儿童和老年人代谢排泄能力低，半衰期可能延长，剂量应比成人适当减少。</p></div>
+    </div>
+    <p><strong>靶点与安全边界：</strong>除锂盐外，大部分精神药物的靶蛋白是内源性神经递质的<strong>受体或转运体</strong>。多数药物治疗指数高、用药安全；<strong>锂盐治疗指数低、安全性差</strong>，需密切监测血药浓度。长期应用苯二氮䓬类可产生耐受性，药效下降。</p>
+    <div class="callout warn">
+      <span class="ct">⚠️ 两条必须记住的药效学相互作用</span>
+      ① 单胺氧化酶抑制剂（MAOIs）与 TCAs 或 SSRIs 合用 → 增加<strong>5-HT 综合征</strong>风险；<br>
+      ② 抗精神病药 + 抗胆碱能药 + TCAs 合用 → 可引起<strong>胆碱能危象</strong>。
+    </div>
+  </div>
+
+  <!-- 第三栏 -->
+  <div class="card red" id="u1-3">
+    <h3 class="col-title"><span class="idx">第三栏</span>临床表现拼图 → 治疗决策的四条主线</h3>
+    <div class="tabs" data-tabs>
+      <div class="tabbar">
+        <button class="on" data-tab="a1">用药前</button>
+        <button data-tab="a2">用药中</button>
+        <button data-tab="a3">特殊人群</button>
+      </div>
+      <div class="panel on" data-panel="a1">
+        <ul>
+          <li><strong>先分类：</strong>确定目标症状属于精神病性、情感性、焦虑还是睡眠问题，再对应选药类别。</li>
+          <li><strong>查禁忌：</strong>教材总论未列统一禁忌清单，但强调"剂量的个体化和药物间的相互作用是临床合理用药的关键"。</li>
+          <li><strong>看代谢：</strong>合用经同一 CYP450 亚型代谢的药物时，需警惕血药浓度被抬高或压低。</li>
+        </ul>
+      </div>
+      <div class="panel" data-panel="a2">
+        <ul>
+          <li><strong>剂量个体化：</strong>肝酶活性存在个体和种族差异，且受合用药物的抑制或诱导。</li>
+          <li><strong>监测：</strong>锂盐必须监测血药浓度；长期 BZD 需警惕耐受。</li>
+          <li><strong>联合风险：</strong>避免 MAOIs + SSRIs/TCAs；避免抗精神病药 + 抗胆碱能药 + TCAs 的三联。</li>
+        </ul>
+      </div>
+      <div class="panel" data-panel="a3">
+        <ul>
+          <li><strong>儿童、老年人：</strong>清除半衰期可能延长，剂量应适当减少。</li>
+          <li><strong>哺乳期：</strong>药物可经乳汁排泄，常需停止哺乳。</li>
+          <li><strong>躯体病共存：</strong>用药前需评估心、肝、肾功能（详见各药物单元的禁忌）。</li>
+        </ul>
+      </div>
+    </div>
+    <p class="note">说明：本栏原用于疾病症状分维度呈现；本章无疾病单元，故改为"治疗决策主线"，内容均取自教材总论。</p>
+  </div>
+
+  <!-- 第四栏 -->
+  <div class="card orange" id="u1-4">
+    <h3 class="col-title"><span class="idx">第四栏</span>教材典型案例</h3>
+    <div class="callout book">
+      <span class="ct">📖 教材未提供具体临床案例</span>
+      本节为概念与药代总论，教材未给出患者案例、病史或检查数据。可用的"教材举例"仅为药物相互作用的情境描述（MAOIs + SSRIs/TCAs；抗精神病药 + 抗胆碱能药 + TCAs），已在上栏呈现。
+    </div>
+    <p><strong>可迁移的诊断思路（由教材要点推演）：</strong></p>
+    <ol>
+      <li>患者出现新发精神症状 → 先问<strong>正在服什么药</strong>（含非精神科药物、酒精、吸烟）。</li>
+      <li>怀疑药物相互作用 → 对照 CYP450 抑制/诱导关系。</li>
+      <li>怀疑过量 → 记住"除锂盐外蛋白结合率高，透析有限"这一总原则，处理以对症支持为主。</li>
+    </ol>
+    <p class="note">以上为按教材原则整理的学习思路，不是教材原文病例。</p>
+  </div>
+
+  <!-- 第五栏 -->
+  <div class="card orange" id="u1-5">
+    <h3 class="col-title"><span class="idx">第五栏</span>鉴别诊断对对碰 → 分类与相互作用鉴别</h3>
+    <p><strong>表 1　四类精神药物的"身份鉴别"</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>类别</th><th>核心用途</th><th>教材提到的代表</th><th>最需盯住的风险</th></tr></thead>
+        <tbody>
+          <tr><td>抗精神病药</td><td>精神分裂症及精神病性症状、躁狂发作</td><td>氯丙嗪、氟哌啶醇、氯氮平、利培酮等</td><td>EPS、代谢、催乳素、心脏 QT</td></tr>
+          <tr><td>抗抑郁药</td><td>各类抑郁状态；焦虑、强迫、惊恐、慢性疼痛</td><td>SSRIs、SNRIs、TCAs、MAOIs 等</td><td>5-HT 综合征、TCAs 过量、撤药反应</td></tr>
+          <tr><td>心境稳定剂</td><td>躁狂症、双相障碍的治疗与预防复发</td><td>碳酸锂、丙戊酸盐、卡马西平、拉莫三嗪</td><td>血药浓度、药疹、肝/血象</td></tr>
+          <tr><td>抗焦虑药</td><td>焦虑、失眠、癫痫辅助、酒精戒断替代</td><td>苯二氮䓬类、丁螺环酮、坦度螺酮</td><td>镇静、耐受、依赖、戒断</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p><strong>表 2　易混相互作用的"一句话鉴别"</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>组合</th><th>后果</th><th>一句话记忆</th></tr></thead>
+        <tbody>
+          <tr><td>MAOIs + TCAs/SSRIs</td><td>5-HT 综合征风险增加</td><td>两条"提 5-HT"的路一起开，油门踩到底</td></tr>
+          <tr><td>抗精神病药 + 抗胆碱能药 + TCAs</td><td>胆碱能危象</td><td>三重"抗胆碱"，把乙酰胆碱的路全堵死</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout key"><span class="ct">📌 一句话鉴别总结</span>总论层面的"鉴别"不是辨病，而是辨<strong>药物角色</strong>与<strong>相互作用方向</strong>：谁在抑制酶、谁在诱导酶、谁是中枢抑制剂。</div>
+  </div>
+
+  <!-- 第六栏 -->
+  <div class="card green" id="u1-6">
+    <h3 class="col-title"><span class="idx">第六栏</span>治疗方案工具箱</h3>
+    <p><strong>物理治疗谱系（教材总论给出的定位）</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>手段</th><th>教材定位</th></tr></thead>
+        <tbody>
+          <tr><td>电抽搐治疗（ECT）</td><td>应用于临床时间最长，目前临床多采用改良电抽搐治疗（MECT）</td></tr>
+          <tr><td>经颅磁刺激（TMS）</td><td>近年发展较快，逐渐为临床广泛接受和使用</td></tr>
+          <tr><td>深部脑刺激（DBS）</td><td>有难治性抑郁的适应证</td></tr>
+          <tr><td>迷走神经刺激（VNS）、磁痉挛治疗（MST）、经颅直流电刺激（tDCS）</td><td>目前主要作为辅助治疗</td></tr>
+          <tr><td>胰岛素治疗（胰岛素休克/低血糖疗法）、发热疗法</td><td>已罕用</td></tr>
+          <tr><td>精神外科治疗</td><td>已限制使用或严格适应证下使用</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="timeline">
+      <div class="tl-item"><h4>第一步 · 明确靶症状</h4><p>精神病性症状 / 情感症状 / 焦虑失眠 / 难治状态。</p></div>
+      <div class="tl-item"><h4>第二步 · 选类别与具体药</h4><p>在同类中按不良反应谱、相互作用、患者躯体情况个体化选择。</p></div>
+      <div class="tl-item"><h4>第三步 · 设定监测</h4><p>锂盐查血锂；氯氮平查血常规；TCAs 关注心电图；BZD 控制疗程。</p></div>
+      <div class="tl-item"><h4>第四步 · 评估升级</h4><p>足量足疗程无效时换药、联合或转入物理治疗（详见各单元）。</p></div>
+    </div>
+    <div class="callout tip"><span class="ct">💡 提示</span>总论不提供具体剂量，所有剂量必须回到各节原文。不要把其他资料的数字套进本章。</div>
+  </div>
+
+  <!-- 第七栏 -->
+  <div class="card purple" id="u1-7">
+    <h3 class="col-title"><span class="idx">第七栏</span>记忆工具箱</h3>
+    <div class="callout tip">
+      <span class="ct">🔧 方法一：首字母缩拼法</span>
+      口诀：<strong>"精、抑、稳、焦"</strong>——抗精神病、抗抑郁、心境稳定、抗焦虑，四类药一口报出。<br>
+      再加两个"编外"：<strong>兴奋药</strong>（儿童多动）、<strong>益智药</strong>（脑代谢）。<br>
+      <em>为什么这样记：</em>四个字覆盖分类主干，先有抽屉再装药，避免把具体药名记成散沙。
+    </div>
+    <div class="callout tip">
+      <span class="ct">🔧 方法二：数字编码法</span>
+      记 <strong>"4-4-6"</strong>：4 类精神药物；4 个 CYP450 亚型（1A2、2C19、2D6、3A4）；6 种物理治疗（ECT、TMS、VNS、DBS、MST、tDCS）。<br>
+      <em>为什么这样记：</em>用数字当"目录页码"，回忆时按数量清点，漏一个就知道自己漏了。
+    </div>
+    <div class="callout tip">
+      <span class="ct">🔧 方法三：类比理解（标注：类比理解，非医学事实）</span>
+      把血脑屏障想成<strong>安检门</strong>：精神药物是"亲脂性"的通行证，容易过；把血浆蛋白想成<strong>出租车</strong>：多数药上车后不肯下来，所以透析"捞"不出来；锂盐则是不上车、直接随水走的"独行客"，因此能被透析清除。<br>
+      <em>为什么这样记：</em>用三个画面绑住"亲脂性、蛋白结合、锂盐例外"这一组最容易混的药代考点。
+    </div>
+  </div>
+
+  <!-- 第八栏 -->
+  <div class="card cyan" id="u1-8">
+    <h3 class="col-title"><span class="idx">第八栏</span>知识联动</h3>
+    <ul>
+      <li><strong>与精神分裂症章：</strong>抗精神病药是幻觉妄想与兴奋躁动的核心处置；阴性症状与认知缺陷需"激活作用"。</li>
+      <li><strong>与抑郁障碍/双相障碍章：</strong>抗抑郁药起效滞后 2～3 周，心境稳定剂用于躁狂与预防复发，构成"急性期—巩固—维持"的连续管理。</li>
+      <li><strong>与焦虑障碍章：</strong>BZD 起效快但不宜长期；丁螺环酮/坦度螺酮起效慢但无依赖。</li>
+      <li><strong>与药理学：</strong>CYP450 抑制/诱导决定血药浓度，是"药物相互作用"这一考点的底层逻辑。</li>
+      <li><strong>与内科学：</strong>QT 间期、低钾、肝功能、血糖血脂、催乳素——精神药物不良反应常需内科协同监测。</li>
+    </ul>
+  </div>
+</section>
+<!-- ===== 06 抗精神病药 ===== -->
+<section id="u2">
+  <div class="sec-head"><div class="badge">06</div><h2>抗精神病药<span class="en">第二节（p.291–296）</span></h2></div>
+  <p class="sec-lead">全章分值最高、药名最多的一节。抓住"两代分类 → D2 四通路 → 受体-副作用 → 急性期/维持 → EPS 四型"这条链，就能把 17 个药串起来。</p>
+
+  <!-- 第一栏 -->
+  <div class="card red" id="u2-1">
+    <h3 class="col-title"><span class="idx">第一栏</span>疾病画像 → 治疗单元画像</h3>
+    <div class="quote"><span class="lab">教材原文</span>第一代抗精神病药（FGAs）又称神经阻滞剂、传统抗精神病药、典型抗精神病药，或称多巴胺受体拮抗剂。其主要药理作用为阻断中枢多巴胺 D2 受体，治疗中可出现锥体外系副作用和催乳素水平升高。</div>
+    <p><strong>一句话画像：</strong>抗精神病药是"堵多巴胺"的药：堵在中脑边缘系统，幻觉妄想减轻；堵在黑质纹状体，人就"僵"了；堵在垂体，催乳素就升了。<span class="note">（因果链为类比理解式总结，具体通路见第二栏）</span></p>
+    <div class="grid2">
+      <div class="mini">
+        <h4>历史节点</h4>
+        <ul>
+          <li>20 世纪 50 年代初：偶然发现第一个合成药<strong>氯丙嗪</strong>，开创现代精神药物治疗新纪元。</li>
+          <li>1952 年：法国外科医师 Henri 用于术前患者，发现减轻紧张焦虑；Delay 与 Deniker 首次用于精神障碍和兴奋激越。</li>
+          <li>1959 年：合成<strong>氯氮平</strong>，受体作用最复杂、疗效强、安全性相对较差，成为新药开发的参照。</li>
+          <li>20 世纪 90 年代后：多种递质平衡拮抗的新型非典型抗精神病药陆续出现。</li>
+        </ul>
+      </div>
+      <div class="mini">
+        <h4>两代分类</h4>
+        <ul>
+          <li><strong>FGA：</strong>低效价（氯丙嗪）、中效价（奋乃静）、高效价（氟哌啶醇）。</li>
+          <li><strong>SGA 四类：</strong>①血清素多巴胺拮抗剂（SDA）；②多效受体靶向药（MARTA，氯氮平）；③选择性 D2/D3 拮抗剂（氨磺必利）；④多巴胺受体部分激动剂（阿立哌唑）。</li>
+        </ul>
+      </div>
+    </div>
+    <p><strong>治疗作用的三条腿（教材原文归纳）：</strong></p>
+    <div class="quote"><span class="lab">教材原文</span>①抗精神病作用，即抗幻觉、妄想作用（治疗阳性症状）和激活作用（治疗阴性症状和认知缺陷）；②非特异性镇静作用；③预防疾病复发作用。</div>
+    <div class="stat"><span>FGA 5 个</span><span>SGA 12 个</span><span>共 17 个药名</span><span>EPS 4 型</span><span>不良反应 8 类</span></div>
+  </div>
+
+  <!-- 第二栏 -->
+  <div class="card blue" id="u2-2">
+    <h3 class="col-title"><span class="idx">第二栏</span>病因探秘 → 机制探秘</h3>
+    <p><strong>核心机制：</strong>目前可用的抗精神病药几乎都通过阻断脑内多巴胺受体（尤其 D2 受体）发挥抗精神病作用。传统药（尤其吩噻嗪类）主要阻断 D2、α1、M1、H1 四种受体；新一代在阻断 D2 基础上，还阻断 5-HT2A，增强抗精神病作用并减少 D2 阻断的副作用。</p>
+    <p><strong>表 1　D2 的四条投射通路——"同一把锁，开四扇门"</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>通路</th><th>阻断后的结果</th><th>临床意义</th></tr></thead>
+        <tbody>
+          <tr><td>中脑边缘通路</td><td>抗幻觉、妄想</td><td><strong>治疗作用</strong>所在</td></tr>
+          <tr><td>中脑皮质通路</td><td>药源性阴性症状和抑郁</td><td>需与疾病本身的阴性/抑郁症状区分</td></tr>
+          <tr><td>黑质纹状体通路</td><td>锥体外系副作用</td><td>EPS 的机制根源</td></tr>
+          <tr><td>下丘脑至垂体的结节漏斗通路</td><td>催乳素水平升高</td><td>泌乳、闭经、性功能受损</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p><strong>表 2　受体-副作用映射（必背）</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>受体</th><th>阻断后的主要表现</th><th>代表药倾向</th></tr></thead>
+        <tbody>
+          <tr><td>D2</td><td>抗精神病；EPS；催乳素升高</td><td>高效价 FGA（氟哌啶醇）EPS 更明显</td></tr>
+          <tr><td>5-HT2A</td><td>增强抗精神病作用；5-HT2/D2 比值高者 EPS 少，部分改善阴性症状</td><td>SGA（利培酮、奥氮平等）</td></tr>
+          <tr><td>α1</td><td>镇静、直立性低血压、心动过速、性功能减退、射精延迟</td><td>氯丙嗪肌注时易出现</td></tr>
+          <tr><td>M1</td><td>口干、便秘、排尿困难、视物模糊、记忆障碍</td><td>氯丙嗪、氯氮平</td></tr>
+          <tr><td>H1</td><td>过度镇静、体重增加</td><td>氯氮平、奥氮平</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout tip">
+      <span class="ct">💡 阿立哌唑为什么"不一样"</span>
+      它是多巴胺受体<strong>部分激动剂</strong>：对多巴胺功能亢进的脑区发挥拮抗作用，对功能低下的脑区则起一定激动作用。所以它既抗阳性症状，又有利于改善阴性症状和精神运动性迟滞。<span class="note">（教材原文机制描述）</span>
+    </div>
+    <p><strong>其他药理作用：</strong>加强其他中枢抑制剂的效应、镇吐、降低体温、诱发癫痫，以及对心脏和血液系统的影响。</p>
+  </div>
+
+  <!-- 第三栏 -->
+  <div class="card red" id="u2-3">
+    <h3 class="col-title"><span class="idx">第三栏</span>临床表现拼图 → 治疗效应与不良反应图谱</h3>
+    <div class="tabs" data-tabs>
+      <div class="tabbar">
+        <button class="on" data-tab="b1">治疗效应</button>
+        <button data-tab="b2">适应证与禁忌</button>
+        <button data-tab="b3">不良反应地图</button>
+      </div>
+      <div class="panel on" data-panel="b1">
+        <ul>
+          <li><strong>阳性症状：</strong>抗幻觉、妄想，是抗精神病作用的主战场。</li>
+          <li><strong>阴性症状与认知缺陷：</strong>部分药物具"激活作用"；阿立哌唑、氨磺必利低剂量等被教材点名与阴性症状相关。</li>
+          <li><strong>非特异性镇静：</strong>用于兴奋躁动，但镇静会随耐受而减弱。</li>
+          <li><strong>预防复发：</strong>长期维持治疗可显著减少精神分裂症复发。</li>
+        </ul>
+      </div>
+      <div class="panel" data-panel="b2">
+        <p><strong>适应证：</strong>治疗精神分裂症和预防其复发、控制躁狂发作，还可用于其他具有精神病性症状的精神障碍。</p>
+        <p><strong>禁用：</strong>严重心血管疾病、肝脏疾病、肾脏疾病、严重全身感染；甲状腺功能减退、肾上腺皮质功能减退、重症肌无力、闭角型青光眼、既往同种药物过敏史。</p>
+        <p><strong>慎用：</strong>白细胞过低者、老年人、孕妇和哺乳期妇女；重症监护条件下可酌情慎用。</p>
+        <p class="note">教材强调：每一种药物的应用应参照药品说明书中的禁忌证。</p>
+      </div>
+      <div class="panel" data-panel="b3">
+        <div class="grid2">
+          <div class="mini"><h4>神经系统</h4><p>EPS 四型；恶性综合征；癫痫发作。</p></div>
+          <div class="mini"><h4>自主神经</h4><p>抗胆碱能（口干、视物模糊、排尿困难、便秘）；α1 阻断（直立性低血压、反射性心动过速、射精延迟）。</p></div>
+          <div class="mini"><h4>代谢内分泌</h4><p>腹型肥胖、高血糖、血脂异常；催乳素分泌异常。</p></div>
+          <div class="mini"><h4>精神方面</h4><p>过度镇静；激活/振奋致焦虑激越；撤药反应；药源性抑郁（快感缺失）。</p></div>
+          <div class="mini"><h4>心脏</h4><p>QT 间期延长（尤其硫利达嗪），尖端扭转、室颤、猝死。</p></div>
+          <div class="mini"><h4>其他</h4><p>肝转氨酶升高、药疹、色素沉着、粒细胞缺乏、过量中毒。</p></div>
+        </div>
+      </div>
+    </div>
+    <p class="note">本栏原用于疾病症状分维度呈现；本章以药物为单位，故改为"治疗效应 + 不良反应"双面图谱，分类依据教材原文。</p>
+  </div>
+  <!-- 第四栏 -->
+  <div class="card orange" id="u2-4">
+    <h3 class="col-title"><span class="idx">第四栏</span>教材典型案例</h3>
+    <div class="callout book">
+      <span class="ct">📖 教材未提供具体临床案例</span>
+      本节为药物学叙述，教材未给出带姓名、病史、化验值的完整病例。教材提供的是<strong>典型表现的文字描述</strong>，以下按原文整理，供"看图识病"式学习，不构成真实病例。
+    </div>
+    <div class="grid2">
+      <div class="mini">
+        <h4>情境 A · 用药后突然"歪脖子"</h4>
+        <p>用药不久出现眼上翻、斜颈、颈后倾、面部怪相、吐舌、张口困难，甚至角弓反张、脊柱侧弯——考虑<strong>急性肌张力障碍</strong>。</p>
+        <p class="note">教材提醒：易误诊为破伤风、癫痫、分离性障碍，用药史有助确诊。</p>
+      </div>
+      <div class="mini">
+        <h4>情境 B · 坐着像"长了刺"</h4>
+        <p>治疗 1～2 周后，患者无法控制地激越不安、不能静坐、反复走动或原地踏步——考虑<strong>静坐不能</strong>。</p>
+        <p class="note">教材提醒：易误诊为精神病性激越而错误加量，越加越重。</p>
+      </div>
+      <div class="mini">
+        <h4>情境 C · 表情像"面具"</h4>
+        <p>治疗最初 1～2 个月出现运动过缓、手足震颤、肌张力增高，严重者僵硬、佝偻姿势、慌张步态、面具脸、流涎、皮脂溢出——考虑<strong>帕金森综合征</strong>。</p>
+        <p class="note">教材提醒：因淡漠、抑郁或痴呆易被误诊。</p>
+      </div>
+      <div class="mini">
+        <h4>情境 D · 嘴角不停"蠕动"</h4>
+        <p>持续用药几年后，舌或口唇周围出现轻微震颤或蠕动，睡眠时消失、情绪激动时加重——考虑<strong>迟发性运动障碍</strong>。</p>
+        <p class="note">教材提醒：抗胆碱能药会促进和加重 TD，应避免使用。</p>
+      </div>
+    </div>
+    <p><strong>由表现到判断的思路：</strong>先看<strong>出现时间</strong>（最早/1～2 周/1～2 月/几年）→ 再看<strong>运动形式</strong>（肌张力障碍/坐立不安/帕金森样/刻板舞动）→ 最后核对<strong>用药史</strong>。</p>
+  </div>
+
+  <!-- 第五栏 -->
+  <div class="card orange" id="u2-5">
+    <h3 class="col-title"><span class="idx">第五栏</span>鉴别诊断对对碰</h3>
+    <p><strong>表 1　锥体外系反应（EPS）四型鉴别——本章最高频对比考点</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>类型</th><th>出现时间</th><th>核心表现</th><th>易误诊为</th><th>处理要点</th></tr></thead>
+        <tbody>
+          <tr><td>急性肌张力障碍</td><td><strong>最早</strong></td><td>眼上翻、斜颈、颈后倾、面部怪相、吐舌、张口困难、角弓反张、脊柱侧弯</td><td>破伤风、癫痫、分离性障碍</td><td>肌注东莨菪碱 0.3mg 或异丙嗪 25mg 可即时缓解；必要时减量、加苯海索或换药</td></tr>
+          <tr><td>静坐不能</td><td>治疗 1～2 周</td><td>无法控制的激越不安、不能静坐、反复走动或原地踏步</td><td>精神病性激越或病情加剧</td><td>BZD 和 β 受体阻滞剂（如普萘洛尔）有效；<strong>抗胆碱能药通常无效</strong></td></tr>
+          <tr><td>帕金森综合征</td><td>治疗最初 1～2 个月；<strong>发生率可高达 56%</strong></td><td>运动不能、肌张力高、震颤、自主神经功能紊乱；面具脸、慌张步态、流涎、皮脂溢出</td><td>淡漠、抑郁或痴呆</td><td>苯海索可缓解；缓慢加药或用最低有效剂量</td></tr>
+          <tr><td>迟发性运动障碍（TD）</td><td>持续用药几年后，极少数几个月</td><td>不自主、有节律的刻板式运动；最早为舌/口唇周围轻微震颤或蠕动；睡眠时消失、情绪激动加重</td><td>—（关键在识别而非误诊）</td><td>氘丁苯那嗪片；异丙嗪和银杏叶提取物可能改善；<strong>抗胆碱能药禁用</strong></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout key"><span class="ct">📌 一句话鉴别总结</span><strong>越早越"扭"，越晚越"抖"，几年后"动"</strong>：最早肌张力障碍（扭），1～2 月帕金森（抖），几年后 TD（刻板运动）。</div>
+    <p><strong>表 2　恶性综合征的关键识别（与重症 EPS/感染性高热区分）</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>维度</th><th>恶性综合征</th><th>要点</th></tr></thead>
+        <tbody>
+          <tr><td>核心四联征</td><td>意识波动、肌肉强直、高热、自主神经功能不稳定</td><td>教材原文的临床特征</td></tr>
+          <tr><td>高危药物</td><td>氟哌啶醇、氯丙嗪、氟奋乃静</td><td>最常见于上述药物</td></tr>
+          <tr><td>诱因</td><td>加量过快、用量过高、脱水、营养不足、合并躯体疾病、气候炎热</td><td>可解释"为什么突然出现"</td></tr>
+          <tr><td>辅助检查</td><td>CPK 浓度升高</td><td><strong>不是确诊指征</strong>（教材明确）</td></tr>
+          <tr><td>处理</td><td>及时停药、支持治疗；丹曲林、溴隐亭</td><td>溴隐亭促进中枢多巴胺功能</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p><strong>表 3　常用药"选谁"的鉴别逻辑</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>临床情境</th><th>教材倾向</th><th>理由</th></tr></thead>
+        <tbody>
+          <tr><td>兴奋躁动、不合作</td><td>镇静作用强的药或注射制剂</td><td>快速控制兴奋</td></tr>
+          <tr><td>老年或伴心肝肾疾病</td><td>奋乃静、氟哌啶醇（教材点名适用）</td><td>自主神经不良反应较少/可注射</td></tr>
+          <tr><td>难治性、伴自杀或不能耐受 EPS</td><td>氯氮平</td><td>疗效强、几乎不引起 EPS 及 TD</td></tr>
+          <tr><td>服药不依从</td><td>长效制剂</td><td>减少复发</td></tr>
+          <tr><td>体重增加风险高</td><td>齐拉西酮、阿立哌唑（几乎不影响体重）</td><td>代谢负担较小</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <!-- 第六栏 A -->
+  <div class="card green" id="u2-6">
+    <h3 class="col-title"><span class="idx">第六栏</span>治疗方案工具箱</h3>
+    <p><strong>选药总原则：</strong>剂量充足时，抗精神病药间的治疗效应没有多少差异；<strong>选择主要取决于不良反应的差别</strong>。FGA 锥体外系反应多见，SGA 中部分药物体重增加更突出。兴奋躁动者宜选镇静作用强的药或注射制剂；不能耐受可换类；长效制剂利于解决依从性问题。目前 SGA 临床应用较传统药更广泛。</p>
+    <p><strong>表 1　第一代抗精神病药（FGA）5 药速查</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>药物</th><th>教材定位/特点</th><th>主要不良反应</th></tr></thead>
+        <tbody>
+          <tr><td><strong>氯丙嗪</strong></td><td>口服为主，也有注射制剂，用于快速控制兴奋和急性精神病性症状</td><td>直立性低血压、EPS、抗胆碱能反应、催乳素升高、皮疹</td></tr>
+          <tr><td><strong>奋乃静</strong></td><td>自主神经不良反应较少；适用于老年或伴心、肝、肾、肺疾病者</td><td>主要为 EPS</td></tr>
+          <tr><td><strong>氟哌啶醇</strong></td><td>注射剂常用于精神科急诊；适用于老年或伴躯体疾患的兴奋躁动者；小剂量可用于儿童抽动秽语综合征</td><td>主要为 EPS；长效注射剂 EPS 较口服轻</td></tr>
+          <tr><td><strong>五氟利多</strong></td><td>口服长效制剂，每周给药一次；碾碎后易溶于水、无色无味，家属协助下用于不合作患者</td><td>EPS；少数发生 TD 和抑郁</td></tr>
+          <tr><td><strong>舒必利</strong></td><td>治疗精神分裂症需较高剂量；静脉滴注可缓解紧张症性精神运动迟滞</td><td>高催乳素血症（体重增加、泌乳、闭经、性功能减退）；EPS 少见</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p><strong>表 2　第二代抗精神病药（SGA）12 药速查</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>药物</th><th>一句话特点</th><th>重点风险/监测</th></tr></thead>
+        <tbody>
+          <tr><td><strong>氯氮平</strong></td><td>推荐用于难治性、伴自杀或无法耐受 EPS 的精神分裂症；几乎不引起 EPS 及 TD</td><td>粒细胞缺乏约 1%（国外死亡率 0.13‰）；直立性低血压、过度镇静、体重增加、心动过速、便秘、流涎、体温升高、癫痫、心肌炎、恶性综合征；监测血常规、体重、血糖血脂；专家主张慎用</td></tr>
+          <tr><td><strong>利培酮/帕利哌酮</strong></td><td>利培酮由氟哌啶醇与 5-HT2A 拮抗剂利坦色林化合而成；活性代谢物 9-羟利培酮即帕利哌酮；均有长效注射剂</td><td>激越、失眠、高催乳素血症；较大剂量可出现 EPS</td></tr>
+          <tr><td><strong>奥氮平</strong></td><td>结构与药理类似氯氮平，但对血象无明显影响</td><td>体重增加、嗜睡、便秘；EPS 少见；监测体重、血糖、血脂</td></tr>
+          <tr><td><strong>喹硫平</strong></td><td>由氯氮平结构改造；对阳性症状作用相对较弱，对情感症状有一定疗效；几乎不引起 EPS 及 TD</td><td>嗜睡、直立性低血压</td></tr>
+          <tr><td><strong>齐拉西酮</strong></td><td>疗效肯定；对阴性症状和情感症状可能略有优势；几乎不引起体重增加</td><td>EPS 少见；监测心电图 QT 间期；需与食物同服提高生物利用度</td></tr>
+          <tr><td><strong>阿立哌唑</strong></td><td>目前唯一用于临床的 D2 部分激动剂；疗效与氟哌啶醇相当；激活作用利于改善阴性症状和精神运动性迟滞</td><td>用药初期易致激越、焦虑；几乎不影响体重；EPS 少</td></tr>
+          <tr><td><strong>氨磺必利</strong></td><td>舒必利衍生物；低剂量改善阴性症状，高剂量对幻觉妄想效果明显</td><td>催乳素升高和 QT 间期延长较多见</td></tr>
+          <tr><td><strong>哌罗匹隆</strong></td><td>缓解阳性与阴性症状；激动 5-HT 受体使前额叶皮质多巴胺释放增加，改善认知</td><td>EPS；失眠、困倦</td></tr>
+          <tr><td><strong>鲁拉西酮</strong></td><td>对 D2、5-HT2A、5-HT7 高亲和；5-HT1A 部分激动；阳性、阴性、认知及情感症状均有改善</td><td>QT 间期延长相对少见</td></tr>
+          <tr><td><strong>布南色林</strong></td><td>对 D2、D3 和 5-HT2A 强亲和；阳性及阴性症状均有效</td><td><strong>显著锥体外系不良反应</strong></td></tr>
+          <tr><td><strong>阿塞那平</strong></td><td>拮抗 5-HT、α、D2、H 受体，对 M 胆碱受体无亲和力；改善阳性、阴性症状及躁狂/双相混合发作</td><td>过度镇静、头晕</td></tr>
+          <tr><td><strong>伊潘立酮</strong></td><td>多受体亲和；高 5-HT2A/D2 拮抗比；对 D3 高亲和；减轻阳性症状并改善阴性症状及认知缺陷</td><td>教材未单列其特异性不良反应，使用参照说明书</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout warn"><span class="ct">⚠️ 氯氮平是本节的"监测重点"</span>血常规、体重、血糖、血脂必须监测；起始剂量宜低（易直立性低血压、过度镇静）；粒细胞缺乏罕见但可致命，白细胞计数低者应避免使用。</div>
+  </div>
+  <div class="card green" id="u2-6b">
+    <h3>治疗流程与剂量（教材原文数据）</h3>
+    <div class="timeline">
+      <div class="tl-item"><h4>用药前</h4><p>排除禁忌证；常规体格检查和神经系统检查；血常规、血生化（尤其血钾和肝肾功能）、心电图。</p></div>
+      <div class="tl-item"><h4>急性期 · 第 1 周</h4><p>合作者以口服为主，通常采用逐渐加量法，一般 <strong>1 周内逐步加至有效治疗剂量</strong>。</p></div>
+      <div class="tl-item"><h4>急性期 · 2～8 周</h4><p>急性症状在有效剂量治疗 <strong>2～4 周</strong>后可开始改善，多数患者 <strong>4～8 周</strong>症状可充分缓解。</p></div>
+      <div class="tl-item"><h4>换药节点</h4><p>剂量足够，治疗 <strong>4～6 周</strong>无效或疗效不明显者，可考虑换药。</p></div>
+      <div class="tl-item"><h4>巩固期</h4><p>症状较彻底缓解后，仍要继续以急性期有效剂量<strong>巩固治疗至少 6 个月</strong>，然后缓慢减量进入维持治疗。</p></div>
+      <div class="tl-item"><h4>维持期</h4><p>长期维持可显著减少复发；传统药可缓慢减至治疗剂量的 <strong>1/2</strong> 或不少于 <strong>300mg 氯丙嗪等效剂量</strong>；除氯氮平外，SGA 可用急性期有效剂量或略低。过低剂量与安慰剂一样仍有较高复发率。</p></div>
+      <div class="tl-item"><h4>维持时长</h4><p>首发、缓慢起病者<strong>至少 5 年</strong>；急性发作、缓解迅速彻底者可相应较短。最终只有不足 <strong>1/5</strong> 的患者有可能停药。</p></div>
+    </div>
+    <div class="callout book">
+      <span class="ct">📖 兴奋躁动/不合作的注射方案（教材原文）</span>
+      肌内注射<strong>氟哌啶醇 5～10mg</strong>或<strong>氯丙嗪 50～100mg</strong>，必要时 24 小时内每 6～8 小时重复一次。患者应卧床护理；出现肌张力障碍可注射抗胆碱能药物<strong>东莨菪碱 0.3mg</strong>对抗。苯二氮䓬类（如氯硝西泮或地西泮）肌内注射或静脉缓慢注射，可与抗精神病药注射交替进行，从而减少合用的抗精神病药剂量。
+    </div>
+    <p><strong>不良反应处理速查</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>不良反应</th><th>处理要点（教材原文）</th></tr></thead>
+        <tbody>
+          <tr><td>急性肌张力障碍</td><td>肌注东莨菪碱 0.3mg 或异丙嗪 25mg 可即时缓解；必要时减量、加服苯海索或换用 EPS 低的药物</td></tr>
+          <tr><td>静坐不能</td><td>BZD 和 β 受体阻滞剂（如普萘洛尔）有效；抗胆碱能药通常无效；必要时减量或换药</td></tr>
+          <tr><td>帕金森综合征</td><td>苯海索可缓解；缓慢加药或使用最低有效剂量</td></tr>
+          <tr><td>迟发性运动障碍</td><td>氘丁苯那嗪片；异丙嗪和银杏叶提取物可能有一定改善；<strong>避免抗胆碱能药</strong></td></tr>
+          <tr><td>抗胆碱能药的使用边界</td><td>没有证据表明常规应用可预防 EPS；反而易出现抗胆碱能不良反应（含记忆减退）；如使用，应在 2～3 个月后逐渐停用</td></tr>
+          <tr><td>恶性综合征</td><td>及时停用抗精神病药，支持治疗；可用丹曲林和溴隐亭</td></tr>
+          <tr><td>直立性低血压</td><td>头低脚高位卧床；严重者输液并给予去甲肾上腺素、间羟胺等升压，<strong>禁用肾上腺素</strong></td></tr>
+          <tr><td>代谢异常</td><td>定期监测体重、血糖、血脂；生活方式干预（饮食、运动、心理教育、行为干预）；换用或加用低代谢风险药；阿立哌唑辅助治疗可能潜在有效</td></tr>
+          <tr><td>QT 间期延长</td><td>密切监测心电图 QT 变化，及时发现和纠正低血钾（尤其兴奋激越和/或进食进水少的新入院患者）</td></tr>
+          <tr><td>粒细胞缺乏</td><td>氯氮平发生率较高；白细胞低者避免使用氯氮平、氯丙嗪、硫利达嗪；应用时定期监测血象</td></tr>
+          <tr><td>过量中毒</td><td>最早征象为激越或意识混浊；毒扁豆碱可用作解毒药；对症支持、大量输液、维持体温、抗癫痫；数小时后仍应洗胃；升压只用间羟胺/去甲肾上腺素，<strong>禁用肾上腺素</strong></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p><strong>药物相互作用（教材点名）：</strong>抗酸药影响吸收；<strong>吸烟降低氯氮平血药浓度</strong>；<strong>卡马西平</strong>诱导肝酶，明显降低氟哌啶醇、氯氮平浓度（或增加氯氮平粒细胞缺乏风险）；<strong>氟西汀、帕罗西汀、氟伏沙明</strong>抑制肝酶，升高抗精神病药浓度。</p>
+  </div>
+  <!-- 第七栏 -->
+  <div class="card purple" id="u2-7">
+    <h3 class="col-title"><span class="idx">第七栏</span>记忆工具箱</h3>
+    <div class="callout tip">
+      <span class="ct">🔧 方法一：口诀歌谣法（D2 四通路）</span>
+      口诀：<strong>"边治、皮郁、黑僵、漏乳"</strong><br>
+      解释：<strong>边</strong>＝中脑边缘（治疗幻觉妄想）；<strong>皮</strong>＝中脑皮质（药源性阴性症状/抑郁）；<strong>黑</strong>＝黑质纹状体（EPS，人变"僵"）；<strong>漏</strong>＝结节漏斗（催乳素升高、泌乳）。<br>
+      <em>为什么这样记：</em>四个字对应四条通路，且"治—郁—僵—乳"直接说出结果，看到副作用就能反推是哪条通路被堵。
+    </div>
+    <div class="callout tip">
+      <span class="ct">🔧 方法二：时间轴记忆法（EPS 四型）</span>
+      把四型钉在一条时间轴上：<strong>最早</strong>（急性肌张力障碍）→ <strong>1～2 周</strong>（静坐不能）→ <strong>1～2 个月</strong>（帕金森综合征，发生率可达 56%）→ <strong>几年</strong>（迟发性运动障碍）。<br>
+      <em>为什么这样记：</em>时间是临床上最可靠的鉴别线索；先问"用了多久"，范围立刻缩小到一型。
+    </div>
+    <div class="callout tip">
+      <span class="ct">🔧 方法三：对比记忆法（FGA 低效价 vs 高效价）</span>
+      记成一组"天平"：<br>
+      <strong>低效价（氯丙嗪）</strong>：剂量大、镇静强、抗胆碱强、心肝毒性大、EPS 小；<br>
+      <strong>高效价（氟哌啶醇）</strong>：剂量小、镇静弱、心肝毒性小、EPS 大、幻觉妄想突出。<br>
+      <em>为什么这样记：</em>"剂量越大，越脏但越不僵；剂量越小，越干净但越僵"——把五个维度压缩成一句反向关系。
+    </div>
+    <p class="note">补充数字锚点：氯氮平粒细胞缺乏约 1%；帕金森综合征发生率可高达 56%；巩固至少 6 个月；首发缓慢起病维持至少 5 年；不足 1/5 可停药。</p>
+  </div>
+
+  <!-- 第八栏 -->
+  <div class="card cyan" id="u2-8">
+    <h3 class="col-title"><span class="idx">第八栏</span>知识联动</h3>
+    <ul>
+      <li><strong>与精神分裂症章：</strong>阳性症状靠 D2 阻断，阴性/认知靠激活作用；难治性、伴自杀者对应氯氮平。</li>
+      <li><strong>与神经病学：</strong>急性肌张力障碍需与破伤风、癫痫、分离性障碍鉴别；帕金森综合征需与原发性帕金森病、痴呆鉴别。</li>
+      <li><strong>与急诊/ICU：</strong>恶性综合征四联征、直立性低血压、过量中毒均为急危重症；溴隐亭、丹曲林、毒扁豆碱是关键药名。</li>
+      <li><strong>与内分泌科：</strong>体重、血糖、血脂、催乳素异常需协同管理；氯氮平、奥氮平体重增加最常见。</li>
+      <li><strong>与心血管科：</strong>硫利达嗪等 QT 延长风险，需监测心电图并纠正低钾。</li>
+      <li><strong>与抗抑郁药单元：</strong>氟西汀、帕罗西汀、氟伏沙明抑制肝酶，可升高抗精神病药浓度。</li>
+      <li><strong>与心境稳定剂单元：</strong>卡马西平诱导肝酶，降低氟哌啶醇、氯氮平浓度，可能使精神症状恶化。</li>
+      <li><strong>与社区/依从性管理：</strong>长效制剂（五氟利多每周一次、利培酮/帕利哌酮长效注射）用于不依从患者。</li>
+    </ul>
+  </div>
+</section>
+<!-- ===== 07 抗抑郁药 ===== -->
+<section id="u3">
+  <div class="sec-head"><div class="badge">07</div><h2>抗抑郁药<span class="en">第三节（p.296–301）</span></h2></div>
+  <p class="sec-lead">这一节的关键不是背 24 个药名，而是理解"为什么吃了 2～3 周才起效"，以及"为什么 TCAs 过量会死人"。前者考机制，后者考安全。</p>
+
+  <!-- 第一栏 -->
+  <div class="card green" id="u3-1">
+    <h3 class="col-title"><span class="idx">第一栏</span>疾病画像 → 治疗单元画像</h3>
+    <div class="quote"><span class="lab">教材原文</span>抗抑郁药是一类治疗各种抑郁状态的药物。这类药物不仅能治疗各类抑郁症，而且对焦虑、惊恐、恐惧、强迫、疑病及慢性疼痛等都有一定疗效。</div>
+    <p><strong>一句话画像：</strong>抗抑郁药不是"让人开心"的药，而是通过提高中枢单胺类递质的功能，把被压低的情绪调节系统慢慢"托"起来；起效慢，是因为它要先改变受体敏感性，而不是立刻补充递质。<span class="note">（此句为机制化总结，教材依据见第二栏）</span></p>
+    <div class="grid2">
+      <div class="mini">
+        <h4>教材列出的 11 类（①～⑪）</h4>
+        <ol>
+          <li>选择性 5-HT 再摄取抑制剂（SSRIs）</li>
+          <li>5-HT 和 NE 再摄取抑制剂（SNRIs）</li>
+          <li>NE 和多巴胺再摄取抑制剂（NDRIs）</li>
+          <li>选择性 NE 再摄取抑制剂（NRIs）</li>
+          <li>5-HT 阻滞和再摄取抑制剂（SARIs）</li>
+          <li>α2 受体拮抗剂 / NE 能及特异性 5-HT 能抗抑郁药（NaSSAs）</li>
+          <li>褪黑素受体激动剂</li>
+          <li>多模式抗抑郁药</li>
+          <li>三环类抗抑郁药（TCAs，含杂环/四环类）</li>
+          <li>单胺氧化酶抑制剂（MAOIs）</li>
+          <li>植物药或中成药（教材列为第 11 项）</li>
+        </ol>
+      </div>
+      <div class="mini">
+        <h4>新型 vs 传统</h4>
+        <p><strong>新型：</strong>除 TCAs 和 MAOIs 外，其余均可归为新型抗抑郁药。</p>
+        <p><strong>传统：</strong>TCAs（含杂环/四环类）与 MAOIs。</p>
+        <p><strong>临床地位：</strong>TCAs 曾是首选，后因不良反应逐渐作为二线；MAOIs 作为二线，用于新型药、TCAs 或其他药物无效者。</p>
+      </div>
+    </div>
+    <div class="stat"><span>11 类（含植物药）</span><span>SSRIs 6 药</span><span>教材点名约 24 药</span><span>起效 2～3 周</span><span>TCAs 致死量 1.25g</span></div>
+  </div>
+
+  <!-- 第二栏 -->
+  <div class="card blue" id="u3-2">
+    <h3 class="col-title"><span class="idx">第二栏</span>病因探秘 → 机制探秘</h3>
+    <p><strong>核心机制：</strong>除褪黑素受体激动剂外，抗抑郁药的作用机制均以<strong>增强中枢单胺类神经递质系统功能</strong>为主。中枢单胺包括吲哚胺类 5-HT，以及儿茶酚胺类 NE 和 DA。TCAs、SSRIs、SNRIs、NDRIs、NRIs 和 SARIs 可阻滞胞体膜和突触前膜上的转运体，增加胞体间隙和突触间隙相应递质浓度。</p>
+    <div class="callout book">
+      <span class="ct">📖 为什么"立即抑制再摄取"却要"2～3 周才起效"？</span>
+      教材原文：抗抑郁药对递质再摄取的抑制作用是<strong>立即发生</strong>的，而长期用药后则可以<strong>降低受体的敏感性（下调作用）</strong>，这与临床效应滞后（用药 2～3 周后起效）密切相关。
+    </div>
+    <p><strong>以 5-HT 为例的四步链条：</strong></p>
+    <div class="timeline">
+      <div class="tl-item"><h4>① 抑制再摄取</h4><p>首先增加胞体部位突触间隙内源性 5-HT 浓度。</p></div>
+      <div class="tl-item"><h4>② 下调突触前 5-HT1A 自身受体</h4><p>解除"自抑制"，增加末梢释放 5-HT。</p></div>
+      <div class="tl-item"><h4>③ 下调突触后膜受体</h4><p>受体敏感性改变，信号传递重排。</p></div>
+      <div class="tl-item"><h4>④ 临床抗抑郁效应</h4><p>这一整套适应过程需要时间，故起效滞后。</p></div>
+    </div>
+    <div class="grid2">
+      <div class="mini"><h4>MAOIs</h4><p>抑制单胺氧化酶，减少突触前膜及突触间隙的单胺递质失活。</p></div>
+      <div class="mini"><h4>α2 受体拮抗剂</h4><p>阻滞突触前 α2 自身受体，促进神经末梢 NE 和 5-HT 释放。</p></div>
+    </div>
+    <div class="callout tip"><span class="ct">💡 类比理解（非医学事实）</span>把突触前 5-HT1A 自身受体想成"刹车"：一开始补了 5-HT，刹车还踩着，释放上不去；长期用药把刹车慢慢松开（下调），5-HT 才真正放出来——这就是"起效滞后"的画面。</div>
+  </div>
+
+  <!-- 第三栏 -->
+  <div class="card red" id="u3-3">
+    <h3 class="col-title"><span class="idx">第三栏</span>临床表现拼图 → 治疗效应与不良反应图谱</h3>
+    <div class="tabs" data-tabs>
+      <div class="tabbar">
+        <button class="on" data-tab="c1">治疗谱</button>
+        <button data-tab="c2">起效规律</button>
+        <button data-tab="c3">按类看不良反应</button>
+      </div>
+      <div class="panel on" data-panel="c1">
+        <ul>
+          <li><strong>抑郁状态：</strong>各类抑郁症，是核心适应证。</li>
+          <li><strong>焦虑谱系：</strong>焦虑、惊恐、恐惧、强迫、疑病。</li>
+          <li><strong>躯体症状：</strong>慢性疼痛；度洛西汀还被教材点名改善糖尿病性周围神经痛。</li>
+          <li><strong>其他：</strong>安非他酮用于戒烟、注意缺陷障碍、兴奋剂戒断和渴求；米那普仑用于纤维肌痛。</li>
+        </ul>
+        <p class="note">教材未给出抗抑郁药的统一有效率数据，故不列百分比。</p>
+      </div>
+      <div class="panel" data-panel="c2">
+        <ul>
+          <li><strong>睡眠先改善：</strong>服用抗抑郁药后，患者的睡眠首先得到改善。</li>
+          <li><strong>抗抑郁疗效：</strong>用药 <strong>2～4 周</strong>后出现（TCAs 段落原文）；总论机制段落表述为 <strong>2～3 周</strong>后起效。</li>
+          <li><strong>足量足疗程：</strong>剂量足够、治疗 6～8 周无效或疗效不明显者，可考虑换药（TCAs 段落）。</li>
+          <li><strong>巩固：</strong>抑郁症状缓解后，以有效治疗剂量继续巩固 <strong>4～6 个月</strong>，随后进入维持治疗。</li>
+        </ul>
+      </div>
+      <div class="panel" data-panel="c3">
+        <div class="grid2">
+          <div class="mini"><h4>SSRIs</h4><p>恶心、腹泻、失眠、不安、性功能障碍；多为一过性、可耐受。心血管和抗胆碱不良反应轻微，过量较安全。</p></div>
+          <div class="mini"><h4>SNRIs</h4><p>低剂量类似 SSRIs；中高剂量可见失眠、激越、恶心、头痛、<strong>高血压</strong>；撤药反应常见。</p></div>
+          <div class="mini"><h4>NaSSAs</h4><p>体重增加、过度镇静；少有性功能障碍或恶心、腹泻；米安色林可致粒细胞减少。</p></div>
+          <div class="mini"><h4>NDRI</h4><p>坐立不安、失眠、头痛、恶心、出汗；大剂量有诱发癫痫的报道。</p></div>
+          <div class="mini"><h4>SARI</h4><p>嗜睡、视像存留（少见）、乏力；镇静强；可引起阴茎异常勃起。</p></div>
+          <div class="mini"><h4>TCAs</h4><p>抗胆碱能（最常见）、中枢神经、心血管、性功能、体重增加、过敏、过量中毒。</p></div>
+        </div>
+      </div>
+    </div>
+    <p class="note">本栏原用于疾病症状分维度呈现；本章以药物为单位，故改为"治疗谱—起效规律—不良反应"三视角，内容均来自教材。</p>
+  </div>
+  <!-- 第四栏 -->
+  <div class="card orange" id="u3-4">
+    <h3 class="col-title"><span class="idx">第四栏</span>教材典型案例</h3>
+    <div class="callout book">
+      <span class="ct">📖 教材未提供具体临床案例</span>
+      本节按药物类别逐一叙述，未给出患者案例、病程记录或量表分数。教材中的"举例"均属于<strong>适应证举例</strong>（如小剂量丙米嗪治疗儿童遗尿症、氯米帕明治疗强迫症、安非他酮用于戒烟），不是临床病例。
+    </div>
+    <p><strong>可用的"用药情境推演"（非教材病例）：</strong></p>
+    <ol>
+      <li><strong>伴焦虑的抑郁：</strong>教材点名帕罗西汀"对伴焦虑的抑郁症以及惊恐症较适合"。</li>
+      <li><strong>伴失眠/激越的抑郁：</strong>曲唑酮适用于"伴有焦虑、激越、睡眠以及性功能障碍的抑郁患者"。</li>
+      <li><strong>双相抑郁或睡眠过多：</strong>安非他酮适用于双相抑郁、迟滞性抑郁、睡眠过多、认知缓慢或假性痴呆。</li>
+      <li><strong>SSRIs 无效：</strong>瑞波西汀"尤其 SSRIs 治疗无效者可选用"。</li>
+    </ol>
+    <p class="note">以上仅为把教材适应证还原成"什么人可能用"的学习推演，不含虚构的病史与检查结果。</p>
+  </div>
+
+  <!-- 第五栏 -->
+  <div class="card orange" id="u3-5">
+    <h3 class="col-title"><span class="idx">第五栏</span>鉴别诊断对对碰</h3>
+    <p><strong>表 1　新型抗抑郁药的"选药鉴别"</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>类别</th><th>机制关键词</th><th>教材点名的适用情境</th><th>最需记住的不良反应</th></tr></thead>
+        <tbody>
+          <tr><td>SSRIs</td><td>选择性抑制 5-HT 回收</td><td>抑郁、强迫、惊恐、贪食；强迫/贪食剂量相对较大</td><td>恶心、腹泻、失眠、不安、性功能障碍</td></tr>
+          <tr><td>SNRIs</td><td>5-HT + NE 双回收</td><td>严重抑郁、难治性抑郁；度洛西汀改善慢性疼痛</td><td>中高剂量高血压；撤药反应</td></tr>
+          <tr><td>NaSSAs</td><td>α2 拮抗 + 5-HT2/H1 阻断</td><td>抑郁，尤其需要镇静/抗焦虑者</td><td>体重增加、过度镇静；米安色林粒细胞减少</td></tr>
+          <tr><td>NDRI</td><td>NE + DA 双回收</td><td>双相抑郁、迟滞性抑郁、睡眠过多、假性痴呆；戒烟</td><td>坐立不安、失眠；大剂量诱发癫痫</td></tr>
+          <tr><td>NRI</td><td>选择性 NE 回收</td><td>SSRIs 治疗无效者</td><td>口干、便秘、排尿困难、直立性低血压</td></tr>
+          <tr><td>SARI</td><td>阻滞 5-HT 受体 + 抑制回收</td><td>伴焦虑、激越、睡眠及性功能障碍的抑郁</td><td>嗜睡、乏力；阴茎异常勃起</td></tr>
+          <tr><td>褪黑素受体激动剂</td><td>M1/M2 激动 + 5-HT2C 阻滞</td><td>成人抑郁障碍或严重抑郁；改善睡眠与日间功能</td><td>头痛、头晕、嗜睡/失眠、转氨酶升高</td></tr>
+          <tr><td>多模式</td><td>SERT 抑制 + 多受体调节</td><td>情感迟钝、认知症状相对突出者</td><td>恶心、腹泻、头痛（与安非他酮合用时需关注）</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p><strong>表 2　SSRIs 六药的酶抑制差异（配伍禁忌的核心）</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>药物</th><th>常用剂量（教材）</th><th>酶抑制强度</th><th>一句话特点</th></tr></thead>
+        <tbody>
+          <tr><td>氟西汀</td><td>20mg/d</td><td><strong>CYP2D6 强</strong></td><td>半衰期长，活性代谢物 7～15 天；与其他药合用有禁忌</td></tr>
+          <tr><td>帕罗西汀</td><td>初始 20mg/d，每次加 10mg，间隔≥1 周</td><td><strong>CYP2D6 强</strong></td><td>适合伴焦虑抑郁及惊恐；停药太快有撤药反应</td></tr>
+          <tr><td>舍曲林</td><td>50～100mg/d</td><td>弱</td><td>可用于儿童青少年；早期易焦虑或激活惊恐；配伍禁忌少</td></tr>
+          <tr><td>氟伏沙明</td><td>&gt;100mg/d 时分 2 次</td><td><strong>CYP1A2 强</strong></td><td>有睡眠改善作用，性功能障碍较少</td></tr>
+          <tr><td>西酞普兰</td><td>20mg/d</td><td>最小</td><td>适用于各种抑郁或伴惊恐的抑郁</td></tr>
+          <tr><td>艾司西酞普兰</td><td>10mg/d</td><td>最小</td><td>西酞普兰左旋对映体，治疗作用明显增强</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout key"><span class="ct">📌 一句话鉴别总结</span><strong>"氟帕抑 2D6，氟伏抑 1A2，舍曲弱、西艾最小"</strong>——问配伍禁忌，先想这四个"强/弱"标签。</div>
+    <p><strong>表 3　TCAs 与 SSRIs 的代际差异</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>维度</th><th>TCAs</th><th>SSRIs</th></tr></thead>
+        <tbody>
+          <tr><td>疗效</td><td>抗抑郁作用明确；对严重抑郁可能优于 SSRIs</td><td>与 TCAs 相当，但严重抑郁可能不如 TCAs</td></tr>
+          <tr><td>受体作用</td><td>兼有 M1、α1、H1 拮抗 → 抗胆碱、心血管、镇静</td><td>对 NE 影响很小，几乎不影响 DA；帕罗西汀/氟伏沙明有轻度抗胆碱作用</td></tr>
+          <tr><td>安全性</td><td>治疗指数窄，相互作用突出，需 TDM</td><td>心血管和抗胆碱不良反应轻微，过量较安全</td></tr>
+          <tr><td>特殊人群</td><td>青光眼、前列腺肥大、妊娠 3 个月内禁用</td><td>前列腺肥大和青光眼患者可用</td></tr>
+          <tr><td>过量</td><td>1.25g 丙米嗪即可致死；昏迷、癫痫、心律失常三联征</td><td>过量时较安全</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <!-- 第六栏 A -->
+  <div class="card green" id="u3-6">
+    <h3 class="col-title"><span class="idx">第六栏</span>治疗方案工具箱</h3>
+    <p><strong>选药原则：</strong>先看<strong>靶症状与共病</strong>（是否伴焦虑、失眠、疼痛、双相、强迫），再看<strong>不良反应是否可接受</strong>，最后查<strong>酶抑制与合并用药</strong>。教材对 SSRIs 的定位是"抗抑郁作用与 TCAs 相当，但严重抑郁可能不如 TCAs；心血管和抗胆碱不良反应轻微，过量较安全"。</p>
+    <p><strong>表 1　新型抗抑郁药速查（教材数据）</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>药物</th><th>教材要点</th><th>剂量/用法（教材）</th></tr></thead>
+        <tbody>
+          <tr><td><strong>文拉法辛</strong></td><td>剂量依赖性单胺药理：低剂量仅 5-HT；中高剂量 5-HT+NE；非常高剂量再加 DA。起效较快；中高剂量用于严重/难治性抑郁，低剂量可用于非典型抑郁</td><td>教材未给具体 mg 剂量；中高剂量不良反应含高血压；撤药反应常见</td></tr>
+          <tr><td><strong>度洛西汀</strong></td><td>5-HT+NE 双回收；除严重抑郁外改善慢性疼痛（如糖尿病性周围神经痛）</td><td>教材未给具体 mg 剂量；慢性酒精中毒、肝功能不全慎用；未治疗的闭角型青光眼避免使用</td></tr>
+          <tr><td><strong>米那普仑</strong></td><td>同时抑制 5-HT 和 NE 回收；对 α、M、H1 受体无亲和力，对 MAO 活性无影响；用于抑郁及纤维肌痛</td><td>教材未给具体 mg 剂量；常见头晕、多汗、面部潮红、排尿困难</td></tr>
+          <tr><td><strong>米安色林 / 米氮平</strong></td><td>拮抗突触前 α2 受体，增加 NE 能与 5-HT 能传递；阻断 5-HT2 和 H1 → 较强镇静和抗焦虑；米氮平可用于严重/难治性抑郁</td><td>教材未给具体 mg 剂量；体重增加、过度镇静；米安色林需监测血象</td></tr>
+          <tr><td><strong>安非他酮</strong></td><td>NE+DA 双回收，兼有激动 DA 特性；适用于双相抑郁、迟滞性抑郁、睡眠过多、认知缓慢/假性痴呆、SSRIs 无效或不能耐受；戒烟、注意缺陷障碍</td><td>教材未给具体 mg 剂量；大剂量有诱发癫痫报道</td></tr>
+          <tr><td><strong>瑞波西汀</strong></td><td>选择性 NE 回收；SSRIs 无效者可选用</td><td>教材未给具体 mg 剂量；<strong>不推荐用于老年患者</strong>；青光眼、前列腺增生、低血压、新近心血管意外者禁用</td></tr>
+          <tr><td><strong>曲唑酮</strong></td><td>阻滞 5-HT 受体 + 选择性抑制 5-HT 回收；适用于伴焦虑、激越、睡眠及性功能障碍的抑郁</td><td>教材未给具体 mg 剂量；镇静较强；可引起阴茎异常勃起；换用/加 SSRIs 须谨慎</td></tr>
+          <tr><td><strong>阿戈美拉汀</strong></td><td>褪黑素 M1/M2 激动 + 5-HT2C 阻滞；起效较快，改善睡眠质量和日间功能；无撤药反应，不影响性功能、体重、心率或血压</td><td>教材未给具体 mg 剂量；肝功能损害禁用；与 CYP1A2 强抑制剂（氟伏沙明、环丙沙星等）联用禁用</td></tr>
+          <tr><td><strong>伏硫西汀</strong></td><td>多模式：抑制 SERT + 激动 5-HT1A、部分激动 5-HT1B、拮抗 5-HT1D/3/7；改善情感迟钝和认知症状相对突出</td><td>教材未给具体 mg 剂量；与安非他酮合用关注恶心、腹泻、头痛；肾功能损害无需调整；轻中度肝损害无需调整；严重肝损害证据不足</td></tr>
+          <tr><td><strong>植物药/中成药</strong></td><td>贯叶连翘（圣约翰草）提取物、巴戟天寡糖胶囊、舒肝解郁胶囊等</td><td>教材未给具体剂量</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout warn"><span class="ct">⚠️ 安全底线</span>SSRIs 与其他抗抑郁药合用常增强疗效，但<strong>应避免与 MAOIs 等合用</strong>，否则易致 5-HT 综合征。帕罗西汀停药太快会有撤药反应，撤药应缓慢。</div>
+  </div>
+  <div class="card green" id="u3-6b">
+    <h3>传统抗抑郁药：TCAs 与 MAOIs</h3>
+    <p><strong>表 2　TCAs 五种"选谁"速查</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>药物</th><th>教材定位</th></tr></thead>
+        <tbody>
+          <tr><td><strong>丙米嗪</strong></td><td>镇静作用弱；适用于迟滞性抑郁以及儿童遗尿症；最早发现抗抑郁作用，1957 年用于临床</td></tr>
+          <tr><td><strong>氯米帕明</strong></td><td>既能改善抑郁，也是治疗强迫症的有效药物</td></tr>
+          <tr><td><strong>阿米替林</strong></td><td>镇静和抗焦虑作用较强；适用于激越性抑郁</td></tr>
+          <tr><td><strong>多塞平</strong></td><td>抗抑郁作用相对较弱，但镇静和抗焦虑作用较强；常用于恶劣心境障碍和慢性疼痛</td></tr>
+          <tr><td><strong>马普替林</strong></td><td>心肝毒性较少；以往常用于老年抑郁患者</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="grid2">
+      <div class="mini">
+        <h4>适应证</h4>
+        <p>各类以抑郁症状为主的精神障碍（内源性抑郁、恶劣心境障碍、反应性抑郁、器质性抑郁）；焦虑症、惊恐发作、恐惧症；小剂量丙米嗪治儿童遗尿症；氯米帕明治强迫症。</p>
+        <p class="note">精神分裂症伴抑郁症状时治疗宜谨慎，TCAs 可能使精神病性症状加重或明显化。</p>
+      </div>
+      <div class="mini">
+        <h4>禁忌与慎用</h4>
+        <p><strong>禁用：</strong>严重心肝肾疾患、粒细胞减少、青光眼、前列腺肥大、妊娠 3 个月内。</p>
+        <p><strong>慎用：</strong>癫痫患者和老年人。</p>
+      </div>
+    </div>
+    <div class="timeline">
+      <div class="tl-item"><h4>起始</h4><p>从小剂量开始，根据不良反应和疗效，用 <strong>1～2 周</strong>逐渐增至最大有效剂量。以丙米嗪为例：25～50mg/d 开始，每天（或更长时间）增加 25mg，直到约 100mg/d。</p></div>
+      <div class="tl-item"><h4>评估</h4><p>在决定进一步加量前，维持约 1 周；若无或仅轻微疗效，下一周增至 100～200mg/d。</p></div>
+      <div class="tl-item"><h4>换药</h4><p>仍无改善应检测血药浓度；剂量足够、治疗 <strong>6～8 周</strong>无效或疗效不明显者，可考虑换药。</p></div>
+      <div class="tl-item"><h4>给药时间</h4><p>半衰期长，一般每天 1 次睡前服或以睡前剂量为主，避免白天过度镇静和抗胆碱能不良反应。</p></div>
+      <div class="tl-item"><h4>巩固与维持</h4><p>症状缓解后以有效剂量巩固 <strong>4～6 个月</strong>；维持剂量通常低于有效剂量，一般维持 <strong>6 个月或更长</strong>；反复频繁发作者应长期维持。</p></div>
+    </div>
+    <p><strong>表 3　TCAs 不良反应与处理</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>系统</th><th>表现</th><th>处理</th></tr></thead>
+        <tbody>
+          <tr><td>抗胆碱能（最常见）</td><td>口干、便秘、视物模糊；严重者尿潴留、肠麻痹；出现时间早于抗抑郁效果</td><td>减量，必要时加拟胆碱能药对抗</td></tr>
+          <tr><td>中枢神经</td><td>镇静（与 H1 结合力平行）；震颤；癫痫；药源性意识模糊/谵妄（老年）；睡前幻觉、精神病性症状、躁狂</td><td>震颤可减量、换药或普萘洛尔；癫痫患者慎用</td></tr>
+          <tr><td>心血管（主要）</td><td>体位性低血压、心动过速、头晕；QT 延长；PR/QRS 延长；Ⅱ/Ⅲ度传导阻滞</td><td>监测心电图；<strong>心脏传导阻滞者禁用</strong></td></tr>
+          <tr><td>性功能</td><td>阳痿、射精障碍、性兴趣和性快感降低</td><td>随抑郁好转和减量改善；需先区分疾病本身与药物所致</td></tr>
+          <tr><td>体重/水肿</td><td>体重增加（可能与 H1 阻断有关）；外周性水肿</td><td>限制盐摄入</td></tr>
+          <tr><td>过敏</td><td>轻皮疹可对症继续；较重皮疹应减停；偶有粒细胞缺乏</td><td>避免再次使用已过敏药物</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout warn">
+      <span class="ct">⚠️ TCAs 过量中毒（高频必考）</span>
+      一次吞服<strong>丙米嗪 1.25g 即可致死</strong>。临床表现为<strong>昏迷、癫痫发作、心律失常三联征</strong>，还可有高热、低血压、肠麻痹、瞳孔扩大、呼吸抑制、心搏骤停。<br>
+      处理：试用<strong>毒扁豆碱</strong>缓解抗胆碱能作用，每 0.5～1 小时重复给药 1～2mg；及时洗胃、输液，积极处理心律不齐、控制癫痫。抗胆碱能作用使胃排空延迟，<strong>即使过量后数小时仍应洗胃</strong>。
+    </div>
+    <p><strong>TCAs 相互作用：</strong>西咪替丁、哌甲酯、氯丙嗪、氟哌啶醇、甲状腺素、雌激素、奎宁可抑制 TCAs 代谢 → 血药浓度升高；卡马西平、酒精、吸烟、口服避孕药、苯妥英钠、苯巴比妥诱导酶 → 血药浓度下降。TCAs 可拮抗胍乙啶/可乐定的降压作用，加重酒精与镇静催眠药的中枢抑制，与拟交感药合用可致高血压、癫痫。</p>
+    <p><strong>MAOIs：</strong>不可逆型（肼类、反苯环丙胺）不良反应大、禁忌多，国内基本不用；可逆型代表<strong>吗氯贝胺</strong>。作为二线用于新型药、TCAs 或其他药无效的抑郁；对伴睡眠过多、食欲和体重增加的非典型抑郁、轻性抑郁或焦虑抑郁混合状态效果较好。吗氯贝胺初始 <strong>300～450mg/d，分 3 次</strong>；第 2 周起逐渐加量，最大 <strong>600mg/d</strong>。</p>
+  </div>
+  <!-- 第七栏 -->
+  <div class="card purple" id="u3-7">
+    <h3 class="col-title"><span class="idx">第七栏</span>记忆工具箱</h3>
+    <div class="callout tip">
+      <span class="ct">🔧 方法一：口诀歌谣法（SSRIs 六药）</span>
+      口诀：<strong>"氟帕舍，氟西艾"</strong><br>
+      拆解：氟西汀、帕罗西汀、舍曲林 ｜ 氟伏沙明、西酞普兰、艾司西酞普兰——三三分组，读起来像一句六字短诗。<br>
+      <em>为什么这样记：</em>六个药名里三个带"氟"、两个带"西"、一个"舍"，押头韵分组比按字母表硬背更稳。
+    </div>
+    <div class="callout tip">
+      <span class="ct">🔧 方法二：数字编码法（疗程与安全）</span>
+      记一组数字：<strong>2～3 周起效</strong> → <strong>4～6 个月巩固</strong> → <strong>6～8 周无效换药</strong> → <strong>1.25g 丙米嗪致死</strong>。<br>
+      再把过量三联征压成三个字：<strong>"昏、癫、律"</strong>（昏迷、癫痫、心律失常）。<br>
+      <em>为什么这样记：</em>抑郁治疗的关键节点天然就是数字；把"时间"和"危险阈值"编成同一串，复习时一次清点。
+    </div>
+    <div class="callout tip">
+      <span class="ct">🔧 方法三：对比 + 类比理解（TCAs vs SSRIs）</span>
+      把 SSRIs 想成"轻装上路"：只盯 5-HT 一个靶点，所以心血管、抗胆碱负担轻，过量也较安全；把 TCAs 想成"三环重装"：除了 NE/5-HT 再摄取，还额外扛着 M1、α1、H1 三块"负重"，于是口干、便秘、低血压、镇静全来了。<span class="note">（"轻装/重装"为类比理解，非医学事实）</span><br>
+      <em>为什么这样记：</em>用"负重"解释副作用来源，比逐条背副作用更能迁移到没见过的药。
+    </div>
+    <p class="note">易混提醒：氟西汀、帕罗西汀是 CYP2D6 强抑制；氟伏沙明是 CYP1A2 强抑制；舍曲林弱；西酞普兰/艾司西酞普兰最小。</p>
+  </div>
+
+  <!-- 第八栏 -->
+  <div class="card cyan" id="u3-8">
+    <h3 class="col-title"><span class="idx">第八栏</span>知识联动</h3>
+    <ul>
+      <li><strong>与抑郁障碍章：</strong>抗抑郁药是核心处置；起效 2～3 周、巩固 4～6 个月、维持 6 个月或更长，构成全病程管理。</li>
+      <li><strong>与双相障碍章：</strong>TCAs 可诱发躁狂；安非他酮适用于双相抑郁；双相抑郁还需心境稳定剂打底（见下一单元）。</li>
+      <li><strong>与强迫症章：</strong>SSRIs 与氯米帕明是教材点名的有效药物；强迫症治疗剂量相对较大。</li>
+      <li><strong>与焦虑/惊恐章：</strong>帕罗西汀适合伴焦虑抑郁及惊恐；SSRIs 也用于惊恐症。</li>
+      <li><strong>与疼痛/纤维肌痛：</strong>度洛西汀改善糖尿病性周围神经痛；米那普仑用于纤维肌痛；多塞平用于慢性疼痛。</li>
+      <li><strong>与物质依赖/戒烟：</strong>安非他酮用于戒烟、兴奋剂戒断和渴求。</li>
+      <li><strong>与心血管/眼科/泌尿科：</strong>TCAs 禁用于传导阻滞、青光眼、前列腺肥大；SSRIs 对前列腺肥大和青光眼患者可用。</li>
+      <li><strong>与抗精神病药单元：</strong>氟西汀、帕罗西汀、氟伏沙明抑制肝酶，可升高抗精神病药浓度，增加不良反应。</li>
+    </ul>
+  </div>
+</section>
+<!-- ===== 08 心境稳定剂 ===== -->
+<section id="u4">
+  <div class="sec-head"><div class="badge">08</div><h2>心境稳定剂<span class="en">第四节（p.301–303）</span></h2></div>
+  <p class="sec-lead">四个药、四套数字。锂盐是"窄窗药物"的代表，丙戊酸/卡马西平/拉莫三嗪各有明确的优势人群；本节的安全考点几乎都围绕"血药浓度"和"药疹"。</p>
+
+  <!-- 第一栏 -->
+  <div class="card orange" id="u4-1">
+    <h3 class="col-title"><span class="idx">第一栏</span>疾病画像 → 治疗单元画像</h3>
+    <div class="quote"><span class="lab">教材原文</span>碳酸锂是锂盐的一种口服制剂，也有口服缓释剂型，为最常用的心境稳定剂。</div>
+    <p><strong>一句话画像：</strong>心境稳定剂是双相障碍的"压舱石"：把躁狂的高峰压下去，也把抑郁的谷底托起来，并减少下一次发作。<span class="note">（此句为功能性总结，教材依据见适应证部分）</span></p>
+    <div class="grid2">
+      <div class="mini">
+        <h4>教材的四种心境稳定剂</h4>
+        <ol>
+          <li>碳酸锂（lithium carbonate）</li>
+          <li>丙戊酸盐（valproate）：丙戊酸钠、丙戊酸镁</li>
+          <li>卡马西平（carbamazepine）/ 奥卡西平（oxcarbazepine）</li>
+          <li>拉莫三嗪（lamotrigine）</li>
+        </ol>
+      </div>
+      <div class="mini">
+        <h4>各自的"一句话定位"</h4>
+        <ul>
+          <li><strong>锂：</strong>躁狂症和双相障碍的<strong>首选</strong>，治疗与预防复发均可。</li>
+          <li><strong>丙戊酸：</strong>混合型躁狂、快速循环、锂无效者可能更好。</li>
+          <li><strong>卡马西平：</strong>锂无效/不能耐受/快速循环的躁狂效果较好。</li>
+          <li><strong>拉莫三嗪：</strong>唯一对<strong>双相抑郁相</strong>比对躁狂更有效的心境稳定剂。</li>
+        </ul>
+      </div>
+    </div>
+    <div class="stat"><span>4 种药</span><span>锂有效率 70%</span><span>治疗窗 0.6～1.2</span><span>中毒阈值 1.4</span><span>拉莫三嗪药疹 5%～10%</span></div>
+  </div>
+
+  <!-- 第二栏 -->
+  <div class="card blue" id="u4-2">
+    <h3 class="col-title"><span class="idx">第二栏</span>病因探秘 → 机制探秘</h3>
+    <p><strong>锂的体内处置：</strong>普通制剂 1～2 小时达峰，缓释制剂 4～5 小时达峰；不与蛋白结合，均衡分布于体内全部含水空间，不需要生物转化，最终经肾脏排泄；排泄受渗透因子控制，需要肾功能完好；清除半衰期约 <strong>22 小时</strong>，<strong>4～5 天</strong>达到稳态浓度。</p>
+    <p><strong>锂的作用机制（教材阐述）：</strong></p>
+    <div class="timeline">
+      <div class="tl-item"><h4>① 抑制两种酶</h4><p>抑制肌醇单磷酸酶和糖原合成酶激酶（GSK）。</p></div>
+      <div class="tl-item"><h4>② 肌醇耗竭 + Wnt 信号激活</h4><p>进而降低蛋白激酶 C（PKC）的活动。</p></div>
+      <div class="tl-item"><h4>③ 经第二信使 G 蛋白偶联</h4><p>影响脑内主要神经递质系统：谷氨酸全面减少、γ-氨基丁酸水平恢复正常、去甲肾上腺素和 5-HT 功能提高。</p></div>
+      <div class="tl-item"><h4>④ 拮抗 5-HT1A/5-HT1B 自身受体</h4><p>增强 5-HT 释放。</p></div>
+      <div class="tl-item"><h4>⑤ 再同步视交叉上核</h4><p>使控制昼夜节律的下丘脑视交叉上核再同步，改善睡眠-觉醒节律紊乱。</p></div>
+    </div>
+    <div class="callout book"><span class="ct">📖 其他三药的机制</span>教材对丙戊酸盐、卡马西平/奥卡西平、拉莫三嗪<strong>未展开具体分子机制</strong>，仅描述其临床疗效与药代/监测要点。本指南不补充教材之外的机制，避免编造。</div>
+  </div>
+
+  <!-- 第三栏 -->
+  <div class="card red" id="u4-3">
+    <h3 class="col-title"><span class="idx">第三栏</span>临床表现拼图 → 疗效与风险图谱</h3>
+    <div class="tabs" data-tabs>
+      <div class="tabbar">
+        <button class="on" data-tab="d1">碳酸锂</button>
+        <button data-tab="d2">丙戊酸盐</button>
+        <button data-tab="d3">卡马西平</button>
+        <button data-tab="d4">拉莫三嗪</button>
+      </div>
+      <div class="panel on" data-panel="d1">
+        <ul>
+          <li><strong>适应证：</strong>躁狂症和双相障碍（首选）；对躁狂发作或抑郁发作均有治疗和预防复发作用；分裂情感性精神病；精神分裂症伴情绪障碍和兴奋躁动者作为增效。</li>
+          <li><strong>起效：</strong>一般至少 1 周起效，6～8 周可完全缓解；总有效率 70%。</li>
+          <li><strong>风险：</strong>治疗窗窄，中毒剂量与治疗剂量接近；早期/后期不良反应与中毒先兆分层出现。</li>
+        </ul>
+      </div>
+      <div class="panel" data-panel="d2">
+        <ul>
+          <li><strong>适应证：</strong>躁狂症疗效与锂盐相当；对混合型躁狂、快速循环型双相障碍及锂盐无效者可能更好；可与锂盐合用治疗难治性患者。</li>
+          <li><strong>风险：</strong>胃肠刺激、镇静、共济失调、震颤、脱发；转氨酶升高较多见；罕见中毒性肝炎和胰腺炎（特异质性，儿童尤需注意）。</li>
+        </ul>
+      </div>
+      <div class="panel" data-panel="d3">
+        <ul>
+          <li><strong>适应证：</strong>急性躁狂和预防躁狂发作；尤其锂盐无效、不能耐受锂盐不良反应及快速循环发作者；与锂盐合用预防复发，疗效较锂盐+抗精神病药更好。</li>
+          <li><strong>风险：</strong>抗胆碱能作用（视物模糊、口干、便秘）；皮疹较多见，严重者剥脱性皮炎；白细胞/血小板减少及肝损害。</li>
+        </ul>
+      </div>
+      <div class="panel" data-panel="d4">
+        <ul>
+          <li><strong>适应证：</strong>双相抑郁、快速循环、混合发作；对双相抑郁有预防复发效果；增强锂盐疗效；对精神分裂症难治性阳性症状有增效作用。</li>
+          <li><strong>风险：</strong>眩晕、头痛、复视、恶心、共济失调；药疹 5%～10%，包括 Stevens-Johnson 综合征和中毒性表皮坏死。</li>
+        </ul>
+      </div>
+    </div>
+    <p class="note">本栏原用于疾病症状分维度呈现；本章以药物为单位，故改为按药切换的"疗效—风险"图谱。</p>
+  </div>
+  <!-- 第四栏 -->
+  <div class="card orange" id="u4-4">
+    <h3 class="col-title"><span class="idx">第四栏</span>教材典型案例</h3>
+    <div class="callout book">
+      <span class="ct">📖 教材未提供具体临床案例</span>
+      本节为药物学叙述，未给出患者案例或具体血锂数值病例。教材提供的"典型情境"是<strong>锂中毒的渐进表现</strong>，以下按原文分层整理，供识别训练，不是真实病例。
+    </div>
+    <div class="grid3">
+      <div class="mini">
+        <h4>情境 A · 早期</h4>
+        <p>乏力、倦怠、嗜睡、手指震颤、厌食、上腹不适、恶心、呕吐、稀便、腹泻、多尿、口干。</p>
+      </div>
+      <div class="mini">
+        <h4>情境 B · 后期</h4>
+        <p>多尿、口渴、体重增加、甲状腺肿大、黏液性水肿、手指细震颤；<strong>粗大震颤提示接近中毒</strong>。</p>
+      </div>
+      <div class="mini">
+        <h4>情境 C · 中毒</h4>
+        <p>呕吐、腹泻、粗大震颤、抽动、呆滞、困倦、眩晕、构音不清、意识障碍；进一步可至共济失调、昏迷甚至死亡。</p>
+      </div>
+    </div>
+    <p><strong>识别路径：</strong>出现上述任何一组表现 → 立即查血锂 → 结合浓度与症状分层处理（详见第六栏）。</p>
+  </div>
+
+  <!-- 第五栏 -->
+  <div class="card orange" id="u4-5">
+    <h3 class="col-title"><span class="idx">第五栏</span>鉴别诊断对对碰</h3>
+    <p><strong>表 1　四种心境稳定剂的"选药鉴别"</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>药物</th><th>最佳/首选情境</th><th>起始与剂量（教材）</th><th>血药浓度</th><th>关键风险</th></tr></thead>
+        <tbody>
+          <tr><td><strong>碳酸锂</strong></td><td>躁狂症、双相障碍<strong>首选</strong>；治疗+预防复发</td><td>250mg/片；250mg 2～3 次/日；有效 750～1500mg/d，偶达 2000mg/d</td><td>急性期 0.6～1.2mmol/L；&gt;1.4 中毒；维持 0.4～0.8</td><td>窄治疗窗、肾/甲状腺、粗大震颤、中毒</td></tr>
+          <tr><td><strong>丙戊酸盐</strong></td><td>混合型躁狂、快速循环、锂无效者可能更好</td><td>起始 400～600mg/d 分 2～3 次；每 2～3 天加 200mg；范围 800～1800mg/d</td><td>50～120mg/L</td><td>胃肠刺激、震颤、脱发、肝损害、胰腺炎</td></tr>
+          <tr><td><strong>卡马西平</strong></td><td>锂无效/不能耐受/快速循环的躁狂</td><td>起始 400mg/d 分 2 次；每 3～5 天加 200mg；范围 400～1600mg/d</td><td>4～12mg/L</td><td>皮疹/剥脱性皮炎、白细胞/血小板减少、肝损害</td></tr>
+          <tr><td><strong>拉莫三嗪</strong></td><td>双相抑郁、快速循环、混合发作</td><td>25→50→75～100mg/d 逐步滴定；单药目标 200mg/d</td><td>教材未给治疗浓度范围</td><td>药疹 5%～10%，含 SJS/TEN</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p><strong>表 2　锂的三层表现——不良反应、中毒先兆、中毒</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>层级</th><th>表现</th><th>处理方向</th></tr></thead>
+        <tbody>
+          <tr><td>早期不良反应</td><td>乏力、倦怠、嗜睡、手指震颤、厌食、上腹不适、恶心、呕吐、稀便、腹泻、多尿、口干</td><td>减量、观察；常饮淡盐水可减少蓄积</td></tr>
+          <tr><td>后期不良反应</td><td>多尿、口渴、体重增加、甲状腺肿大、黏液性水肿、手指细震颤</td><td>监测甲状腺功能；<strong>粗大震颤提示接近中毒</strong></td></tr>
+          <tr><td>中毒先兆</td><td>呕吐、腹泻、粗大震颤、抽动、呆滞、困倦、眩晕、构音不清、意识障碍</td><td>查血锂，&gt;1.4mmol/L 应减量；严重者停用</td></tr>
+          <tr><td>中毒</td><td>共济失调、协调障碍、肌肉抽动、构音不清、意识模糊、昏迷、死亡</td><td>停锂；生理盐水/高渗钠盐；透析；一般无后遗症</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p><strong>表 3　两种"要命药疹"的鉴别</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>药物</th><th>皮疹特点</th><th>高危因素</th><th>处理</th></tr></thead>
+        <tbody>
+          <tr><td>卡马西平</td><td>皮疹较多见，严重者可发生剥脱性皮炎</td><td>快速加量；合并用药</td><td>轻者对症，重者停药；监测血象与肝功能</td></tr>
+          <tr><td>拉莫三嗪</td><td>药疹 5%～10%，包括 Stevens-Johnson 综合征和中毒性表皮坏死</td><td><strong>合用丙戊酸盐</strong>或<strong>超过起始剂量/加量速度</strong></td><td>出现皮疹即需评估，严重者立即停药</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout key"><span class="ct">📌 一句话鉴别总结</span><strong>躁狂首选锂，混合快速用丙戊，锂败不耐上卡马，抑郁相找拉莫三嗪</strong>；两种药疹都怕"加得太快"，拉莫三嗪还怕"碰上丙戊酸"。</div>
+  </div>
+  <!-- 第六栏 A -->
+  <div class="card green" id="u4-6">
+    <h3 class="col-title"><span class="idx">第六栏</span>治疗方案工具箱</h3>
+    <p><strong>碳酸锂：剂量、疗程与监测</strong></p>
+    <div class="grid2">
+      <div class="mini">
+        <h4>禁忌</h4>
+        <p>急慢性肾炎、肾功能不全、严重心血管疾病、重症肌无力、妊娠最初 3 个月、缺钠或低盐饮食者。</p>
+        <p><strong>慎用：</strong>帕金森病、癫痫、糖尿病、甲状腺功能减退、神经性皮炎、老年性白内障。</p>
+      </div>
+      <div class="mini">
+        <h4>用法</h4>
+        <p>片剂 250mg/片，饭后口服；起始 250mg，2～3 次/日；有效剂量 <strong>750～1500mg/d</strong>，个别可达 2000mg/d。常饮淡盐水可减少锂盐在肾小管内的蓄积，减少肾脏和中枢神经系统不良反应。</p>
+        <p class="note">缓释片用法参照说明书。</p>
+      </div>
+    </div>
+    <div class="timeline">
+      <div class="tl-item"><h4>起效</h4><p>一般至少 <strong>1 周</strong>起效，<strong>6～8 周</strong>可完全缓解；总有效率约 70%。</p></div>
+      <div class="tl-item"><h4>急性期联用</h4><p>起效较慢，急性期常需联合抗精神病药或苯二氮䓬类控制躁狂。兴奋控制后逐渐停用联合药物，以免长期联用掩盖锂盐中毒的早期表现。</p></div>
+      <div class="tl-item"><h4>巩固</h4><p>以有效剂量巩固 <strong>2～3 个月</strong>。</p></div>
+      <div class="tl-item"><h4>维持启动</h4><p>在<strong>第二次发作缓解后</strong>着手维持治疗；维持时长不应低于既往 2～3 个发作循环的间歇期，或持续 <strong>2～3 年</strong>。</p></div>
+      <div class="tl-item"><h4>维持剂量</h4><p>约为治疗剂量的 1/2（<strong>500～750mg/d</strong>），血锂浓度 <strong>0.4～0.8mmol/L</strong>。首次躁狂发作治愈后一般不用维持治疗。</p></div>
+    </div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>血锂水平</th><th>判断</th><th>处理</th></tr></thead>
+        <tbody>
+          <tr><td>0.6～1.2mmol/L</td><td>急性期治疗窗</td><td>维持监测，个体化调整</td></tr>
+          <tr><td>&gt;1.4mmol/L</td><td>中毒风险升高，老年或有器质性疾病者更低浓度也可能中毒</td><td>减量；严重者停用</td></tr>
+          <tr><td>中毒表现</td><td>共济失调、协调障碍、肌肉抽动、构音不清、意识模糊、昏迷</td><td>停锂；生理盐水或高渗钠盐加速排泄；透析；一般无后遗症</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout warn"><span class="ct">⚠️ 安全底线</span>治疗窗窄，中毒剂量与治疗剂量接近。出现粗大震颤、呕吐腹泻、意识改变，不能等——立即查血锂并处理。</div>
+  </div>
+
+  <div class="card green" id="u4-6b">
+    <h3>丙戊酸盐、卡马西平、拉莫三嗪</h3>
+    <div class="tabs" data-tabs>
+      <div class="tabbar">
+        <button class="on" data-tab="e1">丙戊酸盐</button>
+        <button data-tab="e2">卡马西平/奥卡西平</button>
+        <button data-tab="e3">拉莫三嗪</button>
+      </div>
+      <div class="panel on" data-panel="e1">
+        <p><strong>适用：</strong>躁狂症疗效与锂盐相当；混合型躁狂、快速循环型双相障碍及锂盐无效者可能更好；可与锂盐合用治疗难治性患者。</p>
+        <p><strong>禁忌/慎用：</strong>肝、胰疾病患者慎用；孕妇禁用。</p>
+        <p><strong>用法：</strong>起始 400～600mg/d，分 2～3 次；每 2～3 天增加 200mg，直到 800～1800mg/d；血药浓度 <strong>50～120mg/L</strong>；老年人酌情减量。</p>
+        <p><strong>相互作用：</strong>与氟哌啶醇、吩噻嗪类、TCAs、MAOIs 合用可降低丙戊酸效应；与卡马西平合用，卡马西平加速丙戊酸代谢，降低其血药浓度和半衰期。</p>
+        <p><strong>不良反应：</strong>恶心、呕吐、厌食、腹泻等胃肠刺激；镇静、共济失调、震颤、脱发；转氨酶升高较多见；血小板减少、白细胞减少、皮疹、瘀斑、鼻出血；罕见中毒性肝炎和胰腺炎（特异质性，儿童尤需注意）。</p>
+        <p><strong>过量：</strong>早期胃肠症状，继而肌无力、震颤、共济失调、嗜睡、意识模糊或昏迷；停药并支持治疗。</p>
+      </div>
+      <div class="panel" data-panel="e2">
+        <p><strong>适用：</strong>急性躁狂和预防躁狂发作；尤其锂盐无效、不能耐受锂盐不良反应及快速循环发作者；与锂盐合用预防复发，疗效较锂盐+抗精神病药更好。</p>
+        <p><strong>禁忌/慎用：</strong>青光眼、前列腺肥大、糖尿病、酒精依赖者慎用；白细胞减少、血小板减少、肝功能异常者及孕妇禁用。</p>
+        <p><strong>用法：</strong>起始 400mg/d，分 2 次；每 3～5 天增加 200mg，直到 400～1600mg/d；血浆浓度 <strong>4～12mg/L</strong>。加量太快易出现眩晕、共济失调。</p>
+        <p><strong>不良反应：</strong>视物模糊、口干、便秘等抗胆碱能作用；皮疹较多见，严重者剥脱性皮炎；白细胞和血小板减少、肝功能损害；需监测血象与肝功能。</p>
+        <p><strong>奥卡西平：</strong>卡马西平结构衍生物，不良反应较少，耐受性好。</p>
+      </div>
+      <div class="panel" data-panel="e3">
+        <p><strong>适用：</strong>双相抑郁、快速循环、混合发作；对双相抑郁有预防复发效果；可增强锂盐疗效；对精神分裂症难治性阳性症状有增效作用。</p>
+        <p><strong>用法（滴定是关键）：</strong>前 2 周 25mg/d；接下来 2 周 50mg/d；之后 75～100mg/d。单药治疗目标 <strong>200mg/d</strong>；与丙戊酸盐合用目标 <strong>100mg/d</strong>；与除丙戊酸盐外的酶诱导剂合用目标 <strong>400mg/d</strong>；分 1～2 次服用。</p>
+        <p><strong>不良反应：</strong>眩晕、头痛、复视、恶心、共济失调；药疹发生率 <strong>5%～10%</strong>，包括 Stevens-Johnson 综合征和中毒性表皮坏死。合用丙戊酸盐或超过起始剂量/加量速度时，药疹风险增加。</p>
+      </div>
+    </div>
+  </div>
+  <!-- 第七栏 -->
+  <div class="card purple" id="u4-7">
+    <h3 class="col-title"><span class="idx">第七栏</span>记忆工具箱</h3>
+    <div class="callout tip">
+      <span class="ct">🔧 方法一：口诀歌谣法（四药定位）</span>
+      口诀：<strong>"锂首选，丙混合，卡不耐，莫抑郁"</strong><br>
+      解释：锂是躁狂/双相首选；丙戊酸对混合型、快速循环更好；卡马西平用于锂无效或不能耐受者；拉莫三嗪（"莫"）对双相抑郁相更有效。<br>
+      <em>为什么这样记：</em>一句话把"什么情况换谁"绑定，考试问"首选/次选"时可直接反查。
+    </div>
+    <div class="callout tip">
+      <span class="ct">🔧 方法二：数字编码法（三组血浓度）</span>
+      记三组数：<br>
+      <strong>锂：0.6～1.2（治疗）｜&gt;1.4（中毒）｜0.4～0.8（维持）</strong><br>
+      <strong>丙戊酸：50～120mg/L</strong>　<strong>卡马西平：4～12mg/L</strong><br>
+      再加拉莫三嗪滴定：<strong>25 → 50 → 75～100 → 200</strong>（单药目标；合丙戊酸 100；合酶诱导剂 400）。<br>
+      <em>为什么这样记：</em>把"治疗—中毒—维持"三段浓度排成阶梯，"1.4"是红线，"0.4～0.8"是地板，位置感清楚。
+    </div>
+    <div class="callout tip">
+      <span class="ct">🔧 方法三：类比理解（标注：类比理解，非医学事实）</span>
+      锂像<strong>走钢丝</strong>：治疗窗窄，左一步无效、右一步中毒；丙戊酸像<strong>大功率电器</strong>：好用但"费肝""费胰腺"，还容易让头发掉；拉莫三嗪像<strong>慢火熬汤</strong>：只能小步慢加，火一大（加量快或遇丙戊酸）就"糊锅"——药疹。<br>
+      <em>为什么这样记：</em>三个画面分别对应"窄窗、器官毒性、滴定防疹"三条核心考点。
+    </div>
+    <p class="note">危险信号锚点：<strong>粗大震颤</strong>＝锂中毒逼近；<strong>皮疹</strong>＝拉莫三嗪/卡马西平必须停下来评估。</p>
+  </div>
+
+  <!-- 第八栏 -->
+  <div class="card cyan" id="u4-8">
+    <h3 class="col-title"><span class="idx">第八栏</span>知识联动</h3>
+    <ul>
+      <li><strong>与双相障碍章：</strong>急性躁狂以锂/丙戊酸/卡马西平控制，双相抑郁以拉莫三嗪更优；维持治疗决定复发率。</li>
+      <li><strong>与抗精神病药单元：</strong>急性期常联用抗精神病药或 BZD 控制兴奋；兴奋控制后应逐渐撤下联用药，避免掩盖锂中毒早期表现。</li>
+      <li><strong>与抑郁障碍章：</strong>拉莫三嗪用于双相抑郁；单用抗抑郁药在双相中可能诱发躁狂，需心境稳定剂打底。</li>
+      <li><strong>与肾内科：</strong>锂经肾排泄，肾功能不全禁用；中毒时用生理盐水/高渗钠盐、透析。</li>
+      <li><strong>与内分泌科：</strong>锂可致甲状腺肿大、黏液性水肿、体重增加；需监测甲状腺功能。</li>
+      <li><strong>与皮肤科：</strong>卡马西平剥脱性皮炎、拉莫三嗪 SJS/TEN，均与加量速度相关。</li>
+      <li><strong>与产科：</strong>锂妊娠最初 3 个月禁用；丙戊酸盐、卡马西平孕妇禁用。</li>
+      <li><strong>与检验医学：</strong>血锂、丙戊酸浓度、卡马西平浓度是剂量调整的直接依据。</li>
+    </ul>
+  </div>
+</section>
+<!-- ===== 09 抗焦虑药 ===== -->
+<section id="u5">
+  <div class="sec-head"><div class="badge">09</div><h2>抗焦虑药<span class="en">第五节（p.303–304）</span></h2></div>
+  <p class="sec-lead">BZD 是"有效但有代价"的代表：起效快、耐受好，却会耐受、依赖、戒断。丁螺环酮/坦度螺酮则是"慢热但不粘人"的替代。</p>
+
+  <!-- 第一栏 -->
+  <div class="card purple" id="u5-1">
+    <h3 class="col-title"><span class="idx">第一栏</span>疾病画像 → 治疗单元画像</h3>
+    <div class="quote"><span class="lab">教材原文</span>抗焦虑药（anxiolytics）的应用范围广泛，种类较多，具有中枢或外周神经系统抑制作用的药物都曾列入此类，并用于临床。目前，应用最广的为苯二氮䓬类。</div>
+    <p><strong>一句话画像：</strong>抗焦虑药不是单一类药，而是一组"能让你不那么紧张"的药物集合：BZD 是主力，丁螺环酮/坦度螺酮是配角，β 受体阻滞剂、抗抑郁药和小剂量抗精神病药也会被借来用。<span class="note">（此句为结构性总结，教材依据见下）</span></p>
+    <div class="grid2">
+      <div class="mini">
+        <h4>教材列出的抗焦虑药</h4>
+        <ul>
+          <li><strong>苯二氮䓬类：</strong>应用最广，兼作镇静催眠药。</li>
+          <li><strong>5-HT1A 受体部分激动剂：</strong>丁螺环酮、坦度螺酮。</li>
+          <li><strong>β 受体阻滞剂：</strong>如普萘洛尔。</li>
+          <li><strong>多数抗抑郁药</strong>及<strong>部分抗精神病药（小剂量）</strong>也有抗焦虑作用。</li>
+        </ul>
+      </div>
+      <div class="mini">
+        <h4>BZD 的"四合一"药理作用</h4>
+        <ol>
+          <li><strong>抗焦虑：</strong>减轻或消除焦虑不安、紧张、恐惧。</li>
+          <li><strong>镇静催眠：</strong>对睡眠各期均有不同程度影响。</li>
+          <li><strong>抗惊厥：</strong>抑制癫痫病灶放电，使其不向外围扩散。</li>
+          <li><strong>骨骼肌松弛：</strong>抑制脊髓和脊髓上的运动反射。</li>
+        </ol>
+      </div>
+    </div>
+    <div class="stat"><span>BZD 衍生物 2000+</span><span>国内常用十余种</span><span>依赖多见于持续 &gt;3 个月</span><span>疗程最好 ≤1 个月</span><span>丁螺环酮 15～45mg/d</span></div>
+  </div>
+
+  <!-- 第二栏 -->
+  <div class="card blue" id="u5-2">
+    <h3 class="col-title"><span class="idx">第二栏</span>病因探秘 → 机制探秘</h3>
+    <p><strong>BZD 的机制链：</strong>作用于 γ-氨基丁酸（GABA）受体、苯二氮䓬受体和氯离子通道的复合物 → 增强 GABA 活性 → 进一步开放氯离子通道 → 氯离子大量进入细胞内 → 神经细胞超极化 → 中枢抑制。</p>
+    <div class="callout tip"><span class="ct">💡 类比理解（非医学事实）</span>把 GABA 想成"刹车油"，BZD 不是刹车本身，而是<strong>刹车助力器</strong>：它自己踩不下去，但能让 GABA 这脚刹车踩得更深、更久，于是神经细胞"超极化"——相当于整车断电。<br><span class="note">教材还提到：BZD 大剂量时亦可阻断电压依赖性钙通道，使肌肉松弛。</span></div>
+    <p><strong>5-HT1A 部分激动剂：</strong>丁螺环酮、坦度螺酮化学结构属阿扎哌隆类（azapirones），是 5-HT1A 受体的部分激动剂。通常剂量下无明显镇静、催眠、肌肉松弛作用，也无依赖性报道。</p>
+    <p class="note">β 受体阻滞剂的作用机制、抗抑郁药与小剂量抗精神病药的抗焦虑机制，教材在本节未展开，故不补写。</p>
+  </div>
+
+  <!-- 第三栏 -->
+  <div class="card red" id="u5-3">
+    <h3 class="col-title"><span class="idx">第三栏</span>临床表现拼图 → 疗效与风险图谱</h3>
+    <div class="tabs" data-tabs>
+      <div class="tabbar">
+        <button class="on" data-tab="f1">适应证</button>
+        <button data-tab="f2">禁忌与慎用</button>
+        <button data-tab="f3">不良反应与依赖</button>
+      </div>
+      <div class="panel on" data-panel="f1">
+        <ul>
+          <li>各型神经症、各种失眠。</li>
+          <li>各种躯体疾病伴随的焦虑、紧张、失眠、自主神经系统紊乱等症状。</li>
+          <li>各类伴焦虑、紧张、恐惧、失眠的精神病，以及激越性抑郁、轻性抑郁的辅助治疗。</li>
+          <li>癫痫治疗；酒精急性戒断症状的替代治疗。</li>
+          <li>丁螺环酮/坦度螺酮：各种神经症所致的焦虑状态、躯体疾病伴发的焦虑状态；抑郁障碍的增效治疗。</li>
+        </ul>
+      </div>
+      <div class="panel" data-panel="f2">
+        <p><strong>BZD 禁用：</strong>严重心血管疾病、肾病、药物过敏、青光眼、重症肌无力。</p>
+        <p><strong>需加强关注或禁用：</strong>阿片等物质滥用、酒精中毒及中枢抑制剂中毒时呼吸抑制风险较大。</p>
+        <p><strong>慎用：</strong>老年人、儿童、分娩前及分娩中。</p>
+        <p><strong>丁螺环酮/坦度螺酮慎用：</strong>孕妇、儿童和有严重心、肝、肾功能障碍者。</p>
+      </div>
+      <div class="panel" data-panel="f3">
+        <ul>
+          <li><strong>最常见：</strong>嗜睡、过度镇静、智力活动受影响、记忆力受损、运动协调性降低；多见于老年或肝病患者。</li>
+          <li><strong>少见：</strong>兴奋、梦魇、谵妄、意识模糊、抑郁、攻击、敌视行为。</li>
+          <li><strong>妊娠：</strong>3 个月内服用有引起新生儿唇裂、腭裂的报道。</li>
+          <li><strong>耐受：</strong>应用数周后需调整剂量才能取得更好疗效。</li>
+          <li><strong>依赖：</strong>长期应用产生躯体依赖和精神依赖，与酒精、巴比妥交叉依赖；短半衰期药物较易依赖。</li>
+          <li><strong>戒断：</strong>焦虑、激动、易激惹、失眠、震颤、头痛、眩晕、多汗、烦躁、耳鸣、人格解体、胃肠症状；严重者惊厥，罕见但可致死。</li>
+        </ul>
+      </div>
+    </div>
+    <p class="note">本栏原用于疾病症状分维度呈现；本章以药物为单位，故改为"适应证—禁忌—风险"三视角。</p>
+  </div>
+  <!-- 第四栏 -->
+  <div class="card orange" id="u5-4">
+    <h3 class="col-title"><span class="idx">第四栏</span>教材典型案例</h3>
+    <div class="callout book">
+      <span class="ct">📖 教材未提供具体临床案例</span>
+      本节为药物学叙述，未给出患者案例、焦虑量表分数或戒断过程记录。教材提供的"典型场景"是<strong>选药情境</strong>与<strong>戒断症状清单</strong>，以下按原文整理，不是真实病例。
+    </div>
+    <div class="grid2">
+      <div class="mini">
+        <h4>情境 A · 持续焦虑 + 躯体症状</h4>
+        <p>患者焦虑持续存在，伴明显躯体症状——教材倾向选用<strong>长半衰期</strong>药物，如地西泮、氯氮䓬。</p>
+      </div>
+      <div class="mini">
+        <h4>情境 B · 焦虑呈波动形式</h4>
+        <p>焦虑时轻时重、呈波动——教材倾向选用<strong>短半衰期</strong>药物，如奥沙西泮、劳拉西泮。</p>
+      </div>
+      <div class="mini">
+        <h4>情境 C · 伴抑郁</h4>
+        <p>焦虑同时伴抑郁——教材点名<strong>阿普唑仑</strong>具有抗抑郁作用，可选用。</p>
+      </div>
+      <div class="mini">
+        <h4>情境 D · 突然停药</h4>
+        <p>长期使用后突然中断——出现焦虑、失眠、震颤、头痛、眩晕、多汗、胃肠症状，严重者可惊厥。教材强调：停药宜逐步缓慢。</p>
+      </div>
+    </div>
+    <p class="note">以上为按教材"药物选择"段落还原的学习情境，不含虚构的患者姓名、剂量与检查结果。</p>
+  </div>
+
+  <!-- 第五栏 -->
+  <div class="card orange" id="u5-5">
+    <h3 class="col-title"><span class="idx">第五栏</span>鉴别诊断对对碰</h3>
+    <p><strong>表 1　BZD 选药鉴别——"看症状形态选半衰期"</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>临床特征</th><th>教材推荐</th><th>理由</th></tr></thead>
+        <tbody>
+          <tr><td>持续性焦虑和躯体症状</td><td>长半衰期：地西泮、氯氮䓬</td><td>血药浓度平稳，避免波动性戒断</td></tr>
+          <tr><td>焦虑呈波动形式</td><td>短半衰期：奥沙西泮、劳拉西泮</td><td>按需起效、便于调整</td></tr>
+          <tr><td>伴抑郁</td><td>阿普唑仑</td><td>具有抗抑郁作用</td></tr>
+          <tr><td>睡眠障碍</td><td>氟西泮、硝西泮、艾司唑仑、咪达唑仑</td><td>镇静催眠</td></tr>
+          <tr><td>癫痫</td><td>氯硝西泮</td><td>对癫痫有较好效果</td></tr>
+          <tr><td>戒酒</td><td>地西泮替代最好</td><td>酒精急性戒断症状的替代治疗</td></tr>
+          <tr><td>肌肉紧张</td><td>劳拉西泮、地西泮、硝西泮</td><td>骨骼肌松弛</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout warn"><span class="ct">⚠️ 教材明确禁止</span>两种甚至三种苯二氮䓬类药物合用应当避免；国内氯硝西泮较常用，但多为非适应证使用。</div>
+    <p><strong>表 2　BZD vs 5-HT1A 部分激动剂——"快而粘" vs "慢而不粘"</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>维度</th><th>苯二氮䓬类</th><th>丁螺环酮/坦度螺酮</th></tr></thead>
+        <tbody>
+          <tr><td>机制</td><td>GABA-A/ BZD 受体/氯通道复合物</td><td>5-HT1A 受体部分激动</td></tr>
+          <tr><td>起效</td><td>快</td><td>一般比 BZD 慢</td></tr>
+          <tr><td>镇静/催眠/肌松</td><td>有（四作用齐备）</td><td>通常剂量下无明显镇静、催眠、肌松</td></tr>
+          <tr><td>依赖</td><td>有耐受、躯体/精神依赖、戒断</td><td>无依赖性报道</td></tr>
+          <tr><td>与酒精/镇静药</td><td>协同中枢抑制，风险增加</td><td>无相互作用</td></tr>
+          <tr><td>驾驶/机械操作</td><td>协调性降低，需谨慎</td><td>不影响</td></tr>
+          <tr><td>惊恐发作</td><td>可用</td><td>疗效不如三环类抗抑郁药</td></tr>
+          <tr><td>主要用途</td><td>焦虑、失眠、癫痫、戒酒、肌松</td><td>神经症性/躯体疾病伴发焦虑；抑郁增效</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p><strong>表 3　BZD 与抗抑郁药的抗焦虑定位</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>维度</th><th>BZD</th><th>抗抑郁药</th></tr></thead>
+        <tbody>
+          <tr><td>抗焦虑起效</td><td>快</td><td>较慢（需数周）</td></tr>
+          <tr><td>长期维持</td><td>不宜长期；长期也不能预防复发，且易依赖</td><td>可用于长期治疗；病情迁延或难治者考虑合并</td></tr>
+          <tr><td>教材定位</td><td>控制症状、辅助</td><td>多数抗抑郁药有抗焦虑作用</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout key"><span class="ct">📌 一句话鉴别总结</span><strong>要快要稳选 BZD，要久要不粘选丁螺/坦度；波动用短、持续用长、伴抑郁找阿普唑仑。</strong></div>
+  </div>
+  <!-- 第六栏 -->
+  <div class="card green" id="u5-6">
+    <h3 class="col-title"><span class="idx">第六栏</span>治疗方案工具箱</h3>
+    <div class="grid2">
+      <div class="mini">
+        <h4>用法原则</h4>
+        <p>多数 BZD 半衰期较长，<strong>无须每天 3 次，每天 1 次即可</strong>；开始可每天 2～3 次，改善后改为每天 1 次。治疗开始时可用小剂量，<strong>3～4 天加到治疗量</strong>；急性期可稍大或静脉给药以控制症状。</p>
+      </div>
+      <div class="mini">
+        <h4>维持原则</h4>
+        <p>控制症状后<strong>无须长期应用</strong>；长期应用也不能预防复发，且易导致依赖。撤药宜逐渐缓慢；缓慢减药后仍可维持较长时间疗效。病情迁延或难治者，考虑合并抗抑郁药或丁螺环酮、坦度螺酮长期治疗。</p>
+      </div>
+    </div>
+    <div class="callout warn">
+      <span class="ct">⚠️ 过量与依赖（教材原文）</span>
+      单独服药过量者常进入睡眠状态，可被唤醒，血压略下降，24～48 小时后醒转；处理主要是洗胃、输液等综合措施，<strong>血液透析往往无效</strong>。若同时服用其他精神药物、吗啡类或酒精，更易出现中枢呼吸抑制甚至死亡。<br>
+      躯体依赖多发生在持续 <strong>3 个月以上</strong>者，短半衰期药物较易依赖；突然中断可引起戒断症状，严重者惊厥，罕见但可致死。因此<strong>最好持续使用不超过 1 个月</strong>，停药逐步缓慢。
+    </div>
+    <p class="note">教材本节<strong>未给出各 BZD 的具体 mg 剂量</strong>，仅给出给药频次、起始与加量原则；具体剂量需参照药品说明书，本指南不补写。</p>
+    <p><strong>丁螺环酮 / 坦度螺酮（教材原文数据）</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>项目</th><th>内容</th></tr></thead>
+        <tbody>
+          <tr><td>机制/类别</td><td>非苯二氮䓬类，阿扎哌隆类，5-HT1A 受体部分激动剂</td></tr>
+          <tr><td>特点</td><td>通常剂量下无明显镇静、催眠、肌肉松弛；无依赖性报道；与其他镇静药、酒精无相互作用；不影响机械操作和车辆驾驶</td></tr>
+          <tr><td>适用</td><td>各种神经症所致的焦虑状态、躯体疾病伴发的焦虑状态；抑郁障碍的增效治疗</td></tr>
+          <tr><td>局限</td><td>对惊恐发作疗效不如三环类抗抑郁药；起效一般比 BZD 慢</td></tr>
+          <tr><td>慎用</td><td>孕妇、儿童、严重心/肝/肾功能障碍者</td></tr>
+          <tr><td>不良反应</td><td>口干、头晕、头痛、失眠、胃肠功能紊乱等，较少</td></tr>
+          <tr><td>剂量</td><td>丁螺环酮 <strong>15～45mg/d，分 3 次</strong>；坦度螺酮 <strong>30～60mg/d，分 3 次</strong></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="timeline">
+      <div class="tl-item"><h4>第一步 · 判断是否需要 BZD</h4><p>急性焦虑、失眠、癫痫、酒精戒断、肌紧张——BZD 有明确位置；长期焦虑应转向抗抑郁药或 5-HT1A 部分激动剂。</p></div>
+      <div class="tl-item"><h4>第二步 · 选半衰期</h4><p>持续症状选长半衰期；波动症状选短半衰期；伴抑郁选阿普唑仑。</p></div>
+      <div class="tl-item"><h4>第三步 · 控制疗程</h4><p>最好不超过 1 个月；避免两种以上 BZD 合用；撤药缓慢。</p></div>
+      <div class="tl-item"><h4>第四步 · 难治者升级</h4><p>合并抗抑郁药或丁螺环酮/坦度螺酮长期治疗。</p></div>
+    </div>
+  </div>
+
+  <!-- 第七栏 -->
+  <div class="card purple" id="u5-7">
+    <h3 class="col-title"><span class="idx">第七栏</span>记忆工具箱</h3>
+    <div class="callout tip">
+      <span class="ct">🔧 方法一：口诀歌谣法（BZD 四作用）</span>
+      口诀：<strong>"抗、静、抽、松"</strong><br>
+      解释：<strong>抗</strong>焦虑、<strong>静</strong>（镇静催眠）、<strong>抽</strong>（抗惊厥）、<strong>松</strong>（骨骼肌松弛）。<br>
+      <em>为什么这样记：</em>四个字就是四类药理作用的首字，答题时按"四合一"清点，不会漏项。
+    </div>
+    <div class="callout tip">
+      <span class="ct">🔧 方法二：数字编码法（疗程与剂量）</span>
+      记 <strong>"2000、十余、3 个月、1 个月"</strong>：2000 多种衍生物、国内常用十余种、躯体依赖多见于持续 3 个月以上、最好不超过 1 个月。<br>
+      再记两个剂量：<strong>丁螺 15～45</strong>，<strong>坦度 30～60</strong>（都是分 3 次）。<br>
+      <em>为什么这样记：</em>把"药物家族规模"和"安全时限"放在同一串数字里，容易形成时间红线。
+    </div>
+    <div class="callout tip">
+      <span class="ct">🔧 方法三：对比 + 类比理解（BZD vs 丁螺环酮）</span>
+      把 BZD 想成<strong>"借来的安静"</strong>：当晚就能借到，但借久了要还——耐受、依赖、戒断；把丁螺环酮/坦度螺酮想成<strong>"慢热型室友"</strong>：刚住进来没什么感觉，时间久了才帮上忙，但不会缠着你（无依赖、不影响驾驶）。<span class="note">（"借来的安静/慢热室友"为类比理解，非医学事实）</span><br>
+      <em>为什么这样记：</em>用"借—还"解释依赖与戒断，用"慢热"解释起效慢但安全，两个画面正好对上两张对比表。
+    </div>
+    <p class="note">危险锚点：<strong>短半衰期</strong>更易依赖；<strong>突然停药</strong>可致惊厥；<strong>联用酒精/阿片</strong>可致呼吸抑制。</p>
+  </div>
+
+  <!-- 第八栏 -->
+  <div class="card cyan" id="u5-8">
+    <h3 class="col-title"><span class="idx">第八栏</span>知识联动</h3>
+    <ul>
+      <li><strong>与焦虑障碍章：</strong>BZD 控制急性焦虑，抗抑郁药负责长期治疗；惊恐发作时丁螺环酮/坦度螺酮不如 TCAs。</li>
+      <li><strong>与睡眠障碍章：</strong>BZD 兼作镇静催眠药，对睡眠各期均有影响；但不宜长期使用。</li>
+      <li><strong>与癫痫章：</strong>氯硝西泮对癫痫效果较好；BZD 的抗惊厥作用是其四作用之一。</li>
+      <li><strong>与物质依赖章：</strong>酒精急性戒断可用地西泮替代；BZD 与酒精、巴比妥交叉依赖。</li>
+      <li><strong>与麻醉/急诊：</strong>咪达唑仑用于睡眠/镇静；急性期可静脉给药控制症状。</li>
+      <li><strong>与老年医学：</strong>老年人更易嗜睡、过度镇静、记忆力受损、协调性降低，慎用。</li>
+      <li><strong>与产科：</strong>妊娠 3 个月内服用有新生儿唇裂、腭裂报道；分娩前及分娩中慎用。</li>
+      <li><strong>与抗抑郁药单元：</strong>SSRIs/SNRIs 是长期抗焦虑的主力；BZD 可作为起效前的过渡。</li>
+    </ul>
+  </div>
+</section>
+<!-- ===== 10 物理治疗 ===== -->
+<section id="u6">
+  <div class="sec-head"><div class="badge">10</div><h2>物理治疗<span class="en">第六节（p.304–306）</span></h2></div>
+  <p class="sec-lead">从"通电"到"磁场"再到"植入电极"，物理治疗的共同点是直接调节脑功能。MECT 是成熟技术，TMS 是新兴主力，DBS 是难治病例的探索性选择。</p>
+
+  <!-- 第一栏 -->
+  <div class="card pink" id="u6-1">
+    <h3 class="col-title"><span class="idx">第一栏</span>疾病画像 → 治疗单元画像</h3>
+    <div class="quote"><span class="lab">教材原文</span>物理治疗（physical therapy）是治疗精神疾病的主要方法之一。经典的脑刺激治疗方式（如电抽搐治疗）应用于临床已有 70 余年，目前改良电抽搐治疗仍然用于治疗多种精神疾病。</div>
+    <p><strong>一句话画像：</strong>物理治疗是"绕过药物、直接调脑"的一组手段：MECT 用电流引发一次受控的抽搐，TMS 用磁场在皮质"点按"神经，DBS 用植入电极持续"放电"。</p>
+    <div class="grid2">
+      <div class="mini">
+        <h4>教材列出的物理治疗</h4>
+        <ul>
+          <li><strong>MECT：</strong>改良电抽搐治疗，临床主力。</li>
+          <li><strong>TMS：</strong>经颅磁刺激，已批准用于抑郁症。</li>
+          <li><strong>DBS：</strong>深部脑刺激，有难治性抑郁适应证。</li>
+          <li><strong>VNS/MST/tDCS：</strong>迷走神经刺激、磁痉挛治疗、经颅直流电刺激，多处于研究/辅助阶段。</li>
+        </ul>
+      </div>
+      <div class="mini">
+        <h4>共同特点</h4>
+        <p>VNS 和 DBS 都具有<strong>微创、可逆、可调试</strong>的优点，能在获得最大治疗效果的同时将不良反应降至最低，而且<strong>关机即可终止治疗、恢复治疗前状态</strong>。</p>
+        <p class="note">MECT 与 TMS 属非侵入性；DBS/VNS 需手术植入。</p>
+      </div>
+    </div>
+    <div class="stat"><span>ECT 临床应用 70+ 年</span><span>MECT 疗程 6～12 次</span><span>电量 80～120mA</span><span>TMS 声压可达 140dB</span><span>DBS 靶点：胼胝体下扣带回</span></div>
+  </div>
+
+  <!-- 第二栏 -->
+  <div class="card blue" id="u6-2">
+    <h3 class="col-title"><span class="idx">第二栏</span>病因探秘 → 机制探秘</h3>
+    <div class="grid2">
+      <div class="mini">
+        <h4>MECT</h4>
+        <p>以一定量电流通过大脑，引起意识丧失和痉挛发作，从而达到治疗目的。改良方法在通电前给予<strong>麻醉剂和肌肉松弛剂</strong>，使通电后不发生抽搐，避免骨折、关节脱位等并发症，更安全、更易被接受。</p>
+      </div>
+      <div class="mini">
+        <h4>TMS</h4>
+        <p>非侵入性脑刺激：电流通过线圈产生磁场，在设定频率下重复脉冲或突发刺激，诱发皮质兴奋性变化；效果持续时间比刺激时间更长。fMRI 研究发现 rTMS 还可影响基底神经节等深层结构。</p>
+      </div>
+      <div class="mini">
+        <h4>DBS</h4>
+        <p>利用立体定向技术准确定位，在大脑特定区域植入电极，连续不断传送刺激脉冲到深部脑组织特定区域。</p>
+      </div>
+      <div class="mini">
+        <h4>VNS / MST / tDCS</h4>
+        <p>VNS：胸腔植入类似起搏器的脉冲发生器，连接颈部迷走神经刺激电极。MST：具有与 ECT 相当疗效、不良反应显著小于 ECT。tDCS：非侵入性脑刺激技术。</p>
+      </div>
+    </div>
+    <div class="callout tip"><span class="ct">💡 TMS 的"频率决定方向"</span>通常<strong>低频刺激起抑制作用，高频刺激起兴奋作用</strong>；兴奋性改变可持续数分钟到数小时。动物实验提示其机制与<strong>长时程增强（LTP）和长时程抑制（LTD）</strong>有关，进而调控突触可塑性。<br><span class="note">类比理解（非医学事实）：低频像"踩刹车"，高频像"踩油门"，踩完后车还会滑行一段时间——对应刺激后效应持续。</span></div>
+  </div>
+
+  <!-- 第三栏 -->
+  <div class="card red" id="u6-3">
+    <h3 class="col-title"><span class="idx">第三栏</span>临床表现拼图 → 适应证与效应图谱</h3>
+    <div class="tabs" data-tabs>
+      <div class="tabbar">
+        <button class="on" data-tab="g1">MECT 适应证</button>
+        <button data-tab="g2">TMS</button>
+        <button data-tab="g3">DBS 与其他</button>
+      </div>
+      <div class="panel on" data-panel="g1">
+        <ol>
+          <li>严重抑郁，有强烈自伤、自杀企图及行为者，以及明显自责自罪者。</li>
+          <li>极度兴奋躁动、冲动伤人者。</li>
+          <li>拒食、违拗和紧张性木僵者。</li>
+          <li>精神药物治疗无效或对药物治疗不能耐受者。</li>
+        </ol>
+        <p class="note">四条适应证可压缩为"<strong>自杀、冲动、木僵、难治</strong>"。</p>
+      </div>
+      <div class="panel" data-panel="g2">
+        <p>美国、加拿大等国家已批准 TMS 用于治疗<strong>抑郁症</strong>；也有在<strong>精神分裂症和焦虑障碍</strong>中开展的研究。因无创、高效，已成为精神疾病中新兴的重要神经调控治疗方法。</p>
+      </div>
+      <div class="panel" data-panel="g3">
+        <p><strong>DBS：</strong>对严重、慢性难治性抑郁患者可持续且显著改善症状；研究范围扩展至强迫症、精神分裂症、神经性厌食和药物成瘾。</p>
+        <p><strong>VNS：</strong>用于难治性抑郁症，具有一定潜在价值。</p>
+        <p><strong>MST：</strong>与 ECT 相当疗效、不良反应显著小于 ECT，具临床应用价值，但仍处实验阶段。</p>
+        <p><strong>tDCS：</strong>主要用于焦虑抑郁和精神分裂症谱系研究，仍有很多不确定性。</p>
+      </div>
+    </div>
+    <p class="note">本栏原用于疾病症状分维度呈现；本章以治疗手段为单位，故改为按技术切换的"适应证—效应"图谱。</p>
+  </div>
+  <!-- 第四栏 -->
+  <div class="card orange" id="u6-4">
+    <h3 class="col-title"><span class="idx">第四栏</span>教材典型案例</h3>
+    <div class="callout book">
+      <span class="ct">📖 教材未提供具体临床案例</span>
+      本节为技术学叙述，未给出接受 MECT/TMS/DBS 的患者个案、治疗参数记录或疗效评分。教材提供的是<strong>适应证清单</strong>与<strong>并发症描述</strong>，以下按原文整理，不是真实病例。
+    </div>
+    <div class="grid3">
+      <div class="mini">
+        <h4>情境 A · 拒食木僵</h4>
+        <p>患者拒食、违拗、紧张性木僵——符合 MECT 第③条适应证。</p>
+      </div>
+      <div class="mini">
+        <h4>情境 B · 强烈自杀</h4>
+        <p>严重抑郁，有强烈自伤、自杀企图及行为，明显自责自罪——符合 MECT 第①条适应证。</p>
+      </div>
+      <div class="mini">
+        <h4>情境 C · 药物无效</h4>
+        <p>精神药物治疗无效或不能耐受——符合 MECT 第④条适应证。</p>
+      </div>
+    </div>
+    <p><strong>治疗后的"教科书式反应"：</strong>常见头痛、恶心、呕吐、焦虑、可逆性记忆减退、全身肌肉酸痛，通常无须处理；出现关节脱位/骨折、意识障碍或认知受损时应停用 ECT。</p>
+  </div>
+
+  <!-- 第五栏 -->
+  <div class="card orange" id="u6-5">
+    <h3 class="col-title"><span class="idx">第五栏</span>鉴别诊断对对碰</h3>
+    <p><strong>表 1　三种主要物理治疗的"横向鉴别"</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>维度</th><th>MECT</th><th>TMS</th><th>DBS</th></tr></thead>
+        <tbody>
+          <tr><td>侵入性</td><td>非侵入，但需麻醉</td><td><strong>非侵入</strong></td><td><strong>侵入</strong>（立体定向植入电极）</td></tr>
+          <tr><td>是否引发抽搐</td><td>传统 ECT 是；MECT 用肌松剂使通电后不发生抽搐</td><td>否</td><td>否</td></tr>
+          <tr><td>核心适应证</td><td>严重抑郁伴自杀、极度兴奋冲动、拒食违拗/紧张性木僵、药物无效/不耐受</td><td>抑郁症（美加已批准）；精神分裂症、焦虑障碍研究中</td><td>严重、慢性难治性抑郁；强迫症、精神分裂症、神经性厌食、药物成瘾研究中</td></tr>
+          <tr><td>关键优势</td><td>起效快、对急危重症状有效</td><td>无创、高效、可门诊</td><td>可持续刺激；<strong>关机即终止</strong>，可逆、可调</td></tr>
+          <tr><td>关键风险</td><td>记忆减退、骨折/脱位、麻醉意外、延迟性窒息、严重心律不齐</td><td>听觉影响（可达 140dB）、癫痫发作、头痛</td><td>手术与靶点定位风险；靶点边界不清、个体差异大、疗效可重复性差</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p><strong>表 2　MECT 的九条禁忌证——按系统归类</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>系统</th><th>禁忌证（教材原文）</th></tr></thead>
+        <tbody>
+          <tr><td>脑器质性</td><td>颅内占位性病变、脑血管疾病、中枢神经系统炎症和外伤；脑肿瘤或脑动脉瘤尤应注意（抽搐时颅内压骤升，易脑出血、脑组织损伤或脑疝）</td></tr>
+          <tr><td>心血管</td><td>冠心病、心肌梗死、高血压、心律失常、主动脉瘤及心功能不全</td></tr>
+          <tr><td>骨关节</td><td>骨关节疾病，尤其新近发生者</td></tr>
+          <tr><td>血管</td><td>出血或不稳定的动脉瘤畸形</td></tr>
+          <tr><td>眼科</td><td>有视网膜脱落潜在危险的疾病，如青光眼</td></tr>
+          <tr><td>感染/发热</td><td>急性的全身感染、发热</td></tr>
+          <tr><td>呼吸/肝肾</td><td>严重的呼吸系统疾病，严重的肝、肾疾病</td></tr>
+          <tr><td>药物</td><td>利血平治疗者</td></tr>
+          <tr><td>特殊人群</td><td>老年人、儿童及孕妇（<strong>MECT 禁忌较传统 ECT 少，老年或孕妇可以应用</strong>）</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout key"><span class="ct">📌 一句话鉴别总结</span><strong>急危重选 MECT，抑郁无创选 TMS，难治且愿意手术选 DBS</strong>；三者都"调脑"，但侵入性、是否抽搐、风险谱完全不同。</div>
+  </div>
+  <!-- 第六栏 -->
+  <div class="card green" id="u6-6">
+    <h3 class="col-title"><span class="idx">第六栏</span>治疗方案工具箱</h3>
+    <p><strong>MECT 治疗前准备（教材七条）</strong></p>
+    <div class="timeline">
+      <div class="tl-item"><h4>① 评估</h4><p>详细体格检查（含神经系统）；必要时血常规、血生化、心电图、脑电图，胸部/脊柱 X 线摄片。</p></div>
+      <div class="tl-item"><h4>② 知情同意</h4><p>获取知情同意。</p></div>
+      <div class="tl-item"><h4>③ 停药与禁食</h4><p>治疗前 <strong>8 小时</strong>停服抗癫痫药和抗焦虑药，或治疗期间避免应用；<strong>禁食、禁水 4 小时以上</strong>。治疗期间抗精神病药、抗抑郁药或锂盐应采用较低剂量。</p></div>
+      <div class="tl-item"><h4>④ 急救准备</h4><p>准备各种急救药品和器械。</p></div>
+      <div class="tl-item"><h4>⑤ 生命体征</h4><p>治疗前监测体温、脉搏、血压。</p></div>
+      <div class="tl-item"><h4>⑥ 用药</h4><p>治疗前 <strong>15～30 分钟</strong>皮下注射<strong>阿托品 0.5～1.0mg</strong>，防止迷走神经过度兴奋、减少分泌物；若第一次治疗后呼吸恢复不好，以后每次治疗前 15～30 分钟皮下注射<strong>洛贝林 3.0～6.0mg</strong>。</p></div>
+      <div class="tl-item"><h4>⑦ 准备</h4><p>排空大小便，取出活动假牙，解开衣带、领扣，取下发卡等。</p></div>
+    </div>
+    <p><strong>操作与参数：</strong>仰卧，四肢自然伸直，两肩胛间（胸椎中段）垫沙枕使脊柱前突；压舌板/牙垫防咬伤，紧托下颌防脱位，助手保护肩肘、髋膝及四肢。电极置于头顶部和非优势侧颞部（不良反应较小）或双侧颞部（抽搐效果较好）。电量以引起痉挛发作的最小量为准，一般 <strong>80～120mA，通电 2～3 秒</strong>；未发作或发作不完全，多为电极接触不好或通电时间不够，应尽快正确操作下重复一次，否则增加 <strong>10mA</strong> 或酌情延长通电时间。</p>
+    <p><strong>疗程：</strong>一般从每天 1 次过渡到隔天 1 次，或一开始就隔天 1 次，一个疗程 <strong>6～12 次</strong>。躁狂状态约 6 次；幻觉妄想状态多需 8～12 次；抑郁状态介于两者之间。</p>
+    <p><strong>不良反应（教材原文）：</strong>头痛、恶心、呕吐、焦虑、可逆性记忆减退、全身肌肉酸痛，通常无须处理。关节脱位和骨折较常见：脱位以下颌关节为多，应立即复位；骨折以<strong>第 4～8 胸椎压缩性骨折</strong>多见，应立即处理。年龄大、治疗期间用抗胆碱能药物者，较易出现意识障碍（昼轻夜重、持续定向力障碍、可有幻视）和认知功能受损；出现时应停用 ECT。死亡极罕见，多与潜在躯体疾病有关。MECT 并发症发生率更低、程度更轻，但可出现<strong>麻醉意外、延迟性窒息、严重心律不齐</strong>，应立即心肺复苏。</p>
+    <div class="grid2">
+      <div class="mini">
+        <h4>TMS 不良反应与安全</h4>
+        <ul>
+          <li><strong>听觉：</strong>振动和声响，高频率时声压可达 140dB；建议佩戴耳塞；<strong>禁止植入电子耳蜗者</strong>接受 TMS 检测或治疗。</li>
+          <li><strong>癫痫：</strong>最严重的急性不良反应；治疗前完善脑电图、排除癫痫病史；制定晕厥和癫痫发作处理制度。</li>
+          <li><strong>头痛：</strong>常见，与耐受性、频率、强度、部位、线圈类型有关；多轻微、可耐受，随治疗延长可消失。</li>
+        </ul>
+      </div>
+      <div class="mini">
+        <h4>DBS 靶点与局限</h4>
+        <p>目前主要以<strong>胼胝体下扣带回</strong>作为抑郁障碍治疗靶点。该区域解剖边界不清晰、个体差异大，定位并不准确，临床疗效可重复性差，仍需改进。</p>
+        <p class="note">DBS 手术中靶点定位和触点选择是决定疗效的重要因素。</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 第七栏 -->
+  <div class="card purple" id="u6-7">
+    <h3 class="col-title"><span class="idx">第七栏</span>记忆工具箱</h3>
+    <div class="callout tip">
+      <span class="ct">🔧 方法一：口诀歌谣法（物理治疗谱系）</span>
+      口诀：<strong>"电、磁、深、迷、磁、直"</strong><br>
+      解释：<strong>电</strong>＝ECT/MECT；<strong>磁</strong>＝TMS；<strong>深</strong>＝DBS；<strong>迷</strong>＝VNS；第二个<strong>磁</strong>＝MST（磁痉挛）；<strong>直</strong>＝tDCS（直流电）。<br>
+      <em>为什么这样记：</em>六个字按"能量/解剖"排布，先把谱系记全，再往里填适应证。
+    </div>
+    <div class="callout tip">
+      <span class="ct">🔧 方法二：数字编码法（MECT 参数）</span>
+      记 <strong>"8-4-15/30-0.5/1.0"</strong>：治疗前 8 小时停抗癫痫/抗焦虑药；禁食禁水 4 小时以上；治疗前 15～30 分钟皮下注射阿托品 0.5～1.0mg。<br>
+      再记 <strong>"80～120mA、2～3 秒、6～12 次"</strong>；躁狂约 6 次，幻觉妄想 8～12 次。<br>
+      <em>为什么这样记：</em>把"准备—参数—疗程"三组数字按操作顺序串起来，考试问任一环节都能顺藤摸瓜。
+    </div>
+    <div class="callout tip">
+      <span class="ct">🔧 方法三：归类 + 类比理解（MECT 适应证）</span>
+      适应证压成四个词：<strong>"自杀、冲动、木僵、难治"</strong>；禁忌证按系统归为"脑、心、骨、血、眼、感染、呼吸肝肾、利血平、特殊人群"。<br>
+      类比：MECT 像<strong>"重启电脑"</strong>——对卡死的系统（木僵、拒食）和危险状态（自杀、冲动）能快速恢复，但重启前必须检查硬件（脑、心、骨）是否承受得住。<span class="note">（"重启电脑"为类比理解，非医学事实）</span><br>
+      <em>为什么这样记：</em>"四适应证 + 九禁忌"用两个清单装起来，比逐条背诵更抗遗忘。
+    </div>
+    <p class="note">TMS 三个不良反应锚点：<strong>耳朵、癫痫、头痛</strong>；DBS 一个靶点锚点：<strong>胼胝体下扣带回</strong>。</p>
+  </div>
+
+  <!-- 第八栏 -->
+  <div class="card cyan" id="u6-8">
+    <h3 class="col-title"><span class="idx">第八栏</span>知识联动</h3>
+    <ul>
+      <li><strong>与抑郁障碍章：</strong>严重抑郁伴自杀是 MECT 首位适应证；TMS 已批准用于抑郁症；DBS 用于严重慢性难治性抑郁。</li>
+      <li><strong>与精神分裂症章：</strong>极度兴奋躁动、冲动伤人、紧张性木僵、药物无效者可考虑 MECT；TMS 在精神分裂症中仍有研究。</li>
+      <li><strong>与双相障碍章：</strong>躁狂状态 MECT 约 6 次；锂盐治疗期间做 ECT 应使用较低剂量。</li>
+      <li><strong>与麻醉科：</strong>MECT 需麻醉剂与肌松剂；麻醉意外、延迟性窒息是 MECT 的特有风险。</li>
+      <li><strong>与神经内科/影像科：</strong>颅内占位、脑血管病、癫痫病史是 MECT/TMS 前必须排除的问题；DBS 依赖立体定向与影像定位。</li>
+      <li><strong>与骨科：</strong>骨质疏松、新近骨关节疾病是 MECT 禁忌；胸椎 4～8 压缩性骨折是常见并发症。</li>
+      <li><strong>与耳鼻喉科：</strong>TMS 噪声可达 140dB，需耳塞；电子耳蜗植入者禁用。</li>
+      <li><strong>与伦理/知情同意：</strong>MECT 治疗前必须获取知情同意，是医疗合规的重要环节。</li>
+    </ul>
+  </div>
+</section>
+<!-- ===== 11 核心要点 ===== -->
+<section id="summary">
+  <div class="sec-head"><div class="badge">11</div><h2>全章核心要点速览<span class="en">19 key points</span></h2></div>
+  <p class="sec-lead">考前最后一遍只看这里。每条都能独立成题，建议逐条自问"为什么"。</p>
+  <div class="card blue">
+    <div class="grid2">
+      <ol>
+        <li>精神药物四大类：抗精神病药、抗抑郁药、心境稳定剂、抗焦虑药；另有精神兴奋药、益智药。</li>
+        <li>药代共同点：亲脂性易过血脑屏障；多数蛋白结合率高、透析难清除；肝脏 CYP450 代谢；可经乳汁排泄；半衰期较长；儿童老年减量。</li>
+        <li>多数精神药物治疗指数高；<strong>锂盐治疗指数低</strong>，必须监测血药浓度。</li>
+        <li>MAOIs + TCAs/SSRIs → 5-HT 综合征风险；抗精神病药 + 抗胆碱能药 + TCAs → 胆碱能危象。</li>
+        <li>FGA 主要阻断 D2；低效价（氯丙嗪）剂量大、镇静/抗胆碱/心肝毒性大、EPS 小；高效价（氟哌啶醇）剂量小、EPS 大。</li>
+        <li>SGA 四类：SDA、MARTA（氯氮平）、选择性 D2/D3（氨磺必利）、D2 部分激动（阿立哌唑）。</li>
+        <li>D2 四通路：中脑边缘（治疗）、中脑皮质（阴性/抑郁）、黑质纹状体（EPS）、结节漏斗（催乳素↑）。</li>
+        <li>受体-副作用：α1→镇静/直立性低血压/心动过速/射精延迟；M1→口干/便秘/排尿困难/视物模糊；H1→镇静/体重增加；5-HT2A→EPS 少、部分改善阴性。</li>
+        <li>急性期：1 周内加至有效剂量；2～4 周开始改善；4～8 周充分缓解；足量 4～6 周无效换药。</li>
+        <li>巩固至少 6 个月；维持减至半量或不少于 300mg 氯丙嗪等效剂量；首发缓慢起病维持至少 5 年；不足 1/5 可停药。</li>
+      </ol>
+      <ol start="11">
+        <li>EPS 四型：急性肌张力障碍（最早）→静坐不能（1～2 周）→帕金森综合征（1～2 月，可达 56%）→迟发性运动障碍（几年）。</li>
+        <li>恶性综合征四联征：意识波动、肌肉强直、高热、自主神经不稳定；CPK 升高<strong>不是确诊指征</strong>；停药用丹曲林、溴隐亭。</li>
+        <li>氯氮平：难治/伴自杀/不能耐受 EPS；粒细胞缺乏约 1%，需监测血常规、体重、血糖血脂。</li>
+        <li>抗抑郁药 11 类（含植物药）；SSRIs 六药；再摄取抑制立即发生，受体下调导致临床效应滞后 2～3 周。</li>
+        <li>TCAs 一次吞服丙米嗪 1.25g 可致死；<strong>昏迷、癫痫发作、心律失常</strong>三联征；毒扁豆碱、洗胃（数小时后仍应洗胃）。</li>
+        <li>锂：急性期 0.6～1.2mmol/L，&gt;1.4 中毒，维持 0.4～0.8；有效剂量 750～1500mg/d；总有效率 70%；至少 1 周起效、6～8 周缓解；巩固 2～3 个月。</li>
+        <li>丙戊酸 800～1800mg/d、50～120mg/L；卡马西平 400～1600mg/d、4～12mg/L；拉莫三嗪单药 200mg/d、合丙戊酸 100mg/d、合酶诱导剂 400mg/d。</li>
+        <li>BZD 四作用"抗、静、抽、松"；最好不超过 1 个月；短半衰期更易依赖；丁螺环酮 15～45mg/d、坦度螺酮 30～60mg/d，均分 3 次。</li>
+        <li>MECT：适应证"自杀、冲动、木僵、难治"；电量 80～120mA、2～3 秒；疗程 6～12 次（躁狂约 6 次、幻觉妄想 8～12 次）。</li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 12 易混 ===== -->
+<section id="pitfalls">
+  <div class="sec-head"><div class="badge">12</div><h2>易混易错点警示<span class="en">Common traps</span></h2></div>
+  <p class="sec-lead">这些点不是"没背到"，而是"背反了"。逐条核对你的第一反应。</p>
+  <div class="card danger">
+    <details open>
+      <summary>① 静坐不能 ≠ 病情加重，不能靠加量解决</summary>
+      <div class="dbody">静坐不能多出现在治疗 1～2 周，表现为无法控制的激越不安、不能静坐、反复走动。教材明确：易误诊为精神病性激越或病情加剧。<strong>抗胆碱能药通常无效</strong>，BZD 和 β 受体阻滞剂（如普萘洛尔）有效，必要时减量或换药。</div>
+    </details>
+    <details>
+      <summary>② 抗胆碱能药不能预防 EPS，还会加重迟发性运动障碍</summary>
+      <div class="dbody">教材明确：没有证据表明常规应用抗胆碱能药可预防 EPS，反而易出现抗胆碱能不良反应（包括记忆减退）；如使用，应在 2～3 个月后逐渐停用。TD 应避免抗胆碱能药，因其会促进和加重 TD。</div>
+    </details>
+    <details>
+      <summary>③ CPK 升高 ≠ 恶性综合征确诊</summary>
+      <div class="dbody">恶性综合征靠"意识波动、肌肉强直、高热、自主神经功能不稳定"识别；CPK 浓度升高<strong>不是确诊指征</strong>。处理是停药、支持治疗，可用丹曲林和溴隐亭。</div>
+    </details>
+    <details>
+      <summary>④ 抗抑郁药 2～3 周没效 ≠ 药无效</summary>
+      <div class="dbody">再摄取抑制立即发生，但受体下调需要时间，临床效应滞后 2～3 周。TCAs 段落还强调：睡眠先改善，抗抑郁疗效 2～4 周出现；足量 6～8 周无效才考虑换药。</div>
+    </details>
+    <details>
+      <summary>⑤ "氟西汀、帕罗西汀、氟伏沙明"不是同一类酶</summary>
+      <div class="dbody">氟西汀、帕罗西汀强抑制 <strong>CYP2D6</strong>；氟伏沙明强抑制 <strong>CYP1A2</strong>；舍曲林弱；西酞普兰/艾司西酞普兰最小。记错酶，就会把配伍禁忌答反。</div>
+    </details>
+    <details>
+      <summary>⑥ 锂的两个浓度别混：0.6～1.2 是急性期，0.4～0.8 是维持</summary>
+      <div class="dbody">&gt;1.4mmol/L 中毒风险升高；老年或有器质性疾病者更低浓度也可能中毒。<strong>粗大震颤提示接近中毒</strong>；中毒处理为停锂、生理盐水/高渗钠盐、透析。</div>
+    </details>
+    <details>
+      <summary>⑦ 丙戊酸与卡马西平的单位不同：mg/L，不是 mmol/L</summary>
+      <div class="dbody">丙戊酸 50～120mg/L；卡马西平 4～12mg/L；锂是 mmol/L。答题时写错单位，数值再对也会扣分。</div>
+    </details>
+    <details>
+      <summary>⑧ 拉莫三嗪的"三个目标剂量"取决于合用药</summary>
+      <div class="dbody">单药 200mg/d；<strong>合丙戊酸盐 100mg/d</strong>（因丙戊酸使药疹风险增加）；合除丙戊酸外的酶诱导剂 400mg/d。滴定必须慢：25→50→75～100。</div>
+    </details>
+    <details>
+      <summary>⑨ BZD 不是"长期抗焦虑药"</summary>
+      <div class="dbody">长期应用不能预防复发，且易依赖；躯体依赖多见于持续 3 个月以上，短半衰期更易依赖；最好不超过 1 个月，停药逐步缓慢。难治/迁延者应合并抗抑郁药或丁螺环酮/坦度螺酮。</div>
+    </details>
+    <details>
+      <summary>⑩ TMS 的频率方向、MECT 的禁忌范围最容易记反</summary>
+      <div class="dbody">TMS：<strong>低频抑制、高频兴奋</strong>。MECT 禁忌证较传统 ECT <strong>少</strong>，老年或孕妇可以应用；不要把所有传统 ECT 禁忌都当成 MECT 的绝对禁忌。</div>
+    </details>
+  </div>
+</section>
+<!-- ===== 13 自测 ===== -->
+<section id="quiz">
+  <div class="sec-head"><div class="badge">13</div><h2>章节自测系统<span class="en">13 questions · 6 types</span></h2></div>
+  <p class="sec-lead">覆盖单选、多选、判断、名词解释、简答、案例分析六种题型，按易→中→难排列。先作答，再展开解析。</p>
+
+  <div class="quiz-q">
+    <div class="qh"><span class="qno">第 1 题</span><span class="qtype">单选题</span><span class="diff">易</span></div>
+    <p class="brief">下列哪一项<strong>不属于</strong>教材所说的传统四大类精神药物？</p>
+    <div class="opts">
+      <div class="opt"><span class="l">A.</span>抗精神病药</div>
+      <div class="opt"><span class="l">B.</span>抗抑郁药</div>
+      <div class="opt"><span class="l">C.</span>心境稳定剂</div>
+      <div class="opt"><span class="l">D.</span>益智药</div>
+    </div>
+    <details><summary>查看答案与解析</summary><div class="dbody"><strong>答案：D</strong><br>四大类为抗精神病药、抗抑郁药、心境稳定剂（抗躁狂药）、抗焦虑药。益智药是教材另行提及的"改善脑循环和神经细胞代谢"的药物，不属于四大类。</div></details>
+  </div>
+
+  <div class="quiz-q">
+    <div class="qh"><span class="qno">第 2 题</span><span class="qtype">单选题</span><span class="diff">中</span></div>
+    <p class="brief">抗精神病药引起锥体外系反应，主要与阻断哪条多巴胺通路有关？</p>
+    <div class="opts">
+      <div class="opt"><span class="l">A.</span>中脑边缘通路</div>
+      <div class="opt"><span class="l">B.</span>中脑皮质通路</div>
+      <div class="opt"><span class="l">C.</span>黑质纹状体通路</div>
+      <div class="opt"><span class="l">D.</span>结节漏斗通路</div>
+    </div>
+    <details><summary>查看答案与解析</summary><div class="dbody"><strong>答案：C</strong><br>D2 四通路：中脑边缘→抗幻觉妄想；中脑皮质→药源性阴性症状和抑郁；黑质纹状体→EPS；结节漏斗→催乳素升高。</div></details>
+  </div>
+
+  <div class="quiz-q">
+    <div class="qh"><span class="qno">第 3 题</span><span class="qtype">单选题</span><span class="diff">中</span></div>
+    <p class="brief">锥体外系反应中，通常<strong>出现最早</strong>的是哪一型？</p>
+    <div class="opts">
+      <div class="opt"><span class="l">A.</span>急性肌张力障碍</div>
+      <div class="opt"><span class="l">B.</span>静坐不能</div>
+      <div class="opt"><span class="l">C.</span>帕金森综合征</div>
+      <div class="opt"><span class="l">D.</span>迟发性运动障碍</div>
+    </div>
+    <details><summary>查看答案与解析</summary><div class="dbody"><strong>答案：A</strong><br>时间轴：急性肌张力障碍最早；静坐不能多见于治疗 1～2 周；帕金森综合征多见于最初 1～2 个月；TD 多在持续用药几年后。</div></details>
+  </div>
+
+  <div class="quiz-q">
+    <div class="qh"><span class="qno">第 4 题</span><span class="qtype">单选题</span><span class="diff">难</span></div>
+    <p class="brief">关于恶性综合征，下列哪项表述是<strong>错误</strong>的？</p>
+    <div class="opts">
+      <div class="opt"><span class="l">A.</span>临床特征包括意识波动、肌肉强直、高热、自主神经功能不稳定</div>
+      <div class="opt"><span class="l">B.</span>最常见于氟哌啶醇、氯丙嗪、氟奋乃静</div>
+      <div class="opt"><span class="l">C.</span>CPK 浓度升高即可确诊</div>
+      <div class="opt"><span class="l">D.</span>处理包括停药、支持治疗，可用丹曲林和溴隐亭</div>
+    </div>
+    <details><summary>查看答案与解析</summary><div class="dbody"><strong>答案：C</strong><br>教材明确：CPK 浓度升高<strong>不是确诊指征</strong>。诊断依赖四联征与用药史，处理为停药、支持治疗，丹曲林和溴隐亭可用。</div></details>
+  </div>
+
+  <div class="quiz-q">
+    <div class="qh"><span class="qno">第 5 题</span><span class="qtype">多选题</span><span class="diff">中</span></div>
+    <p class="brief">关于氯氮平，下列哪些说法正确？</p>
+    <div class="opts">
+      <div class="opt"><span class="l">A.</span>推荐用于难治性、伴自杀或无法耐受 EPS 的精神分裂症</div>
+      <div class="opt"><span class="l">B.</span>几乎不引起 EPS 及 TD</div>
+      <div class="opt"><span class="l">C.</span>粒细胞缺乏症发生概率大约为 1%</div>
+      <div class="opt"><span class="l">D.</span>对血象无明显影响，无需监测血常规</div>
+    </div>
+    <details><summary>查看答案与解析</summary><div class="dbody"><strong>答案：ABC</strong><br>D 错：氯氮平可引起粒细胞缺乏，必须监测血常规；此外还需监测体重、血糖、血脂。其起始剂量宜低，易出现直立性低血压和过度镇静。</div></details>
+  </div>
+
+  <div class="quiz-q">
+    <div class="qh"><span class="qno">第 6 题</span><span class="qtype">多选题</span><span class="diff">难</span></div>
+    <p class="brief">下列哪些属于碳酸锂的禁忌证？</p>
+    <div class="opts">
+      <div class="opt"><span class="l">A.</span>肾功能不全</div>
+      <div class="opt"><span class="l">B.</span>重症肌无力</div>
+      <div class="opt"><span class="l">C.</span>妊娠最初 3 个月</div>
+      <div class="opt"><span class="l">D.</span>缺钠或低盐饮食</div>
+    </div>
+    <details><summary>查看答案与解析</summary><div class="dbody"><strong>答案：ABCD</strong><br>锂禁忌还包括急慢性肾炎、严重心血管疾病。慎用：帕金森病、癫痫、糖尿病、甲状腺功能减退、神经性皮炎、老年性白内障。</div></details>
+  </div>
+
+  <div class="quiz-q">
+    <div class="qh"><span class="qno">第 7 题</span><span class="qtype">判断题</span><span class="diff">易</span></div>
+    <p class="brief">抗抑郁药临床效应滞后 2～3 周，与长期用药后受体敏感性下调有关。</p>
+    <div class="opts">
+      <div class="opt"><span class="l">A.</span>正确</div>
+      <div class="opt"><span class="l">B.</span>错误</div>
+    </div>
+    <details><summary>查看答案与解析</summary><div class="dbody"><strong>答案：A（正确）</strong><br>教材原文：再摄取抑制立即发生，而长期用药后可降低受体敏感性（下调作用），这与临床效应滞后（2～3 周起效）密切相关。</div></details>
+  </div>
+  <div class="quiz-q">
+    <div class="qh"><span class="qno">第 8 题</span><span class="qtype">判断题</span><span class="diff">中</span></div>
+    <p class="brief">静坐不能对抗胆碱能药物通常有效，可作为首选处理。</p>
+    <div class="opts">
+      <div class="opt"><span class="l">A.</span>正确</div>
+      <div class="opt"><span class="l">B.</span>错误</div>
+    </div>
+    <details><summary>查看答案与解析</summary><div class="dbody"><strong>答案：B（错误）</strong><br>静坐不能的抗胆碱能药通常<strong>无效</strong>；BZD 和 β 受体阻滞剂（如普萘洛尔）有效，必要时减量或换药。抗胆碱能药主要用于急性肌张力障碍和帕金森综合征。</div></details>
+  </div>
+
+  <div class="quiz-q">
+    <div class="qh"><span class="qno">第 9 题</span><span class="qtype">判断题</span><span class="diff">难</span></div>
+    <p class="brief">孕妇是改良电抽搐治疗（MECT）的绝对禁忌证。</p>
+    <div class="opts">
+      <div class="opt"><span class="l">A.</span>正确</div>
+      <div class="opt"><span class="l">B.</span>错误</div>
+    </div>
+    <details><summary>查看答案与解析</summary><div class="dbody"><strong>答案：B（错误）</strong><br>教材原文：改良电抽搐治疗的禁忌证较传统电抽搐治疗少，<strong>如老年或孕妇可以应用</strong>。不能把传统 ECT 的禁忌全部平移到 MECT。</div></details>
+  </div>
+
+  <div class="quiz-q">
+    <div class="qh"><span class="qno">第 10 题</span><span class="qtype">名词解释</span><span class="diff">中</span></div>
+    <p class="brief">请解释"迟发性运动障碍（TD）"。</p>
+    <details><summary>查看答案与解析</summary><div class="dbody"><strong>参考答案：</strong>长期使用抗精神病药后出现的一种锥体外系反应，表现为<strong>不自主、有节律的刻板式运动</strong>；最早为舌或口唇周围的轻微震颤或蠕动，睡眠时消失、情绪激动时加重。多在持续用药几年后出现，极少数几个月内发生；女性稍多，老年及有脑器质性疾病者多见。处理可用氘丁苯那嗪，异丙嗪和银杏叶提取物可能改善，<strong>应避免抗胆碱能药</strong>。</div></details>
+  </div>
+
+  <div class="quiz-q">
+    <div class="qh"><span class="qno">第 11 题</span><span class="qtype">名词解释</span><span class="diff">中</span></div>
+    <p class="brief">请解释"恶性综合征（NMS）"。</p>
+    <details><summary>查看答案与解析</summary><div class="dbody"><strong>参考答案：</strong>使用抗精神病药过程中出现的一组以<strong>意识波动、肌肉强直、高热、自主神经功能不稳定</strong>为临床特征的综合征；最常见于氟哌啶醇、氯丙嗪、氟奋乃静。加量过快、用量过高、脱水、营养不足、合并躯体疾病或气候炎热可诱发。CPK 升高不是确诊指征。处理为及时停药、支持治疗，可用丹曲林和溴隐亭。</div></details>
+  </div>
+
+  <div class="quiz-q">
+    <div class="qh"><span class="qno">第 12 题</span><span class="qtype">简答题</span><span class="diff">难</span></div>
+    <p class="brief">简述抗精神病药治疗精神分裂症的急性期与维持治疗时间节点。</p>
+    <details><summary>查看答案与解析</summary><div class="dbody">
+      <strong>参考答案：</strong>
+      <ol>
+        <li>急性期：通常逐渐加量，一般 <strong>1 周内</strong>加至有效治疗剂量；有效剂量治疗 <strong>2～4 周</strong>后急性症状开始改善；多数患者 <strong>4～8 周</strong>充分缓解。</li>
+        <li>换药：剂量足够、治疗 <strong>4～6 周</strong>无效或疗效不明显者，可考虑换药。</li>
+        <li>巩固：症状较彻底缓解后，以急性期有效剂量<strong>巩固至少 6 个月</strong>，再缓慢减量。</li>
+        <li>维持：传统药减至治疗剂量的 1/2 或不少于 300mg 氯丙嗪等效剂量；除氯氮平外 SGA 可用急性期有效剂量或略低。首发、缓慢起病者<strong>至少 5 年</strong>；急性发作、缓解迅速彻底者可较短；最终不足 1/5 的患者可能停药。</li>
+      </ol>
+    </div></details>
+  </div>
+
+  <div class="quiz-q">
+    <div class="qh"><span class="qno">第 13 题</span><span class="qtype">案例分析题</span><span class="diff">难</span></div>
+    <p class="brief">某抑郁患者服用氟西汀效果不佳，自行加用吗氯贝胺。请判断该用药是否合理，并说明主要风险与机制。</p>
+    <details><summary>查看答案与解析</summary><div class="dbody">
+      <strong>参考答案：</strong>不合理。教材明确：SSRIs 等新型抗抑郁药<strong>应避免与 MAOIs 等合用</strong>，否则易致 <strong>5-HT 综合征</strong>；总论也指出 MAOIs 与 TCAs 或 SSRIs 合用会增加 5-HT 综合征风险。<br>
+      机制：两者都通过不同途径增强 5-HT 能传递（SSRI 抑制 5-HT 再摄取，MAOI 抑制单胺氧化酶、减少 5-HT 失活），叠加后中枢 5-HT 过度增高。<br>
+      <span class="note">教材未展开 5-HT 综合征的具体症状与处理，本答案仅依据教材提到的风险与机制，不补充教材外内容。</span>
+    </div></details>
+  </div>
+</section>
+<!-- ===== 14 速记卡 ===== -->
+<section id="cards">
+  <div class="sec-head"><div class="badge">14</div><h2>考点速记卡<span class="en">20 flip cards</span></h2></div>
+  <p class="sec-lead">正面是问题，点击翻面看答案。建议按"概念→数据→风险"三轮刷，每轮只追求快速反应。</p>
+  <div class="flashcard-grid">
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag concept">概念</span><p>精神药物的传统四大分类是什么？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">抗精神病药、抗抑郁药、心境稳定剂（抗躁狂药）、抗焦虑药。另有精神兴奋药（儿童多动）与益智药。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag data">对比</span><p>氯丙嗪与氟哌啶醇的核心差别？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">氯丙嗪＝低效价：剂量大、镇静强、抗胆碱强、心肝毒性大、EPS 小；氟哌啶醇＝高效价：剂量小、镇静弱、心肝毒性小、EPS 大、幻觉妄想突出。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag concept">概念</span><p>SGA 按药理作用分哪四类？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">①SDA（血清素多巴胺拮抗剂）；②MARTA（多效受体靶向药，氯氮平）；③选择性 D2/D3 拮抗剂（氨磺必利）；④D2 部分激动剂（阿立哌唑）。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag concept">机制</span><p>D2 的四条通路及后果？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">中脑边缘→抗幻觉妄想；中脑皮质→药源性阴性症状和抑郁；黑质纹状体→EPS；结节漏斗→催乳素升高。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag risk">风险</span><p>阻断 α1 受体可出现什么？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">镇静、直立性低血压、心动过速、性功能减退、射精延迟。氯丙嗪肌注时尤易出现。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag risk">风险</span><p>阻断 M1 受体可出现什么？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">口干、便秘、排尿困难、视物模糊、记忆障碍。氯丙嗪、氯氮平较明显。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag risk">风险</span><p>阻断 H1 受体可出现什么？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">过度镇静、体重增加。氯氮平、奥氮平最常见。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag diag">鉴别</span><p>EPS 四型的时间顺序？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">急性肌张力障碍（最早）→静坐不能（1～2 周）→帕金森综合征（1～2 月，可达 56%）→迟发性运动障碍（几年）。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag risk">风险</span><p>恶性综合征的四联征？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">意识波动、肌肉强直、高热、自主神经功能不稳定。CPK 升高不是确诊指征；停药用丹曲林、溴隐亭。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag risk">风险</span><p>氯氮平必须监测什么？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">血常规（粒细胞缺乏约 1%）、体重、血糖、血脂；起始剂量宜低，警惕直立性低血压与过度镇静。</div>
+    </div></div>
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag concept">机制</span><p>抗抑郁药为什么起效滞后 2～3 周？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">再摄取抑制立即发生，但长期用药后受体敏感性下调（如突触前 5-HT1A 自身受体下调），这一适应过程需要时间，故临床效应滞后。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag treat">药物</span><p>SSRIs 的六个代表药？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">氟西汀、帕罗西汀、舍曲林、氟伏沙明、西酞普兰、艾司西酞普兰（口诀"氟帕舍，氟西艾"）。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag risk">风险</span><p>TCAs 过量中毒的"三联征"与致死量？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">昏迷、癫痫发作、心律失常；一次吞服丙米嗪 1.25g 即可致死。用毒扁豆碱；数小时后仍应洗胃。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag data">数据</span><p>锂的三组血浓度？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">急性期 0.6～1.2mmol/L；&gt;1.4mmol/L 中毒风险升高；维持 0.4～0.8mmol/L。粗大震颤提示接近中毒。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag data">数据</span><p>丙戊酸与卡马西平的目标浓度？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">丙戊酸 50～120mg/L；卡马西平 4～12mg/L（注意单位是 mg/L，不是 mmol/L）。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag data">数据</span><p>拉莫三嗪的三个目标剂量？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">单药 200mg/d；合丙戊酸盐 100mg/d；合除丙戊酸外的酶诱导剂 400mg/d。滴定：25→50→75～100mg/d。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag treat">药物</span><p>BZD 的四个药理作用与疗程红线？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">抗焦虑、镇静催眠、抗惊厥、骨骼肌松弛（"抗、静、抽、松"）。最好持续使用不超过 1 个月；短半衰期更易依赖。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag data">数据</span><p>丁螺环酮与坦度螺酮的剂量？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">丁螺环酮 15～45mg/d，分 3 次；坦度螺酮 30～60mg/d，分 3 次。起效较 BZD 慢，但无依赖、不影响驾驶。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag treat">治疗</span><p>MECT 的四条适应证？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">①严重抑郁伴强烈自伤/自杀企图及行为、明显自责自罪；②极度兴奋躁动、冲动伤人；③拒食、违拗和紧张性木僵；④药物治疗无效或不能耐受。压缩为"自杀、冲动、木僵、难治"。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag data">数据</span><p>MECT 的电量、通电时间与疗程？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">一般 80～120mA，通电 2～3 秒；疗程 6～12 次。躁狂约 6 次；幻觉妄想 8～12 次；抑郁介于两者之间。</div>
+    </div></div>
+  </div>
+</section>
+<!-- ===== 15 病例挑战 ===== -->
+<section id="cases">
+  <div class="sec-head"><div class="badge">15</div><h2>病例挑战<span class="en">3 cases · increasing difficulty</span></h2></div>
+  <p class="sec-lead">以下为<strong>模拟临床情境</strong>：依据教材所述典型表现与处理原则构建，用于训练临床推理，<strong>不是教材原案例</strong>，也不含虚构的化验数值。</p>
+
+  <div class="case">
+    <span class="ctag">难度 ★ · 识别与即刻处理</span>
+    <h3>案例 1：注射后突然"歪脖子"</h3>
+    <div class="scene">某精神分裂症患者因极度兴奋躁动、不合作，按教材方案肌内注射氟哌啶醇 10mg。数小时后，患者突然出现眼上翻、斜颈、颈后倾，表情痛苦但意识清楚。</div>
+    <ol class="ques">
+      <li>最可能的不良反应是什么？依据是什么？</li>
+      <li>首选如何处理？教材给出的具体药物与剂量？</li>
+      <li>为什么不能常规用抗胆碱能药"预防"这类反应？</li>
+    </ol>
+    <details><summary>查看答案与解析</summary><div class="dbody">
+      <strong>1.</strong>急性肌张力障碍。依据：用药后<strong>最早</strong>出现，表现为眼上翻、斜颈、颈后倾、面部怪相、吐舌、张口困难，甚至角弓反张、脊柱侧弯；教材提醒易误诊为破伤风、癫痫、分离性障碍，用药史有助确诊。<br>
+      <strong>2.</strong>肌内注射<strong>东莨菪碱 0.3mg</strong>或<strong>异丙嗪 25mg</strong>可即时缓解；必要时减量、加服苯海索或换用 EPS 低的药物。<br>
+      <strong>3.</strong>教材明确：没有证据表明常规应用抗胆碱能药可预防 EPS，反而易出现抗胆碱能不良反应（包括记忆减退）；如使用，应在 2～3 个月后逐渐停用，且 TD 患者应避免使用。
+    </div></details>
+  </div>
+
+  <div class="case">
+    <span class="ctag">难度 ★★ · 中毒识别与处置</span>
+    <h3>案例 2：抑郁患者吞服大量丙米嗪</h3>
+    <div class="scene">某抑郁患者一次吞服大量丙米嗪后被送至急诊，表现为昏迷、癫痫发作、心律失常。家属称患者平时服用的抗抑郁药为丙米嗪。</div>
+    <ol class="ques">
+      <li>该患者最可能是什么中毒？教材给出的致死量是多少？</li>
+      <li>TCAs 过量中毒的"三联征"是什么？还可能有哪些表现？</li>
+      <li>解毒与处理要点有哪些？为什么数小时后仍要洗胃？</li>
+    </ol>
+    <details><summary>查看答案与解析</summary><div class="dbody">
+      <strong>1.</strong>TCAs 过量中毒。教材原文：一次吞服<strong>丙米嗪 1.25g 即可致死</strong>。<br>
+      <strong>2.</strong>三联征：<strong>昏迷、癫痫发作、心律失常</strong>。还可有高热、低血压、肠麻痹、瞳孔扩大、呼吸抑制、心搏骤停。<br>
+      <strong>3.</strong>试用<strong>毒扁豆碱</strong>缓解抗胆碱能作用，每 0.5～1 小时重复给药 1～2mg；及时洗胃、输液，积极处理心律不齐、控制癫痫。抗胆碱能作用使胃排空延迟，<strong>即使过量后数小时仍应洗胃</strong>。
+    </div></details>
+  </div>
+
+  <div class="case">
+    <span class="ctag">难度 ★★★ · 综合判断</span>
+    <h3>案例 3：夏天腹泻后的"手抖"</h3>
+    <div class="scene">某双相障碍患者长期服用碳酸锂维持治疗。入夏后出现腹泻、进食减少，仍按原剂量服药。数日后出现呕吐、腹泻加重、粗大震颤、构音不清、困倦与意识模糊。</div>
+    <ol class="ques">
+      <li>最可能发生了什么？为什么这次发作有明确诱因？</li>
+      <li>此时血锂可能处于什么范围？教材对中毒阈值如何表述？</li>
+      <li>紧急处理的三步是什么？</li>
+      <li>哪些人更容易在较低浓度下中毒？</li>
+    </ol>
+    <details><summary>查看答案与解析</summary><div class="dbody">
+      <strong>1.</strong>锂盐中毒。锂经肾排泄，排泄受渗透因子控制；腹泻、进食减少可导致脱水/缺钠，使锂排泄减少、血锂升高。<br>
+      <strong>2.</strong>可能 <strong>&gt;1.4mmol/L</strong>。教材：急性期治疗浓度 0.6～1.2mmol/L，&gt;1.4mmol/L 中毒风险升高；出现呕吐、腹泻、粗大震颤、抽动、呆滞、困倦、眩晕、构音不清、意识障碍等中毒先兆应减量，严重者停用。<br>
+      <strong>3.</strong>停用锂盐；给予<strong>生理盐水或高渗钠盐</strong>加速锂排泄；必要时<strong>透析</strong>。一般无后遗症。<br>
+      <strong>4.</strong>老年人或有器质性疾病者，较低浓度也可能中毒。
+    </div></details>
+  </div>
+</section>
+
+<!-- ===== 16 拓展 ===== -->
+<section id="ext">
+  <div class="sec-head"><div class="badge">16</div><h2>拓展延伸<span class="en">Beyond the chapter</span></h2></div>
+  <p class="sec-lead">本章教材已提及但未展开的内容，集中列在这里；同时明确标出"教材未涉及"的空白，避免把课外知识误当成教材结论。</p>
+  <div class="grid2">
+    <div class="card cyan">
+      <h3>教材提及、但仅一笔带过的内容</h3>
+      <ul>
+        <li><strong>VNS：</strong>用于难治性抑郁症，需在胸腔植入类似起搏器的脉冲发生器并连接颈部迷走神经电极；侵入性和不良反应仍需研究。</li>
+        <li><strong>MST：</strong>疗效与 ECT 相当，不良反应显著小于 ECT，具临床应用价值，但线圈类型、刺激剂量、最佳刺激位置、机制和患者选择仍需研究。</li>
+        <li><strong>tDCS：</strong>非侵入性脑刺激，国外研究多年，主要用于焦虑抑郁和精神分裂症谱系，仍有很多不确定性。</li>
+        <li><strong>胰岛素治疗、发热疗法：</strong>教材称已罕用。</li>
+        <li><strong>精神外科：</strong>已限制使用或严格适应证下使用。</li>
+      </ul>
+    </div>
+    <div class="card orange">
+      <h3>教材未涉及 / 本指南不补写的内容</h3>
+      <ul>
+        <li>多数新型抗抑郁药（文拉法辛、度洛西汀、米氮平等）的<strong>具体 mg 剂量</strong>——教材只给机制、适应证与注意事项。</li>
+        <li><strong>5-HT 综合征</strong>的诊断标准、具体症状与处理——教材只提示"合用会增加风险"。</li>
+        <li>各苯二氮䓬类药物的<strong>具体 mg 剂量</strong>——教材只给给药频次与加量原则。</li>
+        <li>TMS、DBS 的<strong>具体刺激参数</strong>（频率、强度、脉宽、触点组合）——教材未给。</li>
+        <li>心理治疗的具体流派与操作技术——本章未展开。</li>
+        <li>药物基因组学、治疗药物监测（TDM）的详细指南——教材未涉及。</li>
+      </ul>
+    </div>
+  </div>
+  <div class="callout ext">
+    <span class="ct">📖 使用提醒</span>
+    本指南所有数值、剂量、疗程与禁忌均取自教材第二十四章原文；凡标注"教材未给/未展开"的地方，不要用其他资料的数字替代，以免与教材答案冲突。
+  </div>
+  <div class="hr"></div>
+  <p class="note" style="text-align:center">精神病学（第9版）· 第二十四章 治疗学 · 印刷页 290–306 · 学习指南完</p>
+</section>
+
+</div>
+<nav class="chapter-pager" aria-label="章节间导航"><a class="cp-prev" href="精神病学_第二十三章_会诊联络精神病学_学习指南.html">← 上一章：第二十三章</a><a class="cp-toc" href="index.html">目录</a><a class="cp-next" href="精神病学_第二十五章_精神障碍的预防和康复_学习指南.html">下一章：第二十五章 →</a></nav>
+</main>
+<button class="top" id="topBtn" aria-label="回到顶部">↑</button>
+<script>
+/* ============================================================
+   精神病学学习指南 · 统一交互层 v1（构建期注入，整体替换原 IIFE）
+   兼容 A 族（.tabbar button + [data-panel] + .panel.on）与
+   B 族（.tab-nav + .tab-panel.active）两套 DOM 约定。
+   特性检测 + 防御式查询 + 幂等；不引入任何外部依赖。
+   ============================================================ */
+(function () {
+  'use strict';
+  if (window.__PSY_GUIDE_APP__) { return; }
+  window.__PSY_GUIDE_APP__ = true;
+
+  var d = document;
+
+  function all(sel, root) {
+    return Array.prototype.slice.call((root || d).querySelectorAll(sel));
+  }
+  function on(el, ev, fn, opt) {
+    if (el) { el.addEventListener(ev, fn, opt || false); }
+  }
+  function norm(s) {
+    return String(s || '').replace(/\s+/g, '').toUpperCase();
+  }
+
+  /* ---------- 1. Tab 切换（两族约定都支持） ---------- */
+  function initTabs() {
+    all('.tabs, [data-tabs]').forEach(function (g) {
+      if (g.__psyTabs) { return; }
+      g.__psyTabs = true;
+      var isA = !!g.querySelector('.tabbar button');
+      var btns = all(isA ? '.tabbar button' : '.tab-nav .tab-btn', g);
+      if (!btns.length) { return; }
+      var cls = isA ? 'on' : 'active';
+      var nav = btns[0].closest('.tabbar') || btns[0].closest('.tab-nav');
+      if (nav && !nav.hasAttribute('role')) { nav.setAttribute('role', 'tablist'); }
+      all(isA ? '.panel' : '.tab-panel', g).forEach(function (p) {
+        if (!p.hasAttribute('role')) { p.setAttribute('role', 'tabpanel'); }
+      });
+      function activate(btn) {
+        btns.forEach(function (b) {
+          b.classList.remove(cls);
+          b.setAttribute('aria-selected', 'false');
+        });
+        btn.classList.add(cls);
+        btn.setAttribute('aria-selected', 'true');
+        var id = btn.getAttribute('data-tab');
+        if (!id) { return; }
+        var target = isA
+          ? g.querySelector('[data-panel="' + id + '"]')
+          : (g.querySelector('.tab-panel#' + id) || d.getElementById(id));
+        all(isA ? '.panel' : '.tab-panel', g).forEach(function (p) {
+          var show = isA ? (p.getAttribute('data-panel') === id) : (p === target);
+          p.classList.toggle(cls, show);
+        });
+      }
+      btns.forEach(function (btn, i) {
+        if (!btn.hasAttribute('role')) { btn.setAttribute('role', 'tab'); }
+        btn.setAttribute('aria-selected', btn.classList.contains(cls) ? 'true' : 'false');
+        if (!btn.hasAttribute('tabindex') && !btn.classList.contains(cls)) { btn.setAttribute('tabindex', '0'); }
+        on(btn, 'click', function () { activate(btn); });
+        on(btn, 'keydown', function (e) {
+          if (e.key !== 'ArrowRight' && e.key !== 'ArrowLeft') { return; }
+          e.preventDefault();
+          var nx = btns[(i + (e.key === 'ArrowRight' ? 1 : btns.length - 1)) % btns.length];
+          if (nx) { nx.focus(); activate(nx); }
+        });
+      });
+    });
+  }
+
+  /* ---------- 2. 速记卡：点击/键盘翻转 + 可达性 ---------- */
+  function initCards() {
+    all('.flashcard').forEach(function (card) {
+      if (card.__psyCard) { return; }
+      card.__psyCard = true;
+      card.setAttribute('tabindex', '0');
+      card.setAttribute('role', 'button');
+      function sync() {
+        card.setAttribute('aria-pressed', card.classList.contains('flipped') ? 'true' : 'false');
+      }
+      function flip() { card.classList.toggle('flipped'); sync(); }
+      on(card, 'click', flip);
+      on(card, 'keydown', function (e) {
+        if (e.key === 'Enter' || e.key === ' ' || e.key === 'Spacebar') {
+          e.preventDefault();
+          flip();
+        }
+      });
+      sync();
+    });
+  }
+
+  /* ---------- 3. 自测题交互化（核心新功能） ---------- */
+  function initQuiz() {
+    var questions = all('.quiz-q, .quiz-item');
+    if (!questions.length) { return; }
+    var groups = {};
+
+    function keyOf(o) {
+      var L = o.getAttribute('data-letter');
+      if (L && String(L).replace(/\s+/g, '') !== '') { return norm(L); }
+      var sp = o.querySelector('.l');
+      if (sp) {
+        var t = norm(sp.textContent).replace(/[.．、:：]/g, '');
+        if (t !== '') { return t; }
+      }
+      var txt = norm(o.textContent);
+      if (txt.indexOf('正确') >= 0 || txt.indexOf('错误') >= 0) { return txt; }
+      return txt.charAt(0);
+    }
+
+    function getGroup(q) {
+      var sec = q.closest('.quiz-block') || q.closest('section') || d.body;
+      if (!groups[sec.__psyGid]) {
+        sec.__psyGid = 'g' + (Object.keys(groups).length + 1);
+        groups[sec.__psyGid] = { sec: sec, total: 0, score: 0, row: null, first: null };
+      }
+      var g = groups[sec.__psyGid];
+      if (!g.first) { g.first = q; }
+      return g;
+    }
+
+    function ensureRow(g) {
+      if (g.row) { return g.row; }
+      var row = d.createElement('div');
+      row.className = 'quiz-score';
+      row.setAttribute('role', 'status');
+      row.setAttribute('aria-live', 'polite');
+      row.innerHTML = '<span class="qs-label">自测计分</span>' +
+        '<span class="qs-num">得分 0 / ' + g.total + '</span>' +
+        '<span class="qs-bar"><i></i></span>';
+      g.first.parentNode.insertBefore(row, g.first);
+      g.row = row;
+      return row;
+    }
+
+    function updateRow(g) {
+      var row = ensureRow(g);
+      var num = row.querySelector('.qs-num');
+      var bar = row.querySelector('.qs-bar i');
+      if (num) { num.textContent = '得分 ' + g.score + ' / ' + g.total; }
+      if (bar) { bar.style.width = (g.total ? Math.round(g.score / g.total * 100) : 0) + '%'; }
+    }
+
+    questions.forEach(function (q) {
+      if (q.__psyQuiz) { return; }
+      q.__psyQuiz = true;
+      var opts = all('.opt', q);
+      if (!opts.length) { opts = all('.quiz-options > li', q); }
+      if (!opts.length) { return; }
+
+      /* 正确答案先记入内存：预标 correct 优先（记录后立即移除，消除剧透），
+         否则从解析文本「答案：X / 答案 X」提取（不改动任何文字） */
+      var ansKeys = [];
+      var preset = opts.filter(function (o) { return o.classList.contains('correct'); });
+      preset.forEach(function (o) { o.classList.remove('correct'); });
+      if (preset.length) {
+        ansKeys = preset.map(keyOf);
+      } else {
+        var dt = q.querySelector('details');
+        var txt = dt ? dt.textContent : '';
+        var m = txt.match(/答案\s*[:：]?\s*([A-Za-z](?:[\s、,，·和及]*[A-Za-z])*)/);
+        if (m) {
+          ansKeys = m[1].match(/[A-Za-z]/g) || [];
+        } else {
+          var m2 = txt.match(/答案\s*[:：]?\s*(正确|错误)/);
+          if (m2) { ansKeys = [m2[1]]; }
+        }
+      }
+      if (!ansKeys.length) { return; } /* 无可判定答案（名词解释等），保持原样 */
+
+      var g = getGroup(q);
+      g.total += 1;
+      var multi = ansKeys.length > 1;
+      var ansSet = ansKeys.map(norm);
+      var locked = false;
+      var picked = [];
+
+      function revealAll() {
+        opts.forEach(function (o) {
+          if (ansSet.indexOf(keyOf(o)) >= 0) { o.classList.add('is-reveal'); }
+        });
+      }
+      function finish(ok) {
+        locked = true;
+        q.classList.add('is-locked');
+        var dt = q.querySelector('details');
+        if (dt) { dt.open = true; }
+        if (ok) { g.score += 1; }
+        updateRow(g);
+      }
+
+      opts.forEach(function (o) {
+        o.setAttribute('tabindex', '0');
+        function pick() {
+          if (locked) { return; }
+          var k = keyOf(o);
+          if (ansSet.indexOf(k) >= 0) {
+            o.classList.add('is-right');
+            if (picked.indexOf(k) < 0) { picked.push(k); }
+            if (multi) {
+              if (picked.length === ansSet.length) { finish(true); }
+            } else {
+              finish(true);
+            }
+          } else {
+            o.classList.add('is-wrong');
+            revealAll();
+            finish(false);
+          }
+        }
+        on(o, 'click', pick);
+        on(o, 'keydown', function (e) {
+          if (e.key === 'Enter' || e.key === ' ' || e.key === 'Spacebar') {
+            e.preventDefault();
+            pick();
+          }
+        });
+      });
+    });
+
+    Object.keys(groups).forEach(function (id) {
+      if (groups[id].total > 0) { updateRow(groups[id]); }
+    });
+  }
+
+  /* ---------- 4. 侧栏 scroll spy（本页锚点高亮） ---------- */
+  function initSpy() {
+    var links = all('#sidebar a[href^="#"]');
+    if (!links.length || !('IntersectionObserver' in window)) { return; }
+    var map = {};
+    links.forEach(function (a) {
+      var id = a.getAttribute('href').slice(1);
+      if (id) { map[id] = a; }
+    });
+    var secs = [];
+    Object.keys(map).forEach(function (id) {
+      var s = d.getElementById(id);
+      if (s) { secs.push(s); }
+    });
+    if (!secs.length) { return; }
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting && map[e.target.id]) {
+          links.forEach(function (a) { a.classList.remove('active'); });
+          map[e.target.id].classList.add('active');
+        }
+      });
+    }, { rootMargin: '-15% 0px -70% 0px', threshold: 0 });
+    secs.forEach(function (s) { io.observe(s); });
+  }
+
+  /* ---------- 5. 阅读进度条 + 回顶 ---------- */
+  function initScroll() {
+    var bar = d.getElementById('readbar');
+    var topBtn = d.getElementById('topBtn') || d.getElementById('backTop');
+    var ticking = false;
+    function step() {
+      ticking = false;
+      var h = d.documentElement;
+      var y = window.pageYOffset || h.scrollTop || 0;
+      if (bar) {
+        var max = h.scrollHeight - h.clientHeight;
+        bar.style.width = (max > 0 ? (y / max) * 100 : 0) + '%';
+      }
+      if (topBtn) {
+        topBtn.classList.toggle('show', y > 400);     /* A 族类名 */
+        topBtn.classList.toggle('visible', y > 400);  /* B 族类名 */
+      }
+    }
+    on(window, 'scroll', function () {
+      if (!ticking) { ticking = true; window.requestAnimationFrame(step); }
+    }, { passive: true });
+    step();
+    on(topBtn, 'click', function () {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
+
+  /* ---------- 6. 侧栏开合（存在才绑定；抽屉打开时锁定背景滚动） ---------- */
+  function initSidebar() {
+    var sidebar = d.getElementById('sidebar');
+    if (!sidebar) { return; }
+    var btn = d.getElementById('menuBtn') || d.getElementById('navToggle');
+    var ov = d.getElementById('overlay') || d.getElementById('sidebarOverlay');
+    function lock(open) {
+      /* 仅移动抽屉断点（≤900px）锁滚动；宽屏兜底解除，防布局残留 */
+      d.body.classList.toggle('nav-locked', !!open && window.innerWidth <= 900);
+    }
+    function close() {
+      sidebar.classList.remove('open');
+      if (ov) { ov.classList.remove('show'); }
+      lock(false);
+    }
+    on(btn, 'click', function () {
+      var open = !sidebar.classList.contains('open');
+      sidebar.classList.toggle('open');
+      if (ov) { ov.classList.toggle('show'); }
+      lock(open);
+    });
+    on(ov, 'click', close);
+    all('a', sidebar).forEach(function (a) {
+      on(a, 'click', function () {
+        if (window.innerWidth <= 900) { close(); }
+      });
+    });
+    on(window, 'resize', function () {
+      if (window.innerWidth > 900) { lock(false); }
+    });
+  }
+
+  /* ---------- 启动（脚本位于 body 末尾，DOM 已就绪；防御兜底） ---------- */
+  function boot() {
+    initTabs();
+    initCards();
+    initQuiz();
+    initSpy();
+    initScroll();
+    initSidebar();
+  }
+  if (d.readyState === 'loading') {
+    on(d, 'DOMContentLoaded', boot);
+  } else {
+    boot();
+  }
+})();
+</script>
+
+</body>
+</html>

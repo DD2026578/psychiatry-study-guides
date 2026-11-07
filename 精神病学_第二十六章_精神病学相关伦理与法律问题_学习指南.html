@@ -1,0 +1,2197 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>精神病学 第二十六章 精神病学相关伦理与法律问题 · 学习指南</title>
+<style>
+:root{
+  --primary:#0EA5E9; --accent:#10B981; --symptom:#EF4444; --treatment:#10B981;
+  --cause:#3B82F6; --diagnosis:#F59E0B; --memory:#8B5CF6; --danger:#DC2626;
+  --quiz:#EC4899; --flashcard:#06B6D4; --bg:#F0F7FA; --card:#FFFFFF;
+  --ink:#0F172A; --muted:#64748B; --border:#E2E8F0; --accent2:#10B981; --accent3:#06B6D4;
+  --shadow:0 4px 18px rgba(15,23,42,.06); --radius:14px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:'Microsoft YaHei','PingFang SC','Hiragino Sans GB',system-ui,-apple-system,sans-serif;font-size:16px;line-height:1.75;-webkit-font-smoothing:antialiased}
+#readbar{position:fixed;top:0;left:0;height:4px;width:0;background:linear-gradient(135deg,#0EA5E9 0%,#06B6D4 50%,#10B981 100%);z-index:300;transition:width .12s linear}
+a{color:var(--primary);text-decoration:none}
+a:hover{text-decoration:underline}
+.sidebar{position:fixed;top:0;left:0;width:272px;height:100vh;background:#fff;border-right:1px solid var(--border);overflow-y:auto;padding:20px 16px 40px;z-index:120}
+.sidebar h2{font-size:17px;margin:0 0 4px;line-height:1.5}
+.sidebar .sub{font-size:12px;color:var(--muted);line-height:1.6;margin-bottom:14px}
+.toc-group{font-size:12px;letter-spacing:.08em;color:var(--muted);margin:16px 0 6px;font-weight:700}
+.sidebar a.toc{display:block;padding:7px 10px;border-radius:8px;font-size:14px;color:var(--ink);line-height:1.5;margin:2px 0}
+.sidebar a.toc:hover{background:#E0F2FE;text-decoration:none}
+.sidebar a.toc .n{display:inline-block;min-width:26px;color:var(--primary);font-weight:700}
+.sidebar .unitlink{font-weight:600}
+.sidebar .sub2{padding-left:26px;font-size:13px;color:var(--muted)}
+.overlay{display:none}
+.menu-btn{display:none;position:fixed;top:14px;left:14px;z-index:200;width:46px;height:46px;border-radius:12px;border:1px solid var(--border);background:#fff;box-shadow:var(--shadow);font-size:22px;line-height:1;color:var(--primary);cursor:pointer}
+.main{margin-left:272px;padding:0 40px 90px;max-width:1240px}
+.wrap{max-width:980px;margin:0 auto}
+.hero{background:linear-gradient(135deg,#0EA5E9 0%,#06B6D4 50%,#10B981 100%);color:#fff;border-radius:0 0 26px 26px;padding:52px 44px 40px;margin:0 -40px 30px;box-shadow:0 12px 30px rgba(14,165,233,.18)}
+.hero .chap{display:inline-block;font-size:13px;letter-spacing:.22em;background:rgba(255,255,255,.18);padding:5px 14px;border-radius:999px;margin-bottom:16px}
+.hero h1{font-size:42px;line-height:1.25;margin:0 0 10px;font-weight:800}
+.hero .tagline{font-size:18px;opacity:.96;margin:0 0 6px}
+.hero .meta{font-size:13px;opacity:.85}
+.goalbox{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.28);border-radius:14px;padding:18px 20px;margin-top:22px}
+.goalbox h3{margin:0 0 10px;font-size:15px;letter-spacing:.06em}
+.goalbox ul{margin:0;padding-left:20px}
+.goalbox li{margin:4px 0;font-size:14.5px;line-height:1.65}
+.lv{display:inline-block;font-size:11px;font-weight:700;padding:1px 8px;border-radius:999px;background:#fff;color:#0369A1;margin-right:6px;vertical-align:1px}
+.lv.l2{color:#047857}.lv.l3{color:#B45309}.lv.l4{color:#B91C1C}
+section{scroll-margin-top:18px;margin:0 0 46px}
+.sec-head{display:flex;align-items:center;gap:12px;margin:0 0 8px}
+.sec-head .badge{flex:0 0 auto;width:44px;height:44px;border-radius:13px;background:linear-gradient(135deg,#0EA5E9,#06B6D4);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:17px;box-shadow:0 6px 14px rgba(14,165,233,.25)}
+.sec-head h2{font-size:27px;margin:0;line-height:1.35;font-weight:800}
+.sec-head .en{font-size:13px;color:var(--muted);font-weight:400;margin-left:6px}
+.sec-lead{color:#334155;background:#fff;border-left:4px solid var(--primary);border-radius:0 12px 12px 0;padding:13px 18px;margin:12px 0 22px;box-shadow:var(--shadow);font-size:15px}
+.card{background:var(--card);border:1px solid var(--border);border-left:6px solid var(--primary);border-radius:var(--radius);padding:20px 22px;margin:16px 0;box-shadow:var(--shadow)}
+.card.red{border-left-color:var(--symptom)} .card.green{border-left-color:var(--treatment)}
+.card.blue{border-left-color:var(--cause)} .card.orange{border-left-color:var(--diagnosis)}
+.card.purple{border-left-color:var(--memory)} .card.cyan{border-left-color:var(--flashcard)}
+.card.danger{border-left-color:var(--danger)} .card.pink{border-left-color:var(--quiz)}
+.card h3,.col-title{font-size:19px;margin:0 0 10px;line-height:1.45;display:flex;align-items:center;gap:9px;flex-wrap:wrap}
+.col-title .idx{font-size:12px;font-weight:800;color:#fff;background:var(--primary);padding:2px 9px;border-radius:999px;letter-spacing:.03em}
+.card p{margin:8px 0}
+.card ul,.card ol{margin:8px 0;padding-left:22px}
+.card li{margin:5px 0}
+.quote{background:#EFF8FF;border:1px dashed #7DD3FC;border-radius:10px;padding:12px 16px;margin:10px 0;font-size:15px;color:#0C4A6E}
+.quote .lab{display:inline-block;font-size:11px;font-weight:800;background:#0EA5E9;color:#fff;padding:1px 7px;border-radius:5px;margin-right:7px;vertical-align:1px}
+.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.grid4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.grid2>*,.grid3>*,.grid4>*{min-width:0}
+.mini{background:#F8FAFC;border:1px solid var(--border);border-radius:11px;padding:12px 14px}
+.mini h4{margin:0 0 5px;font-size:15px;color:#0F172A}
+.mini p,.mini ul{font-size:14px;color:#334155;margin:4px 0}
+.mini ul{padding-left:18px}
+.stat{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0}
+.stat span{font-size:13px;background:#E0F2FE;color:#075985;border-radius:999px;padding:3px 11px;font-weight:600}
+.table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:12px 0;border-radius:12px;border:1px solid var(--border)}
+table{border-collapse:collapse;width:100%;min-width:560px;background:#fff;font-size:14px}
+th{background:#0F172A;color:#fff;font-weight:700;padding:10px 12px;text-align:left;line-height:1.5;font-size:13.5px}
+td{padding:10px 12px;border-top:1px solid var(--border);vertical-align:top;line-height:1.65}
+tbody tr:nth-child(even){background:#F8FAFC}
+td strong{color:#0C4A6E}
+.callout{border-radius:12px;padding:13px 16px;margin:12px 0;border:1px solid;font-size:14.5px}
+.callout .ct{font-weight:800;display:block;margin-bottom:4px;font-size:14.5px}
+.callout.tip{background:#F5F3FF;border-color:#C4B5FD;color:#4C1D95}
+.callout.warn{background:#FEF2F2;border-color:#FCA5A5;color:#7F1D1D}
+.callout.key{background:#ECFDF5;border-color:#6EE7B7;color:#065F46}
+.callout.book{background:#EFF6FF;border-color:#93C5FD;color:#1E3A8A}
+.callout.quiz{background:#FDF2F8;border-color:#F9A8D4;color:#831843}
+.callout.ext{background:#F0F9FF;border-color:#7DD3FC;color:#0C4A6E}
+.timeline{border-left:3px solid #BAE6FD;margin:14px 0 6px 8px;padding-left:20px}
+.tl-item{position:relative;margin:0 0 16px}
+.tl-item:before{content:"";position:absolute;left:-28px;top:5px;width:13px;height:13px;border-radius:50%;background:#fff;border:3px solid var(--primary)}
+.tl-item h4{margin:0 0 3px;font-size:15px;color:#075985}
+.tl-item p{margin:0;font-size:14px;color:#334155}
+.bar{background:#E2E8F0;border-radius:999px;height:9px;overflow:hidden;margin:6px 0 10px}
+.bar i{display:block;height:100%;border-radius:999px;background:linear-gradient(90deg,#0EA5E9,#10B981)}
+.bar-label{display:flex;justify-content:space-between;font-size:13px;color:#334155}
+.tabs{margin:14px 0}
+.tabbar{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:12px}
+.tabbar button{border:1px solid var(--border);background:#fff;border-radius:999px;padding:7px 15px;font-size:14px;font-family:inherit;cursor:pointer;color:#334155}
+.tabbar button.on{background:var(--primary);color:#fff;border-color:var(--primary)}
+.panel{display:none}
+.panel.on{display:block;animation:fade .25s ease}
+@keyframes fade{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}
+details{background:#fff;border:1px solid var(--border);border-radius:11px;margin:10px 0;overflow:hidden}
+summary{cursor:pointer;padding:11px 15px;font-weight:700;color:#075985;list-style:none;font-size:14.5px;background:#F8FAFC}
+summary::-webkit-details-marker{display:none}
+summary:before{content:"▸";display:inline-block;margin-right:7px;color:var(--primary);transition:transform .2s}
+details[open] summary:before{transform:rotate(90deg)}
+details[open] summary{border-bottom:1px solid var(--border)}
+.dbody{padding:13px 16px;font-size:14.5px;color:#1E293B}
+.flashcard-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin:16px 0}
+.flashcard{perspective:1200px;height:200px;cursor:pointer}
+.fc-inner{position:relative;width:100%;height:100%;transition:transform .55s;transform-style:preserve-3d}
+.flashcard.flipped .fc-inner{transform:rotateY(180deg)}
+.fc-front,.fc-back{position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;border-radius:14px;padding:14px 16px;display:flex;flex-direction:column;justify-content:center;box-shadow:var(--shadow);overflow:auto}
+.fc-front{background:#fff;border:1px solid var(--border);border-top:5px solid var(--flashcard)}
+.fc-back{background:#ECFEFF;border:1px solid #A5F3FC;transform:rotateY(180deg);font-size:13.5px;line-height:1.65;color:#164E63}
+.tag{display:inline-block;align-self:flex-start;font-size:11px;font-weight:800;padding:1px 8px;border-radius:999px;margin-bottom:8px;letter-spacing:.04em}
+.tag.concept{background:#DBEAFE;color:#1E40AF}
+.tag.diag{background:#FFEDD5;color:#9A3412}
+.tag.treat{background:#D1FAE5;color:#065F46}
+.tag.data{background:#FCE7F3;color:#9D174D}
+.tag.risk{background:#FEE2E2;color:#991B1B}
+.fc-front p{margin:0;font-size:14.5px;font-weight:700;line-height:1.6}
+.fc-hint{position:absolute;bottom:10px;left:16px;font-size:11px;color:#94A3B8}
+.quiz-q{background:#fff;border:1px solid var(--border);border-left:5px solid var(--quiz);border-radius:12px;padding:16px 18px;margin:16px 0;box-shadow:var(--shadow)}
+.quiz-q .qh{display:flex;justify-content:space-between;gap:10px;align-items:flex-start;margin-bottom:8px;flex-wrap:wrap}
+.quiz-q .qno{font-size:12px;font-weight:800;color:#fff;background:var(--quiz);border-radius:999px;padding:2px 9px;letter-spacing:.04em}
+.diff{font-size:12px;color:#B45309;background:#FEF3C7;border-radius:999px;padding:2px 10px;font-weight:700;white-space:nowrap}
+.qtype{font-size:12px;color:#6B21A8;background:#F3E8FF;border-radius:999px;padding:2px 10px;font-weight:700;white-space:nowrap}
+.opts{margin:10px 0 4px;display:grid;gap:7px}
+.opt{border:1px solid var(--border);border-radius:9px;padding:8px 12px;font-size:14.5px;background:#F8FAFC}
+.opt.correct{border-color:#6EE7B7;background:#ECFDF5;color:#065F46;font-weight:600}
+.opt .l{font-weight:800;color:var(--primary);margin-right:7px}
+.opt.correct .l{color:#047857}
+.brief{font-size:14px;color:#334155;margin-top:4px}
+.case{border:1px solid var(--border);border-top:5px solid var(--danger);border-radius:14px;background:#fff;padding:20px 22px;margin:18px 0;box-shadow:var(--shadow)}
+.case h3{font-size:19px;margin:0 0 8px;color:#7F1D1D}
+.case .ctag{font-size:11.5px;font-weight:800;background:#FEE2E2;color:#991B1B;padding:2px 9px;border-radius:999px;display:inline-block;margin-bottom:10px}
+.case .scene{background:#FFF7ED;border-left:4px solid #FB923C;border-radius:0 10px 10px 0;padding:12px 16px;font-size:14.5px;margin:8px 0 14px}
+.case .ques{margin:8px 0;padding-left:2px}
+.case .ques li{margin:5px 0;font-size:14.5px}
+.top{position:fixed;right:24px;bottom:26px;width:48px;height:48px;border-radius:50%;background:var(--primary);color:#fff;border:none;font-size:20px;cursor:pointer;box-shadow:0 8px 20px rgba(14,165,233,.35);z-index:150;display:none;font-family:inherit}
+.top.show{display:block}
+.hr{height:1px;background:var(--border);margin:26px 0}
+.note{font-size:13px;color:var(--muted);margin-top:6px}
+.kv{display:flex;gap:10px;flex-wrap:wrap;margin:8px 0}
+.kv .k{font-size:12px;font-weight:800;color:#0369A1;background:#E0F2FE;border-radius:6px;padding:2px 8px;white-space:nowrap}
+.kv .v{font-size:14px;color:#334155}
+.starme{font-size:12.5px;color:#B45309;white-space:nowrap}
+@media (max-width:1100px){
+  .main{padding:0 22px 80px}
+  .hero{margin:0 -22px 26px;padding:44px 26px 34px}
+  .hero h1{font-size:34px}
+  .flashcard-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .grid4{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width:900px){
+  .sidebar{transform:translateX(-100%);transition:transform .25s ease;width:280px;box-shadow:0 0 30px rgba(0,0,0,.18)}
+  .sidebar.open{transform:none}
+  .overlay{display:none;position:fixed;inset:0;background:rgba(15,23,42,.42);z-index:110}
+  .overlay.show{display:block}
+  .menu-btn{display:block}
+  .main{margin-left:0;padding:0 18px 80px}
+  .hero{margin:0 -18px 24px;padding:64px 22px 30px;border-radius:0 0 20px 20px}
+  .hero h1{font-size:30px}
+  .sec-head h2{font-size:23px}
+}
+@media (max-width:680px){
+  .grid2,.grid3,.grid4{grid-template-columns:minmax(0,1fr)}
+  .flashcard-grid{grid-template-columns:minmax(0,1fr)}
+  .flashcard{height:190px}
+  table{min-width:500px}
+}
+</style>
+<style data-refactor="v1">
+/* ============================================================
+   精神病学学习指南 · 统一交互层增量覆盖样式 v1
+   构建期由 apply-refactor.ps1 注入 </head> 前，仅追加修正，
+   不改动 A/B 两族基础样式。全部使用字面色值，兼容两族设计变量。
+   ============================================================ */
+
+/* ---- 1. 全局键盘焦点可见 ---- */
+:focus-visible{outline:2px solid #0EA5E9;outline-offset:2px}
+
+/* ---- 2. 章节导航条（胶囊式三段：上一章 / 目录 / 下一章） ---- */
+.chapter-pager{display:flex;align-items:stretch;justify-content:center;gap:10px;margin:36px 0 10px;flex-wrap:wrap}
+.chapter-pager a,.chapter-pager span{flex:1 1 200px;display:flex;align-items:center;justify-content:center;min-height:44px;padding:10px 18px;border:1px solid #E2E8F0;border-radius:999px;background:#FFFFFF;color:#0F172A;font-size:14px;font-weight:600;line-height:1.4;text-decoration:none;text-align:center;box-shadow:0 1px 2px rgba(15,23,42,.06);transition:border-color .15s ease,box-shadow .15s ease,color .15s ease}
+.chapter-pager a:hover{border-color:#0EA5E9;color:#0EA5E9;box-shadow:0 4px 14px rgba(14,165,233,.18);text-decoration:none}
+.chapter-pager .cp-toc{flex:0 0 auto;min-width:104px;background:linear-gradient(135deg,#0EA5E9,#10B981);border-color:transparent;color:#FFFFFF}
+.chapter-pager .cp-toc:hover{border-color:transparent;color:#FFFFFF;opacity:.92}
+.chapter-pager .cp-disabled{opacity:.45;background:#F8FAFC;box-shadow:none;cursor:default}
+@media (max-width:680px){.chapter-pager{gap:8px;margin:28px 0 8px}.chapter-pager a,.chapter-pager span{flex:1 1 100%}}
+
+/* ---- 3. 自测题交互态（兼容 A 族 .opt 与 B 族 .quiz-options li） ---- */
+/* 3.1 基础可点击 */
+.quiz-q .opt{cursor:pointer}
+.quiz-item .quiz-options li{cursor:pointer}
+/* 3.2 hover / 焦点态 */
+.quiz-q .opt:hover,.quiz-q .opt:focus-visible{border-color:#7DD3FC;background:#F0F9FF}
+.quiz-item .quiz-options li:hover,.quiz-item .quiz-options li:focus-visible{background:#FFFFFF;box-shadow:inset 0 0 0 1px #7DD3FC}
+/* 3.3 判定结果态 */
+.quiz-q .opt.is-right{border-color:#34D399;background:#ECFDF5;color:#065F46;font-weight:600}
+.quiz-q .opt.is-right::after{content:" ✓";color:#059669;font-weight:800}
+.quiz-q .opt.is-right .l{color:#047857}
+.quiz-item .quiz-options li.is-right{background:#DCFCE7;box-shadow:inset 0 0 0 1px #34D399;font-weight:600}
+.quiz-item .quiz-options li.is-right::after{content:" ✓";color:#15803D;font-weight:800}
+.quiz-q .opt.is-wrong{border-color:#FCA5A5;background:#FEF2F2;color:#B91C1C;font-weight:600}
+.quiz-q .opt.is-wrong::after{content:" ✗";color:#DC2626;font-weight:800}
+.quiz-q .opt.is-wrong .l{color:#B91C1C}
+.quiz-item .quiz-options li.is-wrong{background:#FEE2E2;box-shadow:inset 0 0 0 1px #FCA5A5;font-weight:600}
+.quiz-item .quiz-options li.is-wrong::after{content:" ✗";color:#DC2626;font-weight:800}
+.quiz-q .opt.is-reveal{border-color:#6EE7B7;background:#ECFDF5;color:#065F46}
+.quiz-q .opt.is-reveal .l{color:#047857}
+.quiz-item .quiz-options li.is-reveal{background:#ECFDF5;box-shadow:inset 0 0 0 1px #6EE7B7;color:#065F46}
+/* 3.4 已锁定禁用态 */
+.quiz-q.is-locked .opt,.quiz-item.is-locked .quiz-options li{cursor:default;pointer-events:none}
+.quiz-q.is-locked .opt:not(.is-right):not(.is-wrong):not(.is-reveal){opacity:.55}
+.quiz-item.is-locked .quiz-options li:not(.is-right):not(.is-wrong):not(.is-reveal){opacity:.55}
+/* 3.5 计分行（运行时注入） */
+.quiz-score{display:flex;align-items:center;gap:12px;margin:14px 0 18px;padding:12px 18px;border:1px dashed #7DD3FC;border-radius:12px;background:#F0F9FF;font-size:14px;font-weight:700;color:#0F172A}
+.quiz-score .qs-label{white-space:nowrap}
+.quiz-score .qs-num{white-space:nowrap;color:#0284C7;font-size:16px}
+.quiz-score .qs-bar{flex:1 1 60px;min-width:60px;height:8px;border-radius:999px;background:#E2E8F0;overflow:hidden}
+.quiz-score .qs-bar i{display:block;height:100%;width:0;border-radius:999px;background:linear-gradient(90deg,#0EA5E9,#10B981);transition:width .35s ease}
+
+/* ---- 4. 速记卡可达性与长内容 ---- */
+.fc-hint,.flip-hint{color:#64748B}
+.flashcard-face{overflow:auto}
+.flashcard[tabindex]{outline:none}
+.flashcard[tabindex]:focus-visible{outline:3px solid #0EA5E9;outline-offset:3px}
+
+/* ---- 5. 侧栏目录 ---- */
+/* B 族 sticky 侧栏内目录限高滚动（A 族 aside 本身已可滚动，此规则空匹配无害） */
+.sidebar .sidebar-nav{max-height:calc(100vh - 60px);overflow-y:auto;scrollbar-width:thin}
+/* A 族 scroll spy 高亮（B 族高亮由其基础样式提供） */
+.sidebar a.toc.active{background:#E0F2FE;color:#0369A1;font-weight:600}
+
+/* ---- 6. 响应式补充：681–900px 时 grid3 降为两列 ---- */
+@media (min-width:681px) and (max-width:900px){
+  .grid3{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+
+/* ---- 7. 打印样式补充（A 族新增；B 族已有 print，重复声明无害） ---- */
+@media print{
+  .sidebar,.overlay,.sidebar-overlay,#menuBtn,#navToggle,#overlay,#sidebarOverlay,#readbar,#topBtn,#backTop,.chapter-pager,.quiz-score{display:none!important}
+}
+
+/* ---- 8. 手机端增强 v2（触控体验 / 防溢出 / 抽屉滚动锁定） ---- */
+/* 8.1 触控体验：去点按高亮、消除双击缩放延迟（flashcard 高 190-200px 天然达标，不另设 min-height） */
+.opt,.tabbar button,.tab-btn,.quiz-options li,.flashcard,.chapter-pager a,.chapter-pager span,.menu-btn,.mobile-nav-toggle{-webkit-tap-highlight-color:transparent;touch-action:manipulation}
+/* 8.2 触控目标最小 44px（自测选项与 tab 胶囊原高约 33px） */
+.opt,.tabbar button,.tab-btn,.quiz-options li{min-height:44px}
+/* 8.3 防溢出：内容图自适应；svg 不设 height:auto，避免定尺寸图标塌陷 */
+img{max-width:100%;height:auto}
+svg{max-width:100%}
+/* 8.4 长词/URL 断行 */
+body{overflow-wrap:break-word}
+/* 8.5 表格容器触摸惯性滚动（A 族已有同值规则，重复声明无害） */
+.table-wrap{-webkit-overflow-scrolling:touch}
+/* 8.6 抽屉打开时锁定背景滚动（两族抽屉断点均为 900px；类由统一脚本增删） */
+@media (max-width:900px){
+  body.nav-locked{overflow:hidden}
+}
+</style>
+</head>
+<body>
+<div id="readbar"></div>
+<button class="menu-btn" id="menuBtn" aria-label="打开目录">☰</button>
+<div class="overlay" id="overlay"></div>
+<aside class="sidebar" id="sidebar">
+  <h2>第二十六章 精神病学相关伦理与法律问题</h2>
+  <div class="sub">精神病学（第9版）· 印刷页 319–329<br>学习指南 · 技能标准版</div>
+  <div class="toc-group">开篇</div>
+  <a class="toc" href="#cover"><span class="n">00</span>章节封面与学习目标</a>
+  <a class="toc" href="#status"><span class="n">01</span>本章地位速览</a>
+  <a class="toc" href="#navmap"><span class="n">02</span>章节导航图</a>
+  <a class="toc" href="#mindmap"><span class="n">03</span>本章知识地图</a>
+  <a class="toc" href="#route"><span class="n">04</span>学习路线图</a>
+  <div class="toc-group">正文（主题单元八栏）</div>
+  <a class="toc unitlink" href="#u1"><span class="n">05</span>概述：伦理与法律的入口</a>
+  <a class="toc unitlink" href="#u2"><span class="n">06</span>精神卫生服务相关伦理原则</a>
+  <a class="toc sub2" href="#u2-6">└ 知情同意与保密操作</a>
+  <a class="toc unitlink" href="#u3"><span class="n">07</span>精神障碍患者的法律保护</a>
+  <a class="toc sub2" href="#u3-6">└ 送诊与非自愿住院程序</a>
+  <a class="toc unitlink" href="#u4"><span class="n">08</span>精神障碍与违法行为</a>
+  <a class="toc sub2" href="#u4-6">└ 鉴定与处置程序</a>
+  <div class="toc-group">结尾</div>
+  <a class="toc" href="#summary"><span class="n">09</span>全章核心要点速览</a>
+  <a class="toc" href="#pitfalls"><span class="n">10</span>易混易错点警示</a>
+  <a class="toc" href="#quiz"><span class="n">11</span>章节自测系统</a>
+  <a class="toc" href="#cards"><span class="n">12</span>考点速记卡</a>
+  <a class="toc" href="#cases"><span class="n">13</span>病例挑战</a>
+  <a class="toc" href="#ext"><span class="n">14</span>拓展延伸</a>
+</aside>
+<main class="main">
+<div class="wrap">
+
+<!-- ===== 00 封面 ===== -->
+<section id="cover">
+  <div class="hero">
+    <span class="chap">第二十六章 · CHAPTER 26</span>
+    <h1>精神病学相关伦理与法律问题</h1>
+    <p class="tagline">临床决策不只有"医学上能不能"，还有"伦理上该不该"与"法律上允不允许"。本章给精神科实践划出三条边界：原则、权利、程序。</p>
+    <p class="meta">教材：精神病学（第9版）｜印刷页 319–329｜全章 4 节：概述、精神卫生服务相关伦理原则、精神障碍患者的法律保护、精神障碍与违法行为</p>
+    <div class="goalbox">
+      <h3>学习目标（四级分层）</h3>
+      <ul>
+        <li><span class="lv">了解</span>说出精神病学与法律、精神卫生与法律的学科定位；列出本章四节各自回答的问题，以及司法精神病学的服务对象。</li>
+        <li><span class="lv l2">理解</span>解释尊重（自主）、不伤害、有利（行善）、公正四项基本原则在精神科的特殊张力；理解"患精神障碍不等于自动丧失决定能力"。</li>
+        <li><span class="lv l3">掌握</span>掌握知情同意的成立条件与例外、保密义务及披露边界；掌握自愿/非自愿住院的法定前提、决定主体与救济途径；掌握民事责任能力分级与监护规则。</li>
+        <li><span class="lv l4">重点</span>刑事责任能力中的辨认能力与控制能力、受审能力与责任能力的时间差异、服刑能力/性自卫能力/作证能力的判断要点，以及违法精神障碍患者的三种处置方式——高频考点与法律风险底线。</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 01 地位 ===== -->
+<section id="status">
+  <div class="sec-head"><div class="badge">01</div><h2>本章地位速览<span class="en">Why this chapter matters</span></h2></div>
+  <p class="sec-lead">前面各章回答"是什么病、怎么治"，本章回答"做这些事时，伦理与法律的边界在哪里"。它不按疾病组织，而是按原则、权利和程序组织。</p>
+  <div class="grid3">
+    <div class="card blue">
+      <h3>章节定位与重要性</h3>
+      <p>本章位于教材后部（第二十六章，印刷页 319–329），集中论述精神卫生伦理与法律。全章<strong>不设独立疾病单元</strong>，以四节主题组织：概述 → 伦理原则 → 法律保护 → 违法行为。</p>
+      <p class="note">考试权重集中在：四项伦理原则、知情同意与保密、自愿/非自愿住院、民事行为能力、六项法律能力与三种处置方式。</p>
+    </div>
+    <div class="card red">
+      <h3>临床意义</h3>
+      <p>精神科临床实践涉及<strong>非自愿住院、留院观察、强制医疗</strong>等直接触及人身自由的措施。教材因此强调，精神卫生服务长期面临大量伦理困境，而现代精神卫生服务正是在处理这些挑战中不断完善。</p>
+      <p>对临床医生而言，知情同意、隐私保护、鉴定资格与程序都不是可有可无的"软知识"：教材在隐私保护部分明确提到，违反相关法律义务要承担<strong>民事赔偿、监管处罚，乃至刑事制裁</strong>。</p>
+    </div>
+    <div class="card green">
+      <h3>与前后章节关联</h3>
+      <p><strong>前置：</strong>精神分裂症的命令性幻听、被害妄想，抑郁障碍的冲动与产后精神障碍，物质依赖的控制能力损害，都是本章"违法行为"部分的疾病学基础。</p>
+      <p><strong>后续延伸：</strong>司法精神病学鉴定、强制医疗、社区精神卫生服务中的伦理与程序问题。</p>
+      <p><strong>横向交叉：</strong>与伦理学、法学（刑法、民法典、刑事诉讼法、精神卫生法）、公共卫生政策、卫生管理交叉。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 02 导航 ===== -->
+<section id="navmap">
+  <div class="sec-head"><div class="badge">02</div><h2>章节导航图<span class="en">Section map</span></h2></div>
+  <p class="sec-lead">按教材四节顺序排列，每节对应一个主题单元。点击卡片直接跳转。</p>
+  <div class="grid2">
+    <a class="card cyan" href="#u1" style="display:block;color:inherit">
+      <h3>第一节 · 概述</h3>
+      <p>精神病学与伦理；刑事与民事司法体系中的精神医学问题；司法精神病学及相关法律能力。</p>
+      <p class="note">关键词：伦理 · 社会控制 · 分流 · 意思自治 · 六项法律能力</p>
+    </a>
+    <a class="card red" href="#u2" style="display:block;color:inherit">
+      <h3>第二节 · 精神卫生服务相关伦理原则</h3>
+      <p>尊重（自主）、不伤害、有利（行善）、公正；自主权、知情同意、隐私与特许证明、治疗权利、医患关系边界。</p>
+      <p class="note">关键词：第一准则 · 自愿同意 · 同意能力 · 去标识 · 红包</p>
+    </a>
+    <a class="card orange" href="#u3" style="display:block;color:inherit">
+      <h3>第三节 · 精神障碍患者的法律保护</h3>
+      <p>精神卫生立法；劳动就业与受教育权；民事权利与监护；精神障碍诊疗；非自愿医疗。</p>
+      <p class="note">关键词：1890 · 1938 · 2012 · 七章八十五条 · 两情形两主体</p>
+    </a>
+    <a class="card purple" href="#u4" style="display:block;color:inherit">
+      <h3>第四节 · 精神障碍与违法行为</h3>
+      <p>暴力风险数据；法医精神病鉴定；刑事责任能力、受审能力、服刑能力、性自卫能力、作证能力；违法患者的处置。</p>
+      <p class="note">关键词：第三方服务 · 辨认/控制 · 原因自由行为 · 强制医疗</p>
+    </a>
+  </div>
+  <div class="callout book">
+    <span class="ct">📖 关于"八栏"适配的说明（非疾病章节）</span>
+    本章是伦理与法律章，教材没有"某种疾病"的病因、症状、治疗单元，故以<strong>主题单元</strong>承载固定八栏，栏目标题与顺序一律保留，内容按主题对应改写：<br>
+    ① 疾病画像 → <strong>主题画像</strong>（该节的定义、核心命题与教材定位）；<br>
+    ② 病因探秘 → <strong>问题溯源</strong>（伦理困境/立法需求/违法行为的成因与背景）；<br>
+    ③ 临床表现拼图 → <strong>规范要素拼图</strong>（原则、权利、能力、程序的分维拆解）；<br>
+    ④ 教材典型案例 → <strong>案例核查</strong>（本章教材未给具体个案，统一标注）；<br>
+    ⑤ 鉴别诊断对对碰 → <strong>概念与制度辨析</strong>（伦理/法律、能力/能力、自愿/非自愿等）；<br>
+    ⑥ 治疗方案工具箱 → <strong>实务操作工具箱</strong>（告知、送诊、鉴定、处置的可执行步骤）；<br>
+    ⑦ 记忆工具箱（至少 3 种方法，方法类型与"为什么这样记"齐全）；<br>
+    ⑧ 知识联动（仅写教材有依据的跨章、跨学科联系）。<br>
+    <span class="note">不适用的栏目一律保留标题并说明原因，不删除、不改造栏目顺序。</span>
+  </div>
+</section>
+
+<!-- ===== 03 知识地图 ===== -->
+<section id="mindmap">
+  <div class="sec-head"><div class="badge">03</div><h2>本章知识地图<span class="en">Knowledge map</span></h2></div>
+  <p class="sec-lead">本章可用一条主线压缩：<strong>伦理定"应当"，法律定"能不能"与"走什么程序"；伦理原则约束日常临床，法律能力与程序约束强制措施与司法衔接</strong>。</p>
+  <div class="stat">
+    <span>4 节</span><span>4 个主题单元</span><span>4 项基本伦理原则</span><span>5 项具体伦理要求</span><span>6 项传统法律能力 + 1 项决策能力</span><span>5 条国际非自愿住院标准</span><span>3 种违法处置方式</span><span>《精神卫生法》7 章 85 条</span>
+  </div>
+  <p class="note">统计口径：六项传统法律能力指刑事责任能力、民事行为能力、受审能力、服刑能力、性自我防卫能力、作证能力；《精神卫生法》出台后，决策能力（知情同意能力）评定亦成为重要工作内容。</p>
+  <div class="grid2">
+    <div class="card cyan">
+      <h3>① 概述：两个体系与一门学科</h3>
+      <ul>
+        <li>精神病学与法律 = 对传统司法精神病学概念的拓展</li>
+        <li>伦理：源自 ethos，指行为举止规范、价值观或行为准则</li>
+        <li>四类伦理困境：诊断属性、自主权 vs 健康权、患者 vs 公众、治疗选择</li>
+        <li>社会控制：刑事司法为主体，精神卫生系统承担"分流"</li>
+        <li>刑事：侦查、起诉、审判、处置；民事：意思自治 → 民事行为能力</li>
+        <li>司法精神病学：只服务于法律，鉴定人≠治疗者</li>
+      </ul>
+    </div>
+    <div class="card red">
+      <h3>② 伦理原则：四条底线 + 五处落地</h3>
+      <ul>
+        <li>尊重（自主）：充分信息 + 充分时间 + 自由决定</li>
+        <li>不伤害：精神科专业伦理的第一准则</li>
+        <li>有利（行善）：特定情形可置于自主权之上，必要且最小程度</li>
+        <li>公正：形式公正与实质公正有机统一</li>
+        <li>落地：自主权、知情同意、隐私与特许证明、治疗权利、医患关系边界</li>
+        <li>知情同意四要素：知情、自愿、能力、合法</li>
+      </ul>
+    </div>
+    <div class="card orange">
+      <h3>③ 法律保护：赋权 + 限权 + 救济</h3>
+      <ul>
+        <li>立法史：1890 英国《疯人法》→ 1938 法国首部《精神卫生法》→ 1996 WHO 十项原则</li>
+        <li>我国：2012 年通过、2013 年施行、2018 年个别条款修正</li>
+        <li>权利：就业、受教育、民事权利、监护、诊疗、隐私</li>
+        <li>民事行为能力：完全 / 限制 / 无（8、16、18 岁锚点）</li>
+        <li>非自愿住院：伤害自身 / 危害他人两种情形，两种决定主体</li>
+        <li>救济：再次诊断、医学鉴定、投诉、诉讼</li>
+      </ul>
+    </div>
+    <div class="card purple">
+      <h3>④ 违法行为：能力评定 + 处置</h3>
+      <ul>
+        <li>暴力风险：精神分裂症凶杀风险约为一般人群 4 倍</li>
+        <li>法医精神病鉴定：医学要件 + 法学要件，第三方服务</li>
+        <li>责任能力两大关键：辨认能力、控制能力（先辨后控）</li>
+        <li>受审能力看"批捕后至判决前"，可信度更高</li>
+        <li>服刑、性自卫、作证能力各有独立判断对象</li>
+        <li>处置三方式：不追究 / 追究 / 部分追究；强制医疗由检察院申请、法院决定</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 04 路线 ===== -->
+<section id="route">
+  <div class="sec-head"><div class="badge">04</div><h2>学习路线图<span class="en">Study route</span></h2></div>
+  <p class="sec-lead">本章概念多、条文多，最忌"从头背到尾"。建议先建立"原则—权利—程序—能力"的四层框架，再逐层填充。</p>
+  <div class="grid2">
+    <div class="card blue">
+      <h3>推荐学习路径</h3>
+      <div class="timeline">
+        <div class="tl-item"><h4>第 1 步 · 建框架（约 20 分钟）</h4><p>读第一节与知识地图，先弄清伦理、法律、社会控制、分流、司法精神病学五个定位，再记住六项法律能力清单。</p></div>
+        <div class="tl-item"><h4>第 2 步 · 攻伦理原则（约 40 分钟）</h4><p>先背四项原则，再逐条理解精神科的特殊张力：自主 vs 保护、保密 vs 披露、有利 vs 自主。最后攻知情同意与同意能力。</p></div>
+        <div class="tl-item"><h4>第 3 步 · 攻法律保护（约 45 分钟）</h4><p>用时间轴记立法节点；用"两情形、两主体"记非自愿住院；用"8、16、18"记民事行为能力；用"医学要件 + 法学要件"记鉴定原则。</p></div>
+        <div class="tl-item"><h4>第 4 步 · 攻违法行为（约 45 分钟）</h4><p>先分清六项能力各自的时间点与被鉴定人，再攻辨认/控制、责任/受审的一致与不一致，最后记三种处置方式。</p></div>
+        <div class="tl-item"><h4>第 5 步 · 自测与复盘（约 30 分钟）</h4><p>做 13 道自测题，翻 20 张速记卡，再用 3 个模拟病例训练"先程序、后结论"的答题习惯。</p></div>
+      </div>
+      <p class="note">总时长约 3 小时；建议分 2 次完成，次日只用速记卡 + 易混点复习 25 分钟。</p>
+    </div>
+    <div class="card purple">
+      <h3>重点优先级与记忆策略</h3>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>内容</th><th>优先级</th><th>推荐记忆法</th></tr></thead>
+          <tbody>
+            <tr><td>四项基本伦理原则及其冲突</td><td class="starme">⭐⭐⭐</td><td>口诀 + 情境联想</td></tr>
+            <tr><td>知情同意成立条件与例外</td><td class="starme">⭐⭐⭐</td><td>四问法 + 对比表</td></tr>
+            <tr><td>保密义务与披露边界</td><td class="starme">⭐⭐⭐</td><td>三分情形对比</td></tr>
+            <tr><td>非自愿住院两情形与两主体</td><td class="starme">⭐⭐⭐</td><td>口诀 + 流程轴</td></tr>
+            <tr><td>民事行为能力三级与监护</td><td class="starme">⭐⭐⭐</td><td>数字锚定 8/16/18</td></tr>
+            <tr><td>刑事责任能力：辨认 + 控制</td><td class="starme">⭐⭐⭐</td><td>"先辨后控"因果链</td></tr>
+            <tr><td>责任能力 vs 受审能力</td><td class="starme">⭐⭐⭐</td><td>时间轴对比</td></tr>
+            <tr><td>服刑、性自卫、作证能力</td><td class="starme">⭐⭐</td><td>对象—时间点配对</td></tr>
+            <tr><td>立法史与国际文件</td><td class="starme">⭐⭐</td><td>数字时间轴</td></tr>
+            <tr><td>三种处置方式与强制医疗</td><td class="starme">⭐⭐</td><td>分类 + 主体配对</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="note">记忆总原则：先分清"这是伦理问题、能力问题还是程序问题"，再调用对应框架；不要把伦理判断当成法律结论，也不要用诊断代替能力评定。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 05 概述 ===== -->
+<section id="u1">
+  <div class="sec-head"><div class="badge">05</div><h2>概述：伦理与法律的入口<span class="en">第一节 · 概述（p.319–320）</span></h2></div>
+  <p class="sec-lead">本节只做三件事：界定伦理、说明精神科为何伦理困境多、交代精神医学在刑事与民事司法体系中的位置与法律能力清单。</p>
+
+  <div class="card cyan" id="u1-1">
+    <h3 class="col-title"><span class="idx">第一栏</span>疾病画像 → 主题画像</h3>
+    <div class="quote"><span class="lab">教材原文</span>精神病学与法律（psychiatry and law）或者精神卫生与法律（mental health and law）是对传统的司法精神病学（forensic psychiatry）概念的拓展。</div>
+    <div class="quote"><span class="lab">教材原文</span>伦理（ethics）一词源自希腊文"ethos"（道义、德行），具体含义指行为举止规范，也就是个人或团体所拥有的价值观或行为准则。</div>
+    <p><strong>一句话画像：</strong>本章不研究"某一种病怎么治"，而是研究"精神医学在伦理与法律框架内应当怎样做、能做到什么边界"；它把临床问题翻译成三类问题——<strong>应不应该做（伦理）、有没有资格做（法律能力）、按什么程序做（法律制度）</strong>。<span class="note">（此句为学习框架整理，非教材原文）</span></p>
+    <p><strong>教材对学科联系的定性：</strong></p>
+    <div class="quote"><span class="lab">教材原文</span>精神病学与法律和司法实践之间具有特殊的联系。这种联系甚至可以追溯到作为医学学科的精神病学出现之前。了解精神卫生和精神病学实践中的伦理与法律问题，不仅是司法精神病学专业的任务，也是临床和公共精神卫生领域面临的日益重要的课题。</div>
+    <div class="grid4">
+      <div class="mini"><h4>① 学科边界</h4><p>从传统司法精神病学拓展为"精神病学与法律 / 精神卫生与法律"，覆盖越界行为、犯罪、权益保护与侵权、医疗纠纷等。</p></div>
+      <div class="mini"><h4>② 伦理维度</h4><p>以价值观与行为准则约束专业行为，处理自主、伤害、利益与公正之间的张力。</p></div>
+      <div class="mini"><h4>③ 法律维度</h4><p>以刑事、民事法律规范划定权利、义务与责任，并以法定程序保障实施。</p></div>
+      <div class="mini"><h4>④ 能力桥梁</h4><p>精神状态是否影响行为人行使法律权利、承担法定义务的资格，是伦理与法律交汇的落点。</p></div>
+    </div>
+    <p class="note">流行病学：教材本节未提供本章主题相关的患病率或司法数据，仅在第四节给出暴力风险数据，故本栏不列数字。</p>
+  </div>
+
+  <div class="card blue" id="u1-2">
+    <h3 class="col-title"><span class="idx">第二栏</span>病因探秘 → 问题溯源</h3>
+    <p><strong>为什么精神科会成为伦理困境的集中地？</strong>教材从疾病特点、能力受损、公共安全与资源分配四重结构性压力来解释：</p>
+    <div class="quote"><span class="lab">教材原文</span>大多数精神障碍因治愈率低、病残率高，容易造成社会和家庭的沉重负担。部分精神障碍患者可能由于疾病而缺乏自主判断的实际能力，需家人或监护人代替其作出决策。此外，精神障碍可使一部分患者具有难以预料的自伤自杀或伤人毁物的危险倾向，因而对社会治安和社会稳定具有潜在的危害性。</div>
+    <div class="grid2">
+      <div class="mini"><h4>① 疾病负担</h4><p>治愈率低、病残率高 → 家庭与社会负担沉重 → 治疗选择与资源分配成为伦理问题。</p></div>
+      <div class="mini"><h4>② 自主能力受损</h4><p>部分患者缺乏自主判断的实际能力 → 需要监护人/法定代理人替代决策 → 自主与保护冲突。</p></div>
+      <div class="mini"><h4>③ 公共安全风险</h4><p>难以预料的自伤自杀或伤人毁物倾向 → 保护患者与保护公众之间需要平衡。</p></div>
+      <div class="mini"><h4>④ 歧视与服务落后</h4><p>长期遭受偏见与歧视，精神卫生服务长期落后于其他医疗服务 → 权益保护与公正问题突出。</p></div>
+    </div>
+    <p><strong>教材归纳的四类伦理困境：</strong></p>
+    <ol>
+      <li>疾病分类诊断的<strong>医学属性与社会属性</strong>问题；</li>
+      <li><strong>患者自主权与健康权</strong>冲突的问题；</li>
+      <li><strong>保护患者与保护公众利益</strong>之间的平衡问题；</li>
+      <li><strong>精神科治疗的选择</strong>问题。</li>
+    </ol>
+    <p><strong>法律问题的来源：</strong>随着法律制度不断完善、司法和医学实践不断深化、司法精神病学学术研究发展，越来越多涉及精神病学的法律问题以及涉及伦理与法律的临床实践问题，对精神卫生专业人员的固有知识提出挑战。</p>
+    <div class="callout book">
+      <span class="ct">📖 社会控制中的"分流"</span>
+      医学（尤其是精神病学）同刑事司法体系一起，是构成<strong>社会控制</strong>（社会组织利用社会规范对其成员的社会行为实施约束的过程）的重要成分。刑事司法体系在国家社会控制分工协作中占据<strong>主要作用</strong>；精神卫生体系扮演<strong>"分流"的次要角色</strong>——从有违法行为的个体中甄别出因精神障碍病情严重而不能加以责罚者，并将其从刑事司法系统转入精神医学系统进行医学处置。
+    </div>
+    <div class="callout key">
+      <span class="ct">📌 分流对象并不限于"无刑事责任能力"</span>
+      实践中分流对象往往超出法定的"丧失心理能力"或"无刑事责任能力"者范围，涵盖不同严重程度的违法精神障碍患者。两个体系的功能区分从来不是各自为政、相互封闭的；某些患者的社会控制方式会在这两个系统之间依次转换，二者大致保持相对平衡，但在历史某些阶段这种平衡会有所改变。
+    </div>
+  </div>
+
+  <div class="card red" id="u1-3">
+    <h3 class="col-title"><span class="idx">第三栏</span>临床表现拼图 → 规范要素拼图</h3>
+    <p>本节的知识由三个维度拼成：伦理维度、刑事司法维度、民事司法维度；其共同落点是"法律能力"。</p>
+    <div class="grid3">
+      <div class="mini">
+        <h4>伦理维度</h4>
+        <ul>
+          <li>尊重（自主）、不伤害、有利（行善）、公正</li>
+          <li>衍生：诚信、保密、最优化</li>
+          <li>中国传统：以人为本、仁爱济世、大医精诚</li>
+        </ul>
+      </div>
+      <div class="mini">
+        <h4>刑事司法维度</h4>
+        <ul>
+          <li>服务环节：刑事侦查、起诉、审判、（判决后的）处置</li>
+          <li>评估内容：行为前及行为时精神状态与病情严重程度；精神状态与违法行为的关系；医学处理意见</li>
+          <li>体系角色：社会控制的主要力量</li>
+        </ul>
+      </div>
+      <div class="mini">
+        <h4>民事司法维度</h4>
+        <ul>
+          <li>核心原则：意思自治</li>
+          <li>前提：真实意思表示；足够的辨认行为后果的能力</li>
+          <li>判断依据：智力发展水平 + 精神健康状况</li>
+          <li>任务：评估民事行为能力</li>
+        </ul>
+      </div>
+    </div>
+    <div class="quote"><span class="lab">教材原文</span>司法精神病学也被译为"法庭精神病学"，是精神医学的分支学科，主要研究与法律相关的精神医学和精神卫生问题，包括对各种法律问题的精神病学咨询（如精神疾病司法鉴定、法医学咨询等）和对罪犯、受害人等特殊人群的临床服务等。</div>
+    <p><strong>教材列出的法律能力清单：</strong></p>
+    <div class="grid3">
+      <div class="mini"><h4>传统六项</h4><p>刑事责任能力、民事行为能力、受审能力、服刑能力、性自我防卫能力、作证能力。</p></div>
+      <div class="mini"><h4>新增一项</h4><p>随着《精神卫生法》出台，患者在接受医疗服务时的<strong>决策能力（知情同意能力）</strong>评定，也成为该领域重要工作内容。</p></div>
+      <div class="mini"><h4>前提认识</h4><p>大多数精神障碍患者具有对影响其生活的重要事物作出合理选择与决定的能力；但在一些严重患者或疾病某一阶段，精神症状可能使其失去行使法律权利和承担法定义务的行为能力或资格。</p></div>
+    </div>
+    <div class="callout warn">
+      <span class="ct">⚠️ 不要把"患病"直接等同于"无能力"</span>
+      教材的表述是"可能失去"，而非"必然失去"。法律能力评定的对象是<strong>特定行为、特定时间、特定事项</strong>的能力，不是给患者贴一个终身标签。
+    </div>
+  </div>
+
+  <div class="card orange" id="u1-4">
+    <h3 class="col-title"><span class="idx">第四栏</span>教材典型案例</h3>
+    <div class="callout book">
+      <span class="ct">📖 教材未提供具体临床案例</span>
+      本节为概念、学科定位与法律体系的概述，教材通篇未给出患者个案、病史、鉴定意见或裁判结果。教材只给出规范性表述与制度描述（如刑事司法的服务环节、民事意思自治原则），因此本栏<strong>不编造司法案例</strong>。
+    </div>
+    <p><strong>可迁移的阅读框架（由教材要点整理，非教材原文）：</strong></p>
+    <ol>
+      <li>先问：眼前的问题是<strong>伦理问题</strong>（该不该做）、<strong>能力问题</strong>（有没有资格做），还是<strong>程序问题</strong>（按什么步骤做）？</li>
+      <li>若涉及刑事：定位到侦查、起诉、审判、处置中的哪一环节，再确定要评的是行为时状态还是诉讼时状态。</li>
+      <li>若涉及民事：先看该民事行为是否需要"真实意思表示"，再判断行为人对行为后果的辨认能力。</li>
+    </ol>
+    <p class="note">以上是学习路径整理，不是教材病例，也不构成对任何真实案件的意见。</p>
+  </div>
+
+  <div class="card orange" id="u1-5">
+    <h3 class="col-title"><span class="idx">第五栏</span>鉴别诊断对对碰 → 概念与制度辨析</h3>
+    <p><strong>表 1　伦理与法律：两种约束，不能互相替代</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>维度</th><th>伦理</th><th>法律</th></tr></thead>
+        <tbody>
+          <tr><td>教材界定</td><td>行为举止规范，个人或团体所拥有的价值观或行为准则；源自希腊文 ethos（道义、德行）</td><td>刑事法律：关于犯罪、刑事责任和刑罚的法律规范的总称；民事法律：以平等主体之间一定财产关系和人身关系为调整对象的法律规范的总称</td></tr>
+          <tr><td>回答的问题</td><td>应当怎么做才符合职业规范与价值观</td><td>可以/应当/必须怎么做；违反承担何种法律责任</td></tr>
+          <tr><td>在精神科的典型落点</td><td>四项基本原则、知情同意、保密、医患关系边界</td><td>法律能力、非自愿医疗程序、监护、强制医疗、侵权责任</td></tr>
+          <tr><td>关系</td><td colspan="2">二者都服务于患者权益与公众利益，但<strong>不能互相替代</strong>：符合伦理不等于完成法定程序；完成法定程序也不等于伦理上无懈可击。</td></tr>
+          <tr><td><strong>一句话鉴别</strong></td><td colspan="2">伦理回答"应当"，法律回答"可以/应当/必须"；符合伦理不等于完成法定程序。</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p><strong>表 2　刑事司法与民事司法中的精神医学：服务对象不同</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>比较项</th><th>刑事司法领域</th><th>民事司法领域</th></tr></thead>
+        <tbody>
+          <tr><td>服务环节</td><td>刑事侦查、起诉、审判、（判决后的）处置</td><td>涉及相关当事人<strong>民事行为能力</strong>判断的各类民事行为</td></tr>
+          <tr><td>核心问题</td><td>行为前及行为时精神状态与病情严重程度；精神状态与违法行为的关系；医学处理意见</td><td>是否具有足够的辨认其行为后果的能力；意思表示是否真实</td></tr>
+          <tr><td>对应能力</td><td>刑事责任能力、受审能力、服刑能力等</td><td>民事行为能力（含监护、代理）</td></tr>
+          <tr><td>一句话鉴别</td><td colspan="2"><strong>刑事看"行为时能不能责罚"，民事看"行为时意思表示是否真实有效"。</strong></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p><strong>表 3　刑事司法体系与精神卫生体系：主与辅的分工</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>比较项</th><th>刑事司法体系</th><th>精神卫生体系</th></tr></thead>
+        <tbody>
+          <tr><td>社会控制角色</td><td>占据主要作用</td><td>扮演"分流"的次要角色</td></tr>
+          <tr><td>分流对象</td><td>—</td><td>因精神障碍病情严重而不能加以责罚者；实践中可超出"无刑事责任能力"范围，涵盖不同严重程度者</td></tr>
+          <tr><td>处置性质</td><td>责罚</td><td>医学处置</td></tr>
+          <tr><td>体系关系</td><td colspan="2">功能区分并非各自为政、相互封闭；部分患者的社会控制方式会在两个系统之间依次转换。</td></tr>
+          <tr><td><strong>一句话鉴别</strong></td><td colspan="2">刑事司法是主体，精神卫生是"分流"；分流对象可超出"无刑事责任能力"范围。</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout key"><span class="ct">📌 一句话鉴别总结</span>伦理问"应不应该"，法律问"有没有资格、走没走程序"；刑事看行为时，民事看意思表示，二者都不能用"诊断"直接替代"能力评定"。</div>
+  </div>
+
+  <div class="card green" id="u1-6">
+    <h3 class="col-title"><span class="idx">第六栏</span>治疗方案工具箱 → 实务操作工具箱</h3>
+    <p><strong>遇到一个"伦理/法律夹缝"问题时，按教材的四层结构定位：</strong></p>
+    <div class="timeline">
+      <div class="tl-item"><h4>第一步 · 分清问题类型</h4><p>是伦理冲突（想做的事与合乎伦理要求的事不一致）、伦理困境（伦理观念或价值之间的冲突），还是法律能力/程序问题？</p></div>
+      <div class="tl-item"><h4>第二步 · 找到伦理落点</h4><p>对照尊重（自主）、不伤害、有利（行善）、公正，看冲突发生在哪两条原则之间。</p></div>
+      <div class="tl-item"><h4>第三步 · 找到法律落点</h4><p>判断涉及哪一项法律能力（刑事/民事/受审/服刑/性自卫/作证/决策能力），以及该能力的判断要件。</p></div>
+      <div class="tl-item"><h4>第四步 · 找到程序落点</h4><p>非自愿医疗走《精神卫生法》程序；鉴定走委托与采信程序；违法处置走刑事、治安或行政程序。</p></div>
+    </div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>问题类型</th><th>教材对应入口</th><th>最易犯的错</th></tr></thead>
+        <tbody>
+          <tr><td>患者拒绝治疗，但存在自伤风险</td><td>有利（行善）原则 + 非自愿医疗两情形</td><td>直接以"为患者好"强制，忽略法定条件与决定主体</td></tr>
+          <tr><td>家属/单位索要病情资料</td><td>隐私保护与特许证明 + 第三方评估的保密差异</td><td>把治疗关系中的保密义务与第三方评估混为一谈</td></tr>
+          <tr><td>患者有伤害他人的念头</td><td>保密例外 + 有利（行善）原则</td><td>一律保密或一律披露，缺少权衡，或未遵循有利（行善）原则</td></tr>
+          <tr><td>涉案人员精神状态不明</td><td>法医精神病鉴定：医学要件 + 法学要件</td><td>只下诊断，不评法律能力</td></tr>
+          <tr><td>患者被羁押后出现精神症状</td><td>受审能力（批捕后至判决前）</td><td>用"作案时"的责任能力代替"现在"的受审能力</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout warn"><span class="ct">⚠️ 底线提醒</span>伦理分析不能替代法定程序；诊断也不能替代法律能力评定。教材反复强调的是"特定情形 + 法定条件 + 相应主体 + 必要且最小程度"。</div>
+  </div>
+
+  <div class="card purple" id="u1-7">
+    <h3 class="col-title"><span class="idx">第七栏</span>记忆工具箱</h3>
+    <div class="callout tip">
+      <span class="ct">🔧 方法一：口诀歌谣法</span>
+      口诀：<strong>"尊、不、有、公"</strong>——尊重（自主）、不伤害、有利（行善）、公正，四项基本原则一口气报出。<br>
+      再加三个衍生词：<strong>诚信、保密、最优化</strong>。<br>
+      <em>为什么这样记：</em>四字主干像抽屉标签，先把四个抽屉装好，再把"诚信/保密/最优化"作为抽屉里的附件，避免原则与衍生要求混成一团。
+    </div>
+    <div class="callout tip">
+      <span class="ct">🔧 方法二：数字编码法</span>
+      记 <strong>"4—6—1"</strong>：4 项基本伦理原则；6 项传统法律能力（刑事、民事、受审、服刑、性自卫、作证）；1 项新增决策能力（知情同意能力）。<br>
+      <em>为什么这样记：</em>数字是最好的"查漏工具"。答题时先报数量，再逐项清点，少一项就知道自己漏了。
+    </div>
+    <div class="callout tip">
+      <span class="ct">🔧 方法三：对比记忆法（标注：学习框架，非教材原文）</span>
+      画一条横轴：左端写"伦理＝应当"，右端写"法律＝资格＋程序"；中间放"法律能力"作为连接点。<br>
+      再画一条纵轴：上端"刑事＝行为时"，下端"民事＝意思表示"。<br>
+      <em>为什么这样记：</em>本章所有概念都能挂到这两条轴上；先定坐标，再填细节，比线性背书更不容易串线。
+    </div>
+  </div>
+
+  <div class="card cyan" id="u1-8">
+    <h3 class="col-title"><span class="idx">第八栏</span>知识联动</h3>
+    <ul>
+      <li><strong>与精神分裂症章：</strong>命令性幻听、被害妄想、物理影响妄想可支配危害行为，是第四节责任能力分析的疾病学基础。</li>
+      <li><strong>与抑郁障碍章：</strong>合并焦虑、冲动或激惹性增高可发生凶杀伤害行为（凶杀式自杀）；产后抑郁或产后精神障碍女性的杀幼式自杀是教材点名的情形。</li>
+      <li><strong>与物质依赖章：</strong>醉酒、吸毒可加重控制能力削弱；酒精依赖本身可能属于精神障碍范畴，但原因自由行为的责任判断另有规则。</li>
+      <li><strong>与法学：</strong>刑法（责任能力、故意/过失犯罪）、民法典（民事行为能力、监护、隐私与个人信息）、刑事诉讼法（鉴定启动、强制医疗）、精神卫生法（诊断治疗、非自愿医疗）。</li>
+      <li><strong>与公共卫生/卫生管理：</strong>精神卫生资源短缺与公正原则、服务可及性、医疗保险和社会保障，均在本章有明确表述。</li>
+    </ul>
+    <p class="note">以上联系均可在教材本章或相关章节找到依据；教材未展开的具体法条全文、司法解释与判例，不在本指南补写。</p>
+  </div>
+</section>
+
+<!-- ===== 06 伦理原则 ===== -->
+<section id="u2">
+  <div class="sec-head"><div class="badge">06</div><h2>精神卫生服务相关伦理原则<span class="en">第二节 · 伦理原则（p.320–323）</span></h2></div>
+  <p class="sec-lead">本节把"应该怎么做"拆成四条基本原则和五处具体落地。核心张力只有一句话：在尊重患者自主的同时，如何在必要时、以最小程度保护其生命健康与公众安全。</p>
+
+  <div class="card cyan" id="u2-1">
+    <h3 class="col-title"><span class="idx">第一栏</span>疾病画像 → 主题画像</h3>
+    <div class="quote"><span class="lab">教材原文</span>掌握精神病学相关伦理原则，有助于精神科医务人员避免伦理冲突（即想做的事与合乎伦理要求的事之间不一致），以及通过思考伦理困境（伦理观念或价值之间的冲突）处理不同群体和个人之间的伦理关系、平衡各种利益。</div>
+    <div class="quote"><span class="lab">教材原文</span>医学伦理的原则（尤其是精神病学相关的伦理要求）提出了精神科临床实践的理想标准和从业者的职业规范。这些要求包括使用成熟而且符合科学要求的技术，在专业内自我约束不当行为，尊重患者、患者家庭、同事和社会的权利与需要等。</div>
+    <p><strong>一句话画像：</strong>伦理原则不是写在墙上的口号，而是精神科每一次"要不要强制、要不要告知、要不要保密、要不要越界"决策时的<strong>操作系统</strong>；它先给方向，再由法律给条件和程序。<span class="note">（此句为类比理解，非教材原文）</span></p>
+    <div class="grid4">
+      <div class="mini"><h4>尊重（自主）</h4><p>充分信息 + 充分时间理解利益、风险与成本 → 自由决定。</p></div>
+      <div class="mini"><h4>不伤害</h4><p>精神科专业伦理的<strong>第一准则</strong>；避免不恰当医疗行为或不作为造成风险。</p></div>
+      <div class="mini"><h4>有利（行善）</h4><p>把有利于患者健康放第一位；同时履行社会义务、维护公众权益。</p></div>
+      <div class="mini"><h4>公正</h4><p>形式公正与实质公正有机统一；公平分配短缺的精神卫生资源。</p></div>
+    </div>
+    <p><strong>五项具体伦理要求：</strong>尊重患者自主权、知情同意、隐私保护与特许证明、治疗权利、医患关系及其边界。</p>
+    <div class="quote"><span class="lab">教材原文</span>联合国在《保护精神病患者和改善精神保健的原则》中明确规定了精神障碍患者的住院、治疗自决权。因此，自主和知情同意应是绝大多数患者治疗和康复的基础。</div>
+    <div class="callout key"><span class="ct">📌 本节的主线</span>四项基本原则是"总纲"，五项具体伦理要求是"落地"。所有考题都可以回到一句判断：<strong>这项措施是在尊重自主，还是在以"为你好"为名过度剥夺自主？</strong></div>
+  </div>
+
+  <div class="card blue" id="u2-2">
+    <h3 class="col-title"><span class="idx">第二栏</span>病因探秘 → 问题溯源</h3>
+    <p><strong>为什么精神科的伦理张力特别大？</strong>教材指向四组结构性矛盾：</p>
+    <div class="grid2">
+      <div class="mini"><h4>① 疾病特点</h4><p>治愈率低、病残率高、负担沉重；部分患者缺乏自主判断能力，需他人代为决策。</p></div>
+      <div class="mini"><h4>② 风险的双向性</h4><p>患者可能自伤自杀，也可能伤人毁物；保护患者与保护公众可能同时被触发。</p></div>
+      <div class="mini"><h4>③ 强制与自主的张力</h4><p>有利（行善）原则容许特定情形下将患者利益置于自主权之上，但必须"必要且最小程度"地剥夺自主权。</p></div>
+      <div class="mini"><h4>④ 资源短缺与强制边界</h4><p>精神卫生资源通常短缺；说服与强迫的界线"既狭窄又模糊"，强制与自主的边界难以把握。</p></div>
+    </div>
+    <div class="quote"><span class="lab">教材原文</span>精神科的相关规范或指南均容许专科医师在特定情形下将有利（行善）原则置于患者自主权之上。当患者将会或已经有自身受伤害或伤害他人的风险时，就可能需要采取患者非自愿的治疗措施，确保必要且最小程度地剥夺患者的自主权，从而最大限度地减少伤害、降低风险。</div>
+    <p><strong>教材给出的两层正当性：</strong>一方面基于患者生命健康权的正当性本质和<strong>医疗紧急避险原则</strong>；另一方面基于社会公众权利与患者自身权利的<strong>合理平衡</strong>。</p>
+    <div class="callout warn">
+      <span class="ct">⚠️ 最容易越界的一句话</span>
+      "我是为患者好"不能自动成为限制自主权的理由。教材要求同时满足：<strong>特定情形</strong>（将会或已经有自伤/伤人风险）、<strong>必要</strong>、<strong>最小程度</strong>，并且要落到法定条件与程序上。
+    </div>
+    <div class="callout tip">
+      <span class="ct">💡 说服与强迫的界线</span>
+      教材指出：如果某一负面的可能性（包括对某治疗方案不良预后的夸张估计）同患者拒绝某种治疗而接受另一推荐的治疗存在联系，那由此导致的任何同意在技术上都可能是<strong>无效</strong>的。
+    </div>
+  </div>
+
+  <div class="card red" id="u2-3">
+    <h3 class="col-title"><span class="idx">第三栏</span>临床表现拼图 → 规范要素拼图</h3>
+    <p><strong>先看四项基本原则的教材定义：</strong></p>
+    <div class="grid2">
+      <div class="mini">
+        <h4>尊重（自主）respect / autonomy</h4>
+        <p>要求人们在获得充分的信息并有充分的时间理解其利益、所有合理选择的风险和成本后，再采取自由决定的行动。其中蕴含<strong>知情同意原则</strong>。</p>
+        <p>若患者由于疾病原因确实无法为自己作决定，应考虑<strong>替代决策机制</strong>，如由监护人或其他法定代理人代行决策。</p>
+      </div>
+      <div class="mini">
+        <h4>不伤害 nonmaleficence</h4>
+        <p>精神科专业伦理的<strong>第一准则</strong>。医师必须对医疗决策和临床操作格外小心，确保足够专业训练，主动寻求同行帮助或意见建议，避免不恰当医疗行为或不作为给患者造成风险。</p>
+      </div>
+      <div class="mini">
+        <h4>有利（行善）beneficence</h4>
+        <p>把有利于患者健康放在第一位并切实为患者谋利益；衍生<strong>患者至上原则、最优化原则</strong>。同时要求履行社会义务、维护公众权益。</p>
+      </div>
+      <div class="mini">
+        <h4>公正 justice</h4>
+        <p>涉及正义或奖惩，也关乎社会利益的公平分配；力求<strong>形式公正和实质公正有机统一</strong>。包括资源是否平等分配给最需要的人，以及如何平衡病情需要、治疗价值与患者既往和预期的社会贡献。</p>
+      </div>
+    </div>
+    <p><strong>再看五项具体要求的"落地要点"：</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>具体要求</th><th>教材核心要求</th><th>最需盯住的边界</th></tr></thead>
+        <tbody>
+          <tr><td>尊重患者自主权</td><td>自主或人身自由权是最基本权益；所有患者首先应被假定为有行为能力；实施非自愿程序前，应尽一切努力使患者能够接受自愿入院或治疗</td><td>保护人身自由≠放任自流；冲突时可依有利原则暂时采取合理限制措施</td></tr>
+          <tr><td>知情同意</td><td>患者有权知晓病情及可选治疗方案，并对防治措施有决定取舍的自主权；同意的基础是知情；基本要求是自愿同意</td><td>患精神障碍不等于自动丧失决定能力；例外情形须依法定条件</td></tr>
+          <tr><td>隐私保护与特许证明</td><td>未经同意，信息不得透露给第三方；所有专业人员都有责任防止信息泄露，不论是否与病情有关；住院患者通信、会客自由应受保护</td><td>学术公开须去标识；第三方评估的保密义务不同；紧急披露须遵循有利原则</td></tr>
+          <tr><td>治疗权利</td><td>公民无法获取医疗保健也是对人权的侵犯；人人皆有权得到可获得的最佳精神卫生保健</td><td>可及性、可接受性、质量；费用与保险保障；非自愿医疗条件与程序的明确规范</td></tr>
+          <tr><td>医患关系边界</td><td>并非所有越界行为都属违规；最重要判断依据是医师是否为了自身利益而罔顾患者利益</td><td>商业联系、社交友谊、财务关系（红包、减免费用、串通骗保）</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="quote"><span class="lab">教材原文</span>严重精神障碍常会影响到这种能力，但患有精神障碍并不意味着患者就自动地丧失了作出决定的能力。</div>
+    <div class="quote"><span class="lab">教材原文</span>《中华人民共和国宪法》（以下简称《宪法》）第三十七条明确保障了公民的人身自由。《精神卫生法》更明确规定："精神障碍患者的人格尊严、人身和财产安全不受侵犯。""除法律另有规定外，不得违背本人意志进行确定其是否患有精神障碍的医学检查。"</div>
+  </div>
+
+  <div class="card orange" id="u2-4">
+    <h3 class="col-title"><span class="idx">第四栏</span>教材典型案例</h3>
+    <div class="callout book">
+      <span class="ct">📖 教材未提供具体临床案例</span>
+      本节是伦理原则与操作要求的规范论述，教材没有给出患者个案、知情同意谈话记录或伦理委员会讨论记录。教材只列举了若干<strong>情形</strong>（如与就诊患者发生商业关系、与患者发展友谊、收受红包、与患者串通骗取医保费用），这些是规范禁止的情形清单，<strong>不是案例</strong>。
+    </div>
+    <p><strong>可迁移的伦理分析思路（由教材要点整理，非教材原文）：</strong></p>
+    <ol>
+      <li>识别冲突：这是"想做的事"与"合乎伦理要求的事"不一致（伦理冲突），还是两种伦理价值之间冲突（伦理困境）？</li>
+      <li>定位原则：冲突发生在自主与有利之间、保密与公众安全之间，还是公正与资源分配之间？</li>
+      <li>检查条件：是否已充分告知？同意是否自愿？患者是否有同意能力？是否属于例外？是否确保必要且最小程度地剥夺自主权？</li>
+      <li>落到程序：需要替代决策的，是否已由监护人/法定代理人依法代行？涉及非自愿医疗的，是否满足法定前提与决定主体要求？</li>
+    </ol>
+  </div>
+
+  <div class="card orange" id="u2-5">
+    <h3 class="col-title"><span class="idx">第五栏</span>鉴别诊断对对碰 → 概念与制度辨析</h3>
+    <p><strong>表 1　伦理冲突 vs 伦理困境</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>概念</th><th>教材定义</th><th>典型表现</th><th>处理方向</th></tr></thead>
+        <tbody>
+          <tr><td>伦理冲突</td><td>想做的事与合乎伦理要求的事之间不一致</td><td>想尽快控制症状，但患者拒绝；想保密，但家属强烈要求知情</td><td>先识别"想做"与"该做"的差距，再调整行为</td></tr>
+          <tr><td>伦理困境</td><td>伦理观念或价值之间的冲突</td><td>自主 vs 有利；保密 vs 公众安全；公正 vs 资源有限</td><td>在两种价值间权衡、平衡不同群体和个人利益</td></tr>
+          <tr><td>一句话鉴别</td><td colspan="2"><strong>伦理冲突是"行为与规范"对不上；伦理困境是"两种价值"对不上。</strong></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p><strong>表 2　四项基本原则的边界：别把"好原则"用成"越界理由"</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>原则</th><th>正确理解</th><th>常见误读</th></tr></thead>
+        <tbody>
+          <tr><td>尊重（自主）</td><td>充分信息、充分时间、自由决定；无法决定时走替代决策</td><td>"尊重"＝什么都听患者的，放弃专业建议与保护义务</td></tr>
+          <tr><td>不伤害</td><td>第一准则；以专业训练、同行咨询、谨慎操作避免风险</td><td>"不伤害"＝什么都不敢做，以不作为规避风险</td></tr>
+          <tr><td>有利（行善）</td><td>患者利益第一，同时维护公众权益；特定情形可置于自主权之上，但必要且最小程度</td><td>"为患者好"＝可以无限强制，不必讲条件与程序</td></tr>
+          <tr><td>公正</td><td>形式公正与实质公正统一；资源给最需要的人；公平对待患者、家属与社会大众</td><td>"公正"＝绝对平均，忽略病情需要与治疗价值</td></tr>
+          <tr><td><strong>一句话鉴别</strong></td><td colspan="2">四项原则不是"四选一"，而是"四选平衡"；冲突时要说明取舍理由与限制程度。</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p><strong>表 3　知情同意的两个"告知标准"</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>标准</th><th>教材表述</th><th>判断视角</th></tr></thead>
+        <tbody>
+          <tr><td>医学标准</td><td>绝大多数医师在某种特定情况下应告知什么，或者在某个特定问题上通常医师应告知什么</td><td>以"医师通常做法"为尺度</td></tr>
+          <tr><td>以患者为中心的标准</td><td>为了作出合理的决定，一个处于患者地位的理性的人需要知道什么样的"具体"内容</td><td>以"患者需要知道什么"为尺度；教材称有些司法实践可能采用</td></tr>
+          <tr><td><strong>一句话鉴别</strong></td><td colspan="2">医学标准看"医师通常告知什么"，患者中心标准看"患者实际需要知道什么"；核心都是知情。</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p><strong>表 4　保密义务的三种场景：不能一把尺子量到底</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>场景</th><th>保密义务</th><th>教材依据/要求</th></tr></thead>
+        <tbody>
+          <tr><td>普通诊疗关系</td><td>未经患者同意，信息不得透露给第三方；不论是否与病情有关</td><td>所有为患者治疗的专业人员都有责任防止信息泄露</td></tr>
+          <tr><td>为第三方作评估（司法鉴定、就业/入学前心理评估、残疾评定、劳动能力评定等）</td><td>医师与患者之间<strong>不存在治疗关系</strong>，保密义务有所不同</td><td>被鉴定人/被评估者接受鉴定或评估，通常意味着对第三方使用其相关信息的默认</td></tr>
+          <tr><td>紧急披露（患者可能自杀或杀害身边的人等）</td><td>通常被赋予在紧急情况下向相关方披露的权利，但须严格遵循有利（行善）原则</td><td>在患者隐私权与他人和社会安全利益之间权衡</td></tr>
+          <tr><td><strong>一句话鉴别</strong></td><td colspan="2">普通诊疗原则保密；第三方评估关系不同、通常默认；紧急披露有权但有原则约束。</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout key"><span class="ct">📌 一句话鉴别总结</span>四项原则不是"四选一"，而是"四选平衡"；知情同意不是"签个字"，而是"知情 + 自愿 + 能力 + 合法"；保密不是"绝对不说"，而是"原则保密 + 法定例外 + 严格遵循有利（行善）原则的披露"。</div>
+  </div>
+
+  <div class="card green" id="u2-6">
+    <h3 class="col-title"><span class="idx">第六栏</span>治疗方案工具箱 → 实务操作工具箱</h3>
+    <p>按照有关法律和伦理规定，在任何治疗开始前都应获得知情同意。</p>
+    <p><strong>（一）知情同意：四步操作</strong></p>
+    <div class="timeline">
+      <div class="tl-item"><h4>第一步 · 告知</h4><p>告知真实、准确且充分的信息：病情、可选治疗方案、各自的风险与成本。告知标准可按医学标准，部分司法实践采用以患者为中心的标准。</p></div>
+      <div class="tl-item"><h4>第二步 · 确认自愿</h4><p>不得以任何引诱、强迫、欺骗、欺诈手段影响决定；评估医师态度、环境条件与患者精神状态。注意"说服"与"强迫"界线狭窄模糊。</p></div>
+      <div class="tl-item"><h4>第三步 · 评估能力</h4><p>有效同意能力＝对特定评估或治疗理解其目的、性质、可能作用及风险的能力，也包括实施治疗过程中配合专业人员的能力。</p></div>
+      <div class="tl-item"><h4>第四步 · 记录与代行</h4><p>患者无能力或放弃知情权时，通常需监护人/近亲属代为行使；在延误治疗严重危及健康、如实告知可能导致躯体或精神健康恶化等例外情形，无须获得患者本人知情同意。</p></div>
+    </div>
+    <p><strong>教材列出的知情同意例外（四条）：</strong></p>
+    <div class="grid2">
+      <div class="mini"><h4>① 紧急救治</h4><p>在延误治疗可能严重危及患者健康的特殊或紧急情况下。</p></div>
+      <div class="mini"><h4>② 告知有害</h4><p>如实告知信息可能导致患者躯体或精神健康恶化。</p></div>
+      <div class="mini"><h4>③ 放弃知情权</h4><p>患者放弃知情权；通常需监护人/近亲属代为行使知情同意权。</p></div>
+      <div class="mini"><h4>④ 本人无能力</h4><p>患者本人无能力作出知情同意决定；同样通常需监护人/近亲属代为行使。</p></div>
+    </div>
+    <p><strong>（二）隐私保护：五项动作</strong></p>
+    <ul>
+      <li>建立有效系统（如电子数据库），保证只有取得授权才可以使用临床记录或其他数据记录。</li>
+      <li>住院患者：保护其正常通信、会客自由。</li>
+      <li>学术交流公开资料：隐去姓名、身份证、学生证、工作证、联系方式、家庭住址、工作单位、具体工作内容或职务、密切接触亲属/同事/朋友的姓名和住址等标志性资料。</li>
+      <li>身份无法充分掩饰：必须得到患者或其法定代理人同意。</li>
+      <li>违反《民法典》《个人信息保护法》相关义务：承担民事赔偿、监管处罚，乃至刑事制裁。</li>
+    </ul>
+    <p><strong>（三）医患关系边界：三条红线</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>情形</th><th>教材态度</th><th>判断要点</th></tr></thead>
+        <tbody>
+          <tr><td>商业等业务联系</td><td>与既往患者存在商业联系可能是不当的；与目前在就诊的患者发生任何商业关系，更是不道德的</td><td>是否利用诊疗关系谋取私利</td></tr>
+          <tr><td>社交</td><td>需考虑特定地点和环境；首要原则是尊重医患关系界线；至少在治疗期间应避免发展友谊</td><td>是否损害诊疗客观性与治疗中立性</td></tr>
+          <tr><td>财务关系</td><td>收受红包破坏医患关系，在我国属于违规违纪；非公立机构诊疗费收取有时也涉及伦理甚至法律问题</td><td>减免费用、变相补偿、串通骗取医保费用等</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout warn"><span class="ct">⚠️ 操作底线</span>是否违规最重要的判断依据是<strong>医师是否为了自身利益而罔顾患者的利益</strong>；医师应始终保持不越界，或确保越界行为保持在最低限度，以不发生损害患者利益的行为为底线。</div>
+    <div class="callout tip"><span class="ct">💡 治疗权利的现实障碍</span>教材列出：患者及家属对疾病认识和重视程度不够、医疗卫生资金投入不足及服务能力匮乏、慢性患者及家庭无力承担费用、患者对住院和治疗的知情同意权被忽视。对应措施是科普宣传、完善法律法规与政策、提高可及性/可接受性/质量、完善医疗保险和社会保障、明确非自愿医疗条件与程序。</div>
+  </div>
+
+  <div class="card purple" id="u2-7">
+    <h3 class="col-title"><span class="idx">第七栏</span>记忆工具箱</h3>
+    <div class="callout tip">
+      <span class="ct">🔧 方法一：首字口诀法</span>
+      口诀：<strong>"尊、不、有、公"</strong>。展开为：尊重（自主）、不伤害、有利（行善）、公正。<br>
+      再补一句"<strong>不伤害是第一</strong>"，专门应付"第一准则"这类单选题。<br>
+      <em>为什么这样记：</em>四个字押住四项原则的顺序，附加一句锚住"第一准则"，把最容易考倒的细节单独挂钩。
+    </div>
+    <div class="callout tip">
+      <span class="ct">🔧 方法二：四问法（知情同意）</span>
+      面对任何"同意是否有效"的问题，依次问：<br>
+      ① <strong>知不知情</strong>——告知是否真实、准确、充分？<br>
+      ② <strong>自不自愿</strong>——有无引诱、强迫、欺骗、欺诈？<br>
+      ③ <strong>有没有能力</strong>——能否理解目的、性质、可能作用与风险，并配合治疗？<br>
+      ④ <strong>合不合法</strong>——是否属于法定例外？是否由监护人/近亲属依法代行？<br>
+      <em>为什么这样记：</em>把定义拆成四个可操作的检查点，答题时按顺序过一遍，不会漏"能力"这一最常被忽略的要素。
+    </div>
+    <div class="callout tip">
+      <span class="ct">🔧 方法三：情境联想法（标注：类比理解，非医学事实）</span>
+      把四项原则想成手术台上的四个人：<br>
+      <strong>尊重</strong>站在患者耳边问"你同意吗"；<strong>不伤害</strong>站在器械旁盯着风险；<strong>有利</strong>站在患者身后说"我为你好，但不能替你活"；<strong>公正</strong>站在门口分配有限的床位。<br>
+      <em>为什么这样记：</em>用四个角色把抽象原则"人格化"，遇到案例题时先想"现在是谁在说话"，就能快速定位冲突类型。
+    </div>
+    <div class="callout tip">
+      <span class="ct">🔧 方法四：三分对比法（保密）</span>
+      保密只记三种场景：<strong>普通诊疗——原则保密；第三方评估——关系不同、通常默认；紧急披露——有权披露但须有利原则</strong>。<br>
+      <em>为什么这样记：</em>保密题的错误多半来自"把三种场景混成一种"；先分场景，再谈义务，答案自然收敛。
+    </div>
+  </div>
+
+  <div class="card cyan" id="u2-8">
+    <h3 class="col-title"><span class="idx">第八栏</span>知识联动</h3>
+    <ul>
+      <li><strong>与治疗学章：</strong>任何治疗开始前都应获得知情同意；治疗选择本身也是教材所列的四类伦理困境之一。</li>
+      <li><strong>与精神障碍诊断章：</strong>诊断的医学属性与社会属性问题是伦理困境的第一条；诊断权由精神科执业医师行使，是法律对诊断主体的约束。</li>
+      <li><strong>与司法鉴定：</strong>为第三方作评估时不存在治疗关系，保密义务不同；接受评估通常意味着默认第三方使用信息。</li>
+      <li><strong>与公共卫生：</strong>精神卫生资源通常短缺，公正原则要求合理配置；治疗权利的可及性、可接受性和质量是服务要义。</li>
+      <li><strong>与医患沟通/风险管理：</strong>说服与强迫的界线、越界行为的判断标准，均直接转化为投诉与纠纷风险。</li>
+    </ul>
+    <p class="note">教材未提供具体伦理委员会操作细则、知情同意书模板与保密协议范本，本指南不补写。</p>
+  </div>
+</section>
+
+<!-- ===== 07 法律保护 ===== -->
+<section id="u3">
+  <div class="sec-head"><div class="badge">07</div><h2>精神障碍患者的法律保护<span class="en">第三节 · 法律保护（p.323–326）</span></h2></div>
+  <p class="sec-lead">本节回答"法律如何保护患者"：先用专门立法赋权，再用民事能力与监护制度补位，最后用诊疗规则和非自愿医疗程序划定限制人身自由的边界。</p>
+
+  <div class="card cyan" id="u3-1">
+    <h3 class="col-title"><span class="idx">第一栏</span>疾病画像 → 主题画像</h3>
+    <div class="quote"><span class="lab">教材原文</span>精神障碍患者属于社会的弱势群体，在生活、工作、学习、人际交往甚至医疗等方面，面临着比其他内外科疾病患者更多的困难。为改变这种状态，国际社会、各国政府和广大精神卫生工作者进行了长期不懈的努力，其中一个最重要而有效的措施，便是开展精神卫生立法（mental health legislation）。</div>
+    <div class="quote"><span class="lab">教材原文</span>立法既能保护患者本人的基本权益、防范对患者的歧视和侵害，同时也可更有效地保护其家庭成员以及社会大众。</div>
+    <p><strong>一句话画像：</strong>法律保护不是"把患者关起来"，而是"<strong>赋权 + 限权 + 救济</strong>"：赋权让患者能就医、能就业、能上学、能保有财产；限权只在法定情形与法定程序下限制人身自由；救济则给患者对限制措施提出异议的通道。<span class="note">（"赋权+限权+救济"为学习框架整理，非教材原文）</span></p>
+    <div class="grid4">
+      <div class="mini"><h4>① 专门立法</h4><p>精神卫生立法是保护患者权益最重要而有效的措施；既保护患者，也保护家庭成员与社会大众。</p></div>
+      <div class="mini"><h4>② 权利清单</h4><p>人身自由与人格尊严、治疗权、劳动就业与受教育权、隐私权、获得物质帮助的权利等。</p></div>
+      <div class="mini"><h4>③ 民事补位</h4><p>通过监护制度保护无民事行为能力或限制民事行为能力患者的人身、财产及其他合法权益。</p></div>
+      <div class="mini"><h4>④ 程序保障</h4><p>诊断主体法定、住院自愿为原则、非自愿医疗有严格条件与救济途径。</p></div>
+    </div>
+    <p class="note">教材本节未给出我国精神障碍患病率或立法覆盖率的统计数据，故不列具体数字。</p>
+  </div>
+
+  <div class="card blue" id="u3-2">
+    <h3 class="col-title"><span class="idx">第二栏</span>病因探秘 → 问题溯源</h3>
+    <p><strong>为什么需要专门立法，而不是靠既有法律"打补丁"？</strong>教材给出的理由很直接：</p>
+    <div class="quote"><span class="lab">教材原文</span>不过，上述法律法规大多仅涉及一部分特殊患者（如精神残疾者或民事、刑事案件中患病的当事人），或者对患者某些权益的保护。世界各国的经验表明，对于精神卫生这一既具有高度专业性又具有广泛社会性的领域，专门立法能够更好地实现保护精神障碍患者权益的目标。</div>
+    <p>换言之，既有法律的问题是"<strong>覆盖不全</strong>"：只覆盖部分患者、只保护部分权益；而精神卫生既高度专业又广泛社会，需要专门立法统一规范。</p>
+    <p>教材同时指出，在《残疾人保障法》《中华人民共和国母婴保健法》及《残疾人就业条例》等法律法规中，也有涉及精神障碍患者权益保护的相关条文规定，它们确实对改善我国精神障碍患者的处境起到了积极作用。</p>
+    <p><strong>立法史时间轴：</strong></p>
+    <div class="timeline">
+      <div class="tl-item"><h4>1890 年 · 英国《疯人法》（The Lunacy Act）</h4><p>首次通过立法提出要保护精神障碍患者的权利和财产。</p></div>
+      <div class="tl-item"><h4>1938 年 · 法国</h4><p>颁布世界上第一部正式命名的《精神卫生法》。之后许多欧美国家相继制定或修改各自的精神卫生立法。</p></div>
+      <div class="tl-item"><h4>20 世纪 60 年代以后 · 世界性潮流</h4><p>随着人权运动兴起和发展，精神卫生立法逐渐成为世界性的潮流。亚洲范围内，日本早在 20 世纪 60 年代就有《精神卫生法》，并于 1995 年修订实施《精神保健与福利法》；韩国也于 20 世纪 90 年代颁布《精神卫生法》。</p></div>
+      <div class="tl-item"><h4>20 世纪 70 年代以来 · 国际文件</h4><p>联合国和专业团体发表《智力迟钝者权利宣言》（1971）、《夏威夷宣言》（世界精神病学协会，1977）、《卢克索尔人权宣言》（世界心理卫生联合会，1989）等；1996 年 WHO 对精神卫生立法归纳了十项基本原则。</p></div>
+      <div class="tl-item"><h4>1985—2012 年 · 我国立法四阶段</h4><p>① 立法前酝酿（1985—2000，四川省和湖南省卫生厅组织起草初稿）；② 卫生部起草（2000—2007）；③ 国务院推进（2007—2011，2010 年列为一类立法项目）；④ 全国人大常委会推进（2011 年 9 月—2012 年 10 月 26 日）。</p></div>
+      <div class="tl-item"><h4>2012—2018 年 · 施行与修正</h4><p>历经 27 年，2012 年 10 月 26 日十一届全国人大常委会第二十九次会议通过，2013 年 5 月 1 日起施行，2018 年进行个别条款修正。</p></div>
+    </div>
+    <div class="callout key">
+      <span class="ct">📌 《精神卫生法》的框架与宗旨</span>
+      共<strong>七章八十五条</strong>：总则、心理健康促进和精神障碍预防、精神障碍的诊断和治疗、精神障碍的康复、保障措施、法律责任和附则。<br>
+      宗旨：发展精神卫生事业、规范精神卫生服务、维护精神障碍患者的合法权益；方针：<strong>预防为主，预防、治疗和康复相结合</strong>。
+    </div>
+  </div>
+
+  <div class="card red" id="u3-3">
+    <h3 class="col-title"><span class="idx">第三栏</span>临床表现拼图 → 规范要素拼图</h3>
+    <div class="tabs" data-tabs>
+      <div class="tabbar">
+        <button class="on" data-tab="c1">平等权利</button>
+        <button data-tab="c2">民事权利</button>
+        <button data-tab="c3">诊疗规则</button>
+        <button data-tab="c4">非自愿医疗</button>
+      </div>
+      <div class="panel on" data-panel="c1">
+        <p><strong>劳动就业与受教育权：</strong>依据《残疾人保障法》，精神障碍患者属于精神残疾或智力残疾范畴，理应受到多部法律法规保护。保护劳动就业权与适龄儿童青少年受教育权，有利于康复与回归社会。</p>
+        <ul>
+          <li>我国一直提倡精神障碍患者在<strong>痊愈后</strong>即享有与普通人同等的就学、就业权利，不应受到社会歧视。</li>
+          <li>《宪法》第四十五条："国家和社会帮助安排盲、聋、哑和其他有残疾的公民的劳动、生活和教育"。</li>
+          <li>《残疾人保障法》第三十三条："国家机关、社会团体、企业事业单位、民办非企业单位应当按照规定的比例安排残疾人就业，并为其选择适当的工种和岗位"。</li>
+          <li>《中华人民共和国劳动合同法》第四十二条：患病或者非因工负伤，在规定的医疗期内的，用人单位不得解除劳动合同。</li>
+          <li>《精神卫生法》第五十八条："用人单位应当根据精神障碍患者的实际情况，安排患者从事力所能及的工作，保障患者享有同等待遇。"</li>
+          <li>《精神卫生法》第七十条："县级以上地方人民政府及其有关部门应当采取有效措施，保证患有精神障碍的适龄儿童、少年接受义务教育，扶持有劳动能力的精神障碍患者从事力所能及的劳动，并为已经康复的人员提供就业服务。"</li>
+        </ul>
+        <p class="note">教材强调：这些条款确保患者不会在发病期间被解雇或退学，并保证痊愈或好转后同样有权获得平等的入学、考试、就业机会，不因曾患精神障碍而受歧视和被剥夺相关资格。</p>
+      </div>
+      <div class="panel" data-panel="c2">
+        <p><strong>民事行为能力：</strong>指公民能够通过自己的行为，取得民事权利和承担民事义务，从而设立、变更或终止法律关系的资格；也就是公民以自己的意志行为独立进行民事活动和对其过失行为承担相应民事责任的能力。</p>
+        <p>大多数精神障碍患者具有对影响其生活的重要事件做出正确选择和决定的能力，即具有民事行为能力；但少数严重患者的这种能力可能受损。监护（guardianship）或代理（proxy）制度体现"用最有利于患者的方式来处理其个人的事务"的立法思想，在非自愿入院等服务实践中运用得最为普遍。</p>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>类别</th><th>年龄/精神状况（教材引《民法典》第十七至二十二条）</th><th>行为效力（教材引第一百四十三至一百四十五条）</th></tr></thead>
+            <tbody>
+              <tr><td>完全民事行为能力人</td><td>年满 18 周岁以上的成年人；或 16 周岁以上以自己的劳动收入为主要生活来源的未成年人</td><td>可独立实施民事法律行为（须符合有效条件）</td></tr>
+              <tr><td>限制民事行为能力人</td><td>8 周岁以上的未成年人；或不能完全辨认自己行为的成年人</td><td>纯获利益的行为，或与其年龄、智力、精神健康状况相适应的行为有效；其他由法定代理人代理或经同意、追认</td></tr>
+              <tr><td>无民事行为能力人</td><td>不满 8 周岁的未成年人；以及不能辨认其行为的成年人</td><td>实施的民事法律行为无效；由法定代理人代理实施</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p><strong>民事法律行为有效的条件：</strong>① 行为人具有相应的民事行为能力；② 意思表示真实；③ 不违反法律、行政法规的强制性规定，不违背公序良俗。</p>
+        <p><strong>推定规则：</strong>在法院作出认定之前，任何年满 18 周岁的成年人都被推定为完全民事行为能力人，进而根据鉴定检查和调查分析证明其能力有削弱或丧失。</p>
+        <p><strong>评定依据：</strong>司法部《精神障碍者民事行为能力评定指南》（SF/Z JD 0104004—2018），推荐使用《精神障碍者民事行为能力评定量表》。按<strong>医学要件</strong>（是否为精神障碍患者）和<strong>法学要件</strong>（对民事行为辨认能力状况）两个要素相结合的原则进行。</p>
+        <p><strong>辨认能力：</strong>民事活动当事人能否理解其民事行为的法律意义和行为后果，以及能否做出与真实意思相一致的表示。</p>
+      </div>
+      <div class="panel" data-panel="c3">
+        <p><strong>《精神卫生法》规定的诊疗基本原则：</strong>由具备资质的机构、人员提供；以精神健康状况为依据；诊疗活动中应保护患者安全、自主权、隐私权等权益；特殊诊疗活动按严格的条件和程序实施。</p>
+        <p><strong>送诊主体：</strong></p>
+        <ul>
+          <li>个人自行就诊。</li>
+          <li>疑似患者可由其<strong>近亲属</strong>送诊。</li>
+          <li>对查找不到近亲属的流浪乞讨人员中的疑似患者，由当地<strong>民政等部门</strong>负责送诊。</li>
+          <li>疑似患者已经发生伤害自身、危害他人安全的行为，或有伤害自身、危害他人安全的危险时，无论是其近亲属还是所在单位、当地公安机关<strong>均可</strong>送诊。</li>
+          <li>病情需要但非自愿住院的严重精神障碍患者，由其<strong>监护人</strong>送诊，必要时<strong>公安机关可以协助</strong>送诊。</li>
+        </ul>
+        <p><strong>诊断主体与目的：</strong>《精神卫生法》第二十九条："精神障碍的诊断应当由精神科执业医师作出。"诊断目的有三：① 确定有无精神障碍以及属于何种精神障碍；② 评估精神障碍的严重程度；③ 评估是否需要住院治疗。</p>
+        <p>对于将要发生伤害他人行为或有此类危险的疑似患者，医疗机构要安排其进行<strong>留院观察</strong>，并立即指派精神科医师进行诊断，及时出具诊断结论。</p>
+      </div>
+      <div class="panel" data-panel="c4">
+        <p><strong>背景：</strong>现代精神卫生服务源于救济院、疯人院等收容性机构。非自愿入院与治疗也因此贯穿于现代精神医学的整个发展历史进程中，成为临床精神医学非常独特而且重要的一个组成部分。</p>
+        <p><strong>基本原则：</strong>精神障碍的住院治疗在我国实行<strong>自愿原则</strong>。只有符合特定标准或条件的患者，才能实施非自愿住院治疗。</p>
+        <p><strong>国际通行的非自愿住院标准（教材归纳的五条表述）：</strong></p>
+        <ol>
+          <li>存在由国际公认标准定义的、达到一定严重程度的精神障碍。</li>
+          <li>存在自伤或伤人的极大可能性。</li>
+          <li>如果未经治疗，患者的状况会恶化。</li>
+          <li>患者无法自理。</li>
+          <li>入院具有治疗性目的（如果可采用限制性更小的其他备选方案如社区治疗，则不必入院）。</li>
+        </ol>
+        <p><strong>我国《精神卫生法》的前提条件：</strong>严重精神障碍患者"已经发生伤害自身行为或者有伤害自身危险"，以及"已经发生危害他人安全的行为或者有危害他人安全的危险"。</p>
+        <p><strong>程序与决定主体：</strong></p>
+        <ul>
+          <li>有伤害自身行为或危险：由<strong>监护人</strong>做出非自愿入院和出院的决定。</li>
+          <li>有危害他人安全的行为或危险：由<strong>负责诊治的医疗机构及其专科医师</strong>决定患者的入、出院。</li>
+          <li>收治机构需具备提供充足安全措施和恰当医疗服务的资质，以保障患者合法权益不受侵害。</li>
+        </ul>
+        <p><strong>救济途径：</strong>再次诊断、医学鉴定等；有异议时还可向卫生行政部门投诉，直至通过司法途径诉讼。</p>
+      </div>
+    </div>
+    <p class="note">说明：本栏原用于疾病症状分维度呈现；本节无疾病单元，故改为"权利—能力—诊疗—非自愿医疗"四个规范维度，内容均取自教材第三节。</p>
+  </div>
+
+  <div class="card orange" id="u3-4">
+    <h3 class="col-title"><span class="idx">第四栏</span>教材典型案例</h3>
+    <div class="callout book">
+      <span class="ct">📖 教材未提供具体临床案例</span>
+      本节为立法史、权利条款、民事能力与诊疗程序的规范叙述，教材没有给出患者送诊、非自愿住院争议或监护指定的个案，也没有裁判文书。因此本栏不编造案例，只保留"教材点名的地方立法"作为事实性举例。
+    </div>
+    <p><strong>教材提到的实例（非临床案例）：</strong></p>
+    <ul>
+      <li>近年来，浙江、江苏、辽宁、内蒙古等省、自治区，武汉、长春等市已进一步制定地方的《精神卫生条例》，另有多个地方正在调研起草中。</li>
+      <li>教材提及《精神障碍者民事行为能力评定指南》（SF/Z JD 0104004—2018）及推荐使用的《精神障碍者民事行为能力评定量表》，但<strong>未给出量表条目、评分与判定阈值</strong>。</li>
+    </ul>
+    <p><strong>可迁移的程序阅读思路（由教材要点整理，非教材原文）：</strong>先看"谁送诊"→ 再看"谁诊断"→ 再看"谁决定入出院"→ 最后看"患者不服走哪条救济路径"。四问顺序不能颠倒，因为决定主体取决于情形的性质。</p>
+  </div>
+
+  <div class="card orange" id="u3-5">
+    <h3 class="col-title"><span class="idx">第五栏</span>鉴别诊断对对碰 → 概念与制度辨析</h3>
+    <p><strong>表 1　自愿住院 vs 非自愿住院</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>比较项</th><th>自愿住院</th><th>非自愿住院</th></tr></thead>
+        <tbody>
+          <tr><td>地位</td><td>我国住院治疗实行<strong>自愿原则</strong></td><td>只有符合特定标准或条件的患者才能实施</td></tr>
+          <tr><td>前提</td><td>患者自主决定、同意</td><td>严重精神障碍 + 已经发生伤害自身行为或有危险；或已经发生危害他人安全行为或有危险</td></tr>
+          <tr><td>决定主体</td><td>患者本人（有同意能力时）</td><td>伤害自身：监护人；危害他人：负责诊治的医疗机构及其专科医师</td></tr>
+          <tr><td>救济</td><td>—</td><td>再次诊断、医学鉴定、卫生行政部门投诉、司法途径诉讼</td></tr>
+          <tr><td>一句话鉴别</td><td colspan="2"><strong>自愿是原则，非自愿是法定例外；例外的种类决定由谁拍板。</strong></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p><strong>表 2　非自愿住院的两种情形：决定主体最容易记反</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>情形</th><th>法定表述</th><th>入/出院决定主体</th></tr></thead>
+        <tbody>
+          <tr><td>伤害自身</td><td>已经发生伤害自身行为或者有伤害自身危险</td><td><strong>监护人</strong>做出非自愿入院和出院的决定</td></tr>
+          <tr><td>危害他人</td><td>已经发生危害他人安全的行为或者有危害他人安全的危险</td><td><strong>负责诊治的医疗机构及其专科医师</strong>决定患者的入、出院</td></tr>
+          <tr><td>记忆提示</td><td colspan="2"><strong>"伤己找家长，伤人找医院"</strong>（此为记忆口诀，不改变教材表述）</td></tr>
+          <tr><td><strong>一句话鉴别</strong></td><td colspan="2">伤己由监护人决定，伤人由医疗机构及其专科医师决定；情形不同，主体不同。</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p><strong>表 3　民事行为能力三级：年龄与精神状况双重锚点</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>类别</th><th>年龄锚点</th><th>精神状况锚点</th><th>行为效力关键词</th></tr></thead>
+        <tbody>
+          <tr><td>完全</td><td>≥18 周岁；或 ≥16 周岁且以自己的劳动收入为主要生活来源</td><td>—</td><td>独立实施</td></tr>
+          <tr><td>限制</td><td>≥8 周岁的未成年人</td><td>不能完全辨认自己行为的成年人</td><td>纯获利益或相适应者有效；其余代理/同意/追认</td></tr>
+          <tr><td>无</td><td>＜8 周岁的未成年人</td><td>不能辨认其行为的成年人</td><td>行为无效；由法定代理人代理</td></tr>
+          <tr><td><strong>一句话鉴别</strong></td><td colspan="3">年龄管未成年人（8/16/18），辨认管成年人：不能完全辨认→限制，不能辨认→无。</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p><strong>表 4　国际五条标准 vs 我国法定两项前提</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>比较项</th><th>国际通行五条（教材归纳）</th><th>我国《精神卫生法》</th></tr></thead>
+        <tbody>
+          <tr><td>核心条件</td><td>严重精神障碍；自伤或伤人极大可能；不治疗会恶化；无法自理；入院有治疗性目的</td><td>严重精神障碍 + 已经发生伤害自身行为或有危险；或已经发生危害他人安全行为或有危险</td></tr>
+          <tr><td>最小限制要求</td><td>若可采用限制性更小的备选方案（如社区治疗），则不必入院</td><td>教材未就"最小限制替代方案"作进一步规定</td></tr>
+          <tr><td>使用提醒</td><td colspan="2">国际文件是背景原则；在我国执业，<strong>必须以《精神卫生法》的法定前提与程序为准</strong>，不能直接用国际五条替代国内法。</td></tr>
+          <tr><td><strong>一句话鉴别</strong></td><td colspan="2">国际五条是背景参考，我国以"两类危险 + 两类决定主体"为法定落点。</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout key"><span class="ct">📌 一句话鉴别总结</span>自愿是原则、非自愿是例外；伤己由监护人决定，伤人由医疗机构及专科医师决定；民事能力看"年龄 + 辨认/完全辨认"，非自愿看"严重精神障碍 + 两类危险"。</div>
+  </div>
+
+  <div class="card green" id="u3-6">
+    <h3 class="col-title"><span class="idx">第六栏</span>治疗方案工具箱 → 实务操作工具箱</h3>
+    <p><strong>（一）非自愿住院：从送诊到救济的五步</strong></p>
+    <div class="timeline">
+      <div class="tl-item"><h4>第一步 · 确定送诊主体</h4><p>自行就诊；近亲属送诊；流浪乞讨人员由民政等部门送诊；已发生伤害自身/危害他人行为或危险时，近亲属、所在单位、当地公安机关均可送诊；病情需要但非自愿住院的严重患者由监护人送诊，必要时公安机关协助。</p></div>
+      <div class="tl-item"><h4>第二步 · 依法检查评估、作出诊断</h4><p>由具备资质的机构与人员提供；诊断应由精神科执业医师作出；诊断需回答"有无/何种障碍、严重程度、是否需要住院"。</p></div>
+      <div class="tl-item"><h4>第三步 · 判断属于哪一种法定情形</h4><p>伤害自身行为/危险，还是危害他人安全行为/危险。情形决定下一步由谁决定。</p></div>
+      <div class="tl-item"><h4>第四步 · 由法定主体决定入出院</h4><p>伤害自身：监护人决定；危害他人：负责诊治的医疗机构及其专科医师决定。收治机构须具备安全措施与医疗服务资质。</p></div>
+      <div class="tl-item"><h4>第五步 · 告知救济途径</h4><p>再次诊断、医学鉴定；有异议可向卫生行政部门投诉，直至通过司法途径诉讼。</p></div>
+    </div>
+    <p><strong>（二）送诊主体速查表</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>情形</th><th>谁可以/应当送诊</th></tr></thead>
+        <tbody>
+          <tr><td>个人自愿</td><td>本人自行就诊</td></tr>
+          <tr><td>疑似患者，能联系近亲属</td><td>近亲属送诊</td></tr>
+          <tr><td>流浪乞讨人员中的疑似患者，查找不到近亲属</td><td>当地民政等部门负责送诊</td></tr>
+          <tr><td>已发生伤害自身/危害他人安全行为，或有相应危险</td><td>近亲属、所在单位、当地公安机关均可送诊</td></tr>
+          <tr><td>病情需要但非自愿住院的严重精神障碍患者</td><td>监护人送诊；必要时公安机关可以协助送诊</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p><strong>（三）民事行为能力评定：两个要件、一个推定</strong></p>
+    <div class="grid3">
+      <div class="mini"><h4>医学要件</h4><p>首先确定被鉴定人是否存在精神障碍。</p></div>
+      <div class="mini"><h4>法学要件</h4><p>分析精神状态对某种民事行为辨认能力或意思表示能力的影响；辨认能力＝能否理解法律意义与行为后果、能否作出与真实意思一致的表示。</p></div>
+      <div class="mini"><h4>推定规则</h4><p>法院认定之前，任何年满 18 周岁的成年人都被推定为完全民事行为能力人。</p></div>
+    </div>
+    <p><strong>（四）监护与代理：顺序与"代替判断"</strong></p>
+    <ul>
+      <li>法定监护人顺序：① 配偶；② 父母、子女；③ 其他近亲属；④ 其他愿意担任监护人的个人或者组织，但须经被监护人住所地的居民委员会、村民委员会或者民政部门同意。</li>
+      <li>被监护人的父母担任监护人时，也可以通过<strong>遗嘱指定</strong>监护人。</li>
+      <li>对监护人确定有争议：由住所地居民委员会、村民委员会或者民政部门指定；有异议可申请人民法院指定；有关当事人也可以直接向人民法院申请指定。</li>
+      <li>代理人代表无/限制民事行为能力患者作决定时，应受<strong>"代替判断"标准</strong>约束：代理人做出的应当是"缺乏行为能力的患者在有行为能力的情况下可能作出的决定"。</li>
+    </ul>
+    <div class="callout warn"><span class="ct">⚠️ 程序底线</span>非自愿住院不是"家属同意就行"，也不是"医生单方决定就行"：<strong>先有法定情形，再有法定主体，最后有救济通道</strong>。三者缺一，程序即有瑕疵。</div>
+  </div>
+
+  <div class="card purple" id="u3-7">
+    <h3 class="col-title"><span class="idx">第七栏</span>记忆工具箱</h3>
+    <div class="callout tip">
+      <span class="ct">🔧 方法一：数字时间轴法</span>
+      记 <strong>"1890—1938—1996—2012—2013—2018"</strong>：<br>
+      1890 英国《疯人法》首次立法保护权利和财产；1938 法国第一部正式命名的《精神卫生法》；1996 WHO 归纳十项基本原则；2012 我国通过；2013 施行；2018 个别条款修正。<br>
+      <em>为什么这样记：</em>立法史是纯记忆点，用一条时间轴把"最早、第一部、国际、我国"四个"最"字考点串起来，比散记年份稳固。
+    </div>
+    <div class="callout tip">
+      <span class="ct">🔧 方法二：口诀法（非自愿住院）</span>
+      口诀：<strong>"伤己找家长，伤人找医院"</strong>。<br>
+      展开：伤害自身行为或危险 → <strong>监护人</strong>决定入出院；危害他人安全行为或危险 → <strong>负责诊治的医疗机构及其专科医师</strong>决定入出院。<br>
+      <em>为什么这样记：</em>"伤己"是家庭内部的风险，由监护人拍板；"伤人"涉及公共安全，由医疗机构与专科医师拍板。口诀背后有逻辑，不是硬背。
+    </div>
+    <div class="callout tip">
+      <span class="ct">🔧 方法三：年龄锚点法（民事行为能力）</span>
+      记三个数字：<strong>8、16、18</strong>。<br>
+      不满 8 周岁 → 无民事行为能力；8 周岁以上未成年人 → 限制民事行为能力；16 周岁以上以自己劳动收入为主要生活来源 → 视为完全；18 周岁以上 → 完全。<br>
+      再加一句"<strong>成年人看辨认</strong>"：不能完全辨认 → 限制；不能辨认 → 无。<br>
+      <em>为什么这样记：</em>年龄管未成年人，辨认管成年人；两条线并排，避免把"8 岁"和"不能辨认"混成一个标准。
+    </div>
+    <div class="callout tip">
+      <span class="ct">🔧 方法四：两要件法（所有司法鉴定）</span>
+      无论民事还是刑事，评定都记 <strong>"医学要件 + 法学要件"</strong>：先确定有没有精神障碍，再分析精神状态对特定法律能力的影响。<br>
+      <em>为什么这样记：</em>这是贯穿第三节与第四节的"通用公式"，记住它就能避免"只下诊断、不评能力"的答题错误。
+    </div>
+  </div>
+
+  <div class="card cyan" id="u3-8">
+    <h3 class="col-title"><span class="idx">第八栏</span>知识联动</h3>
+    <ul>
+      <li><strong>与宪法/民法典：</strong>《宪法》第三十七条保障人身自由；《民法典》规定民事行为能力分级、监护、隐私与个人信息保护。</li>
+      <li><strong>与残疾人保障法/劳动合同法：</strong>精神障碍患者属精神残疾或智力残疾范畴，就业与受教育权受多部法律保护；医疗期内用人单位不得解除劳动合同。</li>
+      <li><strong>与精神科诊疗章：</strong>诊断由精神科执业医师作出；诊断目的包括判断严重程度与是否需要住院，直接衔接非自愿医疗。</li>
+      <li><strong>与康复章：</strong>《精神卫生法》设"精神障碍的康复"专章；教材强调康复与回归社会，就业、教育是康复的重要条件。</li>
+      <li><strong>与司法精神病学：</strong>民事行为能力评定是司法鉴定重要内容；医学要件与法学要件结合是共同原则。</li>
+      <li><strong>与公共卫生管理：</strong>精神卫生服务可及性、医疗保险与社会保障、地方《精神卫生条例》，均属法律保护的落地环节。</li>
+    </ul>
+    <p class="note">教材未涉及我国《精神卫生法》各条的完整释义、地方条例的具体条文，以及监护争议的裁判规则；本指南不补写。</p>
+  </div>
+</section>
+
+<!-- ===== 08 违法行为 ===== -->
+<section id="u4">
+  <div class="sec-head"><div class="badge">08</div><h2>精神障碍与违法行为<span class="en">第四节 · 违法行为（p.326–329）</span></h2></div>
+  <p class="sec-lead">本节回答三个问题：精神障碍与违法犯罪有什么关联？涉案人员的精神状态由谁、按什么标准评成"法律能力"？评完之后，法律上可以怎么处置？</p>
+
+  <div class="card cyan" id="u4-1">
+    <h3 class="col-title"><span class="idx">第一栏</span>疾病画像 → 主题画像</h3>
+    <div class="quote"><span class="lab">教材原文</span>法医精神病鉴定（forensic psychiatric appraisal）既往又称司法精神病鉴定、精神疾病司法鉴定，属司法鉴定的一个分支，是指在诉讼活动中鉴定人运用精神病学及相关的科学技术或者专门知识对诉讼涉及的专门性问题进行鉴别和判断并提供鉴定意见的活动。</div>
+    <p><strong>一句话画像：</strong>本节把"病人"变成"被鉴定人"：不再问"怎么治"，而问"行为时精神状态如何、当时是否具备辨认/控制能力、现在能否受审/服刑、作为被害人其性自卫能力如何、作为证人能否作证"。<span class="note">（此句为学习框架整理，非教材原文）</span></p>
+    <div class="quote"><span class="lab">教材原文</span>与临床精神病学直接服务于患者不同，法医精神病鉴定属于"第三方服务"，即面对的对象（被鉴定人）并不一定是其服务的对象，它只服务于法律；鉴定人与被鉴定人之间并非传统的医患关系，所作出的鉴定意见和结论也不一定对被鉴定人有利。</div>
+    <p><strong>鉴定关注点：</strong>与临床评估关注患者的症状学不同，司法鉴定主要关心个体的<strong>法律（或与法律相关的心理）能力</strong>；刑事与民事鉴定都要求医学要件和法学要件相结合。</p>
+    <div class="stat">
+      <span>精神分裂症入院前暴力行为 20%</span>
+      <span>凶杀风险约为一般人群 4 倍</span>
+      <span>伴人格障碍/酒药依赖风险增加十余倍</span>
+      <span>定罪罪犯中反社会人格障碍终生患病率 50.1%</span>
+    </div>
+    <div class="grid3">
+      <div class="mini"><h4>① 行为时</h4><p>刑事责任能力：行为人在实施侵害他人权利的危害行为时，对所实施行为承担刑事责任的资格。</p></div>
+      <div class="mini"><h4>② 诉讼时</h4><p>受审能力：批捕以后直至判决以前，理解诉讼地位、权利、过程含义并合理行使权利的能力。</p></div>
+      <div class="mini"><h4>③ 服刑时</h4><p>服刑能力：接受处罚和矫正改造的生理或心理能力，能承受刑罚、理解刑罚性质目的意义。</p></div>
+      <div class="mini"><h4>④ 被害时</h4><p>性自我防卫能力：女性精神障碍患者在其性不可侵犯权遭到侵害时，对自身所受侵害或严重后果的实质性理解能力。</p></div>
+      <div class="mini"><h4>⑤ 作证时</h4><p>作证能力：非当事人根据感知到的真实情况，向司法部门提供与案件有关证言的能力。</p></div>
+      <div class="mini"><h4>⑥ 全程</h4><p>民事行为能力与决策能力（知情同意能力）亦属司法精神病学的重要评定内容。</p></div>
+    </div>
+  </div>
+
+  <div class="card blue" id="u4-2">
+    <h3 class="col-title"><span class="idx">第二栏</span>病因探秘 → 问题溯源</h3>
+    <p><strong>为什么精神障碍会与违法行为发生联系？</strong>教材给出的机制不是"疾病必然导致犯罪"，而是"症状可支配行为、共病可放大风险、依从性差可增加复发"：</p>
+    <div class="quote"><span class="lab">教材原文</span>精神障碍患者往往由于受幻觉、妄想等症状直接支配而出现暴力、凶杀等危害行为，如精神分裂症可以在命令性幻听、被害妄想、物理影响妄想等支配下产生毫无先兆的残暴攻击行为。</div>
+    <div class="grid2">
+      <div class="mini"><h4>① 精神病性症状支配</h4><p>命令性幻听、被害妄想、物理影响妄想 → 毫无先兆的残暴攻击行为。</p></div>
+      <div class="mini"><h4>② 情感障碍合并冲动</h4><p>部分抑郁症患者合并焦虑、冲动或激惹性增高 → 凶杀伤害行为，亦称<strong>凶杀式自杀</strong>（homicide-suicide）。</p></div>
+      <div class="mini"><h4>③ 产后精神障碍</h4><p>以患产后抑郁或产后精神障碍的女性杀害其幼年子女最为常见，即<strong>杀幼式自杀</strong>（filicide-suicide）。</p></div>
+      <div class="mini"><h4>④ 依从性与物质因素</h4><p>曾非自愿住院者治疗依从性差风险更高；醉酒、吸毒可加重控制能力削弱；擅自停用药物（如抗癫痫药）也可能导致控制能力下降。</p></div>
+    </div>
+    <p><strong>教材给出的风险数据（原文数字，不得改写）：</strong></p>
+    <ul>
+      <li>20% 的精神分裂症患者入院前有过暴力行为。</li>
+      <li>精神分裂症患者凶杀作案的风险约为一般人群的 4 倍。</li>
+      <li>重性精神障碍伴有人格障碍或酒精、药物依赖问题时，凶杀作案风险会增加十余倍。</li>
+      <li>定罪罪犯中反社会人格障碍终生患病率为 50.1%。</li>
+      <li>危害行为也常见于曾经非自愿住院的患者，因为他们对治疗依从性差的风险更高。</li>
+      <li>既往有暴力史往往是预测精神障碍患者暴力行为最好的指标；10%～20% 的反复暴力者可能导致 50%～70% 的暴力事件。</li>
+    </ul>
+    <div class="callout warn">
+      <span class="ct">⚠️ 两个不能推论的方向</span>
+      ① 不能由"群体风险数据"直接推断某个患者一定会实施暴力；教材同时指出，既往暴力史才是最好的预测指标。<br>
+      ② 不能把"精神障碍"直接等同于"免责"；是否免除刑事责任，取决于行为时的辨认能力与控制能力，以及是否存在原因自由行为。
+    </div>
+  </div>
+
+  <div class="card red" id="u4-3">
+    <h3 class="col-title"><span class="idx">第三栏</span>临床表现拼图 → 规范要素拼图</h3>
+    <p><strong>六项法律能力全景（教材定义 + 时间点 + 被鉴定人）：</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>能力</th><th>教材定义要点</th><th>评价的时间点</th><th>被鉴定人身份</th></tr></thead>
+        <tbody>
+          <tr><td>刑事责任能力</td><td>实施侵害他人权利的危害行为时，对所实施行为承担刑事责任的资格；是接受刑罚的前提</td><td>犯罪行为发生时（含行为前状态）</td><td>犯罪嫌疑人/被告人</td></tr>
+          <tr><td>民事行为能力</td><td>通过自己的行为取得民事权利、承担民事义务，设立/变更/终止法律关系的资格</td><td>实施特定民事行为时</td><td>民事活动当事人</td></tr>
+          <tr><td>受审能力</td><td>理解自己在刑事诉讼活动中的地位和权利、理解诉讼过程含义并合理行使诉讼权利的能力</td><td>批捕以后直至判决以前</td><td>犯罪嫌疑人/被告人</td></tr>
+          <tr><td>服刑能力</td><td>接受处罚和矫正改造的生理或心理能力；能承受刑罚，理解刑罚的性质、目的和意义</td><td>服刑期间</td><td>罪犯/服刑人员</td></tr>
+          <tr><td>性自我防卫能力</td><td>女性精神障碍患者在其性不可侵犯权遭到侵害时，对自身所受侵害或严重后果的实质性理解能力</td><td>性行为发生时</td><td><strong>被害人</strong></td></tr>
+          <tr><td>作证能力</td><td>非当事人根据感知到的真实情况，向司法部门提供与案件有关证言的能力</td><td>作证时</td><td><strong>现场证人</strong></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p><strong>刑事责任能力的定位：</strong>刑事责任能力是<strong>接受刑罚的前提</strong>，而刑罚则是承担刑事责任的<strong>结果</strong>。《刑法》规定 16 周岁以上、精神状态正常的人均应具有刑事责任能力。精神症状可使患者对其行为缺乏自由意志，对行为对错、危害后果缺乏实质性判断认识能力，犯罪要件不完整；因此各国立法对不能辨认或不能控制自己行为者免除刑事责任，代之以强制性精神医学治疗。</p>
+    <p><strong>刑事责任能力评定的两个关键（教材原文逻辑）：</strong></p>
+    <div class="grid2">
+      <div class="mini"><h4>辨认能力</h4><p>对自己行为在<strong>刑法上的意义、性质、作用、后果</strong>的认识能力。具体包括：是否意识到动机、目的、准备或采取的手段、法律意义；是否预见后果；是否理解犯罪性质。</p><p class="note">不是对一般事物是非曲直的抽象判断力，而是对<strong>特定行为</strong>的实质认识判断力。</p></div>
+      <div class="mini"><h4>控制能力</h4><p>按照自己的意志选择实施或不实施被刑法所禁止行为的能力。以辨认能力为前提：完全丧失辨认能力者不具备法律意义上的控制能力；只有在辨认能力存在时，才需确认是否具备控制能力。</p></div>
+    </div>
+    <div class="quote"><span class="lab">教材原文</span>精神障碍患者辨认能力受损常常表现为病态的行为动机、曲解其行为的违法性质、不理解行为的法律后果等。</div>
+    <p><strong>控制能力判断需考虑的因素：</strong>社会功能受损的程度、既往人格因素或行为方式、作案的诱因和先兆、作案后的自我保护、作案环境的选择等。</p>
+    <div class="quote"><span class="lab">教材原文</span>《刑法》第十四条、第十五条规定："明知自己的行为会发生危害社会的结果，并且希望或者放任这种结果发生，因而构成犯罪的，是故意犯罪""应当预见自己的行为可能发生危害社会的结果，因为疏忽大意而没有预见，或者已经预见而轻信能够避免，以致发生这种结果的，是过失犯罪"。</div>
+    <p><strong>两套评定依据（教材点名的技术规范）：</strong></p>
+    <ul>
+      <li>刑事责任能力：《精神障碍者刑事责任能力评定指南》（SF/Z JD0104002—2016），目前唯一的技术规范；推荐使用《精神病人刑事责任能力评定量表》。</li>
+      <li>民事行为能力：《精神障碍者民事行为能力评定指南》（SF/Z JD 0104004—2018）；推荐使用《精神障碍者民事行为能力评定量表》。</li>
+    </ul>
+    <div class="callout key"><span class="ct">📌 共同公式</span>刑事与民事鉴定都要求<strong>医学要件 + 法学要件相结合</strong>：先确定精神障碍诊断，再分析精神状态对特定法律能力的影响。</div>
+  </div>
+
+  <div class="card orange" id="u4-4">
+    <h3 class="col-title"><span class="idx">第四栏</span>教材典型案例</h3>
+    <div class="callout book">
+      <span class="ct">📖 教材未提供具体临床案例</span>
+      本节教材以群体数据、典型症状描述和制度说明为主，<strong>没有给出任何具体涉案人员的病史、鉴定意见或裁判结果</strong>。教材提到的"精神分裂症在命令性幻听、被害妄想、物理影响妄想支配下产生攻击行为"是疾病学层面的典型描述，不是个案。因此本栏不编造司法案例，也不虚构判决。
+    </div>
+    <p><strong>可迁移的鉴定阅读思路（由教材要点整理，非教材原文）：</strong></p>
+    <ol>
+      <li>先看<strong>委托环节</strong>：谁启动鉴定（司法机关控制启动；当事人可申请补充鉴定或重新鉴定）。</li>
+      <li>再看<strong>医学要件</strong>：是否患精神障碍、何种障碍、案发时精神状态如何。</li>
+      <li>再看<strong>法学要件</strong>：针对哪项法律能力，该能力要求"辨认什么、控制什么"。</li>
+      <li>最后看<strong>采信与处置</strong>：鉴定意见属言辞证据，法官需审查可靠性；处置按三种方式或强制医疗程序进行。</li>
+    </ol>
+  </div>
+
+  <div class="card orange" id="u4-5">
+    <h3 class="col-title"><span class="idx">第五栏</span>鉴别诊断对对碰 → 概念与制度辨析</h3>
+    <p><strong>表 1　辨认能力 vs 控制能力：先辨后控</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>比较项</th><th>辨认能力</th><th>控制能力</th></tr></thead>
+        <tbody>
+          <tr><td>定义</td><td>对自己行为在刑法上的意义、性质、作用、后果的认识能力</td><td>按自己的意志选择实施或不实施被刑法所禁止行为的能力</td></tr>
+          <tr><td>判断内容</td><td>动机、目的、手段、法律意义、后果预见、犯罪性质理解</td><td>社会功能受损程度、既往人格/行为方式、诱因先兆、作案后自我保护、环境选择</td></tr>
+          <tr><td>逻辑关系</td><td>基础</td><td><strong>以辨认能力为前提</strong>；完全丧失辨认能力者不具备法律意义上的控制能力；只有辨认能力存在时才需确认控制能力</td></tr>
+          <tr><td>一句话鉴别</td><td colspan="2"><strong>先问"知不知道"，再问"控不控得住"；不知道，就不必单独谈控制。</strong></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p><strong>表 2　责任能力、受审能力、服刑能力：三个时间点，别混</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>能力</th><th>评价时间</th><th>核心问题</th><th>一致性</th></tr></thead>
+        <tbody>
+          <tr><td>刑事责任能力</td><td>作案时</td><td>行为时是否具备辨认/控制能力，能否承担刑事责任</td><td rowspan="3">可能一致：完全责任能力者一般也有受审能力；脑器质性精神障碍、急性期精神分裂症可能两者均无。<br>也可能不一致：作案时患病、审理时缓解 → 可能有受审能力；作案时正常、案发后或审理中出现精神障碍（如严重拘禁性精神障碍）→ 有责任能力但无受审能力。作案有责任能力者一般有服刑能力；服刑期间病情变化则需单独评定。</td></tr>
+          <tr><td>受审能力</td><td>批捕后至判决前</td><td>能否理解诉讼、与律师合作、合理行使诉讼权利</td></tr>
+          <tr><td>服刑能力</td><td>服刑期间</td><td>能否承受刑罚、理解刑罚性质目的意义</td></tr>
+          <tr><td><strong>一句话鉴别</strong></td><td colspan="3">责任能力看作案时，受审能力看批捕后至判决前，服刑能力看服刑时；三者可一致也可不一致。</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note">教材补充：在许多欧美国家，受审能力实际上已经逐步替代刑事责任能力，成为精神障碍相关的刑事司法鉴定中最主要的内容。</p>
+    <p><strong>表 3　强制医疗 vs 非自愿医疗：依据、对象、决定主体不同</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>比较项</th><th>强制医疗</th><th>非自愿医疗</th></tr></thead>
+        <tbody>
+          <tr><td>主要依据</td><td>《刑事诉讼法》第五编第五章</td><td>《精神卫生法》相关条款</td></tr>
+          <tr><td>对象</td><td>主要针对<strong>肇事肇祸甚至有犯罪行为</strong>的精神障碍患者</td><td>未构成犯罪或未构成违反治安管理行为的精神障碍患者</td></tr>
+          <tr><td>程序要点</td><td>申请由<strong>人民检察院</strong>提出，由<strong>人民法院</strong>作出决定；医疗机构应当定期对被强制医疗的人进行诊断评估</td><td>按《精神卫生法》规定的条件与程序；伤害自身由监护人决定，危害他人由医疗机构及专科医师决定</td></tr>
+          <tr><td>一句话鉴别</td><td colspan="2"><strong>已构成犯罪的走刑事强制医疗；未构成犯罪的走精神卫生法非自愿医疗。</strong></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p><strong>表 4　原因自由行为 vs 精神障碍免责：不能把"自己喝醉"当成免责牌</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>比较项</th><th>原因自由行为（自陷行为）</th><th>精神障碍所致责任能力削弱/丧失</th></tr></thead>
+        <tbody>
+          <tr><td>状态形成</td><td>行为人在<strong>具有行为能力时</strong>，故意或过失地使自己陷于无责任能力或限定责任能力状态</td><td>由精神症状导致，使患者对其行为缺乏自由意志</td></tr>
+          <tr><td>典型情形</td><td>醉酒、吸毒加重控制能力削弱；擅自停用药物（如抗癫痫药）导致控制能力下降</td><td>命令性幻听、被害妄想、物理影响妄想支配下实施危害行为；辨认能力受损表现为病态动机、曲解违法性质、不理解法律后果</td></tr>
+          <tr><td>责任判断</td><td>依《刑法》第十四条、第十五条的故意犯罪/过失犯罪规定，<strong>均可能需要承担相应刑事责任</strong></td><td>各国立法对不能辨认或不能控制自己行为者免除刑事责任，代之以强制性精神医学治疗</td></tr>
+          <tr><td>一句话鉴别</td><td colspan="2"><strong>关键看"行为时"的能力是谁造成的：自己造成的，仍可能担责；疾病造成的，才谈免责。</strong></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout key"><span class="ct">📌 一句话鉴别总结</span>责任能力看"作案时"，受审能力看"现在能不能审"，服刑能力看"能不能改"，性自卫能力看"被害人懂不懂"，作证能力看"证人说不说得清"；强制医疗与行政/民事非自愿医疗走的是两套法。</div>
+  </div>
+
+  <div class="card green" id="u4-6">
+    <h3 class="col-title"><span class="idx">第六栏</span>治疗方案工具箱 → 实务操作工具箱</h3>
+    <p><strong>（一）法医精神病鉴定：启动与采信</strong></p>
+    <div class="timeline">
+      <div class="tl-item"><h4>第一步 · 启动</h4><p>《刑事诉讼法》第一百四十六条、第一百四十八条：需要解决专门性问题时，应当指派、聘请有专门知识的人进行鉴定；侦查机关应当将用作证据的鉴定意见告知犯罪嫌疑人、被害人。鉴定主要由司法机关控制启动；当事人享有申请"补充鉴定"或"重新鉴定"的权利；辩护人或近亲属在侦查和起诉阶段实际上也被赋予一定申请鉴定的权利。</p></div>
+      <div class="tl-item"><h4>第二步 · 鉴定</h4><p>鉴定人应坚持循证思维模式和证据意识来"求证"和"用证"，依据具有可靠性的证据得出结论。鉴定意见属言辞证据，具有主客观双重性及真实与失真的双重性。</p></div>
+      <div class="tl-item"><h4>第三步 · 采信</h4><p>法官在采信前需对影响其可靠性的各种因素进行审查，以提升内心确信的准确度。</p></div>
+      <div class="tl-item"><h4>第四步 · 能力评定</h4><p>医学要件 + 法学要件；确定具体评哪项能力（责任/受审/服刑/性自卫/作证/民事/决策）。</p></div>
+    </div>
+    <p><strong>（二）受审能力判断的四个成分（教材原文列举）</strong></p>
+    <ol>
+      <li>是否理解对其起诉的目的和性质。</li>
+      <li>是否理解自己的情况与这次诉讼的关系。</li>
+      <li>是否具有与律师合作、商量、协助辩护人为其辩护的能力。</li>
+      <li>是否理解与其他诉讼参与人的关系，能否对其他诉讼参与人的提问作出应有的回答。</li>
+    </ol>
+    <p>此外还需考虑：能否承受审讯和在拘禁场所长期等待判决等带来的压力；在审讯中能否克制自己，避免出现不理智的失控行为；能否进行自我保护，利用法律有效地保护自己。</p>
+    <p>根据违法行为的类型与性质，可依据《刑法》《治安管理处罚法》《行政处罚法》等法律法规进行处置。</p>
+    <p><strong>（三）违法精神障碍患者的三种处置方式</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>方式</th><th>教材表述</th><th>适用提示</th></tr></thead>
+        <tbody>
+          <tr><td>不追究法律责任</td><td>责令其家属或监护人严加看管和医疗</td><td>经法定程序鉴定后，依法不负刑事责任的情形</td></tr>
+          <tr><td>追究法律责任</td><td>判处刑罚，或者给予治安管理处罚、其他行政处罚</td><td>具备相应责任能力/应受处罚的情形</td></tr>
+          <tr><td>追究部分法律责任</td><td>从轻或减轻刑罚、治安管理处罚或其他行政处罚</td><td>责任能力削弱但未完全丧失的情形</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p><strong>（四）无服刑能力的处置路径</strong></p>
+    <div class="quote"><span class="lab">教材原文</span>评定为无服刑能力的精神障碍患者，应将其送往司法部门指定的精神卫生医疗机构接受强制性医疗措施，待精神症状消失、精神活动恢复正常、经评估能够承受刑罚后，再移送原服刑机关继续余下的刑期。</div>
+    <p><strong>（五）性自卫能力与作证能力的判断要点</strong></p>
+    <div class="grid2">
+      <div class="mini">
+        <h4>性自卫能力</h4>
+        <p>被鉴定人是<strong>被害人</strong>。医学条件：是否存在精神障碍或智能障碍、案发时精神状态；法学条件：性行为当时对两性行为的意义、性质和后果的辨认能力和控制能力。</p>
+        <p>法律依据（教材引）："明知妇女是精神病患者或者痴呆者（程度严重的）而与其发生性行为的，不管犯罪分子采取什么手段，都应以强奸罪论处。与间歇性精神病患者在未发病期间发生性行为，妇女本人同意的，不构成强奸罪。"</p>
+      </div>
+      <div class="mini">
+        <h4>作证能力</h4>
+        <p>对象是<strong>犯罪行为的现场证人</strong>。先明确"精神缺陷"的性质和程度并作出临床诊断，再判断能否辨别是非、能否正确表达意思，以及异常精神活动是否影响陈述真实性。</p>
+        <p>并非所有精神障碍或智能障碍者都无作证能力；需结合具体病情、所要证明的事实、与案件的利害关系、所反映事实的合理性、与调查结果的符合情况、是否受外界因素影响等综合判断。针对精神发育迟滞患者的作证能力评定，除了考虑智商因素外，同时要结合患者智能结构各因素对所涉及需要作证的具体情节的关系进行仔细评估。</p>
+      </div>
+    </div>
+    <div class="callout warn"><span class="ct">⚠️ 处置不是"一关了之"</span>教材强调：处置既为维护社会安全和大众利益不受暴力侵害，也兼顾患者合法权益，给予其恰当医疗和保护，减少因疾病因素再次产生危害行为。广义"处置"甚至包含对将来可能发生危害行为的预测和防范。</div>
+  </div>
+
+  <div class="card purple" id="u4-7">
+    <h3 class="col-title"><span class="idx">第七栏</span>记忆工具箱</h3>
+    <div class="callout tip">
+      <span class="ct">🔧 方法一：六字口诀法（法律能力清单）</span>
+      口诀：<strong>"刑、民、审、服、性、证"</strong>——刑事责任能力、民事行为能力、受审能力、服刑能力、性自我防卫能力、作证能力。<br>
+      <em>为什么这样记：</em>六个字按"从案发到服刑、从被告人到被害人/证人"的顺序排列，既覆盖清单，又暗示各自的时间点。
+    </div>
+    <div class="callout tip">
+      <span class="ct">🔧 方法二：时间轴记忆法</span>
+      画一条案件时间轴：<strong>案发时（责任能力）→ 批捕后至判决前（受审能力）→ 服刑时（服刑能力）</strong>；另画两条分支：<strong>被害时（性自卫能力）→ 作证时（作证能力）</strong>。<br>
+      <em>为什么这样记：</em>教材反复强调"受审能力与责任能力反映不同时期"，用时间轴把这句话变成画面，最不容易把"作案时"和"现在"混答。
+    </div>
+    <div class="callout tip">
+      <span class="ct">🔧 方法三：因果链法（辨认 → 控制）</span>
+      链条：<strong>先有辨认（知道自己在做什么、是否违法）→ 才谈控制（能不能不做）</strong>；完全丧失辨认 → 法律意义上无控制能力；辨认存在 → 才需确认控制是否削弱。<br>
+      <em>为什么这样记：</em>把两个能力串成一条因果链，而不是并排背两个定义；答题时先判断辨认，再判断控制，逻辑自然成立。
+    </div>
+    <div class="callout tip">
+      <span class="ct">🔧 方法四：数字锚定法（风险数据）</span>
+      记三个数字：<strong>4 倍</strong>（精神分裂症凶杀风险约为一般人群）、<strong>十余倍</strong>（伴人格障碍或酒药依赖时增加）、<strong>50.1%</strong>（定罪罪犯中反社会人格障碍终生患病率）。<br>
+      再记两组比例：<strong>10%～20% 的反复暴力者 → 50%～70% 的暴力事件</strong>。<br>
+      <em>为什么这样记：</em>本节数字不多但易混，用"4、十余、50.1"三个锚点先立住，再补两组比例，避免把"4 倍"和"十余倍"的条件记反。
+    </div>
+  </div>
+
+  <div class="card cyan" id="u4-8">
+    <h3 class="col-title"><span class="idx">第八栏</span>知识联动</h3>
+    <ul>
+      <li><strong>与精神分裂症章：</strong>命令性幻听、被害妄想、物理影响妄想支配下的攻击行为，是责任能力评定中最典型的症状学情形。</li>
+      <li><strong>与抑郁障碍章：</strong>合并焦虑、冲动、激惹性增高可致凶杀式自杀；产后抑郁或产后精神障碍可致杀幼式自杀。</li>
+      <li><strong>与物质依赖章：</strong>醉酒、吸毒加重控制能力削弱；酒精依赖可能属于精神障碍范畴，但原因自由行为的责任判断另有规则。</li>
+      <li><strong>与刑法：</strong>第十六周岁以上、精神状态正常的人均应具有刑事责任能力；不能辨认或不能控制自己行为者免除刑事责任，代之以强制性精神医学治疗；第十四条、第十五条区分故意犯罪与过失犯罪。</li>
+      <li><strong>与刑事诉讼法：</strong>鉴定由司法机关控制启动；当事人可申请补充鉴定或重新鉴定；强制医疗由人民检察院申请、人民法院决定。</li>
+      <li><strong>与民法典：</strong>民事行为能力与监护制度，是民事司法领域精神医学介入的落点。</li>
+    </ul>
+    <p class="note">教材未涉及具体量刑规则、鉴定人出庭程序、无受审能力时的诉讼处理细则；本指南不补写，相关试题只考教材已明确的内容。</p>
+  </div>
+</section>
+
+<!-- ===== 09 要点 ===== -->
+<section id="summary">
+  <div class="sec-head"><div class="badge">09</div><h2>全章核心要点速览<span class="en">17 key points</span></h2></div>
+  <p class="sec-lead">考前最后一遍只看这里。每条都能独立成题，建议逐条自问"为什么"。本章要点以"原则—权利—程序—能力"四层排列。</p>
+  <div class="card blue">
+    <div class="grid2">
+      <ol>
+        <li>"精神病学与法律 / 精神卫生与法律"是对传统司法精神病学概念的拓展，涉及越界行为、犯罪、权益保护与侵权、医疗纠纷等。</li>
+        <li>伦理源自希腊文 ethos（道义、德行），指行为举止规范，即个人或团体所拥有的价值观或行为准则；中华传统有"莫贵于人""爱人知人""大医精诚"。</li>
+        <li>现代医学伦理学四大基本原则：尊重（自主）、不伤害、有利（行善）、公正；衍生诚信、保密、最优化。</li>
+        <li>精神科四类伦理困境：诊断的医学属性与社会属性；自主权与健康权冲突；保护患者与保护公众利益平衡；治疗选择问题。</li>
+        <li>社会控制中刑事司法体系占主要作用，精神卫生体系承担"分流"次要角色；分流对象可超出"无刑事责任能力"范围，且两体系间可依次转换。</li>
+        <li>精神医学在刑事领域服务侦查、起诉、审判、处置；民事领域因"意思自治"需评估民事行为能力，判断依据是智力发展水平与精神健康状况。</li>
+        <li>司法精神病学是精神医学分支，研究与法律相关的精神医学和精神卫生问题；传统六项法律能力为刑事、民事、受审、服刑、性自卫、作证，另加决策（知情同意）能力。</li>
+        <li>尊重（自主）要求充分信息、充分时间、自由决定；患者无法决定时考虑替代决策（监护人或其他法定代理人）。</li>
+        <li>不伤害是精神科专业伦理的<strong>第一准则</strong>；有利（行善）在特定情形可置于自主权之上，但须必要且最小程度剥夺自主权；公正要求形式公正与实质公正统一。</li>
+      </ol>
+      <ol start="10">
+        <li>自主权：所有患者首先应被假定为有行为能力；实施非自愿程序前应尽一切努力使患者接受自愿入院或治疗；《宪法》第三十七条保障人身自由；《精神卫生法》规定人格尊严、人身和财产安全不受侵犯，除法律另有规定外不得违背本人意志进行确定其是否患有精神障碍的医学检查。</li>
+        <li>知情同意＝知情 + 自愿 + 能力 + 合法。同意能力指对特定评估或治疗理解目的、性质、可能作用及风险，并配合治疗的能力；<strong>患精神障碍不自动丧失决定能力</strong>。</li>
+        <li>知情同意例外：延误治疗严重危及健康、如实告知可能导致躯体或精神健康恶化、患者放弃知情权、本人无能力；后两种通常由监护人/近亲属代行。</li>
+        <li>保密：未经同意不得向第三方透露；学术公开须去标识，无法充分掩饰须患者或法定代理人同意；第三方评估保密义务不同；紧急披露须遵循有利原则。</li>
+        <li>立法节点：1890 英国《疯人法》首次立法保护权利和财产；1938 法国第一部正式命名的《精神卫生法》；1996 WHO 十项基本原则；我国 2012 年通过、2013 年施行、2018 年个别条款修正，共七章八十五条。</li>
+        <li>民事行为能力三级：完全（≥18 周岁，或 ≥16 周岁以劳动收入为主要生活来源）、限制（≥8 周岁未成年人或不能完全辨认的成年人）、无（＜8 周岁或不能辨认的成年人）；评定采医学要件 + 法学要件。</li>
+        <li>非自愿住院：我国实行自愿原则，仅在严重精神障碍患者已发生伤害自身行为/危险，或已发生危害他人安全行为/危险时可实施；伤己由监护人决定入出院，伤人由医疗机构及专科医师决定；救济包括再次诊断、医学鉴定、投诉、诉讼。</li>
+        <li>违法行为：法医精神病鉴定是"第三方服务"；责任能力两大关键是辨认与控制；受审能力看批捕后至判决前；处置分不追究、追究、部分追究三种。</li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 10 易混 ===== -->
+<section id="pitfalls">
+  <div class="sec-head"><div class="badge">10</div><h2>易混易错点警示<span class="en">Common traps</span></h2></div>
+  <p class="sec-lead">这些点不是"没背到"，而是"背反了"。逐条核对你的第一反应。</p>
+  <div class="card danger">
+    <details open>
+      <summary>① 伦理 ≠ 法律，二者不能互相替代</summary>
+      <div class="dbody">伦理是价值观与行为准则，法律是刑事/民事法律规范。教材反复区分"伦理原则"与"法定条件/程序"：符合伦理不等于完成法定程序，完成法定程序也不等于伦理上无懈可击。<strong>答题时不要把"应当"与"必须"混用。</strong></div>
+    </details>
+    <details>
+      <summary>② 患精神障碍 ≠ 自动丧失知情同意能力</summary>
+      <div class="dbody">教材原文：严重精神障碍常会影响这种能力，<strong>但患有精神障碍并不意味着患者就自动地丧失了作出决定的能力</strong>。同理，年满 18 周岁者在法院认定前被推定为完全民事行为能力人。</div>
+    </details>
+    <details>
+      <summary>③ 尊重自主 ≠ 放任自流</summary>
+      <div class="dbody">保护人身自由、强调自主权，不意味着对患者放任自流。当患者因辨认控制能力受损而可能伤害自身或他人，或因精神障碍严重行为紊乱时，可按有利（行善）原则<strong>暂时</strong>采取合理的人身自由限制措施，但须必要且最小程度。</div>
+    </details>
+    <details>
+      <summary>④ 非自愿住院两情形，决定主体不同</summary>
+      <div class="dbody">伤害自身行为或危险 → <strong>监护人</strong>决定入出院；危害他人安全行为或危险 → <strong>负责诊治的医疗机构及其专科医师</strong>决定入出院。记成"都是家属决定"或"都是医院决定"都会错。</div>
+    </details>
+    <details>
+      <summary>⑤ "自愿原则"不等于"一律不能非自愿"</summary>
+      <div class="dbody">我国住院治疗实行自愿原则，<strong>只有符合特定标准或条件的患者</strong>才能实施非自愿住院。自愿是原则，非自愿是法定例外；不要把原则当成绝对禁止。</div>
+    </details>
+    <details>
+      <summary>⑥ 刑事责任能力 ≠ 受审能力</summary>
+      <div class="dbody">责任能力反映<strong>作案当时</strong>的精神状态；受审能力涉及<strong>批捕以后直至判决以前</strong>，是实时观察评估，法庭辩护中可信度更高。二者可一致也可不一致：作案时患病、审理时缓解 → 可能有受审能力；作案时正常、案发后出现严重拘禁性精神障碍 → 有责任能力但无受审能力。</div>
+    </details>
+    <details>
+      <summary>⑦ 有精神障碍 ≠ 无服刑能力 / 无作证能力</summary>
+      <div class="dbody">被鉴定人即使患有某种精神障碍，但该疾病对其接受服刑改造没有影响，仍属于具有服刑能力。<strong>并非所有精神障碍患者或智能障碍者都无作证能力</strong>，需根据具体病情及所要证明的事实而定。</div>
+    </details>
+    <details>
+      <summary>⑧ 控制能力以辨认能力为前提，不能反过来</summary>
+      <div class="dbody">完全丧失辨认能力的行为人就不具备法律意义上的控制能力；<strong>只有在辨认能力存在的情况下，才需要确认是否具备控制能力</strong>。答题顺序必须是"先辨后控"。</div>
+    </details>
+    <details>
+      <summary>⑨ 醉酒、吸毒、擅自停药可能仍要担责</summary>
+      <div class="dbody">这些可加重控制能力削弱，但本质可能属于<strong>原因自由行为（自陷行为）</strong>：行为人在具有行为能力时，故意或过失地使自己陷于无责任能力或限定责任能力状态而实施危害行为。依《刑法》第十四条、第十五条，<strong>均可能需要承担相应刑事责任</strong>，不能当然免责。</div>
+    </details>
+    <details>
+      <summary>⑩ 法医精神病鉴定不是医患关系</summary>
+      <div class="dbody">它属于"第三方服务"，只服务于法律；鉴定人与被鉴定人之间并非传统医患关系，鉴定意见和结论<strong>不一定对被鉴定人有利</strong>。临床评估关注症状学，司法鉴定主要关心个体的法律（或与法律相关的心理）能力。</div>
+    </details>
+    <details>
+      <summary>⑪ 第三方评估的保密义务与普通诊疗不同</summary>
+      <div class="dbody">为司法鉴定、就业或入学前心理评估、残疾评定、劳动能力评定等作评估时，医师与被评估者<strong>不存在治疗关系</strong>，保密义务有所不同；接受鉴定或评估，通常意味着对第三方使用其相关信息的<strong>默认</strong>。不能把普通诊疗的"绝对保密"直接搬过来。</div>
+    </details>
+    <details>
+      <summary>⑫ 民事行为能力评定不能只看诊断</summary>
+      <div class="dbody">必须<strong>医学要件（是否为精神障碍患者）+ 法学要件（对民事行为辨认能力状况）</strong>两要素结合：先确定有无精神障碍，再分析精神状态对某种民事行为辨认能力或意思表示能力的影响。只写"诊断精神分裂症，故无民事行为能力"是错误思路。</div>
+    </details>
+  </div>
+</section>
+
+<!-- ===== 11 自测 ===== -->
+<section id="quiz">
+  <div class="sec-head"><div class="badge">11</div><h2>章节自测系统<span class="en">13 questions · 6 types</span></h2></div>
+  <p class="sec-lead">覆盖单选、多选、判断、名词解释、简答、案例分析六种题型，按易→中→难排列。先作答，再展开解析。</p>
+
+  <div class="quiz-q">
+    <div class="qh"><span class="qno">第 1 题</span><span class="qtype">单选题</span><span class="diff">易</span></div>
+    <p class="brief">现代医学伦理学归纳的四大基本伦理原则<strong>不包括</strong>下列哪一项？</p>
+    <div class="opts">
+      <div class="opt"><span class="l">A.</span>尊重（自主）</div>
+      <div class="opt"><span class="l">B.</span>不伤害</div>
+      <div class="opt"><span class="l">C.</span>有利（行善）</div>
+      <div class="opt"><span class="l">D.</span>保密</div>
+    </div>
+    <details><summary>查看答案与解析</summary><div class="dbody"><strong>答案：D</strong><br>教材原文：现代医学伦理学将医学基本伦理原则归纳为四大方面——尊重（自主）、不伤害、有利（行善）和公正，由此还衍生出了诚信、保密、最优化等成分。保密是衍生要求，不是四大基本原则之一。</div></details>
+  </div>
+
+  <div class="quiz-q">
+    <div class="qh"><span class="qno">第 2 题</span><span class="qtype">单选题</span><span class="diff">易</span></div>
+    <p class="brief">教材明确称哪一项为"精神科专业伦理的第一准则"？</p>
+    <div class="opts">
+      <div class="opt"><span class="l">A.</span>尊重（自主）</div>
+      <div class="opt"><span class="l">B.</span>不伤害</div>
+      <div class="opt"><span class="l">C.</span>有利（行善）</div>
+      <div class="opt"><span class="l">D.</span>公正</div>
+    </div>
+    <details><summary>查看答案与解析</summary><div class="dbody"><strong>答案：B</strong><br>教材原文："不伤害（nonmaleficence）是精神科专业伦理的第一准则。"尊重（自主）是基本原则之一，但教材未称其为"第一准则"。</div></details>
+  </div>
+
+  <div class="quiz-q">
+    <div class="qh"><span class="qno">第 3 题</span><span class="qtype">单选题</span><span class="diff">中</span></div>
+    <p class="brief">严重精神障碍患者已经发生伤害自身的行为，需要非自愿住院。其入、出院应由谁决定？</p>
+    <div class="opts">
+      <div class="opt"><span class="l">A.</span>患者本人</div>
+      <div class="opt"><span class="l">B.</span>监护人</div>
+      <div class="opt"><span class="l">C.</span>负责诊治的医疗机构及其专科医师</div>
+      <div class="opt"><span class="l">D.</span>当地公安机关</div>
+    </div>
+    <details><summary>查看答案与解析</summary><div class="dbody"><strong>答案：B</strong><br>教材原文：患者有伤害自身行为或危险时，由<strong>监护人</strong>做出非自愿入院和出院的决定；有危害他人安全的行为或危险时，才由负责诊治的医疗机构及其专科医师决定入、出院。注意区分两种情形，不能混答。</div></details>
+  </div>
+
+  <div class="quiz-q">
+    <div class="qh"><span class="qno">第 4 题</span><span class="qtype">单选题</span><span class="diff">难</span></div>
+    <p class="brief">按照教材，评定精神障碍者刑事责任能力的"两大关键"是？</p>
+    <div class="opts">
+      <div class="opt"><span class="l">A.</span>精神障碍诊断与病情严重程度</div>
+      <div class="opt"><span class="l">B.</span>辨认能力与控制能力</div>
+      <div class="opt"><span class="l">C.</span>受审能力与服刑能力</div>
+      <div class="opt"><span class="l">D.</span>社会功能受损程度与既往人格因素</div>
+    </div>
+    <details><summary>查看答案与解析</summary><div class="dbody"><strong>答案：B</strong><br>教材原文：按照《刑法》的相关规定，在确定精神障碍诊断以后，<strong>辨认能力和控制能力</strong>就是评定刑事责任能力的两大关键。A 是前提（医学要件），C 是另外两项能力，D 是判断控制能力时需考虑的因素，均不能替代"两大关键"。</div></details>
+  </div>
+
+  <div class="quiz-q">
+    <div class="qh"><span class="qno">第 5 题</span><span class="qtype">多选题</span><span class="diff">中</span></div>
+    <p class="brief">按照教材，下列哪些情形属于"无须获得患者本人知情同意"的例外？</p>
+    <div class="opts">
+      <div class="opt"><span class="l">A.</span>在延误治疗可能严重危及患者健康的情况下</div>
+      <div class="opt"><span class="l">B.</span>如实告知信息可能导致患者躯体或精神健康恶化</div>
+      <div class="opt"><span class="l">C.</span>患者放弃知情权</div>
+      <div class="opt"><span class="l">D.</span>患者本人无能力作出知情同意决定</div>
+    </div>
+    <details><summary>查看答案与解析</summary><div class="dbody"><strong>答案：ABCD</strong><br>教材列出四类特殊或紧急情况：延误治疗可能严重危及患者健康、如实告知信息可能导致患者躯体或精神健康恶化、患者放弃知情权、患者本人无能力作出知情同意决定。后两种情况下，通常也需要患者的监护人或近亲属代为行使知情同意权。</div></details>
+  </div>
+
+  <div class="quiz-q">
+    <div class="qh"><span class="qno">第 6 题</span><span class="qtype">多选题</span><span class="diff">难</span></div>
+    <p class="brief">关于受审能力，下列哪些表述符合教材？</p>
+    <div class="opts">
+      <div class="opt"><span class="l">A.</span>涉及批捕以后直至判决以前这段时期的精神状态</div>
+      <div class="opt"><span class="l">B.</span>是实时观察和评估到的，在法庭辩护中可信度更高</div>
+      <div class="opt"><span class="l">C.</span>与刑事责任能力可能一致，也可能不一致</div>
+      <div class="opt"><span class="l">D.</span>具有完全刑事责任能力者一定不具有受审能力</div>
+    </div>
+    <details><summary>查看答案与解析</summary><div class="dbody"><strong>答案：ABC</strong><br>D 错。教材原文：具有完全责任能力的行为人<strong>一般也具有受审能力</strong>。责任能力反映作案当时，受审能力反映批捕以后至判决以前，二者可一致也可不一致（如作案时患病、审理时缓解 → 可能有受审能力）。</div></details>
+  </div>
+
+  <div class="quiz-q">
+    <div class="qh"><span class="qno">第 7 题</span><span class="qtype">判断题</span><span class="diff">易</span></div>
+    <p class="brief">按照教材，患有精神障碍就意味着患者自动丧失了作出决定的能力。</p>
+    <div class="opts">
+      <div class="opt"><span class="l">A.</span>正确</div>
+      <div class="opt"><span class="l">B.</span>错误</div>
+    </div>
+    <details><summary>查看答案与解析</summary><div class="dbody"><strong>答案：B（错误）</strong><br>教材原文：严重精神障碍常会影响到这种能力，<strong>但患有精神障碍并不意味着患者就自动地丧失了作出决定的能力</strong>。同意能力是针对特定评估或治疗的具体能力，不是由诊断自动推定。</div></details>
+  </div>
+
+  <div class="quiz-q">
+    <div class="qh"><span class="qno">第 8 题</span><span class="qtype">判断题</span><span class="diff">中</span></div>
+    <p class="brief">我国精神障碍的住院治疗实行自愿原则，只有符合特定标准或条件的患者，才能实施非自愿住院治疗。</p>
+    <div class="opts">
+      <div class="opt"><span class="l">A.</span>正确</div>
+      <div class="opt"><span class="l">B.</span>错误</div>
+    </div>
+    <details><summary>查看答案与解析</summary><div class="dbody"><strong>答案：A（正确）</strong><br>教材原文：精神障碍的住院治疗在我国实行自愿原则。只有符合特定标准或条件的患者，才能实施非自愿住院治疗。非自愿住院的法定前提是严重精神障碍患者已发生伤害自身行为/危险，或已发生危害他人安全行为/危险。</div></details>
+  </div>
+
+  <div class="quiz-q">
+    <div class="qh"><span class="qno">第 9 题</span><span class="qtype">判断题</span><span class="diff">难</span></div>
+    <p class="brief">醉酒、吸毒导致控制能力削弱，属于原因自由行为，仍可能需要承担相应刑事责任。</p>
+    <div class="opts">
+      <div class="opt"><span class="l">A.</span>正确</div>
+      <div class="opt"><span class="l">B.</span>错误</div>
+    </div>
+    <details><summary>查看答案与解析</summary><div class="dbody"><strong>答案：A（正确）</strong><br>教材原文：各种精神活性物质的滥用（如醉酒、吸毒）可以加重行为人控制能力的削弱；这些行为虽然可能有一部分可归属于精神障碍范畴（如酒精依赖），但其本质可能属于原因自由行为（自陷行为）。依《刑法》第十四条、第十五条，<strong>均可能需要承担相应的刑事责任</strong>。</div></details>
+  </div>
+
+  <div class="quiz-q">
+    <div class="qh"><span class="qno">第 10 题</span><span class="qtype">名词解释</span><span class="diff">中</span></div>
+    <p class="brief">请解释"知情同意（informed consent）"。</p>
+    <details><summary>查看答案与解析</summary><div class="dbody"><strong>参考答案：</strong>指在医疗过程中，患者有权知晓自己的病情及可选择的治疗方案，并且对于医务人员采取的防治措施有决定取舍的自主权。同意的基础是<strong>知情</strong>，即告知真实、准确且充分的信息；基本要求是<strong>自愿同意</strong>，医师不得以任何引诱、强迫、欺骗、欺诈的手段影响患者的决定过程；患者还须具有能给出有效同意的能力，即对特定评估或治疗理解其目的、性质、可能作用及风险，并配合治疗的能力。</div></details>
+  </div>
+
+  <div class="quiz-q">
+    <div class="qh"><span class="qno">第 11 题</span><span class="qtype">名词解释</span><span class="diff">中</span></div>
+    <p class="brief">请解释"受审能力（competency to stand trial）"。</p>
+    <details><summary>查看答案与解析</summary><div class="dbody"><strong>参考答案：</strong>指刑事案件中的犯罪嫌疑人或被告人理解自己在刑事诉讼活动中的地位和权利，理解诉讼过程的含义以及合理行使自己诉讼权利的能力。与责任能力反映作案当时的精神状态不同，受审能力涉及<strong>批捕以后直至判决以前</strong>这段时期的精神状态，因而是实时观察和评估到的，在法庭辩护中可信度更高。判断成分包括：理解起诉的目的和性质；理解自己的情况与诉讼的关系；与律师合作、商量、协助辩护的能力；理解与其他诉讼参与人的关系并作出应有回答的能力。</div></details>
+  </div>
+
+  <div class="quiz-q">
+    <div class="qh"><span class="qno">第 12 题</span><span class="qtype">简答题</span><span class="diff">难</span></div>
+    <p class="brief">简述我国非自愿住院治疗的法定前提、决定主体与救济途径。</p>
+    <details><summary>查看答案与解析</summary><div class="dbody">
+      <strong>参考答案：</strong>
+      <ol>
+        <li><strong>前提：</strong>精神障碍的住院治疗实行自愿原则；只有严重精神障碍患者"已经发生伤害自身行为或者有伤害自身危险"，以及"已经发生危害他人安全的行为或者有危害他人安全的危险"，才可实施非自愿住院治疗。</li>
+        <li><strong>决定主体：</strong>有伤害自身行为或危险时，由<strong>监护人</strong>做出非自愿入院和出院的决定；有危害他人安全的行为或危险时，由<strong>负责诊治的医疗机构及其专科医师</strong>决定患者的入、出院。</li>
+        <li><strong>机构资质：</strong>收治这类患者的医疗机构需要具备提供充足的安全措施和恰当的医疗服务的资质，以保障患者合法权益不受侵害。</li>
+        <li><strong>救济：</strong>我国法律对非自愿医疗措施制定了救济途径，包括<strong>再次诊断、医学鉴定</strong>等；有异议时还可向<strong>卫生行政部门投诉</strong>，直至通过<strong>司法途径诉讼</strong>。</li>
+      </ol>
+      <span class="note">不要加入教材未写的复议、听证等程序；教材只列上述救济路径。</span>
+    </div></details>
+  </div>
+
+  <div class="quiz-q">
+    <div class="qh"><span class="qno">第 13 题</span><span class="qtype">案例分析题</span><span class="diff">难</span></div>
+    <p class="brief">某精神分裂症患者，在命令性幻听支配下持械攻击他人。案发后被羁押，审理时精神症状部分缓解。请按教材说明：应评定哪些法律能力？各自的时间点与关键是什么？处置可能有哪些方向？</p>
+    <details><summary>查看答案与解析</summary><div class="dbody">
+      <strong>参考答案：</strong><br>
+      ① <strong>刑事责任能力</strong>：评价<strong>作案时</strong>的精神状态；在确定精神障碍诊断后，两大关键是<strong>辨认能力与控制能力</strong>。教材描述精神分裂症可在命令性幻听、被害妄想、物理影响妄想支配下产生攻击行为；辨认能力受损可表现为病态行为动机、曲解违法性质、不理解法律后果。<br>
+      ② <strong>受审能力</strong>：评价<strong>批捕以后直至判决以前</strong>；看能否理解起诉目的性质、理解自身情况与诉讼关系、与律师合作辩护、理解与其他诉讼参与人关系并作出回答，还需考虑能否承受审讯与长期等待判决的压力。<br>
+      ③ <strong>两能力可能不一致</strong>：作案时患病、审理时缓解，受审能力可能存在；不能因为"作案时有病"就直接推定"现在不能受审"。<br>
+      ④ <strong>处置方向</strong>（教材列三种）：不追究法律责任，责令家属或监护人严加看管和医疗；追究法律责任，判处刑罚或给予治安管理处罚、其他行政处罚；追究部分法律责任，从轻或减轻。若属于肇事肇祸甚至有犯罪行为且符合强制医疗条件，则按《刑事诉讼法》第五编第五章：申请由人民检察院提出，由人民法院作出决定，医疗机构应当定期对被强制医疗的人进行诊断评估。<br>
+      <span class="note">本案例为模拟情境，仅依据教材知识点构建；鉴定意见由司法机关委托形成，是否采信及最终判决由司法机关依法处理，本指南不虚构判决结果。教材未涉及"无受审能力时诉讼如何处理"的细则，故不展开。</span>
+    </div></details>
+  </div>
+</section>
+
+<!-- ===== 12 速记卡 ===== -->
+<section id="cards">
+  <div class="sec-head"><div class="badge">12</div><h2>考点速记卡<span class="en">20 flip cards</span></h2></div>
+  <p class="sec-lead">正面是问题，点击翻面看答案。建议按"概念→原则→法律程序"三轮刷，每轮只追求快速反应。</p>
+  <div class="flashcard-grid">
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag concept">概念</span><p>"精神病学与法律"与传统的司法精神病学是什么关系？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">是对传统司法精神病学（forensic psychiatry）概念的拓展。随着法律制度完善、司法和医学实践深化、学术研究发展，越界行为、犯罪、权益保护与侵权、医疗纠纷等问题日益受到重视。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag concept">概念</span><p>伦理（ethics）的词源与教材定义？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">源自希腊文"ethos"（道义、德行），指行为举止规范，也就是个人或团体所拥有的价值观或行为准则。中华传统有《黄帝内经》"莫贵于人"、张仲景"爱人知人"、孙思邈"大医精诚"。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag concept">概念</span><p>现代医学伦理学的四项基本原则与衍生要求？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">尊重（自主）、不伤害、有利（行善）、公正；由此衍生诚信、保密、最优化等。不伤害被称为精神科专业伦理的第一准则。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag concept">辨析</span><p>伦理冲突与伦理困境的区别？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">伦理冲突＝想做的事与合乎伦理要求的事之间不一致；伦理困境＝伦理观念或价值之间的冲突（如自主 vs 有利、保密 vs 公众安全）。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag concept">概念</span><p>社会控制中，刑事司法体系与精神卫生体系各扮演什么角色？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">刑事司法体系在国家社会控制分工协作中占主要作用；精神卫生体系扮演"分流"的次要角色，把因精神障碍病情严重而不能责罚者从刑事司法系统转入精神医学系统进行医学处置。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag concept">概念</span><p>司法精神病学的研究范围与服务特点？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">研究与法律相关的精神医学和精神卫生问题，包括对各种法律问题的精神病学咨询（司法鉴定、法医学咨询等）和对罪犯、受害人等特殊人群的临床服务。鉴定属"第三方服务"，只服务于法律，鉴定人≠治疗者。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag concept">清单</span><p>司法精神病学关注的六项传统法律能力，加一项新增能力是什么？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">刑事责任能力、民事行为能力、受审能力、服刑能力、性自我防卫能力、作证能力；《精神卫生法》出台后新增决策能力（知情同意能力）评定。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag concept">原则</span><p>尊重（自主）原则的核心要求是什么？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">在获得充分信息并有充分时间理解其利益、所有合理选择的风险和成本后，再采取自由决定的行动；蕴含知情同意原则。患者确实无法决定时，考虑监护人或其他法定代理人等替代决策机制。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag risk">原则</span><p>为什么"不伤害"是精神科专业伦理的第一准则？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">精神科医师必须对医疗决策和临床操作格外小心，确保足够专业训练，主动寻求同行帮助或意见建议，努力避免不恰当的医疗行为或不作为给患者造成风险。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag concept">原则</span><p>有利（行善）原则在什么条件下可以置于患者自主权之上？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">当患者将会或已经有自身受伤害或伤害他人的风险时，可能需采取非自愿治疗措施；须确保必要且最小程度地剥夺自主权，以最大限度减少伤害、降低风险。依据是生命健康权正当性、医疗紧急避险原则，以及公众权利与患者权利的合理平衡。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag concept">原则</span><p>公正原则在精神卫生服务中的特殊议题是什么？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">涉及正义或奖惩，也关乎社会利益公平分配；力求形式公正与实质公正有机统一。议题包括资源是否平等分配给最需要的人、如何平衡病情需要/治疗价值/患者既往和预期社会贡献。精神卫生资源通常短缺。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag concept">概念</span><p>知情同意的定义是什么？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">在医疗过程中，患者有权知晓自己的病情及可选择的治疗方案，并且对于医务人员采取的防治措施有决定取舍的自主权。同意的基础是知情，基本要求是自愿同意。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag concept">概念</span><p>什么是"能给出有效同意的能力（competence）"？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">对某特定的评估或治疗具有理解其目的、性质、可能的作用及风险的能力，也包括在实施治疗过程中配合精神卫生专业人员的能力。严重精神障碍常影响它，但患病不自动等于丧失决定能力。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag risk">操作</span><p>知情同意有哪四类例外？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">①延误治疗可能严重危及患者健康；②如实告知信息可能导致患者躯体或精神健康恶化；③患者放弃知情权；④患者本人无能力作出知情同意决定。后两种通常需监护人/近亲属代为行使。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag concept">操作</span><p>公开患者病情资料时，教材要求隐去哪些"标志性资料"？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">姓名、身份证、学生证、工作证、联系方式、家庭住址、工作单位、具体工作内容或职务、与其有密切接触的亲属/同事/朋友的姓名和住址等。身份无法充分掩饰时，须患者或法定代理人同意。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag data">时间</span><p>精神卫生立法史上的四个关键节点？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">1890 英国《疯人法》首次立法保护患者权利和财产；1938 法国第一部正式命名的《精神卫生法》；1996 WHO 归纳精神卫生立法十项基本原则；我国 2012 年通过、2013 年 5 月 1 日施行、2018 年个别条款修正。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag data">法律</span><p>我国民事行为能力的三个等级如何划分？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">完全：≥18 周岁成年人，或 ≥16 周岁以自己劳动收入为主要生活来源的未成年人；限制：≥8 周岁未成年人，或不能完全辨认自己行为的成年人；无：＜8 周岁未成年人，或不能辨认其行为的成年人。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag risk">法律</span><p>非自愿住院的两种法定情形分别由谁决定入出院？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">伤害自身行为或危险 → 监护人决定；危害他人安全行为或危险 → 负责诊治的医疗机构及其专科医师决定。我国住院治疗实行自愿原则，只有符合特定标准或条件才可非自愿。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag concept">法律</span><p>刑事责任能力评定的两大关键及其逻辑关系？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">辨认能力与控制能力。辨认能力是对行为在刑法上的意义、性质、作用、后果的认识能力；控制能力以辨认能力为前提——完全丧失辨认能力者不具备法律意义上的控制能力，只有辨认能力存在时才需确认控制能力。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag risk">处置</span><p>违法精神障碍患者经法定程序鉴定后，通常有哪三种处理方式？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">①不追究法律责任，责令家属或监护人严加看管和医疗；②追究法律责任，判处刑罚或给予治安管理处罚、其他行政处罚；③追究部分法律责任，从轻或减轻刑罚、治安管理处罚或其他行政处罚。</div>
+    </div></div>
+  </div>
+</section>
+
+<!-- ===== 13 病例挑战 ===== -->
+<section id="cases">
+  <div class="sec-head"><div class="badge">13</div><h2>病例挑战<span class="en">3 cases · increasing difficulty</span></h2></div>
+  <p class="sec-lead">以下为<strong>模拟临床情境</strong>：依据教材所述原则、条件与程序构建，用于训练"先伦理、再法律、后程序"的思维，<strong>不是教材原案例</strong>，也不虚构鉴定结论或判决结果。</p>
+
+  <div class="case">
+    <span class="ctag">模拟情境 · 难度 ★ · 非自愿住院程序</span>
+    <h3>案例 1：拒绝住院的抑郁患者</h3>
+    <div class="scene">某 32 岁男性，既往确诊双相障碍，自行停药后出现持续低落、整夜不眠，在家中用刀片割伤手腕，伤口较深。家属将其送至精神专科医院，患者情绪激动，反复说"我没病，我不住院"，拒绝配合。父母陪同就诊，患者未婚，父母为其主要照护者。</div>
+    <ol class="ques">
+      <li>本案的送诊主体是否在教材所列范围之内？</li>
+      <li>能否实施非自愿住院？法定前提是什么？由谁决定入出院？</li>
+      <li>患者及家属对非自愿住院有异议，可以走哪些救济途径？</li>
+      <li>在实施非自愿程序之前，医师还应先做什么努力？</li>
+    </ol>
+    <details><summary>查看答案与解析</summary><div class="dbody">
+      <strong>1.</strong>在。教材规定：疑似患者可由其近亲属送诊；当疑似患者已经发生伤害自身、危害他人安全的行为或有相应危险时，其近亲属、所在单位、当地公安机关均可送诊。本案父母作为近亲属送诊，符合教材所列送诊主体。<br>
+      <strong>2.</strong>可以进入非自愿住院的判断。教材法定前提是：严重精神障碍患者"已经发生伤害自身行为或者有伤害自身危险"，或者"已经发生危害他人安全的行为或者有危害他人安全的危险"。本案已发生伤害自身行为（割腕），若经精神科执业医师诊断符合严重精神障碍，则满足前提。决定主体：伤害自身情形由<strong>监护人</strong>做出非自愿入院和出院的决定。教材未对本案患者的监护人指定作出规定，实务中应依《民法典》监护规则确定，不能由医师替代监护人拍板。<br>
+      <strong>3.</strong>教材列出的救济途径：<strong>再次诊断、医学鉴定</strong>等；有异议还可向<strong>卫生行政部门投诉</strong>，直至通过<strong>司法途径诉讼</strong>。<br>
+      <strong>4.</strong>教材明确：<strong>所有患者首先应被假定为有行为能力</strong>，并且在实施非自愿程序之前，应<strong>尽一切努力</strong>以使患者能够接受自愿入院或治疗。因此应先行充分告知、沟通与劝说，不能跳过自愿努力直接强制。<br>
+      <span class="note">本案例为模拟情境。诊断、监护指定与最终处置均须由具备资质的人员和法定主体依法作出；本解析不替代真实法律意见。</span>
+    </div></details>
+  </div>
+
+  <div class="case">
+    <span class="ctag">模拟情境 · 难度 ★★ · 保密与披露</span>
+    <h3>案例 2：一句"我想杀了他"</h3>
+    <div class="scene">某 28 岁女性，因精神分裂症在门诊规律随访，病情总体稳定。一次会谈中，她低声告诉医师："我同事总在背后害我，我想带刀去单位杀了他。"随后又要求医师："这事只能你知道，绝对不要告诉我家人，也不要给我单位任何材料。"数日后，患者所在单位人事部门来函，要求医院提供其全部门诊病历，用于"内部人事管理"。</div>
+    <ol class="ques">
+      <li>医师能否应单位要求提供全部门诊病历？依据是什么？</li>
+      <li>对患者"想杀同事"的信息，医师是否可以披露？应遵循什么原则？</li>
+      <li>如果这次评估不是治疗，而是单位委托的入职前心理评估，保密义务有何不同？</li>
+    </ol>
+    <details><summary>查看答案与解析</summary><div class="dbody">
+      <strong>1.</strong>不能直接提供。教材规定：精神障碍患者有对其自身以及疾病和治疗相关信息保密的权利，未经其同意，这些信息不得透露给第三方；所有为患者治疗的专业人员都有责任防止患者的信息泄露，不论这些信息是否与病情有关。单位"内部人事管理"并非教材所列的法定例外，不能据此突破保密义务。<br>
+      <strong>2.</strong>可以进入"紧急披露"的权衡，但不是无条件公开。教材指出：当患者受疾病影响产生非理智想法与行为，且可能给自身或他人造成严重损害后果（如试图自杀或杀害身边的人）时，医师须在患者隐私权与他人和社会安全利益之间权衡；精神卫生专业人员通常被赋予在紧急情况下将患者信息（如试图伤害他人的信息）向相关方披露的权利，但这一过程应<strong>严格遵循有利（行善）原则</strong>，不能把全部病历交给单位。<br>
+      <strong>3.</strong>保密义务有所不同。教材明确：如果是在为第三方作评估（如司法鉴定、就业或入学前心理评估、残疾评定或者劳动能力评定等），医师与患者之间<strong>不存在治疗关系</strong>，医师的保密义务会有所不同；被鉴定人或者被评估者接受了鉴定或评估，通常就意味着对第三方使用其相关信息的<strong>默认</strong>。<br>
+      <span class="note">本案例为模拟情境，不构成对真实个案的披露决定；教材未提供披露的具体文书流程与时限，本解析不补写。</span>
+    </div></details>
+  </div>
+
+  <div class="case">
+    <span class="ctag">模拟情境 · 难度 ★★★ · 责任能力与受审能力</span>
+    <h3>案例 3：命令性幻听下的攻击</h3>
+    <div class="scene">某 24 岁男性，既往精神分裂症病史，案发前自行停药。某日，他在命令性幻听支配下，认为邻居要"用电波害死他"（被害妄想、物理影响妄想），持械将邻居砍伤。案发后他被刑事羁押。羁押期间，他仍称"耳边有人让我动手"，但言语较前连贯，能简单回答问题。案件进入审理阶段，辩护人提出精神病鉴定申请。</div>
+    <ol class="ques">
+      <li>法医精神病鉴定应由谁启动？当事人及辩护人有什么权利？</li>
+      <li>评定刑事责任能力时，医学要件与法学要件各是什么？两大关键如何判断？</li>
+      <li>是否需要同时评定受审能力？它与责任能力的时间点有何不同？</li>
+      <li>依据教材，处置可能有哪三种方向？强制医疗的程序要点是什么？</li>
+    </ol>
+    <details><summary>查看答案与解析</summary><div class="dbody">
+      <strong>1.</strong>教材引《刑事诉讼法》第一百四十六条、第一百四十八条：需要解决案件中某些专门性问题时，应当指派、聘请有专门知识的人进行鉴定；侦查机关应当将用作证据的鉴定意见告知犯罪嫌疑人、被害人。精神病鉴定主要由<strong>司法机关控制启动</strong>；当事人享有申请"补充鉴定"或"重新鉴定"的权利；依据《刑事诉讼法》第四十二条及《人民检察院刑事诉讼规则》第二百二十一条，辩护人或近亲属在侦查和起诉阶段实际上也被赋予一定为犯罪嫌疑人申请精神病鉴定的权利。<br>
+      <strong>2.</strong>医学要件：确定是否存在精神障碍、何种精神障碍，以及行为前及行为时的精神状态和病情严重程度。法学要件：评定精神状态与违法行为之间的关系，核心是<strong>辨认能力与控制能力</strong>。辨认能力是对行为在刑法上的意义、性质、作用、后果的认识能力；控制能力是按自己意志选择实施或不实施被刑法所禁止行为的能力，以辨认能力为前提。教材点名的情形是精神分裂症可在命令性幻听、被害妄想、物理影响妄想支配下产生毫无先兆的残暴攻击行为；辨认能力受损可表现为病态行为动机、曲解违法性质、不理解法律后果。<br>
+      <strong>3.</strong>需要考虑。责任能力评价<strong>作案时</strong>；受审能力评价<strong>批捕以后直至判决以前</strong>，是实时观察评估。本案羁押期间仍有幻听但言语较前连贯，正说明两者可能不一致——不能以"作案时患病"直接推定"现在不能受审"，也不能以"现在能回答"反推"作案时无责任能力"。受审能力判断包括：理解起诉目的和性质、理解自身情况与诉讼关系、与律师合作辩护、理解与其他诉讼参与人关系并作出回答，还需考虑承受审讯与长期等待判决的压力。<br>
+      <strong>4.</strong>三种处置方向：①不追究法律责任，责令家属或监护人严加看管和医疗；②追究法律责任，判处刑罚或给予治安管理处罚、其他行政处罚；③追究部分法律责任，从轻或减轻刑罚、治安管理处罚或其他行政处罚。若属于"肇事肇祸甚至有犯罪行为"且符合强制医疗条件，则依《刑事诉讼法》第五编第五章：<strong>申请由人民检察院提出，由人民法院作出决定，医疗机构应当定期对被强制医疗的人进行诊断评估</strong>。<br>
+      <span class="note">本案例为模拟情境，依据教材知识点构建，不是教材原案例。鉴定意见是否采信、是否判决及判决结果均由司法机关依法处理，本指南不虚构结论。教材未涉及"无受审能力时诉讼如何处理"的细则，故不展开。</span>
+    </div></details>
+  </div>
+</section>
+
+<!-- ===== 14 拓展 ===== -->
+<section id="ext">
+  <div class="sec-head"><div class="badge">14</div><h2>拓展延伸<span class="en">Beyond the chapter</span></h2></div>
+  <p class="sec-lead">本章教材已提及但未展开的内容集中列在这里；同时明确标出"教材未涉及"的空白，避免把课外知识误当成教材结论。</p>
+  <div class="grid2">
+    <div class="card cyan">
+      <h3>教材提及、但仅一笔带过的内容</h3>
+      <ul>
+        <li><strong>WHO 精神卫生立法十项基本原则（1996）：</strong>教材只说明"归纳了十项基本原则"，<strong>未列出十项的具体内容</strong>。</li>
+        <li><strong>国际文件：</strong>《智力迟钝者权利宣言》（联合国，1971）、《夏威夷宣言》（世界精神病学协会，1977）、《卢克索尔人权宣言》（世界心理卫生联合会，1989）——教材只给名称、年份与发布机构。</li>
+        <li><strong>《精神卫生法》七章八十五条：</strong>教材列出各章名称，但未逐条释义。</li>
+        <li><strong>地方立法：</strong>浙江、江苏、辽宁、内蒙古等省/自治区，武汉、长春等市已制定地方《精神卫生条例》；教材未给具体条文。</li>
+        <li><strong>鉴定技术规范：</strong>SF/Z JD0104002—2016（刑事责任能力）、SF/Z JD 0104004—2018（民事行为能力），教材只给名称与推荐量表，<strong>未给量表条目与判定阈值</strong>。</li>
+        <li><strong>强制医疗程序：</strong>教材只述"申请由人民检察院提出、由人民法院作出决定、医疗机构应当定期对被强制医疗的人进行诊断评估"，未展开完整诉讼流程。</li>
+      </ul>
+    </div>
+    <div class="card orange">
+      <h3>教材未涉及 / 本指南不补写的内容</h3>
+      <ul>
+        <li>具体司法判例、裁判文书、鉴定意见书样本——教材全章<strong>未提供任何具体个案</strong>。</li>
+        <li>《刑法》《民法典》《刑事诉讼法》《精神卫生法》的完整条文与司法解释——教材只摘引个别条款。</li>
+        <li>伦理委员会的组织架构、审查流程、投票规则——教材未涉及。</li>
+        <li>知情同意书、保密协议、信息披露审批表的标准模板——教材未涉及。</li>
+        <li>远程医疗、互联网诊疗、基因信息等新型场景的伦理规则——教材未涉及。</li>
+        <li>无受审能力时的具体诉讼处理、鉴定人出庭规则、量刑细则——教材未涉及。</li>
+        <li>各类评定量表的具体条目、评分与阈值——教材只点名量表名称，未给内容。</li>
+      </ul>
+    </div>
+  </div>
+  <div class="callout ext">
+    <span class="ct">📖 使用提醒</span>
+    本指南所有法律条款、伦理原则、能力判断与统计数字均取自教材第二十六章原文；凡标注"教材未提供/未涉及/未展开"的地方，不要用其他资料的法条、案例或数字替代，以免与教材答案冲突。涉及真实案件时，应以现行法律与有权机关的正式文书为准。
+  </div>
+  <div class="hr"></div>
+  <p class="note" style="text-align:center">精神病学（第9版）· 第二十六章 精神病学相关伦理与法律问题 · 印刷页 319–329 · 学习指南完</p>
+</section>
+
+</div>
+<nav class="chapter-pager" aria-label="章节间导航"><a class="cp-prev" href="精神病学_第二十五章_精神障碍的预防和康复_学习指南.html">← 上一章：第二十五章</a><a class="cp-toc" href="index.html">目录</a><span class="cp-next cp-disabled">下一章 →</span></nav>
+</main>
+
+<button class="top" id="topBtn" aria-label="回到顶部">↑</button>
+<script>
+/* ============================================================
+   精神病学学习指南 · 统一交互层 v1（构建期注入，整体替换原 IIFE）
+   兼容 A 族（.tabbar button + [data-panel] + .panel.on）与
+   B 族（.tab-nav + .tab-panel.active）两套 DOM 约定。
+   特性检测 + 防御式查询 + 幂等；不引入任何外部依赖。
+   ============================================================ */
+(function () {
+  'use strict';
+  if (window.__PSY_GUIDE_APP__) { return; }
+  window.__PSY_GUIDE_APP__ = true;
+
+  var d = document;
+
+  function all(sel, root) {
+    return Array.prototype.slice.call((root || d).querySelectorAll(sel));
+  }
+  function on(el, ev, fn, opt) {
+    if (el) { el.addEventListener(ev, fn, opt || false); }
+  }
+  function norm(s) {
+    return String(s || '').replace(/\s+/g, '').toUpperCase();
+  }
+
+  /* ---------- 1. Tab 切换（两族约定都支持） ---------- */
+  function initTabs() {
+    all('.tabs, [data-tabs]').forEach(function (g) {
+      if (g.__psyTabs) { return; }
+      g.__psyTabs = true;
+      var isA = !!g.querySelector('.tabbar button');
+      var btns = all(isA ? '.tabbar button' : '.tab-nav .tab-btn', g);
+      if (!btns.length) { return; }
+      var cls = isA ? 'on' : 'active';
+      var nav = btns[0].closest('.tabbar') || btns[0].closest('.tab-nav');
+      if (nav && !nav.hasAttribute('role')) { nav.setAttribute('role', 'tablist'); }
+      all(isA ? '.panel' : '.tab-panel', g).forEach(function (p) {
+        if (!p.hasAttribute('role')) { p.setAttribute('role', 'tabpanel'); }
+      });
+      function activate(btn) {
+        btns.forEach(function (b) {
+          b.classList.remove(cls);
+          b.setAttribute('aria-selected', 'false');
+        });
+        btn.classList.add(cls);
+        btn.setAttribute('aria-selected', 'true');
+        var id = btn.getAttribute('data-tab');
+        if (!id) { return; }
+        var target = isA
+          ? g.querySelector('[data-panel="' + id + '"]')
+          : (g.querySelector('.tab-panel#' + id) || d.getElementById(id));
+        all(isA ? '.panel' : '.tab-panel', g).forEach(function (p) {
+          var show = isA ? (p.getAttribute('data-panel') === id) : (p === target);
+          p.classList.toggle(cls, show);
+        });
+      }
+      btns.forEach(function (btn, i) {
+        if (!btn.hasAttribute('role')) { btn.setAttribute('role', 'tab'); }
+        btn.setAttribute('aria-selected', btn.classList.contains(cls) ? 'true' : 'false');
+        if (!btn.hasAttribute('tabindex') && !btn.classList.contains(cls)) { btn.setAttribute('tabindex', '0'); }
+        on(btn, 'click', function () { activate(btn); });
+        on(btn, 'keydown', function (e) {
+          if (e.key !== 'ArrowRight' && e.key !== 'ArrowLeft') { return; }
+          e.preventDefault();
+          var nx = btns[(i + (e.key === 'ArrowRight' ? 1 : btns.length - 1)) % btns.length];
+          if (nx) { nx.focus(); activate(nx); }
+        });
+      });
+    });
+  }
+
+  /* ---------- 2. 速记卡：点击/键盘翻转 + 可达性 ---------- */
+  function initCards() {
+    all('.flashcard').forEach(function (card) {
+      if (card.__psyCard) { return; }
+      card.__psyCard = true;
+      card.setAttribute('tabindex', '0');
+      card.setAttribute('role', 'button');
+      function sync() {
+        card.setAttribute('aria-pressed', card.classList.contains('flipped') ? 'true' : 'false');
+      }
+      function flip() { card.classList.toggle('flipped'); sync(); }
+      on(card, 'click', flip);
+      on(card, 'keydown', function (e) {
+        if (e.key === 'Enter' || e.key === ' ' || e.key === 'Spacebar') {
+          e.preventDefault();
+          flip();
+        }
+      });
+      sync();
+    });
+  }
+
+  /* ---------- 3. 自测题交互化（核心新功能） ---------- */
+  function initQuiz() {
+    var questions = all('.quiz-q, .quiz-item');
+    if (!questions.length) { return; }
+    var groups = {};
+
+    function keyOf(o) {
+      var L = o.getAttribute('data-letter');
+      if (L && String(L).replace(/\s+/g, '') !== '') { return norm(L); }
+      var sp = o.querySelector('.l');
+      if (sp) {
+        var t = norm(sp.textContent).replace(/[.．、:：]/g, '');
+        if (t !== '') { return t; }
+      }
+      var txt = norm(o.textContent);
+      if (txt.indexOf('正确') >= 0 || txt.indexOf('错误') >= 0) { return txt; }
+      return txt.charAt(0);
+    }
+
+    function getGroup(q) {
+      var sec = q.closest('.quiz-block') || q.closest('section') || d.body;
+      if (!groups[sec.__psyGid]) {
+        sec.__psyGid = 'g' + (Object.keys(groups).length + 1);
+        groups[sec.__psyGid] = { sec: sec, total: 0, score: 0, row: null, first: null };
+      }
+      var g = groups[sec.__psyGid];
+      if (!g.first) { g.first = q; }
+      return g;
+    }
+
+    function ensureRow(g) {
+      if (g.row) { return g.row; }
+      var row = d.createElement('div');
+      row.className = 'quiz-score';
+      row.setAttribute('role', 'status');
+      row.setAttribute('aria-live', 'polite');
+      row.innerHTML = '<span class="qs-label">自测计分</span>' +
+        '<span class="qs-num">得分 0 / ' + g.total + '</span>' +
+        '<span class="qs-bar"><i></i></span>';
+      g.first.parentNode.insertBefore(row, g.first);
+      g.row = row;
+      return row;
+    }
+
+    function updateRow(g) {
+      var row = ensureRow(g);
+      var num = row.querySelector('.qs-num');
+      var bar = row.querySelector('.qs-bar i');
+      if (num) { num.textContent = '得分 ' + g.score + ' / ' + g.total; }
+      if (bar) { bar.style.width = (g.total ? Math.round(g.score / g.total * 100) : 0) + '%'; }
+    }
+
+    questions.forEach(function (q) {
+      if (q.__psyQuiz) { return; }
+      q.__psyQuiz = true;
+      var opts = all('.opt', q);
+      if (!opts.length) { opts = all('.quiz-options > li', q); }
+      if (!opts.length) { return; }
+
+      /* 正确答案先记入内存：预标 correct 优先（记录后立即移除，消除剧透），
+         否则从解析文本「答案：X / 答案 X」提取（不改动任何文字） */
+      var ansKeys = [];
+      var preset = opts.filter(function (o) { return o.classList.contains('correct'); });
+      preset.forEach(function (o) { o.classList.remove('correct'); });
+      if (preset.length) {
+        ansKeys = preset.map(keyOf);
+      } else {
+        var dt = q.querySelector('details');
+        var txt = dt ? dt.textContent : '';
+        var m = txt.match(/答案\s*[:：]?\s*([A-Za-z](?:[\s、,，·和及]*[A-Za-z])*)/);
+        if (m) {
+          ansKeys = m[1].match(/[A-Za-z]/g) || [];
+        } else {
+          var m2 = txt.match(/答案\s*[:：]?\s*(正确|错误)/);
+          if (m2) { ansKeys = [m2[1]]; }
+        }
+      }
+      if (!ansKeys.length) { return; } /* 无可判定答案（名词解释等），保持原样 */
+
+      var g = getGroup(q);
+      g.total += 1;
+      var multi = ansKeys.length > 1;
+      var ansSet = ansKeys.map(norm);
+      var locked = false;
+      var picked = [];
+
+      function revealAll() {
+        opts.forEach(function (o) {
+          if (ansSet.indexOf(keyOf(o)) >= 0) { o.classList.add('is-reveal'); }
+        });
+      }
+      function finish(ok) {
+        locked = true;
+        q.classList.add('is-locked');
+        var dt = q.querySelector('details');
+        if (dt) { dt.open = true; }
+        if (ok) { g.score += 1; }
+        updateRow(g);
+      }
+
+      opts.forEach(function (o) {
+        o.setAttribute('tabindex', '0');
+        function pick() {
+          if (locked) { return; }
+          var k = keyOf(o);
+          if (ansSet.indexOf(k) >= 0) {
+            o.classList.add('is-right');
+            if (picked.indexOf(k) < 0) { picked.push(k); }
+            if (multi) {
+              if (picked.length === ansSet.length) { finish(true); }
+            } else {
+              finish(true);
+            }
+          } else {
+            o.classList.add('is-wrong');
+            revealAll();
+            finish(false);
+          }
+        }
+        on(o, 'click', pick);
+        on(o, 'keydown', function (e) {
+          if (e.key === 'Enter' || e.key === ' ' || e.key === 'Spacebar') {
+            e.preventDefault();
+            pick();
+          }
+        });
+      });
+    });
+
+    Object.keys(groups).forEach(function (id) {
+      if (groups[id].total > 0) { updateRow(groups[id]); }
+    });
+  }
+
+  /* ---------- 4. 侧栏 scroll spy（本页锚点高亮） ---------- */
+  function initSpy() {
+    var links = all('#sidebar a[href^="#"]');
+    if (!links.length || !('IntersectionObserver' in window)) { return; }
+    var map = {};
+    links.forEach(function (a) {
+      var id = a.getAttribute('href').slice(1);
+      if (id) { map[id] = a; }
+    });
+    var secs = [];
+    Object.keys(map).forEach(function (id) {
+      var s = d.getElementById(id);
+      if (s) { secs.push(s); }
+    });
+    if (!secs.length) { return; }
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting && map[e.target.id]) {
+          links.forEach(function (a) { a.classList.remove('active'); });
+          map[e.target.id].classList.add('active');
+        }
+      });
+    }, { rootMargin: '-15% 0px -70% 0px', threshold: 0 });
+    secs.forEach(function (s) { io.observe(s); });
+  }
+
+  /* ---------- 5. 阅读进度条 + 回顶 ---------- */
+  function initScroll() {
+    var bar = d.getElementById('readbar');
+    var topBtn = d.getElementById('topBtn') || d.getElementById('backTop');
+    var ticking = false;
+    function step() {
+      ticking = false;
+      var h = d.documentElement;
+      var y = window.pageYOffset || h.scrollTop || 0;
+      if (bar) {
+        var max = h.scrollHeight - h.clientHeight;
+        bar.style.width = (max > 0 ? (y / max) * 100 : 0) + '%';
+      }
+      if (topBtn) {
+        topBtn.classList.toggle('show', y > 400);     /* A 族类名 */
+        topBtn.classList.toggle('visible', y > 400);  /* B 族类名 */
+      }
+    }
+    on(window, 'scroll', function () {
+      if (!ticking) { ticking = true; window.requestAnimationFrame(step); }
+    }, { passive: true });
+    step();
+    on(topBtn, 'click', function () {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
+
+  /* ---------- 6. 侧栏开合（存在才绑定；抽屉打开时锁定背景滚动） ---------- */
+  function initSidebar() {
+    var sidebar = d.getElementById('sidebar');
+    if (!sidebar) { return; }
+    var btn = d.getElementById('menuBtn') || d.getElementById('navToggle');
+    var ov = d.getElementById('overlay') || d.getElementById('sidebarOverlay');
+    function lock(open) {
+      /* 仅移动抽屉断点（≤900px）锁滚动；宽屏兜底解除，防布局残留 */
+      d.body.classList.toggle('nav-locked', !!open && window.innerWidth <= 900);
+    }
+    function close() {
+      sidebar.classList.remove('open');
+      if (ov) { ov.classList.remove('show'); }
+      lock(false);
+    }
+    on(btn, 'click', function () {
+      var open = !sidebar.classList.contains('open');
+      sidebar.classList.toggle('open');
+      if (ov) { ov.classList.toggle('show'); }
+      lock(open);
+    });
+    on(ov, 'click', close);
+    all('a', sidebar).forEach(function (a) {
+      on(a, 'click', function () {
+        if (window.innerWidth <= 900) { close(); }
+      });
+    });
+    on(window, 'resize', function () {
+      if (window.innerWidth > 900) { lock(false); }
+    });
+  }
+
+  /* ---------- 启动（脚本位于 body 末尾，DOM 已就绪；防御兜底） ---------- */
+  function boot() {
+    initTabs();
+    initCards();
+    initQuiz();
+    initSpy();
+    initScroll();
+    initSidebar();
+  }
+  if (d.readyState === 'loading') {
+    on(d, 'DOMContentLoaded', boot);
+  } else {
+    boot();
+  }
+})();
+</script>
+
+</body>
+</html>

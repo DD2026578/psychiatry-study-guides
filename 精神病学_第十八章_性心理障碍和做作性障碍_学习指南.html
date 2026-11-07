@@ -1,0 +1,3174 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>精神病学 第十八章 性心理障碍和做作性障碍 · 学习指南</title>
+<style>
+:root{
+  --primary:#0EA5E9; --accent:#10B981; --symptom:#EF4444; --treatment:#10B981;
+  --cause:#3B82F6; --diagnosis:#F59E0B; --memory:#8B5CF6; --danger:#DC2626;
+  --quiz:#EC4899; --flashcard:#06B6D4; --bg:#F0F7FA; --card:#FFFFFF;
+  --ink:#0F172A; --muted:#64748B; --border:#E2E8F0; --accent2:#10B981; --accent3:#06B6D4;
+  --shadow:0 4px 18px rgba(15,23,42,.06); --radius:14px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:'Microsoft YaHei','PingFang SC','Hiragino Sans GB',system-ui,-apple-system,sans-serif;font-size:16px;line-height:1.75;-webkit-font-smoothing:antialiased}
+#readbar{position:fixed;top:0;left:0;height:4px;width:0;background:linear-gradient(135deg,#0EA5E9 0%,#06B6D4 50%,#10B981 100%);z-index:300;transition:width .12s linear}
+a{color:var(--primary);text-decoration:none}
+a:hover{text-decoration:underline}
+.sidebar{position:fixed;top:0;left:0;width:272px;height:100vh;background:#fff;border-right:1px solid var(--border);overflow-y:auto;padding:20px 16px 40px;z-index:120}
+.sidebar h2{font-size:17px;margin:0 0 4px;line-height:1.5}
+.sidebar .sub{font-size:12px;color:var(--muted);line-height:1.6;margin-bottom:14px}
+.toc-group{font-size:12px;letter-spacing:.08em;color:var(--muted);margin:16px 0 6px;font-weight:700}
+.sidebar a.toc{display:block;padding:7px 10px;border-radius:8px;font-size:14px;color:var(--ink);line-height:1.5;margin:2px 0}
+.sidebar a.toc:hover{background:#E0F2FE;text-decoration:none}
+.sidebar a.toc .n{display:inline-block;min-width:26px;color:var(--primary);font-weight:700}
+.sidebar .unitlink{font-weight:600}
+.sidebar .sub2{padding-left:26px;font-size:13px;color:var(--muted)}
+.overlay{display:none}
+.menu-btn{display:none;position:fixed;top:14px;left:14px;z-index:200;width:46px;height:46px;border-radius:12px;border:1px solid var(--border);background:#fff;box-shadow:var(--shadow);font-size:22px;line-height:1;color:var(--primary);cursor:pointer}
+.main{margin-left:272px;padding:0 40px 90px;max-width:1240px}
+.wrap{max-width:980px;margin:0 auto}
+.hero{background:linear-gradient(135deg,#0EA5E9 0%,#06B6D4 50%,#10B981 100%);color:#fff;border-radius:0 0 26px 26px;padding:52px 44px 40px;margin:0 -40px 30px;box-shadow:0 12px 30px rgba(14,165,233,.18)}
+.hero .chap{display:inline-block;font-size:13px;letter-spacing:.22em;background:rgba(255,255,255,.18);padding:5px 14px;border-radius:999px;margin-bottom:16px}
+.hero h1{font-size:42px;line-height:1.25;margin:0 0 10px;font-weight:800}
+.hero .tagline{font-size:18px;opacity:.96;margin:0 0 6px}
+.hero .meta{font-size:13px;opacity:.85}
+.goalbox{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.28);border-radius:14px;padding:18px 20px;margin-top:22px}
+.goalbox h3{margin:0 0 10px;font-size:15px;letter-spacing:.06em}
+.goalbox ul{margin:0;padding-left:20px}
+.goalbox li{margin:4px 0;font-size:14.5px;line-height:1.65}
+.lv{display:inline-block;font-size:11px;font-weight:700;padding:1px 8px;border-radius:999px;background:#fff;color:#0369A1;margin-right:6px;vertical-align:1px}
+.lv.l2{color:#047857}.lv.l3{color:#B45309}.lv.l4{color:#B91C1C}
+section{scroll-margin-top:18px;margin:0 0 46px}
+.sec-head{display:flex;align-items:center;gap:12px;margin:0 0 8px}
+.sec-head .badge{flex:0 0 auto;width:44px;height:44px;border-radius:13px;background:linear-gradient(135deg,#0EA5E9,#06B6D4);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:17px;box-shadow:0 6px 14px rgba(14,165,233,.25)}
+.sec-head h2{font-size:27px;margin:0;line-height:1.35;font-weight:800}
+.sec-head .en{font-size:13px;color:var(--muted);font-weight:400;margin-left:6px}
+.sec-lead{color:#334155;background:#fff;border-left:4px solid var(--primary);border-radius:0 12px 12px 0;padding:13px 18px;margin:12px 0 22px;box-shadow:var(--shadow);font-size:15px}
+.card{background:var(--card);border:1px solid var(--border);border-left:6px solid var(--primary);border-radius:var(--radius);padding:20px 22px;margin:16px 0;box-shadow:var(--shadow)}
+.card.red{border-left-color:var(--symptom)} .card.green{border-left-color:var(--treatment)}
+.card.blue{border-left-color:var(--cause)} .card.orange{border-left-color:var(--diagnosis)}
+.card.purple{border-left-color:var(--memory)} .card.cyan{border-left-color:var(--flashcard)}
+.card.danger{border-left-color:var(--danger)} .card.pink{border-left-color:var(--quiz)}
+.card h3,.col-title{font-size:19px;margin:0 0 10px;line-height:1.45;display:flex;align-items:center;gap:9px;flex-wrap:wrap}
+.col-title .idx{font-size:12px;font-weight:800;color:#fff;background:var(--primary);padding:2px 9px;border-radius:999px;letter-spacing:.03em}
+.card p{margin:8px 0}
+.card ul,.card ol{margin:8px 0;padding-left:22px}
+.card li{margin:5px 0}
+.quote{background:#EFF8FF;border:1px dashed #7DD3FC;border-radius:10px;padding:12px 16px;margin:10px 0;font-size:15px;color:#0C4A6E}
+.quote .lab{display:inline-block;font-size:11px;font-weight:800;background:#0EA5E9;color:#fff;padding:1px 7px;border-radius:5px;margin-right:7px;vertical-align:1px}
+.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.grid4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.grid2>*,.grid3>*,.grid4>*{min-width:0}
+.mini{background:#F8FAFC;border:1px solid var(--border);border-radius:11px;padding:12px 14px}
+.mini h4{margin:0 0 5px;font-size:15px;color:#0F172A}
+.mini p,.mini ul{font-size:14px;color:#334155;margin:4px 0}
+.mini ul{padding-left:18px}
+.stat{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0}
+.stat span{font-size:13px;background:#E0F2FE;color:#075985;border-radius:999px;padding:3px 11px;font-weight:600}
+.table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:12px 0;border-radius:12px;border:1px solid var(--border)}
+table{border-collapse:collapse;width:100%;min-width:560px;background:#fff;font-size:14px}
+th{background:#0F172A;color:#fff;font-weight:700;padding:10px 12px;text-align:left;line-height:1.5;font-size:13.5px}
+td{padding:10px 12px;border-top:1px solid var(--border);vertical-align:top;line-height:1.65}
+tbody tr:nth-child(even){background:#F8FAFC}
+td strong{color:#0C4A6E}
+.callout{border-radius:12px;padding:13px 16px;margin:12px 0;border:1px solid;font-size:14.5px}
+.callout .ct{font-weight:800;display:block;margin-bottom:4px;font-size:14.5px}
+.callout.tip{background:#F5F3FF;border-color:#C4B5FD;color:#4C1D95}
+.callout.warn{background:#FEF2F2;border-color:#FCA5A5;color:#7F1D1D}
+.callout.key{background:#ECFDF5;border-color:#6EE7B7;color:#065F46}
+.callout.book{background:#EFF6FF;border-color:#93C5FD;color:#1E3A8A}
+.callout.quiz{background:#FDF2F8;border-color:#F9A8D4;color:#831843}
+.callout.ext{background:#F0F9FF;border-color:#7DD3FC;color:#0C4A6E}
+.timeline{border-left:3px solid #BAE6FD;margin:14px 0 6px 8px;padding-left:20px}
+.tl-item{position:relative;margin:0 0 16px}
+.tl-item:before{content:"";position:absolute;left:-28px;top:5px;width:13px;height:13px;border-radius:50%;background:#fff;border:3px solid var(--primary)}
+.tl-item h4{margin:0 0 3px;font-size:15px;color:#075985}
+.tl-item p{margin:0;font-size:14px;color:#334155}
+.bar{background:#E2E8F0;border-radius:999px;height:9px;overflow:hidden;margin:6px 0 10px}
+.bar i{display:block;height:100%;border-radius:999px;background:linear-gradient(90deg,#0EA5E9,#10B981)}
+.bar-label{display:flex;justify-content:space-between;font-size:13px;color:#334155}
+.tabs{margin:14px 0}
+.tabbar{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:12px}
+.tabbar button{border:1px solid var(--border);background:#fff;border-radius:999px;padding:7px 15px;font-size:14px;font-family:inherit;cursor:pointer;color:#334155}
+.tabbar button.on{background:var(--primary);color:#fff;border-color:var(--primary)}
+.panel{display:none}
+.panel.on{display:block;animation:fade .25s ease}
+@keyframes fade{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}
+details{background:#fff;border:1px solid var(--border);border-radius:11px;margin:10px 0;overflow:hidden}
+summary{cursor:pointer;padding:11px 15px;font-weight:700;color:#075985;list-style:none;font-size:14.5px;background:#F8FAFC}
+summary::-webkit-details-marker{display:none}
+summary:before{content:"▸";display:inline-block;margin-right:7px;color:var(--primary);transition:transform .2s}
+details[open] summary:before{transform:rotate(90deg)}
+details[open] summary{border-bottom:1px solid var(--border)}
+.dbody{padding:13px 16px;font-size:14.5px;color:#1E293B}
+.flashcard-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin:16px 0}
+.flashcard{perspective:1200px;height:200px;cursor:pointer}
+.fc-inner{position:relative;width:100%;height:100%;transition:transform .55s;transform-style:preserve-3d}
+.flashcard.flipped .fc-inner{transform:rotateY(180deg)}
+.fc-front,.fc-back{position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;border-radius:14px;padding:14px 16px;display:flex;flex-direction:column;justify-content:center;box-shadow:var(--shadow);overflow:auto}
+.fc-front{background:#fff;border:1px solid var(--border);border-top:5px solid var(--flashcard)}
+.fc-back{background:#ECFEFF;border:1px solid #A5F3FC;transform:rotateY(180deg);font-size:13.5px;line-height:1.65;color:#164E63}
+.tag{display:inline-block;align-self:flex-start;font-size:11px;font-weight:800;padding:1px 8px;border-radius:999px;margin-bottom:8px;letter-spacing:.04em}
+.tag.concept{background:#DBEAFE;color:#1E40AF}
+.tag.diag{background:#FFEDD5;color:#9A3412}
+.tag.treat{background:#D1FAE5;color:#065F46}
+.tag.data{background:#FCE7F3;color:#9D174D}
+.tag.risk{background:#FEE2E2;color:#991B1B}
+.fc-front p{margin:0;font-size:14.5px;font-weight:700;line-height:1.6}
+.fc-hint{position:absolute;bottom:10px;left:16px;font-size:11px;color:#94A3B8}
+.quiz-q{background:#fff;border:1px solid var(--border);border-left:5px solid var(--quiz);border-radius:12px;padding:16px 18px;margin:16px 0;box-shadow:var(--shadow)}
+.quiz-q .qh{display:flex;justify-content:space-between;gap:10px;align-items:flex-start;margin-bottom:8px;flex-wrap:wrap}
+.quiz-q .qno{font-size:12px;font-weight:800;color:#fff;background:var(--quiz);border-radius:999px;padding:2px 9px;letter-spacing:.04em}
+.diff{font-size:12px;color:#B45309;background:#FEF3C7;border-radius:999px;padding:2px 10px;font-weight:700;white-space:nowrap}
+.qtype{font-size:12px;color:#6B21A8;background:#F3E8FF;border-radius:999px;padding:2px 10px;font-weight:700;white-space:nowrap}
+.opts{margin:10px 0 4px;display:grid;gap:7px}
+.opt{border:1px solid var(--border);border-radius:9px;padding:8px 12px;font-size:14.5px;background:#F8FAFC}
+.opt.correct{border-color:#6EE7B7;background:#ECFDF5;color:#065F46;font-weight:600}
+.opt .l{font-weight:800;color:var(--primary);margin-right:7px}
+.opt.correct .l{color:#047857}
+.brief{font-size:14px;color:#334155;margin-top:4px}
+.case{border:1px solid var(--border);border-top:5px solid var(--danger);border-radius:14px;background:#fff;padding:20px 22px;margin:18px 0;box-shadow:var(--shadow)}
+.case h3{font-size:19px;margin:0 0 8px;color:#7F1D1D}
+.case .ctag{font-size:11.5px;font-weight:800;background:#FEE2E2;color:#991B1B;padding:2px 9px;border-radius:999px;display:inline-block;margin-bottom:10px}
+.case .scene{background:#FFF7ED;border-left:4px solid #FB923C;border-radius:0 10px 10px 0;padding:12px 16px;font-size:14.5px;margin:8px 0 14px}
+.case .ques{margin:8px 0;padding-left:2px}
+.case .ques li{margin:5px 0;font-size:14.5px}
+.top{position:fixed;right:24px;bottom:26px;width:48px;height:48px;border-radius:50%;background:var(--primary);color:#fff;border:none;font-size:20px;cursor:pointer;box-shadow:0 8px 20px rgba(14,165,233,.35);z-index:150;display:none;font-family:inherit}
+.top.show{display:block}
+.hr{height:1px;background:var(--border);margin:26px 0}
+.note{font-size:13px;color:var(--muted);margin-top:6px}
+.kv{display:flex;gap:10px;flex-wrap:wrap;margin:8px 0}
+.kv .k{font-size:12px;font-weight:800;color:#0369A1;background:#E0F2FE;border-radius:6px;padding:2px 8px;white-space:nowrap}
+.kv .v{font-size:14px;color:#334155}
+.starme{font-size:12.5px;color:#B45309;white-space:nowrap}
+@media (max-width:1100px){
+  .main{padding:0 22px 80px}
+  .hero{margin:0 -22px 26px;padding:44px 26px 34px}
+  .hero h1{font-size:34px}
+  .flashcard-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .grid4{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width:900px){
+  .sidebar{transform:translateX(-100%);transition:transform .25s ease;width:280px;box-shadow:0 0 30px rgba(0,0,0,.18)}
+  .sidebar.open{transform:none}
+  .overlay{display:none;position:fixed;inset:0;background:rgba(15,23,42,.42);z-index:110}
+  .overlay.show{display:block}
+  .menu-btn{display:block}
+  .main{margin-left:0;padding:0 18px 80px}
+  .hero{margin:0 -18px 24px;padding:64px 22px 30px;border-radius:0 0 20px 20px}
+  .hero h1{font-size:30px}
+  .sec-head h2{font-size:23px}
+}
+@media (max-width:680px){
+  .grid2,.grid3,.grid4{grid-template-columns:minmax(0,1fr)}
+  .flashcard-grid{grid-template-columns:minmax(0,1fr)}
+  .flashcard{height:190px}
+  table{min-width:500px}
+}
+</style>
+<style data-refactor="v1">
+/* ============================================================
+   精神病学学习指南 · 统一交互层增量覆盖样式 v1
+   构建期由 apply-refactor.ps1 注入 </head> 前，仅追加修正，
+   不改动 A/B 两族基础样式。全部使用字面色值，兼容两族设计变量。
+   ============================================================ */
+
+/* ---- 1. 全局键盘焦点可见 ---- */
+:focus-visible{outline:2px solid #0EA5E9;outline-offset:2px}
+
+/* ---- 2. 章节导航条（胶囊式三段：上一章 / 目录 / 下一章） ---- */
+.chapter-pager{display:flex;align-items:stretch;justify-content:center;gap:10px;margin:36px 0 10px;flex-wrap:wrap}
+.chapter-pager a,.chapter-pager span{flex:1 1 200px;display:flex;align-items:center;justify-content:center;min-height:44px;padding:10px 18px;border:1px solid #E2E8F0;border-radius:999px;background:#FFFFFF;color:#0F172A;font-size:14px;font-weight:600;line-height:1.4;text-decoration:none;text-align:center;box-shadow:0 1px 2px rgba(15,23,42,.06);transition:border-color .15s ease,box-shadow .15s ease,color .15s ease}
+.chapter-pager a:hover{border-color:#0EA5E9;color:#0EA5E9;box-shadow:0 4px 14px rgba(14,165,233,.18);text-decoration:none}
+.chapter-pager .cp-toc{flex:0 0 auto;min-width:104px;background:linear-gradient(135deg,#0EA5E9,#10B981);border-color:transparent;color:#FFFFFF}
+.chapter-pager .cp-toc:hover{border-color:transparent;color:#FFFFFF;opacity:.92}
+.chapter-pager .cp-disabled{opacity:.45;background:#F8FAFC;box-shadow:none;cursor:default}
+@media (max-width:680px){.chapter-pager{gap:8px;margin:28px 0 8px}.chapter-pager a,.chapter-pager span{flex:1 1 100%}}
+
+/* ---- 3. 自测题交互态（兼容 A 族 .opt 与 B 族 .quiz-options li） ---- */
+/* 3.1 基础可点击 */
+.quiz-q .opt{cursor:pointer}
+.quiz-item .quiz-options li{cursor:pointer}
+/* 3.2 hover / 焦点态 */
+.quiz-q .opt:hover,.quiz-q .opt:focus-visible{border-color:#7DD3FC;background:#F0F9FF}
+.quiz-item .quiz-options li:hover,.quiz-item .quiz-options li:focus-visible{background:#FFFFFF;box-shadow:inset 0 0 0 1px #7DD3FC}
+/* 3.3 判定结果态 */
+.quiz-q .opt.is-right{border-color:#34D399;background:#ECFDF5;color:#065F46;font-weight:600}
+.quiz-q .opt.is-right::after{content:" ✓";color:#059669;font-weight:800}
+.quiz-q .opt.is-right .l{color:#047857}
+.quiz-item .quiz-options li.is-right{background:#DCFCE7;box-shadow:inset 0 0 0 1px #34D399;font-weight:600}
+.quiz-item .quiz-options li.is-right::after{content:" ✓";color:#15803D;font-weight:800}
+.quiz-q .opt.is-wrong{border-color:#FCA5A5;background:#FEF2F2;color:#B91C1C;font-weight:600}
+.quiz-q .opt.is-wrong::after{content:" ✗";color:#DC2626;font-weight:800}
+.quiz-q .opt.is-wrong .l{color:#B91C1C}
+.quiz-item .quiz-options li.is-wrong{background:#FEE2E2;box-shadow:inset 0 0 0 1px #FCA5A5;font-weight:600}
+.quiz-item .quiz-options li.is-wrong::after{content:" ✗";color:#DC2626;font-weight:800}
+.quiz-q .opt.is-reveal{border-color:#6EE7B7;background:#ECFDF5;color:#065F46}
+.quiz-q .opt.is-reveal .l{color:#047857}
+.quiz-item .quiz-options li.is-reveal{background:#ECFDF5;box-shadow:inset 0 0 0 1px #6EE7B7;color:#065F46}
+/* 3.4 已锁定禁用态 */
+.quiz-q.is-locked .opt,.quiz-item.is-locked .quiz-options li{cursor:default;pointer-events:none}
+.quiz-q.is-locked .opt:not(.is-right):not(.is-wrong):not(.is-reveal){opacity:.55}
+.quiz-item.is-locked .quiz-options li:not(.is-right):not(.is-wrong):not(.is-reveal){opacity:.55}
+/* 3.5 计分行（运行时注入） */
+.quiz-score{display:flex;align-items:center;gap:12px;margin:14px 0 18px;padding:12px 18px;border:1px dashed #7DD3FC;border-radius:12px;background:#F0F9FF;font-size:14px;font-weight:700;color:#0F172A}
+.quiz-score .qs-label{white-space:nowrap}
+.quiz-score .qs-num{white-space:nowrap;color:#0284C7;font-size:16px}
+.quiz-score .qs-bar{flex:1 1 60px;min-width:60px;height:8px;border-radius:999px;background:#E2E8F0;overflow:hidden}
+.quiz-score .qs-bar i{display:block;height:100%;width:0;border-radius:999px;background:linear-gradient(90deg,#0EA5E9,#10B981);transition:width .35s ease}
+
+/* ---- 4. 速记卡可达性与长内容 ---- */
+.fc-hint,.flip-hint{color:#64748B}
+.flashcard-face{overflow:auto}
+.flashcard[tabindex]{outline:none}
+.flashcard[tabindex]:focus-visible{outline:3px solid #0EA5E9;outline-offset:3px}
+
+/* ---- 5. 侧栏目录 ---- */
+/* B 族 sticky 侧栏内目录限高滚动（A 族 aside 本身已可滚动，此规则空匹配无害） */
+.sidebar .sidebar-nav{max-height:calc(100vh - 60px);overflow-y:auto;scrollbar-width:thin}
+/* A 族 scroll spy 高亮（B 族高亮由其基础样式提供） */
+.sidebar a.toc.active{background:#E0F2FE;color:#0369A1;font-weight:600}
+
+/* ---- 6. 响应式补充：681–900px 时 grid3 降为两列 ---- */
+@media (min-width:681px) and (max-width:900px){
+  .grid3{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+
+/* ---- 7. 打印样式补充（A 族新增；B 族已有 print，重复声明无害） ---- */
+@media print{
+  .sidebar,.overlay,.sidebar-overlay,#menuBtn,#navToggle,#overlay,#sidebarOverlay,#readbar,#topBtn,#backTop,.chapter-pager,.quiz-score{display:none!important}
+}
+
+/* ---- 8. 手机端增强 v2（触控体验 / 防溢出 / 抽屉滚动锁定） ---- */
+/* 8.1 触控体验：去点按高亮、消除双击缩放延迟（flashcard 高 190-200px 天然达标，不另设 min-height） */
+.opt,.tabbar button,.tab-btn,.quiz-options li,.flashcard,.chapter-pager a,.chapter-pager span,.menu-btn,.mobile-nav-toggle{-webkit-tap-highlight-color:transparent;touch-action:manipulation}
+/* 8.2 触控目标最小 44px（自测选项与 tab 胶囊原高约 33px） */
+.opt,.tabbar button,.tab-btn,.quiz-options li{min-height:44px}
+/* 8.3 防溢出：内容图自适应；svg 不设 height:auto，避免定尺寸图标塌陷 */
+img{max-width:100%;height:auto}
+svg{max-width:100%}
+/* 8.4 长词/URL 断行 */
+body{overflow-wrap:break-word}
+/* 8.5 表格容器触摸惯性滚动（A 族已有同值规则，重复声明无害） */
+.table-wrap{-webkit-overflow-scrolling:touch}
+/* 8.6 抽屉打开时锁定背景滚动（两族抽屉断点均为 900px；类由统一脚本增删） */
+@media (max-width:900px){
+  body.nav-locked{overflow:hidden}
+}
+</style>
+</head>
+<body>
+<div id="readbar"></div>
+<button class="menu-btn" id="menuBtn" aria-label="打开目录">☰</button>
+<div class="overlay" id="overlay"></div>
+<aside class="sidebar" id="sidebar">
+  <h2>第十八章 性心理障碍和做作性障碍</h2>
+  <div class="sub">精神病学（第9版）· 印刷页 214–221<br>学习指南 · 技能标准版</div>
+  <div class="toc-group">开篇</div>
+  <a class="toc" href="#cover"><span class="n">00</span>章节封面与学习目标</a>
+  <a class="toc" href="#status"><span class="n">01</span>本章地位速览</a>
+  <a class="toc" href="#navmap"><span class="n">02</span>章节导航图</a>
+  <a class="toc" href="#mindmap"><span class="n">03</span>本章知识地图</a>
+  <a class="toc" href="#route"><span class="n">04</span>学习路线图</a>
+  <div class="toc-group">正文（八栏单元）</div>
+  <a class="toc unitlink" href="#u1"><span class="n">05</span>性心理障碍概述（总论单元）</a>
+  <a class="toc sub2" href="#u1-5">└ 鉴别诊断对对碰</a>
+  <a class="toc unitlink" href="#u2"><span class="n">06</span>露阴障碍</a>
+  <a class="toc sub2" href="#u2-4">└ 教材典型案例</a>
+  <a class="toc unitlink" href="#u3"><span class="n">07</span>窥视障碍</a>
+  <a class="toc sub2" href="#u3-4">└ 教材典型案例</a>
+  <a class="toc unitlink" href="#u4"><span class="n">08</span>恋童障碍</a>
+  <a class="toc unitlink" href="#u5"><span class="n">09</span>强迫性性施虐障碍（含性受虐障碍）</a>
+  <a class="toc unitlink" href="#u6"><span class="n">10</span>摩擦障碍</a>
+  <a class="toc unitlink" href="#u7"><span class="n">11</span>对自身的做作性障碍</a>
+  <a class="toc sub2" href="#u7-4">└ 教材典型案例</a>
+  <a class="toc unitlink" href="#u8"><span class="n">12</span>对他人的做作性障碍</a>
+  <div class="toc-group">结尾</div>
+  <a class="toc" href="#summary"><span class="n">13</span>全章核心要点速览</a>
+  <a class="toc" href="#pitfalls"><span class="n">14</span>易混易错点警示</a>
+  <a class="toc" href="#quiz"><span class="n">15</span>章节自测系统</a>
+  <a class="toc" href="#cards"><span class="n">16</span>考点速记卡</a>
+  <a class="toc" href="#cases"><span class="n">17</span>病例挑战</a>
+  <a class="toc" href="#ext"><span class="n">18</span>拓展延伸</a>
+</aside>
+<main class="main">
+<div class="wrap">
+
+<!-- ===== 00 封面 ===== -->
+<section id="cover">
+  <div class="hero">
+    <span class="chap">第十八章 · CHAPTER 18</span>
+    <h1>性心理障碍和做作性障碍</h1>
+    <p class="tagline">一类是"性兴奋的出口接错了线"，一类是"患病的身份被制造出来"——两条看似无关的线索，都追问同一句话：他为什么必须这样做？</p>
+    <p class="meta">教材：精神病学（第9版，2024）｜印刷页 214–221｜全章 2 节：性心理障碍（概述、病因与发病机制、临床表现、诊断与鉴别诊断、治疗、康复与预后）、做作性障碍（概述、临床表现、诊断与鉴别诊断、治疗）</p>
+    <div class="goalbox">
+      <h3>学习目标（四级分层）</h3>
+      <ul>
+        <li><span class="lv">了解</span>说出性心理障碍的旧称（性变态／paraphilia）与本章 5 类常见类型；说出 ICD-11 与 DSM-5、ICD-10 在章节归属上的差异；说出做作性障碍在两个诊断系统中的位置变化。</li>
+        <li><span class="lv l2">理解</span>理解"性心理障碍 ≠ 人格障碍 ≠ 性犯罪"这三重边界；理解做作性障碍的核心是"心理获益（患者角色）"而非"现实获益"；理解生物学、心理、社会三因素如何叠加。</li>
+        <li><span class="lv l3">掌握</span>掌握 5 类性心理障碍的临床特征与诊断要点；掌握"实际行为或明显痛苦"这一共同诊断门槛与"各方已同意"这一共同排除条件；掌握做作性障碍两亚型的诊断对象差异。</li>
+        <li><span class="lv l4">重点</span>性施虐／性受虐与"夫妻偶尔调情"的边界、恋童障碍与"青春期同龄性行为""强奸猥亵幼女"的边界、做作性障碍与诈病的"心理获益 vs 现实获益"分水岭——这三条边界是必考点，也是法律与伦理风险点。</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 01 地位 ===== -->
+<section id="status">
+  <div class="sec-head"><div class="badge">01</div><h2>本章地位速览<span class="en">Why this chapter matters</span></h2></div>
+  <p class="sec-lead">本章是全书中最"贴着社会规范"的一章：诊断标准里写着医学，边界外面站着法律、伦理与舆论。学会"既不下道德判决，也不轻易免责"，是本章真正的难点。</p>
+  <div class="grid3">
+    <div class="card blue">
+      <h3>章节定位与重要性</h3>
+      <p>本章为第十八章（印刷页 214–221），内容横跨 ICD-11 第十六章与第十七章两部分：性心理障碍与做作性障碍。教材以 2 节、7 个障碍（5 类性心理障碍 + 做作性障碍的两个亚型）组织全章。</p>
+      <p class="note">考试权重集中于：概念边界、5 类性心理障碍的识别要点、共同诊断门槛、治疗三大类、做作性障碍与诈病／转换障碍／边缘型人格障碍的鉴别。</p>
+    </div>
+    <div class="card red">
+      <h3>临床意义</h3>
+      <p>教材明确：性心理障碍患者"一般不会主动就医"，行为"具有明显隐蔽性"，因而"目前难以获得该类障碍的准确患病率"。这意味着临床遇到的多数病例，是被家属带来、或因行为危害他人而被机构送来。</p>
+      <p>做作性障碍"主要出现在综合医院"，患者以躯体症状进入医生视野，非精神科医师最易被"牵着走"——识别它，直接关系到过度检查、过度治疗与医疗资源浪费。</p>
+    </div>
+    <div class="card green">
+      <h3>与前后章节关联</h3>
+      <p><strong>前置：</strong>人格障碍章（性心理障碍与人格障碍的界限）、精神分裂症章（命令性幻听支配下的暴露行为）、分离（转换）障碍章（与做作性障碍的"作伪证据"之别）。</p>
+      <p><strong>后续延伸：</strong>司法精神病学与法律伦理问题；儿童青少年精神卫生与儿童保护；性医学与内分泌治疗。</p>
+      <p><strong>横向交叉：</strong>神经科学（杏仁核、前脑岛、疼痛通路）、内分泌（性激素、GnRHa）、医院管理与保险系统。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 02 导航 ===== -->
+<section id="navmap">
+  <div class="sec-head"><div class="badge">02</div><h2>章节导航图<span class="en">Section map</span></h2></div>
+  <p class="sec-lead">按教材两节及其内部疾病建立 8 个正文单元，每个单元写满八栏。点击卡片可直接跳到对应单元。</p>
+  <div class="grid2">
+    <a class="card cyan" href="#u1" style="display:block;color:inherit">
+      <h3>第一节 · 概述（总论单元）</h3>
+      <p>定义与 5 类常见类型、患者性格特征、三重边界、流行病学数据、三因素病因、5 条共同特征、治疗三大类与预后困难。</p>
+      <p class="note">关键词：性变态 · 心理获益前身 · 5 条共同特征 · 认识领悟疗法</p>
+    </a>
+    <a class="card red" href="#u2" style="display:block;color:inherit">
+      <h3>露阴障碍</h3>
+      <p>陌生异性毫无准备时暴露生殖器；保持安全距离；受害者反应越强烈越兴奋；教材附典型病例。</p>
+      <p class="note">关键词：几乎只见于男性 · 16 岁以上妇女 · 2%～4%</p>
+    </a>
+    <a class="card red" href="#u3" style="display:block;color:inherit">
+      <h3>窥视障碍</h3>
+      <p>窥视他人性活动、亲昵行为或裸体以获得性兴奋；不企图性交；教材附典型病例。</p>
+      <p class="note">关键词：窗孔 · 反光镜 · 12%／4% · 过路人发现</p>
+    </a>
+    <a class="card orange" href="#u4" style="display:block;color:inherit">
+      <h3>恋童障碍</h3>
+      <p>性欲指向青春期前儿童；"16 岁—5 岁—13 岁"三条年龄线；杏仁核体积减小证据较确凿。</p>
+      <p class="note">关键词：年龄门槛 · 猥亵后威胁 · 不等于强奸猥亵幼女</p>
+    </a>
+    <a class="card orange" href="#u5" style="display:block;color:inherit">
+      <h3>强迫性性施虐障碍（含性受虐障碍）</h3>
+      <p>以他人痛苦激起性唤起，或以自身受苦激起性唤起；教材在同一目中对照叙述两型，故合并为一个单元。</p>
+      <p class="note">关键词：鞭打绳勒撕割 · 疼痛神经通路 · 同意即排除</p>
+    </a>
+    <a class="card red" href="#u6" style="display:block;color:inherit">
+      <h3>摩擦障碍</h3>
+      <p>拥挤场合以身体部位（常为阴茎）摩擦异性身体获得性快感；无暴露愿望、无性交要求。</p>
+      <p class="note">关键词：公交车 · 不知情 · 偶然接触不算</p>
+    </a>
+    <a class="card purple" href="#u7" style="display:block;color:inherit">
+      <h3>对自身的做作性障碍</h3>
+      <p>在自己身上假装、伪造或故意诱发症状；谋求患者角色；教材附综合医院典型病例。</p>
+      <p class="note">关键词：修改化验单 · 心理获益 · 与诈病分水岭</p>
+    </a>
+    <a class="card purple" href="#u8" style="display:block;color:inherit">
+      <h3>对他人的做作性障碍</h3>
+      <p>在依赖者（通常为儿童）身上制造症状；诊断给加害者，不给受害者；可涉虐待罪与监护权。</p>
+      <p class="note">关键词：诊断对象 · 法律干预 · 监护权转移</p>
+    </a>
+  </div>
+  <div class="callout tip">
+    <span class="ct">📌 关于单元划分与八栏适配的说明</span>
+    ① 本章为多疾病章节，教材列出的每一个独立障碍均单独成单元，共 8 个单元，每个单元写满八栏，不合并、不省略。<br>
+    ② <strong>性身份障碍、异装障碍、恋物障碍</strong>：教材在本章开篇仅说明"ICD-11 取消了恋物障碍与异装障碍诊断分类""ICD-11 未再按照性身份障碍、性偏好障碍……进行诊断分类"，<strong>未把它们作为本章疾病展开叙述</strong>。因此本指南不虚构其诊断与治疗内容，统一在<a href="#ext">拓展延伸</a>中说明教材这一处空白。<br>
+    ③ <strong>性受虐障碍</strong>：教材在"强迫性性施虐障碍"同一目内以"性受虐障碍则相反"对照叙述，未单列标题，故并入第五单元，八栏中两型对照呈现，不遗漏。<br>
+    ④ <strong>做作性障碍的两个亚型</strong>：教材在"诊断"部分分列"对自身的做作性障碍"与"对他人的做作性障碍"。为不遗漏亚型，各自独立成单元（第七、第八单元）；第八单元教材着墨较少，相应栏目如实标注"教材未提供"，不编造补白。
+  </div>
+</section>
+
+<!-- ===== 03 知识地图 ===== -->
+<section id="mindmap">
+  <div class="sec-head"><div class="badge">03</div><h2>本章知识地图<span class="en">Knowledge map</span></h2></div>
+  <p class="sec-lead">不按目录抄，而按"一个总定义 → 五条共同特征 → 七个具体障碍 → 三条边界 → 三驾治疗车"重组。全章共 7 个独立障碍、约 14 个核心概念。</p>
+  <div class="grid3">
+    <div class="card blue">
+      <h3>核心概念层</h3>
+      <ul>
+        <li><strong>性心理障碍：</strong>性行为的心理和行为明显偏离正常，并以此作为性兴奋、性满足的主要或唯一方式。</li>
+        <li><strong>前提：</strong>一般精神活动无其他明显异常；正常性活动受到全部或某种程度破坏。</li>
+        <li><strong>做作性障碍：</strong>制造或伪装患病或受伤，以获得患者身份和照顾（心理获益）。</li>
+        <li><strong>对照概念：</strong>诈病（现实获益）、转换障碍（无作伪证据）、人格障碍（无异常性行为之外的广泛适应不良）。</li>
+      </ul>
+    </div>
+    <div class="card red">
+      <h3>五类性心理障碍</h3>
+      <ul>
+        <li><strong>露阴障碍：</strong>向不知情他人暴露生殖器。</li>
+        <li><strong>窥视障碍：</strong>窥视他人裸体或性行为。</li>
+        <li><strong>恋童障碍：</strong>性欲指向青春期前儿童。</li>
+        <li><strong>强迫性性施虐障碍：</strong>对非同意他人施加躯体或心理虐待。</li>
+        <li><strong>摩擦障碍：</strong>公共场合对非同意他人触碰或摩擦。</li>
+        <li class="note">教材原文列举的常见类型还包括性受虐障碍（在性施虐目中对照叙述）。</li>
+      </ul>
+    </div>
+    <div class="card orange">
+      <h3>五条共同特征（诊断骨架）</h3>
+      <ul>
+        <li>①性对象选择或行为方式明显异常，较固定且不易纠正。</li>
+        <li>②后果对个人及社会可能带来损害，但不能自我控制。</li>
+        <li>③有辨认能力，自知不符合规范，迫于压力可出现回避。</li>
+        <li>④除该异常性行为外，一般社会适应良好，无突出人格障碍。</li>
+        <li>⑤无智能障碍和意识障碍。</li>
+      </ul>
+    </div>
+    <div class="card purple">
+      <h3>三条边界（法律与伦理）</h3>
+      <ul>
+        <li><strong>≠ 道德败坏：</strong>多数患者性欲低下、有道德伦理观念、事后愧疚。</li>
+        <li><strong>≠ 人格障碍：</strong>除异常性行为外社会适应良好，甚至不乏知名成功人士。</li>
+        <li><strong>≠ 性犯罪：</strong>性犯罪是司法概念；实施歪曲冲动并造成伤害时应追究责任。</li>
+        <li><strong>同意原则：</strong>露阴、窥视、性施虐、摩擦四类诊断均"特定地排除各方已同意"的情形。</li>
+      </ul>
+    </div>
+    <div class="card green">
+      <h3>治疗三驾马车</h3>
+      <ul>
+        <li><strong>生物学：</strong>SSRIs（氟西汀、舍曲林）、抗雄激素、GnRHa；DBS（下丘脑后部或腹内侧）。</li>
+        <li><strong>心理：</strong>行为疗法（满灌、厌恶、交互抑制、系统脱敏）、想象性内隐致敏法、精神分析、认识领悟疗法。</li>
+        <li><strong>正面教育：</strong>指出行为危害与法律后果，促其以意志克服性偏离倾向。</li>
+        <li><strong>疗效预测：</strong>治疗愿望强、感到痛苦者好；起病早、病程长、年龄超过 40 岁者欠佳。</li>
+      </ul>
+    </div>
+    <div class="card cyan">
+      <h3>做作性障碍两亚型</h3>
+      <ul>
+        <li><strong>对自身：</strong>伪造/诱发自身症状，通常主动求治。</li>
+        <li><strong>对他人的：</strong>在依赖者身上制造症状，通常带其求治。</li>
+        <li><strong>共同内核：</strong>可识别的欺骗行为；不由显而易见的外部奖赏驱动。</li>
+        <li><strong>诊断对象：</strong>对他人的做作性障碍，诊断给加害者而非症状承载者。</li>
+      </ul>
+    </div>
+  </div>
+  <div class="stat"><span>独立障碍 7 个</span><span>性心理障碍 5 类</span><span>做作性障碍 2 亚型</span><span>共同特征 5 条</span><span>治疗 3 大类</span><span>教材病例 3 例</span></div>
+</section>
+
+<!-- ===== 04 路线 ===== -->
+<section id="route">
+  <div class="sec-head"><div class="badge">04</div><h2>学习路线图<span class="en">Study route</span></h2></div>
+  <p class="sec-lead">先用总论搭骨架，再逐个障碍填肉，最后用"三条边界"统一收口。全章建议 100 分钟：60 分钟精读 + 25 分钟自测 + 15 分钟闪卡。</p>
+  <div class="grid2">
+    <div class="card blue">
+      <h3>推荐阅读顺序</h3>
+      <ol>
+        <li><strong>概述（第一单元）：</strong>记住定义、5 类类型、5 条共同特征、三层边界——这是全章的地基。</li>
+        <li><strong>露阴 → 窥视：</strong>两例教材原文病例都在这两节，先看"长什么样"，再记诊断门槛。</li>
+        <li><strong>恋童 → 性施虐／性受虐 → 摩擦：</strong>三条最易出错的行为边界集中在此，边读边画"同意／非同意"的线。</li>
+        <li><strong>做作性障碍两亚型：</strong>先分清"诊断谁"，再记鉴别四联。</li>
+        <li><strong>治疗与预后：</strong>回到总论，把三驾马车与各障碍点名药物串起来。</li>
+      </ol>
+    </div>
+    <div class="card orange">
+      <h3>重点优先级</h3>
+      <ul>
+        <li><span class="starme">⭐⭐⭐</span> 5 条共同特征；诊断需"实际行为或明显痛苦"；四类障碍"排除各方已同意"。</li>
+        <li><span class="starme">⭐⭐⭐</span> 做作性障碍 vs 诈病的"心理获益／现实获益"。</li>
+        <li><span class="starme">⭐⭐⭐</span> 恋童障碍的 16／5／13 三条年龄线，以及与"强奸猥亵幼女"的界限。</li>
+        <li><span class="starme">⭐⭐</span> 露阴、窥视的行为细节与教材两例病例。</li>
+        <li><span class="starme">⭐⭐</span> 治疗三大类与氟西汀的教材定位；疗效好／差的预测因素。</li>
+        <li><span class="starme">⭐</span> ICD-11／DSM-5／ICD-10 的章节归属差异；流行病学具体数字。</li>
+      </ul>
+    </div>
+    <div class="card purple">
+      <h3>记忆策略推荐</h3>
+      <ul>
+        <li><strong>口诀法：</strong>"露窥恋虐摩"五字锁定五类性心理障碍，再逐个展开。</li>
+        <li><strong>对比法：</strong>把"同意／非同意""心理获益／现实获益""诊断谁"做成三张对照表。</li>
+        <li><strong>数字锚定：</strong>16／5／13（恋童年龄线）、2%～4%（男性露阴）、12%／4%（窥视）、3～5 年（抗雄激素疗程说法）。</li>
+        <li><strong>场景法：</strong>用"公交车上""厕所窗孔""校园小道""病房化验单"四个画面挂住四类行为。</li>
+      </ul>
+    </div>
+    <div class="card green">
+      <h3>复习时间规划</h3>
+      <div class="timeline">
+        <div class="tl-item"><h4>第 1 轮（40 分钟）</h4><p>通读八栏，只求"看懂"：每个障碍的画像 + 一条最独特的细节。</p></div>
+        <div class="tl-item"><h4>第 2 轮（20 分钟）</h4><p>只读第五栏与第七栏：把所有"边界表"与记忆口诀过一遍。</p></div>
+        <div class="tl-item"><h4>第 3 轮（25 分钟）</h4><p>做自测 13 题，错题回到对应单元；再看易混警示 10 条。</p></div>
+        <div class="tl-item"><h4>考前（15 分钟）</h4><p>只刷 18 张速记卡 + 18 条核心要点，追求"快速反应"。</p></div>
+      </div>
+    </div>
+  </div>
+  <div class="callout warn"><span class="ct">⚠️ 学习本章的态度提醒</span>本章涉及违法与伦理敏感内容。教材的立场很明确：<strong>既反对把患者一概视为"道德败坏"，也反对以"有病"为由免除其应负的责任</strong>。学习时请把"临床描述"与"法律评价"分开记录，不要把本指南的任何表述当作法律结论。</div>
+</section>
+
+<!-- ===== 05 性心理障碍概述 ===== -->
+<section id="u1">
+  <div class="sec-head"><div class="badge">05</div><h2>性心理障碍概述<span class="en">第一节 · 概述</span></h2></div>
+  <p class="sec-lead">本单元是全章的地基：一个定义、五类类型、五条共同特征、三条边界。把这四样记牢，后面五个障碍只是"同一个骨架的不同填充"。</p>
+
+  <!-- 第一栏 -->
+  <div class="card red" id="u1-1">
+    <h3 class="col-title"><span class="idx">第一栏</span>疾病画像</h3>
+    <div class="quote"><span class="lab">教材原文</span>性心理障碍（psychosexual disorder）既往称性变态（paraphilia），泛指两性性行为的心理和行为明显偏离正常，并以此作为性兴奋、性满足的主要或唯一方式的一组精神障碍。患者正常的性活动受到全部或者某种程度的破坏、干扰或影响。患者的一般精神活动并无其他明显异常。</div>
+    <p><strong>一句话画像：</strong>性心理障碍不是"性欲太强"，而是"性兴奋的开关接错了线"——唤起必须附着在某一类特定对象、场景或行为上，正常的性活动反而被挤到一旁。<span class="note">（类比理解，非医学事实；教材原意是"以偏离正常的性行为作为性兴奋、性满足的主要或唯一方式"）</span></p>
+    <div class="grid2">
+      <div class="mini">
+        <h4>教材列出的常见类型（5 类）</h4>
+        <ul>
+          <li>露阴障碍</li>
+          <li>窥视障碍</li>
+          <li>恋童障碍</li>
+          <li>强迫性性施虐障碍</li>
+          <li>摩擦障碍</li>
+        </ul>
+        <p class="note">教材另在同一目中对照叙述"性受虐障碍"，并在此前的流行病学段落提到它。</p>
+      </div>
+      <div class="mini">
+        <h4>教材描述的性格特征</h4>
+        <ul>
+          <li>内向、怕羞</li>
+          <li>安静少动、不喜交往或孤僻</li>
+          <li>温和、具有女性气质</li>
+        </ul>
+        <p class="note">注意：这是教材对"各类型患者往往具有"的共性描述，不是诊断标准。</p>
+      </div>
+    </div>
+    <p><strong>三重边界（教材反复强调，必考）：</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>容易被误认成</th><th>教材的判断</th><th>关键理由</th></tr></thead>
+        <tbody>
+          <tr><td>道德败坏、流氓成性、性欲亢进</td><td><strong>不应一概这样认为</strong></td><td>大多数患者性欲低下，甚至不能进行正常性生活；家庭关系往往不和谐甚至破裂</td></tr>
+          <tr><td>人格障碍</td><td><strong>既有区别又有联系</strong>，但多数不具人格障碍特征</td><td>除异常性行为外社会适应良好，无其他与社会不相适应的行为，更没有反社会行为；不少患者是社会知名人士和成功人士</td></tr>
+          <tr><td>性犯罪</td><td><strong>不能等同</strong></td><td>性犯罪是司法概念；性心理障碍者若将歪曲的冲动予以实施，对他人造成伤害或干扰社会秩序，应予追究责任</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p><strong>教材给出的患病率线索（均为"有资料表明"，非精确普查值）：</strong></p>
+    <div class="stat"><span>窥视障碍终生患病率 男 12%、女 4%</span><span>男性露阴障碍 2%～4%，女性极低</span><span>性受虐障碍 男 2.2%、女 1.3%（澳大利亚研究）</span><span>性驱使杀人案中性施虐障碍 37%～75%（美国研究）</span></div>
+    <div class="callout warn"><span class="ct">⚠️ 为什么"难以获得准确患病率"</span>教材给了三条理由：①患者一般不会主动就医；②行为往往具有明显隐蔽性；③文化背景、被调查人群和诊断标准不同，研究结果差异较大。<strong>答题时不要把这些"某国某研究"的数字写成总体患病率。</strong></div>
+  </div>
+
+  <!-- 第二栏 -->
+  <div class="card blue" id="u1-2">
+    <h3 class="col-title"><span class="idx">第二栏</span>病因探秘</h3>
+    <p><strong>教材总判断：</strong>病因及发病机制"复杂，目前尚未完全阐明"，"可能是生物学因素、心理因素、社会因素综合作用的结果"。三因素不是并列排队，而是相互叠加。</p>
+    <div class="grid3">
+      <div class="mini">
+        <h4>生物学因素（教材称"要复杂得多"）</h4>
+        <ul>
+          <li>遗传、母体免疫、激素水平干扰 → 神经发育轨迹形成特定模式，成为日后发病的<strong>先决条件</strong>。</li>
+          <li>性施虐／性受虐患者<strong>性激素和皮质醇水平异常</strong>，且与其和性伙伴关系亲密程度存在联系。</li>
+          <li>单胺类递质系统（尤其 <strong>5-羟色胺和多巴胺</strong>）功能紊乱起作用。</li>
+          <li><strong>假说：</strong>性施虐障碍患者可能存在异常疼痛神经通路，施虐行为或许是对该通路的"自我疗法"。</li>
+        </ul>
+      </div>
+      <div class="mini">
+        <h4>心理因素（教材称"可能占主导地位"）</h4>
+        <ul>
+          <li><strong>精神动力学：</strong>性心理发展受挫，退行到儿童早期幼稚的性心理发育阶段；异常行为是"幼稚的、不成熟的儿童性取乐行为"，如玩弄生殖器、暴露阴茎、偷看异性洗澡。</li>
+          <li><strong>行为学：</strong>无关刺激偶然与性兴奋结合，性快感强烈 → 主动回忆时仍出现性快感 → 通过对快感情景的回忆和性幻想不断强化 → 形成<strong>条件联系</strong>。</li>
+        </ul>
+      </div>
+      <div class="mini">
+        <h4>社会因素</h4>
+        <ul>
+          <li>与文化背景有关：受社会道德文化影响，少年儿童最初的性欲被<strong>过分压抑</strong>而改变性欲发泄方向。</li>
+          <li>不正确的性生物学知识教育；不同价值体系社会的性伦理、性道德和性社会学知识<strong>不当教育</strong>，也会促成各类性心理障碍发生。</li>
+        </ul>
+      </div>
+    </div>
+    <p><strong>表 1　教材点名的脑与神经证据（注意区分"证据"与"假说"）</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>证据/线索</th><th>教材表述强度</th><th>具体内容</th></tr></thead>
+        <tbody>
+          <tr><td>额叶、颞叶损伤</td><td>研究提示（"或许"）</td><td>出现儿童性犯罪的性心理障碍患者，其额叶和颞叶损伤或许与冲动抑制功能受损相关</td></tr>
+          <tr><td>杏仁核体积减小</td><td>"证据较为确凿"</td><td>男性恋童症患者脑组织局部体积较正常人小，特别是杏仁核体积减小</td></tr>
+          <tr><td>脑区功能连接</td><td>研究显示</td><td>恋童障碍患者动机、社会情感功能相关脑区的功能连接显著低于正常人群</td></tr>
+          <tr><td>脑白质微结构</td><td>弥散张量成像研究显示</td><td>恋童症患者脑白质微结构存在异常</td></tr>
+          <tr><td>疼痛相关图片反应</td><td>研究显示</td><td>性施虐障碍患者观看疼痛相关图片时杏仁核激活水平更高、疼痛评分更高；前脑岛激活水平与疼痛评分相关</td></tr>
+          <tr><td>围产期脑损害</td><td>Medonick 长期追踪研究的观点</td><td>暴力和性犯罪行为与围产期脑损害有关；发展过程中神经系统体征一般不明显，幼儿及儿童期可有体征及行为障碍；脑电图提示与颞叶、杏仁核、梨状皮质及边缘系统局部病变有关</td></tr>
+          <tr><td>儿童期头部受伤</td><td>Blanchard 等发现</td><td>自我报告儿童时期头部受伤的人群中，恋童障碍比例高于其他人群</td></tr>
+          <tr><td>继发于其他疾病</td><td>"亦有报道"</td><td>癫痫、酒精中毒、阿尔茨海默病早期可出现性心理障碍行为，如露阴障碍、恋童障碍</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout tip"><span class="ct">💡 理解要点</span>教材的因果叙述有一条隐含主线：<strong>神经发育被打乱 → 冲动控制与社会情感加工受损 → 特定刺激经条件化被"绑定"到性快感 → 反复强化成为固定偏好</strong>。生物学提供"土壤"，心理机制提供"嫁接"，社会文化决定"能不能被纠正"。<span class="note">（此句为对教材三段论述的逻辑串联，不是教材原文）</span></div>
+  </div>
+
+  <!-- 第三栏 -->
+  <div class="card red" id="u1-3">
+    <h3 class="col-title"><span class="idx">第三栏</span>临床表现拼图</h3>
+    <p>总论层面，教材用"类型 + 共同特征"两层来呈现临床表现。具体行为细节见各单元第三栏。</p>
+    <p><strong>表 1　五类性心理障碍的"一句话行为核心"</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>类型</th><th>核心行为</th><th>是否进一步侵犯</th><th>教材补充</th></tr></thead>
+        <tbody>
+          <tr><td>露阴障碍</td><td>在陌生异性毫无准备时暴露生殖器以达到性兴奋</td><td>无进一步性侵犯行为施加于对方</td><td>有的继以手淫；几乎只见于男性</td></tr>
+          <tr><td>窥视障碍</td><td>反复窥视他人性活动、亲昵行为或异性裸体以获得性兴奋</td><td>不企图与被窥视者性交，一般无进一步攻击和伤害</td><td>窥视当时或事后手淫</td></tr>
+          <tr><td>恋童障碍</td><td>性欲部分或全部指向青春期前或未发育的儿童</td><td>通过猥亵儿童达到性兴奋或性高潮，不一定发生真正性行为</td><td>患者至少 16 岁，比受害儿童至少年长 5 岁</td></tr>
+          <tr><td>强迫性性施虐障碍</td><td>使他人遭受心理或躯体痛苦从而激起性唤起</td><td>施虐本身可成为满足性欲所必需的方式</td><td>大多数见于男性；鞭打、绳勒、撕割对方躯体</td></tr>
+          <tr><td>摩擦障碍</td><td>拥挤场合以身体部位（常为阴茎）摩擦异性身体获得性快感</td><td>无暴露生殖器的愿望和行为，也无与受害人发生性活动的要求</td><td>受害人多为年轻女性；可伴射精</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p><strong>五条共同特征（教材原文，逐条背）：</strong></p>
+    <div class="quote"><span class="lab">教材原文</span>①与正常人不同，即性冲动行为表现为性对象选择或性行为方式的明显异常，这种行为较固定和不易纠正；②行为的后果对个人及社会可能带来损害，但不能自我控制；③患者本人具有对性行为的辨认能力，自知行为不符合一般社会规范，迫于法律及舆论的压力，可出现回避行为；④除了单一的性心理障碍所表现的异常性行为外，一般社会适应良好，无突出的人格障碍；⑤无智能障碍和意识障碍。</div>
+    <div class="callout key"><span class="ct">📌 五条特征的"功能分工"</span>第①条说<strong>异常且固定</strong>；第②条说<strong>有害且失控</strong>；第③条说<strong>有辨认力、会回避</strong>（这条最能区分"精神病性症状支配下的行为"）；第④⑤条说<strong>其余功能基本完好</strong>。所以性心理障碍是"局部走偏"，不是"整体崩塌"。</div>
+    <p><strong>就诊路径（教材描述的临床现实）：</strong>患者通常不会主动就诊；多因婚姻问题、性生活不和谐、情绪问题由家属陪同就诊，或因其异常性行为对他人造成危害而被有关机构送来。</p>
+  </div>
+
+  <!-- 第四栏 -->
+  <div class="card orange" id="u1-4">
+    <h3 class="col-title"><span class="idx">第四栏</span>教材典型案例</h3>
+    <div class="callout book">
+      <span class="ct">📖 教材未在"概述"部分提供具体临床案例</span>
+      教材本节的两例典型病例分别附在<strong>露阴障碍</strong>与<strong>窥视障碍</strong>之下（男，20 岁，校园露阴；男，28 岁，长期窥视），已完整置于<a href="#u2-4">第二单元第四栏</a>与<a href="#u3-4">第三单元第四栏</a>，此处不重复、不改写、不虚构新病例。
+    </div>
+    <p><strong>总论层面可从教材提取的"临床情境要素"（非病例，仅要点）：</strong></p>
+    <div class="grid2">
+      <div class="mini">
+        <h4>情境要素 A · 被机构送来</h4>
+        <p>因异常性行为对他人造成危害，由学校、单位或司法机关送来鉴定。教材的露阴病例即由校方抓获后经司法精神病学鉴定。</p>
+      </div>
+      <div class="mini">
+        <h4>情境要素 B · 由家属陪来</h4>
+        <p>因婚姻问题、性生活不和谐或情绪问题就诊。教材强调此时"详细完整的病史、认真细致的精神状况检查、生活经历和临床表现"尤为重要。</p>
+      </div>
+    </div>
+    <p class="note">以上为教材对就诊路径的描述整理，不构成真实病例。</p>
+  </div>
+
+  <!-- 第五栏 -->
+  <div class="card orange" id="u1-5">
+    <h3 class="col-title"><span class="idx">第五栏</span>鉴别诊断对对碰</h3>
+    <p><strong>表 1　"异常"还是"正常"——三层边界</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>维度</th><th>性心理障碍</th><th>正常性行为变异／文化认可</th><th>人格障碍</th></tr></thead>
+        <tbody>
+          <tr><td>核心</td><td>以偏离方式作为性兴奋、性满足的主要或唯一方式</td><td>性活动方式多样但可被文化接受，不取代正常性活动</td><td>广泛、持久的行为模式与内心体验偏离，涉及多领域</td></tr>
+          <tr><td>固定性</td><td>较固定、不易纠正</td><td>可变、可调节</td><td>持久、跨情境</td></tr>
+          <tr><td>社会适应</td><td>除异常性行为外一般良好</td><td>良好</td><td>多领域适应不良，可伴反社会行为</td></tr>
+          <tr><td>辨认能力</td><td>有，自知不符合规范，可出现回避</td><td>—</td><td>与其人格结构一致，常缺乏自我审视</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout key"><span class="ct">📌 一句话鉴别总结</span>看"<strong>是不是唯一出口</strong>、<strong>是不是只此一处走偏</strong>"：只在性行为上走偏、其余社会功能完好 → 性心理障碍；整个人格都走偏 → 人格障碍。</div>
+    <p><strong>表 2　与其他精神障碍伴发的性欲倒错行为</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>维度</th><th>性心理障碍</th><th>其他精神障碍伴发的异常性行为</th></tr></thead>
+        <tbody>
+          <tr><td>典型举例</td><td>露阴障碍、窥视障碍等</td><td>精神分裂症患者可在<strong>命令性幻听</strong>的支配下出现暴露行为</td></tr>
+          <tr><td>鉴别要点</td><td>异常性行为是独立的核心问题</td><td>患者<strong>满足其他某种精神疾病的诊断标准</strong>，异常性行为是受该病影响出现的</td></tr>
+          <tr><td>处理方向</td><td>针对障碍本身（生物、心理、教育）</td><td>以治疗原发精神疾病为主</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout key"><span class="ct">📌 一句话鉴别总结</span>先问"<strong>这个行为是不是被别的病'带'出来的</strong>"：能被另一个诊断完整解释，就不再贴性心理障碍的标签。</div>
+    <p><strong>表 3　必须排查的器质性与遗传性因素</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>排查项</th><th>教材要求</th><th>为什么</th></tr></thead>
+        <tbody>
+          <tr><td>性器官发育情况</td><td>诊断时注意检查</td><td>排除相关躯体疾病</td></tr>
+          <tr><td>性激素水平</td><td>诊断时注意检查</td><td>排除内分泌异常</td></tr>
+          <tr><td>染色体有无畸变</td><td>诊断时注意检查</td><td>排除遗传性疾病</td></tr>
+          <tr><td>中老年首次出现露阴行为</td><td><strong>应先排除器质性原因</strong></td><td>教材在露阴障碍中特别提示</td></tr>
+          <tr><td>癫痫、酒精中毒、阿尔茨海默病早期</td><td>可有露阴、恋童等行为</td><td>继发于原发疾病的可能性</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout key"><span class="ct">📌 一句话鉴别总结</span>先做"<strong>三查</strong>"（性器官、性激素、染色体），再问"<strong>有没有原发病</strong>"——器质性原因排除了，才轮到功能性诊断。</div>
+  </div>
+
+  <!-- 第六栏 -->
+  <div class="card green" id="u1-6">
+    <h3 class="col-title"><span class="idx">第六栏</span>治疗方案工具箱</h3>
+    <div class="quote"><span class="lab">教材原文</span>性心理障碍治疗较为困难，患者自身及其家人往往感到非常痛苦，对症支持治疗仍有帮助。性心理障碍的主要治疗方法有生物学治疗、心理治疗、正面教育等。</div>
+    <p><strong>表 1　三大类治疗总览</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>类别</th><th>教材具体内容</th><th>适用/注意事项</th></tr></thead>
+        <tbody>
+          <tr><td><strong>生物学治疗</strong>（以药物为主）</td><td>①SSRIs 类抗抑郁药；②抗雄激素药物；③促性腺激素释放激素类似物（GnRHa）或激动剂。此外，定位于<strong>下丘脑后部或腹内侧</strong>的深部脑刺激也有一定疗效</td><td>方案制定要综合考虑用药史、依从性、病情及<strong>发生性暴力的风险</strong>；存在危险行为高风险者，药物治疗应首先选择一线用药</td></tr>
+          <tr><td><strong>心理治疗</strong>（教材称"目前治疗的主要方法"）</td><td>行为疗法、精神分析疗法、认识领悟疗法等</td><td>最常使用行为疗法；疗效取决于治疗愿望是否强烈、是否为性心理偏离感到不安或痛苦</td></tr>
+          <tr><td><strong>正面教育</strong></td><td>明确指出某些行为的危害性：违反现行法律、单位制度，不符合当地文化风俗，使就业、升学面临严重问题；教育患者通过<strong>意志</strong>克服性偏离倾向</td><td>教材将其单列为第三类方法，不可忽略</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p><strong>表 2　药物细节（教材点名的内容；未点名者一律标注）</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>药物类别</th><th>教材表述</th><th>剂量/疗程</th></tr></thead>
+        <tbody>
+          <tr><td>SSRIs</td><td>以<strong>氟西汀和舍曲林</strong>使用最多；氟西汀能减少恋童障碍、露阴障碍、窥视障碍等患者的性幻想和性行为；主要适用于轻度患者、青少年患者，或共病抑郁障碍、强迫症的情况；在签署知情同意书和依从性较好时，可作为处方药用于认知行为疗法控制欠佳的高水平性唤起患者</td><td><strong>教材未涉及具体剂量</strong></td></tr>
+          <tr><td>抗雄激素药物</td><td>教材列为三类之一，未展开具体药物与不良反应</td><td>疗程："有的学者认为需要至少 <strong>3～5 年</strong>的抗雄激素治疗，也有学者认为有终身治疗的必要"；教材称<strong>尚无一致定论</strong></td></tr>
+          <tr><td>GnRHa 或激动剂</td><td>教材列为三类之一，未展开具体药物</td><td><strong>教材未涉及</strong></td></tr>
+          <tr><td>深部脑刺激（DBS）</td><td>定位于下丘脑后部或腹内侧，"有一定疗效"</td><td><strong>教材未涉及</strong>参数与疗程</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout warn"><span class="ct">⚠️ 一条容易被忽略的国情提示</span>教材明确：虽然 SSRIs 抗抑郁药和抗精神病药目前在我国<strong>尚未批准用于治疗性心理障碍</strong>，但在欧洲和北美有较广泛的使用。答题与临床沟通时都不能把"国外常用"写成"我国常规"。教材还提醒，每一种药物的应用应参照药品说明书。</div>
+    <p><strong>心理治疗的四种具体做法（教材原文要点）：</strong></p>
+    <div class="grid2">
+      <div class="mini">
+        <h4>行为疗法</h4>
+        <p>基于"行为是学习获得"的观点，采用满灌疗法、厌恶疗法、交互抑制法、系统脱敏法，解除患者对成年异性的厌恶情绪，减少偏好的性幻想及性冲动；当患者处在一定环境下引起性冲动时，即给予厌恶性刺激（如电流刺激）引起恶性条件反射，经若干次结合治疗后异常性冲动减退。</p>
+      </div>
+      <div class="mini">
+        <h4>想象性内隐致敏法</h4>
+        <p>请患者想象某种具体性变态渴求的高度兴奋状态场景，当出现性兴奋时进行惩罚（如低电流刺激、弹皮圈、催吐剂等），形成新的条件反射。</p>
+        <p class="note">教材提醒：疗效好坏与患者是否有强烈治疗愿望明显相关；缺乏求治愿望、病程过长者疗效较差。</p>
+      </div>
+      <div class="mini">
+        <h4>精神分析疗法</h4>
+        <p>探讨异常性行为的潜意识意义，回忆幼年经历特别是性心理发展过程，回忆并修复早年心理创伤；一旦领悟其心理意义，症状可明显减轻甚至消失。教材引弗洛伊德："变态的性生活就是幼儿的性生活，不过范围大小和繁简不同罢了。"</p>
+      </div>
+      <div class="mini">
+        <h4>认识领悟疗法</h4>
+        <p>钟友彬在精神分析理论基础上结合中国文化特点创立的<strong>短程精神分析治疗方法</strong>；通过分析童年生活历程，找出性心理创伤或诱惑，告诉患者病态行为是这些创伤或诱惑导致的幼稚、荒谬、不合逻辑的处事方法和后果，使患者领悟到"自己是用儿童式的性乐方式去解决成年人的问题"，从而使症状消失。</p>
+      </div>
+    </div>
+    <div class="callout book"><span class="ct">📖 教材给出的疗效数据（原文）</span>钟友彬曾于 <strong>1992 年</strong>用认识领悟疗法治疗了 <strong>33 例</strong>性变态者，其中 <strong>27 例</strong>发生明显好转，表明该方法治疗性心理障碍是有效的。</div>
+    <p><strong>预后（教材"康复与预后"三点困难）：</strong></p>
+    <div class="timeline">
+      <div class="tl-item"><h4>困难一 · 不愿主动求医</h4><p>患者因异常性行为侵害他人而受到法律惩罚；这些惩罚虽无直接治疗效果，却是必要的，因为惩罚能增加患者主动寻求医治的动机。</p></div>
+      <div class="tl-item"><h4>困难二 · 不愿放弃原有方式</h4><p>来访者不愿意主动放弃自身原有的性行为方式。</p></div>
+      <div class="tl-item"><h4>困难三 · 难以重建新方式</h4><p>来访者短期内难以形成新的、健康的性行为方式。</p></div>
+    </div>
+    <p class="note">教材对总体的判断是：生物学治疗效果不确定，心理治疗难度很高。这一句决定了本章治疗的基调——"可以帮，但很难根治"。</p>
+  </div>
+
+  <!-- 第七栏 -->
+  <div class="card purple" id="u1-7">
+    <h3 class="col-title"><span class="idx">第七栏</span>记忆工具箱</h3>
+    <div class="callout tip">
+      <span class="ct">🔧 方法一：口诀歌谣法</span>
+      口诀：<strong>"露窥恋虐摩，五型记心窝；辨认虽清楚，难控是心魔。"</strong><br>
+      解释：前半句锁定五类常见类型（露阴、窥视、恋童、性施虐、摩擦），后半句锁定第②③条共同特征——"有辨认能力但不能自我控制"。<br>
+      <em>为什么这样记：</em>先记住"有几种"，再记住"最矛盾的那一点"，两句话就把分类与核心特征同时挂住，比逐条背五条更省力。
+    </div>
+    <div class="callout tip">
+      <span class="ct">🔧 方法二：数字编码法</span>
+      记 <strong>"5—5—3—3"</strong>：5 类常见类型；5 条共同特征；3 类治疗（生物、心理、正面教育）；3 重边界（非道德败坏、非人格障碍、非性犯罪）。<br>
+      <em>为什么这样记：</em>四个数字像四个抽屉，回忆时按数量清点，少一个立刻知道自己漏了哪一格；数字比文字更不容易"糊成一团"。
+    </div>
+    <div class="callout tip">
+      <span class="ct">🔧 方法三：对比记忆法（三重边界对照）</span>
+      画一条竖线，左边写"<strong>是什么</strong>"，右边写"<strong>不是什么</strong>"：是"以偏离方式作为主要或唯一性满足方式"；不是道德败坏（多数性欲低下、事后愧疚）、不是人格障碍（其余适应良好）、不是性犯罪（司法概念，实施致害仍要追责）。<br>
+      <em>为什么这样记：</em>本章最容易出错的不是"记不住定义"，而是"态度跑偏"——把患者要么妖魔化、要么无辜化。正反并列能把这两种偏差同时校正。
+    </div>
+    <div class="callout tip">
+      <span class="ct">🔧 方法四：场景串联法</span>
+      想象一条"从门诊到法庭"的路：家属陪着来（婚姻不和谐）→ 医生问生活经历（诊断靠病史）→ 选治疗（药物 + 心理 + 正面教育）→ 若已伤害他人（追究责任）。<br>
+      <em>为什么这样记：</em>把散落的"就诊路径、诊断依据、治疗三类、法律边界"串成一条时间线，形成一个可复述的故事，比孤立记点更稳。
+    </div>
+  </div>
+
+  <!-- 第八栏 -->
+  <div class="card cyan" id="u1-8">
+    <h3 class="col-title"><span class="idx">第八栏</span>知识联动</h3>
+    <ul>
+      <li><strong>与人格障碍章：</strong>教材专门比较"性心理障碍与人格障碍既有区别又有联系"，判断关键是"是否只有性行为这一处走偏"。</li>
+      <li><strong>与精神分裂症章：</strong>命令性幻听支配下也可出现暴露行为，此时异常性行为是"症状"，不是独立障碍——这条鉴别直接连接两章。</li>
+      <li><strong>与分离（转换）障碍章：</strong>做作性障碍与转换障碍的鉴别（有无作伪证据）在本章第二节展开，与分离性障碍章形成对照。</li>
+      <li><strong>与物质使用／神经认知障碍：</strong>教材提到酒精中毒、癫痫、阿尔茨海默病早期可出现露阴、恋童等行为，提示"先排器质、再谈心理"。</li>
+      <li><strong>与司法精神病学：</strong>性犯罪是司法概念；司法精神病学鉴定（教材露阴病例即经此程序）是临床与法律的接口。</li>
+      <li><strong>与内分泌／神经外科：</strong>抗雄激素、GnRHa 涉及内分泌调控；DBS 定位下丘脑后部或腹内侧涉及神经调控。</li>
+      <li><strong>与儿童保护／老年保护：</strong>恋童障碍与"对他人的做作性障碍"都直接指向未成年人及无法表达者的保护问题。</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===== 06 露阴障碍 ===== -->
+<section id="u2">
+  <div class="sec-head"><div class="badge">06</div><h2>露阴障碍<span class="en">Exhibitionistic disorder</span></h2></div>
+  <p class="sec-lead">教材用一整段行为细节 + 一例司法鉴定病例讲它。抓住三个关键词：<strong>毫无准备、安全距离、看反应</strong>——就抓住了这个障碍的全部逻辑。</p>
+
+  <!-- 第一栏 -->
+  <div class="card red" id="u2-1">
+    <h3 class="col-title"><span class="idx">第一栏</span>疾病画像</h3>
+    <div class="quote"><span class="lab">教材原文</span>露阴障碍（exhibitionistic disorder）特点是反复多次在陌生异性毫无准备的情况下暴露自己的生殖器以达到性兴奋的目的，有的继以手淫，但无进一步性侵犯行为施加于对方。</div>
+    <p><strong>一句话画像：</strong>他要的不是性接触，而是"对方被吓到的那一瞬间"——暴露是手段，<strong>对方的情绪反应</strong>才是性兴奋的开关。<span class="note">（此概括依据教材"看到异性羞涩、愤慨、脸红害羞时兴奋程度增加"的描述）</span></p>
+    <div class="grid2">
+      <div class="mini">
+        <h4>人群与起病</h4>
+        <ul>
+          <li>该症<strong>几乎只见于男性</strong>。</li>
+          <li>如在中老年<strong>首次</strong>出现，应先排除器质性原因。</li>
+          <li>患者个性多内倾；暴露行为之前有逐渐增强的焦虑紧张体验。</li>
+        </ul>
+      </div>
+      <div class="mini">
+        <h4>对象与场所</h4>
+        <ul>
+          <li>通常选择<strong>仅有异性存在</strong>的场合，如偏僻的小路、学校教室。</li>
+          <li>受害人可以是单独异性，也可以是多个异性。</li>
+          <li>暴露行为的受害者一般为 <strong>16 岁以上</strong>的妇女。</li>
+        </ul>
+      </div>
+    </div>
+    <div class="stat"><span>男性患病率 2%～4%</span><span>女性患病率极低</span><span>受害者多为 16 岁以上妇女</span><span>几乎只见于男性</span></div>
+    <p class="note">教材特别说明：由于患者不主动就医、行为隐蔽，上述数字来自"有资料表明"，不是精确普查结果。</p>
+  </div>
+
+  <!-- 第二栏 -->
+  <div class="card blue" id="u2-2">
+    <h3 class="col-title"><span class="idx">第二栏</span>病因探秘</h3>
+    <div class="callout book"><span class="ct">📖 教材未对本障碍单列病因</span>教材在第一节"病因与发病机制"中统一论述性心理障碍的三类因素，未再为露阴障碍单独列出病因。以下按教材总论对应到本障碍，并标注教材点名与本障碍相关的内容。</div>
+    <div class="grid3">
+      <div class="mini">
+        <h4>生物学（总论层面）</h4>
+        <ul>
+          <li>遗传、母体免疫、激素水平干扰神经发育轨迹。</li>
+          <li>5-HT 与多巴胺系统功能紊乱。</li>
+          <li><strong>本障碍点名：</strong>中老年首次出现应先排除器质性原因；癫痫、酒精中毒、阿尔茨海默病早期可出现露阴行为。</li>
+        </ul>
+      </div>
+      <div class="mini">
+        <h4>心理（总论层面）</h4>
+        <ul>
+          <li>精神动力学：退行到儿童早期幼稚性心理阶段，"暴露阴茎"被列为幼稚的儿童性取乐行为之一。</li>
+          <li>行为学：无关刺激偶然与性兴奋结合，经回忆与性幻想反复强化形成条件联系。</li>
+        </ul>
+      </div>
+      <div class="mini">
+        <h4>社会（总论层面）</h4>
+        <ul>
+          <li>性欲被过分压抑而改变发泄方向。</li>
+          <li>性生物学知识教育不正确、性伦理与性道德教育不当。</li>
+          <li>教材指出该症"通常由女性受害者报案而发现"，说明社会反应方式也影响其被识别的路径。</li>
+        </ul>
+      </div>
+    </div>
+    <p class="note">教材未对露阴障碍给出遗传度、脑影像或神经递质层面的专属数据；凡此类具体数值均属"教材未涉及"，本指南不补写。</p>
+  </div>
+
+  <!-- 第三栏 -->
+  <div class="card red" id="u2-3">
+    <h3 class="col-title"><span class="idx">第三栏</span>临床表现拼图</h3>
+    <div class="tabs" data-tabs>
+      <div class="tabbar">
+        <button class="on" data-tab="e1">行为脚本</button>
+        <button data-tab="e2">心理细节</button>
+        <button data-tab="e3">功能与后果</button>
+      </div>
+      <div class="panel on" data-panel="e1">
+        <ul>
+          <li><strong>前置：</strong>暴露前有逐渐增强的焦虑紧张体验；个性多内倾。</li>
+          <li><strong>选场：</strong>仅有异性存在的场合（偏僻小路、学校教室等），受害人可单可多。</li>
+          <li><strong>站位：</strong>与受害人<strong>保持一定安全距离</strong>，以便逃脱。</li>
+          <li><strong>动作：</strong>暴露生殖器；有的继以手淫。</li>
+          <li><strong>界限：</strong>无进一步性侵犯行为施加于对方。</li>
+        </ul>
+      </div>
+      <div class="panel" data-panel="e2">
+        <ul>
+          <li>十分清楚自己的行为会给受害人带来危害，能够预料异性可能出现的诧异、震惊等情绪。</li>
+          <li>看到异性表现出<strong>羞涩、愤慨、脸红害羞</strong>等反应时，兴奋程度增加，更容易达到性兴奋或性高潮。</li>
+          <li><strong>情景越惊险刺激、受害人反应越强烈，性满足越强烈。</strong></li>
+          <li>若妇女表现冷淡、无动于衷，反倒令其"大为扫兴"。</li>
+        </ul>
+      </div>
+      <div class="panel" data-panel="e3">
+        <ul>
+          <li>通常由女性受害者报案而发现。</li>
+          <li>女性害怕露阴行为之后遭强奸，<strong>其实强奸并不多见</strong>（教材原文的判断）。</li>
+          <li>大部分患者<strong>性功能低下或缺乏正常性功能</strong>，有的明确表示对性交不感兴趣。</li>
+          <li>教材总论补充：家庭关系往往不和谐甚至破裂；事后多有愧疚之心，但难以控制自己。</li>
+        </ul>
+      </div>
+    </div>
+    <div class="callout tip"><span class="ct">💡 读法提示</span>把这三块按"<strong>选场 → 看反应 → 收场</strong>"排成一条脚本：选只有异性的地方、保持能跑掉的距离、等对方脸红惊叫、在那一瞬间获得满足、然后离开。教材所有细节都嵌在这条脚本里。</div>
+  </div>
+
+  <!-- 第四栏 -->
+  <div class="card orange" id="u2-4">
+    <h3 class="col-title"><span class="idx">第四栏</span>教材典型案例</h3>
+    <div class="quote"><span class="lab">教材原文</span>患者，男，20 岁，性格内向，不善于和女生交往。在天黑前或早晨锻炼时，患者多次在较偏僻的校园林荫小道上对正在读书或路过的女生露出生殖器，见女生受到惊吓而自感快乐。某日 10 时课间操，他一人爬上教学楼顶，见仅有一名女生便掏出生殖器，该女生惊呼。患者被校方抓获，经司法精神病学鉴定诊断为性心理障碍（露阴障碍）。</div>
+    <p><strong>案例拆解（症状 → 鉴别 → 确诊）：</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>步骤</th><th>案例中的对应信息</th><th>教材知识点的落点</th></tr></thead>
+        <tbody>
+          <tr><td>① 抓核心行为</td><td>多次、在偏僻校园小道、对路过的女生暴露生殖器</td><td>"反复多次""陌生异性毫无准备""暴露生殖器以达到性兴奋"</td></tr>
+          <tr><td>② 抓维持条件</td><td>见女生受到惊吓而<strong>自感快乐</strong>；选"仅有一名女生"的时机</td><td>对方的羞涩、惊叫等反应增强兴奋；选择仅有异性存在的场合</td></tr>
+          <tr><td>③ 抓人格背景</td><td>性格内向、不善于和女生交往</td><td>教材描述患者"个性多内倾"；性功能与异性交往常受影响</td></tr>
+          <tr><td>④ 抓界限</td><td>无进一步性侵犯行为</td><td>"无进一步性侵犯行为施加于对方"</td></tr>
+          <tr><td>⑤ 抓程序</td><td>被校方抓获，经<strong>司法精神病学鉴定</strong></td><td>教材点明该症常因危害他人、由机构送来；鉴定是临床与法律的接口</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout key"><span class="ct">📌 从这例学到什么</span>这例的价值不在"20 岁男性"这个标签，而在它把教材的三个抽象要点变成了画面：<strong>选场（偏僻、只有异性）</strong>、<strong>距离（能跑）</strong>、<strong>反应（惊吓即快感）</strong>。同时它示范了一个现实路径——<strong>先被机构控制，才进入诊断</strong>。</div>
+    <p class="note">本栏为教材原文引用，未添加任何教材之外的病史、检查或化验信息。</p>
+  </div>
+
+  <!-- 第五栏 -->
+  <div class="card orange" id="u2-5">
+    <h3 class="col-title"><span class="idx">第五栏</span>鉴别诊断对对碰</h3>
+    <p><strong>表 1　露阴障碍的三组"近邻"</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>鉴别对象</th><th>核心区别</th><th>教材依据</th></tr></thead>
+        <tbody>
+          <tr><td>精神分裂症命令性幻听支配下的暴露行为</td><td>患者满足精神分裂症的诊断标准；暴露行为是受该病影响出现的，不是独立的性唤起模式</td><td>教材"鉴别诊断"明确指出此类情形</td></tr>
+          <tr><td>各方已同意基础上的暴露行为</td><td>露阴障碍"特定地排除"涉及在各方已同意基础上的暴露行为</td><td>教材诊断条目原文</td></tr>
+          <tr><td>文化认可的公共场所裸露</td><td>在一些文化中，公共场所的裸露是被社会认可的，<strong>不构成露阴障碍</strong></td><td>教材诊断条目原文</td></tr>
+          <tr><td>癫痫、酒精中毒、阿尔茨海默病早期出现的露阴行为</td><td>有原发疾病；中老年首次出现应先排除器质性原因</td><td>教材病因段与露阴障碍段</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout key"><span class="ct">📌 一句话鉴别总结</span>问三句：<strong>有没有别的病在支配？对方同意吗？这个地方的文化允许吗？</strong>三问都"没有"，才轮到露阴障碍。</div>
+    <p><strong>表 2　性心理障碍 vs 性犯罪（同一个行为，两套评价）</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>维度</th><th>性心理障碍（医学概念）</th><th>性犯罪（司法概念）</th></tr></thead>
+        <tbody>
+          <tr><td>归属</td><td>精神障碍的诊断分类</td><td>司法概念，包含性心理障碍者的违法行为</td></tr>
+          <tr><td>判断依据</td><td>性唤起模式、固定性、痛苦或实际行为</td><td>是否实施、是否造成伤害、是否干扰社会秩序</td></tr>
+          <tr><td>后果</td><td>治疗、教育、支持</td><td>实施歪曲冲动并致害或扰乱秩序时，<strong>应予追究责任</strong></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout key"><span class="ct">📌 一句话鉴别总结</span>"有病"是<strong>医学解释</strong>，"追责"是<strong>法律评价</strong>——两者可以同时成立，不能用前者抹掉后者，也不能用后者否定前者。</div>
+    <p><strong>表 3　与窥视障碍、摩擦障碍的快速分辨</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>维度</th><th>露阴障碍</th><th>窥视障碍</th><th>摩擦障碍</th></tr></thead>
+        <tbody>
+          <tr><td>对方是否知情</td><td>知情（当场看到）</td><td><strong>不知情</strong>（被偷看）</td><td>不知情（被贴近摩擦）</td></tr>
+          <tr><td>是否身体接触</td><td>无</td><td>无</td><td><strong>有</strong></td></tr>
+          <tr><td>核心快感来源</td><td>对方的惊吓／羞愤反应</td><td>看到他人裸体或性行为</td><td>摩擦带来的躯体刺激</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout key"><span class="ct">📌 一句话鉴别总结</span><strong>让人看见 → 露阴；偷着看 → 窥视；贴上去蹭 → 摩擦。</strong>三个字：露、看、蹭。</div>
+  </div>
+
+  <!-- 第六栏 -->
+  <div class="card green" id="u2-6">
+    <h3 class="col-title"><span class="idx">第六栏</span>治疗方案工具箱</h3>
+    <div class="callout book"><span class="ct">📖 教材未对露阴障碍单列治疗方案</span>教材的治疗论述以"性心理障碍"整体为单位，未按类型分别给出方案与剂量。以下为教材总论 3 类方法中<strong>与本障碍直接相关</strong>的内容；其余按"通用"标注。</div>
+    <p><strong>表 1　按教材总论可落到本障碍的措施</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>层级</th><th>措施</th><th>教材依据与说明</th></tr></thead>
+        <tbody>
+          <tr><td>药物（教材点名）</td><td><strong>氟西汀</strong>可减少露阴障碍患者的性幻想和性行为</td><td>教材在 SSRIs 段落明确点名"恋童障碍、露阴障碍、窥视障碍"；<strong>剂量教材未涉及</strong></td></tr>
+          <tr><td>其他药物</td><td>抗雄激素药物；GnRHa 或激动剂；DBS（下丘脑后部或腹内侧）</td><td>教材列为三类生物学治疗及一种神经调控手段，未按类型细分；疗程见总论"3～5 年"或"终身"两种学者观点</td></tr>
+          <tr><td>心理治疗（一线地位）</td><td>行为疗法（满灌、厌恶、交互抑制、系统脱敏）；想象性内隐致敏法；精神分析；认识领悟疗法</td><td>教材称心理治疗为"目前治疗的主要方法"；最常使用行为疗法</td></tr>
+          <tr><td>教育</td><td>正面教育：指出行为违反法律与制度、使就业升学面临严重问题</td><td>教材单列第三类方法</td></tr>
+          <tr><td>风险分层</td><td>存在危险行为高风险者，药物治疗应<strong>首先选择一线用药</strong></td><td>教材治疗原则原文</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout warn"><span class="ct">⚠️ 三个"不能写"</span>①不能写 SSRIs 的具体 mg 剂量（教材未给）；②不能写"抗雄激素必须用 3～5 年"（教材原文是"有的学者认为……也有学者认为……尚无一致定论"）；③不能写"我国已批准 SSRIs 治疗性心理障碍"（教材明确尚未批准）。</div>
+    <p><strong>处理流程（按教材要点重排）：</strong></p>
+    <div class="timeline">
+      <div class="tl-item"><h4>第一步 · 风险评估</h4><p>是否存在性暴力高风险；是否已有危害他人的行为（教材要求用药方案综合考虑"发生性暴力的风险"）。</p></div>
+      <div class="tl-item"><h4>第二步 · 排除器质</h4><p>中老年首次出现者先排除器质性原因；查性器官发育、性激素、染色体。</p></div>
+      <div class="tl-item"><h4>第三步 · 心理治疗为主</h4><p>以行为疗法为主干，辅以精神分析或认识领悟疗法；疗效取决于治疗愿望与痛苦感。</p></div>
+      <div class="tl-item"><h4>第四步 · 药物辅助</h4><p>轻症、青少年、共病抑郁或强迫者优先考虑 SSRIs；高风险者按教材"一线用药"原则处理；知情同意与依从性是前提。</p></div>
+      <div class="tl-item"><h4>第五步 · 教育与随访</h4><p>正面教育＋法律后果告知；长期随访，因教材坦言"生物学治疗效果不确定，心理治疗难度很高"。</p></div>
+    </div>
+    <p class="note">教材未给出本障碍的疗程节点、随访间隔与复发率，均标注"教材未涉及"。</p>
+  </div>
+
+  <!-- 第七栏 -->
+  <div class="card purple" id="u2-7">
+    <h3 class="col-title"><span class="idx">第七栏</span>记忆工具箱</h3>
+    <div class="callout tip">
+      <span class="ct">🔧 方法一：口诀歌谣法</span>
+      口诀：<strong>"陌生未备露，安全距离留；越惊越兴奋，冷淡反扫兴。"</strong><br>
+      解释：四句分别对应教材四个要点——对象（陌生、毫无准备）、站位（保持安全距离便于逃脱）、强化机制（受害人反应越强越兴奋）、反向验证（对方冷淡则扫兴）。<br>
+      <em>为什么这样记：</em>"冷淡反扫兴"这句最反直觉，也最能证明"他要的是反应而不是性"，记住它，整段行为逻辑就立住了。
+    </div>
+    <div class="callout tip">
+      <span class="ct">🔧 方法二：场景联想法</span>
+      想象傍晚的校园林荫道：一个内向的男生躲在树后，等一个女生走近，突然掏出——女生尖叫跑开，他感到快乐；如果女生面无表情地走过去，他反而觉得没劲。<br>
+      <em>为什么这样记：</em>教材病例正是"天黑前或早晨锻炼""偏僻林荫小道""见女生受到惊吓而自感快乐"，画面本身就来自原文，联想越具体，回忆越省力。
+    </div>
+    <div class="callout tip">
+      <span class="ct">🔧 方法三：数字与人群锚定法</span>
+      记 <strong>"2～4、16、几乎只见男"</strong>：男性患病率 2%～4%；受害者一般为 16 岁以上妇女；该症几乎只见于男性。再加一句"中老年首发先排器质"。<br>
+      <em>为什么这样记：</em>三个数字恰好覆盖"多少、对谁、谁得"三问；"中老年首发排器质"是一个高频陷阱，单独挂在同一组数字上不易漏。
+    </div>
+    <div class="callout tip">
+      <span class="ct">🔧 方法四：对比记忆法（露／看／蹭）</span>
+      一排三列：<strong>露</strong>（让对方看见，无接触）、<strong>看</strong>（偷看，无接触）、<strong>蹭</strong>（贴身体摩擦，有接触）。<br>
+      <em>为什么这样记：</em>三个动词一个字一个障碍，把最容易混的三型一次分开；考试中只要题干出现"身体接触"，立即划掉露阴与窥视。
+    </div>
+  </div>
+
+  <!-- 第八栏 -->
+  <div class="card cyan" id="u2-8">
+    <h3 class="col-title"><span class="idx">第八栏</span>知识联动</h3>
+    <ul>
+      <li><strong>与司法精神病学：</strong>教材病例经"司法精神病学鉴定"确诊，说明本障碍常由机构送检而非自愿就诊；教材也未把诊断或鉴定等同于免责，实施致害仍"应予追究责任"。</li>
+      <li><strong>与精神分裂症章：</strong>命令性幻听支配下的暴露行为属"其他精神障碍伴发"，不可诊断为本障碍。</li>
+      <li><strong>与神经认知障碍／物质使用章：</strong>癫痫、酒精中毒、阿尔茨海默病早期可出现露阴行为，提示器质性排查优先。</li>
+      <li><strong>与性医学：</strong>教材指出大部分患者性功能低下或缺乏正常性功能，有的对性交不感兴趣。<span class="note">（由此看，教材行为疗法中"解除对成年异性厌恶情绪"这一目标对本障碍同样适用；此为临床含义说明，非教材原句）</span></li>
+      <li><strong>与公共安全／校园管理：</strong>教材病例发生在校园，由校方控制后送鉴定，体现场所管理在识别环节的作用（此为教材情境的直接延伸，非新增结论）。</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===== 07 窥视障碍 ===== -->
+<section id="u3">
+  <div class="sec-head"><div class="badge">07</div><h2>窥视障碍<span class="en">Voyeuristic disorder</span></h2></div>
+  <p class="sec-lead">与露阴障碍"一露一藏"正相反：他要的是<strong>不被发现地看</strong>。教材用"小心、潜伏、工具、不性交"四个细节，把它和"好奇"划开。</p>
+
+  <!-- 第一栏 -->
+  <div class="card red" id="u3-1">
+    <h3 class="col-title"><span class="idx">第一栏</span>疾病画像</h3>
+    <div class="quote"><span class="lab">教材原文</span>窥视障碍（voyeuristic disorder）是一种反复多次地窥视他人性活动、亲昵行为或异性裸体来满足自己性兴奋的偏爱方式，有的在窥视当时手淫，有的事后回忆时手淫，达到性的满足。</div>
+    <p><strong>一句话画像：</strong>把"偷看"变成了唯一的性满足渠道：<span class="note">（类比理解）</span>别人用亲密来获得兴奋，他用"我看到了、而你不知道"来获得兴奋。</p>
+    <div class="grid2">
+      <div class="mini">
+        <h4>人群特征</h4>
+        <ul>
+          <li>以<strong>男性多见</strong>。</li>
+          <li>其异性恋活动<strong>并不充分</strong>。</li>
+          <li>往往非常小心，以防被窥视的异性发现。</li>
+          <li>大部分窥视者不是被受害人报告，而是被<strong>过路人</strong>发现。</li>
+        </ul>
+      </div>
+      <div class="mini">
+        <h4>数据（教材"有资料表明"）</h4>
+        <ul>
+          <li>男性窥视障碍<strong>终生患病率约 12%</strong>。</li>
+          <li>女性约 <strong>4%</strong>。</li>
+        </ul>
+        <p class="note">教材同时说明：因不主动就医、行为隐蔽、标准与人群差异，难以获得准确患病率。</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 第二栏 -->
+  <div class="card blue" id="u3-2">
+    <h3 class="col-title"><span class="idx">第二栏</span>病因探秘</h3>
+    <div class="callout book"><span class="ct">📖 教材未对本障碍单列病因</span>教材只在总论中统一论述三类因素。以下为总论机制在本障碍上的对应，凡教材未点名者不补充具体假说。</div>
+    <div class="grid3">
+      <div class="mini">
+        <h4>生物学</h4>
+        <ul>
+          <li>神经发育轨迹受遗传、母体免疫、激素干扰。</li>
+          <li>5-HT／多巴胺系统功能紊乱。</li>
+          <li>教材未提供窥视障碍专属的脑影像或激素数据。</li>
+        </ul>
+      </div>
+      <div class="mini">
+        <h4>心理</h4>
+        <ul>
+          <li>精神动力学：退行至儿童早期，"偷看异性洗澡"被教材列为幼稚的儿童性取乐行为之一。</li>
+          <li>行为学：窥视带来的强烈性快感与场景结合，经回忆与性幻想反复强化，形成条件联系。</li>
+        </ul>
+      </div>
+      <div class="mini">
+        <h4>社会</h4>
+        <ul>
+          <li>性欲被过分压抑、性教育不当。</li>
+          <li>教材强调"很多人都有童年偷看异性上厕所的经历"——说明该行为在人群中并不罕见，<strong>是否会固定下来</strong>才是关键。</li>
+        </ul>
+      </div>
+    </div>
+    <div class="callout tip"><span class="ct">💡 一个重要的"正常—异常"分水岭</span>教材原文：童年偷看经历"随着年龄的增长会自然消失"；"有的由于偶然的机会偷看异性洗澡、上厕所，不属于此症"。所以病因学的关键不是"看过"，而是<strong>是否被强化成偏爱、是否持续到成年并成为主要满足方式</strong>。</div>
+  </div>
+
+  <!-- 第三栏 -->
+  <div class="card red" id="u3-3">
+    <h3 class="col-title"><span class="idx">第三栏</span>临床表现拼图</h3>
+    <div class="grid2">
+      <div class="mini">
+        <h4>怎么窥</h4>
+        <ul>
+          <li>通过厕所、浴室、卧室的<strong>窗户孔隙</strong>进行。</li>
+          <li>有的<strong>长时间潜伏于厕所等肮脏地方</strong>。</li>
+          <li>有的借助<strong>反光镜或望远镜</strong>等工具偷窥。</li>
+        </ul>
+      </div>
+      <div class="mini">
+        <h4>看什么、图什么</h4>
+        <ul>
+          <li>窥视他人性活动、亲昵行为或异性裸体。</li>
+          <li>有的在窥视<strong>当时</strong>手淫，有的<strong>事后回忆</strong>时手淫，达到性的满足。</li>
+          <li>对窥视有<strong>强烈追求</strong>。</li>
+        </ul>
+      </div>
+      <div class="mini">
+        <h4>不做什么（界限）</h4>
+        <ul>
+          <li>并不企图与被窥视者性交。</li>
+          <li>除窥视行为本身外，一般不会有进一步的攻击和伤害行为。</li>
+          <li>特定地排除"已获得行为中各方同意的窥视行为"。</li>
+        </ul>
+      </div>
+      <div class="mini">
+        <h4>现实功能</h4>
+        <ul>
+          <li>多不愿与异性交往，有的甚至害怕异性、害怕性交。</li>
+          <li>与性伴侣的性活动难以获得成功，<strong>有些伴有阳痿</strong>。</li>
+          <li>异性恋活动并不充分。</li>
+        </ul>
+      </div>
+    </div>
+    <div class="callout key"><span class="ct">📌 用一句话把四块缝起来</span>"<strong>躲进脏地方、隔着孔看、看完自己解决、从不进一步</strong>"——这十六个字就是窥视障碍的完整行为链。</div>
+  </div>
+
+  <!-- 第四栏 -->
+  <div class="card orange" id="u3-4">
+    <h3 class="col-title"><span class="idx">第四栏</span>教材典型案例</h3>
+    <div class="quote"><span class="lab">教材原文</span>患者，男，28 岁，由 15 岁开始对女性性器官感到特别好奇，渴求窥视，曾在 16 岁时 1 年期间扒到女厕所看女人排便十余次。后经父母亲包办结婚，婚后对妻子没有感情，但是对妻子排尿特别地感兴趣，在妻子每次排尿时，都聚精会神地观看，同时有手淫行为。</div>
+    <p><strong>案例拆解：</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>线索</th><th>原文表现</th><th>对应知识点</th></tr></thead>
+        <tbody>
+          <tr><td>起病年龄</td><td>15 岁开始对女性性器官特别好奇</td><td>教材未限定起病年龄；本例提示青少年期萌芽</td></tr>
+          <tr><td>行为频率与地点</td><td>16 岁 1 年期间扒女厕所看排便<strong>十余次</strong></td><td>"反复多次""通过厕所窗户孔隙""长时间潜伏于肮脏地方"</td></tr>
+          <tr><td>替代场景</td><td>婚后对妻子排尿特别感兴趣，每次聚精会神观看并手淫</td><td>窥视对象可延伸至"亲昵行为／私密行为"；窥视当时或事后手淫</td></tr>
+          <tr><td>关系背景</td><td>父母包办结婚，婚后对妻子没有感情</td><td>教材"异性恋活动并不充分""与性伴侣的性活动难以获得成功"</td></tr>
+          <tr><td>未出现的内容</td><td>无性交企图、无攻击伤害</td><td>"并不企图与被窥视者性交""一般不会有进一步攻击和伤害行为"</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout key"><span class="ct">📌 这例最容易漏掉的点</span>窥视对象并不限于"陌生人"或"裸体"：本例最终固定于<strong>妻子的排尿</strong>。教材的诊断表述是"窥视其裸体（例如窥视他人更衣或进行性行为）以获得性的刺激"，教材在此处的用词是"偏爱方式"，核心是<strong>私密场景 + 未经同意 + 成为主要满足方式</strong>，而不是对象是不是配偶。<span class="note">（此句为依据教材原文的边界说明，属释义，非教材原文）</span></div>
+    <p class="note">本栏为教材原文引用，未添加任何检查结果或结局推测。</p>
+  </div>
+
+  <!-- 第五栏 -->
+  <div class="card orange" id="u3-5">
+    <h3 class="col-title"><span class="idx">第五栏</span>鉴别诊断对对碰</h3>
+    <p><strong>表 1　窥视障碍 vs 正常的好奇与"手段"</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>情形</th><th>教材判断</th><th>关键理由</th></tr></thead>
+        <tbody>
+          <tr><td>童年偷看异性上厕所</td><td><strong>不属于此症</strong></td><td>很多人都有此经历，随年龄增长会自然消失</td></tr>
+          <tr><td>偶然机会偷看异性洗澡、上厕所</td><td><strong>不属于此症</strong></td><td>教材明确"有的由于偶然的机会……不属于此症"</td></tr>
+          <tr><td>看色情影片、录像、画册时伴性兴奋</td><td><strong>不能诊断为窥视障碍</strong></td><td>不属于窥视"他人"的私密场景；教材将其列为鉴别情形</td></tr>
+          <tr><td>把上述材料作为增强正常性活动的手段</td><td><strong>不能诊断为窥视障碍</strong></td><td>教材原文直接排除</td></tr>
+          <tr><td>各方已同意的窥视行为</td><td><strong>诊断特定排除</strong></td><td>诊断条目："特定地排除已获得行为中各方同意的窥视行为"</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout key"><span class="ct">📌 一句话鉴别总结</span>问"<strong>是不是反复、是不是偏爱、是不是唯一</strong>"：偶然一次、作为辅助手段、双方同意——三条中占一条，就不能贴这个诊断。</div>
+    <p><strong>表 2　与其他精神障碍伴发的窥视行为</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>维度</th><th>窥视障碍</th><th>其他精神障碍伴发</th></tr></thead>
+        <tbody>
+          <tr><td>诊断逻辑</td><td>窥视是独立的核心性唤起模式</td><td>患者满足另一精神疾病诊断标准，行为受该病影响</td></tr>
+          <tr><td>教材举例</td><td>—</td><td>教材在鉴别诊断中以精神分裂症命令性幻听支配下的暴露行为为例，说明"异常性行为可由其他疾病带出"这一逻辑</td></tr>
+          <tr><td>处理</td><td>针对障碍本身</td><td>治疗原发病</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout key"><span class="ct">📌 一句话鉴别总结</span>先确立"<strong>有没有一个能解释全部表现的病</strong>"，再决定这个行为算症状还是算独立的性偏好障碍。</div>
+    <p><strong>表 3　窥视 vs 露阴 vs 摩擦（三个"不性交"的障碍）</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>维度</th><th>窥视障碍</th><th>露阴障碍</th><th>摩擦障碍</th></tr></thead>
+        <tbody>
+          <tr><td>谁主动</td><td>窥视者主动"看"</td><td>露阴者主动"被看"</td><td>摩擦者主动"贴"</td></tr>
+          <tr><td>对方是否知道</td><td>不知道</td><td>知道</td><td>不知道</td></tr>
+          <tr><td>身体接触</td><td>无</td><td>无</td><td>有</td></tr>
+          <tr><td>典型场所</td><td>厕所、浴室、卧室窗外</td><td>偏僻小路、教室</td><td>拥挤公交车、商场</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout key"><span class="ct">📌 一句话鉴别总结</span><strong>要"看到"是窥视，要"被看到"是露阴，要"碰到"是摩擦</strong>——主动方向与接触与否，两个维度足够分开。</div>
+  </div>
+
+  <!-- 第六栏 -->
+  <div class="card green" id="u3-6">
+    <h3 class="col-title"><span class="idx">第六栏</span>治疗方案工具箱</h3>
+    <div class="callout book"><span class="ct">📖 教材未对窥视障碍单列治疗方案</span>教材的治疗内容以"性心理障碍"整体为单位。以下列出教材<strong>点名涉及本障碍</strong>的药物与通用心理治疗、教育措施；剂量与疗程按教材口径标注。</div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>措施</th><th>教材表述</th><th>剂量/疗程</th></tr></thead>
+        <tbody>
+          <tr><td>氟西汀（SSRIs）</td><td>教材明确：氟西汀能够减少恋童障碍、<strong>窥视障碍</strong>、露阴障碍等患者的性幻想和性行为</td><td><strong>教材未涉及剂量</strong></td></tr>
+          <tr><td>舍曲林</td><td>教材称 SSRIs 中以氟西汀和舍曲林使用最多（未逐病点名舍曲林）</td><td><strong>教材未涉及剂量</strong></td></tr>
+          <tr><td>抗雄激素／GnRHa</td><td>教材列为生物学治疗的三类之一</td><td>疗程：学者观点为至少 3～5 年或终身，<strong>无一致定论</strong></td></tr>
+          <tr><td>DBS</td><td>下丘脑后部或腹内侧定位"有一定疗效"</td><td><strong>教材未涉及</strong></td></tr>
+          <tr><td>行为疗法</td><td>满灌、厌恶、交互抑制、系统脱敏；减少偏好的性幻想及性冲动；解除对成年异性的厌恶情绪</td><td>教材未给次数与周期</td></tr>
+          <tr><td>想象性内隐致敏法</td><td>想象高度兴奋场景，出现性兴奋时给予惩罚（低电流刺激、弹皮圈、催吐剂）</td><td>教材未给参数</td></tr>
+          <tr><td>精神分析／认识领悟疗法</td><td>探讨潜意识意义、回忆幼年经历与性心理发展、修复早年创伤；认识领悟疗法为短程疗法</td><td>教材未给疗程</td></tr>
+          <tr><td>正面教育</td><td>指出行为违法、违反制度、影响就业升学，促其以意志克服</td><td>—</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout tip"><span class="ct">💡 本障碍的治疗重点</span>教材对窥视障碍的现实描述是"多不愿与异性交往、害怕异性、害怕性交，有些伴阳痿"。因此行为疗法中"<strong>解除患者对成年异性的厌恶情绪</strong>"这一目标，对本障碍格外贴切——治疗不只是"减少偷看"，还要恢复正常的异性交往与性功能。<span class="note">（此为依据教材原文的临床提示，非教材新增结论）</span></div>
+    <p class="note">教材未涉及：本障碍的药物治疗顺序、疗程节点、复发率、联合治疗方案。</p>
+  </div>
+
+  <!-- 第七栏 -->
+  <div class="card purple" id="u3-7">
+    <h3 class="col-title"><span class="idx">第七栏</span>记忆工具箱</h3>
+    <div class="callout tip">
+      <span class="ct">🔧 方法一：四字缩拼法</span>
+      记 <strong>"孔、藏、看、手"</strong>：隔<strong>孔</strong>（窗孔、孔隙）、<strong>藏</strong>（长时间潜伏于厕所等肮脏地方）、<strong>看</strong>（看性活动、亲昵行为、裸体）、<strong>手</strong>（窥视当时或事后手淫）。<br>
+      <em>为什么这样记：</em>四个字把"手段—场所—对象—满足方式"四要素一次收拢；考试问"窥视障碍的典型表现"，按四字展开即可成段。
+    </div>
+    <div class="callout tip">
+      <span class="ct">🔧 方法二：对比记忆法（正常窥视的三条出口）</span>
+      三条"不算"：<strong>童年经历会消失</strong>、<strong>偶然一次不算</strong>、<strong>看色情材料／作辅助手段不算</strong>。再加一条"双方同意不算"。<br>
+      <em>为什么这样记：</em>教材花了整整一段写"什么人不是窥视障碍"，这一段恰恰是考点；用"三条出口"记，比记"什么是"更省力，也更不容易误诊。
+    </div>
+    <div class="callout tip">
+      <span class="ct">🔧 方法三：数字锚定法</span>
+      记 <strong>"12／4"</strong>：男性终生患病率约 12%，女性约 4%——男女差三倍。<br>
+      <em>为什么这样记：</em>这两个数字是本章少数几个明确的流行病学数据，且与露阴的"2%～4%"容易混。把"窥视 12/4、露阴 2-4"成对记，可以互相校验：<strong>窥视的男性数字明显更高</strong>。
+    </div>
+    <div class="callout tip">
+      <span class="ct">🔧 方法四：故事串联法（教材病例）</span>
+      15 岁好奇 → 16 岁一年扒厕所十余次 → 父母包办结婚、对妻子无感情 → 只对妻子排尿感兴趣、观看并手淫。<br>
+      <em>为什么这样记：</em>这条时间线本身就是教材原文，按"起病—高峰—婚姻—固着"四段复述，既记住病例，也记住"异性恋活动不充分"这一特征。
+    </div>
+  </div>
+
+  <!-- 第八栏 -->
+  <div class="card cyan" id="u3-8">
+    <h3 class="col-title"><span class="idx">第八栏</span>知识联动</h3>
+    <ul>
+      <li><strong>与儿童青少年精神卫生：</strong>教材用"很多人都有童年偷看经历，随年龄增长自然消失"来划定正常范围，提示评估必须结合发育阶段。</li>
+      <li><strong>与性功能障碍：</strong>教材指出患者与性伴侣的性活动难以成功、有些伴阳痿，属于性医学与精神科的交界。</li>
+      <li><strong>与精神分裂症章：</strong>沿用"异常性行为是否由其他精神疾病带出"的鉴别逻辑。</li>
+      <li><strong>与法律／隐私保护：</strong>窥视侵犯他人隐私，教材将其列为可由过路人发现、由受害人报案的行为；具体法律责任依现行法律，教材未展开。</li>
+      <li><strong>与公共设施管理：</strong>教材点名厕所、浴室、卧室窗孔与反光镜、望远镜等工具，提示环境设计与管理是预防环节之一（此为教材情境的直接延伸）。</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===== 08 恋童障碍 ===== -->
+<section id="u4">
+  <div class="sec-head"><div class="badge">08</div><h2>恋童障碍<span class="en">Pedophilic disorder</span></h2></div>
+  <p class="sec-lead">本章证据最"硬"、也最危险的一个单元：教材给了它最确凿的脑影像线索，同时用三条年龄线和一句"不属于本症范畴"划出了不能越过的界。</p>
+
+  <!-- 第一栏 -->
+  <div class="card red" id="u4-1">
+    <h3 class="col-title"><span class="idx">第一栏</span>疾病画像</h3>
+    <div class="quote"><span class="lab">教材原文</span>恋童障碍（pedophilic disorder）是指患者的性欲通常部分或全部地指向青春期前或未发育的儿童。通过与青春期前的单个或多个儿童（通常年龄为 13 岁或更小）的性活动而激起个体反复的、强烈的性唤起，表现为性幻想、性冲动或性行为。患者会实施这些性冲动，或者这些性幻想会引起其显著的痛苦或人际交往困难。患者年龄至少 16 岁，比受害儿童至少年长 5 岁。</div>
+    <p><strong>一句话画像：</strong>不是"喜欢孩子"，而是"性唤起只对未发育的身体起反应"：<span class="note">（类比理解）</span>性偏好的指针被固定在了发育之前的刻度上，成年异性反而"没有信号"。</p>
+    <div class="grid2">
+      <div class="mini">
+        <h4>三条年龄线（诊断门槛）</h4>
+        <ul>
+          <li>受害儿童：<strong>青春期前</strong>，通常 <strong>13 岁或更小</strong>。</li>
+          <li>患者：至少 <strong>16 岁</strong>。</li>
+          <li>年龄差：比受害儿童至少<strong>年长 5 岁</strong>。</li>
+        </ul>
+      </div>
+      <div class="mini">
+        <h4>人群与性功能</h4>
+        <ul>
+          <li>基本都是<strong>男性</strong>，也有女性案例的报道。</li>
+          <li>仅对儿童有强烈性兴趣，对成年异性缺乏必要的性兴趣或正常性活动。</li>
+          <li>缺乏足够的自信心与异性交往；<strong>多数独身</strong>；大多数患有<strong>勃起障碍</strong>。</li>
+        </ul>
+      </div>
+    </div>
+    <div class="callout warn"><span class="ct">⚠️ 本单元的特殊性</span>教材在概述与治疗两处都强调法律边界：性心理障碍者若将歪曲的冲动予以实施、对他人造成伤害或干扰社会秩序，<strong>应予追究责任</strong>——教材并未因"有病"而免除实施者的责任。本指南只做教材内容的整理，不提供任何行为指导。</div>
+  </div>
+
+  <!-- 第二栏 -->
+  <div class="card blue" id="u4-2">
+    <h3 class="col-title"><span class="idx">第二栏</span>病因探秘</h3>
+    <p>教材在总论的生物学段落中，对恋童障碍着墨最多，且明确区分了证据强度。这是本章唯一有"较确凿"脑结构证据的障碍。</p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>线索</th><th>教材表述</th><th>如何理解</th></tr></thead>
+        <tbody>
+          <tr><td>杏仁核体积</td><td>男性恋童症患者脑组织局部体积较正常人小，<strong>特别是杏仁核体积减小的证据较为确凿</strong></td><td>本章最强的一条结构证据；杏仁核参与情绪与性相关加工</td></tr>
+          <tr><td>额叶、颞叶损伤</td><td>出现儿童性犯罪的性心理障碍患者，其额叶和颞叶损伤<strong>或许</strong>与冲动抑制功能受损相关</td><td>"或许"表示推测性关联，不能当作确定因果</td></tr>
+          <tr><td>脑区功能连接</td><td>动机、社会情感功能相关脑区的功能连接<strong>显著低于</strong>正常人群</td><td>功能层面证据，与"社会情感加工"受损相呼应</td></tr>
+          <tr><td>脑白质微结构</td><td>磁共振弥散张量成像研究表明存在异常</td><td>白质层面证据</td></tr>
+          <tr><td>情感加工与神经认知</td><td>有研究支持恋童障碍患者存在脑结构改变，并与其情感加工和神经认知功能受损相关</td><td>把结构与功能连起来的表述</td></tr>
+          <tr><td>儿童期头部受伤</td><td>Blanchard 等发现，自我报告儿童时期头部受伤的人群中，恋童障碍比例高于其他人群</td><td>流行病学关联，非个体诊断依据</td></tr>
+          <tr><td>围产期脑损害</td><td>Medonick 的长期追踪研究认为暴力与性犯罪行为与围产期脑损害有关</td><td>观点性表述</td></tr>
+          <tr><td>继发于其他疾病</td><td>癫痫、酒精中毒、阿尔茨海默病早期可出现恋童等行为</td><td>提示器质性排查</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="grid2">
+      <div class="mini">
+        <h4>心理因素（总论）</h4>
+        <ul>
+          <li>精神动力学：性心理发展受挫、退行至儿童早期阶段。</li>
+          <li>行为学：刺激与性快感偶然结合后被回忆与幻想反复强化，形成条件联系。</li>
+        </ul>
+      </div>
+      <div class="mini">
+        <h4>社会因素（总论）</h4>
+        <ul>
+          <li>性欲被过分压抑、性生物学知识与性伦理教育不当。</li>
+          <li>教材未提出针对恋童障碍的专属社会病因，此处不补写。</li>
+        </ul>
+      </div>
+    </div>
+    <div class="callout tip"><span class="ct">💡 重要限定</span>教材的总结是"多种生物学因素……可能相互叠加，仍有待今后进一步研究"。因此<strong>任何单一脑结构异常都不能用来解释或开脱个体的行为</strong>——教材本身也没有这样推论。</div>
+  </div>
+
+  <!-- 第三栏 -->
+  <div class="card red" id="u4-3">
+    <h3 class="col-title"><span class="idx">第三栏</span>临床表现拼图</h3>
+    <div class="tabs" data-tabs>
+      <div class="tabbar">
+        <button class="on" data-tab="p1">对象与偏好</button>
+        <button data-tab="p2">行为方式</button>
+        <button data-tab="p3">后果与界限</button>
+      </div>
+      <div class="panel on" data-panel="p1">
+        <ul>
+          <li>性欲<strong>部分或全部</strong>指向青春期前或未发育的儿童。</li>
+          <li>偏好对象可能<strong>仅为女孩</strong>、<strong>仅为男孩</strong>，也有的对两种性别儿童均有兴趣。</li>
+          <li>对成年异性"缺乏必要的性兴趣或正常的性活动"。</li>
+          <li>缺乏足够自信心与异性交往，多数独身。</li>
+        </ul>
+      </div>
+      <div class="panel" data-panel="p2">
+        <ul>
+          <li>通过<strong>猥亵儿童</strong>达到性兴奋或性高潮，如<strong>眼观、手摸、手指插入</strong>等。</li>
+          <li><strong>不一定与儿童发生真正的性行为</strong>。</li>
+          <li>受害儿童既可能是患者<strong>自己的孩子或亲属</strong>，也可以是其他非血缘关系的儿童。</li>
+          <li>多数患有勃起障碍。</li>
+        </ul>
+      </div>
+      <div class="panel" data-panel="p3">
+        <ul>
+          <li>患者在猥亵儿童后，通常会对儿童<strong>施以威胁</strong>，以阻止暴行外泄，从而导致后续一系列犯罪行为的出现。</li>
+          <li>恋童障碍是<strong>持续而强烈的性偏好障碍</strong>。</li>
+          <li>教材原文明示："为发泄性欲强奸和猥亵幼女的行为<strong>不属于本症范畴</strong>"。</li>
+          <li>诊断还需"有基于这种想法、幻想或冲动的<strong>实际行为</strong>，或感到明显的痛苦"。</li>
+        </ul>
+      </div>
+    </div>
+    <div class="callout warn"><span class="ct">⚠️ 两处"猥亵"不要读混</span>教材一处说"通过猥亵儿童来达到自己的性兴奋或性高潮"，另一处说"为发泄性欲强奸和猥亵幼女的行为不属于本症范畴"。这是<strong>两种不同语境下的表述</strong>，教材未作进一步区分说明。学习时按原文各自记忆，<strong>不要自行改写或扩张解释</strong>；涉及具体案件定性，属司法判断，不是本章的医学诊断任务。</div>
+  </div>
+
+  <!-- 第四栏 -->
+  <div class="card orange" id="u4-4">
+    <h3 class="col-title"><span class="idx">第四栏</span>教材典型案例</h3>
+    <div class="callout book">
+      <span class="ct">📖 教材未提供具体临床案例</span>
+      本节只有定义、人群描述与行为方式的说明，<strong>没有带年龄、性别、就诊过程的完整病例</strong>（本章仅露阴、窥视与做作性障碍三处附【典型病例】）。为避免编造，本栏不虚构患者。
+    </div>
+    <p><strong>教材以"行为描述"方式给出的三类情境（原文整理，不是病例）：</strong></p>
+    <div class="grid3">
+      <div class="mini">
+        <h4>情境 A · 眼观</h4>
+        <p>教材把"眼观"列为猥亵儿童的具体方式之一，与手摸、手指插入并列。说明该障碍的行为并不必然包含生殖器接触。</p>
+      </div>
+      <div class="mini">
+        <h4>情境 B · 手摸、手指插入</h4>
+        <p>教材原文列举的进一步方式。教材同时指出"不一定与儿童发生真正的性行为"——这句是理解本障碍行为边界的关键。</p>
+      </div>
+      <div class="mini">
+        <h4>情境 C · 威胁封口</h4>
+        <p>猥亵后"通常会对儿童施以威胁，以阻止自己的暴行外泄"，并因此导致后续一系列犯罪行为。教材把这一步写进了临床描述，提示其危害不止于一次性接触。</p>
+      </div>
+    </div>
+    <div class="callout key"><span class="ct">📌 没有病例，怎么练</span>把教材的三条"可观察线索"当作识别锚点：<strong>对象是青春期前儿童</strong>、<strong>方式可以是眼观而不接触</strong>、<strong>事后有威胁封口</strong>。三条都指向"持续性偏好 + 实际行为"，而不是"一次冲动"。</div>
+    <p class="note">本栏不含任何虚构的受害儿童信息、检查结果或司法结论。</p>
+  </div>
+
+  <!-- 第五栏 -->
+  <div class="card orange" id="u4-5">
+    <h3 class="col-title"><span class="idx">第五栏</span>鉴别诊断对对碰</h3>
+    <p><strong>表 1　三条最容易跨错的线</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>对照情形</th><th>教材判断</th><th>判断依据</th></tr></thead>
+        <tbody>
+          <tr><td>青春期前后年龄近似的儿童之间发生的各种性行为</td><td><strong>不能做出恋童障碍的诊断</strong></td><td>教材诊断条目原文；年龄差不足 5 岁，且非"成人—儿童"结构</td></tr>
+          <tr><td>为发泄性欲实施的强奸和猥亵幼女</td><td><strong>不属于本症范畴</strong></td><td>教材在临床表现段末明确表述</td></tr>
+          <tr><td>仅有一次冲动、无实际行为也无明显痛苦</td><td><strong>不满足诊断门槛</strong></td><td>诊断要求"必须有基于这种想法、幻想或冲动的实际行为，或感到明显的痛苦"</td></tr>
+          <tr><td>成年人对成年人的性兴趣（含对年轻成人）</td><td>不符合"青春期前"这一对象限定</td><td>定义以"青春期前或未发育的儿童"为对象</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout key"><span class="ct">📌 一句话鉴别总结</span>先算<strong>年龄</strong>（儿童 ≤13 岁、患者 ≥16 岁、差 ≥5 岁），再看<strong>模式</strong>（持续偏好，不是一次冲动），最后看<strong>门槛</strong>（有实际行为或明显痛苦）。三条缺一，就不能下诊断。</div>
+    <p><strong>表 2　与其他精神障碍、器质性疾病伴发的恋童行为</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>维度</th><th>恋童障碍</th><th>继发于其他疾病</th></tr></thead>
+        <tbody>
+          <tr><td>典型情形</td><td>独立的、持续强烈的性偏好</td><td>癫痫、酒精中毒、阿尔茨海默病早期可出现恋童等行为；或满足另一精神疾病诊断标准</td></tr>
+          <tr><td>时间关系</td><td>长期存在、较固定</td><td>与原发病的出现相关，随原发病变化</td></tr>
+          <tr><td>处理方向</td><td>针对障碍本身（生物、心理、教育）＋法律边界</td><td>优先治疗原发病；教材要求诊断时检查性器官、性激素、染色体以排除躯体与遗传疾病</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout key"><span class="ct">📌 一句话鉴别总结</span>病程短、与原发病同步出现、原发病控制后行为改变 → 先当"继发"处理；长期固定、独立存在 → 才考虑本障碍。</div>
+    <p><strong>表 3　本障碍与"正常成人性兴趣"的结构差异</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>维度</th><th>恋童障碍</th><th>成人间的性兴趣</th></tr></thead>
+        <tbody>
+          <tr><td>对象</td><td>青春期前、未发育的儿童</td><td>性成熟的对象</td></tr>
+          <tr><td>性活动能力</td><td>对成年异性缺乏必要兴趣或正常性活动；多数独身；多数患勃起障碍</td><td>教材未描述此类人群的性功能问题</td></tr>
+          <tr><td>后果</td><td>对儿童造成伤害；教材明确实施者应被追究责任</td><td>不涉及未成年人保护问题</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout key"><span class="ct">📌 一句话鉴别总结</span>这不是"偏好年轻"的程度问题，而是<strong>对象是否处于青春期前</strong>的性质问题——界限由发育阶段划定，不由"看起来成熟"决定。</div>
+  </div>
+
+  <!-- 第六栏 -->
+  <div class="card green" id="u4-6">
+    <h3 class="col-title"><span class="idx">第六栏</span>治疗方案工具箱</h3>
+    <div class="callout book"><span class="ct">📖 教材未对恋童障碍单列治疗方案</span>教材把治疗写在"性心理障碍"总论中，仅在 SSRIs 段落点名本障碍。以下为教材点名内容与通用方法，剂量与疗程严格按教材口径。</div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>措施</th><th>教材表述</th><th>剂量/疗程</th></tr></thead>
+        <tbody>
+          <tr><td><strong>氟西汀</strong>（SSRIs）</td><td>教材点名："氟西汀能够减少<strong>恋童障碍</strong>、露阴障碍、窥视障碍等患者的性幻想和性行为"</td><td><strong>教材未涉及剂量</strong></td></tr>
+          <tr><td>SSRIs 适用人群</td><td>主要适用于轻度患者、青少年患者，或共病抑郁障碍、强迫症的情况；知情同意＋依从性好时，可用于认知行为疗法控制欠佳的高水平性唤起患者</td><td>—</td></tr>
+          <tr><td>抗雄激素药物</td><td>教材列为生物学治疗三类之一</td><td>疗程说法不一：至少 3～5 年，或终身；<strong>无一致定论</strong></td></tr>
+          <tr><td>GnRHa 或激动剂</td><td>教材列为三类之一</td><td><strong>教材未涉及</strong></td></tr>
+          <tr><td>DBS</td><td>下丘脑后部或腹内侧定位"有一定疗效"</td><td><strong>教材未涉及</strong></td></tr>
+          <tr><td>心理治疗</td><td>行为疗法（满灌、厌恶、交互抑制、系统脱敏）；想象性内隐致敏法；精神分析；认识领悟疗法</td><td>教材未给次数与疗程</td></tr>
+          <tr><td>正面教育</td><td>指出行为违反法律、单位制度、文化风俗，使就业升学面临严重问题；促其以意志克服性偏离倾向</td><td>—</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout warn"><span class="ct">⚠️ 风险优先原则（教材原文）</span>"性心理障碍患者若存在危险行为的高风险，其药物治疗应首先选择一线用药。" 教材同时要求方案制定综合考虑<strong>用药史、依从性、病情以及发生性暴力的风险</strong>。本障碍属于需优先评估风险的类型。</div>
+    <div class="timeline">
+      <div class="tl-item"><h4>第一步 · 安全与法律边界</h4><p>教材明确：将歪曲冲动实施、对他人造成伤害或干扰社会秩序者，应予追究责任。治疗不能替代法律责任，儿童保护优先。</p></div>
+      <div class="tl-item"><h4>第二步 · 器质性排查</h4><p>查性器官发育、性激素水平、染色体有无畸变；注意癫痫、酒精中毒、阿尔茨海默病早期等可能。</p></div>
+      <div class="tl-item"><h4>第三步 · 风险分层用药</h4><p>高风险者按教材"一线用药"原则；轻症、青少年、共病抑郁或强迫者可考虑 SSRIs；用药需知情同意。</p></div>
+      <div class="tl-item"><h4>第四步 · 心理治疗与教育</h4><p>以行为疗法为主干，辅以精神分析或认识领悟疗法；配合正面教育指出法律与人生后果。</p></div>
+      <div class="tl-item"><h4>第五步 · 长期管理</h4><p>教材坦言生物学治疗效果不确定、心理治疗难度很高；对治疗愿望弱、病程长、年龄超过 40 岁者疗效欠佳。</p></div>
+    </div>
+    <p class="note">教材未涉及：本障碍的具体药物剂量、疗程节点、复发率、随访间隔，以及任何针对未成年受害者的处理流程（后者超出本章范围）。</p>
+  </div>
+
+  <!-- 第七栏 -->
+  <div class="card purple" id="u4-7">
+    <h3 class="col-title"><span class="idx">第七栏</span>记忆工具箱</h3>
+    <div class="callout tip">
+      <span class="ct">🔧 方法一：数字编码法（本章最值钱的一组数字）</span>
+      记 <strong>"16—5—13"</strong>：患者<strong>至少 16 岁</strong>；比受害儿童<strong>至少年长 5 岁</strong>；受害儿童通常<strong>13 岁或更小</strong>、且为青春期前。<br>
+      <em>为什么这样记：</em>三个数字构成一个"资格门槛"，任一不满足就不能诊断；把数字按"患者—差值—对象"顺序排列，回忆时像核对身份证一样逐项打勾，最不容易漏。
+    </div>
+    <div class="callout tip">
+      <span class="ct">🔧 方法二：证据分级记忆法</span>
+      把教材的脑证据按"硬度"排三档：<strong>较确凿</strong>（杏仁核体积减小）→ <strong>研究显示</strong>（功能连接降低、白质微结构异常、情感与认知受损）→ <strong>或许／假说</strong>（额叶颞叶损伤与冲动抑制、围产期脑损害）。<br>
+      <em>为什么这样记：</em>考试常把"或许相关"写成"已证实"来设陷阱。记住"只有杏仁核是较确凿"，一眼就能判出错误选项。
+    </div>
+    <div class="callout tip">
+      <span class="ct">🔧 方法三：三重"不属于"排除法</span>
+      三个"不是"：<strong>不是</strong>青春期同龄儿童间的性行为（不作诊断）；<strong>不是</strong>为发泄性欲的强奸猥亵幼女（不属本症范畴）；<strong>不是</strong>只有想法而无行为、无痛苦（不达门槛）。<br>
+      <em>为什么这样记：</em>本章这一目的考点几乎全在"边界"上，正面定义反而少考。三个"不是"覆盖了年龄、目的、门槛三个维度，正好对应三张鉴别表。
+    </div>
+    <div class="callout tip">
+      <span class="ct">🔧 方法四：画面对比法</span>
+      左图：一个成年人对成年伴侣有性兴趣，生活、工作、社交都正常；右图：一个长期独身、与异性交往缺乏自信、对成年异性"没有信号"、只对未发育儿童有反应、多数伴勃起障碍的人。<br>
+      <em>为什么这样记：</em>教材用"对成年异性缺乏必要兴趣""多数独身""多数患勃起障碍"三句勾出了一个清晰的功能画像，把这个画像记住，比背定义更容易在题中认出它。
+    </div>
+  </div>
+
+  <!-- 第八栏 -->
+  <div class="card cyan" id="u4-8">
+    <h3 class="col-title"><span class="idx">第八栏</span>知识联动</h3>
+    <ul>
+      <li><strong>与儿童青少年精神卫生／儿童保护：</strong>教材明确指出受害儿童可能是患者自己的孩子、亲属或非血缘儿童，并写到"威胁封口"导致后续犯罪——这是临床上必须联动儿童保护机制的信号。</li>
+      <li><strong>与司法精神病学：</strong>"为发泄性欲强奸和猥亵幼女不属于本症范畴"是医学与司法分工的典型表述；鉴定结论需与法律责任判断分开。</li>
+      <li><strong>与神经影像／神经科学：</strong>杏仁核体积、脑区功能连接、白质微结构是本章唯一成体系的脑结构证据链。</li>
+      <li><strong>与内分泌：</strong>抗雄激素与 GnRHa 的作用靶点是性激素轴，属精神科与内分泌科协作范围。</li>
+      <li><strong>与神经认知障碍／物质使用章：</strong>癫痫、酒精中毒、阿尔茨海默病早期可出现恋童行为，提示"先排继发"。</li>
+      <li><strong>与性功能障碍：</strong>教材指出大多数患者患勃起障碍，治疗中需同时评估性功能。</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===== 09 强迫性性施虐障碍 ===== -->
+<section id="u5">
+  <div class="sec-head"><div class="badge">09</div><h2>强迫性性施虐障碍（含性受虐障碍）<span class="en">Coercive sexual sadism disorder</span></h2></div>
+  <p class="sec-lead">教材在同一目内用"性受虐障碍则相反"对照两型，故本单元两型并列。核心只有一条线：<strong>痛苦是不是性唤起的必要条件，以及对方是否同意</strong>。</p>
+
+  <!-- 第一栏 -->
+  <div class="card red" id="u5-1">
+    <h3 class="col-title"><span class="idx">第一栏</span>疾病画像</h3>
+    <div class="quote"><span class="lab">教材原文</span>在性生活中，通过使另外一个人遭受心理或躯体的痛苦从而激起个体反复、强烈的性唤起，表现为性幻想、性冲动或性行为，以此作为达到性满足的惯用和偏爱方式者为性施虐障碍患者。</div>
+    <div class="quote"><span class="lab">教材原文</span>性受虐障碍则相反，在性生活中，患者要求对方对自己施加肉体上或精神上的痛苦，通过被羞辱、被殴打、被捆绑或其他受苦的方式激起个体反复的、强烈的性冲动，表现为性幻想、性冲动或性行为，以此作为达到性满足的惯用与偏爱方式；患者因为这种性幻想、性冲动或性行为，产生具有临床意义的痛苦。</div>
+    <div class="grid2">
+      <div class="mini">
+        <h4>性施虐障碍 · 画像</h4>
+        <p>快感来自"<strong>我让别人痛</strong>"。教材描述：大多数见于男性，有<strong>鞭打、绳勒、撕割对方躯体</strong>等行为，在对方的痛苦之中感受到性的快乐，甚至<strong>施虐成为满足其性欲所必需的方式</strong>。</p>
+      </div>
+      <div class="mini">
+        <h4>性受虐障碍 · 画像</h4>
+        <p>快感来自"<strong>我被人弄痛</strong>"。教材描述：要求对方对自己施加肉体上或精神上的痛苦，通过<strong>被羞辱、被殴打、被捆绑或其他受苦的方式</strong>激起性冲动；并因此产生具有临床意义的痛苦。</p>
+      </div>
+    </div>
+    <p class="note">教材未为本单元两型提供其他独立数据；相关数字仅见于概述的流行病学段——"澳大利亚一项研究：男性性受虐障碍 2.2%，女性 1.3%"；"性驱使杀人案件中，性施虐障碍患者的比率为 37%～75%（美国研究）"。</p>
+  </div>
+
+  <!-- 第二栏 -->
+  <div class="card blue" id="u5-2">
+    <h3 class="col-title"><span class="idx">第二栏</span>病因探秘</h3>
+    <p>本单元是本章<strong>第二栏内容最实</strong>的一个：教材给了激素、递质、疼痛通路与影像四个层面的线索，且明确标出"假说"与"研究显示"。</p>
+    <div class="grid2">
+      <div class="mini">
+        <h4>激素与递质</h4>
+        <ul>
+          <li>有研究显示性施虐障碍及性受虐障碍患者的<strong>性激素和皮质醇水平异常</strong>。</li>
+          <li>这些激素水平与患者和性伙伴关系的<strong>亲密程度存在联系</strong>，提示激素可能参与调节其性行为。</li>
+          <li>单胺类递质系统（尤其 <strong>5-羟色胺和多巴胺</strong>）功能紊乱在发病中起重要作用。</li>
+        </ul>
+      </div>
+      <div class="mini">
+        <h4>疼痛神经通路（教材明确为"假说"）</h4>
+        <ul>
+          <li>有学者提出假设：性施虐障碍患者可能存在<strong>异常的疼痛神经通路</strong>，施虐行为本身或许是对这种异常脑通路的"<strong>自我疗法</strong>"。</li>
+          <li>影像证据：观看疼痛相关图片时，患者<strong>杏仁核激活水平更高</strong>，对图片的<strong>疼痛评分也更高</strong>；<strong>前脑岛的激活水平与疼痛评分相关</strong>。</li>
+          <li>教材的推论：这些结果表明患者对别人的疼痛有<strong>更高的敏感性</strong>，也从侧面证实存在异常疼痛神经通路。</li>
+        </ul>
+      </div>
+    </div>
+    <div class="callout tip"><span class="ct">💡 一个反直觉的要点</span>教材说的是"对别人的疼痛<strong>更敏感</strong>"，不是"更麻木"。这一点常被记反：如果把施虐者想象成"感觉不到别人痛苦的人"，就与教材的影像证据相反了。<span class="note">（教材原文：结果表明性施虐障碍患者对别人的疼痛有着更高的敏感性）</span></div>
+    <div class="grid3">
+      <div class="mini">
+        <h4>心理（总论）</h4>
+        <p>精神动力学：性心理发展受挫、退行；行为学：刺激与性快感经条件化绑定并反复强化。</p>
+      </div>
+      <div class="mini">
+        <h4>社会（总论）</h4>
+        <p>性欲被过分压抑、性伦理与性道德教育不当。</p>
+      </div>
+      <div class="mini">
+        <h4>动物行为学（教材引用）</h4>
+        <p>研究发现<strong>性行为和攻击行为可有重叠</strong>，正常性活动中可能表现出一些攻击倾向——这为"调情式施虐不算障碍"提供了机制解释。</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 第三栏 -->
+  <div class="card red" id="u5-3">
+    <h3 class="col-title"><span class="idx">第三栏</span>临床表现拼图</h3>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>维度</th><th>性施虐障碍</th><th>性受虐障碍</th></tr></thead>
+        <tbody>
+          <tr><td>谁承受痛苦</td><td>另外一个人</td><td>患者自己</td></tr>
+          <tr><td>典型行为</td><td>鞭打、绳勒、撕割对方躯体</td><td>被羞辱、被殴打、被捆绑或其他受苦方式</td></tr>
+          <tr><td>快感来源</td><td>在对方的痛苦之中感受到性的快乐</td><td>通过受苦的方式激起反复、强烈的性冲动</td></tr>
+          <tr><td>地位</td><td>施虐可成为满足性欲<strong>所必需的方式</strong></td><td>作为达到性满足的<strong>惯用与偏爱方式</strong></td></tr>
+          <tr><td>临床意义</td><td>教材诊断条目要求"实际行为或明显痛苦"</td><td>教材明确"产生具有临床意义的痛苦"</td></tr>
+          <tr><td>性别</td><td>大多数见于男性</td><td>教材未限定性别；流行病学段给出男女数据</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout key"><span class="ct">📌 一眼分辨口诀</span><strong>"施虐向外，受虐向内"</strong>：痛苦落在别人身上 → 施虐；痛苦落在自己身上 → 受虐。两者都以"痛苦"为性唤起的必要条件。</div>
+    <p class="note">教材未描述这两型的起病年龄、病程演变、共病情况，均属"教材未涉及"，本指南不补写。</p>
+  </div>
+
+  <!-- 第四栏 -->
+  <div class="card orange" id="u5-4">
+    <h3 class="col-title"><span class="idx">第四栏</span>教材典型案例</h3>
+    <div class="callout book">
+      <span class="ct">📖 教材未提供具体临床案例</span>
+      本节没有【典型病例】。教材提供的是<strong>一段"正常—异常"的边界描述</strong>，本栏照录整理，不虚构人物。
+    </div>
+    <div class="quote"><span class="lab">教材原文</span>夫妻之间在性活动中挤压、撕咬或给对方施以一定的痛苦，偶尔为之，大多没有"攻击"本意，主要作为一种调情的方式，不能诊断为性施虐障碍和性受虐障碍。</div>
+    <p><strong>把这段边界描述"翻译"成可判断的三问：</strong></p>
+    <div class="grid3">
+      <div class="mini">
+        <h4>问频率</h4>
+        <p>是"偶尔为之"，还是"反复、强烈"？教材的反例是<strong>偶尔</strong>。</p>
+      </div>
+      <div class="mini">
+        <h4>问本意</h4>
+        <p>是"调情"，还是"攻击"？教材说夫妻间此类行为"大多没有'攻击'本意"。</p>
+      </div>
+      <div class="mini">
+        <h4>问地位</h4>
+        <p>是性活动的点缀，还是达到性满足的<strong>惯用和偏爱方式</strong>、甚至"所必需的方式"？</p>
+      </div>
+    </div>
+    <p class="note">教材未提供本障碍的就诊场景、鉴定案例或治疗过程记录；本栏不补。</p>
+  </div>
+
+  <!-- 第五栏 -->
+  <div class="card orange" id="u5-5">
+    <h3 class="col-title"><span class="idx">第五栏</span>鉴别诊断对对碰</h3>
+    <p><strong>表 1　性施虐障碍 vs 正常调情式施虐</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>维度</th><th>性施虐障碍</th><th>夫妻间偶尔的调情式施虐</th></tr></thead>
+        <tbody>
+          <tr><td>频率</td><td>反复、强烈</td><td><strong>偶尔为之</strong></td></tr>
+          <tr><td>本意</td><td>以对方痛苦激起性唤起</td><td>大多<strong>没有"攻击"本意</strong>，主要作为调情方式</td></tr>
+          <tr><td>地位</td><td>达到性满足的惯用和偏爱方式，甚至所必需</td><td>性活动的调剂，不取代正常性满足</td></tr>
+          <tr><td>诊断</td><td>需实际行为或明显痛苦</td><td><strong>不能诊断</strong>为性施虐障碍和性受虐障碍</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout key"><span class="ct">📌 一句话鉴别总结</span><strong>偶尔、调情、不是必需</strong>——三条同时满足，就不算障碍；只要"反复 + 以痛苦为核心 + 成为偏爱方式"，就要认真评估。</div>
+    <p><strong>表 2　两型之间、以及与"同意"的边界</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>维度</th><th>强迫性性施虐障碍</th><th>性受虐障碍</th><th>各方已同意的施虐／受虐行为</th></tr></thead>
+        <tbody>
+          <tr><td>痛苦承受者</td><td>非同意他人</td><td>患者自己</td><td>同意的参与者</td></tr>
+          <tr><td>诊断表述</td><td>对<strong>非同意的他人</strong>实施躯体或心理虐待</td><td>教材以"要求对方对自己施加"表述</td><td>教材诊断条目<strong>特定地排除</strong>"在行为中各方已同意基础上的性施虐障碍和性受虐障碍"</td></tr>
+          <tr><td>取向判定</td><td>"向外"</td><td>"向内"</td><td>不构成诊断</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout key"><span class="ct">📌 一句话鉴别总结</span><strong>同意是分水岭</strong>：同意之内不诊断，同意之外才可能是障碍；受虐与施虐则由"痛苦落在谁身上"决定。</div>
+    <p><strong>表 3　与其他精神障碍伴发的施虐行为</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>维度</th><th>本障碍</th><th>其他精神障碍伴发</th></tr></thead>
+        <tbody>
+          <tr><td>诊断逻辑</td><td>施虐是独立的性唤起模式</td><td>满足另一精神疾病诊断标准，行为受该病影响</td></tr>
+          <tr><td>依据</td><td>持续、反复、作为偏爱方式</td><td>教材鉴别诊断段的通用逻辑（以精神分裂症命令性幻听为例）</td></tr>
+          <tr><td>处理</td><td>针对障碍＋法律边界</td><td>治疗原发病</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout key"><span class="ct">📌 一句话鉴别总结</span>先问"<strong>痛苦是不是被别的病'制造'出来的</strong>"，再问"<strong>对方同意了吗</strong>"——两个问题决定诊断与责任两条线。</div>
+  </div>
+
+  <!-- 第六栏 -->
+  <div class="card green" id="u5-6">
+    <h3 class="col-title"><span class="idx">第六栏</span>治疗方案工具箱</h3>
+    <div class="callout book"><span class="ct">📖 教材未对这两型单列治疗方案</span>教材治疗总论未点名性施虐／性受虐障碍的专属药物或心理技术；以下为可适用的一般措施，并明确标出"教材未点名"的部分。</div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>措施</th><th>教材表述</th><th>说明</th></tr></thead>
+        <tbody>
+          <tr><td>SSRIs</td><td>教材点名范围为"恋童障碍、露阴障碍、窥视障碍等"，<strong>未点名本两型</strong>；适用范围为轻度患者、青少年，或共病抑郁、强迫症者</td><td>不可把"等"字扩张为"教材已推荐本障碍"；剂量教材未涉及</td></tr>
+          <tr><td>抗雄激素药物</td><td>教材列为三类生物学治疗之一</td><td>疗程说法不一：至少 3～5 年或终身，无一致定论</td></tr>
+          <tr><td>GnRHa 或激动剂</td><td>教材列为三类之一</td><td>教材未涉及具体药物与疗程</td></tr>
+          <tr><td>DBS</td><td>下丘脑后部或腹内侧定位"有一定疗效"</td><td>教材未涉及参数</td></tr>
+          <tr><td>行为疗法</td><td>满灌、厌恶、交互抑制、系统脱敏；给予厌恶性刺激建立恶性条件反射</td><td>教材未给次数与周期</td></tr>
+          <tr><td>想象性内隐致敏法</td><td>想象高度兴奋场景，出现性兴奋时给予惩罚（低电流刺激、弹皮圈、催吐剂）</td><td>疗效与治疗愿望强弱明显相关</td></tr>
+          <tr><td>精神分析／认识领悟疗法</td><td>探讨潜意识意义、修复早年创伤；认识领悟疗法为短程疗法</td><td>教材未给疗程</td></tr>
+          <tr><td>正面教育</td><td>指出行为违法、违反制度与文化风俗，影响就业升学</td><td>教材单列</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout warn"><span class="ct">⚠️ 法律与伦理边界（以教材为准）</span>性施虐障碍的诊断表述限定为"对<strong>非同意的他人</strong>"实施虐待；一旦将冲动实施并造成伤害，教材总论的原则是"<strong>应予追究责任</strong>"。同意原则只用于界定诊断范围，<strong>不能作为任何行为的合法授权</strong>；具体法律认定属司法机关职权，教材未展开，本指南不作判断。</div>
+    <div class="timeline">
+      <div class="tl-item"><h4>第一步 · 判定同意与伤害</h4><p>先确认行为是否涉及非同意他人、是否造成实际伤害；这决定是"临床问题"还是"法律问题"，二者可并存。</p></div>
+      <div class="tl-item"><h4>第二步 · 评估痛苦来源</h4><p>本型患者可能因性幻想、性冲动或行为产生临床意义的痛苦；教材对性受虐障碍明确写"产生具有临床意义的痛苦"。</p></div>
+      <div class="tl-item"><h4>第三步 · 心理治疗为主</h4><p>教材称心理治疗是"目前治疗的主要方法"，最常使用行为疗法；辅以精神分析或认识领悟疗法。</p></div>
+      <div class="tl-item"><h4>第四步 · 药物与风险分层</h4><p>高风险者按"一线用药"原则；其余按总论三类生物学治疗个体化选择，注意知情同意。</p></div>
+    </div>
+    <p class="note">教材未涉及：这两型的疗程节点、预后数据、伴侣联合治疗、以及针对"同意性行为"的临床处理建议。</p>
+  </div>
+
+  <!-- 第七栏 -->
+  <div class="card purple" id="u5-7">
+    <h3 class="col-title"><span class="idx">第七栏</span>记忆工具箱</h3>
+    <div class="callout tip">
+      <span class="ct">🔧 方法一：方向口诀法</span>
+      口诀：<strong>"施虐把痛给别人，受虐把痛给自己；痛苦成了兴奋源，同意之内不算病。"</strong><br>
+      解释：前两句分方向，第三句点出"痛苦是性唤起必要条件"这一核心，第四句点出"各方已同意"的排除条款。<br>
+      <em>为什么这样记：</em>这一目最容易把两型记反。用"向外／向内"两个箭头固定方向，比背两段定义更省事，也不会在选择题里颠倒。
+    </div>
+    <div class="callout tip">
+      <span class="ct">🔧 方法二：数字对照法（三问三答）</span>
+      记 <strong>"频率—本意—地位"</strong>三问：偶尔还是反复？调情还是攻击？点缀还是必需？教材的"不算"版本是"偶尔、调情、点缀"。<br>
+      <em>为什么这样记：</em>教材用整段写"夫妻偶尔调情不算"，说明命题人偏爱考边界。把这段压缩成三个二选一，考试时逐项打勾即可。
+    </div>
+    <div class="callout tip">
+      <span class="ct">🔧 方法三：反直觉记忆法（疼痛敏感性）</span>
+      记一句"<strong>施虐者对痛更敏感，不是更麻木</strong>"：杏仁核激活更高、疼痛评分更高、前脑岛激活与评分相关。<br>
+      <em>为什么这样记：</em>这条与常识相反，反而最容易记住；同时它把"异常疼痛神经通路"这一假说与影像证据绑在一起，一次记两件事。
+    </div>
+    <div class="callout tip">
+      <span class="ct">🔧 方法四：证据分层法</span>
+      三层：<strong>激素</strong>（性激素与皮质醇异常，且与亲密程度相关）→ <strong>递质</strong>（5-HT、DA）→ <strong>通路与影像</strong>（疼痛神经通路假说＋杏仁核、前脑岛）。<br>
+      <em>为什么这样记：</em>本章只有这一目有完整的"激素—递质—通路"链条，按层记忆既符合教材顺序，也方便回答"机制"类简答题。
+    </div>
+  </div>
+
+  <!-- 第八栏 -->
+  <div class="card cyan" id="u5-8">
+    <h3 class="col-title"><span class="idx">第八栏</span>知识联动</h3>
+    <ul>
+      <li><strong>与神经科学／疼痛研究：</strong>疼痛神经通路、杏仁核与前脑岛激活，是本章与疼痛医学最直接的交集。</li>
+      <li><strong>与内分泌：</strong>性激素、皮质醇异常，以及抗雄激素、GnRHa 的靶点，都在内分泌轴上。</li>
+      <li><strong>与司法精神病学：</strong>诊断限定"非同意的他人"，与"实施致害应追责"同属一条线；教材的流行病学段还提到性驱使杀人案件中的施虐者比率，说明其法律后果的严重性。</li>
+      <li><strong>与伴侣关系／性治疗：</strong>教材用"夫妻偶尔调情"作反例，说明评估必须放在具体关系情境中，而不是只看行为本身。</li>
+      <li><strong>与动物行为学：</strong>教材引"性行为与攻击行为可有重叠"来解释正常范围内的攻击倾向，属于跨学科机制的引用。</li>
+      <li><strong>与伦理：</strong>"同意"既是诊断排除条件，也是伦理讨论的起点；教材未展开伦理争议，本指南不越界引申。</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===== 10 摩擦障碍 ===== -->
+<section id="u6">
+  <div class="sec-head"><div class="badge">10</div><h2>摩擦障碍<span class="en">Frotteuristic disorder</span></h2></div>
+  <p class="sec-lead">五个性心理障碍中最"短"的一目，但它的三个"没有"（无暴露、无性交要求、无进一步行为）是最好用的鉴别钥匙。</p>
+
+  <!-- 第一栏 -->
+  <div class="card red" id="u6-1">
+    <h3 class="col-title"><span class="idx">第一栏</span>疾病画像</h3>
+    <div class="quote"><span class="lab">教材原文</span>摩擦障碍（frotteuristic disorder）该症在男性中更为常见，受害人多为年轻女性。指患者在拥挤场合或趁对方不备之际，伺机以自己身体的某个部位（常为阴茎）摩擦异性身体某个部位以获得性快感的性心理障碍。</div>
+    <p><strong>一句话画像：</strong>"<strong>借拥挤作掩护，用身体去蹭</strong>"——不需要对方看见，也不需要发生性关系，快感全部来自那一次不被察觉的摩擦。</p>
+    <div class="grid2">
+      <div class="mini">
+        <h4>人群与对象</h4>
+        <ul>
+          <li>在<strong>男性</strong>中更为常见。</li>
+          <li>受害人多为<strong>年轻女性</strong>。</li>
+          <li>通常发生在拥挤的公交车、商场等场合。</li>
+        </ul>
+      </div>
+      <div class="mini">
+        <h4>三个"没有"</h4>
+        <ul>
+          <li>一般<strong>没有暴露自己生殖器的愿望和行为</strong>。</li>
+          <li><strong>没有与受害人发生性活动的要求</strong>。</li>
+          <li>教材的临床表现描述中未提及进一步的攻击或伤害行为。</li>
+        </ul>
+      </div>
+    </div>
+    <p class="note">教材未提供本障碍的患病率数据，也未给出起病年龄与病程描述；均属"教材未涉及"。</p>
+  </div>
+
+  <!-- 第二栏 -->
+  <div class="card blue" id="u6-2">
+    <h3 class="col-title"><span class="idx">第二栏</span>病因探秘</h3>
+    <div class="callout book"><span class="ct">📖 教材未对本障碍单列病因</span>教材只在总论中统一论述三类因素，未给摩擦障碍任何专属的生物学或心理学证据。以下为总论机制的对应，不添加教材外内容。</div>
+    <div class="grid3">
+      <div class="mini">
+        <h4>生物学（总论）</h4>
+        <ul>
+          <li>遗传、母体免疫、激素水平影响神经发育轨迹。</li>
+          <li>5-HT／多巴胺系统功能紊乱。</li>
+          <li>教材未提供本障碍专属数据。</li>
+        </ul>
+      </div>
+      <div class="mini">
+        <h4>心理（总论）</h4>
+        <ul>
+          <li>行为学解释最贴切：拥挤环境中的偶然身体接触带来强烈性快感，随后通过回忆与性幻想反复强化，形成<strong>条件联系</strong>。</li>
+          <li>精神动力学：退行至儿童早期阶段的一般解释。</li>
+        </ul>
+      </div>
+      <div class="mini">
+        <h4>社会（总论）</h4>
+        <ul>
+          <li>性欲被过分压抑而改变发泄方向。</li>
+          <li>性教育与性伦理教育不当。</li>
+          <li>教材未把"拥挤环境"本身列为病因，只作为行为发生的场合。</li>
+        </ul>
+      </div>
+    </div>
+    <div class="callout tip"><span class="ct">💡 一句话抓机制</span>摩擦障碍几乎是教材行为学理论（"无关刺激偶然与性兴奋结合 → 回忆与幻想强化 → 条件联系"）的<strong>最佳例证</strong>：拥挤中的偶然接触是"偶然机会"，强烈快感是"强化"，反复实施是"条件联系已形成"。<span class="note">（此句为对教材理论的举例说明，非教材原文）</span></div>
+  </div>
+
+  <!-- 第三栏 -->
+  <div class="card red" id="u6-3">
+    <h3 class="col-title"><span class="idx">第三栏</span>临床表现拼图</h3>
+    <div class="grid2">
+      <div class="mini">
+        <h4>场合与动作</h4>
+        <ul>
+          <li>拥挤的<strong>公交车、商场</strong>等场合。</li>
+          <li>紧密贴近陌生女性。</li>
+          <li>在受害人<strong>不知情</strong>的情况下，用生殖器反复摩擦受害人的<strong>臀部</strong>，以获得性兴奋或性高潮。</li>
+          <li>可伴有<strong>射精</strong>。</li>
+        </ul>
+      </div>
+      <div class="mini">
+        <h4>行为性质</h4>
+        <ul>
+          <li>摩擦行为是一种<strong>反复出现或持续存在的主动行为</strong>。</li>
+          <li>伴有<strong>强烈的性兴奋和性满足感</strong>。</li>
+          <li>属于"趁对方不备之际，伺机"实施。</li>
+        </ul>
+      </div>
+    </div>
+    <div class="callout key"><span class="ct">📌 三个"没有"再强调一次</span>无暴露生殖器的愿望与行为；无与受害人发生性活动的要求；教材未描述进一步的攻击伤害。这三点是把它与露阴、窥视、性施虐分开的关键。</div>
+    <p class="note">教材未描述本障碍的就诊场景、被发现的途径（如是否由受害人报案），也未给出共病情况，均不补写。</p>
+  </div>
+
+  <!-- 第四栏 -->
+  <div class="card orange" id="u6-4">
+    <h3 class="col-title"><span class="idx">第四栏</span>教材典型案例</h3>
+    <div class="callout book">
+      <span class="ct">📖 教材未提供具体临床案例</span>
+      本节无【典型病例】。教材仅以行为描述的方式呈现，本栏不虚构人物、时间、地点与检查结果。
+    </div>
+    <p><strong>教材给出的"可观察要素"（原文整理）：</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>要素</th><th>教材原文</th><th>识别意义</th></tr></thead>
+        <tbody>
+          <tr><td>场合</td><td>拥挤的公交车、商场等</td><td>需要"拥挤"作为掩护，说明行为人清楚其行为不被允许</td></tr>
+          <tr><td>前提</td><td>受害人不知情</td><td>与露阴（对方知情）形成鲜明对照</td></tr>
+          <tr><td>动作</td><td>用生殖器反复摩擦受害人臀部</td><td>有身体接触，是与其他"无接触"障碍的分界</td></tr>
+          <tr><td>结果</td><td>获得性兴奋或性高潮，可伴射精</td><td>说明其性满足已在现场完成，不需要后续性活动</td></tr>
+          <tr><td>边界</td><td>青年男性在拥挤场合偶然接触到陌生女性身体而出现的性兴奋，<strong>不能归于本症</strong></td><td>这是教材给出的唯一边界句，必须记牢</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note">本栏不含虚构案例；如需练习，请使用本指南"病例挑战"中明确标注为模拟情境的题目。</p>
+  </div>
+
+  <!-- 第五栏 -->
+  <div class="card orange" id="u6-5">
+    <h3 class="col-title"><span class="idx">第五栏</span>鉴别诊断对对碰</h3>
+    <p><strong>表 1　摩擦障碍 vs 偶然接触引起的性兴奋</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>维度</th><th>摩擦障碍</th><th>偶然接触引起的性兴奋</th></tr></thead>
+        <tbody>
+          <tr><td>主动性</td><td><strong>主动</strong>伺机贴靠、反复摩擦</td><td>被动、偶然接触</td></tr>
+          <tr><td>反复性</td><td>反复出现或持续存在</td><td>单次、偶发</td></tr>
+          <tr><td>目的性</td><td>以摩擦获得性兴奋或性高潮，可伴射精</td><td>无此目的</td></tr>
+          <tr><td>教材判断</td><td>符合诊断</td><td><strong>不能归于本症</strong></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout key"><span class="ct">📌 一句话鉴别总结</span>问"<strong>是他凑上去，还是人挤人碰上了</strong>"：主动＋反复＋以此为目的 = 障碍；被动＋偶然 = 不算。</div>
+    <p><strong>表 2　摩擦 vs 露阴 vs 窥视（接触与否是分界线）</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>维度</th><th>摩擦障碍</th><th>露阴障碍</th><th>窥视障碍</th></tr></thead>
+        <tbody>
+          <tr><td>身体接触</td><td><strong>有</strong>（摩擦）</td><td>无</td><td>无</td></tr>
+          <tr><td>对方知情</td><td>不知情</td><td><strong>知情</strong></td><td>不知情</td></tr>
+          <tr><td>是否暴露生殖器</td><td>一般无此愿望和行为</td><td>核心行为</td><td>不暴露，只观看</td></tr>
+          <tr><td>是否要求性活动</td><td>无</td><td>无进一步性侵犯</td><td>不企图性交</td></tr>
+          <tr><td>典型场合</td><td>拥挤公共交通、商场</td><td>偏僻小路、教室</td><td>厕所、浴室、卧室窗外</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout key"><span class="ct">📌 一句话鉴别总结</span><strong>有接触且对方不知 → 摩擦；无接触且对方知道 → 露阴；无接触且对方不知道 → 窥视。</strong></div>
+    <p><strong>表 3　与其他精神障碍伴发的摩擦行为</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>维度</th><th>本障碍</th><th>其他精神障碍伴发</th></tr></thead>
+        <tbody>
+          <tr><td>诊断逻辑</td><td>摩擦是独立的核心性唤起模式</td><td>满足另一精神疾病诊断标准，行为由其影响出现</td></tr>
+          <tr><td>依据</td><td>反复、主动、以摩擦为主要满足方式</td><td>教材鉴别诊断段的通用逻辑</td></tr>
+          <tr><td>处理</td><td>针对障碍本身</td><td>治疗原发病</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout key"><span class="ct">📌 一句话鉴别总结</span>先确认"<strong>有没有另一个诊断能解释这一切</strong>"，再谈本障碍；否则容易把继发行为误当原发偏好。</div>
+  </div>
+
+  <!-- 第六栏 -->
+  <div class="card green" id="u6-6">
+    <h3 class="col-title"><span class="idx">第六栏</span>治疗方案工具箱</h3>
+    <div class="callout book"><span class="ct">📖 教材未对摩擦障碍单列治疗方案</span>教材未在治疗章节点名本障碍。以下为总论三类方法的通用内容，并标明教材未点名的部分，避免"过度归属"。</div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>措施</th><th>教材表述</th><th>剂量/疗程</th></tr></thead>
+        <tbody>
+          <tr><td>SSRIs</td><td>教材点名范围是"恋童障碍、露阴障碍、窥视障碍等"，<strong>未点名摩擦障碍</strong></td><td><strong>教材未涉及剂量</strong></td></tr>
+          <tr><td>抗雄激素药物</td><td>教材列为生物学治疗三类之一</td><td>至少 3～5 年或终身（学者观点，无一致定论）</td></tr>
+          <tr><td>GnRHa 或激动剂</td><td>教材列为三类之一</td><td><strong>教材未涉及</strong></td></tr>
+          <tr><td>DBS</td><td>下丘脑后部或腹内侧"有一定疗效"</td><td><strong>教材未涉及</strong></td></tr>
+          <tr><td>行为疗法</td><td>满灌、厌恶、交互抑制、系统脱敏；减少偏好的性幻想及性冲动</td><td>教材未给次数与周期</td></tr>
+          <tr><td>想象性内隐致敏法</td><td>想象高度兴奋场景，出现性兴奋时给予惩罚</td><td>疗效与治疗愿望强弱相关</td></tr>
+          <tr><td>精神分析／认识领悟疗法</td><td>探讨潜意识意义、修复早年创伤；认识领悟疗法为短程疗法</td><td>教材未给疗程</td></tr>
+          <tr><td>正面教育</td><td>指出行为违反法律与制度、不符合文化风俗、影响就业升学</td><td>—</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout tip"><span class="ct">💡 治疗落点提示</span>教材对性心理障碍的总判断是"生物学治疗效果不确定，心理治疗难度很高"，并列出三条困难：不愿主动求医、不愿放弃原有方式、短期内难以形成新的健康性行为方式。对摩擦障碍而言，这三条同样成立——它常在没有被追究的情况下长期隐匿。<span class="note">（此为教材总论在本障碍上的适用，非教材新增结论）</span></div>
+    <p class="note">教材未涉及：本障碍的用药选择顺序、疗程节点、复发率、随访方案。</p>
+  </div>
+
+  <!-- 第七栏 -->
+  <div class="card purple" id="u6-7">
+    <h3 class="col-title"><span class="idx">第七栏</span>记忆工具箱</h3>
+    <div class="callout tip">
+      <span class="ct">🔧 方法一：动作四步法</span>
+      记 <strong>"挤—贴—蹭—射"</strong>：选<strong>挤</strong>的场合（公交、商场）→<strong>贴</strong>近陌生女性→用生殖器反复<strong>蹭</strong>臀部→获得性兴奋或高潮，可伴<strong>射</strong>精。<br>
+      <em>为什么这样记：</em>四个动词就是教材整段临床表现的顺序，按动作复述比按句子背更牢；考试问"典型表现"，四步一展开就是完整答案。
+    </div>
+    <div class="callout tip">
+      <span class="ct">🔧 方法二：三个"没有"排除法</span>
+      没有暴露愿望、没有性交要求、教材未描述进一步攻击伤害。<br>
+      <em>为什么这样记：</em>本障碍的定义几乎由"做了什么"和"没做什么"共同构成；三个"没有"正好把它与露阴、窥视、性施虐区分开，是最高效的鉴别记忆。
+    </div>
+    <div class="callout tip">
+      <span class="ct">🔧 方法三：一句话边界法</span>
+      背下教材唯一的边界句：<strong>"青年男性在人群拥挤的场合中，偶然接触到陌生女性的身体而出现的性兴奋，不能归于本症。"</strong><br>
+      <em>为什么这样记：</em>这是本节唯一的"反例"，也是命题人最爱的干扰项。记住"偶然 ≠ 障碍"，可以一击排除"拥挤场合有性兴奋就是摩擦障碍"的陷阱。
+    </div>
+    <div class="callout tip">
+      <span class="ct">🔧 方法四：人群锚定法</span>
+      记 <strong>"男多、年轻女性受害"</strong>：男性中更为常见；受害人多为年轻女性。<br>
+      <em>为什么这样记：</em>本障碍没有患病率数字可记，人群特征就是它的"数据"；把它与露阴（16 岁以上妇女）、窥视（男 12%／女 4%）并排，三个"对象画像"一次分清。
+    </div>
+  </div>
+
+  <!-- 第八栏 -->
+  <div class="card cyan" id="u6-8">
+    <h3 class="col-title"><span class="idx">第八栏</span>知识联动</h3>
+    <ul>
+      <li><strong>与性骚扰／法律：</strong>教材描述的是"趁对方不备""不知情"的摩擦，属侵犯他人身体边界；具体法律责任依现行法律，教材未展开。</li>
+      <li><strong>与城市公共交通管理：</strong>教材点名公交车、商场等拥挤场合，提示环境与秩序管理是减少此类行为的现实环节之一（直接延伸自教材情境）。</li>
+      <li><strong>与精神分裂症章：</strong>沿用"行为是否由其他精神疾病带出"的鉴别逻辑。</li>
+      <li><strong>与性医学：</strong>教材未描述本障碍的性功能状况，与露阴（性功能低下）、窥视（可伴阳痿）形成对比，提示不可一概而论。</li>
+      <li><strong>与行为心理学：</strong>本障碍是教材"条件联系"理论的最佳例证，可与总论第二栏互相印证。</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===== 11 对自身的做作性障碍 ===== -->
+<section id="u7">
+  <div class="sec-head"><div class="badge">11</div><h2>对自身的做作性障碍<span class="en">Factitious disorder imposed on self</span></h2></div>
+  <p class="sec-lead">前五个单元是"性兴奋走偏"，从这一单元起换成另一条线：<strong>制造疾病本身</strong>。核心只有一句——他图的是"患者"这个身份，不是钱、不是赔偿、不是逃避。</p>
+
+  <!-- 第一栏 -->
+  <div class="card red" id="u7-1">
+    <h3 class="col-title"><span class="idx">第一栏</span>疾病画像</h3>
+    <div class="quote"><span class="lab">教材原文</span>做作性障碍（factitious disorder），是一种特殊的欺骗伪装行为，患者制造或伪装患病或受伤，以获得患者身份和得到照顾（心理获益），而不是为了骗取现实获益。这种障碍包括对自身的做作性障碍和对他人的做作性障碍。</div>
+    <div class="quote"><span class="lab">教材原文</span>对自身的做作性障碍（factitious disorder imposed on self）表现为在自己身上假装、伪造或故意诱发生理、心理或行为上的症状、体征或损伤，与可识别的欺骗行为相关；或在已有的障碍或疾病基础上，故意加重现有症状，或伪造、诱发其他症状。</div>
+    <p><strong>一句话画像：</strong>"<strong>他伪造的不是金钱，而是病历</strong>"：所有检查、住院、治疗，都是为了换来一个"我是病人"的身份和随之而来的照顾。<span class="note">（类比理解）</span></p>
+    <div class="grid3">
+      <div class="mini">
+        <h4>核心动机</h4>
+        <ul>
+          <li>获得<strong>患者身份</strong>、享受被诊断、被治疗的过程。</li>
+          <li>教材明确：装病目的<strong>既不是</strong>获得赔偿、照顾或摆脱困境，<strong>也不是诈病</strong>。</li>
+          <li>属于"心理获益"，而非"现实获益"。</li>
+        </ul>
+      </div>
+      <div class="mini">
+        <h4>两个"身份"标签</h4>
+        <ul>
+          <li>教材称其为"伴有病理性谎言的<strong>自虐行为</strong>"（"目前普遍认为"）。</li>
+          <li>一些西方教材认为与<strong>强迫行为</strong>存在相似之处。</li>
+          <li>心理动力学提示：重复可能与早期<strong>被忽视或被抛弃的不安全依附关系</strong>相关。</li>
+        </ul>
+      </div>
+      <div class="mini">
+        <h4>诊断系统的位置变迁</h4>
+        <ul>
+          <li><strong>DSM-5：</strong>纳入躯体症状及相关障碍范畴。</li>
+          <li><strong>ICD-10：</strong>归入人格障碍（F68.10）章节。</li>
+          <li><strong>ICD-11：</strong>列为<strong>独立的诊断实体</strong>。</li>
+          <li>DSM-Ⅲ 曾提出过"伪装心理疾病"的亚型。</li>
+        </ul>
+      </div>
+    </div>
+    <div class="callout tip"><span class="ct">💡 为什么教材强调"主要出现在综合医院"</span>因为患者以<strong>躯体症状和疾病的形式</strong>进入医生的视野：他们先去内科、免疫科、外科，而不是精神科。这正是 DSM-5 把它放进"躯体症状及相关障碍"的现实原因，也是它最容易被漏诊的原因。</div>
+  </div>
+
+  <!-- 第二栏 -->
+  <div class="card blue" id="u7-2">
+    <h3 class="col-title"><span class="idx">第二栏</span>病因探秘</h3>
+    <div class="callout book"><span class="ct">📖 教材对本障碍的病因着墨很少</span>教材第二节只给了两条心理学线索，<strong>没有给出生物学因素、遗传学或脑影像证据</strong>。以下严格照录，不补写。</div>
+    <div class="grid2">
+      <div class="mini">
+        <h4>线索一 · 与强迫行为的相似性</h4>
+        <p>"一些西方教材认为，做作性障碍与强迫行为存在相似之处。"教材以"一些西方教材认为"限定，属<strong>观点引用</strong>，不是定论。</p>
+      </div>
+      <div class="mini">
+        <h4>线索二 · 早期依恋创伤</h4>
+        <p>"心理动力学的研究则提示，这种行为的重复可能与早期经历的被忽视或被抛弃的不安全依附关系相关。"注意用词是"<strong>提示</strong>""<strong>相关</strong>"，不是因果证明。</p>
+      </div>
+    </div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>因素类别</th><th>教材是否提供</th><th>说明</th></tr></thead>
+        <tbody>
+          <tr><td>生物学因素（遗传、递质、脑结构）</td><td><strong>教材未涉及</strong></td><td>本节未提及任何生物学机制，本指南不补写</td></tr>
+          <tr><td>心理因素</td><td>有（两条）</td><td>强迫行为相似性（观点）；早期被忽视／被抛弃的不安全依附（心理动力学提示）</td></tr>
+          <tr><td>社会因素</td><td><strong>教材未单列</strong></td><td>教材未把家庭、医疗环境或社会文化列为病因，仅在治疗部分提到医疗系统与保险系统的管理困难</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout warn"><span class="ct">⚠️ 不要替教材"补机制"</span>网络上常说做作性障碍与童年虐待、人格障碍"高度相关"。教材在本章只写了上述两条线索，<strong>并把"其实质可能伴有人格障碍"放在治疗部分作为一句推测性表述</strong>。学习时请区分"教材明说"与"教材推测"。</div>
+  </div>
+
+  <!-- 第三栏 -->
+  <div class="card red" id="u7-3">
+    <h3 class="col-title"><span class="idx">第三栏</span>临床表现拼图</h3>
+    <div class="quote"><span class="lab">教材原文</span>做作性障碍患者有意识地伪装某些躯体或心理症状，甚至自残自伤，以谋求患者角色。装病的目的既不是获得赔偿、照顾或摆脱困境，也不是诈病，而是获得患者的角色，享受被诊断、被治疗的过程。</div>
+    <div class="tabs" data-tabs>
+      <div class="tabbar">
+        <button class="on" data-tab="f1">行为特征</button>
+        <button data-tab="f2">就诊模式</button>
+        <button data-tab="f3">心理状态</button>
+      </div>
+      <div class="panel on" data-panel="f1">
+        <ul>
+          <li><strong>有意识</strong>地伪装躯体或心理症状。</li>
+          <li>严重者<strong>自残自伤</strong>。</li>
+          <li>可表现为"假装、伪造或故意诱发"生理、心理或行为上的症状、体征或损伤。</li>
+          <li>也可在<strong>已有的障碍或疾病基础上</strong>故意加重现有症状，或伪造、诱发其他症状。</li>
+          <li>与<strong>可识别的欺骗行为</strong>相关（如修改化验单、编造病史）。</li>
+        </ul>
+      </div>
+      <div class="panel" data-panel="f2">
+        <ul>
+          <li>主要表现为<strong>到处求医</strong>。</li>
+          <li><strong>千方百计地要求住院</strong>。</li>
+          <li>为达到目的可通过说谎，甚至不惜<strong>损伤自己躯体</strong>，编造出很多症状。</li>
+          <li>个体通常会<strong>寻求治疗</strong>，并使自己表现为病态的、受伤的或功能受损的。</li>
+        </ul>
+      </div>
+      <div class="panel" data-panel="f3">
+        <ul>
+          <li>目的是获得<strong>患者的角色</strong>，"享受被诊断、被治疗的过程"。</li>
+          <li>不是为了获得赔偿、照顾或摆脱困境，也不是诈病。</li>
+          <li>教材病例中：面对精神科会诊，患者"认为自己没有任何精神问题"，交谈时思维条理清晰，未见抑郁、焦虑，未见幻觉、妄想。</li>
+        </ul>
+      </div>
+    </div>
+    <div class="callout key"><span class="ct">📌 一个易漏的关键点</span>本障碍的"伪装"<strong>不限于躯体症状</strong>：教材明确包括"生理、心理或行为上的症状、体征或损伤"。所以"假装精神疾病"同样属于本障碍的表现范围（DSM-Ⅲ 就曾提出"伪装心理疾病"的亚型）。</div>
+  </div>
+
+  <!-- 第四栏 -->
+  <div class="card orange" id="u7-4">
+    <h3 class="col-title"><span class="idx">第四栏</span>教材典型案例</h3>
+    <div class="quote"><span class="lab">教材原文</span>患者，女，32 岁，免疫科住院患者。病房医师要求心理医学科会诊的原因是，入院后发现患者修改了自己的化验单，入院后复查相应的指标都是正常的，但是患者仍然坚持认为自己存在免疫方面的问题，并要求病房医师给自己激素冲击治疗。当医师以患者是"健康的"为由拒绝使用激素治疗后，患者出现了强烈的情绪反应，在病房里哭闹，对医师不满，大喊大叫。当心理医学科的医师见到患者后，患者表现出了明显的不满，认为自己没有任何精神问题。在和患者交谈的过程中，患者思维条理清晰，没有发现抑郁、焦虑等情绪异常，没有发现幻觉、妄想等精神病症状。患者承认自己修改了化验单，对自己修改化验单的解释是该化验单没有反映出自己实际的病情，对要求用激素治疗的解释是"我的病我知道，我需要使用激素"。结束会诊后，患者又在医院住了一周，仍反复要求激素治疗，坚决反对心理医学科医师的再次会诊。在医师们反复拒绝使用激素后，患者出院，并再也没有出现在该院门诊。</div>
+    <p><strong>案例拆解（症状 → 鉴别 → 确诊思路）：</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>步骤</th><th>案例信息</th><th>教材知识点落点</th></tr></thead>
+        <tbody>
+          <tr><td>① 抓欺骗行为</td><td>入院后被发现<strong>修改了自己的化验单</strong>；复查指标均正常</td><td>"与可识别的欺骗行为相关"；"伪造症状、体征或损伤"</td></tr>
+          <tr><td>② 抓动机</td><td>坚持认为自己有免疫问题，<strong>要求激素冲击治疗</strong>；被拒后哭闹、大喊大叫</td><td>谋求患者角色、要求治疗；不是为了赔偿或逃避困境</td></tr>
+          <tr><td>③ 排除其他精神障碍</td><td>思维条理清晰；<strong>无抑郁、焦虑</strong>；<strong>无幻觉、妄想</strong></td><td>排除精神病性症状与情感症状的解释力；也回应"伪装心理疾病"的可能</td></tr>
+          <tr><td>④ 抓自知力缺口</td><td>承认修改化验单，但解释为"该化验单没有反映出自己实际的病情"；"我的病我知道"</td><td>典型的<strong>病理性谎言</strong>式自洽解释：承认行为、不承认虚构</td></tr>
+          <tr><td>⑤ 抓对精神科的态度</td><td>对心理医学科医师明显不满，<strong>坚决反对再次会诊</strong></td><td>教材："该病患者往往回避精神科医师或临床心理治疗者的帮助"</td></tr>
+          <tr><td>⑥ 抓结局</td><td>再住一周、反复要求激素；被反复拒绝后出院，<strong>再未出现在该院门诊</strong></td><td>教材治疗部分："有的患者在可能造成对质前，已经自行溜走"</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout key"><span class="ct">📌 这例的三个"教学点"</span>①<strong>欺骗是可观察的</strong>（修改化验单），但动机是"要治疗"而非"要钱"；②<strong>精神检查基本正常</strong>，所以不能靠"查出别的病"来解释；③<strong>拒绝精神科</strong>并最终消失，说明治疗的最大障碍是"他不认为自己需要被治"。</div>
+    <p class="note">本栏为教材原文完整引用，未添加任何教材之外的化验数值、诊断结论或随访信息。</p>
+  </div>
+
+  <!-- 第五栏 -->
+  <div class="card orange" id="u7-5">
+    <h3 class="col-title"><span class="idx">第五栏</span>鉴别诊断对对碰</h3>
+    <p><strong>表 1　做作性障碍 vs 诈病（本章最重要的一张表）</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>维度</th><th>做作性障碍</th><th>诈病</th></tr></thead>
+        <tbody>
+          <tr><td>获益性质</td><td><strong>心理获益</strong>：患者身份、被诊断被治疗、被照顾</td><td><strong>外部获益</strong>：金钱、休假、免责</td></tr>
+          <tr><td>教材原文</td><td>"这种欺骗行为并不仅仅由显而易见的外在奖赏或激励所驱动"</td><td>"诈病行为是由显而易见的外在奖赏或激励所驱动的"</td></tr>
+          <tr><td>典型举例</td><td>为获得患者角色而伪造症状</td><td>为获得残疾赔偿或逃避刑事起诉</td></tr>
+          <tr><td>一句话</td><td>图"我是病人"</td><td>图"对我有好处"</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout key"><span class="ct">📌 一句话鉴别总结</span>问"<strong>他从中得到了什么</strong>"：得到的是<strong>身份与照顾</strong> → 做作性障碍；得到的是<strong>钱、假、免责</strong> → 诈病。</div>
+    <p><strong>表 2　做作性障碍 vs 转换障碍</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>维度</th><th>做作性障碍</th><th>转换障碍</th></tr></thead>
+        <tbody>
+          <tr><td>表现相似处</td><td>模仿、伪装疾病时表现可类似转换障碍；神经科检查也可呈现类似结果（<strong>不同检查方法暴露出不一致</strong>）</td><td>同样可有神经系统症状与"检查不一致"</td></tr>
+          <tr><td>核心区别</td><td>有<strong>作伪的证据</strong>；"要求"更强</td><td>患者的"要求"没有做作性障碍那么强，<strong>更没有作伪的证据</strong></td></tr>
+          <tr><td>一句话</td><td>"他是造出来的"</td><td>"他不是装出来的"</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout key"><span class="ct">📌 一句话鉴别总结</span>两者的检查都可能"对不上"，分水岭只有一条：<strong>有没有作伪的证据</strong>（伪造、修改、故意诱发）。有证据 → 做作性障碍；无证据 → 不能轻易这样诊断。</div>
+    <p><strong>表 3　做作性障碍 vs 边缘型人格障碍</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>维度</th><th>做作性障碍</th><th>边缘型人格障碍</th></tr></thead>
+        <tbody>
+          <tr><td>自伤后的态度</td><td>回避、掩饰、以"病情"解释</td><td>就诊被问到时<strong>直接承认是自己所为、是出于情绪失控</strong></td></tr>
+          <tr><td>核心机制</td><td>可识别的欺骗行为，为获得患者角色</td><td>情绪失控下的自伤，不是欺骗</td></tr>
+          <tr><td>共同点</td><td colspan="2">教材明确：两种障碍患者在病史及成长史上<strong>有某些共同的精神痛苦</strong>（如感到被忽视、被抛弃），但<strong>采用的索偿策略不同</strong></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout key"><span class="ct">📌 一句话鉴别总结</span>同样"感到被抛弃"，一个<strong>坦白</strong>（边缘型），一个<strong>掩饰</strong>（做作性）——差别在"承认不承认"。</div>
+    <p><strong>表 4　与"共病躯体疾病"的陷阱</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>风险</th><th>教材表述</th><th>后果</th></tr></thead>
+        <tbody>
+          <tr><td>患者确有躯体疾病</td><td>"做作性障碍患者也会共病躯体疾病"</td><td>不能因为"他有做作性障碍"就否认其真实症状</td></tr>
+          <tr><td>医师的固化归因</td><td>反复发作者"一贯的风格（如容易有夸大和虚构故事的成分）"会使医师产生固化归因</td><td>导致"抵触、回避为这样的患者'服务'"</td></tr>
+          <tr><td>平行风险</td><td>"这与癔症患者出现新的症状容易被忽视是同一种风险"</td><td>真实的新症状可能被漏诊</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout key"><span class="ct">📌 一句话鉴别总结</span>诊断"他会造假"<strong>不等于</strong>"他这次也在造假"——每一次新症状都要独立评估，这是教材点明的同一类医疗风险。</div>
+  </div>
+
+  <!-- 第六栏 -->
+  <div class="card green" id="u7-6">
+    <h3 class="col-title"><span class="idx">第六栏</span>治疗方案工具箱</h3>
+    <div class="quote"><span class="lab">教材原文</span>在发现做作性障碍的证据后，需要与患者对质。有的患者在可能造成对质前，已经自行溜走，也有的患者能承认自己的虚假行为。该病患者往往回避精神科医师或临床心理治疗者的帮助，对于这样的患者，其实质可能伴有人格障碍，处理起来是相对棘手的。</div>
+    <div class="grid2">
+      <div class="mini">
+        <h4>第一步 · 对质</h4>
+        <p>发现证据后<strong>需要与患者对质</strong>。教材给出两种结局：有的患者在可能造成对质前<strong>已自行溜走</strong>；也有的患者<strong>能承认</strong>自己的虚假行为。</p>
+      </div>
+      <div class="mini">
+        <h4>第二步 · 认清难点</h4>
+        <p>患者往往<strong>回避精神科医师或临床心理治疗者</strong>的帮助；"其实质可能伴有人格障碍"，处理"相对棘手"。</p>
+      </div>
+    </div>
+    <div class="callout key"><span class="ct">📌 治疗目标：不是"治好病"，而是"控制风险"</span>教材原文："治疗的目标是<strong>控制风险</strong>，这更多需要<strong>系统的力量</strong>，即将这样的患者在<strong>医疗系统和保险系统中予以警示</strong>。"这是本章与其他章节最不一样的治疗观——个体治疗难以奏效，靠系统管理。</div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>层面</th><th>教材内容</th><th>现实困难（教材原文）</th></tr></thead>
+        <tbody>
+          <tr><td>个体层面</td><td>对质；争取患者承认</td><td>患者回避精神科；可能在对质前溜走</td></tr>
+          <tr><td>系统层面</td><td>在医疗系统和保险系统中予以警示</td><td>"我们的医疗系统尚缺乏统一的管理"</td></tr>
+          <tr><td>人员层面</td><td>需要非精神科医师识别与转诊</td><td>"非精神科医师普遍不了解具体情况，不知如何应对和转诊"</td></tr>
+          <tr><td>药物/心理治疗</td><td><strong>教材未涉及</strong>具体药物、剂量与心理治疗方案</td><td>教材本节未给出任何用药或心理治疗技术的名称与参数</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout warn"><span class="ct">⚠️ 三个"不能写"</span>①不能写"做作性障碍用某某药治疗"（教材未涉及）；②不能写"对质一定有效"（教材只说"需要与患者对质"，并列出溜走与承认两种结局）；③不能写"做作性障碍就是人格障碍"（教材只说"其实质<strong>可能</strong>伴有人格障碍"）。</div>
+    <p class="note">教材未涉及：本障碍的疗程、复发率、随访方案、家属沟通的具体流程。凡此均不补写。</p>
+  </div>
+
+  <!-- 第七栏 -->
+  <div class="card purple" id="u7-7">
+    <h3 class="col-title"><span class="idx">第七栏</span>记忆工具箱</h3>
+    <div class="callout tip">
+      <span class="ct">🔧 方法一：一句话抓动机</span>
+      口诀：<strong>"不图钱、不图假、不图逃，只图'我是病人'。"</strong><br>
+      解释：三个"不图"对应教材否定的三种现实获益（赔偿、照顾以外的现实好处、摆脱困境），最后一句点出"患者角色"这一心理获益。<br>
+      <em>为什么这样记：</em>本障碍的全部考点都从"动机"发散出去（鉴别、治疗、预后），先把动机钉死，其余自然顺下来。
+    </div>
+    <div class="callout tip">
+      <span class="ct">🔧 方法二：四联鉴别口诀</span>
+      口诀：<strong>"诈病图外利，转换无伪证，边缘会承认，共病别漏诊。"</strong><br>
+      解释：四句分别对应诈病（外部获益）、转换障碍（无作伪证据）、边缘型人格障碍（直接承认）、共病躯体疾病（新症状不可忽视）。<br>
+      <em>为什么这样记：</em>教材鉴别部分正好是"四联"，每句一个字眼（外利／伪证／承认／漏诊），四个关键词即可还原整张表。
+    </div>
+    <div class="callout tip">
+      <span class="ct">🔧 方法三：数字编码法（三个诊断系统）</span>
+      记 <strong>"DSM-5 躯体、ICD-10 人格、ICD-11 独立"</strong>，再挂一个括号 <strong>F68.10</strong>。<br>
+      <em>为什么这样记：</em>同一个病在三个系统里"搬了三次家"，这条线索最能说明"做作性障碍身份尴尬"；数字 F68.10 是教材给的唯一编码，记住它就能答"ICD-10 归在哪一章"。
+    </div>
+    <div class="callout tip">
+      <span class="ct">🔧 方法四：场景还原法（教材病例）</span>
+      画面：免疫科病房 → 医师发现化验单被改 → 复查正常 → 患者仍坚持要激素冲击 → 被拒后哭闹 → 精神科会诊被拒 → 再住一周 → 出院后消失。<br>
+      <em>为什么这样记：</em>这条链条把"欺骗行为—动机—精神检查—对精神科的态度—结局"五段全串起来，比背定义更容易在案例题中调用。
+    </div>
+  </div>
+
+  <!-- 第八栏 -->
+  <div class="card cyan" id="u7-8">
+    <h3 class="col-title"><span class="idx">第八栏</span>知识联动</h3>
+    <ul>
+      <li><strong>与分离（转换）障碍章：</strong>教材专门比较两者——表现可类似、检查均可"不一致"，分水岭是"有无作伪证据"；教材还提示"癔症患者出现新症状容易被忽视"是同一种风险。</li>
+      <li><strong>与人格障碍章：</strong>边缘型人格障碍的自伤会"直接承认"，做作性障碍则掩饰；教材称后者"实质可能伴有人格障碍"。</li>
+      <li><strong>与强迫及相关障碍章：</strong>教材引用"一些西方教材认为与强迫行为存在相似之处"，属观点层面的联系。</li>
+      <li><strong>与躯体症状及相关障碍：</strong>DSM-5 将做作性障碍纳入该范畴，说明它与躯体症状障碍在临床上常同处一个诊区。</li>
+      <li><strong>与医院管理／医疗保险：</strong>教材的治疗建议指向"医疗系统和保险系统警示"，属跨系统的管理问题。</li>
+      <li><strong>与医学伦理：</strong>对质、告知、记录与警示都涉及患者隐私与信任；教材未展开伦理细则，本指南不作引申。</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===== 12 对他人的做作性障碍 ===== -->
+<section id="u8">
+  <div class="sec-head"><div class="badge">12</div><h2>对他人的做作性障碍<span class="en">Factitious disorder imposed on another</span></h2></div>
+  <p class="sec-lead">同一个"制造疾病"的动作，换了一个承受者：这次躺在病床上的是别人。诊断对象也随之改变——<strong>诊断给制造症状的人，不给被制造症状的人</strong>。</p>
+
+  <!-- 第一栏 -->
+  <div class="card red" id="u8-1">
+    <h3 class="col-title"><span class="idx">第一栏</span>疾病画像</h3>
+    <div class="quote"><span class="lab">教材原文</span>对他人的做作性障碍（factitious disorder imposed on another）表现为在另一人身上（通常是对个体依赖的儿童）假装、伪造或故意诱发生理、心理或行为上的症状、体征或损伤，与可识别的欺骗行为相关；如果此人已有某种障碍或疾病，则个体故意加重现有症状或伪造、诱发其他症状。</div>
+    <div class="quote"><span class="lab">教材原文</span>应注意的是，对他人的做作性障碍的诊断应给予假装、伪造或诱发另一人症状的个体，而不是表现出症状的个体。某些情况中，个体会在宠物身上诱导或假装症状。</div>
+    <p><strong>一句话画像：</strong>"<strong>把别人变成病人，自己当照顾者</strong>"：症状长在对方身上，动机仍在制造症状的人心里。<span class="note">（类比理解）</span></p>
+    <div class="grid2">
+      <div class="mini">
+        <h4>对象</h4>
+        <ul>
+          <li>通常是<strong>对个体依赖的儿童</strong>。</li>
+          <li>教材另指出：往往是对<strong>孩子或无法表达的老人</strong>施虐。</li>
+          <li>"某些情况中，个体会在<strong>宠物</strong>身上诱导或假装症状"。</li>
+        </ul>
+      </div>
+      <div class="mini">
+        <h4>行为</h4>
+        <ul>
+          <li>在另一人身上假装、伪造或<strong>故意诱发</strong>症状、体征或损伤。</li>
+          <li>若此人已有障碍或疾病，则<strong>故意加重</strong>现有症状，或伪造、诱发其他症状。</li>
+          <li>通常<strong>带此人寻求治疗</strong>，使其表现为病态、受伤或功能受损。</li>
+        </ul>
+      </div>
+    </div>
+    <div class="callout warn"><span class="ct">⚠️ 本单元最重要的一句话</span><strong>"诊断给加害者，不给受害者。"</strong> 教材原文："诊断应给予假装、伪造或诱发另一人症状的个体，而不是表现出症状的个体。" 这一条决定了整个单元的诊断逻辑、治疗对象与法律后果。</div>
+  </div>
+
+  <!-- 第二栏 -->
+  <div class="card blue" id="u8-2">
+    <h3 class="col-title"><span class="idx">第二栏</span>病因探秘</h3>
+    <div class="callout book"><span class="ct">📖 教材未对本亚型单列病因</span>教材第二节的病因线索（强迫行为相似性、早期被忽视／被抛弃的不安全依附）写在"概述"中，是<strong>针对做作性障碍整体</strong>的，并未对"对自身"与"对他人"分别论述。本栏如实照录，不拆分、不虚构。</div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>因素类别</th><th>教材内容</th><th>对本亚型的适用</th></tr></thead>
+        <tbody>
+          <tr><td>心理动力学</td><td>行为的重复可能与早期经历的被忽视或被抛弃的不安全依附关系相关</td><td>教材未说明是否同样适用于本亚型；不得径自套用为结论</td></tr>
+          <tr><td>与强迫行为的相似性</td><td>"一些西方教材认为"（观点引用）</td><td>同上，教材未分亚型讨论</td></tr>
+          <tr><td>生物学因素</td><td><strong>教材未涉及</strong></td><td>—</td></tr>
+          <tr><td>社会／家庭因素</td><td><strong>教材未单列</strong></td><td>仅在临床表现中提到"在家人身上制造疾病"这一行为形态，未作病因解释</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout tip"><span class="ct">💡 教材在这里的写作特点</span>本亚型教材只有三处着墨：<strong>概述一句（属于虐待、可能构成虐待犯罪）</strong>、<strong>诊断一段（定义与诊断对象）</strong>、<strong>治疗一句（需引入法律干预）</strong>。因此第二栏内容必然单薄——这是教材的空白，不是本指南的省略。</div>
+  </div>
+
+  <!-- 第三栏 -->
+  <div class="card red" id="u8-3">
+    <h3 class="col-title"><span class="idx">第三栏</span>临床表现拼图</h3>
+    <div class="quote"><span class="lab">教材原文</span>至于在家人身上制造疾病使其获得医疗照顾，而自己也扮演照顾者的角色，属于一种虐待，甚至可能构成虐待犯罪。这种情况往往是对孩子或无法表达的老人施虐。这时加害者可以诊断加诸他人的做作性障碍，而受害者（孩子或老人）不是诊断的对象。</div>
+    <div class="grid2">
+      <div class="mini">
+        <h4>行为链（据教材定义整理）</h4>
+        <ul>
+          <li>在依赖者身上<strong>假装、伪造或故意诱发</strong>症状。</li>
+          <li>若对方已有病，则<strong>加重</strong>或另造症状。</li>
+          <li><strong>带其求治</strong>，使其表现为病态。</li>
+          <li>自己扮演<strong>照顾者</strong>的角色。</li>
+        </ul>
+      </div>
+      <div class="mini">
+        <h4>性质与对象</h4>
+        <ul>
+          <li>教材定性：这属于一种<strong>虐待</strong>，甚至可能构成<strong>虐待犯罪</strong>。</li>
+          <li>常见对象：<strong>孩子</strong>或<strong>无法表达的老人</strong>。</li>
+          <li>教材补充：某些情况中对象可为<strong>宠物</strong>。</li>
+          <li>诊断对象：<strong>加害者</strong>，不是受害者。</li>
+        </ul>
+      </div>
+    </div>
+    <div class="callout key"><span class="ct">📌 三个识别信号（全部来自教材原文）</span>①症状出现在<strong>依赖者</strong>身上；②<strong>照顾者</strong>始终在场并主导就医；③存在<strong>可识别的欺骗行为</strong>（假装、伪造或故意诱发）。教材未给出更细的识别清单，本指南不补。</div>
+  </div>
+
+  <!-- 第四栏 -->
+  <div class="card orange" id="u8-4">
+    <h3 class="col-title"><span class="idx">第四栏</span>教材典型案例</h3>
+    <div class="callout book">
+      <span class="ct">📖 教材未提供具体临床案例</span>
+      本亚型在本章中<strong>没有【典型病例】</strong>。教材唯一的完整病例（女，32 岁，免疫科）属于"对自身的做作性障碍"，已置于<a href="#u7-4">第十一单元第四栏</a>。<strong>不得把它改写成"母亲对孩子"的版本冒充教材案例</strong>——那会构成编造。
+    </div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>教材可用的描述</th><th>位置</th><th>属于案例吗</th></tr></thead>
+        <tbody>
+          <tr><td>"在家人身上制造疾病使其获得医疗照顾，而自己也扮演照顾者的角色"</td><td>概述段</td><td>否，属概括性描述</td></tr>
+          <tr><td>"这种情况往往是对孩子或无法表达的老人施虐"</td><td>概述段</td><td>否，属人群描述</td></tr>
+          <tr><td>"个体会在宠物身上诱导或假装症状"</td><td>诊断段</td><td>否，属补充说明</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout warn"><span class="ct">⚠️ 为什么这里坚持不写案例</span>本亚型涉及未成年人或无法表达的老人，任何虚构的"病例"都可能被误读为真实临床事实，甚至被当作操作描述。教材没有给，本指南就<strong>明确留白</strong>，练习请使用结尾"病例挑战"中显著标注为模拟情境的题目。</div>
+  </div>
+
+  <!-- 第五栏 -->
+  <div class="card orange" id="u8-5">
+    <h3 class="col-title"><span class="idx">第五栏</span>鉴别诊断对对碰</h3>
+    <p><strong>表 1　对他人 vs 对自身（同一个障碍，两个方向）</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>维度</th><th>对他人的做作性障碍</th><th>对自身的做作性障碍</th></tr></thead>
+        <tbody>
+          <tr><td>症状承载者</td><td>另一人（通常为依赖的儿童）</td><td>患者自己</td></tr>
+          <tr><td>谁求治</td><td>个体<strong>带此人</strong>寻求治疗</td><td>个体<strong>自己</strong>寻求治疗</td></tr>
+          <tr><td>诊断给谁</td><td><strong>加害者</strong></td><td>患者本人</td></tr>
+          <tr><td>教材定性</td><td>属于虐待，甚至可能构成虐待犯罪</td><td>伴有病理性谎言的自虐行为</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout key"><span class="ct">📌 一句话鉴别总结</span>先问"<strong>症状长在谁身上、诊断写给谁</strong>"：长在别人身上、诊断写给自己 → 对他人的做作性障碍。</div>
+    <p><strong>表 2　对他人的做作性障碍 vs 诈病</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>维度</th><th>对他人的做作性障碍</th><th>诈病</th></tr></thead>
+        <tbody>
+          <tr><td>获益性质</td><td>心理获益（患者身份、被照顾／扮演照顾者）；<strong>不由显而易见的外部奖赏驱动</strong></td><td><strong>外部获益</strong>驱动</td></tr>
+          <tr><td>教材举例</td><td>—</td><td>"获得残疾赔偿或<strong>逃避虐待儿童、老人的刑事起诉</strong>"</td></tr>
+          <tr><td>一句话</td><td>图"照顾与被照顾"</td><td>图"免责与获利"</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout key"><span class="ct">📌 一句话鉴别总结</span>教材把"逃避虐待儿童、老人的刑事起诉"明确列为<strong>诈病</strong>的外部获益例子——这条最容易被忽略，也最能在案例题里区分两者。</div>
+    <p><strong>表 3　医学诊断 vs 法律定性（两条不同的轨道）</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>维度</th><th>医学诊断</th><th>法律定性</th></tr></thead>
+        <tbody>
+          <tr><td>依据</td><td>定义中的欺骗行为、症状制造、心理获益</td><td>教材："严重的可构成虐待罪"；"涉及监护权的转移等法律问题"</td></tr>
+          <tr><td>对象</td><td>加害者</td><td>教材未展开具体主体与程序</td></tr>
+          <tr><td>关系</td><td colspan="2">两条轨道<strong>可以并行</strong>：诊断为加害者，不等于免除其法律责任；教材明确要求"需要引入法律干预"</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout key"><span class="ct">📌 一句话鉴别总结</span>医学上写"加诸他人的做作性障碍"，法律上是否构成虐待罪、是否转移监护权，<strong>由法定程序认定</strong>——教材只给了方向，本指南不作法律判断。</div>
+  </div>
+
+  <!-- 第六栏 -->
+  <div class="card green" id="u8-6">
+    <h3 class="col-title"><span class="idx">第六栏</span>治疗方案工具箱</h3>
+    <div class="quote"><span class="lab">教材原文</span>对于加诸于他人的做作性障碍，需要引入法律干预，严重的可构成虐待罪，涉及监护权的转移等法律问题。</div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>层面</th><th>教材内容</th><th>说明</th></tr></thead>
+        <tbody>
+          <tr><td>法律干预</td><td><strong>需要引入法律干预</strong></td><td>教材给出的唯一明确处置方向</td></tr>
+          <tr><td>刑事定性</td><td>严重的可构成<strong>虐待罪</strong></td><td>教材表述为"可构成"，具体认定依司法程序</td></tr>
+          <tr><td>监护安排</td><td>涉及<strong>监护权的转移</strong>等法律问题</td><td>教材未展开条件与流程</td></tr>
+          <tr><td>诊断对象</td><td>诊断加害者，<strong>受害者不是诊断对象</strong></td><td>直接影响治疗对象的选择</td></tr>
+          <tr><td>药物治疗／心理治疗</td><td><strong>教材未涉及</strong></td><td>本节未给出任何药物、剂量或心理治疗方案</td></tr>
+          <tr><td>保护受害者</td><td>教材只写"受害者不是诊断的对象"</td><td>教材未展开具体的保护流程，本指南不补写</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout warn"><span class="ct">⚠️ 表述分寸（必须谨慎）</span>教材的用词是"<strong>属于一种虐待，甚至可能构成虐待犯罪</strong>""<strong>严重的可构成虐待罪</strong>"。写作或答题时应保留"可能""严重的可构成"这些限定词，<strong>不要把"可能"写成"一定"</strong>，也不要把医学诊断直接等同于定罪结论。</div>
+    <div class="timeline">
+      <div class="tl-item"><h4>识别</h4><p>在依赖者身上出现难以解释的、反复的症状；照顾者主导就医；存在可识别的欺骗行为。</p></div>
+      <div class="tl-item"><h4>分离诊断对象</h4><p>把诊断写给制造症状的个体，而不是症状承载者（教材原文要求）。</p></div>
+      <div class="tl-item"><h4>引入法律干预</h4><p>教材明确要求；严重情形可能涉及虐待罪与监护权转移。</p></div>
+      <div class="tl-item"><h4>系统警示</h4><p>沿用教材对做作性障碍整体的建议：在医疗系统与保险系统中予以警示（教材未分亚型，本指南按整体建议引用）。</p></div>
+    </div>
+    <p class="note">教材未涉及：本亚型的药物治疗、心理治疗、家庭干预、随访与预后。凡此均不编造。</p>
+  </div>
+
+  <!-- 第七栏 -->
+  <div class="card purple" id="u8-7">
+    <h3 class="col-title"><span class="idx">第七栏</span>记忆工具箱</h3>
+    <div class="callout tip">
+      <span class="ct">🔧 方法一：一句话锁定诊断对象</span>
+      口诀：<strong>"症状在人身上，诊断写他名下——诊加害者，不诊受害者。"</strong><br>
+      解释：前一句描述现象（症状出现在依赖者身上），后一句给出规则（诊断写给制造症状的人）。<br>
+      <em>为什么这样记：</em>这是本亚型唯一的"高频必考点"，也是实践中最容易出错的地方；把它压缩成一句口令，可以在案例题里第一时间排除"给受害儿童下诊断"的选项。
+    </div>
+    <div class="callout tip">
+      <span class="ct">🔧 方法二：三对象锚定法</span>
+      记 <strong>"儿童—老人—宠物"</strong>：孩子或无法表达的老人最常受害；教材另补充宠物也可能成为对象。<br>
+      <em>为什么这样记：</em>三个对象的共同点是"<strong>无法表达或依赖他人</strong>"，记住这条共性，就能理解为什么诊断必须写给加害者——因为受害者说不清。
+    </div>
+    <div class="callout tip">
+      <span class="ct">🔧 方法三：双轨对照法（医学／法律）</span>
+      画两条平行线：左线写"医学诊断：加害者、做作性障碍"；右线写"法律：可能构成虐待罪、监护权转移"。两条线互不替代。<br>
+      <em>为什么这样记：</em>本亚型的最大误区是把"诊断"与"定罪"混为一谈；双轨图能同时防住"以病免罪"和"以罪代诊"两种偏差。
+    </div>
+    <div class="callout tip">
+      <span class="ct">🔧 方法四：诈病反例法</span>
+      记一句教材里的"反例"：诈病的外部获益包括"<strong>逃避虐待儿童、老人的刑事起诉</strong>"。<br>
+      <em>为什么这样记：</em>这条把"对他人的做作性障碍"和"诈病"放在同一个场景里对照：同样发生在虐待情形中，图"照顾者身份"的是做作性障碍，图"逃避起诉"的是诈病。一个例子记两张表。
+    </div>
+  </div>
+
+  <!-- 第八栏 -->
+  <div class="card cyan" id="u8-8">
+    <h3 class="col-title"><span class="idx">第八栏</span>知识联动</h3>
+    <ul>
+      <li><strong>与儿科／老年医学：</strong>受害者多为儿童或无法表达的老人，症状由他人制造，首诊常在儿科或老年科而非精神科。</li>
+      <li><strong>与儿童保护／老年保护：</strong>教材将其定性为"一种虐待"，直接连到保护机制与强制报告等制度层面（教材未展开制度细节，本指南不补）。</li>
+      <li><strong>与司法／监护制度：</strong>"严重的可构成虐待罪""涉及监护权的转移"，属法律轨道。</li>
+      <li><strong>与医院管理／医疗保险：</strong>沿用做作性障碍整体的"系统警示"建议。</li>
+      <li><strong>与对自身的做作性障碍：</strong>同一定义框架、同一心理获益逻辑，差异只在"症状承载者"与"诊断对象"。</li>
+      <li><strong>与医学伦理：</strong>诊断加害者同时意味着对受害者的保护义务；教材未展开伦理细则，本指南不越界。</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===== 13 核心要点 ===== -->
+<section id="summary">
+  <div class="sec-head"><div class="badge">13</div><h2>全章核心要点速览<span class="en">18 key points</span></h2></div>
+  <p class="sec-lead">考前最后一遍只看这里。18 条都能独立成题，建议逐条自问"为什么"，尤其是带数字与带"排除"字样的条目。</p>
+  <div class="card blue">
+    <div class="grid2">
+      <ol>
+        <li>性心理障碍（旧称性变态／paraphilia）：性行为的心理和行为明显偏离正常，并以此作为性兴奋、性满足的<strong>主要或唯一方式</strong>；一般精神活动无其他明显异常。</li>
+        <li>教材列出的常见类型：露阴障碍、窥视障碍、恋童障碍、强迫性性施虐障碍、摩擦障碍（性受虐障碍在同一目中对照叙述）。</li>
+        <li>三重边界：<strong>不是</strong>道德败坏（多数性欲低下、事后愧疚）；<strong>不是</strong>人格障碍（其余社会适应良好）；<strong>不是</strong>性犯罪（司法概念，实施致害仍应追责）。</li>
+        <li>五条共同特征：①异常且固定；②有害且不能自控；③有辨认能力、可回避；④无突出人格障碍；⑤无智能与意识障碍。</li>
+        <li>病因三因素：生物学（遗传、免疫、激素、递质、脑结构与功能）＋心理（精神动力学退行、行为学条件联系）＋社会（性压抑、性教育不当），教材称"尚未完全阐明"。</li>
+        <li>患病率线索：窥视障碍终生患病率男 12%／女 4%；男性露阴 2%～4%（女性极低）；性受虐 男 2.2%／女 1.3%（澳大利亚）；性驱使杀人案中性施虐 37%～75%（美国）。</li>
+        <li>诊断共同门槛：必须有基于性想法、幻想或冲动的<strong>实际行为</strong>，或感到<strong>明显的痛苦</strong>；露阴、窥视、性施虐、摩擦四类均"特定地排除各方已同意"的情形。</li>
+        <li>露阴障碍：陌生异性毫无准备时暴露生殖器；保持安全距离便于逃脱；对方羞涩愤慨时兴奋增加，冷淡则扫兴；几乎只见男性；受害者多为 16 岁以上妇女；中老年首发先排器质。</li>
+        <li>窥视障碍：隔窗孔窥视他人性活动、亲昵行为或裸体以获性兴奋；不企图性交、无进一步攻击；多不愿与异性交往、可伴阳痿；童年偷看与偶然偷看<strong>不算</strong>。</li>
+        <li>恋童障碍：对象为青春期前（通常 ≤13 岁）儿童；患者 ≥16 岁；比受害儿童至少年长 5 岁；多为男性、多数独身、多数患勃起障碍；<strong>青春期同龄性行为不作诊断</strong>。</li>
+      </ol>
+      <ol start="11">
+        <li>强迫性性施虐障碍：以非同意他人承受心理或躯体痛苦激起性唤起；性受虐障碍相反，以自身被羞辱、殴打、捆绑等受苦激起性冲动；夫妻偶尔调情式施虐<strong>不能诊断</strong>。</li>
+        <li>摩擦障碍：拥挤场合以身体部位（常为阴茎）摩擦异性身体获性快感；无暴露愿望、无性交要求；拥挤中偶然接触引起的性兴奋<strong>不能归于本症</strong>。</li>
+        <li>治疗三大类：生物学治疗（SSRIs、抗雄激素、GnRHa，另有下丘脑后部或腹内侧 DBS）、心理治疗（行为疗法、精神分析、认识领悟疗法）、正面教育。</li>
+        <li>药物要点：SSRIs 中氟西汀与舍曲林使用最多；氟西汀可减少恋童、露阴、窥视患者的性幻想与性行为；主要适用于轻症、青少年或共病抑郁／强迫者；<strong>我国尚未批准用于性心理障碍</strong>；剂量教材未涉及。</li>
+        <li>疗程与疗效：抗雄激素"至少 3～5 年"或"终身"两说，教材称无一致定论；治疗愿望强、感到痛苦者疗效好；起病早、病程长、年龄超过 40 岁者疗效欠佳；钟友彬 1992 年用认识领悟疗法治疗 33 例，27 例明显好转。</li>
+        <li>做作性障碍：制造或伪装患病／受伤以获得患者身份与照顾（<strong>心理获益</strong>），不由显而易见的外部奖赏驱动；ICD-11 列为独立诊断实体。</li>
+        <li>两亚型：对自身——在自己身上假装、伪造或故意诱发症状；对他人——在依赖者（通常儿童、无法表达的老人，亦可为宠物）身上制造症状，<strong>诊断给加害者而非受害者</strong>。</li>
+        <li>鉴别与处理：诈病＝外部获益；转换障碍＝无作伪证据；边缘型人格障碍＝自伤后会直接承认；处理上对自身重"对质＋系统警示"，对他人重"法律干预＋监护权等法律问题"。</li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 14 易混 ===== -->
+<section id="pitfalls">
+  <div class="sec-head"><div class="badge">14</div><h2>易混易错点警示<span class="en">Common traps</span></h2></div>
+  <p class="sec-lead">这些点不是"没背到"，而是"背反了"。逐条核对你的第一反应，尤其是所有带"排除""不算""不属于"字样的句子。</p>
+  <div class="card danger">
+    <details open>
+      <summary>① "性心理障碍患者大多性欲亢进"——错，教材说的常是相反</summary>
+      <div class="dbody">教材明确：不应一概认为他们"道德败坏、流氓成性或性欲亢进"；其实大多数此类患者<strong>性欲低下</strong>，甚至不能进行正常的性生活，家庭关系往往不和谐甚至破裂；他们具备正常人的道德伦理观念，事后多有愧疚之心，但难以控制自己。</div>
+    </details>
+    <details>
+      <summary>② "有病就不用负责"——错，教材把两条线分开写</summary>
+      <div class="dbody">教材：性犯罪是司法概念；性心理障碍者若将其歪曲的冲动予以实施，对他人造成伤害或干扰社会秩序时，<strong>应予追究责任</strong>。医学诊断与法律评价可以同时成立。</div>
+    </details>
+    <details>
+      <summary>③ 把"配偶"排除在窥视对象之外——错，教材病例就发生在夫妻之间</summary>
+      <div class="dbody">教材窥视障碍病例中，患者对妻子的排尿"特别地感兴趣"，每次聚精会神观看并手淫。可见判断核心是<strong>私密场景 + 未经同意 + 成为主要满足方式</strong>，而不是对象是否为陌生人。<span class="note">（此条为目的说明性释义，教材诊断条目原文为"在他人不知情的情况下，窥视其裸体……以获得性的刺激"）</span></div>
+    </details>
+    <details>
+      <summary>④ "看过色情片有性兴奋就是窥视障碍"——错，教材直接排除</summary>
+      <div class="dbody">教材：有的在看色情影片、录像、画册的同时伴有性兴奋，或将其作为增强正常性活动的一种手段，<strong>也不能诊断为窥视障碍</strong>。童年偷看、偶然偷看同样"不属于此症"。</div>
+    </details>
+    <details>
+      <summary>⑤ 恋童障碍的"三条年龄线"记不全——最常见的失分点</summary>
+      <div class="dbody">受害儿童：青春期前、通常 <strong>13 岁或更小</strong>；患者：至少 <strong>16 岁</strong>；年龄差：比受害儿童至少<strong>年长 5 岁</strong>。另外，青春期前后年龄近似的儿童之间的性行为<strong>不能作出恋童障碍的诊断</strong>。</div>
+    </details>
+    <details>
+      <summary>⑥ 把"强奸猥亵幼女"等同于恋童障碍——错，教材明确不属于本症范畴</summary>
+      <div class="dbody">教材原文："恋童障碍是持续而强烈的性偏好障碍，为发泄性欲强奸和猥亵幼女的行为<strong>不属于本症范畴</strong>。"注意教材另一处又说患者"通过猥亵儿童来达到性兴奋"，两处语境不同，按原文各自记忆，不要自行改写。</div>
+    </details>
+    <details>
+      <summary>⑦ "性施虐者对他人痛苦麻木"——正好记反了</summary>
+      <div class="dbody">教材的影像研究显示：性施虐障碍患者观看疼痛相关图片时杏仁核激活水平<strong>更高</strong>、疼痛评分<strong>更高</strong>，前脑岛激活与疼痛评分相关；结论是他们对别人的疼痛有着<strong>更高的敏感性</strong>。</div>
+    </details>
+    <details>
+      <summary>⑧ 把"夫妻偶尔调情式施虐"当障碍——教材专门写了"不能诊断"</summary>
+      <div class="dbody">夫妻之间在性活动中挤压、撕咬或给对方施以一定痛苦，<strong>偶尔为之</strong>，大多没有"攻击"本意，主要作为调情方式，不能诊断为性施虐障碍和性受虐障碍。教材还引用动物行为学"性行为与攻击行为可有重叠"来解释这一点。</div>
+    </details>
+    <details>
+      <summary>⑨ 摩擦障碍与"拥挤中的偶然接触"混为一谈——错</summary>
+      <div class="dbody">教材唯一的边界句："青年男性在人群拥挤的场合中，偶然接触到陌生女性的身体而出现的性兴奋，<strong>不能归于本症</strong>。"本症要求反复出现或持续存在的<strong>主动</strong>行为，并伴强烈性兴奋与满足感。</div>
+    </details>
+    <details>
+      <summary>⑩ 做作性障碍与诈病只看"有没有装"——错，要看"图什么"</summary>
+      <div class="dbody">做作性障碍：心理获益（患者身份、被诊断被治疗），欺骗行为<strong>并不仅仅由显而易见的外在奖赏驱动</strong>；诈病：由<strong>显而易见的外部奖赏</strong>驱动（金钱、休假、免责，如获得残疾赔偿或逃避刑事起诉）。这是本章最核心的一条分水岭。</div>
+    </details>
+    <details>
+      <summary>⑪ "做作性障碍就是人格障碍"——错，教材只说"可能"</summary>
+      <div class="dbody">教材治疗部分原文："对于这样的患者，其实质<strong>可能</strong>伴有人格障碍，处理起来是相对棘手的。"这是推测性表述，不是定义。另外 ICD-10 把做作性障碍<strong>归入</strong>人格障碍章节（F68.10），与"它就是人格障碍"是两件事。</div>
+    </details>
+    <details>
+      <summary>⑫ "对他人的做作性障碍，患者是那个孩子"——错，诊断给加害者</summary>
+      <div class="dbody">教材原文："诊断应给予假装、伪造或诱发另一人症状的个体，<strong>而不是表现出症状的个体</strong>。"受害儿童或老人不是诊断对象。同时教材把这种行为定性为"一种虐待，甚至可能构成虐待犯罪"。</div>
+    </details>
+  </div>
+</section>
+
+<!-- ===== 15 自测 ===== -->
+<section id="quiz">
+  <div class="sec-head"><div class="badge">15</div><h2>章节自测系统<span class="en">13 questions · 6 types</span></h2></div>
+  <p class="sec-lead">覆盖单选、多选、判断、名词解释、简答、案例分析六种题型，按易→中→难排列。先作答，再展开解析；解析中的依据都能在教材原文中找到。</p>
+
+  <div class="quiz-q">
+    <div class="qh"><span class="qno">第 1 题</span><span class="qtype">单选题</span><span class="diff">易</span></div>
+    <p class="brief">性心理障碍（psychosexual disorder）既往被称为什么？</p>
+    <div class="opts">
+      <div class="opt"><span class="l">A.</span>性变态（paraphilia）</div>
+      <div class="opt"><span class="l">B.</span>性身份障碍</div>
+      <div class="opt"><span class="l">C.</span>性功能失调</div>
+      <div class="opt"><span class="l">D.</span>性取向障碍</div>
+    </div>
+    <details><summary>查看答案与解析</summary><div class="dbody"><strong>答案：A</strong><br>教材原文："性心理障碍（psychosexual disorder）既往称性变态（paraphilia）。" B、C、D 都是本章未作为独立疾病展开的名称；教材只在开篇提到 ICD-11 不再按"性身份障碍、性偏好障碍"等分类。</div></details>
+  </div>
+
+  <div class="quiz-q">
+    <div class="qh"><span class="qno">第 2 题</span><span class="qtype">单选题</span><span class="diff">中</span></div>
+    <p class="brief">关于恋童障碍的年龄条件，下列哪项符合教材表述？</p>
+    <div class="opts">
+      <div class="opt"><span class="l">A.</span>患者至少 14 岁，比受害儿童年长 3 岁以上</div>
+      <div class="opt"><span class="l">B.</span>患者至少 16 岁，比受害儿童至少年长 5 岁</div>
+      <div class="opt"><span class="l">C.</span>患者至少 18 岁，受害儿童 13 岁以下</div>
+      <div class="opt"><span class="l">D.</span>患者至少 20 岁，比受害儿童年长 10 岁以上</div>
+    </div>
+    <details><summary>查看答案与解析</summary><div class="dbody"><strong>答案：B</strong><br>教材原文："患者年龄至少 16 岁，比受害儿童至少年长 5 岁"；受害儿童通常年龄为 <strong>13 岁或更小</strong>、处于青春期前。三项条件需同时满足，缺一不能诊断。</div></details>
+  </div>
+
+  <div class="quiz-q">
+    <div class="qh"><span class="qno">第 3 题</span><span class="qtype">单选题</span><span class="diff">中</span></div>
+    <p class="brief">做作性障碍与诈病最关键的区别是？</p>
+    <div class="opts">
+      <div class="opt"><span class="l">A.</span>是否真的存在躯体疾病</div>
+      <div class="opt"><span class="l">B.</span>是否由显而易见的外部奖赏驱动</div>
+      <div class="opt"><span class="l">C.</span>是否愿意住院</div>
+      <div class="opt"><span class="l">D.</span>是否有自伤行为</div>
+    </div>
+    <details><summary>查看答案与解析</summary><div class="dbody"><strong>答案：B</strong><br>教材：做作性障碍的欺骗行为"并不仅仅由显而易见的外在奖赏或激励所驱动"（心理获益：患者身份与照顾）；诈病"是由显而易见的外在奖赏或激励所驱动的"（外部获益：金钱、休假、免责）。A 错：做作性障碍患者也会共病躯体疾病。C、D 都不是两者的鉴别依据。</div></details>
+  </div>
+
+  <div class="quiz-q">
+    <div class="qh"><span class="qno">第 4 题</span><span class="qtype">多选题</span><span class="diff">中</span></div>
+    <p class="brief">下列哪些属于教材所述性心理障碍的共同特征？</p>
+    <div class="opts">
+      <div class="opt"><span class="l">A.</span>性对象选择或性行为方式明显异常，较固定且不易纠正</div>
+      <div class="opt"><span class="l">B.</span>行为的后果可能带来损害，但不能自我控制</div>
+      <div class="opt"><span class="l">C.</span>具有对性行为的辨认能力，迫于压力可出现回避行为</div>
+      <div class="opt"><span class="l">D.</span>除异常性行为外，一般社会适应良好，无突出的人格障碍</div>
+      <div class="opt"><span class="l">E.</span>多数伴有智能障碍或意识障碍</div>
+    </div>
+    <details><summary>查看答案与解析</summary><div class="dbody"><strong>答案：ABCD</strong><br>教材五条共同特征的最后一条明确是"<strong>无智能障碍和意识障碍</strong>"，故 E 错。A、B、C、D 分别对应第①②③④条。</div></details>
+  </div>
+
+  <div class="quiz-q">
+    <div class="qh"><span class="qno">第 5 题</span><span class="qtype">多选题</span><span class="diff">中</span></div>
+    <p class="brief">教材所述性心理障碍的主要治疗方法包括哪些？</p>
+    <div class="opts">
+      <div class="opt"><span class="l">A.</span>生物学治疗</div>
+      <div class="opt"><span class="l">B.</span>心理治疗</div>
+      <div class="opt"><span class="l">C.</span>正面教育</div>
+      <div class="opt"><span class="l">D.</span>强制外科手术</div>
+    </div>
+    <details><summary>查看答案与解析</summary><div class="dbody"><strong>答案：ABC</strong><br>教材原文："性心理障碍的主要治疗方法有生物学治疗、心理治疗、正面教育等。" D 错：教材未把外科手术列为治疗方法；神经调控方面教材只提到"定位于下丘脑后部或腹内侧的深部脑刺激也有一定疗效"。</div></details>
+  </div>
+
+  <div class="quiz-q">
+    <div class="qh"><span class="qno">第 6 题</span><span class="qtype">多选题</span><span class="diff">难</span></div>
+    <p class="brief">下列哪些障碍的诊断条目中，教材明确"特定地排除"各方已同意基础上的相应行为？</p>
+    <div class="opts">
+      <div class="opt"><span class="l">A.</span>露阴障碍</div>
+      <div class="opt"><span class="l">B.</span>窥视障碍</div>
+      <div class="opt"><span class="l">C.</span>强迫性性施虐障碍</div>
+      <div class="opt"><span class="l">D.</span>摩擦障碍</div>
+    </div>
+    <details><summary>查看答案与解析</summary><div class="dbody"><strong>答案：ABCD</strong><br>教材在四条诊断中均写明"特定地排除"：露阴（各方已同意基础上的暴露行为）、窥视（已获得行为中各方同意的窥视行为）、强迫性性施虐（各方已同意基础上的性施虐障碍和性受虐障碍）、摩擦（各方已同意基础上的触碰或摩擦）。另：露阴还特别排除"文化认可的公共场所裸露"。恋童障碍条目中教材未写此类同意排除句（因儿童不具备同意能力，教材以年龄条件与"同龄儿童间性行为不作诊断"处理）。</div></details>
+  </div>
+
+  <div class="quiz-q">
+    <div class="qh"><span class="qno">第 7 题</span><span class="qtype">判断题</span><span class="diff">易</span></div>
+    <p class="brief">性心理障碍患者大多性欲亢进，且缺乏对自身行为的辨认能力。</p>
+    <div class="opts">
+      <div class="opt"><span class="l">A.</span>正确</div>
+      <div class="opt"><span class="l">B.</span>错误</div>
+    </div>
+    <details><summary>查看答案与解析</summary><div class="dbody"><strong>答案：B（错误）</strong><br>教材明确：大多数此类患者<strong>性欲低下</strong>，甚至不能进行正常性生活；且"患者本人具有对性行为的辨认能力"，自知行为不符合一般社会规范。两处都与题干相反。</div></details>
+  </div>
+
+  <div class="quiz-q">
+    <div class="qh"><span class="qno">第 8 题</span><span class="qtype">判断题</span><span class="diff">中</span></div>
+    <p class="brief">窥视障碍患者通常在窥视后会进一步与受害人发生性行为。</p>
+    <div class="opts">
+      <div class="opt"><span class="l">A.</span>正确</div>
+      <div class="opt"><span class="l">B.</span>错误</div>
+    </div>
+    <details><summary>查看答案与解析</summary><div class="dbody"><strong>答案：B（错误）</strong><br>教材：窥视者"并不企图与被窥视者性交，除了窥视行为本身之外，一般不会有进一步的攻击和伤害行为"。且多不愿与异性交往，有的害怕性交，与性伴侣的性活动难以成功，有些伴阳痿。</div></details>
+  </div>
+
+  <div class="quiz-q">
+    <div class="qh"><span class="qno">第 9 题</span><span class="qtype">判断题</span><span class="diff">难</span></div>
+    <p class="brief">对他人的做作性障碍，诊断应给予表现出症状的那个人（如儿童）。</p>
+    <div class="opts">
+      <div class="opt"><span class="l">A.</span>正确</div>
+      <div class="opt"><span class="l">B.</span>错误</div>
+    </div>
+    <details><summary>查看答案与解析</summary><div class="dbody"><strong>答案：B（错误）</strong><br>教材原文："诊断应给予假装、伪造或诱发另一人症状的个体，<strong>而不是表现出症状的个体</strong>。" 受害儿童或老人不是诊断对象。教材同时指出这种情况"属于一种虐待，甚至可能构成虐待犯罪"。</div></details>
+  </div>
+
+  <div class="quiz-q">
+    <div class="qh"><span class="qno">第 10 题</span><span class="qtype">名词解释</span><span class="diff">中</span></div>
+    <p class="brief">请解释"性心理障碍（psychosexual disorder）"。</p>
+    <details><summary>查看答案与解析</summary><div class="dbody"><strong>参考答案：</strong>既往称性变态（paraphilia），指两性性行为的心理和行为明显偏离正常，并以此作为性兴奋、性满足的<strong>主要或唯一方式</strong>的一组精神障碍。患者正常的性活动受到全部或者某种程度的破坏、干扰或影响，而一般精神活动并无其他明显异常。教材列出的常见类型包括露阴障碍、窥视障碍、恋童障碍、强迫性性施虐障碍、摩擦障碍等。</div></details>
+  </div>
+
+  <div class="quiz-q">
+    <div class="qh"><span class="qno">第 11 题</span><span class="qtype">名词解释</span><span class="diff">中</span></div>
+    <p class="brief">请解释"做作性障碍（factitious disorder）"。</p>
+    <details><summary>查看答案与解析</summary><div class="dbody"><strong>参考答案：</strong>一种特殊的欺骗伪装行为：患者制造或伪装患病或受伤，以<strong>获得患者身份和得到照顾（心理获益）</strong>，而不是为了骗取现实获益。包括对自身与对他人的两个亚型。教材称目前普遍认为这是一种"伴有病理性谎言的自虐行为"；ICD-11 将其列为独立诊断实体。</div></details>
+  </div>
+
+  <div class="quiz-q">
+    <div class="qh"><span class="qno">第 12 题</span><span class="qtype">简答题</span><span class="diff">难</span></div>
+    <p class="brief">简述性心理障碍的鉴别诊断要点（教材所述）。</p>
+    <details><summary>查看答案与解析</summary><div class="dbody">
+      <strong>参考答案：</strong>
+      <ol>
+        <li><strong>与正常性行为变异／文化认可情形鉴别：</strong>露阴须排除各方同意的暴露与文化认可的公共场所裸露；窥视须排除童年偷看、偶然偷看、看色情材料或作为增强正常性活动手段的情形；摩擦须排除拥挤场合的偶然接触；性施虐／性受虐须排除夫妻偶尔的调情式行为；恋童须排除青春期前后年龄近似儿童之间的性行为。</li>
+        <li><strong>与其他精神障碍伴发的性欲倒错行为鉴别：</strong>关键在于患者是否<strong>满足其他某种精神疾病的诊断标准</strong>，异常性行为是否受该病影响出现（教材以精神分裂症患者在命令性幻听支配下出现暴露行为为例）。</li>
+        <li><strong>排除躯体和遗传性疾病：</strong>检查性器官发育情况、性激素水平及染色体有无畸变。</li>
+        <li><strong>诊断门槛：</strong>须有基于性想法、幻想或冲动的实际行为，或感到明显的痛苦；并符合五条共同特征。</li>
+      </ol>
+      <span class="note">教材未给出鉴别所用的具体量表或实验室阈值，本答案不补充。</span>
+    </div></details>
+  </div>
+
+  <div class="quiz-q">
+    <div class="qh"><span class="qno">第 13 题</span><span class="qtype">案例分析题</span><span class="diff">难</span></div>
+    <p class="brief">【模拟情境，依据教材知识点构建，不是教材原案例】一对夫妻在性活动中偶尔出现挤压、撕咬，双方均接受，事后无痛苦，也未因此影响正常性生活。丈夫担心自己"是不是性施虐障碍"，前来咨询。请回答：①能否诊断性施虐障碍或性受虐障碍？②依据是什么？③还应评估哪些内容？</p>
+    <details><summary>查看答案与解析</summary><div class="dbody">
+      <strong>①不能诊断。</strong><br>
+      <strong>②依据：</strong>教材原文——"夫妻之间在性活动中挤压、撕咬或给对方施以一定的痛苦，<strong>偶尔为之</strong>，大多没有'攻击'本意，主要作为一种调情的方式，不能诊断为性施虐障碍和性受虐障碍。" 本例符合"偶尔为之""作为调情方式"，且不构成达到性满足的惯用和偏爱方式。<br>
+      <strong>③还应评估：</strong>行为的频率与是否"反复、强烈"；是否已成为达到性满足的惯用和偏爱方式、甚至"所必需的方式"；是否存在以对方痛苦激起性唤起这一核心模式；是否存在具有临床意义的痛苦；是否存在其他精神疾病（教材鉴别原则：若满足其他精神疾病诊断标准，异常性行为可能由其影响出现）；必要时按教材要求检查性器官发育、性激素与染色体。<br>
+      <span class="note">本案例为模拟情境，未虚构检查数值、也未描述任何具体行为细节；教材未涉及此类咨询的具体流程与疗程。</span>
+    </div></details>
+  </div>
+</section>
+
+<!-- ===== 16 速记卡 ===== -->
+<section id="cards">
+  <div class="sec-head"><div class="badge">16</div><h2>考点速记卡<span class="en">20 flip cards</span></h2></div>
+  <p class="sec-lead">正面是问题，点击翻面看答案。建议按"概念 → 边界 → 治疗"三轮刷，每轮只求快速反应，不追求逐字复述。</p>
+  <div class="flashcard-grid">
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag concept">概念</span><p>性心理障碍的定义核心是什么？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">性行为的心理和行为明显偏离正常，并以偏离方式作为性兴奋、性满足的<strong>主要或唯一方式</strong>；一般精神活动无其他明显异常。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag concept">概念</span><p>教材列出的五类常见性心理障碍？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">露阴障碍、窥视障碍、恋童障碍、强迫性性施虐障碍、摩擦障碍（口诀"露窥恋虐摩"）。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag diag">诊断</span><p>性心理障碍的五条共同特征？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">①异常且较固定、不易纠正；②后果可能有害但不能自控；③有辨认能力、可回避；④除异常性行为外社会适应良好、无突出人格障碍；⑤无智能障碍和意识障碍。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag concept">边界</span><p>性心理障碍的"三重边界"是什么？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">不等于道德败坏／性欲亢进（多数性欲低下、事后愧疚）；不等于人格障碍（其余社会适应良好）；不等于性犯罪（司法概念，实施致害应追责）。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag diag">诊断</span><p>五类性心理障碍共同的诊断门槛是什么？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">必须有基于这种性的想法、幻想或冲动的<strong>实际行为</strong>，或感到<strong>明显的痛苦</strong>。仅有意念而无行为、无痛苦，不达门槛。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag data">数据</span><p>四种"各方已同意即排除"的障碍？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">露阴障碍、窥视障碍、强迫性性施虐障碍、摩擦障碍。教材对四者均写明"特定地排除"。露阴还排除"文化认可的公共场所裸露"。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag concept">概念</span><p>露阴障碍的三个关键词？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">陌生异性、毫无准备、暴露生殖器以达到性兴奋；无进一步性侵犯。另有：保持安全距离便于逃脱、对方反应越强越兴奋。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag data">数据</span><p>露阴障碍的人群与数字？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">几乎只见于男性；男性患病率 2%～4%，女性极低；受害者一般为 16 岁以上妇女；中老年首次出现应先排除器质性原因。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag concept">概念</span><p>窥视障碍的核心行为？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">反复多次窥视他人性活动、亲昵行为或异性裸体以满足性兴奋；窥视当时或事后手淫；不企图性交，一般无进一步攻击伤害。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag diag">鉴别</span><p>哪些"偷看"不能诊断窥视障碍？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">童年偷看异性上厕所（随年龄自然消失）；偶然偷看洗澡、上厕所；看色情影片录像画册伴性兴奋或作为增强正常性活动的手段；各方已同意的窥视行为。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag diag">诊断</span><p>恋童障碍的三条年龄线？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">受害儿童：青春期前、通常 <strong>13 岁或更小</strong>；患者：至少 <strong>16 岁</strong>；年龄差：至少<strong>年长 5 岁</strong>。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag risk">边界</span><p>恋童障碍的两条"不属于"？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">青春期前后年龄近似的儿童之间的性行为，<strong>不能作出恋童障碍的诊断</strong>；为发泄性欲强奸和猥亵幼女，<strong>不属于本症范畴</strong>。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag concept">概念</span><p>性施虐障碍与性受虐障碍的分野？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">施虐：让<strong>他人</strong>承受心理或躯体痛苦以激起性唤起（鞭打、绳勒、撕割）；受虐：要求<strong>对方对自己</strong>施加痛苦，经被羞辱、殴打、捆绑等受苦激起性冲动。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag diag">鉴别</span><p>夫妻偶尔调情式施虐能不能诊断？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">不能。教材：挤压、撕咬或施以一定痛苦，<strong>偶尔为之</strong>，大多没有"攻击"本意，主要作为调情方式，不能诊断为性施虐障碍和性受虐障碍。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag diag">鉴别</span><p>摩擦障碍的三个"没有"？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">一般没有暴露生殖器的愿望和行为；没有与受害人发生性活动的要求；教材未描述进一步的攻击伤害。另有：拥挤中偶然接触引起的性兴奋<strong>不能归于本症</strong>。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag treat">治疗</span><p>性心理障碍治疗三大类？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">生物学治疗（SSRIs、抗雄激素、GnRHa；另有下丘脑后部或腹内侧 DBS）；心理治疗（行为疗法、精神分析、认识领悟疗法）；正面教育。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag treat">治疗</span><p>氟西汀在教材中的定位与国情提示？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">氟西汀能减少恋童、露阴、窥视患者的性幻想和性行为；SSRIs 适用于轻症、青少年或共病抑郁／强迫者。<strong>我国尚未批准 SSRIs 用于性心理障碍</strong>；剂量教材未涉及。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag data">数据</span><p>认识领悟疗法的创立者与疗效数据？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">钟友彬创立（精神分析基础上结合中国文化特点的短程疗法）；1992 年治疗 <strong>33 例</strong>性变态者，<strong>27 例</strong>明显好转。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag concept">概念</span><p>做作性障碍的核心动机？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">获得患者身份和得到照顾（<strong>心理获益</strong>），享受被诊断、被治疗的过程；不是为了骗取现实获益，也不是诈病。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag diag">鉴别</span><p>做作性障碍的四组鉴别？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">诈病（外部获益）；转换障碍（无作伪证据、要求较弱）；边缘型人格障碍（自伤后会直接承认、情绪失控）；共病躯体疾病（新症状不可忽视，避免固化归因）。</div>
+    </div></div>
+  </div>
+</section>
+
+<!-- ===== 17 病例挑战 ===== -->
+<section id="cases">
+  <div class="sec-head"><div class="badge">17</div><h2>病例挑战<span class="en">3 cases · increasing difficulty</span></h2></div>
+  <p class="sec-lead">以下三个均为<strong>模拟临床情境</strong>：依据教材所述典型表现与处理原则构建，<strong>不是教材原案例</strong>；不虚构检查数值、不描述具体违法操作细节。病例 1 较典型，病例 3 涉及法律与伦理判断，难度递进。</p>
+
+  <div class="case">
+    <span class="ctag">模拟情境 · 难度 ★ · 识别与边界</span>
+    <h3>案例 1：傍晚校园里的"暴露"</h3>
+    <div class="scene">【模拟临床情境，依据教材知识点构建，不是教材原案例】男，24 岁，性格内向，不善于与女性交往。近一年来，他多次在傍晚选择校园偏僻路段，见有单身女性走近时暴露自己的生殖器；对方惊叫、快步离开后，他感到满足，随后离开现场，从未追赶或接触对方。某次被校园保安发现并控制，校方要求其接受精神科评估。评估时他承认自己"控制不住"，事后感到羞愧，但表示对正常性交"提不起兴趣"。</div>
+    <ol class="ques">
+      <li>最可能的诊断是什么？请列出支持依据。</li>
+      <li>需要与哪些情况鉴别？</li>
+      <li>下一步处置原则是什么？教材对治疗与法律边界如何表述？</li>
+    </ol>
+    <details><summary>查看答案与解析</summary><div class="dbody">
+      <strong>1. 最可能：露阴障碍（性心理障碍）。</strong>依据：①反复多次，在<strong>陌生异性毫无准备</strong>的情况下暴露生殖器以达到性兴奋；②暴露前选择<strong>仅有异性存在的偏僻场合</strong>，与受害人<strong>保持一定安全距离</strong>以便逃脱；③<strong>对方的惊叫等反应增强其兴奋</strong>，且无进一步性侵犯行为施加于对方；④个性内向、不善于与女性交往，与教材"个性多内倾"的描述一致；⑤对正常性交缺乏兴趣，与教材"大部分患者性功能低下或缺乏正常性功能"一致。<br>
+      <strong>2. 鉴别：</strong>①<strong>精神分裂症等伴发</strong>——若存在命令性幻听支配或满足其他精神疾病诊断标准，异常性行为应归因于该病；本例未提及幻觉、妄想等精神病性症状，但仍需精神检查确认。②<strong>各方已同意的暴露行为</strong>——本例受害人毫无准备，不存在同意。③<strong>文化认可的公共场所裸露</strong>——本例显然不属于。④<strong>器质性原因</strong>——教材要求中老年首次出现者先排除器质性原因；本例 24 岁起病，但仍应常规排查性器官发育、性激素与染色体。<br>
+      <strong>3. 处置原则：</strong>①先完成精神状况检查与病史采集（教材强调"详细完整的病史、认真细致的精神状况检查，以及患者的生活经历和临床表现"对诊断尤为重要）；②评估是否存在性暴力高风险，高风险者药物治疗"首先选择一线用药"；③以<strong>心理治疗为主要方法</strong>，最常用行为疗法，可辅以精神分析或认识领悟疗法；④药物方面教材点名氟西汀可减少露阴障碍患者的性幻想和性行为（<strong>剂量教材未涉及</strong>，我国尚未批准用于性心理障碍）；⑤<strong>正面教育</strong>，明确指出行为违反法律与制度、影响就业升学；⑥法律边界：教材明确"性犯罪是司法概念"，若将歪曲冲动实施、对他人造成伤害或干扰社会秩序，<strong>应予追究责任</strong>——诊断与责任并存，具体认定由法定程序进行。<br>
+      <span class="note">本案例为模拟情境，未虚构化验值、也未描述任何超出教材的行为细节。</span>
+    </div></details>
+  </div>
+
+  <div class="case">
+    <span class="ctag">模拟情境 · 难度 ★★ · 动机与鉴别</span>
+    <h3>案例 2：总要求"特殊治疗"的住院患者</h3>
+    <div class="scene">【模拟临床情境，依据教材知识点构建，不是教材原案例】女，30 岁，因自述的躯体不适在综合医院多次住院。本次住院期间，主管医师发现她所提供的部分病历资料与院内客观记录不一致；复查后，与其自述严重程度不符。她坚持认为自己患有一种尚未被查出的疾病，反复要求使用某种特殊治疗，并拒绝讨论"是否需要看精神科"。被拒绝后出现强烈情绪反应，在病房哭闹。精神科会诊时，她思维条理清晰，未发现抑郁、焦虑情绪，也未发现幻觉、妄想；她承认自己"改过资料"，但解释为"原来的记录没有反映真实病情"。</div>
+    <ol class="ques">
+      <li>最可能的诊断是什么？核心依据是哪一条？</li>
+      <li>请与诈病、转换障碍、边缘型人格障碍逐一鉴别。</li>
+      <li>治疗目标是什么？教材认为难点在哪里？</li>
+    </ol>
+    <details><summary>查看答案与解析</summary><div class="dbody">
+      <strong>1. 最可能：对自身的做作性障碍。</strong>核心依据：<strong>存在可识别的欺骗行为</strong>（修改资料），目的是<strong>获得患者身份、被诊断与被治疗</strong>（反复要求住院与特殊治疗），而<strong>不是外部获益</strong>（未涉及赔偿、免责等）。精神检查未见抑郁、焦虑、幻觉、妄想，说明不能用其他精神障碍解释其表现。<br>
+      <strong>2. 鉴别：</strong><br>
+      ①<strong>诈病：</strong>关键在于<strong>获益性质</strong>——诈病由"显而易见的外在奖赏或激励"驱动（金钱、休假、免责，如获得残疾赔偿或逃避刑事起诉）；本例图的是患者角色与治疗过程，属心理获益，故不支持诈病。<br>
+      ②<strong>转换障碍：</strong>两者表现可类似，神经科检查也可能都呈现"不同检查方法暴露出不一致"；但转换障碍患者的"要求"没有做作性障碍那么强，<strong>更没有作伪的证据</strong>。本例有明确的修改资料行为，倾向于做作性障碍。<br>
+      ③<strong>边缘型人格障碍：</strong>边缘型患者有故意自伤，但被问到时<strong>直接承认是自己所为、是出于情绪失控</strong>；本例则是掩饰并作解释，二者"索偿策略不同"。教材同时提醒，两类患者在成长史上有某些共同的精神痛苦（如感到被忽视、被抛弃）。<br>
+      <strong>3. 治疗目标与难点：</strong>目标不是"治愈"，而是<strong>控制风险</strong>——教材原文："这更多需要系统的力量，即将这样的患者在医疗系统和保险系统中予以警示。" 难点：①患者往往<strong>回避精神科医师或临床心理治疗者</strong>；②有的患者在可能造成对质前<strong>已自行溜走</strong>；③"其实质可能伴有人格障碍，处理起来是相对棘手的"；④医疗系统尚缺乏统一管理，非精神科医师普遍不了解、不知如何应对和转诊。发现证据后教材要求<strong>与患者对质</strong>，但结果可能是承认，也可能是离开。<br>
+      <span class="note">本案例为模拟情境。教材未涉及做作性障碍的药物治疗与具体心理治疗方案，故本答案不给出用药建议。</span>
+    </div></details>
+  </div>
+
+  <div class="case">
+    <span class="ctag">模拟情境 · 难度 ★★★ · 诊断对象与法律伦理</span>
+    <h3>案例 3：总带父亲看病的照顾者</h3>
+    <div class="scene">【模拟临床情境，依据教材知识点构建，不是教材原案例】一位成年子女长期照顾年迈、表达困难的父亲，多次带其辗转于不同医院就诊。就诊时主要由这位子女陈述病情，所述症状严重且多变，但多次客观评估与之并不相符；该子女始终陪护在旁，代为回答大部分问题，并积极要求进一步检查与治疗，自己则表现出"唯一能照顾好父亲的人"的姿态。父亲本人难以清晰表达自己的感受。</div>
+    <ol class="ques">
+      <li>如果考虑"对他人的做作性障碍"，诊断应当写给谁？为什么？</li>
+      <li>教材如何定性这种行为？与诈病如何区分？</li>
+      <li>处置方向是什么？表述时应注意什么？</li>
+    </ol>
+    <details><summary>查看答案与解析</summary><div class="dbody">
+      <strong>1. 诊断写给这位成年子女（制造症状的个体），不是写给父亲。</strong>教材原文："诊断应给予假装、伪造或诱发另一人症状的个体，<strong>而不是表现出症状的个体</strong>。" 本例症状承载者是表达困难的老人，符合教材"通常是对个体依赖的儿童"以及"往往是对孩子或无法表达的老人施虐"的描述结构。<br>
+      <strong>2. 教材定性：</strong>"属于一种虐待，甚至可能构成虐待犯罪"；治疗部分又写"严重的可构成虐待罪，涉及监护权的转移等法律问题"。<strong>与诈病的区分：</strong>做作性障碍的欺骗"并不仅仅由显而易见的外在奖赏或激励所驱动"（图的是患者身份与被照顾／扮演照顾者）；诈病由外部奖赏驱动，教材特别举出"逃避虐待儿童、老人的刑事起诉"这一情形——若动机是逃避刑事追诉，则属诈病方向，而非做作性障碍。<br>
+      <strong>3. 处置方向：</strong>教材明确"需要引入法律干预"，严重情形可能涉及虐待罪与<strong>监护权的转移</strong>等法律问题；同时应把诊断写在加害者名下，而不是给受害者贴标签。<strong>表述注意：</strong>必须保留教材的限定词——"属于一种虐待，<strong>甚至可能</strong>构成虐待犯罪""严重的<strong>可</strong>构成虐待罪"；医学诊断不等于定罪，是否构成犯罪、是否转移监护权由法定程序认定，教材未展开，本指南不作法律判断。教材亦未提供本亚型的药物或心理治疗方案。<br>
+      <span class="note">本案例为模拟情境，未描述任何具体伤害方式、未虚构检查数值与司法结论；目的是训练"诊断对象"这一核心判断。</span>
+    </div></details>
+  </div>
+</section>
+
+<!-- ===== 18 拓展 ===== -->
+<section id="ext">
+  <div class="sec-head"><div class="badge">18</div><h2>拓展延伸<span class="en">Beyond the chapter</span></h2></div>
+  <p class="sec-lead">这里只放两类内容：教材明确提到但一笔带过的，以及教材确实空白、必须标"未涉及"的。前者标「拓展补充」，后者标「教材未涉及」，绝不混用。</p>
+  <div class="grid2">
+    <div class="card cyan">
+      <h3>教材提到、但仅一笔带过的内容（拓展补充）</h3>
+      <ul>
+        <li><strong>ICD-11 与 DSM-5 的差异：</strong>教材开篇指出，与 DSM-5 相比，ICD-11 <strong>取消了恋物障碍与异装障碍</strong>的诊断分类；与 ICD-10 相比，ICD-11 不再按"性身份障碍、性偏好障碍与性发育和性取向有关的心理及行为障碍"分类。</li>
+        <li><strong>做作性障碍的归属变迁：</strong>DSM-5 并入躯体症状及相关障碍；ICD-10 归入人格障碍（F68.10）；ICD-11 列为独立诊断实体。</li>
+        <li><strong>GnRHa：</strong>教材只列为生物学治疗三类之一（"促性腺激素释放激素类似物或激动剂"），未给出药名、剂量与适应证细节。</li>
+        <li><strong>深部脑刺激：</strong>教材只写"定位于下丘脑后部或腹内侧的深部脑刺激也有一定疗效"，未给参数、疗程与风险。</li>
+        <li><strong>抗雄激素疗程：</strong>教材呈现两种学者观点（至少 3～5 年／终身），并明确"尚无一致定论"。</li>
+        <li><strong>惩罚与求医动机：</strong>教材提出法律惩罚"虽然没有直接治疗效果，却是必要的"，因为能增加患者主动寻求医治的动机。</li>
+        <li><strong>认识领悟疗法：</strong>教材介绍其为钟友彬在精神分析理论基础上结合中国文化特点创立的短程精神分析治疗方法。</li>
+      </ul>
+    </div>
+    <div class="card orange">
+      <h3>教材未涉及 / 本指南不补写的内容</h3>
+      <ul>
+        <li><strong>性身份障碍、异装障碍、恋物障碍：</strong>本章开篇只说明 ICD-11 取消或不再使用相关分类，<strong>未把它们作为本章疾病展开</strong>；因此本指南不为其编写八栏，也不虚构诊断标准与治疗。</li>
+        <li><strong>所有药物的具体剂量：</strong>SSRIs、抗雄激素、GnRHa 的 mg 剂量与给药方案，教材均未给出。</li>
+        <li><strong>统一疗程：</strong>教材明确"药物治疗的疗程尚无一致定论"，仅有两种学者观点。</li>
+        <li><strong>心理治疗的次数、周期与操作手册：</strong>教材只写方法名称与原理，未给疗程参数。</li>
+        <li><strong>精确患病率：</strong>教材反复强调"难以获得准确患病率"，所引数字均为特定国家、特定人群的研究结果。</li>
+        <li><strong>对他人的做作性障碍的治疗方案：</strong>教材只给"引入法律干预"，未给药物、心理治疗或家庭干预内容。</li>
+        <li><strong>对自身做作性障碍的药物治疗：</strong>教材未提及任何药物。</li>
+        <li><strong>性心理障碍的共病率、复发率、随访方案：</strong>教材未涉及。</li>
+      </ul>
+    </div>
+  </div>
+  <div class="callout warn">
+    <span class="ct">⚠️ 关于法律与伦理表述的统一提醒</span>
+    本章所有涉及法律的表述均来自教材：性犯罪是<strong>司法概念</strong>；实施歪曲冲动致害或扰乱秩序<strong>应予追究责任</strong>；对他人的做作性障碍"<strong>属于一种虐待，甚至可能构成虐待犯罪</strong>"，"严重的<strong>可</strong>构成虐待罪，涉及监护权的转移"。教材未展开罪名构成、程序与举证，本指南<strong>不作任何法律结论</strong>；临床判断与法律认定应分开进行。
+  </div>
+  <div class="callout ext">
+    <span class="ct">📖 使用提醒</span>
+    本指南所有定义、诊断条目、数字、药名与治疗表述均取自教材第十八章原文（印刷页 214–221）。凡标注"教材未涉及"处，不要用其他资料的数字或方案替代，以免与教材答案冲突。涉及具体病例的法律定性，请以现行法律与司法程序为准。
+  </div>
+  <div class="hr"></div>
+  <p class="note" style="text-align:center">精神病学（第9版）｜第十八章 性心理障碍和做作性障碍｜印刷页 214–221｜学习指南完</p>
+</section>
+
+</div>
+<nav class="chapter-pager" aria-label="章节间导航"><a class="cp-prev" href="精神病学_第十七章_人格障碍及相关人格特质_学习指南.html">← 上一章：第十七章</a><a class="cp-toc" href="index.html">目录</a><a class="cp-next" href="精神病学_第十九章_神经认知障碍_学习指南.html">下一章：第十九章 →</a></nav>
+</main>
+
+<button class="top" id="topBtn" aria-label="回到顶部">↑</button>
+<script>
+/* ============================================================
+   精神病学学习指南 · 统一交互层 v1（构建期注入，整体替换原 IIFE）
+   兼容 A 族（.tabbar button + [data-panel] + .panel.on）与
+   B 族（.tab-nav + .tab-panel.active）两套 DOM 约定。
+   特性检测 + 防御式查询 + 幂等；不引入任何外部依赖。
+   ============================================================ */
+(function () {
+  'use strict';
+  if (window.__PSY_GUIDE_APP__) { return; }
+  window.__PSY_GUIDE_APP__ = true;
+
+  var d = document;
+
+  function all(sel, root) {
+    return Array.prototype.slice.call((root || d).querySelectorAll(sel));
+  }
+  function on(el, ev, fn, opt) {
+    if (el) { el.addEventListener(ev, fn, opt || false); }
+  }
+  function norm(s) {
+    return String(s || '').replace(/\s+/g, '').toUpperCase();
+  }
+
+  /* ---------- 1. Tab 切换（两族约定都支持） ---------- */
+  function initTabs() {
+    all('.tabs, [data-tabs]').forEach(function (g) {
+      if (g.__psyTabs) { return; }
+      g.__psyTabs = true;
+      var isA = !!g.querySelector('.tabbar button');
+      var btns = all(isA ? '.tabbar button' : '.tab-nav .tab-btn', g);
+      if (!btns.length) { return; }
+      var cls = isA ? 'on' : 'active';
+      var nav = btns[0].closest('.tabbar') || btns[0].closest('.tab-nav');
+      if (nav && !nav.hasAttribute('role')) { nav.setAttribute('role', 'tablist'); }
+      all(isA ? '.panel' : '.tab-panel', g).forEach(function (p) {
+        if (!p.hasAttribute('role')) { p.setAttribute('role', 'tabpanel'); }
+      });
+      function activate(btn) {
+        btns.forEach(function (b) {
+          b.classList.remove(cls);
+          b.setAttribute('aria-selected', 'false');
+        });
+        btn.classList.add(cls);
+        btn.setAttribute('aria-selected', 'true');
+        var id = btn.getAttribute('data-tab');
+        if (!id) { return; }
+        var target = isA
+          ? g.querySelector('[data-panel="' + id + '"]')
+          : (g.querySelector('.tab-panel#' + id) || d.getElementById(id));
+        all(isA ? '.panel' : '.tab-panel', g).forEach(function (p) {
+          var show = isA ? (p.getAttribute('data-panel') === id) : (p === target);
+          p.classList.toggle(cls, show);
+        });
+      }
+      btns.forEach(function (btn, i) {
+        if (!btn.hasAttribute('role')) { btn.setAttribute('role', 'tab'); }
+        btn.setAttribute('aria-selected', btn.classList.contains(cls) ? 'true' : 'false');
+        if (!btn.hasAttribute('tabindex') && !btn.classList.contains(cls)) { btn.setAttribute('tabindex', '0'); }
+        on(btn, 'click', function () { activate(btn); });
+        on(btn, 'keydown', function (e) {
+          if (e.key !== 'ArrowRight' && e.key !== 'ArrowLeft') { return; }
+          e.preventDefault();
+          var nx = btns[(i + (e.key === 'ArrowRight' ? 1 : btns.length - 1)) % btns.length];
+          if (nx) { nx.focus(); activate(nx); }
+        });
+      });
+    });
+  }
+
+  /* ---------- 2. 速记卡：点击/键盘翻转 + 可达性 ---------- */
+  function initCards() {
+    all('.flashcard').forEach(function (card) {
+      if (card.__psyCard) { return; }
+      card.__psyCard = true;
+      card.setAttribute('tabindex', '0');
+      card.setAttribute('role', 'button');
+      function sync() {
+        card.setAttribute('aria-pressed', card.classList.contains('flipped') ? 'true' : 'false');
+      }
+      function flip() { card.classList.toggle('flipped'); sync(); }
+      on(card, 'click', flip);
+      on(card, 'keydown', function (e) {
+        if (e.key === 'Enter' || e.key === ' ' || e.key === 'Spacebar') {
+          e.preventDefault();
+          flip();
+        }
+      });
+      sync();
+    });
+  }
+
+  /* ---------- 3. 自测题交互化（核心新功能） ---------- */
+  function initQuiz() {
+    var questions = all('.quiz-q, .quiz-item');
+    if (!questions.length) { return; }
+    var groups = {};
+
+    function keyOf(o) {
+      var L = o.getAttribute('data-letter');
+      if (L && String(L).replace(/\s+/g, '') !== '') { return norm(L); }
+      var sp = o.querySelector('.l');
+      if (sp) {
+        var t = norm(sp.textContent).replace(/[.．、:：]/g, '');
+        if (t !== '') { return t; }
+      }
+      var txt = norm(o.textContent);
+      if (txt.indexOf('正确') >= 0 || txt.indexOf('错误') >= 0) { return txt; }
+      return txt.charAt(0);
+    }
+
+    function getGroup(q) {
+      var sec = q.closest('.quiz-block') || q.closest('section') || d.body;
+      if (!groups[sec.__psyGid]) {
+        sec.__psyGid = 'g' + (Object.keys(groups).length + 1);
+        groups[sec.__psyGid] = { sec: sec, total: 0, score: 0, row: null, first: null };
+      }
+      var g = groups[sec.__psyGid];
+      if (!g.first) { g.first = q; }
+      return g;
+    }
+
+    function ensureRow(g) {
+      if (g.row) { return g.row; }
+      var row = d.createElement('div');
+      row.className = 'quiz-score';
+      row.setAttribute('role', 'status');
+      row.setAttribute('aria-live', 'polite');
+      row.innerHTML = '<span class="qs-label">自测计分</span>' +
+        '<span class="qs-num">得分 0 / ' + g.total + '</span>' +
+        '<span class="qs-bar"><i></i></span>';
+      g.first.parentNode.insertBefore(row, g.first);
+      g.row = row;
+      return row;
+    }
+
+    function updateRow(g) {
+      var row = ensureRow(g);
+      var num = row.querySelector('.qs-num');
+      var bar = row.querySelector('.qs-bar i');
+      if (num) { num.textContent = '得分 ' + g.score + ' / ' + g.total; }
+      if (bar) { bar.style.width = (g.total ? Math.round(g.score / g.total * 100) : 0) + '%'; }
+    }
+
+    questions.forEach(function (q) {
+      if (q.__psyQuiz) { return; }
+      q.__psyQuiz = true;
+      var opts = all('.opt', q);
+      if (!opts.length) { opts = all('.quiz-options > li', q); }
+      if (!opts.length) { return; }
+
+      /* 正确答案先记入内存：预标 correct 优先（记录后立即移除，消除剧透），
+         否则从解析文本「答案：X / 答案 X」提取（不改动任何文字） */
+      var ansKeys = [];
+      var preset = opts.filter(function (o) { return o.classList.contains('correct'); });
+      preset.forEach(function (o) { o.classList.remove('correct'); });
+      if (preset.length) {
+        ansKeys = preset.map(keyOf);
+      } else {
+        var dt = q.querySelector('details');
+        var txt = dt ? dt.textContent : '';
+        var m = txt.match(/答案\s*[:：]?\s*([A-Za-z](?:[\s、,，·和及]*[A-Za-z])*)/);
+        if (m) {
+          ansKeys = m[1].match(/[A-Za-z]/g) || [];
+        } else {
+          var m2 = txt.match(/答案\s*[:：]?\s*(正确|错误)/);
+          if (m2) { ansKeys = [m2[1]]; }
+        }
+      }
+      if (!ansKeys.length) { return; } /* 无可判定答案（名词解释等），保持原样 */
+
+      var g = getGroup(q);
+      g.total += 1;
+      var multi = ansKeys.length > 1;
+      var ansSet = ansKeys.map(norm);
+      var locked = false;
+      var picked = [];
+
+      function revealAll() {
+        opts.forEach(function (o) {
+          if (ansSet.indexOf(keyOf(o)) >= 0) { o.classList.add('is-reveal'); }
+        });
+      }
+      function finish(ok) {
+        locked = true;
+        q.classList.add('is-locked');
+        var dt = q.querySelector('details');
+        if (dt) { dt.open = true; }
+        if (ok) { g.score += 1; }
+        updateRow(g);
+      }
+
+      opts.forEach(function (o) {
+        o.setAttribute('tabindex', '0');
+        function pick() {
+          if (locked) { return; }
+          var k = keyOf(o);
+          if (ansSet.indexOf(k) >= 0) {
+            o.classList.add('is-right');
+            if (picked.indexOf(k) < 0) { picked.push(k); }
+            if (multi) {
+              if (picked.length === ansSet.length) { finish(true); }
+            } else {
+              finish(true);
+            }
+          } else {
+            o.classList.add('is-wrong');
+            revealAll();
+            finish(false);
+          }
+        }
+        on(o, 'click', pick);
+        on(o, 'keydown', function (e) {
+          if (e.key === 'Enter' || e.key === ' ' || e.key === 'Spacebar') {
+            e.preventDefault();
+            pick();
+          }
+        });
+      });
+    });
+
+    Object.keys(groups).forEach(function (id) {
+      if (groups[id].total > 0) { updateRow(groups[id]); }
+    });
+  }
+
+  /* ---------- 4. 侧栏 scroll spy（本页锚点高亮） ---------- */
+  function initSpy() {
+    var links = all('#sidebar a[href^="#"]');
+    if (!links.length || !('IntersectionObserver' in window)) { return; }
+    var map = {};
+    links.forEach(function (a) {
+      var id = a.getAttribute('href').slice(1);
+      if (id) { map[id] = a; }
+    });
+    var secs = [];
+    Object.keys(map).forEach(function (id) {
+      var s = d.getElementById(id);
+      if (s) { secs.push(s); }
+    });
+    if (!secs.length) { return; }
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting && map[e.target.id]) {
+          links.forEach(function (a) { a.classList.remove('active'); });
+          map[e.target.id].classList.add('active');
+        }
+      });
+    }, { rootMargin: '-15% 0px -70% 0px', threshold: 0 });
+    secs.forEach(function (s) { io.observe(s); });
+  }
+
+  /* ---------- 5. 阅读进度条 + 回顶 ---------- */
+  function initScroll() {
+    var bar = d.getElementById('readbar');
+    var topBtn = d.getElementById('topBtn') || d.getElementById('backTop');
+    var ticking = false;
+    function step() {
+      ticking = false;
+      var h = d.documentElement;
+      var y = window.pageYOffset || h.scrollTop || 0;
+      if (bar) {
+        var max = h.scrollHeight - h.clientHeight;
+        bar.style.width = (max > 0 ? (y / max) * 100 : 0) + '%';
+      }
+      if (topBtn) {
+        topBtn.classList.toggle('show', y > 400);     /* A 族类名 */
+        topBtn.classList.toggle('visible', y > 400);  /* B 族类名 */
+      }
+    }
+    on(window, 'scroll', function () {
+      if (!ticking) { ticking = true; window.requestAnimationFrame(step); }
+    }, { passive: true });
+    step();
+    on(topBtn, 'click', function () {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
+
+  /* ---------- 6. 侧栏开合（存在才绑定；抽屉打开时锁定背景滚动） ---------- */
+  function initSidebar() {
+    var sidebar = d.getElementById('sidebar');
+    if (!sidebar) { return; }
+    var btn = d.getElementById('menuBtn') || d.getElementById('navToggle');
+    var ov = d.getElementById('overlay') || d.getElementById('sidebarOverlay');
+    function lock(open) {
+      /* 仅移动抽屉断点（≤900px）锁滚动；宽屏兜底解除，防布局残留 */
+      d.body.classList.toggle('nav-locked', !!open && window.innerWidth <= 900);
+    }
+    function close() {
+      sidebar.classList.remove('open');
+      if (ov) { ov.classList.remove('show'); }
+      lock(false);
+    }
+    on(btn, 'click', function () {
+      var open = !sidebar.classList.contains('open');
+      sidebar.classList.toggle('open');
+      if (ov) { ov.classList.toggle('show'); }
+      lock(open);
+    });
+    on(ov, 'click', close);
+    all('a', sidebar).forEach(function (a) {
+      on(a, 'click', function () {
+        if (window.innerWidth <= 900) { close(); }
+      });
+    });
+    on(window, 'resize', function () {
+      if (window.innerWidth > 900) { lock(false); }
+    });
+  }
+
+  /* ---------- 启动（脚本位于 body 末尾，DOM 已就绪；防御兜底） ---------- */
+  function boot() {
+    initTabs();
+    initCards();
+    initQuiz();
+    initSpy();
+    initScroll();
+    initSidebar();
+  }
+  if (d.readyState === 'loading') {
+    on(d, 'DOMContentLoaded', boot);
+  } else {
+    boot();
+  }
+})();
+</script>
+
+</body>
+</html>

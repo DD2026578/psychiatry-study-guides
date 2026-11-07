@@ -1,0 +1,1849 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>精神病学 第二十二章 精神科急诊及危机干预 · 学习指南</title>
+<style>
+:root{
+  --primary:#0EA5E9; --accent:#10B981; --symptom:#EF4444; --treatment:#10B981;
+  --cause:#3B82F6; --diagnosis:#F59E0B; --memory:#8B5CF6; --danger:#DC2626;
+  --quiz:#EC4899; --flashcard:#06B6D4; --bg:#F0F7FA; --card:#FFFFFF;
+  --ink:#0F172A; --muted:#64748B; --border:#E2E8F0; --accent2:#10B981; --accent3:#06B6D4;
+  --shadow:0 4px 18px rgba(15,23,42,.06); --radius:14px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:'Microsoft YaHei','PingFang SC','Hiragino Sans GB',system-ui,-apple-system,sans-serif;font-size:16px;line-height:1.75;-webkit-font-smoothing:antialiased}
+#readbar{position:fixed;top:0;left:0;height:4px;width:0;background:linear-gradient(135deg,#0EA5E9 0%,#06B6D4 50%,#10B981 100%);z-index:300;transition:width .12s linear}
+a{color:var(--primary);text-decoration:none}
+a:hover{text-decoration:underline}
+.sidebar{position:fixed;top:0;left:0;width:272px;height:100vh;background:#fff;border-right:1px solid var(--border);overflow-y:auto;padding:20px 16px 40px;z-index:120}
+.sidebar h2{font-size:17px;margin:0 0 4px;line-height:1.5}
+.sidebar .sub{font-size:12px;color:var(--muted);line-height:1.6;margin-bottom:14px}
+.toc-group{font-size:12px;letter-spacing:.08em;color:var(--muted);margin:16px 0 6px;font-weight:700}
+.sidebar a.toc{display:block;padding:7px 10px;border-radius:8px;font-size:14px;color:var(--ink);line-height:1.5;margin:2px 0}
+.sidebar a.toc:hover{background:#E0F2FE;text-decoration:none}
+.sidebar a.toc .n{display:inline-block;min-width:26px;color:var(--primary);font-weight:700}
+.sidebar .unitlink{font-weight:600}
+.sidebar .sub2{padding-left:26px;font-size:13px;color:var(--muted)}
+.overlay{display:none}
+.menu-btn{display:none;position:fixed;top:14px;left:14px;z-index:200;width:46px;height:46px;border-radius:12px;border:1px solid var(--border);background:#fff;box-shadow:var(--shadow);font-size:22px;line-height:1;color:var(--primary);cursor:pointer}
+.main{margin-left:272px;padding:0 40px 90px;max-width:1240px}
+.wrap{max-width:980px;margin:0 auto}
+.hero{background:linear-gradient(135deg,#0EA5E9 0%,#06B6D4 50%,#10B981 100%);color:#fff;border-radius:0 0 26px 26px;padding:52px 44px 40px;margin:0 -40px 30px;box-shadow:0 12px 30px rgba(14,165,233,.18)}
+.hero .chap{display:inline-block;font-size:13px;letter-spacing:.22em;background:rgba(255,255,255,.18);padding:5px 14px;border-radius:999px;margin-bottom:16px}
+.hero h1{font-size:42px;line-height:1.25;margin:0 0 10px;font-weight:800}
+.hero .tagline{font-size:18px;opacity:.96;margin:0 0 6px}
+.hero .meta{font-size:13px;opacity:.85}
+.goalbox{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.28);border-radius:14px;padding:18px 20px;margin-top:22px}
+.goalbox h3{margin:0 0 10px;font-size:15px;letter-spacing:.06em}
+.goalbox ul{margin:0;padding-left:20px}
+.goalbox li{margin:4px 0;font-size:14.5px;line-height:1.65}
+.lv{display:inline-block;font-size:11px;font-weight:700;padding:1px 8px;border-radius:999px;background:#fff;color:#0369A1;margin-right:6px;vertical-align:1px}
+.lv.l2{color:#047857}.lv.l3{color:#B45309}.lv.l4{color:#B91C1C}
+section{scroll-margin-top:18px;margin:0 0 46px}
+.sec-head{display:flex;align-items:center;gap:12px;margin:0 0 8px}
+.sec-head .badge{flex:0 0 auto;width:44px;height:44px;border-radius:13px;background:linear-gradient(135deg,#0EA5E9,#06B6D4);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:17px;box-shadow:0 6px 14px rgba(14,165,233,.25)}
+.sec-head h2{font-size:27px;margin:0;line-height:1.35;font-weight:800}
+.sec-head .en{font-size:13px;color:var(--muted);font-weight:400;margin-left:6px}
+.sec-lead{color:#334155;background:#fff;border-left:4px solid var(--primary);border-radius:0 12px 12px 0;padding:13px 18px;margin:12px 0 22px;box-shadow:var(--shadow);font-size:15px}
+.card{background:var(--card);border:1px solid var(--border);border-left:6px solid var(--primary);border-radius:var(--radius);padding:20px 22px;margin:16px 0;box-shadow:var(--shadow)}
+.card.red{border-left-color:var(--symptom)} .card.green{border-left-color:var(--treatment)}
+.card.blue{border-left-color:var(--cause)} .card.orange{border-left-color:var(--diagnosis)}
+.card.purple{border-left-color:var(--memory)} .card.cyan{border-left-color:var(--flashcard)}
+.card.danger{border-left-color:var(--danger)} .card.pink{border-left-color:var(--quiz)}
+.card h3,.col-title{font-size:19px;margin:0 0 10px;line-height:1.45;display:flex;align-items:center;gap:9px;flex-wrap:wrap}
+.col-title .idx{font-size:12px;font-weight:800;color:#fff;background:var(--primary);padding:2px 9px;border-radius:999px;letter-spacing:.03em}
+.card p{margin:8px 0}
+.card ul,.card ol{margin:8px 0;padding-left:22px}
+.card li{margin:5px 0}
+.quote{background:#EFF8FF;border:1px dashed #7DD3FC;border-radius:10px;padding:12px 16px;margin:10px 0;font-size:15px;color:#0C4A6E}
+.quote .lab{display:inline-block;font-size:11px;font-weight:800;background:#0EA5E9;color:#fff;padding:1px 7px;border-radius:5px;margin-right:7px;vertical-align:1px}
+.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.grid4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.grid2>*,.grid3>*,.grid4>*{min-width:0}
+.mini{background:#F8FAFC;border:1px solid var(--border);border-radius:11px;padding:12px 14px}
+.mini h4{margin:0 0 5px;font-size:15px;color:#0F172A}
+.mini p,.mini ul{font-size:14px;color:#334155;margin:4px 0}
+.mini ul{padding-left:18px}
+.stat{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0}
+.stat span{font-size:13px;background:#E0F2FE;color:#075985;border-radius:999px;padding:3px 11px;font-weight:600}
+.table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:12px 0;border-radius:12px;border:1px solid var(--border)}
+table{border-collapse:collapse;width:100%;min-width:560px;background:#fff;font-size:14px}
+th{background:#0F172A;color:#fff;font-weight:700;padding:10px 12px;text-align:left;line-height:1.5;font-size:13.5px}
+td{padding:10px 12px;border-top:1px solid var(--border);vertical-align:top;line-height:1.65}
+tbody tr:nth-child(even){background:#F8FAFC}
+td strong{color:#0C4A6E}
+.callout{border-radius:12px;padding:13px 16px;margin:12px 0;border:1px solid;font-size:14.5px}
+.callout .ct{font-weight:800;display:block;margin-bottom:4px;font-size:14.5px}
+.callout.tip{background:#F5F3FF;border-color:#C4B5FD;color:#4C1D95}
+.callout.warn{background:#FEF2F2;border-color:#FCA5A5;color:#7F1D1D}
+.callout.key{background:#ECFDF5;border-color:#6EE7B7;color:#065F46}
+.callout.book{background:#EFF6FF;border-color:#93C5FD;color:#1E3A8A}
+.callout.quiz{background:#FDF2F8;border-color:#F9A8D4;color:#831843}
+.callout.ext{background:#F0F9FF;border-color:#7DD3FC;color:#0C4A6E}
+.timeline{border-left:3px solid #BAE6FD;margin:14px 0 6px 8px;padding-left:20px}
+.tl-item{position:relative;margin:0 0 16px}
+.tl-item:before{content:"";position:absolute;left:-28px;top:5px;width:13px;height:13px;border-radius:50%;background:#fff;border:3px solid var(--primary)}
+.tl-item h4{margin:0 0 3px;font-size:15px;color:#075985}
+.tl-item p{margin:0;font-size:14px;color:#334155}
+.bar{background:#E2E8F0;border-radius:999px;height:9px;overflow:hidden;margin:6px 0 10px}
+.bar i{display:block;height:100%;border-radius:999px;background:linear-gradient(90deg,#0EA5E9,#10B981)}
+.bar-label{display:flex;justify-content:space-between;font-size:13px;color:#334155}
+.tabs{margin:14px 0}
+.tabbar{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:12px}
+.tabbar button{border:1px solid var(--border);background:#fff;border-radius:999px;padding:7px 15px;font-size:14px;font-family:inherit;cursor:pointer;color:#334155}
+.tabbar button.on{background:var(--primary);color:#fff;border-color:var(--primary)}
+.panel{display:none}
+.panel.on{display:block;animation:fade .25s ease}
+@keyframes fade{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}
+details{background:#fff;border:1px solid var(--border);border-radius:11px;margin:10px 0;overflow:hidden}
+summary{cursor:pointer;padding:11px 15px;font-weight:700;color:#075985;list-style:none;font-size:14.5px;background:#F8FAFC}
+summary::-webkit-details-marker{display:none}
+summary:before{content:"▸";display:inline-block;margin-right:7px;color:var(--primary);transition:transform .2s}
+details[open] summary:before{transform:rotate(90deg)}
+details[open] summary{border-bottom:1px solid var(--border)}
+.dbody{padding:13px 16px;font-size:14.5px;color:#1E293B}
+.flashcard-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin:16px 0}
+.flashcard{perspective:1200px;height:200px;cursor:pointer}
+.fc-inner{position:relative;width:100%;height:100%;transition:transform .55s;transform-style:preserve-3d}
+.flashcard.flipped .fc-inner{transform:rotateY(180deg)}
+.fc-front,.fc-back{position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;border-radius:14px;padding:14px 16px;display:flex;flex-direction:column;justify-content:center;box-shadow:var(--shadow);overflow:auto}
+.fc-front{background:#fff;border:1px solid var(--border);border-top:5px solid var(--flashcard)}
+.fc-back{background:#ECFEFF;border:1px solid #A5F3FC;transform:rotateY(180deg);font-size:13.5px;line-height:1.65;color:#164E63}
+.tag{display:inline-block;align-self:flex-start;font-size:11px;font-weight:800;padding:1px 8px;border-radius:999px;margin-bottom:8px;letter-spacing:.04em}
+.tag.concept{background:#DBEAFE;color:#1E40AF}
+.tag.diag{background:#FFEDD5;color:#9A3412}
+.tag.treat{background:#D1FAE5;color:#065F46}
+.tag.data{background:#FCE7F3;color:#9D174D}
+.tag.risk{background:#FEE2E2;color:#991B1B}
+.fc-front p{margin:0;font-size:14.5px;font-weight:700;line-height:1.6}
+.fc-hint{position:absolute;bottom:10px;left:16px;font-size:11px;color:#94A3B8}
+.quiz-q{background:#fff;border:1px solid var(--border);border-left:5px solid var(--quiz);border-radius:12px;padding:16px 18px;margin:16px 0;box-shadow:var(--shadow)}
+.quiz-q .qh{display:flex;justify-content:space-between;gap:10px;align-items:flex-start;margin-bottom:8px;flex-wrap:wrap}
+.quiz-q .qno{font-size:12px;font-weight:800;color:#fff;background:var(--quiz);border-radius:999px;padding:2px 9px;letter-spacing:.04em}
+.diff{font-size:12px;color:#B45309;background:#FEF3C7;border-radius:999px;padding:2px 10px;font-weight:700;white-space:nowrap}
+.qtype{font-size:12px;color:#6B21A8;background:#F3E8FF;border-radius:999px;padding:2px 10px;font-weight:700;white-space:nowrap}
+.opts{margin:10px 0 4px;display:grid;gap:7px}
+.opt{border:1px solid var(--border);border-radius:9px;padding:8px 12px;font-size:14.5px;background:#F8FAFC}
+.opt.correct{border-color:#6EE7B7;background:#ECFDF5;color:#065F46;font-weight:600}
+.opt .l{font-weight:800;color:var(--primary);margin-right:7px}
+.opt.correct .l{color:#047857}
+.brief{font-size:14px;color:#334155;margin-top:4px}
+.case{border:1px solid var(--border);border-top:5px solid var(--danger);border-radius:14px;background:#fff;padding:20px 22px;margin:18px 0;box-shadow:var(--shadow)}
+.case h3{font-size:19px;margin:0 0 8px;color:#7F1D1D}
+.case .ctag{font-size:11.5px;font-weight:800;background:#FEE2E2;color:#991B1B;padding:2px 9px;border-radius:999px;display:inline-block;margin-bottom:10px}
+.case .scene{background:#FFF7ED;border-left:4px solid #FB923C;border-radius:0 10px 10px 0;padding:12px 16px;font-size:14.5px;margin:8px 0 14px}
+.case .ques{margin:8px 0;padding-left:2px}
+.case .ques li{margin:5px 0;font-size:14.5px}
+.top{position:fixed;right:24px;bottom:26px;width:48px;height:48px;border-radius:50%;background:var(--primary);color:#fff;border:none;font-size:20px;cursor:pointer;box-shadow:0 8px 20px rgba(14,165,233,.35);z-index:150;display:none;font-family:inherit}
+.top.show{display:block}
+.hr{height:1px;background:var(--border);margin:26px 0}
+.note{font-size:13px;color:var(--muted);margin-top:6px}
+.kv{display:flex;gap:10px;flex-wrap:wrap;margin:8px 0}
+.kv .k{font-size:12px;font-weight:800;color:#0369A1;background:#E0F2FE;border-radius:6px;padding:2px 8px;white-space:nowrap}
+.kv .v{font-size:14px;color:#334155}
+.starme{font-size:12.5px;color:#B45309;white-space:nowrap}
+@media (max-width:1100px){
+  .main{padding:0 22px 80px}
+  .hero{margin:0 -22px 26px;padding:44px 26px 34px}
+  .hero h1{font-size:34px}
+  .flashcard-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .grid4{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width:900px){
+  .sidebar{transform:translateX(-100%);transition:transform .25s ease;width:280px;box-shadow:0 0 30px rgba(0,0,0,.18)}
+  .sidebar.open{transform:none}
+  .overlay{display:none;position:fixed;inset:0;background:rgba(15,23,42,.42);z-index:110}
+  .overlay.show{display:block}
+  .menu-btn{display:block}
+  .main{margin-left:0;padding:0 18px 80px}
+  .hero{margin:0 -18px 24px;padding:64px 22px 30px;border-radius:0 0 20px 20px}
+  .hero h1{font-size:30px}
+  .sec-head h2{font-size:23px}
+}
+@media (max-width:680px){
+  .grid2,.grid3,.grid4{grid-template-columns:minmax(0,1fr)}
+  .flashcard-grid{grid-template-columns:minmax(0,1fr)}
+  .flashcard{height:190px}
+  table{min-width:500px}
+}
+</style>
+<style data-refactor="v1">
+/* ============================================================
+   精神病学学习指南 · 统一交互层增量覆盖样式 v1
+   构建期由 apply-refactor.ps1 注入 </head> 前，仅追加修正，
+   不改动 A/B 两族基础样式。全部使用字面色值，兼容两族设计变量。
+   ============================================================ */
+
+/* ---- 1. 全局键盘焦点可见 ---- */
+:focus-visible{outline:2px solid #0EA5E9;outline-offset:2px}
+
+/* ---- 2. 章节导航条（胶囊式三段：上一章 / 目录 / 下一章） ---- */
+.chapter-pager{display:flex;align-items:stretch;justify-content:center;gap:10px;margin:36px 0 10px;flex-wrap:wrap}
+.chapter-pager a,.chapter-pager span{flex:1 1 200px;display:flex;align-items:center;justify-content:center;min-height:44px;padding:10px 18px;border:1px solid #E2E8F0;border-radius:999px;background:#FFFFFF;color:#0F172A;font-size:14px;font-weight:600;line-height:1.4;text-decoration:none;text-align:center;box-shadow:0 1px 2px rgba(15,23,42,.06);transition:border-color .15s ease,box-shadow .15s ease,color .15s ease}
+.chapter-pager a:hover{border-color:#0EA5E9;color:#0EA5E9;box-shadow:0 4px 14px rgba(14,165,233,.18);text-decoration:none}
+.chapter-pager .cp-toc{flex:0 0 auto;min-width:104px;background:linear-gradient(135deg,#0EA5E9,#10B981);border-color:transparent;color:#FFFFFF}
+.chapter-pager .cp-toc:hover{border-color:transparent;color:#FFFFFF;opacity:.92}
+.chapter-pager .cp-disabled{opacity:.45;background:#F8FAFC;box-shadow:none;cursor:default}
+@media (max-width:680px){.chapter-pager{gap:8px;margin:28px 0 8px}.chapter-pager a,.chapter-pager span{flex:1 1 100%}}
+
+/* ---- 3. 自测题交互态（兼容 A 族 .opt 与 B 族 .quiz-options li） ---- */
+/* 3.1 基础可点击 */
+.quiz-q .opt{cursor:pointer}
+.quiz-item .quiz-options li{cursor:pointer}
+/* 3.2 hover / 焦点态 */
+.quiz-q .opt:hover,.quiz-q .opt:focus-visible{border-color:#7DD3FC;background:#F0F9FF}
+.quiz-item .quiz-options li:hover,.quiz-item .quiz-options li:focus-visible{background:#FFFFFF;box-shadow:inset 0 0 0 1px #7DD3FC}
+/* 3.3 判定结果态 */
+.quiz-q .opt.is-right{border-color:#34D399;background:#ECFDF5;color:#065F46;font-weight:600}
+.quiz-q .opt.is-right::after{content:" ✓";color:#059669;font-weight:800}
+.quiz-q .opt.is-right .l{color:#047857}
+.quiz-item .quiz-options li.is-right{background:#DCFCE7;box-shadow:inset 0 0 0 1px #34D399;font-weight:600}
+.quiz-item .quiz-options li.is-right::after{content:" ✓";color:#15803D;font-weight:800}
+.quiz-q .opt.is-wrong{border-color:#FCA5A5;background:#FEF2F2;color:#B91C1C;font-weight:600}
+.quiz-q .opt.is-wrong::after{content:" ✗";color:#DC2626;font-weight:800}
+.quiz-q .opt.is-wrong .l{color:#B91C1C}
+.quiz-item .quiz-options li.is-wrong{background:#FEE2E2;box-shadow:inset 0 0 0 1px #FCA5A5;font-weight:600}
+.quiz-item .quiz-options li.is-wrong::after{content:" ✗";color:#DC2626;font-weight:800}
+.quiz-q .opt.is-reveal{border-color:#6EE7B7;background:#ECFDF5;color:#065F46}
+.quiz-q .opt.is-reveal .l{color:#047857}
+.quiz-item .quiz-options li.is-reveal{background:#ECFDF5;box-shadow:inset 0 0 0 1px #6EE7B7;color:#065F46}
+/* 3.4 已锁定禁用态 */
+.quiz-q.is-locked .opt,.quiz-item.is-locked .quiz-options li{cursor:default;pointer-events:none}
+.quiz-q.is-locked .opt:not(.is-right):not(.is-wrong):not(.is-reveal){opacity:.55}
+.quiz-item.is-locked .quiz-options li:not(.is-right):not(.is-wrong):not(.is-reveal){opacity:.55}
+/* 3.5 计分行（运行时注入） */
+.quiz-score{display:flex;align-items:center;gap:12px;margin:14px 0 18px;padding:12px 18px;border:1px dashed #7DD3FC;border-radius:12px;background:#F0F9FF;font-size:14px;font-weight:700;color:#0F172A}
+.quiz-score .qs-label{white-space:nowrap}
+.quiz-score .qs-num{white-space:nowrap;color:#0284C7;font-size:16px}
+.quiz-score .qs-bar{flex:1 1 60px;min-width:60px;height:8px;border-radius:999px;background:#E2E8F0;overflow:hidden}
+.quiz-score .qs-bar i{display:block;height:100%;width:0;border-radius:999px;background:linear-gradient(90deg,#0EA5E9,#10B981);transition:width .35s ease}
+
+/* ---- 4. 速记卡可达性与长内容 ---- */
+.fc-hint,.flip-hint{color:#64748B}
+.flashcard-face{overflow:auto}
+.flashcard[tabindex]{outline:none}
+.flashcard[tabindex]:focus-visible{outline:3px solid #0EA5E9;outline-offset:3px}
+
+/* ---- 5. 侧栏目录 ---- */
+/* B 族 sticky 侧栏内目录限高滚动（A 族 aside 本身已可滚动，此规则空匹配无害） */
+.sidebar .sidebar-nav{max-height:calc(100vh - 60px);overflow-y:auto;scrollbar-width:thin}
+/* A 族 scroll spy 高亮（B 族高亮由其基础样式提供） */
+.sidebar a.toc.active{background:#E0F2FE;color:#0369A1;font-weight:600}
+
+/* ---- 6. 响应式补充：681–900px 时 grid3 降为两列 ---- */
+@media (min-width:681px) and (max-width:900px){
+  .grid3{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+
+/* ---- 7. 打印样式补充（A 族新增；B 族已有 print，重复声明无害） ---- */
+@media print{
+  .sidebar,.overlay,.sidebar-overlay,#menuBtn,#navToggle,#overlay,#sidebarOverlay,#readbar,#topBtn,#backTop,.chapter-pager,.quiz-score{display:none!important}
+}
+
+/* ---- 8. 手机端增强 v2（触控体验 / 防溢出 / 抽屉滚动锁定） ---- */
+/* 8.1 触控体验：去点按高亮、消除双击缩放延迟（flashcard 高 190-200px 天然达标，不另设 min-height） */
+.opt,.tabbar button,.tab-btn,.quiz-options li,.flashcard,.chapter-pager a,.chapter-pager span,.menu-btn,.mobile-nav-toggle{-webkit-tap-highlight-color:transparent;touch-action:manipulation}
+/* 8.2 触控目标最小 44px（自测选项与 tab 胶囊原高约 33px） */
+.opt,.tabbar button,.tab-btn,.quiz-options li{min-height:44px}
+/* 8.3 防溢出：内容图自适应；svg 不设 height:auto，避免定尺寸图标塌陷 */
+img{max-width:100%;height:auto}
+svg{max-width:100%}
+/* 8.4 长词/URL 断行 */
+body{overflow-wrap:break-word}
+/* 8.5 表格容器触摸惯性滚动（A 族已有同值规则，重复声明无害） */
+.table-wrap{-webkit-overflow-scrolling:touch}
+/* 8.6 抽屉打开时锁定背景滚动（两族抽屉断点均为 900px；类由统一脚本增删） */
+@media (max-width:900px){
+  body.nav-locked{overflow:hidden}
+}
+</style>
+</head>
+<body>
+<div id="readbar"></div>
+<button class="menu-btn" id="menuBtn" aria-label="打开目录">☰</button>
+<div class="overlay" id="overlay"></div>
+<aside class="sidebar" id="sidebar">
+  <h2>第二十二章 精神科急诊及危机干预</h2>
+  <div class="sub">精神病学（第9版）· 印刷页 262–279<br>学习指南 · 技能标准版</div>
+  <div class="toc-group">开篇</div>
+  <a class="toc" href="#cover"><span class="n">00</span>章节封面与学习目标</a>
+  <a class="toc" href="#status"><span class="n">01</span>本章地位速览</a>
+  <a class="toc" href="#navmap"><span class="n">02</span>章节导航图</a>
+  <a class="toc" href="#mindmap"><span class="n">03</span>本章知识地图</a>
+  <a class="toc" href="#route"><span class="n">04</span>学习路线图</a>
+  <div class="toc-group">正文（工作主题单元八栏）</div>
+  <a class="toc unitlink" href="#u1"><span class="n">05</span>精神科急诊</a>
+  <a class="toc sub2" href="#u1-3">└ 常见急诊问题识别</a>
+  <a class="toc sub2" href="#u1-6">└ 处置工具箱</a>
+  <a class="toc unitlink" href="#u2"><span class="n">06</span>危机干预</a>
+  <a class="toc sub2" href="#u2-6">└ 干预技术工具箱</a>
+  <div class="toc-group">结尾</div>
+  <a class="toc" href="#summary"><span class="n">07</span>全章核心要点速览</a>
+  <a class="toc" href="#pitfalls"><span class="n">08</span>易混易错点警示</a>
+  <a class="toc" href="#quiz"><span class="n">09</span>章节自测系统</a>
+  <a class="toc" href="#cards"><span class="n">10</span>考点速记卡</a>
+  <a class="toc" href="#cases"><span class="n">11</span>病例挑战</a>
+  <a class="toc" href="#ext"><span class="n">12</span>拓展延伸</a>
+</aside>
+<main class="main">
+<div class="wrap">
+
+<!-- ===== 00 封面 ===== -->
+<section id="cover">
+  <div class="hero">
+    <span class="chap">第二十二章 · CHAPTER 22</span>
+    <h1>精神科急诊及危机干预</h1>
+    <p class="tagline">先把危险接住，再谈诊断：快速评估自杀与攻击风险、识别器质性病因、守住安全底线，并用短程危机干预帮人重新站稳。</p>
+    <p class="meta">教材：精神病学（第9版）｜印刷页 262–279｜全章 2 节：精神科急诊、危机干预</p>
+    <div class="goalbox">
+      <h3>学习目标（四级分层）</h3>
+      <ul>
+        <li><span class="lv">了解</span>说出精神科急诊的三类工作范围、急诊评估的组成，以及危机干预的常用形式。</li>
+        <li><span class="lv l2">理解</span>解释"先排除躯体或脑器质性疾病"的评估逻辑；理解危机三标准、危机四类型与三种结局。</li>
+        <li><span class="lv l3">掌握</span>掌握自杀风险线索与三级预防、攻击行为危险性评估三方法及七条处置原则、留院观察指征。</li>
+        <li><span class="lv l4">重点</span>自杀与攻击的快速风险识别、不同原发疾病下的处置差异、危机干预六步法与五步骤——高频考点与安全底线。</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 01 地位 ===== -->
+<section id="status">
+  <div class="sec-head"><div class="badge">01</div><h2>本章地位速览<span class="en">Why this chapter matters</span></h2></div>
+  <p class="sec-lead">前面的章节教你"辨病与治病"，本章教你在最危险的时刻"先保命、再辨因、后处置"。它不是疾病章，而是精神科临床的安全出口。</p>
+  <div class="grid3">
+    <div class="card blue">
+      <h3>章节定位与重要性</h3>
+      <p>本章位于教材第二十二章（印刷页 262–279），是临床精神病学与急诊医学的交叉分支。教材以两节组织：<strong>精神科急诊</strong>（概述、自杀行为、攻击行为及危险评估）与<strong>危机干预</strong>（概念、类型与结局、方法与步骤）。</p>
+      <p class="note">考试权重集中于：急诊范围与评估、留院观察指征、自杀风险因素与三级预防、攻击危险性评估与处置、危机三标准与六步法。</p>
+    </div>
+    <div class="card red">
+      <h3>临床意义</h3>
+      <p>教材开篇即指出：自杀及攻击行为是精神科常见的高风险行为，<strong>对自杀和攻击行为风险快速评估和干预是精神科急诊的首要任务</strong>。急诊处理既要考虑器质性病因、躯体状况、创伤事件与物质使用，也要注意患者合法权益与法律问题。</p>
+      <p>急诊判断的迟疑可能造成不可逆后果；本章的"排除器质性""留院观察""告知看护者并书面沟通"都是保命与避险要点。</p>
+    </div>
+    <div class="card green">
+      <h3>与前后章节关联</h3>
+      <p><strong>前置：</strong>抑郁障碍、精神分裂症、双相障碍、焦虑障碍、物质使用障碍、谵妄等章节的症状学与诊断，是急诊识别的基础。</p>
+      <p><strong>后续延伸：</strong>危机干预的短程支持性思路，可延伸到创伤后应激障碍、适应障碍等应激相关问题的处理。</p>
+      <p><strong>横向交叉：</strong>与急诊医学、内科学、神经病学（器质性病因）、法律与伦理（非自愿住院）交叉。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 02 导航 ===== -->
+<section id="navmap">
+  <div class="sec-head"><div class="badge">02</div><h2>章节导航图<span class="en">Section map</span></h2></div>
+  <p class="sec-lead">按教材两节排列。本章不按疾病拆分，而以两个"工作主题单元"承载八栏，点击卡片可直接跳转。</p>
+  <div class="grid2">
+    <div class="card cyan">
+      <h3><a href="#u1">第一节 · 精神科急诊</a></h3>
+      <p>急诊范围与评估、诊断与处理原则、自杀行为、攻击行为及危险评估。</p>
+      <p class="note">关键词：三类范围 · 留院观察 6 条 · 自杀三形式 · 攻击评估三方法</p>
+    </div>
+    <div class="card green">
+      <h3><a href="#u2">第二节 · 危机干预</a></h3>
+      <p>危机的定义与三标准、四类型与三结局、危机干预六步法与五步骤、CISD。</p>
+      <p class="note">关键词：心理失衡 · 短程支持性 · 六步法 · 严重程度 6 级</p>
+    </div>
+  </div>
+  <div class="callout book">
+    <span class="ct">📖 关于"每病八栏"的适配说明</span>
+    本章<strong>不是疾病章</strong>，教材没有设置独立的疾病单元，而是按"急诊工作"与"危机干预工作"组织。为遵守技能"栏目顺序固定、不得删栏"的要求，正文以<strong>工作主题单元</strong>套用八栏：第一栏 疾病画像→工作单元画像；第二栏 病因探秘→问题来源与机制；第三栏 临床表现拼图→识别与评估要点；第四栏 教材典型案例→教材案例核查；第五栏 鉴别诊断对对碰→易混情境与概念鉴别；第六栏 治疗方案工具箱→处置/干预工具箱；第七栏 记忆工具箱；第八栏 知识联动。<strong>教材第一节内部的"概述—自杀—攻击"三块同属急诊工作，故合并为一个单元，不拆成三个"疾病"；第二节危机干预本身是一个连续工作体系，单独成单元。</strong>不适用栏目保留标题，并写明"教材未提供相关内容"及原因。
+  </div>
+</section>
+
+<!-- ===== 03 知识地图 ===== -->
+<section id="mindmap">
+  <div class="sec-head"><div class="badge">03</div><h2>本章知识地图<span class="en">Knowledge map</span></h2></div>
+  <p class="sec-lead">按"急诊安全 → 风险评估 → 危机干预"的逻辑重组。全章可压缩为一条主线：<strong>先排除器质性、再判断危险、然后分级处置、最后用短程干预恢复平衡</strong>。</p>
+  <div class="stat">
+    <span>2 节</span><span>2 个工作主题单元</span><span>核心工作概念 10 个</span><span>自杀 3 种形式</span><span>攻击评估 3 种方法</span><span>危机 4 种类型</span><span>危机干预 6 步 + 5 步骤</span><span>严重程度 6 级</span>
+  </div>
+  <p class="note">"核心工作概念 10 个"统计口径：急诊范围、急诊评估、留院观察、自杀风险评估、自杀三级预防、攻击危险性评估、攻击行为处置、危机、危机类型与结局、危机干预六步法/五步骤。教材未给出统一计数，此为按原文要点整理。</p>
+  <div class="grid3">
+    <div class="card cyan">
+      <h3>① 急诊定位与范围</h3>
+      <ul>
+        <li>临床精神病学 + 急诊医学的分支</li>
+        <li>门急诊、住院应急处理、急会诊</li>
+        <li>自杀企图者占急诊总数 1/3～1/2</li>
+        <li>问题复杂，常需多部门协同</li>
+      </ul>
+    </div>
+    <div class="card blue">
+      <h3>② 急诊评估</h3>
+      <ul>
+        <li>病史采集 10 项 + 多途径核实</li>
+        <li>躯体、神经、精神、实验室、影像</li>
+        <li>病情严重程度 4 个维度</li>
+        <li>安全程度 → 6 条留院观察指征</li>
+        <li>先排除躯体/脑器质性病因</li>
+      </ul>
+    </div>
+    <div class="card red">
+      <h3>③ 自杀行为</h3>
+      <ul>
+        <li>自杀意念、自杀未遂、自杀死亡</li>
+        <li>既往自杀史是最显著独立预测因素</li>
+        <li>心理学、社会学、生物学、疾病因素</li>
+        <li>风险线索 7 类 + 评估内容</li>
+        <li>一级、二级、三级预防</li>
+      </ul>
+    </div>
+    <div class="card orange">
+      <h3>④ 攻击行为</h3>
+      <ul>
+        <li>广义/狭义；暴力是极端形式</li>
+        <li>预谋性 vs 冲动性（临床最常用）</li>
+        <li>评估：经验性、精细性、结构化</li>
+        <li>静态/动态、近期/远期风险</li>
+        <li>七条处置原则 + 分类治疗</li>
+      </ul>
+    </div>
+    <div class="card purple">
+      <h3>⑤ 危机</h3>
+      <ul>
+        <li>三标准：突发事件、功能失调、应对失效</li>
+        <li>四类型：发展性、境遇性、存在性、环境性</li>
+        <li>三结局：有效度过、暂时渡过、心理生理崩溃</li>
+        <li>应对四阶段：适度唤起→过度→替代→衰竭</li>
+      </ul>
+    </div>
+    <div class="card pink">
+      <h3>⑥ 危机干预</h3>
+      <ul>
+        <li>短程、紧急、支持性，不塑造人格</li>
+        <li>六步法：定、安、支、选、计、诺</li>
+        <li>五步骤：接触→评估→目标→措施→随访</li>
+        <li>严重程度 6 级；评估内容 6 项</li>
+        <li>CISD 保护干预者</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 04 路线 ===== -->
+<section id="route">
+  <div class="sec-head"><div class="badge">04</div><h2>学习路线图<span class="en">Study route</span></h2></div>
+  <p class="sec-lead">建议按"先建安全框架、再攻两大风险、最后学干预技术"的顺序推进。本章概念多、数字少，重在形成处置顺序感。</p>
+  <div class="grid2">
+    <div class="card blue">
+      <h3>推荐学习路径</h3>
+      <div class="timeline">
+        <div class="tl-item"><h4>第 1 步 · 建框架（约 20 分钟）</h4><p>读概述与知识地图，记牢急诊三类范围、评估组成、"先排器质"原则与留院观察 6 条。</p></div>
+        <div class="tl-item"><h4>第 2 步 · 自杀（约 35 分钟）</h4><p>按"三形式 → 危险因素 → 风险线索 → 评估 → 三级预防"串联；重点记既往自杀史、90%/95%、女性企图/男性死亡。</p></div>
+        <div class="tl-item"><h4>第 3 步 · 攻击（约 35 分钟）</h4><p>先记分类，再记三种评估方法与五类评估内容，最后背七条处置原则和按原发病分层治疗。</p></div>
+        <div class="tl-item"><h4>第 4 步 · 危机与干预（约 40 分钟）</h4><p>抓住危机三标准、四类型、三结局，重点区分六步法与五步骤，理解"短程、支持性、不塑造人格"。</p></div>
+        <div class="tl-item"><h4>第 5 步 · 自测与病例（约 30 分钟）</h4><p>做自测、翻速记卡、走病例挑战，用"识别—评估—处置"三步法复盘。</p></div>
+      </div>
+      <p class="note">总时长约 2.7 小时；建议分 2 次完成，次日用速记卡复习 20 分钟。</p>
+    </div>
+    <div class="card purple">
+      <h3>重点优先级与记忆策略</h3>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>内容</th><th>优先级</th><th>推荐记忆法</th></tr></thead>
+          <tbody>
+            <tr><td>自杀风险线索与评估</td><td class="starme">⭐⭐⭐</td><td>清单法 + 故事串联</td></tr>
+            <tr><td>自杀三级预防</td><td class="starme">⭐⭐⭐</td><td>数字编码 + 分层</td></tr>
+            <tr><td>攻击危险性评估与七条处置原则</td><td class="starme">⭐⭐⭐</td><td>口诀 + 流程图</td></tr>
+            <tr><td>留院观察 6 条指征</td><td class="starme">⭐⭐⭐</td><td>数字编码</td></tr>
+            <tr><td>先排除躯体/脑器质性病因</td><td class="starme">⭐⭐⭐</td><td>因果链 + 类比</td></tr>
+            <tr><td>危机三标准与四类型</td><td class="starme">⭐⭐⭐</td><td>首字缩拼 + 对比</td></tr>
+            <tr><td>危机干预六步法</td><td class="starme">⭐⭐⭐</td><td>口诀"定安支选计诺"</td></tr>
+            <tr><td>危机干预五步骤与严重程度 6 级</td><td class="starme">⭐⭐</td><td>时间线 + 数字锚定</td></tr>
+            <tr><td>急诊评估的病史 10 项</td><td class="starme">⭐⭐</td><td>归类记忆</td></tr>
+            <tr><td>攻击行为生物学/心理/社会因素</td><td class="starme">⭐</td><td>归类记忆</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="note">记忆策略总原则：先记"顺序"（先排器质→评风险→分级处置），再记"清单"（线索、指征、原则），最后用对比表区分易混概念。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 05 精神科急诊 ===== -->
+<section id="u1">
+  <div class="sec-head"><div class="badge">05</div><h2>精神科急诊<span class="en">第一节 · 概述 / 自杀行为 / 攻击行为（p.262–275）</span></h2></div>
+  <p class="sec-lead">这一节回答三个问题：急诊要接住哪些问题？怎样快速评估？自杀与攻击这两大高风险行为如何识别、评估和处置？</p>
+
+  <!-- 第一栏 -->
+  <div class="card cyan" id="u1-1">
+    <h3 class="col-title"><span class="idx">第一栏</span>疾病画像 → 急诊工作单元画像</h3>
+    <div class="quote"><span class="lab">教材原文</span>精神科急诊（emergency medicine of psychiatry）又称急诊精神病学（emergency psychiatry），是临床精神病学的一个分支，也是急诊医学的一个分支，主要针对突发的精神卫生问题或紧急的心理危机情况，为患者提供快速有效的救助和治疗。</div>
+    <p><strong>一句话画像：</strong>精神科急诊不是"慢慢辨病"的门诊，而是<strong>在危险尚未发生时先识别、在危险已经发生时先控制</strong>的临床安全岗；它像机场安检，先排除不能带上"飞机"的隐患（器质性病因与躯体危险），再安排后续航程（精神科治疗）。<span class="note">（此句为类比理解，非教材原文）</span></p>
+    <p><strong>核心任务：</strong>对各类急性精神障碍作出<strong>迅速、准确</strong>的评估，依据病史、体格检查、精神检查、实验室检查结果，尽快判断精神障碍的性质、严重程度及危险性，并及时处置。</p>
+    <div class="stat">
+      <span>工作范围 3 类</span><span>急诊评估 4 大块</span><span>留院观察 6 条</span><span>自杀 3 种形式</span><span>攻击评估 3 种方法</span>
+    </div>
+    <div class="grid3">
+      <div class="mini"><h4>门急诊紧急处理</h4><p>急性精神障碍、器质性/躯体疾病所致精神障碍、药物过量与中毒、药物不良反应、物质滥用、儿童青少年心理问题、社会心理危机。</p></div>
+      <div class="mini"><h4>住院患者应急处理</h4><p>自伤自杀、暴力冲动、精神运动性兴奋、震颤、急性焦虑或惊恐、谵妄及木僵；以及心衰、高热、哮喘、严重心律失常、水电解质失衡、EPS、5-HT 综合征、恶性综合征等。</p></div>
+      <div class="mini"><h4>急会诊</h4><p>综合医院各科患者伴发精神障碍，如谵妄、人格改变、急性焦虑、严重幻觉妄想、自伤自杀或攻击行为等。</p></div>
+    </div>
+    <p class="note">教材引用 2020 年美国调查数据：精神科急诊患者中物质滥用占 48.6%、焦虑障碍 23.8%、心境障碍 15.9%、精神障碍 6.6%，共病常见，自杀企图者占总数的 1/3～1/2。此为教材所引国外数据，不代表我国构成比。</p>
+  </div>
+
+  <!-- 第二栏 -->
+  <div class="card blue" id="u1-2">
+    <h3 class="col-title"><span class="idx">第二栏</span>病因探秘 → 急诊问题的来源与诱因</h3>
+    <p><strong>急诊问题不是"单一精神疾病"，而是多来源叠加。</strong>教材在概述与评估部分给出三条来源线索，按"器质性—精神障碍—社会心理"归类如下（这是对教材来源的整理，不是病因学假说）。</p>
+    <div class="grid3">
+      <div class="mini">
+        <h4>① 器质性与躯体来源</h4>
+        <ul>
+          <li>脑器质性疾病：中枢神经系统感染、脑血管病、颅脑外伤、脑肿瘤。</li>
+          <li>躯体疾病：躯体感染、内脏器官疾病、内分泌与代谢性疾病、免疫性疾病、恶性肿瘤。</li>
+          <li>药物与物质：精神药物过量/中毒、严重不良反应；酒精及其他精神活性物质滥用与戒断。</li>
+        </ul>
+      </div>
+      <div class="mini">
+        <h4>② 精神障碍本身</h4>
+        <ul>
+          <li>自杀、自残、暴力行为、精神病性症状、焦虑、抑郁等急性状态。</li>
+          <li>重性精神障碍急性期：幻觉妄想突出、兴奋躁动、冲动攻击。</li>
+          <li>治疗依从性差、认知功能严重损害、诊断不明。</li>
+        </ul>
+      </div>
+      <div class="mini">
+        <h4>③ 社会心理与创伤</h4>
+        <ul>
+          <li>重大自然灾害、重大事故、严重传染病流行。</li>
+          <li>儿童青少年：网络成瘾、失恋、进食障碍、依恋障碍、适应不良、逃学、性心理问题。</li>
+          <li>创伤性事件、家庭冲突、人际矛盾、工作压力。</li>
+        </ul>
+      </div>
+    </div>
+    <div class="callout warn">
+      <span class="ct">⚠️ 一条必须记住的评估前提</span>
+      对任何出现认知、思维、情绪、行为改变的患者，<strong>首先必须排除躯体或脑器质性疾病</strong>，特别是谵妄或痴呆患者。教材引用一项急诊科研究：以精神症状为首发症状的患者中，<strong>近 2/3 的精神症状由躯体疾病引发</strong>。精神专科医院对躯体疾病诊疗条件有限，更须防漏诊。
+    </div>
+    <p><strong>高危群体：</strong>老年患者、既往有躯体疾病史者、急性起病且生命体征不稳定或意识障碍者、颅脑外伤者、毒品使用者、流浪或无家可归者。</p>
+  </div>
+
+  <!-- 第三栏 -->
+  <div class="card red" id="u1-3">
+    <h3 class="col-title"><span class="idx">第三栏</span>临床表现拼图 → 常见急诊问题的识别与评估</h3>
+    <p>教材分述了自杀、攻击两大高风险行为，并在范围与留院指征中点到谵妄、拒食、木僵等问题。下面按问题逐一呈现"识别线索"，不把它们混成一句空泛原则。</p>
+    <div class="tabs" data-tabs>
+      <div class="tabbar">
+        <button class="on" data-tab="e1">自杀风险</button>
+        <button data-tab="e2">攻击与暴力</button>
+        <button data-tab="e3">谵妄/器质性</button>
+        <button data-tab="e4">拒食/木僵/不合作</button>
+        <button data-tab="e5">药物与物质问题</button>
+      </div>
+      <div class="panel on" data-panel="e1">
+        <p><strong>自杀前的三种心理特点（教材原文要点）：</strong></p>
+        <ul>
+          <li><strong>矛盾状态：</strong>处于"想尽快摆脱痛苦"与"求生欲望"的矛盾中；常提及死亡或自杀话题，其实希望摆脱痛苦。</li>
+          <li><strong>冲动性：</strong>常被日常负性生活事件触发，自杀冲动有时仅持续几分钟或几小时。</li>
+          <li><strong>思维僵化：</strong>思维、情感及行动明显僵化，以悲观主义先占观念看待一切，拒绝也无法用其他方式考虑解决问题。</li>
+        </ul>
+        <p><strong>提示自杀风险的 7 类基本线索：</strong></p>
+        <ol>
+          <li><strong>流露意愿：</strong>反复打听/谈论自杀方法，日记等作品频繁谈及自杀，储备自杀工具（药物或武器）；<strong>不愿讨论、有意掩盖</strong>也是重要危险信号。</li>
+          <li><strong>近期严重丧失性事件：</strong>事件早期易自杀；危机干预后风险可下降，但绝望感仍可致行动；逐步适应后风险减小。</li>
+          <li><strong>近期自伤或自杀行动：</strong>既往自伤/自杀是将来行为的最强预测因子；多次重复后周围人放松警惕，成功率反而增加。</li>
+          <li><strong>性格改变：</strong>易怒、悲观、自卑、冷漠，社交隔离，自我憎恨、负疚、无价值感，突然整理物品或书写遗嘱。</li>
+          <li><strong>情绪改变：</strong>慢性难治性躯体疾病患者突然拒绝医疗干预，或出现"反常性"情绪好转、交代今后安排。</li>
+          <li><strong>精神障碍：</strong>抑郁障碍、精神分裂症、酒精及药物依赖为高危；伴自责自罪、被害或虚无妄想、命令性幻听、强制性思维、抑郁焦虑惊恐者需警惕。</li>
+          <li><strong>睡眠问题：</strong>严重失眠或过度嗜睡均可能与自杀风险有关。</li>
+        </ol>
+        <div class="callout warn"><span class="ct">⚠️ 教材特别提醒</span>抑郁障碍导致的自杀并不只出现在疾病高峰期，<strong>缓解期也有较高风险</strong>：出院 6 个月内 42.0% 的患者自杀，1 年内 58.0%，2 年内 70.0%。</div>
+      </div>
+      <div class="panel" data-panel="e2">
+        <p><strong>攻击行为：</strong>广义指有目的、有意图地对人（包括自身）、动物或其他目标进行伤害或破坏；狭义指对自身以外目标的伤害或破坏。<strong>暴力行为是攻击行为的极端形式。</strong></p>
+        <p><strong>与攻击行为关系较大的症状特点：</strong>被害妄想、被控制体验、被跟踪感、产生不良体验的命令性幻听、绝望状态、病理性嫉妒、激越状态、缺乏自我控制、治疗依从性差、认知功能损害。</p>
+        <p><strong>高危疾病：</strong>精神分裂症、人格障碍（尤其反社会型、边缘型）、药物和酒精滥用；未获恰当治疗者攻击可能性更大。其他精神病性障碍、双相障碍、颅脑外伤后也常伴攻击行为。</p>
+        <p><strong>评估时必须覆盖的五项内容：</strong></p>
+        <ul>
+          <li><strong>既往攻击史及特点：</strong>既往暴力史是预测未来暴力行为<strong>最有效的独立影响因素</strong>。</li>
+          <li><strong>人格特征：</strong>无诱因暴力、事后无悔意、持续否认、易冲动、不能接受批评和挫折、自我中心等。</li>
+          <li><strong>精神状态：</strong>病态嫉妒、偏执观念、缺乏自我控制、依从性差、酒精或药物滥用；<strong>精神活性物质使用是相关性最高的危险因素</strong>。</li>
+          <li><strong>环境因素：</strong>精神刺激/突发事件再出现可能、社交困难、暴力暴露、社会不稳定、缺乏支持。</li>
+          <li><strong>保护因素：</strong>社会支持系统、情绪调节技能、健康行为、积极应对策略。</li>
+        </ul>
+        <p class="note">发生率：教材称因定义与分类不同，研究结果差异很大（20%～70%）；大多数暴力行为是冲动性攻击的产物。</p>
+      </div>
+      <div class="panel" data-panel="e3">
+        <p><strong>识别原则：</strong>任何患者出现<strong>认知、思维、情绪、行为</strong>等精神活动改变，先想到躯体或脑器质性疾病，尤其是<strong>谵妄或痴呆</strong>。</p>
+        <p><strong>教材点出的识别线索：</strong></p>
+        <ul>
+          <li>急性起病且<strong>生命体征不稳定或意识障碍</strong>者，属器质性疾病高危群体。</li>
+          <li><strong>老年人尿路感染</strong>可导致严重谵妄状态（教材在尿常规项下明确点出）。</li>
+          <li><strong>脑电图</strong>可用于诊断癫痫和鉴别代谢性脑病（谵妄）症状。</li>
+          <li><strong>腰椎穿刺</strong>用于任何出现精神状态异常、发热及脑膜刺激征的患者，寻找病毒或细菌感染、脑炎、出血或隐球菌感染证据。</li>
+          <li>头颅 CT 对可能存在器质性精神障碍或新发精神症状者进行筛查；较 MRI 敏感度低，但快捷便宜。</li>
+        </ul>
+        <p><strong>常规医学检查 10 项：</strong>①血常规 ②电解质 ③血糖 ④肝功能、血氨 ⑤肾功能 ⑥甲状腺功能 ⑦血、尿毒物学筛查 ⑧药物浓度 ⑨脑电图 ⑩头颅 CT 或 MRI。</p>
+        <p class="note">教材未给出谵妄的独立诊断标准与逐条症状清单；上列内容均为本章评估部分原文要点，不补写教材外诊断标准。</p>
+      </div>
+      <div class="panel" data-panel="e4">
+        <p><strong>教材如何定位这类患者：</strong>在"安全程度评估"中，<strong>拒食、违拗、不合作、亚木僵、木僵的患者</strong>被明确列为<strong>应建议留院观察</strong>的情况；在"住院患者应急处理"中，<strong>谵妄及木僵状态</strong>被列为需紧急处理或请相关科室联络会诊的急诊情况。</p>
+        <div class="callout warn">
+          <span class="ct">⚠️ 教材未提供相关内容</span>
+          本章没有给出拒食、木僵的独立识别标准、分级或具体处置流程（如营养支持方式、约束时长、电抽搐指征等）。因此本栏只能确认两点：<strong>①属留院观察指征；②属需紧急有效处理或联络会诊的状态</strong>。具体诊疗细节请回到教材相关疾病章节，不能在本章凭空补流程。
+        </div>
+        <p><strong>可确认的评估动作：</strong>将其纳入安全程度评估；同时完成病史、体格与神经系统检查、精神检查，排查器质性病因；评估水电解质与营养状况（教材在兴奋冲动处理中强调纠正水电解质紊乱与酸碱失衡、及时补充能量）。</p>
+      </div>
+      <div class="panel" data-panel="e5">
+        <p><strong>教材在急诊范围内点名的药物/物质问题：</strong></p>
+        <ul>
+          <li><strong>精神药物过量和中毒：</strong>误服或因企图自杀而过量服药、<strong>锂中毒</strong>等。</li>
+          <li><strong>精神药物不良反应：</strong>严重锥体外系反应、低钾所致麻痹性肠梗阻、氯氮平所致粒细胞缺乏症、药物性肝损伤、<strong>恶性综合征</strong>等。</li>
+          <li><strong>物质滥用相关问题：</strong>阿片类、大麻、中枢神经系统兴奋剂所致精神病性障碍；镇静催眠药或酒精滥用及戒断相关精神障碍与行为问题。</li>
+          <li><strong>住院患者突发：</strong>5-HT 综合征、恶性综合征、肠梗阻、严重心律失常、水电解质失衡等。</li>
+        </ul>
+        <p><strong>评估支持：</strong>血、尿毒物学筛查、药物浓度、心电图（抗精神病药、美沙酮等可延长 QTc 间期）、电解质（低钾可致心律失常，低钠可为 SSRIs 副作用尤其在老年人）。</p>
+        <div class="callout warn"><span class="ct">⚠️ 边界提醒</span>本章只把这些列为急诊范围与检查要点，<strong>未给出具体解毒、洗胃、拮抗剂或剂量方案</strong>；凡教材未给的处置细节，本指南不补写。</div>
+      </div>
+    </div>
+    <p class="note">说明：本栏原用于疾病症状分维度呈现；本章为工作章，故按"急诊问题"分标签呈现识别与评估要点，内容均取自教材第一节。</p>
+  </div>
+
+  <!-- 第四栏 -->
+  <div class="card orange" id="u1-4">
+    <h3 class="col-title"><span class="idx">第四栏</span>教材典型案例</h3>
+    <div class="callout book">
+      <span class="ct">📖 教材未提供具体临床案例</span>
+      本章第一节为急诊工作论述，教材<strong>未给出患者案例、病史或检查数值</strong>。教材提供的可用素材是表 22-1（精神科评估前的躯体检查）、表 22-2（实验室检查异常值的精神科意义）、表 22-3（自杀的危险因素）、表 22-4（自杀评估内容），以及攻击危险性评估的要点，均属"评估工具/清单"，不是病例。
+    </div>
+    <p><strong>由教材要点整理的可迁移评估路径（非教材病例）：</strong></p>
+    <ol>
+      <li><strong>先问危险：</strong>有无自杀意念/计划/行为、冲动攻击、拒食、外走等高风险行为。</li>
+      <li><strong>再排器质：</strong>起病形式、意识状态、生命体征、颅脑外伤史、物质使用；必要时实验室、脑电图、头颅 CT/MRI。</li>
+      <li><strong>多途径核实：</strong>患者不能或不愿提供真实病史时，向家属、朋友、医师、警察或转运人员采集。</li>
+      <li><strong>判断严重程度与安全程度：</strong>有无精神病性症状、现实检验与自知力、社会功能、自杀/暴力风险；据此决定留院观察或住院。</li>
+    </ol>
+    <p class="note">以上为按教材原则整理的学习路径，不是教材原文病例，也不含虚构化验值。</p>
+  </div>
+
+  <!-- 第五栏 -->
+  <div class="card orange" id="u1-5">
+    <h3 class="col-title"><span class="idx">第五栏</span>鉴别诊断对对碰 → 易混情境与概念鉴别</h3>
+    <p><strong>表 1　自杀的三种形式：一个"行动"变量就能分开</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>形式</th><th>是否有寻死意向</th><th>是否采取行动</th><th>是否导致死亡</th><th>关键点</th></tr></thead>
+        <tbody>
+          <tr><td>自杀意念</td><td>有</td><td>无</td><td>无</td><td>可为短期、过渡性，也可长期持续</td></tr>
+          <tr><td>自杀未遂</td><td>有</td><td>有（有意毁灭自我）</td><td>否</td><td>可能有计划，也可能冲动；发生率是自杀死亡的 10～20 倍</td></tr>
+          <tr><td>自杀死亡</td><td>有</td><td>有</td><td>是</td><td>涉及制定和实施能造成致命伤害的计划</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note">一句话鉴别总结：<strong>有意向无行动是意念，有行动未死是未遂，有行动且死亡是自杀死亡。</strong></p>
+
+    <p><strong>表 2　预谋性攻击 vs 冲动性攻击（临床指导意义最大的分类）</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>维度</th><th>预谋性攻击</th><th>冲动性攻击</th></tr></thead>
+        <tbody>
+          <tr><td>目标取向</td><td>通常是目标取向</td><td>对感知到的压力或威胁的反应</td></tr>
+          <tr><td>与挫折/威胁的关系</td><td>通常与挫折和即刻威胁无关</td><td>由即刻的压力或威胁触发</td></tr>
+          <tr><td>临床提示</td><td>需关注获益、操控、计划性</td><td>大多数暴力行为是冲动性攻击的产物</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note">一句话鉴别总结：<strong>预谋性攻击"先算后做"，冲动性攻击"先炸后想"。</strong>（此句为类比理解）</p>
+
+    <p><strong>表 3　"病情严重程度"与"安全程度"：两个不能混用的评估维度</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>维度</th><th>看什么</th><th>教材给出的判断项</th><th>对处置的意义</th></tr></thead>
+        <tbody>
+          <tr><td>病情严重程度</td><td>重性还是轻型精神障碍</td><td>①有无幻觉妄想等精神病性症状；②现实检验能力与自知力；③社会功能是否明显受损；④有无自杀意念/行为及暴力冲动</td><td>决定治疗强度与医疗级别</td></tr>
+          <tr><td>安全程度</td><td>是否需要留院观察</td><td>病情严重或躯体差；严重自杀意念/行为或冲动攻击；拒食违拗不合作亚木僵木僵；依从性差；认知严重损害；诊断不明</td><td>决定留院观察/住院与监护等级</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note">一句话鉴别总结：<strong>严重程度回答"病多重"，安全程度回答"人危不危险"，两者都高才更需要闭环看护。</strong></p>
+  </div>
+
+  <!-- 第六栏 -->
+  <div class="card green" id="u1-6">
+    <h3 class="col-title"><span class="idx">第六栏</span>治疗方案工具箱 → 急诊处置工具箱</h3>
+    <p><strong>第一步永远是"分层"：</strong>决定处理措施前，先确认是否为躯体疾病或脑器质性疾病所致精神障碍；是否合并冠心病、高血压、糖尿病、癫痫等躯体疾病；考虑年龄；女性注意妊娠或哺乳期。</p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>急诊问题</th><th>教材给出的处置要点</th><th>教材边界</th></tr></thead>
+        <tbody>
+          <tr>
+            <td><strong>兴奋躁动、冲动和暴力行为</strong></td>
+            <td>如有颅内感染、颅脑占位、脑血管病及严重躯体疾病（尤其心脑血管病），尽快控制兴奋冲动；减少环境噪声和刺激，保持谨慎的人际互动；必要时隔离或约束；仍不能控制者收住入院；同时纠正水电解质紊乱与酸碱失衡、补充能量、积极治疗原发病。</td>
+            <td>未给约束时长与具体操作规范。</td>
+          </tr>
+          <tr>
+            <td><strong>严重消极意念和行为</strong></td>
+            <td>高度重视，向看护者交代自伤/自杀风险，做好必要的<strong>书面沟通和签字</strong>；除紧急处理外建议入院；按原发疾病分别处理（见下表）。</td>
+            <td>未给抗抑郁药具体剂量与疗程。</td>
+          </tr>
+          <tr>
+            <td><strong>严重躯体疾病或脑器质性疾病</strong></td>
+            <td>及时请相关科室会诊协同诊治，着重病因治疗，<strong>优先处理威胁生命的疾病</strong>；精神症状较重者可适当用抗精神病药，但用量宜从一般剂量的 <strong>1/3～1/2</strong> 开始缓慢加量，定期监测用药反应，好转后逐渐减量至停用；必要时转相应科室。</td>
+            <td>未给具体药物名称与剂量数值（仅给起始比例原则）。</td>
+          </tr>
+          <tr>
+            <td><strong>谵妄状态</strong></td>
+            <td>按"器质性优先"原则：请相关科室会诊协同诊治，优先处理威胁生命的疾病；精神症状较重时按上述 1/3～1/2 原则慎用抗精神病药并监测。</td>
+            <td>教材未给谵妄的独立治疗方案、病因清单与药物剂量。</td>
+          </tr>
+          <tr>
+            <td><strong>拒食、违拗、不合作、亚木僵、木僵</strong></td>
+            <td>明确列为<strong>留院观察指征</strong>；住院患者属需紧急有效处理或请相关科室联络会诊的状态。</td>
+            <td><strong>教材未涉及</strong>具体营养支持、约束、电抽搐或其他处置流程，本指南不补写。</td>
+          </tr>
+          <tr>
+            <td><strong>药物过量/中毒、严重不良反应</strong></td>
+            <td>列入急诊范围；评估上查毒物学、药物浓度、电解质、心电图（QTc）等。</td>
+            <td><strong>教材未涉及</strong>洗胃、解毒剂、拮抗剂与具体急救流程。</td>
+          </tr>
+          <tr>
+            <td><strong>法律问题（如非自愿住院）</strong></td>
+            <td>根据我国有关法律正确处理，避免法律纠纷。</td>
+            <td>教材未展开具体法律条文与程序。</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p><strong>按原发疾病处理"严重消极意念和行为"（教材分述）：</strong></p>
+    <div class="grid2">
+      <div class="mini">
+        <h4>① 精神分裂症（严重幻觉、妄想）</h4>
+        <p>自杀手段可能更暴力、更有致死性。及时用抗精神病药有效控制幻觉妄想，同时采取保护措施；必要时考虑电抽搐治疗，以防自杀及冲动暴力。</p>
+      </div>
+      <div class="mini">
+        <h4>② 抑郁发作</h4>
+        <p>可适当予以抗抑郁药、苯二氮䓬类药物，但需谨慎选择：考虑绝对禁忌证、既往治疗反应、不良反应、合并躯体疾病与潜在药物相互作用。</p>
+        <p>密切评估自杀风险，尤其是<strong>儿童、青少年或伴混合特征的抑郁障碍</strong>；双相抑郁高自杀风险时<strong>慎用抗抑郁药</strong>，可首先选择锂盐、抗惊厥药或非典型抗精神病药；加强看护，建议尽快入院；必要时电抽搐治疗。</p>
+      </div>
+      <div class="mini">
+        <h4>③ 急性应激障碍</h4>
+        <p>作相应危机干预与应激因素处理；可酌情用苯二氮䓬类或抗抑郁药；视病情配合心理干预，使患者尽快脱离创伤情境；加强看护，必要时建议住院。</p>
+      </div>
+      <div class="mini">
+        <h4>④ 物质使用障碍</h4>
+        <p>企图自杀风险较正常人高 <strong>6.2 倍</strong>；恢复清醒后常否认自伤想法。应在保障安全的情况下尽快消除精神活性物质的药理效应。</p>
+      </div>
+    </div>
+
+    <p><strong>攻击行为的七条处置原则（教材顺序）：</strong></p>
+    <ol>
+      <li><strong>求助：</strong>要求安全保卫人员到场，必要时寻求警察或其他能制服攻击暴力患者的人员帮助。</li>
+      <li><strong>展示领导力：</strong>控制局面，制定应对攻击者的策略。</li>
+      <li><strong>保持距离：</strong>与攻击者保持恰当距离，保持门路畅通。</li>
+      <li><strong>解除凶器：</strong>处理或治疗前解除凶器，不合作可强制解除。</li>
+      <li><strong>隔离：</strong>尽快带离公共场所，减少攻击目标，避免外界刺激。</li>
+      <li><strong>约束：</strong>语言不能制止攻击冲动时，可采取保护性约束。</li>
+      <li><strong>药物干预：</strong>明显兴奋激越或情绪焦虑时，可给抗精神病药或苯二氮䓬类药物口服或肌内注射。</li>
+    </ol>
+    <p><strong>攻击行为的治疗分层：</strong>重性精神障碍且有明显攻击暴力倾向、危及他人或自身者，及时<strong>短期封闭式住院</strong>，以治疗原发病为主；品行障碍、人格障碍、器质性人格改变、精神发育迟滞等原发病疗效不确切者，可<strong>门诊治疗</strong>（心理治疗+药物治疗），涉案犯罪时刑事惩罚等社会控制手段有一定效果。</p>
+    <p><strong>药物与物理治疗（教材点名）：</strong>尽量选择镇静作用强、抗攻击作用好的药物，如抗精神病药中的<strong>氯氮平、奥氮平、氟哌啶醇</strong>，必要时联合电抽搐治疗；抑郁障碍可在抗抑郁药基础上联用<strong>碳酸锂</strong>；脑电图有改变者可用抗癫痫药；酒精和药物滥用者有步骤地戒断；<strong>普萘洛尔</strong>等 β 受体阻滞剂对脑器质性损伤致额叶功能受损引起的攻击行为有效。苯二氮䓬类虽有镇静作用，但有时可发挥<strong>脱抑制作用</strong>促发暴力，教材提到"反常愤怒反应"和易激惹，但少见。</p>
+
+    <p><strong>留院观察 6 条指征（教材原文归纳）：</strong></p>
+    <ol>
+      <li>病情严重（幻觉、妄想突出等）或躯体情况较差。</li>
+      <li>具有严重自杀意念和自杀行为，以及具有冲动、攻击倾向和行为。</li>
+      <li>拒食、违拗、不合作、亚木僵、木僵。</li>
+      <li>治疗依从性差。</li>
+      <li>认知功能严重损害。</li>
+      <li>诊断不明。</li>
+    </ol>
+    <div class="callout key"><span class="ct">📌 处置顺序一页纸</span>先排器质与躯体危险 → 再控兴奋冲动/自杀风险 → 同步纠正水电解质与能量 → 请相关科室会诊、治疗原发病 → 判断留院观察或住院 → 完成告知、书面沟通与法律程序。</div>
+    <div class="callout tip"><span class="ct">💡 边界提示</span>本章只给处置<strong>原则与部分药物类别</strong>；所有具体剂量、约束时长、解毒流程均标"教材未涉及"，不要用课外资料替代。</div>
+  </div>
+
+  <!-- 第七栏 -->
+  <div class="card purple" id="u1-7">
+    <h3 class="col-title"><span class="idx">第七栏</span>记忆工具箱</h3>
+    <div class="callout tip">
+      <span class="ct">🔧 方法一：数字编码法（"3-4-6-10"）</span>
+      口诀：<strong>3 类范围、4 维严重程度、6 条留观、10 项常规检查</strong>。<br>
+      3 类：门急诊、住院应急、急会诊；4 维：精神病性症状、现实检验/自知力、社会功能、自杀与暴力风险；6 条留观：重、危、僵、差、痴、不明；10 项检查：血常规、电解质、血糖、肝功血氨、肾功、甲功、毒物筛查、药物浓度、脑电图、头颅 CT/MRI。<br>
+      <em>为什么这样记：</em>用四个数字当"四层抽屉"，先记数量再填内容，回忆时漏一层立刻能发现。
+    </div>
+    <div class="callout tip">
+      <span class="ct">🔧 方法二：口诀歌谣法</span>
+      口诀：<strong>"先排器质再评险，重危僵差痴不明；自杀问史看线索，攻击求助距离清。"</strong><br>
+      解释：前两句对应"先排除器质性"与留院观察 6 条；后两句对应自杀评估（既往史+线索）与攻击处置前两步（求助、保持距离与门路畅通）。<br>
+      <em>为什么这样记：</em>把"评估顺序"和"处置动作"压成两句，考场先想起顺序，再展开细节，避免一上来就堆药名。
+    </div>
+    <div class="callout tip">
+      <span class="ct">🔧 方法三：对比记忆法（自杀三形式 vs 攻击两类型）</span>
+      自杀：<strong>意念（只想不做）→ 未遂（做了没死）→ 死亡（做了且死）</strong>；攻击：<strong>预谋（先算后做）→ 冲动（先炸后想）</strong>。<br>
+      <em>为什么这样记：</em>两组都用"行动"作分轴，放在一起记不容易把"意念"误当成"未遂"，也不容易把"冲动性攻击"当成"预谋"。
+    </div>
+    <div class="callout tip">
+      <span class="ct">🔧 方法四：类比理解（标注：类比理解，非医学事实）</span>
+      把急诊评估想成<strong>过机场安检</strong>：行李先过 X 光（躯体/实验室/影像，排器质），人再过安检门（精神检查与风险询问），最后系好安全带（留院观察与看护）。跳过 X 光直接登机，就是把器质性病因放上了天。<br>
+      <em>为什么这样记：</em>用一个连续画面绑住"先排器质→再评精神与风险→最后定安全级别"这条最容易被写反的顺序。
+    </div>
+  </div>
+
+  <!-- 第八栏 -->
+  <div class="card cyan" id="u1-8">
+    <h3 class="col-title"><span class="idx">第八栏</span>知识联动</h3>
+    <ul>
+      <li><strong>与抑郁障碍章：</strong>抑郁是自杀最重要的疾病因素之一；教材给出出院后 6 个月、1 年、2 年的自杀比例，说明<strong>缓解期仍需随访</strong>。双相抑郁高自杀风险时慎用抗抑郁药，可首选锂盐、抗惊厥药或非典型抗精神病药。</li>
+      <li><strong>与精神分裂症章：</strong>幻觉妄想突出者自杀手段可能更暴力；及时控制精神病性症状、保护性看护，必要时电抽搐治疗。攻击行为也与被害妄想、命令性幻听、被控制体验密切相关。</li>
+      <li><strong>与物质使用障碍章：</strong>物质使用障碍者自杀风险为正常人的 6.2 倍；酒精/药物滥用也是攻击行为相关性最高的危险因素，并涉及戒断处理。</li>
+      <li><strong>与谵妄/器质性精神障碍章：</strong>急诊首先要排除躯体或脑器质性疾病；尿路感染、电解质紊乱、药物、脑电图与头颅影像都是关键线索。</li>
+      <li><strong>与急诊医学/内科学：</strong>生命体征、水电解质、QTc、肝肾功能、甲状腺功能等评估，决定精神科处置能否安全落地。</li>
+      <li><strong>与法律与伦理：</strong>非自愿住院、告知看护者、书面沟通与签字，是急诊处置不可分割的一部分。</li>
+      <li><strong>与本章第二节：</strong>自杀与攻击的"急性期"处理，常需接力到危机干预；危机干预的"保证安全"原则与急诊安全评估同源。</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===== 06 危机干预 ===== -->
+<section id="u2">
+  <div class="sec-head"><div class="badge">06</div><h2>危机干预<span class="en">第二节（p.275–279）</span></h2></div>
+  <p class="sec-lead">这一节把"灾难现场的心理急救"拆成可操作的流程：先定义危机，再分类型与结局，最后用六步法/五步骤把当事人从失衡拉回自主控制。</p>
+
+  <!-- 第一栏 -->
+  <div class="card cyan" id="u2-1">
+    <h3 class="col-title"><span class="idx">第一栏</span>疾病画像 → 危机干预工作单元画像</h3>
+    <div class="quote"><span class="lab">教材原文</span>危机（crisis）是指个体或群体面临突然或重大负性生活事件（如至亲死亡、婚姻破裂或自然灾害等）时，在一段时间内以现有资源和应对机制无法解决，导致出现心理失衡状态。</div>
+    <p><strong>一句话画像：</strong>危机不是"某一种病"，而是<strong>人与环境动态平衡被突然打破后的失衡状态</strong>；危机干预就是在失衡的急性窗口期，用短程、支持性的心理治疗帮当事人重新找回控制感。<span class="note">（此句为释义，非教材原文）</span></p>
+    <div class="quote"><span class="lab">教材原文</span>危机干预（crisis intervention）是对处于心理失衡状态的个体进行简短而有效的帮助，使他们度过心理危机，恢复生理、心理和社会功能水平。</div>
+    <p><strong>本质：</strong>短程和紧急心理治疗，<strong>本质上属于支持性心理治疗</strong>；以解决问题为主，<strong>一般不涉及当事人的人格塑造</strong>。时机以个体面临危机的<strong>急性阶段</strong>最为适宜。</p>
+    <div class="stat">
+      <span>定义三标准</span><span>危机 4 类型</span><span>结局 3 种</span><span>应对 4 阶段</span><span>六步法</span><span>五步骤</span><span>严重程度 6 级</span>
+    </div>
+    <p class="note">教材明确指出：危机很少只影响个人，会传播开来，影响多个与危机事件相关的人；因此干预对象也可能是群体。</p>
+  </div>
+
+  <!-- 第二栏 -->
+  <div class="card blue" id="u2-2">
+    <h3 class="col-title"><span class="idx">第二栏</span>病因探秘 → 危机的发生机制</h3>
+    <p><strong>为什么同样的事件，有人能撑住，有人会失衡？</strong>教材用"动态平衡—应对资源"来解释，而不是单一病因。</p>
+    <div class="grid2">
+      <div class="mini">
+        <h4>① 平衡被打破</h4>
+        <p>人与环境始终处于动态平衡。突然或重大负性生活事件（至亲死亡、婚姻破裂、自然灾害等）打破平衡，个体以现有资源和应对机制无法解决，即进入危机状态。</p>
+      </div>
+      <div class="mini">
+        <h4>② 应对能力不足</h4>
+        <p>面临逆境时，若<strong>应对能力不足、缺乏应对策略、缺少社会支持</strong>，会导致急性情绪、认知及行为上的功能紊乱。持续下去可造成剧烈心理痛苦与社会功能损害，严重时精神崩溃或自杀。</p>
+      </div>
+      <div class="mini">
+        <h4>③ 危险与机遇共存</h4>
+        <p>危机产生的焦虑与痛苦体验会提供变化的动力，迫使个体寻求支持，帮助其自我成长与自我实现。因此正确处理危机、进行必要干预极其重要。</p>
+      </div>
+      <div class="mini">
+        <h4>④ 反应的四阶段</h4>
+        <p>①适度情感唤起（有助于问题解决）→②过度情感唤起（导致行为紊乱）→③尝试替代（尝试其他应付方式）→④衰竭及失代偿。危机干预尝试把反应限制在第一阶段，或避免进入第四阶段。</p>
+      </div>
+    </div>
+    <div class="callout key"><span class="ct">📌 机制主线（教材要点概括）</span>危机的发生可归结为<strong>事件冲击、应对资源不足、支持系统薄弱</strong>三者的叠加；干预的着力点因此有三处：释放情绪、改变认知态度、补上应对方式与社会资源。</div>
+  </div>
+
+  <!-- 第三栏 -->
+  <div class="card red" id="u2-3">
+    <h3 class="col-title"><span class="idx">第三栏</span>临床表现拼图 → 危机的类型、结局与严重程度</h3>
+    <p>教材把危机拆成"类型—结局—严重程度"三层来观察。识别时先问"是哪一类危机"，再问"走到哪一步"，最后用严重程度表判断功能损害。</p>
+    <div class="tabs" data-tabs>
+      <div class="tabbar">
+        <button class="on" data-tab="c1">危机四类型</button>
+        <button data-tab="c2">三种结局</button>
+        <button data-tab="c3">严重程度 6 级</button>
+        <button data-tab="c4">定义三标准</button>
+      </div>
+      <div class="panel on" data-panel="c1">
+        <div class="grid2">
+          <div class="mini"><h4>发展性危机</h4><p>人在成长和发展过程中，急剧的变化和转变，如就业、移民、退休等。</p></div>
+          <div class="mini"><h4>境遇性危机</h4><p>遭遇罕见或异乎寻常的事件，如交通事故、空难、洪水、地震和火灾等。</p></div>
+          <div class="mini"><h4>存在性危机</h4><p>人生的重大问题，如目的、责任、独立性、自由和意义等。</p></div>
+          <div class="mini"><h4>环境性危机</h4><p>人长期所处的境遇，如工作歧视、违反社会常规、空气污染等。</p></div>
+        </div>
+        <p class="note">一句话区分：发展性看"人生阶段的转变"，境遇性看"罕见事件"，存在性看"人生意义"，环境性看"长期处境"。</p>
+      </div>
+      <div class="panel" data-panel="c2">
+        <ol>
+          <li><strong>有效地应付和度过：</strong>自主有效应对，并从经历中获得力量，以积极态度改变和成长，之后更强大、更富有同情心。</li>
+          <li><strong>暂时渡过危机：</strong>似乎能渡过，但未真正解决好危机影响，遗留认知、行为、人格问题，以后会以各种方式不断出现和消失。</li>
+          <li><strong>心理、生理崩溃：</strong>危机产生时就崩溃；若不立即给予特殊帮助，将导致物质依赖与滥用、自杀、攻击或精神障碍等。</li>
+        </ol>
+        <p class="note">教材指出危机可能经过<strong>冲击、防御、解决及成长</strong>几个阶段；结局并非命中注定，干预可以改变走向。</p>
+      </div>
+      <div class="panel" data-panel="c3">
+        <p>表 22-5 从<strong>情感、行为、思维</strong>三个维度把损害分为 6 级：</p>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>严重程度</th><th>情感</th><th>行为</th><th>思维</th></tr></thead>
+            <tbody>
+              <tr><td>没有损害</td><td>心境稳定，情感可控</td><td>行为得体稳定无攻击性，日常功能无损害</td><td>决策合理有逻辑，注意力完整，问题解决正常</td></tr>
+              <tr><td>少许损害</td><td>情感基本适宜，需一定程度控制情绪</td><td>基本得体，有轻度短暂冲动，日常功能轻微损害</td><td>决策奇怪但安全，思维受危机影响尚能控制</td></tr>
+              <tr><td>轻度损害</td><td>情感尚适宜，明显波动和负面情绪，尚能控制</td><td>行为不得体但尚无危险，对人对己轻度威胁，功能一定程度受损</td><td>决策越来越不合理，思维局限于危机事件但不至于困在其中</td></tr>
+              <tr><td>中度损害</td><td>情感主要负面，夸大或明显减弱，难以控制、易变，与环境不协调</td><td>行为适应不良但无即刻破坏性，对人对己有一定威胁且越来越难控制</td><td>决策基本不合理，思维局限于危机事件并困于其中，问题解决有困难</td></tr>
+              <tr><td>明显损害</td><td>情感尤其鲜明或严重受限，负面情绪难以控制，全面影响生活</td><td>行为使危机情境恶化，前后矛盾，对人对己有威胁，明显缺乏日常功能</td><td>决策冲动不合理，思维变得强迫，自我怀疑和混乱，缺乏问题解决能力</td></tr>
+              <tr><td>严重损害</td><td>情感极其明显，从歇斯底里到毫无反应，无控制能力，代偿失调，非真实感、人格解体</td><td>行为完全无效，极具破坏性，可能伤害人己，无法完成日常生活最简单的任务</td><td>决策能力完全丧失，思维混乱，完全被危机控制，丧失理解和回应能力</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="note">用途：危机评估时据此判断功能损害层级，并决定是否需要医学措施与紧急处理（教材明确评估需确定"是否需要用药等医学措施"）。</p>
+      </div>
+      <div class="panel" data-panel="c4">
+        <p><strong>定义为危机需同时满足三个标准：</strong></p>
+        <ol>
+          <li>事件往往突发，对心理造成重大影响。</li>
+          <li>引起当事人急性情绪困扰，并在<strong>认知、行为甚至躯体反应</strong>等方面出现功能失调，但<strong>临床表现不足以诊断为任何精神障碍</strong>。</li>
+          <li>当事人运用平常解决问题的方法和技巧<strong>难以应对或应对失效</strong>，可能造成社会功能下降或角色混乱。</li>
+        </ol>
+        <div class="callout warn"><span class="ct">⚠️ 关键边界</span>第三条常被忽略：危机是"应对失效的功能失调"，不是"任何精神障碍"的替名词。临床表现足以诊断某种精神障碍时，不能只用"危机"解释。</div>
+      </div>
+    </div>
+    <p class="note">说明：本栏原用于疾病症状分维度呈现；本章无疾病单元，故按"类型—结局—严重程度—定义标准"呈现危机的临床画像。</p>
+  </div>
+
+  <!-- 第四栏 -->
+  <div class="card orange" id="u2-4">
+    <h3 class="col-title"><span class="idx">第四栏</span>教材典型案例</h3>
+    <div class="callout book">
+      <span class="ct">📖 教材未提供具体临床案例</span>
+      本节为危机干预的概念与技术论述，教材<strong>未提供具体当事人案例</strong>，也没有给出晤谈对话、评估分值或随访记录。教材中的"案例性材料"仅为灾难情境的概括描述（战争、交通事故、地震、火灾、风暴、海啸等）与表 22-5 的严重程度分级，不构成个案。
+    </div>
+    <p><strong>由教材要点整理的学习路径（非教材病例）：</strong></p>
+    <ol>
+      <li>先判断是否满足危机三标准，避免把精神障碍误当"危机"。</li>
+      <li>用严重程度表定位情感、行为、思维三个维度的损害层级。</li>
+      <li>按六步法推进会谈，按五步骤管理整个干预过程。</li>
+      <li>结束时获取自由、自愿、可行的承诺，并安排即时与短期随访。</li>
+    </ol>
+    <p class="note">以上为按教材流程整理的学习路径，不是教材原文案例。</p>
+  </div>
+
+  <!-- 第五栏 -->
+  <div class="card orange" id="u2-5">
+    <h3 class="col-title"><span class="idx">第五栏</span>鉴别诊断对对碰 → 概念与流程鉴别</h3>
+    <p><strong>表 1　危机 vs 精神障碍：一条"诊断阈值"分开</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>维度</th><th>危机</th><th>精神障碍</th></tr></thead>
+        <tbody>
+          <tr><td>诱因</td><td>突然或重大负性生活事件</td><td>可有诱因，也可无明显诱因</td></tr>
+          <tr><td>表现</td><td>急性情绪困扰，认知、行为、躯体功能失调</td><td>符合特定障碍的症状学与病程标准</td></tr>
+          <tr><td>诊断边界</td><td><strong>临床表现不足以诊断为任何精神障碍</strong></td><td>达到相应诊断标准</td></tr>
+          <tr><td>应对</td><td>平常方法难以应对或失效</td><td>功能损害可源于疾病本身</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note">一句话鉴别总结：<strong>危机是"被事件压垮的失衡"，精神障碍是"达到诊断标准的病"；前者不足以诊断后者。</strong></p>
+
+    <p><strong>表 2　危机四类型：用"时间尺度 + 诱因性质"区分</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>类型</th><th>诱因性质</th><th>教材举例</th><th>一句话抓手</th></tr></thead>
+        <tbody>
+          <tr><td>发展性危机</td><td>成长发展中的急剧变化与转变</td><td>就业、移民、退休</td><td>人生阶段转弯</td></tr>
+          <tr><td>境遇性危机</td><td>罕见或异乎寻常的事件</td><td>交通事故、空难、洪水、地震、火灾</td><td>偶发大事件</td></tr>
+          <tr><td>存在性危机</td><td>人生重大问题</td><td>目的、责任、独立性、自由、意义</td><td>意义与价值拷问</td></tr>
+          <tr><td>环境性危机</td><td>长期所处境遇</td><td>工作歧视、违反社会常规、空气污染</td><td>长期环境压迫</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note">一句话鉴别总结：<strong>发展性看"转变"、境遇性看"事件"、存在性看"意义"、环境性看"长期处境"。</strong></p>
+
+    <p><strong>表 3　危机干预"六步法" vs "危机干预的步骤"：两个不同层级，不能混答</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>框架</th><th>教材位置</th><th>内容</th><th>定位</th></tr></thead>
+        <tbody>
+          <tr>
+            <td><strong>六步法</strong></td>
+            <td>"危机干预的方法"之下</td>
+            <td>①确定问题 ②保证求助者安全 ③给予支持 ④提出并验证可变通的应对方式 ⑤制定计划、恢复自主控制 ⑥获取承诺</td>
+            <td>处理危机的<strong>技术流程</strong>，侧重会谈内推进；检查评估贯穿全程</td>
+          </tr>
+          <tr>
+            <td><strong>危机干预的步骤</strong></td>
+            <td>"危机干预的步骤"之下</td>
+            <td>①实现接触、保持联系 ②危机评估 ③制定干预目标 ④干预措施 ⑤实现目标与随访</td>
+            <td>整个干预过程的<strong>阶段管理</strong>，从建立联系到随访收尾</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note">一句话鉴别总结：<strong>六步法侧重"会谈内怎么推进"，五步骤侧重"整个过程怎么走完"；两者是嵌套关系，不是二选一。</strong></p>
+  </div>
+
+  <!-- 第六栏 -->
+  <div class="card green" id="u2-6">
+    <h3 class="col-title"><span class="idx">第六栏</span>治疗方案工具箱 → 危机干预技术工具箱</h3>
+    <p><strong>干预形式（教材列举）：</strong>热线电话、现场干预、紧急事件应急晤谈、咨询门诊、家庭和社会干预、信函及网络等。危机多样，干预要<strong>注重实效、因情而异</strong>，技术应用应自然流畅，不机械生搬硬套。</p>
+
+    <p><strong>六步法（核心操作，建议按顺序记）：</strong></p>
+    <div class="timeline">
+      <div class="tl-item"><h4>第 1 步 · 确定问题</h4><p>全面了解诱因，评价求助动机，分析何种技术能在最短时间达到最佳效果，从受害者角度确定并理解危机。使用<strong>核心倾听技术</strong>：共情、理解、真诚、接纳或积极关注。</p></div>
+      <div class="tl-item"><h4>第 2 步 · 保证求助者的安全</h4><p>把对自我和他人的生理、心理危险性降到最低；在检查评估、倾听和制定行动计划全过程中，安全都受到同等、足够关注。</p></div>
+      <div class="tl-item"><h4>第 3 步 · 给予支持</h4><p>强调沟通交流，让求助者相信工作人员能给予真正关心和帮助；<strong>无条件地以积极方式接纳所有求助者，不在乎报答</strong>；不评价其经历和感受是否值得称赞，而是让其相信有人关心支持。</p></div>
+      <div class="tl-item"><h4>第 4 步 · 提出并验证可变通的应对方式</h4><p>帮助思维僵化、认为"无路可走"的求助者看到多种选择。从三角度考虑：<strong>环境支持</strong>（谁现在或过去关心自己）、<strong>应对机制</strong>（具体行为/举动/环境资源）、<strong>积极的创造性思维</strong>（重新构建、改变看法、减轻应激焦虑）。只需讨论其中几种，不求多，求有针对性、可操作、能解决问题。</p></div>
+      <div class="tl-item"><h4>第 5 步 · 制定计划，恢复自主控制</h4><p>与求助者<strong>共同</strong>制定行动步骤，调整行为、情绪和认知平衡。计划包括：确定其他个人/组织/团体能提供及时支持；提供即刻可采用、求助者能理解把握的积极应对机制。核心是<strong>控制性与自主性</strong>，让计划可实施以恢复自主能力，不依赖支持者。</p></div>
+      <div class="tl-item"><h4>第 6 步 · 获取承诺</h4><p>让求助者复述计划或以握手表示承诺；涉及法律问题时需文字记录并双方签字。承诺应<strong>自由、自愿、可行</strong>，<strong>不应强加</strong>；强加的承诺无用。核心倾听技术在此步仍重要。</p></div>
+    </div>
+
+    <p><strong>危机干预的五个步骤（过程管理）：</strong></p>
+    <div class="grid2">
+      <div class="mini"><h4>① 实现接触、保持联系</h4><p>用当事人能接受的方式尽快建立联系，让其确信并非单独应对；鼓励其描述危机经过与感受，自我介绍并说明干预目的，表明帮助意愿，获得信任。要有持续性与连贯性，浅尝辄止可能无效甚至有害。</p></div>
+      <div class="mini"><h4>② 危机评估</h4><p>迅速确定事件与严重程度；评估应对状况、资源与支持系统；确定是否需要用药等医学措施；确定需紧急处理的问题，提供必要保证和支持；确保躯体、心理安全。用表 22-5 分 6 级判断损害。</p></div>
+      <div class="mini"><h4>③ 制定干预目标</h4><p>主要目标：降低急性、剧烈心理危机和创伤风险，稳定并减少直接严重后果，促进恢复康复。<strong>最高目标</strong>：度过危机、恢复心理健康、促进成长；<strong>最低目标</strong>：保护当事人、预防意外、防止进一步发展为精神障碍。目标应切合实际、可操作、可实现。</p></div>
+      <div class="mini"><h4>④ 干预措施</h4><p>先让当事人理解"解决问题需要其积极配合与共同努力"，激发动机，了解创伤事件含义、干预所需时间与可能困难，再实施具体措施。</p></div>
+    </div>
+    <p><strong>干预措施 9 条（教材顺序）：</strong></p>
+    <ol>
+      <li>以共情、真诚、尊重、不偏不倚和关心的态度进行倾听、观察、理解和反应。</li>
+      <li>向当事人解释情感活动是对危机的正常反应。</li>
+      <li>鼓励当事人讨论目前感受，如否认、内疚、悲痛、生气。</li>
+      <li>鼓励当事人谈述过去和现在。</li>
+      <li>帮助当事人理智地面对现实、接受现实及痛苦。</li>
+      <li>增进当事人对现实世界的了解，分清幻想与事实。</li>
+      <li>教会呼吸放松、肌肉放松、想象放松等放松技术。</li>
+      <li>提供应对策略，探索可用解决方法，促使积极搜索环境支持与应付方式，发掘积极思维方式，建立新的支撑点，转向其他领域，从丧失性情绪中走出。</li>
+      <li>强调当事人对行为和决定的责任心。</li>
+    </ol>
+    <div class="mini">
+      <h4>⑤ 实现目标与随访</h4>
+      <p>根据不断了解的情况、当事人反应与干预进程，验证并必要调整目标与策略；进步时及时总结回顾。结束前强化其应对方式、资源利用与适应技能，帮助预测和准备未来，增强处理将来应激的自信心。结束后进行<strong>即时和短期随访</strong>，确保计划实行与安全；当事人缺乏其他社会支持系统时，坚持随访尤其关键。</p>
+    </div>
+
+    <div class="callout tip">
+      <span class="ct">🔧 干预者也要被干预：CISD</span>
+      对实施干预的人也要及时干预，保护其免受强烈心理痛苦。可采用<strong>关键事件应激报告法（critical incident stress debriefing，CISD）</strong>：通过系统、交谈来减轻压力。目标是在危机群体中公开讨论内心感受；给予支持和安慰；调动一切可能资源；帮助当事人在认知和情绪上消化创伤体验。
+    </div>
+    <div class="callout warn">
+      <span class="ct">⚠️ 教材边界</span>
+      本章<strong>未涉及</strong>危机干预的具体疗程、会谈频次、药物剂量、量表评分 cut-off，也未展开各类灾难的分级响应流程。上述内容均只按教材原文呈现，不补写课外流程。
+    </div>
+  </div>
+
+  <!-- 第七栏 -->
+  <div class="card purple" id="u2-7">
+    <h3 class="col-title"><span class="idx">第七栏</span>记忆工具箱</h3>
+    <div class="callout tip">
+      <span class="ct">🔧 方法一：首字口诀法（六步法）</span>
+      口诀：<strong>"定、安、支、选、计、诺"</strong>——确定问题、保证安全、给予支持、选择可变通方式、制定计划、获取承诺。<br>
+      <em>为什么这样记：</em>六个字按会谈推进顺序排列，先有"钩子"再还原内容；考场默写时按字逐个展开，不会漏步。
+    </div>
+    <div class="callout tip">
+      <span class="ct">🔧 方法二：数字编码法（"3-4-3-6-5"）</span>
+      口诀：<strong>危机 3 标准、4 类型、3 结局、严重程度 6 级、干预 5 步骤</strong>。<br>
+      3 标准：突发事件、功能失调但不足以诊断、应对失效；4 类型：发展、境遇、存在、环境；3 结局：有效度过、暂时渡过、崩溃；6 级：无、少许、轻、中、明显、严重；5 步骤：接触、评估、目标、措施、随访。<br>
+      <em>为什么这样记：</em>用一串数字锁定整节的骨架，先回忆"有几个",再填"是什么",特别适合考前快速自检。
+    </div>
+    <div class="callout tip">
+      <span class="ct">🔧 方法三：对比记忆法（六步法 vs 五步骤）</span>
+      六步法：<strong>"管会谈"</strong>——定、安、支、选、计、诺；五步骤：<strong>"管全程"</strong>——接触、评估、目标、措施、随访。<br>
+      <em>为什么这样记：</em>把两个容易混答的框架用"会谈内/全流程"作标签，先分层再背条目，避免把"获取承诺"塞进五步骤。
+    </div>
+    <div class="callout tip">
+      <span class="ct">🔧 方法四：故事串联法（标注：类比理解，非医学事实）</span>
+      想象地震后的幸存者：志愿者先<strong>接触</strong>他（实现接触）→ 判断他处于哪一级损害（<strong>评估</strong>）→ 定下"先保安全、再恢复控制"的目标（<strong>目标</strong>）→ 倾听、解释、教放松、找资源（<strong>措施</strong>）→ 几天后回访（<strong>随访</strong>）。进入对话后，再按"定安支选计诺"六步走。<br>
+      <em>为什么这样记：</em>用一个时间故事把"五步骤"串起来，再把"六步法"挂到"措施"这一步里，两个框架自然嵌套，不会互相打架。
+    </div>
+  </div>
+
+  <!-- 第八栏 -->
+  <div class="card cyan" id="u2-8">
+    <h3 class="col-title"><span class="idx">第八栏</span>知识联动</h3>
+    <ul>
+      <li><strong>与本章第一节：</strong>急诊的"保证安全"与危机干预六步法的第 2 步同源；自杀/攻击急性期控制后，常需接力危机干预与随访。</li>
+      <li><strong>与应激相关障碍章：</strong>急性应激障碍的急诊处理明确要求"作相应危机干预和应激因素处理"；危机干预是应激相关障碍早期心理支持的重要思路。</li>
+      <li><strong>与创伤后应激障碍章：</strong>教材提到的 CISD 用于危机群体公开讨论感受、消化创伤体验；它属于早期支持性干预，不等同于 PTSD 的正式心理治疗。</li>
+      <li><strong>与抑郁障碍/自杀预防：</strong>危机干预是二级预防中"及时干预"的重要载体；教材在自杀二级预防中明确提到建立危机干预中心和热线电话。</li>
+      <li><strong>与灾难医学/公共精神卫生：</strong>教材强调危机干预机构与网络建设、把心理援助纳入救灾预警机制；完整的救援体系包括物质支持、医疗救援、卫生防疫、心理救助。</li>
+      <li><strong>与心理治疗总论：</strong>危机干预本质是支持性心理治疗，短程、以解决问题为主，不涉及人格塑造——这决定了它不能替代长程心理治疗。</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===== 07 核心要点 ===== -->
+<section id="summary">
+  <div class="sec-head"><div class="badge">07</div><h2>全章核心要点速览<span class="en">18 key points</span></h2></div>
+  <p class="sec-lead">考前最后一遍只看这里。每条都能独立成题，建议逐条自问"为什么"。</p>
+  <div class="card blue">
+    <div class="grid2">
+      <ol>
+        <li>精神科急诊是临床精神病学与急诊医学的分支，针对突发的精神卫生问题或紧急心理危机，提供快速有效救助和治疗。</li>
+        <li>急诊范围三类：门急诊紧急处理、住院患者应急处理、急会诊。</li>
+        <li>急诊评估 = 病史采集 + 体格/神经系统检查 + 精神检查 + 辅助检查；病史需多途径核实。</li>
+        <li>病情严重程度看四项：精神病性症状、现实检验与自知力、社会功能、自杀意念/行为与暴力冲动。</li>
+        <li>留院观察 6 条：病情严重或躯体差、严重自杀或冲动攻击、拒食违拗不合作亚木僵木僵、依从性差、认知严重损害、诊断不明。</li>
+        <li>任何精神活动改变先排除躯体或脑器质性疾病；急诊以精神症状首发的患者中近 2/3 由躯体疾病引发。</li>
+        <li>自杀三形式：自杀意念、自杀未遂、自杀死亡；自杀未遂发生率是自杀死亡的 10～20 倍。</li>
+        <li>既往自杀史是自杀行为最显著的独立预测因素；超过 90% 自杀企图者和 95% 自杀身亡者有精神障碍史。</li>
+        <li>女性企图自杀约为男性 3 倍，男性自杀死亡率约为女性 4 倍，男性占自杀总死亡人数 2/3。</li>
+      </ol>
+      <ol start="10">
+        <li>自杀风险线索 7 类：流露意愿、近期严重丧失、近期自伤自杀、性格改变、情绪改变（反常好转）、精神障碍、睡眠问题。</li>
+        <li>自杀三级预防：一级普及知识/提高识别/减少工具获得/引导媒体；二级早发现早诊断早治疗；三级救治、防再自杀、善后与随访。</li>
+        <li>攻击行为临床最常用分类：预谋性攻击（目标取向、与即刻威胁无关）vs 冲动性攻击（对压力或威胁的反应）。</li>
+        <li>攻击危险性评估三方法：临床经验性评估、精细性评估、结构化临床评估；工具不能替代临床观察。</li>
+        <li>攻击处置七原则：求助、展示领导力、保持距离、解除凶器、隔离、约束、药物干预。</li>
+        <li>危机三标准：突发事件重大影响；急性情绪困扰并功能失调但不足以诊断任何精神障碍；平常应对方法难以应对或失效。</li>
+        <li>危机四类型：发展性、境遇性、存在性、环境性；三结局：有效度过、暂时渡过、心理生理崩溃。</li>
+        <li>危机干预是短程、紧急、支持性心理治疗，以解决问题为主，不涉及人格塑造；急性阶段最适宜。</li>
+        <li>六步法："定、安、支、选、计、诺"；五步骤：接触、评估、目标、措施、随访。两者是嵌套关系。</li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 08 易混 ===== -->
+<section id="pitfalls">
+  <div class="sec-head"><div class="badge">08</div><h2>易混易错点警示<span class="en">Common traps</span></h2></div>
+  <p class="sec-lead">这些点不是"没背到"，而是"背反了"。逐条核对你的第一反应。</p>
+  <div class="card danger">
+    <details open>
+      <summary>① 精神科急诊 ≠ 只看精神症状，先排器质性是铁律</summary>
+      <div class="dbody">教材明确：任何患者出现认知、思维、情绪、行为改变，<strong>首先必须排除躯体或脑器质性疾病</strong>，特别是谵妄或痴呆。一项急诊科研究显示，以精神症状为首发症状者中<strong>近 2/3 由躯体疾病引发</strong>。先按功能精神病处理、把躯体检查后置，是最危险的顺序错误。</div>
+    </details>
+    <details>
+      <summary>② 患者不主动说自杀，不等于没有自杀风险</summary>
+      <div class="dbody">教材指出，即使患者不愿意主动提及消极观念，<strong>被询问时仍会如实回答</strong>。因此不能因为"他没说"就跳过询问；自杀评估要主动询问自杀观念、计划和行为，并评估意图与计划的致命性。</div>
+    </details>
+    <details>
+      <summary>③ 自杀意念 ≠ 自杀未遂：差别在"有没有行动"</summary>
+      <div class="dbody">自杀意念是有寻死意向但未采取任何实际行动；自杀未遂是采取有意毁灭自我的行动但未死亡；自杀死亡是行动并导致死亡。把"反复说想死"直接写成"自杀未遂"是概念错误。</div>
+    </details>
+    <details>
+      <summary>④ 最显著的独立预测因素是"既往自杀史"，不是"当前看起来多严重"</summary>
+      <div class="dbody">教材表 22-3 明确：<strong>既往有过自杀史是自杀行为最显著的独立预测因素</strong>。同时，既往自伤或自杀行为也是将来行为的最强预测因子；多次重复后周围人放松警惕，自杀成功率反而增加。</div>
+    </details>
+    <details>
+      <summary>⑤ 性别数字别记反：女性"企图"多，男性"死亡"多</summary>
+      <div class="dbody">女性企图自杀的问题发生率是男性的 <strong>3 倍</strong>；男性自杀死亡率却是女性的 <strong>4 倍</strong>，且男性占自杀总死亡人数的 <strong>2/3</strong>。自杀未遂的男女性别比约为 1∶3。</div>
+    </details>
+    <details>
+      <summary>⑥ 抑郁自杀不只在"高峰期"，缓解期同样高危</summary>
+      <div class="dbody">教材追踪调查：抑郁障碍患者出院 <strong>6 个月内 42.0%</strong> 自杀，1 年内 58.0%，2 年内 70.0%。因此出院随访、缓解期评估不能松劲；情绪突然"好转"、交代后事也要警惕。</div>
+    </details>
+    <details>
+      <summary>⑦ 攻击评估工具再标准化，也不能替代临床观察</summary>
+      <div class="dbody">精细性评估的准确率较临床经验性评估显著提高，但未考虑尚未验证的危险因素，静态因素使被评估者处于被动地位；教材强调<strong>评估工具依然不能替代临床观察</strong>，且应综合工作人员、家属、社会工作者、临床心理学家多方意见。</div>
+    </details>
+    <details>
+      <summary>⑧ 静态风险与动态风险不能混：前者改不了，后者能干预</summary>
+      <div class="dbody">静态风险：人口学特征、既往暴力等，不能通过干预改变；动态风险：非法持有武器、精神症状、物质滥用等，可通过干预改变。近期风险主要是当时应激状态与精神症状；远期风险主要是人格特征、社会支持与环境。</div>
+    </details>
+    <details>
+      <summary>⑨ 苯二氮䓬类不是"永远镇静"，有时反而促发暴力</summary>
+      <div class="dbody">教材明确：苯二氮䓬类虽有镇静作用，但有时发挥<strong>脱抑制作用</strong>从而促发暴力行为；有研究提到"反常愤怒反应"和易激惹症状，但这种情况少见。不要把它当成绝对安全的"万能约束替代"。</div>
+    </details>
+    <details>
+      <summary>⑩ 危机干预 ≠ 长程心理治疗，更不等于人格塑造</summary>
+      <div class="dbody">危机干预是<strong>短程和紧急心理治疗</strong>，本质属支持性心理治疗，以解决问题为主，<strong>一般不涉及人格塑造</strong>；时机以急性阶段最适宜。把它写成"重塑人格的长程治疗"是方向性错误。</div>
+    </details>
+    <details>
+      <summary>⑪ 六步法与五步骤不是"两套互斥答案"</summary>
+      <div class="dbody">六步法在"危机干预的方法"之下，是一次晤谈的技术流程：确定问题、保证安全、给予支持、提出并验证可变通方式、制定计划恢复自主控制、获取承诺。五步骤在"危机干预的步骤"之下，是整个过程：接触、评估、目标、措施、随访。答题先看题干问"方法"还是"步骤"。</div>
+    </details>
+    <details>
+      <summary>⑫ 危机定义必须三条同时满足，"有应激事件"就够了吗？不够</summary>
+      <div class="dbody">还必须：出现急性情绪困扰及认知、行为、躯体功能失调，且<strong>临床表现不足以诊断为任何精神障碍</strong>；平常解决问题的方法<strong>难以应对或应对失效</strong>。只有"遇到大事"而无功能失调与应对失效，不构成教材定义的危机。</div>
+    </details>
+  </div>
+</section>
+
+<!-- ===== 09 自测 ===== -->
+<section id="quiz">
+  <div class="sec-head"><div class="badge">09</div><h2>章节自测系统<span class="en">14 questions · 6 types</span></h2></div>
+  <p class="sec-lead">覆盖单选、多选、判断、名词解释、简答、案例分析六种题型，按易→中→难排列。先作答，再展开解析。</p>
+
+  <div class="quiz-q">
+    <div class="qh"><span class="qno">第 1 题</span><span class="qtype">单选题</span><span class="diff">易</span></div>
+    <p class="brief">教材所述的精神科急诊范围通常<strong>不包括</strong>下列哪一项？</p>
+    <div class="opts">
+      <div class="opt"><span class="l">A.</span>门急诊紧急处理</div>
+      <div class="opt"><span class="l">B.</span>住院患者的应急处理</div>
+      <div class="opt"><span class="l">C.</span>急会诊</div>
+      <div class="opt"><span class="l">D.</span>社区精神障碍的流行病学调查</div>
+    </div>
+    <details><summary>查看答案与解析</summary><div class="dbody"><strong>答案：D</strong><br>教材原文：精神科急诊范围主要包括门急诊、住院患者的应急处理、急会诊。流行病学调查不属于急诊范围。</div></details>
+  </div>
+
+  <div class="quiz-q">
+    <div class="qh"><span class="qno">第 2 题</span><span class="qtype">单选题</span><span class="diff">易</span></div>
+    <p class="brief">根据自杀发生的情况，教材把自杀分为三种形式，下列<strong>不属于</strong>其中的是？</p>
+    <div class="opts">
+      <div class="opt"><span class="l">A.</span>自杀意念</div>
+      <div class="opt"><span class="l">B.</span>自杀未遂</div>
+      <div class="opt"><span class="l">C.</span>自杀死亡</div>
+      <div class="opt"><span class="l">D.</span>自杀计划</div>
+    </div>
+    <details><summary>查看答案与解析</summary><div class="dbody"><strong>答案：D</strong><br>教材分为自杀意念、自杀未遂、自杀死亡三种形式。"自杀计划"是评估自杀风险时需要询问的内容（是否存在计划、计划的致命性），不是一个独立形式。</div></details>
+  </div>
+
+  <div class="quiz-q">
+    <div class="qh"><span class="qno">第 3 题</span><span class="qtype">单选题</span><span class="diff">中</span></div>
+    <p class="brief">下列哪种情况，按教材标准<strong>不属于</strong>建议留院观察的情形？</p>
+    <div class="opts">
+      <div class="opt"><span class="l">A.</span>幻觉、妄想突出，病情严重</div>
+      <div class="opt"><span class="l">B.</span>具有严重自杀意念和自杀行为</div>
+      <div class="opt"><span class="l">C.</span>拒食、违拗、不合作、亚木僵</div>
+      <div class="opt"><span class="l">D.</span>诊断明确、治疗依从性好、社会支持充分且无风险行为</div>
+    </div>
+    <details><summary>查看答案与解析</summary><div class="dbody"><strong>答案：D</strong><br>教材列出的留院观察指征包括：病情严重或躯体情况差；严重自杀意念/行为或冲动攻击；拒食、违拗、不合作、亚木僵、木僵；治疗依从性差；认知功能严重损害；诊断不明。D 与这些指征相反。</div></details>
+  </div>
+
+  <div class="quiz-q">
+    <div class="qh"><span class="qno">第 4 题</span><span class="qtype">单选题</span><span class="diff">中</span></div>
+    <p class="brief">攻击行为危险性评估的三种方法中，教材称对攻击行为预测准确率较临床经验性评估<strong>显著提高</strong>的是？</p>
+    <div class="opts">
+      <div class="opt"><span class="l">A.</span>临床经验性评估</div>
+      <div class="opt"><span class="l">B.</span>精细性评估</div>
+      <div class="opt"><span class="l">C.</span>结构化临床评估</div>
+      <div class="opt"><span class="l">D.</span>患者自我报告</div>
+    </div>
+    <details><summary>查看答案与解析</summary><div class="dbody"><strong>答案：B</strong><br>教材：与临床经验性评估相比，<strong>精细性评估</strong>对攻击行为预测的准确率显著提高；但其未考虑尚未验证的危险因素，静态因素使被评估者处于被动地位，适用性与准确性仍受质疑。结构化临床评估强调一致性与个体化并重、动态连续评估。</div></details>
+  </div>
+
+  <div class="quiz-q">
+    <div class="qh"><span class="qno">第 5 题</span><span class="qtype">多选题</span><span class="diff">中</span></div>
+    <p class="brief">下列哪些属于教材所述的自杀危险因素？</p>
+    <div class="opts">
+      <div class="opt"><span class="l">A.</span>既往有过自杀史</div>
+      <div class="opt"><span class="l">B.</span>精神障碍史，尤其是抑郁与焦虑共病</div>
+      <div class="opt"><span class="l">C.</span>童年期负性经历</div>
+      <div class="opt"><span class="l">D.</span>良好的家庭和社会支持系统</div>
+    </div>
+    <details><summary>查看答案与解析</summary><div class="dbody"><strong>答案：ABC</strong><br>A、B、C 均为教材表 22-3 列出的危险因素；B 中教材还明确指出抑郁和焦虑共病的患者自杀风险最高。D 属于<strong>保护因素</strong>，不是危险因素。</div></details>
+  </div>
+
+  <div class="quiz-q">
+    <div class="qh"><span class="qno">第 6 题</span><span class="qtype">多选题</span><span class="diff">中</span></div>
+    <p class="brief">教材所述攻击行为的处理原则包括下列哪些？</p>
+    <div class="opts">
+      <div class="opt"><span class="l">A.</span>求助安全保卫人员，必要时寻求警察帮助</div>
+      <div class="opt"><span class="l">B.</span>与攻击者保持恰当距离，保持门路畅通</div>
+      <div class="opt"><span class="l">C.</span>处理或治疗前解除凶器，不合作可强制解除</div>
+      <div class="opt"><span class="l">D.</span>独自与患者反锁在封闭房间内长时间对峙</div>
+    </div>
+    <details><summary>查看答案与解析</summary><div class="dbody"><strong>答案：ABC</strong><br>教材七原则为：求助、展示领导力、保持距离、解除凶器、隔离、约束、药物干预。D 与"求助""保持距离""保持门路畅通""隔离"的安全原则相违背，且教材未涉及此做法。</div></details>
+  </div>
+
+  <div class="quiz-q">
+    <div class="qh"><span class="qno">第 7 题</span><span class="qtype">多选题</span><span class="diff">难</span></div>
+    <p class="brief">按教材定义，判断"危机"需满足的标准包括？</p>
+    <div class="opts">
+      <div class="opt"><span class="l">A.</span>事件往往突发，对心理造成重大影响</div>
+      <div class="opt"><span class="l">B.</span>急性情绪困扰，认知、行为甚至躯体反应出现功能失调，但临床表现不足以诊断任何精神障碍</div>
+      <div class="opt"><span class="l">C.</span>平常解决问题的方法和技巧难以应对或应对失效</div>
+      <div class="opt"><span class="l">D.</span>症状必须持续 6 个月以上</div>
+    </div>
+    <details><summary>查看答案与解析</summary><div class="dbody"><strong>答案：ABC</strong><br>教材给出三条标准，A、B、C 分别对应。D 是编造的时间阈值，教材未给危机持续时间标准。</div></details>
+  </div>
+
+  <div class="quiz-q">
+    <div class="qh"><span class="qno">第 8 题</span><span class="qtype">判断题</span><span class="diff">易</span></div>
+    <p class="brief">危机干预一般不涉及当事人的人格塑造。</p>
+    <div class="opts">
+      <div class="opt"><span class="l">A.</span>正确</div>
+      <div class="opt"><span class="l">B.</span>错误</div>
+    </div>
+    <details><summary>查看答案与解析</summary><div class="dbody"><strong>答案：A（正确）</strong><br>教材原文：危机干预是短程和紧急心理治疗，本质上属于支持性心理治疗，以解决问题为主，一般不涉及当事人的人格塑造。</div></details>
+  </div>
+
+  <div class="quiz-q">
+    <div class="qh"><span class="qno">第 9 题</span><span class="qtype">判断题</span><span class="diff">中</span></div>
+    <p class="brief">既往有过自杀史是自杀行为最显著的独立预测因素。</p>
+    <div class="opts">
+      <div class="opt"><span class="l">A.</span>正确</div>
+      <div class="opt"><span class="l">B.</span>错误</div>
+    </div>
+    <details><summary>查看答案与解析</summary><div class="dbody"><strong>答案：A（正确）</strong><br>教材表 22-3 首条即此表述；风险线索部分也强调既往自伤或自杀行为是将来自伤或自杀行为的最强预测因子。</div></details>
+  </div>
+
+  <div class="quiz-q">
+    <div class="qh"><span class="qno">第 10 题</span><span class="qtype">判断题</span><span class="diff">中</span></div>
+    <p class="brief">精神科急诊遇到精神症状，应先按功能性精神病处理，躯体检查可以等精神科处置后再补。</p>
+    <div class="opts">
+      <div class="opt"><span class="l">A.</span>正确</div>
+      <div class="opt"><span class="l">B.</span>错误</div>
+    </div>
+    <details><summary>查看答案与解析</summary><div class="dbody"><strong>答案：B（错误）</strong><br>教材明确：任何患者出现认知、思维、情绪、行为改变，<strong>首先必须排除躯体或脑器质性疾病</strong>，特别是谵妄或痴呆；急诊以精神症状首发的患者中近 2/3 由躯体疾病引发。顺序不能颠倒。</div></details>
+  </div>
+
+  <div class="quiz-q">
+    <div class="qh"><span class="qno">第 11 题</span><span class="qtype">名词解释</span><span class="diff">中</span></div>
+    <p class="brief">请解释"危机（crisis）"。</p>
+    <details><summary>查看答案与解析</summary><div class="dbody"><strong>参考答案：</strong>危机是指个体或群体面临突然或重大负性生活事件（如至亲死亡、婚姻破裂或自然灾害等）时，在一段时间内以现有资源和应对机制无法解决，导致出现心理失衡状态。定义为危机需满足三条：①事件往往突发、对心理造成重大影响；②出现急性情绪困扰及认知、行为甚至躯体反应功能失调，但临床表现不足以诊断为任何精神障碍；③平常解决问题的方法和技巧难以应对或应对失效，可能造成社会功能下降或角色混乱。</div></details>
+  </div>
+
+  <div class="quiz-q">
+    <div class="qh"><span class="qno">第 12 题</span><span class="qtype">名词解释</span><span class="diff">中</span></div>
+    <p class="brief">请解释"危机干预（crisis intervention）"。</p>
+    <details><summary>查看答案与解析</summary><div class="dbody"><strong>参考答案：</strong>危机干预是对处于心理失衡状态的个体进行简短而有效的帮助，使其度过心理危机，恢复生理、心理和社会功能水平。它是短程和紧急心理治疗，本质上属于支持性心理治疗，以解决问题为主，一般不涉及当事人的人格塑造；时机以个体面临危机的急性阶段最为适宜。</div></details>
+  </div>
+
+  <div class="quiz-q">
+    <div class="qh"><span class="qno">第 13 题</span><span class="qtype">简答题</span><span class="diff">难</span></div>
+    <p class="brief">简述危机干预六步法的具体步骤，并指出"检查评估"在其中的位置。</p>
+    <details><summary>查看答案与解析</summary><div class="dbody">
+      <strong>参考答案：</strong>
+      <ol>
+        <li><strong>确定问题：</strong>全面了解诱因，评价求助动机，从受害者角度理解危机；使用共情、理解、真诚、接纳或积极关注等核心倾听技术。</li>
+        <li><strong>保证求助者的安全：</strong>把对自我和他人的生理、心理危险性降到最低，安全在检查评估、倾听和制定行动计划全程受到同等关注。</li>
+        <li><strong>给予支持：</strong>无条件地以积极方式接纳求助者，不在乎报答，不评价其经历是否值得称赞，让其相信有人关心支持。</li>
+        <li><strong>提出并验证可变通的应对方式：</strong>从环境支持、应对机制、积极创造性思维三个角度，帮助思维僵化者看到可选择方案，只讨论少数有针对性、可操作的方案。</li>
+        <li><strong>制定计划，恢复自主控制：</strong>与求助者共同制定行动步骤，明确可提供支持的个人/组织/团体与即刻可用的应对机制，核心是控制性与自主性。</li>
+        <li><strong>获取承诺：</strong>让求助者复述计划或握手承诺；涉及法律问题需文字记录并双方签字；承诺应自由、自愿、可行，不应强加。</li>
+      </ol>
+      <strong>检查评估的位置：</strong>教材明确"检查评估贯穿于六步法过程中"，不是独立于六步之外的一步。
+    </div></details>
+  </div>
+
+  <div class="quiz-q">
+    <div class="qh"><span class="qno">第 14 题</span><span class="qtype">案例分析题</span><span class="diff">难</span></div>
+    <p class="brief">（模拟情境，非教材原案例）45 岁男性，有抑郁障碍史，近 1 个月失业。家属诉其反复说"活着没意思"，但近两天突然情绪明显好转，主动把银行卡密码告诉家人，整理个人物品，并交代"以后家里的事怎么安排"。既往无冲动攻击史，未提供化验数值。请回答：①该患者自杀风险如何判断？依据哪些教材线索？②处置原则是什么？</p>
+    <details><summary>查看答案与解析</summary><div class="dbody">
+      <strong>① 风险判断：</strong>属<strong>高风险</strong>，需立即加强看护并建议入院评估。<br>
+      <strong>教材线索：</strong>①近期严重丧失性事件（失业）；②流露消极情绪、表达活着没意思；③<strong>情绪"反常性"好转</strong>，并与亲友交代家庭今后的安排；④<strong>突然整理个人物品</strong>（教材将"突然整理个人物品或书写遗嘱"列为性格改变线索）；⑤有抑郁障碍史，属自杀高危精神障碍。<br>
+      <strong>② 处置原则：</strong>按教材"有严重消极意念和行为的患者"处理：高度重视，向看护者交代可能存在的自伤、自杀风险，做好必要的<strong>书面沟通和签字</strong>；除紧急处理外<strong>建议入院治疗</strong>；针对抑郁发作，可适当予以抗抑郁药、苯二氮䓬类药物，但需谨慎评估禁忌证、既往反应、不良反应、合并躯体疾病与药物相互作用；<strong>密切评估自杀风险</strong>；加强看护；必要时考虑电抽搐治疗。<br>
+      <span class="note">本案例为模拟情境，依据教材风险线索与处置原则构建，不是教材原案例，也未虚构任何检查数值。</span>
+    </div></details>
+  </div>
+</section>
+
+<!-- ===== 10 速记卡 ===== -->
+<section id="cards">
+  <div class="sec-head"><div class="badge">10</div><h2>考点速记卡<span class="en">20 flip cards</span></h2></div>
+  <p class="sec-lead">正面是问题，点击翻面看答案。建议按"概念→风险→流程"三轮刷，每轮只追求快速反应。</p>
+  <div class="flashcard-grid">
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag concept">概念</span><p>精神科急诊的定义？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">又称急诊精神病学，是临床精神病学与急诊医学的分支，主要针对突发的精神卫生问题或紧急心理危机情况，为患者提供快速有效的救助和治疗。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag concept">概念</span><p>精神科急诊的三类范围？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">①门急诊紧急处理；②住院患者的应急处理；③急会诊。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag concept">概念</span><p>急诊评估由哪几块组成？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">详细的病史采集、体格检查（含神经系统检查）、精神检查及辅助检查（实验室、神经电生理、影像学）。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag risk">风险</span><p>留院观察的 6 条指征？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">①病情严重或躯体情况差；②严重自杀意念/行为，或冲动攻击倾向/行为；③拒食、违拗、不合作、亚木僵、木僵；④治疗依从性差；⑤认知功能严重损害；⑥诊断不明。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag concept">概念</span><p>自杀的三种形式？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">自杀意念（有寻死意向、无行动）、自杀未遂（有行动、未死亡）、自杀死亡（有行动、导致死亡）。未遂发生率是死亡的 10～20 倍。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag data">数据</span><p>自杀最重要的一条独立预测因素？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">既往有过自杀史。此外，既往自伤/自杀行为是将来自伤或自杀行为的最强预测因子。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag data">数据</span><p>自杀者中精神障碍史的比例？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">超过 90% 有自杀企图者和 95% 自杀身亡者有精神障碍史；自杀死亡者中患精神疾病比例高达 90% 以上，约 50% 死前看过精神科医师。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag data">数据</span><p>自杀的性别差异数字？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">女性企图自杀是男性的 3 倍；男性自杀死亡率是女性的 4 倍，占自杀总死亡人数 2/3。自杀未遂男女性别比约 1∶3。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag risk">风险</span><p>自杀风险的 7 类基本线索？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">①流露消极情绪/自杀意愿或刻意掩盖；②近期严重丧失性事件；③近期自伤或自杀行动；④性格改变（整理物品、写遗嘱等）；⑤情绪改变（反常好转、交代后事）；⑥精神障碍；⑦严重睡眠问题。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag treat">治疗</span><p>自杀的三级预防各做什么？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">一级：普及心理健康知识、提高精神障碍识别、减少自杀工具获得、引导媒体正确报道。二级：早发现早诊断早治疗、培训人员、高危人群维护、加强防范、及时干预、精神障碍患者住院与随访。三级：建立急诊救治系统、预防再自杀、同情理解幸存者、减少不良环境因素。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag diag">鉴别</span><p>预谋性攻击与冲动性攻击的区别？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">预谋性攻击通常目标取向，与挫折和即刻威胁无关；冲动性攻击是对感知到的压力或威胁的反应。大多数暴力行为是冲动性攻击的产物。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag concept">概念</span><p>攻击危险性评估的三种方法？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">临床经验性评估、精细性评估（如 DBRS、HCR-20、MOAS）、结构化临床评估（如 PCL-R、VRAG、MICT）。工具不能替代临床观察。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag treat">治疗</span><p>攻击行为的七条处置原则？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">①求助；②展示领导力；③保持距离、保持门路畅通；④解除凶器；⑤隔离；⑥约束；⑦药物干预（抗精神病药或苯二氮䓬类口服/肌注）。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag risk">风险</span><p>哪些药物可用于攻击行为？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">镇静作用强、抗攻击作用好的抗精神病药：氯氮平、奥氮平、氟哌啶醇，必要时联合电抽搐；抑郁障碍可联用碳酸锂；脑电图有改变可用抗癫痫药；额叶受损所致攻击可用普萘洛尔等 β 受体阻滞剂。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag concept">概念</span><p>危机定义的三条标准？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">①事件突发、对心理造成重大影响；②急性情绪困扰并出现认知/行为/躯体功能失调，但不足以诊断任何精神障碍；③平常应对方法难以应对或失效，可致社会功能下降或角色混乱。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag concept">概念</span><p>危机的四种类型？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">发展性危机（就业、移民、退休）、境遇性危机（交通事故、空难、洪水、地震、火灾）、存在性危机（目的、责任、独立性、自由、意义）、环境性危机（工作歧视、违反社会常规、空气污染）。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag concept">概念</span><p>危机的三种结局？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">①有效地应付和度过，并从经历中获得力量；②暂时渡过危机，但遗留认知、行为、人格问题；③心理、生理崩溃，可导致物质依赖、自杀、攻击或精神障碍。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag treat">治疗</span><p>危机干预六步法的六个字？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">定、安、支、选、计、诺：确定问题→保证求助者安全→给予支持→提出并验证可变通应对方式→制定计划恢复自主控制→获取承诺。检查评估贯穿全程。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag concept">概念</span><p>危机干预的五个步骤？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">①实现接触、保持联系；②危机评估；③制定干预目标；④干预措施；⑤实现目标与随访。它是整个干预过程，与六步法嵌套而非互斥。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag data">数据</span><p>危机严重程度分几级？评估哪三维度？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">6 级：没有、少许、轻度、中度、明显、严重损害；从情感、行为、思维三个维度评估。</div>
+    </div></div>
+  </div>
+</section>
+
+<!-- ===== 11 病例挑战 ===== -->
+<section id="cases">
+  <div class="sec-head"><div class="badge">11</div><h2>病例挑战<span class="en">3 cases · increasing difficulty</span></h2></div>
+  <p class="sec-lead">以下均为<strong>模拟临床情境</strong>：依据教材所述风险线索与处置原则构建，用于训练"识别—评估—处置"的临床推理，<strong>不是教材原案例</strong>，也不含虚构的化验数值。</p>
+
+  <div class="case">
+    <span class="ctag">难度 ★ · 风险识别</span>
+    <h3>案例 1：突然安静的精神分裂症患者</h3>
+    <div class="scene">某青年男性，确诊精神分裂症，近期幻觉妄想加重，诉"有人要害我"，并称听到声音命令他去死。家属发现他这两天突然变得异常安静，把自己的证件和贵重物品整理好交给家人，还说"以后你们好好过"。既往无自杀未遂史，本次未提供任何化验数值。</div>
+    <ol class="ques">
+      <li>该患者存在哪些自杀风险线索？</li>
+      <li>教材为何特别提醒精神分裂症患者的自杀更危险？</li>
+      <li>处置原则是什么？</li>
+    </ol>
+    <details><summary>查看答案与解析</summary><div class="dbody">
+      <strong>1.</strong>线索：①精神障碍（精神分裂症，属自杀高危人群）；②命令性幻听、被害妄想；③流露消极意愿（"命令他去死"）；④<strong>突然整理个人物品并交代后事</strong>（教材列为性格改变线索）；⑤"突然安静/情绪改变"需警惕。<br>
+      <strong>2.</strong>教材原文：精神分裂症患者的自杀手段可能更为暴力，也更有致死性。<br>
+      <strong>3.</strong>按"有严重消极意念和行为的患者"处理：高度重视，向看护者交代自伤/自杀风险，做好必要的书面沟通和签字；<strong>建议入院治疗</strong>；及时应用抗精神病药有效控制幻觉妄想，同时采取保护措施；必要时考虑电抽搐治疗，以防自杀及冲动暴力行为。<br>
+      <span class="note">模拟情境，依据教材风险线索与精神分裂症自杀处置原则构建，不是教材原案例。</span>
+    </div></details>
+  </div>
+
+  <div class="case">
+    <span class="ctag">难度 ★★ · 兴奋冲动与器质性排查</span>
+    <h3>案例 2：急诊室里情绪失控的患者</h3>
+    <div class="scene">某中年男性被家属送至急诊，表现为明显兴奋躁动、言语凌乱、冲动砸物，无法安静配合。家属诉其近日有发热、头痛，既往有颅脑外伤史。患者拒绝查体，未提供实验室与影像结果。</div>
+    <ol class="ques">
+      <li>在控制兴奋冲动的同时，必须优先考虑什么？为什么？</li>
+      <li>现场处置应遵循哪些原则？</li>
+      <li>如考虑使用抗精神病药，教材对合并严重躯体/脑器质性疾病者有什么用量要求？</li>
+    </ol>
+    <details><summary>查看答案与解析</summary><div class="dbody">
+      <strong>1.</strong>必须优先排除<strong>躯体疾病或脑器质性疾病所致精神障碍</strong>（如颅内感染、颅脑占位、脑血管病）。教材明确：任何精神活动改变先排除器质性；发热、头痛、颅脑外伤史都是高危线索；急诊以精神症状首发的患者近 2/3 由躯体疾病引发。<br>
+      <strong>2.</strong>教材处置原则：尽快控制兴奋冲动，避免不良后果；<strong>减少环境噪声和刺激</strong>，保持谨慎的人际互动；必要时<strong>隔离或约束</strong>；经处理仍不能控制者收住入院；同时<strong>纠正水电解质紊乱和酸碱平衡失调、及时补充能量</strong>，积极治疗原发疾病。攻击行为七原则同样适用：求助、展示领导力、保持距离、解除凶器、隔离、约束、药物干预。<br>
+      <strong>3.</strong>教材：精神症状较重者可适当用抗精神病药，但需考虑身体状况对药物代谢和处理的影响，<strong>用量宜从一般剂量的 1/3～1/2 开始缓慢加量</strong>，定期监测用药反应，症状好转后逐渐减量直至停用；必要时转相应科室。教材未给具体药物剂量与约束时长。<br>
+      <span class="note">模拟情境，依据教材评估与处置原则构建，不是教材原案例；未虚构化验值。</span>
+    </div></details>
+  </div>
+
+  <div class="case">
+    <span class="ctag">难度 ★★★ · 危机干预流程</span>
+    <h3>案例 3：地震后的幸存者</h3>
+    <div class="scene">某成年女性在地震中失去住所，近一周持续紧张、失眠、反复哭泣，反复说"什么都没了，不知道怎么办"。她原先工作与生活能力正常，目前尚能完成基本自理，但决策明显困难，思维总围绕灾情打转。既往无精神障碍诊断，本次未提供任何量表分值与化验数值。</div>
+    <ol class="ques">
+      <li>该情况是否符合教材"危机"的定义？需对照哪三条标准？</li>
+      <li>若按六步法干预，前四步分别做什么？</li>
+      <li>本次干预的目标层次与结束时的注意事项是什么？</li>
+    </ol>
+    <details><summary>查看答案与解析</summary><div class="dbody">
+      <strong>1.</strong>符合。三条标准：①地震为突发重大事件，对心理造成重大影响；②出现急性情绪困扰及认知、行为、躯体功能失调（失眠、哭泣、决策困难），但尚无证据达到任何精神障碍诊断；③原有应对方式难以应对，出现社会功能受影响（决策困难、思维困于灾情）。<br>
+      <strong>2.</strong>六步法前四步：①<strong>确定问题</strong>——了解诱因，从当事人角度理解危机，使用共情、理解、真诚、接纳/积极关注等核心倾听技术；②<strong>保证安全</strong>——把对自我和他人的生理、心理危险降到最低，全程关注安全；③<strong>给予支持</strong>——无条件积极接纳，让其相信有人真正关心帮助；④<strong>提出并验证可变通应对方式</strong>——从环境支持（还有哪些亲友/组织关心她）、应对机制（当下可做的具体行动）、积极创造性思维（重新构建对事件的看法）三角度，只讨论少数可操作方案。<br>
+      <strong>3.</strong>目标：最高目标是度过危机、恢复心理健康并促进成长；最低目标是保护当事人、预防意外、防止进一步发展为精神障碍；具体目标应切合实际、可操作、可实现。结束前获取<strong>自由、自愿、可行</strong>的承诺，不强加；结束后做<strong>即时和短期随访</strong>，缺乏社会支持时尤其要坚持随访；对干预者可用 CISD 进行保护性干预。<br>
+      <span class="note">模拟情境，依据教材危机三标准、六步法与目标/随访要点构建，不是教材原案例。</span>
+    </div></details>
+  </div>
+</section>
+
+<!-- ===== 12 拓展 ===== -->
+<section id="ext">
+  <div class="sec-head"><div class="badge">12</div><h2>拓展延伸<span class="en">Beyond the chapter</span></h2></div>
+  <p class="sec-lead">本章教材已提及但未展开的内容集中列在这里；同时明确标出"教材未涉及"的空白，避免把课外知识误当成教材结论。</p>
+  <div class="grid2">
+    <div class="card cyan">
+      <h3>教材提及、但仅一笔带过的内容</h3>
+      <ul>
+        <li><strong>ICD-11 与 DSM-5：</strong>教材在急诊诊断处提到对照精神疾病分类诊断标准快速作出初步印象或诊断，未展开具体条目。</li>
+        <li><strong>攻击危险性评估工具：</strong>DBRS、HCR-20、MOAS、PCL-R、VRAG、MICT 仅列名称与所属评估类型，未给条目、评分与 cut-off。</li>
+        <li><strong>CISD：</strong>教材给出定义与目标（公开讨论感受、支持安慰、调动资源、消化创伤体验），未给具体操作时长与步骤。</li>
+        <li><strong>急诊在灾难及突发事件中的作用：</strong>教材称"日益彰显"，未展开分级响应与现场流程。</li>
+        <li><strong>非自愿住院等法律问题：</strong>教材要求"根据我国有关法律正确处理"，未列具体法律条文与程序。</li>
+        <li><strong>危机干预机构与网络建设：</strong>教材提出应把心理援助纳入救灾预警机制，构建全方位、多形式救助、多层次保障的网络体系，未给建设标准。</li>
+      </ul>
+    </div>
+    <div class="card orange">
+      <h3>教材未涉及 / 本指南不补写的内容</h3>
+      <ul>
+        <li>约束的具体时长、体位、解除标准与记录规范——教材只说"必要时可采取隔离或约束措施"。</li>
+        <li>急诊抗精神病药、苯二氮䓬类的具体药名剂量与给药间隔——教材只给"1/3～1/2 起始"的比例原则与药物类别。</li>
+        <li>精神药物过量/中毒的洗胃、解毒剂、拮抗剂与急救流程——教材只列为急诊范围与检查要点。</li>
+        <li>谵妄的独立诊断标准、病因清单与逐条治疗方案——本章只在评估与处理原则中点到。</li>
+        <li>拒食、木僵的具体营养支持、约束与电抽搐指征——本章只列为留院观察与需紧急处理状态。</li>
+        <li>危机干预的疗程、会谈频次、量表评分阈值与各类灾难的分级响应——教材未给。</li>
+        <li>自杀风险评估量表的具体条目与分值解释——教材只提醒"了解自杀评估量表的相关性和局限性"。</li>
+      </ul>
+    </div>
+  </div>
+  <div class="callout ext">
+    <span class="ct">📖 使用提醒</span>
+    本指南所有定义、数字、指征与处置原则均取自教材第二十二章原文；凡标注"教材未涉及/未展开"的地方，不要用其他资料的数字或流程替代，以免与教材答案冲突。
+  </div>
+  <div class="hr"></div>
+  <p class="note" style="text-align:center">精神病学（第9版）· 第二十二章 精神科急诊及危机干预 · 印刷页 262–279 · 学习指南完</p>
+</section>
+
+</div>
+<nav class="chapter-pager" aria-label="章节间导航"><a class="cp-prev" href="精神病学_第二十一章_睡眠觉醒障碍_学习指南.html">← 上一章：第二十一章</a><a class="cp-toc" href="index.html">目录</a><a class="cp-next" href="精神病学_第二十三章_会诊联络精神病学_学习指南.html">下一章：第二十三章 →</a></nav>
+</main>
+
+<button class="top" id="topBtn" aria-label="回到顶部">↑</button>
+<script>
+/* ============================================================
+   精神病学学习指南 · 统一交互层 v1（构建期注入，整体替换原 IIFE）
+   兼容 A 族（.tabbar button + [data-panel] + .panel.on）与
+   B 族（.tab-nav + .tab-panel.active）两套 DOM 约定。
+   特性检测 + 防御式查询 + 幂等；不引入任何外部依赖。
+   ============================================================ */
+(function () {
+  'use strict';
+  if (window.__PSY_GUIDE_APP__) { return; }
+  window.__PSY_GUIDE_APP__ = true;
+
+  var d = document;
+
+  function all(sel, root) {
+    return Array.prototype.slice.call((root || d).querySelectorAll(sel));
+  }
+  function on(el, ev, fn, opt) {
+    if (el) { el.addEventListener(ev, fn, opt || false); }
+  }
+  function norm(s) {
+    return String(s || '').replace(/\s+/g, '').toUpperCase();
+  }
+
+  /* ---------- 1. Tab 切换（两族约定都支持） ---------- */
+  function initTabs() {
+    all('.tabs, [data-tabs]').forEach(function (g) {
+      if (g.__psyTabs) { return; }
+      g.__psyTabs = true;
+      var isA = !!g.querySelector('.tabbar button');
+      var btns = all(isA ? '.tabbar button' : '.tab-nav .tab-btn', g);
+      if (!btns.length) { return; }
+      var cls = isA ? 'on' : 'active';
+      var nav = btns[0].closest('.tabbar') || btns[0].closest('.tab-nav');
+      if (nav && !nav.hasAttribute('role')) { nav.setAttribute('role', 'tablist'); }
+      all(isA ? '.panel' : '.tab-panel', g).forEach(function (p) {
+        if (!p.hasAttribute('role')) { p.setAttribute('role', 'tabpanel'); }
+      });
+      function activate(btn) {
+        btns.forEach(function (b) {
+          b.classList.remove(cls);
+          b.setAttribute('aria-selected', 'false');
+        });
+        btn.classList.add(cls);
+        btn.setAttribute('aria-selected', 'true');
+        var id = btn.getAttribute('data-tab');
+        if (!id) { return; }
+        var target = isA
+          ? g.querySelector('[data-panel="' + id + '"]')
+          : (g.querySelector('.tab-panel#' + id) || d.getElementById(id));
+        all(isA ? '.panel' : '.tab-panel', g).forEach(function (p) {
+          var show = isA ? (p.getAttribute('data-panel') === id) : (p === target);
+          p.classList.toggle(cls, show);
+        });
+      }
+      btns.forEach(function (btn, i) {
+        if (!btn.hasAttribute('role')) { btn.setAttribute('role', 'tab'); }
+        btn.setAttribute('aria-selected', btn.classList.contains(cls) ? 'true' : 'false');
+        if (!btn.hasAttribute('tabindex') && !btn.classList.contains(cls)) { btn.setAttribute('tabindex', '0'); }
+        on(btn, 'click', function () { activate(btn); });
+        on(btn, 'keydown', function (e) {
+          if (e.key !== 'ArrowRight' && e.key !== 'ArrowLeft') { return; }
+          e.preventDefault();
+          var nx = btns[(i + (e.key === 'ArrowRight' ? 1 : btns.length - 1)) % btns.length];
+          if (nx) { nx.focus(); activate(nx); }
+        });
+      });
+    });
+  }
+
+  /* ---------- 2. 速记卡：点击/键盘翻转 + 可达性 ---------- */
+  function initCards() {
+    all('.flashcard').forEach(function (card) {
+      if (card.__psyCard) { return; }
+      card.__psyCard = true;
+      card.setAttribute('tabindex', '0');
+      card.setAttribute('role', 'button');
+      function sync() {
+        card.setAttribute('aria-pressed', card.classList.contains('flipped') ? 'true' : 'false');
+      }
+      function flip() { card.classList.toggle('flipped'); sync(); }
+      on(card, 'click', flip);
+      on(card, 'keydown', function (e) {
+        if (e.key === 'Enter' || e.key === ' ' || e.key === 'Spacebar') {
+          e.preventDefault();
+          flip();
+        }
+      });
+      sync();
+    });
+  }
+
+  /* ---------- 3. 自测题交互化（核心新功能） ---------- */
+  function initQuiz() {
+    var questions = all('.quiz-q, .quiz-item');
+    if (!questions.length) { return; }
+    var groups = {};
+
+    function keyOf(o) {
+      var L = o.getAttribute('data-letter');
+      if (L && String(L).replace(/\s+/g, '') !== '') { return norm(L); }
+      var sp = o.querySelector('.l');
+      if (sp) {
+        var t = norm(sp.textContent).replace(/[.．、:：]/g, '');
+        if (t !== '') { return t; }
+      }
+      var txt = norm(o.textContent);
+      if (txt.indexOf('正确') >= 0 || txt.indexOf('错误') >= 0) { return txt; }
+      return txt.charAt(0);
+    }
+
+    function getGroup(q) {
+      var sec = q.closest('.quiz-block') || q.closest('section') || d.body;
+      if (!groups[sec.__psyGid]) {
+        sec.__psyGid = 'g' + (Object.keys(groups).length + 1);
+        groups[sec.__psyGid] = { sec: sec, total: 0, score: 0, row: null, first: null };
+      }
+      var g = groups[sec.__psyGid];
+      if (!g.first) { g.first = q; }
+      return g;
+    }
+
+    function ensureRow(g) {
+      if (g.row) { return g.row; }
+      var row = d.createElement('div');
+      row.className = 'quiz-score';
+      row.setAttribute('role', 'status');
+      row.setAttribute('aria-live', 'polite');
+      row.innerHTML = '<span class="qs-label">自测计分</span>' +
+        '<span class="qs-num">得分 0 / ' + g.total + '</span>' +
+        '<span class="qs-bar"><i></i></span>';
+      g.first.parentNode.insertBefore(row, g.first);
+      g.row = row;
+      return row;
+    }
+
+    function updateRow(g) {
+      var row = ensureRow(g);
+      var num = row.querySelector('.qs-num');
+      var bar = row.querySelector('.qs-bar i');
+      if (num) { num.textContent = '得分 ' + g.score + ' / ' + g.total; }
+      if (bar) { bar.style.width = (g.total ? Math.round(g.score / g.total * 100) : 0) + '%'; }
+    }
+
+    questions.forEach(function (q) {
+      if (q.__psyQuiz) { return; }
+      q.__psyQuiz = true;
+      var opts = all('.opt', q);
+      if (!opts.length) { opts = all('.quiz-options > li', q); }
+      if (!opts.length) { return; }
+
+      /* 正确答案先记入内存：预标 correct 优先（记录后立即移除，消除剧透），
+         否则从解析文本「答案：X / 答案 X」提取（不改动任何文字） */
+      var ansKeys = [];
+      var preset = opts.filter(function (o) { return o.classList.contains('correct'); });
+      preset.forEach(function (o) { o.classList.remove('correct'); });
+      if (preset.length) {
+        ansKeys = preset.map(keyOf);
+      } else {
+        var dt = q.querySelector('details');
+        var txt = dt ? dt.textContent : '';
+        var m = txt.match(/答案\s*[:：]?\s*([A-Za-z](?:[\s、,，·和及]*[A-Za-z])*)/);
+        if (m) {
+          ansKeys = m[1].match(/[A-Za-z]/g) || [];
+        } else {
+          var m2 = txt.match(/答案\s*[:：]?\s*(正确|错误)/);
+          if (m2) { ansKeys = [m2[1]]; }
+        }
+      }
+      if (!ansKeys.length) { return; } /* 无可判定答案（名词解释等），保持原样 */
+
+      var g = getGroup(q);
+      g.total += 1;
+      var multi = ansKeys.length > 1;
+      var ansSet = ansKeys.map(norm);
+      var locked = false;
+      var picked = [];
+
+      function revealAll() {
+        opts.forEach(function (o) {
+          if (ansSet.indexOf(keyOf(o)) >= 0) { o.classList.add('is-reveal'); }
+        });
+      }
+      function finish(ok) {
+        locked = true;
+        q.classList.add('is-locked');
+        var dt = q.querySelector('details');
+        if (dt) { dt.open = true; }
+        if (ok) { g.score += 1; }
+        updateRow(g);
+      }
+
+      opts.forEach(function (o) {
+        o.setAttribute('tabindex', '0');
+        function pick() {
+          if (locked) { return; }
+          var k = keyOf(o);
+          if (ansSet.indexOf(k) >= 0) {
+            o.classList.add('is-right');
+            if (picked.indexOf(k) < 0) { picked.push(k); }
+            if (multi) {
+              if (picked.length === ansSet.length) { finish(true); }
+            } else {
+              finish(true);
+            }
+          } else {
+            o.classList.add('is-wrong');
+            revealAll();
+            finish(false);
+          }
+        }
+        on(o, 'click', pick);
+        on(o, 'keydown', function (e) {
+          if (e.key === 'Enter' || e.key === ' ' || e.key === 'Spacebar') {
+            e.preventDefault();
+            pick();
+          }
+        });
+      });
+    });
+
+    Object.keys(groups).forEach(function (id) {
+      if (groups[id].total > 0) { updateRow(groups[id]); }
+    });
+  }
+
+  /* ---------- 4. 侧栏 scroll spy（本页锚点高亮） ---------- */
+  function initSpy() {
+    var links = all('#sidebar a[href^="#"]');
+    if (!links.length || !('IntersectionObserver' in window)) { return; }
+    var map = {};
+    links.forEach(function (a) {
+      var id = a.getAttribute('href').slice(1);
+      if (id) { map[id] = a; }
+    });
+    var secs = [];
+    Object.keys(map).forEach(function (id) {
+      var s = d.getElementById(id);
+      if (s) { secs.push(s); }
+    });
+    if (!secs.length) { return; }
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting && map[e.target.id]) {
+          links.forEach(function (a) { a.classList.remove('active'); });
+          map[e.target.id].classList.add('active');
+        }
+      });
+    }, { rootMargin: '-15% 0px -70% 0px', threshold: 0 });
+    secs.forEach(function (s) { io.observe(s); });
+  }
+
+  /* ---------- 5. 阅读进度条 + 回顶 ---------- */
+  function initScroll() {
+    var bar = d.getElementById('readbar');
+    var topBtn = d.getElementById('topBtn') || d.getElementById('backTop');
+    var ticking = false;
+    function step() {
+      ticking = false;
+      var h = d.documentElement;
+      var y = window.pageYOffset || h.scrollTop || 0;
+      if (bar) {
+        var max = h.scrollHeight - h.clientHeight;
+        bar.style.width = (max > 0 ? (y / max) * 100 : 0) + '%';
+      }
+      if (topBtn) {
+        topBtn.classList.toggle('show', y > 400);     /* A 族类名 */
+        topBtn.classList.toggle('visible', y > 400);  /* B 族类名 */
+      }
+    }
+    on(window, 'scroll', function () {
+      if (!ticking) { ticking = true; window.requestAnimationFrame(step); }
+    }, { passive: true });
+    step();
+    on(topBtn, 'click', function () {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
+
+  /* ---------- 6. 侧栏开合（存在才绑定；抽屉打开时锁定背景滚动） ---------- */
+  function initSidebar() {
+    var sidebar = d.getElementById('sidebar');
+    if (!sidebar) { return; }
+    var btn = d.getElementById('menuBtn') || d.getElementById('navToggle');
+    var ov = d.getElementById('overlay') || d.getElementById('sidebarOverlay');
+    function lock(open) {
+      /* 仅移动抽屉断点（≤900px）锁滚动；宽屏兜底解除，防布局残留 */
+      d.body.classList.toggle('nav-locked', !!open && window.innerWidth <= 900);
+    }
+    function close() {
+      sidebar.classList.remove('open');
+      if (ov) { ov.classList.remove('show'); }
+      lock(false);
+    }
+    on(btn, 'click', function () {
+      var open = !sidebar.classList.contains('open');
+      sidebar.classList.toggle('open');
+      if (ov) { ov.classList.toggle('show'); }
+      lock(open);
+    });
+    on(ov, 'click', close);
+    all('a', sidebar).forEach(function (a) {
+      on(a, 'click', function () {
+        if (window.innerWidth <= 900) { close(); }
+      });
+    });
+    on(window, 'resize', function () {
+      if (window.innerWidth > 900) { lock(false); }
+    });
+  }
+
+  /* ---------- 启动（脚本位于 body 末尾，DOM 已就绪；防御兜底） ---------- */
+  function boot() {
+    initTabs();
+    initCards();
+    initQuiz();
+    initSpy();
+    initScroll();
+    initSidebar();
+  }
+  if (d.readyState === 'loading') {
+    on(d, 'DOMContentLoaded', boot);
+  } else {
+    boot();
+  }
+})();
+</script>
+
+</body>
+</html>

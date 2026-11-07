@@ -1,0 +1,2567 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>精神病学 第十七章 人格障碍及相关人格特质 - 学习指南</title>
+<style>
+/* ===== 设计系统（请完整复制，勿修改变量与组件样式） ===== */
+:root{
+  --bg:#F0F7FA; --card:#FFFFFF; --ink:#0F172A; --muted:#64748B; --border:#E2E8F0;
+  --primary:#0EA5E9; --accent:#10B981; --symptom:#EF4444; --treatment:#10B981;
+  --cause:#3B82F6; --diagnosis:#F59E0B; --memory:#8B5CF6; --danger:#DC2626;
+  --quiz:#EC4899; --flashcard:#06B6D4;
+  --symptom-bg:#FEF2F2; --treatment-bg:#ECFDF5; --cause-bg:#EFF6FF;
+  --diagnosis-bg:#FFFBEB; --memory-bg:#F5F3FF; --quiz-bg:#FDF2F8; --flash-bg:#ECFEFF;
+  --gradient-main:linear-gradient(135deg,#0EA5E9 0%,#06B6D4 50%,#10B981 100%);
+  --gradient-soft:linear-gradient(135deg,rgba(14,165,233,.08),rgba(6,182,212,.05) 50%,rgba(16,185,129,.08));
+  --radius-sm:8px; --radius-md:12px; --radius-lg:18px;
+  --shadow-sm:0 1px 3px rgba(15,23,42,.06),0 1px 2px rgba(15,23,42,.04);
+  --shadow-md:0 6px 18px rgba(14,165,233,.10),0 2px 6px rgba(15,23,42,.05);
+  --shadow-lg:0 14px 38px rgba(14,165,233,.16),0 4px 12px rgba(15,23,42,.06);
+  --sidebar-w:262px; --content-max:980px;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:"Microsoft YaHei","PingFang SC","Segoe UI",system-ui,sans-serif;
+  font-size:16px;line-height:1.75;color:var(--ink);background:var(--bg);
+  background-image:radial-gradient(ellipse 620px 420px at 8% 0%,rgba(14,165,233,.09),transparent 70%),
+                    radial-gradient(ellipse 520px 380px at 92% 16%,rgba(16,185,129,.07),transparent 70%),
+                    radial-gradient(ellipse 700px 520px at 50% 100%,rgba(6,182,212,.05),transparent 70%);
+  min-height:100vh;
+}
+img{max-width:100%}
+a{color:var(--primary)}
+p{margin-bottom:12px}
+strong{font-weight:700;color:var(--ink)}
+mark.key{background:none;color:var(--primary);font-weight:700}
+.page-wrapper{display:flex;max-width:1420px;margin:0 auto;padding:0 24px}
+.main-content{flex:1;min-width:0;max-width:var(--content-max);padding:36px 0 88px}
+
+/* ===== 侧边导航 ===== */
+.sidebar{width:var(--sidebar-w);flex-shrink:0;position:sticky;top:20px;align-self:flex-start;
+  max-height:calc(100vh - 40px);overflow-y:auto;padding:22px 0;margin-right:30px}
+.sidebar-brand{font-size:.78rem;font-weight:700;letter-spacing:.06em;color:var(--muted);
+  padding:0 14px 12px;border-bottom:1px dashed var(--border);margin-bottom:10px}
+.sidebar-nav ul{list-style:none}
+.sidebar-nav>ul>li>a{display:flex;align-items:center;gap:9px;padding:9px 14px;border-radius:var(--radius-sm);
+  color:var(--ink);text-decoration:none;font-size:.9rem;font-weight:500;border-left:3px solid transparent;
+  transition:all .2s ease;margin-left:-3px}
+.sidebar-nav>ul>li>a:hover{background:rgba(14,165,233,.06);color:var(--primary)}
+.sidebar-nav>ul>li>a.active{background:rgba(14,165,233,.1);color:var(--primary);
+  border-left-color:var(--primary);font-weight:700}
+.toc-num{font-family:Consolas,monospace;font-size:.72rem;color:var(--muted);min-width:22px}
+.sidebar-nav .sub-list{margin:2px 0 8px 22px;padding-left:12px;border-left:1px solid var(--border)}
+.sidebar-nav .sub-list li a{display:block;padding:5px 10px;color:var(--muted);text-decoration:none;
+  font-size:.8rem;border-radius:4px}
+.sidebar-nav .sub-list li a:hover{color:var(--primary);background:rgba(14,165,233,.05)}
+
+/* ===== 封面 ===== */
+.hero{position:relative;overflow:hidden;text-align:center;padding:54px 34px 46px;margin-bottom:48px;
+  background:var(--gradient-soft);border:1px solid rgba(14,165,233,.12);border-radius:var(--radius-lg)}
+.hero::before{content:"";position:absolute;inset:-40% -20% auto;height:180%;
+  background:radial-gradient(circle at 28% 30%,rgba(14,165,233,.1),transparent 55%),
+             radial-gradient(circle at 74% 68%,rgba(16,185,129,.09),transparent 55%);pointer-events:none}
+.hero>*{position:relative}
+.hero-badge{display:inline-flex;align-items:center;gap:6px;padding:6px 15px;border-radius:100px;
+  background:rgba(14,165,233,.12);border:1px solid rgba(14,165,233,.22);color:var(--primary);
+  font-size:.8rem;font-weight:700;margin-bottom:18px}
+.hero h1{font-size:2.35rem;line-height:1.28;font-weight:800;margin-bottom:12px;
+  background:var(--gradient-main);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.hero .subtitle{max-width:680px;margin:0 auto;color:var(--muted);font-size:1.02rem}
+.hero-meta{display:flex;justify-content:center;gap:34px;flex-wrap:wrap;margin-top:26px}
+.hero-meta-item .num{font-size:1.7rem;font-weight:800;line-height:1.2;color:var(--primary)}
+.hero-meta-item .label{font-size:.78rem;color:var(--muted)}
+.hero-quote{margin:24px auto 0;max-width:720px;padding:12px 18px;border-radius:10px;
+  background:rgba(255,255,255,.66);border:1px dashed rgba(14,165,233,.3);
+  font-size:.9rem;color:var(--muted);text-align:left}
+
+/* ===== 区块 ===== */
+.section{margin-bottom:56px;scroll-margin-top:20px}
+.section-header{display:flex;align-items:center;gap:13px;margin-bottom:22px;padding-bottom:12px;
+  border-bottom:2px solid transparent;border-image:var(--gradient-main) 1}
+.section-number{width:40px;height:40px;border-radius:var(--radius-sm);display:inline-flex;
+  align-items:center;justify-content:center;background:var(--gradient-main);color:#fff;
+  font-weight:800;font-size:1rem;flex-shrink:0}
+.section-header h2{font-size:1.55rem;font-weight:800;line-height:1.35}
+.subsection{margin:30px 0;scroll-margin-top:20px}
+.subsection h3{font-size:1.18rem;font-weight:700;margin-bottom:12px;display:flex;align-items:center;gap:8px}
+.sub-subsection{margin:18px 0}
+.sub-subsection h4{font-size:1rem;font-weight:700;margin-bottom:8px}
+.lead{font-size:1rem;color:var(--muted);margin-bottom:18px}
+
+/* ===== 疾病页眉 / 八栏 ===== */
+.disease-hero{background:linear-gradient(135deg,#0f2b46,#155e75 60%,#0f766e);color:#fff;
+  border-radius:var(--radius-lg);padding:28px 30px;margin:26px 0 22px;box-shadow:var(--shadow-md)}
+.disease-hero .en{font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;color:#99f6e4}
+.disease-hero h3{font-size:1.5rem;margin:4px 0 8px;color:#fff}
+.disease-hero p{color:#e0f2fe;font-size:.92rem;margin:0}
+.disease-hero .quick-tags{margin-top:14px;display:flex;gap:8px;flex-wrap:wrap}
+.disease-hero .quick-tags span{background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.28);
+  color:#fff;border-radius:100px;padding:3px 11px;font-size:.76rem}
+.module{background:var(--card);border:1px solid var(--border);border-radius:var(--radius-md);
+  padding:22px 24px;margin:16px 0;box-shadow:var(--shadow-sm)}
+.module-head{display:flex;align-items:center;gap:10px;margin-bottom:14px;padding-bottom:10px;
+  border-bottom:1px solid var(--border)}
+.module-index{font-family:Consolas,monospace;font-size:.72rem;font-weight:700;color:#fff;
+  background:var(--gradient-main);padding:3px 9px;border-radius:100px;white-space:nowrap}
+.module-head h3{font-size:1.08rem;font-weight:700;margin:0}
+.module-head .module-en{font-size:.74rem;color:var(--muted);font-weight:400}
+.module-cause .module-index{background:var(--cause)}
+.module-symptom .module-index{background:var(--symptom)}
+.module-case .module-index{background:var(--diagnosis)}
+.module-diff .module-index{background:#0F766E}
+.module-treat .module-index{background:var(--treatment)}
+.module-memory .module-index{background:var(--memory)}
+.module-link .module-index{background:#475569}
+
+/* ===== 卡片 ===== */
+.card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius-md);
+  padding:18px 20px;box-shadow:var(--shadow-sm);transition:.2s}
+.card:hover{box-shadow:var(--shadow-md);transform:translateY(-1px)}
+.card-header{display:flex;align-items:center;gap:9px;margin-bottom:10px;padding-bottom:9px;
+  border-bottom:1px solid var(--border)}
+.card-icon{font-size:1.2rem}
+.card-title{font-size:1rem;font-weight:700}
+.card-body{font-size:.94rem}
+.card-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px;margin:16px 0}
+.card-grid .card{margin:0}
+.card-symptom{border-left:4px solid var(--symptom)}
+.card-treatment{border-left:4px solid var(--treatment)}
+.card-cause{border-left:4px solid var(--cause)}
+.card-diagnosis{border-left:4px solid var(--diagnosis)}
+.card-memory{border-left:4px solid var(--memory)}
+.card-quiz{border-left:4px solid var(--quiz)}
+.quick-facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin:14px 0}
+.fact{background:var(--bg);border:1px solid var(--border);border-radius:10px;padding:12px 14px}
+.fact b{display:block;font-size:.76rem;color:var(--muted);font-weight:600;margin-bottom:2px}
+.fact span{font-size:.95rem;font-weight:700;color:var(--ink)}
+
+/* ===== 提示框 ===== */
+.callout{display:flex;gap:11px;padding:14px 18px;border-radius:var(--radius-md);margin:14px 0;
+  border-left:4px solid;font-size:.92rem}
+.callout-icon{font-size:1.15rem;flex-shrink:0;margin-top:1px}
+.callout-body{flex:1}
+.callout-body strong{display:block;margin-bottom:3px}
+.callout-info{background:var(--cause-bg);border-left-color:var(--cause)}
+.callout-success{background:var(--treatment-bg);border-left-color:var(--treatment)}
+.callout-warning{background:var(--diagnosis-bg);border-left-color:var(--diagnosis)}
+.callout-danger{background:var(--symptom-bg);border-left-color:var(--danger)}
+.callout-memory{background:var(--memory-bg);border-left-color:var(--memory)}
+.callout-example{background:var(--flash-bg);border-left-color:var(--flashcard)}
+
+/* ===== 列表 ===== */
+.icon-list{list-style:none;margin:10px 0}
+.icon-list li{position:relative;padding-left:26px;margin-bottom:9px;font-size:.94rem;line-height:1.65}
+.icon-list li::before{content:"✦";position:absolute;left:0;top:2px;color:var(--primary);font-size:.8rem}
+.icon-list.check li::before{content:"✓";color:var(--treatment);font-weight:800}
+.icon-list.cross li::before{content:"✗";color:var(--symptom);font-weight:800}
+.numbered-list{list-style:none;counter-reset:n;margin:10px 0}
+.numbered-list li{position:relative;padding-left:38px;margin-bottom:10px;font-size:.94rem;counter-increment:n}
+.numbered-list li::before{content:counter(n);position:absolute;left:0;top:0;width:24px;height:24px;
+  border-radius:50%;background:var(--gradient-main);color:#fff;font-size:.76rem;font-weight:800;
+  display:flex;align-items:center;justify-content:center}
+
+/* ===== 表格 ===== */
+.table-wrap{overflow-x:auto;margin:14px 0;border:1px solid var(--border);border-radius:var(--radius-md)}
+table{width:100%;border-collapse:collapse;font-size:.89rem;min-width:560px}
+thead{background:linear-gradient(135deg,#0EA5E9,#0891B2)}
+thead th{padding:11px 14px;text-align:left;color:#fff;font-size:.84rem;font-weight:700;white-space:nowrap}
+tbody tr{border-bottom:1px solid var(--border)}
+tbody tr:nth-child(even){background:#FAFCFE}
+tbody tr:hover{background:rgba(14,165,233,.05)}
+tbody tr:last-child{border-bottom:0}
+tbody td{padding:10px 14px;vertical-align:top;line-height:1.6}
+tbody td:first-child{font-weight:700;color:#0F766E;background:rgba(14,165,233,.04)}
+.table-note{font-size:.78rem;color:var(--muted);margin-top:-6px}
+
+/* ===== 标签 ===== */
+.tag{display:inline-flex;align-items:center;padding:2px 9px;border-radius:100px;
+  font-size:.75rem;font-weight:700;line-height:1.6}
+.tag-core{background:var(--symptom-bg);color:var(--danger)}
+.tag-master{background:var(--treatment-bg);color:var(--treatment)}
+.tag-understand{background:var(--cause-bg);color:var(--cause)}
+.tag-know{background:var(--diagnosis-bg);color:#B45309}
+.tag-info{background:rgba(14,165,233,.1);color:var(--primary)}
+.tag-memory{background:var(--memory-bg);color:var(--memory)}
+
+/* ===== Tab ===== */
+.tabs{margin:14px 0}
+.tab-nav{display:flex;gap:4px;flex-wrap:wrap;border-bottom:2px solid var(--border);margin-bottom:14px}
+.tab-btn{border:0;background:none;cursor:pointer;font-family:inherit;font-size:.88rem;
+  font-weight:600;color:var(--muted);padding:9px 16px;border-radius:var(--radius-sm) var(--radius-sm) 0 0;
+  border-bottom:2px solid transparent;margin-bottom:-2px}
+.tab-btn:hover{color:var(--primary);background:rgba(14,165,233,.05)}
+.tab-btn.active{color:var(--primary);border-bottom-color:var(--primary)}
+.tab-panel{display:none}
+.tab-panel.active{display:block;animation:fadeIn .25s ease}
+@keyframes fadeIn{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}
+
+/* ===== 折叠问答 ===== */
+details.qa{background:var(--card);border:1px solid var(--border);border-radius:var(--radius-md);
+  margin:10px 0;overflow:hidden}
+details.qa[open]{box-shadow:var(--shadow-sm)}
+details.qa summary{cursor:pointer;padding:13px 16px;font-weight:600;font-size:.94rem;
+  display:flex;align-items:center;gap:10px;list-style:none;user-select:none}
+details.qa summary::-webkit-details-marker{display:none}
+details.qa summary::after{content:"▾";margin-left:auto;color:var(--muted);transition:.2s}
+details.qa[open] summary::after{transform:rotate(180deg)}
+details.qa summary:hover{background:rgba(14,165,233,.04)}
+.qa-body{padding:0 16px 15px 52px;font-size:.92rem;border-top:1px solid var(--border);padding-top:12px}
+.qa-num{display:inline-flex;align-items:center;justify-content:center;min-width:26px;height:26px;
+  border-radius:7px;background:rgba(14,165,233,.1);color:var(--primary);font-size:.78rem;
+  font-weight:800;flex-shrink:0}
+
+/* ===== 自测题 ===== */
+.quiz-block{background:var(--quiz-bg);border:1px solid #FBCFE8;border-radius:var(--radius-md);
+  padding:20px 22px;margin:18px 0}
+.quiz-item{background:#fff;border:1px solid #F9D5E5;border-radius:10px;padding:16px 18px;margin:12px 0}
+.quiz-stem{font-weight:600;font-size:.95rem;margin-bottom:10px;display:flex;gap:8px;align-items:flex-start}
+.q-type{display:inline-block;padding:1px 8px;border-radius:5px;background:var(--quiz-bg);
+  color:var(--quiz);font-size:.72rem;font-weight:800;white-space:nowrap;margin-top:2px}
+.quiz-options{list-style:none;margin:8px 0}
+.quiz-options li{position:relative;padding:6px 10px 6px 30px;font-size:.9rem;border-radius:6px;margin:3px 0}
+.quiz-options li::before{content:attr(data-letter);position:absolute;left:8px;top:6px;
+  font-weight:800;color:var(--quiz)}
+.quiz-options li.correct{background:#DCFCE7;font-weight:600}
+.quiz-options li.correct::after{content:" ✓ 正确";color:#15803D;font-size:.76rem;font-weight:700}
+.quiz-options li.wrong{background:#FEE2E2}
+.quiz-options li.wrong::after{content:" ✗";color:var(--danger);font-size:.76rem;font-weight:700}
+.answer-key{display:inline-block;background:#DCFCE7;color:#15803D;border-radius:6px;
+  padding:2px 9px;font-size:.8rem;font-weight:800;margin-right:6px}
+.difficulty{color:#B45309;font-size:.8rem;letter-spacing:1px;white-space:nowrap}
+
+/* ===== 闪卡 ===== */
+.flashcard-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:14px;margin:18px 0}
+.flashcard{perspective:1000px;height:210px;cursor:pointer}
+.flashcard-inner{position:relative;width:100%;height:100%;transition:transform .55s;
+  transform-style:preserve-3d}
+.flashcard.flipped .flashcard-inner{transform:rotateY(180deg)}
+.flashcard-face{position:absolute;inset:0;backface-visibility:hidden;border-radius:var(--radius-md);
+  padding:18px 18px 14px;display:flex;flex-direction:column;justify-content:center;
+  border:1px solid var(--border);background:#fff;box-shadow:var(--shadow-sm)}
+.flashcard-front{border-top:5px solid var(--flashcard)}
+.flashcard-back{transform:rotateY(180deg);background:var(--flash-bg);border-top:5px solid var(--primary);
+  justify-content:flex-start;overflow-y:auto;font-size:.88rem;line-height:1.65}
+.flashcard-front p{font-size:.95rem;font-weight:600;margin:0;text-align:center}
+.card-tag{align-self:center;margin-bottom:10px;padding:2px 9px;border-radius:100px;
+  font-size:.72rem;font-weight:800;background:var(--flash-bg);color:#0E7490}
+.card-tag.concept{background:var(--cause-bg);color:var(--cause)}
+.card-tag.diagnosis{background:var(--diagnosis-bg);color:#B45309}
+.card-tag.treatment{background:var(--treatment-bg);color:#047857}
+.card-tag.memory{background:var(--memory-bg);color:var(--memory)}
+.flip-hint{text-align:center;font-size:.74rem;color:var(--muted);margin-top:auto;padding-top:8px}
+
+/* ===== 病例挑战 ===== */
+.case-card{background:#fff;border:1px solid var(--border);border-top:5px solid var(--diagnosis);
+  border-radius:var(--radius-md);padding:20px 22px;margin:18px 0;box-shadow:var(--shadow-sm)}
+.case-meta{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:10px}
+.case-meta span{background:var(--diagnosis-bg);color:#B45309;border-radius:100px;
+  padding:2px 10px;font-size:.75rem;font-weight:700}
+.case-title{font-size:1.02rem;font-weight:800;margin-bottom:8px}
+.case-body{font-size:.93rem;color:var(--ink)}
+.case-questions{margin:12px 0 0;padding:12px 16px;background:var(--bg);border-radius:10px}
+.case-questions li{margin-bottom:6px;font-size:.9rem}
+
+/* ===== 记忆工具箱 ===== */
+.memory-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px;margin:14px 0}
+.memory-card{background:var(--memory-bg);border:1px solid #DDD6FE;border-radius:var(--radius-md);padding:16px 18px}
+.memory-card .m-title{font-weight:800;color:var(--memory);font-size:.9rem;margin-bottom:6px}
+.memory-card .m-type{display:inline-block;font-size:.7rem;font-weight:700;color:var(--memory);
+  background:#fff;border:1px solid #DDD6FE;border-radius:100px;padding:1px 8px;margin-left:6px}
+.memory-card .m-formula{font-weight:700;background:#fff;border-left:3px solid var(--memory);
+  padding:8px 10px;border-radius:6px;margin:8px 0;font-size:.92rem}
+.memory-card p{font-size:.88rem;margin:6px 0}
+
+/* ===== 学习路线 / 知识地图 ===== */
+.route-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin:16px 0}
+.route-card{background:#fff;border:1px solid var(--border);border-radius:var(--radius-md);padding:16px 18px}
+.route-card h4{font-size:.95rem;margin-bottom:6px;color:var(--primary)}
+.route-card p{font-size:.86rem;color:var(--muted);margin:0}
+.priority{display:inline-flex;gap:2px;font-size:.8rem;color:#F59E0B;margin-left:4px}
+.knowledge-map{display:grid;grid-template-columns:repeat(auto-fit,minmax(165px,1fr));gap:12px;margin:16px 0}
+.km-card{background:#fff;border:1px solid var(--border);border-radius:var(--radius-md);
+  padding:15px 12px;text-align:center;transition:.2s}
+.km-card:hover{border-color:var(--primary);transform:translateY(-2px);box-shadow:var(--shadow-md)}
+.km-icon{font-size:1.8rem;margin-bottom:6px}
+.km-title{font-weight:700;font-size:.9rem;margin-bottom:2px}
+.km-count{font-size:.76rem;color:var(--muted)}
+.km-count strong{color:var(--primary);font-size:1rem}
+
+/* ===== 数据 / 时间线 ===== */
+.stat-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(135px,1fr));gap:12px;margin:16px 0}
+.stat-card{background:#fff;border:1px solid var(--border);border-radius:var(--radius-md);
+  padding:16px 12px;text-align:center}
+.stat-num{font-size:1.65rem;font-weight:800;color:var(--primary);line-height:1.2}
+.stat-label{font-size:.77rem;color:var(--muted);margin-top:3px}
+.timeline{position:relative;margin:18px 0;padding-left:28px}
+.timeline::before{content:"";position:absolute;left:8px;top:4px;bottom:4px;width:2px;
+  background:linear-gradient(to bottom,var(--primary),var(--accent));border-radius:2px}
+.tl-item{position:relative;margin-bottom:18px}
+.tl-item::before{content:"";position:absolute;left:-25px;top:5px;width:11px;height:11px;
+  border-radius:50%;background:#fff;border:3px solid var(--primary)}
+.tl-title{font-weight:700;font-size:.94rem;margin-bottom:3px}
+.tl-desc{font-size:.86rem;color:var(--muted)}
+.progress-item{margin-bottom:12px}
+.progress-label{display:flex;justify-content:space-between;font-size:.84rem;margin-bottom:4px}
+.progress-bar{height:8px;background:var(--border);border-radius:100px;overflow:hidden}
+.progress-fill{height:100%;border-radius:100px;background:var(--gradient-main)}
+
+/* ===== 易错警示 ===== */
+.exam-alert{background:#FFF7ED;border:1px solid #FED7AA;border-left:5px solid var(--diagnosis);
+  border-radius:var(--radius-md);padding:18px 22px;margin:18px 0}
+.exam-alert h3{color:#C2410C;font-size:1rem;margin-bottom:10px}
+.exam-alert li{font-size:.92rem;margin-bottom:8px}
+.exam-alert li::before{content:"⚠️"}
+
+/* ===== 页脚 ===== */
+.footer{margin-top:56px;padding-top:28px;border-top:1px solid var(--border);
+  text-align:center;font-size:.82rem;color:var(--muted)}
+.footer .footer-tag{display:inline-block;padding:6px 16px;border-radius:100px;color:#fff;
+  background:var(--gradient-main);font-weight:700;margin-bottom:10px}
+.disclaimer{font-size:.78rem;color:var(--muted);background:#fff;border:1px dashed var(--border);
+  border-radius:10px;padding:12px 16px;margin:18px 0;text-align:left}
+
+/* ===== 浮动按钮 ===== */
+.back-to-top{position:fixed;right:22px;bottom:22px;width:44px;height:44px;border:0;border-radius:50%;
+  background:var(--gradient-main);color:#fff;font-size:1.05rem;cursor:pointer;box-shadow:var(--shadow-lg);
+  opacity:0;visibility:hidden;transform:translateY(10px);transition:.25s;z-index:60}
+.back-to-top.visible{opacity:1;visibility:visible;transform:none}
+.mobile-nav-toggle{display:none;position:fixed;top:14px;left:14px;z-index:100;width:44px;height:44px;
+  border:1px solid var(--border);border-radius:var(--radius-sm);background:#fff;box-shadow:var(--shadow-md);
+  cursor:pointer;font-size:1.15rem;align-items:center;justify-content:center}
+.sidebar-overlay{display:none;position:fixed;inset:0;background:rgba(15,23,42,.35);z-index:98}
+
+/* ===== 响应式 ===== */
+@media(max-width:1100px){.sidebar{width:220px;margin-right:22px}.main-content{max-width:100%}}
+@media(max-width:900px){
+  .mobile-nav-toggle{display:flex}
+  .sidebar{position:fixed;left:-290px;top:0;height:100vh;width:270px;background:#fff;
+    border-right:1px solid var(--border);z-index:99;transition:left .28s ease;padding:70px 16px 24px;
+    margin:0;max-height:100vh}
+  .sidebar.open{left:0}
+  .sidebar-overlay.show{display:block}
+  .page-wrapper{padding:0 16px}
+  .main-content{padding-top:66px}
+  .hero{padding:38px 20px 30px}.hero h1{font-size:1.75rem}
+  .section-header h2{font-size:1.3rem}
+  .module{padding:18px 16px}
+  .qa-body{padding-left:16px}
+}
+@media(max-width:680px){
+  body{font-size:15px}
+  .hero h1{font-size:1.45rem}
+  .hero-meta{gap:18px}
+  .knowledge-map{grid-template-columns:repeat(2,1fr)}
+  .flashcard-grid{grid-template-columns:1fr}
+  .flashcard{height:200px}
+  .stat-row{grid-template-columns:repeat(2,1fr)}
+  .section{margin-bottom:40px}
+  table{min-width:520px}
+}
+@media print{
+  .sidebar,.mobile-nav-toggle,.back-to-top,.sidebar-overlay{display:none!important}
+  .page-wrapper{display:block;padding:0}
+  .main-content{max-width:100%}
+  details.qa{break-inside:avoid}
+  details.qa .qa-body{display:block}
+}
+::-webkit-scrollbar{width:8px;height:8px}
+::-webkit-scrollbar-thumb{background:var(--border);border-radius:4px}
+::-webkit-scrollbar-thumb:hover{background:var(--muted)}
+</style>
+<style data-refactor="v1">
+/* ============================================================
+   精神病学学习指南 · 统一交互层增量覆盖样式 v1
+   构建期由 apply-refactor.ps1 注入 </head> 前，仅追加修正，
+   不改动 A/B 两族基础样式。全部使用字面色值，兼容两族设计变量。
+   ============================================================ */
+
+/* ---- 1. 全局键盘焦点可见 ---- */
+:focus-visible{outline:2px solid #0EA5E9;outline-offset:2px}
+
+/* ---- 2. 章节导航条（胶囊式三段：上一章 / 目录 / 下一章） ---- */
+.chapter-pager{display:flex;align-items:stretch;justify-content:center;gap:10px;margin:36px 0 10px;flex-wrap:wrap}
+.chapter-pager a,.chapter-pager span{flex:1 1 200px;display:flex;align-items:center;justify-content:center;min-height:44px;padding:10px 18px;border:1px solid #E2E8F0;border-radius:999px;background:#FFFFFF;color:#0F172A;font-size:14px;font-weight:600;line-height:1.4;text-decoration:none;text-align:center;box-shadow:0 1px 2px rgba(15,23,42,.06);transition:border-color .15s ease,box-shadow .15s ease,color .15s ease}
+.chapter-pager a:hover{border-color:#0EA5E9;color:#0EA5E9;box-shadow:0 4px 14px rgba(14,165,233,.18);text-decoration:none}
+.chapter-pager .cp-toc{flex:0 0 auto;min-width:104px;background:linear-gradient(135deg,#0EA5E9,#10B981);border-color:transparent;color:#FFFFFF}
+.chapter-pager .cp-toc:hover{border-color:transparent;color:#FFFFFF;opacity:.92}
+.chapter-pager .cp-disabled{opacity:.45;background:#F8FAFC;box-shadow:none;cursor:default}
+@media (max-width:680px){.chapter-pager{gap:8px;margin:28px 0 8px}.chapter-pager a,.chapter-pager span{flex:1 1 100%}}
+
+/* ---- 3. 自测题交互态（兼容 A 族 .opt 与 B 族 .quiz-options li） ---- */
+/* 3.1 基础可点击 */
+.quiz-q .opt{cursor:pointer}
+.quiz-item .quiz-options li{cursor:pointer}
+/* 3.2 hover / 焦点态 */
+.quiz-q .opt:hover,.quiz-q .opt:focus-visible{border-color:#7DD3FC;background:#F0F9FF}
+.quiz-item .quiz-options li:hover,.quiz-item .quiz-options li:focus-visible{background:#FFFFFF;box-shadow:inset 0 0 0 1px #7DD3FC}
+/* 3.3 判定结果态 */
+.quiz-q .opt.is-right{border-color:#34D399;background:#ECFDF5;color:#065F46;font-weight:600}
+.quiz-q .opt.is-right::after{content:" ✓";color:#059669;font-weight:800}
+.quiz-q .opt.is-right .l{color:#047857}
+.quiz-item .quiz-options li.is-right{background:#DCFCE7;box-shadow:inset 0 0 0 1px #34D399;font-weight:600}
+.quiz-item .quiz-options li.is-right::after{content:" ✓";color:#15803D;font-weight:800}
+.quiz-q .opt.is-wrong{border-color:#FCA5A5;background:#FEF2F2;color:#B91C1C;font-weight:600}
+.quiz-q .opt.is-wrong::after{content:" ✗";color:#DC2626;font-weight:800}
+.quiz-q .opt.is-wrong .l{color:#B91C1C}
+.quiz-item .quiz-options li.is-wrong{background:#FEE2E2;box-shadow:inset 0 0 0 1px #FCA5A5;font-weight:600}
+.quiz-item .quiz-options li.is-wrong::after{content:" ✗";color:#DC2626;font-weight:800}
+.quiz-q .opt.is-reveal{border-color:#6EE7B7;background:#ECFDF5;color:#065F46}
+.quiz-q .opt.is-reveal .l{color:#047857}
+.quiz-item .quiz-options li.is-reveal{background:#ECFDF5;box-shadow:inset 0 0 0 1px #6EE7B7;color:#065F46}
+/* 3.4 已锁定禁用态 */
+.quiz-q.is-locked .opt,.quiz-item.is-locked .quiz-options li{cursor:default;pointer-events:none}
+.quiz-q.is-locked .opt:not(.is-right):not(.is-wrong):not(.is-reveal){opacity:.55}
+.quiz-item.is-locked .quiz-options li:not(.is-right):not(.is-wrong):not(.is-reveal){opacity:.55}
+/* 3.5 计分行（运行时注入） */
+.quiz-score{display:flex;align-items:center;gap:12px;margin:14px 0 18px;padding:12px 18px;border:1px dashed #7DD3FC;border-radius:12px;background:#F0F9FF;font-size:14px;font-weight:700;color:#0F172A}
+.quiz-score .qs-label{white-space:nowrap}
+.quiz-score .qs-num{white-space:nowrap;color:#0284C7;font-size:16px}
+.quiz-score .qs-bar{flex:1 1 60px;min-width:60px;height:8px;border-radius:999px;background:#E2E8F0;overflow:hidden}
+.quiz-score .qs-bar i{display:block;height:100%;width:0;border-radius:999px;background:linear-gradient(90deg,#0EA5E9,#10B981);transition:width .35s ease}
+
+/* ---- 4. 速记卡可达性与长内容 ---- */
+.fc-hint,.flip-hint{color:#64748B}
+.flashcard-face{overflow:auto}
+.flashcard[tabindex]{outline:none}
+.flashcard[tabindex]:focus-visible{outline:3px solid #0EA5E9;outline-offset:3px}
+
+/* ---- 5. 侧栏目录 ---- */
+/* B 族 sticky 侧栏内目录限高滚动（A 族 aside 本身已可滚动，此规则空匹配无害） */
+.sidebar .sidebar-nav{max-height:calc(100vh - 60px);overflow-y:auto;scrollbar-width:thin}
+/* A 族 scroll spy 高亮（B 族高亮由其基础样式提供） */
+.sidebar a.toc.active{background:#E0F2FE;color:#0369A1;font-weight:600}
+
+/* ---- 6. 响应式补充：681–900px 时 grid3 降为两列 ---- */
+@media (min-width:681px) and (max-width:900px){
+  .grid3{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+
+/* ---- 7. 打印样式补充（A 族新增；B 族已有 print，重复声明无害） ---- */
+@media print{
+  .sidebar,.overlay,.sidebar-overlay,#menuBtn,#navToggle,#overlay,#sidebarOverlay,#readbar,#topBtn,#backTop,.chapter-pager,.quiz-score{display:none!important}
+}
+
+/* ---- 8. 手机端增强 v2（触控体验 / 防溢出 / 抽屉滚动锁定） ---- */
+/* 8.1 触控体验：去点按高亮、消除双击缩放延迟（flashcard 高 190-200px 天然达标，不另设 min-height） */
+.opt,.tabbar button,.tab-btn,.quiz-options li,.flashcard,.chapter-pager a,.chapter-pager span,.menu-btn,.mobile-nav-toggle{-webkit-tap-highlight-color:transparent;touch-action:manipulation}
+/* 8.2 触控目标最小 44px（自测选项与 tab 胶囊原高约 33px） */
+.opt,.tabbar button,.tab-btn,.quiz-options li{min-height:44px}
+/* 8.3 防溢出：内容图自适应；svg 不设 height:auto，避免定尺寸图标塌陷 */
+img{max-width:100%;height:auto}
+svg{max-width:100%}
+/* 8.4 长词/URL 断行 */
+body{overflow-wrap:break-word}
+/* 8.5 表格容器触摸惯性滚动（A 族已有同值规则，重复声明无害） */
+.table-wrap{-webkit-overflow-scrolling:touch}
+/* 8.6 抽屉打开时锁定背景滚动（两族抽屉断点均为 900px；类由统一脚本增删） */
+@media (max-width:900px){
+  body.nav-locked{overflow:hidden}
+}
+</style>
+</head>
+<body>
+<button class="mobile-nav-toggle" id="navToggle" aria-label="打开目录">☰</button>
+<div class="sidebar-overlay" id="sidebarOverlay"></div>
+<div class="page-wrapper">
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-brand">《精神病学》第9版 · 学习指南</div>
+    <nav class="sidebar-nav">
+      <ul>
+        <li><a href="#cover" class="active"><span class="toc-num">00</span>章节封面</a></li>
+        <li><a href="#position"><span class="toc-num">01</span>本章地位速览</a></li>
+        <li><a href="#map"><span class="toc-num">02</span>本章知识地图</a></li>
+        <li><a href="#route"><span class="toc-num">03</span>学习路线图</a></li>
+        <li><a href="#nav"><span class="toc-num">04</span>章节导航</a></li>
+        <li><a href="#overview"><span class="toc-num">05</span>总论：概念、机制与诊断框架</a></li>
+        <li><a href="#types"><span class="toc-num">06</span>八种类型分述</a>
+          <ul class="sub-list">
+            <li><a href="#types-a">A 组：奇特/古怪</a></li>
+            <li><a href="#types-b">B 组：戏剧化/不稳定</a></li>
+            <li><a href="#types-c">C 组：强迫/回避/依赖</a></li>
+          </ul>
+        </li>
+        <li><a href="#summary"><span class="toc-num">07</span>核心要点速览</a></li>
+        <li><a href="#pitfalls"><span class="toc-num">08</span>易混易错警示</a></li>
+        <li><a href="#quiz"><span class="toc-num">09</span>章节自测</a></li>
+        <li><a href="#flashcards"><span class="toc-num">10</span>考点速记卡</a></li>
+        <li><a href="#cases"><span class="toc-num">11</span>病例挑战</a></li>
+        <li><a href="#extend"><span class="toc-num">12</span>拓展延伸</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <main class="main-content">
+    <section id="cover" class="section">
+      <div class="hero">
+        <div class="hero-badge">《精神病学》第9版（2024） · 第十七章</div>
+        <h1>人格障碍及相关人格特质</h1>
+        <p class="subtitle">从人格特质（personality trait）到人格障碍（personality disorder）的连续谱：八型识别、ICD-11 维度诊断、鉴别与以心理治疗为主的处理</p>
+        <div class="hero-meta">
+          <div class="hero-meta-item"><div class="num">8</div><div class="label">常见类型</div></div>
+          <div class="hero-meta-item"><div class="num">4</div><div class="label">严重程度等级</div></div>
+          <div class="hero-meta-item"><div class="num">5+1</div><div class="label">特质领域 + 边缘型模式</div></div>
+          <div class="hero-meta-item"><div class="num">15</div><div class="label">自测题目</div></div>
+        </div>
+        <div class="hero-quote"><strong>一句话定位：</strong>人格障碍不是“性格不好”，而是起病于童年、青少年或成年早期，持久、固定、泛化、适应不良的人格模式，造成自我和/或人际功能损害，并带来痛苦或不良影响。</div>
+      </div>
+
+      <div class="card">
+        <div class="card-header"><span class="card-icon">🎯</span><span class="card-title">本章学习目标</span></div>
+        <div class="card-body">
+          <ul class="icon-list">
+            <li><span class="tag tag-core">必考</span> 说清“人格特质 → 人格困难 → 人格障碍”的连续谱，以及人格障碍定义的五项要素。</li>
+            <li><span class="tag tag-master">掌握</span> ICD-11 的 7 条诊断要点、4 级严重程度、5 个特质领域与边缘型模式。</li>
+            <li><span class="tag tag-master">掌握</span> 八种类型的核心表现、A/B/C 归类与一句话识别。</li>
+            <li><span class="tag tag-understand">理解</span> 人格障碍与人格改变、精神分裂症/分裂型障碍、双相/抑郁、物质使用及类型内四对易混的鉴别。</li>
+            <li><span class="tag tag-know">了解</span> 病因、流行病学、治疗原则与预后，理解“心理治疗为主、药物只对症”。</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="position" class="section">
+      <div class="section-header"><span class="section-number">01</span><h2>本章地位速览</h2></div>
+      <p class="lead">本章位于各论中后段，是“症状—诊断—治疗”之后回到“人”本身的一章：它不讨论某一个症状群，而讨论一个人长期、跨情境的行为与关系模式。学好本章，才能理解为什么有些患者“症状不难治，人却很难相处”，为什么治疗关系本身就是治疗工具。</p>
+
+      <div class="card-grid">
+        <div class="card">
+          <div class="card-header"><span class="card-icon">📚</span><span class="card-title">章节定位</span></div>
+          <div class="card-body">人格是精神障碍的“底色层”。本章把前面各章的具体障碍放回人格背景中，回答三个问题：这个人的长期模式是什么？哪些表现属于人格层面？人格问题如何影响诊断、共病与治疗？</div>
+        </div>
+        <div class="card">
+          <div class="card-header"><span class="card-icon">🏥</span><span class="card-title">临床意义</span></div>
+          <div class="card-body">教材明确：人格障碍可能是精神障碍的<strong>易感素质之一</strong>；精神分裂症患者很多在病前就有<strong>分裂型人格</strong>的表现，<strong>偏执型人格</strong>容易发展成为<strong>妄想性障碍</strong>。识别人格底色，有助于理解症状为何反复、治疗为何困难、关系为何总出问题。</div>
+        </div>
+        <div class="card">
+          <div class="card-header"><span class="card-icon">🔗</span><span class="card-title">前后与横向关联</span></div>
+          <div class="card-body">
+            <ul class="icon-list">
+              <li><strong>前置：</strong>症状学、检查与诊断、各类精神障碍的临床表现。</li>
+              <li><strong>横向：</strong>精神分裂症及其他精神病性障碍、心境障碍、焦虑障碍、强迫症、物质使用所致障碍、神经发育障碍。</li>
+              <li><strong>后续：</strong>治疗学、康复、会诊联络与法律伦理问题。</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="callout callout-info">
+        <div class="callout-icon">💡</div>
+        <div class="callout-body"><strong>本章两条主线，先记住</strong>①<strong>连续谱主线</strong>：人格特质 → 人格困难 → 人格障碍，正常与异常只有程度不同，没有性质变化；人格改变则是另一条“获得性、继发性”的线。②<strong>诊断框架主线</strong>：ICD-11 不再按临床类型诊断，而是“严重程度 + 突出特质/模式”；教材的 A/B/C 八型是 DSM-5 对照与学习框架，不能反过来当作 ICD-11 的分类体系。</div>
+      </div>
+    </section>
+
+    <section id="map" class="section">
+      <div class="section-header"><span class="section-number">02</span><h2>本章知识地图</h2></div>
+      <p class="lead">全章可以用“1 条连续谱 + 3 套分类 + 8 种类型 + 4 级严重程度 + 5 个特质领域 + 1 个边缘型模式”来搭骨架。先搭骨架，再填细节。</p>
+
+      <div class="knowledge-map">
+        <div class="km-card"><div class="km-icon">🧱</div><div class="km-title">概念谱系</div><div class="km-count"><strong>4</strong> 个关键词：人格特质/人格困难（personality difficulty）/人格障碍/人格改变（personality change）</div></div>
+        <div class="km-card"><div class="km-icon">📊</div><div class="km-title">流行病学</div><div class="km-count"><strong>6</strong> 组关键数字</div></div>
+        <div class="km-card"><div class="km-icon">🧬</div><div class="km-title">病因机制</div><div class="km-count"><strong>4</strong> 类因素：遗传/神经生化/病理生理/心理社会</div></div>
+        <div class="km-card"><div class="km-icon">🗂️</div><div class="km-title">分类系统</div><div class="km-count"><strong>3</strong> 套：ICD-10 / DSM-5 / ICD-11</div></div>
+        <div class="km-card"><div class="km-icon">📶</div><div class="km-title">严重程度</div><div class="km-count"><strong>4</strong> 级：人格困难/轻/中/重</div></div>
+        <div class="km-card"><div class="km-icon">🎨</div><div class="km-title">人格特质</div><div class="km-count"><strong>5+1</strong>：五特质 + 边缘型模式</div></div>
+        <div class="km-card"><div class="km-icon">👥</div><div class="km-title">八种类型</div><div class="km-count"><strong>8</strong> 型：A 组 2 + B 组 3 + C 组 3</div></div>
+        <div class="km-card"><div class="km-icon">🩺</div><div class="km-title">鉴别与治疗</div><div class="km-count"><strong>2</strong> 层鉴别 + <strong>2</strong> 条治疗主线</div></div>
+      </div>
+
+      <div class="callout callout-memory">
+        <div class="callout-icon">🧠</div>
+        <div class="callout-body"><strong>一句话抓住本章</strong>人格障碍 = <strong>明显偏离正常 + 根深蒂固 + 适应不良 + 起病于童年/青少年/成年早期 + 长期泛化 + 自己或他人痛苦/功能损害</strong>。再把 ICD-11 的“<strong>4 级严重度 + 5 个特质 + 边缘型模式</strong>”套在外面，本章骨架就完整了。</div>
+      </div>
+
+      <div class="callout callout-warning">
+        <div class="callout-icon">⚠️</div>
+        <div class="callout-body"><strong>维度模型与类型描述，差别在哪里</strong>类型描述回答“像哪一款”（如偏执型、边缘型）；ICD-11 维度模型回答“<strong>严重到什么程度</strong>”加“<strong>突出哪些特质</strong>”。前者便于教学与记忆，后者更贴近临床个体差异。考试若问 ICD-11，答题必须写“严重程度 + 特质领域（+ 边缘型模式）”，不能只写“八型”或某个类型名称。</div>
+      </div>
+    </section>
+
+    <section id="route" class="section">
+      <div class="section-header"><span class="section-number">03</span><h2>学习路线图</h2></div>
+      <p class="lead">推荐按“先框架、再类型、后鉴别治疗”的顺序。本章概念多、类型多，最忌一上来就背八型细目。</p>
+
+      <div class="route-grid">
+        <div class="route-card"><h4>第一步 · 建立连续谱</h4><p>分清人格特质、人格困难、人格障碍、人格改变四个词。 <span class="priority">⭐⭐⭐</span></p></div>
+        <div class="route-card"><h4>第二步 · 病因与三套分类</h4><p>遗传 × 环境；ICD-10、DSM-5、ICD-11 各自怎么排。 <span class="priority">⭐⭐</span></p></div>
+        <div class="route-card"><h4>第三步 · 啃下 ICD-11</h4><p>7 条诊断要点、4 级严重程度、5 个特质领域 + 边缘型模式。 <span class="priority">⭐⭐⭐</span></p></div>
+        <div class="route-card"><h4>第四步 · 八型对照</h4><p>按 A/B/C 分组，每型抓“核心表现 + 一句话 + 一个鉴别”。 <span class="priority">⭐⭐⭐</span></p></div>
+        <div class="route-card"><h4>第五步 · 鉴别与治疗</h4><p>两张鉴别表；心理治疗为主，药物只对症，预后欠佳。 <span class="priority">⭐⭐⭐</span></p></div>
+      </div>
+
+      <div class="card-grid">
+        <div class="card card-diagnosis">
+          <div class="card-header"><span class="card-icon">🗓️</span><span class="card-title">复习节奏</span></div>
+          <div class="card-body"><ul class="icon-list">
+            <li><strong>第 1 遍：</strong>只读开篇 + 知识地图 + 八栏标题，建立目录感。</li>
+            <li><strong>第 2 遍：</strong>逐型填“核心表现 + 鉴别一句话”，用对比表串起来。</li>
+            <li><strong>第 3 遍：</strong>做自测与病例，回查错题对应的教材原文。</li>
+            <li><strong>间隔复习：</strong>第 1、3、7 天各一次，每次先默写框架再补细节。</li>
+          </ul></div>
+        </div>
+        <div class="card card-memory">
+          <div class="card-header"><span class="card-icon">🧠</span><span class="card-title">记忆策略建议</span></div>
+          <div class="card-body"><ul class="icon-list">
+            <li><strong>先归类：</strong>“A 偏分、B 反边表、C 强回依”把八型压成三组。</li>
+            <li><strong>再对比：</strong>每学一型，立刻写“它最像谁、哪里不像”。</li>
+            <li><strong>后输出：</strong>用闪卡自问自答，用病例练“症状→鉴别→诊断→处理”。</li>
+            <li><strong>不背剂量：</strong>教材未给剂量，记“剂量个体化，遵医嘱”。</li>
+          </ul></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="nav" class="section">
+      <div class="section-header"><span class="section-number">04</span><h2>章节导航</h2></div>
+      <p class="lead">按学习任务跳转：先总论，再分型，最后用题目和病例收口。</p>
+      <div class="knowledge-map">
+        <div class="km-card"><div class="km-icon">🏛️</div><div class="km-title"><a href="#overview">总论八栏</a></div><div class="km-count">概念/病因/临床/案例/鉴别/治疗/记忆/联动</div></div>
+        <div class="km-card"><div class="km-icon">🅰️</div><div class="km-title"><a href="#types-a">A 组</a></div><div class="km-count">偏执型 · 分裂型</div></div>
+        <div class="km-card"><div class="km-icon">🅱️</div><div class="km-title"><a href="#types-b">B 组</a></div><div class="km-count">反社会型 · 边缘型 · 表演型</div></div>
+        <div class="km-card"><div class="km-icon">🅲</div><div class="km-title"><a href="#types-c">C 组</a></div><div class="km-count">强迫型 · 回避型 · 依赖型</div></div>
+        <div class="km-card"><div class="km-icon">📌</div><div class="km-title"><a href="#summary">核心要点</a></div><div class="km-count">18 条速览</div></div>
+        <div class="km-card"><div class="km-icon">📝</div><div class="km-title"><a href="#quiz">章节自测</a></div><div class="km-count">15 题</div></div>
+        <div class="km-card"><div class="km-icon">🃏</div><div class="km-title"><a href="#flashcards">考点速记卡</a></div><div class="km-count">20 张翻转卡</div></div>
+        <div class="km-card"><div class="km-icon">🏥</div><div class="km-title"><a href="#cases">病例挑战</a></div><div class="km-count">3 个病例</div></div>
+      </div>
+    </section>
+
+    <section id="overview" class="section">
+      <div class="section-header"><span class="section-number">05</span><h2>总论：概念、机制与诊断框架</h2></div>
+      <p class="lead">总论解决四个问题：是什么（疾病画像）、为什么（病因）、怎么表现与诊断（临床表现）、怎么区分与处理（鉴别、治疗、记忆、联动）。八栏按教材逻辑重组，以 ICD-11 为诊断主线，DSM-5 只作教材对照与记忆分组。</p>
+
+      <div class="subsection" id="ov-portrait">
+        <div class="module">
+          <div class="module-head"><span class="module-index">第一栏</span><h3>疾病画像 <span class="module-en">DISEASE PROFILE</span></h3></div>
+          <div class="disease-hero">
+            <div class="en">PERSONALITY DISORDER</div>
+            <h3>人格障碍</h3>
+            <p>一句话：明显偏离正常、根深蒂固、适应不良的人格模式，造成自我和/或人际功能损害，并带来痛苦或不良影响。</p>
+            <div class="quick-tags"><span>核心：持久 · 固定 · 泛化 · 适应不良</span><span>起病：童年/青少年/成年早期</span><span>病程：持续到成年乃至终生</span><span>转归：部分成年后缓和</span></div>
+          </div>
+
+          <div class="card-grid">
+            <div class="card card-cause">
+              <div class="card-header"><span class="card-icon">📖</span><span class="card-title">定义（教材原文要点）</span></div>
+              <div class="card-body">
+                <p><strong>人格（personality）/ 个性（character）：</strong>一个人固定的行为模式及在日常活动中处事待人的习惯方式。</p>
+                <p><strong>人格障碍（personality disorder）：</strong>明显偏离正常且根深蒂固的行为方式，具有适应不良的性质；表现为<strong>自我功能</strong>（身份、自我价值、自我认识的准确性、自我引导）和/或<strong>人际功能</strong>（建立与维持相互满意关系、理解他人感受、冲突控制）受损；患者为此遭受痛苦和/或使他人遭受痛苦，或给个人或社会带来不良影响。</p>
+                <p>教材还强调：人格障碍常妨碍情感表达和意志活动，破坏行为的目的性和统一性，给人以与众不同的特异感觉，在待人接物方面表现尤为突出。</p>
+              </div>
+            </div>
+
+            <div class="card card-diagnosis">
+              <div class="card-header"><span class="card-icon">📊</span><span class="card-title">流行病学：资料少，数字要记准</span></div>
+              <div class="card-body">
+                <ul class="icon-list">
+                  <li>我国 1982 年、1993 年部分地区调查：患病率均为 <strong>0.1‰</strong>。</li>
+                  <li>国外调查：大部分在 <strong>2%～10%</strong>；反社会型 <strong>1%～4%</strong>，边缘型 <strong>1%～6%</strong>，强迫型约 <strong>6.5%</strong>。</li>
+                  <li>中国资料偏低，可能与中西方对人格障碍的理解、诊断工具不一致及文化差异有关。</li>
+                  <li>成年后部分患者缓和：反社会型 18～30 岁患病率 <strong>2.3%</strong>，65 岁低于 <strong>0.05%</strong>，总体减少约 <strong>98%</strong>。</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="card card-symptom">
+              <div class="card-header"><span class="card-icon">🧩</span><span class="card-title">核心特征：五个关键词</span></div>
+              <div class="card-body">
+                <ul class="icon-list">
+                  <li><strong>持久：</strong>不是一时状态，而是长期模式。</li>
+                  <li><strong>固定：</strong>根深蒂固，自己难以改变。</li>
+                  <li><strong>泛化：</strong>不限于特定关系或情境，跨个人与社会情境表现。</li>
+                  <li><strong>起病早：</strong>通常开始于童年、青少年或成年早期。</li>
+                  <li><strong>有损害：</strong>造成痛苦和/或功能损害，或给个人、社会带来不良影响。</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="table-wrap">
+            <table class="comparison-table">
+              <thead><tr><th>概念</th><th>性质/起病</th><th>严重度与功能损害</th><th>归属</th><th>一句话</th></tr></thead>
+              <tbody>
+                <tr><td>人格特质<br><span>personality trait</span></td><td>正常人格特征的延续；不是诊断，是维度</td><td>本身不构成障碍；人格损害越重，适用的特质限定词越多</td><td>ICD-11 特质限定词</td><td>“描述人格的词，不是病名”</td></tr>
+                <tr><td>正常人格</td><td>稳定、适应良好</td><td>无显著痛苦或功能损害</td><td>非疾病状态</td><td>“配置够用”</td></tr>
+                <tr><td>人格困难<br><span>personality difficulty</span></td><td>明显人格特征，间歇或较低强度</td><td>可能影响治疗或健康服务，但未严重到人格障碍；社会功能损害不明显；可仅限特定关系/情况</td><td><strong>不是精神障碍</strong>；归入影响健康状况/医疗保健服务的人际交往问题</td><td>“有特征，不够病”</td></tr>
+                <tr><td>人格障碍<br><span>personality disorder</span></td><td>童年、青少年或成年早期开始；长期持续到成年乃至终生；部分成年后缓和</td><td>自我和/或人际功能受损；痛苦/他人痛苦/社会不良影响</td><td>精神障碍</td><td>“系统级、长期性的适应不良”</td></tr>
+                <tr><td>人格改变<br><span>personality change</span></td><td><strong>获得性</strong>，通常成年期；发生于严重或持久应激、极度环境剥夺、严重精神障碍、严重脑部疾病或损伤之后</td><td>代表先前特征性人格模式的变化；是某种医疗状况的直接病理生理后果</td><td>DSM-5 归入“其他人格障碍”；ICD-11 归入“继发性人格障碍”</td><td>“原来的人格被疾病改写”</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="table-note">连续谱读法：人格特质（正常维度的延续）→ 人格困难（明显但不够病）→ 人格障碍（持久、泛化、有损害）；人格改变不在这条线上，它是“获得性、继发性”的另一条线。</p>
+
+          <blockquote class="quote">
+            <p><strong>教材原文：</strong>“心理发展的过程是一个连续谱，正常人格与异常人格没有明确的界限，两者只有程度的不同，并无性质的变化。”</p>
+          </blockquote>
+
+          <div class="callout callout-warning">
+            <div class="callout-icon">⚠️</div>
+            <div class="callout-body"><strong>痛苦不一定在患者身上</strong>教材的定义是“患者为此遭受痛苦和/或使他人遭受痛苦，或给个人或社会带来不良影响”。因此，不能因为患者“自己不觉得痛苦”就排除人格障碍；反社会型人格障碍的损害常由他人承受。</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="subsection" id="ov-cause">
+        <div class="module module-cause">
+          <div class="module-head"><span class="module-index">第二栏</span><h3>病因探秘 <span class="module-en">ETIOLOGY</span></h3></div>
+          <p>教材的结论是：人格障碍可能是<strong>遗传及环境相互作用</strong>的结果。下面按“生物学 → 心理社会”串联；凡教材用“可能/有学者认为/研究提示”的，均按<strong>假说或证据线索</strong>理解。</p>
+
+          <div class="card-grid">
+            <div class="card card-cause">
+              <div class="card-header"><span class="card-icon">🧬</span><span class="card-title">遗传因素</span></div>
+              <div class="card-body"><ul class="icon-list">
+                <li>双生子研究：单卵双生子人格障碍同病率高达 <strong>67%</strong>，双卵双生子为 <strong>31%</strong>。</li>
+                <li>寄养子研究：有遗传背景的寄养子成年后，人格障碍发生率仍高于正常对照。</li>
+                <li>研究提示：边缘型人格障碍遗传度 <strong>0.69</strong>，表演型 <strong>0.67</strong>。</li>
+                <li>攻击的遗传可能性在成人中为 <strong>44%～72%</strong>；罪犯中 XYY 核型者比例超过普通人群。</li>
+                <li>儿茶酚胺、单胺氧化酶 A（MAO-A）、神经肽活性相关基因的多态性及等位基因变异与冲动攻击行为相关。</li>
+              </ul></div>
+            </div>
+
+            <div class="card card-cause">
+              <div class="card-header"><span class="card-icon">⚗️</span><span class="card-title">神经生化因素</span></div>
+              <div class="card-body"><ul class="icon-list">
+                <li>边缘系统的 <strong>γ-氨基丁酸能、谷氨酸能、胆碱能环路过度反应</strong>，可能介导情绪不稳定，使患者对环境、情绪刺激的反应和敏感性增强；情绪不稳定型人格障碍可能与之相关。</li>
+                <li><strong>杏仁核过度反应 + 前额叶抑制降低</strong>，可能与边缘型、反社会型人格障碍的冲动攻击性阈值较低相关。</li>
+                <li>前额叶皮质的多巴胺能和去甲肾上腺能活性降低，可能与分裂型人格障碍的认知缺陷有关。</li>
+              </ul><p>以上均为教材的“可能”机制，属于<strong>学说/假说</strong>层面。</p></div>
+            </div>
+
+            <div class="card card-cause">
+              <div class="card-header"><span class="card-icon">🧠</span><span class="card-title">病理生理因素</span></div>
+              <div class="card-body"><ul class="icon-list">
+                <li><strong>50%</strong> 的人格障碍患者脑电图可见慢波，近似儿童脑电图；有学者认为人格障碍是<strong>大脑发育成熟延迟</strong>的表现（学说）。</li>
+                <li>人格障碍患者的父母中，脑电图异常率较高。</li>
+                <li>感染、中毒、孕期及婴幼儿营养不良（尤其蛋白质、脂类、维生素不足）、出生时或婴幼儿期脑损伤/传染病/病毒感染，可能是大脑发育不成熟的原因。</li>
+                <li>中年以后情况改善，可能是大脑皮质成熟程度增加的结果。</li>
+              </ul></div>
+            </div>
+
+            <div class="card card-cause">
+              <div class="card-header"><span class="card-icon">🏠</span><span class="card-title">心理社会环境因素</span></div>
+              <div class="card-body"><ul class="icon-list">
+                <li>童年重大精神刺激或生活挫折可损害人格发育。</li>
+                <li>父母离异、父爱或母爱剥夺：难以发展温暖、亲密的人际关系与共情，<strong>可能形成反社会型人格</strong>。</li>
+                <li>教养方式不一致、反复无常、奖罚无原则：自我同一性发展受阻，成年后自我概念紊乱，<strong>可能形成边缘型人格</strong>。</li>
+                <li>家庭一贯苛求、固执或“认真”：儿童缺乏“变通”，<strong>可能与偏执型、强迫型人格</strong>形成有关。</li>
+                <li>父母粗暴、放纵溺爱、过分苛求等，对人格发育均有不利影响。</li>
+              </ul></div>
+            </div>
+          </div>
+
+          <div class="callout callout-memory">
+            <div class="callout-icon">🧠</div>
+            <div class="callout-body"><strong>类比理解（非教材原文）</strong>把人格障碍想象成“<strong>基因给枪上膛，童年环境扣动扳机，大脑成熟延迟决定什么时候走火</strong>”。教材没有说单一因素“导致”人格障碍，答题要落到“遗传与环境相互作用”。</div>
+          </div>
+
+          <div class="callout callout-info">
+            <div class="callout-icon">📌</div>
+            <div class="callout-body"><strong>已证实与假说要分开写</strong>双生子、寄养子、XYY、脑电图慢波等是教材给出的<strong>研究证据</strong>；“大脑发育成熟延迟”“边缘系统过度反应介导情绪不稳定”等是教材用“可能/有学者认为”表述的<strong>假说</strong>。答题时不要把它们写成已定论的因果关系。</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="subsection" id="ov-clinical">
+        <div class="module module-symptom">
+          <div class="module-head"><span class="module-index">第三栏</span><h3>临床表现拼图 <span class="module-en">CLINICAL PICTURE</span></h3></div>
+          <p>这一栏把“分类—诊断—严重程度—特质”四块拼在一起。先看三套分类系统怎么排，再看 ICD-11 的七条诊断要点、四级严重程度和五个特质领域。</p>
+
+          <div class="sub-subsection">
+            <h4>① 三套分类系统：从“分款式”到“量尺寸”</h4>
+            <div class="tabs">
+              <div class="tab-nav">
+                <button class="tab-btn active" data-tab="tab-icd10">ICD-10：临床分型</button>
+                <button class="tab-btn" data-tab="tab-dsm5">DSM-5：A/B/C 三组</button>
+                <button class="tab-btn" data-tab="tab-icd11">ICD-11：维度系统</button>
+              </div>
+              <div class="tab-panel active" id="tab-icd10">
+                <div class="card">
+                  <div class="card-header"><span class="card-icon">📋</span><span class="card-title">ICD-10 依据主要行为表现分型</span></div>
+                  <div class="card-body">
+                    <ul class="icon-list">
+                      <li>偏执型人格障碍、分裂型人格障碍</li>
+                      <li>社交紊乱型人格障碍、情绪不稳型人格障碍</li>
+                      <li>表演型人格障碍、强迫型人格障碍</li>
+                      <li>焦虑（回避）型人格障碍、依赖型人格障碍</li>
+                      <li>其他特异人格障碍、未特定的人格障碍</li>
+                    </ul>
+                    <p>教材提醒：这种分类仅仅是一种概括性的描述，不同类型之间并不相互排斥，而且在某些特征上有所重叠。</p>
+                  </div>
+                </div>
+              </div>
+              <div class="tab-panel" id="tab-dsm5">
+                <div class="card-grid">
+                  <div class="card card-cause">
+                    <div class="card-header"><span class="card-icon">🅰️</span><span class="card-title">A 组：奇特/古怪</span></div>
+                    <div class="card-body"><ul class="icon-list"><li>偏执型人格障碍</li><li>分裂型人格障碍</li></ul><p>教材描述：个体通常表现得奇特或古怪。</p></div>
+                  </div>
+                  <div class="card card-symptom">
+                    <div class="card-header"><span class="card-icon">🅱️</span><span class="card-title">B 组：戏剧化/情绪化/不稳定</span></div>
+                    <div class="card-body"><ul class="icon-list"><li>反社会型人格障碍</li><li>边缘型人格障碍</li><li>表演型人格障碍</li><li>自恋型人格障碍</li></ul><p>教材八型中<strong>未单列自恋型</strong>，此处是 DSM-5 分组原文。</p></div>
+                  </div>
+                  <div class="card card-treatment">
+                    <div class="card-header"><span class="card-icon">🅲</span><span class="card-title">C 组：回避/依赖/强迫</span></div>
+                    <div class="card-body"><ul class="icon-list"><li>回避型人格障碍</li><li>依赖型人格障碍</li><li>强迫型人格障碍</li></ul><p>教材只列类型，未给这一组的组名描述。</p></div>
+                  </div>
+                </div>
+              </div>
+              <div class="tab-panel" id="tab-icd11">
+                <div class="card">
+                  <div class="card-header"><span class="card-icon">📋</span><span class="card-title">ICD-11 不再临床分型，改为维度系统</span></div>
+                  <div class="card-body">
+                    <p><strong>第一步：识别人格障碍的严重程度。</strong>1～4 级：人格困难、轻度、中度、重度；如果都不符合，意味着是正常人格。</p>
+                    <p><strong>第二步：衡量突出的人格特质或模式。</strong>5 个特质领域：负性情感、分离、去社会、脱抑制、强迫；以及“边缘型模式”这一补充标注。</p>
+                    <p>教材写法示例：“具有负性情感、去社会和脱抑制特质的<strong>中度人格障碍</strong>、<strong>边缘型模式</strong>”。</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="callout callout-warning">
+              <div class="callout-icon">⚠️</div>
+              <div class="callout-body"><strong>别把三套系统混着答</strong>ICD-10 是临床分型；DSM-5 是 A/B/C 三组；ICD-11 是“严重程度 + 特质”的维度系统。教材用 A/B/C 组织八型，是为了对照与记忆，<strong>不是 ICD-11 的分类</strong>。问 ICD-11 时不要答“偏执型/边缘型”作为诊断类型。</div>
+            </div>
+          </div>
+
+          <div class="sub-subsection">
+            <h4>② ICD-11 诊断要点：七条缺一不可</h4>
+            <p>教材强调：人格障碍主要依据<strong>病史</strong>诊断，应尽可能从多方面采集病史资料，并采用临床访谈、标准化的评估、自评问卷等手段辅助诊断。</p>
+            <ol class="numbered-list">
+              <li>一种<strong>持久的障碍</strong>：自我各方面功能（身份、自我价值、自我观点准确性、自我指导）和/或人际功能（发展维持亲密或相互满意关系、理解他人观点、处理关系冲突）存在问题。</li>
+              <li>障碍持续了<strong>很长一段时间</strong>（教材举例：持续 2 年或更长时间）。</li>
+              <li>表现为<strong>认知模式、情绪体验、情绪表达和适应不良的行为</strong>（如不灵活或调节不良）。</li>
+              <li>在<strong>一系列个人和社会情境</strong>中表现出来，不限于特定关系或社会角色（但可能由特定类型的情境引起）。</li>
+              <li>不是<strong>药物或物质的直接影响</strong>（如戒断效应），也不能用另一种精神障碍、神经系统疾病或其他医疗状况更好地解释。</li>
+              <li>与个人、家庭、社会、教育、职业或其他重要功能领域的<strong>痛苦或严重损害</strong>有关。</li>
+              <li>如果行为模式在<strong>发育阶段是合理的</strong>（如青春期建立独立自我认同的问题），或可由<strong>社会/文化因素</strong>（包括社会政治冲突）解释，则不应诊断人格障碍。</li>
+            </ol>
+            <div class="callout callout-danger">
+              <div class="callout-icon">⚠️</div>
+              <div class="callout-body"><strong>儿童和青少年期不应做人格障碍的诊断</strong>教材在鉴别诊断部分明确：人格障碍多在儿童后期或青春期出现，持续到成年并渐渐显著，因此在儿童和青少年期不应做人格障碍的诊断。青春期身份认同问题本身是发育任务，不要病理化。</div>
+            </div>
+            <div class="callout callout-info">
+              <div class="callout-icon">🔍</div>
+              <div class="callout-body"><strong>诊断思路（教材顺序）</strong>① 多途径采集病史 → ② 评估自我功能和人际功能 → ③ 确认持久、跨情境、导致痛苦/损害 → ④ 排除物质、躯体疾病、其他精神障碍 → ⑤ 排除发育阶段/文化解释 → ⑥ 评定严重程度与突出特质。</div>
+            </div>
+          </div>
+
+          <div class="sub-subsection">
+            <h4>③ 严重程度：人格困难 → 轻度 → 中度 → 重度</h4>
+            <p>ICD-11 依据<strong>人际社会功能紊乱</strong>和<strong>自我认知的扭曲</strong>两方面评估严重程度，从轻到重分 4 级；如果都不符合，即是正常人格。详细的等级区分，需要参考人格功能的四个方面：自我功能、人际关系、情绪/认知/行为表现的普遍性与严重度及持续时间、痛苦或损害的程度。</p>
+            <div class="table-wrap">
+              <table class="comparison-table">
+                <thead><tr><th>等级</th><th>自我功能</th><th>人际功能</th><th>情境表现与损害</th><th>是否精神障碍</th></tr></thead>
+                <tbody>
+                  <tr><td>人格困难</td><td>明显人格特征，但未达人格障碍</td><td>可能影响治疗或健康服务</td><td>间歇性或较低强度；社会功能损害不明显；可能仅限特定关系/情况</td><td><strong>不是</strong>；归入人际交往问题</td></tr>
+                  <tr><td>轻度人格障碍</td><td>仅影响人格功能的一部分领域（如仅自我导向问题，身份稳定性、自我价值尚可）</td><td>多种人际关系和/或职业、社会角色有问题，但也有一些能维持和执行</td><td>特征性表现通常轻；一些情境可不表现；可与巨大痛苦或部分领域严重损害相关</td><td>是</td></tr>
+                  <tr><td>中度人格障碍</td><td>影响多个领域（如身份、自我感觉、亲密关系、冲动控制、行为调整），但一些领域较轻</td><td>绝大多数人际关系有明显问题；绝大多数预期社会/职业角色受相当影响；可表现为冲突、回避、拒绝或极度依赖</td><td>特征性表现中等严重；有时会伤害自我或他人；通常有明显损害，但可维持部分领域功能</td><td>是</td></tr>
+                  <tr><td>重度人格障碍</td><td>自我功能严重紊乱：极度不稳定（“感觉不到自我”）或极度僵硬刻板；自我看法可自卑、夸大或高度异常</td><td>人际功能严重影响，所有人际关系都有问题；几乎没有履行预期社会/职业角色的能力和意愿</td><td>特征性表现严重，几乎影响全部人格功能领域；常与自我/他人伤害及生活几乎所有领域的严重损害相关</td><td>是</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="timeline">
+              <div class="tl-item"><div class="tl-title">人格困难</div><div class="tl-desc">有“明显的人格特征”，但还不足以诊断人格障碍；不是精神障碍。</div></div>
+              <div class="tl-item"><div class="tl-title">轻度</div><div class="tl-desc">人格功能一部分领域受损，部分情境可正常；特征表现轻。</div></div>
+              <div class="tl-item"><div class="tl-title">中度</div><div class="tl-desc">多个领域受损，绝大多数人际关系/角色有明显问题；可能伤害自我或他人。</div></div>
+              <div class="tl-item"><div class="tl-title">重度</div><div class="tl-desc">自我功能严重紊乱，所有人际关系受影响，几乎无法履行社会/职业角色；严重伤害与全面损害。</div></div>
+            </div>
+          </div>
+
+          <div class="sub-subsection">
+            <h4>④ 五个特质领域 + 边缘型模式</h4>
+            <p>ICD-11 要求对突出的人格特质或模式进行标注。<strong>特质不是诊断</strong>：它只适用于已被诊断为人格障碍（轻度、中度、重度）或人格困难的个体；人格损害越严重，适用的限定词越多；特质表现并非一成不变。</p>
+            <div class="card-grid">
+              <div class="card card-cause">
+                <div class="card-header"><span class="card-icon">😔</span><span class="card-title">负性情感 negative affectivity</span></div>
+                <div class="card-body">广泛的负性情感倾向。可表现为情绪不稳、情绪调节欠佳；消极态度、低自尊、低自信；对他人的怀疑和不信任。不同时间、不同个体可有差异，频率和强度可与情境不匹配。</div>
+              </div>
+              <div class="card card-cause">
+                <div class="card-header"><span class="card-icon">❄️</span><span class="card-title">分离 detachment</span></div>
+                <div class="card-body">保持人际关系距离（社交分离）和情感距离（情感分离）的倾向。社交分离：回避社交互动、缺少朋友、回避亲密关系；情感分离：情感保留、冷漠，情感表达和体验受限。</div>
+              </div>
+              <div class="card card-symptom">
+                <div class="card-header"><span class="card-icon">🎯</span><span class="card-title">去社会 dissociality</span></div>
+                <div class="card-body">不在乎他人权益和感受，自我中心且缺乏同理心。自我中心包括权力感、期望他人尊敬、寻求关注、只顾自己的需要/欲望/便利；缺乏同理心包括欺骗、操纵、剥削、刻薄、躯体攻击、对他人痛苦冷漠、为达目标冷酷无情。</div>
+              </div>
+              <div class="card card-symptom">
+                <div class="card-header"><span class="card-icon">🚀</span><span class="card-title">脱抑制 disinhibition</span></div>
+                <div class="card-body">受到外在或内在刺激（感觉、情感、思想）时鲁莽行动，不考虑潜在负性后果。包括冲动、分心、不负责任、鲁莽、缺乏计划性。</div>
+              </div>
+              <div class="card card-treatment">
+                <div class="card-header"><span class="card-icon">📐</span><span class="card-title">强迫 anankastia</span></div>
+                <div class="card-body">狭隘地关注自己严格的完美、对错标准，并控制自己和他人的行为/情境以确保符合标准。包括完美主义（规则、义务、对错、细节、流程、计划、组织、纪律、整洁）和约束情感/行为（控制表达、倔强顽固、不懂变通、规避风险、持续坚忍、小心谨慎）。</div>
+              </div>
+              <div class="card card-memory">
+                <div class="card-header"><span class="card-icon">🌗</span><span class="card-title">边缘型模式 borderline pattern</span></div>
+                <div class="card-body">ICD-11 为增强临床实用性增加的<strong>补充标注</strong>，可能有助于识别对某些心理治疗有反应的个体，最好与特质限定词结合使用。适用于广泛不稳定人格紊乱模式（人际关系、自我印象、情感不稳定）并伴明显冲动行为的个体。</div>
+              </div>
+            </div>
+
+            <div class="callout callout-info">
+              <div class="callout-icon">🧩</div>
+              <div class="callout-body"><strong>边缘型模式的九个教材要点</strong>① 为避免被抛弃（真正的或想象的）做出疯狂努力；② 不稳定而强烈的人际关系模式；③ 身份紊乱，自我印象或自我感觉明显而持续地不稳定；④ 高度负性情感中行为鲁莽，导致潜在自伤；⑤ 反复发作的自我伤害；⑥ 心境反应明显，情感不稳定；⑦ 慢性空虚感；⑧ 不适当的强烈愤怒或难以控制愤怒；⑨ 情绪高度唤起时出现短暂分离性症状或精神病样特征。</div>
+            </div>
+
+            <div class="callout callout-warning">
+              <div class="callout-icon">⚠️</div>
+              <div class="callout-body"><strong>教材未展开的部分</strong>教材没有给出每个特质对应的具体量表、cutoff 分值或治疗匹配方案。本指南不虚构；临床评估请依据教材原则与规范工具。</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="subsection" id="ov-case">
+        <div class="module module-case">
+          <div class="module-head"><span class="module-index">第四栏</span><h3>教材典型案例 <span class="module-en">TEXTBOOK CASE</span></h3></div>
+          <p>教材在本章只提供了一个典型病例，位于“反社会型人格障碍”部分。以下为<strong>教材原文节选</strong>（省略号表示节选省略）；完整病例与思考题见<a href="#cases">病例挑战 · 病例 1</a>。</p>
+          <div class="case-card">
+            <div class="case-meta"><span>教材原文（节选）</span><span>反社会型人格障碍</span><span>男性 · 25 岁</span></div>
+            <div class="case-title">从小品行问题，成年后漠视他人权利</div>
+            <div class="case-body">
+              <p>患者，男，25 岁，初中文化，未婚，无业。其父是某大学知名教授，其母是某公司经理，二人忙于事业，从小将其寄养于乡下爷爷奶奶家中并在农村读完小学。爷爷奶奶从小对其管教不严，加之和农村学生相比经济条件优越，患者从小就挥霍无度、脾气暴烈、欺负同学、不听管教。小学四五年级时和当地不良少年混在一起抽烟喝酒并一起小偷小摸，学习成绩低下，经常和老师顶撞。13 岁回省城上初中，和父母没有感情，常和父母顶撞……初二时结交了班上品行差的一些同学，多次集体到附近的小学敲诈勒索小学生，被小学生家长举报而受到学校警告处分。初中毕业后到某中专成教班学习，经常旷课，不参加考试，在学生宿舍里经常欺负家境贫寒的同学……读中专一年后自动退学。两年前交往一个女朋友，因女方家长反对，女方提出分手，但患者经常守候于女方住房附近纠缠，并打电话威胁其父母。最近沉溺于网络赌博和打赏主播，欠下近百万网络贷款，父母不愿意为其偿还贷款，就辱骂并用刀威胁父母。</p>
+              <p><strong>诊断：反社会型人格障碍。</strong></p>
+            </div>
+          </div>
+          <div class="callout callout-example">
+            <div class="callout-icon">🔍</div>
+            <div class="callout-body"><strong>教材诊断思路拆解</strong>① 童年/少年期即有品行问题（说谎、逃学、偷窃、斗殴、敲诈、欺负同学），符合反社会型“18 岁前品行问题”的轨迹；② 成年后漠视他人权利、缺乏责任感、无内疚感、易迁怒、暴力威胁，符合核心特征；③ 人际关系能建立但不能长久、对挫折耐受低、行为合理化，支持诊断；④ 诊断成立还需排除物质使用、其他精神障碍等更合理的解释。</div>
+          </div>
+          <div class="callout callout-warning">
+            <div class="callout-icon">📌</div>
+            <div class="callout-body"><strong>教材未提供其他七型的典型病例</strong>本指南不虚构病例；后文病例 2、3 均为“经典临床情境（教学演练，非教材原文）”，只使用教材描述过的表现。</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="subsection" id="ov-diff">
+        <div class="module module-diff">
+          <div class="module-head"><span class="module-index">第五栏</span><h3>鉴别诊断对对碰 <span class="module-en">DIFFERENTIAL</span></h3></div>
+          <p>鉴别分两层：<strong>第一层先排除“不是人格障碍”的情况</strong>（人格困难、继发性人格改变、精神分裂症/分裂型障碍、双相/抑郁、物质使用、品行障碍）；<strong>第二层再区分“是哪一型”</strong>。先排除，再分型，顺序不能反。</p>
+
+          <div class="sub-subsection">
+            <h4>第一层：先排除“不是人格障碍”</h4>
+            <div class="table-wrap">
+              <table class="comparison-table">
+                <thead><tr><th>易混对象</th><th>核心症状</th><th>病程/起病</th><th>关键鉴别点</th><th>排除/辅助要点</th><th>一句话鉴别</th></tr></thead>
+                <tbody>
+                  <tr>
+                    <td>人格困难</td>
+                    <td>明显人格特征，但强度较低或间歇出现</td>
+                    <td>间歇性（如压力时期）或较低强度；可仅限特定关系/情况</td>
+                    <td>功能问题不够严重，不足以对社会、职业、人际关系造成显著破坏；<strong>不是精神障碍</strong></td>
+                    <td>病史与访谈；教材未给定界量表</td>
+                    <td>“有特征，不够病”</td>
+                  </tr>
+                  <tr>
+                    <td>继发性人格改变<br><span>躯体/精神疾病所致</span></td>
+                    <td>先前特征性人格模式发生改变</td>
+                    <td><strong>获得性</strong>，通常成年期；发生于严重/持久应激、极度环境剥夺、严重精神障碍、严重脑部疾病或损伤之后</td>
+                    <td>是某种精神、行为、神经发育障碍之外的<strong>医疗状况的直接病理生理后果</strong></td>
+                    <td>依据病史、体格检查或实验室检查证据；若由其他疾病引起，<strong>不诊断人格障碍</strong></td>
+                    <td>“原来的人格被疾病改写”</td>
+                  </tr>
+                  <tr>
+                    <td>精神分裂症 / 分裂型障碍</td>
+                    <td>精神分裂症有典型、持续的精神病性症状；分裂型障碍属持续性精神障碍；边缘型仅短暂、轻微的精神病样症状</td>
+                    <td>精神病性障碍/持续性精神障碍的病程；人格障碍是持久人格模式</td>
+                    <td>持续的精神病性症状若能解释，不诊断人格障碍；边缘型短暂症状<strong>现实检验能力相对保存</strong>，无典型持续精神病性症状</td>
+                    <td>纵向观察精神病性症状；教材未展开具体诊断标准</td>
+                    <td>“持续精神病性症状归精神病性障碍，人格只解释人格模式”</td>
+                  </tr>
+                  <tr>
+                    <td>双相/抑郁发作<br><span>心境障碍</span></td>
+                    <td>情绪不稳、冲动、自伤可在边缘型出现；教材提示边缘型短暂精神病性症状易被误诊为心境障碍</td>
+                    <td>教材未展开心境障碍的鉴别病程；需纵向看“持久人格模式”还是“可被心境障碍解释”</td>
+                    <td>边缘型是持久的人格层面不稳定（情绪、人际、自我形象）+ 怕抛弃/空虚；教材<strong>未给正式鉴别标准</strong></td>
+                    <td>教材未提供专门排除要点；不能仅凭一次情绪发作定人格障碍</td>
+                    <td>“教材只给误诊提醒，未给标准；关键看持久人格模式”</td>
+                  </tr>
+                  <tr>
+                    <td>物质使用所致障碍</td>
+                    <td>自我控制能力和自尊下降、人际关系困难/冲突、与获取或使用毒品有关的去社会化行为等，类似人格障碍</td>
+                    <td>与物质使用相关；教材未展开时间标准</td>
+                    <td>如果人格障碍<strong>完全因物质使用而起</strong>，不诊断；若人格障碍在物质使用之前已存在，或某些特质不能由物质使用解释（如完美主义），可额外诊断</td>
+                    <td>物质使用史；教材未给定量的观察期</td>
+                    <td>“先停物质再看人格，原发的才留下”</td>
+                  </tr>
+                  <tr>
+                    <td>伴有亲社会情绪受限的品行障碍<br><span>conduct disorder</span></td>
+                    <td>无视他人权利/感受、自我中心、缺乏同理心；与“去社会特质”人格障碍相似</td>
+                    <td>可在青春期前儿童诊断；症状持续时间比人格障碍短</td>
+                    <td>只有当除亲社会情绪受限外，还存在导致自我/人际功能受损的人格特质时，才额外诊断人格障碍</td>
+                    <td>年龄与病程；儿童青少年不诊断人格障碍</td>
+                    <td>“小孩先看品行障碍，成年后的持久模式才谈人格障碍”</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="table-note">一句话总鉴别：先问“是不是病”（人格困难/继发改变）→ 再问“是不是别的病”（精神病性、心境、物质、品行）→ 最后才问“是哪一型人格障碍”。</p>
+            <div class="callout callout-warning">
+              <div class="callout-icon">⚠️</div>
+              <div class="callout-body"><strong>两个教材边界</strong>① 教材中的“分裂型障碍（schizotypal disorder）”属于“其他持续性精神障碍”，不等同于“分裂型人格障碍（schizotypal personality disorder）”；前者若已能解释，一般不额外诊断人格障碍。② 双相/抑郁的鉴别，教材只提示边缘型短暂精神病性症状易被误诊为心境障碍，<strong>未展开正式鉴别标准</strong>；答题不要编造病程阈值，写“需纵向观察持久人格模式与心境发作”。</div>
+            </div>
+          </div>
+
+          <div class="sub-subsection">
+            <h4>第二层：类型内五对易混</h4>
+            <div class="table-wrap">
+              <table class="comparison-table">
+                <thead><tr><th>易混对</th><th>共同点</th><th>关键鉴别点（教材）</th><th>一句话鉴别</th></tr></thead>
+                <tbody>
+                  <tr><td>偏执型 vs 分裂型</td><td>人际关系亲密程度均存在缺陷；都可能出现猜疑、人际疏离及偏执观念</td><td>分裂型<strong>退缩、冷漠</strong>，没有偏执性猜疑思维；偏执型<strong>社会参与性更高</strong>，常有攻击性言行，更多把自己的感受投射到他人身上；分裂型还有<strong>奇异想法、罕见认知体验、怪异想法和言语</strong></td><td>“偏执疑人，分裂避人”</td></tr>
+                  <tr><td>分裂型 vs 回避型</td><td>都存在社会隔离</td><td>回避型<strong>期望参与活动</strong>，因怕被拒绝/批评而回避；分裂型是真正退缩、冷漠，不想建立关系</td><td>“回避想社交，分裂不想去”</td></tr>
+                  <tr><td>反社会型 vs 边缘型<br><span>教材未直接对比</span></td><td>均可见冲动和人际关系问题（按教材各自描述归纳）</td><td>反社会型：漠视/侵犯他人权利、无内疚、18 岁前品行问题、30 岁后常缓和；边缘型：情绪/行为/人际关系/自我形象极不稳定、怕被抛弃、自伤、短暂精神病样症状</td><td>“反社会向外伤人，边缘向内失控”（记忆类比）</td></tr>
+                  <tr><td>表演型 vs 边缘型</td><td>情绪不稳定、行为戏剧化、人际关系波折；教材称鉴别存在一定困难</td><td>边缘型有<strong>更多自杀未遂、身份认同障碍和短暂的精神病症状</strong>；表演型以过分感情用事、夸张言行吸引注意为核心</td><td>“表演要掌声，边缘怕抛弃”</td></tr>
+                  <tr><td>强迫型 vs 回避型/依赖型<br><span>教材未直接对比</span></td><td>同属 C 组，均涉及规则或关系上的限制</td><td>强迫型核心是完美、秩序、控制（对自己和他人）；回避型核心是怕拒绝/批评而回避社交；依赖型核心是让渡决定、怕被抛弃/独处无助</td><td>“强迫控制事，回避躲评价，依赖靠别人”</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="table-note">一句话总鉴别：类型之间不互斥、特征可重叠；抓“最突出、最持久、跨情境”的核心模式，不要只凭一条表现套型。</p>
+          </div>
+
+          <div class="callout callout-danger">
+            <div class="callout-icon">⚠️</div>
+            <div class="callout-body"><strong>诊断顺序不能反</strong>教材反复强调“不能用另一种精神障碍、神经系统疾病或其他医疗状况更好地解释”。遇到“长期人际冲突”的患者，先排查<strong>物质、躯体疾病、其他精神障碍、发育阶段、文化因素</strong>，再考虑人格障碍。</div>
+          </div>
+
+          <div class="callout callout-memory">
+            <div class="callout-icon">🧠</div>
+            <div class="callout-body"><strong>记忆口诀（非教材原文）</strong>“<strong>困不算病，病不背锅，物不赖账，继发不改名</strong>”——人格困难不算病；其他精神障碍不替人格障碍背锅；物质使用不赖账；继发性人格改变不诊断人格障碍。</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="subsection" id="ov-treat">
+        <div class="module module-treat">
+          <div class="module-head"><span class="module-index">第六栏</span><h3>治疗方案工具箱 <span class="module-en">TREATMENT</span></h3></div>
+          <p>教材对治疗的表述很克制：<strong>人格障碍的治疗较为困难，但有关治疗手段对行为的矫正仍可发挥一定作用</strong>。按“首选 → 辅助”记：心理治疗是主战场；药物只对靶症状、少量、短期。</p>
+
+          <div class="card card-treatment">
+            <div class="card-header"><span class="card-icon">🗣️</span><span class="card-title">首选：心理治疗</span></div>
+            <div class="card-body">
+              <ul class="icon-list check">
+                <li>医师需要与患者<strong>深入接触，建立良好关系</strong>。</li>
+                <li>帮助患者<strong>认识个性缺陷之所在</strong>。</li>
+                <li>鼓励患者<strong>改变自己的行为模式</strong>，对出现的积极变化予以鼓励和强化。</li>
+                <li>可采用<strong>分析性治疗、认知治疗、行为治疗、家庭治疗</strong>等不同心理治疗方法。</li>
+                <li>治疗形式可实施<strong>个别治疗或小组治疗</strong>。</li>
+                <li>治疗目的之一：帮助患者建立良好的行为模式，矫正不良习惯。</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="callout callout-info">
+            <div class="callout-icon">💡</div>
+            <div class="callout-body"><strong>理解性说明（非教材原文）</strong>人格障碍的核心问题常体现在人际关系里：不信任、控制、依赖、回避、戏剧化……如果医患关系本身就是一次“安全的关系练习”，患者才有机会在关系中被看见、被理解、被矫正。这是理解治疗为何强调“建立良好关系”的角度，不是教材原文。</div>
+          </div>
+
+          <div class="card card-treatment">
+            <div class="card-header"><span class="card-icon">💊</span><span class="card-title">辅助：药物治疗（按靶症状）</span></div>
+            <div class="card-body">
+              <div class="table-wrap">
+                <table class="comparison-table">
+                  <thead><tr><th>靶症状/场景</th><th>药物类别与举例</th><th>教材说明</th></tr></thead>
+                  <tbody>
+                    <tr><td>激越、焦虑</td><td>苯二氮䓬类</td><td>可用于治疗激越和焦虑；可用于减少<strong>回避型人格障碍</strong>的人际交往焦虑。</td></tr>
+                    <tr><td>愤怒、敌对、短暂精神病性症状</td><td>小剂量抗精神病药（氟哌啶醇、利培酮等）</td><td>控制愤怒、敌对和短暂的精神病症状发作；也用于治疗<strong>表演型人格障碍</strong>的现实感丧失和幻想。</td></tr>
+                    <tr><td>抑郁、焦虑、对拒绝敏感</td><td>5-HT 能抗抑郁药</td><td>改善抑郁、焦虑情绪；也可能减少患者对拒绝的敏感性。</td></tr>
+                    <tr><td>冲动行为</td><td>抗癫痫药</td><td>控制冲动行为，特别是<strong>反社会型人格障碍脑电图有异常波幅</strong>的患者；也可以改善<strong>边缘型人格障碍</strong>的整体功能。</td></tr>
+                    <tr><td>自主神经亢进、恐惧状态</td><td>β 受体阻滞剂（如阿替洛尔）</td><td>缓解自主神经系统亢进；可用于改善<strong>回避型人格障碍</strong>患者在恐惧状态下的情绪。</td></tr>
+                  </tbody>
+                </table>
+              </div>
+              <p class="table-note">教材未提供具体剂量与疗程：<strong>剂量个体化，遵医嘱</strong>；本表只记“靶症状—药物类别”，不背数字。</p>
+            </div>
+          </div>
+
+          <div class="callout callout-danger">
+            <div class="callout-icon">⚠️</div>
+            <div class="callout-body"><strong>三条铁律（教材原话）</strong>① 药物治疗<strong>很难改变人格结构</strong>；② 一般在出现异常应激、情绪反应和短暂精神病症状时<strong>少量用药</strong>；③ <strong>一般不主张长期应用和常规使用药物</strong>，因其远期效果难以确定。</div>
+          </div>
+
+          <div class="card card-diagnosis">
+            <div class="card-header"><span class="card-icon">📉</span><span class="card-title">预后：治疗有限，早期培养更重要</span></div>
+            <div class="card-body">
+              <ul class="icon-list">
+                <li>人格障碍通常开始于童年、青少年或成年早期，持续到成年乃至终生；<strong>部分患者成年后有所缓和</strong>。</li>
+                <li>社会学习过程、社会化过程及其他成熟过程，可使特征性行为逐渐减少。</li>
+                <li>反社会型：<strong>30 岁以后常有所缓和</strong>，但仍难以和家庭成员建立持久、尽责、热情的关系。</li>
+                <li>中年以后情况改善，可能是大脑皮质成熟程度增加的结果。</li>
+                <li>总体：<strong>治疗效果有限，预后欠佳</strong>；因此幼年时期培养健全的人格尤为重要。</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="callout callout-warning">
+            <div class="callout-icon">🌱</div>
+            <div class="callout-body"><strong>预防比治疗更重要</strong>教材用“总之”收尾：人格障碍治疗效果有限，预后欠佳，因此在<strong>幼年时期培养健全的人格尤为重要</strong>。这句话是本章的价值判断，也是常考的“治疗原则”。</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="subsection" id="ov-memory">
+        <div class="module module-memory">
+          <div class="module-head"><span class="module-index">第七栏</span><h3>记忆工具箱 <span class="module-en">MEMORY TOOLBOX</span></h3></div>
+          <p>以下均为<strong>记忆辅助</strong>，不是教材原文；口诀不得改变医学事实，答题时回到教材原词。</p>
+          <div class="memory-grid">
+            <div class="memory-card">
+              <div class="m-title">方法一：A/B/C 归类法<span class="m-type">归类</span></div>
+              <div class="m-formula">“A 偏分，B 反边表，C 强回依”</div>
+              <p><strong>拆解：</strong>A 组 = 偏执型、分裂型；B 组 = 反社会型、边缘型、表演型（DSM-5 另有自恋型）；C 组 = 强迫型、回避型、依赖型。</p>
+              <p><strong>原理：</strong>把 8 个孤立词压成 3 个“组块”，降低记忆负荷；先记组，再记组内成员，最后填每型核心特征。</p>
+            </div>
+            <div class="memory-card">
+              <div class="m-title">方法二：ICD-11 五特质首字母/缩略法<span class="m-type">首字母</span></div>
+              <div class="m-formula">“负、离、去、脱、强”</div>
+              <p><strong>拆解：</strong>负性情感、分离、去社会、脱抑制、强迫（英文首字母 N-D-D-D-A）。</p>
+              <p><strong>原理：</strong>用 5 个字的缩略串住 5 个维度；再单独补“边缘型模式（borderline pattern）”，避免把它误当成第 6 个特质领域。</p>
+            </div>
+            <div class="memory-card">
+              <div class="m-title">方法三：边缘型“不稳定”联想法<span class="m-type">联想</span></div>
+              <div class="m-formula">“三不稳、一冲动、怕抛弃、常自伤”</div>
+              <p><strong>拆解：</strong>三不稳 = 情绪、人际关系、自我形象（含身份）不稳定；一冲动 = 行为不计后果、易冲动；怕抛弃 = 疯狂避免被抛弃；常自伤 = 自杀威胁/自伤、慢性空虚、短暂精神病样症状。</p>
+              <p><strong>原理：</strong>把“极不稳定”这个抽象核心拆成可画面的四条线索，用故事化方式串起来；看到“关系过山车 + 怕被丢下”就想到边缘型。</p>
+            </div>
+            <div class="memory-card">
+              <div class="m-title">方法四：类型对比法<span class="m-type">对比</span></div>
+              <div class="m-formula">“偏疑分裂冷，回避想参与；表演要掌声，边缘多自伤；反社会无愧疚，强迫控一切，依赖靠别人”</div>
+              <p><strong>原理：</strong>对比记忆利用“差异”作为提取线索；每型只记一个最独特的对比词，避免八型糊成一团。注意“反社会 vs 边缘”“强迫 vs 回避/依赖”教材未直接对比，此口诀是按教材特征归纳的记忆标签。</p>
+            </div>
+            <div class="memory-card">
+              <div class="m-title">方法五：关键数字锚定法<span class="m-type">数字</span></div>
+              <div class="m-formula">“67/31、0.69/0.67、44～72、50%、0.1‰ vs 2～10%、4/5/8”</div>
+              <p><strong>拆解：</strong>单卵/双卵同病率 67%/31%；边缘型/表演型遗传度 0.69/0.67；攻击遗传可能性 44%～72%；50% 脑电图慢波；中国 0.1‰、国外 2%～10%；4 级严重度、5 个特质、8 种类型。</p>
+              <p><strong>原理：</strong>数字是高频考点，用“成对/成组”锚定比孤立背数字牢；同时把“0.1‰”和“2%～10%”放在一起对比，防止混淆。</p>
+            </div>
+            <div class="memory-card">
+              <div class="m-title">方法六：治疗原则口诀法<span class="m-type">口诀</span></div>
+              <div class="m-formula">“心理打底，药物对症；短期小量，不长期用”</div>
+              <p><strong>原理：</strong>用押韵把“首选—辅助—限制”三层信息压成一句；看到“药物能不能改变人格”就答“不能，只对症，不长期常规”。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="subsection" id="ov-link">
+        <div class="module module-link">
+          <div class="module-head"><span class="module-index">第八栏</span><h3>知识联动 <span class="module-en">CONNECTIONS</span></h3></div>
+          <p>人格障碍不是孤立的“性格问题”，它位于精神障碍的“底色层”：既可能是易感素质，也可能是共病、预后和治疗关系的背景。</p>
+          <div class="card-grid">
+            <div class="card">
+              <div class="card-header"><span class="card-icon">🧠</span><span class="card-title">精神分裂症与妄想性障碍</span></div>
+              <div class="card-body"><ul class="icon-list">
+                <li>教材明确：精神分裂症患者很多在病前就有<strong>分裂型人格</strong>的表现。</li>
+                <li>教材明确：<strong>偏执型人格</strong>容易发展成为<strong>妄想性障碍</strong>。</li>
+                <li>人格底色会影响症状表达、求助方式和治疗联盟。</li>
+              </ul></div>
+            </div>
+            <div class="card">
+              <div class="card-header"><span class="card-icon">🎭</span><span class="card-title">心境障碍、焦虑与强迫</span></div>
+              <div class="card-body"><ul class="icon-list">
+                <li>边缘型的情绪不稳定、冲动、自伤，教材提示易被误诊为<strong>心境障碍</strong>；具体鉴别标准教材未展开。</li>
+                <li>回避型、依赖型常与焦虑、抑郁症状并存（临床提示）。</li>
+                <li>教材明确：约 <strong>70%</strong> 的强迫症患者病前有<strong>强迫型人格障碍</strong>；5-HT 能抗抑郁药可改善抑郁、焦虑和对拒绝的敏感性。</li>
+              </ul></div>
+            </div>
+            <div class="card">
+              <div class="card-header"><span class="card-icon">🧪</span><span class="card-title">物质使用及成瘾行为</span></div>
+              <div class="card-body"><ul class="icon-list">
+                <li>物质使用可造成类似人格障碍的表现：自我控制下降、人际冲突、去社会化行为。</li>
+                <li>教材明确：如果人格障碍<strong>完全由物质使用引起</strong>，不诊断人格障碍。</li>
+                <li>如果人格障碍在物质使用前已存在，或某些特质（如完美主义）不能由物质解释，可额外诊断。</li>
+              </ul></div>
+            </div>
+            <div class="card">
+              <div class="card-header"><span class="card-icon">🧒</span><span class="card-title">神经发育与儿童青少年</span></div>
+              <div class="card-body"><ul class="icon-list">
+                <li>品行障碍可在青春期前诊断，人格障碍<strong>不应在儿童和青少年期诊断</strong>。</li>
+                <li>孤独症谱系障碍、分裂型障碍等持续性精神障碍可能模拟人格障碍。</li>
+                <li>青春期身份认同问题属于发育任务，不能病理化。</li>
+              </ul></div>
+            </div>
+            <div class="card">
+              <div class="card-header"><span class="card-icon">🏥</span><span class="card-title">治疗学与康复</span></div>
+              <div class="card-body"><ul class="icon-list">
+                <li>心理治疗是主战场：建立关系、认识缺陷、改变模式、强化积极变化。</li>
+                <li>药物只对靶症状少量、短期使用，不改变人格结构。</li>
+                <li>预后欠佳，早期培养健全人格更重要；康复重点在行为模式与社会功能。</li>
+              </ul></div>
+            </div>
+            <div class="card">
+              <div class="card-header"><span class="card-icon">⚖️</span><span class="card-title">社会文化与法律</span></div>
+              <div class="card-body"><ul class="icon-list">
+                <li>中国人格障碍患病率资料偏低，可能与诊断工具、理解及<strong>文化差异</strong>有关。</li>
+                <li>诊断必须考虑社会/文化因素，避免把文化差异当成病理。</li>
+                <li>教材指出反社会型人格障碍与违法犯罪关系较密切；法律免责问题教材未展开。</li>
+              </ul></div>
+            </div>
+          </div>
+          <div class="callout callout-memory">
+            <div class="callout-icon">🔗</div>
+            <div class="callout-body"><strong>一根主线</strong>人格障碍是精神障碍的<strong>易感素质之一</strong>：它不一定直接“导致”某种病，但会影响一个人如何应对压力、如何建立关系、如何求助、如何配合治疗。理解这条主线，本章就能和整本教材连起来。</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="types" class="section">
+      <div class="section-header"><span class="section-number">06</span><h2>八种类型分述</h2></div>
+      <p class="lead">教材在“常见的人格障碍类型”中逐一描述了八型：<strong>偏执型、分裂型、反社会型、边缘型、表演型、强迫型、回避型、依赖型</strong>。下面按教材的 DSM-5 对照分组（A/B/C）组织，便于对比记忆；类型名称与描述以教材为准。ICD-11 不按这些类型诊断，类型只作为学习与沟通框架。</p>
+
+      <div class="callout callout-warning">
+        <div class="callout-icon">⚠️</div>
+        <div class="callout-body"><strong>先说明三个边界</strong>① DSM-5 的 B 组还包括<strong>自恋型人格障碍</strong>，但教材“常见类型”八型中<strong>未单列自恋型</strong>，本指南不额外编造其临床表现。② DSM-5 的 C 组常被概括为“焦虑组”，这是记忆性标签；教材只列出类型，未使用这一组名。③ 教材 A 组只列偏执型、分裂型；DSM-5 原版 A 组还包括<strong>分裂样人格障碍（schizoid）</strong>，教材八型未单列，本指南不展开，仅在“拓展延伸”中作术语提醒。</div>
+      </div>
+
+      <div class="table-wrap">
+        <table class="comparison-table">
+          <thead><tr><th>类型</th><th>核心特征（教材）</th><th>性别倾向</th><th>一句话记忆</th></tr></thead>
+          <tbody>
+            <tr><td>偏执型<br><span>paranoid PD</span></td><td>猜疑、偏执</td><td>男性多于女性</td><td>“谁都不可信，记仇不原谅”</td></tr>
+            <tr><td>分裂型<br><span>schizotypal PD</span></td><td>情感冷漠、人际关系明显缺陷</td><td>男性略多于女性</td><td>“冷、独、怪，活在自己世界”</td></tr>
+            <tr><td>反社会型<br><span>antisocial PD</span></td><td>不遵守社会规范、漠视或侵犯他人权利</td><td>男性多于女性</td><td>“无愧疚、无责任、无情”</td></tr>
+            <tr><td>边缘型<br><span>borderline PD</span></td><td>情绪、行为、人际关系、自我形象极不稳定</td><td>女性多于男性</td><td>“怕被抛弃，关系过山车”</td></tr>
+            <tr><td>表演型<br><span>histrionic PD</span></td><td>过分感情用事、夸张言行吸引注意</td><td>女性多于男性</td><td>“戏多、夸张、要关注”</td></tr>
+            <tr><td>强迫型<br><span>obsessive-compulsive PD</span></td><td>过分谨小慎微、严格要求、完美主义、内心不安全</td><td>男性诊断率约为女性 2 倍</td><td>“完美、刻板、不放心”</td></tr>
+            <tr><td>回避型<br><span>avoidant PD</span></td><td>对拒绝极其敏感、社会回避</td><td>教材未明确</td><td>“想社交，又怕被拒绝”</td></tr>
+            <tr><td>依赖型<br><span>dependent PD</span></td><td>过分依赖、害怕被抛弃、决定能力低下</td><td>女性多于男性</td><td>“没你不行，事事要人定”</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="subsection" id="types-a">
+        <h3>🅰️ A 组：奇特/古怪 —— 偏执型与分裂型</h3>
+        <p>这一组的共同气质是“看起来怪、离群、多疑或冷漠”。但两者的关键差别在：偏执型<strong>参与其中但不信任</strong>，分裂型<strong>退缩其外且冷漠</strong>。</p>
+
+        <div class="sub-subsection" id="type-paranoid">
+          <div class="disease-hero">
+            <div class="en">PARANOID PERSONALITY DISORDER</div>
+            <h3>偏执型人格障碍</h3>
+            <p>画像：以猜疑和偏执为核心，把他人无意或友好的行为解读为敌意，长期记仇、好斗、病态嫉妒，社会参与性并不低。</p>
+            <div class="quick-tags"><span>A 组 · 奇特/古怪</span><span>性别：男性多于女性</span><span>核心：猜疑 · 记仇 · 好斗</span><span>关系：偏执型人格易发展为妄想性障碍</span></div>
+          </div>
+
+          <div class="module module-symptom">
+            <div class="module-head"><span class="module-index">核心表现</span><h3>核心表现拼图</h3></div>
+            <div class="card-grid">
+              <div class="card card-symptom">
+                <div class="card-header"><span class="card-icon">🕵️</span><span class="card-title">教材六条核心表现</span></div>
+                <div class="card-body"><ul class="icon-list">
+                  <li>对挫折与拒绝过分敏感，为他人对自己的“忽视”深感羞辱，满怀怨恨。</li>
+                  <li>容易长久记仇，不肯原谅侮辱、伤害或轻视；对自认为受到的轻视、不公平待遇耿耿于怀，有强烈敌意和报复心。</li>
+                  <li>猜疑：把他人无意或友好的行为误解为敌意或轻蔑；无端怀疑别人要伤害、欺骗或利用自己，或认为有针对自己的阴谋。</li>
+                  <li>好斗：容易与他人发生争辩、对抗，固执追求不合理的利益或权利，意见多，常有抗议。</li>
+                  <li>病态嫉妒：毫无根据地怀疑配偶或性伴侣的忠诚，限制对方和异性的交往或表现出极大不快。</li>
+                  <li>自负、自我评价过高，对他人过错不能宽容，给人以“得理不饶人”的感觉。</li>
+                </ul></div>
+              </div>
+              <div class="card card-cause">
+                <div class="card-header"><span class="card-icon">📌</span><span class="card-title">教材定位与关系</span></div>
+                <div class="card-body"><ul class="icon-list">
+                  <li>A 组，通常表现得奇特或古怪。</li>
+                  <li>与分裂型相比，偏执型<strong>社会参与性更高</strong>，常有攻击性言行，更多把自己的感受投射到他人身上。</li>
+                  <li>教材明确：偏执型人格容易发展成为<strong>妄想性障碍</strong>；若已形成持久、固定的妄想并达到精神病性障碍程度，应按相应障碍评估（具体标准教材未展开）。</li>
+                </ul></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="module module-diff">
+            <div class="module-head"><span class="module-index">鉴别</span><h3>最像谁？哪里不像？</h3></div>
+            <div class="table-wrap">
+              <table class="comparison-table">
+                <thead><tr><th>鉴别对象</th><th>共同点</th><th>关键鉴别点（教材）</th><th>一句话</th></tr></thead>
+                <tbody>
+                  <tr><td>分裂型人格障碍</td><td>人际关系亲密程度都有缺陷；都可能有猜疑、人际疏离、偏执观念</td><td>分裂型退缩、冷漠，没有偏执性猜疑思维；偏执型社会参与性更高、常有攻击性言行、更多投射；分裂型还有奇异想法、罕见认知体验、怪异想法和言语</td><td>“偏执疑人，分裂避人”</td></tr>
+                  <tr><td>妄想性障碍</td><td>都可能存在猜疑、偏执观念</td><td>教材只提示偏执型人格容易发展为妄想性障碍；人格障碍是长期人格模式，妄想性障碍以精神病性症状为核心，二者具体鉴别标准教材未展开</td><td>“人格是底色，妄想是病”</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="table-note">一句话：偏执型“还在人群里斗”，分裂型“已经退出人群”；一旦出现持久固定的妄想，要考虑精神病性障碍。</p>
+          </div>
+
+          <div class="module module-treat">
+            <div class="module-head"><span class="module-index">治疗</span><h3>治疗与处理</h3></div>
+            <div class="card card-treatment">
+              <div class="card-body"><ul class="icon-list check">
+                <li><strong>首选心理治疗：</strong>建立关系、帮助认识个性缺陷、鼓励改变行为模式、强化积极变化；可采用分析性、认知、行为、家庭治疗，个别或小组形式。</li>
+                <li><strong>药物辅助：</strong>出现愤怒、敌对或短暂精神病性症状时，可用小剂量抗精神病药（如氟哌啶醇、利培酮等）对症；<strong>剂量个体化，遵医嘱</strong>。</li>
+                <li><strong>注意：</strong>教材未单列针对偏执型的专门治疗方案；药物不改变人格结构，不主张长期、常规使用。</li>
+              </ul></div>
+            </div>
+          </div>
+
+          <div class="module module-memory">
+            <div class="module-head"><span class="module-index">记忆</span><h3>一句话记住</h3></div>
+            <div class="memory-grid">
+              <div class="memory-card"><div class="m-title">“疑、记、斗、妒、傲”<span class="m-type">口诀</span></div><div class="m-formula">猜疑 · 记仇 · 好斗 · 嫉妒 · 自负</div><p>五字对应教材六条表现中的五组核心：猜疑、长久记仇、好斗、病态嫉妒、自负。另加“对挫折/拒绝过分敏感”作为底色。</p></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="sub-subsection" id="type-schizotypal">
+          <div class="disease-hero">
+            <div class="en">SCHIZOTYPAL PERSONALITY DISORDER</div>
+            <h3>分裂型人格障碍</h3>
+            <p>画像：以情感冷漠及人际关系明显缺陷为特点，离群独处、沉湎幻想、行为怪异，但不以偏执性猜疑为核心。</p>
+            <div class="quick-tags"><span>A 组 · 奇特/古怪</span><span>性别：男性略多于女性</span><span>核心：情感冷漠 · 人际缺陷</span><span>关系：精神分裂症病前常有分裂型人格表现</span></div>
+          </div>
+
+          <div class="module module-symptom">
+            <div class="module-head"><span class="module-index">核心表现</span><h3>核心表现拼图</h3></div>
+            <div class="card-grid">
+              <div class="card card-symptom">
+                <div class="card-header"><span class="card-icon">🧊</span><span class="card-title">教材九条核心表现</span></div>
+                <div class="card-body"><ul class="icon-list">
+                  <li>几乎没有可体验到愉快的活动。</li>
+                  <li>情绪冷淡，对人冷漠，缺乏热情和幽默感。</li>
+                  <li>对他人表达温情、体贴或愤怒情绪的能力有限。</li>
+                  <li>对批评或表扬都无动于衷，对别人关于自己的看法漠不关心。</li>
+                  <li>对与他人发生性接触缺乏兴趣。</li>
+                  <li>几乎总是偏爱单独行动，回避社交、离群独处，我行我素而自得其乐。</li>
+                  <li>过分沉湎于幻想和内省。</li>
+                  <li>没有亲密朋友，与人不建立相互信任的关系（或只有一位），也不想建立这种关系。</li>
+                  <li>明显无视公认的社会常规及习俗，常不修边幅、服饰奇特、行为怪异，行为不合时宜，不符合当时当地风俗习惯或目的不明确。</li>
+                </ul></div>
+              </div>
+              <div class="card card-cause">
+                <div class="card-header"><span class="card-icon">📌</span><span class="card-title">教材定位与关系</span></div>
+                <div class="card-body"><ul class="icon-list">
+                  <li>A 组，通常表现得奇特或古怪。</li>
+                  <li>教材明确：精神分裂症患者很多在病前就有<strong>分裂型人格</strong>的表现。</li>
+                  <li>“分裂型障碍（schizotypal disorder）”在教材鉴别部分被列入“其他持续性精神障碍”；若其持续障碍已能解释，则不额外诊断人格障碍，除非另有导致自我/人际功能重大问题的人格特质。</li>
+                </ul></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="module module-diff">
+            <div class="module-head"><span class="module-index">鉴别</span><h3>最像谁？哪里不像？</h3></div>
+            <div class="table-wrap">
+              <table class="comparison-table">
+                <thead><tr><th>鉴别对象</th><th>共同点</th><th>关键鉴别点（教材）</th><th>一句话</th></tr></thead>
+                <tbody>
+                  <tr><td>偏执型人格障碍</td><td>人际关系亲密程度都有缺陷；都可能有猜疑、人际疏离、偏执观念</td><td>分裂型退缩、冷漠，没有偏执性猜疑思维；偏执型社会参与性更高、常有攻击性言行、更多投射；分裂型还有奇异想法、罕见认知体验、怪异想法和言语</td><td>“偏执疑人，分裂避人”</td></tr>
+                  <tr><td>回避型人格障碍</td><td>都存在社会隔离</td><td>回避型<strong>期望参与活动</strong>，因怕被拒绝/批评而回避；分裂型真正退缩、冷漠，不想建立关系</td><td>“回避想社交，分裂不想去”</td></tr>
+                  <tr><td>精神分裂症 / 分裂型障碍</td><td>都可能出现奇特想法、社交困难；精神分裂症病前常有分裂型人格表现</td><td>若存在持续、典型的精神病性症状，应考虑精神分裂症等精神病性障碍；分裂型障碍属“其他持续性精神障碍”，若已能解释则不额外诊断人格障碍（具体标准教材未展开）</td><td>“人格是底色，持续精神病性症状另算”</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="table-note">一句话：分裂型“冷、独、怪”，但没有偏执型的“疑与斗”；有持续精神病性症状时不要只写人格障碍。</p>
+          </div>
+
+          <div class="module module-treat">
+            <div class="module-head"><span class="module-index">治疗</span><h3>治疗与处理</h3></div>
+            <div class="card card-treatment">
+              <div class="card-body"><ul class="icon-list check">
+                <li><strong>首选心理治疗：</strong>按教材总原则，建立关系、帮助认识个性缺陷、鼓励改变行为模式、强化积极变化；可采用分析性、认知、行为、家庭治疗，个别或小组形式。</li>
+                <li><strong>药物辅助：</strong>教材未单列针对分裂型的专门药物推荐；若出现愤怒、敌对或短暂精神病性症状，可按通用原则用小剂量抗精神病药对症。<strong>剂量个体化，遵医嘱</strong>。</li>
+                <li><strong>注意：</strong>药物不改变人格结构，不主张长期、常规使用；若存在持续精神病性症状，应按相应障碍评估。</li>
+              </ul></div>
+            </div>
+          </div>
+
+          <div class="module module-memory">
+            <div class="module-head"><span class="module-index">记忆</span><h3>一句话记住</h3></div>
+            <div class="memory-grid">
+              <div class="memory-card"><div class="m-title">“冷、独、幻、怪”<span class="m-type">口诀</span></div><div class="m-formula">情感冷 · 离群独 · 沉湎幻想 · 行为怪</div><p>九条表现可分成三簇：<strong>情感冷</strong>（第 1～5 条）、<strong>社交独</strong>（第 6、8 条）、<strong>幻想与怪</strong>（第 7、9 条）。先记四字，再按三簇展开。</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="subsection" id="types-b">
+        <h3>🅱️ B 组：戏剧化/不稳定 —— 反社会型、边缘型、表演型</h3>
+        <p>这一组的共同气质是“戏剧化、情绪化或不稳定”。但三型的“向外/向内”方向不同：反社会型向外侵犯他人权利，边缘型向内体验剧烈的自我与人际不稳定，表演型向外争取注意与赞赏。</p>
+
+        <div class="sub-subsection" id="type-antisocial">
+          <div class="disease-hero">
+            <div class="en">ANTISOCIAL / DISSOCIAL PERSONALITY DISORDER</div>
+            <h3>反社会型人格障碍</h3>
+            <p>画像：以不遵守社会规范和漠视或侵犯他人权利为特点，冷酷无情、无责任感、无内疚感，常在 18 岁前就有品行问题。</p>
+            <div class="quick-tags"><span>B 组 · 戏剧化/不稳定</span><span>性别：男性多于女性</span><span>别名：社交紊乱型人格障碍</span><span>病程：30 岁以后常有所缓和</span></div>
+          </div>
+
+          <div class="module module-symptom">
+            <div class="module-head"><span class="module-index">核心表现</span><h3>核心表现拼图</h3></div>
+            <div class="card-grid">
+              <div class="card card-symptom">
+                <div class="card-header"><span class="card-icon">🚫</span><span class="card-title">教材六条核心表现</span></div>
+                <div class="card-body"><ul class="icon-list">
+                  <li>对他人感受漠不关心，往往缺乏正常的友情和亲情，对家庭亲属缺乏爱和责任心，待人冷酷无情。</li>
+                  <li>缺乏责任感，无视社会规范与义务，经常违法乱纪。</li>
+                  <li>尽管建立人际关系并无困难，却不能长久地保持。</li>
+                  <li>对挫折的耐受性极低，微小刺激便可引起攻击，甚至暴力行为。</li>
+                  <li>无内疚感，不能从经历中（特别是从惩罚中）吸取教训。</li>
+                  <li>易迁怒他人，或者当他们与社会相冲突时对自己的行为作似是而非的合理化解释。</li>
+                </ul></div>
+              </div>
+              <div class="card card-diagnosis">
+                <div class="card-header"><span class="card-icon">🧒</span><span class="card-title">童年/少年期（18 岁前）品行问题</span></div>
+                <div class="card-body"><p>经常说谎、逃学、吸烟、酗酒、外宿不归、欺侮弱小；经常偷窃、斗殴、赌博；故意破坏他人财物或公共财物；无视家教、校规、社会道德礼仪，甚至出现性犯罪行为；曾被学校除名或被公安机关管教等。</p><p><strong>病程：</strong>与违法犯罪关系较密切；<strong>30 岁以后常有所缓和</strong>，但难以和家庭成员建立持久、尽责、热情的关系。</p></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="module module-diff">
+            <div class="module-head"><span class="module-index">鉴别</span><h3>最像谁？哪里不像？</h3></div>
+            <div class="table-wrap">
+              <table class="comparison-table">
+                <thead><tr><th>鉴别对象</th><th>共同点</th><th>关键鉴别点（教材）</th><th>一句话</th></tr></thead>
+                <tbody>
+                  <tr><td>边缘型人格障碍<br><span>教材未直接对比</span></td><td>均可见冲动和人际关系问题（按教材各自描述归纳）</td><td>反社会型：漠视/侵犯他人权利、无内疚、18 岁前品行问题、30 岁后常缓和；边缘型：情绪/行为/人际关系/自我形象极不稳定、怕被抛弃、自伤、短暂精神病样症状</td><td>“反社会向外伤人，边缘向内失控”（记忆类比）</td></tr>
+                  <tr><td>伴有亲社会情绪受限的品行障碍</td><td>都无视他人权利/感受、自我中心、缺乏同理心</td><td>品行障碍可在青春期前诊断，症状持续时间比人格障碍短；只有除亲社会情绪受限外，还存在导致自我/人际功能受损的人格特质，才额外诊断人格障碍</td><td>“小孩先看品行障碍，成年后的持久模式才谈人格障碍”</td></tr>
+                  <tr><td>物质使用所致障碍</td><td>都可能有自我控制下降、人际冲突、去社会化行为</td><td>完全因物质使用而起则不诊断人格障碍；若人格障碍在物质使用前已存在，或某些特质不能由物质解释（如完美主义），可额外诊断</td><td>“先停物质再看人格”</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="table-note">一句话：反社会型的核心不是“脾气大”，而是“长期漠视他人权利且无内疚”；若只是物质使用后的失控，不能直接扣人格障碍的帽子。</p>
+          </div>
+
+          <div class="module module-treat">
+            <div class="module-head"><span class="module-index">治疗</span><h3>治疗与处理</h3></div>
+            <div class="card card-treatment">
+              <div class="card-body"><ul class="icon-list check">
+                <li><strong>首选心理治疗：</strong>按教材总原则，建立关系、帮助认识个性缺陷、鼓励改变行为模式、强化积极变化；可采用分析性、认知、行为、家庭治疗，个别或小组形式。</li>
+                <li><strong>药物辅助：</strong>抗癫痫药可用于控制冲动行为，特别是<strong>脑电图有异常波幅</strong>的反社会型患者；出现愤怒、敌对或短暂精神病性症状时，可用小剂量抗精神病药。<strong>剂量个体化，遵医嘱</strong>。</li>
+                <li><strong>注意：</strong>教材未提供针对反社会型的专门心理治疗方案；药物不改变人格结构，不主张长期、常规使用。</li>
+              </ul></div>
+            </div>
+          </div>
+
+          <div class="module module-memory">
+            <div class="module-head"><span class="module-index">记忆</span><h3>一句话记住</h3></div>
+            <div class="memory-grid">
+              <div class="memory-card"><div class="m-title">“无情、无责、无愧疚；从小坏，三十缓”<span class="m-type">口诀</span></div><div class="m-formula">三无 + 早发 + 中年缓和</div><p>“三无”对应：对他人感受漠不关心（无情）、缺乏责任感（无责）、无内疚感（无愧疚）；“从小坏”指 18 岁前品行问题；“三十缓”指 30 岁以后常有所缓和。</p></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="sub-subsection" id="type-borderline">
+          <div class="disease-hero">
+            <div class="en">BORDERLINE PERSONALITY DISORDER</div>
+            <h3>边缘型人格障碍</h3>
+            <p>画像：以极不稳定的情绪、行为、人际关系和自我形象为特点；怕被抛弃、身份模糊、慢性空虚，可伴短暂应激性精神病性症状。</p>
+            <div class="quick-tags"><span>B 组 · 戏剧化/不稳定</span><span>性别：女性多于男性</span><span>核心：三不稳 + 一冲动</span><span>ICD-11：可用“边缘型模式”标注</span></div>
+          </div>
+
+          <div class="module module-symptom">
+            <div class="module-head"><span class="module-index">核心表现</span><h3>核心表现拼图</h3></div>
+            <div class="card-grid">
+              <div class="card card-symptom">
+                <div class="card-header"><span class="card-icon">🌪️</span><span class="card-title">教材四条核心表现</span></div>
+                <div class="card-body"><ul class="icon-list">
+                  <li><strong>情绪不稳定：</strong>能在上一刻好争论，而下一刻变得抑郁；强烈愤怒爆发常导致暴力或“行为爆炸”；当冲动行为被人评判或阻止时，极易诱发上述表现。</li>
+                  <li><strong>人际关系不稳定：</strong>强烈而时好时坏，要么极好要么极坏，几乎没有持久的朋友；害怕被抛弃，不能忍受孤独，疯狂地寻找伴侣，无论自己是否满意；可导致连续情感危机、自杀威胁或自伤行为。</li>
+                  <li><strong>自我形象、目的及内心偏好（包括性偏好）模糊或扭曲：</strong>缺乏持久的自我同一性；自尊心不足，常有持续的空虚感，挫折耐受性低。</li>
+                  <li><strong>行为不计后果：</strong>事先进行计划的能力很差，易冲动。</li>
+                </ul></div>
+              </div>
+              <div class="card card-symptom">
+                <div class="card-header"><span class="card-icon">⚠️</span><span class="card-title">短暂应激性精神病性症状（教材重点）</span></div>
+                <div class="card-body">
+                  <p>边缘型者有时会出现短暂的精神病性症状。与精神分裂症不同：一般<strong>比较轻微、历时短暂、容易被忽略</strong>，多频繁发生在对真正或想象被抛弃的恐惧中，持续几分钟到几小时；可表现为真实感、个体认同出现偏离所致的人格解体和非真实感，但同时<strong>现实检验能力相对保存</strong>；也有患者出现偏执症状和分离症状。</p>
+                  <p>这种短暂症状往往难以归类，推想原因可能是对应激情景的急性反应，或酒精、药物的滥用。识别不足，易误诊为精神分裂症、心境障碍或神经症。</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="module module-diff">
+            <div class="module-head"><span class="module-index">鉴别</span><h3>最像谁？哪里不像？</h3></div>
+            <div class="table-wrap">
+              <table class="comparison-table">
+                <thead><tr><th>鉴别对象</th><th>共同点</th><th>关键鉴别点（教材）</th><th>一句话</th></tr></thead>
+                <tbody>
+                  <tr><td>表演型人格障碍</td><td>情绪不稳定、行为戏剧化、人际关系波折；教材称鉴别存在一定困难</td><td>边缘型有<strong>更多自杀未遂、身份认同障碍和短暂的精神病症状</strong>；表演型以过分感情用事、夸张言行吸引注意为核心</td><td>“表演要掌声，边缘怕抛弃”</td></tr>
+                  <tr><td>精神分裂症</td><td>边缘型可出现短暂精神病性症状，易误诊为精神分裂症</td><td>边缘型的精神病性症状<strong>短暂、轻微、现实检验能力相对保存</strong>，没有典型、持续的精神病性症状；精神分裂症有典型、持续的精神病性症状</td><td>“边缘是短暂的，精分是持续的”</td></tr>
+                  <tr><td>双相/抑郁发作<br><span>心境障碍</span></td><td>情绪波动、冲动、自伤可见于边缘型；教材提示边缘型的短暂精神病性症状易被误诊为心境障碍</td><td>边缘型是持久的人格层面不稳定（情绪、人际、自我形象）+ 怕抛弃/空虚；教材<strong>未给正式鉴别标准</strong>，需纵向观察“持久人格模式”还是“可被心境障碍解释”</td><td>“教材只给误诊提醒，未给标准”</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="table-note">一句话：边缘型的“精神病样症状”是短暂的、应激相关的、现实检验相对保存；持续的精神病性症状要另找诊断。</p>
+          </div>
+
+          <div class="module module-treat">
+            <div class="module-head"><span class="module-index">治疗</span><h3>治疗与处理</h3></div>
+            <div class="card card-treatment">
+              <div class="card-body"><ul class="icon-list check">
+                <li><strong>首选心理治疗：</strong>教材列出分析性治疗、认知治疗、行为治疗、家庭治疗，个别或小组形式均可；核心是建立关系、认识个性缺陷、鼓励改变行为模式、强化积极变化。教材未指定某一流派为唯一首选。</li>
+                <li><strong>药物辅助：</strong>抗癫痫药可改善边缘型的整体功能；小剂量抗精神病药可控制愤怒、敌对和短暂精神病症状；5-HT 能抗抑郁药可改善抑郁、焦虑情绪。<strong>剂量个体化，遵医嘱</strong>。</li>
+                <li><strong>注意：</strong>教材描述其可伴一连串自杀威胁或自伤行为；药物不改变人格结构，不主张长期、常规使用。</li>
+              </ul></div>
+            </div>
+          </div>
+
+          <div class="module module-memory">
+            <div class="module-head"><span class="module-index">记忆</span><h3>一句话记住</h3></div>
+            <div class="memory-grid">
+              <div class="memory-card"><div class="m-title">“三不稳、一冲动、怕抛弃、常自伤”<span class="m-type">联想</span></div><div class="m-formula">情绪不稳 · 人际不稳 · 自我形象不稳 + 行为冲动</div><p>“三不稳”是教材的“极不稳定”拆解；“怕抛弃”是人际线的发动机；“常自伤”包括自杀威胁/自伤与慢性空虚。ICD-11 的“边缘型模式”正是这套不稳定人格模式的补充标注（见<a href="#ov-clinical">第三栏</a>）。</p></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="sub-subsection" id="type-histrionic">
+          <div class="disease-hero">
+            <div class="en">HISTRIONIC PERSONALITY DISORDER</div>
+            <h3>表演型人格障碍</h3>
+            <p>画像：以过分的感情用事、夸张言行吸引他人注意为特点；情绪不稳定、暗示性和依赖性强，既往称“癔症性人格障碍”。</p>
+            <div class="quick-tags"><span>B 组 · 戏剧化/不稳定</span><span>性别：女性多于男性</span><span>核心：夸张 · 暗示 · 要关注</span><span>旧称：癔症性人格障碍</span></div>
+          </div>
+
+          <div class="module module-symptom">
+            <div class="module-head"><span class="module-index">核心表现</span><h3>核心表现拼图</h3></div>
+            <div class="card-grid">
+              <div class="card card-symptom">
+                <div class="card-header"><span class="card-icon">🎭</span><span class="card-title">教材七条核心表现</span></div>
+                <div class="card-body"><ul class="icon-list">
+                  <li>戏剧化、做作性、夸张的自我情绪表达，表情丰富但矫揉造作。</li>
+                  <li>暗示性强，容易受他人或环境的影响。</li>
+                  <li>情感体验肤浅，情感反应强烈易变，感情用事，喜怒哀乐皆形于色，爱发脾气。</li>
+                  <li>不停追求刺激、为他人赞赏及以自己为注意中心的活动，如过分参加各种社交活动、爱表现自己、渴望别人注意。</li>
+                  <li>外表及行为显出不恰当的挑逗性，夸张、做作，甚至卖弄风情，给人以轻浮的感觉。</li>
+                  <li>对自己外观容貌过分计较。</li>
+                  <li>自我中心、自我放任，感情易受伤害；为满足自己的需要常不择手段。</li>
+                </ul></div>
+              </div>
+              <div class="card card-cause">
+                <div class="card-header"><span class="card-icon">📌</span><span class="card-title">教材定位</span></div>
+                <div class="card-body"><ul class="icon-list">
+                  <li>B 组，通常显得戏剧化、情绪化或不稳定。</li>
+                  <li>女性多于男性；暗示性、依赖性强。</li>
+                  <li>与边缘型的鉴别存在一定困难：边缘型有更多自杀未遂、身份认同障碍和短暂精神病症状。</li>
+                </ul></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="module module-diff">
+            <div class="module-head"><span class="module-index">鉴别</span><h3>最像谁？哪里不像？</h3></div>
+            <div class="table-wrap">
+              <table class="comparison-table">
+                <thead><tr><th>鉴别对象</th><th>共同点</th><th>关键鉴别点（教材）</th><th>一句话</th></tr></thead>
+                <tbody>
+                  <tr><td>边缘型人格障碍</td><td>情绪不稳定、行为戏剧化、人际关系波折；教材称鉴别存在一定困难</td><td>边缘型有<strong>更多自杀未遂、身份认同障碍和短暂的精神病症状</strong>；表演型以吸引注意、夸张情绪表达为核心</td><td>“表演要掌声，边缘怕抛弃”</td></tr>
+                  <tr><td>依赖型人格障碍<br><span>教材未直接对比</span></td><td>表演型也“依赖性强”，两型都可能显得黏人</td><td>表演型以情感夸张、寻求注意为中心；依赖型以让渡决定、怕独处无助、缺乏自信为中心</td><td>“表演要你看着，依赖要你替我做”</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="table-note">一句话：表演型的主场是“被看见”，边缘型的主场是“被抛弃”；前者夸张，后者失控。</p>
+          </div>
+
+          <div class="module module-treat">
+            <div class="module-head"><span class="module-index">治疗</span><h3>治疗与处理</h3></div>
+            <div class="card card-treatment">
+              <div class="card-body"><ul class="icon-list check">
+                <li><strong>首选心理治疗：</strong>按教材总原则，建立关系、认识个性缺陷、改变行为模式、强化积极变化；可采用分析性、认知、行为、家庭治疗，个别或小组形式。</li>
+                <li><strong>药物辅助：</strong>小剂量抗精神病药（如氟哌啶醇、利培酮等）可用于治疗表演型人格障碍的<strong>现实感丧失和幻想</strong>。<strong>剂量个体化，遵医嘱</strong>。</li>
+                <li><strong>注意：</strong>教材未单列针对表演型的专门心理治疗方案；药物不改变人格结构，不主张长期、常规使用。</li>
+              </ul></div>
+            </div>
+          </div>
+
+          <div class="module module-memory">
+            <div class="module-head"><span class="module-index">记忆</span><h3>一句话记住</h3></div>
+            <div class="memory-grid">
+              <div class="memory-card"><div class="m-title">“戏、夸、注、浮”<span class="m-type">口诀</span></div><div class="m-formula">戏剧化 · 夸张 · 要关注 · 轻浮</div><p>四字对应：戏剧化/做作、夸张情绪表达、以自己为注意中心、外表行为挑逗轻浮。再补“暗示性强、情感肤浅、自我中心”。</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="subsection" id="types-c">
+        <h3>🅲 C 组：强迫/回避/依赖</h3>
+        <p>这一组常被记忆为“焦虑组”（记忆标签，非教材组名）。三型的共同底色是紧张、不安全感与对秩序的执着，但方向不同：强迫型控制“标准”，回避型躲避“评价”，依赖型让渡“决定”。</p>
+
+        <div class="sub-subsection" id="type-ocpd">
+          <div class="disease-hero">
+            <div class="en">OBSESSIVE-COMPULSIVE PERSONALITY DISORDER</div>
+            <h3>强迫型人格障碍</h3>
+            <p>画像：以过分的谨小慎微、严格要求、完美主义及内心的不安全感为特征；约 70% 的强迫症患者病前有强迫型人格障碍。</p>
+            <div class="quick-tags"><span>C 组 · 强迫/回避/依赖</span><span>性别：男性诊断率约为女性 2 倍</span><span>核心：完美 · 秩序 · 控制</span><span>关键数字：70% 强迫症病前人格</span></div>
+          </div>
+
+          <div class="module module-symptom">
+            <div class="module-head"><span class="module-index">核心表现</span><h3>核心表现拼图</h3></div>
+            <div class="card-grid">
+              <div class="card card-symptom">
+                <div class="card-header"><span class="card-icon">📐</span><span class="card-title">教材六条核心表现</span></div>
+                <div class="card-body"><ul class="icon-list">
+                  <li>过分疑虑及谨慎，常有不安全感，往往穷思竭虑，对实施的计划反复检查、核对，唯恐疏忽或差错。</li>
+                  <li>对细节、规则、条目、秩序、组织或表格过分关注，常拘泥细节，犹豫不决，往往避免作出决定，否则感到焦虑不安。</li>
+                  <li>完美主义，对任何事物都要求过高，以致影响工作的完成。</li>
+                  <li>道德感过强，谨小慎微，过分看重工作成效而不顾乐趣和人际关系。</li>
+                  <li>过分迂腐，拘泥于社会习俗，缺乏创新和冒险精神。</li>
+                  <li>刻板和固执，不合情理地坚持要求他人严格按自己的方式行事，或即使允许他人行事也极不情愿；对别人做事很不放心，担任领导职务往往事必躬亲、事无巨细。</li>
+                </ul></div>
+              </div>
+              <div class="card card-diagnosis">
+                <div class="card-header"><span class="card-icon">🔢</span><span class="card-title">关键数字与关系</span></div>
+                <div class="card-body"><ul class="icon-list">
+                  <li>男性中的诊断率约为女性的 <strong>2 倍</strong>。</li>
+                  <li>约 <strong>70%</strong> 的强迫症患者病前有强迫型人格障碍。</li>
+                  <li>强迫型人格障碍是持久的人格模式；强迫症是症状障碍，两者可共存但不等同；教材未展开二者具体鉴别标准。</li>
+                </ul></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="module module-diff">
+            <div class="module-head"><span class="module-index">鉴别</span><h3>最像谁？哪里不像？</h3></div>
+            <div class="table-wrap">
+              <table class="comparison-table">
+                <thead><tr><th>鉴别对象</th><th>共同点</th><th>关键鉴别点（教材）</th><th>一句话</th></tr></thead>
+                <tbody>
+                  <tr><td>强迫症<br><span>obsessive-compulsive disorder</span></td><td>名称相近；约 70% 强迫症患者病前有强迫型人格障碍</td><td>强迫型人格障碍是持久人格模式；强迫症是症状障碍。教材未展开二者具体鉴别标准</td><td>“人格是长期底色，强迫症是症状障碍”</td></tr>
+                  <tr><td>回避型 / 依赖型<br><span>教材未直接对比</span></td><td>同属 C 组，均涉及规则或关系上的限制</td><td>强迫型的控制指向“标准与秩序”，对他人做事不放心；回避型指向“避免被否定”，依赖型指向“避免独自承担”</td><td>“强迫控制事，回避躲评价，依赖靠别人”</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="table-note">一句话：强迫型是“要把事做对到极致”，回避型是“怕被说不好”，依赖型是“怕自己扛不住”。</p>
+          </div>
+
+          <div class="module module-treat">
+            <div class="module-head"><span class="module-index">治疗</span><h3>治疗与处理</h3></div>
+            <div class="card card-treatment">
+              <div class="card-body"><ul class="icon-list check">
+                <li><strong>首选心理治疗：</strong>按教材总原则，建立关系、认识个性缺陷、改变行为模式、强化积极变化；可采用分析性、认知、行为、家庭治疗，个别或小组形式。</li>
+                <li><strong>药物辅助：</strong>教材未提供针对强迫型人格障碍的专门药物推荐；药物治疗仅按通用原则对靶症状少量、短期使用。<strong>剂量个体化，遵医嘱</strong>。</li>
+                <li><strong>注意：</strong>药物不改变人格结构，不主张长期、常规使用。</li>
+              </ul></div>
+            </div>
+          </div>
+
+          <div class="module module-memory">
+            <div class="module-head"><span class="module-index">记忆</span><h3>一句话记住</h3></div>
+            <div class="memory-grid">
+              <div class="memory-card"><div class="m-title">“完美、秩序、控制、不放心”<span class="m-type">口诀</span></div><div class="m-formula">完美主义 · 秩序细节 · 控制他人 · 事必躬亲</div><p>四条对应教材：完美主义；对细节/规则/秩序过分关注；要求他人按自己的方式；对别人做事不放心、事必躬亲。数字再记“2 倍、70%”。</p></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="sub-subsection" id="type-avoidant">
+          <div class="disease-hero">
+            <div class="en">AVOIDANT PERSONALITY DISORDER</div>
+            <h3>回避型人格障碍</h3>
+            <p>画像：以对拒绝的极其敏感和社会回避为特征，常感到紧张、提心吊胆、不安全及自卑；也称焦虑型人格障碍。</p>
+            <div class="quick-tags"><span>C 组 · 强迫/回避/依赖</span><span>性别：教材未明确</span><span>核心：怕拒绝 · 回避社交</span><span>别名：焦虑型人格障碍</span></div>
+          </div>
+
+          <div class="module module-symptom">
+            <div class="module-head"><span class="module-index">核心表现</span><h3>核心表现拼图</h3></div>
+            <div class="card-grid">
+              <div class="card card-symptom">
+                <div class="card-header"><span class="card-icon">🙈</span><span class="card-title">教材六条核心表现</span></div>
+                <div class="card-body"><ul class="icon-list">
+                  <li>持续和泛化的紧张感与忧虑。</li>
+                  <li>自卑，相信自己在社交上笨拙、没有吸引力或不如别人。</li>
+                  <li>在社交场合总过分担心被人指责或拒绝。</li>
+                  <li>除非肯定受人欢迎，否则不肯与他人打交道。</li>
+                  <li>出于躯体安全感的需要，在生活风格上有许多限制，惯性地夸大日常处境中的潜在危险，而有回避某些活动的倾向。</li>
+                  <li>对拒绝和批评过分敏感，由于担心批评、指责或拒绝，回避那些与人密切交往的社交或职业活动。</li>
+                </ul></div>
+              </div>
+              <div class="card card-cause">
+                <div class="card-header"><span class="card-icon">📌</span><span class="card-title">教材定位</span></div>
+                <div class="card-body">C 组；也称焦虑型人格障碍；核心不是“不想社交”，而是“想参与但怕被拒绝/批评”，因此回避密切交往的社交或职业活动。</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="module module-diff">
+            <div class="module-head"><span class="module-index">鉴别</span><h3>最像谁？哪里不像？</h3></div>
+            <div class="table-wrap">
+              <table class="comparison-table">
+                <thead><tr><th>鉴别对象</th><th>共同点</th><th>关键鉴别点（教材）</th><th>一句话</th></tr></thead>
+                <tbody>
+                  <tr><td>分裂型人格障碍</td><td>都存在社会隔离</td><td>回避型<strong>期望参与活动</strong>，因怕被拒绝/批评而回避；分裂型真正退缩、冷漠，不想建立关系</td><td>“回避想社交，分裂不想去”</td></tr>
+                  <tr><td>强迫型人格障碍<br><span>教材未直接对比</span></td><td>同属 C 组，都可能显得拘谨、紧张</td><td>回避型的核心是怕否定/拒绝；强迫型的核心是完美、秩序、控制，对他人做事不放心</td><td>“回避躲评价，强迫控标准”</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="table-note">一句话：回避型是“想靠近但怕受伤”，分裂型是“根本不想靠近”。</p>
+          </div>
+
+          <div class="module module-treat">
+            <div class="module-head"><span class="module-index">治疗</span><h3>治疗与处理</h3></div>
+            <div class="card card-treatment">
+              <div class="card-body"><ul class="icon-list check">
+                <li><strong>首选心理治疗：</strong>按教材总原则，建立关系、认识个性缺陷、改变行为模式、强化积极变化；可采用分析性、认知、行为、家庭治疗，个别或小组形式。</li>
+                <li><strong>药物辅助：</strong>苯二氮䓬类可用于减少回避型人格障碍的<strong>人际交往焦虑</strong>；β 受体阻滞剂（如阿替洛尔）可改善其在<strong>恐惧状态下的情绪</strong>；5-HT 能抗抑郁药可能减少患者对拒绝的敏感性。<strong>剂量个体化，遵医嘱</strong>。</li>
+                <li><strong>注意：</strong>药物不改变人格结构，不主张长期、常规使用。</li>
+              </ul></div>
+            </div>
+          </div>
+
+          <div class="module module-memory">
+            <div class="module-head"><span class="module-index">记忆</span><h3>一句话记住</h3></div>
+            <div class="memory-grid">
+              <div class="memory-card"><div class="m-title">“想参与，怕被拒；越怕越躲”<span class="m-type">联想</span></div><div class="m-formula">期望参与 − 怕拒绝/批评 = 社会回避</div><p>用“减法”记：回避型不是没有社交愿望，而是愿望被“怕被拒绝”压住；这与分裂型的“不想去”形成对照。</p></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="sub-subsection" id="type-dependent">
+          <div class="disease-hero">
+            <div class="en">DEPENDENT PERSONALITY DISORDER</div>
+            <h3>依赖型人格障碍</h3>
+            <p>画像：以过分依赖、害怕被抛弃和决定能力低下为特征；把重要决定交给别人，独处时不安、无助。</p>
+            <div class="quick-tags"><span>C 组 · 强迫/回避/依赖</span><span>性别：女性多于男性</span><span>核心：让渡决定 · 怕被抛弃</span><span>关系：与边缘型都怕抛弃，但表现不同</span></div>
+          </div>
+
+          <div class="module module-symptom">
+            <div class="module-head"><span class="module-index">核心表现</span><h3>核心表现拼图</h3></div>
+            <div class="card-grid">
+              <div class="card card-symptom">
+                <div class="card-header"><span class="card-icon">🪢</span><span class="card-title">教材六条核心表现</span></div>
+                <div class="card-body"><ul class="icon-list">
+                  <li>请求或顺从他人为自己生活中大多数重要事情做决定。</li>
+                  <li>将自己的需求附属于所依赖的人，过分顺从他人的意志，宁愿放弃自己的个人趣味、价值观。</li>
+                  <li>不敢对所依赖的人提出即使是合理的要求，处处委曲求全。</li>
+                  <li>由于过分害怕不能照顾自己，在独处时总感到不安或无助。</li>
+                  <li>沉陷于被关系亲密的人所抛弃的恐惧之中，生怕孤立无援。</li>
+                  <li>没有别人保证时，不能做出日常决定；缺乏自信，总认为自己无依无靠，没有能力。</li>
+                </ul></div>
+              </div>
+              <div class="card card-cause">
+                <div class="card-header"><span class="card-icon">📌</span><span class="card-title">教材定位</span></div>
+                <div class="card-body">C 组；女性多于男性；核心是“过分依赖、害怕被抛弃、决定能力低下”。与边缘型都可出现“怕抛弃”，但依赖型以顺从、让渡决定为主，边缘型以关系强烈摇摆、身份紊乱、冲动自伤为主（按教材特征归纳，教材未直接对比）。</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="module module-diff">
+            <div class="module-head"><span class="module-index">鉴别</span><h3>最像谁？哪里不像？</h3></div>
+            <div class="table-wrap">
+              <table class="comparison-table">
+                <thead><tr><th>鉴别对象</th><th>共同点</th><th>关键鉴别点（教材）</th><th>一句话</th></tr></thead>
+                <tbody>
+                  <tr><td>强迫型人格障碍<br><span>教材未直接对比</span></td><td>同属 C 组，都可能显得拘谨、不放心</td><td>依赖型的核心是让渡决定、顺从他人、怕独处无助；强迫型的核心是完美、秩序、控制，要求他人按自己的方式</td><td>“依赖靠别人，强迫控别人”</td></tr>
+                  <tr><td>边缘型人格障碍<br><span>教材未直接对比</span></td><td>都可能有害怕被抛弃的恐惧</td><td>依赖型以顺从、让渡决定、放弃个人趣味为主；边缘型以情绪/人际/自我形象极不稳定、冲动、自伤、短暂精神病样症状为主</td><td>“依赖怕没人管，边缘怕被丢下”</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="table-note">一句话：依赖型把“我”交给别人保管；边缘型在“我”与“你”之间剧烈摇摆。</p>
+          </div>
+
+          <div class="module module-treat">
+            <div class="module-head"><span class="module-index">治疗</span><h3>治疗与处理</h3></div>
+            <div class="card card-treatment">
+              <div class="card-body"><ul class="icon-list check">
+                <li><strong>首选心理治疗：</strong>按教材总原则，建立关系、认识个性缺陷、鼓励改变行为模式、强化积极变化；可采用分析性、认知、行为、家庭治疗，个别或小组形式。</li>
+                <li><strong>药物辅助：</strong>教材未单列针对依赖型的专门药物推荐；若出现焦虑、抑郁等靶症状，可按通用原则少量、短期对症。<strong>剂量个体化，遵医嘱</strong>。</li>
+                <li><strong>注意：</strong>药物不改变人格结构，不主张长期、常规使用。</li>
+              </ul></div>
+            </div>
+          </div>
+
+          <div class="module module-memory">
+            <div class="module-head"><span class="module-index">记忆</span><h3>一句话记住</h3></div>
+            <div class="memory-grid">
+              <div class="memory-card"><div class="m-title">“你决定、你负责、你别走”<span class="m-type">口诀</span></div><div class="m-formula">让渡决定 · 顺从承担 · 恐惧抛弃</div><p>三句对应：大多数重要事情请别人决定；过分顺从、委曲求全；害怕被亲密的人抛弃、独处不安。再补“缺乏自信、认为自己无能力”。</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="summary" class="section">
+      <div class="section-header"><span class="section-number">07</span><h2>核心要点速览</h2></div>
+      <p class="lead">全章 18 条，按“概念—数据—病因—诊断—类型—鉴别治疗”六组收口。考前只看这一节，也能把骨架复述出来。</p>
+
+      <div class="card-grid">
+        <div class="card card-cause">
+          <div class="card-header"><span class="card-icon">1️⃣</span><span class="card-title">概念谱系</span></div>
+          <div class="card-body"><ul class="icon-list">
+            <li>人格是固定的行为模式及处事待人的习惯方式。</li>
+            <li>正常人格与异常人格只有程度不同，无性质变化。</li>
+            <li>人格困难不是精神障碍；人格障碍是；人格改变是获得性、继发性的另一条线。</li>
+          </ul></div>
+        </div>
+        <div class="card card-diagnosis">
+          <div class="card-header"><span class="card-icon">2️⃣</span><span class="card-title">流行病学</span></div>
+          <div class="card-body"><ul class="icon-list">
+            <li>中国部分地区 <strong>0.1‰</strong>；国外 <strong>2%～10%</strong>。</li>
+            <li>反社会型 1%～4%；边缘型 1%～6%；强迫型约 6.5%。</li>
+            <li>反社会型 18～30 岁 2.3%，65 岁低于 0.05%，总体减少约 98%。</li>
+          </ul></div>
+        </div>
+        <div class="card card-cause">
+          <div class="card-header"><span class="card-icon">3️⃣</span><span class="card-title">病因机制</span></div>
+          <div class="card-body"><ul class="icon-list">
+            <li>单卵双生 67%、双卵双生 31%；边缘型遗传度 0.69、表演型 0.67。</li>
+            <li>边缘系统过度反应、杏仁核过度反应 + 前额叶抑制降低、前额叶 DA/NE 活性降低。</li>
+            <li>50% 脑电图慢波；童年经历与教养方式；结论是遗传 × 环境相互作用。</li>
+          </ul></div>
+        </div>
+        <div class="card card-treatment">
+          <div class="card-header"><span class="card-icon">4️⃣</span><span class="card-title">分类与诊断</span></div>
+          <div class="card-body"><ul class="icon-list">
+            <li>ICD-10 临床分型；DSM-5 A/B/C；ICD-11 维度系统。</li>
+            <li>ICD-11 七条诊断要点；病程教材举例 ≥2 年；儿童青少年不诊断。</li>
+            <li>严重度 4 级；依据自我 + 人际；人格困难不是精神障碍。</li>
+          </ul></div>
+        </div>
+        <div class="card card-symptom">
+          <div class="card-header"><span class="card-icon">5️⃣</span><span class="card-title">八种类型</span></div>
+          <div class="card-body"><ul class="icon-list">
+            <li>A 组：偏执型、分裂型；B 组：反社会型、边缘型、表演型；C 组：强迫型、回避型、依赖型。</li>
+            <li>边缘型 = 极不稳定情绪/行为/人际/自我形象 + 短暂精神病样症状现实检验保存。</li>
+            <li>反社会型 18 岁前品行问题、30 岁后缓和；强迫型 70% 强迫症病前人格。</li>
+          </ul></div>
+        </div>
+        <div class="card card-treatment">
+          <div class="card-header"><span class="card-icon">6️⃣</span><span class="card-title">鉴别与治疗</span></div>
+          <div class="card-body"><ul class="icon-list">
+            <li>先排除人格困难、继发改变、精神病性障碍、心境障碍、物质使用、品行障碍。</li>
+            <li>类型内四对：偏执 vs 分裂型、反社会 vs 边缘、表演 vs 边缘、强迫 vs 回避/依赖。</li>
+            <li>心理治疗为主；药物对症、不改结构、不长期；预后欠佳，幼年培养重要。</li>
+          </ul></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="pitfalls" class="section">
+      <div class="section-header"><span class="section-number">08</span><h2>易混易错警示</h2></div>
+      <div class="exam-alert">
+        <h3>⚠️ 十条高频警示</h3>
+        <p><strong>1. 人格障碍 ≠ “性格不好”。</strong>必须满足明显偏离正常、根深蒂固、适应不良、自我/人际功能受损、导致痛苦或损害等条件，并且通常从童年/青少年/成年早期开始、长期持续。偶尔脾气怪、难相处，不等于人格障碍。</p>
+        <p><strong>2. 痛苦不一定在患者自己身上。</strong>教材定义包含“使他人遭受痛苦”或“给个人或社会带来不良影响”；反社会型的损害常由他人承受。</p>
+        <p><strong>3. 人格困难不是精神障碍。</strong>它只是可能影响治疗或健康服务的明显人格特征，强度较低、间歇出现，社会功能损害不明显；归入人际交往问题。</p>
+        <p><strong>4. 人格改变是“获得性”的。</strong>一般人格障碍在儿童/青春期发育过程中出现、延续到成年；人格改变通常成年期出现，继发于严重/持久应激、极端环境剥夺、严重精神障碍、严重脑部疾病或损伤。</p>
+        <p><strong>5. ICD-11 不再做临床分型。</strong>不要把 ICD-10 的临床分型或 DSM-5 的 A/B/C 分组当成 ICD-11 的分类。ICD-11 写“严重程度 + 特质领域（+ 边缘型模式）”。</p>
+        <p><strong>6. A/B/C 是 DSM-5 分组，不是 ICD-11。</strong>教材八型不含自恋型；C 组“焦虑组”是记忆标签，教材未使用该组名；A 组教材只列偏执型、分裂型，未列分裂样。</p>
+        <p><strong>7. 儿童青少年不诊断人格障碍。</strong>品行障碍可在青春期前诊断；人格障碍要等人格模式持续、跨情境、成年后仍显著。</p>
+        <p><strong>8. 边缘型短暂精神病性症状 ≠ 精神分裂症。</strong>边缘型症状一般轻微、历时短暂、现实检验能力相对保存，多与被抛弃恐惧相关；精神分裂症有典型、持续的精神病性症状。反过来，也不能把精神分裂症当“人格问题”。</p>
+        <p><strong>9. 药物不能“改造人格”。</strong>药物只对激越、焦虑、愤怒、敌对、冲动、短暂精神病性症状等靶症状有帮助；不主张长期应用和常规使用。</p>
+        <p><strong>10. 类型不互斥、特征可重叠。</strong>不要拿一条表现硬套某一型；抓最突出、最持久、跨情境的核心模式。类型内鉴别教材未直接对比的，答题要注明“按教材特征归纳”。</p>
+      </div>
+    </section>
+
+    <section id="quiz" class="section">
+      <div class="section-header"><span class="section-number">09</span><h2>章节自测</h2></div>
+      <p class="lead">15 题：单选 4、多选 3、判断 3、名词解释 2、简答 2、案例 1。答案默认折叠，先自己写，再展开核对。</p>
+      <div class="quiz-block">
+
+        <div class="quiz-item">
+          <div class="quiz-stem"><span class="q-type">单选</span><span>下列哪项最符合教材对人格障碍定义的核心？</span><span class="difficulty">⭐</span></div>
+          <ul class="quiz-options">
+            <li data-letter="A">偶发的情绪爆发，事后能反省</li>
+            <li data-letter="B" class="correct">明显偏离正常且根深蒂固、适应不良的行为方式，伴自我和/或人际功能受损</li>
+            <li data-letter="C">成年后因脑外伤出现的人格改变</li>
+            <li data-letter="D">只在特定压力下出现、强度较低的人格特征</li>
+          </ul>
+          <details class="qa"><summary><span class="qa-num">答</span>答案与解析</summary>
+            <div class="qa-body"><span class="answer-key">答案 B</span>B 是教材定义的核心：明显偏离正常、根深蒂固、适应不良，伴自我/人际功能受损。A 是短暂状态；C 是获得性人格改变，不是一般人格障碍；D 更符合人格困难（间歇、较低强度、损害不明显）。</div>
+          </details>
+        </div>
+
+        <div class="quiz-item">
+          <div class="quiz-stem"><span class="q-type">单选</span><span>ICD-11 人格障碍严重程度分级不包括下列哪一项？</span><span class="difficulty">⭐⭐</span></div>
+          <ul class="quiz-options">
+            <li data-letter="A">人格困难</li>
+            <li data-letter="B">轻度</li>
+            <li data-letter="C">中度</li>
+            <li data-letter="D">重度</li>
+            <li data-letter="E" class="correct">极重度</li>
+          </ul>
+          <details class="qa"><summary><span class="qa-num">答</span>答案与解析</summary>
+            <div class="qa-body"><span class="answer-key">答案 E</span>教材写 1～4 级：人格困难、轻度、中度、重度；如果都不符合，意味着是正常人格。没有“极重度”这一级。注意人格困难不是精神障碍。</div>
+          </details>
+        </div>
+
+        <div class="quiz-item">
+          <div class="quiz-stem"><span class="q-type">单选</span><span>边缘型人格障碍出现短暂精神病性症状时，下列哪项最支持其不是精神分裂症？</span><span class="difficulty">⭐⭐</span></div>
+          <ul class="quiz-options">
+            <li data-letter="A">症状持续存在并逐渐加重</li>
+            <li data-letter="B" class="correct">症状轻微、历时短暂，现实检验能力相对保存</li>
+            <li data-letter="C">症状总是在物质使用之后出现</li>
+            <li data-letter="D">症状仅表现为持续的情感淡漠</li>
+          </ul>
+          <details class="qa"><summary><span class="qa-num">答</span>答案与解析</summary>
+            <div class="qa-body"><span class="answer-key">答案 B</span>教材明确：边缘型的精神病性症状一般比较轻微、历时短暂、容易被忽略，多发生在被抛弃恐惧中，持续几分钟到几小时，现实检验能力相对保存；精神分裂症有典型、持续的精神病性症状。A 与“短暂”相反；C 是把边缘型短暂症状的可能原因之一绝对化；D 不是教材对边缘型的描述。</div>
+          </details>
+        </div>
+
+        <div class="quiz-item">
+          <div class="quiz-stem"><span class="q-type">单选</span><span>关于八型人格障碍的性别与病程，下列哪项与教材一致？</span><span class="difficulty">⭐⭐⭐</span></div>
+          <ul class="quiz-options">
+            <li data-letter="A">边缘型人格障碍男性多于女性</li>
+            <li data-letter="B">偏执型人格障碍女性多于男性</li>
+            <li data-letter="C" class="correct">反社会型人格障碍 30 岁以后常有所缓和</li>
+            <li data-letter="D">强迫型人格障碍女性诊断率约为男性的 2 倍</li>
+          </ul>
+          <details class="qa"><summary><span class="qa-num">答</span>答案与解析</summary>
+            <div class="qa-body"><span class="answer-key">答案 C</span>教材：反社会型 30 岁以后常有所缓和，但难以和家庭成员建立持久、尽责、热情的关系。A 错，边缘型女性多于男性；B 错，偏执型男性多于女性；D 错，强迫型男性诊断率约为女性的 2 倍。</div>
+          </details>
+        </div>
+
+        <div class="quiz-item">
+          <div class="quiz-stem"><span class="q-type">多选</span><span>下列哪些属于教材对人格障碍定义/特征的表述？</span><span class="difficulty">⭐⭐</span></div>
+          <ul class="quiz-options">
+            <li data-letter="A" class="correct">明显偏离正常且根深蒂固的行为方式</li>
+            <li data-letter="B" class="correct">具有适应不良的性质</li>
+            <li data-letter="C" class="correct">自我功能和/或人际功能受损</li>
+            <li data-letter="D">必须由患者本人主动求医才能诊断</li>
+            <li data-letter="E" class="correct">使患者痛苦和/或使他人痛苦，或给个人/社会带来不良影响</li>
+          </ul>
+          <details class="qa"><summary><span class="qa-num">答</span>答案与解析</summary>
+            <div class="qa-body"><span class="answer-key">答案 A、B、C、E</span>A/B/C/E 均为教材定义要素。D 错：教材没有要求“本人主动求医”；痛苦可以由他人承受，或表现为社会不良影响。</div>
+          </details>
+        </div>
+
+        <div class="quiz-item">
+          <div class="quiz-stem"><span class="q-type">多选</span><span>ICD-11 的 5 个人格特质领域包括？</span><span class="difficulty">⭐⭐</span></div>
+          <ul class="quiz-options">
+            <li data-letter="A" class="correct">负性情感</li>
+            <li data-letter="B" class="correct">分离</li>
+            <li data-letter="C" class="correct">去社会</li>
+            <li data-letter="D" class="correct">脱抑制</li>
+            <li data-letter="E" class="correct">强迫</li>
+            <li data-letter="F">边缘型模式</li>
+          </ul>
+          <details class="qa"><summary><span class="qa-num">答</span>答案与解析</summary>
+            <div class="qa-body"><span class="answer-key">答案 A、B、C、D、E</span>五个特质领域：负性情感、分离、去社会、脱抑制、强迫。F 是“边缘型模式”，属于为增强临床实用性增加的<strong>补充标注</strong>，不是第 6 个特质领域；使用时最好与特质限定词结合。</div>
+          </details>
+        </div>
+
+        <div class="quiz-item">
+          <div class="quiz-stem"><span class="q-type">多选</span><span>下列哪些属于教材对边缘型人格障碍的描述？</span><span class="difficulty">⭐⭐⭐</span></div>
+          <ul class="quiz-options">
+            <li data-letter="A" class="correct">极不稳定的情绪、行为、人际关系和自我形象</li>
+            <li data-letter="B" class="correct">害怕被抛弃，不能忍受孤独</li>
+            <li data-letter="C" class="correct">自我形象、目的及内心偏好常模糊或扭曲，缺乏持久自我同一性</li>
+            <li data-letter="D">典型、持续的精神病性症状</li>
+            <li data-letter="E" class="correct">女性多于男性</li>
+          </ul>
+          <details class="qa"><summary><span class="qa-num">答</span>答案与解析</summary>
+            <div class="qa-body"><span class="answer-key">答案 A、B、C、E</span>A/B/C/E 均见于教材。D 错：边缘型是“短暂的精神病性症状”，一般轻微、历时短暂、现实检验相对保存，没有典型、持续的精神病性症状。</div>
+          </details>
+        </div>
+
+        <div class="quiz-item">
+          <div class="quiz-stem"><span class="q-type">判断</span><span>人格困难不被归类为精神障碍，而归入影响健康状况或医疗保健服务的人际交往问题。</span><span class="difficulty">⭐</span></div>
+          <ul class="quiz-options">
+            <li data-letter="A" class="correct">正确</li>
+            <li data-letter="B">错误</li>
+          </ul>
+          <details class="qa"><summary><span class="qa-num">答</span>答案与解析</summary>
+            <div class="qa-body"><span class="answer-key">答案 正确</span>教材原文明确：人格困难不被归类为精神障碍，而是归入影响健康状况或医疗保健服务的人际交往问题。</div>
+          </details>
+        </div>
+
+        <div class="quiz-item">
+          <div class="quiz-stem"><span class="q-type">判断</span><span>人格障碍多在儿童后期或青春期出现，因此应在儿童和青少年期尽早作出诊断。</span><span class="difficulty">⭐⭐</span></div>
+          <ul class="quiz-options">
+            <li data-letter="A">正确</li>
+            <li data-letter="B" class="correct">错误</li>
+          </ul>
+          <details class="qa"><summary><span class="qa-num">答</span>答案与解析</summary>
+            <div class="qa-body"><span class="answer-key">答案 错误</span>教材明确：人格障碍多在儿童后期或青春期出现，持续到成年并渐渐显著，因此在儿童和青少年期<strong>不应</strong>做人格障碍的诊断。青春期身份认同问题属于发育任务，不能病理化。</div>
+          </details>
+        </div>
+
+        <div class="quiz-item">
+          <div class="quiz-stem"><span class="q-type">判断</span><span>药物治疗可以改变人格结构，因此应长期、常规使用。</span><span class="difficulty">⭐⭐</span></div>
+          <ul class="quiz-options">
+            <li data-letter="A">正确</li>
+            <li data-letter="B" class="correct">错误</li>
+          </ul>
+          <details class="qa"><summary><span class="qa-num">答</span>答案与解析</summary>
+            <div class="qa-body"><span class="answer-key">答案 错误</span>教材明确：药物治疗很难改变人格结构；一般在异常应激、情绪反应和短暂精神病症状时少量用药；一般不主张长期应用和常规使用，因远期效果难以确定。</div>
+          </details>
+        </div>
+
+        <div class="quiz-item">
+          <div class="quiz-stem"><span class="q-type">名词解释</span><span>人格困难（personality difficulty）</span><span class="difficulty">⭐⭐</span></div>
+          <details class="qa"><summary><span class="qa-num">答</span>答案与解析</summary>
+            <div class="qa-body"><span class="answer-key">答案要点</span>指可能影响治疗或健康服务的明显人格特征，但未严重到诊断为人格障碍的程度；与人格障碍相比，仅表现为间歇性或较低强度，不足以对社会功能造成明显损害，可能仅限特定关系或情况。人格困难<strong>不是精神障碍</strong>，归入影响健康状况或医疗保健服务的人际交往问题。</div>
+          </details>
+        </div>
+
+        <div class="quiz-item">
+          <div class="quiz-stem"><span class="q-type">名词解释</span><span>边缘型模式（borderline pattern）</span><span class="difficulty">⭐⭐⭐</span></div>
+          <details class="qa"><summary><span class="qa-num">答</span>答案与解析</summary>
+            <div class="qa-body"><span class="answer-key">答案要点</span>ICD-11 为增强人格障碍分类的临床实用性增加的<strong>补充标注</strong>，可能有助于识别对某些心理治疗有反应的个体；适用于存在广泛不稳定人格紊乱模式（人际关系、自我印象、情感不稳定）并伴明显冲动行为的个体。可表现为：疯狂避免被抛弃、不稳定而强烈的人际关系、身份紊乱、高度负性情感中鲁莽并可能自伤、反复自我伤害、心境反应明显、慢性空虚、不适当强烈愤怒、情绪高度唤起时短暂分离性症状或精神病样特征。使用时最好与负性情感、去社会、脱抑制等特质限定词结合。</div>
+          </details>
+        </div>
+
+        <div class="quiz-item">
+          <div class="quiz-stem"><span class="q-type">简答</span><span>简述 ICD-11 人格障碍的 7 条诊断要点。</span><span class="difficulty">⭐⭐⭐</span></div>
+          <details class="qa"><summary><span class="qa-num">答</span>答案与解析</summary>
+            <div class="qa-body"><span class="answer-key">答案要点</span>① 持久的障碍：自我各方面功能和/或人际功能存在问题；② 持续很长时间（教材举例：2 年或更长）；③ 表现为认知模式、情绪体验、情绪表达和适应不良行为；④ 在一系列个人和社会情境中表现，不限于特定关系/角色；⑤ 不是药物或物质的直接影响，也不能用另一种精神障碍、神经系统疾病或其他医疗状况更好地解释；⑥ 与个人、家庭、社会、教育、职业或其他重要功能领域的痛苦或严重损害有关；⑦ 如果行为模式在发育阶段是合理的，或可由社会/文化因素解释，则不诊断。</div>
+          </details>
+        </div>
+
+        <div class="quiz-item">
+          <div class="quiz-stem"><span class="q-type">简答</span><span>简述人格障碍的治疗原则与预后。</span><span class="difficulty">⭐⭐</span></div>
+          <details class="qa"><summary><span class="qa-num">答</span>答案与解析</summary>
+            <div class="qa-body"><span class="answer-key">答案要点</span><strong>心理治疗为主：</strong>深入接触、建立良好关系，帮助认识个性缺陷，鼓励改变行为模式，强化积极变化；可采用分析性、认知、行为、家庭治疗，个别或小组形式；目的是建立良好行为模式、矫正不良习惯。<strong>药物为辅：</strong>很难改变人格结构，只在异常应激、情绪反应和短暂精神病症状时少量用药；苯二氮䓬类、小剂量抗精神病药、5-HT 能抗抑郁药、抗癫痫药、β 受体阻滞剂分别针对不同靶症状；不主张长期、常规使用。<strong>预后：</strong>治疗较为困难、效果有限、预后欠佳；部分患者成年后缓和；幼年时期培养健全人格尤为重要。</div>
+          </details>
+        </div>
+
+        <div class="quiz-item">
+          <div class="quiz-stem"><span class="q-type">案例</span><span>患者女性，二十余岁，因反复的人际冲突和情绪波动就诊。她描述自己与人相处“要么极好、要么极坏”，非常害怕被重要的人抛弃，独处时感到强烈空虚；对自己是什么样的人、想要什么常感模糊。情绪可在愤怒与抑郁之间快速变化，冲动时曾多次自伤。一次激烈争吵后，她短暂出现猜疑和不真实感，很快缓解，当时仍能分辨现实。最可能的诊断是？</span><span class="difficulty">⭐⭐⭐</span></div>
+          <ul class="quiz-options">
+            <li data-letter="A">精神分裂症</li>
+            <li data-letter="B" class="correct">边缘型人格障碍</li>
+            <li data-letter="C">双相障碍</li>
+            <li data-letter="D">表演型人格障碍</li>
+          </ul>
+          <details class="qa"><summary><span class="qa-num">答</span>答案与解析</summary>
+            <div class="qa-body"><span class="answer-key">答案 B</span>核心线索：极不稳定的情绪、人际关系、自我形象；害怕被抛弃、慢性空虚；冲动与反复自伤；短暂精神病样症状且现实检验相对保存——符合教材边缘型人格障碍的描述。A 错：精神分裂症为典型、持续精神病性症状；C 错：教材提示边缘型易被误诊为心境障碍，但本例是持久人格模式，教材未给正式鉴别标准；D 错：表演型以夸张、寻求注意为核心，边缘型更多自杀未遂、身份认同障碍和短暂精神病症状。</div>
+          </details>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="flashcards" class="section">
+      <div class="section-header"><span class="section-number">10</span><h2>考点速记卡</h2></div>
+      <p class="lead">20 张翻转卡，覆盖概念、诊断、鉴别、治疗与数据。先看正面自问，再点击翻转核对。</p>
+      <div class="flashcard-grid">
+
+        <div class="flashcard"><div class="flashcard-inner">
+          <div class="flashcard-face flashcard-front"><span class="card-tag concept">概念</span><p>人格（personality）/ 个性是什么？</p><span class="flip-hint">点击翻转</span></div>
+          <div class="flashcard-face flashcard-back"><p>一个人固定的行为模式及在日常活动中处事待人的习惯方式。</p></div>
+        </div></div>
+
+        <div class="flashcard"><div class="flashcard-inner">
+          <div class="flashcard-face flashcard-front"><span class="card-tag concept">概念</span><p>人格困难的关键词？</p><span class="flip-hint">点击翻转</span></div>
+          <div class="flashcard-face flashcard-back"><p>明显人格特征；可能影响治疗/健康服务；未严重到人格障碍；间歇或较低强度；社会功能损害不明显；<strong>不是精神障碍</strong>，归入人际交往问题。</p></div>
+        </div></div>
+
+        <div class="flashcard"><div class="flashcard-inner">
+          <div class="flashcard-face flashcard-front"><span class="card-tag concept">概念</span><p>人格障碍的定义五要素？</p><span class="flip-hint">点击翻转</span></div>
+          <div class="flashcard-face flashcard-back"><p>明显偏离正常；根深蒂固；适应不良；自我和/或人际功能受损；导致痛苦/他人痛苦/社会不良影响。起病于童年、青少年或成年早期，持续到成年乃至终生，部分成年后缓和。</p></div>
+        </div></div>
+
+        <div class="flashcard"><div class="flashcard-inner">
+          <div class="flashcard-face flashcard-front"><span class="card-tag concept">概念</span><p>人格改变与一般人格障碍的区别？</p><span class="flip-hint">点击翻转</span></div>
+          <div class="flashcard-face flashcard-back"><p>人格改变是<strong>获得性</strong>的，通常成年期出现，发生于严重/持久应激、极度环境剥夺、严重精神障碍、严重脑部疾病或损伤之后；是某种医疗状况的直接病理生理后果。DSM-5 归“其他人格障碍”，ICD-11 归“继发性人格障碍”。</p></div>
+        </div></div>
+
+        <div class="flashcard"><div class="flashcard-inner">
+          <div class="flashcard-face flashcard-front"><span class="card-tag diagnosis">诊断</span><p>ICD-11 诊断要点七条，怎么压缩？</p><span class="flip-hint">点击翻转</span></div>
+          <div class="flashcard-face flashcard-back"><p>持久自我/人际问题；持续很久（举例 2 年+）；认知/情绪/行为适应不良；跨情境；排除物质/其他疾病；造成痛苦或损害；排除发育阶段/文化解释。</p></div>
+        </div></div>
+
+        <div class="flashcard"><div class="flashcard-inner">
+          <div class="flashcard-face flashcard-front"><span class="card-tag diagnosis">诊断</span><p>ICD-11 对病程的举例？</p><span class="flip-hint">点击翻转</span></div>
+          <div class="flashcard-face flashcard-back"><p>“持续了很长一段时间（例如，持续 2 年或更长时间）”。注意这是教材举例，不是唯一标准。</p></div>
+        </div></div>
+
+        <div class="flashcard"><div class="flashcard-inner">
+          <div class="flashcard-face flashcard-front"><span class="card-tag diagnosis">诊断</span><p>ICD-11 严重程度四级？</p><span class="flip-hint">点击翻转</span></div>
+          <div class="flashcard-face flashcard-back"><p>人格困难、轻度、中度、重度；都不符合即正常人格。依据人际社会功能紊乱和自我认知的扭曲两方面评估。</p></div>
+        </div></div>
+
+        <div class="flashcard"><div class="flashcard-inner">
+          <div class="flashcard-face flashcard-front"><span class="card-tag diagnosis">诊断</span><p>人格困难 vs 轻度人格障碍？</p><span class="flip-hint">点击翻转</span></div>
+          <div class="flashcard-face flashcard-back"><p>人格困难不是精神障碍，归入人际交往问题，损害不明显；轻度人格障碍仅影响人格功能一部分领域，部分情境可不表现，但仍属精神障碍。</p></div>
+        </div></div>
+
+        <div class="flashcard"><div class="flashcard-inner">
+          <div class="flashcard-face flashcard-front"><span class="card-tag diagnosis">诊断</span><p>中度 vs 重度人格障碍？</p><span class="flip-hint">点击翻转</span></div>
+          <div class="flashcard-face flashcard-back"><p>中度：多个领域受损，绝大多数人际关系/角色有明显问题，有时伤害自我/他人，可维持部分功能。重度：自我功能严重紊乱，所有人际关系都有问题，几乎无法履行角色，几乎影响全部人格功能领域。</p></div>
+        </div></div>
+
+        <div class="flashcard"><div class="flashcard-inner">
+          <div class="flashcard-face flashcard-front"><span class="card-tag diagnosis">诊断</span><p>ICD-11 五个特质领域？</p><span class="flip-hint">点击翻转</span></div>
+          <div class="flashcard-face flashcard-back"><p>负性情感（negative affectivity）、分离（detachment）、去社会（dissociality）、脱抑制（disinhibition）、强迫（anankastia）。</p></div>
+        </div></div>
+
+        <div class="flashcard"><div class="flashcard-inner">
+          <div class="flashcard-face flashcard-front"><span class="card-tag diagnosis">诊断</span><p>边缘型模式是第 6 个特质吗？</p><span class="flip-hint">点击翻转</span></div>
+          <div class="flashcard-face flashcard-back"><p>不是。它是 ICD-11 为增强临床实用性增加的<strong>补充标注</strong>，适用于广泛不稳定人格紊乱 + 明显冲动行为的个体；最好与五个特质限定词结合使用。</p></div>
+        </div></div>
+
+        <div class="flashcard"><div class="flashcard-inner">
+          <div class="flashcard-face flashcard-front"><span class="card-tag diagnosis">诊断</span><p>A 组有哪两型？共同气质？</p><span class="flip-hint">点击翻转</span></div>
+          <div class="flashcard-face flashcard-back"><p>偏执型、分裂型；教材描述为“通常表现得奇特或古怪”。</p></div>
+        </div></div>
+
+        <div class="flashcard"><div class="flashcard-inner">
+          <div class="flashcard-face flashcard-front"><span class="card-tag diagnosis">诊断</span><p>B 组有哪几型？教材八型是否含自恋？</p><span class="flip-hint">点击翻转</span></div>
+          <div class="flashcard-face flashcard-back"><p>DSM-5 B 组：反社会型、边缘型、表演型、自恋型；共同气质“戏剧化、情绪化或不稳定”。教材“常见类型”八型中<strong>未单列自恋型</strong>。</p></div>
+        </div></div>
+
+        <div class="flashcard"><div class="flashcard-inner">
+          <div class="flashcard-face flashcard-front"><span class="card-tag diagnosis">诊断</span><p>C 组有哪三型？教材给组名了吗？</p><span class="flip-hint">点击翻转</span></div>
+          <div class="flashcard-face flashcard-back"><p>回避型、依赖型、强迫型。教材只列类型，<strong>未使用“焦虑组”这一组名</strong>；“焦虑组”是记忆标签。</p></div>
+        </div></div>
+
+        <div class="flashcard"><div class="flashcard-inner">
+          <div class="flashcard-face flashcard-front"><span class="card-tag diagnosis">鉴别</span><p>偏执型 vs 分裂型，一句话？</p><span class="flip-hint">点击翻转</span></div>
+          <div class="flashcard-face flashcard-back"><p>偏执型社会参与性更高、猜疑记仇、常有攻击性言行、更多投射；分裂型退缩冷漠、无偏执性猜疑，但有奇异想法、罕见认知体验、怪异想法和言语。<strong>“偏执疑人，分裂避人。”</strong></p></div>
+        </div></div>
+
+        <div class="flashcard"><div class="flashcard-inner">
+          <div class="flashcard-face flashcard-front"><span class="card-tag diagnosis">鉴别</span><p>表演型 vs 边缘型，关键区别？</p><span class="flip-hint">点击翻转</span></div>
+          <div class="flashcard-face flashcard-back"><p>教材称鉴别有一定困难；边缘型有<strong>更多自杀未遂、身份认同障碍和短暂的精神病症状</strong>。表演型以夸张情绪、吸引注意为核心。</p></div>
+        </div></div>
+
+        <div class="flashcard"><div class="flashcard-inner">
+          <div class="flashcard-face flashcard-front"><span class="card-tag diagnosis">鉴别</span><p>反社会型 vs 边缘型，怎么记？</p><span class="flip-hint">点击翻转</span></div>
+          <div class="flashcard-face flashcard-back"><p>教材未直接对比。按特征归纳：反社会型漠视/侵犯他人权利、无内疚、18 岁前品行问题、30 岁后缓和；边缘型情绪/人际/自我形象极不稳定、怕抛弃、自伤。<strong>“反社会向外伤人，边缘向内失控。”</strong></p></div>
+        </div></div>
+
+        <div class="flashcard"><div class="flashcard-inner">
+          <div class="flashcard-face flashcard-front"><span class="card-tag treatment">治疗</span><p>心理治疗的原则与形式？</p><span class="flip-hint">点击翻转</span></div>
+          <div class="flashcard-face flashcard-back"><p>深入接触、建立良好关系；帮助认识个性缺陷；鼓励改变行为模式，强化积极变化；可采用分析性、认知、行为、家庭治疗；个别或小组治疗；目的是建立良好行为模式、矫正不良习惯。</p></div>
+        </div></div>
+
+        <div class="flashcard"><div class="flashcard-inner">
+          <div class="flashcard-face flashcard-front"><span class="card-tag treatment">治疗</span><p>药物五类靶症状，怎么配？</p><span class="flip-hint">点击翻转</span></div>
+          <div class="flashcard-face flashcard-back"><p>苯二氮䓬类—激越/焦虑（回避型人际焦虑）；小剂量抗精神病药—愤怒/敌对/短暂精神病症状（表演型现实感丧失和幻想）；5-HT 能抗抑郁药—抑郁/焦虑/对拒绝敏感；抗癫痫药—冲动（反社会型 EEG 异常波幅、边缘型整体功能）；β 受体阻滞剂（阿替洛尔）—自主神经亢进/恐惧状态（回避型）。<strong>剂量个体化，遵医嘱。</strong></p></div>
+        </div></div>
+
+        <div class="flashcard"><div class="flashcard-inner">
+          <div class="flashcard-face flashcard-front"><span class="card-tag diagnosis">数据</span><p>本章关键数字，一次串起来？</p><span class="flip-hint">点击翻转</span></div>
+          <div class="flashcard-face flashcard-back"><p>中国 0.1‰；国外 2%～10%；反社会型 1%～4%；边缘型 1%～6%；强迫型约 6.5%；单卵/双卵 67%/31%；边缘型/表演型遗传度 0.69/0.67；攻击遗传 44%～72%；50% EEG 慢波；70% 强迫症病前有强迫型人格；4 级/5 特质/8 型。</p></div>
+        </div></div>
+
+      </div>
+    </section>
+
+    <section id="cases" class="section">
+      <div class="section-header"><span class="section-number">11</span><h2>病例挑战</h2></div>
+      <p class="lead">3 个病例，难度递进。病例 1 为教材原文；病例 2、3 为经典临床情境（教学演练，非教材原文），只使用教材描述过的表现，不编造化验值、剂量或具体时间阈值。</p>
+
+      <div class="case-card">
+        <div class="case-meta"><span>病例 1</span><span>难度 ⭐</span><span>教材原文</span></div>
+        <div class="case-title">25 岁男性，从小品行问题，成年后威胁父母</div>
+        <div class="case-body">
+          <p>患者，男，25 岁，初中文化，未婚，无业。其父是某大学知名教授，其母是某公司经理，二人忙于事业，从小将其寄养于乡下爷爷奶奶家中并在农村读完小学。爷爷奶奶从小对其管教不严，加之和农村学生相比经济条件优越，患者从小就挥霍无度、脾气暴烈、欺负同学、不听管教。小学四五年级时和当地不良少年混在一起抽烟喝酒并一起小偷小摸，学习成绩低下，经常和老师顶撞。13 岁回省城上初中，和父母没有感情，常和父母顶撞，数次和父母争吵后乘车回爷爷奶奶家。初一时尚能坚持上课，初二时结交了班上品行差的一些同学，多次集体到附近的小学敲诈勒索小学生，被小学生家长举报而受到学校警告处分。初中毕业后到某中专成教班学习，经常旷课，不参加考试，在学生宿舍里经常欺负家境贫寒的同学，曾邀约同伙到学校“教训”不服他管教的学生。读中专一年后自动退学。两年前交往一个女朋友，因女方家长反对，女方提出分手，但患者经常守候于女方住房附近纠缠，并打电话威胁其父母。最近沉溺于网络赌博和打赏主播，欠下近百万网络贷款，父母不愿意为其偿还贷款，就辱骂并用刀威胁父母。</p>
+          <p><strong>教材诊断：反社会型人格障碍。</strong></p>
+        </div>
+        <ol class="case-questions">
+          <li>本案最可能的诊断是什么？请按教材线索写出至少三条依据。</li>
+          <li>需要与哪些情况鉴别？至少说出两类。</li>
+          <li>治疗与预后要点是什么？</li>
+        </ol>
+        <details class="qa"><summary><span class="qa-num">析</span>答案与诊断思路</summary>
+          <div class="qa-body">
+            <p><strong>诊断：反社会型人格障碍（教材原文）。</strong></p>
+            <p><strong>依据：</strong>① 18 岁前即有品行问题：说谎、逃学、偷窃、斗殴、敲诈勒索、欺负同学、被学校处分；② 成年后漠视或侵犯他人权利：纠缠前女友、威胁其父母、辱骂并用刀威胁父母；③ 缺乏责任感、无内疚感、易迁怒、行为合理化；④ 人际关系能建立但不能长久，对挫折耐受性低。</p>
+            <p><strong>鉴别：</strong>① 伴有亲社会情绪受限的品行障碍——可在青春期前诊断，症状持续时间比人格障碍短；只有除亲社会情绪受限外还有导致自我/人际功能受损的人格特质，才额外诊断人格障碍。② 物质使用所致障碍——若表现完全由物质使用引起则不诊断人格障碍；若人格障碍在物质使用前已存在或某些特质不能由物质解释，可额外诊断。③ 其他人格障碍类型——抓最突出、最持久的模式，本案以漠视他人权利、无内疚、早发品行问题为核心。</p>
+            <p><strong>治疗与预后：</strong>心理治疗为主（建立关系、认识个性缺陷、改变行为模式、强化积极变化；分析性/认知/行为/家庭治疗，个别或小组）；药物只对症，如抗癫痫药控制冲动（尤其 EEG 异常波幅者）、小剂量抗精神病药控制愤怒/敌对；剂量个体化，遵医嘱，不主张长期常规使用。预后：30 岁以后常有所缓和，但难以和家庭成员建立持久、尽责、热情的关系；总体治疗效果有限。</p>
+          </div>
+        </details>
+      </div>
+
+      <div class="case-card">
+        <div class="case-meta"><span>病例 2</span><span>难度 ⭐⭐</span><span>经典临床情境（教学演练，非教材原文）</span></div>
+        <div class="case-title">二十余岁女性，关系过山车、怕被抛弃、反复自伤</div>
+        <div class="case-body">
+          <p>患者女性，二十余岁，因反复的人际冲突和情绪波动就诊。她描述自己与人相处“要么极好、要么极坏”，几乎没有持久的朋友；非常害怕被重要的人抛弃，独处时感到强烈空虚，会疯狂地寻找伴侣。她对自己是什么样的人、想要什么常感模糊，自尊不足；情绪可在愤怒与抑郁之间快速变化，冲动时曾多次自伤。一次激烈争吵后，她短暂出现猜疑和不真实感，很快缓解，当时仍能分辨现实。</p>
+        </div>
+        <ol class="case-questions">
+          <li>最可能的诊断是什么？请写出教材依据。</li>
+          <li>需要与精神分裂症、双相/抑郁发作、表演型人格障碍如何考虑？</li>
+          <li>治疗原则是什么？药物能改变人格结构吗？</li>
+        </ol>
+        <details class="qa"><summary><span class="qa-num">析</span>答案与诊断思路</summary>
+          <div class="qa-body">
+            <p><strong>诊断：边缘型人格障碍。</strong>依据：① 极不稳定的情绪、行为、人际关系和自我形象；② 人际关系强烈而时好时坏，害怕被抛弃、不能忍受孤独、疯狂寻找伴侣；③ 自我形象/目的/偏好模糊，缺乏持久自我同一性，自尊不足、持续空虚；④ 行为不计后果、易冲动，伴自杀威胁/自伤；⑤ 短暂应激性精神病样症状，现实检验能力相对保存。女性多于男性也与教材一致。</p>
+            <p><strong>鉴别：</strong>① 精神分裂症——边缘型精神病性症状短暂、轻微、现实检验相对保存，无典型持续精神病性症状；② 双相/抑郁发作——教材提示边缘型短暂精神病性症状易被误诊为心境障碍，但未给正式鉴别标准；关键是看“持久人格模式”还是“可被心境障碍解释”，需纵向观察；③ 表演型——教材称鉴别有一定困难，但边缘型有更多自杀未遂、身份认同障碍和短暂精神病症状。</p>
+            <p><strong>治疗：</strong>心理治疗为主（分析性/认知/行为/家庭治疗，个别或小组；建立关系、认识缺陷、改变模式、强化积极）。药物只对症：抗癫痫药可改善整体功能；小剂量抗精神病药控制愤怒/敌对/短暂精神病症状；5-HT 能抗抑郁药改善抑郁/焦虑。剂量个体化，遵医嘱；药物<strong>很难改变人格结构</strong>，不主张长期、常规使用。</p>
+          </div>
+        </details>
+      </div>
+
+      <div class="case-card">
+        <div class="case-meta"><span>病例 3</span><span>难度 ⭐⭐⭐</span><span>经典临床情境（教学演练，非教材原文）</span></div>
+        <div class="case-title">三十余岁男性，长期猜疑同事“联合针对自己”</div>
+        <div class="case-body">
+          <p>患者男性，三十余岁，长期认为同事“联合起来针对自己”，对玩笑和忽视耿耿于怀，多年记仇；曾多次因小事与同事争辩、投诉，坚信自己应得更高职位。他并无确凿依据，却怀疑伴侣不忠，限制其与异性往来。他社会参与并不退缩，谈话中反复把自身的不满解释为他人恶意；否认情绪低落，也未提及持续的精神病性症状。</p>
+        </div>
+        <ol class="case-questions">
+          <li>最可能的诊断是什么？</li>
+          <li>与分裂型人格障碍如何鉴别？</li>
+          <li>与妄想性障碍/精神分裂症如何考虑？治疗关系与用药原则是什么？</li>
+        </ol>
+        <details class="qa"><summary><span class="qa-num">析</span>答案与诊断思路</summary>
+          <div class="qa-body">
+            <p><strong>诊断：偏执型人格障碍。</strong>依据：对挫折与拒绝过分敏感、长久记仇、猜疑（把无意/友好行为误解为敌意）、好斗、病态嫉妒、自负；社会参与性不低，符合教材偏执型描述。男性多于女性亦相符。</p>
+            <p><strong>与分裂型鉴别：</strong>分裂型退缩、冷漠，没有偏执性猜疑思维；偏执型社会参与性更高、常有攻击性言行、更多把自己的感受投射到他人身上；分裂型还会出现奇异想法、罕见认知体验、怪异想法和言语。本案“参与其中、反复投诉、投射敌意”更支持偏执型。</p>
+            <p><strong>与精神病性障碍：</strong>教材只提示偏执型人格容易发展成为妄想性障碍；若出现持久、固定的妄想并达到精神病性障碍程度，应按相应障碍评估（具体标准教材未展开）。本案未提及持续精神病性症状，故先按人格障碍评估，但需纵向观察。</p>
+            <p><strong>治疗：</strong>心理治疗为主，难点在建立信任与治疗联盟；帮助认识个性缺陷、鼓励改变行为模式、强化积极变化。药物只对症：愤怒、敌对或短暂精神病性症状可用小剂量抗精神病药（如氟哌啶醇、利培酮等）；剂量个体化，遵医嘱；不改变人格结构，不主张长期常规使用。教材未单列偏执型的专门治疗方案。</p>
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <section id="extend" class="section">
+      <div class="section-header"><span class="section-number">12</span><h2>拓展延伸</h2></div>
+      <p class="lead">以下只列教材明确提及或明确未展开的内容，帮助区分“教材对照”与“拓展补充”。</p>
+      <div class="card-grid">
+        <div class="card">
+          <div class="card-header"><span class="card-icon">🫥</span><span class="card-title">教材对照：自恋型人格障碍</span></div>
+          <div class="card-body"><p>DSM-5 的 B 组包括<strong>自恋型人格障碍</strong>，教材在分类对照中列出了它；但教材“常见的人格障碍类型”八型中<strong>没有单列自恋型</strong>，也未描述其临床表现。本指南不编造。</p></div>
+        </div>
+        <div class="card">
+          <div class="card-header"><span class="card-icon">🔤</span><span class="card-title">术语提醒：分裂型 vs 分裂样</span></div>
+          <div class="card-body"><p>教材沿用“<strong>分裂型人格障碍</strong>（schizotypal personality disorder）”，其描述包含情感冷漠、离群独处与行为怪异。DSM-5 另有“<strong>分裂样人格障碍</strong>（schizoid personality disorder）”，教材八型未单列，本指南不展开。<strong>拓展补充：</strong>阅读英文文献时注意 schizotypal 与 schizoid 不是同一个词。</p></div>
+        </div>
+        <div class="card">
+          <div class="card-header"><span class="card-icon">🧭</span><span class="card-title">ICD-11 维度系统的教材表述</span></div>
+          <div class="card-body"><p>教材明确：ICD-11 不再对人格障碍进行临床分型，代之以维度系统——先识别人格障碍的严重程度（人格困难、轻度、中度、重度），再衡量突出的人格特质或模式（5 个特质领域 + 边缘型模式）。其具体实施细节、量表与 cutoff，教材未展开。</p></div>
+        </div>
+        <div class="card">
+          <div class="card-header"><span class="card-icon">📌</span><span class="card-title">教材未提供的内容</span></div>
+          <div class="card-body"><ul class="icon-list cross">
+            <li>教材未提供除反社会型以外的典型病例。</li>
+            <li>教材未给出各型的独立患病率（仅给出反社会、边缘、强迫型的部分数据）。</li>
+            <li>教材未给出具体心理治疗手册、疗程或药物剂量。</li>
+            <li>教材未展开人格障碍与双相障碍等心境障碍的具体鉴别标准。</li>
+          </ul><p>以上均按“教材未提供/未展开”标注，本指南不虚构。</p></div>
+        </div>
+      </div>
+    </section>
+
+    <div class="disclaimer">
+      <strong>免责声明：</strong>本指南依据《精神病学》第9版（2024）第十七章“人格障碍及相关人格特质”整理，仅供学习复习使用。文中“口诀/类比/记忆标签”均为记忆辅助，不是教材原文；药物剂量教材未提供，临床用药请遵循现行诊疗规范与专科医师判断。病例 2、3 为经典临床情境（教学演练，非教材原文），不构成真实病例。
+    </div>
+
+    <footer class="footer">
+      <div class="footer-tag">精神病学 · 第十七章 · 学习指南</div>
+      <p>内容依据《精神病学》第9版（2024）第十七章整理，仅供学习复习使用。</p>
+      <p>诊断与治疗请以教材原文、现行诊疗规范及专科医师判断为准。</p>
+    </footer>
+  <nav class="chapter-pager" aria-label="章节间导航"><a class="cp-prev" href="精神病学_第十六章_冲动控制障碍、破坏性行为或去社会障碍_学习指南.html">← 上一章：第十六章</a><a class="cp-toc" href="index.html">目录</a><a class="cp-next" href="精神病学_第十八章_性心理障碍和做作性障碍_学习指南.html">下一章：第十八章 →</a></nav>
+</main>
+</div>
+<button class="back-to-top" id="backTop" aria-label="回到顶部">↑</button>
+
+<script>
+/* ============================================================
+   精神病学学习指南 · 统一交互层 v1（构建期注入，整体替换原 IIFE）
+   兼容 A 族（.tabbar button + [data-panel] + .panel.on）与
+   B 族（.tab-nav + .tab-panel.active）两套 DOM 约定。
+   特性检测 + 防御式查询 + 幂等；不引入任何外部依赖。
+   ============================================================ */
+(function () {
+  'use strict';
+  if (window.__PSY_GUIDE_APP__) { return; }
+  window.__PSY_GUIDE_APP__ = true;
+
+  var d = document;
+
+  function all(sel, root) {
+    return Array.prototype.slice.call((root || d).querySelectorAll(sel));
+  }
+  function on(el, ev, fn, opt) {
+    if (el) { el.addEventListener(ev, fn, opt || false); }
+  }
+  function norm(s) {
+    return String(s || '').replace(/\s+/g, '').toUpperCase();
+  }
+
+  /* ---------- 1. Tab 切换（两族约定都支持） ---------- */
+  function initTabs() {
+    all('.tabs, [data-tabs]').forEach(function (g) {
+      if (g.__psyTabs) { return; }
+      g.__psyTabs = true;
+      var isA = !!g.querySelector('.tabbar button');
+      var btns = all(isA ? '.tabbar button' : '.tab-nav .tab-btn', g);
+      if (!btns.length) { return; }
+      var cls = isA ? 'on' : 'active';
+      var nav = btns[0].closest('.tabbar') || btns[0].closest('.tab-nav');
+      if (nav && !nav.hasAttribute('role')) { nav.setAttribute('role', 'tablist'); }
+      all(isA ? '.panel' : '.tab-panel', g).forEach(function (p) {
+        if (!p.hasAttribute('role')) { p.setAttribute('role', 'tabpanel'); }
+      });
+      function activate(btn) {
+        btns.forEach(function (b) {
+          b.classList.remove(cls);
+          b.setAttribute('aria-selected', 'false');
+        });
+        btn.classList.add(cls);
+        btn.setAttribute('aria-selected', 'true');
+        var id = btn.getAttribute('data-tab');
+        if (!id) { return; }
+        var target = isA
+          ? g.querySelector('[data-panel="' + id + '"]')
+          : (g.querySelector('.tab-panel#' + id) || d.getElementById(id));
+        all(isA ? '.panel' : '.tab-panel', g).forEach(function (p) {
+          var show = isA ? (p.getAttribute('data-panel') === id) : (p === target);
+          p.classList.toggle(cls, show);
+        });
+      }
+      btns.forEach(function (btn, i) {
+        if (!btn.hasAttribute('role')) { btn.setAttribute('role', 'tab'); }
+        btn.setAttribute('aria-selected', btn.classList.contains(cls) ? 'true' : 'false');
+        if (!btn.hasAttribute('tabindex') && !btn.classList.contains(cls)) { btn.setAttribute('tabindex', '0'); }
+        on(btn, 'click', function () { activate(btn); });
+        on(btn, 'keydown', function (e) {
+          if (e.key !== 'ArrowRight' && e.key !== 'ArrowLeft') { return; }
+          e.preventDefault();
+          var nx = btns[(i + (e.key === 'ArrowRight' ? 1 : btns.length - 1)) % btns.length];
+          if (nx) { nx.focus(); activate(nx); }
+        });
+      });
+    });
+  }
+
+  /* ---------- 2. 速记卡：点击/键盘翻转 + 可达性 ---------- */
+  function initCards() {
+    all('.flashcard').forEach(function (card) {
+      if (card.__psyCard) { return; }
+      card.__psyCard = true;
+      card.setAttribute('tabindex', '0');
+      card.setAttribute('role', 'button');
+      function sync() {
+        card.setAttribute('aria-pressed', card.classList.contains('flipped') ? 'true' : 'false');
+      }
+      function flip() { card.classList.toggle('flipped'); sync(); }
+      on(card, 'click', flip);
+      on(card, 'keydown', function (e) {
+        if (e.key === 'Enter' || e.key === ' ' || e.key === 'Spacebar') {
+          e.preventDefault();
+          flip();
+        }
+      });
+      sync();
+    });
+  }
+
+  /* ---------- 3. 自测题交互化（核心新功能） ---------- */
+  function initQuiz() {
+    var questions = all('.quiz-q, .quiz-item');
+    if (!questions.length) { return; }
+    var groups = {};
+
+    function keyOf(o) {
+      var L = o.getAttribute('data-letter');
+      if (L && String(L).replace(/\s+/g, '') !== '') { return norm(L); }
+      var sp = o.querySelector('.l');
+      if (sp) {
+        var t = norm(sp.textContent).replace(/[.．、:：]/g, '');
+        if (t !== '') { return t; }
+      }
+      var txt = norm(o.textContent);
+      if (txt.indexOf('正确') >= 0 || txt.indexOf('错误') >= 0) { return txt; }
+      return txt.charAt(0);
+    }
+
+    function getGroup(q) {
+      var sec = q.closest('.quiz-block') || q.closest('section') || d.body;
+      if (!groups[sec.__psyGid]) {
+        sec.__psyGid = 'g' + (Object.keys(groups).length + 1);
+        groups[sec.__psyGid] = { sec: sec, total: 0, score: 0, row: null, first: null };
+      }
+      var g = groups[sec.__psyGid];
+      if (!g.first) { g.first = q; }
+      return g;
+    }
+
+    function ensureRow(g) {
+      if (g.row) { return g.row; }
+      var row = d.createElement('div');
+      row.className = 'quiz-score';
+      row.setAttribute('role', 'status');
+      row.setAttribute('aria-live', 'polite');
+      row.innerHTML = '<span class="qs-label">自测计分</span>' +
+        '<span class="qs-num">得分 0 / ' + g.total + '</span>' +
+        '<span class="qs-bar"><i></i></span>';
+      g.first.parentNode.insertBefore(row, g.first);
+      g.row = row;
+      return row;
+    }
+
+    function updateRow(g) {
+      var row = ensureRow(g);
+      var num = row.querySelector('.qs-num');
+      var bar = row.querySelector('.qs-bar i');
+      if (num) { num.textContent = '得分 ' + g.score + ' / ' + g.total; }
+      if (bar) { bar.style.width = (g.total ? Math.round(g.score / g.total * 100) : 0) + '%'; }
+    }
+
+    questions.forEach(function (q) {
+      if (q.__psyQuiz) { return; }
+      q.__psyQuiz = true;
+      var opts = all('.opt', q);
+      if (!opts.length) { opts = all('.quiz-options > li', q); }
+      if (!opts.length) { return; }
+
+      /* 正确答案先记入内存：预标 correct 优先（记录后立即移除，消除剧透），
+         否则从解析文本「答案：X / 答案 X」提取（不改动任何文字） */
+      var ansKeys = [];
+      var preset = opts.filter(function (o) { return o.classList.contains('correct'); });
+      preset.forEach(function (o) { o.classList.remove('correct'); });
+      if (preset.length) {
+        ansKeys = preset.map(keyOf);
+      } else {
+        var dt = q.querySelector('details');
+        var txt = dt ? dt.textContent : '';
+        var m = txt.match(/答案\s*[:：]?\s*([A-Za-z](?:[\s、,，·和及]*[A-Za-z])*)/);
+        if (m) {
+          ansKeys = m[1].match(/[A-Za-z]/g) || [];
+        } else {
+          var m2 = txt.match(/答案\s*[:：]?\s*(正确|错误)/);
+          if (m2) { ansKeys = [m2[1]]; }
+        }
+      }
+      if (!ansKeys.length) { return; } /* 无可判定答案（名词解释等），保持原样 */
+
+      var g = getGroup(q);
+      g.total += 1;
+      var multi = ansKeys.length > 1;
+      var ansSet = ansKeys.map(norm);
+      var locked = false;
+      var picked = [];
+
+      function revealAll() {
+        opts.forEach(function (o) {
+          if (ansSet.indexOf(keyOf(o)) >= 0) { o.classList.add('is-reveal'); }
+        });
+      }
+      function finish(ok) {
+        locked = true;
+        q.classList.add('is-locked');
+        var dt = q.querySelector('details');
+        if (dt) { dt.open = true; }
+        if (ok) { g.score += 1; }
+        updateRow(g);
+      }
+
+      opts.forEach(function (o) {
+        o.setAttribute('tabindex', '0');
+        function pick() {
+          if (locked) { return; }
+          var k = keyOf(o);
+          if (ansSet.indexOf(k) >= 0) {
+            o.classList.add('is-right');
+            if (picked.indexOf(k) < 0) { picked.push(k); }
+            if (multi) {
+              if (picked.length === ansSet.length) { finish(true); }
+            } else {
+              finish(true);
+            }
+          } else {
+            o.classList.add('is-wrong');
+            revealAll();
+            finish(false);
+          }
+        }
+        on(o, 'click', pick);
+        on(o, 'keydown', function (e) {
+          if (e.key === 'Enter' || e.key === ' ' || e.key === 'Spacebar') {
+            e.preventDefault();
+            pick();
+          }
+        });
+      });
+    });
+
+    Object.keys(groups).forEach(function (id) {
+      if (groups[id].total > 0) { updateRow(groups[id]); }
+    });
+  }
+
+  /* ---------- 4. 侧栏 scroll spy（本页锚点高亮） ---------- */
+  function initSpy() {
+    var links = all('#sidebar a[href^="#"]');
+    if (!links.length || !('IntersectionObserver' in window)) { return; }
+    var map = {};
+    links.forEach(function (a) {
+      var id = a.getAttribute('href').slice(1);
+      if (id) { map[id] = a; }
+    });
+    var secs = [];
+    Object.keys(map).forEach(function (id) {
+      var s = d.getElementById(id);
+      if (s) { secs.push(s); }
+    });
+    if (!secs.length) { return; }
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting && map[e.target.id]) {
+          links.forEach(function (a) { a.classList.remove('active'); });
+          map[e.target.id].classList.add('active');
+        }
+      });
+    }, { rootMargin: '-15% 0px -70% 0px', threshold: 0 });
+    secs.forEach(function (s) { io.observe(s); });
+  }
+
+  /* ---------- 5. 阅读进度条 + 回顶 ---------- */
+  function initScroll() {
+    var bar = d.getElementById('readbar');
+    var topBtn = d.getElementById('topBtn') || d.getElementById('backTop');
+    var ticking = false;
+    function step() {
+      ticking = false;
+      var h = d.documentElement;
+      var y = window.pageYOffset || h.scrollTop || 0;
+      if (bar) {
+        var max = h.scrollHeight - h.clientHeight;
+        bar.style.width = (max > 0 ? (y / max) * 100 : 0) + '%';
+      }
+      if (topBtn) {
+        topBtn.classList.toggle('show', y > 400);     /* A 族类名 */
+        topBtn.classList.toggle('visible', y > 400);  /* B 族类名 */
+      }
+    }
+    on(window, 'scroll', function () {
+      if (!ticking) { ticking = true; window.requestAnimationFrame(step); }
+    }, { passive: true });
+    step();
+    on(topBtn, 'click', function () {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
+
+  /* ---------- 6. 侧栏开合（存在才绑定；抽屉打开时锁定背景滚动） ---------- */
+  function initSidebar() {
+    var sidebar = d.getElementById('sidebar');
+    if (!sidebar) { return; }
+    var btn = d.getElementById('menuBtn') || d.getElementById('navToggle');
+    var ov = d.getElementById('overlay') || d.getElementById('sidebarOverlay');
+    function lock(open) {
+      /* 仅移动抽屉断点（≤900px）锁滚动；宽屏兜底解除，防布局残留 */
+      d.body.classList.toggle('nav-locked', !!open && window.innerWidth <= 900);
+    }
+    function close() {
+      sidebar.classList.remove('open');
+      if (ov) { ov.classList.remove('show'); }
+      lock(false);
+    }
+    on(btn, 'click', function () {
+      var open = !sidebar.classList.contains('open');
+      sidebar.classList.toggle('open');
+      if (ov) { ov.classList.toggle('show'); }
+      lock(open);
+    });
+    on(ov, 'click', close);
+    all('a', sidebar).forEach(function (a) {
+      on(a, 'click', function () {
+        if (window.innerWidth <= 900) { close(); }
+      });
+    });
+    on(window, 'resize', function () {
+      if (window.innerWidth > 900) { lock(false); }
+    });
+  }
+
+  /* ---------- 启动（脚本位于 body 末尾，DOM 已就绪；防御兜底） ---------- */
+  function boot() {
+    initTabs();
+    initCards();
+    initQuiz();
+    initSpy();
+    initScroll();
+    initSidebar();
+  }
+  if (d.readyState === 'loading') {
+    on(d, 'DOMContentLoaded', boot);
+  } else {
+    boot();
+  }
+})();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,2059 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>精神病学 第二十三章 会诊-联络精神病学 · 学习指南</title>
+<style>
+:root{
+  --primary:#0EA5E9; --accent:#10B981; --symptom:#EF4444; --treatment:#10B981;
+  --cause:#3B82F6; --diagnosis:#F59E0B; --memory:#8B5CF6; --danger:#DC2626;
+  --quiz:#EC4899; --flashcard:#06B6D4; --bg:#F0F7FA; --card:#FFFFFF;
+  --ink:#0F172A; --muted:#64748B; --border:#E2E8F0; --accent2:#10B981; --accent3:#06B6D4;
+  --shadow:0 4px 18px rgba(15,23,42,.06); --radius:14px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:'Microsoft YaHei','PingFang SC','Hiragino Sans GB',system-ui,-apple-system,sans-serif;font-size:16px;line-height:1.75;-webkit-font-smoothing:antialiased}
+#readbar{position:fixed;top:0;left:0;height:4px;width:0;background:linear-gradient(135deg,#0EA5E9 0%,#06B6D4 50%,#10B981 100%);z-index:300;transition:width .12s linear}
+a{color:var(--primary);text-decoration:none}
+a:hover{text-decoration:underline}
+.sidebar{position:fixed;top:0;left:0;width:272px;height:100vh;background:#fff;border-right:1px solid var(--border);overflow-y:auto;padding:20px 16px 40px;z-index:120}
+.sidebar h2{font-size:17px;margin:0 0 4px;line-height:1.5}
+.sidebar .sub{font-size:12px;color:var(--muted);line-height:1.6;margin-bottom:14px}
+.toc-group{font-size:12px;letter-spacing:.08em;color:var(--muted);margin:16px 0 6px;font-weight:700}
+.sidebar a.toc{display:block;padding:7px 10px;border-radius:8px;font-size:14px;color:var(--ink);line-height:1.5;margin:2px 0}
+.sidebar a.toc:hover{background:#E0F2FE;text-decoration:none}
+.sidebar a.toc .n{display:inline-block;min-width:26px;color:var(--primary);font-weight:700}
+.sidebar .unitlink{font-weight:600}
+.sidebar .sub2{padding-left:26px;font-size:13px;color:var(--muted)}
+.overlay{display:none}
+.menu-btn{display:none;position:fixed;top:14px;left:14px;z-index:200;width:46px;height:46px;border-radius:12px;border:1px solid var(--border);background:#fff;box-shadow:var(--shadow);font-size:22px;line-height:1;color:var(--primary);cursor:pointer}
+.main{margin-left:272px;padding:0 40px 90px;max-width:1240px}
+.wrap{max-width:980px;margin:0 auto}
+.hero{background:linear-gradient(135deg,#0EA5E9 0%,#06B6D4 50%,#10B981 100%);color:#fff;border-radius:0 0 26px 26px;padding:52px 44px 40px;margin:0 -40px 30px;box-shadow:0 12px 30px rgba(14,165,233,.18)}
+.hero .chap{display:inline-block;font-size:13px;letter-spacing:.22em;background:rgba(255,255,255,.18);padding:5px 14px;border-radius:999px;margin-bottom:16px}
+.hero h1{font-size:42px;line-height:1.25;margin:0 0 10px;font-weight:800}
+.hero .tagline{font-size:18px;opacity:.96;margin:0 0 6px}
+.hero .meta{font-size:13px;opacity:.85}
+.goalbox{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.28);border-radius:14px;padding:18px 20px;margin-top:22px}
+.goalbox h3{margin:0 0 10px;font-size:15px;letter-spacing:.06em}
+.goalbox ul{margin:0;padding-left:20px}
+.goalbox li{margin:4px 0;font-size:14.5px;line-height:1.65}
+.lv{display:inline-block;font-size:11px;font-weight:700;padding:1px 8px;border-radius:999px;background:#fff;color:#0369A1;margin-right:6px;vertical-align:1px}
+.lv.l2{color:#047857}.lv.l3{color:#B45309}.lv.l4{color:#B91C1C}
+section{scroll-margin-top:18px;margin:0 0 46px}
+.sec-head{display:flex;align-items:center;gap:12px;margin:0 0 8px}
+.sec-head .badge{flex:0 0 auto;width:44px;height:44px;border-radius:13px;background:linear-gradient(135deg,#0EA5E9,#06B6D4);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:17px;box-shadow:0 6px 14px rgba(14,165,233,.25)}
+.sec-head h2{font-size:27px;margin:0;line-height:1.35;font-weight:800}
+.sec-head .en{font-size:13px;color:var(--muted);font-weight:400;margin-left:6px}
+.sec-lead{color:#334155;background:#fff;border-left:4px solid var(--primary);border-radius:0 12px 12px 0;padding:13px 18px;margin:12px 0 22px;box-shadow:var(--shadow);font-size:15px}
+.card{background:var(--card);border:1px solid var(--border);border-left:6px solid var(--primary);border-radius:var(--radius);padding:20px 22px;margin:16px 0;box-shadow:var(--shadow)}
+.card.red{border-left-color:var(--symptom)} .card.green{border-left-color:var(--treatment)}
+.card.blue{border-left-color:var(--cause)} .card.orange{border-left-color:var(--diagnosis)}
+.card.purple{border-left-color:var(--memory)} .card.cyan{border-left-color:var(--flashcard)}
+.card.danger{border-left-color:var(--danger)} .card.pink{border-left-color:var(--quiz)}
+.card h3,.col-title{font-size:19px;margin:0 0 10px;line-height:1.45;display:flex;align-items:center;gap:9px;flex-wrap:wrap}
+.col-title .idx{font-size:12px;font-weight:800;color:#fff;background:var(--primary);padding:2px 9px;border-radius:999px;letter-spacing:.03em}
+.card p{margin:8px 0}
+.card ul,.card ol{margin:8px 0;padding-left:22px}
+.card li{margin:5px 0}
+.quote{background:#EFF8FF;border:1px dashed #7DD3FC;border-radius:10px;padding:12px 16px;margin:10px 0;font-size:15px;color:#0C4A6E}
+.quote .lab{display:inline-block;font-size:11px;font-weight:800;background:#0EA5E9;color:#fff;padding:1px 7px;border-radius:5px;margin-right:7px;vertical-align:1px}
+.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.grid4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.grid2>*,.grid3>*,.grid4>*{min-width:0}
+.mini{background:#F8FAFC;border:1px solid var(--border);border-radius:11px;padding:12px 14px}
+.mini h4{margin:0 0 5px;font-size:15px;color:#0F172A}
+.mini p,.mini ul{font-size:14px;color:#334155;margin:4px 0}
+.mini ul{padding-left:18px}
+.stat{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0}
+.stat span{font-size:13px;background:#E0F2FE;color:#075985;border-radius:999px;padding:3px 11px;font-weight:600}
+.table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:12px 0;border-radius:12px;border:1px solid var(--border)}
+table{border-collapse:collapse;width:100%;min-width:560px;background:#fff;font-size:14px}
+th{background:#0F172A;color:#fff;font-weight:700;padding:10px 12px;text-align:left;line-height:1.5;font-size:13.5px}
+td{padding:10px 12px;border-top:1px solid var(--border);vertical-align:top;line-height:1.65}
+tbody tr:nth-child(even){background:#F8FAFC}
+td strong{color:#0C4A6E}
+.callout{border-radius:12px;padding:13px 16px;margin:12px 0;border:1px solid;font-size:14.5px}
+.callout .ct{font-weight:800;display:block;margin-bottom:4px;font-size:14.5px}
+.callout.tip{background:#F5F3FF;border-color:#C4B5FD;color:#4C1D95}
+.callout.warn{background:#FEF2F2;border-color:#FCA5A5;color:#7F1D1D}
+.callout.key{background:#ECFDF5;border-color:#6EE7B7;color:#065F46}
+.callout.book{background:#EFF6FF;border-color:#93C5FD;color:#1E3A8A}
+.callout.quiz{background:#FDF2F8;border-color:#F9A8D4;color:#831843}
+.callout.ext{background:#F0F9FF;border-color:#7DD3FC;color:#0C4A6E}
+.timeline{border-left:3px solid #BAE6FD;margin:14px 0 6px 8px;padding-left:20px}
+.tl-item{position:relative;margin:0 0 16px}
+.tl-item:before{content:"";position:absolute;left:-28px;top:5px;width:13px;height:13px;border-radius:50%;background:#fff;border:3px solid var(--primary)}
+.tl-item h4{margin:0 0 3px;font-size:15px;color:#075985}
+.tl-item p{margin:0;font-size:14px;color:#334155}
+.bar{background:#E2E8F0;border-radius:999px;height:9px;overflow:hidden;margin:6px 0 10px}
+.bar i{display:block;height:100%;border-radius:999px;background:linear-gradient(90deg,#0EA5E9,#10B981)}
+.bar-label{display:flex;justify-content:space-between;font-size:13px;color:#334155}
+.tabs{margin:14px 0}
+.tabbar{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:12px}
+.tabbar button{border:1px solid var(--border);background:#fff;border-radius:999px;padding:7px 15px;font-size:14px;font-family:inherit;cursor:pointer;color:#334155}
+.tabbar button.on{background:var(--primary);color:#fff;border-color:var(--primary)}
+.panel{display:none}
+.panel.on{display:block;animation:fade .25s ease}
+@keyframes fade{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}
+details{background:#fff;border:1px solid var(--border);border-radius:11px;margin:10px 0;overflow:hidden}
+summary{cursor:pointer;padding:11px 15px;font-weight:700;color:#075985;list-style:none;font-size:14.5px;background:#F8FAFC}
+summary::-webkit-details-marker{display:none}
+summary:before{content:"▸";display:inline-block;margin-right:7px;color:var(--primary);transition:transform .2s}
+details[open] summary:before{transform:rotate(90deg)}
+details[open] summary{border-bottom:1px solid var(--border)}
+.dbody{padding:13px 16px;font-size:14.5px;color:#1E293B}
+.flashcard-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin:16px 0}
+.flashcard{perspective:1200px;height:200px;cursor:pointer}
+.fc-inner{position:relative;width:100%;height:100%;transition:transform .55s;transform-style:preserve-3d}
+.flashcard.flipped .fc-inner{transform:rotateY(180deg)}
+.fc-front,.fc-back{position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;border-radius:14px;padding:14px 16px;display:flex;flex-direction:column;justify-content:center;box-shadow:var(--shadow);overflow:auto}
+.fc-front{background:#fff;border:1px solid var(--border);border-top:5px solid var(--flashcard)}
+.fc-back{background:#ECFEFF;border:1px solid #A5F3FC;transform:rotateY(180deg);font-size:13.5px;line-height:1.65;color:#164E63}
+.tag{display:inline-block;align-self:flex-start;font-size:11px;font-weight:800;padding:1px 8px;border-radius:999px;margin-bottom:8px;letter-spacing:.04em}
+.tag.concept{background:#DBEAFE;color:#1E40AF}
+.tag.diag{background:#FFEDD5;color:#9A3412}
+.tag.treat{background:#D1FAE5;color:#065F46}
+.tag.data{background:#FCE7F3;color:#9D174D}
+.tag.risk{background:#FEE2E2;color:#991B1B}
+.fc-front p{margin:0;font-size:14.5px;font-weight:700;line-height:1.6}
+.fc-hint{position:absolute;bottom:10px;left:16px;font-size:11px;color:#94A3B8}
+.quiz-q{background:#fff;border:1px solid var(--border);border-left:5px solid var(--quiz);border-radius:12px;padding:16px 18px;margin:16px 0;box-shadow:var(--shadow)}
+.quiz-q .qh{display:flex;justify-content:space-between;gap:10px;align-items:flex-start;margin-bottom:8px;flex-wrap:wrap}
+.quiz-q .qno{font-size:12px;font-weight:800;color:#fff;background:var(--quiz);border-radius:999px;padding:2px 9px;letter-spacing:.04em}
+.diff{font-size:12px;color:#B45309;background:#FEF3C7;border-radius:999px;padding:2px 10px;font-weight:700;white-space:nowrap}
+.qtype{font-size:12px;color:#6B21A8;background:#F3E8FF;border-radius:999px;padding:2px 10px;font-weight:700;white-space:nowrap}
+.opts{margin:10px 0 4px;display:grid;gap:7px}
+.opt{border:1px solid var(--border);border-radius:9px;padding:8px 12px;font-size:14.5px;background:#F8FAFC}
+.opt.correct{border-color:#6EE7B7;background:#ECFDF5;color:#065F46;font-weight:600}
+.opt .l{font-weight:800;color:var(--primary);margin-right:7px}
+.opt.correct .l{color:#047857}
+.brief{font-size:14px;color:#334155;margin-top:4px}
+.case{border:1px solid var(--border);border-top:5px solid var(--danger);border-radius:14px;background:#fff;padding:20px 22px;margin:18px 0;box-shadow:var(--shadow)}
+.case h3{font-size:19px;margin:0 0 8px;color:#7F1D1D}
+.case .ctag{font-size:11.5px;font-weight:800;background:#FEE2E2;color:#991B1B;padding:2px 9px;border-radius:999px;display:inline-block;margin-bottom:10px}
+.case .scene{background:#FFF7ED;border-left:4px solid #FB923C;border-radius:0 10px 10px 0;padding:12px 16px;font-size:14.5px;margin:8px 0 14px}
+.case .ques{margin:8px 0;padding-left:2px}
+.case .ques li{margin:5px 0;font-size:14.5px}
+.top{position:fixed;right:24px;bottom:26px;width:48px;height:48px;border-radius:50%;background:var(--primary);color:#fff;border:none;font-size:20px;cursor:pointer;box-shadow:0 8px 20px rgba(14,165,233,.35);z-index:150;display:none;font-family:inherit}
+.top.show{display:block}
+.hr{height:1px;background:var(--border);margin:26px 0}
+.note{font-size:13px;color:var(--muted);margin-top:6px}
+.kv{display:flex;gap:10px;flex-wrap:wrap;margin:8px 0}
+.kv .k{font-size:12px;font-weight:800;color:#0369A1;background:#E0F2FE;border-radius:6px;padding:2px 8px;white-space:nowrap}
+.kv .v{font-size:14px;color:#334155}
+.starme{font-size:12.5px;color:#B45309;white-space:nowrap}
+@media (max-width:1100px){
+  .main{padding:0 22px 80px}
+  .hero{margin:0 -22px 26px;padding:44px 26px 34px}
+  .hero h1{font-size:34px}
+  .flashcard-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .grid4{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width:900px){
+  .sidebar{transform:translateX(-100%);transition:transform .25s ease;width:280px;box-shadow:0 0 30px rgba(0,0,0,.18)}
+  .sidebar.open{transform:none}
+  .overlay{display:none;position:fixed;inset:0;background:rgba(15,23,42,.42);z-index:110}
+  .overlay.show{display:block}
+  .menu-btn{display:block}
+  .main{margin-left:0;padding:0 18px 80px}
+  .hero{margin:0 -18px 24px;padding:64px 22px 30px;border-radius:0 0 20px 20px}
+  .hero h1{font-size:30px}
+  .sec-head h2{font-size:23px}
+}
+@media (max-width:680px){
+  .grid2,.grid3,.grid4{grid-template-columns:minmax(0,1fr)}
+  .flashcard-grid{grid-template-columns:minmax(0,1fr)}
+  .flashcard{height:190px}
+  table{min-width:500px}
+}
+</style>
+<style data-refactor="v1">
+/* ============================================================
+   精神病学学习指南 · 统一交互层增量覆盖样式 v1
+   构建期由 apply-refactor.ps1 注入 </head> 前，仅追加修正，
+   不改动 A/B 两族基础样式。全部使用字面色值，兼容两族设计变量。
+   ============================================================ */
+
+/* ---- 1. 全局键盘焦点可见 ---- */
+:focus-visible{outline:2px solid #0EA5E9;outline-offset:2px}
+
+/* ---- 2. 章节导航条（胶囊式三段：上一章 / 目录 / 下一章） ---- */
+.chapter-pager{display:flex;align-items:stretch;justify-content:center;gap:10px;margin:36px 0 10px;flex-wrap:wrap}
+.chapter-pager a,.chapter-pager span{flex:1 1 200px;display:flex;align-items:center;justify-content:center;min-height:44px;padding:10px 18px;border:1px solid #E2E8F0;border-radius:999px;background:#FFFFFF;color:#0F172A;font-size:14px;font-weight:600;line-height:1.4;text-decoration:none;text-align:center;box-shadow:0 1px 2px rgba(15,23,42,.06);transition:border-color .15s ease,box-shadow .15s ease,color .15s ease}
+.chapter-pager a:hover{border-color:#0EA5E9;color:#0EA5E9;box-shadow:0 4px 14px rgba(14,165,233,.18);text-decoration:none}
+.chapter-pager .cp-toc{flex:0 0 auto;min-width:104px;background:linear-gradient(135deg,#0EA5E9,#10B981);border-color:transparent;color:#FFFFFF}
+.chapter-pager .cp-toc:hover{border-color:transparent;color:#FFFFFF;opacity:.92}
+.chapter-pager .cp-disabled{opacity:.45;background:#F8FAFC;box-shadow:none;cursor:default}
+@media (max-width:680px){.chapter-pager{gap:8px;margin:28px 0 8px}.chapter-pager a,.chapter-pager span{flex:1 1 100%}}
+
+/* ---- 3. 自测题交互态（兼容 A 族 .opt 与 B 族 .quiz-options li） ---- */
+/* 3.1 基础可点击 */
+.quiz-q .opt{cursor:pointer}
+.quiz-item .quiz-options li{cursor:pointer}
+/* 3.2 hover / 焦点态 */
+.quiz-q .opt:hover,.quiz-q .opt:focus-visible{border-color:#7DD3FC;background:#F0F9FF}
+.quiz-item .quiz-options li:hover,.quiz-item .quiz-options li:focus-visible{background:#FFFFFF;box-shadow:inset 0 0 0 1px #7DD3FC}
+/* 3.3 判定结果态 */
+.quiz-q .opt.is-right{border-color:#34D399;background:#ECFDF5;color:#065F46;font-weight:600}
+.quiz-q .opt.is-right::after{content:" ✓";color:#059669;font-weight:800}
+.quiz-q .opt.is-right .l{color:#047857}
+.quiz-item .quiz-options li.is-right{background:#DCFCE7;box-shadow:inset 0 0 0 1px #34D399;font-weight:600}
+.quiz-item .quiz-options li.is-right::after{content:" ✓";color:#15803D;font-weight:800}
+.quiz-q .opt.is-wrong{border-color:#FCA5A5;background:#FEF2F2;color:#B91C1C;font-weight:600}
+.quiz-q .opt.is-wrong::after{content:" ✗";color:#DC2626;font-weight:800}
+.quiz-q .opt.is-wrong .l{color:#B91C1C}
+.quiz-item .quiz-options li.is-wrong{background:#FEE2E2;box-shadow:inset 0 0 0 1px #FCA5A5;font-weight:600}
+.quiz-item .quiz-options li.is-wrong::after{content:" ✗";color:#DC2626;font-weight:800}
+.quiz-q .opt.is-reveal{border-color:#6EE7B7;background:#ECFDF5;color:#065F46}
+.quiz-q .opt.is-reveal .l{color:#047857}
+.quiz-item .quiz-options li.is-reveal{background:#ECFDF5;box-shadow:inset 0 0 0 1px #6EE7B7;color:#065F46}
+/* 3.4 已锁定禁用态 */
+.quiz-q.is-locked .opt,.quiz-item.is-locked .quiz-options li{cursor:default;pointer-events:none}
+.quiz-q.is-locked .opt:not(.is-right):not(.is-wrong):not(.is-reveal){opacity:.55}
+.quiz-item.is-locked .quiz-options li:not(.is-right):not(.is-wrong):not(.is-reveal){opacity:.55}
+/* 3.5 计分行（运行时注入） */
+.quiz-score{display:flex;align-items:center;gap:12px;margin:14px 0 18px;padding:12px 18px;border:1px dashed #7DD3FC;border-radius:12px;background:#F0F9FF;font-size:14px;font-weight:700;color:#0F172A}
+.quiz-score .qs-label{white-space:nowrap}
+.quiz-score .qs-num{white-space:nowrap;color:#0284C7;font-size:16px}
+.quiz-score .qs-bar{flex:1 1 60px;min-width:60px;height:8px;border-radius:999px;background:#E2E8F0;overflow:hidden}
+.quiz-score .qs-bar i{display:block;height:100%;width:0;border-radius:999px;background:linear-gradient(90deg,#0EA5E9,#10B981);transition:width .35s ease}
+
+/* ---- 4. 速记卡可达性与长内容 ---- */
+.fc-hint,.flip-hint{color:#64748B}
+.flashcard-face{overflow:auto}
+.flashcard[tabindex]{outline:none}
+.flashcard[tabindex]:focus-visible{outline:3px solid #0EA5E9;outline-offset:3px}
+
+/* ---- 5. 侧栏目录 ---- */
+/* B 族 sticky 侧栏内目录限高滚动（A 族 aside 本身已可滚动，此规则空匹配无害） */
+.sidebar .sidebar-nav{max-height:calc(100vh - 60px);overflow-y:auto;scrollbar-width:thin}
+/* A 族 scroll spy 高亮（B 族高亮由其基础样式提供） */
+.sidebar a.toc.active{background:#E0F2FE;color:#0369A1;font-weight:600}
+
+/* ---- 6. 响应式补充：681–900px 时 grid3 降为两列 ---- */
+@media (min-width:681px) and (max-width:900px){
+  .grid3{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+
+/* ---- 7. 打印样式补充（A 族新增；B 族已有 print，重复声明无害） ---- */
+@media print{
+  .sidebar,.overlay,.sidebar-overlay,#menuBtn,#navToggle,#overlay,#sidebarOverlay,#readbar,#topBtn,#backTop,.chapter-pager,.quiz-score{display:none!important}
+}
+
+/* ---- 8. 手机端增强 v2（触控体验 / 防溢出 / 抽屉滚动锁定） ---- */
+/* 8.1 触控体验：去点按高亮、消除双击缩放延迟（flashcard 高 190-200px 天然达标，不另设 min-height） */
+.opt,.tabbar button,.tab-btn,.quiz-options li,.flashcard,.chapter-pager a,.chapter-pager span,.menu-btn,.mobile-nav-toggle{-webkit-tap-highlight-color:transparent;touch-action:manipulation}
+/* 8.2 触控目标最小 44px（自测选项与 tab 胶囊原高约 33px） */
+.opt,.tabbar button,.tab-btn,.quiz-options li{min-height:44px}
+/* 8.3 防溢出：内容图自适应；svg 不设 height:auto，避免定尺寸图标塌陷 */
+img{max-width:100%;height:auto}
+svg{max-width:100%}
+/* 8.4 长词/URL 断行 */
+body{overflow-wrap:break-word}
+/* 8.5 表格容器触摸惯性滚动（A 族已有同值规则，重复声明无害） */
+.table-wrap{-webkit-overflow-scrolling:touch}
+/* 8.6 抽屉打开时锁定背景滚动（两族抽屉断点均为 900px；类由统一脚本增删） */
+@media (max-width:900px){
+  body.nav-locked{overflow:hidden}
+}
+</style>
+</head>
+<body>
+<div id="readbar"></div>
+<button class="menu-btn" id="menuBtn" aria-label="打开目录">☰</button>
+<div class="overlay" id="overlay"></div>
+<aside class="sidebar" id="sidebar">
+  <h2>第二十三章 会诊-联络精神病学</h2>
+  <div class="sub">精神病学（第9版）· 印刷页 280–289<br>学习指南 · 技能标准版</div>
+  <div class="toc-group">开篇</div>
+  <a class="toc" href="#cover"><span class="n">00</span>章节封面与学习目标</a>
+  <a class="toc" href="#status"><span class="n">01</span>本章地位速览</a>
+  <a class="toc" href="#navmap"><span class="n">02</span>章节导航图与八栏适配说明</a>
+  <a class="toc" href="#mindmap"><span class="n">03</span>本章知识地图</a>
+  <a class="toc" href="#route"><span class="n">04</span>学习路线图</a>
+  <div class="toc-group">正文（主题单元八栏）</div>
+  <a class="toc unitlink" href="#u1"><span class="n">05</span>学科概览：从身心统一观到 CLP</a>
+  <a class="toc sub2" href="#u1-3">└ 学科工作图景与现实版图</a>
+  <a class="toc sub2" href="#u1-5">└ 学科定位辨析</a>
+  <a class="toc unitlink" href="#u2"><span class="n">06</span>会诊原则、角色边界与七步流程</a>
+  <a class="toc sub2" href="#u2-3">└ 七步流程图景</a>
+  <a class="toc sub2" href="#u2-6">└ 会诊处置工具箱</a>
+  <a class="toc unitlink" href="#u3"><span class="n">07</span>综合医院常见精神症状及情绪、行为问题</a>
+  <a class="toc sub2" href="#u3-3">└ 八类问题临床表现拼图</a>
+  <a class="toc sub2" href="#u3-6">└ 分类处理原则工具箱</a>
+  <div class="toc-group">结尾</div>
+  <a class="toc" href="#summary"><span class="n">08</span>全章核心要点速览</a>
+  <a class="toc" href="#pitfalls"><span class="n">09</span>易混易错点警示</a>
+  <a class="toc" href="#quiz"><span class="n">10</span>章节自测系统</a>
+  <a class="toc" href="#cards"><span class="n">11</span>考点速记卡</a>
+  <a class="toc" href="#cases"><span class="n">12</span>病例挑战</a>
+  <a class="toc" href="#ext"><span class="n">13</span>拓展延伸</a>
+</aside>
+<main class="main">
+<div class="wrap">
+
+<!-- ===== 00 封面 ===== -->
+<section id="cover">
+  <div class="hero">
+    <span class="chap">第二十三章 · CHAPTER 23</span>
+    <h1>会诊-联络精神病学</h1>
+    <p class="tagline">精神科医师走进综合医院的病房：在别人的主场上，把“身心统一”落成一次可执行的会诊。</p>
+    <p class="meta">教材：精神病学（第9版）｜印刷页 280–289｜全章 2 节：概述、综合医院提请会诊常见的精神症状及情绪、行为问题</p>
+    <div class="goalbox">
+      <h3>学习目标（四级分层）</h3>
+      <ul>
+        <li><span class="lv">了解</span>说出会诊-联络精神病学（CLP）的定义、三项工作内容与历史脉络；复述躯体疾病与精神症状的五种关系。</li>
+        <li><span class="lv l2">理解</span>解释医学模式转变为何催生 CLP；理解“以请求会诊科室的躯体治疗为主”这一角色边界背后的理由。</li>
+        <li><span class="lv l3">掌握</span>会诊七步流程及各步关键动作；综合医院八类常见问题的识别要点与分类处理原则。</li>
+        <li><span class="lv l4">重点</span>自杀风险评估与转诊、激越的三级处置、谵妄的核心特征、躯体痛苦障碍的诊断逻辑——高频考点与会诊安全底线。</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 01 地位 ===== -->
+<section id="status">
+  <div class="sec-head"><div class="badge">01</div><h2>本章地位速览<span class="en">Why this chapter matters</span></h2></div>
+  <p class="sec-lead">前面各章教你在精神科病房里看病，本章教你在<strong>别人的病房</strong>里看病：患者的主诉是躯体病，请求会诊的理由却常常是情绪、行为或“查不出原因”。</p>
+  <div class="grid3">
+    <div class="card blue">
+      <h3>章节定位与重要性</h3>
+      <p>本章位于教材第二十三章（印刷页 280–289），属<strong>工作模式与临床服务</strong>章节，不是疾病章。全章两节：第一节“概述”讲身心统一观、学科历史与工作模式；第二节按八类问题讲综合医院会诊的常见主诉。</p>
+      <p class="note">考试权重集中于：CLP 定义与任务、五种身心关系、会诊原则与流程、自杀风险评估、激越处置、谵妄识别、躯体痛苦障碍。</p>
+    </div>
+    <div class="card red">
+      <h3>临床意义</h3>
+      <p>教材指出，综合医院里诊断和治疗躯体疾病的医师“不可避免地要面对躯体疾病所伴发的精神心理症状”，而患病和就诊过程本身产生的行为与情绪反应，同样影响躯体疾病的治疗与转归。</p>
+      <p>会诊处理的不只是“多一个精神科诊断”，而是<strong>躯体疾病的预后、治疗依从性与医患关系</strong>：教材明确共病焦虑/抑郁可增加心肌梗死发作的死亡率，也易导致慢性躯体疾病反复发作。</p>
+      <p>同时，会诊本身有风险：把“查不出器质性证据”等同于“精神心理问题”、把自杀抢救后的患者直接放走，都是教材点名的临床陷阱。</p>
+    </div>
+    <div class="card green">
+      <h3>与前后章节关联</h3>
+      <p><strong>前置：</strong>精神症状学、精神检查、精神药理学与心理治疗基本技巧，是会诊医师的“工具箱”。</p>
+      <p><strong>后续延伸：</strong>本章多处把具体疾病“交回”其他章——谵妄见第十九章第一节，躯体痛苦障碍见第十三章第一节，躯体疾病所致精神病性症状的治疗见精神疾病治疗相关章节。</p>
+      <p><strong>横向交叉：</strong>与内科学、神经病学、急诊医学、肿瘤学、医学伦理学与医院管理交叉；教材举出的艾滋病、癌症、脑外伤、癫痫、消化性溃疡、多发性硬化、库欣综合征、类风湿关节炎、卟啉症，均属跨学科内容。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 02 导航 ===== -->
+<section id="navmap">
+  <div class="sec-head"><div class="badge">02</div><h2>章节导航图<span class="en">Section map</span></h2></div>
+  <p class="sec-lead">教材两节按“学科是什么 → 会诊怎么做 → 会诊看什么”重组为三个主题单元。点击卡片可直接跳转。</p>
+  <div class="grid3">
+    <a class="card cyan" href="#u1" style="display:block;color:inherit">
+      <h3>单元一 · 学科概览</h3>
+      <p>对应第一节第一、二小节（p.280–282）。医学模式转变、身心统一观、五种关系、CLP 定义与三项任务、欧美与我国的发展现状。</p>
+      <p class="note">关键词：生物-心理-社会 · 五种关系 · 44.6% · 32.8%/22.6%/10.5%</p>
+    </a>
+    <a class="card orange" href="#u2" style="display:block;color:inherit">
+      <h3>单元二 · 原则、边界与流程</h3>
+      <p>对应第一节第三小节（p.282–284）。身心统一指导思想、会诊医师的三重能力、角色边界、七步会诊流程、记录与随访。</p>
+      <p class="note">关键词：不喧宾夺主 · 七步流程 · 小剂量滴定 · 会诊小组</p>
+    </a>
+    <a class="card red" href="#u3" style="display:block;color:inherit">
+      <h3>单元三 · 常见问题谱</h3>
+      <p>对应第二节（p.284–289）。焦虑与抑郁、自杀、精神病性症状、激越、睡眠障碍、疼痛、无客观检查所见的躯体症状、谵妄。</p>
+      <p class="note">关键词：自杀三前位 · 35%～50% · 4P · 疼痛三型 · BDD</p>
+    </a>
+  </div>
+
+  <div class="callout warn">
+    <span class="ct">📌 关于八栏适配的说明（必读）</span>
+    <p>本章<strong>不是疾病章</strong>：教材没有把任何一种精神障碍作为独立疾病单元完整展开，而是以“一个学科 + 一套工作方法 + 一组会诊问题”为叙述对象。因此不能按“每病八栏”直接书写。本指南按 BRIEF 的非疾病章适配规则处理：</p>
+    <ul>
+      <li><strong>单元划分依据：</strong>第一节含“身心统一观／定义、历史与现状／基本原则与工作模式”三小节。前两小节回答“学科是什么、为什么有”，合并为<strong>单元一</strong>；第三小节回答“会诊怎么做”，独立为<strong>单元二</strong>。第二节按八类问题平行叙述，合并为<strong>单元三</strong>。共 <strong>3 个主题单元、3×8＝24 栏</strong>，教材两节内容无遗漏。</li>
+      <li><strong>栏目名称与顺序一律不变</strong>（第一栏疾病画像 → 第八栏知识联动），只把“疾病”替换为对应对象：第一栏“疾病画像 → 学科画像／会诊工作画像／会诊问题谱画像”；第二栏“病因探秘 → 学科兴起探秘／原则依据探秘／问题成因探秘”；第三栏“临床表现拼图 → 学科工作图景／七步流程图景／八类问题拼图”。</li>
+      <li><strong>第三栏与第六栏：</strong>单元三逐一覆盖教材点名的八类问题及其处理原则；教材只给病因、未给治疗的问题（如失眠、躯体痛苦障碍）明确标「教材未给具体治疗方案」，不补写剂量与疗程。</li>
+      <li><strong>第四栏：</strong>三个单元均<strong>无患者案例</strong>，统一标注「教材未提供具体临床案例」。教材中的“双心门诊”“阳光医院”、两项会诊调查数据、会诊申请理由清单，均属<strong>机构做法或调查结果</strong>，不是病例，本指南不虚构病史与检查数值。</li>
+      <li><strong>第五栏：</strong>以“身心关系辨析／会诊角色辨析／会诊问题辨析”替代疾病鉴别，统一用表格呈现，每表附一句话总结。</li>
+      <li><strong>第六栏：</strong>单元一、二写“学科任务／会诊处置”工具箱；单元三写“分类处理原则”，并逐项标明教材给出的处理与教材空白。</li>
+      <li><strong>第七栏：</strong>每单元仍提供<strong>不少于 3 种</strong>记忆方法，注明方法类型与“为什么这样记”，口诀不改变医学事实。</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===== 03 知识地图 ===== -->
+<section id="mindmap">
+  <div class="sec-head"><div class="badge">03</div><h2>本章知识地图<span class="en">Knowledge map</span></h2></div>
+  <p class="sec-lead">不按目录复制，而按“为什么会有这个学科 → 它做什么 → 会诊怎么做 → 会诊看什么”四层重排。全章可压成一句话：<strong>躯体病带来精神问题，精神科医师进病房帮忙，但主角仍是躯体治疗</strong>。</p>
+  <div class="stat">
+    <span>2 节</span><span>3 个主题单元</span><span>5 种身心关系</span><span>7 步会诊流程</span><span>8 类会诊问题</span><span>2 组教材调查数据</span>
+  </div>
+  <p class="note">统计口径：八类问题按教材第二节小标题计（焦虑、抑郁合并为一类；“疑病”在第七类中随 DSM-5 的“疾病焦虑障碍”出现；“查无实据的躯体症状”对应“缺乏客观检查所见的躯体症状主诉”）。教材未给出统一计数，此为按原文小标题整理。</p>
+  <div class="grid2">
+    <div class="card cyan">
+      <h3>第一层 · 为什么会有 CLP</h3>
+      <ul>
+        <li><strong>医学模式：</strong>从生物医学模式（身体如机器、治疗如修理）转向生物-心理-社会医学模式。</li>
+        <li><strong>两个突破口：</strong>坎农等心理生理学派的应激理论；精神分析对心理冲突的强调。</li>
+        <li><strong>神经科学支撑：</strong>应激→小胶质细胞→中枢免疫炎症→神经发生与突触可塑性；微生物群-肠道-脑参与抑郁发生。</li>
+        <li><strong>现实推力：</strong>临床需求、培训加强、非精神科医师认识局限、疾病谱改变（生活方式病、糖尿病、冠心病）。</li>
+      </ul>
+    </div>
+    <div class="card blue">
+      <h3>第二层 · 学科做什么</h3>
+      <ul>
+        <li><strong>临床：</strong>在综合医院非精神科科室，针对精神症状与心理问题做咨询、诊断、干预和治疗。</li>
+        <li><strong>教学培训：</strong>促进精神科与非精神科医师理解躯体疾病与精神疾病的关系及处理方法。</li>
+        <li><strong>研究：</strong>广义的 CLP 还包括相关基础与临床研究。</li>
+        <li><strong>五种关系：</strong>躯体病直接导致／心理反应／精神科并发症／精神疾病的躯体症状／共病。</li>
+      </ul>
+    </div>
+    <div class="card orange">
+      <h3>第三层 · 会诊怎么做</h3>
+      <ul>
+        <li><strong>指导思想：</strong>从身心统一的角度理解疾病。</li>
+        <li><strong>三重能力：</strong>熟悉易致精神症状的躯体病；熟悉精神药理学与相互作用、特殊人群；具备基本心理治疗技巧。</li>
+        <li><strong>角色边界：</strong>以请求会诊科室的躯体治疗为主，精神科提供有限服务，不喧宾夺主。</li>
+        <li><strong>七步：</strong>沟通→读史→面谈检查→核对躯体用药→诊断治疗→记录→随访。</li>
+      </ul>
+    </div>
+    <div class="card red">
+      <h3>第四层 · 会诊看什么</h3>
+      <ul>
+        <li><strong>情绪：</strong>焦虑、抑郁（可影响心肌梗死死亡率、依从性与预后）。</li>
+        <li><strong>危险：</strong>自杀观念/企图；急诊自杀抢救后的转诊。</li>
+        <li><strong>行为：</strong>精神病性症状、激越（言语安抚→药物→约束）。</li>
+        <li><strong>躯体主诉：</strong>失眠（4P）、疼痛（三型）、无客观检查所见的躯体症状（BDD）。</li>
+        <li><strong>认知：</strong>谵妄——注意障碍 + 意识障碍 + 一日内波动，起病急、可逆。</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 04 路线 ===== -->
+<section id="route">
+  <div class="sec-head"><div class="badge">04</div><h2>学习路线图<span class="en">Study route</span></h2></div>
+  <p class="sec-lead">建议按“先立场、再流程、后问题谱、最后练题”的顺序。本章记忆负担不大，难在<strong>角色定位</strong>和<strong>处理分级</strong>。</p>
+  <div class="grid2">
+    <div class="card blue">
+      <h3>推荐学习路径</h3>
+      <div class="timeline">
+        <div class="tl-item"><h4>第 1 步 · 建立场（约 25 分钟）</h4><p>读第一节第一、二小节，抓住医学模式转变与五种身心关系。先想清楚“为什么精神科要进综合医院”。</p></div>
+        <div class="tl-item"><h4>第 2 步 · 记流程（约 35 分钟）</h4><p>精读第一节第三小节，把七步流程按“沟通—资料—检查—用药—处置—文书—随访”串成一条线。</p></div>
+        <div class="tl-item"><h4>第 3 步 · 攻问题谱（约 50 分钟）</h4><p>按“情绪（焦虑抑郁）→危险（自杀）→行为（精神病性、激越）→躯体主诉（睡眠、疼痛、BDD）→认知（谵妄）”分组记忆，每组记识别要点 + 处理分级。</p></div>
+        <div class="tl-item"><h4>第 4 步 · 记数据（约 15 分钟）</h4><p>只背教材给出的两组调查数据与 35%～50%、4P、三种疼痛，不做课外补充。</p></div>
+        <div class="tl-item"><h4>第 5 步 · 自测与病例（约 30 分钟）</h4><p>做 14 道自测题，再过 3 个模拟病例，重点练“先评估风险，再谈诊断”。</p></div>
+      </div>
+      <p class="note">总时长约 2.5 小时；建议分 2 次完成，次日用速记卡复习 20 分钟。</p>
+    </div>
+    <div class="card purple">
+      <h3>重点优先级与记忆策略</h3>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>内容</th><th>优先级</th><th>推荐记忆法</th></tr></thead>
+          <tbody>
+            <tr><td>五种身心关系</td><td class="starme">⭐⭐⭐</td><td>数字编码 + 方向辨析</td></tr>
+            <tr><td>会诊角色边界（不喧宾夺主）</td><td class="starme">⭐⭐⭐</td><td>类比理解 + 反例警示</td></tr>
+            <tr><td>七步会诊流程</td><td class="starme">⭐⭐⭐</td><td>口诀 + 流程时间线</td></tr>
+            <tr><td>自杀风险评估与转诊</td><td class="starme">⭐⭐⭐</td><td>三步口诀 + 危险因素清单</td></tr>
+            <tr><td>激越的三级处置</td><td class="starme">⭐⭐⭐</td><td>降级阶梯 + 场景联想</td></tr>
+            <tr><td>谵妄的核心特征</td><td class="starme">⭐⭐⭐</td><td>四要素 + 类比</td></tr>
+            <tr><td>躯体痛苦障碍的诊断逻辑</td><td class="starme">⭐⭐⭐</td><td>对比记忆（阳性证据 vs 解释缺如）</td></tr>
+            <tr><td>失眠 4P</td><td class="starme">⭐⭐</td><td>首字母缩拼</td></tr>
+            <tr><td>焦虑/抑郁的共病影响</td><td class="starme">⭐⭐</td><td>因果链记忆</td></tr>
+            <tr><td>会诊调查数据</td><td class="starme">⭐</td><td>数字锚定（不必强记小数）</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="note">记忆策略总原则：本章的“考点”多是<strong>顺序与分级</strong>（先做什么、后做什么），优先用流程与阶梯，而不是散点背诵。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 05 单元一 ===== -->
+<section id="u1">
+  <div class="sec-head"><div class="badge">05</div><h2>学科概览：从身心统一观到 CLP<span class="en">第一节 · 概述（p.280–282）</span></h2></div>
+  <p class="sec-lead">这一单元回答三个“为什么”：为什么医学模式要变、为什么躯体病会带来精神症状、为什么综合医院需要一个精神科分支。</p>
+
+  <!-- 第一栏 -->
+  <div class="card cyan" id="u1-1">
+    <h3 class="col-title"><span class="idx">第一栏</span>疾病画像 → 学科画像</h3>
+    <div class="quote"><span class="lab">教材原文</span>会诊-联络精神病学（consultation-liaison psychiatry，CLP）是精神病学的一个分支，其核心工作是精神科医师在综合医院的非精神科科室针对患者的精神症状及心理问题进行相关的临床咨询、诊断、干预和治疗。</div>
+    <p><strong>一句话画像：</strong>CLP 是精神科派驻到综合医院的“临床接口”——患者住在内科、外科、妇产科，精神科医师过去看、过去治，也过去教。<span class="note">（此句为类比理解，非教材原文）</span></p>
+    <p><strong>教材给出的三项工作内容：</strong></p>
+    <div class="grid3">
+      <div class="mini"><h4>① 临床诊疗</h4><p>在非精神科科室针对精神症状及心理问题进行临床咨询、诊断、干预和治疗。这是“核心工作”。</p></div>
+      <div class="mini"><h4>② 教学培训</h4><p>促进精神科以及非精神科医师更好地理解躯体疾病与精神疾病（或精神症状）的关系，掌握相应的诊断和处理方法。</p></div>
+      <div class="mini"><h4>③ 研究</h4><p>广义的 CLP 还包括针对相关问题进行的基础和临床研究工作。</p></div>
+    </div>
+    <div class="callout key">
+      <span class="ct">📌 学科定位</span>
+      CLP 已成为精神病学的<strong>一个重要分支</strong>，推动综合医院精神病学服务质量和水平的提高，并获得非精神科医师及患者的认可。教材把它的产生直接归因于医学模式转变——它是“在新的医学模式指导下应运而生的具体的临床实践方式之一”。
+    </div>
+    <p class="note">流行病学：教材未提供 CLP 服务覆盖率的全国性数据；本节只给出两项具体的会诊调查结果，放在第三栏呈现，避免把局部数据写成总体患病率。</p>
+    <div class="callout tip">
+      <span class="ct">💡 单元分工说明</span>
+      本单元回答“学科是什么、为什么有”（定义、任务、历史与现状）；“会诊该怎么做、做到哪一步”（基本原则、角色边界、沟通与记录要求）集中在<strong>单元二</strong>展开，避免同一内容两处重复。
+    </div>
+  </div>
+
+  <!-- 第二栏 -->
+  <div class="card blue" id="u1-2">
+    <h3 class="col-title"><span class="idx">第二栏</span>病因探秘 → 学科兴起探秘</h3>
+    <p><strong>理论前提：从“修机器”到“看整个人”。</strong>教材用医学模式的演变解释 CLP 的诞生：传统生物医学模式基于分析还原论，把身体视为一架复杂精密的仪器，疾病与治疗被等同于对机器的修理与维护。</p>
+    <div class="grid2">
+      <div class="mini">
+        <h4>两个理论突破口</h4>
+        <ul>
+          <li><strong>心理生理学派：</strong>以坎农等生理学家为代表，提出应激理论，率先阐述应激对身体的影响，为认识身心相互作用机制打开大门。</li>
+          <li><strong>精神分析理论：</strong>强调心理冲突对躯体的影响，促使人们进一步思考心理与躯体的内在关系。</li>
+        </ul>
+      </div>
+      <div class="mini">
+        <h4>模式确立与学科群</h4>
+        <ul>
+          <li>自 20 世纪 70 年代开始，生物-心理-社会医学模式被广为接受。</li>
+          <li>形成医学心理学、心身医学、行为医学等流派，从生物、心理、社会文化的整体观、多元观理解心身疾病。</li>
+        </ul>
+      </div>
+    </div>
+    <p><strong>神经科学的支撑：</strong>教材指出，精神疾病的产生和发展不仅限于大脑的生物学改变，整个身体系统（免疫、内分泌、消化系统中的肠道微生物菌群等）都参与病理生理过程。</p>
+    <ul>
+      <li>应激可能通过多种生物学途径激活大脑<strong>小胶质细胞</strong>，导致中枢免疫炎症性反应，影响<strong>神经发生、突触可塑性和突触修饰</strong>。</li>
+      <li><strong>微生物群-肠道-脑</strong>的相互调控，共同参与并导致神经、内分泌及免疫系统紊乱，进而影响神经元结构与功能，导致抑郁的发生。</li>
+    </ul>
+    <p><strong>现实推力：20 世纪 70 年代以后，四个因素共同促成 CLP 发展。</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>推力</th><th>教材表述</th></tr></thead>
+        <tbody>
+          <tr><td>临床需求 + 培训</td><td>临床需求进一步增加，相关专业培训教育工作得到加强。</td></tr>
+          <tr><td>精神科一侧的主动性</td><td>美国初级保健医师对 CLP 兴趣日增；精神科医师在神经精神病学研究迅猛发展的基础上，认识到精神科临床工作的独特性，获得更多自信并更积极参与会诊-联络工作。</td></tr>
+          <tr><td>非精神科一侧的认识转变</td><td>非精神科医师逐渐认识到传统医学模式的局限性，希望精神科医师帮助解决患者出现的精神症状和心理问题。</td></tr>
+          <tr><td>疾病谱改变</td><td>心理社会因素在更多慢性疾病（生活方式病、糖尿病、冠心病等）中的作用被重视；非精神科医师开始认识到心理干预和行为方式调整对慢性疾病康复的重要性。</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p><strong>我国起步较晚的限制因素（教材列出七条）：</strong>精神科医师缺乏联络会诊的积极性；医院重视不够；资源配置不到位；部门之间沟通不畅；非精神科医师缺乏重视甚至抱有偏见；精神科医师缺乏基本的躯体疾病诊治技能；患者对精神疾病抱有病耻感。</p>
+    <div class="callout warn">
+      <span class="ct">⚠️ 注意区分“学科病因”与“患者病因”</span>
+      本栏的“病因”是<strong>学科兴起的原因</strong>，不是某位患者出现精神症状的原因。患者的成因见单元三第二栏；两类内容不要混答。
+    </div>
+  </div>
+
+  <!-- 第三栏 -->
+  <div class="card red" id="u1-3">
+    <h3 class="col-title"><span class="idx">第三栏</span>临床表现拼图 → 学科工作图景与现实版图</h3>
+    <div class="tabs" data-tabs>
+      <div class="tabbar">
+        <button class="on" data-tab="u1a">五种身心关系</button>
+        <button data-tab="u1b">我国会诊现实</button>
+        <button data-tab="u1c">历史节点</button>
+      </div>
+      <div class="panel on" data-panel="u1a">
+        <p><strong>教材把躯体疾病与精神症状（或精神障碍）的关系归为五种：</strong></p>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>关系</th><th>教材举例</th><th>因果方向</th></tr></thead>
+            <tbody>
+              <tr><td>① 躯体疾病<strong>直接导致</strong>的精神症状</td><td>脑炎患者出现的精神症状</td><td>躯体 → 精神</td></tr>
+              <tr><td>② 患者对躯体疾病产生的<strong>心理反应</strong></td><td>癌症后的焦虑、抑郁反应</td><td>躯体病 → 心理反应</td></tr>
+              <tr><td>③ 躯体疾病的<strong>精神科并发症</strong></td><td>卒中后抑郁</td><td>躯体病 → 精神障碍</td></tr>
+              <tr><td>④ <strong>精神疾病的躯体症状</strong></td><td>焦虑症和抑郁症中的躯体症状、转换性障碍</td><td>精神 → 躯体主诉</td></tr>
+              <tr><td>⑤ 躯体疾病与精神疾病<strong>共病</strong></td><td>两者同时存在</td><td>并存，需分别处理</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="callout key"><span class="ct">📌 一句话理解</span>同样是“躯体病 + 精神症状”，第①②③种是躯体病在前，第④种是精神障碍在前，第⑤种是两条线并行——会诊第一步就是辨方向。</div>
+      </div>
+
+      <div class="panel" data-panel="u1b">
+        <p><strong>教材引述的一项省级综合医院调查</strong>（2013 年 3 月至 2016 年 3 月，心身医学中心联络会诊）：</p>
+        <div class="stat">
+          <span>3 年会诊量增长率 44.6%</span>
+          <span>心内科 9.4%</span>
+          <span>神经内科 8.9%</span>
+          <span>骨科 5.4%</span>
+        </div>
+        <p><strong>会诊原因前三位：</strong>“存在情绪问题”“协助控制精神症状”“无法解释的躯体症状”。</p>
+        <p><strong>会诊诊断构成：</strong></p>
+        <div class="bar-label"><span>焦虑障碍（焦虑状态、惊恐障碍、强迫等）</span><span>32.8%</span></div>
+        <div class="bar"><i style="width:32.8%"></i></div>
+        <div class="bar-label"><span>心境障碍（抑郁症、抑郁状态、躁狂等）</span><span>22.6%</span></div>
+        <div class="bar"><i style="width:22.6%"></i></div>
+        <div class="bar-label"><span>器质性精神障碍</span><span>10.5%</span></div>
+        <div class="bar"><i style="width:10.5%"></i></div>
+        <p><strong>教材引述的另一项回顾性研究</strong>（2020 年 7 月至 2021 年 6 月，北京某医院躯体疾病科室接受心理医学科联络会诊的住院患者）：会诊诊断涉及几乎所有精神障碍，前三位为<strong>焦虑障碍 18.76%、抑郁障碍 17.12%、脑器质性精神障碍 16.45%</strong>。</p>
+        <p class="note">两组数据来自不同医院、不同年份、不同统计口径，教材并列呈现，不可直接相加或互相替代。小数位按原文保留。</p>
+      </div>
+
+      <div class="panel" data-panel="u1c">
+        <div class="timeline">
+          <div class="tl-item"><h4>20 世纪 20—30 年代 · 美国</h4><p>CLP 起源可追溯到此时，背景是精神医学的快速发展以及美国很多综合医院精神科的设立。</p></div>
+          <div class="tl-item"><h4>20 世纪 70 年代以前</h4><p>尚未形成规模；精神科学术会议上鲜有讨论，住院医师培训中占比很小。</p></div>
+          <div class="tl-item"><h4>20 世纪 70 年代以后</h4><p>四因素推动快速发展；欧美各国在全国范围推进，并将培训列入精神科住院医师和主治医师培养计划；出版《综合医院精神病学》《心身医学》等杂志。</p></div>
+          <div class="tl-item"><h4>1997 年</h4><p>欧洲多国成立欧洲会诊-联络精神病学及心身医学联合会（EACLPP），促进欧洲国家综合医院 CLP 工作的开展、教育培训以及专业管理。</p></div>
+          <div class="tl-item"><h4>我国 · 起步较晚</h4><p>三级以上医院基本都设立精神科或临床心理科，但规模、质量仍有很大差距；近年出现“双心门诊”“阳光医院”等尝试。</p></div>
+        </div>
+      </div>
+    </div>
+    <p class="note">本栏原用于疾病症状分维度呈现；本章无疾病单元，故改为“学科工作图景”，内容全部取自教材第一节。</p>
+  </div>
+
+  <!-- 第四栏 -->
+  <div class="card orange" id="u1-4">
+    <h3 class="col-title"><span class="idx">第四栏</span>教材典型案例</h3>
+    <div class="callout book">
+      <span class="ct">📖 教材未提供具体临床案例</span>
+      本节为学科概念、历史与现状，教材没有给出任何患者案例、病史或检查数据。教材中出现的“双心门诊”“阳光医院”属于<strong>机构做法举例</strong>，两项会诊调查属于<strong>统计结果</strong>，均不是病例；本指南不据此虚构患者。
+    </div>
+    <p><strong>可由教材内容推演的学习思路（非教材原文病例）：</strong></p>
+    <ol>
+      <li>看到“躯体病 + 精神症状”，先判五种关系中的哪一种——方向决定谁来主导治疗。</li>
+      <li>看到“查不出器质性原因”的主诉，先不要下“精神心理问题”的结论，教材明确警告这种“一分为二”的观念。</li>
+      <li>看到“情绪问题”的会诊申请，要想到教材的数据背景：焦虑、抑郁是会诊诊断中最常见的两类。</li>
+    </ol>
+    <p class="note">以上为按教材原则整理的学习思路，不是教材原案例。</p>
+  </div>
+
+  <!-- 第五栏 -->
+  <div class="card orange" id="u1-5">
+    <h3 class="col-title"><span class="idx">第五栏</span>鉴别诊断对对碰 → 学科定位辨析</h3>
+    <p><strong>表 1　五种身心关系的“方向鉴别”</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>关系</th><th>最先发生的是什么</th><th>会诊时的关键问法</th><th>最容易答错的地方</th></tr></thead>
+        <tbody>
+          <tr><td>① 躯体病直接导致</td><td>躯体疾病</td><td>精神症状是否随躯体病出现、随其恶化而加重？</td><td>误当成原发性精神障碍</td></tr>
+          <tr><td>② 心理反应</td><td>躯体疾病</td><td>症状是否在患病、住院、检查、手术等应激后短期出现？</td><td>误当成“共病精神障碍”</td></tr>
+          <tr><td>③ 精神科并发症</td><td>躯体疾病</td><td>有无明确的躯体事件（如卒中）在前？</td><td>与①混同（①更强调直接病理生理结果）</td></tr>
+          <tr><td>④ 精神疾病的躯体症状</td><td>精神障碍</td><td>躯体主诉是否与精神症状同步、检查能否解释？</td><td>误当成“躯体病导致精神症状”</td></tr>
+          <tr><td>⑤ 共病</td><td>两条线独立</td><td>两类诊断是否都能各自成立？</td><td>用一个诊断“吸收”另一个</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p><strong>表 2　欧美与我国 CLP 发展对比</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>维度</th><th>欧美</th><th>我国（教材表述）</th></tr></thead>
+        <tbody>
+          <tr><td>起步</td><td>20 世纪 20—30 年代美国</td><td>起步较晚</td></tr>
+          <tr><td>规模化</td><td>20 世纪 70 年代后全国推进，培训纳入住院医师与主治医师培养计划</td><td>三级以上医院多设精神科或临床心理科，但规模与质量差距大</td></tr>
+          <tr><td>组织与刊物</td><td>1997 年成立 EACLPP；出版《综合医院精神病学》《心身医学》</td><td>教材未提及全国性组织或专门刊物</td></tr>
+          <tr><td>主要阻碍</td><td>教材未涉及</td><td>积极性、重视、资源、沟通、偏见、躯体技能、病耻感七条</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout key"><span class="ct">📌 一句话鉴别总结</span>CLP 的“鉴别”首先是辨<strong>因果方向</strong>（谁在先），其次才是辨<strong>具体障碍</strong>；方向错了，后面的诊断与治疗都会跟着错。</div>
+  </div>
+
+  <!-- 第六栏 -->
+  <div class="card green" id="u1-6">
+    <h3 class="col-title"><span class="idx">第六栏</span>治疗方案工具箱 → 学科任务工具箱</h3>
+    <p><strong>教材为 CLP 划定的三项任务，可视为本学科的“工作处方”：</strong></p>
+    <div class="grid3">
+      <div class="mini"><h4>临床服务</h4><p>面向综合医院非精神科科室，处理精神症状与心理问题：咨询、诊断、干预、治疗。这是学科存在的第一理由。</p></div>
+      <div class="mini"><h4>教学培训</h4><p>让非精神科医师也能理解躯体疾病与精神疾病的关系、掌握相应诊断与处理方法；同时提升精神科医师的躯体疾病诊治能力。</p></div>
+      <div class="mini"><h4>研究</h4><p>广义 CLP 的组成部分，针对相关问题开展基础与临床研究。</p></div>
+    </div>
+    <p><strong>教材描述的服务落点：</strong></p>
+    <ul>
+      <li>会诊可发生在<strong>非精神科病房</strong>，也可发生在<strong>急诊</strong>（自杀抢救情境即为例证）。</li>
+      <li>对能自如走动的患者，在允许的情况下可<strong>直接到精神科门诊短期就诊</strong>；长期住院患者的家属或陪护可到精神科与医师共同讨论护理问题。</li>
+      <li>需要长期用药者，建议<strong>出院后继续接受精神科门诊治疗</strong>。</li>
+    </ul>
+    <div class="callout tip"><span class="ct">💡 提示</span>本栏原为“治疗方案”；学科层面教材未给出任何药物、剂量或疗程。具体处置原则见单元二第六栏与单元三第六栏；教材没有的数字一律不补。</div>
+  </div>
+
+  <!-- 第七栏 -->
+  <div class="card purple" id="u1-7">
+    <h3 class="col-title"><span class="idx">第七栏</span>记忆工具箱</h3>
+    <div class="callout tip">
+      <span class="ct">🔧 方法一：数字编码法（五种关系）</span>
+      记 <strong>“直、反、并、躯、共”</strong>五个字：①躯体病<strong>直</strong>接导致；②心理<strong>反</strong>应；③精神科<strong>并</strong>发症；④精神疾病的<strong>躯</strong>体症状；⑤<strong>共</strong>病。<br>
+      <em>为什么这样记：</em>五个字各对应一种关系，且自带方向提示（“直/并”是躯体在前，“躯”是精神在前，“共”是并行），比背整句定义更省力，也不易漏项。
+    </div>
+    <div class="callout tip">
+      <span class="ct">🔧 方法二：口诀歌谣法（学科任务与历史）</span>
+      口诀：<strong>“二三十年代起美国，七十年代才成规模；九七欧洲 EACLPP，临床教学研究三件事。”</strong><br>
+      <em>为什么这样记：</em>把“起源—规模化—组织化”三个时间点和“临床/教学/研究”三项任务压进两句，时间轴与任务清单一次成型。
+    </div>
+    <div class="callout tip">
+      <span class="ct">🔧 方法三：类比理解（标注：类比理解，非医学事实）</span>
+      把 CLP 想成医院里的<strong>“驻科翻译”</strong>：躯体科医师说的是“器官语言”，精神科医师说的是“心理语言”，会诊医师负责在两者之间翻译，并提醒“这句话背后还有情绪”。翻译再重要，也不能替主人改写原文——这正是“不喧宾夺主”。<br>
+      <em>为什么这样记：</em>一个画面同时绑住学科功能与角色边界这两个最易混的考点。
+    </div>
+    <div class="callout tip">
+      <span class="ct">🔧 方法四：对比记忆法（我国困境）</span>
+      把七条限制因素分成三组：<strong>“人不来”（积极性、偏见、病耻感）、“事不通”（沟通不畅、资源配置、医院重视）、“技不够”（缺乏躯体疾病诊治技能）</strong>。<br>
+      <em>为什么这样记：</em>七条散点难背，归成三组后每组只需回忆一个“关键词”，再展开细节。
+    </div>
+  </div>
+
+  <!-- 第八栏 -->
+  <div class="card cyan" id="u1-8">
+    <h3 class="col-title"><span class="idx">第八栏</span>知识联动</h3>
+    <ul>
+      <li><strong>与医学模式、心身医学：</strong>教材把 CLP 定位为生物-心理-社会医学模式下的具体临床实践方式，与医学心理学、心身医学、行为医学同源。</li>
+      <li><strong>与精神症状学、精神检查：</strong>会诊的第一手资料仍来自症状识别与精神检查；本章不重复症状学定义，只强调“在综合医院场景中识别”。</li>
+      <li><strong>与躯体痛苦障碍章（第十三章第一节）：</strong>教材在本章第七类问题中直接指向该章，说明 BDD 的临床表现需回第十三章学习。</li>
+      <li><strong>与谵妄章（第十九章第一节）：</strong>教材在本章第八类问题中直接指向该章，本章只给定义与识别要点。</li>
+      <li><strong>与治疗学章：</strong>躯体疾病所致精神病性症状的治疗，教材明确“参见本书精神疾病治疗的相关章节”，本章不展开用药。</li>
+      <li><strong>与内科学、神经病学、急诊医学：</strong>会诊申请来自几乎所有内外科室；自杀抢救、谵妄、激越都涉及急诊与躯体科室的协同。</li>
+      <li><strong>与医院管理：</strong>教材把“行政支持”“专门的会诊小组”写进随访环节，说明 CLP 的运行不只靠医师个人。</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===== 06 单元二 ===== -->
+<section id="u2">
+  <div class="sec-head"><div class="badge">06</div><h2>会诊原则、角色边界与七步流程<span class="en">第一节 · 基本原则与工作模式（p.282–284）</span></h2></div>
+  <p class="sec-lead">这一单元是全章的“操作手册”：先摆正位置（我是来帮忙的），再按七步把事情做完（从接到申请到随访）。</p>
+
+  <!-- 第一栏 -->
+  <div class="card cyan" id="u2-1">
+    <h3 class="col-title"><span class="idx">第一栏</span>疾病画像 → 会诊工作画像</h3>
+    <div class="quote"><span class="lab">教材原文</span>从身心统一的角度理解疾病是精神科联络会诊的基本指导思想。</div>
+    <p><strong>一句话画像：</strong>会诊是一个“完整的临床过程”，从会诊申请的提出一直到会诊医师的随访观察；它可能是一次性的，也可能是多次的。</p>
+    <div class="quote"><span class="lab">教材原文</span>治疗应该以请求会诊科室的躯体治疗为主，精神科医师主要是为对方提供服务（通常是有限的），而不是喧宾夺主。</div>
+    <p><strong>会诊医师要具备的三重能力（教材逐条要求）：</strong></p>
+    <div class="grid3">
+      <div class="mini"><h4>① 躯体病知识</h4><p>除一般疾病病理学知识外，应熟悉那些<strong>容易产生精神症状的常见躯体疾病</strong>。</p></div>
+      <div class="mini"><h4>② 精神药理知识</h4><p>熟悉药代动力学与药效动力学，避免精神科药物与躯体治疗药物相互作用导致的不良反应；了解老人、儿童、孕妇等特殊人群用药问题。</p></div>
+      <div class="mini"><h4>③ 心理治疗技巧</h4><p>具备基本的心理治疗技巧和能力，并把心理干预技巧<strong>贯穿到整个会诊过程</strong>中。</p></div>
+    </div>
+    <p><strong>教材对“看人”的要求：</strong>会诊医师应牢记被会诊的患者是一个完整的个体，除充分的理解、共情和支持外，还应能把握患者的<strong>人格倾向、疾病角色、情绪状态、认知水平以及行为方式</strong>，并善于通过语言沟通交流。</p>
+    <div class="callout warn">
+      <span class="ct">⚠️ 角色边界（教材反复强调）</span>
+      会诊能解决的问题<strong>有限</strong>；精神科医师应充分理解躯体治疗的重要性，通过耐心细致的沟通把精神疾病专业的理解（诊断和治疗）传达给请求会诊的医师，并制定<strong>切实可行</strong>的治疗计划。即使面对非精神科医师不了解、患者有戒心、精神科人手不足的现实，也要积极配合，而不是接管整个治疗。
+    </div>
+  </div>
+
+  <!-- 第二栏 -->
+  <div class="card blue" id="u2-2">
+    <h3 class="col-title"><span class="idx">第二栏</span>病因探秘 → 原则依据探秘</h3>
+    <p><strong>为什么必须“身心统一”？</strong>教材给出一个很朴素的理由：患病本身就是一个应激事件，足以促发各种心理情绪问题，并恶化躯体疾病本身；患有躯体疾病并在医院接受诊断和治疗，也会诱发患者正常或异常的生理心理反应。</p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>原则</th><th>教材给出的理由</th><th>临床上的“反例”</th></tr></thead>
+        <tbody>
+          <tr><td>要懂常见躯体病</td><td>这些躯体病容易产生精神症状；不懂躯体病，就无法判断精神症状是否为其直接结果。</td><td>把脑炎、代谢紊乱所致精神症状当成“原发性精神病”</td></tr>
+          <tr><td>要懂精神药理</td><td>避免精神科药物与躯体治疗药物相互作用的不良反应；特殊人群（老人、儿童、孕妇）用药需特别注意。</td><td>只看精神症状加药，不看躯体用药与肝肾功能</td></tr>
+          <tr><td>要会心理治疗</td><td>心理干预技巧应贯穿整个会诊过程，而不是“看完开药就走”。</td><td>把会诊做成一次“诊断贴标签”</td></tr>
+          <tr><td>要看环境与家庭</td><td>患病给患者及家庭带来影响；有时患病可能成为一种<strong>获益行为</strong>，涉及与周围人的人际关系冲突；不能改变环境或行为模式，很多慢性疾病无法满意改善。</td><td>只调药，不问家庭角色与照护安排</td></tr>
+          <tr><td>要以躯体治疗为主</td><td>会诊能解决的问题有限；精神科是提供服务的一方，而不是主导者。</td><td>精神科“接管”患者，与非精神科团队对立</td></tr>
+          <tr><td>要有高度责任心</td><td>非精神科医师可能缺乏了解、患者可能有戒心、精神科资源匮乏、工作繁忙、人手不足。</td><td>接诊一次即失访，后续无人跟进</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p><strong>教材同时提醒：</strong>会诊医师有时需要更广阔的视野看待患者就医并接受诊疗的行为——理解患病对患者本人及家庭的影响，关注患者生活环境与疾病的关系，“尽管会诊能够解决的问题有限，但是保持对患者生活环境与疾病关系的关注和警觉是必要的”。</p>
+    <p class="note">教材未提供支持这些原则的对照研究或循证数据；本栏只还原教材给出的理由，不补写“研究表明”。</p>
+  </div>
+
+  <!-- 第三栏 -->
+  <div class="card red" id="u2-3">
+    <h3 class="col-title"><span class="idx">第三栏</span>临床表现拼图 → 七步流程图景</h3>
+    <p>教材参考《麻省总医院精神病学手册》相关内容，并结合我国综合医院实际，把会诊归纳为七步。以下按原文顺序展开：</p>
+    <div class="timeline">
+      <div class="tl-item"><h4>第 1 步 · 与申请会诊医师沟通</h4><p>请求会诊的医师通常会提出目的：患者不配合治疗、攻击冲动、严重失眠、存在抑郁情绪、焦虑不安或出现谵妄，以及不能从躯体医学角度解释患者的不适主诉。但请求医师未必能准确把握问题实质，需要会诊医师<strong>主动沟通</strong>，请对方简短概括本次住院病史、治疗状况与存在的问题，尽快明确真正问题；遇到不熟悉的躯体疾病，应明确告知对方并请其讲解病因学与治疗学知识。</p></div>
+      <div class="tl-item"><h4>第 2 步 · 了解现病史和既往史</h4><p>从住院记录直接了解躯体病病史与既往史，加上请求医师的总结，勾勒大致轮廓；通过护理记录了解住院期间行为表现；通过<strong>家属或陪护</strong>了解人格特点、对患病态度、对家庭与社会功能的影响、可能参与或加重躯体疾病的生活事件。对不配合治疗、有记忆障碍等认知问题、有意识障碍的患者，家属及陪护的信息<strong>尤为重要</strong>。还要询问共病精神疾病史：物质滥用、是否正在服用精神科药物、病态人格特点、生活事件影响。</p></div>
+      <div class="tl-item"><h4>第 3 步 · 与患者面谈，进行相关检查</h4><p>先亲切友好交流，<strong>告知患者来会诊的目的</strong>，确认患者自己最迫切希望解决的问题；理解很多患者对精神科会诊抱有抵抗态度；倾听其对患病、住院治疗、医护服务的感受，并对痛苦、担忧、焦躁表示共情，给予恰当安慰和鼓励。检查重点：焦虑、抑郁、精神病性症状（幻觉、妄想、行为紊乱）；<strong>认知功能</strong>（定向力、注意力、记忆力、执行功能、语言表达），可用 MMSE、画钟试验；基本<strong>神经系统检查</strong>（肌张力、生理反射、病理反射）；必要时建议脑影像学、脑电图等中枢神经系统检查。</p></div>
+      <div class="tl-item"><h4>第 4 步 · 了解患者躯体治疗状况</h4><p>很多药物都可能引起精神症状。会诊医师不必掌握所有非精神科药物的精神不良反应，但<strong>开始服药或突然撤药与精神症状产生的时间关系</strong>常可提醒医师。要留意：精神科药物被患者隐瞒或忽视；住院后突然停用精神科药物（服用不便或需手术）；自行服用镇静催眠药而未告知；有物质滥用史者因住院出现<strong>戒断症状</strong>。</p></div>
+      <div class="tl-item"><h4>第 5 步 · 进行诊断并制定治疗方案</h4><p>常见诊断：抑郁障碍、焦虑障碍、创伤及应激相关障碍、躯体症状及相关障碍、睡眠-觉醒障碍、神经认知障碍、物质/药物所致的精神障碍。很多精神症状未达到“障碍”程度，可暂以<strong>“状态”</strong>描述。治疗基本上以<strong>对症治疗</strong>为原则，根本治疗多需等待躯体疾病状况改善；避免不良反应大的药物；<strong>从小剂量开始滴定</strong>，密切观察并及时调整；向请求医师介绍机制与不良反应，尽可能留下联系方式。同时给予适当的心理干预和支持性治疗。</p></div>
+      <div class="tl-item"><h4>第 6 步 · 书写会诊记录</h4><p>简明扼要，包括精神症状及精神检查结果、可能的诊断和治疗方案；<strong>避免使用精神科专业术语</strong>；详细写明药物服用的时间以及加药或减药的具体剂量和时间过程；精神科用药多为短期，症状缓解后应告知减药和撤药方法；需长期用药者，建议出院后继续精神科门诊治疗。</p></div>
+      <div class="tl-item"><h4>第 7 步 · 随访</h4><p>单次会诊通常不能彻底解决问题；病情变化、药物调整需要多次会诊。现实是综合医院精神科人手不够，连续性难保证，医师可能不主动跟踪。除增加责任心外，医院应从<strong>行政上</strong>给予支持；如可能，精神科应设立<strong>专门的会诊小组</strong>，定期对全院会诊患者做简单记录并进行组内沟通与讨论，使后续会诊医师了解情况。</p></div>
+    </div>
+    <div class="callout key">
+      <span class="ct">📌 流程的两条“隐形主线”</span>
+      ① <strong>核实</strong>：申请理由≠真实问题，第 1、2、4 步都在核实；② <strong>交接</strong>：第 6、7 步保证下一个医师能接上手。两条线断了，会诊就退化成“一次性贴标签”。
+    </div>
+  </div>
+
+  <!-- 第四栏 -->
+  <div class="card orange" id="u2-4">
+    <h3 class="col-title"><span class="idx">第四栏</span>教材典型案例</h3>
+    <div class="callout book">
+      <span class="ct">📖 教材未提供具体临床案例</span>
+      本节为原则与流程，教材没有给出患者案例、病史或检查数据。教材列出的“不配合治疗、攻击冲动、严重失眠、抑郁情绪、焦虑不安、谵妄、不能解释的不适主诉”属于<strong>会诊申请理由清单</strong>，不是病例；本指南不据此虚构人物与化验结果。
+    </div>
+    <p><strong>可由七步流程推演的学习思路（非教材原文病例）：</strong></p>
+    <ol>
+      <li>接到申请先问“为什么现在请会诊”，而不是直接冲到床边开药。</li>
+      <li>先读住院记录与护理记录，再向家属/陪护补问；对不配合、认知障碍、意识障碍者尤其依赖家属信息。</li>
+      <li>面谈时先告知目的、确认患者最迫切的问题，再谈检查与诊断。</li>
+      <li>开药前必须核对患者正在服用的所有药物与撤药情况。</li>
+      <li>记录要让非精神科医师看得懂；随访要有着落。</li>
+    </ol>
+    <p class="note">以上为按教材流程整理的学习思路，不是教材原案例。</p>
+  </div>
+
+  <!-- 第五栏 -->
+  <div class="card orange" id="u2-5">
+    <h3 class="col-title"><span class="idx">第五栏</span>鉴别诊断对对碰 → 会诊角色与情境辨析</h3>
+    <p><strong>表 1　“申请理由”与“需要澄清的实质”</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>申请会诊的理由（教材原文列举）</th><th>需要澄清的实质（按教材后文对应内容整理）</th></tr></thead>
+        <tbody>
+          <tr><td>患者不配合治疗</td><td>是依从性问题、认知/意识障碍，还是对精神科诊断的戒心？教材提醒患者可能因不愿被视为“有精神问题”而抵抗。</td></tr>
+          <tr><td>攻击冲动</td><td>是激越（脑器质性、物质、精神障碍三类原因），还是精神病性症状驱动？需先排除躯体原因。</td></tr>
+          <tr><td>严重失眠</td><td>按 4P 排查：生理/躯体、心理、精神医学、药理（含撤药与酒精）。</td></tr>
+          <tr><td>存在抑郁情绪</td><td>是患病后的短期心理反应，还是达到抑郁障碍标准？是否伴自杀风险？</td></tr>
+          <tr><td>焦虑不安</td><td>是焦虑症状、焦虑障碍，还是躯体疾病（如甲亢）或药物所致？</td></tr>
+          <tr><td>出现谵妄</td><td>注意障碍 + 意识障碍 + 一日内波动；需找躯体病因，而非仅用精神科药物控制。</td></tr>
+          <tr><td>不能从躯体医学角度解释的不适主诉</td><td>可能是躯体痛苦障碍，也可能是尚未查出的躯体疾病；教材明确“没有客观检查证据≠精神心理问题”。</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note">右栏为按教材第二、三节内容整理的对应关系，不是教材原文的逐条解释；教材原文只强调“请求会诊解决的问题和患者实际存在的心身问题出入很大”。</p>
+
+    <p><strong>表 2　会诊、门诊与转诊的适用情境</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>方式</th><th>教材给出的情境</th></tr></thead>
+        <tbody>
+          <tr><td>院内会诊</td><td>非精神科科室住院患者出现精神症状或心理问题；可一次或多次。</td></tr>
+          <tr><td>精神科门诊短期就诊</td><td>能够自如走动、允许的情况下，可直接到精神科门诊短期就诊。</td></tr>
+          <tr><td>出院后精神科门诊</td><td>躯体疾病好转后仍需长期用药者，建议出院后继续接受精神科门诊治疗。</td></tr>
+          <tr><td>急诊抢救后转诊</td><td>院外自杀行为送急诊，抢救成功、脱离生命危险后，及时转诊到精神科门诊或病房。</td></tr>
+          <tr><td>家属/陪护到精神科讨论</td><td>长期住院患者的家属或陪护可到精神科，与医师共同讨论护理等问题。</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p><strong>表 3　单次会诊与连续随访</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>维度</th><th>单次会诊</th><th>连续随访</th></tr></thead>
+        <tbody>
+          <tr><td>能解决什么</td><td>明确问题、给出诊断与初步方案、处理急性风险</td><td>观察病情变化、调整药物、处理后续问题</td></tr>
+          <tr><td>教材判断</td><td>“单次会诊并不能彻底解决患者的问题”</td><td>“理想的情况下，多次会诊应该始终由一个医师担任”</td></tr>
+          <tr><td>现实障碍</td><td>申请理由可能不准确</td><td>人手不足、连续性难保证、医师可能不主动跟踪</td></tr>
+          <tr><td>补救</td><td>第 6 步写清记录</td><td>行政支持 + 专门会诊小组 + 定期记录与组内讨论</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout key"><span class="ct">📌 一句话鉴别总结</span>会诊的“鉴别”不是辨病名，而是辨<strong>谁主导、做什么、做到哪一步</strong>：躯体治疗由请求科室主导，精神科负责有限而专业的补充，并对交接负责。</div>
+  </div>
+
+  <!-- 第六栏 -->
+  <div class="card green" id="u2-6">
+    <h3 class="col-title"><span class="idx">第六栏</span>治疗方案工具箱 → 会诊处置工具箱</h3>
+    <p><strong>① 治疗总原则</strong></p>
+    <ul>
+      <li>治疗基本上以<strong>对症治疗</strong>为原则；大多数情况下，根本的治疗需要等待躯体疾病状况的改善。</li>
+      <li>熟悉欲使用精神科药物的不良反应对躯体本身的不良影响，<strong>尽量避免不良反应较大的药物</strong>。</li>
+      <li>药物滴定<strong>从小剂量开始</strong>，密切观察可能出现的不良反应并及时调整。</li>
+      <li>向请求会诊的医师介绍所用药物的作用机制与可能存在的不良反应；如可能，留下联系方式以便及时指导。</li>
+    </ul>
+    <p><strong>② 教材举例要避开的五类不良反应</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>需避免的药物特性</th><th>教材给出的躯体风险</th></tr></thead>
+        <tbody>
+          <tr><td>抗胆碱能药物</td><td>加剧老年患者认知功能损伤；加重消化功能不良</td></tr>
+          <tr><td>易引起心脏毒性和血压波动的药物</td><td>心血管风险</td></tr>
+          <tr><td>可能加重意识障碍的药物</td><td>使谵妄/意识障碍恶化</td></tr>
+          <tr><td>容易引起运动障碍的药物</td><td>导致患者跌倒</td></tr>
+          <tr><td>可能加重肝肾损伤的药物</td><td>肝肾负担加重</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p><strong>③ 心理干预与支持性治疗（教材明确“非常必要”）</strong></p>
+    <div class="grid2">
+      <div class="mini">
+        <h4>做什么</h4>
+        <ul>
+          <li>帮助患者正确认识自己的疾病，以积极心态配合治疗。</li>
+          <li>指导住院期间保持适当情绪，例如应对手术带来的紧张、焦虑、对术后疼痛的恐惧。</li>
+          <li>帮助患者加强睡眠等方面的管理。</li>
+        </ul>
+      </div>
+      <div class="mini">
+        <h4>为什么</h4>
+        <ul>
+          <li>使患者更好地调整自己的<strong>疾病角色</strong>。</li>
+          <li>应对患病所带来的人生危机。</li>
+        </ul>
+      </div>
+    </div>
+    <p><strong>④ 会诊记录与随访的硬要求</strong></p>
+    <ul>
+      <li>记录简明扼要：精神症状及精神检查结果、可能的诊断和治疗方案。</li>
+      <li><strong>避免使用精神科专业术语</strong>，让请求科室看得懂。</li>
+      <li>写明药物服用的时间，以及加药或减药的具体剂量和时间过程。</li>
+      <li>告知减药和撤药方法；需长期用药者安排出院后精神科门诊。</li>
+      <li>随访：单次不够；争取同一医师连续跟踪；设专门会诊小组，定期记录并组内讨论。</li>
+    </ul>
+    <div class="callout warn">
+      <span class="ct">⚠️ 教材空白</span>
+      教材<strong>未给出</strong>任何具体精神科药物的名称、剂量、疗程，也未给出具体心理治疗技术的操作步骤。本指南不补写；用药请回到教材治疗学相关章节。
+    </div>
+  </div>
+
+  <!-- 第七栏 -->
+  <div class="card purple" id="u2-7">
+    <h3 class="col-title"><span class="idx">第七栏</span>记忆工具箱</h3>
+    <div class="callout tip">
+      <span class="ct">🔧 方法一：口诀歌谣法（七步流程）</span>
+      口诀：<strong>“一问、二读、三面谈，四查用药、五定案，六写记录、七随访。”</strong><br>
+      展开：问申请医师 → 读病史与护理记录 → 面谈与检查 → 查躯体用药与撤药 → 诊断与治疗 → 写会诊记录 → 随访。<br>
+      <em>为什么这样记：</em>七步按临床时间顺序排列，口诀保留了顺序信息；只要起头“一问”，后面会顺着场景自然接上。
+    </div>
+    <div class="callout tip">
+      <span class="ct">🔧 方法二：数字编码法（“3 + 5 + 7”）</span>
+      记 <strong>3 重能力</strong>（躯体病知识、精神药理、心理治疗技巧）；<strong>5 类避开</strong>（抗胆碱能、心脏毒性/血压波动、加重意识障碍、运动障碍致跌倒、加重肝肾损伤）；<strong>7 步流程</strong>。<br>
+      <em>为什么这样记：</em>三个数字分别锚定“人要有本事”“药要选得稳”“事要做得全”，把本节的三块内容各自打包，避免交叉串味。
+    </div>
+    <div class="callout tip">
+      <span class="ct">🔧 方法三：类比理解（标注：类比理解，非医学事实）</span>
+      把会诊医师想成<strong>“客座顾问”</strong>：房子是主人的，结构不能拆；顾问只提出“这里可以加固、那里需要通风”，并把建议写成主人看得懂的说明书（记录），还要约好复诊（随访）。<br>
+      <em>为什么这样记：</em>“客座顾问”四个字同时解释了角色边界、记录要求与随访必要性，比单背三条原则更牢。
+    </div>
+    <div class="callout tip">
+      <span class="ct">🔧 方法四：对比记忆法（会诊 vs 接管）</span>
+      把“该做/不该做”成对记：<strong>该做</strong>——理解躯体治疗、提供专业意见、制定可行计划、留联系方式；<strong>不该做</strong>——喧宾夺主、只贴标签、用专业术语写记录、接诊一次就失访。<br>
+      <em>为什么这样记：</em>边界类考点最容易“记反”，成对记忆比单向陈述更能防止越界。
+    </div>
+  </div>
+
+  <!-- 第八栏 -->
+  <div class="card cyan" id="u2-8">
+    <h3 class="col-title"><span class="idx">第八栏</span>知识联动</h3>
+    <ul>
+      <li><strong>与精神检查章：</strong>第 3 步的检查重点（焦虑、抑郁、精神病性症状、认知功能、神经系统检查）直接调用精神检查与认知评估技能。</li>
+      <li><strong>与精神药理学/治疗学章：</strong>第 5 步的药物选择与滴定原则，需要治疗学章的药物知识支撑；本章只给“避免什么、怎么开始”。</li>
+      <li><strong>与心理治疗章：</strong>“基本心理治疗技巧贯穿整个会诊过程”是教材对会诊医师的明确要求。</li>
+      <li><strong>与医疗文书、医疗安全管理：</strong>会诊记录要避免专业术语、写清滴定过程；随访需要行政支持与会诊小组，属于制度层面的联动。</li>
+      <li><strong>与医患沟通/伦理：</strong>告知患者会诊目的、理解患者对精神科诊断的戒心与病耻感、尊重患者最迫切的问题，均来自教材流程原文。</li>
+      <li><strong>与单元三：</strong>七步流程是处理八类问题的“通用容器”；具体到自杀、激越、谵妄时，第 5 步的处理会替换为该类问题的专项原则。</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===== 07 单元三 ===== -->
+<section id="u3">
+  <div class="sec-head"><div class="badge">07</div><h2>综合医院常见精神症状及情绪、行为问题<span class="en">第二节（p.284–289）</span></h2></div>
+  <p class="sec-lead">这一单元是“会诊现场”的问题谱：八类主诉、八套成因、八条处理边界。教材只给原则的地方，本指南就只写到原则。</p>
+
+  <!-- 第一栏 -->
+  <div class="card cyan" id="u3-1">
+    <h3 class="col-title"><span class="idx">第一栏</span>疾病画像 → 会诊问题谱画像</h3>
+    <div class="quote"><span class="lab">教材原文</span>本章概述了综合医院精神科联络会诊中常见的精神症状及情绪、行为问题，如焦虑、抑郁、激越、自杀风险、精神病性症状、睡眠障碍、疼痛、疑病、查无实据的躯体症状以及谵妄。</div>
+    <p><strong>一句话画像：</strong>这八类问题不是八个独立疾病，而是综合医院里<strong>最常被写进会诊申请单</strong>的八种“求助方式”——有的表现为情绪，有的表现为行为，有的表现为查不出原因的躯体主诉，有的表现为意识与注意的波动。</p>
+    <p><strong>教材第二节的八个实际小标题（本单元逐一对应）：</strong></p>
+    <div class="grid4">
+      <div class="mini"><h4>一、焦虑、抑郁</h4><p>情绪问题，会诊诊断中最常见。</p></div>
+      <div class="mini"><h4>二、自杀企图与行为</h4><p>住院识别 + 急诊抢救后转诊。</p></div>
+      <div class="mini"><h4>三、精神病性症状</h4><p>幻觉、妄想、兴奋躁动、思维言语行为紊乱。</p></div>
+      <div class="mini"><h4>四、激越</h4><p>坐立不安 + 过多肢体活动 + 焦虑。</p></div>
+      <div class="mini"><h4>五、睡眠障碍</h4><p>只讨论最常见的失眠障碍。</p></div>
+      <div class="mini"><h4>六、疼痛</h4><p>器质性与功能性因素的辨别。</p></div>
+      <div class="mini"><h4>七、缺乏客观检查所见的躯体症状主诉</h4><p>ICD-11 躯体痛苦障碍（BDD）。</p></div>
+      <div class="mini"><h4>八、谵妄</h4><p>注意 + 意识障碍，起病急、可逆。</p></div>
+    </div>
+    <p><strong>三类共同特征：</strong></p>
+    <ul>
+      <li><strong>起于躯体情境：</strong>躯体疾病、躯体治疗（药物/手术/撤药）、住院环境本身，都可能成为诱因或病因。</li>
+      <li><strong>常达不到“障碍”标准：</strong>教材明确“很多精神症状没有达到足以诊断为‘障碍’的程度，也可以暂且先以‘状态’字样来描述”。</li>
+      <li><strong>处理以对症为主：</strong>“大多数情况下，根本的治疗需要等待躯体疾病状况的改善”。</li>
+    </ul>
+    <p class="note">“疑病”在教材第二节没有独立小标题，而是在第七类中随 DSM-5 的“疾病焦虑障碍”出现（DSM-5 已取消“疑病症”诊断）。本指南按教材结构处理，不另立单元。</p>
+  </div>
+
+  <!-- 第二栏 -->
+  <div class="card blue" id="u3-2">
+    <h3 class="col-title"><span class="idx">第二栏</span>病因探秘 → 问题成因探秘</h3>
+    <p><strong>（一）焦虑与抑郁的两条成因主线（教材明确分为“两方面”）</strong></p>
+    <div class="grid2">
+      <div class="mini">
+        <h4>第一，患病与诊疗带来的情绪影响和心理应激</h4>
+        <ul>
+          <li>患病本身的痛苦；家庭、学业、职业功能缺损或丧失；经济负担增加。</li>
+          <li>进入疾病角色后在诊疗过程中遭遇的环境负面影响与生活状况改变：尚无定论的诊断、烦琐复杂的医疗检查、不良的医患关系、住院的隔离、对治疗的恐惧、治疗的不良反应。</li>
+          <li>通常<strong>短期</strong>诱发焦虑/抑郁症状，随治疗展开逐渐消失；但这些应激也可作为重要诱因导致焦虑障碍或抑郁障碍的<strong>发病或复发</strong>。</li>
+        </ul>
+      </div>
+      <div class="mini">
+        <h4>第二，躯体疾病与焦虑/抑郁共病</h4>
+        <ul>
+          <li>原因涉及一些<strong>尚不明确的内在病理生理学机制</strong>。</li>
+          <li>教材给出的可能路径：躯体疾病通过全身的<strong>免疫系统</strong>作用于大脑，改变大脑功能，促发精神障碍或精神症状。</li>
+          <li>共病后果：增加主观痛苦；可能恶化躯体疾病病理过程（焦虑和抑郁可增加心肌梗死发作的死亡率）；影响预后、增加治疗难度；易致慢性躯体疾病反复发作；影响医患关系与治疗依从性。</li>
+        </ul>
+      </div>
+    </div>
+    <p><strong>（二）八类问题的成因速查</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>问题</th><th>教材给出的主要成因</th></tr></thead>
+        <tbody>
+          <tr><td>焦虑、抑郁</td><td>患病与诊疗应激；与躯体疾病共病（免疫—大脑路径，机制尚不明确）。</td></tr>
+          <tr><td>自杀企图与行为</td><td>精神疾病（情感障碍、物质/酒精滥用、精神分裂症居前三；惊恐障碍、严重焦虑、摄食障碍、严重失眠为短期危险因素）；严重内科疾病；自杀家族史、既往自杀企图史、生活状况（丧偶/离婚/分居）、严重应激事件、人格障碍。</td></tr>
+          <tr><td>精神病性症状</td><td>代谢紊乱、感染、中毒、脑外伤、脑血管疾病等躯体疾病；药物戒断和药物不良反应。教材另列神经系统、内分泌、代谢、肝肾、自身免疫五组躯体病。</td></tr>
+          <tr><td>激越</td><td>三类：①脑器质性疾病和其他躯体疾病；②精神活性物质中毒或戒断；③精神障碍（焦虑激越、激越性抑郁/双相抑郁的精神运动性激越、精神病性激越）。</td></tr>
+          <tr><td>睡眠障碍（失眠）</td><td>4P：physiological/physical、psychological、psychiatric、pharmacological。</td></tr>
+          <tr><td>疼痛</td><td>组织损伤导致的感官及情感体验；心理因素在发作、维持、恶化中起作用；亦可由精神疾病（抑郁、焦虑、躯体痛苦障碍、药物滥用）引起；还需排查强镇痛剂使用/戒断、滥用、成瘾、人格问题、诈病、转换性障碍、躯体或性虐待。</td></tr>
+          <tr><td>无客观检查所见的躯体症状</td><td>教材未给出明确病因学；只说明为持续躯体症状伴过度关注、反复就医与功能损害，且缺乏相应器质性基础或关注程度超过疾病本身。</td></tr>
+          <tr><td>谵妄</td><td>教材在本章只给定义与识别，病因与治疗明确“参见第十九章第一节”，本章未展开。</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p><strong>（三）失眠的 4P 展开（教材原文框架）</strong></p>
+    <div class="grid2">
+      <div class="mini"><h4>P1 · physiological / physical</h4><p>生理：既往睡眠规律打乱、白天长时间卧床、缺少运动、病房环境嘈杂。躯体：与呼吸相关的睡眠障碍（最常见阻塞性睡眠呼吸暂停低通气）、咳嗽、不宁腿综合征、夜间心绞痛、夜间尿频、内分泌疾病、透析、疼痛、瘙痒。</p></div>
+      <div class="mini"><h4>P2 · psychological</h4><p>焦虑、抑郁情绪；对失眠的<strong>预期恐惧</strong>。</p></div>
+      <div class="mini"><h4>P3 · psychiatric</h4><p>各种精神疾病；也包括阿尔茨海默病、脑血管障碍、脑肿瘤等脑器质性病变导致的<strong>睡眠中枢和生物钟功能紊乱</strong>。</p></div>
+      <div class="mini"><h4>P4 · pharmacological</h4><p>咖啡因、麻黄碱等中枢神经刺激物；降压药、类固醇、口服避孕药、抗结核药、消炎药、抗肿瘤药、干扰素；突然停用镇静催眠药或某些抗抑郁药；长期用酒精代替睡眠药物产生依赖。</p></div>
+    </div>
+    <div class="callout warn">
+      <span class="ct">⚠️ 一个常被漏掉的成因</span>
+      第 4 步“了解躯体治疗状况”与 P4 呼应：<strong>突然撤药</strong>本身就能引起精神症状或失眠。问诊时不要只问“加了什么药”，还要问“停了什么药、停了多久”。
+    </div>
+  </div>
+
+  <!-- 第三栏 -->
+  <div class="card red" id="u3-3">
+    <h3 class="col-title"><span class="idx">第三栏</span>临床表现拼图 → 八类问题拼图</h3>
+    <div class="tabs" data-tabs>
+      <div class="tabbar">
+        <button class="on" data-tab="u3a">焦虑、抑郁</button>
+        <button data-tab="u3b">自杀</button>
+        <button data-tab="u3c">精神病性症状</button>
+        <button data-tab="u3d">激越</button>
+        <button data-tab="u3e">睡眠障碍</button>
+        <button data-tab="u3f">疼痛</button>
+        <button data-tab="u3g">无客观所见的躯体症状</button>
+        <button data-tab="u3h">谵妄</button>
+      </div>
+
+      <div class="panel on" data-panel="u3a">
+        <p><strong>识别要点：</strong>在综合医院接受诊疗的患者中，相当一部分存在不同程度的焦虑/抑郁症状；即使未达诊断标准，情绪困扰也会给躯体疾病的诊治带来不良影响。</p>
+        <p><strong>教材给出的分科比例：</strong></p>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>科室</th><th>可诊断为焦虑障碍</th><th>可诊断为抑郁障碍</th></tr></thead>
+            <tbody>
+              <tr><td>神经内科</td><td>11.7%</td><td>15.6%</td></tr>
+              <tr><td>消化内科</td><td>9.4%</td><td>14.4%</td></tr>
+              <tr><td>心内科</td><td>7.8%</td><td>10.6%</td></tr>
+              <tr><td>妇科</td><td>5.4%</td><td>7.86%</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p><strong>神经内科更突出：</strong>教材引述一项研究，帕金森病、癫痫、卒中患者共患焦虑/抑郁的比例分别为 <strong>24.1%、21.9%、19.5%</strong>；原因是这些疾病涉及大脑的病理性改变。</p>
+        <p><strong>临床影响：</strong>增加主观痛苦、恶化躯体疾病病理过程、影响预后、增加治疗难度、易致慢性病反复、影响医患关系与依从性。</p>
+      </div>
+
+      <div class="panel" data-panel="u3b">
+        <p><strong>两种会诊情境：</strong></p>
+        <ul>
+          <li><strong>住院患者</strong>出现自杀观念或企图——需要临床医师对潜在自杀风险进行恰当识别与评估。</li>
+          <li><strong>院外已采取自杀行为</strong>的患者被送到急诊抢救——抢救成功后应与精神专科医师合作，转诊到精神科干预或治疗，查明原因、治疗相关精神疾病、最大程度降低再自杀风险。</li>
+        </ul>
+        <p><strong>高危精神疾病（自杀比例前三）：</strong>情感障碍、物质或酒精滥用、精神分裂症。此外，惊恐障碍、严重的焦虑、摄食障碍以及严重失眠，会作为<strong>短期危险因素</strong>增加自杀风险。</p>
+        <p><strong>高危躯体疾病：</strong>艾滋病、各种癌症、脑外伤、癫痫、消化性溃疡、多发性硬化、脑器质性综合征、库欣综合征、类风湿关节炎、卟啉症。</p>
+        <p><strong>其他危险因素：</strong>自杀家族史、既往自杀企图史、生活状况（丧偶、离婚或分居等）、严重的应激事件、人格障碍。</p>
+        <div class="callout warn"><span class="ct">⚠️ 询问方式（教材明确）</span>询问自杀观念或企图时“没必要遮遮掩掩”；可用委婉表述（如“是否活着没意思”）让沟通容易一些；若患者回答存在观念或打算采取行为，<strong>进一步询问具体计划（时间、地点、方式）是非常必要的</strong>。</div>
+      </div>
+
+      <div class="panel" data-panel="u3c">
+        <p><strong>范围：</strong>主要指幻觉、妄想，兴奋、躁动，以及思维、言语及行为紊乱。</p>
+        <p><strong>常见原因：</strong>代谢紊乱、感染、中毒、脑外伤、脑血管疾病等多种躯体疾病，以及药物戒断和药物不良反应。</p>
+        <div class="callout book"><span class="ct">📖 教材原文</span>据统计，幻觉、妄想和行为紊乱占综合医院精神科急会诊的 35%～50%。</div>
+        <p><strong>可致幻觉妄想状态的躯体疾病（教材列举）：</strong></p>
+        <div class="grid2">
+          <div class="mini"><h4>神经系统</h4><p>肿瘤、脑血管疾病、亨廷顿病、多发性硬化症、癫痫、听神经或视神经损伤/损害、耳聋、偏头痛、中枢神经系统感染。</p></div>
+          <div class="mini"><h4>内分泌</h4><p>甲状腺功能亢进或减退、甲状旁腺功能亢进或减退、肾上腺皮质功能亢进或减退。</p></div>
+          <div class="mini"><h4>代谢性</h4><p>低氧血症、高碳酸血症、低血糖、水或电解质失衡。</p></div>
+          <div class="mini"><h4>肝肾与自身免疫</h4><p>肝脏或肾脏疾病；自身免疫性疾病伴中枢神经系统损伤，如红斑狼疮。</p></div>
+        </div>
+      </div>
+
+      <div class="panel" data-panel="u3d">
+        <div class="quote"><span class="lab">教材原文</span>激越被描述为“明显的坐立不安和过多的肢体活动，并伴有焦虑”（ICD-10）。</div>
+        <p><strong>表现谱：</strong>一系列思维活动、情绪和行为从低到高不同程度的兴奋过程，且无法平静；严重时可表现为兴奋冲动、对他人有躯体威胁，并发生攻击他人及自身的暴力行为。教材称其为精神科常见的<strong>一种急性综合征</strong>，也是综合医院请求会诊的常见问题。</p>
+        <p><strong>三类原因（《激越患者精神科处置专家共识》）：</strong></p>
+        <ul>
+          <li><strong>脑器质性疾病和其他躯体疾病：</strong>高热、感染、脑炎/脑膜炎、脑外伤、脑血管病、脑部占位性病变、缺氧性脑病、痴呆；代谢及内分泌疾病如甲状腺功能亢进、嗜铬细胞瘤、低钠血症、低钙血症、低血糖。</li>
+          <li><strong>精神活性物质中毒或戒断：</strong>可卡因或苯丙胺（拟交感神经兴奋剂）可引起严重激越或诱发精神病性症状；酒精戒断可能加剧急性激越。</li>
+          <li><strong>精神障碍：</strong>严重焦虑的焦虑激越；激越性抑郁或双相情感障碍抑郁发作的精神运动性激越；精神病性激越（常见于精神分裂症、分裂情感障碍及双相障碍躁狂发作）。</li>
+        </ul>
+        <p><strong>精神病性激越的诱发因素：</strong>幻觉（尤其评论性和命令性幻听）、偏执观念（被害妄想、被动体验）、强烈的易激惹/愤怒/高涨心境。</p>
+      </div>
+
+      <div class="panel" data-panel="u3e">
+        <p><strong>教材讨论范围：</strong>ICD-11 的非器质性睡眠障碍包括非器质性失眠障碍、非器质性嗜睡症、非器质性睡眠-觉醒节律障碍、睡行症（梦游）、睡惊症（夜惊）、梦魇等；本节<strong>仅讨论综合医院最常见的失眠障碍</strong>。</p>
+        <div class="quote"><span class="lab">教材原文</span>失眠是指当事人存在入睡困难或维持睡眠困难，并具有对睡眠数量或质量的主观不满意。</div>
+        <p><strong>判断要点：</strong>睡眠存在个体差异，除患者自身对睡眠不满意的主诉外，还要看睡眠问题是否给患者的身体、心理以及社会功能带来影响。</p>
+        <p><strong>背景：</strong>失眠是许多精神疾病的症状表现；很多躯体疾病或症状可伴发失眠；治疗躯体疾病的药物也可能诱发失眠；住院患者因焦虑、抑郁情绪及睡眠环境改变，也会增加失眠。</p>
+      </div>
+
+      <div class="panel" data-panel="u3f">
+        <div class="quote"><span class="lab">教材原文</span>疼痛被定义为由组织损伤导致的不愉快的感官及情感体验，因此涉及精神和心理因素的影响，需要由精神科医师协助处理。</div>
+        <p><strong>会诊要做的两件事：</strong>①帮助非精神科医师区别疼痛的<strong>器质性因素和功能性因素</strong>，鉴别那些与躯体损害不一致或躯体障碍缺如的疼痛症状和主诉；②对可能由精神疾病（抑郁症、焦虑症、躯体痛苦障碍、药物滥用等）引起的疼痛进行诊断并给予相应治疗。</p>
+        <p><strong>必须明确的相关问题：</strong>是否存在持续的躯体疾病（如感染和癌症）；是否有因吗啡类强镇痛剂使用或戒断反应引起的疼痛；疼痛主诉是原发还是继发于精神疾病（如抑郁症或妄想性障碍）；是否存在滥用、成瘾、人格问题、诈病、转换性障碍；是否遭受过躯体或性虐待。</p>
+        <p><strong>躯体检查：</strong>包括疼痛的位置（激痛点）、感觉反应等；既有助于区分器质性与功能性问题，也有助于建立良好医患关系，避免让患者认为医师将其疼痛仅仅视为心理问题。</p>
+      </div>
+
+      <div class="panel" data-panel="u3g">
+        <p><strong>ICD-11 名称：</strong>躯体痛苦障碍（bodily distress disorder，BDD）。</p>
+        <div class="quote"><span class="lab">教材原文</span>指一类以持续存在的躯体症状为特征的精神障碍。由于躯体症状产生的痛苦使患者过度关注自己的身体状况，从而产生反复就医行为，并引起相应的功能损害。</div>
+        <p><strong>核心逻辑：</strong>患者的痛苦主诉缺乏相应的器质性病变基础，<strong>或者</strong>对疾病的关注程度明显超过躯体疾病本身的性质及进展程度；不适感受或过度关注<strong>不能被适宜的医学检查以及来自医学方面的解释所缓解或消除</strong>。症状可多种、可随时间变化；个别情况下可只有单个症状，通常是疼痛或疲劳。</p>
+        <p><strong>BDD 的“收纳范围”：</strong>不仅包括 ICD-10 的躯体形式障碍、未分化的躯体形式障碍、躯体形式的自主神经功能紊乱、持续的躯体形式的疼痛障碍，还包括内科常用的肌纤维痛、慢性疲劳综合征、通气过度综合征、肠易激综合征、非心脏性胸痛、疼痛综合征——这些常被称为功能性躯体综合征，或医学无法解释的躯体症状。</p>
+        <div class="callout warn"><span class="ct">⚠️ 分类变动</span>考虑到疑病障碍（ICD-10 的亚型分类）的强迫特点，ICD-11 将之归为<strong>强迫性障碍</strong>的分类中；DSM-5 则取消“疑病症”诊断，大部分过去被诊断为“疑病症”的患者可归入“躯体症状障碍”或“疾病焦虑障碍”。</div>
+      </div>
+
+      <div class="panel" data-panel="u3h">
+        <div class="quote"><span class="lab">教材原文</span>谵妄（delirium）被定义为以注意障碍（指向、集中、维持障碍以及注意的转移）和意识障碍为特征，在短时间内产生且症状在一天内呈现波动变化的一组综合征。</div>
+        <p><strong>常伴随：</strong>记忆障碍、定向力障碍、言语紊乱、视觉空间知觉感知障碍（主要表现错觉、幻觉和妄想）、行为紊乱、激越、退缩，以及睡眠-觉醒周期的改变。</p>
+        <p><strong>与痴呆相比：</strong>谵妄通常<strong>起病较急且具有可逆性</strong>，因此也被称为<strong>急性脑综合征</strong>（acute brain syndrome）。</p>
+        <p><strong>本章边界：</strong>关于谵妄的临床表现、原因以及治疗，教材明确“请参见第十九章第一节”，本章不展开。</p>
+      </div>
+    </div>
+    <p class="note">本栏按教材第二节八个小标题逐一呈现，分类体系未作改动；“疑病”按教材归入第七类，不另设面板。</p>
+  </div>
+
+  <!-- 第四栏 -->
+  <div class="card orange" id="u3-4">
+    <h3 class="col-title"><span class="idx">第四栏</span>教材典型案例</h3>
+    <div class="callout book">
+      <span class="ct">📖 教材未提供具体临床案例</span>
+      第二节通篇为问题识别、成因与处理原则，教材<strong>没有给出任何患者案例、病史或检查数值</strong>。教材中的分科患病比例、帕金森/癫痫/卒中共病比例、急会诊占比、两项会诊调查，均为<strong>研究或统计结果</strong>，不是病例；本指南不据此虚构人物、化验单或影像报告。
+    </div>
+    <p><strong>可由教材内容推演的学习思路（非教材原文病例）：</strong></p>
+    <ol>
+      <li>面对“情绪问题”的会诊申请：先分“患病后的短期反应”还是“达到障碍标准的共病”，再评估自杀风险。</li>
+      <li>面对“兴奋躁动”：先按激越三类原因排查躯体与物质因素，再考虑精神障碍所致。</li>
+      <li>面对“查不出原因”的躯体主诉：先确认检查是否适宜、解释是否充分，再谈 BDD；不要把“没有器质性证据”直接等同于精神心理问题。</li>
+      <li>面对“夜间意识不清、白天又好一些”：先想到谵妄的注意障碍与一日内波动，回到第十九章找病因与处理。</li>
+    </ol>
+    <p class="note">以上为按教材原则整理的学习思路，不是教材原案例。</p>
+  </div>
+
+  <!-- 第五栏 -->
+  <div class="card orange" id="u3-5">
+    <h3 class="col-title"><span class="idx">第五栏</span>鉴别诊断对对碰 → 会诊问题辨析</h3>
+    <p><strong>表 1　谵妄与“躯体疾病所致精神病性障碍”</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>维度</th><th>谵妄</th><th>躯体疾病所致精神病性障碍</th></tr></thead>
+        <tbody>
+          <tr><td>核心表现</td><td>注意障碍（指向、集中、维持、转移）+ 意识障碍；一日内波动</td><td>显著的幻觉或妄想</td></tr>
+          <tr><td>起病与转归</td><td>短时间内产生，通常起病较急、具有可逆性（急性脑综合征）</td><td>教材未在本章描述起病形式</td></tr>
+          <tr><td>诊断关系</td><td>谵妄本身可伴幻觉、妄想、行为紊乱</td><td>诊断标准明确要求“该障碍<strong>并非仅仅出现于谵妄时</strong>”</td></tr>
+          <tr><td>本章处理</td><td>参见第十九章第一节</td><td>治疗参见精神疾病治疗相关章节</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p><strong>表 2　焦虑/抑郁：短期心理反应 vs 达到障碍标准</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>维度</th><th>患病与诊疗相关的情绪反应</th><th>焦虑障碍/抑郁障碍（共病）</th></tr></thead>
+        <tbody>
+          <tr><td>诱因</td><td>患病痛苦、功能缺损、经济负担；诊断未定、检查繁琐、医患关系、住院隔离、治疗恐惧、不良反应</td><td>躯体疾病通过免疫等机制作用于大脑（机制尚不明确）</td></tr>
+          <tr><td>病程</td><td>通常<strong>短期</strong>，随治疗展开逐渐消失</td><td>达到相应障碍的诊断标准；也可因应激而发病或复发</td></tr>
+          <tr><td>会诊意义</td><td>支持、解释、环境与沟通调整</td><td>需要按障碍处理，并评估自杀风险与依从性</td></tr>
+          <tr><td>共同后果</td><td colspan="2">两者都会增加主观痛苦、影响躯体病预后与治疗依从性；不能因为“是反应”就忽略，也不能因为“是反应”就都不诊断。</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p><strong>表 3　疼痛的三种类型（教材便于理解的分类）</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>类型</th><th>心理因素的作用</th><th>教材表述</th></tr></thead>
+        <tbody>
+          <tr><td>心理性的</td><td>在疼痛的发作、维持以及恶化中扮演重要角色</td><td>心理因素为主</td></tr>
+          <tr><td>非精神病性的</td><td>作用不大</td><td>躯体疾病是疼痛的主要原因，即使存在心理因素，所起作用也不大</td></tr>
+          <tr><td>混合型的</td><td>躯体与心理相互作用</td><td>包括大部分疼痛状况；“事实上，疼痛通常都包含了躯体疾病和心理因素的相互作用和影响”</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p><strong>表 4　躯体痛苦障碍 vs “真正的躯体疾病”</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>容易走偏的判断</th><th>教材的反驳或修正</th></tr></thead>
+        <tbody>
+          <tr><td>“查不出器质性证据，就是精神心理问题”</td><td>没有客观检查证据<strong>不等于</strong>患者的问题一定是精神心理问题；仅因不存在可证明的器质性病理证据就下精神障碍诊断是<strong>草率</strong>的。</td></tr>
+          <tr><td>“有躯体疾病，就不会有精神障碍”</td><td>有躯体疾病也<strong>不能排除</strong>个体同时患有精神疾病共病的可能性。</td></tr>
+          <tr><td>“反复转诊就能解决问题”</td><td>把躯体疾病和精神心理问题“一分为二”的观念不利于解决问题；患者可能因不被理解而愤怒、反复换医师、浪费医疗资源，并对转诊精神科产生耻辱感。</td></tr>
+          <tr><td>“诊断靠排除”</td><td>DSM-5 的躯体症状障碍诊断基于<strong>阳性症状和体征</strong>（躯体症状 + 对症状的病态思维、情感及行为反应），而非对躯体症状的医学解释的缺如。</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout key"><span class="ct">📌 一句话鉴别总结</span>会诊问题谱的“鉴别”始终围绕两句话：<strong>先排除躯体与药物原因，再判断精神障碍；判断精神障碍靠阳性证据，不靠“查不出病”。</strong></div>
+  </div>
+
+  <!-- 第六栏 -->
+  <div class="card green" id="u3-6">
+    <h3 class="col-title"><span class="idx">第六栏</span>治疗方案工具箱 → 分类处理原则</h3>
+    <p>教材在本章只给“原则”，具体药物与剂量多数指向其他章节。下表逐项标明“教材给了什么、教材没给什么”。</p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>问题</th><th>教材给出的处理原则</th><th>教材空白</th></tr></thead>
+        <tbody>
+          <tr>
+            <td>焦虑、抑郁</td>
+            <td>识别并处理躯体疾病与诊疗应激；共病者需按障碍处理；关注其对躯体病预后、慢性病反复、医患关系与依从性的影响。通用心理干预与支持性治疗见单元二第六栏。</td>
+            <td>未给具体药物、剂量、疗程；未给具体心理治疗方案。</td>
+          </tr>
+          <tr>
+            <td>自杀企图与行为</td>
+            <td><strong>住院：</strong>识别与评估风险，必要时请精神科会诊。<strong>评估：</strong>①建立良好医患关系、获取信任，客观、共情、关切、支持；不遮掩地询问，必要时问具体计划（时间、地点、方式）；②系统评估，可用 SASP、BASIC 等量表；不能量表时了解精神状况与诊断、自杀决心、主观痛苦程度、准备细节、内外资源（保护性因素）、压力与应激性质、既往自杀企图、家族自杀史；据此定轻/中/高等级；无法判断或不能有效干预→请精神科会诊。<strong>急诊：</strong>抢救由急诊科医师实施；精神科应“到位”，从家属/保护人获取病史（特别是精神类药物使用），脱离生命危险后转诊精神科门诊或病房。</td>
+            <td>未给具体防自杀干预技术、未给药物；未给量表条目与评分。</td>
+          </tr>
+          <tr>
+            <td>精神病性症状</td>
+            <td>按四条诊断标准判断是否为躯体疾病所致；治疗“参见本书精神疾病治疗的相关章节”。</td>
+            <td>本章未给抗精神病药选择、剂量与疗程。</td>
+          </tr>
+          <tr>
+            <td>激越</td>
+            <td><strong>目标：</strong>尽快缓解激越，降低和防止攻击与暴力对患者自身及他人的伤害；尽快到现场，不得拖延；简单评估后尽快采取<strong>综合治理</strong>。<strong>顺序：</strong>①言语安抚，保持一定空间距离，避免患者感到人身威胁，灵活应对、适当妥协，让家属参与沟通；②言语安抚无效→药物治疗：口服非典型抗精神病药和/或苯二氮䓬类；典型或非典型抗精神病药或苯二氮䓬类<strong>肌内注射</strong>，通常起效快；③不得已→医学保护性约束：即使无法达成共识，也应口头告知并开具医嘱，遵循操作流程避免伤害，并按情况在最短时间内解除。</td>
+            <td>未给具体药物名称、剂量与注射方案。</td>
+          </tr>
+          <tr>
+            <td>睡眠障碍（失眠）</td>
+            <td>先确认“主观不满意 + 对身心社会功能的影响”；按 4P 排查生理/躯体、心理、精神医学、药理原因，尤其注意躯体病、治疗药物与撤药。</td>
+            <td>未给具体治疗方案、药物或剂量；未给心理治疗操作。</td>
+          </tr>
+          <tr>
+            <td>疼痛</td>
+            <td><strong>药物：</strong>教材明确“非本节所要讲述的内容”（包括抗抑郁药治疗）。<strong>非药物：</strong>保持共情，承认痛苦真实存在；充分倾听与理解；避免患者产生不切实际的期望；允许患者表达长期疼痛带来的恐惧、愤怒和怨恨；建立同盟关系，鼓励主动参与；可用催眠治疗、认知行为疗法、心理动力性治疗；指导放松技术，如瑜伽、针刺疗法、经皮电神经刺激疗法、按摩等康复治疗，帮助增加对疼痛的自控感、减少疼痛；推动疼痛门诊的多学科合作。</td>
+            <td>未给任何药物与剂量；未给各心理治疗的操作细节与疗程。</td>
+          </tr>
+          <tr>
+            <td>无客观检查所见的躯体症状（BDD）</td>
+            <td>核心在<strong>诊断逻辑与沟通</strong>：充分解释，避免简单把患者“推到精神心理科”；避免心身二元论；不以“查不出病”作为诊断依据；不因精神科诊断而贻误潜在躯体疾病；临床表现参见第十三章第一节。</td>
+            <td>本章未给具体治疗、药物或心理治疗方案。</td>
+          </tr>
+          <tr>
+            <td>谵妄</td>
+            <td>识别注意障碍 + 意识障碍 + 一日内波动；起病急、可逆；临床表现、原因及治疗参见第十九章第一节。</td>
+            <td>本章未给病因清单、药物或非药物治疗。</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout warn">
+      <span class="ct">⚠️ 三条不能越界的红线</span>
+      ① 不给教材没有的剂量与疗程；② 不把“心理干预”写成教材未提的流派技术；③ 不把其他章节的诊疗细节冒充本章内容——该说“参见第十九章/第十三章/治疗相关章节”的，就照教材说。
+    </div>
+  </div>
+
+  <!-- 第七栏 -->
+  <div class="card purple" id="u3-7">
+    <h3 class="col-title"><span class="idx">第七栏</span>记忆工具箱</h3>
+    <div class="callout tip">
+      <span class="ct">🔧 方法一：首字母缩拼法（失眠 4P）</span>
+      四个 P：<strong>P</strong>hysiological/physical（生理/躯体）、<strong>P</strong>sychological（心理）、<strong>P</strong>sychiatric（精神医学）、<strong>P</strong>harmacological（药理）。<br>
+      <em>为什么这样记：</em>首字母相同，天然成组；回忆时按“身体—心情—脑子—药”四个方向各问一句，基本不会漏掉撤药与酒精。
+    </div>
+    <div class="callout tip">
+      <span class="ct">🔧 方法二：口诀歌谣法（八类问题清单）</span>
+      口诀：<strong>“焦抑、自杀、精神病，激越、失眠、痛；查无实据躯体症，最后谵妄要认清。”</strong><br>
+      <em>为什么这样记：</em>按教材八个小标题的顺序押成四句，前四类偏“情绪与行为”，后四类偏“躯体主诉与认知”，背完即可还原目录。
+    </div>
+    <div class="callout tip">
+      <span class="ct">🔧 方法三：三步口诀 + 阶梯图（自杀与激越）</span>
+      <strong>自杀评估三步：</strong>“建关系 → 评等级 → 转专科”。<strong>激越处置三级：</strong>“言语安抚 → 药物治疗 → 保护性约束”，且约束必须“口头告知 + 开具医嘱 + 遵循流程 + 最短时间解除”。<br>
+      <em>为什么这样记：</em>两类高风险问题都考“先后顺序”；用“三步/三级”锚定，能防止一上来就用药或一上来就约束。
+    </div>
+    <div class="callout tip">
+      <span class="ct">🔧 方法四：类比理解（标注：类比理解，非医学事实）</span>
+      把谵妄比作电脑的<strong>“蓝屏”</strong>：不是硬件慢慢老化（痴呆），而是系统突然宕机——屏幕时好时坏（一日内波动）、鼠标点不准（注意障碍）、整机反应迟钝（意识障碍），重启后可能恢复（可逆）。<br>
+      <em>为什么这样记：</em>“突然、波动、注意、可逆”四个关键词被一个画面绑定；同时提醒不要把它当成痴呆的缓慢进展。
+    </div>
+  </div>
+
+  <!-- 第八栏 -->
+  <div class="card cyan" id="u3-8">
+    <h3 class="col-title"><span class="idx">第八栏</span>知识联动</h3>
+    <ul>
+      <li><strong>与抑郁障碍、焦虑障碍章：</strong>本章的“焦虑、抑郁”只讲综合医院场景中的识别与影响，诊断标准与治疗需回到相应疾病章。</li>
+      <li><strong>与第十三章第一节“躯体痛苦障碍”：</strong>教材明确把 BDD 在各器官系统的常见临床表现指向该节，本章只讲概念演变与会诊沟通陷阱。</li>
+      <li><strong>与第十九章第一节“谵妄”：</strong>教材把谵妄的临床表现、原因与治疗整体交给该节；本章保留定义、核心特征与“急性脑综合征”的别称。</li>
+      <li><strong>与治疗学章：</strong>躯体疾病所致精神病性症状的治疗、激越的药物治疗，最终都要回到精神疾病治疗相关章节；本章只给“用哪一类、按什么顺序”。</li>
+      <li><strong>与急诊医学：</strong>自杀抢救的“抢救由急诊科医师实施 + 精神科及时到位 + 脱险后转诊”是两科协同的典型场景。</li>
+      <li><strong>与内科学、神经病学：</strong>甲亢/甲减、甲状旁腺与肾上腺疾病、低氧/高碳酸/低血糖/电解质失衡、肝肾疾病、红斑狼疮、帕金森、癫痫、卒中、脑外伤等，都是“先排躯体原因”的具体落点。</li>
+      <li><strong>与肿瘤学、感染科：</strong>癌症后的焦虑抑郁反应、艾滋病与癌症的自杀风险，属教材点名的跨学科情境。</li>
+      <li><strong>与医学伦理、医疗安全：</strong>病耻感、转诊耻辱感、反复转诊与资源浪费、保护性约束的告知与医嘱，均涉及伦理与安全。</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===== 08 核心要点 ===== -->
+<section id="summary">
+  <div class="sec-head"><div class="badge">08</div><h2>全章核心要点速览<span class="en">18 key points</span></h2></div>
+  <p class="sec-lead">考前最后一遍只看这里。每条都能独立成题，建议逐条自问“为什么”。</p>
+  <div class="card blue">
+    <div class="grid2">
+      <ol>
+        <li>会诊-联络精神病学（CLP）是精神病学的一个分支，核心工作是精神科医师在综合医院<strong>非精神科科室</strong>针对精神症状及心理问题进行临床咨询、诊断、干预和治疗。</li>
+        <li>CLP 的三项工作：临床诊疗、教学培训、基础与临床研究（广义）。</li>
+        <li>医学模式从生物医学模式转向生物-心理-社会医学模式；坎农应激理论与精神分析是两个理论突破口。</li>
+        <li>躯体疾病与精神症状的五种关系：直接导致、心理反应、精神科并发症、精神疾病的躯体症状、共病。</li>
+        <li>CLP 起源于 20 世纪 20—30 年代的美国；20 世纪 70 年代后才形成规模；1997 年成立 EACLPP。</li>
+        <li>我国起步较晚，限制因素包括积极性、医院重视、资源配置、部门沟通、非精神科偏见、精神科躯体技能不足、患者病耻感。</li>
+        <li>教材引述某省级综合医院 2013—2016 年会诊量增长率 <strong>44.6%</strong>；会诊量前三科室为心内科 9.4%、神经内科 8.9%、骨科 5.4%。</li>
+        <li>该调查中会诊诊断前三：焦虑障碍 32.8%、心境障碍 22.6%、器质性精神障碍 10.5%；另一项北京某医院研究为焦虑 18.76%、抑郁 17.12%、脑器质性 16.45%。</li>
+        <li>会诊基本指导思想是<strong>从身心统一的角度理解疾病</strong>；患病本身即是一个应激事件。</li>
+        <li>会诊医师的三重能力：熟悉易产生精神症状的常见躯体疾病；熟悉精神药理学、相互作用与特殊人群；具备基本心理治疗技巧并贯穿全程。</li>
+      </ol>
+      <ol start="11">
+        <li>角色边界：治疗以<strong>请求会诊科室的躯体治疗为主</strong>，精神科提供有限服务，不喧宾夺主。</li>
+        <li>会诊七步：与申请医师沟通 → 了解现病史与既往史 → 与患者面谈并检查 → 了解躯体治疗状况 → 诊断并制定方案 → 书写会诊记录 → 随访。</li>
+        <li>面谈先告知会诊目的、确认患者最迫切的问题；检查重点为焦虑抑郁、精神病性症状、认知功能与神经系统检查，必要时建议脑影像、脑电图。</li>
+        <li>治疗以对症为主，根本治疗等待躯体疾病改善；避免抗胆碱能、心脏毒性/血压波动、加重意识障碍、致跌倒、加重肝肾损伤的药物；<strong>小剂量开始滴定</strong>。</li>
+        <li>会诊记录避免精神科专业术语，写明加药/减药的具体剂量与时间；随访靠行政支持与专门会诊小组。</li>
+        <li>自杀比例前三的精神疾病：情感障碍、物质或酒精滥用、精神分裂症；惊恐障碍、严重焦虑、摄食障碍、严重失眠是短期危险因素；严重内科疾病也增加风险。</li>
+        <li>激越按 ICD-10 为“明显的坐立不安和过多的肢体活动，并伴有焦虑”；处理顺序为言语安抚 → 药物治疗 → 医学保护性约束。</li>
+        <li>失眠 4P；疼痛分心理性、非精神病性、混合型；躯体痛苦障碍诊断基于<strong>阳性症状和体征</strong>；谵妄核心是注意障碍 + 意识障碍 + 一日内波动，起病急、可逆。</li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 09 易混 ===== -->
+<section id="pitfalls">
+  <div class="sec-head"><div class="badge">09</div><h2>易混易错点警示<span class="en">Common traps</span></h2></div>
+  <p class="sec-lead">这些点不是“没背到”，而是“背反了”。逐条核对你的第一反应。</p>
+  <div class="card danger">
+    <details open>
+      <summary>① CLP 不只是“精神科去会诊”</summary>
+      <div class="dbody">教材把 CLP 的工作内容写成三块：临床咨询/诊断/干预/治疗、<strong>教学培训</strong>、广义上的<strong>基础与临床研究</strong>。只答“会诊”会漏掉三分之二。</div>
+    </details>
+    <details>
+      <summary>② 会诊不是精神科“接管”患者</summary>
+      <div class="dbody">教材原文：治疗应以请求会诊科室的<strong>躯体治疗为主</strong>，精神科医师主要是为对方提供服务（通常是有限的），而不是喧宾夺主。会诊能解决的问题有限。</div>
+    </details>
+    <details>
+      <summary>③ 五种关系的方向不能记反</summary>
+      <div class="dbody">“躯体疾病直接导致精神症状”“心理反应”“精神科并发症”都是<strong>躯体在前</strong>；“精神疾病的躯体症状”（如焦虑症、抑郁症的躯体症状、转换性障碍）是<strong>精神在前</strong>；“共病”是两条线并行。方向错，处理主体就错。</div>
+    </details>
+    <details>
+      <summary>④ “短期情绪反应”不等于“没有障碍”</summary>
+      <div class="dbody">教材说患病与诊疗应激通常<strong>短期</strong>诱发焦虑/抑郁症状、随治疗展开消失；但同一段又说这些应激可作为重要诱因导致焦虑障碍或抑郁障碍的<strong>发病或复发</strong>。两者要分开判断，不能一刀切。</div>
+    </details>
+    <details>
+      <summary>⑤ 自杀风险不只来自精神科</summary>
+      <div class="dbody">严重内科疾病（艾滋病、各种癌症、脑外伤、癫痫、消化性溃疡、多发性硬化、脑器质性综合征、库欣综合征、类风湿关节炎、卟啉症）也与自杀风险增加有关。只问“有没有精神病史”会漏人。</div>
+    </details>
+    <details>
+      <summary>⑥ “情感障碍、物质/酒精滥用、精神分裂症”是前三，不是“抑郁、焦虑、精分”</summary>
+      <div class="dbody">教材明确前三为<strong>情感障碍、物质或酒精滥用、精神分裂症</strong>。惊恐障碍、严重焦虑、摄食障碍、严重失眠是<strong>短期危险因素</strong>，不是“前三”。</div>
+    </details>
+    <details>
+      <summary>⑦ 35%～50% 是“急会诊”占比，不是全部会诊</summary>
+      <div class="dbody">教材原文：幻觉、妄想和行为紊乱占综合医院精神科<strong>急会诊</strong>的 35%～50%。不要把它扩大成“所有会诊的一半”。</div>
+    </details>
+    <details>
+      <summary>⑧ 谵妄的核心不是“幻觉”，而是注意 + 意识 + 波动</summary>
+      <div class="dbody">定义以<strong>注意障碍和意识障碍</strong>为特征，短时间内产生、一天内波动，可伴幻觉妄想。只凭“看见幻觉”诊断谵妄，会漏掉最关键的注意与意识维度。</div>
+    </details>
+    <details>
+      <summary>⑨ 躯体痛苦障碍不是“排除性诊断”</summary>
+      <div class="dbody">DSM-5 的躯体症状障碍诊断基于<strong>阳性症状和体征</strong>（躯体症状 + 对症状的病态思维、情感及行为反应），而不是“医学解释缺如”。教材还警告：仅因没有器质性证据就下精神障碍诊断是草率的。</div>
+    </details>
+    <details>
+      <summary>⑩ “查不出病”≠精神心理问题；“有躯体病”≠没有精神障碍</summary>
+      <div class="dbody">教材两句话要成对记：没有客观检查证据不等于问题一定是精神心理问题；有躯体疾病也不能排除个体同时患有精神疾病共病。把两者“一分为二”正是教材批评的旧观念。</div>
+    </details>
+    <details>
+      <summary>⑪ 激越的第一步不是打针，约束也不是首选</summary>
+      <div class="dbody">顺序是：<strong>言语安抚</strong>（保持空间距离、避免人身威胁、可适当妥协、家属参与）→ 药物（口服或肌内注射）→ <strong>不得已</strong>才医学保护性约束。约束仍需口头告知、开具医嘱、遵循操作流程、最短时间解除。</div>
+    </details>
+  </div>
+</section>
+
+<!-- ===== 10 自测 ===== -->
+<section id="quiz">
+  <div class="sec-head"><div class="badge">10</div><h2>章节自测系统<span class="en">14 questions · 6 types</span></h2></div>
+  <p class="sec-lead">覆盖单选、多选、判断、名词解释、简答、案例分析六种题型，按易→中→难排列。先作答，再展开解析。</p>
+
+  <div class="quiz-q">
+    <div class="qh"><span class="qno">第 1 题</span><span class="qtype">单选题</span><span class="diff">易</span></div>
+    <p class="brief">会诊-联络精神病学的核心工作是</p>
+    <div class="opts">
+      <div class="opt"><span class="l">A.</span>在精神科病房收治综合医院转来的患者</div>
+      <div class="opt"><span class="l">B.</span>在综合医院非精神科科室针对患者的精神症状及心理问题进行咨询、诊断、干预和治疗</div>
+      <div class="opt"><span class="l">C.</span>只负责精神疾病的司法鉴定</div>
+      <div class="opt"><span class="l">D.</span>只开展精神疾病的基础研究</div>
+    </div>
+    <details><summary>查看答案与解析</summary><div class="dbody"><strong>答案：B</strong><br>教材定义明确：CLP 是精神病学的一个分支，核心工作是精神科医师在综合医院<strong>非精神科科室</strong>针对患者的精神症状及心理问题进行相关的临床咨询、诊断、干预和治疗。A 把方向说反；C、D 都把 CLP 的三项工作之一当成了全部。</div></details>
+  </div>
+
+  <div class="quiz-q">
+    <div class="qh"><span class="qno">第 2 题</span><span class="qtype">单选题</span><span class="diff">易</span></div>
+    <p class="brief">下列哪一项最能概括谵妄的核心特征？</p>
+    <div class="opts">
+      <div class="opt"><span class="l">A.</span>持续数月的心境低落与兴趣减退</div>
+      <div class="opt"><span class="l">B.</span>注意障碍与意识障碍，短时间内产生且一日内波动</div>
+      <div class="opt"><span class="l">C.</span>反复的躯体主诉与过度关注</div>
+      <div class="opt"><span class="l">D.</span>坐立不安伴过多肢体活动</div>
+    </div>
+    <details><summary>查看答案与解析</summary><div class="dbody"><strong>答案：B</strong><br>教材定义：谵妄以<strong>注意障碍</strong>（指向、集中、维持障碍及注意转移）和<strong>意识障碍</strong>为特征，短时间内产生且一天内波动。A 是抑郁表现；C 接近躯体痛苦障碍；D 是激越的描述。</div></details>
+  </div>
+
+  <div class="quiz-q">
+    <div class="qh"><span class="qno">第 3 题</span><span class="qtype">单选题</span><span class="diff">中</span></div>
+    <p class="brief">按教材，下列哪一组精神疾病的自杀比例排在前三位？</p>
+    <div class="opts">
+      <div class="opt"><span class="l">A.</span>情感障碍、物质或酒精滥用、精神分裂症</div>
+      <div class="opt"><span class="l">B.</span>焦虑障碍、抑郁障碍、失眠障碍</div>
+      <div class="opt"><span class="l">C.</span>精神分裂症、强迫障碍、摄食障碍</div>
+      <div class="opt"><span class="l">D.</span>双相障碍、人格障碍、惊恐障碍</div>
+    </div>
+    <details><summary>查看答案与解析</summary><div class="dbody"><strong>答案：A</strong><br>教材原文：在所有精神疾病中，<strong>情感障碍、物质或酒精滥用以及精神分裂症</strong>的自杀比例排在前三位。惊恐障碍、严重焦虑、摄食障碍、严重失眠属于<strong>短期危险因素</strong>，不是前三。</div></details>
+  </div>
+
+  <div class="quiz-q">
+    <div class="qh"><span class="qno">第 4 题</span><span class="qtype">单选题</span><span class="diff">难</span></div>
+    <p class="brief">关于 ICD-11 躯体痛苦障碍（BDD），下列哪项表述<strong>错误</strong>？</p>
+    <div class="opts">
+      <div class="opt"><span class="l">A.</span>以持续存在的躯体症状为特征，伴过度关注与反复就医</div>
+      <div class="opt"><span class="l">B.</span>患者的痛苦主诉缺乏相应器质性病变基础，或关注程度超过疾病本身</div>
+      <div class="opt"><span class="l">C.</span>只要查不出器质性证据，就可以直接诊断为 BDD</div>
+      <div class="opt"><span class="l">D.</span>BDD 也收纳了肌纤维痛、慢性疲劳综合征、肠易激综合征等功能性躯体综合征</div>
+    </div>
+    <details><summary>查看答案与解析</summary><div class="dbody"><strong>答案：C</strong><br>教材明确警告：没有客观检查证据<strong>不等于</strong>患者的问题一定是精神心理问题；仅因不存在可证明的器质性病理证据就下精神障碍诊断是草率的。DSM-5 的躯体症状障碍诊断基于<strong>阳性症状和体征</strong>，而非医学解释的缺如。A、B、D 均符合教材。</div></details>
+  </div>
+
+  <div class="quiz-q">
+    <div class="qh"><span class="qno">第 5 题</span><span class="qtype">多选题</span><span class="diff">中</span></div>
+    <p class="brief">教材把躯体疾病与精神症状（或精神障碍）的关系概括为以下哪些？</p>
+    <div class="opts">
+      <div class="opt"><span class="l">A.</span>躯体疾病直接导致的精神症状</div>
+      <div class="opt"><span class="l">B.</span>患者对躯体疾病产生的心理反应</div>
+      <div class="opt"><span class="l">C.</span>躯体疾病的精神科并发症</div>
+      <div class="opt"><span class="l">D.</span>精神疾病的躯体症状</div>
+    </div>
+    <details><summary>查看答案与解析</summary><div class="dbody"><strong>答案：ABCD</strong><br>教材列出五种：①直接导致（如脑炎的精神症状）；②心理反应（如癌症后的焦虑、抑郁反应）；③精神科并发症（如卒中后抑郁）；④精神疾病的躯体症状（如焦虑症、抑郁症的躯体症状、转换性障碍）；⑤<strong>共病</strong>。本题四项均属前四种，第五种未列入选项。</div></details>
+  </div>
+
+  <div class="quiz-q">
+    <div class="qh"><span class="qno">第 6 题</span><span class="qtype">多选题</span><span class="diff">难</span></div>
+    <p class="brief">按《激越患者精神科处置专家共识》，激越的原因包括哪些？</p>
+    <div class="opts">
+      <div class="opt"><span class="l">A.</span>脑器质性疾病和其他躯体疾病（如感染、脑外伤、甲亢、低血糖）</div>
+      <div class="opt"><span class="l">B.</span>精神活性物质中毒或戒断（如可卡因、苯丙胺、酒精戒断）</div>
+      <div class="opt"><span class="l">C.</span>精神障碍（如焦虑激越、激越性抑郁、精神病性激越）</div>
+      <div class="opt"><span class="l">D.</span>仅由患者“性格不好”引起，无需排查躯体因素</div>
+    </div>
+    <details><summary>查看答案与解析</summary><div class="dbody"><strong>答案：ABC</strong><br>教材把激越原因分三类：①脑器质性疾病和其他躯体疾病（含代谢及内分泌疾病）；②精神活性物质中毒或戒断；③精神障碍。D 与教材“先排查躯体与物质因素”的思路相反。</div></details>
+  </div>
+
+  <div class="quiz-q">
+    <div class="qh"><span class="qno">第 7 题</span><span class="qtype">多选题</span><span class="diff">中</span></div>
+    <p class="brief">关于精神科会诊的角色与原则，下列哪些符合教材表述？</p>
+    <div class="opts">
+      <div class="opt"><span class="l">A.</span>从身心统一的角度理解疾病是基本指导思想</div>
+      <div class="opt"><span class="l">B.</span>治疗应以请求会诊科室的躯体治疗为主</div>
+      <div class="opt"><span class="l">C.</span>会诊医师应把心理干预技巧贯穿整个会诊过程</div>
+      <div class="opt"><span class="l">D.</span>会诊医师应接管患者的全部治疗，以确保精神科方案落实</div>
+    </div>
+    <details><summary>查看答案与解析</summary><div class="dbody"><strong>答案：ABC</strong><br>D 与教材相反：精神科医师“主要是为对方提供服务（通常是有限的），而不是喧宾夺主”；应理解躯体治疗的重要性，通过沟通传达精神科的专业理解，并制定<strong>切实可行</strong>的治疗计划。</div></details>
+  </div>
+
+  <div class="quiz-q">
+    <div class="qh"><span class="qno">第 8 题</span><span class="qtype">判断题</span><span class="diff">易</span></div>
+    <p class="brief">综合医院精神科会诊应以精神科治疗为主，躯体治疗服从精神科方案。</p>
+    <div class="opts">
+      <div class="opt"><span class="l">A.</span>正确</div>
+      <div class="opt"><span class="l">B.</span>错误</div>
+    </div>
+    <details><summary>查看答案与解析</summary><div class="dbody"><strong>答案：B（错误）</strong><br>教材原文：治疗应该以<strong>请求会诊科室的躯体治疗为主</strong>，精神科医师主要是为对方提供服务（通常是有限的），而不是喧宾夺主。</div></details>
+  </div>
+
+  <div class="quiz-q">
+    <div class="qh"><span class="qno">第 9 题</span><span class="qtype">判断题</span><span class="diff">中</span></div>
+    <p class="brief">患者反复主诉躯体不适但各项检查未见相应器质性改变，即可判定其问题纯属精神心理问题。</p>
+    <div class="opts">
+      <div class="opt"><span class="l">A.</span>正确</div>
+      <div class="opt"><span class="l">B.</span>错误</div>
+    </div>
+    <details><summary>查看答案与解析</summary><div class="dbody"><strong>答案：B（错误）</strong><br>教材明确：没有客观检查的证据并不等于患者的问题就一定是精神心理问题；仅因不存在可证明的器质性病理证据就下精神障碍诊断也是草率的。同时，有躯体疾病也不能排除精神疾病共病。</div></details>
+  </div>
+
+  <div class="quiz-q">
+    <div class="qh"><span class="qno">第 10 题</span><span class="qtype">判断题</span><span class="diff">中</span></div>
+    <p class="brief">谵妄通常起病较急且具有可逆性，因此又被称为急性脑综合征。</p>
+    <div class="opts">
+      <div class="opt"><span class="l">A.</span>正确</div>
+      <div class="opt"><span class="l">B.</span>错误</div>
+    </div>
+    <details><summary>查看答案与解析</summary><div class="dbody"><strong>答案：A（正确）</strong><br>教材原文：与痴呆障碍相比，谵妄因通常起病较急且具有可逆性，也被称为急性脑综合征（acute brain syndrome）。</div></details>
+  </div>
+
+  <div class="quiz-q">
+    <div class="qh"><span class="qno">第 11 题</span><span class="qtype">名词解释</span><span class="diff">中</span></div>
+    <p class="brief">请解释“激越”。</p>
+    <details><summary>查看答案与解析</summary><div class="dbody"><strong>参考答案：</strong>激越被描述为“明显的坐立不安和过多的肢体活动，并伴有焦虑”（ICD-10）。临床上表现为一系列思维活动、情绪和行为从低到高不同程度的兴奋过程，且无法平静；严重时可表现为兴奋冲动、对他人有躯体威胁，并发生攻击他人及自身的暴力行为。它是精神科常见的一种<strong>急性综合征</strong>，也是综合医院请求会诊的常见问题。</div></details>
+  </div>
+
+  <div class="quiz-q">
+    <div class="qh"><span class="qno">第 12 题</span><span class="qtype">名词解释</span><span class="diff">中</span></div>
+    <p class="brief">请解释“躯体痛苦障碍（BDD）”。</p>
+    <details><summary>查看答案与解析</summary><div class="dbody"><strong>参考答案：</strong>ICD-11 中以持续存在的躯体症状为特征的一类精神障碍。躯体症状产生的痛苦使患者过度关注自己的身体状况，产生反复就医行为并引起相应功能损害；其痛苦主诉缺乏相应器质性病变基础，或对疾病的关注程度明显超过躯体疾病本身的性质及进展程度；不适感受或过度关注不能被适宜的医学检查及医学解释所缓解或消除。症状可多种、随时间变化，个别情况下可只有单个症状（通常为疼痛或疲劳）。</div></details>
+  </div>
+
+  <div class="quiz-q">
+    <div class="qh"><span class="qno">第 13 题</span><span class="qtype">简答题</span><span class="diff">难</span></div>
+    <p class="brief">简述综合医院精神科联络会诊的七步流程及各步核心任务。</p>
+    <details><summary>查看答案与解析</summary><div class="dbody">
+      <strong>参考答案：</strong>
+      <ol>
+        <li><strong>与申请会诊医师沟通：</strong>了解申请目的，主动核实真实问题；不熟悉的躯体病请对方讲解。</li>
+        <li><strong>了解现病史和既往史：</strong>住院记录、护理记录、家属/陪护信息；重点询问共病精神疾病史、物质滥用、精神科药物、人格特点与生活事件。</li>
+        <li><strong>与患者面谈并检查：</strong>告知会诊目的、确认患者最迫切的问题；检查焦虑抑郁、精神病性症状、认知功能与神经系统，必要时建议脑影像、脑电图。</li>
+        <li><strong>了解躯体治疗状况：</strong>核对所有药物、开始服药或突然撤药的时间关系、隐瞒用药、自行服药、物质滥用戒断。</li>
+        <li><strong>诊断并制定治疗方案：</strong>常见诊断可为“障碍”或暂称“状态”；对症治疗为主，根本治疗等待躯体改善；避免不良反应大的药物，小剂量滴定；配合心理干预与支持性治疗。</li>
+        <li><strong>书写会诊记录：</strong>简明扼要、避免专业术语；写明药物时间与加减剂量过程；告知减撤药方法；需长期用药者安排出院后门诊。</li>
+        <li><strong>随访：</strong>单次会诊不足；争取同一医师连续跟踪；行政支持与会诊小组定期记录、组内讨论。</li>
+      </ol>
+    </div></details>
+  </div>
+
+  <div class="quiz-q">
+    <div class="qh"><span class="qno">第 14 题</span><span class="qtype">案例分析题</span><span class="diff">难</span></div>
+    <p class="brief">某老年患者因躯体疾病住院，夜间出现烦躁、拉扯输液管、不认识陪护家属，白天又相对安静。家属认为“只是闹脾气”，请求会诊目的是“协助控制精神症状”。请分析：最需要优先考虑什么问题？会诊时应重点检查什么？处理原则是什么？</p>
+    <details><summary>查看答案与解析</summary><div class="dbody">
+      <strong>参考答案：</strong><br>
+      <strong>1. 优先考虑谵妄。</strong>依据：夜间出现的行为紊乱、对陪护家属的定向障碍，以及“白天相对安静”所提示的<strong>一日内波动</strong>；教材定义的核心是注意障碍与意识障碍，短时间内产生、一天内波动，可伴记忆障碍、定向力障碍、行为紊乱、激越或退缩、睡眠-觉醒周期改变。<br>
+      <strong>2. 会诊重点：</strong>认知功能（定向力、注意力、记忆力、执行功能、语言表达），可用 MMSE、画钟试验；基本神经系统检查（肌张力、生理反射、病理反射）；核对躯体疾病、躯体用药与撤药情况；必要时建议脑影像、脑电图等中枢神经系统检查。教材明确谵妄的临床表现、原因与治疗参见第十九章第一节。<br>
+      <strong>3. 处理原则：</strong>先找躯体病因与诱因，不能只用精神科药物“压症状”；避免可能加重意识障碍的药物（教材在会诊治疗原则中明确列出）；以对症治疗为主，根本治疗等待躯体疾病改善；同时指导家属理解症状、参与照护。若出现激越，按“言语安抚→药物→不得已时保护性约束”的顺序，且约束须口头告知、开具医嘱、遵循流程、最短时间解除。<br>
+      <span class="note">本题为模拟临床情境，依据教材知识点构建，不是教材原案例；教材未给具体药物与剂量，故答案不写。</span>
+    </div></details>
+  </div>
+</section>
+
+<!-- ===== 11 速记卡 ===== -->
+<section id="cards">
+  <div class="sec-head"><div class="badge">11</div><h2>考点速记卡<span class="en">19 flip cards</span></h2></div>
+  <p class="sec-lead">正面是问题，点击翻面看答案。建议按“概念→数据→处置”三轮刷，每轮只追求快速反应。</p>
+  <div class="flashcard-grid">
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag concept">概念</span><p>什么是会诊-联络精神病学（CLP）？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">精神病学的一个分支，核心工作是精神科医师在综合医院非精神科科室，针对患者的精神症状及心理问题进行临床咨询、诊断、干预和治疗。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag concept">概念</span><p>CLP 的三项工作内容？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">①临床诊疗（咨询、诊断、干预、治疗）；②教学培训（促进两类医师理解身心关系与处理方法）；③研究（广义 CLP 包括基础与临床研究）。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag concept">概念</span><p>躯体疾病与精神症状的五种关系？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">①躯体疾病直接导致（脑炎）；②对躯体病的心理反应（癌症后焦虑抑郁）；③精神科并发症（卒中后抑郁）；④精神疾病的躯体症状（焦虑抑郁的躯体症状、转换性障碍）；⑤共病。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag data">数据</span><p>CLP 的起源与 1997 年的组织？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">起源可追溯到 20 世纪 20—30 年代的美国；20 世纪 70 年代后才形成规模；1997 年欧洲多国成立 EACLPP（欧洲会诊-联络精神病学及心身医学联合会）。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag data">数据</span><p>我国某省级综合医院 3 年会诊量增长率与会诊量前三科室？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">2013.3—2016.3 会诊量增长率 44.6%；前三科室为心内科 9.4%、神经内科 8.9%、骨科 5.4%。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag data">数据</span><p>该调查中会诊诊断的前三位及占比？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">焦虑障碍 32.8%、心境障碍 22.6%、器质性精神障碍 10.5%。另一项北京某医院研究为焦虑 18.76%、抑郁 17.12%、脑器质性 16.45%。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag data">数据</span><p>神经内科中帕金森、癫痫、卒中患者共患焦虑/抑郁的比例？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">分别为 24.1%、21.9%、19.5%。教材解释：这些疾病涉及大脑的病理性改变，故焦虑/抑郁与精神症状问题更突出。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag concept">概念</span><p>精神科联络会诊的基本指导思想？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">从身心统一的角度理解疾病。患病本身即是应激事件，足以促发心理情绪问题并恶化躯体疾病。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag treat">边界</span><p>会诊医师的角色边界是什么？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">治疗以请求会诊科室的躯体治疗为主；精神科提供有限服务，不喧宾夺主；通过沟通传达专业理解，制定切实可行的计划。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag diag">流程</span><p>会诊七步流程？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">①与申请医师沟通；②了解现病史和既往史；③与患者面谈并检查；④了解躯体治疗状况；⑤诊断并制定治疗方案；⑥书写会诊记录；⑦随访。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag treat">文书</span><p>会诊记录的四个硬要求？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">简明扼要；避免精神科专业术语；写明药物服用时间及加/减药的具体剂量和时间过程；告知减药撤药方法，需长期用药者安排出院后精神科门诊。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag risk">风险</span><p>自杀比例前三的精神疾病？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">情感障碍、物质或酒精滥用、精神分裂症。惊恐障碍、严重焦虑、摄食障碍、严重失眠是短期危险因素。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag diag">评估</span><p>自杀风险评估的步骤与可用量表？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">①建立良好医患关系、获取信任，客观共情关切支持，不遮掩地询问，必要时问具体计划（时间、地点、方式）；②系统评估，可用 SASP、BASIC 等量表；不能量表时了解诊断、自杀决心、痛苦程度、准备细节、保护性因素、应激性质、既往企图、家族史；③定轻/中/高等级，无法判断或不能干预则请精神科会诊。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag diag">标准</span><p>躯体疾病所致精神病性障碍的四条诊断标准？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">①存在显著幻觉或妄想；②病史、体检或实验室检查证据表明是其他躯体疾病直接的病理生理性结果；③不能用其他精神障碍更好解释，且并非仅仅出现于谵妄时；④引起有临床意义的痛苦，或导致社交、职业等重要功能损害。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag treat">处置</span><p>激越的三级处置顺序？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">①言语安抚，保持空间距离、避免人身威胁、灵活应对、适当妥协、家属参与；②药物：口服非典型抗精神病药和/或苯二氮䓬类；肌内注射典型或非典型抗精神病药或苯二氮䓬类；③不得已时医学保护性约束，须口头告知、开具医嘱、遵循流程、最短时间解除。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag concept">概念</span><p>失眠的 4P 分别指什么？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">physiological/physical（生理/躯体）、psychological（心理）、psychiatric（精神医学）、pharmacological（药理）。药理项还包括突然停用镇静催眠药或某些抗抑郁药、长期以酒精代替睡眠药物。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag concept">概念</span><p>疼痛按心理因素作用分为哪三型？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">心理性的（心理因素在发作、维持、恶化中作用重要）；非精神病性的（躯体疾病是主因，心理因素作用不大）；混合型的（躯体与心理相互作用，包括大部分疼痛）。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag diag">分类</span><p>ICD-11 的 BDD 与 DSM-5 的对应？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">ICD-11 称“躯体痛苦障碍”；DSM-5 称“躯体症状及相关障碍”，亚型包括躯体症状障碍、疾病焦虑障碍（相当于疑病障碍）、转换障碍、影响其他躯体疾病的心理因素、做作性障碍等。DSM-5 已取消“疑病症”诊断。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag concept">概念</span><p>谵妄的定义与别称？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">以注意障碍（指向、集中、维持障碍及注意转移）和意识障碍为特征，短时间内产生且一天内波动的一组综合征；常伴记忆、定向、言语、视空间知觉（错觉幻觉妄想）、行为、睡眠-觉醒周期改变。起病急、可逆，又称急性脑综合征。</div>
+    </div></div>
+  </div>
+</section>
+
+<!-- ===== 12 病例挑战 ===== -->
+<section id="cases">
+  <div class="sec-head"><div class="badge">12</div><h2>病例挑战<span class="en">3 cases · increasing difficulty</span></h2></div>
+  <p class="sec-lead">以下为<strong>模拟临床情境</strong>：依据教材所述识别要点与处理原则构建，用于训练临床推理，<strong>不是教材原案例</strong>，也不含虚构的化验数值。</p>
+
+  <div class="case">
+    <span class="ctag">难度 ★ · 识别与分级处置</span>
+    <h3>案例 1：术后第一个夜晚的“躁动”</h3>
+    <div class="scene">某老年患者接受躯体手术后当晚出现明显坐立不安、反复起床、拉扯管路，对护士的劝阻反应激烈，偶有喊叫。家属说“他平时脾气很好，今天像变了个人”。值班医师拟申请精神科会诊，理由是“协助控制精神症状”。</div>
+    <ol class="ques">
+      <li>此时应优先考虑哪两类问题？如何用教材给出的要点区分？</li>
+      <li>在请精神科会诊前，躯体科室最应补充了解什么？</li>
+      <li>若判断为激越，处置顺序是什么？约束在什么位置？</li>
+    </ol>
+    <details><summary>查看答案与解析</summary><div class="dbody">
+      <strong>1.</strong>优先考虑<strong>谵妄</strong>与<strong>激越</strong>。谵妄的核心是注意障碍 + 意识障碍、短时间内产生、一日内波动，可伴行为紊乱、激越、睡眠-觉醒周期改变；激越则是“明显的坐立不安和过多的肢体活动，并伴有焦虑”，是一组急性综合征。若患者存在注意力不集中、定向错误、夜间加重白天减轻，应首先想到谵妄；若以坐立不安、肢体活动过多为主而注意与意识基本保留，则更符合激越。两者也可并存。<br>
+      <strong>2.</strong>按教材会诊第 4 步与激越原因：核对<strong>躯体疾病与用药</strong>——是否感染、发热、电解质/代谢异常、缺氧；是否使用可致精神症状的药物；是否<strong>突然停用</strong>原有药物（含镇静催眠药、精神科药物）；有无酒精或物质滥用史及戒断；有无脑器质性疾病史。教材强调“开始服药或突然撤药与精神症状产生的时间关系”常可提醒医师。<br>
+      <strong>3.</strong>激越处置顺序：①<strong>言语安抚</strong>，保持一定空间距离、避免患者感到人身威胁、灵活应对、适当妥协、让家属参与沟通；②言语安抚无效→<strong>药物</strong>（口服非典型抗精神病药和/或苯二氮䓬类；必要时肌内注射，起效快）；③<strong>不得已</strong>才医学保护性约束，且应口头告知并开具医嘱、遵循操作流程避免伤害、按情况最短时间解除。<br>
+      <span class="note">模拟情境，依据教材构建，不是教材原案例；教材未给具体药名与剂量，答案不补写。</span>
+    </div></details>
+  </div>
+
+  <div class="case">
+    <span class="ctag">难度 ★★ · 诊断逻辑与沟通</span>
+    <h3>案例 2：“查不出原因”的胸痛</h3>
+    <div class="scene">某中年患者因反复胸痛多次就诊，主诉疼痛明显、影响工作与睡眠，反复要求“再查一次心脏”。相关科室已按常规完成评估，未发现与主诉程度相符的器质性改变，并已多次解释，患者仍不满意，认为“医生不重视”。此次由心内科申请精神科会诊。</div>
+    <ol class="ques">
+      <li>该患者最可能属于教材所说的哪一类问题？诊断依据是什么？</li>
+      <li>教材警告的两个“诊疗困难”是什么？</li>
+      <li>会诊沟通与处理应把握哪些原则？教材未给什么？</li>
+    </ol>
+    <details><summary>查看答案与解析</summary><div class="dbody">
+      <strong>1.</strong>最可能为<strong>缺乏客观检查所见的躯体症状主诉</strong>，即 ICD-11 的<strong>躯体痛苦障碍（BDD）</strong>。依据：以持续存在的躯体症状（胸痛）为特征，痛苦使患者过度关注身体、产生反复就医行为并引起功能损害（影响工作与睡眠）；痛苦主诉缺乏相应器质性病变基础，或关注程度明显超过躯体疾病本身；不适感受不能被适宜的医学检查及医学解释所缓解。<br>
+      <strong>2.</strong>①患者可能因缺乏躯体检查证据被非精神科医师<strong>简单地推到精神心理科</strong>，从而感到不满甚至愤怒，认为医师不能理解、缺乏重视或缺乏能力，进而反复转换医师、浪费医疗资源，甚至对转诊精神科产生耻辱感；②精神科医师也可能担心患者存在潜在躯体疾病、担心贻误诊治，因而反复要求患者回到非精神科科室检查。教材指出，这种把躯体与精神“一分为二”的观念不利于解决问题。<br>
+      <strong>3.</strong>原则：充分解释，避免简单推诿；不以“查不出病”作为精神障碍的诊断依据，DSM-5 的躯体症状障碍诊断基于<strong>阳性症状和体征</strong>（躯体症状 + 对症状的病态思维、情感及行为反应）；同时不因精神科诊断而排除或延误潜在躯体疾病；承认痛苦真实存在，建立同盟。教材在本章<strong>未给</strong> BDD 的具体治疗、药物或心理治疗方案，临床表现参见第十三章第一节。<br>
+      <span class="note">模拟情境，依据教材构建，不是教材原案例；未写具体检查数值。</span>
+    </div></details>
+  </div>
+
+  <div class="case">
+    <span class="ctag">难度 ★★★ · 风险评估与转诊</span>
+    <h3>案例 3：病房里那句“活着没意思”</h3>
+    <div class="scene">某住院患者在与护士交谈时说出“活着没意思，不如算了”。患者既往因情感障碍住过精神科，本次因躯体疾病入院，家属要求“不要和精神科提，免得被人看不起”。值班医师不确定这句话算不算自杀观念，遂申请会诊。</div>
+    <ol class="ques">
+      <li>会诊医师应如何开口询问？教材对“要不要直接问”的态度是什么？</li>
+      <li>自杀风险评估应收集哪些信息？如何分级？</li>
+      <li>该患者有哪些危险因素与保护性因素需要核实？后续处置的边界在哪里？</li>
+    </ol>
+    <details><summary>查看答案与解析</summary><div class="dbody">
+      <strong>1.</strong>教材明确：询问自杀观念或企图时<strong>没必要遮遮掩掩</strong>；可用委婉表述（如“是否活着没意思”）让沟通容易一些；当患者发现可以把自杀想法说出来时，自杀观念就会减轻。若患者回答存在自杀观念或打算采取行为，<strong>进一步询问具体计划（时间、地点、方式）非常必要</strong>。同时要保持客观、共情、关切和支持性的态度，先建立良好医患关系、获取信任。<br>
+      <strong>2.</strong>系统评估可用自杀可能性评估量表（SASP）、波士顿自杀观念评估量表（BASIC）等；不能量表时，应了解：目前精神状况与精神疾病诊断、自杀决心、主观痛苦程度、准备自杀的相关细节、个体可获得的内在和外在资源（保护性因素）、面临的压力与应激性质、既往自杀企图、家族自杀史。据此确定<strong>轻、中、高</strong>风险等级；无法准确判断或明确判断后不能有效干预，应及时请精神科医师会诊。<br>
+      <strong>3.</strong>危险因素：既往<strong>情感障碍</strong>（教材列为自杀比例前三之一）；严重躯体疾病住院（躯体疾病本身为应激）；可能的自杀家族史、既往自杀企图史、生活状况与严重应激事件需逐项核实；家属的回避态度可能使信息被隐瞒。保护性因素：家庭支持、可获得的内在资源与外在资源，需具体询问而非假设。<br>
+      后续边界：住院患者由临床医师识别与评估风险，必要时请精神科会诊；若已发生自杀行为并被送至急诊，抢救由急诊科医师实施，精神科应及时“到位”，从家属或保护人获取病史（<strong>特别是精神类药物的使用状况</strong>），患者脱离生命危险后及时转诊到精神科门诊或病房。教材未给具体防自杀干预技术与药物，本答案不补写。<br>
+      <span class="note">模拟情境，依据教材构建，不是教材原案例。</span>
+    </div></details>
+  </div>
+</section>
+
+<!-- ===== 13 拓展 ===== -->
+<section id="ext">
+  <div class="sec-head"><div class="badge">13</div><h2>拓展延伸<span class="en">Beyond the chapter</span></h2></div>
+  <p class="sec-lead">教材已提及但未展开的内容集中列在这里；教材没有的，明确标“教材未涉及”，避免把课外知识当成教材结论。</p>
+  <div class="grid2">
+    <div class="card cyan">
+      <h3>教材提及、但明确指向其他章节</h3>
+      <ul>
+        <li><strong>谵妄：</strong>临床表现、原因及治疗，教材写明“请参见第十九章第一节”。</li>
+        <li><strong>躯体痛苦障碍：</strong>在各器官系统中的常见临床表现，教材写明“可参见第十三章第一节‘躯体痛苦障碍’”。</li>
+        <li><strong>躯体疾病所致精神病性症状的治疗：</strong>教材写明“请参见本书精神疾病治疗的相关章节”。</li>
+        <li><strong>疼痛的药物治疗（包括抗抑郁药）：</strong>教材写明“非本节所要讲述的内容”，只简述非药物治疗。</li>
+        <li><strong>认知评估工具：</strong>教材提到 MMSE 通常有帮助，画钟试验等简易检查可发现潜在神经心理问题；未给具体操作与评分。</li>
+        <li><strong>自杀评估量表：</strong>教材点名 SASP、BASIC；未给条目、评分与截断值。</li>
+        <li><strong>ICD-11 与 DSM-5 的分类变动：</strong>教材说明 ICD-10 相关诊断与用语的改变主要参照 DSM-5 思路；BDD 为新类别，疑病障碍归入强迫性障碍。</li>
+        <li><strong>我国的实践尝试：</strong>教材举出“双心门诊”“阳光医院”，未展开其组织方式与成效数据。</li>
+      </ul>
+    </div>
+    <div class="card orange">
+      <h3>教材未涉及 / 本指南不补写的内容</h3>
+      <ul>
+        <li>各类精神科药物的<strong>具体名称、剂量、疗程</strong>——本章只给“避免哪几类不良反应”，用药回到治疗学相关章节。</li>
+        <li>激越的<strong>具体注射方案与药物选择顺序</strong>——教材只给“典型/非典型抗精神病药或苯二氮䓬类”这一类别层面。</li>
+        <li>自杀的<strong>具体干预技术、随访频次与安全计划</strong>——教材只给评估、会诊与转诊。</li>
+        <li>失眠、BDD 的<strong>具体治疗方案</strong>——本章只给成因框架与诊断逻辑。</li>
+        <li>心理治疗各流派（催眠、CBT、心理动力性治疗）的<strong>操作步骤与疗程</strong>——教材只点名方法。</li>
+        <li>会诊的<strong>人员配置标准、收费标准、绩效考核</strong>——教材只提“行政支持”与“会诊小组”。</li>
+        <li>CLP 的<strong>全国性流行病学数据</strong>——教材只给两项具体医院的调查结果。</li>
+        <li>会诊相关的<strong>伦理法规条文</strong>（如知情同意、隐私保护的具体规定）——教材未涉及；本指南只呈现教材已有的“告知会诊目的”“理解病耻感”等表述。</li>
+      </ul>
+    </div>
+  </div>
+  <div class="callout ext">
+    <span class="ct">📖 使用提醒</span>
+    本指南所有定义、比例、流程与处理顺序均取自教材第二十三章原文；凡标注“教材未给/未涉及”的地方，不要用其他资料的数字或方案替代，以免与教材答案冲突。
+  </div>
+  <div class="hr"></div>
+  <p class="note" style="text-align:center">精神病学（第9版）· 第二十三章 会诊-联络精神病学 · 印刷页 280–289 · 学习指南完</p>
+</section>
+</div>
+<nav class="chapter-pager" aria-label="章节间导航"><a class="cp-prev" href="精神病学_第二十二章_精神科急诊及危机干预_学习指南.html">← 上一章：第二十二章</a><a class="cp-toc" href="index.html">目录</a><a class="cp-next" href="精神病学_第二十四章_治疗学_学习指南.html">下一章：第二十四章 →</a></nav>
+</main>
+
+<button class="top" id="topBtn" aria-label="回到顶部">↑</button>
+<script>
+/* ============================================================
+   精神病学学习指南 · 统一交互层 v1（构建期注入，整体替换原 IIFE）
+   兼容 A 族（.tabbar button + [data-panel] + .panel.on）与
+   B 族（.tab-nav + .tab-panel.active）两套 DOM 约定。
+   特性检测 + 防御式查询 + 幂等；不引入任何外部依赖。
+   ============================================================ */
+(function () {
+  'use strict';
+  if (window.__PSY_GUIDE_APP__) { return; }
+  window.__PSY_GUIDE_APP__ = true;
+
+  var d = document;
+
+  function all(sel, root) {
+    return Array.prototype.slice.call((root || d).querySelectorAll(sel));
+  }
+  function on(el, ev, fn, opt) {
+    if (el) { el.addEventListener(ev, fn, opt || false); }
+  }
+  function norm(s) {
+    return String(s || '').replace(/\s+/g, '').toUpperCase();
+  }
+
+  /* ---------- 1. Tab 切换（两族约定都支持） ---------- */
+  function initTabs() {
+    all('.tabs, [data-tabs]').forEach(function (g) {
+      if (g.__psyTabs) { return; }
+      g.__psyTabs = true;
+      var isA = !!g.querySelector('.tabbar button');
+      var btns = all(isA ? '.tabbar button' : '.tab-nav .tab-btn', g);
+      if (!btns.length) { return; }
+      var cls = isA ? 'on' : 'active';
+      var nav = btns[0].closest('.tabbar') || btns[0].closest('.tab-nav');
+      if (nav && !nav.hasAttribute('role')) { nav.setAttribute('role', 'tablist'); }
+      all(isA ? '.panel' : '.tab-panel', g).forEach(function (p) {
+        if (!p.hasAttribute('role')) { p.setAttribute('role', 'tabpanel'); }
+      });
+      function activate(btn) {
+        btns.forEach(function (b) {
+          b.classList.remove(cls);
+          b.setAttribute('aria-selected', 'false');
+        });
+        btn.classList.add(cls);
+        btn.setAttribute('aria-selected', 'true');
+        var id = btn.getAttribute('data-tab');
+        if (!id) { return; }
+        var target = isA
+          ? g.querySelector('[data-panel="' + id + '"]')
+          : (g.querySelector('.tab-panel#' + id) || d.getElementById(id));
+        all(isA ? '.panel' : '.tab-panel', g).forEach(function (p) {
+          var show = isA ? (p.getAttribute('data-panel') === id) : (p === target);
+          p.classList.toggle(cls, show);
+        });
+      }
+      btns.forEach(function (btn, i) {
+        if (!btn.hasAttribute('role')) { btn.setAttribute('role', 'tab'); }
+        btn.setAttribute('aria-selected', btn.classList.contains(cls) ? 'true' : 'false');
+        if (!btn.hasAttribute('tabindex') && !btn.classList.contains(cls)) { btn.setAttribute('tabindex', '0'); }
+        on(btn, 'click', function () { activate(btn); });
+        on(btn, 'keydown', function (e) {
+          if (e.key !== 'ArrowRight' && e.key !== 'ArrowLeft') { return; }
+          e.preventDefault();
+          var nx = btns[(i + (e.key === 'ArrowRight' ? 1 : btns.length - 1)) % btns.length];
+          if (nx) { nx.focus(); activate(nx); }
+        });
+      });
+    });
+  }
+
+  /* ---------- 2. 速记卡：点击/键盘翻转 + 可达性 ---------- */
+  function initCards() {
+    all('.flashcard').forEach(function (card) {
+      if (card.__psyCard) { return; }
+      card.__psyCard = true;
+      card.setAttribute('tabindex', '0');
+      card.setAttribute('role', 'button');
+      function sync() {
+        card.setAttribute('aria-pressed', card.classList.contains('flipped') ? 'true' : 'false');
+      }
+      function flip() { card.classList.toggle('flipped'); sync(); }
+      on(card, 'click', flip);
+      on(card, 'keydown', function (e) {
+        if (e.key === 'Enter' || e.key === ' ' || e.key === 'Spacebar') {
+          e.preventDefault();
+          flip();
+        }
+      });
+      sync();
+    });
+  }
+
+  /* ---------- 3. 自测题交互化（核心新功能） ---------- */
+  function initQuiz() {
+    var questions = all('.quiz-q, .quiz-item');
+    if (!questions.length) { return; }
+    var groups = {};
+
+    function keyOf(o) {
+      var L = o.getAttribute('data-letter');
+      if (L && String(L).replace(/\s+/g, '') !== '') { return norm(L); }
+      var sp = o.querySelector('.l');
+      if (sp) {
+        var t = norm(sp.textContent).replace(/[.．、:：]/g, '');
+        if (t !== '') { return t; }
+      }
+      var txt = norm(o.textContent);
+      if (txt.indexOf('正确') >= 0 || txt.indexOf('错误') >= 0) { return txt; }
+      return txt.charAt(0);
+    }
+
+    function getGroup(q) {
+      var sec = q.closest('.quiz-block') || q.closest('section') || d.body;
+      if (!groups[sec.__psyGid]) {
+        sec.__psyGid = 'g' + (Object.keys(groups).length + 1);
+        groups[sec.__psyGid] = { sec: sec, total: 0, score: 0, row: null, first: null };
+      }
+      var g = groups[sec.__psyGid];
+      if (!g.first) { g.first = q; }
+      return g;
+    }
+
+    function ensureRow(g) {
+      if (g.row) { return g.row; }
+      var row = d.createElement('div');
+      row.className = 'quiz-score';
+      row.setAttribute('role', 'status');
+      row.setAttribute('aria-live', 'polite');
+      row.innerHTML = '<span class="qs-label">自测计分</span>' +
+        '<span class="qs-num">得分 0 / ' + g.total + '</span>' +
+        '<span class="qs-bar"><i></i></span>';
+      g.first.parentNode.insertBefore(row, g.first);
+      g.row = row;
+      return row;
+    }
+
+    function updateRow(g) {
+      var row = ensureRow(g);
+      var num = row.querySelector('.qs-num');
+      var bar = row.querySelector('.qs-bar i');
+      if (num) { num.textContent = '得分 ' + g.score + ' / ' + g.total; }
+      if (bar) { bar.style.width = (g.total ? Math.round(g.score / g.total * 100) : 0) + '%'; }
+    }
+
+    questions.forEach(function (q) {
+      if (q.__psyQuiz) { return; }
+      q.__psyQuiz = true;
+      var opts = all('.opt', q);
+      if (!opts.length) { opts = all('.quiz-options > li', q); }
+      if (!opts.length) { return; }
+
+      /* 正确答案先记入内存：预标 correct 优先（记录后立即移除，消除剧透），
+         否则从解析文本「答案：X / 答案 X」提取（不改动任何文字） */
+      var ansKeys = [];
+      var preset = opts.filter(function (o) { return o.classList.contains('correct'); });
+      preset.forEach(function (o) { o.classList.remove('correct'); });
+      if (preset.length) {
+        ansKeys = preset.map(keyOf);
+      } else {
+        var dt = q.querySelector('details');
+        var txt = dt ? dt.textContent : '';
+        var m = txt.match(/答案\s*[:：]?\s*([A-Za-z](?:[\s、,，·和及]*[A-Za-z])*)/);
+        if (m) {
+          ansKeys = m[1].match(/[A-Za-z]/g) || [];
+        } else {
+          var m2 = txt.match(/答案\s*[:：]?\s*(正确|错误)/);
+          if (m2) { ansKeys = [m2[1]]; }
+        }
+      }
+      if (!ansKeys.length) { return; } /* 无可判定答案（名词解释等），保持原样 */
+
+      var g = getGroup(q);
+      g.total += 1;
+      var multi = ansKeys.length > 1;
+      var ansSet = ansKeys.map(norm);
+      var locked = false;
+      var picked = [];
+
+      function revealAll() {
+        opts.forEach(function (o) {
+          if (ansSet.indexOf(keyOf(o)) >= 0) { o.classList.add('is-reveal'); }
+        });
+      }
+      function finish(ok) {
+        locked = true;
+        q.classList.add('is-locked');
+        var dt = q.querySelector('details');
+        if (dt) { dt.open = true; }
+        if (ok) { g.score += 1; }
+        updateRow(g);
+      }
+
+      opts.forEach(function (o) {
+        o.setAttribute('tabindex', '0');
+        function pick() {
+          if (locked) { return; }
+          var k = keyOf(o);
+          if (ansSet.indexOf(k) >= 0) {
+            o.classList.add('is-right');
+            if (picked.indexOf(k) < 0) { picked.push(k); }
+            if (multi) {
+              if (picked.length === ansSet.length) { finish(true); }
+            } else {
+              finish(true);
+            }
+          } else {
+            o.classList.add('is-wrong');
+            revealAll();
+            finish(false);
+          }
+        }
+        on(o, 'click', pick);
+        on(o, 'keydown', function (e) {
+          if (e.key === 'Enter' || e.key === ' ' || e.key === 'Spacebar') {
+            e.preventDefault();
+            pick();
+          }
+        });
+      });
+    });
+
+    Object.keys(groups).forEach(function (id) {
+      if (groups[id].total > 0) { updateRow(groups[id]); }
+    });
+  }
+
+  /* ---------- 4. 侧栏 scroll spy（本页锚点高亮） ---------- */
+  function initSpy() {
+    var links = all('#sidebar a[href^="#"]');
+    if (!links.length || !('IntersectionObserver' in window)) { return; }
+    var map = {};
+    links.forEach(function (a) {
+      var id = a.getAttribute('href').slice(1);
+      if (id) { map[id] = a; }
+    });
+    var secs = [];
+    Object.keys(map).forEach(function (id) {
+      var s = d.getElementById(id);
+      if (s) { secs.push(s); }
+    });
+    if (!secs.length) { return; }
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting && map[e.target.id]) {
+          links.forEach(function (a) { a.classList.remove('active'); });
+          map[e.target.id].classList.add('active');
+        }
+      });
+    }, { rootMargin: '-15% 0px -70% 0px', threshold: 0 });
+    secs.forEach(function (s) { io.observe(s); });
+  }
+
+  /* ---------- 5. 阅读进度条 + 回顶 ---------- */
+  function initScroll() {
+    var bar = d.getElementById('readbar');
+    var topBtn = d.getElementById('topBtn') || d.getElementById('backTop');
+    var ticking = false;
+    function step() {
+      ticking = false;
+      var h = d.documentElement;
+      var y = window.pageYOffset || h.scrollTop || 0;
+      if (bar) {
+        var max = h.scrollHeight - h.clientHeight;
+        bar.style.width = (max > 0 ? (y / max) * 100 : 0) + '%';
+      }
+      if (topBtn) {
+        topBtn.classList.toggle('show', y > 400);     /* A 族类名 */
+        topBtn.classList.toggle('visible', y > 400);  /* B 族类名 */
+      }
+    }
+    on(window, 'scroll', function () {
+      if (!ticking) { ticking = true; window.requestAnimationFrame(step); }
+    }, { passive: true });
+    step();
+    on(topBtn, 'click', function () {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
+
+  /* ---------- 6. 侧栏开合（存在才绑定；抽屉打开时锁定背景滚动） ---------- */
+  function initSidebar() {
+    var sidebar = d.getElementById('sidebar');
+    if (!sidebar) { return; }
+    var btn = d.getElementById('menuBtn') || d.getElementById('navToggle');
+    var ov = d.getElementById('overlay') || d.getElementById('sidebarOverlay');
+    function lock(open) {
+      /* 仅移动抽屉断点（≤900px）锁滚动；宽屏兜底解除，防布局残留 */
+      d.body.classList.toggle('nav-locked', !!open && window.innerWidth <= 900);
+    }
+    function close() {
+      sidebar.classList.remove('open');
+      if (ov) { ov.classList.remove('show'); }
+      lock(false);
+    }
+    on(btn, 'click', function () {
+      var open = !sidebar.classList.contains('open');
+      sidebar.classList.toggle('open');
+      if (ov) { ov.classList.toggle('show'); }
+      lock(open);
+    });
+    on(ov, 'click', close);
+    all('a', sidebar).forEach(function (a) {
+      on(a, 'click', function () {
+        if (window.innerWidth <= 900) { close(); }
+      });
+    });
+    on(window, 'resize', function () {
+      if (window.innerWidth > 900) { lock(false); }
+    });
+  }
+
+  /* ---------- 启动（脚本位于 body 末尾，DOM 已就绪；防御兜底） ---------- */
+  function boot() {
+    initTabs();
+    initCards();
+    initQuiz();
+    initSpy();
+    initScroll();
+    initSidebar();
+  }
+  if (d.readyState === 'loading') {
+    on(d, 'DOMContentLoaded', boot);
+  } else {
+    boot();
+  }
+})();
+</script>
+
+</body>
+</html>

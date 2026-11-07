@@ -1,0 +1,10 @@
+# 教材原书 PDF 超过 GitHub 100MB 单文件限制，不入库（仅本地保留）
+*.pdf
+
+# 构建期资产与原始备份（仅本地保留）
+_refactor/
+
+# 工具缓存与本地协作配置
+.trae-html-share-packages/
+AGENTS.md
+_commitmsg.txt

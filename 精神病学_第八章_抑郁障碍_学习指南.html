@@ -1,0 +1,1964 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>精神病学 第八章 抑郁障碍 - 学习指南</title>
+<style>
+/* ===== 设计系统（请完整复制，勿修改变量与组件样式） ===== */
+:root{
+  --bg:#F0F7FA; --card:#FFFFFF; --ink:#0F172A; --muted:#64748B; --border:#E2E8F0;
+  --primary:#0EA5E9; --accent:#10B981; --symptom:#EF4444; --treatment:#10B981;
+  --cause:#3B82F6; --diagnosis:#F59E0B; --memory:#8B5CF6; --danger:#DC2626;
+  --quiz:#EC4899; --flashcard:#06B6D4;
+  --symptom-bg:#FEF2F2; --treatment-bg:#ECFDF5; --cause-bg:#EFF6FF;
+  --diagnosis-bg:#FFFBEB; --memory-bg:#F5F3FF; --quiz-bg:#FDF2F8; --flash-bg:#ECFEFF;
+  --gradient-main:linear-gradient(135deg,#0EA5E9 0%,#06B6D4 50%,#10B981 100%);
+  --gradient-soft:linear-gradient(135deg,rgba(14,165,233,.08),rgba(6,182,212,.05) 50%,rgba(16,185,129,.08));
+  --radius-sm:8px; --radius-md:12px; --radius-lg:18px;
+  --shadow-sm:0 1px 3px rgba(15,23,42,.06),0 1px 2px rgba(15,23,42,.04);
+  --shadow-md:0 6px 18px rgba(14,165,233,.10),0 2px 6px rgba(15,23,42,.05);
+  --shadow-lg:0 14px 38px rgba(14,165,233,.16),0 4px 12px rgba(15,23,42,.06);
+  --sidebar-w:262px; --content-max:980px;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:"Microsoft YaHei","PingFang SC","Segoe UI",system-ui,sans-serif;
+  font-size:16px;line-height:1.75;color:var(--ink);background:var(--bg);
+  background-image:radial-gradient(ellipse 620px 420px at 8% 0%,rgba(14,165,233,.09),transparent 70%),
+                    radial-gradient(ellipse 520px 380px at 92% 16%,rgba(16,185,129,.07),transparent 70%),
+                    radial-gradient(ellipse 700px 520px at 50% 100%,rgba(6,182,212,.05),transparent 70%);
+  min-height:100vh;
+}
+img{max-width:100%}
+a{color:var(--primary)}
+p{margin-bottom:12px}
+strong{font-weight:700;color:var(--ink)}
+mark.key{background:none;color:var(--primary);font-weight:700}
+.page-wrapper{display:flex;max-width:1420px;margin:0 auto;padding:0 24px}
+.main-content{flex:1;min-width:0;max-width:var(--content-max);padding:36px 0 88px}
+
+/* ===== 侧边导航 ===== */
+.sidebar{width:var(--sidebar-w);flex-shrink:0;position:sticky;top:20px;align-self:flex-start;
+  max-height:calc(100vh - 40px);overflow-y:auto;padding:22px 0;margin-right:30px}
+.sidebar-brand{font-size:.78rem;font-weight:700;letter-spacing:.06em;color:var(--muted);
+  padding:0 14px 12px;border-bottom:1px dashed var(--border);margin-bottom:10px}
+.sidebar-nav ul{list-style:none}
+.sidebar-nav>ul>li>a{display:flex;align-items:center;gap:9px;padding:9px 14px;border-radius:var(--radius-sm);
+  color:var(--ink);text-decoration:none;font-size:.9rem;font-weight:500;border-left:3px solid transparent;
+  transition:all .2s ease;margin-left:-3px}
+.sidebar-nav>ul>li>a:hover{background:rgba(14,165,233,.06);color:var(--primary)}
+.sidebar-nav>ul>li>a.active{background:rgba(14,165,233,.1);color:var(--primary);
+  border-left-color:var(--primary);font-weight:700}
+.toc-num{font-family:Consolas,monospace;font-size:.72rem;color:var(--muted);min-width:22px}
+.sidebar-nav .sub-list{margin:2px 0 8px 22px;padding-left:12px;border-left:1px solid var(--border)}
+.sidebar-nav .sub-list li a{display:block;padding:5px 10px;color:var(--muted);text-decoration:none;
+  font-size:.8rem;border-radius:4px}
+.sidebar-nav .sub-list li a:hover{color:var(--primary);background:rgba(14,165,233,.05)}
+
+/* ===== 封面 ===== */
+.hero{position:relative;overflow:hidden;text-align:center;padding:54px 34px 46px;margin-bottom:48px;
+  background:var(--gradient-soft);border:1px solid rgba(14,165,233,.12);border-radius:var(--radius-lg)}
+.hero::before{content:"";position:absolute;inset:-40% -20% auto;height:180%;
+  background:radial-gradient(circle at 28% 30%,rgba(14,165,233,.1),transparent 55%),
+             radial-gradient(circle at 74% 68%,rgba(16,185,129,.09),transparent 55%);pointer-events:none}
+.hero>*{position:relative}
+.hero-badge{display:inline-flex;align-items:center;gap:6px;padding:6px 15px;border-radius:100px;
+  background:rgba(14,165,233,.12);border:1px solid rgba(14,165,233,.22);color:var(--primary);
+  font-size:.8rem;font-weight:700;margin-bottom:18px}
+.hero h1{font-size:2.35rem;line-height:1.28;font-weight:800;margin-bottom:12px;
+  background:var(--gradient-main);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.hero .subtitle{max-width:680px;margin:0 auto;color:var(--muted);font-size:1.02rem}
+.hero-meta{display:flex;justify-content:center;gap:34px;flex-wrap:wrap;margin-top:26px}
+.hero-meta-item .num{font-size:1.7rem;font-weight:800;line-height:1.2;color:var(--primary)}
+.hero-meta-item .label{font-size:.78rem;color:var(--muted)}
+.hero-quote{margin:24px auto 0;max-width:720px;padding:12px 18px;border-radius:10px;
+  background:rgba(255,255,255,.66);border:1px dashed rgba(14,165,233,.3);
+  font-size:.9rem;color:var(--muted);text-align:left}
+
+/* ===== 区块 ===== */
+.section{margin-bottom:56px;scroll-margin-top:20px}
+.section-header{display:flex;align-items:center;gap:13px;margin-bottom:22px;padding-bottom:12px;
+  border-bottom:2px solid transparent;border-image:var(--gradient-main) 1}
+.section-number{width:40px;height:40px;border-radius:var(--radius-sm);display:inline-flex;
+  align-items:center;justify-content:center;background:var(--gradient-main);color:#fff;
+  font-weight:800;font-size:1rem;flex-shrink:0}
+.section-header h2{font-size:1.55rem;font-weight:800;line-height:1.35}
+.subsection{margin:30px 0;scroll-margin-top:20px}
+.subsection h3{font-size:1.18rem;font-weight:700;margin-bottom:12px;display:flex;align-items:center;gap:8px}
+.sub-subsection{margin:18px 0}
+.sub-subsection h4{font-size:1rem;font-weight:700;margin-bottom:8px}
+.lead{font-size:1rem;color:var(--muted);margin-bottom:18px}
+
+/* ===== 疾病页眉 / 八栏 ===== */
+.disease-hero{background:linear-gradient(135deg,#0f2b46,#155e75 60%,#0f766e);color:#fff;
+  border-radius:var(--radius-lg);padding:28px 30px;margin:26px 0 22px;box-shadow:var(--shadow-md)}
+.disease-hero .en{font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;color:#99f6e4}
+.disease-hero h3{font-size:1.5rem;margin:4px 0 8px;color:#fff}
+.disease-hero p{color:#e0f2fe;font-size:.92rem;margin:0}
+.disease-hero .quick-tags{margin-top:14px;display:flex;gap:8px;flex-wrap:wrap}
+.disease-hero .quick-tags span{background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.28);
+  color:#fff;border-radius:100px;padding:3px 11px;font-size:.76rem}
+.module{background:var(--card);border:1px solid var(--border);border-radius:var(--radius-md);
+  padding:22px 24px;margin:16px 0;box-shadow:var(--shadow-sm)}
+.module-head{display:flex;align-items:center;gap:10px;margin-bottom:14px;padding-bottom:10px;
+  border-bottom:1px solid var(--border)}
+.module-index{font-family:Consolas,monospace;font-size:.72rem;font-weight:700;color:#fff;
+  background:var(--gradient-main);padding:3px 9px;border-radius:100px;white-space:nowrap}
+.module-head h3{font-size:1.08rem;font-weight:700;margin:0}
+.module-head .module-en{font-size:.74rem;color:var(--muted);font-weight:400}
+.module-cause .module-index{background:var(--cause)}
+.module-symptom .module-index{background:var(--symptom)}
+.module-case .module-index{background:var(--diagnosis)}
+.module-diff .module-index{background:#0F766E}
+.module-treat .module-index{background:var(--treatment)}
+.module-memory .module-index{background:var(--memory)}
+.module-link .module-index{background:#475569}
+
+/* ===== 卡片 ===== */
+.card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius-md);
+  padding:18px 20px;box-shadow:var(--shadow-sm);transition:.2s}
+.card:hover{box-shadow:var(--shadow-md);transform:translateY(-1px)}
+.card-header{display:flex;align-items:center;gap:9px;margin-bottom:10px;padding-bottom:9px;
+  border-bottom:1px solid var(--border)}
+.card-icon{font-size:1.2rem}
+.card-title{font-size:1rem;font-weight:700}
+.card-body{font-size:.94rem}
+.card-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px;margin:16px 0}
+.card-grid .card{margin:0}
+.card-symptom{border-left:4px solid var(--symptom)}
+.card-treatment{border-left:4px solid var(--treatment)}
+.card-cause{border-left:4px solid var(--cause)}
+.card-diagnosis{border-left:4px solid var(--diagnosis)}
+.card-memory{border-left:4px solid var(--memory)}
+.card-quiz{border-left:4px solid var(--quiz)}
+.quick-facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin:14px 0}
+.fact{background:var(--bg);border:1px solid var(--border);border-radius:10px;padding:12px 14px}
+.fact b{display:block;font-size:.76rem;color:var(--muted);font-weight:600;margin-bottom:2px}
+.fact span{font-size:.95rem;font-weight:700;color:var(--ink)}
+
+/* ===== 提示框 ===== */
+.callout{display:flex;gap:11px;padding:14px 18px;border-radius:var(--radius-md);margin:14px 0;
+  border-left:4px solid;font-size:.92rem}
+.callout-icon{font-size:1.15rem;flex-shrink:0;margin-top:1px}
+.callout-body{flex:1}
+.callout-body strong{display:block;margin-bottom:3px}
+.callout-info{background:var(--cause-bg);border-left-color:var(--cause)}
+.callout-success{background:var(--treatment-bg);border-left-color:var(--treatment)}
+.callout-warning{background:var(--diagnosis-bg);border-left-color:var(--diagnosis)}
+.callout-danger{background:var(--symptom-bg);border-left-color:var(--danger)}
+.callout-memory{background:var(--memory-bg);border-left-color:var(--memory)}
+.callout-example{background:var(--flash-bg);border-left-color:var(--flashcard)}
+
+/* ===== 列表 ===== */
+.icon-list{list-style:none;margin:10px 0}
+.icon-list li{position:relative;padding-left:26px;margin-bottom:9px;font-size:.94rem;line-height:1.65}
+.icon-list li::before{content:"✦";position:absolute;left:0;top:2px;color:var(--primary);font-size:.8rem}
+.icon-list.check li::before{content:"✓";color:var(--treatment);font-weight:800}
+.icon-list.cross li::before{content:"✗";color:var(--symptom);font-weight:800}
+.numbered-list{list-style:none;counter-reset:n;margin:10px 0}
+.numbered-list li{position:relative;padding-left:38px;margin-bottom:10px;font-size:.94rem;counter-increment:n}
+.numbered-list li::before{content:counter(n);position:absolute;left:0;top:0;width:24px;height:24px;
+  border-radius:50%;background:var(--gradient-main);color:#fff;font-size:.76rem;font-weight:800;
+  display:flex;align-items:center;justify-content:center}
+
+/* ===== 表格 ===== */
+.table-wrap{overflow-x:auto;margin:14px 0;border:1px solid var(--border);border-radius:var(--radius-md)}
+table{width:100%;border-collapse:collapse;font-size:.89rem;min-width:560px}
+thead{background:linear-gradient(135deg,#0EA5E9,#0891B2)}
+thead th{padding:11px 14px;text-align:left;color:#fff;font-size:.84rem;font-weight:700;white-space:nowrap}
+tbody tr{border-bottom:1px solid var(--border)}
+tbody tr:nth-child(even){background:#FAFCFE}
+tbody tr:hover{background:rgba(14,165,233,.05)}
+tbody tr:last-child{border-bottom:0}
+tbody td{padding:10px 14px;vertical-align:top;line-height:1.6}
+tbody td:first-child{font-weight:700;color:#0F766E;background:rgba(14,165,233,.04)}
+.table-note{font-size:.78rem;color:var(--muted);margin-top:-6px}
+
+/* ===== 标签 ===== */
+.tag{display:inline-flex;align-items:center;padding:2px 9px;border-radius:100px;
+  font-size:.75rem;font-weight:700;line-height:1.6}
+.tag-core{background:var(--symptom-bg);color:var(--danger)}
+.tag-master{background:var(--treatment-bg);color:var(--treatment)}
+.tag-understand{background:var(--cause-bg);color:var(--cause)}
+.tag-know{background:var(--diagnosis-bg);color:#B45309}
+.tag-info{background:rgba(14,165,233,.1);color:var(--primary)}
+.tag-memory{background:var(--memory-bg);color:var(--memory)}
+
+/* ===== Tab ===== */
+.tabs{margin:14px 0}
+.tab-nav{display:flex;gap:4px;flex-wrap:wrap;border-bottom:2px solid var(--border);margin-bottom:14px}
+.tab-btn{border:0;background:none;cursor:pointer;font-family:inherit;font-size:.88rem;
+  font-weight:600;color:var(--muted);padding:9px 16px;border-radius:var(--radius-sm) var(--radius-sm) 0 0;
+  border-bottom:2px solid transparent;margin-bottom:-2px}
+.tab-btn:hover{color:var(--primary);background:rgba(14,165,233,.05)}
+.tab-btn.active{color:var(--primary);border-bottom-color:var(--primary)}
+.tab-panel{display:none}
+.tab-panel.active{display:block;animation:fadeIn .25s ease}
+@keyframes fadeIn{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}
+
+/* ===== 折叠问答 ===== */
+details.qa{background:var(--card);border:1px solid var(--border);border-radius:var(--radius-md);
+  margin:10px 0;overflow:hidden}
+details.qa[open]{box-shadow:var(--shadow-sm)}
+details.qa summary{cursor:pointer;padding:13px 16px;font-weight:600;font-size:.94rem;
+  display:flex;align-items:center;gap:10px;list-style:none;user-select:none}
+details.qa summary::-webkit-details-marker{display:none}
+details.qa summary::after{content:"▾";margin-left:auto;color:var(--muted);transition:.2s}
+details.qa[open] summary::after{transform:rotate(180deg)}
+details.qa summary:hover{background:rgba(14,165,233,.04)}
+.qa-body{padding:0 16px 15px 52px;font-size:.92rem;border-top:1px solid var(--border);padding-top:12px}
+.qa-num{display:inline-flex;align-items:center;justify-content:center;min-width:26px;height:26px;
+  border-radius:7px;background:rgba(14,165,233,.1);color:var(--primary);font-size:.78rem;
+  font-weight:800;flex-shrink:0}
+
+/* ===== 自测题 ===== */
+.quiz-block{background:var(--quiz-bg);border:1px solid #FBCFE8;border-radius:var(--radius-md);
+  padding:20px 22px;margin:18px 0}
+.quiz-item{background:#fff;border:1px solid #F9D5E5;border-radius:10px;padding:16px 18px;margin:12px 0}
+.quiz-stem{font-weight:600;font-size:.95rem;margin-bottom:10px;display:flex;gap:8px;align-items:flex-start}
+.q-type{display:inline-block;padding:1px 8px;border-radius:5px;background:var(--quiz-bg);
+  color:var(--quiz);font-size:.72rem;font-weight:800;white-space:nowrap;margin-top:2px}
+.quiz-options{list-style:none;margin:8px 0}
+.quiz-options li{position:relative;padding:6px 10px 6px 30px;font-size:.9rem;border-radius:6px;margin:3px 0}
+.quiz-options li::before{content:attr(data-letter);position:absolute;left:8px;top:6px;
+  font-weight:800;color:var(--quiz)}
+.quiz-options li.correct{background:#DCFCE7;font-weight:600}
+.quiz-options li.correct::after{content:" ✓ 正确";color:#15803D;font-size:.76rem;font-weight:700}
+.quiz-options li.wrong{background:#FEE2E2}
+.quiz-options li.wrong::after{content:" ✗";color:var(--danger);font-size:.76rem;font-weight:700}
+.answer-key{display:inline-block;background:#DCFCE7;color:#15803D;border-radius:6px;
+  padding:2px 9px;font-size:.8rem;font-weight:800;margin-right:6px}
+.difficulty{color:#B45309;font-size:.8rem;letter-spacing:1px;white-space:nowrap}
+
+/* ===== 闪卡 ===== */
+.flashcard-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:14px;margin:18px 0}
+.flashcard{perspective:1000px;height:210px;cursor:pointer}
+.flashcard-inner{position:relative;width:100%;height:100%;transition:transform .55s;
+  transform-style:preserve-3d}
+.flashcard.flipped .flashcard-inner{transform:rotateY(180deg)}
+.flashcard-face{position:absolute;inset:0;backface-visibility:hidden;border-radius:var(--radius-md);
+  padding:18px 18px 14px;display:flex;flex-direction:column;justify-content:center;
+  border:1px solid var(--border);background:#fff;box-shadow:var(--shadow-sm)}
+.flashcard-front{border-top:5px solid var(--flashcard)}
+.flashcard-back{transform:rotateY(180deg);background:var(--flash-bg);border-top:5px solid var(--primary);
+  justify-content:flex-start;overflow-y:auto;font-size:.88rem;line-height:1.65}
+.flashcard-front p{font-size:.95rem;font-weight:600;margin:0;text-align:center}
+.card-tag{align-self:center;margin-bottom:10px;padding:2px 9px;border-radius:100px;
+  font-size:.72rem;font-weight:800;background:var(--flash-bg);color:#0E7490}
+.card-tag.concept{background:var(--cause-bg);color:var(--cause)}
+.card-tag.diagnosis{background:var(--diagnosis-bg);color:#B45309}
+.card-tag.treatment{background:var(--treatment-bg);color:#047857}
+.card-tag.memory{background:var(--memory-bg);color:var(--memory)}
+.flip-hint{text-align:center;font-size:.74rem;color:var(--muted);margin-top:auto;padding-top:8px}
+
+/* ===== 病例挑战 ===== */
+.case-card{background:#fff;border:1px solid var(--border);border-top:5px solid var(--diagnosis);
+  border-radius:var(--radius-md);padding:20px 22px;margin:18px 0;box-shadow:var(--shadow-sm)}
+.case-meta{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:10px}
+.case-meta span{background:var(--diagnosis-bg);color:#B45309;border-radius:100px;
+  padding:2px 10px;font-size:.75rem;font-weight:700}
+.case-title{font-size:1.02rem;font-weight:800;margin-bottom:8px}
+.case-body{font-size:.93rem;color:var(--ink)}
+.case-questions{margin:12px 0 0;padding:12px 16px;background:var(--bg);border-radius:10px}
+.case-questions li{margin-bottom:6px;font-size:.9rem}
+
+/* ===== 记忆工具箱 ===== */
+.memory-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px;margin:14px 0}
+.memory-card{background:var(--memory-bg);border:1px solid #DDD6FE;border-radius:var(--radius-md);padding:16px 18px}
+.memory-card .m-title{font-weight:800;color:var(--memory);font-size:.9rem;margin-bottom:6px}
+.memory-card .m-type{display:inline-block;font-size:.7rem;font-weight:700;color:var(--memory);
+  background:#fff;border:1px solid #DDD6FE;border-radius:100px;padding:1px 8px;margin-left:6px}
+.memory-card .m-formula{font-weight:700;background:#fff;border-left:3px solid var(--memory);
+  padding:8px 10px;border-radius:6px;margin:8px 0;font-size:.92rem}
+.memory-card p{font-size:.88rem;margin:6px 0}
+
+/* ===== 学习路线 / 知识地图 ===== */
+.route-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin:16px 0}
+.route-card{background:#fff;border:1px solid var(--border);border-radius:var(--radius-md);padding:16px 18px}
+.route-card h4{font-size:.95rem;margin-bottom:6px;color:var(--primary)}
+.route-card p{font-size:.86rem;color:var(--muted);margin:0}
+.priority{display:inline-flex;gap:2px;font-size:.8rem;color:#F59E0B;margin-left:4px}
+.knowledge-map{display:grid;grid-template-columns:repeat(auto-fit,minmax(165px,1fr));gap:12px;margin:16px 0}
+.km-card{background:#fff;border:1px solid var(--border);border-radius:var(--radius-md);
+  padding:15px 12px;text-align:center;transition:.2s}
+.km-card:hover{border-color:var(--primary);transform:translateY(-2px);box-shadow:var(--shadow-md)}
+.km-icon{font-size:1.8rem;margin-bottom:6px}
+.km-title{font-weight:700;font-size:.9rem;margin-bottom:2px}
+.km-count{font-size:.76rem;color:var(--muted)}
+.km-count strong{color:var(--primary);font-size:1rem}
+
+/* ===== 数据 / 时间线 ===== */
+.stat-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(135px,1fr));gap:12px;margin:16px 0}
+.stat-card{background:#fff;border:1px solid var(--border);border-radius:var(--radius-md);
+  padding:16px 12px;text-align:center}
+.stat-num{font-size:1.65rem;font-weight:800;color:var(--primary);line-height:1.2}
+.stat-label{font-size:.77rem;color:var(--muted);margin-top:3px}
+.timeline{position:relative;margin:18px 0;padding-left:28px}
+.timeline::before{content:"";position:absolute;left:8px;top:4px;bottom:4px;width:2px;
+  background:linear-gradient(to bottom,var(--primary),var(--accent));border-radius:2px}
+.tl-item{position:relative;margin-bottom:18px}
+.tl-item::before{content:"";position:absolute;left:-25px;top:5px;width:11px;height:11px;
+  border-radius:50%;background:#fff;border:3px solid var(--primary)}
+.tl-title{font-weight:700;font-size:.94rem;margin-bottom:3px}
+.tl-desc{font-size:.86rem;color:var(--muted)}
+.progress-item{margin-bottom:12px}
+.progress-label{display:flex;justify-content:space-between;font-size:.84rem;margin-bottom:4px}
+.progress-bar{height:8px;background:var(--border);border-radius:100px;overflow:hidden}
+.progress-fill{height:100%;border-radius:100px;background:var(--gradient-main)}
+
+/* ===== 易错警示 ===== */
+.exam-alert{background:#FFF7ED;border:1px solid #FED7AA;border-left:5px solid var(--diagnosis);
+  border-radius:var(--radius-md);padding:18px 22px;margin:18px 0}
+.exam-alert h3{color:#C2410C;font-size:1rem;margin-bottom:10px}
+.exam-alert li{font-size:.92rem;margin-bottom:8px}
+.exam-alert li::before{content:"⚠️"}
+
+/* ===== 页脚 ===== */
+.footer{margin-top:56px;padding-top:28px;border-top:1px solid var(--border);
+  text-align:center;font-size:.82rem;color:var(--muted)}
+.footer .footer-tag{display:inline-block;padding:6px 16px;border-radius:100px;color:#fff;
+  background:var(--gradient-main);font-weight:700;margin-bottom:10px}
+.disclaimer{font-size:.78rem;color:var(--muted);background:#fff;border:1px dashed var(--border);
+  border-radius:10px;padding:12px 16px;margin:18px 0;text-align:left}
+
+/* ===== 浮动按钮 ===== */
+.back-to-top{position:fixed;right:22px;bottom:22px;width:44px;height:44px;border:0;border-radius:50%;
+  background:var(--gradient-main);color:#fff;font-size:1.05rem;cursor:pointer;box-shadow:var(--shadow-lg);
+  opacity:0;visibility:hidden;transform:translateY(10px);transition:.25s;z-index:60}
+.back-to-top.visible{opacity:1;visibility:visible;transform:none}
+.mobile-nav-toggle{display:none;position:fixed;top:14px;left:14px;z-index:100;width:44px;height:44px;
+  border:1px solid var(--border);border-radius:var(--radius-sm);background:#fff;box-shadow:var(--shadow-md);
+  cursor:pointer;font-size:1.15rem;align-items:center;justify-content:center}
+.sidebar-overlay{display:none;position:fixed;inset:0;background:rgba(15,23,42,.35);z-index:98}
+
+/* ===== 响应式 ===== */
+@media(max-width:1100px){.sidebar{width:220px;margin-right:22px}.main-content{max-width:100%}}
+@media(max-width:900px){
+  .mobile-nav-toggle{display:flex}
+  .sidebar{position:fixed;left:-290px;top:0;height:100vh;width:270px;background:#fff;
+    border-right:1px solid var(--border);z-index:99;transition:left .28s ease;padding:70px 16px 24px;
+    margin:0;max-height:100vh}
+  .sidebar.open{left:0}
+  .sidebar-overlay.show{display:block}
+  .page-wrapper{padding:0 16px}
+  .main-content{padding-top:66px}
+  .hero{padding:38px 20px 30px}.hero h1{font-size:1.75rem}
+  .section-header h2{font-size:1.3rem}
+  .module{padding:18px 16px}
+  .qa-body{padding-left:16px}
+}
+@media(max-width:680px){
+  body{font-size:15px}
+  .hero h1{font-size:1.45rem}
+  .hero-meta{gap:18px}
+  .knowledge-map{grid-template-columns:repeat(2,1fr)}
+  .flashcard-grid{grid-template-columns:1fr}
+  .flashcard{height:200px}
+  .stat-row{grid-template-columns:repeat(2,1fr)}
+  .section{margin-bottom:40px}
+  table{min-width:520px}
+}
+@media print{
+  .sidebar,.mobile-nav-toggle,.back-to-top,.sidebar-overlay{display:none!important}
+  .page-wrapper{display:block;padding:0}
+  .main-content{max-width:100%}
+  details.qa{break-inside:avoid}
+  details.qa .qa-body{display:block}
+}
+::-webkit-scrollbar{width:8px;height:8px}
+::-webkit-scrollbar-thumb{background:var(--border);border-radius:4px}
+::-webkit-scrollbar-thumb:hover{background:var(--muted)}
+</style>
+<style data-refactor="v1">
+/* ============================================================
+   精神病学学习指南 · 统一交互层增量覆盖样式 v1
+   构建期由 apply-refactor.ps1 注入 </head> 前，仅追加修正，
+   不改动 A/B 两族基础样式。全部使用字面色值，兼容两族设计变量。
+   ============================================================ */
+
+/* ---- 1. 全局键盘焦点可见 ---- */
+:focus-visible{outline:2px solid #0EA5E9;outline-offset:2px}
+
+/* ---- 2. 章节导航条（胶囊式三段：上一章 / 目录 / 下一章） ---- */
+.chapter-pager{display:flex;align-items:stretch;justify-content:center;gap:10px;margin:36px 0 10px;flex-wrap:wrap}
+.chapter-pager a,.chapter-pager span{flex:1 1 200px;display:flex;align-items:center;justify-content:center;min-height:44px;padding:10px 18px;border:1px solid #E2E8F0;border-radius:999px;background:#FFFFFF;color:#0F172A;font-size:14px;font-weight:600;line-height:1.4;text-decoration:none;text-align:center;box-shadow:0 1px 2px rgba(15,23,42,.06);transition:border-color .15s ease,box-shadow .15s ease,color .15s ease}
+.chapter-pager a:hover{border-color:#0EA5E9;color:#0EA5E9;box-shadow:0 4px 14px rgba(14,165,233,.18);text-decoration:none}
+.chapter-pager .cp-toc{flex:0 0 auto;min-width:104px;background:linear-gradient(135deg,#0EA5E9,#10B981);border-color:transparent;color:#FFFFFF}
+.chapter-pager .cp-toc:hover{border-color:transparent;color:#FFFFFF;opacity:.92}
+.chapter-pager .cp-disabled{opacity:.45;background:#F8FAFC;box-shadow:none;cursor:default}
+@media (max-width:680px){.chapter-pager{gap:8px;margin:28px 0 8px}.chapter-pager a,.chapter-pager span{flex:1 1 100%}}
+
+/* ---- 3. 自测题交互态（兼容 A 族 .opt 与 B 族 .quiz-options li） ---- */
+/* 3.1 基础可点击 */
+.quiz-q .opt{cursor:pointer}
+.quiz-item .quiz-options li{cursor:pointer}
+/* 3.2 hover / 焦点态 */
+.quiz-q .opt:hover,.quiz-q .opt:focus-visible{border-color:#7DD3FC;background:#F0F9FF}
+.quiz-item .quiz-options li:hover,.quiz-item .quiz-options li:focus-visible{background:#FFFFFF;box-shadow:inset 0 0 0 1px #7DD3FC}
+/* 3.3 判定结果态 */
+.quiz-q .opt.is-right{border-color:#34D399;background:#ECFDF5;color:#065F46;font-weight:600}
+.quiz-q .opt.is-right::after{content:" ✓";color:#059669;font-weight:800}
+.quiz-q .opt.is-right .l{color:#047857}
+.quiz-item .quiz-options li.is-right{background:#DCFCE7;box-shadow:inset 0 0 0 1px #34D399;font-weight:600}
+.quiz-item .quiz-options li.is-right::after{content:" ✓";color:#15803D;font-weight:800}
+.quiz-q .opt.is-wrong{border-color:#FCA5A5;background:#FEF2F2;color:#B91C1C;font-weight:600}
+.quiz-q .opt.is-wrong::after{content:" ✗";color:#DC2626;font-weight:800}
+.quiz-q .opt.is-wrong .l{color:#B91C1C}
+.quiz-item .quiz-options li.is-wrong{background:#FEE2E2;box-shadow:inset 0 0 0 1px #FCA5A5;font-weight:600}
+.quiz-item .quiz-options li.is-wrong::after{content:" ✗";color:#DC2626;font-weight:800}
+.quiz-q .opt.is-reveal{border-color:#6EE7B7;background:#ECFDF5;color:#065F46}
+.quiz-q .opt.is-reveal .l{color:#047857}
+.quiz-item .quiz-options li.is-reveal{background:#ECFDF5;box-shadow:inset 0 0 0 1px #6EE7B7;color:#065F46}
+/* 3.4 已锁定禁用态 */
+.quiz-q.is-locked .opt,.quiz-item.is-locked .quiz-options li{cursor:default;pointer-events:none}
+.quiz-q.is-locked .opt:not(.is-right):not(.is-wrong):not(.is-reveal){opacity:.55}
+.quiz-item.is-locked .quiz-options li:not(.is-right):not(.is-wrong):not(.is-reveal){opacity:.55}
+/* 3.5 计分行（运行时注入） */
+.quiz-score{display:flex;align-items:center;gap:12px;margin:14px 0 18px;padding:12px 18px;border:1px dashed #7DD3FC;border-radius:12px;background:#F0F9FF;font-size:14px;font-weight:700;color:#0F172A}
+.quiz-score .qs-label{white-space:nowrap}
+.quiz-score .qs-num{white-space:nowrap;color:#0284C7;font-size:16px}
+.quiz-score .qs-bar{flex:1 1 60px;min-width:60px;height:8px;border-radius:999px;background:#E2E8F0;overflow:hidden}
+.quiz-score .qs-bar i{display:block;height:100%;width:0;border-radius:999px;background:linear-gradient(90deg,#0EA5E9,#10B981);transition:width .35s ease}
+
+/* ---- 4. 速记卡可达性与长内容 ---- */
+.fc-hint,.flip-hint{color:#64748B}
+.flashcard-face{overflow:auto}
+.flashcard[tabindex]{outline:none}
+.flashcard[tabindex]:focus-visible{outline:3px solid #0EA5E9;outline-offset:3px}
+
+/* ---- 5. 侧栏目录 ---- */
+/* B 族 sticky 侧栏内目录限高滚动（A 族 aside 本身已可滚动，此规则空匹配无害） */
+.sidebar .sidebar-nav{max-height:calc(100vh - 60px);overflow-y:auto;scrollbar-width:thin}
+/* A 族 scroll spy 高亮（B 族高亮由其基础样式提供） */
+.sidebar a.toc.active{background:#E0F2FE;color:#0369A1;font-weight:600}
+
+/* ---- 6. 响应式补充：681–900px 时 grid3 降为两列 ---- */
+@media (min-width:681px) and (max-width:900px){
+  .grid3{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+
+/* ---- 7. 打印样式补充（A 族新增；B 族已有 print，重复声明无害） ---- */
+@media print{
+  .sidebar,.overlay,.sidebar-overlay,#menuBtn,#navToggle,#overlay,#sidebarOverlay,#readbar,#topBtn,#backTop,.chapter-pager,.quiz-score{display:none!important}
+}
+
+/* ---- 8. 手机端增强 v2（触控体验 / 防溢出 / 抽屉滚动锁定） ---- */
+/* 8.1 触控体验：去点按高亮、消除双击缩放延迟（flashcard 高 190-200px 天然达标，不另设 min-height） */
+.opt,.tabbar button,.tab-btn,.quiz-options li,.flashcard,.chapter-pager a,.chapter-pager span,.menu-btn,.mobile-nav-toggle{-webkit-tap-highlight-color:transparent;touch-action:manipulation}
+/* 8.2 触控目标最小 44px（自测选项与 tab 胶囊原高约 33px） */
+.opt,.tabbar button,.tab-btn,.quiz-options li{min-height:44px}
+/* 8.3 防溢出：内容图自适应；svg 不设 height:auto，避免定尺寸图标塌陷 */
+img{max-width:100%;height:auto}
+svg{max-width:100%}
+/* 8.4 长词/URL 断行 */
+body{overflow-wrap:break-word}
+/* 8.5 表格容器触摸惯性滚动（A 族已有同值规则，重复声明无害） */
+.table-wrap{-webkit-overflow-scrolling:touch}
+/* 8.6 抽屉打开时锁定背景滚动（两族抽屉断点均为 900px；类由统一脚本增删） */
+@media (max-width:900px){
+  body.nav-locked{overflow:hidden}
+}
+</style>
+</head>
+<body>
+<button class="mobile-nav-toggle" id="navToggle" aria-label="打开目录">☰</button>
+<div class="sidebar-overlay" id="sidebarOverlay"></div>
+<div class="page-wrapper">
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-brand">《精神病学》第9版 · 学习指南</div>
+    <nav class="sidebar-nav">
+      <ul>
+        <li><a href="#cover" class="active"><span class="toc-num">00</span>章节封面</a></li>
+        <li><a href="#position"><span class="toc-num">01</span>本章地位速览</a></li>
+        <li><a href="#map"><span class="toc-num">02</span>本章知识地图</a></li>
+        <li><a href="#route"><span class="toc-num">03</span>学习路线图</a></li>
+        <li><a href="#nav"><span class="toc-num">04</span>章节导航</a></li>
+        <li><a href="#disease-depression"><span class="toc-num">05</span>抑郁障碍</a></li>
+        <li><a href="#disease-dysthymia"><span class="toc-num">06</span>恶劣心境障碍</a></li>
+        <li><a href="#disease-mixed"><span class="toc-num">07</span>混合性抑郁和焦虑障碍</a></li>
+        <li><a href="#summary"><span class="toc-num">08</span>核心要点速览</a></li>
+        <li><a href="#pitfalls"><span class="toc-num">09</span>易混易错警示</a></li>
+        <li><a href="#quiz"><span class="toc-num">10</span>章节自测</a></li>
+        <li><a href="#flashcards"><span class="toc-num">11</span>考点速记卡</a></li>
+        <li><a href="#cases"><span class="toc-num">12</span>病例挑战</a></li>
+        <li><a href="#extend"><span class="toc-num">13</span>拓展延伸</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <main class="main-content">
+    <section id="cover" class="hero">
+      <div class="hero-badge">《精神病学》第9版（2024） · 第八章</div>
+      <h1>抑郁障碍</h1>
+      <p class="subtitle">Depressive Disorders —— 以心境低落与兴趣、快感丧失为核心的心境障碍，是情感障碍章节的“另一半”，也是自杀风险最高的精神障碍之一。</p>
+      <div class="hero-meta">
+        <div class="hero-meta-item"><div class="num">3</div><div class="label">章内独立障碍</div></div>
+        <div class="hero-meta-item"><div class="num">18</div><div class="label">核心考点</div></div>
+        <div class="hero-meta-item"><div class="num">15</div><div class="label">自测题目</div></div>
+        <div class="hero-meta-item"><div class="num">3</div><div class="label">病例挑战</div></div>
+      </div>
+      <div class="hero-quote">
+        <strong>学习目标：</strong>
+        <span class="tag tag-know">了解</span> 流行病学、疾病负担与病因假说；
+        <span class="tag tag-understand">理解</span> 核心症状、心理症状群、躯体症状群的内部逻辑；
+        <span class="tag tag-master">掌握</span> ICD-11 分型与严重程度、鉴别诊断、全病程治疗与自杀风险评估；
+        <span class="tag tag-core">必考</span> “三低”核心症状、早醒、晨重暮轻、双相鉴别线索、抗抑郁药分类与 MECT 指征。
+      </div>
+    </section>
+
+    <!-- ================= 01 本章地位 ================= -->
+    <section id="position" class="section">
+      <div class="section-header"><span class="section-number">01</span><h2>本章地位速览</h2></div>
+      <p class="lead">抑郁障碍是《精神病学》情感障碍部分的<b>核心章节</b>：它既是临床上最常见的心境障碍之一，也是理解自杀、共病、慢性化与功能残疾的主线疾病。</p>
+
+      <div class="card-grid">
+        <div class="card card-cause">
+          <div class="card-header"><span class="card-icon">🎯</span><span class="card-title">章节定位</span></div>
+          <div class="card-body">教材第八章以“抑郁障碍”为总称，先概述与病因，再按<b>核心症状—心理症状群—躯体症状群</b>描述临床表现，随后按 <b>ICD-11</b> 分为单次发作、复发性、恶劣心境、混合性抑郁和焦虑障碍，最后落到评估、诊断、鉴别与全病程治疗。</div>
+        </div>
+        <div class="card card-symptom">
+          <div class="card-header"><span class="card-icon">🏥</span><span class="card-title">临床意义</span></div>
+          <div class="card-body">抑郁障碍是<b>全球精神障碍所致疾病负担的首要原因</b>；我国识别率、治疗率、充分治疗率分别仅为 <b>21%、9.5%、0.5%</b>。其最严重后果是自杀——约 <b>50%</b> 的自杀者可能符合抑郁障碍诊断，患者自杀风险约为一般人群的 <b>19.7 倍</b>。</div>
+        </div>
+        <div class="card card-diagnosis">
+          <div class="card-header"><span class="card-icon">🔗</span><span class="card-title">与第7章的关系</span></div>
+          <div class="card-body">第7章双相障碍与本章互为<b>鉴别重点</b>：二者都可有抑郁发作，但双相必须有躁狂/轻躁狂/混合发作史。教材特别列出提示双相的可疑线索，诊断抑郁前必须追问“有没有过高涨、话多、精力旺盛”的时期。</div>
+        </div>
+        <div class="card card-cause">
+          <div class="card-header"><span class="card-icon">🧩</span><span class="card-title">横向关联</span></div>
+          <div class="card-body">与<b>第6章精神分裂症</b>（精神病性抑郁、抑郁性木僵的鉴别）、<b>第19章老年精神障碍</b>（老年抑郁与痴呆、躯体共病）、<b>第22章自杀与危机干预</b>（风险评估与处置）紧密相连；第2章症状学、第3章量表与检查是本章的工具基础。</div>
+        </div>
+      </div>
+
+      <div class="table-wrap"><table class="comparison-table">
+        <thead><tr><th>关系类型</th><th>关联章节</th><th>本章需要带走的知识</th></tr></thead>
+        <tbody>
+          <tr><td>前置知识</td><td>第2章 精神症状学；第3章 精神检查与量表</td><td>心境、兴趣、快感、思维迟缓、自责自罪、幻觉妄想等术语；HAMD、MADRS 等评估工具</td></tr>
+          <tr><td>平行鉴别</td><td>第7章 双相及相关障碍</td><td>抑郁发作 vs 双相抑郁；躁狂/轻躁狂表现与发作史；双相障碍的诊断要点</td></tr>
+          <tr><td>平行鉴别</td><td>第6章 精神分裂症谱系</td><td>原发症状、协调性、病程三项鉴别；精神病性症状与抑郁性木僵</td></tr>
+          <tr><td>横向交叉</td><td>第19章 老年精神障碍</td><td>老年抑郁的躯体主诉、认知损害与痴呆鉴别、用药安全</td></tr>
+          <tr><td>横向交叉</td><td>第22章 自杀、危机干预</td><td>自杀危险因素、风险评估、扩大性自杀、MECT 快速控制自杀意念</td></tr>
+        </tbody>
+      </table></div>
+      <p class="table-note">一句话：本章是“情感低谷”的总论，第7章是“情感高峰与摆动”的总论，两者合起来才是完整的心境障碍。</p>
+
+      <div class="callout callout-info"><div class="callout-icon">💡</div><div class="callout-body"><strong>教材提醒</strong>公众通常认为心理问题是抑郁障碍的主要原因，教材明确指出<b>这其实是对本疾病的误解</b>；抑郁障碍是生物、心理、社会因素共同作用的结果。</div></div>
+    </section>
+
+    <!-- ================= 02 知识地图 ================= -->
+    <section id="map" class="section">
+      <div class="section-header"><span class="section-number">02</span><h2>本章知识地图</h2></div>
+      <p class="lead">全章可压缩为 <b>1 个核心疾病 + 2 个同组障碍 + 6 大知识块</b>。先建立骨架，再往骨架里填症状与治疗细节。</p>
+
+      <div class="knowledge-map">
+        <div class="km-card"><div class="km-icon">🌧️</div><div class="km-title">抑郁障碍</div><div class="km-count"><strong>1</strong> 个核心疾病</div></div>
+        <div class="km-card"><div class="km-icon">🌫️</div><div class="km-title">恶劣心境障碍</div><div class="km-count"><strong>1</strong> 个慢性轻型障碍</div></div>
+        <div class="km-card"><div class="km-icon">🌀</div><div class="km-title">混合性抑郁和焦虑</div><div class="km-count"><strong>1</strong> 个 ICD-11 新类别</div></div>
+        <div class="km-card"><div class="km-icon">🧠</div><div class="km-title">病因与机制</div><div class="km-count"><strong>6</strong> 类因素</div></div>
+        <div class="km-card"><div class="km-icon">🩺</div><div class="km-title">临床表现</div><div class="km-count"><strong>3+9+5</strong> 个症状</div></div>
+        <div class="km-card"><div class="km-icon">📊</div><div class="km-title">评估与诊断</div><div class="km-count"><strong>5</strong> 个常用量表</div></div>
+        <div class="km-card"><div class="km-icon">⚖️</div><div class="km-title">鉴别诊断</div><div class="km-count"><strong>5+</strong> 组疾病</div></div>
+        <div class="km-card"><div class="km-icon">💊</div><div class="km-title">治疗</div><div class="km-count"><strong>3</strong> 大手段 + <strong>7</strong> 类新药</div></div>
+        <div class="km-card"><div class="km-icon">🌱</div><div class="km-title">预后与康复</div><div class="km-count"><strong>6</strong> 项复发因素</div></div>
+      </div>
+
+      <div class="table-wrap"><table class="comparison-table">
+        <thead><tr><th>知识块</th><th>必须掌握的内容</th><th>常见考法</th></tr></thead>
+        <tbody>
+          <tr><td>概念与分型</td><td>抑郁障碍定义；ICD-11 四类；单次/复发；轻中重；伴/不伴精神病性症状；缓解状态；四个附加描述</td><td>选择题辨析“单次 vs 复发”“恶劣心境 vs 复发性抑郁”</td></tr>
+          <tr><td>临床表现</td><td>3 条核心症状、9 条心理症状、5 条躯体症状；早醒、晨重暮轻、自杀、扩大性自杀</td><td>病例题找核心症状；简答“抑郁障碍的临床表现”</td></tr>
+          <tr><td>评估与诊断</td><td>评估内容；HAMD/MADRS/BDI/SDS/PHQ-9；response/remission/recovery/relapse/recurrence</td><td>名词解释；计算减分率；判断缓解状态</td></tr>
+          <tr><td>鉴别诊断</td><td>精神分裂症、双相、焦虑、PTSD、躯体疾病所致</td><td>病例题“最可能诊断及鉴别”</td></tr>
+          <tr><td>治疗</td><td>全病程三期；SSRIs 等七类新药；TCAs/MAOI；CBT；MECT/rTMS</td><td>用药选择、疗程、不良反应、MECT 指征</td></tr>
+          <tr><td>预后</td><td>15% 难达临床治愈；首发缓解后约半数不复发；≥3 次发作复发风险 >90%</td><td>数字题、复发因素多选</td></tr>
+        </tbody>
+      </table></div>
+    </section>
+
+    <!-- ================= 03 学习路线 ================= -->
+    <section id="route" class="section">
+      <div class="section-header"><span class="section-number">03</span><h2>学习路线图</h2></div>
+      <div class="route-grid">
+        <div class="route-card"><h4>第一步 · 建立疾病框架</h4><p>先读“概述—临床分型”，把抑郁障碍、恶劣心境、混合性抑郁和焦虑的边界画清。<span class="priority">⭐⭐⭐</span></p></div>
+        <div class="route-card"><h4>第二步 · 吃透症状群</h4><p>按核心—心理—躯体三层记忆，重点抓“早醒、晨重暮轻、三自、精神病性症状”。<span class="priority">⭐⭐⭐</span></p></div>
+        <div class="route-card"><h4>第三步 · 诊断与鉴别</h4><p>用 ICD-11 三维度（严重度、精神病性症状、发作阶段）给病例“贴标签”，再与双相、精分、焦虑、PTSD 对表。<span class="priority">⭐⭐⭐</span></p></div>
+        <div class="route-card"><h4>第四步 · 治疗与安全</h4><p>背全病程三期的时长与目标；按“首选—次选—辅助”整理药物；把自杀风险评估贯穿始终。<span class="priority">⭐⭐⭐</span></p></div>
+        <div class="route-card"><h4>第五步 · 记忆与自测</h4><p>用“三低—三自—三群—3+7—急巩维”串起来，再做 15 题与 3 个病例收口。<span class="priority">⭐⭐</span></p></div>
+      </div>
+
+      <div class="callout callout-memory"><div class="callout-icon">🧠</div><div class="callout-body"><strong>复习节奏建议</strong>第 1 遍通读建立框架（约 40 分钟）；第 2 遍只看症状群、鉴别表与治疗时间线（约 30 分钟）；第 3 遍用闪卡与自测查漏（约 30 分钟）。隔 1 天、3 天、7 天各回看一次“易混易错警示”。</div></div>
+
+      <div class="quick-facts">
+        <div class="fact"><b>最高优先级</b><span>核心症状、双相鉴别、全病程</span></div>
+        <div class="fact"><b>次优先级</b><span>药物分类、不良反应、量表</span></div>
+        <div class="fact"><b>了解级</b><span>病因假说、康复体系、补充治疗</span></div>
+      </div>
+    </section>
+
+    <!-- ================= 04 章节导航 ================= -->
+    <section id="nav" class="section">
+      <div class="section-header"><span class="section-number">04</span><h2>章节导航</h2></div>
+      <p class="lead">按“疾病—结论—练习”的顺序跳转。每个疾病页均为完整八栏。</p>
+      <div class="card-grid">
+        <a class="card card-symptom" href="#disease-depression" style="text-decoration:none;color:inherit"><div class="card-header"><span class="card-icon">🌧️</span><span class="card-title">抑郁障碍（核心）</span></div><div class="card-body">单次发作与复发性抑郁障碍；含严重程度、精神病性症状、缓解状态与四个附加描述。八栏完整。</div></a>
+        <a class="card card-diagnosis" href="#disease-dysthymia" style="text-decoration:none;color:inherit"><div class="card-header"><span class="card-icon">🌫️</span><span class="card-title">恶劣心境障碍</span></div><div class="card-body">持续 2 年以上的慢性轻度抑郁；与复发性抑郁的边界是高频考点。八栏完整。</div></a>
+        <a class="card card-cause" href="#disease-mixed" style="text-decoration:none;color:inherit"><div class="card-header"><span class="card-icon">🌀</span><span class="card-title">混合性抑郁和焦虑障碍</span></div><div class="card-body">ICD-11 首次出现的类别；抑郁与焦虑“都不够独立诊断”时才用它。八栏完整。</div></a>
+        <a class="card card-memory" href="#summary" style="text-decoration:none;color:inherit"><div class="card-header"><span class="card-icon">📌</span><span class="card-title">核心要点与易错</span></div><div class="card-body">18 条核心要点 + 12 条易混警示，考前 10 分钟速览。</div></a>
+        <a class="card card-quiz" href="#quiz" style="text-decoration:none;color:inherit"><div class="card-header"><span class="card-icon">✍️</span><span class="card-title">章节自测</span></div><div class="card-body">15 题：单选 4、多选 3、判断 3、名词解释 2、简答 2、案例 1。</div></a>
+        <a class="card" href="#cases" style="text-decoration:none;color:inherit"><div class="card-header"><span class="card-icon">🩺</span><span class="card-title">病例挑战</span></div><div class="card-body">3 个递进病例：典型抑郁 → 双相陷阱 → 躯体疾病/老年共病。</div></a>
+      </div>
+    </section>
+
+    <!-- ================= 05 抑郁障碍 ================= -->
+    <section id="disease-depression" class="section">
+      <div class="section-header"><span class="section-number">05</span><h2>抑郁障碍</h2></div>
+
+      <div class="disease-hero">
+        <div class="en">Depressive Disorder / Depression</div>
+        <h3>抑郁障碍（抑郁症）</h3>
+        <p>由多种原因引起的、以显著而持久的抑郁症状群为主要临床特征的一类心境障碍；核心是与处境不相称的<b>心境低落</b>和<b>兴趣丧失</b>。包括单次发作、复发性、恶劣心境、混合性抑郁和焦虑障碍等类别。</p>
+        <div class="quick-tags"><span>核心：心境低落 + 兴趣/快感丧失</span><span>病程：单次≥2周；复发≥2次</span><span>后果：自杀风险 19.7 倍</span><span>治疗：全病程 + 药物/心理/物理</span></div>
+      </div>
+
+      <!-- 第一栏 -->
+      <div class="module">
+        <div class="module-head"><span class="module-index">第一栏</span><h3>疾病画像</h3><span class="module-en">Definition · Epidemiology · Core features</span></div>
+
+        <p><b>定义：</b>抑郁障碍（depressive disorder）也称抑郁症（depression），是由多种原因引起的以<b>显著和持久的抑郁症状群</b>为主要临床特征的一类心境障碍。其核心症状为<b>与处境不相称的心境低落（depressed mood）和兴趣丧失（loss of interest）</b>，常伴焦虑或激越，严重时出现幻觉、妄想等精神病性症状。需要强调：抑郁障碍不是“心情不好”，而是有生物学基础、可致残、可致死的疾病。</p>
+
+        <div class="stat-row">
+          <div class="stat-card"><div class="stat-num">2.8亿+</div><div class="stat-label">全球罹患人数（占人口 3.8%）</div></div>
+          <div class="stat-card"><div class="stat-num">5.0%</div><div class="stat-label">成年人患病率（女 6.0% / 男 4.0%）</div></div>
+          <div class="stat-card"><div class="stat-num">3.59%</div><div class="stat-label">我国年患病率（2019）</div></div>
+          <div class="stat-card"><div class="stat-num">6.8%</div><div class="stat-label">我国终生患病率（2019）</div></div>
+        </div>
+
+        <div class="callout callout-info"><div class="callout-icon">📊</div><div class="callout-body"><strong>我国流行病学要点（教材 2019 年黄悦勤等报道）</strong>总患病人数超过 <b>9000 万</b>；<b>41.1%</b> 的患者共病至少一种其他精神障碍（焦虑障碍、物质使用障碍、冲动控制障碍等）；与 1990 年相比，患病率增长 <b>22.01%</b>，伤残调整生命年（DALYs）增长 <b>14.70%</b>。</div></div>
+
+        <div class="card-grid">
+          <div class="card card-cause"><div class="card-header"><span class="card-icon">🌍</span><span class="card-title">全球负担</span></div><div class="card-body">抑郁障碍 DALYs 在精神障碍中占比最大，达 <b>37.3%</b>；是影响残疾年限（YLD）的<b>第二大</b>疾病负担；也是 14 岁以上所有年龄段人口 DALYs 与 YLD 负担最高的精神障碍。GBD2019 显示其患病率较 1999 年增长 <b>63.7%</b>。</div></div>
+          <div class="card card-symptom"><div class="card-header"><span class="card-icon">⚠️</span><span class="card-title">诊疗缺口</span></div><div class="card-body">我国识别率 <b>21%</b>、治疗率 <b>9.5%</b>、充分治疗率仅 <b>0.5%</b>。教材用这组数字说明：抑郁障碍的主要问题不只是“治不好”，更是“没被认出来、没被规范治”。</div></div>
+          <div class="card card-diagnosis"><div class="card-header"><span class="card-icon">💔</span><span class="card-title">自杀后果</span></div><div class="card-body">约 <b>50%</b> 的自杀者可能符合抑郁障碍诊断；全球每年 <b>70 万余人</b>死于自杀，占死亡总人口 <b>1.3%</b>；患者自杀风险为一般人群的 <b>19.7 倍</b>；我国超过 <b>1/2</b> 患者曾有自杀观念，超过 <b>1/5</b> 曾尝试自杀。</div></div>
+        </div>
+
+        <h4 style="margin:18px 0 8px;font-size:1rem">ICD-11 分型：单次发作、复发性与分类维度</h4>
+        <div class="tabs">
+          <div class="tab-nav">
+            <button class="tab-btn active" data-tab="dep-single">单次发作</button>
+            <button class="tab-btn" data-tab="dep-recurrent">复发性</button>
+            <button class="tab-btn" data-tab="dep-severity">严重程度与精神病性症状</button>
+            <button class="tab-btn" data-tab="dep-course">发作阶段与附加描述</button>
+          </div>
+          <div class="tab-panel active" id="dep-single">
+            <p><b>单次发作抑郁障碍：</b>表现为 <b>1 次持续时间至少 2 周</b>的抑郁发作，且既往无抑郁发作史。抑郁发作以显著而持久的心境低落为主要临床特征，临床表现可从闷闷不乐到悲痛欲绝。大多数可以缓解，部分可存在残留症状或转为慢性病程。</p>
+          </div>
+          <div class="tab-panel" id="dep-recurrent">
+            <p><b>复发性抑郁障碍：</b>出现 <b>2 次以上</b>的抑郁发作，且 2 次发作间隔的<b>至少数个月内没有显著的心境紊乱</b>。教材未给出更精确的间歇期天数，复习时不要自行加数字。</p>
+          </div>
+          <div class="tab-panel" id="dep-severity">
+            <p>ICD-11 按目前发作的严重程度分为<b>轻度、中度、重度</b>，并按是否伴精神病性症状再分：</p>
+            <ul class="icon-list">
+              <li><b>轻度：</b>任何症状都不应达到强烈水平；日常工作和社交、家务有一些困难但不严重；发作中<b>没有幻觉或妄想</b>。</li>
+              <li><b>中度：</b>少许症状突出或整体症状略微突出；多个功能领域有相当困难，但一些领域仍保有功能；<b>中度以上可伴/不伴精神病性症状</b>。</li>
+              <li><b>重度：</b>较多或大多数症状突出，一些症状尤为强烈；在个人、家庭、社交、学业、职业等领域<b>无法保有功能或严重受限</b>。</li>
+              <li><b>伴精神病性症状：</b>符合中、重度发作标准，并存在妄想、幻觉或抑郁性木僵。妄想多涉及<b>自罪、贫穷或灾难迫在眉睫</b>；幻觉多为幻听和幻嗅，幻听常为诋毁或指责性声音，幻嗅多为污物腐肉气味。</li>
+            </ul>
+            <div class="callout callout-warning"><div class="callout-icon">📌</div><div class="callout-body"><strong>关键规则</strong>只要出现精神病性症状，抑郁障碍的严重程度<b>至少是中度发作</b>。这条规则常以选择题出现。</div></div>
+          </div>
+          <div class="tab-panel" id="dep-course">
+            <p><b>发作阶段：</b>①目前处于抑郁发作期——症状达到抑郁发作诊断标准；②目前为部分缓解——已不符合发作的定义性需求，但仍可能残留显著情感症状；③目前为完全缓解——已无任何显著情感症状。</p>
+            <p><b>附加限制条件（ICD-11 用语）：</b>伴有显著焦虑症状、伴有忧郁特征、围产期内的目前发作、伴有季节性发作。</p>
+            <p><b>伴有忧郁特征</b>的定义为：兴趣缺乏、缺少情绪反应性、<b>早醒</b>、<b>晨重暮轻</b>、精神运动性激越或迟滞、食欲不佳和体重下降。教材在 PTSD 鉴别处又写作“晨重夜轻”，指同一类节律现象。</p>
+          </div>
+        </div>
+
+        <div class="quick-facts">
+          <div class="fact"><b>最短病程</b><span>单次发作 ≥ 2 周</span></div>
+          <div class="fact"><b>复发定义</b><span>≥ 2 次发作，间歇期至少数月无显著心境紊乱</span></div>
+          <div class="fact"><b>最特征性躯体症状</b><span>早醒（比平时早 2～3 小时）</span></div>
+          <div class="fact"><b>最危险症状</b><span>自杀观念与自杀行为</span></div>
+        </div>
+      </div>
+
+      <!-- 第二栏 -->
+      <div class="module module-cause">
+        <div class="module-head"><span class="module-index">第二栏</span><h3>病因探秘</h3><span class="module-en">Etiology &amp; Pathogenesis</span></div>
+
+        <p>教材的总论是：抑郁障碍病因及发病机制复杂，<b>尚未完全阐明</b>，可能为<b>生物因素、心理因素及社会环境因素共同作用</b>。既往研究提示家族遗传史、童年创伤、脑结构及功能网络异常、人格特征、创伤事件、社会环境等均可能影响发病。以下机制均以“假说/学说”看待，不宜表述为已证实因果。</p>
+
+        <div class="card-grid">
+          <div class="card card-cause"><div class="card-header"><span class="card-icon">🧬</span><span class="card-title">遗传</span></div><div class="card-body">一级亲属患病风险约为一般人群的 <b>2～10 倍</b>，遗传度约 <b>30%～50%</b>；<b>复发性抑郁障碍的遗传度高于单次发作</b>。GWAS（全基因组关联分析）已识别 <b>超过 200 个风险位点</b>，提示高度多基因性；多基因风险评分（PRS）可用于预测低、中、高风险。基因表达还受异位显性、表观遗传及基因—环境相互作用影响。<span class="tag tag-info">已证实：遗传因素重要</span></div></div>
+          <div class="card card-cause"><div class="card-header"><span class="card-icon">🧪</span><span class="card-title">神经生化</span></div><div class="card-body"><b>单胺假说</b>：MAOA（单胺氧化酶A）表达增加、脑内 5-羟色胺（5-hydroxytryptamine，5-HT）与去甲肾上腺素（norepinephrine，NE）水平降低被认为是主要致病因素；多巴胺（dopamine，DA）系统亦参与。Glu（谷氨酸）/GABA（γ-氨基丁酸）浓度与活性改变；NMDA（N-甲基-D-天冬氨酸）受体拮抗剂氯胺酮的快速抗抑郁效应提示 Glu 神经传递在病理生理与治疗反应中关键。长期递质异常还会引起受体数量、密度及受体后信号转导的<b>适应性改变</b>。<span class="tag tag-memory">学说</span></div></div>
+          <div class="card card-cause"><div class="card-header"><span class="card-icon">🩺</span><span class="card-title">神经内分泌</span></div><div class="card-body"><b>下丘脑-垂体-肾上腺（HPA）轴</b>：血皮质醇增高、应激相关激素昼夜节律改变、无晚间自发性皮质醇分泌抑制；脑脊液 CRH（促肾上腺皮质激素释放激素）升高；约 <b>40%</b> 患者地塞米松抑制试验阳性。临床可监测血浆皮质醇与 24 小时尿 17-羟皮质类固醇。<b>下丘脑-垂体-甲状腺（HPT）轴</b>：甲减患者可出现抑郁情绪、易疲劳、精力减退，但因果关系尚不清楚。<b>下丘脑-垂体-性腺（HPG）轴</b>：功能下调，性激素通过单胺、谷氨酸系统并与 HPA 轴相互作用。</div></div>
+          <div class="card card-cause"><div class="card-header"><span class="card-icon">🧠</span><span class="card-title">神经影像</span></div><div class="card-body">可见<b>海马萎缩</b>，可能先于疾病发生，且症状持续、复发或长期恶化者萎缩更明显；内侧前额叶、背外侧前额叶、前扣带回、后扣带回/楔前叶、杏仁核、尾状核等亦有异常。MDD（重性抑郁障碍）患者预测年龄与实际年龄差异增加 <b>1 岁以上</b>，提示抑郁可能加速年龄相关脑萎缩。</div></div>
+          <div class="card card-cause"><div class="card-header"><span class="card-icon">⚡</span><span class="card-title">神经电生理</span></div><div class="card-body">EEG（脑电图）：抑郁严重程度与左右脑半球平均整合振幅呈负相关；异常有<b>侧化</b>，右半球激活升高，右半球 α 波幅相对降低、α 波右/左比率降低、右半球快波波幅相对增加，主要在<b>右额叶</b>。CEP（脑诱发电位）：发作时波幅较小并与严重程度相关，ERP 的 <b>P300、N400 潜伏期延长</b>。</div></div>
+          <div class="card card-cause"><div class="card-header"><span class="card-icon">👥</span><span class="card-title">心理社会</span></div><div class="card-body">生活应激事件（亲人丧失、婚姻关系不良、失业、严重躯体疾病）是危险因素，多个严重事件可协同。精神创伤（尤其<b>早年创伤</b>）显著增加成年期发病风险；心理学上认为早年创伤促进<b>负性图式</b>发展，导致情绪信息加工的负面偏向。童年创伤史者治疗更复杂、对药物反应较差，常需综合心理治疗；社会支持可缓解创伤影响。</div></div>
+        </div>
+
+        <div class="table-wrap"><table class="comparison-table">
+          <thead><tr><th>两条关键神经环路</th><th>中心结构</th><th>主要调节递质</th><th>与症状的关系</th></tr></thead>
+          <tbody>
+            <tr><td>内隐情绪调节环路</td><td>杏仁核 + 内侧前额叶皮质</td><td>5-HT</td><td>负性情绪的内隐调节；对负性刺激反应、静息功能连接等异常</td></tr>
+            <tr><td>奖赏神经环路</td><td>腹侧纹状体/伏隔核 + 内侧前额叶皮质</td><td>DA</td><td>奖赏与动机；对正性刺激反应减弱，对应兴趣/快感缺失</td></tr>
+          </tbody>
+        </table></div>
+        <p class="table-note">一句话：情绪调节环路偏“5-HT”，奖赏环路偏“DA”，两条环路分别解释“低落”和“没兴趣、没快感”。</p>
+
+        <div class="callout callout-warning"><div class="callout-icon">🔬</div><div class="callout-body"><strong>其他假说与现状</strong>教材还提到第二信使失衡假说、神经可塑性假说、脑-肠轴、能量代谢假说等。至今仍<b>缺乏有效的抑郁障碍特异性诊断标志</b>，部分研究结果甚至难以重复验证——因此本章的诊断始终是“临床诊断”，不是“化验诊断”。</div></div>
+      </div>
+
+      <!-- 第三栏 -->
+      <div class="module module-symptom">
+        <div class="module-head"><span class="module-index">第三栏</span><h3>临床表现拼图</h3><span class="module-en">Clinical Manifestations</span></div>
+
+        <p>教材把临床表现分为<b>核心症状、心理症状群、躯体症状群</b>三个方面；具体归类常相互重叠，很难简单划一。记忆时先抓 3 条核心，再向心理与躯体两侧展开。</p>
+
+        <div class="tabs">
+          <div class="tab-nav">
+            <button class="tab-btn active" data-tab="sym-core">核心症状（3）</button>
+            <button class="tab-btn" data-tab="sym-psych">心理症状群（9）</button>
+            <button class="tab-btn" data-tab="sym-soma">躯体症状群（5）</button>
+            <button class="tab-btn" data-tab="sym-special">节律、自杀与精神病性症状</button>
+          </div>
+
+          <div class="tab-panel active" id="sym-core">
+            <div class="card-grid">
+              <div class="card card-symptom"><div class="card-header"><span class="card-icon">1️⃣</span><span class="card-title">心境低落</span></div><div class="card-body"><b>心境低落（depressed mood）：</b>自我感受或他人观察到的<b>显著而持久的情绪低落和抑郁悲观</b>。患者常说“心情不好，高兴不起来”，终日愁眉苦脸、忧心忡忡，出现典型抑郁面容：眉头紧锁、长吁短叹。严重者痛不欲生、悲观绝望，有度日如年、生不如死感。低落情绪几乎大部分时间都存在，且<b>一般不随外界环境变化而变化</b>。</div></div>
+              <div class="card card-symptom"><div class="card-header"><span class="card-icon">2️⃣</span><span class="card-title">兴趣减退</span></div><div class="card-body"><b>兴趣减退（loss of interest）：</b>对各种过去喜爱的活动或事物<b>丧失兴趣或兴趣下降</b>，做任何事提不起精神；即使勉强去做，也体会不到以前愉快的感觉。典型者对任何事物无论好坏都缺乏兴趣，什么都不愿意做。</div></div>
+              <div class="card card-symptom"><div class="card-header"><span class="card-icon">3️⃣</span><span class="card-title">快感缺失</span></div><div class="card-body"><b>快感缺失（anhedonia）：体验快乐的能力下降</b>，不能从日常活动中体验到乐趣；即使从事以前喜欢的事情或工作也体会不到快感。部分患者表面兴趣似乎仍在，但进一步询问会发现他并不会从活动中感到快乐，参加的目的只是摆脱悲观失望或消磨时间，甚至觉得是负担。</div></div>
+            </div>
+            <div class="callout callout-info"><div class="callout-icon">🔗</div><div class="callout-body"><strong>三者关系</strong>三种症状相互联系、互为因果；不同患者表现并不完全一致，可能三种同时出现，也可能只以其中一两种为突出表现。教材特别提醒：<b>不要机械要求“三低”全部齐备</b>。</div></div>
+          </div>
+
+          <div class="tab-panel" id="sym-psych">
+            <div class="card-grid">
+              <div class="card card-symptom"><div class="card-header"><span class="card-icon">🧠</span><span class="card-title">1. 思维迟缓</span></div><div class="card-body"><b>思维迟缓（thought retardation）：</b>思维联想速度减慢，患者自我感觉“脑子像生了锈”“像涂了一层糨糊”。决断能力降低，优柔寡断、犹豫不决，日常小事也难决定。临床可见主动言语减少、语速明显减慢、语音变低，严重者无法正常交流。</div></div>
+              <div class="card card-symptom"><div class="card-header"><span class="card-icon">📉</span><span class="card-title">2. 认知功能损害</span></div><div class="card-body">是最常见主诉：难以忘记过去糟糕经历、注意力下降、反应时间延长、注意不能持久，导致学习工作效率下降；还可有抽象概括能力下降、学习能力降低、言语流畅性变差。大多数患者存在认知损害，<b>即使情绪缓解后，有些人的认知受损仍难以恢复</b>。</div></div>
+              <div class="card card-symptom"><div class="card-header"><span class="card-icon">🕳️</span><span class="card-title">3. 负性认知模式</span></div><div class="card-body">认知模式的特点是<b>负性的、歪曲的</b>：对自我、世界、未来均持负性认知——认为自己无价值、有缺陷、不值得被爱；把环境看成灾难性的；对未来没有信心、感到没有希望。常见类型：<b>非此即彼</b>（极端化）、<b>灾难化</b>、<b>贴标签</b>、<b>选择性关注</b>（只注意消极细节）。</div></div>
+              <div class="card card-symptom"><div class="card-header"><span class="card-icon">😖</span><span class="card-title">4. 自责自罪</span></div><div class="card-body"><b>自责自罪（self-blame and guilt）：</b>认为自己犯下不可饶恕的错误；轻微过失也要痛加责备，把自己看作家庭和社会的巨大负担。例如因过去微不足道的不诚实行为或曾让别人失望而有负罪感。严重时对过失无限制“上纲上线”，产生深深内疚甚至罪恶感，达到<b>罪恶妄想</b>程度。</div></div>
+              <div class="card card-symptom"><div class="card-header"><span class="card-icon">💔</span><span class="card-title">5. 自杀观念和行为</span></div><div class="card-body">感到一切都没有意义、活着没意思，脑内反复出现死亡相关念头，甚至详细策划自杀的时间、地点和方式；认为“结束生命是一种解脱”“自己活在世上是多余的”，最终发展成自杀行为。<b>自杀行为是抑郁障碍最严重的症状和最危险的后果之一</b>。部分患者出现<b>扩大性自杀</b>：认为亲人活着也非常痛苦，帮助亲人死亡是解脱，于是杀死亲人后再自杀。</div></div>
+              <div class="card card-symptom"><div class="card-header"><span class="card-icon">🐢</span><span class="card-title">6. 精神运动性迟滞或激越</span></div><div class="card-body"><b>迟滞（psychomotor retardation）：</b>行为和言语活动显著减少，以思维发动迟缓和行为显著持久的抑制为特征；行为迟缓、生活懒散被动、独坐一旁、不与人沟通或整日卧床，严重者无法顾及个人卫生，甚至达到亚木僵或木僵状态。<br><b>激越（agitation）：</b>动作行为和言语活动显著增加，大脑持续紧张、反复思考无意义缺乏条理的事情，注意力无法集中、思维效率下降；行为上烦躁不安、紧张、抓握、搓手顿足、坐立不安或来回踱步。</div></div>
+              <div class="card card-symptom"><div class="card-header"><span class="card-icon">😰</span><span class="card-title">7. 焦虑</span></div><div class="card-body">焦虑常与抑郁共存，并成为抑郁障碍的主要症状之一：心烦、担心、紧张、无法放松，担心失控或发生意外，也可表现为易激惹、冲动；因过度担忧而注意力不能集中。常伴胸闷、心慌、尿频、出汗、坐立不安等躯体症状，<b>有时躯体症状可掩盖主观的焦虑抑郁体验而成为临床主诉</b>。</div></div>
+              <div class="card card-symptom"><div class="card-header"><span class="card-icon">👁️</span><span class="card-title">8. 精神病性症状</span></div><div class="card-body">严重抑郁可出现幻觉或妄想，内容多<b>与抑郁心境协调</b>：罪恶妄想、无价值妄想、躯体疾病或灾难妄想、嘲弄性/谴责性幻听。部分患者出现<b>与心境不协调</b>的精神病性症状，如被害妄想、没有情感背景的幻听。</div></div>
+              <div class="card card-symptom"><div class="card-header"><span class="card-icon">🪞</span><span class="card-title">9. 自知力</span></div><div class="card-body"><b>自知力（insight）：</b>多数患者自知力完整，能主动求治并描述病情。有些严重患者自知力不完整甚至缺乏，<b>在明显自杀倾向或伴精神病性症状者中尤其常见</b>：缺乏对当前状态的正确认识，甚至完全失去求治愿望。</div></div>
+            </div>
+          </div>
+
+          <div class="tab-panel" id="sym-soma">
+            <div class="card-grid">
+              <div class="card card-symptom"><div class="card-header"><span class="card-icon">🌙</span><span class="card-title">1. 睡眠障碍</span></div><div class="card-body">最常出现的躯体症状之一。①<b>早段失眠</b>（入睡困难）：最多见，睡眠潜伏期一般超过 <b>30 分钟</b>；②<b>中段失眠</b>：睡眠轻浅、多梦；③<b>末段失眠</b>（早醒）：<b>最具特征性</b>，一般比平时早醒 <b>2～3 小时</b>，醒后无法再次入睡。非典型抑郁障碍患者也可出现<b>睡眠过多</b>。</div></div>
+              <div class="card card-symptom"><div class="card-header"><span class="card-icon">💓</span><span class="card-title">2. 自主神经功能紊乱</span></div><div class="card-body">头晕、头痛、心慌、心悸、出汗、皮肤感觉异常（冷热感和发麻感）；也可有内脏功能紊乱，如消化道分泌和蠕动下降、尿频尿急。此类患者常由综合医院转诊至精神专科门诊。</div></div>
+              <div class="card card-symptom"><div class="card-header"><span class="card-icon">🍽️</span><span class="card-title">3. 进食紊乱</span></div><div class="card-body">主要表现<b>食欲减退伴体重减轻</b>。轻者食不知味、没有胃口，但进食量不一定明显减少，体重改变可能不明显；严重者完全丧失进食欲望，对既往喜欢的食物也不感兴趣，甚至不愿提到吃饭，进食后腹胀、胃部不适，体重明显下降甚至营养不良。非典型抑郁障碍患者则可有<b>食欲亢进和体重增加</b>。</div></div>
+              <div class="card card-symptom"><div class="card-header"><span class="card-icon">🔋</span><span class="card-title">4. 精力下降</span></div><div class="card-body">无精打采、疲乏无力、懒惰；感到“整个人都垮了、散架了”，常说“太累了”“没有精神”“什么都没做也感到疲惫不堪”，筋疲力尽、能力下降。</div></div>
+              <div class="card card-symptom"><div class="card-header"><span class="card-icon">❤️‍🩹</span><span class="card-title">5. 性功能障碍</span></div><div class="card-body">性欲减退乃至完全丧失；有些患者勉强维持性行为但无法体验乐趣。女性患者还可出现月经紊乱、闭经。</div></div>
+            </div>
+            <div class="callout callout-warning"><div class="callout-icon">⚠️</div><div class="callout-body"><strong>非典型表现</strong>教材在两处明确提到“非典型抑郁障碍”：可出现<b>睡眠过多</b>，以及<b>食欲亢进和体重增加</b>。这与典型的“早醒、食欲减退、体重下降”方向相反，考试常用来设置干扰项。</div></div>
+          </div>
+
+          <div class="tab-panel" id="sym-special">
+            <h4 style="font-size:1rem;margin-bottom:8px">节律改变：晨重暮轻 / 昼重夜轻</h4>
+            <p>教材在 ICD-11“伴有忧郁特征”中写作<b>晨重暮轻（diurnal variation of mood）</b>，在 PTSD 鉴别中写作<b>晨重夜轻</b>（临床也常表述为“昼重夜轻”），均指情绪在清晨或白天较重、傍晚或夜间相对减轻的节律现象。它提示抑郁的<b>生物学成分</b>较突出，也帮助与创伤后应激障碍（其通常无此节律改变）相鉴别。</p>
+            <div class="callout callout-memory"><div class="callout-icon">🕰️</div><div class="callout-body"><strong>一句话记</strong>“早醒 + 晨重暮轻 + 食欲体重下降 + 迟滞/激越”是“忧郁特征”的一组线索，教材把它们放在同一个定义里。</div></div>
+
+            <h4 style="font-size:1rem;margin:16px 0 8px">自杀风险：必须主动评估</h4>
+            <ul class="icon-list">
+              <li>自杀行为是抑郁障碍<b>最严重的症状和最危险的后果之一</b>；临床工作者应对曾有自杀观念或企图者<b>保持高度警惕</b>，认真做好风险评估和预防。</li>
+              <li>教材指出：患者自杀意念或自杀死亡的风险与<b>年龄、性别、社会环境变化以及疾病严重程度</b>密切相关。</li>
+              <li>未及时诊断治疗、共患其他疾病（如焦虑障碍）、遭遇不良生活事件者，自杀危险性非常高。</li>
+              <li><b>扩大性自杀</b>：认为亲人活着也痛苦，杀死亲人后再自杀，后果极其严重，需特别识别。</li>
+              <li>抗抑郁药治疗初期，抗抑郁效果尚未显现而不良反应已显露，加之疾病本身使自杀风险增高，<b>治疗初期尤应评估自杀风险</b>，整个治疗过程也需持续评估。</li>
+            </ul>
+
+            <h4 style="font-size:1rem;margin:16px 0 8px">精神病性症状：协调 vs 不协调</h4>
+            <div class="table-wrap"><table class="comparison-table">
+              <thead><tr><th>类型</th><th>常见内容</th><th>诊断意义</th></tr></thead>
+              <tbody>
+                <tr><td>与心境协调</td><td>罪恶妄想（认为自己应受惩罚）、无价值妄想、躯体疾病或灾难妄想、嘲弄性/谴责性幻听</td><td>支持“伴有精神病性症状的抑郁发作”；严重程度至少中度</td></tr>
+                <tr><td>与心境不协调</td><td>被害妄想、没有情感背景的幻听等</td><td>仍属抑郁发作的精神病性症状，但需与精神分裂症等鉴别</td></tr>
+              </tbody>
+            </table></div>
+            <p class="table-note">一句话：内容“跟着情绪走”多为协调性；“跟情绪无关”的不协调症状更容易与精神分裂症混淆，需靠原发症状、协调性、病程三项区分。</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 第四栏 -->
+      <div class="module module-case">
+        <div class="module-head"><span class="module-index">第四栏</span><h3>教材典型案例</h3><span class="module-en">Textbook Examples</span></div>
+
+        <div class="callout callout-info"><div class="callout-icon">📖</div><div class="callout-body"><strong>来源说明</strong>教材第八章<b>未提供完整病程的临床病例</b>，仅在症状描述中穿插了若干简短举例。以下逐条标注“教材举例”，不补造年龄、化验、剂量与时间阈值。</div></div>
+
+        <div class="card-grid">
+          <div class="card card-diagnosis"><div class="card-header"><span class="card-icon">🏀</span><span class="card-title">举例一：兴趣减退</span></div><div class="card-body">“患者在生病以前是很喜欢打篮球的人，现在对篮球却一点兴趣都没有。”<br><span class="tag tag-info">教材举例</span><br>要点：兴趣减退不是“没时间玩”，而是<b>对既往喜爱活动的主观兴趣消失</b>；询问时要对比病前状态。</div></div>
+          <div class="card card-diagnosis"><div class="card-header"><span class="card-icon">😔</span><span class="card-title">举例二：自责自罪</span></div><div class="card-body">“患者会因过去微不足道的不诚实行为或者曾让别人失望而有负罪感。”严重时对自己的过失无限制“上纲上线”，产生深深内疚甚至罪恶感，认为自己罪孽深重、必须受到社会惩罚。<br><span class="tag tag-info">教材举例</span><br>要点：自责的<b>程度与事实明显不相称</b>，是判断病理性自责的关键。</div></div>
+          <div class="card card-diagnosis"><div class="card-header"><span class="card-icon">👨‍👩‍👧</span><span class="card-title">举例三：扩大性自杀</span></div><div class="card-body">患者认为亲人活着也非常痛苦，帮助亲人死亡是对他们的解脱，于是选择<b>杀死亲人后再自杀</b>，导致极其严重的不良后果。<br><span class="tag tag-info">教材举例</span><br>要点：这是抑郁障碍最危险的情形之一，需立即进行风险评估与安全处置。</div></div>
+        </div>
+
+        <div class="callout callout-example"><div class="callout-icon">🩺</div><div class="callout-body"><strong>如何把“举例”扩成病例思维</strong>拿到一个抑郁症状描述时，按“<b>核心症状 → 心理症状 → 躯体症状 → 自杀风险 → 功能损害 → 鉴别线索</b>”六步走。教材的举例只提供症状片段，完整病例需由临床采集现病史、既往史、家族史与精神检查后形成。</div></div>
+      </div>
+
+      <!-- 第五栏 -->
+      <div class="module module-diff">
+        <div class="module-head"><span class="module-index">第五栏</span><h3>鉴别诊断对对碰</h3><span class="module-en">Differential Diagnosis</span></div>
+
+        <h4 style="font-size:1rem;margin-bottom:8px">先评估，再诊断</h4>
+        <p>教材要求对存在抑郁症状的患者进行<b>全面的心理、社会和生物学评估</b>，了解是否存在其他精神症状和躯体问题，最终明确诊断并制定治疗方案。评估内容包括：现病史、目前症状、<b>是否有自杀意念</b>、既往是否有过躁狂发作或精神病性症状发作、目前治疗情况及疗效、过去治疗史、躯体疾病病史、家族史。</p>
+        <p>除全面躯体检查及神经系统检查外，还应结合实际开展必要的<b>实验室、电生理及影像学检查</b>，以排除内分泌及脑部器质病变导致的情绪与精神行为异常，例如甲状腺功能、头颅 MRI、脑电图等。</p>
+
+        <div class="table-wrap"><table class="comparison-table">
+          <thead><tr><th>量表</th><th>类型</th><th>教材要点</th></tr></thead>
+          <tbody>
+            <tr><td>汉密尔顿抑郁量表（Hamilton Depression Rating Scale，HAMD）</td><td>他评</td><td>临床评定时应用最普遍；有 17 项、21 项、24 项三种。HAMD-24 分七因子：焦虑和躯体化、体重、认识障碍、日夜变化、阻滞、睡眠障碍、绝望感</td></tr>
+            <tr><td>蒙哥马利-艾森贝格抑郁评定量表（Montgomery-Åsberg Depression Rating Scale，MADRS）</td><td>他评</td><td>常用于疗效评估；减分率用于判定“有效”</td></tr>
+            <tr><td>贝克抑郁量表（Beck Depression Inventory，BDI）</td><td>自评</td><td>常用自评工具</td></tr>
+            <tr><td>抑郁自评量表（Self-Rating Depression Scale，SDS）</td><td>自评</td><td>自评筛查与评估</td></tr>
+            <tr><td>患者健康问卷（Patient Health Questionnaire-9，PHQ-9）</td><td>自评</td><td>9 条目，快速筛查</td></tr>
+          </tbody>
+        </table></div>
+        <p class="table-note">教材指出：量表通常被用来评估抑郁障碍的<b>治疗效果</b>，不能替代临床诊断。</p>
+
+        <h4 style="font-size:1rem;margin:18px 0 8px">ICD-11 诊断总则</h4>
+        <ul class="icon-list">
+          <li>诊断需基于<b>一次或多次抑郁发作</b>，并且<b>没有躁狂、混合或轻躁狂发作史</b>。</li>
+          <li>分为<b>单次发作</b>与<b>复发性</b>；按目前发作的严重程度（轻、中、重）及<b>伴/不伴精神病性症状</b>进一步分类。</li>
+          <li>严重程度不仅取决于<b>症状数目</b>，也取决于<b>症状的严重程度</b>及<b>对功能的损害</b>。</li>
+          <li>可加附加限制条件：伴显著焦虑症状、伴忧郁特征、围产期内的目前发作、伴季节性发作。</li>
+          <li>非目前发作时，进一步分为<b>部分缓解</b>或<b>完全缓解</b>。</li>
+        </ul>
+
+        <h4 style="font-size:1rem;margin:18px 0 8px">疗效与病程的五个概念</h4>
+        <div class="table-wrap"><table class="comparison-table">
+          <thead><tr><th>概念</th><th>英文</th><th>教材定义</th></tr></thead>
+          <tbody>
+            <tr><td>临床治疗有效</td><td>response</td><td>抑郁症状减轻，HAMD-17 减分率至少达 <b>50%</b>，或 MADRS 减分率达 <b>50% 以上</b></td></tr>
+            <tr><td>临床治愈</td><td>remission</td><td>抑郁症状完全消失时间 <b>>2 周</b>，HAMD-17 <b>≤7</b> 或 MADRS <b>≤10</b>，且社会功能恢复良好</td></tr>
+            <tr><td>临床痊愈</td><td>recovery</td><td>抑郁症状完全缓解时间<b>超过 6 个月</b></td></tr>
+            <tr><td>复燃</td><td>relapse</td><td>症状缓解后，在 <b>6 个月内</b>又再次发作</td></tr>
+            <tr><td>复发</td><td>recurrence</td><td>症状已完全消失 <b>6 个月以上</b>又再次发作</td></tr>
+          </tbody>
+        </table></div>
+        <p class="table-note">一句话：有效看“减分”，治愈看“消失 2 周 + 量表阈值”，痊愈看“满 6 个月”；6 个月也是复燃与复发的分界。</p>
+
+        <h4 style="font-size:1rem;margin:18px 0 8px">鉴别诊断总表</h4>
+        <p>教材本章正式展开的鉴别对象有五个：<b>精神分裂症、双相情感障碍、焦虑障碍、创伤后应激障碍、躯体疾病所致的精神障碍</b>。下表统一按“核心症状 / 病程与起病 / 关键鉴别点 / 辅助检查与排除要点”四维对照。</p>
+
+        <div class="table-wrap"><table class="comparison-table">
+          <thead><tr><th>维度</th><th>抑郁障碍</th><th>双相抑郁</th><th>精神分裂症伴抑郁</th></tr></thead>
+          <tbody>
+            <tr><td>核心症状</td><td>心境低落、兴趣减退、快感缺失；情感、认知、意志行为<b>全面抑制</b></td><td>抑郁发作 + 情感<b>不稳定性与转换性</b>；可有躁狂/轻躁狂表现</td><td>思维障碍、情感淡漠等精神病性症状为原发；抑郁为继发</td></tr>
+            <tr><td>病程与起病</td><td>间歇性病程，间歇期基本正常；单次≥2周，复发≥2次</td><td>抑郁发作基础上，存在<b>一次及以上</b>符合躁狂/轻躁狂的发作史</td><td>多为发作进展或持续进展，缓解期常有残留精神症状</td></tr>
+            <tr><td>关键鉴别点</td><td>无躁狂、混合或轻躁狂发作史</td><td>追问既往“高涨、话多、精力旺盛、睡眠需求减少”期；教材列出双相可疑线索（见下）</td><td>原发症状、精神活动<b>协调性</b>、病程三项；抑郁障碍的精神活动尚存一定协调性</td></tr>
+            <tr><td>辅助检查与排除</td><td>排除内分泌、脑器质性病变；量表评估</td><td>重点在病史与纵向病程，而非单次量表分数</td><td>详细精神检查、病前性格、家族史、治疗反应；排除器质性病因</td></tr>
+          </tbody>
+        </table></div>
+        <p class="table-note">一句话鉴别：有“高峰”史就是双相；原发是思维障碍/情感淡漠且不协调就是精神分裂症；只有“低谷”才是抑郁障碍。</p>
+
+        <div class="callout callout-danger"><div class="callout-icon">🚩</div><div class="callout-body"><strong>教材列出的双相“红旗”线索</strong>对首次发病年龄早（<b>25 岁或更早</b>起病）、双相障碍家族史、伴精神病性症状、抑郁发作突然且<b>发作次数在 5 次以上</b>、心境不稳定、易激惹或激越、睡眠和体重增加的患者，诊治过程中要<b>高度关注并定期随访评估躁狂发作的可能性</b>，及时修正诊断。</div></div>
+
+        <div class="table-wrap"><table class="comparison-table">
+          <thead><tr><th>维度</th><th>抑郁障碍</th><th>焦虑障碍</th><th>创伤后应激障碍（PTSD）</th><th>躯体疾病所致精神障碍</th></tr></thead>
+          <tbody>
+            <tr><td>核心症状</td><td>以“情感低落”为核心；痛苦、厌倦、疲劳；躯体化重者可伴疑病</td><td>以“害怕、恐惧、担心”为主要特点；焦虑、脆弱，明显自主神经失调及运动性不安</td><td>创伤事件闯入性记忆（意识或梦境）、情感麻木、回避；抑郁可有但非主要临床相</td><td>情绪低落与躯体疾病在时间、机制上相关；可有原发病的躯体/神经系统体征</td></tr>
+            <tr><td>病程与起病</td><td>间歇性；可有晨重暮轻</td><td>常与精神紧张因素相关；焦虑体验在前或在后需按时间顺序判断</td><td>起病前有严重、灾难性、威胁生命的创伤事件（如强奸、地震、被虐待），随后起病</td><td>与原发病病程平行；可为直接原因、诱因、共病或抑郁导致躯体症状四种关系</td></tr>
+            <tr><td>关键鉴别点</td><td>心境低落为主，自我感觉不佳</td><td>自知力一般良好、求治心切；症状主次与先后顺序是鉴别关键</td><td><b>无晨重夜轻节律</b>；睡眠多为入睡困难、创伤相关噩梦/梦魇，而非以早醒为特征</td><td>全面病史、躯体与神经系统检查、辅助检查取得证据；不能轻率归因于躯体病而不干预</td></tr>
+            <tr><td>辅助检查与排除</td><td>甲状腺功能、头颅 MRI、EEG 等排除器质性病因</td><td>排除甲亢、心律失常等躯体疾病所致焦虑</td><td>创伤史询问；量表辅助，不做唯一依据</td><td>内分泌、脑部器质性病变检查；必要时多学科会诊</td></tr>
+          </tbody>
+        </table></div>
+        <p class="table-note">一句话鉴别：焦虑是“怕”，PTSD 是“创伤闯入 + 回避”，躯体疾病所致要看“时间与因果链”，抑郁是“持续的低落与兴趣/快感丧失”。</p>
+
+        <div class="card-grid">
+          <div class="card card-diagnosis"><div class="card-header"><span class="card-icon">⚖️</span><span class="card-title">抑郁 vs 双相抑郁</span></div><div class="card-body"><b>一句话：</b>只要历史上出现过躁狂、轻躁狂或混合发作，就不再是“抑郁障碍”，而应归入双相障碍。教材强调对不能提供明确躁狂史者也要定期随访，不要一次问完就永久下结论。</div></div>
+          <div class="card card-diagnosis"><div class="card-header"><span class="card-icon">🧩</span><span class="card-title">抑郁 vs 精神分裂症伴抑郁</span></div><div class="card-body"><b>一句话：</b>看“谁原发、协不协调、怎么走”。抑郁障碍以心境低落为原发、精神病性症状继发、精神活动尚协调、间歇性病程；精神分裂症以思维障碍和情感淡漠为原发、协调性缺乏、常持续进展并残留症状。</div></div>
+          <div class="card card-diagnosis"><div class="card-header"><span class="card-icon">😰</span><span class="card-title">抑郁 vs 焦虑障碍</span></div><div class="card-body"><b>一句话：</b>抓“主次与先后”。抑郁以情感低落为核心，焦虑以害怕、恐惧、担心为核心；两者症状可重叠（躯体不安、注意力集中困难、睡眠紊乱、疲劳），需按主要临床相和出现顺序判断。</div></div>
+          <div class="card card-diagnosis"><div class="card-header"><span class="card-icon">🩺</span><span class="card-title">抑郁 vs 躯体疾病/药物所致</span></div><div class="card-body"><b>一句话：</b>先问“谁先谁后、谁因谁果”。教材给出四种关系：躯体疾病是直接原因、是诱因、与抑郁共病、或抑郁导致躯体症状。即使躯体疾病成立，也<b>不能停止抗抑郁治疗</b>。药物/物质所致教材未展开，临床需补充用药史（非教材原文）。</div></div>
+        </div>
+
+        <h4 style="margin:18px 0 8px;font-size:1rem">教材未展开但临床常遇到的两种边界</h4>
+        <div class="table-wrap"><table class="comparison-table">
+          <thead><tr><th>鉴别对象</th><th>教材依据状态</th><th>可用的鉴别思路（非教材原文，仅提示）</th></tr></thead>
+          <tbody>
+            <tr><td>居丧反应 / 延长哀伤障碍</td><td><b>教材本章未提供专门条目</b></td><td>居丧的哀伤体验通常围绕逝者、与丧失事件同步，并随支持与时间波动；若哀伤持续、广泛且严重损害功能，超出所在文化的一般预期，应考虑延长哀伤障碍并转专科评估。<b>教材未提供具体时限阈值，不要套用数字。</b></td></tr>
+            <tr><td>强迫障碍</td><td><b>教材本章未展开</b></td><td>强迫障碍以反复的强迫观念和/或强迫行为为核心，患者常试图抵抗并感到不合理；抑郁障碍以持续心境低落与兴趣/快感丧失为核心。二者可共病，按“主要临床相 + 症状出现顺序”判断。</td></tr>
+          </tbody>
+        </table></div>
+        <p class="table-note">诚实标注：以上两行是教材外的临床提示，考试作答仍应以教材明确写出的五组鉴别为准。</p>
+      </div>
+
+      <!-- 第六栏 -->
+      <div class="module module-treat">
+        <div class="module-head"><span class="module-index">第六栏</span><h3>治疗方案工具箱</h3><span class="module-en">Treatment Toolbox</span></div>
+
+        <h4 style="font-size:1rem;margin-bottom:8px">一、五条治疗原则</h4>
+        <div class="card-grid">
+          <div class="card card-treatment"><div class="card-header"><span class="card-icon">🔄</span><span class="card-title">全病程治疗</span></div><div class="card-body">一半以上患者在发病后 <b>2 年内复发</b>。为降低复燃和复发，提倡全病程治疗：急性期 → 巩固期 → 维持期。</div></div>
+          <div class="card card-treatment"><div class="card-header"><span class="card-icon">👤</span><span class="card-title">个体化合理用药</span></div><div class="card-body">结合年龄、性别、伴随疾病、既往治疗史，从<b>安全性、有效性、经济性、适当性</b>选药及剂量。伴睡眠问题优先考虑可同时改善睡眠的药；老年患者避免不良反应多的药。</div></div>
+          <div class="card card-treatment"><div class="card-header"><span class="card-icon">📊</span><span class="card-title">量化评估</span></div><div class="card-body">治疗前综合评估病情、躯体情况、社会功能及家庭支持；治疗中重点观察症状变化与药物反应，定期用实验室检查及精神科量表评估疗效、耐受性与安全性。</div></div>
+          <div class="card card-treatment"><div class="card-header"><span class="card-icon">🤝</span><span class="card-title">联合用药</span></div><div class="card-body"><b>一般不主张联合用药</b>；难治性患者可选<b>两种作用机制不同</b>的抗抑郁药，<b>不主张联用两种以上</b>。可酌情联合锂盐、非典型抗精神病药或三碘甲状腺原氨酸；伴精神病性症状者可抗抑郁药 + 抗精神病药。</div></div>
+          <div class="card card-treatment"><div class="card-header"><span class="card-icon">🫱</span><span class="card-title">建立治疗联盟</span></div><div class="card-body">诊断依赖完整真实病史与全面精神检查；彼此信任、支持性的医患联盟有助于配合。应与家属密切合作，调动社会支持系统，提高依从性。</div></div>
+        </div>
+
+        <h4 style="font-size:1rem;margin:18px 0 8px">二、全病程时间线：急性期 → 巩固期 → 维持期</h4>
+        <div class="timeline">
+          <div class="tl-item"><div class="tl-title">急性期治疗 · 8～12 周</div><div class="tl-desc">以<b>控制症状</b>为主，尽量达到临床痊愈；同时促进社会功能恢复、提高生活质量。急性期治疗效果对预后和结局起关键作用。</div></div>
+          <div class="tl-item"><div class="tl-title">巩固期治疗 · 4～9 个月</div><div class="tl-desc">以<b>防止病情复燃</b>为主。此期病情不稳定、易复燃；应保持与急性期<b>一致的治疗方案</b>，维持原药物种类、剂量和服用方法。</div></div>
+          <div class="tl-item"><div class="tl-title">维持期治疗 · 一般至少 2～3 年</div><div class="tl-desc">持续、规范的维持治疗可有效降低复燃/复发率。多次反复发作或残留症状明显者建议<b>长期维持</b>。病情稳定且无其他诱发因素可缓慢减药至停；一旦发现复发早期征象，应迅速恢复治疗。</div></div>
+        </div>
+        <div class="callout callout-memory"><div class="callout-icon">🧠</div><div class="callout-body"><strong>时间记忆</strong>“急 8～12 周、巩 4～9 月、维 2～3 年”。三个数字对应三个目标：<b>控症状、防复燃、防复发</b>。</div></div>
+
+        <h4 style="font-size:1rem;margin:18px 0 8px">三、药物治疗：首选 → 次选 → 辅助</h4>
+        <p>新型抗抑郁药包括：<b>SSRIs</b>（选择性 5-羟色胺再摄取抑制剂，selective serotonin reuptake inhibitors）、<b>SNRIs</b>（5-羟色胺和去甲肾上腺素再摄取抑制剂，serotonin-norepinephrine reuptake inhibitors）、<b>NaSSAs</b>（去甲肾上腺素和特异性 5-羟色胺能抗抑郁药，noradrenergic and specific serotonergic antidepressants）、<b>NDRIs</b>（去甲肾上腺素和多巴胺再摄取抑制剂，norepinephrine dopamine reuptake inhibitors）、<b>SARIs</b>（5-羟色胺受体拮抗剂/再摄取抑制剂，serotonin antagonist/reuptake inhibitors），以及褪黑素 MT1/MT2 受体激动剂和 5-HT2C 受体拮抗剂、多模式机制药。</p>
+        <div class="table-wrap"><table class="comparison-table">
+          <thead><tr><th>层级</th><th>药物类别</th><th>代表药物</th><th>教材依据与要点</th></tr></thead>
+          <tbody>
+            <tr><td>首选（一线）</td><td>新型抗抑郁药</td><td>SSRIs、SNRIs、NaSSAs、NDRIs、SARIs、褪黑素受体激动剂、多模式机制药</td><td>凭借安全性和耐受性优势成为<b>一线推荐</b>；大量循证研究验证有效；<b>不同药物总体有效率无显著差异</b></td></tr>
+            <tr><td>次选（二线）</td><td>传统抗抑郁药</td><td>三环类（阿米替林、氯米帕明、丙米嗪、多塞平）及四环类（马普替林）</td><td>因耐受性和安全性问题作为<b>二线</b></td></tr>
+            <tr><td>三线</td><td>单胺氧化酶抑制剂（MAOI）</td><td>吗氯贝胺（国内可逆性 RMAOI）</td><td>因安全性、耐受性及饮食限制作为<b>三线</b>；常用于其他抗抑郁药无效者；疗效与三环类相当</td></tr>
+            <tr><td>辅助/联合</td><td>锂盐、非典型抗精神病药、三碘甲状腺原氨酸</td><td>—</td><td>用于难治性患者或特定情况；伴精神病性症状可抗抑郁药 + 抗精神病药</td></tr>
+          </tbody>
+        </table></div>
+
+        <div class="table-wrap"><table class="comparison-table">
+          <thead><tr><th>类别</th><th>代表药物与特点</th><th>主要不良反应</th><th>主要禁忌/注意</th></tr></thead>
+          <tbody>
+            <tr><td>SSRIs</td><td>氟西汀、帕罗西汀、舍曲林、氟伏沙明、西酞普兰、艾司西酞普兰；临床最常用，不良反应明显小于 TCAs；6 种整体疗效无显著差异</td><td>胃肠道反应、头痛、失眠焦虑、性功能障碍；氟西汀可皮疹；帕罗西汀抗胆碱能反应、镇静明显、停药反应常见（需缓慢减量）；西酞普兰/艾司西酞普兰可低钠血症</td><td>禁与 MAOIs、氯米帕明、色氨酸等联用；慎用酒精</td></tr>
+            <tr><td>SNRIs</td><td>文拉法辛、度洛西汀；5-HT 与 NE 双重摄取抑制，高剂量对 DA 有抑制；<b>疗效与剂量有关</b>，剂量增加作用谱加宽、不良反应增多；度洛西汀对共病糖尿病/周围神经痛及纤维肌痛更有优势</td><td>胃肠道反应、血压轻度升高、性功能障碍、体重增加少</td><td>禁与 MAOIs 联用</td></tr>
+            <tr><td>NaSSAs</td><td>米氮平；增强 NE、5-HT 释放，阻断 α2 自身/异质受体及 5-HT2、5-HT3；<b>对食欲减退和睡眠紊乱改善明显，较少引起性功能障碍</b></td><td>镇静、口干、头晕、疲乏、体重增加、胆固醇升高、粒细胞减少（罕见）</td><td>禁与 MAOIs；出现感染症状应查血象</td></tr>
+            <tr><td>NDRIs</td><td>安非他酮；疗效与 SSRIs 相当；对疲乏、困倦改善优于某些 SSRIs；对体重增加影响小甚至可减重；也用于戒烟；<b>伴精神病性症状时不宜使用</b></td><td>失眠、头痛、坐立不安、恶心、出汗；高剂量有诱发癫痫风险；很少性功能障碍</td><td>禁与氟西汀或 TCAs 合用；慎与卡马西平合用</td></tr>
+            <tr><td>SARIs</td><td>曲唑酮；镇静作用较好，适用于<b>伴激越或睡眠障碍</b>者</td><td>口干、镇静、头晕、倦睡、阴茎异常勃起</td><td>室性心律失常、严重低血压者禁用</td></tr>
+            <tr><td>褪黑素受体激动剂</td><td>阿戈美拉汀；MT1/MT2 受体激动 + 5-HT2C 拮抗；对季节性情感障碍也有效；睡眠改善常在用药<b>第 1 周</b>显现；<b>25～50 mg/d，每天 1 次，睡前服</b></td><td>头痛、恶心、乏力；潜在肝损害</td><td>用药前须查基线肝功能；血清氨基转移酶超过正常上限 <b>3 倍</b>者不用；治疗期间定期监测肝功能</td></tr>
+            <tr><td>多模式机制药</td><td>伏硫西汀；改善情感症状，并有<b>改善认知症状</b>的作用；<b>初始与推荐剂量均为 10 mg/d，每天 1 次</b>，按个体反应调整</td><td>胃肠道反应</td><td>禁与 MAOIs 联用</td></tr>
+            <tr><td>TCAs</td><td>阿米替林、丙米嗪、多塞平、氯米帕明；马普替林为四环类</td><td>过度镇静、直立性低血压、心动过速、心律失常、抗胆碱能不良反应；氯米帕明可抽搐</td><td>禁与 SSRIs（不含艾司西酞普兰、西酞普兰）、酒精、MAOIs、吩噻嗪类联用；严重心、肝、肾疾病禁用；癫痫者禁用氯米帕明</td></tr>
+          </tbody>
+        </table></div>
+        <p class="table-note">剂量说明：教材仅给出阿戈美拉汀与伏硫西汀的具体剂量；其余药物教材未列剂量，一律写“<b>剂量个体化，遵医嘱</b>”，不自行补数字。</p>
+
+        <div class="callout callout-warning"><div class="callout-icon">⏱️</div><div class="callout-body"><strong>起效时间与换药</strong>教材<b>未提供抗抑郁药的具体起效时间</b>，只强调“治疗初期抗抑郁效果尚未显现时，不良反应就已显露”，故初期应加强随访与自杀风险评估。教材也<b>未给出具体换药流程</b>；可确定的原则是：足量、足疗程、个体化、量化评估，必要时在医生指导下调整或联合。</div></div>
+
+        <div class="card-grid">
+          <div class="card card-treatment"><div class="card-header"><span class="card-icon">🌿</span><span class="card-title">中草药（轻中度）</span></div><div class="card-body">①<b>圣约翰草提取物片</b>：主要药理成分为贯叶金丝桃素和贯叶连翘；②<b>舒肝解郁胶囊</b>：贯叶金丝桃 + 刺五加，用于轻中度单相抑郁属肝郁脾虚证，疗效与盐酸氟西汀相当、优于安慰剂；③<b>巴戟天寡糖胶囊</b>：用于肾阳虚证者的轻中度抑郁。</div></div>
+          <div class="card card-treatment"><div class="card-header"><span class="card-icon">💉</span><span class="card-title">氯胺酮 / 艾司氯胺酮</span></div><div class="card-body">NMDA 谷氨酸受体拮抗剂，具有<b>快速抗抑郁效应</b>。艾司氯胺酮为氯胺酮的 S 型异构体；2019 年美国批准用于<b>难治性抑郁障碍</b>，补充适应证为与口服抗抑郁药联用、治疗有<b>急性自杀念头或行为</b>的成人；2023 年 4 月我国批准鼻喷剂上市。注意：氯胺酮作为致幻剂有<b>成瘾性</b>，长程安全性尚待研究。</div></div>
+        </div>
+
+        <h4 style="font-size:1rem;margin:20px 0 8px">四、心理治疗：几乎适用于所有患者</h4>
+        <div class="card-grid">
+          <div class="card card-treatment"><div class="card-header"><span class="card-icon">🛋️</span><span class="card-title">支持性心理治疗</span></div><div class="card-body">通过倾听、安慰、解释、指导和鼓励，帮助患者正确认识和对待疾病，积极主动配合治疗；几乎适用于所有抑郁障碍患者，可与其他治疗联合。要点：①积极倾听，给足述说时间；②引导觉察并表达情绪；③疾病健康教育；④增强信心，寻找“治疗—社会功能”的平衡点。</div></div>
+          <div class="card card-treatment"><div class="card-header"><span class="card-icon">🧠</span><span class="card-title">认知行为疗法（CBT）</span></div><div class="card-body">帮助患者认识并矫正错误信念，缓解情感症状、改善应对能力、减少复发。三项技术：①<b>识别自动性想法</b>（提问、想象、角色扮演）；②<b>识别认知错误和逻辑错误</b>（记录自动思维与“我应该/必须”等口头禅，用苏格拉底式提问归纳规律）；③<b>真实性检验</b>（把自动思维当作假设到现实生活中验证）。</div></div>
+          <div class="card card-treatment"><div class="card-header"><span class="card-icon">🕳️</span><span class="card-title">精神动力学治疗</span></div><div class="card-body">在经典精神分析基础上改良发展，分长程与短程；<b>目前推荐用于抑郁障碍的主要是短程疗法</b>。要点：治疗师较少参与，让患者自由联想、自由畅谈；从具体实例发现线索，选择患者认可的焦点冲突；通过自我感悟和“修通”，形成新的认识与表达方式。</div></div>
+          <div class="card card-treatment"><div class="card-header"><span class="card-icon">👥</span><span class="card-title">人际心理治疗</span></div><div class="card-body">识别抑郁促发因素：人际关系丧失、角色破坏和转变、社会性分离、社交技巧缺陷；处理当前人际交往问题，把情绪与人际关系联系起来，通过调整关系减轻抑郁。<b>可能起效较慢</b>，可能需数月治疗甚至治疗结束后数月，社会功能才改善。</div></div>
+          <div class="card card-treatment"><div class="card-header"><span class="card-icon">🏠</span><span class="card-title">婚姻家庭治疗</span></div><div class="card-body"><b>婚姻治疗：</b>促进良好配偶关系，重点发现和解决夫妻问题；原则为积极主动、兼顾平衡、保持中立、重在调适、<b>非包办</b>。<b>家庭治疗：</b>以家庭为对象的团体心理治疗，改善家庭应对功能；不重个人内在心理分析，焦点在成员互动关系，从家庭系统角度解释个人行为。</div></div>
+        </div>
+
+        <h4 style="font-size:1rem;margin:20px 0 8px">五、物理治疗：MECT 是“快速控自杀”的关键手段</h4>
+        <div class="card-grid">
+          <div class="card card-treatment"><div class="card-header"><span class="card-icon">⚡</span><span class="card-title">电抽搐治疗（ECT/MECT）</span></div><div class="card-body">给予中枢神经系统适量电流，诱发一次癫痫放电，引起短暂意识丧失和全身抽搐，达到治疗目的。电刺激前静脉麻醉并注射肌肉松弛剂，使抽搐不明显，即<b>改良电抽搐治疗（MECT）</b>，是目前临床主要形式。<br>MECT 可有效缓解重性抑郁症状，<b>对伴自杀观念者疗效较好，可在较短时间内快速控制自杀意念，降低自杀死亡率</b>。治疗抑郁障碍一般 <b>8～12 次</b>；近期疗效明确但维持时间较短，建议<b>与抗抑郁药联合</b>，避免停药后复发。机制尚不清楚，可能涉及血脑屏障通透性、乙酰胆碱能与 GABA 能功能、5-HT 受体敏感性、催乳素/内啡肽/前列腺素 E2 等。</div></div>
+          <div class="card card-treatment"><div class="card-header"><span class="card-icon">🧲</span><span class="card-title">重复经颅磁刺激（rTMS）</span></div><div class="card-body">无创的非药物治疗手段。2008 年美国 FDA 批准用于<b>难治性抑郁障碍</b>；2010 年被纳入美国精神病协会《抑郁障碍治疗实用指南》。机制可能是影响深部脑组织（基底核、纹状体、海马、丘脑、边缘叶等）局部皮质兴奋性和血流，改变神经递质、细胞因子及神经营养因子。<b>最大不良反应是诱发癫痫</b>；另有头痛（治疗后 <b>10%～30%</b> 出现，持续时间短、多可自行缓解）、刺激部位皮肤损伤、诱发躁狂。</div></div>
+          <div class="card card-treatment"><div class="card-header"><span class="card-icon">🔌</span><span class="card-title">迷走神经刺激（VNS）</span></div><div class="card-body">原为临床上难治性癫痫的常规治疗；因迷走神经与情绪调节区域有解剖联系，且接受 VNS 的癫痫患者可出现情绪改变，故开发用于抑郁障碍。不良反应包括声音改变、咳嗽、吞咽困难、感觉异常、咽炎，随治疗可能逐渐改善。美国 FDA 已批准 VNS 作为抑郁障碍的<b>辅助治疗</b>。</div></div>
+          <div class="card card-treatment"><div class="card-header"><span class="card-icon">🧩</span><span class="card-title">深部脑刺激（DBS）</span></div><div class="card-body">将脉冲发生器植入脑内，释放弱脉冲刺激相关核团。研究刺激核团集中在胼胝体、扣带回、伏隔核、腹侧纹状体、缰核等；确切机制尚不清楚。对多种药物、心理和 ECT 均较差的难治性患者可考虑，但目前仍处于<b>试验性治疗阶段</b>。</div></div>
+        </div>
+
+        <h4 style="font-size:1rem;margin:20px 0 8px">六、抗抑郁药的严重不良反应与安全监测</h4>
+        <div class="table-wrap"><table class="comparison-table">
+          <thead><tr><th>问题</th><th>教材要点</th><th>识别与处理</th></tr></thead>
+          <tbody>
+            <tr><td>5-HT 综合征（SS）</td><td>服用抗抑郁药诱发的严重不良反应；自主神经功能紊乱 + 神经肌肉活动异常，严重时意识障碍甚至危及生命。表现：恶心呕吐腹痛、颜面潮红、多汗、心动过速、激越、震颤、腱反射亢进、肌张力增高；进展可出现高热、呼吸困难、抽搐、酸中毒性横纹肌溶解、继发球蛋白尿、肾衰竭、休克、死亡</td><td><b>早期发现、及时确诊、立即停药、内科紧急处理</b>。机制与中枢 5-HT 大量蓄积、代谢能力下降、受体激动饱和有关，单一受体学说不能完全解释</td></tr>
+            <tr><td>戒断综合征</td><td>约 <b>20%</b> 使用抗抑郁药者在服药一段时间后停药或减药时出现；与药物种类关系不大，<b>用药时间较长或半衰期较短</b>时易发生；表现为流感样症状、精神症状及神经系统症状，可能被误诊为复燃或复发</td><td>避免短期快速撤药，应在医嘱指导下<b>逐渐减药甚至停药</b>；提前沟通、提高依从性</td></tr>
+            <tr><td>自杀风险</td><td>抗抑郁药被美国 FDA 整体添加<b>黑框警告</b>，提示可能升高 <b>24 岁及以下</b>患者自杀风险；抑郁本身即与自杀风险升高显著相关，目前尚无肯定结论证实抗抑郁药与自杀的关系</td><td>治疗初期抗抑郁效果尚未显现而不良反应已显露，<b>初期应评估自杀风险</b>；整个治疗过程持续评估</td></tr>
+          </tbody>
+        </table></div>
+
+        <div class="callout callout-success"><div class="callout-icon">✅</div><div class="callout-body"><strong>治疗选择速记</strong>伴失眠/体重轻 → 米氮平（镇静、增重）；伴激越/睡眠障碍 → 曲唑酮；伴疲乏/困倦或超重 → 安非他酮；伴躯体疼痛/纤维肌痛 → 度洛西汀；伴认知症状 → 伏硫西汀；伴肝病风险需监测肝功能 → 阿戈美拉汀需先查肝功能；伴精神病性症状 → 抗抑郁药 + 抗精神病药，<b>不用安非他酮</b>；伴高自杀风险 → 可考虑 MECT 快速控制自杀意念。</div></div>
+
+        <div class="callout callout-danger"><div class="callout-icon">🚨</div><div class="callout-body"><strong>安全底线</strong>自杀风险评估不是一次性的“入院筛查”，而是贯穿诊断、治疗初期、换药、减药与出院的全过程。对伴精神病性症状、扩大性自杀观念、既往自杀企图、共病焦虑或物质使用、遭遇不良生活事件者，应提高警惕并加强随访。</div></div>
+      </div>
+
+      <!-- 第七栏 -->
+      <div class="module module-memory">
+        <div class="module-head"><span class="module-index">第七栏</span><h3>记忆工具箱</h3><span class="module-en">Memory Toolkit</span></div>
+        <p>以下框架均由教材症状与数字<b>归纳</b>而来，不改变医学事实；口诀只是提取线索，答题时仍要回到教材原词。</p>
+
+        <div class="memory-grid">
+          <div class="memory-card">
+            <div class="m-title">方法一：口诀法 · “三低三自三群”<span class="m-type">口诀</span></div>
+            <div class="m-formula">“情绪低、兴趣低、快感低；自责、自罪、自杀；核心、心理、躯体三大群。”</div>
+            <p><b>解释：</b>“三低”对应 3 条核心症状（心境低落、兴趣减退、快感缺失）；“三自”对应自责、自罪与自杀观念/行为；“三群”是教材的三大症状分类。先背 3+3+3，再展开 9 条心理症状与 5 条躯体症状。</p>
+          </div>
+          <div class="memory-card">
+            <div class="m-title">方法二：数字法 · “3-9-5 / 3-7 / 8-4-2”<span class="m-type">数字</span></div>
+            <div class="m-formula">3 核心 + 9 心理 + 5 躯体；ICD-10 复习用 3 核心 + 7 附加；疗程 8～12 周、4～9 月、2～3 年。</div>
+            <p><b>解释：</b>把全章数字分成三组：<b>症状组</b>（3-9-5）、<b>诊断组</b>（3+7，教材回顾 ICD-10）、<b>疗程组</b>（急 8～12 周、巩 4～9 月、维 2～3 年）。数字之间用“越急越短、越稳越长”串联。</p>
+          </div>
+          <div class="memory-card">
+            <div class="m-title">方法三：首字母法 · SSRIs 六药<span class="m-type">首字母</span></div>
+            <div class="m-formula">“舍、氟、帕、氟、西、艾”</div>
+            <p><b>解释：</b>舍曲林、氟西汀、帕罗西汀、氟伏沙明、西酞普兰、艾司西酞普兰。共同标签：<b>一线、最常见、胃肠道反应、性功能障碍、禁与 MAOIs/氯米帕明/色氨酸联用</b>。注意两个“氟”分别指氟西汀与氟伏沙明。</p>
+          </div>
+          <div class="memory-card">
+            <div class="m-title">方法四：对比法 · 典型 vs 非典型<span class="m-type">对比</span></div>
+            <div class="m-formula">典型“早醒、少吃、体重降”；非典型“多睡、多吃、体重增”。</div>
+            <p><b>解释：</b>教材明确写到非典型抑郁可出现睡眠过多、食欲亢进和体重增加。把两组方向相反的躯体症状成对记，做题时先判断“是典型还是非典型”，再选对应表现。</p>
+          </div>
+          <div class="memory-card">
+            <div class="m-title">方法五：故事法 · “早醒看晨光”<span class="m-type">联想</span></div>
+            <div class="m-formula">早醒（比平时早 2～3 小时）→ 醒后看见清晨 → 情绪“晨重暮轻”。</div>
+            <p><b>解释：</b>把“早醒”和“晨重暮轻”绑在同一幅画面里：醒得早、清晨最难熬、到了傍晚反而松一点。这两个特征常同时出现在“伴忧郁特征”的抑郁发作中。</p>
+          </div>
+          <div class="memory-card">
+            <div class="m-title">方法六：归类法 · 药物“按特点对号入座”<span class="m-type">归类</span></div>
+            <div class="m-formula">失眠/瘦 → 米氮平；激越/失眠 → 曲唑酮；疲乏/超重 → 安非他酮；疼痛 → 度洛西汀；认知 → 伏硫西汀；肝 → 阿戈美拉汀先查肝功能。</div>
+            <p><b>解释：</b>不孤立背药名，而是把“药物特点”与“患者特征”配对。教材对每种药都给了明确的适用线索，配对记忆比按字母背诵更牢。</p>
+          </div>
+        </div>
+
+        <div class="callout callout-memory"><div class="callout-icon">🧠</div><div class="callout-body"><strong>“三无”框架（据教材症状归纳）</strong><b>无望</b>（对未来没有信心、感到没有希望）、<b>无价值</b>（认为自己无价值、有缺陷，甚至无价值妄想）、<b>无意义</b>（感到生活中的一切都没有意义）。这三条都出现在教材的负性认知、自责自罪与自杀观念段落中，可用于快速回忆抑郁的认知三联征色彩。</div></div>
+      </div>
+
+      <!-- 第八栏 -->
+      <div class="module module-link">
+        <div class="module-head"><span class="module-index">第八栏</span><h3>知识联动</h3><span class="module-en">Knowledge Links</span></div>
+        <div class="card-grid">
+          <div class="card card-cause"><div class="card-header"><span class="card-icon">🌗</span><span class="card-title">与第7章 双相障碍</span></div><div class="card-body">本章反复强调“无躁狂、混合或轻躁狂发作史”是抑郁障碍诊断的前提。学完本章后应回到第7章，补上躁狂/轻躁狂的表现、病程与心境稳定剂治疗；两章合看，才能理解“为什么首次抑郁发作也要问高涨史”。</div></div>
+          <div class="card card-cause"><div class="card-header"><span class="card-icon">🧩</span><span class="card-title">与第6章 精神分裂症</span></div><div class="card-body">精神病性抑郁、抑郁性木僵是两章的交界处。教材给出三项鉴别：<b>原发症状、协调性、病程</b>；再结合病前性格、家族史、预后与治疗反应。遇到“既有幻觉妄想又有情绪低落”的病例，不要只凭症状数量下诊断。</div></div>
+          <div class="card card-cause"><div class="card-header"><span class="card-icon">👵</span><span class="card-title">与第19章 老年精神障碍</span></div><div class="card-body">本章治疗原则明确：<b>老年患者应避免选择不良反应多的药物</b>。老年抑郁常以躯体主诉、认知损害就诊，需与痴呆、躯体疾病所致精神障碍鉴别；用药还需考虑共病与相互作用。</div></div>
+          <div class="card card-cause"><div class="card-header"><span class="card-icon">🆘</span><span class="card-title">与第22章 自杀与危机干预</span></div><div class="card-body">本章提供自杀的“疾病背景”（约 50% 自杀者可能符合抑郁障碍、风险 19.7 倍、扩大性自杀）与“治疗手段”（MECT 快速控制自杀意念）。第22章会进一步展开风险评估的结构化询问、危险因素与保护因素、危机处置流程。</div></div>
+          <div class="card card-cause"><div class="card-header"><span class="card-icon">📋</span><span class="card-title">与第2、3章 症状学与评估</span></div><div class="card-body">本章的症状描述依赖第2章术语（心境、兴趣、快感、思维迟缓、自责自罪、幻觉妄想）；诊断依赖第3章的精神检查与量表。HAMD-24 的七因子结构、HAMD-17/MADRS 的减分率，都是“量化评估”原则的具体工具。</div></div>
+          <div class="card card-cause"><div class="card-header"><span class="card-icon">🏥</span><span class="card-title">共病与跨学科</span></div><div class="card-body">教材指出 <b>41.1%</b> 的患者共病至少一种其他精神障碍（焦虑障碍、物质使用障碍、冲动控制障碍）。跨学科方面：内分泌（甲减、HPA 轴）、妇产科（围产期发作）、中医（肝郁脾虚证、肾阳虚证）、康复医学（社会与职业功能康复）均与本章相交。</div></div>
+        </div>
+      </div>
+      <!-- 附：预后与康复 -->
+      <div class="module module-link">
+        <div class="module-head"><span class="module-index">附</span><h3>预后与康复</h3><span class="module-en">Prognosis &amp; Rehabilitation</span></div>
+        <div class="stat-row">
+          <div class="stat-card"><div class="stat-num">15%</div><div class="stat-label">经治疗仍无法达到临床治愈</div></div>
+          <div class="stat-card"><div class="stat-num">约半数</div><div class="stat-label">首次发作缓解后不再复发</div></div>
+          <div class="stat-card"><div class="stat-num">&gt;90%</div><div class="stat-label">≥3 次发作或未维持治疗者的复发风险</div></div>
+          <div class="stat-card"><div class="stat-num">20%～35%</div><div class="stat-label">有残留症状或社会/职业功能受损</div></div>
+        </div>
+        <p>经过抗抑郁治疗，大部分患者的抑郁症状可缓解或显著减轻；首次发作缓解后约半数不再复发，但对 <b>3 次及以上发作</b>或<b>未接受维持治疗</b>的患者，复发风险可高达 <b>90% 以上</b>。症状缓解后社会功能一般可恢复到病前水平，但仍有 20%～35% 的患者存在残留症状或功能受损。</p>
+
+        <div class="table-wrap"><table class="comparison-table">
+          <thead><tr><th>影响复发的因素</th><th>教材要点</th></tr></thead>
+          <tbody>
+            <tr><td>治疗不足</td><td>维持治疗的抗抑郁药剂量及使用时间不足</td></tr>
+            <tr><td>应激</td><td>生活应激事件</td></tr>
+            <tr><td>社会适应</td><td>社会适应不良</td></tr>
+            <tr><td>躯体共病</td><td>慢性躯体疾病</td></tr>
+            <tr><td>支持系统</td><td>家庭社会支持缺乏</td></tr>
+            <tr><td>家族史</td><td>阳性心境障碍家族史</td></tr>
+          </tbody>
+        </table></div>
+
+        <h4 style="font-size:1rem;margin:16px 0 8px">精神康复的四个维度</h4>
+        <div class="card-grid">
+          <div class="card card-treatment"><div class="card-header"><span class="card-icon">🧍</span><span class="card-title">个人生活自理能力</span></div><div class="card-body">恢复独立生活与自我照料的基本能力，包括个人卫生、饮食起居等。</div></div>
+          <div class="card card-treatment"><div class="card-header"><span class="card-icon">🏠</span><span class="card-title">家庭职能</span></div><div class="card-body">恢复患者在家庭中的角色功能，重建家庭关系与互动模式。</div></div>
+          <div class="card card-treatment"><div class="card-header"><span class="card-icon">👥</span><span class="card-title">社交技能</span></div><div class="card-body">恢复和提高人际交往能力，重新融入社会生活。</div></div>
+          <div class="card card-treatment"><div class="card-header"><span class="card-icon">💼</span><span class="card-title">职业技能</span></div><div class="card-body">恢复和提高职业能力，帮助患者重返工作岗位或实现就业。</div></div>
+        </div>
+        <div class="callout callout-info"><div class="callout-icon">🏥</div><div class="callout-body"><strong>我国康复现状</strong>康复可在医院和社区进行，但目前我国社区精神残疾康复系统发展还不够完善，相当一部分患者因反复发作或慢性化无法正常参与社会生活而长期留在医院。教材因此强调：<b>院内康复应在患者住院后尽快开展</b>，尽量恢复社会功能、提高治愈率，为社区康复打下基础。</div></div>
+      </div>
+    </section>
+
+    <!-- ================= 06 恶劣心境障碍 ================= -->
+    <section id="disease-dysthymia" class="section">
+      <div class="section-header"><span class="section-number">06</span><h2>恶劣心境障碍</h2></div>
+
+      <div class="disease-hero">
+        <div class="en">Dysthymic Disorder / Dysthymia</div>
+        <h3>恶劣心境障碍</h3>
+        <p>以<b>持久的心境低落</b>为主的轻度抑郁，从不出现躁狂或轻躁狂发作；病程常在 2 年以上，其间无长时间完全缓解。它不是“性格悲观”，而是有病程门槛的独立障碍。</p>
+        <div class="quick-tags"><span>核心：持续低落 ≥2 年</span><span>程度：轻度</span><span>缓解：一般不超过 2 个月</span><span>关键：无躁狂/轻躁狂</span></div>
+      </div>
+
+      <div class="module">
+        <div class="module-head"><span class="module-index">第一栏</span><h3>疾病画像</h3></div>
+        <div class="card-grid">
+          <div class="card card-diagnosis"><div class="card-header"><span class="card-icon">📜</span><span class="card-title">名称沿革</span></div><div class="card-body">过去称为<b>抑郁性神经症</b>；在 ICD-10 中称为“<b>恶劣心境</b>”；ICD-11 采用“恶劣心境障碍”。教材把它列为抑郁障碍的独立类别之一。</div></div>
+          <div class="card card-diagnosis"><div class="card-header"><span class="card-icon">⏳</span><span class="card-title">病程门槛</span></div><div class="card-body">这种慢性的心境低落，无论从<b>严重程度</b>还是一次发作的<b>持续时间</b>，均不符合轻度或中度复发性抑郁障碍的标准。病程常持续 <b>2 年以上</b>，其间无长时间完全缓解，<b>一般不超过 2 个月</b>。</div></div>
+          <div class="card card-diagnosis"><div class="card-header"><span class="card-icon">🙅</span><span class="card-title">排除躁狂</span></div><div class="card-body"><b>从不出现躁狂或轻躁狂发作</b>。一旦出现躁狂/轻躁狂/混合发作，诊断方向应转向双相障碍，而不是恶劣心境。</div></div>
+          <div class="card card-diagnosis"><div class="card-header"><span class="card-icon">🧍</span><span class="card-title">功能与求治</span></div><div class="card-body">患者<b>具有求治意愿</b>，生活<b>不受严重影响</b>；通常起病于<b>成年早期</b>，持续数年；与生活事件及个人性格存在密切关系。</div></div>
+        </div>
+
+        <h4 style="margin:16px 0 8px;font-size:1rem">ICD-11 的细化描述</h4>
+        <ul class="icon-list">
+          <li>特征是<b>持续性抑郁情绪</b>（持续 2 年或更长），持续一天中大部分时间，而且持续的天数较多。</li>
+          <li><b>儿童和青少年</b>的抑郁情绪可表现为<b>普遍易怒</b>。</li>
+          <li>抑郁情绪伴随其他症状：活动兴趣或快感明显减弱、注意力不集中或犹豫不决、感到自我价值低、过度或不适当的内疚、对未来无望、睡眠不安或睡眠增加、食欲减弱或增加、精力不足或疲劳。</li>
+          <li>在疾病的<b>前 2 年</b>，从未有过 <b>2 周</b>时间，其症状的数量和持续时间足以满足抑郁发作的诊断要求。</li>
+        </ul>
+
+        <div class="callout callout-warning"><div class="callout-icon">📌</div><div class="callout-body"><strong>最容易混的一句</strong>恶劣心境“像抑郁但不够发作”：病程够长（≥2 年），但严重程度不够、且从未有连续 2 周达到抑郁发作标准。若某段时间确实达到发作标准，就应考虑抑郁障碍（并评估是否共病/叠加），而不是简单归为恶劣心境。</div></div>
+      </div>
+
+      <div class="module module-cause">
+        <div class="module-head"><span class="module-index">第二栏</span><h3>病因探秘</h3></div>
+        <p><b>教材未为恶劣心境障碍单列病因与发病机制章节。</b>可确定的是：教材在总论中把遗传、神经生化、神经内分泌、神经影像、神经电生理与心理社会因素作为抑郁障碍的共同病因框架；在恶劣心境的描述中则强调其与<b>生活事件及个人性格</b>存在密切关系。因此复习时不要把总论机制“硬套”成恶劣心境的独立病因结论，答题应写明“教材未单列”。</p>
+        <div class="callout callout-info"><div class="callout-icon">💡</div><div class="callout-body"><strong>可说的与不可说的</strong>可说：病程慢性、与生活事件和性格相关、从不出现躁狂/轻躁狂。不可说：教材未给出恶劣心境特有的遗传度、影像学改变或发病率数字。</div></div>
+      </div>
+
+      <div class="module module-symptom">
+        <div class="module-head"><span class="module-index">第三栏</span><h3>临床表现拼图</h3></div>
+        <div class="card-grid">
+          <div class="card card-symptom"><div class="card-header"><span class="card-icon">🌫️</span><span class="card-title">持续性心境低落</span></div><div class="card-body">低落持续存在，一天中大部分时间、且大多数日子都有；不是“遇到事才难过”，而是长期“高兴不起来”的背景色调。程度为<b>轻度</b>，生活一般不受严重影响。</div></div>
+          <div class="card card-symptom"><div class="card-header"><span class="card-icon">😤</span><span class="card-title">儿童青少年的“易怒”</span></div><div class="card-body">教材特别指出：儿童和青少年抑郁情绪可表现为<b>普遍易怒</b>，而非典型的口述“心情低落”。这提示问诊时要向家长/教师采集“脾气、易激惹”的变化。</div></div>
+          <div class="card card-symptom"><div class="card-header"><span class="card-icon">🪫</span><span class="card-title">伴随症状群</span></div><div class="card-body">活动兴趣或快感明显减弱；注意力不集中或犹豫不决；自我价值低；过度或不适当的内疚；对未来无望；睡眠不安或睡眠增加；食欲减弱或增加；精力不足或疲劳。</div></div>
+          <div class="card card-symptom"><div class="card-header"><span class="card-icon">🕰️</span><span class="card-title">“不够发作”的边界</span></div><div class="card-body">前 2 年内<b>从未有过连续 2 周</b>达到抑郁发作的症状数量与持续时间要求。这是与单次/复发性抑郁障碍最核心的现象学差别。</div></div>
+        </div>
+      </div>
+
+      <div class="module module-case">
+        <div class="module-head"><span class="module-index">第四栏</span><h3>教材典型案例</h3></div>
+        <div class="callout callout-info"><div class="callout-icon">📖</div><div class="callout-body"><strong>教材未提供恶劣心境障碍的临床病例或具体举例。</strong>本章对恶劣心境的描述以定义、病程与症状清单为主。此处不作虚构病例；可在“病例挑战”中看到仅使用教材症状搭建的教学演练情境，并会明确标注“非教材原文”。</div></div>
+      </div>
+
+      <div class="module module-diff">
+        <div class="module-head"><span class="module-index">第五栏</span><h3>鉴别诊断对对碰</h3></div>
+        <div class="table-wrap"><table class="comparison-table">
+          <thead><tr><th>维度</th><th>恶劣心境障碍</th><th>复发性抑郁障碍</th><th>双相障碍</th></tr></thead>
+          <tbody>
+            <tr><td>核心症状</td><td>持续性轻度心境低落 + 一组伴随症状</td><td>达到抑郁发作标准的间歇性发作</td><td>抑郁发作 + 躁狂/轻躁狂/混合发作</td></tr>
+            <tr><td>病程与起病</td><td>≥2 年，其间完全缓解一般不超过 2 个月；成年早期起病</td><td>≥2 次发作，间歇期至少数月无显著心境紊乱</td><td>有躁狂/轻躁狂发作史；情感不稳定、转换性</td></tr>
+            <tr><td>关键鉴别点</td><td>严重程度与单次持续时间均达不到轻/中度复发性抑郁标准；前 2 年无连续 2 周达到发作标准</td><td>每次发作达到抑郁发作定义；间歇期可基本恢复正常</td><td>只要出现躁狂/轻躁狂/混合发作，即不考虑单纯恶劣心境</td></tr>
+            <tr><td>辅助检查与排除</td><td>排除躯体疾病、物质所致；评估功能与自杀风险</td><td>量表与纵向病程；排除器质性病因</td><td>重点追问高涨史与家族史；定期随访</td></tr>
+          </tbody>
+        </table></div>
+        <p class="table-note">一句话鉴别：恶劣心境是“长而轻、从未达标”；复发性抑郁是“间歇性、每次达标”；双相是“有过高峰”。</p>
+
+        <div class="card-grid">
+          <div class="card card-diagnosis"><div class="card-header"><span class="card-icon">⚖️</span><span class="card-title">恶劣心境 vs 混合性抑郁和焦虑</span></div><div class="card-body"><b>一句话：</b>混合性抑郁和焦虑要求抑郁与焦虑症状同时存在、且<b>各自都不足以独立诊断</b>；恶劣心境的核心是长期轻度抑郁，焦虑不是定义性必需成分。若焦虑严重到足以诊断焦虑障碍，应按教材规则分别诊断。</div></div>
+          <div class="card card-diagnosis"><div class="card-header"><span class="card-icon">🧩</span><span class="card-title">恶劣心境 vs 性格悲观</span></div><div class="card-body"><b>一句话：</b>教材把恶劣心境列为独立障碍，并强调其与生活事件及个人性格“关系密切”，但诊断仍需满足<b>2 年病程</b>与症状清单；不能把长期的性格悲观直接等同于恶劣心境。</div></div>
+        </div>
+      </div>
+
+      <div class="module module-treat">
+        <div class="module-head"><span class="module-index">第六栏</span><h3>治疗方案工具箱</h3></div>
+        <div class="callout callout-warning"><div class="callout-icon">📌</div><div class="callout-body"><strong>教材未单列恶劣心境障碍的治疗方案。</strong>本章第六节的治疗原则、药物与心理治疗、物理治疗均以“抑郁障碍”为总对象展开，未按亚型给出独立剂量或疗程。因此此处只写可确定的原则，不虚构“恶劣心境专用方案”。</div></div>
+        <ul class="icon-list check">
+          <li><b>原则层面：</b>同样适用全病程治疗、个体化合理用药、量化评估、联合用药与建立治疗联盟。</li>
+          <li><b>药物治疗：</b>教材把新型抗抑郁药列为一线；具体选药需结合症状特点（如睡眠、食欲、体重、焦虑）与个体情况，<b>剂量个体化，遵医嘱</b>。</li>
+          <li><b>心理治疗：</b>支持性心理治疗几乎适用于所有患者；CBT 可帮助识别与矫正负性认知、减少复发；其余心理治疗按教材总论选择。</li>
+          <li><b>物理治疗：</b>教材未将 MECT/rTMS 列为恶劣心境的常规治疗；是否使用需由专科医师根据严重程度、自杀风险与治疗史决定。</li>
+          <li><b>疗程：</b>教材未给出恶劣心境的独立疗程；全病程三期的时长（急性 8～12 周、巩固 4～9 个月、维持至少 2～3 年）是抑郁障碍的总原则，不能机械照搬为“恶劣心境必须维持 2～3 年”。</li>
+        </ul>
+      </div>
+
+      <div class="module module-memory">
+        <div class="module-head"><span class="module-index">第七栏</span><h3>记忆工具箱</h3></div>
+        <div class="memory-grid">
+          <div class="memory-card"><div class="m-title">方法一：数字法 · “三个 2”<span class="m-type">数字</span></div><div class="m-formula">病程 ≥2 年；完全缓解 ≤2 个月；前 2 年无连续 2 周达到发作标准。</div><p><b>解释：</b>三个“2”把恶劣心境的“长、轻、不达标”全部串起来。注意第三个“2 周”是否定式——不是说“必须有 2 周症状”，而是“从未有 2 周达到发作标准”。</p></div>
+          <div class="memory-card"><div class="m-title">方法二：对比法 · “长轻” vs “间歇达标”<span class="m-type">对比</span></div><div class="m-formula">恶劣心境 = 长而轻；复发性抑郁 = 间歇而达标；双相 = 有过高峰。</div><p><b>解释：</b>用三条时间轴画图：一条连续低平线（恶劣心境）、一条断续低谷线（复发性抑郁）、一条低谷加高峰线（双相）。图形比文字更容易在考场回忆。</p></div>
+          <div class="memory-card"><div class="m-title">方法三：口诀法 · “两不一求”<span class="m-type">口诀</span></div><div class="m-formula">不出现躁狂、不够发作标准；有求治意愿、生活不受严重影响。</div><p><b>解释：</b>“两不”是排除与程度，“一求”是求治意愿。把四个短句连读，可快速区分恶劣心境与“性格问题”及双相。</p></div>
+        </div>
+      </div>
+
+      <div class="module module-link">
+        <div class="module-head"><span class="module-index">第八栏</span><h3>知识联动</h3></div>
+        <div class="card-grid">
+          <div class="card card-cause"><div class="card-header"><span class="card-icon">🌧️</span><span class="card-title">与抑郁障碍</span></div><div class="card-body">恶劣心境是抑郁障碍章节内的独立类别，但治疗原则共享。考试常把它与“复发性抑郁障碍”放在同一题干里，用“2 年、2 个月、从未 2 周达标”做区分。</div></div>
+          <div class="card card-cause"><div class="card-header"><span class="card-icon">🌗</span><span class="card-title">与双相障碍</span></div><div class="card-body">“从不出现躁狂或轻躁狂”是恶劣心境的硬门槛；一旦出现高峰，应转第7章的双相评估。对起病早、家族史阳性、易激惹者尤其要随访。</div></div>
+          <div class="card card-cause"><div class="card-header"><span class="card-icon">🧠</span><span class="card-title">与人格、应激相关</span></div><div class="card-body">教材强调恶劣心境与生活事件及个人性格关系密切，这提醒我们在第2章症状学与第7章之外，还要结合人格特质、长期应激与社会功能做纵向评估，避免把“慢性低平”简单归因于性格。</div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 07 混合性抑郁和焦虑障碍 ================= -->
+    <section id="disease-mixed" class="section">
+      <div class="section-header"><span class="section-number">07</span><h2>混合性抑郁和焦虑障碍</h2></div>
+
+      <div class="disease-hero">
+        <div class="en">Mixed Depression and Anxiety Disorder</div>
+        <h3>混合性抑郁和焦虑障碍</h3>
+        <p>ICD-11 抑郁障碍章节<b>首次出现</b>的类别：抑郁与焦虑症状同时存在、持续足够时间，但分开看任何一组都<b>不足以独立诊断</b>；同时造成相当程度的主观痛苦或社会功能受损。</p>
+        <div class="quick-tags"><span>时间：≥2 周的大部分时间</span><span>结构：抑郁 + 焦虑两组</span><span>关键：各自都不够诊断</span><span>后果：痛苦 + 功能受损</span></div>
+      </div>
+
+      <div class="module">
+        <div class="module-head"><span class="module-index">第一栏</span><h3>疾病画像</h3></div>
+        <div class="card-grid">
+          <div class="card card-diagnosis"><div class="card-header"><span class="card-icon">🆕</span><span class="card-title">分类地位</span></div><div class="card-body">该分型在 <b>ICD-11 抑郁障碍章节首次出现</b>，与单次发作、复发性、恶劣心境并列，构成教材所列的抑郁障碍类别之一。</div></div>
+          <div class="card card-diagnosis"><div class="card-header"><span class="card-icon">⏱️</span><span class="card-title">时间与结构</span></div><div class="card-body">主要表现是<b>焦虑与抑郁症状持续 2 周或以上</b>；在 2 周及以上时间的<b>大部分时间</b>同时出现抑郁和焦虑症状。</div></div>
+          <div class="card card-diagnosis"><div class="card-header"><span class="card-icon">📏</span><span class="card-title">“都不够”规则</span></div><div class="card-body">分开考虑任何一组症状群的<b>严重程度和/或持续时间</b>时，均不足以符合相应的诊断——这是使用本类别的核心前提。</div></div>
+          <div class="card card-diagnosis"><div class="card-header"><span class="card-icon">💥</span><span class="card-title">痛苦与损害</span></div><div class="card-body">该障碍会给患者造成<b>相当程度的主观痛苦和社会功能受损</b>；在个人、家庭、社会、教育、职业或其他重要功能领域导致严重痛苦或严重损害。</div></div>
+        </div>
+
+        <h4 style="margin:16px 0 8px;font-size:1rem">三条分流规则（教材原文逻辑）</h4>
+        <ol class="numbered-list">
+          <li><b>严重焦虑 + 较轻抑郁 → 采用焦虑障碍的诊断。</b></li>
+          <li><b>严重抑郁 + 较轻焦虑 → 诊断为抑郁障碍。</b></li>
+          <li><b>抑郁与焦虑均存在，且各自足以符合相应诊断 → 不应使用本类别，应同时给予两个障碍的诊断。</b></li>
+        </ol>
+        <div class="callout callout-warning"><div class="callout-icon">📌</div><div class="callout-body"><strong>一句话抓住</strong>混合性抑郁和焦虑是“<b>两个都不够，合起来才够痛苦</b>”的诊断；只要其中一个够诊断，就不能用它来“打包”。</div></div>
+      </div>
+
+      <div class="module module-cause">
+        <div class="module-head"><span class="module-index">第二栏</span><h3>病因探秘</h3></div>
+        <p><b>教材未为混合性抑郁和焦虑障碍单列病因。</b>其机制可参照本章总论的生物—心理—社会框架；教材在临床表现中已指出抑郁与焦虑常共存、症状重叠（躯体不安、注意力集中困难、睡眠紊乱、疲劳），这解释了为什么两类症状容易“混在一起”而各自又达不到诊断门槛。答题时应避免虚构该类别特有的遗传或影像学结论。</p>
+      </div>
+
+      <div class="module module-symptom">
+        <div class="module-head"><span class="module-index">第三栏</span><h3>临床表现拼图</h3></div>
+        <div class="table-wrap"><table class="comparison-table">
+          <thead><tr><th>症状组</th><th>教材描述的表现</th><th>在本类别中的定位</th></tr></thead>
+          <tbody>
+            <tr><td>抑郁症状</td><td>心境低落、兴趣减退、快感缺失、精力下降、自责自罪、自杀观念等</td><td>存在，但严重程度/数量/持续时间不足以独立诊断抑郁障碍</td></tr>
+            <tr><td>焦虑症状</td><td>心烦、担心、紧张、无法放松、担心失控或意外；易激惹、冲动；胸闷、心慌、尿频、出汗、坐立不安</td><td>存在，但不足以独立诊断焦虑及恐惧相关障碍</td></tr>
+            <tr><td>重叠症状</td><td>躯体不安、注意力集中困难、睡眠紊乱、疲劳</td><td>两类障碍都可出现，不能单凭重叠症状归入某一类</td></tr>
+            <tr><td>功能损害</td><td>相当程度的主观痛苦；个人、家庭、社会、教育、职业等功能受损</td><td>本类别成立的必要条件之一</td></tr>
+          </tbody>
+        </table></div>
+        <p class="table-note">一句话：症状“两边都占”，但“两边都不够”；痛苦和功能损害必须真实存在。</p>
+      </div>
+
+      <div class="module module-case">
+        <div class="module-head"><span class="module-index">第四栏</span><h3>教材典型案例</h3></div>
+        <div class="callout callout-info"><div class="callout-icon">📖</div><div class="callout-body"><strong>教材未提供混合性抑郁和焦虑障碍的病例或举例。</strong>本章仅给出定义、时间门槛与三条分流规则。此处不作虚构；病例挑战中的相关情境将明确标注“教学演练，非教材原文”，且只使用教材描述过的症状。</div></div>
+      </div>
+
+      <div class="module module-diff">
+        <div class="module-head"><span class="module-index">第五栏</span><h3>鉴别诊断对对碰</h3></div>
+        <div class="table-wrap"><table class="comparison-table">
+          <thead><tr><th>维度</th><th>混合性抑郁和焦虑障碍</th><th>抑郁障碍</th><th>焦虑障碍</th><th>恶劣心境障碍</th></tr></thead>
+          <tbody>
+            <tr><td>核心症状</td><td>抑郁 + 焦虑同时存在，各自均不够诊断</td><td>以心境低落、兴趣/快感丧失为核心，达到发作标准</td><td>以害怕、恐惧、担心为核心，达到相应诊断</td><td>持续性轻度心境低落 ≥2 年</td></tr>
+            <tr><td>病程与起病</td><td>≥2 周的大部分时间同时存在</td><td>单次 ≥2 周；复发 ≥2 次</td><td>按相应焦虑障碍的病程要求</td><td>≥2 年，完全缓解一般 ≤2 个月</td></tr>
+            <tr><td>关键鉴别点</td><td>“都不够”是定义性前提；若一方够诊断则不用本类别</td><td>抑郁症状的数目、严重度与功能损害达到发作标准</td><td>焦虑症状达到相应诊断，且为主要临床相</td><td>时间更长、程度更轻、从未连续 2 周达到发作标准</td></tr>
+            <tr><td>辅助检查与排除</td><td>排除躯体疾病、物质所致；评估功能与自杀风险</td><td>甲状腺功能、头颅 MRI、EEG 等排除器质性病因</td><td>排除甲亢、心律失常等躯体原因</td><td>排除躯体/物质所致；纵向病程评估</td></tr>
+          </tbody>
+        </table></div>
+        <p class="table-note">一句话鉴别：先问“哪一组更重、持续更久、功能损害主要由谁造成”；够诊断就单独诊断，不够才考虑“混合”。</p>
+
+        <div class="card-grid">
+          <div class="card card-diagnosis"><div class="card-header"><span class="card-icon">⚖️</span><span class="card-title">最容易犯的错</span></div><div class="card-body">把“抑郁 + 焦虑”直接写成“混合性抑郁和焦虑障碍”，却不检查两组症状是否各自达到独立诊断。教材明确：<b>各自够诊断时，应同时给予两个诊断</b>，而不是使用本类别。</div></div>
+          <div class="card card-diagnosis"><div class="card-header"><span class="card-icon">🕰️</span><span class="card-title">与恶劣心境的时间差</span></div><div class="card-body">混合性抑郁和焦虑的时间门槛是<b>2 周及以上</b>；恶劣心境是<b>2 年及以上</b>。把“2 周”与“2 年”对调，是常见的选择题陷阱。</div></div>
+        </div>
+      </div>
+
+      <div class="module module-treat">
+        <div class="module-head"><span class="module-index">第六栏</span><h3>治疗方案工具箱</h3></div>
+        <div class="callout callout-warning"><div class="callout-icon">📌</div><div class="callout-body"><strong>教材未单列本类别的治疗方案。</strong>教材的治疗章节以“抑郁障碍”为总对象，未按混合性抑郁和焦虑障碍给出专门药物、剂量或疗程。可确定的是：应按本章五条治疗原则进行个体化评估与治疗，同时处理抑郁与焦虑两组症状，并定期量化评估疗效与安全性。</div></div>
+        <ul class="icon-list check">
+          <li><b>评估先行：</b>明确两组症状的主次、先后、严重度与功能损害，排除躯体疾病与物质所致。</li>
+          <li><b>药物治疗：</b>按抑郁障碍的一线药物原则选药，并结合焦虑、睡眠、激越等特征个体化；<b>剂量个体化，遵医嘱</b>。教材未给出本类别的专用剂量。</li>
+          <li><b>心理治疗：</b>支持性心理治疗几乎适用于所有患者；CBT 可用于识别与矫正负性认知、改善应对；焦虑相关内容可按教材心理治疗原则选择。</li>
+          <li><b>疗程：</b>教材未给出本类别的独立疗程；不可把抑郁障碍的“急 8～12 周、巩 4～9 月、维 2～3 年”机械套用，需由专科医师按病情决定。</li>
+        </ul>
+      </div>
+
+      <div class="module module-memory">
+        <div class="module-head"><span class="module-index">第七栏</span><h3>记忆工具箱</h3></div>
+        <div class="memory-grid">
+          <div class="memory-card"><div class="m-title">方法一：数字口诀 · “2 周、2 组、2 不够”<span class="m-type">口诀</span></div><div class="m-formula">≥2 周的大部分时间；抑郁 + 焦虑 2 组症状；分开看 2 组都不够诊断。</div><p><b>解释：</b>三个“2”分别对应时间、结构、门槛。最后再加一句“还要有痛苦和功能损害”，就把定义补齐了。</p></div>
+          <div class="memory-card"><div class="m-title">方法二：决策树法 · “谁够谁单飞”<span class="m-type">图解</span></div><div class="m-formula">抑郁够诊断 → 抑郁障碍；焦虑够诊断 → 焦虑障碍；两者都够 → 两个诊断；都不够 + 同时存在 → 混合性。</div><p><b>解释：</b>画一棵四叉树，先判断“够不够”，再判断“谁更重”。树状图能避免把“共病”误写成“混合”。</p></div>
+          <div class="memory-card"><div class="m-title">方法三：对比法 · “混合 vs 共病”<span class="m-type">对比</span></div><div class="m-formula">混合 = 都不够，合成一个类别；共病 = 都够，各自给诊断。</div><p><b>解释：</b>这是本类别最核心的概念对。记住“混合是降级打包，共病是分别成立”，就不会在选择题里被“同时诊断”干扰。</p></div>
+        </div>
+      </div>
+
+      <div class="module module-link">
+        <div class="module-head"><span class="module-index">第八栏</span><h3>知识联动</h3></div>
+        <div class="card-grid">
+          <div class="card card-cause"><div class="card-header"><span class="card-icon">😰</span><span class="card-title">与焦虑及恐惧相关障碍</span></div><div class="card-body">本类别是抑郁与焦虑的“交界地带”。学完本章后应对照焦虑障碍章节，掌握“害怕、恐惧、担心”的核心地位、自主神经功能失调与运动性不安，以及各自诊断门槛，才能正确执行三条分流规则。</div></div>
+          <div class="card card-cause"><div class="card-header"><span class="card-icon">🌧️</span><span class="card-title">与抑郁障碍</span></div><div class="card-body">教材指出焦虑常与抑郁共存，并成为抑郁障碍的主要症状之一；有时躯体症状可掩盖主观的焦虑抑郁体验。这提示临床要主动询问焦虑，而不是只看“情绪低”。</div></div>
+          <div class="card card-cause"><div class="card-header"><span class="card-icon">📊</span><span class="card-title">与评估工具</span></div><div class="card-body">本章量表以抑郁评估为主（HAMD、MADRS、BDI、SDS、PHQ-9）。混合性抑郁和焦虑的评估还需同时覆盖焦虑症状与功能损害；教材未列出专门量表，临床按需补充。</div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 08 核心要点 ================= -->
+    <section id="summary" class="section">
+      <div class="section-header"><span class="section-number">08</span><h2>核心要点速览</h2></div>
+      <p class="lead">考前 10 分钟只看这一页：18 条，覆盖定义、症状、诊断、鉴别、治疗与预后。</p>
+      <ol class="numbered-list">
+        <li><b>定义：</b>抑郁障碍是由多种原因引起、以显著而持久的抑郁症状群为主要临床特征的一类心境障碍；核心是<b>与处境不相称的心境低落和兴趣丧失</b>。</li>
+        <li><b>四类：</b>ICD-11 下包括单次发作抑郁障碍、复发性抑郁障碍、恶劣心境障碍、混合性抑郁和焦虑障碍。</li>
+        <li><b>流行病学：</b>全球超过 2.8 亿人（3.8%）；成年人 5.0%（女 6.0%、男 4.0%）；我国年患病率 3.59%、终生 6.8%、患者逾 9000 万。</li>
+        <li><b>疾病负担：</b>DALYs 占精神障碍 37.3%，是 YLD 的第二大负担；我国识别率 21%、治疗率 9.5%、充分治疗率 0.5%。</li>
+        <li><b>自杀：</b>约 50% 自杀者可能符合抑郁障碍；风险为一般人群 19.7 倍；我国逾 1/2 患者有自杀观念、逾 1/5 曾尝试；警惕扩大性自杀。</li>
+        <li><b>病因：</b>生物—心理—社会共同作用；一级亲属风险 2～10 倍、遗传度 30%～50%；单胺假说、HPA 轴亢进、海马萎缩、右额叶 EEG 异常、早年创伤与负性图式。</li>
+        <li><b>核心症状：</b>心境低落、兴趣减退、快感缺失；“三低”是记忆框架，不是诊断标准，三者不要求全部齐备。</li>
+        <li><b>心理症状群：</b>思维迟缓、认知功能损害、负性认知模式、自责自罪、自杀观念和行为、精神运动性迟滞或激越、焦虑、精神病性症状、自知力改变（共 9 项）。</li>
+        <li><b>躯体症状群：</b>睡眠障碍、自主神经功能紊乱、进食紊乱、精力下降、性功能障碍（共 5 项）；<b>入睡困难最多见，早醒最具特征性</b>（比平时早 2～3 小时）。</li>
+        <li><b>非典型：</b>睡眠过多、食欲亢进、体重增加——与典型方向相反。</li>
+        <li><b>节律：</b>晨重暮轻（教材鉴别处写作晨重夜轻）是“伴忧郁特征”的线索；PTSD 通常无此节律。</li>
+        <li><b>诊断底线：</b>单次发作 ≥2 周；复发 ≥2 次且间歇期至少数月无显著心境紊乱；有精神病性症状者严重程度至少中度；无躁狂/混合/轻躁狂史。</li>
+        <li><b>ICD-10 回顾：</b>3 条核心症状 + 7 条附加症状；教材未给出按症状数划分轻中重的具体组合，不要自行补数字。</li>
+        <li><b>评估：</b>HAMD（17/21/24 项，24 项七因子）、MADRS、BDI、SDS、PHQ-9；response = HAMD-17 或 MADRS 减分率 ≥50%；remission = 症状消失 >2 周且 HAMD-17≤7 或 MADRS≤10。</li>
+        <li><b>复燃 vs 复发：</b>缓解后 6 个月内再发为复燃（relapse）；完全消失 6 个月以上再发为复发（recurrence）。</li>
+        <li><b>鉴别：</b>双相（有无高峰史 + 七条红旗）、精神分裂症（原发症状/协调性/病程）、焦虑（怕 vs 低落）、PTSD（创伤闯入 + 无晨重夜轻）、躯体疾病（四种因果关系）。</li>
+        <li><b>治疗：</b>全病程——急性期 8～12 周控症状、巩固期 4～9 个月防复燃、维持期至少 2～3 年防复发；新型抗抑郁药一线，TCAs 二线，MAOI 三线；心理治疗 + MECT/rTMS 等物理治疗。</li>
+        <li><b>预后：</b>约 15% 无法达到临床治愈；首发缓解后约半数不再复发；≥3 次发作或未维持治疗者复发风险 >90%；20%～35% 有残留症状或功能受损。</li>
+      </ol>
+
+      <div class="callout callout-success"><div class="callout-icon">🎯</div><div class="callout-body"><strong>一句话总括</strong>抑郁障碍 = “<b>三低三群、两周起步、无高峰史、全病程治、防自杀</b>”。把这句话拆开，就是本章的全部考点。</div></div>
+    </section>
+
+    <!-- ================= 09 易混易错 ================= -->
+    <section id="pitfalls" class="section">
+      <div class="section-header"><span class="section-number">09</span><h2>易混易错警示</h2></div>
+      <div class="exam-alert">
+        <h3>⚠️ 高频踩坑清单</h3>
+        <ul>
+          <li><b>把抑郁当成“想不开”。</b>教材明确：公众认为心理问题是主要原因，<b>这其实是对本疾病的误解</b>；抑郁障碍有生物、心理、社会多因素基础。</li>
+          <li><b>把“三低”当诊断标准。</b>“三低”只是记忆框架；教材的症状学是 3 核心 + 9 心理 + 5 躯体，诊断则按 ICD-11 的严重程度、精神病性症状、发作阶段三维度。</li>
+          <li><b>把“入睡困难最多见”与“早醒最具特征性”对调。</b>前者是频率最高，后者是诊断特征最强；早醒指比平时早 2～3 小时且醒后不能再睡。</li>
+          <li><b>认为抑郁一定“少吃、变瘦、早醒”。</b>教材明确非典型抑郁可睡眠过多、食欲亢进、体重增加。</li>
+          <li><b>把“晨重暮轻”与“昼重夜轻”当成两个病。</b>教材两处用词不同，指的是同类节律现象；PTSD 通常<b>没有</b>这种节律。</li>
+          <li><b>轻度抑郁却写出幻觉妄想。</b>教材规定：出现精神病性症状，严重程度<b>至少是中度</b>；轻度发作“没有幻觉或妄想”。</li>
+          <li><b>漏问躁狂/轻躁狂史。</b>双相的红旗包括 25 岁或更早起病、双相家族史、精神病性症状、发作突然且 ≥5 次、心境不稳定、易激惹/激越、睡眠和体重增加；一次问完不等于终身排除。</li>
+          <li><b>把“2 周、2 年、2 个月”用错。</b>抑郁发作 ≥2 周；恶劣心境 ≥2 年、完全缓解一般 ≤2 个月；混合性抑郁和焦虑 ≥2 周的大部分时间。</li>
+          <li><b>把“混合”当“共病”。</b>抑郁与焦虑<b>各自都够诊断</b>时，应同时给两个诊断，不能用“混合性抑郁和焦虑障碍”打包。</li>
+          <li><b>自行给抗抑郁药补剂量、补起效时间。</b>教材只给了阿戈美拉汀 25～50 mg/d 与伏硫西汀 10 mg/d；其余写“剂量个体化，遵医嘱”。教材也未提供具体起效时间与换药流程。</li>
+          <li><b>把 5-HT 综合征、戒断综合征、复燃混为一谈。</b>5-HT 综合征有自主神经紊乱 + 神经肌肉异常（震颤、腱反射亢进、肌张力增高），需立即停药并内科急救；戒断综合征约见于 20% 停药/减量者，可被误认为复燃。</li>
+          <li><b>把 MECT 当“最后手段”。</b>教材明确 MECT 对伴自杀观念者疗效较好，可在较短时间内快速控制自杀意念；一般 8～12 次，建议与抗抑郁药联合。</li>
+        </ul>
+      </div>
+
+      <div class="callout callout-danger"><div class="callout-icon">🚨</div><div class="callout-body"><strong>两条安全红线</strong>①对任何抑郁障碍患者，都要主动询问自杀观念、计划、既往企图与扩大性自杀念头；②对 24 岁及以下患者，治疗初期尤需监测自杀风险（教材所述 FDA 黑框警告）。</div></div>
+    </section>
+
+    <!-- ================= 10 章节自测 ================= -->
+    <section id="quiz" class="section">
+      <div class="section-header"><span class="section-number">10</span><h2>章节自测</h2></div>
+      <p class="lead">共 15 题：单选 4、多选 3、判断 3、名词解释 2、简答 2、案例 1。答案默认折叠，先做后看。</p>
+
+      <div class="quiz-block">
+        <div class="quiz-item">
+          <div class="quiz-stem"><span class="q-type">单选</span><span>1. 抑郁障碍睡眠障碍中，<b>最具特征性</b>的表现是？</span><span class="difficulty">⭐⭐</span></div>
+          <ul class="quiz-options">
+            <li data-letter="A">入睡困难，睡眠潜伏期超过 30 分钟</li>
+            <li data-letter="B" class="correct">早醒，比平时早醒 2～3 小时且醒后无法再入睡</li>
+            <li data-letter="C">睡眠轻浅、多梦</li>
+            <li data-letter="D">睡眠过多</li>
+          </ul>
+          <details class="qa"><summary><span class="qa-num">答</span>答案与解析</summary><div class="qa-body"><span class="answer-key">答案 B</span>教材明确：入睡困难<b>最多见</b>，而末段失眠（早醒）<b>最具有特征性</b>，一般比平时早醒 2～3 小时，醒后无法再次入睡。A 是频率最高，不是特征性最强；C 属中段失眠；D 可见于非典型抑郁，不是特征性表现。</div></details>
+        </div>
+
+        <div class="quiz-item">
+          <div class="quiz-stem"><span class="q-type">单选</span><span>2. 按照教材 ICD-11 的规则，抑郁发作一旦出现精神病性症状，其严重程度至少为？</span><span class="difficulty">⭐⭐⭐</span></div>
+          <ul class="quiz-options">
+            <li data-letter="A">轻度</li>
+            <li data-letter="B" class="correct">中度</li>
+            <li data-letter="C">重度</li>
+            <li data-letter="D">无法判断，需另立诊断</li>
+          </ul>
+          <details class="qa"><summary><span class="qa-num">答</span>答案与解析</summary><div class="qa-body"><span class="answer-key">答案 B</span>教材原文：“如果出现了精神病性症状，那么抑郁障碍的严重程度至少是中度发作。”轻度发作明确“没有幻觉或妄想”，故 A 错；重度是“较多或大多数症状突出、功能严重受限”，并非出现精神病性症状就必须判重度，故 C 错；D 与教材规则相反。</div></details>
+        </div>
+
+        <div class="quiz-item">
+          <div class="quiz-stem"><span class="q-type">单选</span><span>3. 下列哪一项是教材列出的、提示抑郁发作可能实为<b>双相障碍</b>的线索？</span><span class="difficulty">⭐⭐⭐</span></div>
+          <ul class="quiz-options">
+            <li data-letter="A" class="correct">首次发病年龄 25 岁或更早</li>
+            <li data-letter="B">早醒</li>
+            <li data-letter="C">食欲减退伴体重下降</li>
+            <li data-letter="D">自责自罪</li>
+          </ul>
+          <details class="qa"><summary><span class="qa-num">答</span>答案与解析</summary><div class="qa-body"><span class="answer-key">答案 A</span>教材列出的双相可疑线索包括：首次发病年龄早（<b>25 岁或更早</b>起病）、双相障碍家族史、伴精神病性症状、抑郁发作突然且发作次数在 5 次以上、心境不稳定、易激惹或激越、睡眠和体重增加。B、C、D 都是抑郁发作本身的常见表现，不能单独提示双相。</div></details>
+        </div>
+
+        <div class="quiz-item">
+          <div class="quiz-stem"><span class="q-type">单选</span><span>4. 抑郁障碍全病程治疗中，<b>巩固期</b>的时长与主要目标是？</span><span class="difficulty">⭐⭐</span></div>
+          <ul class="quiz-options">
+            <li data-letter="A">8～12 周，控制症状</li>
+            <li data-letter="B" class="correct">4～9 个月，防止病情复燃</li>
+            <li data-letter="C">至少 2～3 年，防止复发</li>
+            <li data-letter="D">6 个月，处理残留症状</li>
+          </ul>
+          <details class="qa"><summary><span class="qa-num">答</span>答案与解析</summary><div class="qa-body"><span class="answer-key">答案 B</span>教材：急性期 8～12 周以控制症状为主；巩固期 4～9 个月以防止复燃为主，应保持与急性期一致的治疗方案；维持期一般至少 2～3 年以降低复燃/复发率。D 的“6 个月”是复燃与复发的分界，不是巩固期时长。</div></details>
+        </div>
+
+        <div class="quiz-item">
+          <div class="quiz-stem"><span class="q-type">多选</span><span>5. 下列属于抑郁障碍<b>核心症状</b>的有？</span><span class="difficulty">⭐⭐</span></div>
+          <ul class="quiz-options">
+            <li data-letter="A" class="correct">心境低落</li>
+            <li data-letter="B" class="correct">兴趣减退</li>
+            <li data-letter="C" class="correct">快感缺失</li>
+            <li data-letter="D">思维迟缓</li>
+            <li data-letter="E">早醒</li>
+          </ul>
+          <details class="qa"><summary><span class="qa-num">答</span>答案与解析</summary><div class="qa-body"><span class="answer-key">答案 A、B、C</span>教材第三节把核心症状列为心境低落、兴趣减退、快感缺失三项。D 思维迟缓属心理症状群；E 早醒属躯体症状群（睡眠障碍）。</div></details>
+        </div>
+
+        <div class="quiz-item">
+          <div class="quiz-stem"><span class="q-type">多选</span><span>6. 按照教材，下列哪些属于双相障碍的“红旗”线索？</span><span class="difficulty">⭐⭐⭐</span></div>
+          <ul class="quiz-options">
+            <li data-letter="A" class="correct">双相障碍家族史</li>
+            <li data-letter="B" class="correct">抑郁发作突然且发作次数在 5 次以上</li>
+            <li data-letter="C" class="correct">心境不稳定、易激惹或激越</li>
+            <li data-letter="D" class="correct">睡眠和体重增加</li>
+            <li data-letter="E">早醒</li>
+          </ul>
+          <details class="qa"><summary><span class="qa-num">答</span>答案与解析</summary><div class="qa-body"><span class="answer-key">答案 A、B、C、D</span>教材在双相鉴别处列出：首次发病年龄早（25 岁或更早）、双相家族史、伴精神病性症状、抑郁发作突然且发作次数 5 次以上、心境不稳定、易激惹或激越、睡眠和体重增加。E 早醒是抑郁的典型躯体症状，不是双相红旗。</div></details>
+        </div>
+
+        <div class="quiz-item">
+          <div class="quiz-stem"><span class="q-type">多选</span><span>7. 5-HT 综合征（serotonin syndrome）可出现下列哪些表现？</span><span class="difficulty">⭐⭐⭐</span></div>
+          <ul class="quiz-options">
+            <li data-letter="A" class="correct">震颤、腱反射亢进、肌张力增高</li>
+            <li data-letter="B" class="correct">恶心、呕吐、腹痛、颜面潮红、多汗</li>
+            <li data-letter="C" class="correct">心动过速、激越</li>
+            <li data-letter="D" class="correct">高热、呼吸困难、抽搐，严重可危及生命</li>
+            <li data-letter="E">早醒</li>
+          </ul>
+          <details class="qa"><summary><span class="qa-num">答</span>答案与解析</summary><div class="qa-body"><span class="answer-key">答案 A、B、C、D</span>教材描述 5-HT 综合征为自主神经功能紊乱 + 神经肌肉活动异常，严重时意识障碍甚至危及生命；可有恶心呕吐腹痛、颜面潮红、多汗、心动过速、激越、震颤、腱反射亢进、肌张力增高，进展可出现高热、呼吸困难、抽搐、横纹肌溶解、肾衰竭、休克和死亡。E 早醒是抑郁症状，与本综合征无关。</div></details>
+        </div>
+
+        <div class="quiz-item">
+          <div class="quiz-stem"><span class="q-type">判断</span><span>8. 抑郁障碍患者出现精神病性症状时，其严重程度仍可属于轻度发作。</span><span class="difficulty">⭐⭐</span></div>
+          <ul class="quiz-options">
+            <li data-letter="正确">正确</li>
+            <li data-letter="错误" class="correct">错误</li>
+          </ul>
+          <details class="qa"><summary><span class="qa-num">答</span>答案与解析</summary><div class="qa-body"><span class="answer-key">答案 错误</span>教材规定：出现精神病性症状，严重程度至少是中度发作；轻度发作“没有幻觉或妄想”。因此“轻度 + 精神病性症状”的组合不成立。</div></details>
+        </div>
+
+        <div class="quiz-item">
+          <div class="quiz-stem"><span class="q-type">判断</span><span>9. 入睡困难是抑郁障碍最常见的睡眠障碍形式，而早醒最具特征性。</span><span class="difficulty">⭐⭐</span></div>
+          <ul class="quiz-options">
+            <li data-letter="正确" class="correct">正确</li>
+            <li data-letter="错误">错误</li>
+          </ul>
+          <details class="qa"><summary><span class="qa-num">答</span>答案与解析</summary><div class="qa-body"><span class="answer-key">答案 正确</span>教材原文：入睡困难最为多见，一般睡眠潜伏期超过 30 分钟；而以末段失眠（早醒）最具有特征性，一般比平时早醒 2～3 小时，醒后无法再次入睡。两者“频率”与“特征性”不同，不能对调。</div></details>
+        </div>
+
+        <div class="quiz-item">
+          <div class="quiz-stem"><span class="q-type">判断</span><span>10. 恶劣心境障碍从不出现躁狂或轻躁狂发作，病程常持续 2 年以上。</span><span class="difficulty">⭐⭐</span></div>
+          <ul class="quiz-options">
+            <li data-letter="正确" class="correct">正确</li>
+            <li data-letter="错误">错误</li>
+          </ul>
+          <details class="qa"><summary><span class="qa-num">答</span>答案与解析</summary><div class="qa-body"><span class="answer-key">答案 正确</span>教材明确：恶劣心境障碍是一种以持久的心境低落状态为主的轻度抑郁，<b>从不出现躁狂或轻躁狂发作</b>；病程常持续 2 年以上，其间无长时间完全缓解，一般不超过 2 个月。</div></details>
+        </div>
+
+        <div class="quiz-item">
+          <div class="quiz-stem"><span class="q-type">名词解释</span><span>11. 临床治愈（remission）</span><span class="difficulty">⭐⭐</span></div>
+          <details class="qa"><summary><span class="qa-num">答</span>答案与解析</summary><div class="qa-body"><span class="answer-key">答题要点</span>指抑郁症状<b>完全消失时间 >2 周</b>，HAMD-17 <b>≤7 分</b>或 MADRS <b>≤10 分</b>，并且<b>社会功能恢复良好</b>。若完全缓解时间超过 <b>6 个月</b>，则认为达到临床痊愈（recovery）。注意与“临床治疗有效（response）”区分：后者指 HAMD-17 或 MADRS 减分率至少达 50%。</div></details>
+        </div>
+
+        <div class="quiz-item">
+          <div class="quiz-stem"><span class="q-type">名词解释</span><span>12. 扩大性自杀</span><span class="difficulty">⭐⭐⭐</span></div>
+          <details class="qa"><summary><span class="qa-num">答</span>答案与解析</summary><div class="qa-body"><span class="answer-key">答题要点</span>部分抑郁障碍患者认为自己的亲人活着也非常痛苦，<b>帮助亲人死亡是对他们的解脱</b>，于是选择<b>杀死亲人后再自杀</b>，导致极其严重的不良后果。它是抑郁障碍自杀风险评估中必须主动询问的高危情形。</div></details>
+        </div>
+
+        <div class="quiz-item">
+          <div class="quiz-stem"><span class="q-type">简答</span><span>13. 简述抑郁障碍与双相障碍的鉴别要点（包括教材列出的双相可疑线索）。</span><span class="difficulty">⭐⭐⭐</span></div>
+          <details class="qa"><summary><span class="qa-num">答</span>答案与解析</summary><div class="qa-body"><span class="answer-key">答题要点</span>①<b>发作史</b>：双相必须在抑郁发作基础上存在一次及以上符合躁狂/轻躁狂的发作史；抑郁障碍则无躁狂、混合或轻躁狂发作史。②<b>疾病特征</b>：抑郁障碍是情感、认知、意志行为的<b>全面抑制</b>；双相的特征是情感的<b>不稳定性和转换性</b>。③<b>可疑线索</b>：首次发病年龄早（25 岁或更早）、双相障碍家族史、伴精神病性症状、抑郁发作突然且发作次数在 5 次以上、心境不稳定、易激惹或激越、睡眠和体重增加。④对不能提供明确躁狂史者，应<b>高度关注并定期随访评估</b>，及时修正诊断。</div></details>
+        </div>
+
+        <div class="quiz-item">
+          <div class="quiz-stem"><span class="q-type">简答</span><span>14. 简述抑郁障碍全病程治疗的三个阶段、时长与主要目标。</span><span class="difficulty">⭐⭐⭐</span></div>
+          <details class="qa"><summary><span class="qa-num">答</span>答案与解析</summary><div class="qa-body"><span class="answer-key">答题要点</span>①<b>急性期 8～12 周</b>：以控制症状为主，尽量达到临床痊愈，促进社会功能恢复、提高生活质量；此期治疗对预后和结局起关键作用。②<b>巩固期 4～9 个月</b>：以防止病情复燃为主；此期病情不稳定、易复燃，应保持与急性期一致的治疗方案，维持原药物种类、剂量和服用方法。③<b>维持期至少 2～3 年</b>：持续规范维持可降低复燃/复发率；多次反复发作或残留症状明显者建议长期维持；病情稳定且无诱发因素可缓慢减药至停，发现复发早期征象应迅速恢复治疗。</div></details>
+        </div>
+
+        <div class="quiz-item">
+          <div class="quiz-stem"><span class="q-type">案例</span><span>15. 综合题（教学演练，非教材原文）：35 岁女性，近一段时间持续情绪低落、高兴不起来，对以前喜欢的活动失去兴趣，做事提不起精神；入睡困难并早醒，食欲下降，自觉“脑子反应慢、做决定很困难”，反复自责，认为自己是家庭的负担，曾对家人说“活着没意思”。既往没有持续数天精力特别旺盛、话明显增多、睡眠需求明显减少的时期。无明确躯体疾病史。<br>请回答：①最可能的诊断及依据；②需要与哪些疾病鉴别；③治疗原则与安全注意。</span><span class="difficulty">⭐⭐⭐</span></div>
+          <details class="qa"><summary><span class="qa-num">析</span>答案与诊断思路</summary><div class="qa-body"><span class="answer-key">答题要点</span><b>①诊断：</b>最可能为<b>抑郁障碍</b>（单次发作；具体严重程度需按症状强度与功能损害判定）。依据：存在核心症状（心境低落、兴趣减退、快感缺失）、心理症状（思维迟缓/决断困难、自责、自杀观念）、躯体症状（入睡困难、早醒、食欲下降）；病程达到教材所述抑郁发作的时间要求；<b>无躁狂/轻躁狂史</b>。若功能严重受限或出现幻觉妄想，则严重程度相应上调，出现精神病性症状至少为中度。<br><b>②鉴别：</b>双相障碍（追问高涨史、家族史、起病年龄、发作次数等红旗）；精神分裂症（本案例无幻觉妄想，但仍需评估原发症状、协调性与病程）；焦虑障碍（本案例以情感低落为主，焦虑症状需按主次与先后判断）；PTSD（询问有无严重创伤及闯入性记忆、回避，且本例以早醒为特征，更支持抑郁）；躯体疾病所致（结合病史、躯体与神经系统检查、甲状腺功能与头颅影像等排除）。<br><b>③治疗与安全：</b>按全病程治疗原则（急性期 8～12 周、巩固期 4～9 个月、维持期至少 2～3 年）；首选新型抗抑郁药，剂量个体化、遵医嘱，可联合支持性心理治疗/CBT；<b>立即评估自杀风险</b>（观念、计划、既往企图、扩大性自杀），加强随访与家属合作；若自杀风险高，可考虑 MECT 快速控制自杀意念（一般 8～12 次，建议与抗抑郁药联合）。</div></details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 11 闪卡 ================= -->
+    <section id="flashcards" class="section">
+      <div class="section-header"><span class="section-number">11</span><h2>考点速记卡</h2></div>
+      <p class="lead">20 张翻转卡，覆盖概念、诊断、治疗与数据。先正面回忆，再点击翻转核对。</p>
+
+      <div class="flashcard-grid">
+        <div class="flashcard"><div class="flashcard-inner">
+          <div class="flashcard-face flashcard-front"><span class="card-tag concept">概念</span><p>抑郁障碍的定义是什么？</p><span class="flip-hint">点击翻转</span></div>
+          <div class="flashcard-face flashcard-back"><p>由多种原因引起的、以<b>显著和持久的抑郁症状群</b>为主要临床特征的一类心境障碍；核心是<b>与处境不相称的心境低落和兴趣丧失</b>。</p></div>
+        </div></div>
+
+        <div class="flashcard"><div class="flashcard-inner">
+          <div class="flashcard-face flashcard-front"><span class="card-tag concept">概念</span><p>抑郁障碍的 3 条核心症状？</p><span class="flip-hint">点击翻转</span></div>
+          <div class="flashcard-face flashcard-back"><p><b>心境低落、兴趣减退、快感缺失</b>。三者相互联系、互为因果，不要求全部齐备。</p></div>
+        </div></div>
+
+        <div class="flashcard"><div class="flashcard-inner">
+          <div class="flashcard-face flashcard-front"><span class="card-tag memory">记忆</span><p>“三低三自三群”分别指什么？</p><span class="flip-hint">点击翻转</span></div>
+          <div class="flashcard-face flashcard-back"><p>三低 = 情绪低、兴趣低、快感低；三自 = 自责、自罪、自杀；三群 = 核心症状、心理症状群、躯体症状群。</p></div>
+        </div></div>
+
+        <div class="flashcard"><div class="flashcard-inner">
+          <div class="flashcard-face flashcard-front"><span class="card-tag concept">概念</span><p>快感缺失的典型描述？</p><span class="flip-hint">点击翻转</span></div>
+          <div class="flashcard-face flashcard-back"><p>体验快乐的能力下降，不能从日常活动中体验到乐趣；即使做以前喜欢的事也体会不到快感。部分患者表面仍有兴趣，但参加活动只是为摆脱悲观或消磨时间，甚至觉得是负担。</p></div>
+        </div></div>
+
+        <div class="flashcard"><div class="flashcard-inner">
+          <div class="flashcard-face flashcard-front"><span class="card-tag diagnosis">诊断</span><p>单次发作抑郁障碍的病程门槛？</p><span class="flip-hint">点击翻转</span></div>
+          <div class="flashcard-face flashcard-back"><p><b>1 次持续时间至少 2 周</b>的抑郁发作，且既往无抑郁发作史。</p></div>
+        </div></div>
+
+        <div class="flashcard"><div class="flashcard-inner">
+          <div class="flashcard-face flashcard-front"><span class="card-tag diagnosis">诊断</span><p>复发性抑郁障碍的定义？</p><span class="flip-hint">点击翻转</span></div>
+          <div class="flashcard-face flashcard-back"><p><b>2 次以上</b>抑郁发作，且 2 次发作间隔的<b>至少数个月内没有显著的心境紊乱</b>。</p></div>
+        </div></div>
+
+        <div class="flashcard"><div class="flashcard-inner">
+          <div class="flashcard-face flashcard-front"><span class="card-tag diagnosis">诊断</span><p>出现精神病性症状时，严重程度如何定？</p><span class="flip-hint">点击翻转</span></div>
+          <div class="flashcard-face flashcard-back"><p>抑郁障碍的严重程度<b>至少是中度发作</b>；妄想多涉及自罪、贫穷或灾难迫在眉睫，幻觉多为诋毁/指责性幻听或污物腐肉气味的幻嗅。</p></div>
+        </div></div>
+
+        <div class="flashcard"><div class="flashcard-inner">
+          <div class="flashcard-face flashcard-front"><span class="card-tag diagnosis">诊断</span><p>“伴忧郁特征”包括哪些？</p><span class="flip-hint">点击翻转</span></div>
+          <div class="flashcard-face flashcard-back"><p>兴趣缺乏、缺少情绪反应性、<b>早醒</b>、<b>晨重暮轻</b>、精神运动性激越或迟滞、食欲不佳和体重下降。</p></div>
+        </div></div>
+
+        <div class="flashcard"><div class="flashcard-inner">
+          <div class="flashcard-face flashcard-front"><span class="card-tag diagnosis">诊断</span><p>抑郁最特征性的睡眠障碍？</p><span class="flip-hint">点击翻转</span></div>
+          <div class="flashcard-face flashcard-back"><p><b>早醒（末段失眠）</b>：一般比平时早醒 <b>2～3 小时</b>，醒后无法再次入睡。入睡困难最多见（潜伏期 >30 分钟），但早醒最具特征性。</p></div>
+        </div></div>
+
+        <div class="flashcard"><div class="flashcard-inner">
+          <div class="flashcard-face flashcard-front"><span class="card-tag diagnosis">诊断</span><p>HAMD-17 的“有效”与“治愈”标准？</p><span class="flip-hint">点击翻转</span></div>
+          <div class="flashcard-face flashcard-back"><p><b>有效（response）</b>：HAMD-17 或 MADRS 减分率 ≥50%。<b>临床治愈（remission）</b>：症状完全消失 >2 周，HAMD-17 ≤7 或 MADRS ≤10，社会功能恢复良好。</p></div>
+        </div></div>
+
+        <div class="flashcard"><div class="flashcard-inner">
+          <div class="flashcard-face flashcard-front"><span class="card-tag diagnosis">诊断</span><p>复燃与复发如何区分？</p><span class="flip-hint">点击翻转</span></div>
+          <div class="flashcard-face flashcard-back"><p>症状缓解后<b>6 个月内</b>再发 = 复燃（relapse）；症状完全消失<b>6 个月以上</b>再发 = 复发（recurrence）。</p></div>
+        </div></div>
+
+        <div class="flashcard"><div class="flashcard-inner">
+          <div class="flashcard-face flashcard-front"><span class="card-tag diagnosis">诊断</span><p>恶劣心境障碍的“三个 2”？</p><span class="flip-hint">点击翻转</span></div>
+          <div class="flashcard-face flashcard-back"><p>病程 <b>≥2 年</b>；完全缓解一般 <b>≤2 个月</b>；疾病前 2 年<b>从未有连续 2 周</b>达到抑郁发作标准。</p></div>
+        </div></div>
+
+        <div class="flashcard"><div class="flashcard-inner">
+          <div class="flashcard-face flashcard-front"><span class="card-tag diagnosis">诊断</span><p>混合性抑郁和焦虑障碍的核心规则？</p><span class="flip-hint">点击翻转</span></div>
+          <div class="flashcard-face flashcard-back"><p>抑郁与焦虑同时存在 <b>≥2 周的大部分时间</b>；分开看两组都<b>不足以独立诊断</b>；若任一方够诊断，则不用本类别；两者都够，则同时给两个诊断。</p></div>
+        </div></div>
+
+        <div class="flashcard"><div class="flashcard-inner">
+          <div class="flashcard-face flashcard-front"><span class="card-tag diagnosis">诊断</span><p>双相障碍的“红旗”线索？</p><span class="flip-hint">点击翻转</span></div>
+          <div class="flashcard-face flashcard-back"><p>25 岁或更早起病、双相家族史、伴精神病性症状、抑郁发作突然且发作次数 ≥5 次、心境不稳定、易激惹或激越、睡眠和体重增加。</p></div>
+        </div></div>
+
+        <div class="flashcard"><div class="flashcard-inner">
+          <div class="flashcard-face flashcard-front"><span class="card-tag diagnosis">诊断</span><p>抑郁 vs 精神分裂症的三项鉴别？</p><span class="flip-hint">点击翻转</span></div>
+          <div class="flashcard-face flashcard-back"><p><b>原发症状</b>：抑郁以心境低落为原发、精神病性症状继发；精分以思维障碍和情感淡漠为原发、抑郁继发。<b>协调性</b>：抑郁尚协调，精分缺乏。<b>病程</b>：抑郁间歇性、间歇期基本正常；精分进展性、缓解期常残留症状。</p></div>
+        </div></div>
+
+        <div class="flashcard"><div class="flashcard-inner">
+          <div class="flashcard-face flashcard-front"><span class="card-tag treatment">治疗</span><p>全病程治疗的三个阶段与时长？</p><span class="flip-hint">点击翻转</span></div>
+          <div class="flashcard-face flashcard-back"><p><b>急性期 8～12 周</b>（控制症状）→ <b>巩固期 4～9 个月</b>（防复燃，原方案不变）→ <b>维持期至少 2～3 年</b>（防复发；多次发作/残留症状明显者长期维持）。</p></div>
+        </div></div>
+
+        <div class="flashcard"><div class="flashcard-inner">
+          <div class="flashcard-face flashcard-front"><span class="card-tag treatment">治疗</span><p>SSRIs 的六个代表药物？</p><span class="flip-hint">点击翻转</span></div>
+          <div class="flashcard-face flashcard-back"><p>氟西汀、帕罗西汀、舍曲林、氟伏沙明、西酞普兰、艾司西酞普兰。临床最常用，不良反应小于 TCAs，6 种整体疗效无显著差异；禁与 MAOIs、氯米帕明、色氨酸等联用。</p></div>
+        </div></div>
+
+        <div class="flashcard"><div class="flashcard-inner">
+          <div class="flashcard-face flashcard-front"><span class="card-tag treatment">治疗</span><p>米氮平与曲唑酮各适合谁？</p><span class="flip-hint">点击翻转</span></div>
+          <div class="flashcard-face flashcard-back"><p><b>米氮平</b>：对食欲减退和睡眠紊乱改善明显、较少性功能障碍，适合伴失眠和体重较轻者；注意镇静、体重增加、罕见粒细胞减少。<b>曲唑酮</b>：镇静较好，适合伴激越或睡眠障碍者；注意阴茎异常勃起，室性心律失常/严重低血压禁用。</p></div>
+        </div></div>
+
+        <div class="flashcard"><div class="flashcard-inner">
+          <div class="flashcard-face flashcard-front"><span class="card-tag treatment">治疗</span><p>MECT 的疗程与最关键适应证？</p><span class="flip-hint">点击翻转</span></div>
+          <div class="flashcard-face flashcard-back"><p>一般 <b>8～12 次</b>；可有效缓解重性抑郁，<b>对伴自杀观念者疗效较好，可在较短时间内快速控制自杀意念</b>；近期疗效明确但维持时间短，建议与抗抑郁药联合。</p></div>
+        </div></div>
+
+        <div class="flashcard"><div class="flashcard-inner">
+          <div class="flashcard-face flashcard-front"><span class="card-tag treatment">治疗</span><p>5-HT 综合征的识别与处理？</p><span class="flip-hint">点击翻转</span></div>
+          <div class="flashcard-face flashcard-back"><p>自主神经功能紊乱 + 神经肌肉异常：恶心呕吐、颜面潮红、多汗、心动过速、激越、震颤、腱反射亢进、肌张力增高；严重可高热、抽搐、肾衰竭、休克。处理：<b>早期发现、及时确诊、立即停药、内科紧急处理</b>。</p></div>
+        </div></div>
+      </div>
+    </section>
+
+    <!-- ================= 12 病例挑战 ================= -->
+    <section id="cases" class="section">
+      <div class="section-header"><span class="section-number">12</span><h2>病例挑战</h2></div>
+      <p class="lead">3 个病例，难度递进：典型抑郁 → 双相陷阱 → 老年/躯体共病。病例 1 由教材举例改编；病例 2、3 为教学演练，非教材原文，仅使用教材描述过的症状。</p>
+
+      <div class="case-card">
+        <div class="case-meta"><span>病例 1</span><span>难度 ⭐⭐</span><span>教材举例改编</span></div>
+        <div class="case-title">“对篮球一点兴趣都没有了”</div>
+        <div class="case-body"><p>30 岁男性，平素喜欢打篮球。近来一段时间，他逐渐对篮球失去兴趣，朋友约球也提不起精神；勉强去打，也体会不到以前的愉快。整日愁眉苦脸、长吁短叹，觉得“高兴不起来”；自觉脑子反应慢，做决定犹豫不决；常因过去一件微不足道的不诚实行为自责，认为自己是家庭的负担。睡眠变浅，早上比平时醒得早，醒后难以再睡；胃口变差。</p></div>
+        <ol class="case-questions">
+          <li>本病例最突出的核心症状有哪些？</li>
+          <li>还需重点询问哪些内容以完成诊断与风险评估？</li>
+          <li>如果评估为抑郁障碍，治疗应遵循什么框架？</li>
+        </ol>
+        <details class="qa"><summary><span class="qa-num">析</span>答案与诊断思路</summary><div class="qa-body"><span class="answer-key">诊断思路</span><b>①核心症状：</b>心境低落（高兴不起来、愁眉苦脸）、兴趣减退（对篮球失去兴趣）、快感缺失（勉强打球也体验不到愉快）。同时存在心理症状（思维迟缓/决断困难、自责自罪）与躯体症状（早醒、食欲下降）。<br><b>②需补充询问：</b>症状持续时间与功能损害；<b>自杀观念、计划、既往企图、扩大性自杀</b>；既往有无躁狂/轻躁狂/混合发作（高涨、话多、精力旺盛、睡眠需求减少）；精神病性症状；躯体疾病史与用药史；家族史。按教材评估要求，结合躯体/神经系统检查及甲状腺功能、头颅影像、EEG 等排除器质性病因。<br><b>③治疗框架：</b>全病程治疗（急性期 8～12 周、巩固期 4～9 个月、维持期至少 2～3 年）；新型抗抑郁药为一线，剂量个体化、遵医嘱；可联合支持性心理治疗/CBT；定期量化评估疗效、耐受性与自杀风险。若出现高自杀风险，可考虑 MECT。</div></details>
+      </div>
+
+      <div class="case-card">
+        <div class="case-meta"><span>病例 2</span><span>难度 ⭐⭐⭐</span><span>教学演练（非教材原文）</span></div>
+        <div class="case-title">反复“抑郁”的年轻人</div>
+        <div class="case-body"><p>24 岁女性，多次出现情绪低落、兴趣减退、精力下降，每次持续一段时间后可缓解。她起病较早，母亲有心境障碍病史。本次抑郁发作来得比较突然；追问过去，她曾有“心情特别好、话比平时多、精力旺盛、睡得少也不觉得累”的时期，但未系统就诊。她平时情绪起伏较大，容易激惹；本次发作期间睡眠增多、体重增加。她否认幻觉、妄想。</p></div>
+        <ol class="case-questions">
+          <li>最可能的诊断是什么？为什么不能简单诊断为“复发性抑郁障碍”？</li>
+          <li>教材列出哪些支持双相评估的线索？本例具备哪些？</li>
+          <li>在确诊前，治疗与随访应注意什么？</li>
+        </ol>
+        <details class="qa"><summary><span class="qa-num">析</span>答案与诊断思路</summary><div class="qa-body"><span class="answer-key">诊断思路</span><b>①最可能为双相障碍。</b>抑郁障碍的诊断前提是<b>没有躁狂、混合或轻躁狂发作史</b>；本例存在“心情特别好、话多、精力旺盛、睡眠需求减少”的时期，提示轻躁狂/躁狂发作，故不能只诊断复发性抑郁障碍。<br><b>②教材红旗：</b>首次发病年龄早（<b>25 岁或更早</b>，本例 24 岁）、家族史（本例母亲有心境障碍史，需进一步核实是否为双相）、抑郁发作突然、发作次数（本例“多次”，需核实是否达 5 次以上）、心境不稳定、易激惹或激越、睡眠和体重增加（本例均有）。<br><b>③治疗与随访：</b>应先按<b>双相障碍</b>进一步评估，由专科医师确定治疗方案；教材强调对不能提供明确躁狂史者要<b>高度关注并定期随访评估躁狂发作的可能性</b>，及时修正诊断。同时评估自杀风险与共病。</div></details>
+      </div>
+
+      <div class="case-card">
+        <div class="case-meta"><span>病例 3</span><span>难度 ⭐⭐⭐⭐</span><span>教学演练（非教材原文）</span></div>
+        <div class="case-title">老年患者的“没力气、没胃口、睡不好”</div>
+        <div class="case-body"><p>68 岁女性，近一段时间诉“浑身没力气、什么都不想做”，食欲差，体重下降，入睡困难并早醒。她反复说“活着没意思”，觉得自己拖累了家人。家属认为“年纪大了都这样”。她同时有怕冷、反应变慢等表现；既往有躯体疾病史，正在接受相关治疗。按教材评估要求进行躯体与神经系统检查及辅助检查，发现甲状腺功能异常，其余检查未发现可解释全部症状的脑部器质性病变。</p></div>
+        <ol class="case-questions">
+          <li>本例需要考虑哪些诊断与鉴别？甲状腺功能异常能否解释全部症状？</li>
+          <li>教材对“躯体疾病与抑郁”的关系给出哪四种情况？本例应如何理解？</li>
+          <li>治疗与安全管理的关键点是什么？</li>
+        </ol>
+        <details class="qa"><summary><span class="qa-num">析</span>答案与诊断思路</summary><div class="qa-body"><span class="answer-key">诊断思路</span><b>①诊断与鉴别：</b>应评估<b>抑郁障碍</b>（老年患者）、躯体疾病所致精神障碍、甲状腺功能异常相关的情绪症状，并与痴呆/认知损害、焦虑、PTSD、双相抑郁等鉴别。甲状腺功能异常确实可引起抑郁情绪、易疲劳、精力减退（教材原文），但<b>不能仅凭一项异常就认定全部症状都由甲状腺疾病所致</b>；还需结合症状群、病程、功能损害与治疗反应综合判断。<br><b>②四种关系：</b>①躯体疾病是抑郁障碍的<b>直接原因</b>（如内分泌疾病所致抑郁发作）；②是<b>诱因</b>（作为心理学因素）；③与抑郁<b>共病</b>，无直接因果但相互促进；④抑郁是躯体疾病的<b>直接原因</b>（抑郁伴随的躯体症状）。本例需判断甲状腺异常属于哪一种，不能轻率归因。<br><b>③治疗与安全：</b>即使躯体疾病是抑郁的直接原因，<b>也要进行抗抑郁治疗</b>，抑郁改善也有利于躯体疾病预后。老年患者应<b>避免选择不良反应多的药物</b>，注意共病与药物相互作用，剂量个体化、遵医嘱。立即评估自杀风险（本例已流露“活着没意思”），加强家属合作与随访；必要时考虑 MECT 快速控制自杀意念。</div></details>
+      </div>
+    </section>
+
+    <!-- ================= 13 拓展延伸 ================= -->
+    <section id="extend" class="section">
+      <div class="section-header"><span class="section-number">13</span><h2>拓展延伸</h2></div>
+      <div class="card-grid">
+        <div class="card card-cause"><div class="card-header"><span class="card-icon">🧫</span><span class="card-title">教材提及但未展开的假说</span></div><div class="card-body">教材在本章末尾提到第二信使失衡假说、神经可塑性假说、脑-肠轴以及抑郁障碍能量代谢假说，但<b>未展开具体机制</b>。复习时只需记住“存在这些假说、尚无特异性诊断标志”，不要自行补充研究细节。</div></div>
+        <div class="card card-cause"><div class="card-header"><span class="card-icon">🧲</span><span class="card-title">物理治疗的定位</span></div><div class="card-body">教材把物理治疗列为抑郁障碍综合治疗的手段之一，机制包括改善脑部血液循环、促进脑部神经发育等。<b>MECT 的疗效与自杀控制证据最明确</b>；rTMS 无创、用于难治性抑郁；VNS 为辅助；DBS 仍属试验性。教材未给出各治疗的适用顺序细则。</div></div>
+        <div class="card card-treatment"><div class="card-header"><span class="card-icon">🌿</span><span class="card-title">补充与替代治疗</span></div><div class="card-body">教材列出自然疗法（瑜伽、冥想按摩、温泉疗法）、营养补充（维生素 B 群、维生素 D、钙、镁等，需医师指导）与替代疗法（针灸、中医、音乐疗法）。它们被定位为<b>辅助方法</b>，不能替代抗抑郁药或心理治疗。</div></div>
+        <div class="card card-cause"><div class="card-header"><span class="card-icon">📚</span><span class="card-title">配套资源</span></div><div class="card-body">教材章首标注“本章数字资源”“本章思维导图”，属于教材配套资源；本学习指南未引入任何外部链接或资源，仅依据教材正文整理。</div></div>
+      </div>
+      <div class="callout callout-info"><div class="callout-icon">📌</div><div class="callout-body"><strong>诚实标注</strong>本章教材未展开的内容包括：抑郁障碍的独立遗传咨询流程、抗抑郁药的具体起效时间与换药流程、各亚型的独立疗程、居丧/延长哀伤与强迫障碍的专门鉴别、以及 DBS 的长期疗效。上述内容本指南均未虚构。</div></div>
+    </section>
+
+    <div class="disclaimer">
+      <b>免责声明：</b>本学习指南依据《精神病学》第9版（2024）第八章“抑郁障碍”整理，仅用于课程复习与知识梳理，不构成诊断或治疗建议。教材未提供具体剂量的药物，本指南一律标注“剂量个体化，遵医嘱”；临床诊疗请以教材原文、现行诊疗规范及专科医师判断为准。
+    </div>
+
+    <footer class="footer">
+      <div class="footer-tag">精神病学 · 第八章 · 抑郁障碍 · 学习指南</div>
+      <p>内容依据《精神病学》第9版（2024）第八章整理，仅供学习复习使用。</p>
+      <p>诊断与治疗请以教材原文、现行诊疗规范及专科医师判断为准。</p>
+    </footer>
+  <nav class="chapter-pager" aria-label="章节间导航"><a class="cp-prev" href="精神病学_第七章_双相及相关障碍_学习指南.html">← 上一章：第七章</a><a class="cp-toc" href="index.html">目录</a><a class="cp-next" href="精神病学_第九章_焦虑或恐惧性相关障碍_学习指南.html">下一章：第九章 →</a></nav>
+</main>
+</div>
+<button class="back-to-top" id="backTop" aria-label="回到顶部">↑</button>
+
+<script>
+/* ============================================================
+   精神病学学习指南 · 统一交互层 v1（构建期注入，整体替换原 IIFE）
+   兼容 A 族（.tabbar button + [data-panel] + .panel.on）与
+   B 族（.tab-nav + .tab-panel.active）两套 DOM 约定。
+   特性检测 + 防御式查询 + 幂等；不引入任何外部依赖。
+   ============================================================ */
+(function () {
+  'use strict';
+  if (window.__PSY_GUIDE_APP__) { return; }
+  window.__PSY_GUIDE_APP__ = true;
+
+  var d = document;
+
+  function all(sel, root) {
+    return Array.prototype.slice.call((root || d).querySelectorAll(sel));
+  }
+  function on(el, ev, fn, opt) {
+    if (el) { el.addEventListener(ev, fn, opt || false); }
+  }
+  function norm(s) {
+    return String(s || '').replace(/\s+/g, '').toUpperCase();
+  }
+
+  /* ---------- 1. Tab 切换（两族约定都支持） ---------- */
+  function initTabs() {
+    all('.tabs, [data-tabs]').forEach(function (g) {
+      if (g.__psyTabs) { return; }
+      g.__psyTabs = true;
+      var isA = !!g.querySelector('.tabbar button');
+      var btns = all(isA ? '.tabbar button' : '.tab-nav .tab-btn', g);
+      if (!btns.length) { return; }
+      var cls = isA ? 'on' : 'active';
+      var nav = btns[0].closest('.tabbar') || btns[0].closest('.tab-nav');
+      if (nav && !nav.hasAttribute('role')) { nav.setAttribute('role', 'tablist'); }
+      all(isA ? '.panel' : '.tab-panel', g).forEach(function (p) {
+        if (!p.hasAttribute('role')) { p.setAttribute('role', 'tabpanel'); }
+      });
+      function activate(btn) {
+        btns.forEach(function (b) {
+          b.classList.remove(cls);
+          b.setAttribute('aria-selected', 'false');
+        });
+        btn.classList.add(cls);
+        btn.setAttribute('aria-selected', 'true');
+        var id = btn.getAttribute('data-tab');
+        if (!id) { return; }
+        var target = isA
+          ? g.querySelector('[data-panel="' + id + '"]')
+          : (g.querySelector('.tab-panel#' + id) || d.getElementById(id));
+        all(isA ? '.panel' : '.tab-panel', g).forEach(function (p) {
+          var show = isA ? (p.getAttribute('data-panel') === id) : (p === target);
+          p.classList.toggle(cls, show);
+        });
+      }
+      btns.forEach(function (btn, i) {
+        if (!btn.hasAttribute('role')) { btn.setAttribute('role', 'tab'); }
+        btn.setAttribute('aria-selected', btn.classList.contains(cls) ? 'true' : 'false');
+        if (!btn.hasAttribute('tabindex') && !btn.classList.contains(cls)) { btn.setAttribute('tabindex', '0'); }
+        on(btn, 'click', function () { activate(btn); });
+        on(btn, 'keydown', function (e) {
+          if (e.key !== 'ArrowRight' && e.key !== 'ArrowLeft') { return; }
+          e.preventDefault();
+          var nx = btns[(i + (e.key === 'ArrowRight' ? 1 : btns.length - 1)) % btns.length];
+          if (nx) { nx.focus(); activate(nx); }
+        });
+      });
+    });
+  }
+
+  /* ---------- 2. 速记卡：点击/键盘翻转 + 可达性 ---------- */
+  function initCards() {
+    all('.flashcard').forEach(function (card) {
+      if (card.__psyCard) { return; }
+      card.__psyCard = true;
+      card.setAttribute('tabindex', '0');
+      card.setAttribute('role', 'button');
+      function sync() {
+        card.setAttribute('aria-pressed', card.classList.contains('flipped') ? 'true' : 'false');
+      }
+      function flip() { card.classList.toggle('flipped'); sync(); }
+      on(card, 'click', flip);
+      on(card, 'keydown', function (e) {
+        if (e.key === 'Enter' || e.key === ' ' || e.key === 'Spacebar') {
+          e.preventDefault();
+          flip();
+        }
+      });
+      sync();
+    });
+  }
+
+  /* ---------- 3. 自测题交互化（核心新功能） ---------- */
+  function initQuiz() {
+    var questions = all('.quiz-q, .quiz-item');
+    if (!questions.length) { return; }
+    var groups = {};
+
+    function keyOf(o) {
+      var L = o.getAttribute('data-letter');
+      if (L && String(L).replace(/\s+/g, '') !== '') { return norm(L); }
+      var sp = o.querySelector('.l');
+      if (sp) {
+        var t = norm(sp.textContent).replace(/[.．、:：]/g, '');
+        if (t !== '') { return t; }
+      }
+      var txt = norm(o.textContent);
+      if (txt.indexOf('正确') >= 0 || txt.indexOf('错误') >= 0) { return txt; }
+      return txt.charAt(0);
+    }
+
+    function getGroup(q) {
+      var sec = q.closest('.quiz-block') || q.closest('section') || d.body;
+      if (!groups[sec.__psyGid]) {
+        sec.__psyGid = 'g' + (Object.keys(groups).length + 1);
+        groups[sec.__psyGid] = { sec: sec, total: 0, score: 0, row: null, first: null };
+      }
+      var g = groups[sec.__psyGid];
+      if (!g.first) { g.first = q; }
+      return g;
+    }
+
+    function ensureRow(g) {
+      if (g.row) { return g.row; }
+      var row = d.createElement('div');
+      row.className = 'quiz-score';
+      row.setAttribute('role', 'status');
+      row.setAttribute('aria-live', 'polite');
+      row.innerHTML = '<span class="qs-label">自测计分</span>' +
+        '<span class="qs-num">得分 0 / ' + g.total + '</span>' +
+        '<span class="qs-bar"><i></i></span>';
+      g.first.parentNode.insertBefore(row, g.first);
+      g.row = row;
+      return row;
+    }
+
+    function updateRow(g) {
+      var row = ensureRow(g);
+      var num = row.querySelector('.qs-num');
+      var bar = row.querySelector('.qs-bar i');
+      if (num) { num.textContent = '得分 ' + g.score + ' / ' + g.total; }
+      if (bar) { bar.style.width = (g.total ? Math.round(g.score / g.total * 100) : 0) + '%'; }
+    }
+
+    questions.forEach(function (q) {
+      if (q.__psyQuiz) { return; }
+      q.__psyQuiz = true;
+      var opts = all('.opt', q);
+      if (!opts.length) { opts = all('.quiz-options > li', q); }
+      if (!opts.length) { return; }
+
+      /* 正确答案先记入内存：预标 correct 优先（记录后立即移除，消除剧透），
+         否则从解析文本「答案：X / 答案 X」提取（不改动任何文字） */
+      var ansKeys = [];
+      var preset = opts.filter(function (o) { return o.classList.contains('correct'); });
+      preset.forEach(function (o) { o.classList.remove('correct'); });
+      if (preset.length) {
+        ansKeys = preset.map(keyOf);
+      } else {
+        var dt = q.querySelector('details');
+        var txt = dt ? dt.textContent : '';
+        var m = txt.match(/答案\s*[:：]?\s*([A-Za-z](?:[\s、,，·和及]*[A-Za-z])*)/);
+        if (m) {
+          ansKeys = m[1].match(/[A-Za-z]/g) || [];
+        } else {
+          var m2 = txt.match(/答案\s*[:：]?\s*(正确|错误)/);
+          if (m2) { ansKeys = [m2[1]]; }
+        }
+      }
+      if (!ansKeys.length) { return; } /* 无可判定答案（名词解释等），保持原样 */
+
+      var g = getGroup(q);
+      g.total += 1;
+      var multi = ansKeys.length > 1;
+      var ansSet = ansKeys.map(norm);
+      var locked = false;
+      var picked = [];
+
+      function revealAll() {
+        opts.forEach(function (o) {
+          if (ansSet.indexOf(keyOf(o)) >= 0) { o.classList.add('is-reveal'); }
+        });
+      }
+      function finish(ok) {
+        locked = true;
+        q.classList.add('is-locked');
+        var dt = q.querySelector('details');
+        if (dt) { dt.open = true; }
+        if (ok) { g.score += 1; }
+        updateRow(g);
+      }
+
+      opts.forEach(function (o) {
+        o.setAttribute('tabindex', '0');
+        function pick() {
+          if (locked) { return; }
+          var k = keyOf(o);
+          if (ansSet.indexOf(k) >= 0) {
+            o.classList.add('is-right');
+            if (picked.indexOf(k) < 0) { picked.push(k); }
+            if (multi) {
+              if (picked.length === ansSet.length) { finish(true); }
+            } else {
+              finish(true);
+            }
+          } else {
+            o.classList.add('is-wrong');
+            revealAll();
+            finish(false);
+          }
+        }
+        on(o, 'click', pick);
+        on(o, 'keydown', function (e) {
+          if (e.key === 'Enter' || e.key === ' ' || e.key === 'Spacebar') {
+            e.preventDefault();
+            pick();
+          }
+        });
+      });
+    });
+
+    Object.keys(groups).forEach(function (id) {
+      if (groups[id].total > 0) { updateRow(groups[id]); }
+    });
+  }
+
+  /* ---------- 4. 侧栏 scroll spy（本页锚点高亮） ---------- */
+  function initSpy() {
+    var links = all('#sidebar a[href^="#"]');
+    if (!links.length || !('IntersectionObserver' in window)) { return; }
+    var map = {};
+    links.forEach(function (a) {
+      var id = a.getAttribute('href').slice(1);
+      if (id) { map[id] = a; }
+    });
+    var secs = [];
+    Object.keys(map).forEach(function (id) {
+      var s = d.getElementById(id);
+      if (s) { secs.push(s); }
+    });
+    if (!secs.length) { return; }
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting && map[e.target.id]) {
+          links.forEach(function (a) { a.classList.remove('active'); });
+          map[e.target.id].classList.add('active');
+        }
+      });
+    }, { rootMargin: '-15% 0px -70% 0px', threshold: 0 });
+    secs.forEach(function (s) { io.observe(s); });
+  }
+
+  /* ---------- 5. 阅读进度条 + 回顶 ---------- */
+  function initScroll() {
+    var bar = d.getElementById('readbar');
+    var topBtn = d.getElementById('topBtn') || d.getElementById('backTop');
+    var ticking = false;
+    function step() {
+      ticking = false;
+      var h = d.documentElement;
+      var y = window.pageYOffset || h.scrollTop || 0;
+      if (bar) {
+        var max = h.scrollHeight - h.clientHeight;
+        bar.style.width = (max > 0 ? (y / max) * 100 : 0) + '%';
+      }
+      if (topBtn) {
+        topBtn.classList.toggle('show', y > 400);     /* A 族类名 */
+        topBtn.classList.toggle('visible', y > 400);  /* B 族类名 */
+      }
+    }
+    on(window, 'scroll', function () {
+      if (!ticking) { ticking = true; window.requestAnimationFrame(step); }
+    }, { passive: true });
+    step();
+    on(topBtn, 'click', function () {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
+
+  /* ---------- 6. 侧栏开合（存在才绑定；抽屉打开时锁定背景滚动） ---------- */
+  function initSidebar() {
+    var sidebar = d.getElementById('sidebar');
+    if (!sidebar) { return; }
+    var btn = d.getElementById('menuBtn') || d.getElementById('navToggle');
+    var ov = d.getElementById('overlay') || d.getElementById('sidebarOverlay');
+    function lock(open) {
+      /* 仅移动抽屉断点（≤900px）锁滚动；宽屏兜底解除，防布局残留 */
+      d.body.classList.toggle('nav-locked', !!open && window.innerWidth <= 900);
+    }
+    function close() {
+      sidebar.classList.remove('open');
+      if (ov) { ov.classList.remove('show'); }
+      lock(false);
+    }
+    on(btn, 'click', function () {
+      var open = !sidebar.classList.contains('open');
+      sidebar.classList.toggle('open');
+      if (ov) { ov.classList.toggle('show'); }
+      lock(open);
+    });
+    on(ov, 'click', close);
+    all('a', sidebar).forEach(function (a) {
+      on(a, 'click', function () {
+        if (window.innerWidth <= 900) { close(); }
+      });
+    });
+    on(window, 'resize', function () {
+      if (window.innerWidth > 900) { lock(false); }
+    });
+  }
+
+  /* ---------- 启动（脚本位于 body 末尾，DOM 已就绪；防御兜底） ---------- */
+  function boot() {
+    initTabs();
+    initCards();
+    initQuiz();
+    initSpy();
+    initScroll();
+    initSidebar();
+  }
+  if (d.readyState === 'loading') {
+    on(d, 'DOMContentLoaded', boot);
+  } else {
+    boot();
+  }
+})();
+</script>
+
+</body>
+</html>

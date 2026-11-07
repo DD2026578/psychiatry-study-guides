@@ -1,0 +1,1902 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>精神病学 第十三章 躯体痛苦及躯体体验障碍 · 学习指南</title>
+<style>
+:root{
+  --primary:#0EA5E9; --accent:#10B981; --symptom:#EF4444; --treatment:#10B981;
+  --cause:#3B82F6; --diagnosis:#F59E0B; --memory:#8B5CF6; --danger:#DC2626;
+  --quiz:#EC4899; --flashcard:#06B6D4; --bg:#F0F7FA; --card:#FFFFFF;
+  --ink:#0F172A; --muted:#64748B; --border:#E2E8F0; --accent2:#10B981; --accent3:#06B6D4;
+  --shadow:0 4px 18px rgba(15,23,42,.06); --radius:14px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:'Microsoft YaHei','PingFang SC','Hiragino Sans GB',system-ui,-apple-system,sans-serif;font-size:16px;line-height:1.75;-webkit-font-smoothing:antialiased}
+#readbar{position:fixed;top:0;left:0;height:4px;width:0;background:linear-gradient(135deg,#0EA5E9 0%,#06B6D4 50%,#10B981 100%);z-index:300;transition:width .12s linear}
+a{color:var(--primary);text-decoration:none}
+a:hover{text-decoration:underline}
+.sidebar{position:fixed;top:0;left:0;width:272px;height:100vh;background:#fff;border-right:1px solid var(--border);overflow-y:auto;padding:20px 16px 40px;z-index:120}
+.sidebar h2{font-size:17px;margin:0 0 4px;line-height:1.5}
+.sidebar .sub{font-size:12px;color:var(--muted);line-height:1.6;margin-bottom:14px}
+.toc-group{font-size:12px;letter-spacing:.08em;color:var(--muted);margin:16px 0 6px;font-weight:700}
+.sidebar a.toc{display:block;padding:7px 10px;border-radius:8px;font-size:14px;color:var(--ink);line-height:1.5;margin:2px 0}
+.sidebar a.toc:hover{background:#E0F2FE;text-decoration:none}
+.sidebar a.toc .n{display:inline-block;min-width:26px;color:var(--primary);font-weight:700}
+.sidebar .unitlink{font-weight:600}
+.sidebar .sub2{padding-left:26px;font-size:13px;color:var(--muted)}
+.overlay{display:none}
+.menu-btn{display:none;position:fixed;top:14px;left:14px;z-index:200;width:46px;height:46px;border-radius:12px;border:1px solid var(--border);background:#fff;box-shadow:var(--shadow);font-size:22px;line-height:1;color:var(--primary);cursor:pointer}
+.main{margin-left:272px;padding:0 40px 90px;max-width:1240px}
+.wrap{max-width:980px;margin:0 auto}
+.hero{background:linear-gradient(135deg,#0EA5E9 0%,#06B6D4 50%,#10B981 100%);color:#fff;border-radius:0 0 26px 26px;padding:52px 44px 40px;margin:0 -40px 30px;box-shadow:0 12px 30px rgba(14,165,233,.18)}
+.hero .chap{display:inline-block;font-size:13px;letter-spacing:.22em;background:rgba(255,255,255,.18);padding:5px 14px;border-radius:999px;margin-bottom:16px}
+.hero h1{font-size:42px;line-height:1.25;margin:0 0 10px;font-weight:800}
+.hero .tagline{font-size:18px;opacity:.96;margin:0 0 6px}
+.hero .meta{font-size:13px;opacity:.85}
+.goalbox{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.28);border-radius:14px;padding:18px 20px;margin-top:22px}
+.goalbox h3{margin:0 0 10px;font-size:15px;letter-spacing:.06em}
+.goalbox ul{margin:0;padding-left:20px}
+.goalbox li{margin:4px 0;font-size:14.5px;line-height:1.65}
+.lv{display:inline-block;font-size:11px;font-weight:700;padding:1px 8px;border-radius:999px;background:#fff;color:#0369A1;margin-right:6px;vertical-align:1px}
+.lv.l2{color:#047857}.lv.l3{color:#B45309}.lv.l4{color:#B91C1C}
+section{scroll-margin-top:18px;margin:0 0 46px}
+.sec-head{display:flex;align-items:center;gap:12px;margin:0 0 8px}
+.sec-head .badge{flex:0 0 auto;width:44px;height:44px;border-radius:13px;background:linear-gradient(135deg,#0EA5E9,#06B6D4);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:17px;box-shadow:0 6px 14px rgba(14,165,233,.25)}
+.sec-head h2{font-size:27px;margin:0;line-height:1.35;font-weight:800}
+.sec-head .en{font-size:13px;color:var(--muted);font-weight:400;margin-left:6px}
+.sec-lead{color:#334155;background:#fff;border-left:4px solid var(--primary);border-radius:0 12px 12px 0;padding:13px 18px;margin:12px 0 22px;box-shadow:var(--shadow);font-size:15px}
+.card{background:var(--card);border:1px solid var(--border);border-left:6px solid var(--primary);border-radius:var(--radius);padding:20px 22px;margin:16px 0;box-shadow:var(--shadow)}
+.card.red{border-left-color:var(--symptom)} .card.green{border-left-color:var(--treatment)}
+.card.blue{border-left-color:var(--cause)} .card.orange{border-left-color:var(--diagnosis)}
+.card.purple{border-left-color:var(--memory)} .card.cyan{border-left-color:var(--flashcard)}
+.card.danger{border-left-color:var(--danger)} .card.pink{border-left-color:var(--quiz)}
+.card h3,.col-title{font-size:19px;margin:0 0 10px;line-height:1.45;display:flex;align-items:center;gap:9px;flex-wrap:wrap}
+.col-title .idx{font-size:12px;font-weight:800;color:#fff;background:var(--primary);padding:2px 9px;border-radius:999px;letter-spacing:.03em}
+.card p{margin:8px 0}
+.card ul,.card ol{margin:8px 0;padding-left:22px}
+.card li{margin:5px 0}
+.quote{background:#EFF8FF;border:1px dashed #7DD3FC;border-radius:10px;padding:12px 16px;margin:10px 0;font-size:15px;color:#0C4A6E}
+.quote .lab{display:inline-block;font-size:11px;font-weight:800;background:#0EA5E9;color:#fff;padding:1px 7px;border-radius:5px;margin-right:7px;vertical-align:1px}
+.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.grid4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.grid2>*,.grid3>*,.grid4>*{min-width:0}
+.mini{background:#F8FAFC;border:1px solid var(--border);border-radius:11px;padding:12px 14px}
+.mini h4{margin:0 0 5px;font-size:15px;color:#0F172A}
+.mini p,.mini ul{font-size:14px;color:#334155;margin:4px 0}
+.mini ul{padding-left:18px}
+.stat{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0}
+.stat span{font-size:13px;background:#E0F2FE;color:#075985;border-radius:999px;padding:3px 11px;font-weight:600}
+.table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:12px 0;border-radius:12px;border:1px solid var(--border)}
+table{border-collapse:collapse;width:100%;min-width:560px;background:#fff;font-size:14px}
+th{background:#0F172A;color:#fff;font-weight:700;padding:10px 12px;text-align:left;line-height:1.5;font-size:13.5px}
+td{padding:10px 12px;border-top:1px solid var(--border);vertical-align:top;line-height:1.65}
+tbody tr:nth-child(even){background:#F8FAFC}
+td strong{color:#0C4A6E}
+.callout{border-radius:12px;padding:13px 16px;margin:12px 0;border:1px solid;font-size:14.5px}
+.callout .ct{font-weight:800;display:block;margin-bottom:4px;font-size:14.5px}
+.callout.tip{background:#F5F3FF;border-color:#C4B5FD;color:#4C1D95}
+.callout.warn{background:#FEF2F2;border-color:#FCA5A5;color:#7F1D1D}
+.callout.key{background:#ECFDF5;border-color:#6EE7B7;color:#065F46}
+.callout.book{background:#EFF6FF;border-color:#93C5FD;color:#1E3A8A}
+.callout.quiz{background:#FDF2F8;border-color:#F9A8D4;color:#831843}
+.callout.ext{background:#F0F9FF;border-color:#7DD3FC;color:#0C4A6E}
+.timeline{border-left:3px solid #BAE6FD;margin:14px 0 6px 8px;padding-left:20px}
+.tl-item{position:relative;margin:0 0 16px}
+.tl-item:before{content:"";position:absolute;left:-28px;top:5px;width:13px;height:13px;border-radius:50%;background:#fff;border:3px solid var(--primary)}
+.tl-item h4{margin:0 0 3px;font-size:15px;color:#075985}
+.tl-item p{margin:0;font-size:14px;color:#334155}
+.bar{background:#E2E8F0;border-radius:999px;height:9px;overflow:hidden;margin:6px 0 10px}
+.bar i{display:block;height:100%;border-radius:999px;background:linear-gradient(90deg,#0EA5E9,#10B981)}
+.bar-label{display:flex;justify-content:space-between;font-size:13px;color:#334155}
+.tabs{margin:14px 0}
+.tabbar{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:12px}
+.tabbar button{border:1px solid var(--border);background:#fff;border-radius:999px;padding:7px 15px;font-size:14px;font-family:inherit;cursor:pointer;color:#334155}
+.tabbar button.on{background:var(--primary);color:#fff;border-color:var(--primary)}
+.panel{display:none}
+.panel.on{display:block;animation:fade .25s ease}
+@keyframes fade{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}
+details{background:#fff;border:1px solid var(--border);border-radius:11px;margin:10px 0;overflow:hidden}
+summary{cursor:pointer;padding:11px 15px;font-weight:700;color:#075985;list-style:none;font-size:14.5px;background:#F8FAFC}
+summary::-webkit-details-marker{display:none}
+summary:before{content:"▸";display:inline-block;margin-right:7px;color:var(--primary);transition:transform .2s}
+details[open] summary:before{transform:rotate(90deg)}
+details[open] summary{border-bottom:1px solid var(--border)}
+.dbody{padding:13px 16px;font-size:14.5px;color:#1E293B}
+.flashcard-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin:16px 0}
+.flashcard{perspective:1200px;height:200px;cursor:pointer}
+.fc-inner{position:relative;width:100%;height:100%;transition:transform .55s;transform-style:preserve-3d}
+.flashcard.flipped .fc-inner{transform:rotateY(180deg)}
+.fc-front,.fc-back{position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;border-radius:14px;padding:14px 16px;display:flex;flex-direction:column;justify-content:center;box-shadow:var(--shadow);overflow:auto}
+.fc-front{background:#fff;border:1px solid var(--border);border-top:5px solid var(--flashcard)}
+.fc-back{background:#ECFEFF;border:1px solid #A5F3FC;transform:rotateY(180deg);font-size:13.5px;line-height:1.65;color:#164E63}
+.tag{display:inline-block;align-self:flex-start;font-size:11px;font-weight:800;padding:1px 8px;border-radius:999px;margin-bottom:8px;letter-spacing:.04em}
+.tag.concept{background:#DBEAFE;color:#1E40AF}
+.tag.diag{background:#FFEDD5;color:#9A3412}
+.tag.treat{background:#D1FAE5;color:#065F46}
+.tag.data{background:#FCE7F3;color:#9D174D}
+.tag.risk{background:#FEE2E2;color:#991B1B}
+.fc-front p{margin:0;font-size:14.5px;font-weight:700;line-height:1.6}
+.fc-hint{position:absolute;bottom:10px;left:16px;font-size:11px;color:#94A3B8}
+.quiz-q{background:#fff;border:1px solid var(--border);border-left:5px solid var(--quiz);border-radius:12px;padding:16px 18px;margin:16px 0;box-shadow:var(--shadow)}
+.quiz-q .qh{display:flex;justify-content:space-between;gap:10px;align-items:flex-start;margin-bottom:8px;flex-wrap:wrap}
+.quiz-q .qno{font-size:12px;font-weight:800;color:#fff;background:var(--quiz);border-radius:999px;padding:2px 9px;letter-spacing:.04em}
+.diff{font-size:12px;color:#B45309;background:#FEF3C7;border-radius:999px;padding:2px 10px;font-weight:700;white-space:nowrap}
+.qtype{font-size:12px;color:#6B21A8;background:#F3E8FF;border-radius:999px;padding:2px 10px;font-weight:700;white-space:nowrap}
+.opts{margin:10px 0 4px;display:grid;gap:7px}
+.opt{border:1px solid var(--border);border-radius:9px;padding:8px 12px;font-size:14.5px;background:#F8FAFC}
+.opt.correct{border-color:#6EE7B7;background:#ECFDF5;color:#065F46;font-weight:600}
+.opt .l{font-weight:800;color:var(--primary);margin-right:7px}
+.opt.correct .l{color:#047857}
+.brief{font-size:14px;color:#334155;margin-top:4px}
+.case{border:1px solid var(--border);border-top:5px solid var(--danger);border-radius:14px;background:#fff;padding:20px 22px;margin:18px 0;box-shadow:var(--shadow)}
+.case h3{font-size:19px;margin:0 0 8px;color:#7F1D1D}
+.case .ctag{font-size:11.5px;font-weight:800;background:#FEE2E2;color:#991B1B;padding:2px 9px;border-radius:999px;display:inline-block;margin-bottom:10px}
+.case .scene{background:#FFF7ED;border-left:4px solid #FB923C;border-radius:0 10px 10px 0;padding:12px 16px;font-size:14.5px;margin:8px 0 14px}
+.case .ques{margin:8px 0;padding-left:2px}
+.case .ques li{margin:5px 0;font-size:14.5px}
+.top{position:fixed;right:24px;bottom:26px;width:48px;height:48px;border-radius:50%;background:var(--primary);color:#fff;border:none;font-size:20px;cursor:pointer;box-shadow:0 8px 20px rgba(14,165,233,.35);z-index:150;display:none;font-family:inherit}
+.top.show{display:block}
+.hr{height:1px;background:var(--border);margin:26px 0}
+.note{font-size:13px;color:var(--muted);margin-top:6px}
+.kv{display:flex;gap:10px;flex-wrap:wrap;margin:8px 0}
+.kv .k{font-size:12px;font-weight:800;color:#0369A1;background:#E0F2FE;border-radius:6px;padding:2px 8px;white-space:nowrap}
+.kv .v{font-size:14px;color:#334155}
+.starme{font-size:12.5px;color:#B45309;white-space:nowrap}
+@media (max-width:1100px){
+  .main{padding:0 22px 80px}
+  .hero{margin:0 -22px 26px;padding:44px 26px 34px}
+  .hero h1{font-size:34px}
+  .flashcard-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .grid4{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width:900px){
+  .sidebar{transform:translateX(-100%);transition:transform .25s ease;width:280px;box-shadow:0 0 30px rgba(0,0,0,.18)}
+  .sidebar.open{transform:none}
+  .overlay{display:none;position:fixed;inset:0;background:rgba(15,23,42,.42);z-index:110}
+  .overlay.show{display:block}
+  .menu-btn{display:block}
+  .main{margin-left:0;padding:0 18px 80px}
+  .hero{margin:0 -18px 24px;padding:64px 22px 30px;border-radius:0 0 20px 20px}
+  .hero h1{font-size:30px}
+  .sec-head h2{font-size:23px}
+}
+@media (max-width:680px){
+  .grid2,.grid3,.grid4{grid-template-columns:minmax(0,1fr)}
+  .flashcard-grid{grid-template-columns:minmax(0,1fr)}
+  .flashcard{height:190px}
+  table{min-width:500px}
+}
+</style>
+<style data-refactor="v1">
+/* ============================================================
+   精神病学学习指南 · 统一交互层增量覆盖样式 v1
+   构建期由 apply-refactor.ps1 注入 </head> 前，仅追加修正，
+   不改动 A/B 两族基础样式。全部使用字面色值，兼容两族设计变量。
+   ============================================================ */
+
+/* ---- 1. 全局键盘焦点可见 ---- */
+:focus-visible{outline:2px solid #0EA5E9;outline-offset:2px}
+
+/* ---- 2. 章节导航条（胶囊式三段：上一章 / 目录 / 下一章） ---- */
+.chapter-pager{display:flex;align-items:stretch;justify-content:center;gap:10px;margin:36px 0 10px;flex-wrap:wrap}
+.chapter-pager a,.chapter-pager span{flex:1 1 200px;display:flex;align-items:center;justify-content:center;min-height:44px;padding:10px 18px;border:1px solid #E2E8F0;border-radius:999px;background:#FFFFFF;color:#0F172A;font-size:14px;font-weight:600;line-height:1.4;text-decoration:none;text-align:center;box-shadow:0 1px 2px rgba(15,23,42,.06);transition:border-color .15s ease,box-shadow .15s ease,color .15s ease}
+.chapter-pager a:hover{border-color:#0EA5E9;color:#0EA5E9;box-shadow:0 4px 14px rgba(14,165,233,.18);text-decoration:none}
+.chapter-pager .cp-toc{flex:0 0 auto;min-width:104px;background:linear-gradient(135deg,#0EA5E9,#10B981);border-color:transparent;color:#FFFFFF}
+.chapter-pager .cp-toc:hover{border-color:transparent;color:#FFFFFF;opacity:.92}
+.chapter-pager .cp-disabled{opacity:.45;background:#F8FAFC;box-shadow:none;cursor:default}
+@media (max-width:680px){.chapter-pager{gap:8px;margin:28px 0 8px}.chapter-pager a,.chapter-pager span{flex:1 1 100%}}
+
+/* ---- 3. 自测题交互态（兼容 A 族 .opt 与 B 族 .quiz-options li） ---- */
+/* 3.1 基础可点击 */
+.quiz-q .opt{cursor:pointer}
+.quiz-item .quiz-options li{cursor:pointer}
+/* 3.2 hover / 焦点态 */
+.quiz-q .opt:hover,.quiz-q .opt:focus-visible{border-color:#7DD3FC;background:#F0F9FF}
+.quiz-item .quiz-options li:hover,.quiz-item .quiz-options li:focus-visible{background:#FFFFFF;box-shadow:inset 0 0 0 1px #7DD3FC}
+/* 3.3 判定结果态 */
+.quiz-q .opt.is-right{border-color:#34D399;background:#ECFDF5;color:#065F46;font-weight:600}
+.quiz-q .opt.is-right::after{content:" ✓";color:#059669;font-weight:800}
+.quiz-q .opt.is-right .l{color:#047857}
+.quiz-item .quiz-options li.is-right{background:#DCFCE7;box-shadow:inset 0 0 0 1px #34D399;font-weight:600}
+.quiz-item .quiz-options li.is-right::after{content:" ✓";color:#15803D;font-weight:800}
+.quiz-q .opt.is-wrong{border-color:#FCA5A5;background:#FEF2F2;color:#B91C1C;font-weight:600}
+.quiz-q .opt.is-wrong::after{content:" ✗";color:#DC2626;font-weight:800}
+.quiz-q .opt.is-wrong .l{color:#B91C1C}
+.quiz-item .quiz-options li.is-wrong{background:#FEE2E2;box-shadow:inset 0 0 0 1px #FCA5A5;font-weight:600}
+.quiz-item .quiz-options li.is-wrong::after{content:" ✗";color:#DC2626;font-weight:800}
+.quiz-q .opt.is-reveal{border-color:#6EE7B7;background:#ECFDF5;color:#065F46}
+.quiz-q .opt.is-reveal .l{color:#047857}
+.quiz-item .quiz-options li.is-reveal{background:#ECFDF5;box-shadow:inset 0 0 0 1px #6EE7B7;color:#065F46}
+/* 3.4 已锁定禁用态 */
+.quiz-q.is-locked .opt,.quiz-item.is-locked .quiz-options li{cursor:default;pointer-events:none}
+.quiz-q.is-locked .opt:not(.is-right):not(.is-wrong):not(.is-reveal){opacity:.55}
+.quiz-item.is-locked .quiz-options li:not(.is-right):not(.is-wrong):not(.is-reveal){opacity:.55}
+/* 3.5 计分行（运行时注入） */
+.quiz-score{display:flex;align-items:center;gap:12px;margin:14px 0 18px;padding:12px 18px;border:1px dashed #7DD3FC;border-radius:12px;background:#F0F9FF;font-size:14px;font-weight:700;color:#0F172A}
+.quiz-score .qs-label{white-space:nowrap}
+.quiz-score .qs-num{white-space:nowrap;color:#0284C7;font-size:16px}
+.quiz-score .qs-bar{flex:1 1 60px;min-width:60px;height:8px;border-radius:999px;background:#E2E8F0;overflow:hidden}
+.quiz-score .qs-bar i{display:block;height:100%;width:0;border-radius:999px;background:linear-gradient(90deg,#0EA5E9,#10B981);transition:width .35s ease}
+
+/* ---- 4. 速记卡可达性与长内容 ---- */
+.fc-hint,.flip-hint{color:#64748B}
+.flashcard-face{overflow:auto}
+.flashcard[tabindex]{outline:none}
+.flashcard[tabindex]:focus-visible{outline:3px solid #0EA5E9;outline-offset:3px}
+
+/* ---- 5. 侧栏目录 ---- */
+/* B 族 sticky 侧栏内目录限高滚动（A 族 aside 本身已可滚动，此规则空匹配无害） */
+.sidebar .sidebar-nav{max-height:calc(100vh - 60px);overflow-y:auto;scrollbar-width:thin}
+/* A 族 scroll spy 高亮（B 族高亮由其基础样式提供） */
+.sidebar a.toc.active{background:#E0F2FE;color:#0369A1;font-weight:600}
+
+/* ---- 6. 响应式补充：681–900px 时 grid3 降为两列 ---- */
+@media (min-width:681px) and (max-width:900px){
+  .grid3{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+
+/* ---- 7. 打印样式补充（A 族新增；B 族已有 print，重复声明无害） ---- */
+@media print{
+  .sidebar,.overlay,.sidebar-overlay,#menuBtn,#navToggle,#overlay,#sidebarOverlay,#readbar,#topBtn,#backTop,.chapter-pager,.quiz-score{display:none!important}
+}
+
+/* ---- 8. 手机端增强 v2（触控体验 / 防溢出 / 抽屉滚动锁定） ---- */
+/* 8.1 触控体验：去点按高亮、消除双击缩放延迟（flashcard 高 190-200px 天然达标，不另设 min-height） */
+.opt,.tabbar button,.tab-btn,.quiz-options li,.flashcard,.chapter-pager a,.chapter-pager span,.menu-btn,.mobile-nav-toggle{-webkit-tap-highlight-color:transparent;touch-action:manipulation}
+/* 8.2 触控目标最小 44px（自测选项与 tab 胶囊原高约 33px） */
+.opt,.tabbar button,.tab-btn,.quiz-options li{min-height:44px}
+/* 8.3 防溢出：内容图自适应；svg 不设 height:auto，避免定尺寸图标塌陷 */
+img{max-width:100%;height:auto}
+svg{max-width:100%}
+/* 8.4 长词/URL 断行 */
+body{overflow-wrap:break-word}
+/* 8.5 表格容器触摸惯性滚动（A 族已有同值规则，重复声明无害） */
+.table-wrap{-webkit-overflow-scrolling:touch}
+/* 8.6 抽屉打开时锁定背景滚动（两族抽屉断点均为 900px；类由统一脚本增删） */
+@media (max-width:900px){
+  body.nav-locked{overflow:hidden}
+}
+</style>
+</head>
+<body>
+<div id="readbar"></div>
+<button class="menu-btn" id="menuBtn" aria-label="打开目录">☰</button>
+<div class="overlay" id="overlay"></div>
+<aside class="sidebar" id="sidebar">
+  <h2>第十三章 躯体痛苦及躯体体验障碍</h2>
+  <div class="sub">精神病学（第9版）· 印刷页 159–166<br>学习指南 · 技能标准版</div>
+  <div class="toc-group">开篇</div>
+  <a class="toc" href="#cover"><span class="n">00</span>章节封面与学习目标</a>
+  <a class="toc" href="#status"><span class="n">01</span>本章地位速览</a>
+  <a class="toc" href="#navmap"><span class="n">02</span>章节导航图</a>
+  <a class="toc" href="#mindmap"><span class="n">03</span>本章知识地图</a>
+  <a class="toc" href="#route"><span class="n">04</span>学习路线图</a>
+  <div class="toc-group">正文（疾病单元八栏）</div>
+  <a class="toc unitlink" href="#u1"><span class="n">05</span>躯体痛苦障碍</a>
+  <a class="toc sub2" href="#u1-5">└ 鉴别诊断对对碰</a>
+  <a class="toc sub2" href="#u1-6">└ 治疗方案工具箱</a>
+  <a class="toc unitlink" href="#u2"><span class="n">06</span>身体完整性烦恼</a>
+  <a class="toc sub2" href="#u2-4">└ 教材典型案例</a>
+  <a class="toc sub2" href="#u2-5">└ 鉴别诊断对对碰</a>
+  <div class="toc-group">结尾</div>
+  <a class="toc" href="#summary"><span class="n">07</span>全章核心要点速览</a>
+  <a class="toc" href="#pitfalls"><span class="n">08</span>易混易错点警示</a>
+  <a class="toc" href="#quiz"><span class="n">09</span>章节自测系统</a>
+  <a class="toc" href="#cards"><span class="n">10</span>考点速记卡</a>
+  <a class="toc" href="#cases"><span class="n">11</span>病例挑战</a>
+  <a class="toc" href="#ext"><span class="n">12</span>拓展延伸</a>
+</aside>
+<main class="main">
+<div class="wrap">
+
+<!-- ===== 00 封面 ===== -->
+<section id="cover">
+  <div class="hero">
+    <span class="chap">第十三章 · CHAPTER 13</span>
+    <h1>躯体痛苦及躯体体验障碍</h1>
+    <p class="tagline">ICD-11 新设的类别：当躯体症状本身成为痛苦的核心，或当"成为残疾人"变成一种持续的自我要求。</p>
+    <p class="meta">教材：精神病学（第9版）｜印刷页 159–166｜全章 2 节：第一节 躯体痛苦障碍、第二节 身体完整性烦恼</p>
+    <div class="goalbox">
+      <h3>学习目标（四级分层）</h3>
+      <ul>
+        <li><span class="lv">了解</span>说出「躯体痛苦及躯体体验障碍」是 ICD-11 新出现的类别及其四个亚型；知道本章只展开前两个亚型；知道躯体痛苦障碍在 DSM-5 中名为躯体症状障碍（SSD）。</li>
+        <li><span class="lv l2">理解</span>解释躯体痛苦障碍与 ICD-10 躯体形式障碍的根本区别（"查无实据" vs "过度关注与痛苦无法被合理解释"）；理解"神经质"人格—感觉阈值降低—症状感知的链条，以及脑干网状结构滤过功能失调假说。</li>
+        <li><span class="lv l3">掌握</span>掌握躯体痛苦障碍的六条诊断要点与三级严重程度；掌握与躯体疾病、疑病症、抑郁障碍、焦虑障碍等七组鉴别；掌握治疗中"四条注意"、四项目标与心理治疗、药物治疗的具体内容。</li>
+        <li><span class="lv l4">重点</span>身体完整性烦恼的五个诊断条件与四组鉴别（尤其与躯体变形障碍、强迫症的分界）；"只有残疾了才是完整的"这一核心体验；教材对 BID 治疗现状的坦率结论——缺乏公认有效治疗方式。</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 01 地位 ===== -->
+<section id="status">
+  <div class="sec-head"><div class="badge">01</div><h2>本章地位速览<span class="en">Why this chapter matters</span></h2></div>
+  <p class="sec-lead">这一章不教你"怎么查出病"，而教你"当检查查不出病、患者却确实在痛苦时，如何理解和处置"。它是会诊联络精神医学的入口章节。</p>
+  <div class="grid3">
+    <div class="card blue">
+      <h3>章节定位与重要性</h3>
+      <p>本章位于教材第十三章（印刷页 159–166），属于"躯体症状及相关障碍"知识模块。全章以 ICD-11 新类别开篇，列四个亚型，只展开<strong>躯体痛苦障碍</strong>与<strong>身体完整性烦恼</strong>两种。</p>
+      <p class="note">命名要记牢：ICD-11 用"躯体痛苦障碍（BDD）"，DSM-5 用"躯体症状障碍（SSD）"，二者是同一类问题的不同命名体系。</p>
+    </div>
+    <div class="card red">
+      <h3>临床意义</h3>
+      <p>躯体痛苦障碍患者常反复就医、频繁更换医院与专家、对治疗依从性差，且常拒绝精神科诊断，长期非正规诊疗易造成医患不信任。教材指出住院患者中其比例可达 5%，是医疗资源消耗与医患冲突的高发区。</p>
+      <p>身体完整性烦恼虽罕见，但后果可能极端——患者可能实施自我截肢，使健康或生命处于重大危险之中。</p>
+    </div>
+    <div class="card green">
+      <h3>与前后章节关联</h3>
+      <p><strong>前置：</strong>ICD-10 的躯体形式障碍、疑病症等旧分类，是理解本章"最大区别"的对照物。</p>
+      <p><strong>横向：</strong>与抑郁障碍、焦虑障碍、分离性障碍、精神分裂症、物质使用所致障碍反复交叉，构成本章鉴别的主体；BID 则与强迫症、躯体变形障碍、做作性障碍与诈病相邻。</p>
+      <p><strong>跨学科：</strong>消化内科（肠易激综合征）、心血管内科（非心脏性胸痛）、神经科（右顶叶假说）均有交集。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 02 导航 ===== -->
+<section id="navmap">
+  <div class="sec-head"><div class="badge">02</div><h2>章节导航图<span class="en">Section map</span></h2></div>
+  <p class="sec-lead">教材两节各自独立成病，因此建立两个正文单元，每单元完整八栏。点击卡片直接跳转。</p>
+  <div class="grid2">
+    <a class="card red" href="#u1" style="display:block;color:inherit">
+      <h3>第一节 · 躯体痛苦障碍</h3>
+      <p>持续性躯体症状 + 对症状的过度关注 + 显著功能障碍。核心是"关注"而非"查无实据"。</p>
+      <p class="note">关键词：BDD · SSD · 继发性获益 · 脑干网状结构 · 三级严重度</p>
+    </a>
+    <a class="card purple" href="#u2" style="display:block;color:inherit">
+      <h3>第二节 · 身体完整性烦恼</h3>
+      <p>强烈而持久地渴望成为残疾者，认为"残疾了才是完整的"。儿童早期至中期最常见。</p>
+      <p class="note">关键词：BID · 右顶叶 · 自我截肢 · 与躯体变形障碍分界</p>
+    </a>
+  </div>
+  <div class="callout book">
+    <span class="ct">📖 单元合并与拆分说明</span>
+    教材在章首明确列出四个亚型：躯体痛苦障碍、身体完整性烦恼、其他特定的躯体痛苦或躯体体验障碍、未特定的躯体痛苦或躯体体验障碍，并说明<strong>本章主要介绍前面两种</strong>。故本指南只设两个正文单元，与教材两节一一对应；后两个亚型教材未展开内容，不另行编造单元，只在「拓展延伸」中标明教材未涉及。
+  </div>
+</section>
+
+<!-- ===== 03 知识地图 ===== -->
+<section id="mindmap">
+  <div class="sec-head"><div class="badge">03</div><h2>本章知识地图<span class="en">Knowledge map</span></h2></div>
+  <p class="sec-lead">教材按"一个类别 → 两个疾病"展开。把知识重排为五层，比按目录背诵更接近临床思路。</p>
+  <div class="grid3">
+    <div class="mini">
+      <h4>第 1 层 · 类别层</h4>
+      <p>ICD-11 新类别「躯体痛苦及躯体体验障碍」，核心是<strong>自身躯体体验的紊乱</strong>，含 4 个亚型。</p>
+    </div>
+    <div class="mini">
+      <h4>第 2 层 · 疾病层</h4>
+      <p>① 躯体痛苦障碍：症状 + 过度关注；② 身体完整性烦恼：渴望残疾。</p>
+    </div>
+    <div class="mini">
+      <h4>第 3 层 · 机制层</h4>
+      <p>BDD：心理社会因素（继发性获益、神经质人格）+ 生物学（家族聚集、网状结构滤过失调）。<br>BID：右顶叶功能障碍假说。</p>
+    </div>
+    <div class="mini">
+      <h4>第 4 层 · 识别层</h4>
+      <p>BDD：六条诊断要点 → 轻/中/重三级 → 七组鉴别。<br>BID：五个必备条件 → 四组鉴别。</p>
+    </div>
+    <div class="mini">
+      <h4>第 5 层 · 处置层</h4>
+      <p>BDD：四条注意 + 四项目标 + 心理治疗/药物/其他。<br>BID：缺乏公认有效治疗，重点转向缓解伴随的焦虑抑郁与痛苦。</p>
+    </div>
+    <div class="mini">
+      <h4>第 6 层 · 结局层</h4>
+      <p>BDD 慢性波动，约一半 6～12 个月内症状消失；起病缓慢、病程 2 年以上预后差。BID 的渴望强度可波动，但"任何时候都不会完全消失"。</p>
+    </div>
+  </div>
+  <div class="card cyan">
+    <h3>本章核心概念与数量统计</h3>
+    <div class="stat">
+      <span>疾病单元 2 个</span>
+      <span>ICD-11 亚型 4 个（教材展开 2 个）</span>
+      <span>BDD 诊断要点 6 条</span>
+      <span>BDD 严重程度 3 级</span>
+      <span>BDD 鉴别 7 组</span>
+      <span>BID 诊断条件 5 条</span>
+      <span>BID 鉴别 4 组</span>
+      <span>教材案例 3 例（BDD 2 例、BID 1 例）</span>
+    </div>
+    <p class="note">注意：本章的"躯体变形障碍"只在 BID 的鉴别栏出现，教材没有把它作为本章疾病展开；不要把其他章节的躯体变形障碍内容搬进本章。</p>
+  </div>
+</section>
+
+<!-- ===== 04 路线 ===== -->
+<section id="route">
+  <div class="sec-head"><div class="badge">04</div><h2>学习路线图<span class="en">Study route</span></h2></div>
+  <p class="sec-lead">先立"类别"，再学"两个病"，最后用鉴别表收口。本章概念不难，难在"边界"——尤其是 BDD 与疑病症、BID 与躯体变形障碍的分界。</p>
+  <div class="grid2">
+    <div class="card blue">
+      <h3>推荐阅读顺序</h3>
+      <ol>
+        <li>章首导语：记住"四个亚型、只讲两个"，以及 BDD＝SSD 的命名对应。</li>
+        <li>躯体痛苦障碍：概述 → 病因 → 临床表现 → 两例教材病例。</li>
+        <li>诊断要点与三级严重度，逐条对照病例找证据。</li>
+        <li>七组鉴别，先做"BDD vs 疑病症"和"BDD vs 抑郁"两组。</li>
+        <li>治疗：先记四条"注意"，再记心理治疗与药物清单。</li>
+        <li>身体完整性烦恼：定义 → 病例 → 五条件 → 四组鉴别 → 治疗现状。</li>
+      </ol>
+    </div>
+    <div class="card green">
+      <h3>重点优先级与时间规划</h3>
+      <p><strong>建议总时长：</strong>首次精读 70～90 分钟；复习 2 轮，每轮 25 分钟；考前只看要点与鉴别表 10 分钟。</p>
+      <p><strong>复习节奏：</strong>学完当天做自测 → 第 3 天翻闪卡 → 第 7 天重做病例挑战。</p>
+      <p class="note">本章数字不多但都关键：3 个月、1% / 0.1%～0.4% / 1%～2% / 5%、20%、6～12 个月、2 年、30～50 岁。</p>
+    </div>
+  </div>
+  <div class="card orange">
+    <h3>考点优先级一览</h3>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>知识点</th><th>优先级</th><th>推荐记忆策略</th></tr></thead>
+        <tbody>
+          <tr><td>BDD 六条诊断要点 + 症状持续 3 个月</td><td class="starme">⭐⭐⭐</td><td>口诀 + 数字锚定</td></tr>
+          <tr><td>BDD 与 ICD-10 躯体形式障碍的最大区别</td><td class="starme">⭐⭐⭐</td><td>对比记忆法</td></tr>
+          <tr><td>BDD 与疑病症、抑郁障碍、焦虑障碍鉴别</td><td class="starme">⭐⭐⭐</td><td>对比 + 一句话总结</td></tr>
+          <tr><td>BDD 治疗四条注意与药物清单</td><td class="starme">⭐⭐⭐</td><td>归类记忆法</td></tr>
+          <tr><td>BID 定义与五个诊断条件</td><td class="starme">⭐⭐⭐</td><td>关键词 + 故事锚定</td></tr>
+          <tr><td>BID 与躯体变形障碍、强迫症的分界</td><td class="starme">⭐⭐⭐</td><td>对比记忆法</td></tr>
+          <tr><td>BDD 三级严重程度</td><td>⭐⭐</td><td>时间锚定（每天 1～2 小时 / 几小时 / 唯一焦点）</td></tr>
+          <tr><td>BDD 病因：继发性获益、神经质人格、网状结构假说</td><td>⭐⭐</td><td>因果链联想</td></tr>
+          <tr><td>BID 治疗现状与病程特点</td><td>⭐⭐</td><td>关键词记忆</td></tr>
+          <tr><td>BID 右顶叶功能障碍假说</td><td>⭐</td><td>类比理解</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout tip">
+      <span class="ct">💡 本章记忆策略推荐</span>
+      以<strong>对比记忆法</strong>为主轴：BDD 的七组鉴别、BID 的四组鉴别都是"边界题"，把两端放在同一张表里记，比单独背定义有效；再用<strong>数字锚定</strong>守住 3 个月、三级、五条件这三组硬指标。
+    </div>
+  </div>
+</section>
+
+<!-- ===== 05 躯体痛苦障碍 ===== -->
+<section id="u1">
+  <div class="sec-head"><div class="badge">05</div><h2>躯体痛苦障碍<span class="en">Bodily distress disorder · 第一节（p.159–164）</span></h2></div>
+  <p class="sec-lead">一句话抓本质：不是"查不出病"，而是"症状真实存在、关注明显过度、功能确实受损"。教材把诊断的锚点从"检查结果"移到了"关注程度"。</p>
+
+  <!-- 第一栏 -->
+  <div class="card red" id="u1-1">
+    <h3 class="col-title"><span class="idx">第一栏</span>疾病画像</h3>
+    <div class="quote"><span class="lab">教材原文</span>躯体痛苦障碍（bodily distress disorder，BDD）以存在令人痛苦的持续性躯体症状以及个体对症状的过度关注为特征，并造成显著的功能障碍。</div>
+    <p><strong>一句话画像：</strong>躯体症状是真实的，痛苦也是真实的，但"关注"远远超出了症状本身的分量——患者的注意力被症状牢牢占住，生活被反复就医和检查填满。<span class="note">（此句为教材要点的通俗化表述，非教材原文）</span></p>
+    <div class="grid3">
+      <div class="mini">
+        <h4>要素① 持续性躯体症状</h4>
+        <p>多涉及多种躯体症状，并随时间的推移发生变化；有时只有单个症状，<strong>通常是疼痛或疲劳</strong>。</p>
+      </div>
+      <div class="mini">
+        <h4>要素② 过度关注</h4>
+        <p>执着地关注症状严重性或其负面后果，关注程度显然过度；坚信症状会危害身体健康，反复就医超过医学必要程度。</p>
+      </div>
+      <div class="mini">
+        <h4>要素③ 显著功能障碍</h4>
+        <p>个人、家庭、社会、教育、职业或其他重要方面功能受损，这是诊断的必要一环，不是"附带现象"。</p>
+      </div>
+    </div>
+    <p><strong>与旧分类的分水岭：</strong>教材把这一点写得很直白——</p>
+    <div class="quote"><span class="lab">教材原文</span>躯体痛苦障碍与ICD-10 中的躯体形式障碍最大的区别在于，后者强调各种医学检查均无可解释躯体症状的异常发现，而前者强调患者对躯体症状的过度关注和痛苦不能被合理解释。也就是说，即使医学检查发现了异常，只要患者表现出过度的关注和痛苦，都可以诊断躯体痛苦障碍。</div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>维度</th><th>ICD-10 躯体形式障碍</th><th>ICD-11 躯体痛苦障碍</th></tr></thead>
+        <tbody>
+          <tr><td>诊断立足点</td><td>各种医学检查均无<strong>可解释症状的异常发现</strong></td><td>患者对症状的<strong>过度关注和痛苦不能被合理解释</strong></td></tr>
+          <tr><td>检查有异常时</td><td>按教材表述，其强调"查无异常发现"</td><td><strong>仍可诊断</strong>——只要过度关注与痛苦成立</td></tr>
+          <tr><td>临床含义</td><td>以"排除器质性"为核心</td><td>以"评估关注程度与功能损害"为核心</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p><strong>同义与近义的临床标签：</strong>在临床各科室就诊的慢性疲劳综合征（chronic fatigue syndrome）、肠易激综合征（irritable bowel syndrome）、非心脏性胸痛（noncardiac chest pain）、疼痛综合征（pain syndrome）患者，常伴有躯体痛苦障碍。这些综合征又常被非精神科医师称为<strong>功能性躯体综合征</strong>（functional somatic syndrome），或<strong>医学无法解释的躯体症状</strong>（medically unexplained somatic symptom）。</p>
+    <div class="stat">
+      <span>估计患病率 &lt; 1%</span>
+      <span>1992 年美国调查 0.1%～0.4%</span>
+      <span>初级保健机构 1%～2%</span>
+      <span>住院患者高达 5%</span>
+    </div>
+    <p class="note">教材说明：目前还缺乏较公认的终生患病率、现患病率数据，上述数字为教材引用的估计值与 1992 年美国流行病学研究中心调查结果。</p>
+    <div class="callout book">
+      <span class="ct">📖 生命周期特点（教材原文归纳）</span>
+      儿童期更常见的是<strong>单一躯体症状</strong>，如反复出现的胃肠道症状（腹痛、恶心等）、疲劳、头痛和肌肉骨骼疼痛；病情严重时可出现行为退化和功能损害，影响生活自理与行动能力。老年人则以<strong>多种躯体症状为主，且为持续性</strong>；因本身可能患有复杂躯体疾病，其症状可能被躯体疾病所解释，故老年人诊断应更加谨慎。
+    </div>
+  </div>
+
+  <!-- 第二栏 -->
+  <div class="card blue" id="u1-2">
+    <h3 class="col-title"><span class="idx">第二栏</span>病因探秘</h3>
+    <p>教材开宗明义：<strong>确切病因尚不明确</strong>，目前研究结果显示主要涉及心理社会因素及生物学因素。以下严格区分"易患因素"与"假说"。</p>
+    <div class="grid2">
+      <div class="mini">
+        <h4>心理社会因素 · 易患因素</h4>
+        <ul>
+          <li>幼时受到父母<strong>过度照顾或忽略</strong></li>
+          <li>儿童期患病经历、创伤</li>
+          <li>长期与慢性疾病患者共同生活</li>
+          <li>生活中存在现实冲突</li>
+          <li>部分患者属<strong>医源性起病</strong>，如误诊、不恰当的治疗</li>
+        </ul>
+      </div>
+      <div class="mini">
+        <h4>心理社会因素 · 维持机制</h4>
+        <ul>
+          <li><strong>继发性获益：</strong>因躯体症状回避社会责任，并获得更多关心、保护和照顾，成为疾病迁延不愈的重要原因</li>
+          <li><strong>文化塑造：</strong>传统社会文化倾向于对躯体症状给予关注和同情，可能鼓励躯体症状的表达，实现免除某种责任等获益</li>
+          <li><strong>防御机制：</strong>在繁忙拥挤的医疗环境中，患者常无意识地掩饰或忽略情绪症状，以直接的、易被周围文化接受的躯体症状为主诉</li>
+        </ul>
+      </div>
+    </div>
+    <div class="callout tip">
+      <span class="ct">🧠 人格—感知链条（教材原文逻辑）</span>
+      许多研究发现患者多具有<strong>"神经质"人格特征</strong>：敏感、多疑、固执、过度关注躯体不适和自身健康状况 → 导致<strong>感觉阈值降低</strong>、躯体感觉的敏感性增加 → 更容易感觉到各种躯体症状。<br>
+      <em>记忆抓手：</em>不是"症状变多了"，而是"门槛变低了"。
+    </div>
+    <div class="grid2">
+      <div class="mini">
+        <h4>生物学因素 · 家族聚集</h4>
+        <p>躯体痛苦障碍可有家族聚集性。有研究发现，约<strong>20%</strong>的躯体痛苦障碍患者的<strong>女性一级亲属</strong>也符合该诊断。教材指出，其家族聚集性可受遗传因素、环境因素或两者共同影响。</p>
+      </div>
+      <div class="mini">
+        <h4>生物学因素 · 假说</h4>
+        <p>有研究认为，患者可能存在<strong>脑干网状结构滤过功能失调</strong>。该结构负责维持意识状态、保持正常注意和唤醒、过滤不必要信息；滤过失调后，过去不被感知的内脏器官活动被感知，注意力由外转向身体内部。</p>
+      </div>
+    </div>
+    <p><strong>假说的完整链条：</strong>滤过功能失调 → 内脏活动被感知、注意转向体内 → 情绪焦虑紧张时体内生理变化加剧（如神经内分泌、血液生化等改变）→ 这些信息不断上传到大脑中枢并被感受 → 被患者感知为躯体不适或相应症状。</p>
+    <div class="callout warn">
+      <span class="ct">⚠️ 严谨性提醒</span>
+      教材对生物学机制使用的措辞是"有研究认为""一个观点认为"，属于<strong>假说</strong>而非定论；心理社会因素多为<strong>易患因素</strong>与维持因素，不能表述为"病因已证实"。答题时照教材措辞，不要绝对化。
+    </div>
+  </div>
+
+  <!-- 第三栏 -->
+  <div class="card red" id="u1-3">
+    <h3 class="col-title"><span class="idx">第三栏</span>临床表现拼图</h3>
+    <p><strong>一、四条共同临床特点（教材原文的四点归纳）</strong></p>
+    <div class="grid2">
+      <div class="mini">
+        <h4>① 症状复杂多样、无法用恰当器质性依据解释</h4>
+        <p>发病往往涉及精神心理因素，患者多有情绪表达的躯体化特点。表现为症状复杂多样、反复出现、时常变化，但未找到明确器质性依据，或无法完全用器质性疾病解释。</p>
+      </div>
+      <div class="mini">
+        <h4>② 反复检查和治疗、医患关系不佳</h4>
+        <p>症状顽固持久；患者依一知半解的医学知识把痛苦归咎于躯体疾病，频繁更换医院和专家、尝试多种治疗；对症状变化与治疗调整的不适过分关注、顾虑重重、依从性差；<strong>常拒绝接受精神障碍的诊断及治疗</strong>。</p>
+      </div>
+      <div class="mini">
+        <h4>③ 非精神科诊断名称含糊多样</h4>
+        <p>患者难接受精神障碍标签，常在非精神科反复就诊；非精神科医师对心理问题识别率较低，不同科室诊断名称繁杂混乱（如自主神经功能紊乱、功能性胃肠病、肠易激综合征、胃肠神经症）。模棱两可的诊断或假阳性结果会<strong>增加疾病感</strong>、强化求医行为。</p>
+      </div>
+      <div class="mini">
+        <h4>④ 病前负性应激、病后应激加重疾病感</h4>
+        <p>基于"神经质"人格，病前常遇较多心理事件（如人际关系问题），并倾向于放大这些事件；患病后不被家人、同事、领导理解，应激加重，形成<strong>恶性循环</strong>。</p>
+      </div>
+    </div>
+    <p><strong>二、各系统症状的两个共性</strong></p>
+    <div class="callout key">
+      <span class="ct">📌 教材给出的两条共性</span>
+      一是以<strong>自主神经兴奋的客观体征</strong>为基础，如心悸、出汗、脸红、震颤；二是<strong>非特异性症状</strong>，如部位不定的疼痛、烧灼感、沉重感、紧束感、肿胀感等。患者的疾病体验、表达、解释归因、求助动机、对医师的期望等心理活动更具个体特异性和主观性；但任何一种类型症状，都无法完全用有关器官和系统存在器质性病变的证据来解释。
+    </div>
+    <p><strong>三、按系统拆开看（教材列举）</strong></p>
+    <div class="tabs" data-tabs>
+      <div class="tabbar">
+        <button class="on" data-tab="s1">呼吸循环</button>
+        <button data-tab="s2">消化</button>
+        <button data-tab="s3">运动</button>
+        <button data-tab="s4">神经</button>
+        <button data-tab="s5">其他</button>
+      </div>
+      <div class="panel on" data-panel="s1">
+        <ul>
+          <li>心悸、胸闷、心跳加速</li>
+          <li>心前区不适、胸痛</li>
+          <li>呼吸困难、咳嗽</li>
+          <li>过度换气综合征</li>
+        </ul>
+      </div>
+      <div class="panel" data-panel="s2">
+        <ul>
+          <li>腹痛、腹胀、反胃、腹泻、恶心</li>
+          <li>大便频繁、上腹部灼热感</li>
+          <li>教材特别提示：部分患者胃镜结果常提示"浅表性胃炎"，这<strong>可能加重疾病恐惧与躯体不适</strong></li>
+        </ul>
+      </div>
+      <div class="panel" data-panel="s3">
+        <ul>
+          <li>四肢疼痛、肌肉疼痛、关节疼痛、背痛</li>
+          <li>麻痹感或无力、转移性疼痛</li>
+          <li>令人不愉快的麻木感或刺痛感</li>
+          <li>教材提示：患者对疼痛的描述常常是<strong>戏剧化、生动鲜明</strong>的</li>
+        </ul>
+      </div>
+      <div class="panel" data-panel="s4">
+        <ul>
+          <li>注意力不集中、记忆力下降</li>
+          <li>过度疲劳</li>
+          <li>头晕、头痛、耳鸣、眩晕</li>
+        </ul>
+      </div>
+      <div class="panel" data-panel="s5">
+        <ul>
+          <li>出汗、震颤</li>
+          <li>尿频、排尿困难</li>
+          <li>呃逆</li>
+        </ul>
+      </div>
+    </div>
+    <p class="note">以上症状均取自教材"各系统常见临床表现"原文，未补充教材之外的症状。</p>
+  </div>
+
+  <!-- 第四栏 -->
+  <div class="card orange" id="u1-4">
+    <h3 class="col-title"><span class="idx">第四栏</span>教材典型案例</h3>
+    <div class="quote">
+      <span class="lab">教材原文</span>
+      <strong>病例一：</strong>患者，女，45 岁。主诉"乏力、怕冷、胸闷、腹胀等躯体不适5 年"。患者平素性格内向、工作认真。5 年前因琐事与单位同事发生矛盾，感到生气，此后逐渐出现进食后上腹饱胀感、乏力、胸闷，尤其怕冷，夏天还穿毛衣。先后辗转于多家医院的消化内科、呼吸内科、心血管内科、内分泌科、中医科等就诊，进行过多次血、尿、粪的化验和心电图、胃镜、B 超、胸腹X 片等检查，均无异常发现。服用多种药物对症治疗，但症状时轻时重、难以持续缓解，经常感到身体多处不适。患者常为疾病不能康复而紧张不安，并抱怨医师"服务态度不好，医疗水平太差"，抱怨家里人"不理解自己，不关心自己"。近2 年无法坚持工作。<br>
+      <strong>诊断：躯体痛苦障碍。</strong>
+    </div>
+    <p><strong>病例一拆解：症状 → 鉴别 → 确诊</strong></p>
+    <ul>
+      <li><strong>症状侧：</strong>乏力、怕冷、胸闷、腹胀，涉及消化、呼吸循环、神经等多系统，且"时轻时重、难以持续缓解"——符合"复杂多样、反复变化"。</li>
+      <li><strong>关注侧：</strong>辗转五个科室、完成大量检查、服药对症，"常为疾病不能康复而紧张不安"——过度关注与反复就医超过医学必要程度。</li>
+      <li><strong>功能侧：</strong>"近 2 年无法坚持工作"——职业功能显著受损。</li>
+      <li><strong>鉴别侧：</strong>多项检查"均无异常发现"，可排除以客观检查为据的躯体疾病；情绪症状以躯体主诉形式呈现，且并非以心境低落为主线，故不优先考虑抑郁障碍。</li>
+      <li><strong>关系侧：</strong>抱怨医师与家人——教材所说的医患关系不佳、病后应激加重疾病感。</li>
+    </ul>
+    <div class="quote">
+      <span class="lab">教材原文</span>
+      <strong>病例二：</strong>患者，男，43 岁。因"臀部、腰背部、左侧腹股沟疼痛2 年"就诊。患者病前个性内向，且不善交际，办事认真。2 年前行"疝气"手术，术后恢复良好。但患者感到左侧腹股沟部位疼痛一直存在，并放射至左侧臀部、腰背部及下肢，患者担心是手术的并发症，多次到普外科检查，均未发现异常。曾2 次行腰骶椎MRI 检查未见异常。疼痛严重时服用止痛药可以暂时缓解，在劳累、生气、失眠情况下加重。1 年前，右侧臀部及下肢亦出现疼痛，有时为放射性，有时则呈跳动性，有时呈游走性。近2 年，患者晚间睡眠差，入睡困难，常服用"安定"帮助入睡。曾到多家医院的普外科、骨科、疼痛科、中医科等就诊，未给出准确诊断。患者一方面四处就医，尝试各种治疗方案，另一方面因感到难以有持续的效果而经常自行中断治疗。半年前患者上述症状加重，在普外科医师的建议下，来到某三甲医院的精神心理科就诊。<br>
+      <strong>诊断：躯体痛苦障碍。</strong>
+    </div>
+    <p><strong>病例二拆解：</strong></p>
+    <ul>
+      <li><strong>诱因：</strong>疝气手术成为疼痛的"起点"，患者"担心是手术的并发症"——典型的归因于躯体疾病。</li>
+      <li><strong>症状演变：</strong>由左侧腹股沟扩展至臀部、腰背、下肢，性质在放射性、跳动性、游走性间变化——符合"症状随时间推移而变化"。</li>
+      <li><strong>求医行为：</strong>多家医院多个科室、多次影像检查均未见异常，仍四处就医；同时"经常自行中断治疗"——依从性差。</li>
+      <li><strong>功能与共病：</strong>睡眠差、需"安定"助眠；症状在劳累、生气、失眠时加重，提示情绪与应激的放大作用。</li>
+      <li><strong>转诊节点：</strong>由普外科医师建议转精神心理科——教材示范了非精神科识别与转介的价值。</li>
+    </ul>
+    <div class="callout book">
+      <span class="ct">📖 两例的共同教学点</span>
+      "检查无异常"只是背景，真正支撑诊断的是：症状多系统、反复变化；关注过度、反复就医；功能受损；以及症状与心理应激之间的时间联系。两例都由教材明确给出"诊断：躯体痛苦障碍"。
+    </div>
+  </div>
+
+  <!-- 第五栏 -->
+  <div class="card orange" id="u1-5">
+    <h3 class="col-title"><span class="idx">第五栏</span>鉴别诊断对对碰</h3>
+    <p>教材列出七组鉴别。前四组最常考，后三组是"容易被忽略但会答错"的边界。</p>
+    <p><strong>表 1　四组高频鉴别</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>鉴别对象</th><th>对方的核心表现</th><th>关键鉴别点</th></tr></thead>
+        <tbody>
+          <tr>
+            <td>躯体疾病</td>
+            <td>具有明确的、与症状相称的客观检查结果；症状主诉相对集中，并能用当今医学知识解释</td>
+            <td>BDD 的症状<strong>数量和严重程度通常超过</strong>相关躯体疾病表现，且"查无实据"。注意：BDD 可与躯体疾病同时存在；若躯体主诉的<strong>重点和稳定性发生转化</strong>，提示可能有躯体疾病，应进一步检查和会诊</td>
+          </tr>
+          <tr>
+            <td>疑病症</td>
+            <td>注意力更多指向<strong>潜在进行性的严重疾病过程及其不良后果</strong>，倾向要求医学检查以确定或证实疾病性质，或要求医务人员提供保证</td>
+            <td>BDD 关注的是<strong>症状本身及症状严重程度对个体的影响</strong>，不是对某种特定严重疾病的担心；可能相信症状预示躯体疾病，但关注点主要是<strong>要求治疗以消除症状</strong></td>
+          </tr>
+          <tr>
+            <td>抑郁障碍</td>
+            <td>以<strong>心境低落、兴趣缺失</strong>为主要临床特征；可有早醒、晨重暮轻的节律改变、体重减轻、精神运动迟滞、自罪自责、自杀言行；对躯体症状的求治欲望不如 BDD 强烈</td>
+            <td>BDD 以<strong>对躯体症状的过度关注</strong>为主要表现，且不只是在抑郁发作背景下出现躯体症状。两者可并存：抑郁常伴躯体不适，BDD 也常伴抑郁情绪</td>
+          </tr>
+          <tr>
+            <td>焦虑障碍</td>
+            <td>广泛性焦虑的躯体症状只是众多焦虑之一，通常还伴对工作、人际关系、财务等其他方面的担忧；惊恐障碍的躯体症状常伴<strong>强烈恐惧</strong>且往往为<strong>发作性</strong></td>
+            <td>BDD 的躯体症状是关注的核心与主轴，不表现为"多发担忧之一"或"发作性惊恐"</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p><strong>表 2　三组易漏鉴别</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>鉴别对象</th><th>对方的核心表现</th><th>关键鉴别点</th></tr></thead>
+        <tbody>
+          <tr>
+            <td>分离性障碍（分离性神经症状障碍）</td>
+            <td>常有"癔症样"人格特征；躯体症状往往有心理诱因，表现为在时间上与应激性事件有<strong>明确联系</strong>；暗示和催眠治疗有较好疗效</td>
+            <td>BDD <strong>缺乏</strong>上述特点（无明确的时间联系、暗示催眠疗效不显著）</td>
+          </tr>
+          <tr>
+            <td>精神分裂症</td>
+            <td>可有疼痛等躯体不适，但往往对躯体症状<strong>漠不关心</strong>或予以<strong>荒谬离奇的解释</strong>，常伴思维形式障碍或幻觉妄想</td>
+            <td>BDD 对症状是过度关注而非漠视，且无思维形式障碍与幻觉妄想</td>
+          </tr>
+          <tr>
+            <td>物质使用所致障碍</td>
+            <td>对精神活性物质（如苯二氮䓬类药物、阿片类物质等）形成依赖后，戒断时常见疼痛等躯体不适；继续使用成瘾药物或替代药物可以缓解</td>
+            <td>关键在于<strong>症状与物质使用/戒断的时间关系</strong>及"用药即缓解"的规律；BDD 无此规律</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout key">
+      <span class="ct">📌 一句话鉴别总结</span>
+      BDD 是"<strong>盯着症状要治疗</strong>"；疑病症是"<strong>盯着病名要检查</strong>"；抑郁是"<strong>心境低落为主、求治躯体症状的欲望不强</strong>"；焦虑是"<strong>担忧很多、或呈发作性惊恐</strong>"；分离性障碍"<strong>与应激事件时间锁定、暗示催眠有效</strong>"；精神分裂症"<strong>漠不关心或荒谬解释</strong>"；物质所致"<strong>戒断出现、再用药缓解</strong>"。
+    </div>
+  </div>
+
+  <!-- 第六栏 -->
+  <div class="card green" id="u1-6">
+    <h3 class="col-title"><span class="idx">第六栏</span>治疗方案工具箱</h3>
+    <p>教材先讲"治疗时应注意的问题"，再讲目标与原则，最后才是具体方法——顺序本身说明：<strong>关系与评估优先于技术</strong>。</p>
+    <p><strong>一、治疗时应注意的四个问题</strong></p>
+    <div class="grid2">
+      <div class="mini">
+        <h4>① 重视医患关系</h4>
+        <p>治疗开始就要建立良好关系；以耐心、同情、接纳的态度对待痛苦，<strong>理解躯体体验的真实性</strong>，而非认为是"想象的问题"或"装病"。理解患者的体验是建立良好医患关系的开始。</p>
+      </div>
+      <div class="mini">
+        <h4>② 重视连续的医学评估</h4>
+        <p>早期进行彻底的医学评估和适当检查；清楚反馈检查结果并恰当解释，特别是对矛盾的实验室结果或似是而非的阳性结果。解释<strong>不应加重灾难化推论，也不应彻底否认</strong>患者的躯体问题。症状加重或出现新症状时必须再评估以排除器质性疾病。</p>
+      </div>
+      <div class="mini">
+        <h4>③ 重视心理社会因素的评估</h4>
+        <p>确定心理社会因素可能是病因之一后，尽早选择合适时机提出"心理社会因素与躯体症状关系"的话题并讨论，鼓励患者把疾病看成<strong>躯体、心理和社会多因素综合导致</strong>。</p>
+      </div>
+      <div class="mini">
+        <h4>④ 适当控制不合理要求</h4>
+        <p>避免承诺安排过多检查，以免强化疾病观念和过度就医；可定期约见、提供必要检查但<strong>不能太频繁</strong>；同时对家庭成员进行疾病知识教育，因为家人也可能强化患者的不合理行为。</p>
+      </div>
+    </div>
+    <div class="grid2">
+      <div class="mini">
+        <h4>二、治疗目标（四条）</h4>
+        <ol>
+          <li>减少或减轻症状</li>
+          <li>减少心理社会应激</li>
+          <li>减少或减轻日常功能损害</li>
+          <li>减少不合理医疗资源的使用</li>
+        </ol>
+      </div>
+      <div class="mini">
+        <h4>三、治疗原则（三条）</h4>
+        <ol>
+          <li>对躯体疾病和精神障碍的诊断和治疗均保持谨慎的判断</li>
+          <li>对共病给予适当的治疗</li>
+          <li>治疗任务分阶段制定</li>
+        </ol>
+      </div>
+    </div>
+    <p><strong>四、心理治疗</strong></p>
+    <p>目的在于让患者逐渐了解所患疾病的性质，改变不合理观念，解除或减轻心理社会因素的影响，使患者对自己的身体情况与健康状态有相对正确的评估，逐渐建立对躯体痛苦的合理性解释。常用方法：<strong>支持性心理治疗、认知行为疗法</strong>，也可采用<strong>动力性心理治疗、团体治疗、家庭治疗</strong>。</p>
+    <div class="grid2">
+      <div class="mini">
+        <h4>支持性心理治疗</h4>
+        <p>帮助患者重新树立信心并使其得到鼓舞，促使他们对治疗计划的其他方面予以配合。对医学检查结果合理的解释、适当做出承诺和必要的保证也具有一定治疗作用。</p>
+      </div>
+      <div class="mini">
+        <h4>认知行为疗法（CBT）</h4>
+        <p>教材称其为<strong>有效的治疗手段，可以减少躯体症状</strong>。主要目标是引导患者克服认知盲点、模糊知觉和不正确判断，改变歪曲认知或不合逻辑的思考方式。<strong>功能性分析</strong>（明确特定刺激与结果间的联系）是治疗成功的关键。</p>
+      </div>
+    </div>
+    <div class="callout key">
+      <span class="ct">📌 CBT 的四项内容（教材原文顺序）</span>
+      ① 明确治疗目标：帮助患者认识问题的实质，从而减少躯体症状；<br>
+      ② 在接受患者躯体体验和痛苦感的基础上，与患者一起讨论症状的<strong>生物学和心理学机制</strong>，鼓励患者说出疑虑和想法；<br>
+      ③ 与患者讨论其对疾病的解释，评估和审视患者提出的论据；<br>
+      ④ 减少不恰当的病理性行为（如过度检查和就医），并减少其对社会现实问题的回避。
+    </div>
+    <p><strong>五、药物治疗（通常结合心理治疗使用）</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>目标症状/情形</th><th>教材提到的药物</th><th>教材表述</th></tr></thead>
+        <tbody>
+          <tr><td>抑郁、焦虑等症状</td><td>抗抑郁药、抗焦虑药；常用的有 <strong>SSRIs、SNRIs</strong></td><td>对症治疗；治疗前应仔细评估，确定在哪个阶段、使用哪些精神药物是有利的</td></tr>
+          <tr><td>慢性疼痛</td><td><strong>SNRIs、三环类抗抑郁药、镇痛药</strong></td><td>可对症处理</td></tr>
+          <tr><td>有偏执倾向、难治性患者</td><td><strong>小剂量非典型抗精神病药物</strong>：喹硫平、利培酮、阿立哌唑、奥氮平、氨磺必利</td><td>用于提高疗效</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout warn">
+      <span class="ct">⚠️ 教材未涉及</span>
+      本节<strong>未给出任何药物剂量、给药频次、疗程或换药节点</strong>，也未给出心理治疗的具体次数与时长。凡遇剂量/疗程题，一律按"教材未涉及"处理，不要用课外数字填空。
+    </div>
+    <p><strong>六、其他治疗：</strong>物理治疗、中医中药治疗等对躯体痛苦障碍的患者可能也有一定效果。</p>
+    <div class="timeline">
+      <div class="tl-item"><h4>第 1 步 · 建立关系（教材强调"治疗开始"）</h4><p>接纳痛苦、承认躯体体验的真实性，避免"想象"或"装病"的判断。</p></div>
+      <div class="tl-item"><h4>第 2 步 · 连续医学评估</h4><p>彻底评估 + 适当检查；结果清楚反馈并解释；症状变化时重新评估排除器质性疾病。</p></div>
+      <div class="tl-item"><h4>第 3 步 · 评估心理社会因素并提出讨论</h4><p>选择合适时机，把疾病解释为躯体、心理、社会多因素综合所致。</p></div>
+      <div class="tl-item"><h4>第 4 步 · 控制不合理要求、设定随访边界</h4><p>不承诺过多检查，定期约见而非过频；同步教育家庭成员。</p></div>
+      <div class="tl-item"><h4>第 5 步 · 分阶段实施心理治疗与药物治疗</h4><p>按教材"治疗任务分阶段制定"的原则，CBT/支持性治疗为主，药物针对抑郁焦虑、慢性疼痛或难治偏执倾向。</p></div>
+    </div>
+    <p class="note">上述五步为按教材"治疗时应注意的问题 + 治疗原则 + 治疗方法"整理的流程，不是教材给定的疗程时间表。</p>
+  </div>
+
+  <!-- 第七栏 -->
+  <div class="card purple" id="u1-7">
+    <h3 class="col-title"><span class="idx">第七栏</span>记忆工具箱</h3>
+    <div class="callout tip">
+      <span class="ct">🔧 方法一：口诀歌谣法</span>
+      口诀：<strong>"症、注、解、久、损、排"</strong>——一个/多个<strong>症</strong>状；过度<strong>注</strong>意；检查与<strong>解</strong>释不能缓<strong>解</strong>（两个"解"合成一句"解不了"）；<strong>久</strong>（至少 3 个月的大部分时间）；功能受<strong>损</strong>；<strong>排</strong>除其他精神障碍。<br>
+      <em>为什么这样记：</em>六条诊断要点按"出现顺序"排列，口诀每字对应一条，回忆时按字清点，不会漏项。
+    </div>
+    <div class="callout tip">
+      <span class="ct">🔧 方法二：数字编码法</span>
+      记 <strong>"1—2—3—3—4—6"</strong>：1 个主诉（以躯体症状为主诉）；2 个核心（症状 + 过度关注）；3 个月；3 级严重度（轻/中/重）；4 项治疗目标；6 条诊断要点。<br>
+      <em>为什么这样记：</em>本章硬指标集中在这几个数字上，用一串数字当"抽屉编号"，考场上按号取物。
+    </div>
+    <div class="callout tip">
+      <span class="ct">🔧 方法三：对比记忆法</span>
+      把最易混的三组摆成一句话：<br>
+      <strong>"BDD 要治症状，疑病症要查病名，抑郁是心境低落求治弱"</strong>。<br>
+      再加一句：<strong>"焦虑是担忧之一或发作性惊恐"</strong>。<br>
+      <em>为什么这样记：</em>鉴别题考的是"分界"而非"定义"，把两端并排放，比单独背定义更抗遗忘。
+    </div>
+    <div class="callout tip">
+      <span class="ct">🔧 方法四：故事锚定法</span>
+      用教材病例一编故事：<strong>"一位内向的女职工，跟同事吵了一架，此后怕冷到夏天穿毛衣，跑了消化、呼吸、心血管、内分泌、中医五个科室，检查全正常，最后丢了工作"</strong>。<br>
+      故事里自带四个采分点：心理诱因、多系统症状、多科反复检查无异常、职业功能受损。<br>
+      <em>为什么这样记：</em>病例是"带细节的定义"，把抽象条目挂到具体人物身上，提取时先想起人，再想起点。
+    </div>
+    <div class="callout tip">
+      <span class="ct">🔧 方法五：归类记忆法（治疗）</span>
+      把治疗拆成四个抽屉：<strong>"心"</strong>（支持性、CBT、动力性、团体、家庭）、<strong>"药"</strong>（SSRIs、SNRIs）、<strong>"痛"</strong>（SNRIs、TCAs、镇痛药）、<strong>"难"</strong>（小剂量非典型抗精神病药：喹硫平、利培酮、阿立哌唑、奥氮平、氨磺必利）。<br>
+      <em>为什么这样记：</em>教材的药物是按"目标症状"分配的，按抽屉记就不会把"慢性疼痛用药"和"难治偏执用药"混在一起。
+    </div>
+  </div>
+
+  <!-- 第八栏 -->
+  <div class="card cyan" id="u1-8">
+    <h3 class="col-title"><span class="idx">第八栏</span>知识联动</h3>
+    <ul>
+      <li><strong>与 ICD-10 躯体形式障碍：</strong>本章开篇即以它为对照，说明诊断锚点从"检查无异常"转向"过度关注与痛苦无法被合理解释"——这是本章最核心的历史脉络。</li>
+      <li><strong>与抑郁障碍章：</strong>抑郁障碍常伴躯体不适，BDD 也常伴抑郁情绪；教材要求以"心境低落、兴趣缺失"为主线判断抑郁，以"对躯体症状的过度关注"判断 BDD。治疗上抗抑郁药同时服务两个方向。</li>
+      <li><strong>与焦虑障碍章：</strong>广泛性焦虑的多方面担忧、惊恐障碍的发作性强烈恐惧，是 BDD 的重要鉴别点；抗焦虑药也是 BDD 的对症选择之一。</li>
+      <li><strong>与分离性障碍章：</strong>教材以"与应激事件时间上的明确联系"和"暗示、催眠治疗疗效好"作为分界，提示两章在"心理因素如何转化为躯体表现"上互为参照。</li>
+      <li><strong>与精神分裂症、物质使用所致障碍章：</strong>前者以"漠不关心或荒谬解释 + 思维形式障碍/幻觉妄想"排除，后者以"戒断出现、再用药缓解"排除。</li>
+      <li><strong>与内科各系统：</strong>肠易激综合征、慢性疲劳综合征、非心脏性胸痛、疼痛综合征患者常伴 BDD；教材亦提示胃镜"浅表性胃炎"结果可能加重疾病恐惧，说明检查结论的沟通方式本身会影响病程。</li>
+      <li><strong>与本章第二节：</strong>两者同属 ICD-11「躯体痛苦及躯体体验障碍」类别，但一个指向"症状与关注"，一个指向"身体形态与完整性"，不可互相套用诊断逻辑。</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===== 06 身体完整性烦恼 ===== -->
+<section id="u2">
+  <div class="sec-head"><div class="badge">06</div><h2>身体完整性烦恼<span class="en">Body integrity dysphoria · 第二节（p.164–166）</span></h2></div>
+  <p class="sec-lead">一句话抓本质：患者不是"觉得自己丑"，而是"觉得自己太完整"——只有失去某个肢体或某种功能，才觉得身体是正确、自然、完整的。</p>
+
+  <!-- 第一栏 -->
+  <div class="card purple" id="u2-1">
+    <h3 class="col-title"><span class="idx">第一栏</span>疾病画像</h3>
+    <div class="quote"><span class="lab">教材原文</span>身体完整性烦恼（body integrity dysphoria，BID）又名身体完整性焦虑症，既往称身体完整性认同障碍（body integrity identity disorder），其特征是强烈和持续地渴望成为身体残疾者（如主要肢体截肢、截瘫、失去视力、失去听力等）。</div>
+    <p><strong>一句话画像：</strong>对普通人来说"健全"是好事，对 BID 患者却是持续的不适来源；他们"认为自己生来就应该具有所期望的残疾"，通过截肢等方式变成残疾反而能使其感觉自己更完整。<span class="note">（此句是对教材原意的转述）</span></p>
+    <div class="grid2">
+      <div class="mini">
+        <h4>核心悖论</h4>
+        <p>教材原文：患者"对于自己目前的身体健全状态不满，认为自己生来就应该具有所期望的残疾，对于身体某些部位或器官，通过截肢等方式变成残疾反而能使其感觉自己更完整。"</p>
+        <p class="note">记忆点：不是"想摆脱痛苦的身体"，而是"想通过残缺获得完整"。</p>
+      </div>
+      <div class="mini">
+        <h4>起病与人群特点</h4>
+        <p>该病最常见于<strong>儿童早期至中期</strong>，有些病例在<strong>青春期</strong>发病。确诊病例在临床较为罕见；目前无准确的流行病学研究及数据提示其在人群中的总体患病率；各国均有病例报道，在寻求临床治疗的患者中<strong>男性多于女性</strong>。</p>
+      </div>
+    </div>
+    <div class="callout key">
+      <span class="ct">📌 两个"不属于"（教材明确排除，高频考点）</span>
+      ① <strong>青春期或成年期性别认同障碍不属于身体完整性烦恼</strong>；<br>
+      ② 部分儿童与青少年<strong>假装有残疾仅仅是出于好奇</strong>——想知道作为残疾人生活是什么样子，这也不属于 BID，因为这些人并没有经历一种持续的残疾愿望，也没有与 BID 相关的有害后果。
+    </div>
+    <p><strong>期望的残疾类型（教材列举）：</strong>主要肢体截肢、截瘫、失去视力、失去听力等。</p>
+  </div>
+
+  <!-- 第二栏 -->
+  <div class="card blue" id="u2-2">
+    <h3 class="col-title"><span class="idx">第二栏</span>病因探秘</h3>
+    <div class="quote"><span class="lab">教材原文</span>身体完整性烦恼的病因和发病机制尚未阐明，目前部分研究认为身体完整性烦恼患者提出截肢的愿望源于右顶叶功能障碍。</div>
+    <div class="grid2">
+      <div class="mini">
+        <h4>教材给出的唯一机制线索</h4>
+        <p>部分研究认为，提出截肢的愿望<strong>源于右顶叶功能障碍</strong>。一个观点认为，患者期望被截肢的身体部位可能<strong>没有被适当地整合到更高层次的神经表征中</strong>。</p>
+        <p class="note">教材紧接着写明："但具体的病因和发病机制待进一步研究。"</p>
+      </div>
+      <div class="mini">
+        <h4>教材未提供的内容</h4>
+        <ul>
+          <li>未提供心理社会因素的病因学分析</li>
+          <li>未提供家族聚集、遗传或流行病学危险因素数据</li>
+          <li>未提供神经影像或其他检查的特征性发现</li>
+        </ul>
+      </div>
+    </div>
+    <div class="callout tip">
+      <span class="ct">🧠 类比理解（标注：类比理解，非医学事实）</span>
+      把"更高层次的神经表征"想成一份<strong>身体地图</strong>：大多数人地图上的每个部位都标注正确；BID 患者地图上某个部位可能被标成了"本不该存在"，于是真实存在的肢体反而成了"多余的异物"。<br>
+      <em>注意：</em>这只是帮助理解"未整合"这一表述的比喻，教材并未如此定义病因。
+    </div>
+    <div class="callout warn">
+      <span class="ct">⚠️ 严谨性提醒</span>
+      教材对本节病因使用的措辞是"尚未阐明""部分研究认为""一个观点认为"，属<strong>假说</strong>。答题时不可写成"BID 由右顶叶病变所致"这样的确定判断。
+    </div>
+  </div>
+
+  <!-- 第三栏 -->
+  <div class="card red" id="u2-3">
+    <h3 class="col-title"><span class="idx">第三栏</span>临床表现拼图</h3>
+    <p><strong>一、体验层：一种"生来就该如此"的确信</strong></p>
+    <div class="quote"><span class="lab">教材原文</span>身体完整性烦恼患者会觉得自己生来就应该具有期望的残疾；通常以假装或模拟自己期望的残疾行为为第一表现，这些行为往往是秘密进行的，因此患者常会主动避免和终止亲密关系。</div>
+    <div class="grid3">
+      <div class="mini">
+        <h4>① 渴望与专注</h4>
+        <p>对某些残疾有<strong>强烈的渴望或者异样的偏执</strong>；一想到残疾就会产生<strong>强烈的兴奋</strong>。</p>
+      </div>
+      <div class="mini">
+        <h4>② 羞耻与保密</h4>
+        <p>常对残疾的渴望感到<strong>羞耻</strong>，选择严格保密；朋友或家人并不知道他们的欲望。</p>
+      </div>
+      <div class="mini">
+        <h4>③ 求助的错位</h4>
+        <p>有些人可能对其伴随的<strong>抑郁或其他症状</strong>寻求治疗，却不愿对医师或治疗师分享残疾的愿望。</p>
+      </div>
+    </div>
+    <p><strong>二、行为层：从"假装"到"实施"</strong></p>
+    <div class="timeline">
+      <div class="tl-item"><h4>第一步 · 假装或模拟</h4><p>通常为第一表现，如假装已截肢、只用单腿生活；行为往往秘密进行。</p></div>
+      <div class="tl-item"><h4>第二步 · 回避亲密关系</h4><p>因为难以扮演或假装自己所期望的残疾，患者常主动避免和终止亲密关系，形成社会功能障碍。</p></div>
+      <div class="tl-item"><h4>第三步 · 自残并伪装</h4><p>部分患者试图通过自残使自己成为残疾人，并试图使其看起来像<strong>意外事故</strong>，以掩盖想成为残疾人的企图和本质。</p></div>
+      <div class="tl-item"><h4>第四步 · 自我截肢等危险行为</h4><p>病情恶化可见于 <strong>30～50 岁</strong>；想成为残疾的愿望让患者十分痛苦，甚至可能从事自我截肢等危险行为，以致伤害自己从而不得不寻求医师帮助，或希望医师帮助实现他们想要的残疾。</p></div>
+    </div>
+    <p><strong>三、社会层：有害后果的两种形态（教材原文）</strong></p>
+    <div class="grid2">
+      <div class="mini">
+        <h4>形态 A · 健康与生命受威胁</h4>
+        <p>试图真正成为残疾人，导致其健康或生命处于重大危险之中；严重时可出现自我截肢等行为。</p>
+      </div>
+      <div class="mini">
+        <h4>形态 B · 功能损害</h4>
+        <p>对成为残疾的专注严重干扰工作和休闲活动；或出现社会功能障碍，如不愿意有亲密关系，因为这样很难扮演或假装自己所期望的残疾。</p>
+      </div>
+    </div>
+    <div class="callout book">
+      <span class="ct">📖 与"好奇"和"性别认同"的分界</span>
+      教材用两条排除把边界画得很清楚：<strong>仅仅好奇</strong>者没有持续的残疾愿望，也没有相关有害后果；<strong>青春期或成年期的性别认同障碍</strong>不属于 BID。也就是说，"想成为另一种性别"与"想失去某个肢体/功能"是两件事。
+    </div>
+  </div>
+
+  <!-- 第四栏 -->
+  <div class="card orange" id="u2-4">
+    <h3 class="col-title"><span class="idx">第四栏</span>教材典型案例</h3>
+    <div class="quote">
+      <span class="lab">教材原文</span>
+      患者，男，70 岁，右腿截肢。患者自述从4 岁看到一个一只手被截肢的男孩时就渴望成为某种截肢者，且对其他截肢者十分着迷。12 岁时，曾想过在公共汽车下压碎右腿，认为右腿的存在让他感到自己过于完整，他想让右腿消失。在个人独处时也曾假装整个右腿截肢，只用左腿生活。截肢的想法一直伴随着患者的生活，曾试图进行右腿截肢并采取实际行动，最近一次是45 岁时用电锯砍木头时，自己主动将电锯放在右侧大腿，希望伪造意外导致右腿被电锯截肢的假象，最终因难以忍受疼痛而被迫停止，并被家人送往医院救治。患者自述此前从未向家人和医师透露过自己想截肢的愿望，并表示在网上查询到有其他人跟自己有同样的截肢变成残疾的愿望时，此愿望变得更加强烈。患者在其65 岁时因车祸导致右腿粉碎性骨折，因无保肢可能而截肢，此后便再无对截肢的强烈冲动，心境变得平和，且可以在日常生活中与他人正常相处。<br>
+      <strong>诊断：身体完整性烦恼。</strong>
+    </div>
+    <p><strong>案例拆解：五个采分点</strong></p>
+    <div class="grid2">
+      <div class="mini">
+        <h4>① 起病年龄与持续愿望</h4>
+        <p>4 岁起即有渴望，12 岁出现具体想法（"右腿的存在让他感到自己过于完整"），持续至成年——符合"持续渴望出现在儿童期或青春期早期"。</p>
+      </div>
+      <div class="mini">
+        <h4>② 核心体验的表述</h4>
+        <p>"右腿的存在让他感到自己过于完整"——这是 BID 最具辨识度的表述：<strong>完整反而成为负担</strong>。</p>
+      </div>
+      <div class="mini">
+        <h4>③ 秘密的模拟行为</h4>
+        <p>独处时假装整个右腿截肢、只用左腿生活；此前<strong>从未向家人和医师透露</strong>——符合"秘密进行""羞耻与保密"。</p>
+      </div>
+      <div class="mini">
+        <h4>④ 有害后果（伪装的自我伤害）</h4>
+        <p>45 岁主动把电锯放在右侧大腿，希望<strong>伪造意外</strong>导致截肢——教材所说的"使自己的健康或生命置于严重危险之中"。</p>
+      </div>
+      <div class="mini">
+        <h4>⑤ 网络强化的作用</h4>
+        <p>在网上查到有同样愿望的人后，愿望<strong>变得更加强烈</strong>——教材如实记录了这一点，未作机制解释。</p>
+      </div>
+      <div class="mini">
+        <h4>⑥ 结局</h4>
+        <p>65 岁因车祸截肢后，"再无对截肢的强烈冲动，心境变得平和"——与教材"很多患者只有在截肢后才会停止伤害自己的行为与想法"相呼应。</p>
+      </div>
+    </div>
+    <div class="callout warn">
+      <span class="ct">⚠️ 阅读提醒</span>
+      本案例是教材用于说明 BID 的个案，<strong>不构成对"截肢可以治疗 BID"的推荐</strong>。教材在治疗部分明确指出：目前缺乏公认的有效治疗方式。案例的结局只是对病程的自然描述。
+    </div>
+  </div>
+
+  <!-- 第五栏 -->
+  <div class="card orange" id="u2-5">
+    <h3 class="col-title"><span class="idx">第五栏</span>鉴别诊断对对碰</h3>
+    <p>教材列出四组鉴别。核心线索只有两个：<strong>是否属于妄想/强迫</strong>，以及<strong>动机是"成为残疾"还是"被关注/获利"</strong>。</p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>鉴别对象</th><th>对方的核心表现</th><th>与 BID 的关键分界</th></tr></thead>
+        <tbody>
+          <tr>
+            <td>精神分裂症及其他原发性精神病性障碍</td>
+            <td>确信自己身体的某一部分不属于自己，属于<strong>妄想信念</strong>；往往还伴有其他精神病性症状</td>
+            <td>BID 患者<strong>不会对外部现实怀有错误的信念</strong>，因此不被认为是妄想；相反，他们有一种<strong>内心的感觉</strong>——只有残疾了，他们才是完整的和正确的</td>
+          </tr>
+          <tr>
+            <td>强迫症</td>
+            <td>重复和持续出现的想法、图像或冲动，这些想法被认为是<strong>令人痛苦的</strong></td>
+            <td>BID 中与残疾欲望相关的重复性想法、图像和冲动（如残疾的幻想）<strong>不会被认为是不必要的或痛苦的</strong>；BID 的焦虑和痛苦通常与<strong>无法实现残疾</strong>或<strong>害怕他人负面评价</strong>有关</td>
+          </tr>
+          <tr>
+            <td>躯体变形障碍</td>
+            <td>持续关注身体某个部位，认为身体<strong>有缺陷</strong>，或外表整体上是<strong>丑陋的</strong></td>
+            <td>BID 被一种感觉困扰：身体结构（如想截肢者）或功能（如想截瘫或失明者）是<strong>错误的、不自然的</strong>；而实现期望的残疾才是完整和正确的。前者嫌"丑/有缺陷"，后者求"改变结构/功能"</td>
+          </tr>
+          <tr>
+            <td>做作性障碍和诈病</td>
+            <td>做作性障碍：假装有医学或心理症状或体征，以<strong>寻求关注</strong>，特别是从保健提供者那里寻求关注，并扮演患者角色；<br>诈病：为了<strong>明显的外部激励</strong>（如残疾补助）而伪造医学体征或心理症状</td>
+            <td>BID 个体经常模拟想要的残疾，是作为<strong>减少负面情绪的一种方式</strong>（如想截瘫者可能部分或全部时间使用轮椅），且<strong>通常不愿就医</strong>——与"求关注""求获利"方向相反</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout key">
+      <span class="ct">📌 一句话鉴别总结</span>
+      妄想是"这腿不是我的"；强迫是"这想法让我痛苦、我不想要"；躯体变形障碍是"我这部位丑/有缺陷"；做作性障碍与诈病是"演给别人看、换关注或换钱"；<strong>BID 是"我要它消失，因为残缺才是真正的我"，而且通常藏着不说、不愿就医。</strong>
+    </div>
+  </div>
+
+  <!-- 第六栏 -->
+  <div class="card green" id="u2-6">
+    <h3 class="col-title"><span class="idx">第六栏</span>治疗方案工具箱</h3>
+    <div class="quote"><span class="lab">教材原文</span>总体而言，目前对身体完整性烦恼缺乏公认的有效治疗方式，继续使用目前无效的治疗方案被认为会给患者和医疗保健提供者带来经济负担。针对身体完整性烦恼伴随的焦虑和抑郁症状，以减轻痛苦为目的的替代性方法似乎已成为治疗关注的重点。</div>
+    <div class="grid2">
+      <div class="mini">
+        <h4>教材明确的立场</h4>
+        <ul>
+          <li><strong>缺乏公认的有效治疗方式</strong>——这是本节治疗的第一个结论</li>
+          <li>继续使用目前无效的方案，会给患者和医疗保健提供者带来<strong>经济负担</strong></li>
+          <li>治疗关注的重点：针对<strong>伴随的焦虑和抑郁症状</strong>，以<strong>减轻痛苦</strong>为目的的替代性方法</li>
+        </ul>
+      </div>
+      <div class="mini">
+        <h4>教材未涉及的内容</h4>
+        <ul>
+          <li>未推荐任何具体药物、剂量或疗程</li>
+          <li>未推荐任何具体心理治疗流派或操作步骤</li>
+          <li>未涉及手术（截肢）请求的伦理、法律或外科处理原则</li>
+          <li>未提供随访频率、住院指征或危机干预方案</li>
+        </ul>
+      </div>
+    </div>
+    <div class="callout warn">
+      <span class="ct">⚠️ 高频易错点</span>
+      不要把"针对伴随焦虑抑郁的对症处理"写成"BID 的标准治疗方案"，也不要把病例中"截肢后愿望消失"写成治疗建议。教材的表述是"缺乏公认的有效治疗方式"，且明确提到无效治疗会带来经济负担。
+    </div>
+    <p><strong>按教材逻辑可整理的处置思路（非教材原文方案）</strong></p>
+    <ol>
+      <li><strong>识别与命名：</strong>先确认是否为持续存在的残疾愿望、是否起于儿童期或青春期早期、是否已造成有害后果。</li>
+      <li><strong>排除：</strong>按四组鉴别排除精神病性障碍、强迫症、躯体变形障碍、做作性障碍与诈病，并排除性别认同障碍、神经系统疾病或其他医学状况。</li>
+      <li><strong>评估伴随症状：</strong>教材提示患者常因抑郁等症状求治，却不愿透露残疾愿望——因此需要在信任关系中留出谈论的空间。</li>
+      <li><strong>以减轻痛苦为目标：</strong>对伴随的焦虑、抑郁症状作对症处理，采用替代性方法，而非承诺"治愈残疾愿望"。</li>
+    </ol>
+    <p class="note">以上四步仅按教材的诊断条件、鉴别顺序与治疗段落整理，教材未给出具体流程、药物或疗程。</p>
+  </div>
+
+  <!-- 第七栏 -->
+  <div class="card purple" id="u2-7">
+    <h3 class="col-title"><span class="idx">第七栏</span>记忆工具箱</h3>
+    <div class="callout tip">
+      <span class="ct">🔧 方法一：关键词悖论法</span>
+      抓住一个悖论：<strong>"残缺 = 完整"</strong>。BID 患者不是想变"好"，而是想变"对"；不是嫌身体丑，而是嫌身体<strong>太完整</strong>。<br>
+      <em>为什么这样记：</em>这个悖论是 BID 与躯体变形障碍、强迫症的分水岭所在，记住它，四组鉴别会自动跟着回忆起来。
+    </div>
+    <div class="callout tip">
+      <span class="ct">🔧 方法二：口诀歌谣法（诊断五条件）</span>
+      口诀：<strong>"久愿、有害、早发、排精、排他"</strong>——<strong>久愿</strong>（强烈持久的成为残疾的愿望 + 对当前身体的持续不适）；<strong>有害</strong>（自残致残危险或功能严重损害）；<strong>早发</strong>（儿童期或青春期早期）；<strong>排精</strong>（排除其他精神障碍与诈病）；<strong>排他</strong>（排除性别认同障碍、神经系统疾病或其他医学状况）。<br>
+      <em>为什么这样记：</em>五个条件里有两条是"排除"，用"排精、排他"两个同音短语区分，避免把两条排除合成一条。
+    </div>
+    <div class="callout tip">
+      <span class="ct">🔧 方法三：故事锚定法（教材病例）</span>
+      记一条年龄轴：<strong>4 岁看见 → 12 岁想被公交车压腿 → 独处时假装截肢 → 45 岁电锯放上大腿并伪装意外 → 65 岁车祸截肢后心境平和</strong>。<br>
+      <em>为什么这样记：</em>年龄轴同时承载"早发、秘密模拟、有害后果、结局"四个要点，比背条目更容易提取。
+    </div>
+    <div class="callout tip">
+      <span class="ct">🔧 方法四：对比记忆法（四组鉴别）</span>
+      一句话四连：<strong>"妄想说不是我的，强迫说我不想要，变形说它太丑，做作说演给你们看"</strong>；BID 则<strong>"我要它消失，而且我不说"</strong>。<br>
+      <em>为什么这样记：</em>鉴别题的错误选项往往就是把上述四句之一安到 BID 头上，先记"别人是什么"，自然就守住"BID 不是什么"。
+    </div>
+    <div class="callout tip">
+      <span class="ct">🔧 方法五：归类记忆法（治疗现状）</span>
+      三个词：<strong>"没有公认有效" → "无效治疗有经济负担" → "重点转向缓解焦虑抑郁与痛苦"</strong>。<br>
+      <em>为什么这样记：</em>教材这一段的逻辑是"否定—代价—转向"，按逻辑链记，答题时不会把"对症处理"误写成"标准治疗"。
+    </div>
+  </div>
+
+  <!-- 第八栏 -->
+  <div class="card cyan" id="u2-8">
+    <h3 class="col-title"><span class="idx">第八栏</span>知识联动</h3>
+    <ul>
+      <li><strong>与本章第一节：</strong>两者同属 ICD-11「躯体痛苦及躯体体验障碍」，并列于同一类别下；但 BDD 的核心是"症状与关注"，BID 的核心是"身体结构与功能的完整性体验"，诊断逻辑不可互换。</li>
+      <li><strong>与强迫症章：</strong>教材以"想法是否被视为不必要、是否令人痛苦"划界——BID 的残疾幻想不被视为不必要或痛苦，其痛苦来自"无法实现"或"怕被负面评价"。</li>
+      <li><strong>与躯体变形障碍：</strong>教材在本节鉴别中给出清晰分界：一方关注"缺陷/丑陋"，一方关注"结构或功能错误、不自然"。注意：本章不展开躯体变形障碍本身，只把它作为鉴别对象。</li>
+      <li><strong>与精神分裂症章：</strong>"身体某部分不属于自己"若为妄想信念且伴其他精神病性症状，应归入精神病性障碍；BID 不对外部现实持有错误信念。</li>
+      <li><strong>与性别认同障碍：</strong>教材明确将"青春期或成年期性别认同障碍"排除在 BID 之外，这是本章跨议题的关键边界。</li>
+      <li><strong>与神经科学：</strong>右顶叶功能障碍与"身体部位未被适当整合到更高层次神经表征"的假说，把 BID 与身体意象、神经表征研究联系起来；教材明确注明机制待进一步研究。</li>
+      <li><strong>与外科/伦理：</strong>教材提到患者可能希望医师帮助实现其想要的残疾，但<strong>未提供任何伦理或手术处理原则</strong>，属于教材空白，不在本指南中延伸。</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===== 07 核心要点 ===== -->
+<section id="summary">
+  <div class="sec-head"><div class="badge">07</div><h2>全章核心要点速览<span class="en">18 key points</span></h2></div>
+  <p class="sec-lead">考前最后一遍只看这里。每条都能独立成题，建议逐条自问"教材的原话是什么"。</p>
+  <div class="card blue">
+    <div class="grid2">
+      <ol>
+        <li>「躯体痛苦及躯体体验障碍」是 ICD-11 新出现的类别，表现为个体自身躯体体验的紊乱，含四个亚型：躯体痛苦障碍、身体完整性烦恼、其他特定的、未特定的；本章只介绍前两个。</li>
+        <li>躯体痛苦障碍在 DSM-5 中名为<strong>躯体症状障碍（SSD）</strong>。</li>
+        <li>BDD 的核心：令人痛苦的<strong>持续性躯体症状</strong> + 对症状的<strong>过度关注</strong> + <strong>显著功能障碍</strong>；症状多系统、随时间变化，有时仅一个症状（常为疼痛或疲劳）。</li>
+        <li>与 ICD-10 躯体形式障碍的最大区别：后者强调<strong>检查无可解释症状的异常发现</strong>，前者强调<strong>过度关注和痛苦不能被合理解释</strong>；即使检查有异常，只要过度关注与痛苦成立，仍可诊断。</li>
+        <li>流行病学：估计患病率 &lt;1%；1992 年美国调查 0.1%～0.4%；初级保健 1%～2%；住院患者高达 5%。终生/现患率尚缺乏公认数据。</li>
+        <li>心理社会因素：幼时过度照顾或忽略、儿童期患病、创伤、与慢性病患者共同生活、现实冲突、医源性起病；<strong>继发性获益</strong>是迁延不愈的重要原因；"神经质"人格使感觉阈值降低。</li>
+        <li>生物学：可有家族聚集性，约 <strong>20%</strong> 的女性一级亲属也符合诊断；假说为<strong>脑干网状结构滤过功能失调</strong>，使内脏活动被感知、注意转向体内。</li>
+        <li>四条共同临床特点：症状复杂多样无法用器质性依据解释；反复检查治疗、医患关系不佳、拒绝精神科诊断；非精神科诊断名称含糊多样强化疾病感；病前负性应激、病后应激加重疾病感。</li>
+        <li>各系统症状两条共性：以<strong>自主神经兴奋的客观体征</strong>为基础（心悸、出汗、脸红、震颤）；<strong>非特异性症状</strong>（部位不定的疼痛、烧灼、沉重、紧束、肿胀感）。</li>
+      </ol>
+      <ol start="10">
+        <li>六条诊断要点：一个或多个躯体症状为主诉；对症状的过度关注；恰当检查与医师解释均不能缓解关注；症状至少 <strong>3 个月</strong>的大部分时间存在；导致重要领域功能损害；其他精神障碍不能更好解释。</li>
+        <li>三级严重度：轻度（每天花在症状上的时间不到 1～2 小时、轻度损害）；中度（每天几个小时、中度损害）；重度（症状成为生活唯一焦点、严重损害）。</li>
+        <li>七组鉴别：躯体疾病、疑病症、抑郁障碍、焦虑障碍、分离性障碍、精神分裂症、物质使用所致障碍。</li>
+        <li>BDD 与疑病症的分界：BDD 关注<strong>症状本身</strong>并要求治疗消除症状；疑病症关注<strong>潜在严重疾病及后果</strong>，要求检查证实或要求保证。</li>
+        <li>治疗四条注意：重视医患关系（承认体验真实性）；重视连续医学评估；重视心理社会因素评估；适当控制不合理要求（含家庭成员教育）。</li>
+        <li>治疗目标四条：减少/减轻症状、减少心理社会应激、减少日常功能损害、减少不合理医疗资源使用。原则：谨慎判断、治疗共病、分阶段制定任务。</li>
+        <li>治疗手段：支持性心理治疗与 CBT（CBT 为有效手段，功能性分析是关键，含四项内容）；药物针对抑郁焦虑用 SSRIs/SNRIs，慢性疼痛可用 SNRIs、TCAs、镇痛药，偏执/难治可用小剂量非典型抗精神病药（喹硫平、利培酮、阿立哌唑、奥氮平、氨磺必利）；另有物理治疗、中医中药。<strong>教材未给剂量与疗程。</strong></li>
+        <li>病程预后：慢性波动，约<strong>一半</strong>患者 6～12 个月内症状消失；严重疾病、多种症状者更持久；有明显心理诱发、急性起病者预后好，起病缓慢、病程 <strong>2 年以上</strong>者预后差。</li>
+        <li>身体完整性烦恼：强烈持久地渴望成为残疾者（截肢、截瘫、失明、失聪），认为残疾了才完整；儿童早期至中期最常见；临床罕见，求治者男多于女；病因未阐明，假说为右顶叶功能障碍；<strong>缺乏公认有效治疗</strong>，重点转向缓解伴随的焦虑抑郁与痛苦。</li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 08 易混 ===== -->
+<section id="pitfalls">
+  <div class="sec-head"><div class="badge">08</div><h2>易混易错点警示<span class="en">Common traps</span></h2></div>
+  <p class="sec-lead">这些点不是"没背到"，而是"背反了"。逐条核对你的第一反应。</p>
+  <div class="card danger">
+    <details open>
+      <summary>① BDD 不是"检查必须无异常"</summary>
+      <div class="dbody">教材明确：即使医学检查<strong>发现了异常</strong>，只要患者表现出过度的关注和痛苦，都可以诊断躯体痛苦障碍。把"查无实据"当成必要条件，是把 ICD-10 的躯体形式障碍错套到 ICD-11 上。</div>
+    </details>
+    <details>
+      <summary>② BDD 不是"症状越多越重"的唯一标准</summary>
+      <div class="dbody">严重度需综合三个维度：<strong>症状的困扰或先占程度、疾病的持久程度、受损程度</strong>，由临床医师根据全部临床表现作整体判断。教材也说明，有时患者只有<strong>单个症状</strong>，通常为疼痛或疲劳。</div>
+    </details>
+    <details>
+      <summary>③ "3 个月"限定的是"大部分时间存在"，不是"一次发作持续 3 个月"</summary>
+      <div class="dbody">教材原文：躯体症状持续存在，即症状（<strong>不一定是相同症状</strong>）在一段时间内（至少 3 个月）的大部分时间均存在。注意两点：症状可以变换；3 个月是"一段时间"的下限。</div>
+    </details>
+    <details>
+      <summary>④ 疑病症不是"更严重的 BDD"</summary>
+      <div class="dbody">两者人格特质与行为特征类似，但关注点不同：疑病症指向<strong>潜在进行性的严重疾病过程及不良后果</strong>，倾向要求检查以确定疾病性质或要求保证；BDD 指向<strong>症状本身及其对个体的影响</strong>，主要要求治疗以消除症状。</div>
+    </details>
+    <details>
+      <summary>⑤ 抑郁障碍与 BDD 可以并存，不能"一票否决"</summary>
+      <div class="dbody">教材原文：抑郁障碍常伴有躯体不适症状，而躯体痛苦障碍也常伴有抑郁情绪。鉴别靠主线：抑郁以<strong>心境低落、兴趣缺失</strong>为主，可有早醒、晨重暮轻、体重减轻、精神运动迟滞、自罪自责、自杀言行，且对躯体症状的求治欲望不如 BDD 强烈；BDD 以<strong>对躯体症状的过度关注</strong>为主，且不只在抑郁发作背景下出现躯体症状。</div>
+    </details>
+    <details>
+      <summary>⑥ 焦虑障碍的躯体症状有两个"限定词"</summary>
+      <div class="dbody">广泛性焦虑的躯体症状只是<strong>众多焦虑之一</strong>，通常还伴工作、人际关系、财务等其他方面的担忧；惊恐障碍的躯体症状常伴<strong>强烈恐惧</strong>且往往为<strong>发作性</strong>。丢掉这两个限定词，就分不开 BDD 与焦虑障碍。</div>
+    </details>
+    <details>
+      <summary>⑦ 精神分裂症的躯体症状是"漠不关心"，不是"过度关注"</summary>
+      <div class="dbody">教材：某些精神分裂症患者可有疼痛等躯体不适，但往往对躯体症状<strong>漠不关心</strong>或予以<strong>荒谬离奇的解释</strong>，常伴思维形式障碍或幻觉妄想。方向正好与 BDD 相反。</div>
+    </details>
+    <details>
+      <summary>⑧ BID 不是躯体变形障碍</summary>
+      <div class="dbody">躯体变形障碍是"持续关注身体某部位，认为<strong>有缺陷</strong>或外表整体<strong>丑陋</strong>"；BID 是感到身体结构或功能"<strong>错误的、不自然的</strong>"，实现期望的残疾才是完整和正确的。本章只把躯体变形障碍作为<strong>鉴别对象</strong>，不作为本章疾病展开。</div>
+    </details>
+    <details>
+      <summary>⑨ BID 的重复想法不是强迫观念</summary>
+      <div class="dbody">强迫症的重复想法、图像或冲动被认为是<strong>令人痛苦的</strong>；BID 的残疾相关想法、图像和冲动<strong>不会被认为是不必要的或痛苦的</strong>。BID 的痛苦来自"无法实现残疾"或"害怕他人负面评价"。判断关键是"<strong>这个想法是不是患者想要的</strong>"。</div>
+    </details>
+    <details>
+      <summary>⑩ 青春期/成年期性别认同障碍不属于 BID，好奇假装也不属于</summary>
+      <div class="dbody">教材两处明确排除：<strong>青春期或成年期性别认同障碍</strong>不属于身体完整性烦恼；部分儿童青少年<strong>假装有残疾仅出于好奇</strong>，没有持续的残疾愿望、也没有相关有害后果，同样不属于 BID。</div>
+    </details>
+    <details>
+      <summary>⑪ BID 不是"做作"或"诈病"</summary>
+      <div class="dbody">BID 患者模拟想要的残疾，是作为<strong>减少负面情绪的一种方式</strong>，且<strong>通常不愿就医</strong>；做作性障碍是借症状<strong>寻求关注</strong>、扮演患者角色；诈病是为<strong>明显外部激励</strong>（如残疾补助）伪造症状。动机方向完全不同。</div>
+    </details>
+    <details>
+      <summary>⑫ "截肢后平静"是病例结局，不是治疗建议</summary>
+      <div class="dbody">教材治疗段落的结论是：<strong>缺乏公认的有效治疗方式</strong>，继续使用无效方案会带来经济负担，重点转向针对伴随焦虑抑郁、以减轻痛苦为目的的替代性方法。病例中的结局只是病程描述，不能反推为治疗推荐。</div>
+    </details>
+  </div>
+</section>
+
+<!-- ===== 09 自测 ===== -->
+<section id="quiz">
+  <div class="sec-head"><div class="badge">09</div><h2>章节自测系统<span class="en">14 questions · 6 types</span></h2></div>
+  <p class="sec-lead">覆盖单选、多选、判断、名词解释、简答、案例分析六种题型，按易→中→难排列。先作答，再展开解析。</p>
+
+  <div class="quiz-q">
+    <div class="qh"><span class="qno">第 1 题</span><span class="qtype">单选题</span><span class="diff">易</span></div>
+    <p class="brief">躯体痛苦障碍在 DSM-5 中的名称是？</p>
+    <div class="opts">
+      <div class="opt"><span class="l">A.</span>躯体形式障碍</div>
+      <div class="opt"><span class="l">B.</span>躯体症状障碍（SSD）</div>
+      <div class="opt"><span class="l">C.</span>疑病症</div>
+      <div class="opt"><span class="l">D.</span>身体完整性烦恼</div>
+    </div>
+    <details><summary>查看答案与解析</summary><div class="dbody"><strong>答案：B</strong><br>教材原文：躯体痛苦障碍在 DSM-5 中的名称是躯体症状障碍（somatic symptom disorder，SSD）。A 是 ICD-10 的旧分类名，本章用它作对照；C 是本章的鉴别对象之一；D 是本章第二节的另一种疾病。</div></details>
+  </div>
+
+  <div class="quiz-q">
+    <div class="qh"><span class="qno">第 2 题</span><span class="qtype">单选题</span><span class="diff">易</span></div>
+    <p class="brief">按 ICD-11 诊断要点，躯体症状需在多长时间内的大部分时间存在？</p>
+    <div class="opts">
+      <div class="opt"><span class="l">A.</span>至少 1 个月</div>
+      <div class="opt"><span class="l">B.</span>至少 3 个月</div>
+      <div class="opt"><span class="l">C.</span>至少 6 个月</div>
+      <div class="opt"><span class="l">D.</span>至少 2 年</div>
+    </div>
+    <details><summary>查看答案与解析</summary><div class="dbody"><strong>答案：B</strong><br>教材诊断要点第（4）条：症状（不一定是相同症状）在一段时间内（<strong>至少 3 个月</strong>）的大部分时间均存在。注意 C 的 6 个月与本章的"约一半患者 6～12 个月内症状消失"是预后数据，不要混用；D 的 2 年是判断预后差的界值。</div></details>
+  </div>
+
+  <div class="quiz-q">
+    <div class="qh"><span class="qno">第 3 题</span><span class="qtype">单选题</span><span class="diff">中</span></div>
+    <p class="brief">躯体痛苦障碍与 ICD-10 躯体形式障碍最大的区别在于？</p>
+    <div class="opts">
+      <div class="opt"><span class="l">A.</span>前者症状更多</div>
+      <div class="opt"><span class="l">B.</span>前者强调对症状的过度关注和痛苦不能被合理解释</div>
+      <div class="opt"><span class="l">C.</span>前者要求病程更长</div>
+      <div class="opt"><span class="l">D.</span>前者只发生在女性</div>
+    </div>
+    <details><summary>查看答案与解析</summary><div class="dbody"><strong>答案：B</strong><br>教材明确：后者强调各种医学检查均无可解释躯体症状的异常发现，前者强调患者对躯体症状的过度关注和痛苦不能被合理解释。因此"即使医学检查发现了异常，只要患者表现出过度的关注和痛苦，都可以诊断"。A、C、D 教材均未如此表述。</div></details>
+  </div>
+
+  <div class="quiz-q">
+    <div class="qh"><span class="qno">第 4 题</span><span class="qtype">单选题</span><span class="diff">中</span></div>
+    <p class="brief">关于躯体痛苦障碍与疑病症的鉴别，正确的是？</p>
+    <div class="opts">
+      <div class="opt"><span class="l">A.</span>BDD 要求检查以证实潜在疾病，疑病症要求治疗消除症状</div>
+      <div class="opt"><span class="l">B.</span>BDD 关注症状本身并要求治疗消除症状，疑病症关注潜在严重疾病及其后果</div>
+      <div class="opt"><span class="l">C.</span>两者人格特质完全不同，容易区分</div>
+      <div class="opt"><span class="l">D.</span>疑病症患者关注症状本身，主要要求治疗以消除症状</div>
+    </div>
+    <details><summary>查看答案与解析</summary><div class="dbody"><strong>答案：B</strong><br>教材：两者具有类似的人格特质和行为特征（故 C 错）。BDD 关注重点是症状本身及症状严重程度对个体的影响，而不是对某种特定严重疾病的担心；患者可能相信症状预示躯体疾病，但关注点主要是要求治疗以消除症状。疑病症的注意力更多指向潜在进行性的严重疾病过程及不良后果，倾向要求检查以确定性质，或要求保证。A 把两者说反了；D 描述的正是 BDD 而非疑病症。</div></details>
+  </div>
+
+  <div class="quiz-q">
+    <div class="qh"><span class="qno">第 5 题</span><span class="qtype">多选题</span><span class="diff">中</span></div>
+    <p class="brief">教材提到可用于躯体痛苦障碍的药物包括？</p>
+    <div class="opts">
+      <div class="opt"><span class="l">A.</span>SSRIs、SNRIs</div>
+      <div class="opt"><span class="l">B.</span>慢性疼痛可用 SNRIs、三环类抗抑郁药、镇痛药</div>
+      <div class="opt"><span class="l">C.</span>有偏执倾向、难治性患者可用小剂量非典型抗精神病药</div>
+      <div class="opt"><span class="l">D.</span>碳酸锂作为一线用药</div>
+    </div>
+    <details><summary>查看答案与解析</summary><div class="dbody"><strong>答案：ABC</strong><br>A、B、C 均为教材原文：常用 SSRIs、SNRIs 等；对慢性疼痛可选择 SNRIs、三环类抗抑郁药、镇痛药；对有偏执倾向、难治性患者可使用小剂量非典型抗精神病药物（喹硫平、利培酮、阿立哌唑、奥氮平、氨磺必利等）。<br>D 错：教材在躯体痛苦障碍一节未提及锂盐。另需记住：<strong>教材未给任何剂量与疗程</strong>。</div></details>
+  </div>
+
+  <div class="quiz-q">
+    <div class="qh"><span class="qno">第 6 题</span><span class="qtype">多选题</span><span class="diff">中</span></div>
+    <p class="brief">身体完整性烦恼的诊断必须具备以下哪些条件？</p>
+    <div class="opts">
+      <div class="opt"><span class="l">A.</span>一直存在强烈而持久的成为残疾的愿望，并伴随对当前身体结构或功能的持续不适或强烈负面情绪</div>
+      <div class="opt"><span class="l">B.</span>成为残疾的愿望导致有害后果，如自残致残危险或重要领域功能严重损害</div>
+      <div class="opt"><span class="l">C.</span>对残疾的持续渴望出现在儿童期或青春期早期</div>
+      <div class="opt"><span class="l">D.</span>必须已经完成截肢手术</div>
+    </div>
+    <details><summary>查看答案与解析</summary><div class="dbody"><strong>答案：ABC</strong><br>A、B、C 分别对应教材诊断条件第 1、2、3 条。教材还有两条排除：不能用另一种精神障碍（如精神分裂症）或诈病更好解释；不能用性别认同障碍、神经系统疾病或其他医学状况更好解释。<br>D 错：教材并未把"已完成截肢"作为诊断条件；教材的病例正是在截肢<strong>之前</strong>即已诊断。</div></details>
+  </div>
+
+  <div class="quiz-q">
+    <div class="qh"><span class="qno">第 7 题</span><span class="qtype">多选题</span><span class="diff">难</span></div>
+    <p class="brief">教材为身体完整性烦恼列出的鉴别对象包括？</p>
+    <div class="opts">
+      <div class="opt"><span class="l">A.</span>精神分裂症及其他原发性精神病性障碍</div>
+      <div class="opt"><span class="l">B.</span>强迫症</div>
+      <div class="opt"><span class="l">C.</span>躯体变形障碍、做作性障碍和诈病</div>
+      <div class="opt"><span class="l">D.</span>创伤后应激障碍</div>
+    </div>
+    <details><summary>查看答案与解析</summary><div class="dbody"><strong>答案：ABC</strong><br>教材为 BID 列出四组鉴别：精神分裂症及其他原发性精神病性障碍、强迫症、躯体变形障碍、做作性障碍和诈病。<br>D 错：教材本节未提及 PTSD 作为鉴别。另请注意：抑郁障碍也不在 BID 的四组鉴别之列，但教材提到 BID 患者可能因<strong>伴随的抑郁</strong>求治——"共病/求助"与"鉴别"不是同一件事。</div></details>
+  </div>
+
+  <div class="quiz-q">
+    <div class="qh"><span class="qno">第 8 题</span><span class="qtype">判断题</span><span class="diff">易</span></div>
+    <p class="brief">只要医学检查发现了器质性异常，就不能诊断躯体痛苦障碍。</p>
+    <div class="opts">
+      <div class="opt"><span class="l">A.</span>正确</div>
+      <div class="opt"><span class="l">B.</span>错误</div>
+    </div>
+    <details><summary>查看答案与解析</summary><div class="dbody"><strong>答案：B（错误）</strong><br>教材原文：即使医学检查发现了异常，只要患者表现出过度的关注和痛苦，都可以诊断躯体痛苦障碍。教材同时提醒：BDD 患者可能同时存在引起症状的躯体疾病；若躯体主诉的<strong>重点和稳定性发生转化</strong>，提示可能有躯体疾病，应进一步检查和会诊。</div></details>
+  </div>
+
+  <div class="quiz-q">
+    <div class="qh"><span class="qno">第 9 题</span><span class="qtype">判断题</span><span class="diff">中</span></div>
+    <p class="brief">青春期或成年期的性别认同障碍属于身体完整性烦恼的一种表现。</p>
+    <div class="opts">
+      <div class="opt"><span class="l">A.</span>正确</div>
+      <div class="opt"><span class="l">B.</span>错误</div>
+    </div>
+    <details><summary>查看答案与解析</summary><div class="dbody"><strong>答案：B（错误）</strong><br>教材明确：值得注意的是，<strong>青春期或成年期性别认同障碍不属于身体完整性烦恼</strong>；部分儿童与青少年假装有残疾仅仅是出于好奇，也不属于 BID。BID 的渴望对象是<strong>身体残疾</strong>（截肢、截瘫、失明、失聪等），不是性别。</div></details>
+  </div>
+
+  <div class="quiz-q">
+    <div class="qh"><span class="qno">第 10 题</span><span class="qtype">名词解释</span><span class="diff">易</span></div>
+    <p class="brief">名词解释：躯体痛苦障碍（bodily distress disorder，BDD）</p>
+    <details><summary>查看答案与解析</summary><div class="dbody"><strong>参考答案：</strong>躯体痛苦障碍以存在令人痛苦的持续性躯体症状以及个体对症状的过度关注为特征，并造成显著的功能障碍。患者常反复就医，但多方检查均不能肯定主诉的器质性病变基础，且过度关注和痛苦不能被适宜的医学检查所解释或被医学解释所缓解；多涉及多种躯体症状并随时间变化，有时仅有单个症状（通常为疼痛或疲劳）。<br><em>采分点：持续性躯体症状 + 过度关注 + 功能障碍。</em></div></details>
+  </div>
+
+  <div class="quiz-q">
+    <div class="qh"><span class="qno">第 11 题</span><span class="qtype">名词解释</span><span class="diff">中</span></div>
+    <p class="brief">名词解释：身体完整性烦恼（body integrity dysphoria，BID）</p>
+    <details><summary>查看答案与解析</summary><div class="dbody"><strong>参考答案：</strong>身体完整性烦恼又名身体完整性焦虑症，既往称身体完整性认同障碍。其特征是强烈和持续地渴望成为身体残疾者（如主要肢体截肢、截瘫、失去视力、失去听力等）。患者对目前的身体健全状态不满，认为自己生来就应该具有所期望的残疾，通过截肢等方式变成残疾反而能使其感觉自己更完整。<br><em>采分点：强烈持久的残疾渴望 + 对当前健全状态不满 + "残疾才完整"的体验。</em></div></details>
+  </div>
+
+  <div class="quiz-q">
+    <div class="qh"><span class="qno">第 12 题</span><span class="qtype">名词解释</span><span class="diff">中</span></div>
+    <p class="brief">名词解释：功能性躯体综合征 / 医学无法解释的躯体症状</p>
+    <details><summary>查看答案与解析</summary><div class="dbody"><strong>参考答案：</strong>教材指出，在临床各科室就诊的慢性疲劳综合征、肠易激综合征、非心脏性胸痛、疼痛综合征等患者常伴有躯体痛苦障碍；这些综合征又常被非精神科医师称为功能性躯体综合征（functional somatic syndrome），或医学无法解释的躯体症状（medically unexplained somatic symptom）。<br><em>提示：</em>这两个称呼是<strong>非精神科医师</strong>使用的标签，教材用它们说明"同一批患者在不同科室被不同命名"的现象。</div></details>
+  </div>
+
+  <div class="quiz-q">
+    <div class="qh"><span class="qno">第 13 题</span><span class="qtype">简答题</span><span class="diff">难</span></div>
+    <p class="brief">简述躯体痛苦障碍治疗中"应注意的问题"，并说明为什么教材把医患关系放在第一位。</p>
+    <details><summary>查看答案与解析</summary><div class="dbody">
+      <strong>参考答案（四条）：</strong><br>
+      ① <strong>重视医患关系：</strong>治疗开始即建立良好关系，以耐心、同情、接纳的态度对待痛苦，理解躯体体验的真实性，而非认为是"想象的问题"或"装病"。<br>
+      ② <strong>重视连续的医学评估：</strong>早期彻底评估与适当检查；清楚反馈并恰当解释，特别是矛盾的实验室结果或似是而非的阳性结果；解释不应加重灾难化推论，也不应彻底否认躯体问题；症状加重或出现新症状必须再评估以排除器质性疾病。<br>
+      ③ <strong>重视心理社会因素的评估：</strong>确定心理社会因素可能是病因之一后，尽早选择合适时机提出并讨论，鼓励患者把疾病看成躯体、心理和社会多因素综合导致。<br>
+      ④ <strong>适当控制患者的不合理要求：</strong>避免承诺过多检查，定期约见、检查不过频；并对家庭成员进行疾病知识教育。<br><br>
+      <strong>为什么关系第一：</strong>教材原文说"理解患者的体验是建立良好医患关系的开始"。BDD 患者常拒绝精神障碍诊断、依从性差、易与医师产生不信任；若不先承认其躯体体验的真实性，后续的评估解释、心理治疗与药物治疗都无法落地。
+    </div></details>
+  </div>
+
+  <div class="quiz-q">
+    <div class="qh"><span class="qno">第 14 题</span><span class="qtype">案例分析题</span><span class="diff">难</span></div>
+    <p class="brief">某 38 岁男性，3 年来反复出现上腹灼热、腹胀、胸闷、头晕、四肢游走性疼痛，先后在消化内科、心血管内科、神经内科就诊，多次检查未发现可解释上述症状的异常，胃镜提示"浅表性胃炎"。他每天花数小时查阅资料、比对症状，坚信"胃病没治好"，频繁更换专家，已请假半年。情绪偏低落，但自述"主要是身体问题，心情不好是因为病没治好"。<br>请回答：（1）最可能的诊断及依据；（2）需与哪些疾病鉴别、关键点是什么；（3）治疗原则与具体手段。</p>
+    <details><summary>查看答案与解析</summary><div class="dbody">
+      <strong>（1）最可能诊断：躯体痛苦障碍。</strong><br>
+      依据六条要点逐条对应：① 以一个或多个躯体症状为主诉，涉及消化、呼吸循环、神经、运动多个系统；② 对症状过度关注——每天数小时查阅资料、比对症状、坚信未治好；③ 恰当医学检查及医师解释不能缓解关注（多次检查未发现可解释异常，胃镜"浅表性胃炎"反而可能加重疾病恐惧）；④ 症状持续 3 年，远超 3 个月；⑤ 职业功能受损（请假半年）；⑥ 情绪低落可用"病没治好"解释，且其求治重点在躯体症状，抑郁障碍不能更好地解释。<br><br>
+      <strong>（2）鉴别：</strong><br>
+      ① <strong>躯体疾病：</strong>若症状的数量与严重程度超过相关躯体疾病表现、且"查无实据"，支持 BDD；若躯体主诉的重点和稳定性发生转化，须进一步检查与会诊。<br>
+      ② <strong>抑郁障碍：</strong>抑郁以心境低落、兴趣缺失为主线，可伴早醒、晨重暮轻、体重减轻、精神运动迟滞、自罪自责、自杀言行，对躯体症状的求治欲望不如 BDD 强烈；本例自述情绪低落继发于"病没治好"，主线仍是躯体关注。<br>
+      ③ <strong>疑病症：</strong>若关注点转向"某种潜在进行性严重疾病"、要求检查证实或要求保证，则考虑疑病症；本例关注点在症状本身与"胃病没治好"。<br>
+      ④ <strong>焦虑障碍：</strong>广泛性焦虑的躯体症状只是众多担忧之一；惊恐障碍常伴强烈恐惧且为发作性。<br>
+      ⑤ 另需排除<strong>分离性障碍</strong>（与应激事件时间明确联系、暗示催眠有效）、<strong>精神分裂症</strong>（漠不关心或荒谬解释、思维形式障碍/幻觉妄想）、<strong>物质使用所致障碍</strong>（戒断出现、再用药缓解）。<br><br>
+      <strong>（3）治疗：</strong><br>
+      原则：对躯体疾病和精神障碍的诊断治疗保持谨慎判断；对共病适当治疗；治疗任务分阶段制定。目标：减轻症状、减少心理社会应激、减轻功能损害、减少不合理医疗资源使用。<br>
+      手段：① 建立医患关系，承认躯体体验的真实性；② 连续医学评估并对结果作不加重灾难化、也不彻底否认的解释；③ 讨论心理社会因素；④ 控制不合理要求（不过多承诺检查、定期约见、教育家属）；⑤ 心理治疗以支持性心理治疗与 CBT 为主（CBT 含四项内容，功能性分析是关键），亦可动力性、团体、家庭治疗；⑥ 药物针对抑郁焦虑用 SSRIs/SNRIs，若为慢性疼痛可用 SNRIs、TCAs、镇痛药，若有偏执倾向或难治可用小剂量非典型抗精神病药；⑦ 物理治疗、中医中药可能有一定效果。<strong>教材未给剂量与疗程。</strong>
+    </div></details>
+  </div>
+</section>
+
+<!-- ===== 10 闪卡 ===== -->
+<section id="cards">
+  <div class="sec-head"><div class="badge">10</div><h2>考点速记卡<span class="en">19 flashcards · click to flip</span></h2></div>
+  <p class="sec-lead">正面是问题，背面是答案。先自己答一遍再翻面——主动回忆比反复阅读有效。</p>
+  <div class="flashcard-grid">
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag concept">概念</span><p>躯体痛苦障碍的核心三要素是什么？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">令人痛苦的持续性躯体症状 + 对症状的过度关注 + 造成显著的功能障碍。三者缺一不可。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag concept">概念</span><p>ICD-11「躯体痛苦及躯体体验障碍」有哪四个亚型？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">① 躯体痛苦障碍；② 身体完整性烦恼；③ 其他特定的躯体痛苦或躯体体验障碍；④ 未特定的躯体痛苦或躯体体验障碍。本章只介绍前两个。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag concept">概念</span><p>躯体痛苦障碍与 ICD-10 躯体形式障碍的最大区别？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">后者强调各种医学检查均无可解释症状的异常发现；前者强调患者对症状的过度关注和痛苦不能被合理解释。即使检查发现异常，只要过度关注与痛苦成立，仍可诊断。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag diag">诊断</span><p>BDD 的六条诊断要点，你能按顺序说出吗？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">① 一个或多个躯体症状为主诉；② 对症状的过度关注（执着于严重性或负面后果）；③ 恰当医学检查及医师解释均不能缓解关注；④ 症状至少 3 个月的大部分时间存在；⑤ 造成重要领域功能损害；⑥ 其他精神障碍不能更好解释。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag diag">诊断</span><p>BDD 症状持续的时间门槛是多少？如何精确表述？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">症状（不一定是相同症状）在一段时间内（至少 3 个月）的大部分时间均存在。注意两个限定：可以是不同症状；"大部分时间"而非"持续不间断"。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag diag">诊断</span><p>BDD 严重程度分几级？分级依据是什么？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">轻、中、重三级。依据三个维度：躯体症状的困扰或先占程度、疾病的持久程度、受损程度，由临床医师综合全部临床表现作整体判断。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag data">数据</span><p>BDD 的四个流行病学数字？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">估计患病率 &lt;1%；1992 年美国流行病学研究中心调查 0.1%～0.4%；初级保健机构 1%～2%；住院患者高达 5%。教材注明尚缺乏公认的终生/现患率数据。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag concept">概念</span><p>BDD 生物学因素中，两个关键数字/名词是什么？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">① 约 20% 的患者女性一级亲属也符合诊断（家族聚集性）；② 假说：脑干网状结构滤过功能失调，使内脏活动被感知、注意由外转向身体内部。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag concept">概念</span><p>"神经质"人格如何推高躯体症状感知？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">特点为敏感、多疑、固执、过度关注躯体不适和自身健康 → 感觉阈值降低、躯体感觉敏感性增加 → 更容易感觉到各种躯体症状。关键在"门槛变低"，不是"症状变多"。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag concept">概念</span><p>什么是"继发性获益"？它在 BDD 中起什么作用？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">患者因躯体症状回避社会责任，并获得更多关心、保护和照顾。教材称这也成为疾病迁延不愈的重要原因。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag diag">诊断</span><p>BDD 各系统症状的两条共性？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">① 以自主神经兴奋的客观体征为基础，如心悸、出汗、脸红、震颤；② 非特异性症状，如部位不定的疼痛、烧灼感、沉重感、紧束感、肿胀感。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag diag">鉴别</span><p>BDD 与疑病症的一句话分界？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">BDD 盯着"症状本身"、要求治疗以消除症状；疑病症盯着"潜在进行性严重疾病及其后果"、要求检查证实或要求保证。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag diag">鉴别</span><p>BDD 与抑郁障碍如何分界？两句话。</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">抑郁以心境低落、兴趣缺失为主线，可伴早醒、晨重暮轻、体重减轻、精神运动迟滞、自罪自责、自杀言行，对躯体症状求治欲望不如 BDD 强烈；BDD 以对躯体症状的过度关注为主，且不只在抑郁发作背景下出现躯体症状。两者可并存。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag diag">鉴别</span><p>BDD 与焦虑障碍的分界靠哪两个限定词？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">广泛性焦虑的躯体症状只是"众多焦虑之一"，还伴工作、人际、财务等其他担忧；惊恐障碍的躯体症状常伴"强烈恐惧"且"发作性"。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag treat">治疗</span><p>BDD 的四条治疗目标？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">① 减少或减轻症状；② 减少心理社会应激；③ 减少或减轻日常功能损害；④ 减少不合理医疗资源的使用。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag treat">治疗</span><p>BDD 认知行为疗法的四项内容？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">① 明确治疗目标；② 在接受躯体体验与痛苦感的基础上讨论症状的生物学和心理学机制；③ 讨论患者对疾病的解释、评估审视其论据；④ 减少不恰当的病理性行为（过度检查和就医），减少对社会现实问题的回避。功能性分析是治疗成功的关键。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag treat">治疗</span><p>BDD 的药物治疗按"目标症状"如何分配？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">抑郁/焦虑：抗抑郁药、抗焦虑药，常用 SSRIs、SNRIs；慢性疼痛：SNRIs、三环类抗抑郁药、镇痛药；偏执倾向/难治：小剂量非典型抗精神病药（喹硫平、利培酮、阿立哌唑、奥氮平、氨磺必利）。教材未给剂量与疗程。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag concept">概念</span><p>身体完整性烦恼的定义与既往名称？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">又名身体完整性焦虑症，既往称身体完整性认同障碍。特征是强烈和持续地渴望成为身体残疾者（主要肢体截肢、截瘫、失明、失聪等）；对当前健全状态不满，认为自己生来就该有期望的残疾，残疾反而使其感觉更完整。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag diag">诊断</span><p>BID 的五个诊断条件？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">① 强烈而持久地渴望成为残疾，伴对当前身体结构或功能的持续不适或强烈负面情绪，直至重要肢体或器官被切除；② 愿望导致有害后果（自残致残危险，或重要领域功能严重损害）；③ 渴望出现在儿童期或青春期早期；④ 不能用其他精神障碍或诈病更好解释；⑤ 不能用性别认同障碍、神经系统疾病或其他医学状况更好解释。</div>
+    </div></div>
+  </div>
+</section>
+
+<!-- ===== 11 病例挑战 ===== -->
+<section id="cases">
+  <div class="sec-head"><div class="badge">11</div><h2>病例挑战<span class="en">3 cases · increasing difficulty</span></h2></div>
+  <p class="sec-lead">以下均为<strong>模拟临床情境，依据教材知识点构建，不是教材原案例</strong>；不虚构具体化验数值与影像结果，只描述教材明确提到的检查"未发现可解释症状的异常"这一事实。</p>
+
+  <div class="case">
+    <span class="ctag">难度 ★ · 识别与基本处置</span>
+    <h3>案例 1：跑了五个科室的"怕冷"</h3>
+    <div class="scene">某 45 岁女性，性格内向、做事认真。5 年前与同事发生争执后，逐渐出现进食后上腹饱胀、乏力、胸闷，特别怕冷，夏天也穿毛衣。此后她在消化内科、呼吸内科、心血管内科、内分泌科、中医科反复就诊，完成教材所述的多项化验与检查，均未发现可解释上述症状的异常；服药后症状时轻时重。她常因"病没好"而紧张不安，抱怨医师水平差、家人不关心，近 2 年无法坚持工作。</div>
+    <ol class="ques">
+      <li>最可能的诊断是什么？请用教材六条要点逐条对应。</li>
+      <li>她的"抱怨医师与家人"在教材中属于哪一类临床特点？</li>
+      <li>接诊初期最重要的两件事是什么？</li>
+    </ol>
+    <details><summary>查看答案与解析</summary><div class="dbody">
+      <strong>1.</strong>躯体痛苦障碍。<br>
+      ① 以乏力、怕冷、胸闷、腹胀等多个躯体症状为主诉，涉及多系统；② 执着关注症状与"病没好"的后果，反复就诊超过医学必要程度；③ 多项检查与医师解释均不能缓解其关注；④ 症状持续 5 年，远超 3 个月；⑤ 近 2 年无法坚持工作，职业功能显著受损；⑥ 情绪紧张可用躯体痛苦与就医经历解释，其他精神障碍不能更好地解释。<br>
+      <strong>2.</strong>属于"反复检查和治疗、医患关系不佳"这一共同临床特点；同时反映"病后的应激又加重了疾病感"——不被家人、同事、领导理解，应激加重，形成恶性循环。<br>
+      <strong>3.</strong>① <strong>建立良好医患关系</strong>：以耐心、同情、接纳的态度对待痛苦，理解其躯体体验的真实性，不视为"想象的问题"或"装病"；② <strong>进行彻底的医学评估与适当检查</strong>，并清楚反馈、恰当解释，既不加重灾难化推论，也不彻底否认其躯体问题。
+    </div></details>
+  </div>
+
+  <div class="case">
+    <span class="ctag">难度 ★★ · 鉴别与沟通</span>
+    <h3>案例 2：一定要"查清楚"的腹痛</h3>
+    <div class="scene">某 29 岁男性，8 个月来反复腹痛、腹胀、大便频繁，多次就诊消化内科。他反复强调"我一定是得了某种严重的肠道疾病，只是还没查出来"，要求安排更多检查以"确定到底是什么病"，并要求医师保证"绝对没问题"。完成教材所述的必要检查后未见可解释症状的异常，他仍不接受，认为"检查不够全面"。他很少主动要求用药缓解腹痛，更多是要求"查明病因"。</div>
+    <ol class="ques">
+      <li>本例更倾向躯体痛苦障碍还是疑病症？关键分界是什么？</li>
+      <li>若考虑躯体痛苦障碍，还需要与哪些疾病鉴别？各自的抓手是什么？</li>
+      <li>面对"要求更多检查"的诉求，教材给出的处理原则是什么？</li>
+    </ol>
+    <details><summary>查看答案与解析</summary><div class="dbody">
+      <strong>1.</strong>更倾向<strong>疑病症</strong>。分界：BDD 关注重点是症状本身及症状严重程度对个体的影响，关注点主要是<strong>要求治疗以消除症状</strong>；疑病症的注意力更多指向<strong>潜在进行性的严重疾病过程及其不良后果</strong>，倾向要求医学检查以确定或证实疾病性质，或要求医务人员提供保证。本例的核心诉求是"查明病名 + 要求保证"，而非"消除腹痛"。<br>
+      <strong>2.</strong>仍需按教材七组鉴别排查：躯体疾病（症状数量与严重程度是否超过躯体疾病表现、有无相称的客观结果；若主诉重点与稳定性转化需进一步检查会诊）；抑郁障碍（心境低落、兴趣缺失是否为主线，有无早醒、晨重暮轻、体重减轻、精神运动迟滞、自罪自责、自杀言行，对躯体症状求治欲望是否强烈）；焦虑障碍（是否为众多担忧之一，或伴强烈恐惧的发作性惊恐）；分离性障碍（与应激事件有无明确时间联系、暗示催眠是否有效）；精神分裂症（对躯体症状是否漠不关心或荒谬解释、有无思维形式障碍/幻觉妄想）；物质使用所致障碍（症状是否在戒断时出现、再用药是否缓解）。<br>
+      <strong>3.</strong>教材"适当控制患者的不合理要求"：医师要避免承诺安排过多的检查，以免强化疾病观念和过度就医行为；可以<strong>定期约见</strong>患者、提供必要的检查，但<strong>不能太频繁</strong>——一方面避免误诊，另一方面减轻患者焦虑；同时对家庭成员进行相关疾病知识教育，因为家人也可能强化不合理行为。
+    </div></details>
+  </div>
+
+  <div class="case">
+    <span class="ctag">难度 ★★★ · 隐蔽动机与综合判断</span>
+    <h3>案例 3：因"抑郁"就诊的年轻人</h3>
+    <div class="scene">某 24 岁男性因情绪低落、失眠就诊，主动谈及"对未来没兴趣"。深入访谈中他提到，从小学起就幻想自己的左腿"不该存在"，独处时会用绷带把左腿藏起来、只靠右腿行动，从未告诉家人和同学。他因难以维持亲密关系而苦恼，说"别人一旦靠近，我就得一直演下去"。他反复出现关于截肢的画面，但并不觉得这些想法是"外来的、不该有的"；他从未因此就医，也不认为自己的腿"丑"或"有缺陷"，只是觉得"它本来就不该长在我身上"。</div>
+    <ol class="ques">
+      <li>除抑郁情绪外，最应考虑什么诊断？依据教材哪几条？</li>
+      <li>与强迫症、躯体变形障碍、精神分裂症、做作性障碍/诈病如何逐一排除？</li>
+      <li>关于治疗，教材能给出的结论是什么？不能给出什么？</li>
+    </ol>
+    <details><summary>查看答案与解析</summary><div class="dbody">
+      <strong>1.</strong>应考虑<strong>身体完整性烦恼</strong>。依据：① 一直存在强烈而持久的成为残疾的愿望（希望左腿不存在），伴对当前身体结构的持续不适；② 已产生有害后果——社会功能障碍（回避/终止亲密关系，"得一直演下去"），且需评估是否存在自残风险；③ 对残疾的持续渴望出现在儿童期（小学起）；④ 抑郁情绪不能更好解释该愿望；⑤ 需排除性别认同障碍、神经系统疾病或其他医学状况。<br>
+      <strong>2.</strong>① <strong>强迫症：</strong>强迫的想法、图像或冲动被认为是令人痛苦的、不必要的；本例的截肢画面并不被视为"外来的、不该有的"，其痛苦来自"无法实现"与"怕被负面评价"，故不支持强迫症。<br>
+      ② <strong>躯体变形障碍：</strong>后者认为身体某部位有缺陷或外表丑陋；本例认为左腿"本来就不该长在我身上"，是结构与功能的"错误、不自然"，而非"丑/有缺陷"。<br>
+      ③ <strong>精神分裂症：</strong>若"腿不属于我"是妄想信念并伴其他精神病性症状，应考虑精神病性障碍；本例对外部现实无错误信念，而是一种内心的感觉——只有残疾了才是完整和正确的。<br>
+      ④ <strong>做作性障碍/诈病：</strong>后者为寻求关注或外部激励（如残疾补助）而伪造；本例秘密进行、从未就医、也不愿他人知道，模拟行为是减少负面情绪的方式，方向相反。<br>
+      <strong>3.</strong>教材结论：目前<strong>缺乏公认的有效治疗方式</strong>；继续使用目前无效的治疗方案会给患者和医疗保健提供者带来经济负担；治疗关注重点是<strong>针对伴随的焦虑和抑郁症状、以减轻痛苦为目的的替代性方法</strong>。<br>
+      教材<strong>不能</strong>给出：具体药物与剂量、具体心理治疗术式与疗程、手术（截肢）请求的伦理与法律处理、随访频率或住院指征。评估中若发现自残/致残风险，属临床安全事项，教材未提供具体处置流程，应按机构规范处理。
+    </div></details>
+  </div>
+</section>
+
+<!-- ===== 12 拓展 ===== -->
+<section id="ext">
+  <div class="sec-head"><div class="badge">12</div><h2>拓展延伸<span class="en">Beyond the chapter</span></h2></div>
+  <p class="sec-lead">只列教材明确提到但未展开的内容，以及教材确属空白的地方——不补写课外结论，避免把网络资料当成教材。</p>
+  <div class="grid2">
+    <div class="card cyan">
+      <h3>教材提及、但仅一笔带过的内容</h3>
+      <ul>
+        <li><strong>ICD-11 另两个亚型：</strong>「其他特定的躯体痛苦或躯体体验障碍」「未特定的躯体痛苦或躯体体验障碍」——教材只列名称，说明本章主要介绍前两种，未给定义与诊断标准。</li>
+        <li><strong>功能性躯体综合征的具体范围：</strong>教材仅举例慢性疲劳综合征、肠易激综合征、非心脏性胸痛、疼痛综合征，未给诊断标准或分类体系。</li>
+        <li><strong>脑干网状结构滤过功能失调：</strong>教材以"有研究认为"提出，未给实验依据、检查方法或定量指标。</li>
+        <li><strong>BID 的右顶叶机制：</strong>教材以"部分研究认为""一个观点认为"提出，明确注明"具体的病因和发病机制待进一步研究"。</li>
+        <li><strong>BID 的网络强化现象：</strong>教材病例记录了"在网上查到有同样愿望的人后愿望更加强烈"，但未作机制解释，也未讨论网络社区的影响。</li>
+        <li><strong>CBT 的"功能性分析"：</strong>教材只说"明确特定刺激与结果间的联系，是治疗成功的关键"，未给操作步骤。</li>
+      </ul>
+    </div>
+    <div class="card orange">
+      <h3>教材未涉及 / 本指南不补写的内容</h3>
+      <ul>
+        <li><strong>药物剂量、给药频次、疗程、换药节点</strong>——BDD 治疗段落只列药名与适用情形，全部未给数值。</li>
+        <li><strong>心理治疗的具体次数与时长</strong>——教材只列方法类型与 CBT 的四项内容。</li>
+        <li><strong>BDD 的鉴别量表、筛查工具、严重度评分量表</strong>——教材只给临床描述性分级。</li>
+        <li><strong>BID 的流行病学患病率</strong>——教材明确"目前无准确的流行病学研究及数据"。</li>
+        <li><strong>BID 的手术（截肢）请求之伦理与法律处理</strong>——教材未涉及；本指南不延伸。</li>
+        <li><strong>BID 的具体药物或心理治疗方案</strong>——教材明确"缺乏公认的有效治疗方式"，未给方案。</li>
+        <li><strong>其他特定/未特定亚型的诊断标准</strong>——教材未展开。</li>
+      </ul>
+    </div>
+  </div>
+  <div class="callout ext">
+    <span class="ct">📖 使用提醒</span>
+    本指南所有定义、诊断条件、鉴别要点、药物名称、流行病学与预后数字均取自教材第十三章原文（印刷页 159–166）。凡标注"教材未涉及"的地方，请勿用其他资料的数字或方案替代，以免与教材答案冲突。
+  </div>
+  <div class="hr"></div>
+  <p class="note" style="text-align:center">精神病学（第9版）· 第十三章 躯体痛苦及躯体体验障碍 · 印刷页 159–166 · 学习指南完</p>
+</section>
+
+</div>
+<nav class="chapter-pager" aria-label="章节间导航"><a class="cp-prev" href="精神病学_第十二章_分离性障碍_学习指南.html">← 上一章：第十二章</a><a class="cp-toc" href="index.html">目录</a><a class="cp-next" href="精神病学_第十四章_进食与排泄障碍_学习指南.html">下一章：第十四章 →</a></nav>
+</main>
+
+<button class="top" id="topBtn" aria-label="回到顶部">↑</button>
+<script>
+/* ============================================================
+   精神病学学习指南 · 统一交互层 v1（构建期注入，整体替换原 IIFE）
+   兼容 A 族（.tabbar button + [data-panel] + .panel.on）与
+   B 族（.tab-nav + .tab-panel.active）两套 DOM 约定。
+   特性检测 + 防御式查询 + 幂等；不引入任何外部依赖。
+   ============================================================ */
+(function () {
+  'use strict';
+  if (window.__PSY_GUIDE_APP__) { return; }
+  window.__PSY_GUIDE_APP__ = true;
+
+  var d = document;
+
+  function all(sel, root) {
+    return Array.prototype.slice.call((root || d).querySelectorAll(sel));
+  }
+  function on(el, ev, fn, opt) {
+    if (el) { el.addEventListener(ev, fn, opt || false); }
+  }
+  function norm(s) {
+    return String(s || '').replace(/\s+/g, '').toUpperCase();
+  }
+
+  /* ---------- 1. Tab 切换（两族约定都支持） ---------- */
+  function initTabs() {
+    all('.tabs, [data-tabs]').forEach(function (g) {
+      if (g.__psyTabs) { return; }
+      g.__psyTabs = true;
+      var isA = !!g.querySelector('.tabbar button');
+      var btns = all(isA ? '.tabbar button' : '.tab-nav .tab-btn', g);
+      if (!btns.length) { return; }
+      var cls = isA ? 'on' : 'active';
+      var nav = btns[0].closest('.tabbar') || btns[0].closest('.tab-nav');
+      if (nav && !nav.hasAttribute('role')) { nav.setAttribute('role', 'tablist'); }
+      all(isA ? '.panel' : '.tab-panel', g).forEach(function (p) {
+        if (!p.hasAttribute('role')) { p.setAttribute('role', 'tabpanel'); }
+      });
+      function activate(btn) {
+        btns.forEach(function (b) {
+          b.classList.remove(cls);
+          b.setAttribute('aria-selected', 'false');
+        });
+        btn.classList.add(cls);
+        btn.setAttribute('aria-selected', 'true');
+        var id = btn.getAttribute('data-tab');
+        if (!id) { return; }
+        var target = isA
+          ? g.querySelector('[data-panel="' + id + '"]')
+          : (g.querySelector('.tab-panel#' + id) || d.getElementById(id));
+        all(isA ? '.panel' : '.tab-panel', g).forEach(function (p) {
+          var show = isA ? (p.getAttribute('data-panel') === id) : (p === target);
+          p.classList.toggle(cls, show);
+        });
+      }
+      btns.forEach(function (btn, i) {
+        if (!btn.hasAttribute('role')) { btn.setAttribute('role', 'tab'); }
+        btn.setAttribute('aria-selected', btn.classList.contains(cls) ? 'true' : 'false');
+        if (!btn.hasAttribute('tabindex') && !btn.classList.contains(cls)) { btn.setAttribute('tabindex', '0'); }
+        on(btn, 'click', function () { activate(btn); });
+        on(btn, 'keydown', function (e) {
+          if (e.key !== 'ArrowRight' && e.key !== 'ArrowLeft') { return; }
+          e.preventDefault();
+          var nx = btns[(i + (e.key === 'ArrowRight' ? 1 : btns.length - 1)) % btns.length];
+          if (nx) { nx.focus(); activate(nx); }
+        });
+      });
+    });
+  }
+
+  /* ---------- 2. 速记卡：点击/键盘翻转 + 可达性 ---------- */
+  function initCards() {
+    all('.flashcard').forEach(function (card) {
+      if (card.__psyCard) { return; }
+      card.__psyCard = true;
+      card.setAttribute('tabindex', '0');
+      card.setAttribute('role', 'button');
+      function sync() {
+        card.setAttribute('aria-pressed', card.classList.contains('flipped') ? 'true' : 'false');
+      }
+      function flip() { card.classList.toggle('flipped'); sync(); }
+      on(card, 'click', flip);
+      on(card, 'keydown', function (e) {
+        if (e.key === 'Enter' || e.key === ' ' || e.key === 'Spacebar') {
+          e.preventDefault();
+          flip();
+        }
+      });
+      sync();
+    });
+  }
+
+  /* ---------- 3. 自测题交互化（核心新功能） ---------- */
+  function initQuiz() {
+    var questions = all('.quiz-q, .quiz-item');
+    if (!questions.length) { return; }
+    var groups = {};
+
+    function keyOf(o) {
+      var L = o.getAttribute('data-letter');
+      if (L && String(L).replace(/\s+/g, '') !== '') { return norm(L); }
+      var sp = o.querySelector('.l');
+      if (sp) {
+        var t = norm(sp.textContent).replace(/[.．、:：]/g, '');
+        if (t !== '') { return t; }
+      }
+      var txt = norm(o.textContent);
+      if (txt.indexOf('正确') >= 0 || txt.indexOf('错误') >= 0) { return txt; }
+      return txt.charAt(0);
+    }
+
+    function getGroup(q) {
+      var sec = q.closest('.quiz-block') || q.closest('section') || d.body;
+      if (!groups[sec.__psyGid]) {
+        sec.__psyGid = 'g' + (Object.keys(groups).length + 1);
+        groups[sec.__psyGid] = { sec: sec, total: 0, score: 0, row: null, first: null };
+      }
+      var g = groups[sec.__psyGid];
+      if (!g.first) { g.first = q; }
+      return g;
+    }
+
+    function ensureRow(g) {
+      if (g.row) { return g.row; }
+      var row = d.createElement('div');
+      row.className = 'quiz-score';
+      row.setAttribute('role', 'status');
+      row.setAttribute('aria-live', 'polite');
+      row.innerHTML = '<span class="qs-label">自测计分</span>' +
+        '<span class="qs-num">得分 0 / ' + g.total + '</span>' +
+        '<span class="qs-bar"><i></i></span>';
+      g.first.parentNode.insertBefore(row, g.first);
+      g.row = row;
+      return row;
+    }
+
+    function updateRow(g) {
+      var row = ensureRow(g);
+      var num = row.querySelector('.qs-num');
+      var bar = row.querySelector('.qs-bar i');
+      if (num) { num.textContent = '得分 ' + g.score + ' / ' + g.total; }
+      if (bar) { bar.style.width = (g.total ? Math.round(g.score / g.total * 100) : 0) + '%'; }
+    }
+
+    questions.forEach(function (q) {
+      if (q.__psyQuiz) { return; }
+      q.__psyQuiz = true;
+      var opts = all('.opt', q);
+      if (!opts.length) { opts = all('.quiz-options > li', q); }
+      if (!opts.length) { return; }
+
+      /* 正确答案先记入内存：预标 correct 优先（记录后立即移除，消除剧透），
+         否则从解析文本「答案：X / 答案 X」提取（不改动任何文字） */
+      var ansKeys = [];
+      var preset = opts.filter(function (o) { return o.classList.contains('correct'); });
+      preset.forEach(function (o) { o.classList.remove('correct'); });
+      if (preset.length) {
+        ansKeys = preset.map(keyOf);
+      } else {
+        var dt = q.querySelector('details');
+        var txt = dt ? dt.textContent : '';
+        var m = txt.match(/答案\s*[:：]?\s*([A-Za-z](?:[\s、,，·和及]*[A-Za-z])*)/);
+        if (m) {
+          ansKeys = m[1].match(/[A-Za-z]/g) || [];
+        } else {
+          var m2 = txt.match(/答案\s*[:：]?\s*(正确|错误)/);
+          if (m2) { ansKeys = [m2[1]]; }
+        }
+      }
+      if (!ansKeys.length) { return; } /* 无可判定答案（名词解释等），保持原样 */
+
+      var g = getGroup(q);
+      g.total += 1;
+      var multi = ansKeys.length > 1;
+      var ansSet = ansKeys.map(norm);
+      var locked = false;
+      var picked = [];
+
+      function revealAll() {
+        opts.forEach(function (o) {
+          if (ansSet.indexOf(keyOf(o)) >= 0) { o.classList.add('is-reveal'); }
+        });
+      }
+      function finish(ok) {
+        locked = true;
+        q.classList.add('is-locked');
+        var dt = q.querySelector('details');
+        if (dt) { dt.open = true; }
+        if (ok) { g.score += 1; }
+        updateRow(g);
+      }
+
+      opts.forEach(function (o) {
+        o.setAttribute('tabindex', '0');
+        function pick() {
+          if (locked) { return; }
+          var k = keyOf(o);
+          if (ansSet.indexOf(k) >= 0) {
+            o.classList.add('is-right');
+            if (picked.indexOf(k) < 0) { picked.push(k); }
+            if (multi) {
+              if (picked.length === ansSet.length) { finish(true); }
+            } else {
+              finish(true);
+            }
+          } else {
+            o.classList.add('is-wrong');
+            revealAll();
+            finish(false);
+          }
+        }
+        on(o, 'click', pick);
+        on(o, 'keydown', function (e) {
+          if (e.key === 'Enter' || e.key === ' ' || e.key === 'Spacebar') {
+            e.preventDefault();
+            pick();
+          }
+        });
+      });
+    });
+
+    Object.keys(groups).forEach(function (id) {
+      if (groups[id].total > 0) { updateRow(groups[id]); }
+    });
+  }
+
+  /* ---------- 4. 侧栏 scroll spy（本页锚点高亮） ---------- */
+  function initSpy() {
+    var links = all('#sidebar a[href^="#"]');
+    if (!links.length || !('IntersectionObserver' in window)) { return; }
+    var map = {};
+    links.forEach(function (a) {
+      var id = a.getAttribute('href').slice(1);
+      if (id) { map[id] = a; }
+    });
+    var secs = [];
+    Object.keys(map).forEach(function (id) {
+      var s = d.getElementById(id);
+      if (s) { secs.push(s); }
+    });
+    if (!secs.length) { return; }
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting && map[e.target.id]) {
+          links.forEach(function (a) { a.classList.remove('active'); });
+          map[e.target.id].classList.add('active');
+        }
+      });
+    }, { rootMargin: '-15% 0px -70% 0px', threshold: 0 });
+    secs.forEach(function (s) { io.observe(s); });
+  }
+
+  /* ---------- 5. 阅读进度条 + 回顶 ---------- */
+  function initScroll() {
+    var bar = d.getElementById('readbar');
+    var topBtn = d.getElementById('topBtn') || d.getElementById('backTop');
+    var ticking = false;
+    function step() {
+      ticking = false;
+      var h = d.documentElement;
+      var y = window.pageYOffset || h.scrollTop || 0;
+      if (bar) {
+        var max = h.scrollHeight - h.clientHeight;
+        bar.style.width = (max > 0 ? (y / max) * 100 : 0) + '%';
+      }
+      if (topBtn) {
+        topBtn.classList.toggle('show', y > 400);     /* A 族类名 */
+        topBtn.classList.toggle('visible', y > 400);  /* B 族类名 */
+      }
+    }
+    on(window, 'scroll', function () {
+      if (!ticking) { ticking = true; window.requestAnimationFrame(step); }
+    }, { passive: true });
+    step();
+    on(topBtn, 'click', function () {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
+
+  /* ---------- 6. 侧栏开合（存在才绑定；抽屉打开时锁定背景滚动） ---------- */
+  function initSidebar() {
+    var sidebar = d.getElementById('sidebar');
+    if (!sidebar) { return; }
+    var btn = d.getElementById('menuBtn') || d.getElementById('navToggle');
+    var ov = d.getElementById('overlay') || d.getElementById('sidebarOverlay');
+    function lock(open) {
+      /* 仅移动抽屉断点（≤900px）锁滚动；宽屏兜底解除，防布局残留 */
+      d.body.classList.toggle('nav-locked', !!open && window.innerWidth <= 900);
+    }
+    function close() {
+      sidebar.classList.remove('open');
+      if (ov) { ov.classList.remove('show'); }
+      lock(false);
+    }
+    on(btn, 'click', function () {
+      var open = !sidebar.classList.contains('open');
+      sidebar.classList.toggle('open');
+      if (ov) { ov.classList.toggle('show'); }
+      lock(open);
+    });
+    on(ov, 'click', close);
+    all('a', sidebar).forEach(function (a) {
+      on(a, 'click', function () {
+        if (window.innerWidth <= 900) { close(); }
+      });
+    });
+    on(window, 'resize', function () {
+      if (window.innerWidth > 900) { lock(false); }
+    });
+  }
+
+  /* ---------- 启动（脚本位于 body 末尾，DOM 已就绪；防御兜底） ---------- */
+  function boot() {
+    initTabs();
+    initCards();
+    initQuiz();
+    initSpy();
+    initScroll();
+    initSidebar();
+  }
+  if (d.readyState === 'loading') {
+    on(d, 'DOMContentLoaded', boot);
+  } else {
+    boot();
+  }
+})();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,2228 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>精神病学 第十一章 应激相关障碍 - 学习指南</title>
+<style>
+/* ===== 设计系统（请完整复制，勿修改变量与组件样式） ===== */
+:root{
+  --bg:#F0F7FA; --card:#FFFFFF; --ink:#0F172A; --muted:#64748B; --border:#E2E8F0;
+  --primary:#0EA5E9; --accent:#10B981; --symptom:#EF4444; --treatment:#10B981;
+  --cause:#3B82F6; --diagnosis:#F59E0B; --memory:#8B5CF6; --danger:#DC2626;
+  --quiz:#EC4899; --flashcard:#06B6D4;
+  --symptom-bg:#FEF2F2; --treatment-bg:#ECFDF5; --cause-bg:#EFF6FF;
+  --diagnosis-bg:#FFFBEB; --memory-bg:#F5F3FF; --quiz-bg:#FDF2F8; --flash-bg:#ECFEFF;
+  --gradient-main:linear-gradient(135deg,#0EA5E9 0%,#06B6D4 50%,#10B981 100%);
+  --gradient-soft:linear-gradient(135deg,rgba(14,165,233,.08),rgba(6,182,212,.05) 50%,rgba(16,185,129,.08));
+  --radius-sm:8px; --radius-md:12px; --radius-lg:18px;
+  --shadow-sm:0 1px 3px rgba(15,23,42,.06),0 1px 2px rgba(15,23,42,.04);
+  --shadow-md:0 6px 18px rgba(14,165,233,.10),0 2px 6px rgba(15,23,42,.05);
+  --shadow-lg:0 14px 38px rgba(14,165,233,.16),0 4px 12px rgba(15,23,42,.06);
+  --sidebar-w:262px; --content-max:980px;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:"Microsoft YaHei","PingFang SC","Segoe UI",system-ui,sans-serif;
+  font-size:16px;line-height:1.75;color:var(--ink);background:var(--bg);
+  background-image:radial-gradient(ellipse 620px 420px at 8% 0%,rgba(14,165,233,.09),transparent 70%),
+                    radial-gradient(ellipse 520px 380px at 92% 16%,rgba(16,185,129,.07),transparent 70%),
+                    radial-gradient(ellipse 700px 520px at 50% 100%,rgba(6,182,212,.05),transparent 70%);
+  min-height:100vh;
+}
+img{max-width:100%}
+a{color:var(--primary)}
+p{margin-bottom:12px}
+strong{font-weight:700;color:var(--ink)}
+mark.key{background:none;color:var(--primary);font-weight:700}
+.page-wrapper{display:flex;max-width:1420px;margin:0 auto;padding:0 24px}
+.main-content{flex:1;min-width:0;max-width:var(--content-max);padding:36px 0 88px}
+
+/* ===== 侧边导航 ===== */
+.sidebar{width:var(--sidebar-w);flex-shrink:0;position:sticky;top:20px;align-self:flex-start;
+  max-height:calc(100vh - 40px);overflow-y:auto;padding:22px 0;margin-right:30px}
+.sidebar-brand{font-size:.78rem;font-weight:700;letter-spacing:.06em;color:var(--muted);
+  padding:0 14px 12px;border-bottom:1px dashed var(--border);margin-bottom:10px}
+.sidebar-nav ul{list-style:none}
+.sidebar-nav>ul>li>a{display:flex;align-items:center;gap:9px;padding:9px 14px;border-radius:var(--radius-sm);
+  color:var(--ink);text-decoration:none;font-size:.9rem;font-weight:500;border-left:3px solid transparent;
+  transition:all .2s ease;margin-left:-3px}
+.sidebar-nav>ul>li>a:hover{background:rgba(14,165,233,.06);color:var(--primary)}
+.sidebar-nav>ul>li>a.active{background:rgba(14,165,233,.1);color:var(--primary);
+  border-left-color:var(--primary);font-weight:700}
+.toc-num{font-family:Consolas,monospace;font-size:.72rem;color:var(--muted);min-width:22px}
+.sidebar-nav .sub-list{margin:2px 0 8px 22px;padding-left:12px;border-left:1px solid var(--border)}
+.sidebar-nav .sub-list li a{display:block;padding:5px 10px;color:var(--muted);text-decoration:none;
+  font-size:.8rem;border-radius:4px}
+.sidebar-nav .sub-list li a:hover{color:var(--primary);background:rgba(14,165,233,.05)}
+
+/* ===== 封面 ===== */
+.hero{position:relative;overflow:hidden;text-align:center;padding:54px 34px 46px;margin-bottom:48px;
+  background:var(--gradient-soft);border:1px solid rgba(14,165,233,.12);border-radius:var(--radius-lg)}
+.hero::before{content:"";position:absolute;inset:-40% -20% auto;height:180%;
+  background:radial-gradient(circle at 28% 30%,rgba(14,165,233,.1),transparent 55%),
+             radial-gradient(circle at 74% 68%,rgba(16,185,129,.09),transparent 55%);pointer-events:none}
+.hero>*{position:relative}
+.hero-badge{display:inline-flex;align-items:center;gap:6px;padding:6px 15px;border-radius:100px;
+  background:rgba(14,165,233,.12);border:1px solid rgba(14,165,233,.22);color:var(--primary);
+  font-size:.8rem;font-weight:700;margin-bottom:18px}
+.hero h1{font-size:2.35rem;line-height:1.28;font-weight:800;margin-bottom:12px;
+  background:var(--gradient-main);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.hero .subtitle{max-width:680px;margin:0 auto;color:var(--muted);font-size:1.02rem}
+.hero-meta{display:flex;justify-content:center;gap:34px;flex-wrap:wrap;margin-top:26px}
+.hero-meta-item .num{font-size:1.7rem;font-weight:800;line-height:1.2;color:var(--primary)}
+.hero-meta-item .label{font-size:.78rem;color:var(--muted)}
+.hero-quote{margin:24px auto 0;max-width:720px;padding:12px 18px;border-radius:10px;
+  background:rgba(255,255,255,.66);border:1px dashed rgba(14,165,233,.3);
+  font-size:.9rem;color:var(--muted);text-align:left}
+
+/* ===== 区块 ===== */
+.section{margin-bottom:56px;scroll-margin-top:20px}
+.section-header{display:flex;align-items:center;gap:13px;margin-bottom:22px;padding-bottom:12px;
+  border-bottom:2px solid transparent;border-image:var(--gradient-main) 1}
+.section-number{width:40px;height:40px;border-radius:var(--radius-sm);display:inline-flex;
+  align-items:center;justify-content:center;background:var(--gradient-main);color:#fff;
+  font-weight:800;font-size:1rem;flex-shrink:0}
+.section-header h2{font-size:1.55rem;font-weight:800;line-height:1.35}
+.subsection{margin:30px 0;scroll-margin-top:20px}
+.subsection h3{font-size:1.18rem;font-weight:700;margin-bottom:12px;display:flex;align-items:center;gap:8px}
+.sub-subsection{margin:18px 0}
+.sub-subsection h4{font-size:1rem;font-weight:700;margin-bottom:8px}
+.lead{font-size:1rem;color:var(--muted);margin-bottom:18px}
+
+/* ===== 疾病页眉 / 八栏 ===== */
+.disease-hero{background:linear-gradient(135deg,#0f2b46,#155e75 60%,#0f766e);color:#fff;
+  border-radius:var(--radius-lg);padding:28px 30px;margin:26px 0 22px;box-shadow:var(--shadow-md)}
+.disease-hero .en{font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;color:#99f6e4}
+.disease-hero h3{font-size:1.5rem;margin:4px 0 8px;color:#fff}
+.disease-hero p{color:#e0f2fe;font-size:.92rem;margin:0}
+.disease-hero .quick-tags{margin-top:14px;display:flex;gap:8px;flex-wrap:wrap}
+.disease-hero .quick-tags span{background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.28);
+  color:#fff;border-radius:100px;padding:3px 11px;font-size:.76rem}
+.module{background:var(--card);border:1px solid var(--border);border-radius:var(--radius-md);
+  padding:22px 24px;margin:16px 0;box-shadow:var(--shadow-sm)}
+.module-head{display:flex;align-items:center;gap:10px;margin-bottom:14px;padding-bottom:10px;
+  border-bottom:1px solid var(--border)}
+.module-index{font-family:Consolas,monospace;font-size:.72rem;font-weight:700;color:#fff;
+  background:var(--gradient-main);padding:3px 9px;border-radius:100px;white-space:nowrap}
+.module-head h3{font-size:1.08rem;font-weight:700;margin:0}
+.module-head .module-en{font-size:.74rem;color:var(--muted);font-weight:400}
+.module-cause .module-index{background:var(--cause)}
+.module-symptom .module-index{background:var(--symptom)}
+.module-case .module-index{background:var(--diagnosis)}
+.module-diff .module-index{background:#0F766E}
+.module-treat .module-index{background:var(--treatment)}
+.module-memory .module-index{background:var(--memory)}
+.module-link .module-index{background:#475569}
+
+/* ===== 卡片 ===== */
+.card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius-md);
+  padding:18px 20px;box-shadow:var(--shadow-sm);transition:.2s}
+.card:hover{box-shadow:var(--shadow-md);transform:translateY(-1px)}
+.card-header{display:flex;align-items:center;gap:9px;margin-bottom:10px;padding-bottom:9px;
+  border-bottom:1px solid var(--border)}
+.card-icon{font-size:1.2rem}
+.card-title{font-size:1rem;font-weight:700}
+.card-body{font-size:.94rem}
+.card-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px;margin:16px 0}
+.card-grid .card{margin:0}
+.card-symptom{border-left:4px solid var(--symptom)}
+.card-treatment{border-left:4px solid var(--treatment)}
+.card-cause{border-left:4px solid var(--cause)}
+.card-diagnosis{border-left:4px solid var(--diagnosis)}
+.card-memory{border-left:4px solid var(--memory)}
+.card-quiz{border-left:4px solid var(--quiz)}
+.quick-facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin:14px 0}
+.fact{background:var(--bg);border:1px solid var(--border);border-radius:10px;padding:12px 14px}
+.fact b{display:block;font-size:.76rem;color:var(--muted);font-weight:600;margin-bottom:2px}
+.fact span{font-size:.95rem;font-weight:700;color:var(--ink)}
+
+/* ===== 提示框 ===== */
+.callout{display:flex;gap:11px;padding:14px 18px;border-radius:var(--radius-md);margin:14px 0;
+  border-left:4px solid;font-size:.92rem}
+.callout-icon{font-size:1.15rem;flex-shrink:0;margin-top:1px}
+.callout-body{flex:1}
+.callout-body strong{display:block;margin-bottom:3px}
+.callout-info{background:var(--cause-bg);border-left-color:var(--cause)}
+.callout-success{background:var(--treatment-bg);border-left-color:var(--treatment)}
+.callout-warning{background:var(--diagnosis-bg);border-left-color:var(--diagnosis)}
+.callout-danger{background:var(--symptom-bg);border-left-color:var(--danger)}
+.callout-memory{background:var(--memory-bg);border-left-color:var(--memory)}
+.callout-example{background:var(--flash-bg);border-left-color:var(--flashcard)}
+
+/* ===== 列表 ===== */
+.icon-list{list-style:none;margin:10px 0}
+.icon-list li{position:relative;padding-left:26px;margin-bottom:9px;font-size:.94rem;line-height:1.65}
+.icon-list li::before{content:"✦";position:absolute;left:0;top:2px;color:var(--primary);font-size:.8rem}
+.icon-list.check li::before{content:"✓";color:var(--treatment);font-weight:800}
+.icon-list.cross li::before{content:"✗";color:var(--symptom);font-weight:800}
+.numbered-list{list-style:none;counter-reset:n;margin:10px 0}
+.numbered-list li{position:relative;padding-left:38px;margin-bottom:10px;font-size:.94rem;counter-increment:n}
+.numbered-list li::before{content:counter(n);position:absolute;left:0;top:0;width:24px;height:24px;
+  border-radius:50%;background:var(--gradient-main);color:#fff;font-size:.76rem;font-weight:800;
+  display:flex;align-items:center;justify-content:center}
+
+/* ===== 表格 ===== */
+.table-wrap{overflow-x:auto;margin:14px 0;border:1px solid var(--border);border-radius:var(--radius-md)}
+table{width:100%;border-collapse:collapse;font-size:.89rem;min-width:560px}
+thead{background:linear-gradient(135deg,#0EA5E9,#0891B2)}
+thead th{padding:11px 14px;text-align:left;color:#fff;font-size:.84rem;font-weight:700;white-space:nowrap}
+tbody tr{border-bottom:1px solid var(--border)}
+tbody tr:nth-child(even){background:#FAFCFE}
+tbody tr:hover{background:rgba(14,165,233,.05)}
+tbody tr:last-child{border-bottom:0}
+tbody td{padding:10px 14px;vertical-align:top;line-height:1.6}
+tbody td:first-child{font-weight:700;color:#0F766E;background:rgba(14,165,233,.04)}
+.table-note{font-size:.78rem;color:var(--muted);margin-top:-6px}
+
+/* ===== 标签 ===== */
+.tag{display:inline-flex;align-items:center;padding:2px 9px;border-radius:100px;
+  font-size:.75rem;font-weight:700;line-height:1.6}
+.tag-core{background:var(--symptom-bg);color:var(--danger)}
+.tag-master{background:var(--treatment-bg);color:var(--treatment)}
+.tag-understand{background:var(--cause-bg);color:var(--cause)}
+.tag-know{background:var(--diagnosis-bg);color:#B45309}
+.tag-info{background:rgba(14,165,233,.1);color:var(--primary)}
+.tag-memory{background:var(--memory-bg);color:var(--memory)}
+
+/* ===== Tab ===== */
+.tabs{margin:14px 0}
+.tab-nav{display:flex;gap:4px;flex-wrap:wrap;border-bottom:2px solid var(--border);margin-bottom:14px}
+.tab-btn{border:0;background:none;cursor:pointer;font-family:inherit;font-size:.88rem;
+  font-weight:600;color:var(--muted);padding:9px 16px;border-radius:var(--radius-sm) var(--radius-sm) 0 0;
+  border-bottom:2px solid transparent;margin-bottom:-2px}
+.tab-btn:hover{color:var(--primary);background:rgba(14,165,233,.05)}
+.tab-btn.active{color:var(--primary);border-bottom-color:var(--primary)}
+.tab-panel{display:none}
+.tab-panel.active{display:block;animation:fadeIn .25s ease}
+@keyframes fadeIn{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}
+
+/* ===== 折叠问答 ===== */
+details.qa{background:var(--card);border:1px solid var(--border);border-radius:var(--radius-md);
+  margin:10px 0;overflow:hidden}
+details.qa[open]{box-shadow:var(--shadow-sm)}
+details.qa summary{cursor:pointer;padding:13px 16px;font-weight:600;font-size:.94rem;
+  display:flex;align-items:center;gap:10px;list-style:none;user-select:none}
+details.qa summary::-webkit-details-marker{display:none}
+details.qa summary::after{content:"▾";margin-left:auto;color:var(--muted);transition:.2s}
+details.qa[open] summary::after{transform:rotate(180deg)}
+details.qa summary:hover{background:rgba(14,165,233,.04)}
+.qa-body{padding:0 16px 15px 52px;font-size:.92rem;border-top:1px solid var(--border);padding-top:12px}
+.qa-num{display:inline-flex;align-items:center;justify-content:center;min-width:26px;height:26px;
+  border-radius:7px;background:rgba(14,165,233,.1);color:var(--primary);font-size:.78rem;
+  font-weight:800;flex-shrink:0}
+
+/* ===== 自测题 ===== */
+.quiz-block{background:var(--quiz-bg);border:1px solid #FBCFE8;border-radius:var(--radius-md);
+  padding:20px 22px;margin:18px 0}
+.quiz-item{background:#fff;border:1px solid #F9D5E5;border-radius:10px;padding:16px 18px;margin:12px 0}
+.quiz-stem{font-weight:600;font-size:.95rem;margin-bottom:10px;display:flex;gap:8px;align-items:flex-start}
+.q-type{display:inline-block;padding:1px 8px;border-radius:5px;background:var(--quiz-bg);
+  color:var(--quiz);font-size:.72rem;font-weight:800;white-space:nowrap;margin-top:2px}
+.quiz-options{list-style:none;margin:8px 0}
+.quiz-options li{position:relative;padding:6px 10px 6px 30px;font-size:.9rem;border-radius:6px;margin:3px 0}
+.quiz-options li::before{content:attr(data-letter);position:absolute;left:8px;top:6px;
+  font-weight:800;color:var(--quiz)}
+.quiz-options li.correct{background:#DCFCE7;font-weight:600}
+.quiz-options li.correct::after{content:" ✓ 正确";color:#15803D;font-size:.76rem;font-weight:700}
+.quiz-options li.wrong{background:#FEE2E2}
+.quiz-options li.wrong::after{content:" ✗";color:var(--danger);font-size:.76rem;font-weight:700}
+.answer-key{display:inline-block;background:#DCFCE7;color:#15803D;border-radius:6px;
+  padding:2px 9px;font-size:.8rem;font-weight:800;margin-right:6px}
+.difficulty{color:#B45309;font-size:.8rem;letter-spacing:1px;white-space:nowrap}
+
+/* ===== 闪卡 ===== */
+.flashcard-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:14px;margin:18px 0}
+.flashcard{perspective:1000px;height:210px;cursor:pointer}
+.flashcard-inner{position:relative;width:100%;height:100%;transition:transform .55s;
+  transform-style:preserve-3d}
+.flashcard.flipped .flashcard-inner{transform:rotateY(180deg)}
+.flashcard-face{position:absolute;inset:0;backface-visibility:hidden;border-radius:var(--radius-md);
+  padding:18px 18px 14px;display:flex;flex-direction:column;justify-content:center;
+  border:1px solid var(--border);background:#fff;box-shadow:var(--shadow-sm)}
+.flashcard-front{border-top:5px solid var(--flashcard)}
+.flashcard-back{transform:rotateY(180deg);background:var(--flash-bg);border-top:5px solid var(--primary);
+  justify-content:flex-start;overflow-y:auto;font-size:.88rem;line-height:1.65}
+.flashcard-front p{font-size:.95rem;font-weight:600;margin:0;text-align:center}
+.card-tag{align-self:center;margin-bottom:10px;padding:2px 9px;border-radius:100px;
+  font-size:.72rem;font-weight:800;background:var(--flash-bg);color:#0E7490}
+.card-tag.concept{background:var(--cause-bg);color:var(--cause)}
+.card-tag.diagnosis{background:var(--diagnosis-bg);color:#B45309}
+.card-tag.treatment{background:var(--treatment-bg);color:#047857}
+.card-tag.memory{background:var(--memory-bg);color:var(--memory)}
+.flip-hint{text-align:center;font-size:.74rem;color:var(--muted);margin-top:auto;padding-top:8px}
+
+/* ===== 病例挑战 ===== */
+.case-card{background:#fff;border:1px solid var(--border);border-top:5px solid var(--diagnosis);
+  border-radius:var(--radius-md);padding:20px 22px;margin:18px 0;box-shadow:var(--shadow-sm)}
+.case-meta{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:10px}
+.case-meta span{background:var(--diagnosis-bg);color:#B45309;border-radius:100px;
+  padding:2px 10px;font-size:.75rem;font-weight:700}
+.case-title{font-size:1.02rem;font-weight:800;margin-bottom:8px}
+.case-body{font-size:.93rem;color:var(--ink)}
+.case-questions{margin:12px 0 0;padding:12px 16px;background:var(--bg);border-radius:10px}
+.case-questions li{margin-bottom:6px;font-size:.9rem}
+
+/* ===== 记忆工具箱 ===== */
+.memory-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px;margin:14px 0}
+.memory-card{background:var(--memory-bg);border:1px solid #DDD6FE;border-radius:var(--radius-md);padding:16px 18px}
+.memory-card .m-title{font-weight:800;color:var(--memory);font-size:.9rem;margin-bottom:6px}
+.memory-card .m-type{display:inline-block;font-size:.7rem;font-weight:700;color:var(--memory);
+  background:#fff;border:1px solid #DDD6FE;border-radius:100px;padding:1px 8px;margin-left:6px}
+.memory-card .m-formula{font-weight:700;background:#fff;border-left:3px solid var(--memory);
+  padding:8px 10px;border-radius:6px;margin:8px 0;font-size:.92rem}
+.memory-card p{font-size:.88rem;margin:6px 0}
+
+/* ===== 学习路线 / 知识地图 ===== */
+.route-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin:16px 0}
+.route-card{background:#fff;border:1px solid var(--border);border-radius:var(--radius-md);padding:16px 18px}
+.route-card h4{font-size:.95rem;margin-bottom:6px;color:var(--primary)}
+.route-card p{font-size:.86rem;color:var(--muted);margin:0}
+.priority{display:inline-flex;gap:2px;font-size:.8rem;color:#F59E0B;margin-left:4px}
+.knowledge-map{display:grid;grid-template-columns:repeat(auto-fit,minmax(165px,1fr));gap:12px;margin:16px 0}
+.km-card{background:#fff;border:1px solid var(--border);border-radius:var(--radius-md);
+  padding:15px 12px;text-align:center;transition:.2s}
+.km-card:hover{border-color:var(--primary);transform:translateY(-2px);box-shadow:var(--shadow-md)}
+.km-icon{font-size:1.8rem;margin-bottom:6px}
+.km-title{font-weight:700;font-size:.9rem;margin-bottom:2px}
+.km-count{font-size:.76rem;color:var(--muted)}
+.km-count strong{color:var(--primary);font-size:1rem}
+
+/* ===== 数据 / 时间线 ===== */
+.stat-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(135px,1fr));gap:12px;margin:16px 0}
+.stat-card{background:#fff;border:1px solid var(--border);border-radius:var(--radius-md);
+  padding:16px 12px;text-align:center}
+.stat-num{font-size:1.65rem;font-weight:800;color:var(--primary);line-height:1.2}
+.stat-label{font-size:.77rem;color:var(--muted);margin-top:3px}
+.timeline{position:relative;margin:18px 0;padding-left:28px}
+.timeline::before{content:"";position:absolute;left:8px;top:4px;bottom:4px;width:2px;
+  background:linear-gradient(to bottom,var(--primary),var(--accent));border-radius:2px}
+.tl-item{position:relative;margin-bottom:18px}
+.tl-item::before{content:"";position:absolute;left:-25px;top:5px;width:11px;height:11px;
+  border-radius:50%;background:#fff;border:3px solid var(--primary)}
+.tl-title{font-weight:700;font-size:.94rem;margin-bottom:3px}
+.tl-desc{font-size:.86rem;color:var(--muted)}
+.progress-item{margin-bottom:12px}
+.progress-label{display:flex;justify-content:space-between;font-size:.84rem;margin-bottom:4px}
+.progress-bar{height:8px;background:var(--border);border-radius:100px;overflow:hidden}
+.progress-fill{height:100%;border-radius:100px;background:var(--gradient-main)}
+
+/* ===== 易错警示 ===== */
+.exam-alert{background:#FFF7ED;border:1px solid #FED7AA;border-left:5px solid var(--diagnosis);
+  border-radius:var(--radius-md);padding:18px 22px;margin:18px 0}
+.exam-alert h3{color:#C2410C;font-size:1rem;margin-bottom:10px}
+.exam-alert li{font-size:.92rem;margin-bottom:8px}
+.exam-alert li::before{content:"⚠️"}
+
+/* ===== 页脚 ===== */
+.footer{margin-top:56px;padding-top:28px;border-top:1px solid var(--border);
+  text-align:center;font-size:.82rem;color:var(--muted)}
+.footer .footer-tag{display:inline-block;padding:6px 16px;border-radius:100px;color:#fff;
+  background:var(--gradient-main);font-weight:700;margin-bottom:10px}
+.disclaimer{font-size:.78rem;color:var(--muted);background:#fff;border:1px dashed var(--border);
+  border-radius:10px;padding:12px 16px;margin:18px 0;text-align:left}
+
+/* ===== 浮动按钮 ===== */
+.back-to-top{position:fixed;right:22px;bottom:22px;width:44px;height:44px;border:0;border-radius:50%;
+  background:var(--gradient-main);color:#fff;font-size:1.05rem;cursor:pointer;box-shadow:var(--shadow-lg);
+  opacity:0;visibility:hidden;transform:translateY(10px);transition:.25s;z-index:60}
+.back-to-top.visible{opacity:1;visibility:visible;transform:none}
+.mobile-nav-toggle{display:none;position:fixed;top:14px;left:14px;z-index:100;width:44px;height:44px;
+  border:1px solid var(--border);border-radius:var(--radius-sm);background:#fff;box-shadow:var(--shadow-md);
+  cursor:pointer;font-size:1.15rem;align-items:center;justify-content:center}
+.sidebar-overlay{display:none;position:fixed;inset:0;background:rgba(15,23,42,.35);z-index:98}
+
+/* ===== 响应式 ===== */
+@media(max-width:1100px){.sidebar{width:220px;margin-right:22px}.main-content{max-width:100%}}
+@media(max-width:900px){
+  .mobile-nav-toggle{display:flex}
+  .sidebar{position:fixed;left:-290px;top:0;height:100vh;width:270px;background:#fff;
+    border-right:1px solid var(--border);z-index:99;transition:left .28s ease;padding:70px 16px 24px;
+    margin:0;max-height:100vh}
+  .sidebar.open{left:0}
+  .sidebar-overlay.show{display:block}
+  .page-wrapper{padding:0 16px}
+  .main-content{padding-top:66px}
+  .hero{padding:38px 20px 30px}.hero h1{font-size:1.75rem}
+  .section-header h2{font-size:1.3rem}
+  .module{padding:18px 16px}
+  .qa-body{padding-left:16px}
+}
+@media(max-width:680px){
+  body{font-size:15px}
+  .hero h1{font-size:1.45rem}
+  .hero-meta{gap:18px}
+  .knowledge-map{grid-template-columns:repeat(2,1fr)}
+  .flashcard-grid{grid-template-columns:1fr}
+  .flashcard{height:200px}
+  .stat-row{grid-template-columns:repeat(2,1fr)}
+  .section{margin-bottom:40px}
+  table{min-width:520px}
+}
+@media print{
+  .sidebar,.mobile-nav-toggle,.back-to-top,.sidebar-overlay{display:none!important}
+  .page-wrapper{display:block;padding:0}
+  .main-content{max-width:100%}
+  details.qa{break-inside:avoid}
+  details.qa .qa-body{display:block}
+}
+::-webkit-scrollbar{width:8px;height:8px}
+::-webkit-scrollbar-thumb{background:var(--border);border-radius:4px}
+::-webkit-scrollbar-thumb:hover{background:var(--muted)}
+</style>
+<style data-refactor="v1">
+/* ============================================================
+   精神病学学习指南 · 统一交互层增量覆盖样式 v1
+   构建期由 apply-refactor.ps1 注入 </head> 前，仅追加修正，
+   不改动 A/B 两族基础样式。全部使用字面色值，兼容两族设计变量。
+   ============================================================ */
+
+/* ---- 1. 全局键盘焦点可见 ---- */
+:focus-visible{outline:2px solid #0EA5E9;outline-offset:2px}
+
+/* ---- 2. 章节导航条（胶囊式三段：上一章 / 目录 / 下一章） ---- */
+.chapter-pager{display:flex;align-items:stretch;justify-content:center;gap:10px;margin:36px 0 10px;flex-wrap:wrap}
+.chapter-pager a,.chapter-pager span{flex:1 1 200px;display:flex;align-items:center;justify-content:center;min-height:44px;padding:10px 18px;border:1px solid #E2E8F0;border-radius:999px;background:#FFFFFF;color:#0F172A;font-size:14px;font-weight:600;line-height:1.4;text-decoration:none;text-align:center;box-shadow:0 1px 2px rgba(15,23,42,.06);transition:border-color .15s ease,box-shadow .15s ease,color .15s ease}
+.chapter-pager a:hover{border-color:#0EA5E9;color:#0EA5E9;box-shadow:0 4px 14px rgba(14,165,233,.18);text-decoration:none}
+.chapter-pager .cp-toc{flex:0 0 auto;min-width:104px;background:linear-gradient(135deg,#0EA5E9,#10B981);border-color:transparent;color:#FFFFFF}
+.chapter-pager .cp-toc:hover{border-color:transparent;color:#FFFFFF;opacity:.92}
+.chapter-pager .cp-disabled{opacity:.45;background:#F8FAFC;box-shadow:none;cursor:default}
+@media (max-width:680px){.chapter-pager{gap:8px;margin:28px 0 8px}.chapter-pager a,.chapter-pager span{flex:1 1 100%}}
+
+/* ---- 3. 自测题交互态（兼容 A 族 .opt 与 B 族 .quiz-options li） ---- */
+/* 3.1 基础可点击 */
+.quiz-q .opt{cursor:pointer}
+.quiz-item .quiz-options li{cursor:pointer}
+/* 3.2 hover / 焦点态 */
+.quiz-q .opt:hover,.quiz-q .opt:focus-visible{border-color:#7DD3FC;background:#F0F9FF}
+.quiz-item .quiz-options li:hover,.quiz-item .quiz-options li:focus-visible{background:#FFFFFF;box-shadow:inset 0 0 0 1px #7DD3FC}
+/* 3.3 判定结果态 */
+.quiz-q .opt.is-right{border-color:#34D399;background:#ECFDF5;color:#065F46;font-weight:600}
+.quiz-q .opt.is-right::after{content:" ✓";color:#059669;font-weight:800}
+.quiz-q .opt.is-right .l{color:#047857}
+.quiz-item .quiz-options li.is-right{background:#DCFCE7;box-shadow:inset 0 0 0 1px #34D399;font-weight:600}
+.quiz-item .quiz-options li.is-right::after{content:" ✓";color:#15803D;font-weight:800}
+.quiz-q .opt.is-wrong{border-color:#FCA5A5;background:#FEF2F2;color:#B91C1C;font-weight:600}
+.quiz-q .opt.is-wrong::after{content:" ✗";color:#DC2626;font-weight:800}
+.quiz-q .opt.is-wrong .l{color:#B91C1C}
+.quiz-item .quiz-options li.is-wrong{background:#FEE2E2;box-shadow:inset 0 0 0 1px #FCA5A5;font-weight:600}
+.quiz-item .quiz-options li.is-wrong::after{content:" ✗";color:#DC2626;font-weight:800}
+.quiz-q .opt.is-reveal{border-color:#6EE7B7;background:#ECFDF5;color:#065F46}
+.quiz-q .opt.is-reveal .l{color:#047857}
+.quiz-item .quiz-options li.is-reveal{background:#ECFDF5;box-shadow:inset 0 0 0 1px #6EE7B7;color:#065F46}
+/* 3.4 已锁定禁用态 */
+.quiz-q.is-locked .opt,.quiz-item.is-locked .quiz-options li{cursor:default;pointer-events:none}
+.quiz-q.is-locked .opt:not(.is-right):not(.is-wrong):not(.is-reveal){opacity:.55}
+.quiz-item.is-locked .quiz-options li:not(.is-right):not(.is-wrong):not(.is-reveal){opacity:.55}
+/* 3.5 计分行（运行时注入） */
+.quiz-score{display:flex;align-items:center;gap:12px;margin:14px 0 18px;padding:12px 18px;border:1px dashed #7DD3FC;border-radius:12px;background:#F0F9FF;font-size:14px;font-weight:700;color:#0F172A}
+.quiz-score .qs-label{white-space:nowrap}
+.quiz-score .qs-num{white-space:nowrap;color:#0284C7;font-size:16px}
+.quiz-score .qs-bar{flex:1 1 60px;min-width:60px;height:8px;border-radius:999px;background:#E2E8F0;overflow:hidden}
+.quiz-score .qs-bar i{display:block;height:100%;width:0;border-radius:999px;background:linear-gradient(90deg,#0EA5E9,#10B981);transition:width .35s ease}
+
+/* ---- 4. 速记卡可达性与长内容 ---- */
+.fc-hint,.flip-hint{color:#64748B}
+.flashcard-face{overflow:auto}
+.flashcard[tabindex]{outline:none}
+.flashcard[tabindex]:focus-visible{outline:3px solid #0EA5E9;outline-offset:3px}
+
+/* ---- 5. 侧栏目录 ---- */
+/* B 族 sticky 侧栏内目录限高滚动（A 族 aside 本身已可滚动，此规则空匹配无害） */
+.sidebar .sidebar-nav{max-height:calc(100vh - 60px);overflow-y:auto;scrollbar-width:thin}
+/* A 族 scroll spy 高亮（B 族高亮由其基础样式提供） */
+.sidebar a.toc.active{background:#E0F2FE;color:#0369A1;font-weight:600}
+
+/* ---- 6. 响应式补充：681–900px 时 grid3 降为两列 ---- */
+@media (min-width:681px) and (max-width:900px){
+  .grid3{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+
+/* ---- 7. 打印样式补充（A 族新增；B 族已有 print，重复声明无害） ---- */
+@media print{
+  .sidebar,.overlay,.sidebar-overlay,#menuBtn,#navToggle,#overlay,#sidebarOverlay,#readbar,#topBtn,#backTop,.chapter-pager,.quiz-score{display:none!important}
+}
+
+/* ---- 8. 手机端增强 v2（触控体验 / 防溢出 / 抽屉滚动锁定） ---- */
+/* 8.1 触控体验：去点按高亮、消除双击缩放延迟（flashcard 高 190-200px 天然达标，不另设 min-height） */
+.opt,.tabbar button,.tab-btn,.quiz-options li,.flashcard,.chapter-pager a,.chapter-pager span,.menu-btn,.mobile-nav-toggle{-webkit-tap-highlight-color:transparent;touch-action:manipulation}
+/* 8.2 触控目标最小 44px（自测选项与 tab 胶囊原高约 33px） */
+.opt,.tabbar button,.tab-btn,.quiz-options li{min-height:44px}
+/* 8.3 防溢出：内容图自适应；svg 不设 height:auto，避免定尺寸图标塌陷 */
+img{max-width:100%;height:auto}
+svg{max-width:100%}
+/* 8.4 长词/URL 断行 */
+body{overflow-wrap:break-word}
+/* 8.5 表格容器触摸惯性滚动（A 族已有同值规则，重复声明无害） */
+.table-wrap{-webkit-overflow-scrolling:touch}
+/* 8.6 抽屉打开时锁定背景滚动（两族抽屉断点均为 900px；类由统一脚本增删） */
+@media (max-width:900px){
+  body.nav-locked{overflow:hidden}
+}
+</style>
+</head>
+<body>
+<button class="mobile-nav-toggle" id="navToggle" aria-label="打开目录">☰</button>
+<div class="sidebar-overlay" id="sidebarOverlay"></div>
+<div class="page-wrapper">
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-brand">《精神病学》第9版 · 学习指南</div>
+    <nav class="sidebar-nav">
+      <ul>
+        <li><a href="#cover" class="active"><span class="toc-num">00</span>章节封面</a></li>
+        <li><a href="#position"><span class="toc-num">01</span>本章地位速览</a></li>
+        <li><a href="#map"><span class="toc-num">02</span>本章知识地图</a></li>
+        <li><a href="#route"><span class="toc-num">03</span>学习路线图</a></li>
+        <li><a href="#nav"><span class="toc-num">04</span>章节导航</a></li>
+        <li><a href="#overview"><span class="toc-num">05</span>应激相关障碍总论</a></li>
+        <li><a href="#ptsd"><span class="toc-num">06</span>创伤后应激障碍（PTSD）</a></li>
+        <li><a href="#cptsd"><span class="toc-num">07</span>复合性创伤后应激障碍（C-PTSD）</a></li>
+        <li><a href="#pgd"><span class="toc-num">08</span>延长哀伤障碍（PGD）</a></li>
+        <li><a href="#adjustment"><span class="toc-num">09</span>适应障碍</a></li>
+        <li><a href="#rad"><span class="toc-num">10</span>反应性依恋障碍（RAD）</a></li>
+        <li><a href="#dsed"><span class="toc-num">11</span>脱抑制性社会参与障碍（DSED）</a></li>
+        <li><a href="#compare"><span class="toc-num">12</span>核心鉴别总表</a></li>
+        <li><a href="#summary"><span class="toc-num">13</span>核心要点速览</a></li>
+        <li><a href="#pitfalls"><span class="toc-num">14</span>易混易错警示</a></li>
+        <li><a href="#quiz"><span class="toc-num">15</span>章节自测</a></li>
+        <li><a href="#flashcards"><span class="toc-num">16</span>考点速记卡</a></li>
+        <li><a href="#cases"><span class="toc-num">17</span>病例挑战</a></li>
+        <li><a href="#extend"><span class="toc-num">18</span>拓展延伸</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <main class="main-content">
+    <section id="cover" class="hero">
+      <div class="hero-badge">《精神病学》第9版（2024） · 第11章</div>
+      <h1>应激相关障碍</h1>
+      <p class="subtitle">应激相关障碍（stress-related disorders）：应激源（stressor）—时间—症状群—功能损害，从“发生了什么”到“损害了什么”的临床推理。</p>
+      <div class="hero-meta">
+        <div class="hero-meta-item"><div class="num">6</div><div class="label">核心障碍</div></div>
+        <div class="hero-meta-item"><div class="num">18</div><div class="label">必考考点</div></div>
+        <div class="hero-meta-item"><div class="num">15</div><div class="label">自测题目</div></div>
+      </div>
+      <div class="hero-quote">本章主线：先确认应激源的性质与强度，再确认症状出现的时间关系，再识别症状群，最后评估社会、职业、家庭等功能损害。有应激事件不等于有病；四项缺一不可。</div>
+      <div class="quick-facts" style="grid-template-columns:repeat(auto-fit,minmax(280px,1fr))">
+        <div class="fact"><b><span class="tag tag-know">了解</span></b><span>应激源三分类与易感因素</span></div>
+        <div class="fact"><b><span class="tag tag-understand">理解</span></b><span>应激相关障碍的共同主线</span></div>
+        <div class="fact"><b><span class="tag tag-master">掌握</span></b><span>创伤后应激障碍（post-traumatic stress disorder，PTSD）四大症状群与时间阈值</span></div>
+        <div class="fact"><b><span class="tag tag-master">掌握</span></b><span>延长哀伤障碍（prolonged grief disorder，PGD）与适应障碍（adjustment disorder）的边界</span></div>
+        <div class="fact"><b><span class="tag tag-core">必考</span></b><span>复合性创伤后应激障碍（complex post traumatic stress disorder，C-PTSD）三自我组织障碍；反应性依恋障碍（reactive attachment disorder，RAD）与脱抑制性社会参与障碍（disinhibited social engagement disorder，DSED）表型差异</span></div>
+      </div>
+    </section>
+
+    <section id="position" class="section">
+      <div class="section-header"><span class="section-number">01</span><h2>本章地位速览</h2></div>
+      <p class="lead">应激相关障碍（stress-related disorders）是全书中最强调“外部事件”的一章：诊断必须能找到可识别的应激源，并且症状的发生时序、内容、病程与预后都与该应激源密切相关。它既是症状学的综合应用，也是抑郁、焦虑、分离性障碍鉴别能力的集中训练。</p>
+      <div class="card-grid">
+        <div class="card card-diagnosis">
+          <div class="card-header"><span class="card-icon">📍</span><div class="card-title">章节定位</div></div>
+          <div class="card-body">承接症状学与抑郁、焦虑章节，训练“事件—时间—症状—功能”的因果推理；向下连接儿童期创伤、人格障碍与分离性障碍。</div>
+        </div>
+        <div class="card card-symptom">
+          <div class="card-header"><span class="card-icon">🏥</span><div class="card-title">临床意义</div></div>
+          <div class="card-body">PTSD 是应激相关障碍中临床症状最严重、预后最差的一种：至少 1/3 患者慢性化甚至终身不愈，自杀率约为普通人群的 6 倍。</div>
+        </div>
+        <div class="card card-memory">
+          <div class="card-header"><span class="card-icon">🎯</span><div class="card-title">学习难点</div></div>
+          <div class="card-body">六个障碍的应激源性质不同、时间阈值不同、症状群重叠明显；最容易混淆的是 PTSD、C-PTSD、PGD 与适应障碍。</div>
+        </div>
+      </div>
+
+      <div class="subsection">
+        <h3>与前后章节的横向联系</h3>
+        <div class="table-wrap"><table class="comparison-table">
+          <thead><tr><th>关联章节</th><th>连接点</th><th>学习提示</th></tr></thead>
+          <tbody>
+            <tr><td>第8章 抑郁障碍</td><td>PTSD、PGD、适应障碍都可出现情绪低落、兴趣减退、睡眠差；PTSD 也常共病抑郁症。</td><td>抓“指向性”：PTSD 指向创伤线索，PGD 指向丧亲，抑郁障碍的情绪低落相对泛化。教材用晨重暮轻、明显消极悲观、食欲减退等特征帮助鉴别抑郁。</td></tr>
+            <tr><td>第9章 焦虑障碍</td><td>PTSD 有焦虑、回避与自主神经症状；C-PTSD 也需与焦虑症鉴别；PTSD 常共病恐怖症。</td><td>焦虑障碍缺少“创伤后四大症状群”的完整结构；关键看有无创伤性侵入与针对创伤线索的回避。</td></tr>
+            <tr><td>第12章 分离性障碍</td><td>创伤后麻木、疏离、情感反应缺失等体验与分离症状学相邻；教材本章在药物选择中提到改善“分离症状”。</td><td>教材本章未直接展开两者的系统鉴别；复习时回到第12章症状学，区分闪回（创伤再体验）与分离体验的边界。</td></tr>
+            <tr><td>儿童期创伤与人格障碍</td><td>C-PTSD 病程长，可能同时存在人格方面的问题；教材明确提示需与边缘型人格障碍（borderline personality disorder，BPD）鉴别。</td><td>教材仅提出鉴别方向，未展开具体条目；不要自行补充诊断标准。</td></tr>
+          </tbody>
+        </table></div>
+      </div>
+
+      <div class="subsection">
+        <h3>本章主线：四步因果链</h3>
+        <div class="timeline">
+          <div class="tl-item"><div class="tl-title">① 应激源</div><div class="tl-desc">外部环境、个体内环境、社会心理环境；强度与主观体验需超出个体耐受能力。</div></div>
+          <div class="tl-item"><div class="tl-title">② 时间</div><div class="tl-desc">PTSD 数天至半年内起病、病程至少 1 个月；PGD 超过 6 个月；适应障碍 1 个月内起病、去除应激后一般不超过 6 个月。</div></div>
+          <div class="tl-item"><div class="tl-title">③ 症状群</div><div class="tl-desc">PTSD 四大症状群；C-PTSD 加三自我组织障碍；PGD 围绕丧亲的九项症状；适应障碍以情绪、行为反应为主。</div></div>
+          <div class="tl-item"><div class="tl-title">④ 功能损害</div><div class="tl-desc">个人、家庭、社交、学业、职业或其他重要领域的功能显著受损。</div></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="map" class="section">
+      <div class="section-header"><span class="section-number">02</span><h2>本章知识地图</h2></div>
+      <p class="lead">六个障碍、三类应激源、五组核心鉴别。先建立总论框架，再逐个障碍填充“画像—病因—表现—案例—鉴别—治疗—记忆—联动”。</p>
+      <div class="knowledge-map">
+        <div class="km-card"><div class="km-icon">🧱</div><div class="km-title">总论</div><div class="km-count"><strong>3</strong> 类应激源</div></div>
+        <div class="km-card"><div class="km-icon">🔁</div><div class="km-title">PTSD</div><div class="km-count"><strong>4</strong> 大症状群</div></div>
+        <div class="km-card"><div class="km-icon">🧩</div><div class="km-title">C-PTSD</div><div class="km-count"><strong>3</strong> 自我组织障碍</div></div>
+        <div class="km-card"><div class="km-icon">🕯️</div><div class="km-title">PGD</div><div class="km-count"><strong>9</strong> 项症状 / 6 个月</div></div>
+        <div class="km-card"><div class="km-icon">🔄</div><div class="km-title">适应障碍</div><div class="km-count"><strong>3</strong> 类人群表型</div></div>
+        <div class="km-card"><div class="km-icon">🧸</div><div class="km-title">RAD</div><div class="km-count"><strong>1</strong> 个核心表型</div></div>
+        <div class="km-card"><div class="km-icon">🤝</div><div class="km-title">DSED</div><div class="km-count"><strong>1</strong> 个核心表型</div></div>
+        <div class="km-card"><div class="km-icon">⚖️</div><div class="km-title">鉴别</div><div class="km-count"><strong>5</strong> 组核心对照</div></div>
+      </div>
+      <div class="callout callout-info"><div class="callout-icon">💡</div><div class="callout-body"><strong>地图使用法</strong>先记住“PTSD 四大症状群”，再记“C-PTSD = PTSD + 三自我组织障碍”，最后用“丧亲 / 生活改变 / 早期忽视”三条线索把 PGD、适应障碍、RAD/DSED 分开。</div></div>
+    </section>
+
+    <section id="route" class="section">
+      <div class="section-header"><span class="section-number">03</span><h2>学习路线图</h2></div>
+      <p class="lead">推荐 2～3 天完成一轮：先总论，再创伤后障碍，再丧失与适应，最后儿童期障碍与鉴别。</p>
+      <div class="route-grid">
+        <div class="route-card"><h4>第一步 · 总论框架</h4><p>应激源三分类、易感因素三时段、应激的神经内分泌与脑结构改变。 <span class="priority">⭐⭐</span></p></div>
+        <div class="route-card"><h4>第二步 · PTSD</h4><p>四大症状群、起病与病程、抗抑郁药一线、创伤聚焦心理治疗。 <span class="priority">⭐⭐⭐</span></p></div>
+        <div class="route-card"><h4>第三步 · C-PTSD</h4><p>长期反复创伤、三自我组织障碍、心理治疗优先。 <span class="priority">⭐⭐⭐</span></p></div>
+        <div class="route-card"><h4>第四步 · PGD 与适应障碍</h4><p>6 个月 vs 1 个月/6 个月；与正常哀伤、抑郁、PTSD 的边界。 <span class="priority">⭐⭐⭐</span></p></div>
+        <div class="route-card"><h4>第五步 · RAD 与 DSED</h4><p>严重忽视背景、9 个月/12 个月、情感退缩 vs 亲疏不分。 <span class="priority">⭐⭐</span></p></div>
+        <div class="route-card"><h4>第六步 · 鉴别与自测</h4><p>五组核心鉴别表 + 15 题自测 + 20 张闪卡。 <span class="priority">⭐⭐⭐</span></p></div>
+      </div>
+      <div class="callout callout-success"><div class="callout-icon">✅</div><div class="callout-body"><strong>复习节奏建议</strong>每个障碍按“定义 1 分钟—四/三大症状群 5 分钟—时间阈值 2 分钟—治疗 3 分钟—鉴别 5 分钟”推进；当晚用闪卡做一次主动回忆，次日只看易错点与鉴别表。</div></div>
+    </section>
+
+    <section id="nav" class="section">
+      <div class="section-header"><span class="section-number">04</span><h2>章节导航</h2></div>
+      <p class="lead">按障碍跳转；每个卡片对应正文的完整八栏或精简八栏。</p>
+      <div class="card-grid">
+        <div class="card card-cause"><div class="card-header"><span class="card-icon">🧱</span><div class="card-title"><a href="#overview">应激相关障碍总论</a></div></div><div class="card-body">应激源、流行病学、易感因素、病因机制、预后。</div></div>
+        <div class="card card-symptom"><div class="card-header"><span class="card-icon">🔁</span><div class="card-title"><a href="#ptsd">创伤后应激障碍（PTSD）</a></div></div><div class="card-body">四大症状群、诊断要点、抗抑郁药与创伤聚焦心理治疗。</div></div>
+        <div class="card card-memory"><div class="card-header"><span class="card-icon">🧩</span><div class="card-title"><a href="#cptsd">复合性创伤后应激障碍（C-PTSD）</a></div></div><div class="card-body">长期反复创伤、三自我组织障碍、治疗联盟。</div></div>
+        <div class="card card-diagnosis"><div class="card-header"><span class="card-icon">🕯️</span><div class="card-title"><a href="#pgd">延长哀伤障碍（PGD）</a></div></div><div class="card-body">6 个月阈值、9 项症状、与正常哀伤/抑郁的边界。</div></div>
+        <div class="card card-treatment"><div class="card-header"><span class="card-icon">🔄</span><div class="card-title"><a href="#adjustment">适应障碍</a></div></div><div class="card-body">1 个月/6 个月、三治疗环节、排除原则。</div></div>
+        <div class="card card-cause"><div class="card-header"><span class="card-icon">🧸</span><div class="card-title"><a href="#rad">反应性依恋障碍（RAD）</a></div></div><div class="card-body">严重忽视、情感退缩、9 个月/12 个月。</div></div>
+        <div class="card card-treatment"><div class="card-header"><span class="card-icon">🤝</span><div class="card-title"><a href="#dsed">脱抑制性社会参与障碍（DSED）</a></div></div><div class="card-body">亲疏不分、与注意缺陷多动障碍（ADHD）鉴别、游戏与艺术治疗。</div></div>
+        <div class="card card-diagnosis"><div class="card-header"><span class="card-icon">⚖️</span><div class="card-title"><a href="#compare">核心鉴别总表</a></div></div><div class="card-body">五组六对，统一维度，一句话鉴别。</div></div>
+      </div>
+    </section>
+
+    <section id="overview" class="section">
+      <div class="section-header"><span class="section-number">05</span><h2>应激相关障碍总论</h2></div>
+      <blockquote class="quote">应激相关障碍是一类与应激源（主要是精神创伤或精神应激）有明显因果关系的精神障碍，其发生时序、症状内容、病程与预后等均与应激因素密切相关。（教材原文）</blockquote>
+
+      <div class="subsection">
+        <h3>一、应激源：三类环境因素</h3>
+        <p>应激源（stressor）是作用于个体并使其产生应激反应的刺激物。教材按环境因素分为三类。本章涉及的应激源多为突发、相对重大、持续性的负性事件；只有其强度和主观体验超出个体耐受能力时，才可能成为致病因素。</p>
+        <div class="card-grid">
+          <div class="card card-cause"><div class="card-header"><span class="card-icon">🌍</span><div class="card-title">外部环境</div></div><div class="card-body">从日常困扰（交通拥挤）到自然灾害与人为灾害（洪水、地震、车祸、战争、传染病大规模暴发），以及外伤、强酸强碱、高温、毒品、病原微生物、寄生虫等。</div></div>
+          <div class="card card-cause"><div class="card-header"><span class="card-icon">🫀</span><div class="card-title">个体内环境</div></div><div class="card-body">机体内部物质产生和平衡失调、内稳态紊乱：疾病、营养缺乏、水电解质紊乱、内分泌紊乱、酶和血液成分改变等。</div></div>
+          <div class="card card-cause"><div class="card-header"><span class="card-icon">👥</span><div class="card-title">社会心理环境</div></div><div class="card-body">工作学习负担过重、节奏过快或难度过大；内容与志趣不一致；环境单调；人际关系困难；父母离异、家庭关系紧张等。</div></div>
+        </div>
+      </div>
+
+      <div class="subsection">
+        <h3>二、流行病学：暴露很常见，发病是少数</h3>
+        <div class="stat-row">
+          <div class="stat-card"><div class="stat-num">50%+</div><div class="stat-label">女性一生经历一次严重精神应激事件</div></div>
+          <div class="stat-card"><div class="stat-num">60%+</div><div class="stat-label">男性一生经历一次严重精神应激事件</div></div>
+          <div class="stat-card"><div class="stat-num">6%～33%</div><div class="stat-label">经历应激事件者出现应激相关障碍</div></div>
+          <div class="stat-card"><div class="stat-num">1%～14%</div><div class="stat-label">PTSD 终生患病率</div></div>
+        </div>
+        <p class="table-note">数据来自教材；不同研究样本、调查方法、诊断标准不同，结论差异较大。教材特别提醒：多数经历者只出现明显心理反应，只有部分人发展为应激相关障碍。</p>
+      </div>
+
+      <div class="subsection">
+        <h3>三、易感因素：按创伤前、围创伤期、创伤后排列</h3>
+        <div class="timeline">
+          <div class="tl-item"><div class="tl-title">创伤前变量（pre-traumatic variables）</div><div class="tl-desc">焦虑或抑郁个人史和/或家族史；既往创伤史（童年期受忽略、受虐待、被遗弃、性创伤）；女性；平均水平以下的智商；神经质等。</div></div>
+          <div class="tl-item"><div class="tl-title">围创伤期变量（peri-traumatic variables）</div><div class="tl-desc">创伤性事件发生后个体的精神和躯体反应情况；个体的认知和社会支持程度等。</div></div>
+          <div class="tl-item"><div class="tl-title">创伤后变量（post-traumatic variables）</div><div class="tl-desc">事后干预的及时性和有效性；创伤后遭受的其他负性生活事件；持续存在的认知方式、人格特质、社会支持等。</div></div>
+        </div>
+      </div>
+
+      <div class="subsection">
+        <h3>四、病因与发病机制：生物学与社会心理共同作用</h3>
+        <div class="card-grid">
+          <div class="card card-cause"><div class="card-header"><span class="card-icon">🧬</span><div class="card-title">遗传</div></div><div class="card-body">PTSD 患者一级亲属同患比例明显高于二、三级亲属；家族史中精神疾病患病率是经历同样事件未发病或无此经历者的 3 倍；子代罹患风险也显著增高。遗传还影响个体暴露于应激事件的可能性。</div></div>
+          <div class="card card-cause"><div class="card-header"><span class="card-icon">⚗️</span><div class="card-title">神经生化</div></div><div class="card-body">大脑既是应激源的“靶器官”，也是应激反应的“组织者”。下丘脑-垂体-肾上腺（HPA）轴兴奋使糖皮质激素分泌增多；急性应激有利于适应，长期慢性刺激可致 HPA 轴功能失调。炎症系统持续或反复激活也可能参与病理过程。</div></div>
+          <div class="card card-cause"><div class="card-header"><span class="card-icon">🧠</span><div class="card-title">脑结构与功能</div></div><div class="card-body">蓝斑-去甲肾上腺素/自主神经系统激活，觉醒度、警觉和焦虑增加；杏仁核/海马复合体、中脑皮质及中脑边缘多巴胺系统被激活。慢性应激可致海马神经细胞变性丢失、萎缩、再生减少，前额叶和前眶额叶皮质神经元及胶质细胞减少。</div></div>
+          <div class="card card-cause"><div class="card-header"><span class="card-icon">💭</span><div class="card-title">社会心理</div></div><div class="card-body">个体先做初级评价（是否与己有利害关系），再做次级评价（能否应对和改变）。负性的、不可控制的、不可预测的、模棱两可的、超负荷的、具威胁性的应激源更容易引起应激；防御机制、应对方式、社会支持也参与。</div></div>
+        </div>
+        <div class="callout callout-warning"><div class="callout-icon">⚠️</div><div class="callout-body"><strong>学说标注</strong>教材把“前额叶-杏仁核-海马环路”明确称为“假说”；把 HPA 轴、炎症、脑结构改变作为研究证据陈述。学习时不要把这些机制说成已经完全确定的唯一病因。</div></div>
+      </div>
+
+      <div class="subsection">
+        <h3>五、预后：多数恢复，PTSD 最差</h3>
+        <p>多数情况下，随着时间推移和应激源消退，应激反应会逐渐恢复正常。但部分儿童期起病的患者症状可持续整个青春期；PTSD 是应激相关障碍中临床症状最严重、预后最差的一种，部分患者迁延不愈、慢性化甚至终身不愈。</p>
+        <div class="callout callout-danger"><div class="callout-icon">🚨</div><div class="callout-body"><strong>必须记住的数字</strong>PTSD 至少 1/3 患者因慢性化而终身不愈、丧失劳动能力；一半以上共病物质滥用、抑郁、焦虑相关障碍等；自杀率约为普通人群的 6 倍。</div></div>
+      </div>
+    </section>
+
+    <section id="ptsd" class="section">
+      <div class="section-header"><span class="section-number">06</span><h2>创伤后应激障碍（PTSD）</h2></div>
+      <div class="disease-hero">
+        <div class="en">POST-TRAUMATIC STRESS DISORDER</div>
+        <h3>创伤后应激障碍（PTSD）</h3>
+        <p>异乎寻常的威胁性、灾难性心理创伤之后，延迟出现并长期持续的创伤后反应。</p>
+        <div class="quick-tags"><span>核心：四大症状群</span><span>起病：数天至半年</span><span>病程：至少 1 个月</span><span>预后：应激相关障碍中最差</span></div>
+      </div>
+
+      <div class="module">
+        <div class="module-head"><span class="module-index">第一栏</span><h3>疾病画像</h3></div>
+        <div class="quick-facts">
+          <div class="fact"><b>终生患病率</b><span>1%～14%</span></div>
+          <div class="fact"><b>高危人群患病率</b><span>3%～58%</span></div>
+          <div class="fact"><b>性别</b><span>女性约为男性 2 倍</span></div>
+          <div class="fact"><b>常见共病</b><span>抑郁、酒精滥用/成瘾、恐怖症</span></div>
+        </div>
+        <p><strong>定义：</strong>创伤后应激障碍（post-traumatic stress disorder，PTSD）是由于受到异乎寻常的威胁性、灾难性心理创伤，导致延迟出现和长期持续的精神障碍。它最初用于描述退伍军人、战俘、集中营幸存者的战争性创伤后果，后扩展到严重事故、地震、被强暴、被绑架、目睹他人惨死等受害者。</p>
+        <p><strong>核心特征：</strong>创伤性事件是 PTSD 发生的必要条件，但不是充分条件。大多数经历者会出现程度不等的症状，但只有部分人最终成为 PTSD 患者。临床研究显示 PTSD 与其他精神障碍共病率很高。</p>
+        <div class="callout callout-info"><div class="callout-icon">📋</div><div class="callout-body"><strong>教材诊断要点（六条）</strong>①遭受异乎寻常的创伤性事件或处境（如天灾人祸）；②反复重现创伤性体验（病理性重现），可表现为不由自主地回想、反复出现创伤性内容的噩梦、反复发生错觉/幻觉、触景生情的精神痛苦、面临相关线索时强烈心理痛苦和生理反应；③对与创伤经历相关的人和事选择性遗忘，对未来失去希望和信心，内疚、自责，疏远他人，兴趣爱好范围变窄，持续不能体验正性情绪；④持续警觉性增高，可出现入睡困难或睡眠不深、易激惹、注意集中困难、过分担惊受怕；⑤对与刺激相似或有关的情景回避，极力不想有关的人与事，避免参加能引起痛苦回忆的活动或到会引起痛苦回忆的地方；⑥在遭受创伤后数日至数月后发生，罕见延迟半年以上才发生。</div></div>
+        <div class="callout callout-warning"><div class="callout-icon">⚠️</div><div class="callout-body"><strong>不要倒因为果</strong>“有创伤经历”只是入口条件；诊断还必须看到特征性症状群、合理的时间关系、至少 1 个月的病程以及显著功能损害。</div></div>
+      </div>
+
+      <div class="module module-cause">
+        <div class="module-head"><span class="module-index">第二栏</span><h3>病因探秘</h3></div>
+        <div class="card-grid">
+          <div class="card card-cause"><div class="card-header"><span class="card-icon">⚡</span><div class="card-title">直接病因：异乎寻常的创伤性事件</div></div><div class="card-body">严重事故、地震、被强暴、被绑架、目睹他人惨死等。教材指出，日常生活中许多超出意料的事件（离婚、失业、考试失败）都可称为“创伤性”，但研究发现大约只有 0.4% 的事件真正具有“创伤性”意义。</div></div>
+          <div class="card card-cause"><div class="card-header"><span class="card-icon">🎯</span><div class="card-title">“创伤性体验”的两个特点</div></div><div class="card-body">第一，对未来的情绪体验具有创伤性影响（例如被强奸者在未来婚姻或性生活中可能反复出现类似体验）；第二，对躯体或生命产生极大的伤害或威胁。</div></div>
+          <div class="card card-cause"><div class="card-header"><span class="card-icon">📋</span><div class="card-title">危险因素</div></div><div class="card-body">精神障碍既往史与家族史；儿童期创伤（忽略、性虐待、父母离异等）；性格内向；创伤前后其他负性生活事件；家境贫寒；躯体健康欠佳；社会支持缺乏。</div></div>
+          <div class="card card-cause"><div class="card-header"><span class="card-icon">🧬</span><div class="card-title">遗传特征</div></div><div class="card-body">双生子研究提示同卵双生子比异卵双生子更容易在同样应激后共同发展为 PTSD；分子遗传学视为多基因作用，涉及多巴胺系统基因、5-羟色胺系统基因、糖皮质激素受体基因等。</div></div>
+          <div class="card card-cause"><div class="card-header"><span class="card-icon">⚗️</span><div class="card-title">神经内分泌特征</div></div><div class="card-body">HPA 轴功能失调可能参与；患者血皮质醇水平降低，对小剂量地塞米松抑制试验呈超敏反应；可能存在糖皮质激素受体（GR）敏感性增强及 GR 介导的负反馈增强；肾上腺素、去甲肾上腺素持续升高，脑源性神经营养因子（BDNF）水平显著低于正常人群。</div></div>
+          <div class="card card-cause"><div class="card-header"><span class="card-icon">🧠</span><div class="card-title">神经影像与电生理</div></div><div class="card-body">海马与海马旁回、杏仁核、内侧前额叶存在功能异常。教材介绍“前额叶-杏仁核-海马环路假说”：前额叶功能减弱→对杏仁核控制减弱→恐惧反应过度增强；海马损害及其与前后脑区联系失调参与陈述性记忆损害。事件相关电位显示 P300 波幅明显下降。</div></div>
+          <div class="card card-cause"><div class="card-header"><span class="card-icon">💭</span><div class="card-title">社会心理：认知评价与支持</div></div><div class="card-body">个体对应激源的初级评价（是否与己有利害关系）与次级评价（能否应对和改变）、应对方式、社会支持、创伤后其他负性生活事件，都会影响是否发病及严重程度；教材把这些列为危险因素与易感因素。</div></div>
+        </div>
+        <div class="callout callout-info"><div class="callout-icon">💡</div><div class="callout-body"><strong>记忆抓手</strong>病因记“事件是直接原因、遗传是易感背景、HPA 轴与杏仁核-海马环路是机制重点”；危险因素记“既往史、童年创伤、性格、后续生活事件、社会经济与支持”。</div></div>
+      </div>
+
+      <div class="module module-symptom">
+        <div class="module-head"><span class="module-index">第三栏</span><h3>临床表现拼图</h3></div>
+        <p>PTSD 临床上有四大核心症状群。教材强调：创伤性体验的反复侵入是最常见也最具特征性的症状。</p>
+        <div class="card-grid">
+          <div class="card card-symptom"><div class="card-header"><span class="card-icon">🔁</span><div class="card-title">① 侵入性症状群</div></div><div class="card-body">
+            <ul class="icon-list">
+              <li>反复发生的侵入性创伤性体验重现，以非常清晰、极端痛苦的方式“重复体验”。</li>
+              <li><strong>闪回（flashback）：</strong>以错觉、幻觉构成的创伤性事件重新体验，患者仿佛完全身临其境，重新表现出事件发生时的各种情感。</li>
+              <li>频频出现内容清晰、与创伤事件明确关联的梦境（梦魇）；常从梦境中惊醒，醒后继续主动“延续”被中断的场景。</li>
+              <li>面临、接触与创伤关联或类似的事件、情景、线索时，出现强烈心理痛苦和生理反应；周年纪念日、相近天气、场景因素都可促发。</li>
+            </ul>
+          </div></div>
+          <div class="card card-symptom"><div class="card-header"><span class="card-icon">🚪</span><div class="card-title">② 持续性回避</div></div><div class="card-body">
+            <ul class="icon-list">
+              <li>对与创伤有关的事物采取持续、主动回避的态度。</li>
+              <li>回避创伤事件或与其高度相关的痛苦记忆、思想或感觉。</li>
+              <li>回避能唤起这些痛苦的情景、人、对话、地点、活动、物体等。</li>
+              <li>回避是“主动”的，不是单纯的遗忘；它与侵入性症状常成对出现。</li>
+            </ul>
+          </div></div>
+          <div class="card card-symptom"><div class="card-header"><span class="card-icon">🌫️</span><div class="card-title">③ 认知和心境的负性改变</div></div><div class="card-body">
+            <ul class="icon-list">
+              <li>无法记住创伤性事件的某个重要方面。</li>
+              <li>对创伤事件的原因或结果出现持续认知歪曲，责备自己或他人。</li>
+              <li>对自己、他人或世界出现持续放大的负性信念和预期，如“世界是绝对危险的”“没有人可以信任”。</li>
+              <li>持续负性情绪状态；对重要活动失去兴趣；疏远他人；持续不能体验正性情绪。</li>
+            </ul>
+          </div></div>
+          <div class="card card-symptom"><div class="card-header"><span class="card-icon">🚨</span><div class="card-title">④ 警觉性增高</div></div><div class="card-body">
+            <ul class="icon-list">
+              <li>过度警觉、惊跳反应增强。</li>
+              <li>注意力不集中。</li>
+              <li>激惹的行为和愤怒的爆发。</li>
+              <li>自我毁灭行为；部分患者出现睡眠障碍（入睡困难或睡眠不深）。</li>
+            </ul>
+          </div></div>
+        </div>
+        <div class="callout callout-example"><div class="callout-icon">🧠</div><div class="callout-body"><strong>类比理解</strong>闪回不是“想起一件事”，而更像“录像带突然倒放”：画面、声音、身体感觉和当时的情绪一起回来，患者仿佛“又回到了现场”。这个类比只帮助理解，不替代定义。</div></div>
+        <div class="callout callout-warning"><div class="callout-icon">⏱️</div><div class="callout-body"><strong>时间阈值</strong>多数患者在创伤性事件后的数天至半年内发病，病程至少持续 1 个月；诊断要点还写明“遭受创伤后数日至数月后，罕见延迟半年以上才发生”。</div></div>
+      </div>
+
+      <div class="module module-case">
+        <div class="module-head"><span class="module-index">第四栏</span><h3>教材典型案例</h3></div>
+        <div class="callout callout-info"><div class="callout-icon">📖</div><div class="callout-body"><strong>教材说明</strong>教材本章未提供 PTSD 的具体临床病例，只给出定义、症状群、诊断要点与治疗原则。以下为教学演练情境，不是教材原文。</div></div>
+        <div class="callout callout-example"><div class="callout-icon">🩺</div><div class="callout-body"><strong>经典临床情境（教学演练，非教材原文）</strong>一名经历过严重车祸的成年人，在创伤后数周内反复出现事故瞬间的闪回和噩梦；刻意绕开事发路段，不愿谈论事故；持续认为“世界处处危险”，对家人疏远、对以往喜欢的活动失去兴趣；听到刹车声即惊跳，入睡困难、易激惹。症状持续超过 1 个月，工作与家庭关系明显受损。</div></div>
+        <p><strong>诊断思路：</strong>①存在异乎寻常的创伤性事件；②出现侵入性再体验、持续性回避、负性认知与情绪、警觉性增高四组症状；③起病在创伤后数天至半年内，病程超过 1 个月；④功能显著受损；⑤排除抑郁障碍、焦虑/恐惧相关障碍、PGD、适应障碍等更合适的诊断。该情境只用于练习症状群识别，不含化验、影像或药物剂量信息。</p>
+      </div>
+
+      <div class="module module-diff">
+        <div class="module-head"><span class="module-index">第五栏</span><h3>鉴别诊断对对碰</h3></div>
+        <div class="table-wrap"><table class="comparison-table">
+          <thead><tr><th>维度</th><th>PTSD</th><th>抑郁症</th></tr></thead>
+          <tbody>
+            <tr><td>核心症状</td><td>与创伤事件相关的侵入性症状、针对创伤线索的持续回避，外加负性认知/情绪与警觉增高。</td><td>情绪低落、兴趣减退、不与外界接触、对未来失去信心；可有晨重暮轻、明显消极悲观、食欲减退等特征性症状。</td></tr>
+            <tr><td>病程/起病</td><td>创伤后数天至半年内起病，病程一般较长，至少 1 个月。</td><td>也可在生活事件后发生，但病情发展明显超出生活事件本身。</td></tr>
+            <tr><td>关键鉴别点</td><td>有创伤特异性侵入与特定场合/情景的回避。</td><td>缺少创伤特异性的侵入性再体验与针对创伤线索的回避。</td></tr>
+            <tr><td>辅助/排除</td><td>围绕创伤史与四大症状群采集；评估共病抑郁。</td><td>围绕抑郁症状群与生物学特征采集；不能解释创伤性侵入。</td></tr>
+          </tbody>
+        </table></div>
+        <p class="table-note">一句话鉴别：PTSD 是“被创伤记忆追着跑”，抑郁障碍是“整体情绪与兴趣塌下来”。</p>
+
+        <div class="table-wrap"><table class="comparison-table">
+          <thead><tr><th>维度</th><th>PTSD</th><th>延长哀伤障碍（PGD）</th></tr></thead>
+          <tbody>
+            <tr><td>创伤事件</td><td>异乎寻常的威胁性、灾难性事件。</td><td>一般限定于关系亲密的人的离世。</td></tr>
+            <tr><td>侵入内容</td><td>创伤性事件本身或相关线索，内容令患者恐惧。</td><td>死者的形象，一般是积极的；也会努力寻找与死者的美好回忆。</td></tr>
+            <tr><td>情绪特征</td><td>愤怒、恐惧、害怕或愧疚为主，伴高警觉。</td><td>哀伤为主，对逝者念念不忘，伴孤独、空虚。</td></tr>
+            <tr><td>回避对象</td><td>时刻回避创伤记忆及相关线索。</td><td>回避的是关于亲人离世的事实。</td></tr>
+            <tr><td>一句话鉴别</td><td>怕的是“事件重演”。</td><td>痛的是“斯人已逝”。（类比理解）</td></tr>
+          </tbody>
+        </table></div>
+
+        <div class="table-wrap"><table class="comparison-table">
+          <thead><tr><th>维度</th><th>PTSD</th><th>适应障碍</th></tr></thead>
+          <tbody>
+            <tr><td>应激源性质</td><td>几乎对每个人来说都是严重的、异乎寻常的创伤性事件。</td><td>主要是生活环境或社会地位的改变，且这些改变长期存在；不是灾难性的或异乎寻常的。</td></tr>
+            <tr><td>人格基础</td><td>人格特质是危险因素之一。</td><td>人格基础在发病过程中起一定作用。</td></tr>
+            <tr><td>临床表现</td><td>与创伤事件相关的四大核心症状群。</td><td>抑郁、焦虑、害怕等情感症状，伴适应不良行为；不出现精神病性症状。</td></tr>
+            <tr><td>时间关系</td><td>创伤后数天至半年内起病，病程至少 1 个月。</td><td>诊断要点要求应激后 1 个月内起病，符合标准至少 1 个月，应激消除后一般不超过 6 个月。</td></tr>
+          </tbody>
+        </table></div>
+        <p class="table-note">一句话鉴别：PTSD 的应激源“非同寻常”，适应障碍的应激源“生活改变但并非灾难”。</p>
+
+        <div class="callout callout-info"><div class="callout-icon">💡</div><div class="callout-body"><strong>还需与焦虑与恐惧相关障碍鉴别</strong>焦虑障碍、恐惧症患者同样可有焦虑、回避与明显自主神经功能紊乱，也可能在生活事件后发生；但应激事件的强度、症状表现与 PTSD 仍有较大区别，关键是 PTSD 的创伤性侵入与创伤线索回避。</div></div>
+      </div>
+
+      <div class="module module-treat">
+        <div class="module-head"><span class="module-index">第六栏</span><h3>治疗方案工具箱</h3></div>
+        <div class="card-grid">
+          <div class="card card-treatment"><div class="card-header"><span class="card-icon">🥇</span><div class="card-title">首选：创伤聚焦心理治疗</div></div><div class="card-body">
+            <ul class="icon-list check">
+              <li><strong>认知行为疗法（cognitive behavioral therapy，CBT）：</strong>正常应激反应教育、焦虑处理训练、病理信念的认知治疗、对创伤事件的想象和情境暴露、复发预防；核心是暴露疗法。</li>
+              <li><strong>眼动脱敏与再加工（eye movement desensitization and reprocessing，EMDR）：</strong>想象创伤场景，同时眼睛追踪治疗师快速移动的手指，再集中调节认知与警觉反应，反复多次直至正性想法能与场景联系、警觉反应减轻。</li>
+              <li><strong>早期危机干预：</strong>提供支持，帮助患者接受不幸与自身反应，鼓励面对事件、表达和宣泄负性情绪，认识应对资源并学习新的应对方式。</li>
+            </ul>
+          </div></div>
+          <div class="card card-treatment"><div class="card-header"><span class="card-icon">💊</span><div class="card-title">一线药物：选择性 5-羟色胺再摄取抑制剂（SSRIs）</div></div><div class="card-body">
+            <ul class="icon-list check">
+              <li>SSRIs 疗效和安全性好、不良反应轻，被推荐为 PTSD 一线用药；氟西汀、帕罗西汀、舍曲林拥有较多证据。</li>
+              <li>5-羟色胺和去甲肾上腺素再摄取抑制剂（SNRIs）也有较好疗效证据。</li>
+              <li>抗抑郁药可改善睡眠、抑郁焦虑，也能减轻侵入性症状和回避症状。</li>
+              <li>剂量与疗程与抑郁症治疗相同；剂量个体化，遵医嘱。</li>
+            </ul>
+          </div></div>
+          <div class="card card-treatment"><div class="card-header"><span class="card-icon">🧰</span><div class="card-title">次选与辅助：按症状与共病个体化</div></div><div class="card-body">
+            <ul class="icon-list">
+              <li>抗焦虑药：降低警觉度、改善恐惧症状、抑制记忆再现。</li>
+              <li>苯二氮䓬类：使用尚有争议；教材认为可慎用于并发惊恐障碍但没有精神活性物质滥用史的 PTSD 患者。</li>
+              <li>新型非苯二氮䓬类抗焦虑药（丁螺环酮、坦度螺酮等）：改善核心症状、认知障碍，不损害精神运动功能，不导致过度镇静、肌肉松弛。</li>
+              <li>抗肾上腺素能药物改善警觉过高、分离症状；心境稳定剂控制攻击性和激惹；非典型抗精神病药改善伴随的精神病性症状。</li>
+            </ul>
+          </div></div>
+        </div>
+        <div class="quick-facts">
+          <div class="fact"><b>起效时间</b><span>一般 4～6 周</span></div>
+          <div class="fact"><b>充分疗程</b><span>8 周或更长</span></div>
+          <div class="fact"><b>维持治疗</b><span>缓解后 1 年</span></div>
+          <div class="fact"><b>剂量</b><span>同抑郁症，个体化遵医嘱</span></div>
+        </div>
+        <div class="callout callout-success"><div class="callout-icon">🛡️</div><div class="callout-body"><strong>安全与稳定原则</strong>早期以支持、稳定化、建立治疗联盟为先；教材提到蝴蝶拍、安全岛等稳定化技术。心理治疗与药物都是重要手段，但药物主要对症，目前没有药物能对四大症状群都产生满意疗效。</div></div>
+        <div class="callout callout-info"><div class="callout-icon">👥</div><div class="callout-body"><strong>辅助：团体心理治疗与社会支持</strong>团体心理治疗让患者与有类似经历的人分享经历，在相互理解的基础上建立人际关系，学习处理羞耻、罪恶感、愤怒、害怕等情绪。慢性与迟发性 PTSD 还需争取最大的社会和心理支持；家属和同事的理解可以为患者获得最大的心理空间。</div></div>
+      </div>
+
+      <div class="module module-memory">
+        <div class="module-head"><span class="module-index">第七栏</span><h3>记忆工具箱</h3></div>
+        <div class="memory-grid">
+          <div class="memory-card"><div class="m-title">方法一：数字锚定法<span class="m-type">数字</span></div><div class="m-formula">“1—4—1”</div><p>1 次异乎寻常的创伤性事件；4 大核心症状群；病程至少 1 个月。原理：用三个数字把“病因—表现—病程”串成一条线，避免只记住症状而漏掉时间条件。</p></div>
+          <div class="memory-card"><div class="m-title">方法二：口诀法<span class="m-type">口诀</span></div><div class="m-formula">“侵、回、认、警”</div><p>侵入性症状群、持续性回避、认知和心境负性改变、警觉性增高。原理：四字对应四组，先背框架再填细节；考试看到“四大症状群”即可展开。</p></div>
+          <div class="memory-card"><div class="m-title">方法三：对比法<span class="m-type">对比</span></div><div class="m-formula">PTSD vs PGD</div><p>PTSD 的闯入内容是创伤事件、情绪以恐惧愤怒为主、回避创伤线索；PGD 的闯入内容多是逝者形象与美好回忆、情绪以哀伤为主、回避的是亲人离世事实。原理：成对记忆比孤立记忆更稳，尤其适合鉴别题。</p></div>
+          <div class="memory-card"><div class="m-title">方法四：联想法<span class="m-type">联想</span></div><div class="m-formula">闪回 = 录像带倒放</div><p>画面、声音、身体感觉与当时情绪一起“倒回来”，患者仿佛又回到现场。原理：用具体画面替代抽象定义；此为我方类比理解，不是教材原文。</p></div>
+        </div>
+      </div>
+
+      <div class="module module-link">
+        <div class="module-head"><span class="module-index">第八栏</span><h3>知识联动</h3></div>
+        <ul class="icon-list">
+          <li><strong>与第8章抑郁障碍：</strong>PTSD 常共病抑郁症；两者都可情绪低落、兴趣减退、睡眠差。鉴别的核心是创伤特异性侵入与回避，以及抑郁的晨重暮轻、普遍性消极悲观、食欲减退等特征。</li>
+          <li><strong>与第9章焦虑障碍：</strong>PTSD 常共病恐怖症；焦虑/恐惧障碍也有焦虑、回避和自主神经症状，但缺少创伤后四大症状群的完整结构。</li>
+          <li><strong>与第12章分离性障碍：</strong>创伤后麻木、疏离、情感反应缺失与分离症状学相邻；教材本章未展开系统鉴别，复习时用症状学章节对照“闪回”与“分离体验”。</li>
+          <li><strong>与物质滥用/自杀风险：</strong>PTSD 一半以上共病物质滥用、抑郁、焦虑相关障碍；自杀率约为普通人群 6 倍，评估时必须问自杀观念与行为。</li>
+          <li><strong>跨学科（学习延伸）：</strong>创伤暴露者可能先出现在急诊、灾害救援、基层医疗与学校场景；教材本章未展开具体筛查与转介流程。</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="cptsd" class="section">
+      <div class="section-header"><span class="section-number">07</span><h2>复合性创伤后应激障碍（C-PTSD）</h2></div>
+      <div class="disease-hero">
+        <div class="en">COMPLEX POST-TRAUMATIC STRESS DISORDER</div>
+        <h3>复合性创伤后应激障碍（C-PTSD）</h3>
+        <p>长期、反复、难以逃离的极端创伤之后，在 PTSD 症状之外叠加情绪调节、自我认知与人际关系的长期障碍。</p>
+        <div class="quick-tags"><span>核心：PTSD 三联征 + 三自我组织障碍</span><span>创伤：长期/反复/难逃离</span><span>提出者：Herman（1992）</span><span>患病率：1%～8%</span></div>
+      </div>
+
+      <div class="module">
+        <div class="module-head"><span class="module-index">第一栏</span><h3>疾病画像</h3></div>
+        <div class="quick-facts">
+          <div class="fact"><b>提出者</b><span>Judith L. Herman，1992</span></div>
+          <div class="fact"><b>人群患病率</b><span>1%～8%</span></div>
+          <div class="fact"><b>精神卫生机构</b><span>高达 50%</span></div>
+          <div class="fact"><b>创伤特点</b><span>长期、反复、难以逃脱</span></div>
+        </div>
+        <p><strong>定义：</strong>复合性创伤后应激障碍（complex post traumatic stress disorder，C-PTSD）是一种暴露于单个或一系列极端威胁或恐怖事件后可能发生的障碍。这些创伤性应激事件通常是长期的或反复的，从这些情境的发生中逃脱是极其困难或不可能的，例如虐待、奴役、种族灭绝活动、长期的家庭暴力、儿童的反复性虐待或躯体虐待。</p>
+        <p>C-PTSD 是一种严重的精神障碍，是对创伤生活事件的反应。其特点是三个核心的创伤后症状群，以及情绪调节、身份认同和关系中长期、普遍的干扰。</p>
+        <div class="callout callout-warning"><div class="callout-icon">⚠️</div><div class="callout-body"><strong>概念边界</strong>C-PTSD 不是“症状更多的 PTSD”，也不是单纯把 PTSD 加重；它的关键是长期创伤背景下的“自我组织”受损。教材在诊断处用“PTSD 三联征”概括，在临床表现处又说“通常具备 PTSD 的全部特征”，两处是不同表述角度，核心都是创伤后症状群必须存在。</div></div>
+      </div>
+
+      <div class="module module-cause">
+        <div class="module-head"><span class="module-index">第二栏</span><h3>病因探秘</h3></div>
+        <div class="card-grid">
+          <div class="card card-cause"><div class="card-header"><span class="card-icon">🔗</span><div class="card-title">创伤类型：Ⅱ型创伤</div></div><div class="card-body">长期、反复、起始于幼年、无法逃离的创伤；教材举例包括虐待、奴役、种族灭绝活动、长期家庭暴力、儿童反复性虐待或躯体虐待。丽诺尔（Lenore C. Terr）把创伤分为Ⅰ型（单纯型，突发一过性）与Ⅱ型（复杂型，持续或反复、与虐待或性侵害有关）。</div></div>
+          <div class="card card-cause"><div class="card-header"><span class="card-icon">🧠</span><div class="card-title">Herman 的观察</div></div><div class="card-body">遭受持续时间较长、反复发生、起始于幼年、无法逃离的创伤后，受害者会表现出超出单纯型 PTSD 定义范围的症状群：除与事件直接关联的症状外，还伴显著自残、暴力、酗酒或其他物质滥用等行为问题，以及对自身认同和情感感受的认知改变。</div></div>
+          <div class="card card-cause"><div class="card-header"><span class="card-icon">🖼️</span><div class="card-title">结构影像</div></div><div class="card-body">C-PTSD 患者的结构成像荟萃分析报告海马、海马旁回、杏仁核、脑岛和前扣带皮质体积减小。</div></div>
+          <div class="card card-cause"><div class="card-header"><span class="card-icon">📈</span><div class="card-title">功能影像</div></div><div class="card-body">与健康对照相比，C-PTSD 个体在海马体、海马旁回、脑岛、前额叶皮质和前扣带皮质活动增加。与 PTSD 患者相比，C-PTSD 患者的杏仁核和脑岛活动增加；前额叶和前扣带区未观察到显著组间差异。</div></div>
+        </div>
+        <div class="callout callout-info"><div class="callout-icon">📖</div><div class="callout-body"><strong>教材未提供</strong>目前缺乏 ICD-11 体系下 C-PTSD 的神经内分泌研究；相关研究数据整体较少，通常参照长期重复童年创伤相关 PTSD 的神经生物学基础研究。</div></div>
+      </div>
+
+      <div class="module module-symptom">
+        <div class="module-head"><span class="module-index">第三栏</span><h3>临床表现拼图</h3></div>
+        <p>C-PTSD 通常具备 PTSD 的全部特征，同时伴有严重的情绪调节问题、自我认知改变和不能持久维持良好的人际关系，导致明显的人际、家庭、社会关系损害，以及教育、职业功能损害。</p>
+        <div class="card-grid">
+          <div class="card card-symptom"><div class="card-header"><span class="card-icon">🔁</span><div class="card-title">PTSD 三联征</div></div><div class="card-body">教材按 ICD-11 诊断标准概括为：创伤再现、回避创伤、强烈的被威胁感。这三项是 C-PTSD 诊断的前提；临床上仍可对照 PTSD 的四大症状群细化询问。</div></div>
+          <div class="card card-symptom"><div class="card-header"><span class="card-icon">🌊</span><div class="card-title">① 情绪调节异常</div></div><div class="card-body">情绪强烈、难以平复，或出现情绪麻木、关闭感；可伴自残、暴力、酗酒或其他物质滥用等行为问题（Herman 的描述）。</div></div>
+          <div class="card card-symptom"><div class="card-header"><span class="card-icon">🪞</span><div class="card-title">② 自我认知改变</div></div><div class="card-body">认为自己非常渺小、一无是处、失败、无价值；对创伤性事件有持续性内疚、羞耻感、自责自罪感或失败感。</div></div>
+          <div class="card card-symptom"><div class="card-header"><span class="card-icon">🤝</span><div class="card-title">③ 人际关系困难</div></div><div class="card-body">难以与他人保持亲密的人际关系；难以持久维持良好关系；可表现为疏离、不信任或关系模式反复冲突。</div></div>
+        </div>
+        <div class="callout callout-warning"><div class="callout-icon">🧷</div><div class="callout-body"><strong>三自我组织障碍</strong>把三栏压缩成三个词：<strong>情绪调节、自我认知、人际关系</strong>。诊断还要求这些症状导致个人、家庭、社交、学业、职业或其他重要领域功能的显著损害。</div></div>
+      </div>
+
+      <div class="module module-case">
+        <div class="module-head"><span class="module-index">第四栏</span><h3>教材典型案例</h3></div>
+        <div class="callout callout-info"><div class="callout-icon">📖</div><div class="callout-body"><strong>教材说明</strong>教材本章未提供 C-PTSD 的具体临床病例。以下为教学演练情境，不是教材原文；只使用教材描述过的创伤类型与症状，不添加化验、影像或剂量细节。</div></div>
+        <div class="callout callout-example"><div class="callout-icon">🩺</div><div class="callout-body"><strong>经典临床情境（教学演练，非教材原文）</strong>一名成年人自幼生活在长期家庭暴力环境中，成年后仍处于难以逃离的暴力关系。她长期情绪波动剧烈，常因小事强烈愤怒，随后陷入麻木；持续认为自己渺小、一无是处，对未能保护家人深感愧疚；难以信任他人，无法维持亲密关系；同时反复出现创伤场景的闪回，回避相关话题，并持续警觉。上述模式持续多年。</div></div>
+        <p><strong>诊断思路：</strong>①长期、反复、难以逃离的极端创伤背景；②存在创伤再现、回避、被威胁感等 PTSD 三联征；③叠加情绪调节异常、负性自我概念、人际关系困难三自我组织障碍；④个人、家庭、社交、职业功能显著受损；⑤需与 PTSD、抑郁障碍、焦虑症、边缘型人格障碍鉴别。教学情境不提供具体病程数字，是因为教材未给 C-PTSD 统一时间阈值。</p>
+      </div>
+
+      <div class="module module-diff">
+        <div class="module-head"><span class="module-index">第五栏</span><h3>鉴别诊断对对碰</h3></div>
+        <div class="table-wrap"><table class="comparison-table">
+          <thead><tr><th>维度</th><th>PTSD</th><th>C-PTSD</th></tr></thead>
+          <tbody>
+            <tr><td>创伤类型</td><td>多为突发、一过性的Ⅰ型创伤。</td><td>多为持续或反复、与虐待或性侵害有关的Ⅱ型创伤；逃脱极其困难或不可能。</td></tr>
+            <tr><td>核心症状</td><td>四大症状群：侵入、回避、负性认知/情绪、警觉增高。</td><td>PTSD 三联征（创伤再现、回避创伤、被威胁感）+ 三自我组织障碍。</td></tr>
+            <tr><td>自我组织</td><td>不是诊断核心；可有负性认知，但通常不构成长期、普遍的情绪—认同—关系障碍。</td><td>情绪调节异常、自我认知改变（渺小/失败/无价值/羞耻内疚）、难以维持亲密关系。</td></tr>
+            <tr><td>病程/预后</td><td>创伤后数天至半年起病，病程至少 1 个月；1/3 慢性化。</td><td>起病原因迁延复杂；治疗脱落率高，预后并不乐观；教材称相关研究尚处起步。</td></tr>
+            <tr><td>治疗重点</td><td>创伤聚焦 CBT、EMDR、SSRIs 等。</td><td>心理治疗优先，创伤为重点、灵活多组综合；药物不独立、不常规，除非共病。</td></tr>
+          </tbody>
+        </table></div>
+        <p class="table-note">一句话鉴别：PTSD 的核心是“创伤后再体验与回避”，C-PTSD 还要看“长期创伤把自我调节、自我认知和人际关系一起改变”。</p>
+
+        <div class="table-wrap"><table class="comparison-table">
+          <thead><tr><th>维度</th><th>C-PTSD</th><th>抑郁障碍</th></tr></thead>
+          <tbody>
+            <tr><td>核心症状</td><td>创伤三联征 + 情绪调节、自我认知、人际关系障碍。</td><td>情绪低落、兴趣减退、消极悲观等抑郁症状群。</td></tr>
+            <tr><td>指向性</td><td>症状围绕长期创伤经历与自我组织功能。</td><td>情绪低落相对泛化，不一定围绕特定创伤。</td></tr>
+            <tr><td>关键鉴别点</td><td>有明确长期创伤背景与创伤性再体验/回避。</td><td>若达到抑郁障碍诊断标准，应优先考虑抑郁障碍；C-PTSD 可共病抑郁。</td></tr>
+            <tr><td>一句话鉴别</td><td>“创伤塑造了自我。” </td><td>“情绪整体低落。” </td></tr>
+          </tbody>
+        </table></div>
+        <div class="callout callout-info"><div class="callout-icon">💡</div><div class="callout-body"><strong>与边缘型人格障碍</strong>教材提出应注意 C-PTSD 与边缘型人格障碍的鉴别，因为 C-PTSD 病程较长，也可能同时存在人格方面的一些问题；但教材未展开具体鉴别条目，复习时不要自行补充诊断标准。</div></div>
+        <div class="callout callout-info"><div class="callout-icon">💡</div><div class="callout-body"><strong>还需与焦虑症、其他应激相关障碍鉴别</strong>教材明确列出这一方向；核心仍是长期创伤背景、三自我组织障碍与功能损害，而不是单一的焦虑或回避症状。</div></div>
+      </div>
+
+      <div class="module module-treat">
+        <div class="module-head"><span class="module-index">第六栏</span><h3>治疗方案工具箱</h3></div>
+        <div class="card-grid">
+          <div class="card card-treatment"><div class="card-header"><span class="card-icon">🥇</span><div class="card-title">首选：心理治疗</div></div><div class="card-body">
+            <ul class="icon-list check">
+              <li>所有治疗指南和荟萃分析都得出结论：应该优先考虑心理治疗。</li>
+              <li>以创伤为重点的灵活、多组综合治疗；儿童推荐以创伤为重点的 CBT。</li>
+              <li>与患者合作制定符合其偏好和价值观的治疗计划；选择治疗成分时考虑合并症（如抑郁等）。</li>
+              <li>关注心理社会功能；根据需要协调服务，包括药物、身体健康评估和监测、介入社会服务。</li>
+            </ul>
+          </div></div>
+          <div class="card card-treatment"><div class="card-header"><span class="card-icon">💊</span><div class="card-title">次选/辅助：药物不独立、不常规</div></div><div class="card-body">药物治疗不应作为一种独立的治疗方法，但可以帮助提高心理治疗的依从性。关于药物对 C-PTSD 症状具体治疗效果的研究很少，所以不建议常规药物治疗，除非有合并症。教材未给出具体药物与剂量；如使用，剂量个体化，遵医嘱。</div></div>
+          <div class="card card-treatment"><div class="card-header"><span class="card-icon">🤝</span><div class="card-title">贯穿全程：治疗联盟是核心课题</div></div><div class="card-body">C-PTSD 患者在治疗中的脱落率很高。教材特别强调治疗联盟；现有研究提到的心理治疗包括心理动力学、依恋、正念框架下的治疗，但总体而言还没有指南明确建议某一种。</div></div>
+        </div>
+        <div class="callout callout-success"><div class="callout-icon">🛡️</div><div class="callout-body"><strong>安全稳定原则</strong>先建立安全、稳定的治疗框架与联盟，再处理创伤记忆；治疗节奏个体化，关注解离、自伤、物质使用及持续受害风险。教材未展开分阶段操作细节。</div></div>
+      </div>
+
+      <div class="module module-memory">
+        <div class="module-head"><span class="module-index">第七栏</span><h3>记忆工具箱</h3></div>
+        <div class="memory-grid">
+          <div class="memory-card"><div class="m-title">方法一：三自我组织障碍数字法<span class="m-type">数字+口诀</span></div><div class="m-formula">“情、认、人”</div><p>情绪调节异常、自我认知改变、人际关系困难。原理：把三条各压成一个字，先记“三”，再展开每条的具体表现；这是 C-PTSD 区别于 PTSD 的核心增量。</p></div>
+          <div class="memory-card"><div class="m-title">方法二：Ⅰ/Ⅱ型创伤对比法<span class="m-type">对比</span></div><div class="m-formula">Ⅰ型 → PTSD；Ⅱ型 → C-PTSD</div><p>Ⅰ型为突发、一过性创伤；Ⅱ型为持续或反复、与虐待或性侵害有关的创伤。原理：用创伤“时间形态”反推诊断类型，看到“长期、反复、逃不掉”就想到 C-PTSD。</p></div>
+          <div class="memory-card"><div class="m-title">方法三：公式法<span class="m-type">公式</span></div><div class="m-formula">C-PTSD = PTSD 三联征 + 三自我组织障碍 + 功能损害</div><p>三联征：创伤再现、回避创伤、被威胁感；三自我组织：情绪、认同、关系；最后必须落到功能损害。原理：用加法结构防止漏项。</p></div>
+          <div class="memory-card"><div class="m-title">方法四：关键词法<span class="m-type">关键词</span></div><div class="m-formula">“长、反、逃不掉”</div><p>创伤时间长、反复发生、逃脱极其困难或不可能。原理：三个关键词对应教材对 C-PTSD 创伤背景的定义，先锁定创伤类型再谈症状。</p></div>
+        </div>
+      </div>
+
+      <div class="module module-link">
+        <div class="module-head"><span class="module-index">第八栏</span><h3>知识联动</h3></div>
+        <ul class="icon-list">
+          <li><strong>与 PTSD：</strong>C-PTSD 以 PTSD 三联征为前提；区别在长期创伤背景与三自我组织障碍。不要把 C-PTSD 当成“PTSD 的严重度分级”。</li>
+          <li><strong>与第8章抑郁障碍：</strong>可共病抑郁；抑郁障碍的情绪低落相对泛化，C-PTSD 的症状围绕长期创伤与自我组织功能。若达到抑郁障碍诊断标准，应优先考虑抑郁障碍并同时评估创伤。</li>
+          <li><strong>与第9章焦虑障碍：</strong>教材要求与焦虑症鉴别；焦虑症状不能解释三自我组织障碍与长期创伤背景。</li>
+          <li><strong>与人格障碍：</strong>教材提示与边缘型人格障碍鉴别，但未展开具体条目；考试若问到，只答“教材提出需鉴别，未展开”。</li>
+          <li><strong>与儿童期创伤：</strong>C-PTSD 研究多参照长期、重复的童年创伤与不良童年经历；儿童治疗推荐创伤聚焦 CBT。</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="pgd" class="section">
+      <div class="section-header"><span class="section-number">08</span><h2>延长哀伤障碍（PGD）</h2></div>
+      <div class="disease-hero">
+        <div class="en">PROLONGED GRIEF DISORDER</div>
+        <h3>延长哀伤障碍（PGD）</h3>
+        <p>亲密的人离世后，哀伤反应持续超过 6 个月仍难以缓解，关于逝者的想法挥之不去，情绪和行为偏离生活常态，社会功能严重受损。</p>
+        <div class="quick-tags"><span>核心：丧亲后持续哀伤</span><span>阈值：超过 6 个月</span><span>症状：每天≥5/9 项</span><span>首选：心理治疗</span></div>
+      </div>
+
+      <div class="module">
+        <div class="module-head"><span class="module-index">第一栏</span><h3>疾病画像</h3></div>
+        <div class="quick-facts">
+          <div class="fact"><b>别名</b><span>病理性/创伤性/复杂性哀伤</span></div>
+          <div class="fact"><b>时间阈值</b><span>超过 6 个月</span></div>
+          <div class="fact"><b>国外发病率</b><span>4%～13%</span></div>
+          <div class="fact"><b>国内数据</b><span>教材称缺乏</span></div>
+        </div>
+        <p><strong>定义：</strong>延长哀伤障碍（prolonged grief disorder，PGD），又被称为病理性哀伤（pathological grief）、创伤性哀伤（traumatic grief）或复杂性哀伤（complicated grief）。有别于正常的哀伤反应，PGD 是指丧失亲人之后持续的哀伤反应，往往超过 6 个月，难以随着时间的推移得到缓解。患者难以摆脱失去亲人的痛苦，关于逝者的想法挥之不去，情绪和行为偏离生活常态，最终导致个体的社会功能受到严重的影响。</p>
+        <p><strong>高危群体：</strong>女性、老年人、文化程度低者及家庭收入低下者。流产史、儿童期分离焦虑、童年虐待、父母离世、与逝者亲密的关系、对逝者过度的情感依赖、不安全的依恋关系、暴力性的致死事件、对亲人去世缺乏心理准备、缺少有效社会支持等也会增加风险。</p>
+        <div class="callout callout-info"><div class="callout-icon">📋</div><div class="callout-body"><strong>教材诊断要点（六条）</strong>①亲近关系的人离世；②每天都想念逝者，甚至达到病态程度；③每天都有 5 项及以上教材所列的 9 项症状，或症状程度达到病态；④症状持续时间在亲人离世后 6 个月以上；⑤症状导致有临床意义的社交、职业或其他重要领域功能受损；⑥症状无法用重性抑郁障碍、广泛性焦虑障碍或 PTSD 等疾病来解释。</div></div>
+        <div class="callout callout-danger"><div class="callout-icon">🚨</div><div class="callout-body"><strong>风险提示</strong>PGD 患者自杀风险明显增加，也更容易出现高血压、心血管疾病、肿瘤、免疫功能异常等疾病。</div></div>
+      </div>
+
+      <div class="module module-cause">
+        <div class="module-head"><span class="module-index">第二栏</span><h3>病因探秘</h3></div>
+        <div class="card-grid">
+          <div class="card card-cause"><div class="card-header"><span class="card-icon">👤</span><div class="card-title">个体与关系因素</div></div><div class="card-body">女性、老年人、文化程度低、家庭收入低；流产史、儿童期分离焦虑、童年虐待、父母离世；与逝者关系亲密、对逝者过度情感依赖、不安全依恋；暴力性致死事件、对亲人去世缺乏心理准备、缺少有效社会支持。</div></div>
+          <div class="card card-cause"><div class="card-header"><span class="card-icon">🧠</span><div class="card-title">影像学线索</div></div><div class="card-body">影像学研究提示 PGD 患者存在伏隔核的奖赏区域过度激活。教材以此作为研究线索，不是诊断依据。</div></div>
+          <div class="card card-cause"><div class="card-header"><span class="card-icon">💭</span><div class="card-title">认知方式</div></div><div class="card-body">个体的认知方式会影响丧亲经历；认知缺陷可能增加 PGD 症状的严重程度。</div></div>
+          <div class="card card-cause"><div class="card-header"><span class="card-icon">📚</span><div class="card-title">教材未展开</div></div><div class="card-body">国内缺乏 PGD 相关流行病学数据；PGD 的病因与发病机制教材着墨较少，未提出统一的生物学模型。</div></div>
+        </div>
+      </div>
+
+      <div class="module module-symptom">
+        <div class="module-head"><span class="module-index">第三栏</span><h3>临床表现拼图</h3></div>
+        <p>PGD 的临床症状紧密围绕丧亲事件，表现为持续性的、极度的痛苦体验；症状持续往往超过半年，并不随着时间的推移而减轻。</p>
+        <div class="card-grid">
+          <div class="card card-symptom"><div class="card-header"><span class="card-icon">🕯️</span><div class="card-title">思念与不接受</div></div><div class="card-body">沉浸在对逝者的缅怀之中，不愿意接受亲人离世的事实，仍旧幻想重新相聚；每天都想念逝者，甚至达到病态程度。</div></div>
+          <div class="card card-symptom"><div class="card-header"><span class="card-icon">📷</span><div class="card-title">过度敏感与回避</div></div><div class="card-body">对与逝者相关的事物过度敏感（如老照片或往事）；有意识地避免接触与逝者相关的事物。</div></div>
+          <div class="card card-symptom"><div class="card-header"><span class="card-icon">💔</span><div class="card-title">自责与信任受损</div></div><div class="card-body">对亲人离世可能存在过分自责；难以再次相信他人；接受他人帮助或建立亲密关系，可能被体验为对逝者的“背叛”。</div></div>
+          <div class="card card-symptom"><div class="card-header"><span class="card-icon">🧭</span><div class="card-title">自我定位与新角色</div></div><div class="card-body">找不到生活中的自我定位；不愿意接受生活中新的角色；不愿意接受新的生活安排。</div></div>
+          <div class="card card-symptom"><div class="card-header"><span class="card-icon">🌫️</span><div class="card-title">情感麻木与空虚</div></div><div class="card-body">除持续、慢性的悲伤外，还有情感麻木、孤独的感受；对未来生活不抱有希望。</div></div>
+          <div class="card card-symptom"><div class="card-header"><span class="card-icon">📉</span><div class="card-title">功能损害</div></div><div class="card-body">与外界隔离、疏远；个人社会功能显著受影响，生活质量严重受损；症状持续超过半年且不随时间减轻。</div></div>
+        </div>
+        <div class="callout callout-warning"><div class="callout-icon">⏱️</div><div class="callout-body"><strong>不要把正常哀伤病理化</strong>正常哀伤通常半年内逐渐减轻，对生活影响有限；PGD 的关键是“超过 6 个月仍不缓解、始终无法接受离世事实、功能显著受损”。</div></div>
+      </div>
+
+      <div class="module module-case">
+        <div class="module-head"><span class="module-index">第四栏</span><h3>教材典型案例</h3></div>
+        <p><strong>教材原文（节选）：</strong>患者，女，38 岁，未婚，公司职员，硕士研究生学历。1 年半前，患者的父亲因癌症过世。从那之后，患者控制不住自己，会反复想念自己的父亲，不知道没有父亲的生活该如何继续。患者觉得无法接受父亲过世的事实，仍旧幻想着改变这个事实。有时候，患者会对父亲离世的问题变得麻木。此外，患者情绪波动不定，害怕自己变得孤独，却又不知道如何继续与男友相处。入院后，患者定向力正常，情绪偏低，问答配合、切题，但话少音低，谈到父亲时会流泪，偶尔会询问“我的父亲还活着，是吧？”“我父亲会来找的我吧？”。</p>
+        <div class="quick-facts">
+          <div class="fact"><b>诊断</b><span>延长哀伤障碍</span></div>
+          <div class="fact"><b>治疗</b><span>个体心理治疗</span></div>
+          <div class="fact"><b>转归</b><span>3 个月后症状减轻</span></div>
+          <div class="fact"><b>功能恢复</b><span>结交新朋友、重新工作</span></div>
+        </div>
+        <p><strong>教材给出的治疗与转归：</strong>患者接受个体心理治疗后，症状有所减轻。虽然仍然会想念父亲，但没有之前那么痛苦。在 3 个月的治疗后，患者开始结交新的朋友，并重新开始了一份简单的工作。</p>
+        <div class="callout callout-info"><div class="callout-icon">📖</div><div class="callout-body"><strong>读案例抓三点</strong>①丧亲事件（父亲癌症过世）；②持续超过 6 个月仍无法接受、反复想念、麻木、回避现实；③功能受损（孤独、无法与男友相处、生活难以继续）。这三点正好对应 PGD 的诊断核心。</div></div>
+      </div>
+
+      <div class="module module-diff">
+        <div class="module-head"><span class="module-index">第五栏</span><h3>鉴别诊断对对碰</h3></div>
+        <div class="table-wrap"><table class="comparison-table">
+          <thead><tr><th>维度</th><th>PGD</th><th>正常哀伤反应</th><th>抑郁障碍</th></tr></thead>
+          <tbody>
+            <tr><td>核心指向</td><td>紧紧围绕丧亲之痛，来源于与逝者的分离；认知活动被丧亲事件牢牢占据。</td><td>同样围绕丧亲，但是对离世的正常悲伤反应。</td><td>情绪低落和消极想法相对泛化，不局限于丧亲。</td></tr>
+            <tr><td>持续时间</td><td>往往超过 6 个月，且严重性迟迟未能缓解。</td><td>通常半年之内逐渐减轻。</td><td>按抑郁障碍病程判断；可发生在生活事件后，但病情发展超出事件本身。</td></tr>
+            <tr><td>对逝者的兴趣</td><td>对逝者的事情仍感兴趣，相信只要能够相聚就会重获快乐。</td><td>逐渐接受事实，能适应新环境、开始新生活。</td><td>广泛兴趣减退，很难体会到快乐。</td></tr>
+            <tr><td>自责/无价值</td><td>表现为对亲人过世的深深自责。</td><td>一般无持续病理性自责。</td><td>愧疚感、无价值感更常见，且较泛化。</td></tr>
+            <tr><td>功能</td><td>社交、职业或其他重要领域功能显著受损。</td><td>对生活影响有限，很少让人失去对生活的热情。</td><td>社会与职业功能受损，伴抑郁症状群。</td></tr>
+            <tr><td>一句话鉴别</td><td>“半年了，仍无法接受。” </td><td>“半年内，慢慢接受并适应。” </td><td>“低落是泛化的，不只是因为逝者。” </td></tr>
+          </tbody>
+        </table></div>
+        <p class="table-note">教材还特别指出：PGD 的诊断标准并不关注体重/胃口改变、睡眠障碍、精神运动性迟滞或兴奋、疲劳、注意力不集中等抑郁症状，而更强调自我定位混淆、难以接受丧亲、难以相信他人等抑郁以外的症状。</p>
+
+        <div class="table-wrap"><table class="comparison-table">
+          <thead><tr><th>维度</th><th>PGD</th><th>PTSD</th></tr></thead>
+          <tbody>
+            <tr><td>情绪特征</td><td>哀伤为主，对逝者念念不忘，伴孤独、空虚。</td><td>愤怒、恐惧、害怕或愧疚为主，伴高警觉，对某些刺激反应强烈。</td></tr>
+            <tr><td>闯入内容</td><td>可以是与逝者相关的点点滴滴，包括美好回忆；不愿面对的是亲人离世的事实。</td><td>总是创伤性事件本身或相关线索，常令患者恐惧。</td></tr>
+            <tr><td>回避对象</td><td>回避关于亲人离世的事实。</td><td>有意识地回避创伤记忆及相关线索。</td></tr>
+            <tr><td>梦魇/闪回</td><td>梦魇、闪回、具有攻击性等症状更符合 PTSD 的表现。</td><td>梦魇、闪回、攻击性症状常见。</td></tr>
+            <tr><td>一句话鉴别</td><td>“想的是逝者的好，躲的是‘他走了’。” </td><td>“想的是事件的痛，躲的是‘它再来’。” </td></tr>
+          </tbody>
+        </table></div>
+        <div class="callout callout-info"><div class="callout-icon">💡</div><div class="callout-body"><strong>共病不等于替代</strong>PGD 可共病抑郁或 PTSD；但 PGD 的核心症状独立于抑郁及焦虑情绪。诊断时要判断“哪一个障碍更能解释当前的核心症状与功能损害”，而不是简单叠加诊断。</div></div>
+      </div>
+
+      <div class="module module-treat">
+        <div class="module-head"><span class="module-index">第六栏</span><h3>治疗方案工具箱</h3></div>
+        <div class="card-grid">
+          <div class="card card-treatment"><div class="card-header"><span class="card-icon">🥇</span><div class="card-title">首选：心理治疗</div></div><div class="card-body">
+            <ul class="icon-list check">
+              <li>心理治疗是 PGD 的首选策略；药物治疗效果并不理想。</li>
+              <li>基于哀伤的 CBT 较对照治疗更能减轻 PGD 症状，且疗效随时间推移更明显。</li>
+              <li>形式包括个体心理治疗、团体心理治疗和基于网络的心理治疗。</li>
+              <li>个体治疗要体现针对性，着力缓解哀伤反应；内容分两部分：接受亲人离世的事实、重新开始新的生活；形式分暴露刺激、认知重建、行为干预等。</li>
+            </ul>
+          </div></div>
+          <div class="card card-treatment"><div class="card-header"><span class="card-icon">📉</span><div class="card-title">次选/辅助：药物疗效不明确</div></div><div class="card-body">
+            <ul class="icon-list">
+              <li>药物治疗 PGD 的疗效还不明确。案例报道和开放性研究提示 SSRIs 可能有助于改善 PGD 症状。</li>
+              <li>一项随机对照研究仅表明三环类抗抑郁药能够减轻丧亲者的抑郁症状，但对哀伤反应本身并无帮助。</li>
+              <li>一些专家认为药物可作为心理治疗的辅助策略，但仍需进一步研究评价疗效。</li>
+              <li>教材未给出具体药物与剂量；如使用，剂量个体化，遵医嘱。</li>
+            </ul>
+          </div></div>
+          <div class="card card-treatment"><div class="card-header"><span class="card-icon">🤝</span><div class="card-title">治疗依从性</div></div><div class="card-body">针对 PGD 的个体心理治疗有一定疗效，但有 20%～30% 的脱落率。值得注意的是，同时服用抗抑郁药可能有助于降低接受此类心理治疗的脱落率。</div></div>
+        </div>
+        <div class="callout callout-success"><div class="callout-icon">🛡️</div><div class="callout-body"><strong>干预原则</strong>对正常哀伤是否需要干预尚无共识；但对 PGD 进行干预有较统一的意见，正确干预对症状改善有较明确和持久的疗效。治疗要围绕“接受离世事实”与“重建生活”两条主线，避免把正常哀伤过度病理化。</div></div>
+      </div>
+
+      <div class="module module-memory">
+        <div class="module-head"><span class="module-index">第七栏</span><h3>记忆工具箱</h3></div>
+        <div class="memory-grid">
+          <div class="memory-card"><div class="m-title">方法一：数字锚定法<span class="m-type">数字</span></div><div class="m-formula">“6—5—9”</div><p>症状持续超过 6 个月；每天至少 5 项症状（或程度达到病态）；症状清单共 9 项。原理：三个数字把诊断要点串起来，比逐条背诵更不易漏。</p></div>
+          <div class="memory-card"><div class="m-title">方法二：九字口诀法<span class="m-type">口诀</span></div><div class="m-formula">“乱、拒、避、疑、痛、停、麻、空、惊”</div><p>自我定位乱、拒绝接受离世、回避相关事物、难再信任、痛苦/愤怒、生活难入正轨、情感麻木、空虚无意义、惊慌茫然震惊。原理：每个字对应一项症状，先背九字再展开。</p></div>
+          <div class="memory-card"><div class="m-title">方法三：归类法<span class="m-type">归类</span></div><div class="m-formula">认同—回避—情绪—生活</div><p>把 9 项症状分成四组：自我定位与接受（乱、拒）；回避与信任（避、疑）；情绪痛苦（痛、麻、惊）；生活与意义（停、空）。原理：组块化降低记忆负荷，且方便答题时按维度展开。</p></div>
+          <div class="memory-card"><div class="m-title">方法四：对比法<span class="m-type">对比</span></div><div class="m-formula">PGD vs 正常哀伤 vs 抑郁</div><p>正常哀伤半年内减轻、能接受并适应；PGD 超过 6 个月、无法接受、功能受损；抑郁的消极想法泛化、广泛兴趣减退。原理：用“时间—接受—泛化”三个开关快速区分三者。</p></div>
+        </div>
+      </div>
+
+      <div class="module module-link">
+        <div class="module-head"><span class="module-index">第八栏</span><h3>知识联动</h3></div>
+        <ul class="icon-list">
+          <li><strong>与第8章抑郁障碍：</strong>PGD 可共病抑郁，但核心症状独立于抑郁与焦虑；抑郁的消极想法泛化，PGD 紧紧围绕丧亲。儿童期分离焦虑是 PGD 的危险因素，但与抑郁症无明显相关性。</li>
+          <li><strong>与 PTSD：</strong>两者可共病；PGD 的情绪以哀伤为主，闯入内容可以是美好回忆，回避的是离世事实；PTSD 的情绪以恐惧愤怒为主，闯入内容是创伤事件，回避的是创伤线索。</li>
+          <li><strong>与自杀风险：</strong>PGD 自杀风险明显增加，评估时要主动询问自杀观念与行为。</li>
+          <li><strong>与躯体疾病：</strong>PGD 更容易出现高血压、心血管疾病、肿瘤、免疫功能异常等；教材把这些作为关联，而不是诊断依据。</li>
+          <li><strong>与初级保健/安宁疗护（学习延伸）：</strong>丧亲者可能先在基层或安宁疗护场景出现；教材未展开具体筛查流程，但强调早期识别与早期治疗。</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="adjustment" class="section">
+      <div class="section-header"><span class="section-number">09</span><h2>适应障碍</h2></div>
+      <div class="disease-hero">
+        <div class="en">ADJUSTMENT DISORDER</div>
+        <h3>适应障碍</h3>
+        <p>明显的生活改变或环境变化后，出现短期的、轻度的烦恼状态和情绪失调，常伴行为变化，但不出现精神病性症状。</p>
+        <div class="quick-tags"><span>核心：应激后适应不良</span><span>起病：诊断要点 1 个月内</span><span>病程：至少 1 个月</span><span>去除应激后：一般≤6 个月</span></div>
+      </div>
+
+      <div class="module">
+        <div class="module-head"><span class="module-index">第一栏</span><h3>疾病画像</h3></div>
+        <div class="quick-facts">
+          <div class="fact"><b>典型事件</b><span>居丧、离婚、失业、迁居、退休</span></div>
+          <div class="fact"><b>起病</b><span>诊断要点：1 个月内</span></div>
+          <div class="fact"><b>病程</b><span>至少 1 个月</span></div>
+          <div class="fact"><b>应激消除后</b><span>一般不超过 6 个月</span></div>
+        </div>
+        <p><strong>定义：</strong>适应障碍（adjustment disorder）是指在明显的生活改变或环境变化时产生的、短期的和轻度的烦恼状态和情绪失调，常有一定程度的行为变化等，但并不出现精神病性症状。典型生活事件包括居丧、离婚、失业或变换岗位、迁居、转学、患重病、经济危机、退休等。</p>
+        <p>发病往往与生活事件的严重程度、个体心理素质、心理应对方式等有关。教材强调：生活事件发生前患者精神状态正常；事件发生后，对于多数人都能顺利处理的事情，患者却表现为适应不良、无法顺利处理。</p>
+        <div class="callout callout-info"><div class="callout-icon">📋</div><div class="callout-body"><strong>教材诊断要点与排除原则（六条）</strong>①有明显的生活事件为诱因，尤其是生活环境或社会地位的改变（如移民、出国、入伍、退休等）；②有理由推断易感个性、生活事件和人格基础对导致精神障碍均起重要作用，事件前精神状态正常，事件后对多数人能顺利处理的事情表现为适应不良；③以抑郁、焦虑、害怕等情感症状为主，伴适应不良行为（退缩、不注意卫生、生活无规律等）和生理功能障碍（睡眠不好、食欲减退等）；④存在见于情感性精神障碍（不包括妄想和幻觉）、神经症、应激障碍、躯体形式障碍、品行障碍的各种症状，但不符合上述障碍的诊断标准；⑤社会功能受损；⑥精神障碍开始于心理社会刺激（但不是灾难性的或异乎寻常的）发生后 1 个月内，符合诊断标准至少 1 个月，应激因素消除后症状持续一般不超过 6 个月。</div></div>
+        <div class="callout callout-warning"><div class="callout-icon">⚠️</div><div class="callout-body"><strong>时间表述要分清</strong>教材“临床表现”部分写“发病常在应激性生活事件发生后的 1～3 个月内出现”；“诊断要点”第 6 条写“精神障碍开始于心理社会刺激发生后 1 个月内，符合诊断标准至少 1 个月，应激因素消除后症状持续一般不超过 6 个月”。答题时按“诊断要点”记 1 个月，同时知道临床常见 1～3 个月。</div></div>
+      </div>
+
+      <div class="module module-cause">
+        <div class="module-head"><span class="module-index">第二栏</span><h3>病因探秘</h3></div>
+        <div class="card-grid">
+          <div class="card card-cause"><div class="card-header"><span class="card-icon">🌪️</span><div class="card-title">应激源：生活改变而非灾难</div></div><div class="card-body">明显的生活事件，尤其是生活环境或社会地位的改变（如移民、出国、入伍、退休等）；这些改变往往长期存在，但不是灾难性的或异乎寻常的。</div></div>
+          <div class="card card-cause"><div class="card-header"><span class="card-icon">🧩</span><div class="card-title">人格基础</div></div><div class="card-body">有理由推断易感个性、生活事件和人格基础对导致精神障碍均起着重要作用；人格基础在发病过程中起一定作用。</div></div>
+          <div class="card card-cause"><div class="card-header"><span class="card-icon">💭</span><div class="card-title">应对方式</div></div><div class="card-body">发病与个体心理素质、心理应对方式有关；同样的生活事件，多数人能顺利处理，患者却适应不良。</div></div>
+          <div class="card card-cause"><div class="card-header"><span class="card-icon">📖</span><div class="card-title">教材未展开</div></div><div class="card-body">教材未提出适应障碍的特异性生物学机制、遗传或影像学改变；病因部分以社会心理因素为主。</div></div>
+        </div>
+      </div>
+
+      <div class="module module-symptom">
+        <div class="module-head"><span class="module-index">第三栏</span><h3>临床表现拼图</h3></div>
+        <p>临床表现多种多样，包括抑郁心境、焦虑或烦恼，感到不能应对当前生活或无从计划未来，失眠、应激相关的躯体功能障碍（头疼、腹部不适、胸闷、心慌），社会功能或工作受到损害。有些患者可出现暴力行为，儿童则表现为尿床、吸吮手指等。</p>
+        <div class="card-grid">
+          <div class="card card-symptom"><div class="card-header"><span class="card-icon">😔</span><div class="card-title">成人：以抑郁为主</div></div><div class="card-body">情绪不高、对日常生活丧失兴趣、自责、无望无助感；伴睡眠障碍、食欲变化和体重减轻；可有激越行为。</div></div>
+          <div class="card card-symptom"><div class="card-header"><span class="card-icon">😰</span><div class="card-title">成人：以焦虑为主</div></div><div class="card-body">焦虑不安、担心害怕、神经过敏、心慌、呼吸急促、窒息感等。</div></div>
+          <div class="card card-symptom"><div class="card-header"><span class="card-icon">🧑‍🎓</span><div class="card-title">青少年：以品行障碍为主</div></div><div class="card-body">逃学、斗殴、盗窃、说谎、物质滥用、离家出走、性滥交等。</div></div>
+          <div class="card card-symptom"><div class="card-header"><span class="card-icon">🧒</span><div class="card-title">儿童：退行性行为</div></div><div class="card-body">尿床、吸吮手指等退行性行为，以及无故躯体不适等含糊的躯体症状。</div></div>
+        </div>
+        <div class="callout callout-info"><div class="callout-icon">💡</div><div class="callout-body"><strong>共同点</strong>症状以抑郁、焦虑、害怕等情感症状为主，伴适应不良的行为障碍（退缩、不注意卫生、生活无规律等）和生理功能障碍（睡眠不好、食欲减退等）；社会功能受损；不出现精神病性症状。</div></div>
+      </div>
+
+      <div class="module module-case">
+        <div class="module-head"><span class="module-index">第四栏</span><h3>教材典型案例</h3></div>
+        <p><strong>教材原文（节选）：</strong>患者，女，15 岁，和母亲居住，留学生，高中在读。因“渐起烦躁，情绪低落，不愿与人交往 2 月余”由父母带至门诊。2 月余前患者独自至国外留学，初期曾抱怨不适应气候、语言、教学环境等，后逐渐出现心情烦躁、控制不住发脾气、情绪低落、对生活感到无望无助，时有哭泣，不愿与人交往，不愿去上学，整天待在宿舍，伴有入睡困难、眠浅易醒及胸闷、心慌等不适感。父母遂将其接回国就诊。入院后，患者定向力正常，问答配合、切题，话少音低，情绪低落，自诉不喜留学生活。</p>
+        <div class="quick-facts">
+          <div class="fact"><b>诊断</b><span>适应障碍</span></div>
+          <div class="fact"><b>治疗</b><span>个体心理治疗</span></div>
+          <div class="fact"><b>转归</b><span>3 个月后基本缓解</span></div>
+          <div class="fact"><b>功能</b><span>恢复交流与学习</span></div>
+        </div>
+        <p><strong>教材给出的治疗与转归：</strong>患者父母暂时将其留在国内，接受个体心理治疗后，症状有所减轻。3 个月后，患者情绪低落、胸闷、心慌基本缓解，食欲睡眠好，能正常与人交流及学习，自诉愿意出国完成学业。</p>
+        <div class="callout callout-info"><div class="callout-icon">📖</div><div class="callout-body"><strong>读案例抓三点</strong>①明确生活改变（独自出国留学、不适应气候/语言/教学）；②应激后出现情绪、行为、躯体与功能症状；③没有精神病性症状，且症状可用适应障碍解释。诊断时要排除抑郁障碍、人格障碍等更合适的诊断。</div></div>
+      </div>
+
+      <div class="module module-diff">
+        <div class="module-head"><span class="module-index">第五栏</span><h3>鉴别诊断对对碰</h3></div>
+        <p>教材明确：适应障碍需要与抑郁障碍和人格障碍鉴别。临床上还需与 PTSD 区分，后者应激源为异乎寻常的创伤。</p>
+        <div class="table-wrap"><table class="comparison-table">
+          <thead><tr><th>维度</th><th>适应障碍</th><th>抑郁障碍</th></tr></thead>
+          <tbody>
+            <tr><td>核心症状</td><td>以抑郁、焦虑、害怕等情感症状为主，伴适应不良行为；症状多样但程度相对轻。</td><td>抑郁症状群达到诊断标准，可有晨重暮轻、明显消极悲观、食欲减退等特征。</td></tr>
+            <tr><td>病程/起病</td><td>应激后 1 个月内起病（诊断要点），至少 1 个月；应激消除后一般≤6 个月。</td><td>按抑郁障碍病程；可生活事件后发生，但病情发展明显超出生活事件本身。</td></tr>
+            <tr><td>关键鉴别点</td><td>症状可用生活改变与人格/应对方式解释，未达到其他障碍完整诊断标准。</td><td>达到抑郁障碍诊断标准时，应优先诊断抑郁障碍，不能仅用适应障碍概括。</td></tr>
+            <tr><td>一句话鉴别</td><td>“事件过去了，反应还在。” </td><td>“低落已经独立成病。” </td></tr>
+          </tbody>
+        </table></div>
+
+        <div class="table-wrap"><table class="comparison-table">
+          <thead><tr><th>维度</th><th>适应障碍</th><th>人格障碍</th></tr></thead>
+          <tbody>
+            <tr><td>起病</td><td>有明确生活事件，症状在事件后出现。</td><td>人格模式长期、稳定、广泛存在，通常起病于早年。</td></tr>
+            <tr><td>核心</td><td>对特定应激源的适应不良反应，应激消除后可缓解。</td><td>持久的内心体验与行为模式偏离，累及多个情境。</td></tr>
+            <tr><td>关键鉴别点</td><td>症状与应激源时间关系明确，功能损害随应激变化。</td><td>不能仅用一次生活事件解释；人格模式先于事件存在。</td></tr>
+            <tr><td>一句话鉴别</td><td>“事件后才有。” </td><td>“一直都是这样。” </td></tr>
+          </tbody>
+        </table></div>
+
+        <div class="table-wrap"><table class="comparison-table">
+          <thead><tr><th>维度</th><th>适应障碍</th><th>PTSD</th></tr></thead>
+          <tbody>
+            <tr><td>应激源</td><td>生活环境或社会地位改变，非灾难性、非异乎寻常。</td><td>异乎寻常的威胁性、灾难性创伤。</td></tr>
+            <tr><td>症状</td><td>抑郁、焦虑、害怕等情感症状与行为变化；无精神病性症状。</td><td>侵入、回避、负性认知/情绪、警觉增高四大症状群。</td></tr>
+            <tr><td>时间</td><td>1 个月内起病，至少 1 个月，去除应激后一般≤6 个月。</td><td>数天至半年内起病，病程至少 1 个月。</td></tr>
+            <tr><td>一句话鉴别</td><td>“生活变了，人跟不上。” </td><td>“创伤重演，人躲不开。” </td></tr>
+          </tbody>
+        </table></div>
+      </div>
+
+      <div class="module module-treat">
+        <div class="module-head"><span class="module-index">第六栏</span><h3>治疗方案工具箱</h3></div>
+        <div class="card-grid">
+          <div class="card card-treatment"><div class="card-header"><span class="card-icon">🥇</span><div class="card-title">首选：心理治疗</div></div><div class="card-body">
+            <ul class="icon-list check">
+              <li>治疗以心理治疗为主，主要解决患者的心理应对方式和情绪发泄途径问题。</li>
+              <li>先评定症状性质与严重程度，了解诱因、人格特点、应对方式在发病中的相对作用，注意应激源对患者的意义。</li>
+              <li>主要采取个别指导、家庭治疗和社会支持等方式；支持性心理治疗、短程动力疗法、认知行为疗法等都可酌情选用。</li>
+            </ul>
+          </div></div>
+          <div class="card card-treatment"><div class="card-header"><span class="card-icon">🔑</span><div class="card-title">治疗三环节</div></div><div class="card-body">
+            <ul class="icon-list check">
+              <li>消除或减少应激源，包括改变对应激事件的态度和认识。</li>
+              <li>提高患者的应对能力。</li>
+              <li>消除或缓解症状。</li>
+            </ul>
+          </div></div>
+          <div class="card card-treatment"><div class="card-header"><span class="card-icon">💊</span><div class="card-title">辅助：药物只用于情绪异常明显者</div></div><div class="card-body">
+            <ul class="icon-list">
+              <li>药物治疗只用于情绪异常较为明显的患者。</li>
+              <li>作用是加快症状缓解，为心理治疗提供合适条件。</li>
+              <li>可根据具体情况采用抗焦虑药物和抗抑郁药物等；以低剂量、短疗程为宜。</li>
+              <li>药物治疗同时，心理治疗应继续进行，尤其对恢复较慢的患者更有益。</li>
+              <li>教材未给出具体药物与剂量；剂量个体化，遵医嘱。</li>
+            </ul>
+          </div></div>
+        </div>
+        <div class="callout callout-success"><div class="callout-icon">🎯</div><div class="callout-body"><strong>治疗目标</strong>适应障碍病程一般不超过 6 个月，可自行缓解，也可能转化为更严重的精神障碍。治疗的根本目的是帮助患者提高处理应激境遇的能力，早日恢复到病前功能水平，防止病程恶化或慢性化。</div></div>
+      </div>
+
+      <div class="module module-memory">
+        <div class="module-head"><span class="module-index">第七栏</span><h3>记忆工具箱</h3></div>
+        <div class="memory-grid">
+          <div class="memory-card"><div class="m-title">方法一：时间轴法<span class="m-type">数字/时间轴</span></div><div class="m-formula">1 个月内起病 → 至少 1 个月 → 去除应激后≤6 个月</div><p>诊断要点：应激后 1 个月内起病；符合诊断标准至少 1 个月；应激因素消除后症状持续一般不超过 6 个月。临床表现又写常在 1～3 个月内出现。原理：把“起病—病程—恢复”排成时间轴，避免把三个数字混成一个。</p></div>
+          <div class="memory-card"><div class="m-title">方法二：三环节口诀<span class="m-type">口诀</span></div><div class="m-formula">“减、提、消”</div><p>减少/消除应激源（改变态度与认识）、提高应对能力、消除/缓解症状。原理：治疗三环节是简答题高频点，三字先立骨架。</p></div>
+          <div class="memory-card"><div class="m-title">方法三：人群表型归类法<span class="m-type">归类</span></div><div class="m-formula">成人情绪 · 青少年品行 · 儿童退行</div><p>成人多见抑郁或焦虑情绪；青少年以品行障碍为主；儿童表现为尿床、吸吮手指等退行行为。原理：按年龄分组，答题时不容易漏人群。</p></div>
+          <div class="memory-card"><div class="m-title">方法四：对比法<span class="m-type">对比</span></div><div class="m-formula">适应障碍 vs PTSD</div><p>适应障碍的应激源是生活改变、非灾难性；PTSD 的应激源异乎寻常。适应障碍以情绪行为反应为主；PTSD 是四大症状群。原理：用“应激源性质”和“症状结构”两把尺子快速分开。</p></div>
+        </div>
+      </div>
+
+      <div class="module module-link">
+        <div class="module-head"><span class="module-index">第八栏</span><h3>知识联动</h3></div>
+        <ul class="icon-list">
+          <li><strong>与第8章抑郁障碍：</strong>适应障碍以抑郁为主时，必须排除抑郁障碍；若达到抑郁障碍诊断标准，应优先诊断抑郁障碍。</li>
+          <li><strong>与第9章焦虑障碍：</strong>以焦虑为主时需与焦虑障碍区分；适应障碍的症状与应激源时间关系明确，且未达到焦虑障碍完整诊断标准。</li>
+          <li><strong>与PTSD：</strong>教材在 PTSD 鉴别中明确对照适应障碍：前者应激源异乎寻常，后者是生活环境或社会地位改变。</li>
+          <li><strong>与人格障碍：</strong>教材明确要求鉴别；人格模式长期稳定，适应障碍是事件后的适应不良反应。</li>
+          <li><strong>与青少年/儿童精神障碍：</strong>青少年品行问题、儿童退行行为要考虑发展阶段与家庭/学校环境；教材未展开具体量表。</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="rad" class="section">
+      <div class="section-header"><span class="section-number">10</span><h2>反应性依恋障碍（RAD）</h2></div>
+      <div class="disease-hero">
+        <div class="en">REACTIVE ATTACHMENT DISORDER</div>
+        <h3>反应性依恋障碍（RAD）</h3>
+        <p>生命早期严重被忽视或虐待，基本情感需要不能满足，儿童不能与照料者建立健康依恋关系，表现为情感退缩式的依恋行为模式。</p>
+        <div class="quick-tags"><span>核心：情感退缩/依恋不足</span><span>起病：9 个月～5 岁</span><span>病程：至少 12 个月</span><span>背景：严重忽视</span></div>
+      </div>
+
+      <div class="module">
+        <div class="module-head"><span class="module-index">第一栏</span><h3>疾病画像</h3></div>
+        <div class="quick-facts">
+          <div class="fact"><b>性质</b><span>罕见但严重</span></div>
+          <div class="fact"><b>患病率</b><span>尚不清楚，临床相对罕见</span></div>
+          <div class="fact"><b>严重忽视儿童中</b><span>低于 10%</span></div>
+          <div class="fact"><b>诊断年龄</b><span>发育年龄至少 9 个月</span></div>
+        </div>
+        <p><strong>定义：</strong>反应性依恋障碍（reactive attachment disorder，RAD）是一种罕见但严重的病症。由于生命早期的被忽视或虐待，婴儿或幼儿的基本情感需要不能被满足，使得患儿不能与父母或者照料者建立起健康的依恋关系。RAD 涉及儿童早期多个领域的功能损害，严重损害了年幼儿童与成年人或同伴之间的人际交往能力。</p>
+        <p><strong>核心：</strong>儿童和成人照料者之间缺乏依恋关系或依恋关系建立不足；这些表现必须在 5 岁前就已经出现。</p>
+        <div class="callout callout-info"><div class="callout-icon">💡</div><div class="callout-body"><strong>不是“内向”</strong>RAD 不是害羞、内向或单纯与陌生人互动少；诊断必须结合严重忽视史、依恋行为模式、发育年龄与病程。</div></div>
+      </div>
+
+      <div class="module module-cause">
+        <div class="module-head"><span class="module-index">第二栏</span><h3>病因探秘</h3></div>
+        <div class="card-grid">
+          <div class="card card-cause"><div class="card-header"><span class="card-icon">🚫</span><div class="card-title">唯一已知风险因素：严重被忽视</div></div><div class="card-body">严重的被忽视是诊断 RAD 的必要条件，也是该障碍的唯一已知风险因素。这种被忽视通常在生命的最初几个月或该障碍被诊断之前就已存在。</div></div>
+          <div class="card card-cause"><div class="card-header"><span class="card-icon">🏚️</span><div class="card-title">常见情境</div></div><div class="card-body">住在孤儿院或托儿所；经常更换寄养家庭或照料者；父母有严重的精神问题、犯罪行为或物质滥用以致不能履行父母职责；因住院而长期和父母或其他照料者分离等。</div></div>
+          <div class="card card-cause"><div class="card-header"><span class="card-icon">🧠</span><div class="card-title">机制</div></div><div class="card-body">教材未展开 RAD 的特异性生物学机制；重点在早期照料关系剥夺对依恋行为与社会情绪功能的影响。</div></div>
+          <div class="card card-cause"><div class="card-header"><span class="card-icon">📖</span><div class="card-title">教材未提供</div></div><div class="card-body">教材未给出 RAD 的遗传、影像或神经内分泌研究数据；不要自行补充。</div></div>
+        </div>
+      </div>
+
+      <div class="module module-symptom">
+        <div class="module-head"><span class="module-index">第三栏</span><h3>临床表现拼图</h3></div>
+        <p>RAD 可以在婴儿期开始。在 9 个月到 5 岁之间，临床表现类似：这个年龄段的儿童没有或仅有不超过最低限度的依恋行为，同时存在与之相关的情绪化异常行为。</p>
+        <ul class="icon-list">
+          <li>不明原因的退缩、恐惧、悲伤或者烦躁。</li>
+          <li>不去寻求安慰，或者对旁人的安慰没有反应。</li>
+          <li>基本没有笑容。</li>
+          <li>密切关注他人，但不参与社交活动。</li>
+          <li>不会去寻求支持或帮助。</li>
+          <li>在将要被抱起时不会主动伸手。</li>
+          <li>没有兴趣玩捉迷藏或其他互动游戏。</li>
+        </ul>
+        <div class="callout callout-warning"><div class="callout-icon">⚠️</div><div class="callout-body"><strong>年龄限制</strong>对 5 岁以上儿童是否会发生 RAD 尚不确定，5 岁以上儿童的诊断需要慎重；对发育程度上还不能形成选择性依恋的儿童，不应诊断 RAD，因此诊断时儿童发育年龄需至少 9 个月。</div></div>
+        <div class="callout callout-info"><div class="callout-icon">📋</div><div class="callout-body"><strong>教材诊断要点（五条）</strong>①对照料者表现出情感退缩式的行为模式：感觉痛苦时不会寻求照料者安慰，对照料者的安慰也基本没有反应；②持续性的社交和情绪障碍，包括“对他人很少有社交性/情感性回应”“有限的正性情感”“与照料者互动中无法解释的烦躁、悲伤或恐惧”中的两到三种；③曾经历极端不被满足的照料模式——社会忽视（持续缺乏安慰、鼓励和喜爱，或反复变换主要照料者，或儿童多、照料者少的特殊机构）；④异常表现由上述照料模式导致，且不符合孤独症谱系障碍的诊断标准；⑤病程至少持续 12 个月。诊断时儿童发育年龄需至少 9 个月。</div></div>
+      </div>
+
+      <div class="module module-case">
+        <div class="module-head"><span class="module-index">第四栏</span><h3>教材典型案例</h3></div>
+        <div class="callout callout-info"><div class="callout-icon">📖</div><div class="callout-body"><strong>教材说明</strong>教材本章未提供 RAD 的具体临床病例。以下为教学演练情境，不是教材原文；仅使用教材描述过的表现，不编造化验、影像或剂量。</div></div>
+        <div class="callout callout-example"><div class="callout-icon">🩺</div><div class="callout-body"><strong>经典临床情境（教学演练，非教材原文）</strong>一名 3 岁儿童，自幼在照料者频繁更换的机构中生活，长期缺乏稳定的情感照料。儿童在感到痛苦时不会主动寻求照料者安慰，照料者安慰时也基本没有反应；很少微笑；会密切关注其他孩子，但不参与互动游戏；被抱起时不会主动伸手；对照料者表现出情感退缩。上述模式持续超过 12 个月，发育年龄已超过 9 个月。</div></div>
+        <p><strong>诊断思路：</strong>①存在极端不被满足的照料模式（严重社会忽视）；②对照料者情感退缩，痛苦时不寻求安慰、对安慰无反应；③持续社交与情绪障碍；④异常表现不能用孤独症谱系障碍（autism spectrum disorder，ASD）解释；⑤病程至少 12 个月，发育年龄至少 9 个月。教学情境不提供发育量表分数，因为教材未给具体数值。</p>
+      </div>
+
+      <div class="module module-diff">
+        <div class="module-head"><span class="module-index">第五栏</span><h3>鉴别诊断对对碰</h3></div>
+        <p>教材明确主要与孤独症谱系障碍、智力障碍（精神发育迟滞）、抑郁症鉴别。</p>
+        <div class="table-wrap"><table class="comparison-table">
+          <thead><tr><th>维度</th><th>RAD</th><th>孤独症谱系障碍（ASD）</th></tr></thead>
+          <tbody>
+            <tr><td>核心</td><td>依恋关系建立不足；痛苦时不寻求照料者安慰，对安慰无反应。</td><td>社交沟通缺陷与受限、重复的行为兴趣模式。</td></tr>
+            <tr><td>起病/背景</td><td>生命早期严重忽视或虐待；表现 5 岁前出现。</td><td>早期发育中出现；不要求严重忽视史。</td></tr>
+            <tr><td>关键鉴别点</td><td>有严重社会忽视史，异常表现由照料模式导致，且不符合 ASD 诊断标准。</td><td>即使改善照料环境，核心社交沟通特征仍持续；有特定的行为兴趣模式。</td></tr>
+            <tr><td>一句话鉴别</td><td>“没人好好抱过他。” </td><td>“他难以建立社交连接，但不因照料剥夺而来。” </td></tr>
+          </tbody>
+        </table></div>
+
+        <div class="table-wrap"><table class="comparison-table">
+          <thead><tr><th>维度</th><th>RAD</th><th>智力障碍</th></tr></thead>
+          <tbody>
+            <tr><td>核心</td><td>依恋行为异常，与发育程度不相符。</td><td>智力与适应功能整体落后。</td></tr>
+            <tr><td>关键鉴别点</td><td>诊断需发育年龄至少 9 个月；要判断其依恋行为是否低于发育水平。</td><td>需结合发育水平评估；教材未展开具体量表。</td></tr>
+            <tr><td>一句话鉴别</td><td>“依恋没建立。” </td><td>“整体发育落后。” </td></tr>
+          </tbody>
+        </table></div>
+
+        <div class="table-wrap"><table class="comparison-table">
+          <thead><tr><th>维度</th><th>RAD</th><th>抑郁症</th></tr></thead>
+          <tbody>
+            <tr><td>核心</td><td>对照料者的情感退缩与依恋不足。</td><td>情绪低落、兴趣减退等抑郁症状；儿童表现可不典型。</td></tr>
+            <tr><td>关系</td><td>抑郁症状可能与 RAD 共存。</td><td>抑郁不能解释依恋关系建立不足的全貌。</td></tr>
+            <tr><td>一句话鉴别</td><td>“关系没建立。” </td><td>“情绪低下去。” </td></tr>
+          </tbody>
+        </table></div>
+      </div>
+
+      <div class="module module-treat">
+        <div class="module-head"><span class="module-index">第六栏</span><h3>治疗方案工具箱</h3></div>
+        <div class="card-grid">
+          <div class="card card-treatment"><div class="card-header"><span class="card-icon">🥇</span><div class="card-title">首选：心理治疗与家庭治疗</div></div><div class="card-body">
+            <ul class="icon-list check">
+              <li>RAD 的治疗方法以心理治疗为主。</li>
+              <li>对于儿童，多以家庭治疗为主。</li>
+              <li>核心是帮助儿童建立与父母或其他主要照料者的稳定依恋关系。</li>
+            </ul>
+          </div></div>
+          <div class="card card-treatment"><div class="card-header"><span class="card-icon">🧰</span><div class="card-title">次选/辅助：行为矫正</div></div><div class="card-body">针对有攻击性和对立违抗行为的儿童，可能需要行为矫正治疗。</div></div>
+          <div class="card card-treatment"><div class="card-header"><span class="card-icon">💊</span><div class="card-title">辅助：药物只针对症状</div></div><div class="card-body">
+            <ul class="icon-list">
+              <li>目前尚没有药物可以增加儿童的依恋行为。</li>
+              <li>针对某些症状，药物仍有帮助：第二代抗精神病药和情感稳定剂可有效减少情绪失控和攻击/敌对行为；抗抑郁药可用于改善焦虑症状。</li>
+              <li>注意筛查注意缺陷障碍；如共病，可使用中枢兴奋剂。</li>
+              <li>教材未给出具体药物与剂量；剂量个体化，遵医嘱。</li>
+            </ul>
+          </div></div>
+        </div>
+        <div class="callout callout-success"><div class="callout-icon">🛡️</div><div class="callout-body"><strong>安全稳定原则</strong>先确保儿童处于安全、稳定、可预测且持续回应其需要的照料环境；再谈症状矫正。教材未展开强制约束或快速建立依恋的操作；治疗以家庭治疗与稳定照料为主。</div></div>
+      </div>
+
+      <div class="module module-memory">
+        <div class="module-head"><span class="module-index">第七栏</span><h3>记忆工具箱</h3></div>
+        <div class="memory-grid">
+          <div class="memory-card"><div class="m-title">方法一：数字锚定法<span class="m-type">数字</span></div><div class="m-formula">“9—5—12”</div><p>发育年龄至少 9 个月；5 岁前起病；病程至少 12 个月。原理：三个数字对应“能不能诊断、什么时候起、要持续多久”，是 RAD/DSED 共用的诊断门槛。</p></div>
+          <div class="memory-card"><div class="m-title">方法二：关键词法<span class="m-type">关键词</span></div><div class="m-formula">“退缩”</div><p>痛苦不找照料者、安慰无反应、少笑容、不主动伸手、不参与互动。原理：用一个词抓住 RAD 的社交表型，再展开具体行为。</p></div>
+          <div class="memory-card"><div class="m-title">方法三：对比法<span class="m-type">对比</span></div><div class="m-formula">RAD“躲” vs DSED“贴”</div><p>RAD 对照顾者情感退缩、不寻求安慰；DSED 对陌生成人过分亲近、亲疏不分。两者共同背景都是严重忽视。原理：用一对相反动作记忆两个障碍，最省力。</p></div>
+        </div>
+      </div>
+
+      <div class="module module-link">
+        <div class="module-head"><span class="module-index">第八栏</span><h3>知识联动</h3></div>
+        <ul class="icon-list">
+          <li><strong>与DSED：</strong>两者均要求严重忽视、发育年龄至少 9 个月、病程至少 12 个月；RAD 是“情感退缩”，DSED 是“亲疏不分”。</li>
+          <li><strong>与发育迟缓：</strong>RAD 常与认知和语言发育迟缓同时存在，也可能有刻板动作、营养不良或照料不佳的迹象。</li>
+          <li><strong>与躯体疾病：</strong>严重营养不良等躯体疾病经常伴随 RAD；评估时要同时关注身体健康。</li>
+          <li><strong>与抑郁：</strong>抑郁症状可能与 RAD 共存；不能把依恋关系缺失简单归因于抑郁。</li>
+          <li><strong>与儿童保护/社会服务：</strong>治疗离不开稳定照料环境与社会服务；教材强调家庭治疗，但未展开具体跨机构流程。</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="dsed" class="section">
+      <div class="section-header"><span class="section-number">11</span><h2>脱抑制性社会参与障碍（DSED）</h2></div>
+      <div class="disease-hero">
+        <div class="en">DISINHIBITED SOCIAL ENGAGEMENT DISORDER</div>
+        <h3>脱抑制性社会参与障碍（DSED）</h3>
+        <p>生命早期严重忽视后，出现超出社会预期的、亲疏不分的社交行为模式：对陌生成人过分亲近、完全无戒备。</p>
+        <div class="quick-tags"><span>核心：亲疏不分</span><span>起病：5 岁前</span><span>病程：至少 12 个月</span><span>背景：严重社会忽视</span></div>
+      </div>
+
+      <div class="module">
+        <div class="module-head"><span class="module-index">第一栏</span><h3>疾病画像</h3></div>
+        <div class="quick-facts">
+          <div class="fact"><b>起病</b><span>5 岁之前</span></div>
+          <div class="fact"><b>病程</b><span>至少 12 个月</span></div>
+          <div class="fact"><b>严重忽视儿童中</b><span>约 20%</span></div>
+          <div class="fact"><b>转归</b><span>可延续至青春期</span></div>
+        </div>
+        <p><strong>定义：</strong>脱抑制性社会参与障碍（disinhibited social engagement disorder，DSED）指的是一种社交行为异常，它常起病于 5 岁之前，与生命早期的被忽视有关，其核心表现为超出了社会预期的、亲疏不分的社交行为模式。患儿对陌生成年人过分亲近、完全无戒备，可表现为过分亲密的言语和肢体接触，以及不真切的情感表达。</p>
+        <p>该障碍严重损害了年幼儿童与成年人或同伴之间的人际交往能力。病程可以持续到青少年时期；是否在成年人中也有表现，目前尚不清楚。疾病转归因人而异，即便养育环境明显改善（如从孤儿院转入收养家庭），部分患儿的社交异常症状仍会持续存在，可能持续至青春期。</p>
+        <div class="callout callout-warning"><div class="callout-icon">⚠️</div><div class="callout-body"><strong>不是“外向”</strong>DSED 的核心不是性格开朗，而是“亲疏不分、完全无戒备”的脱抑制性社交模式；必须结合严重忽视史、发育年龄与病程。</div></div>
+      </div>
+
+      <div class="module module-cause">
+        <div class="module-head"><span class="module-index">第二栏</span><h3>病因探秘</h3></div>
+        <div class="card-grid">
+          <div class="card card-cause"><div class="card-header"><span class="card-icon">🚫</span><div class="card-title">唯一已知风险因素：严重社会忽视</div></div><div class="card-body">严重的社会忽视是诊断 DSED 的必要条件，也是该障碍的唯一已知风险因素。这种社会忽视通常在生命的最初几个月或该障碍被诊断之前就已存在。</div></div>
+          <div class="card card-cause"><div class="card-header"><span class="card-icon">🏠</span><div class="card-title">自己家庭中的风险</div></div><div class="card-body">在自家成长的儿童，患病风险主要在父母方面：贫穷、父母有物质滥用问题或精神疾病（如影响与孩子建立依恋关系的抑郁障碍或人格障碍等）。</div></div>
+          <div class="card card-cause"><div class="card-header"><span class="card-icon">🧠</span><div class="card-title">机制</div></div><div class="card-body">教材未展开 DSED 的特异性生物学机制；重点在早期社会忽视对社交边界与依恋关系的影响。</div></div>
+          <div class="card card-cause"><div class="card-header"><span class="card-icon">📖</span><div class="card-title">教材未提供</div></div><div class="card-body">DSED 的遗传、影像、神经内分泌研究教材均未展开；成人表现也尚不清楚。</div></div>
+        </div>
+      </div>
+
+      <div class="module module-symptom">
+        <div class="module-head"><span class="module-index">第三栏</span><h3>临床表现拼图</h3></div>
+        <p>在年幼儿童中可能表现为亲疏不分，对陌生成人过分亲近、完全无戒备的社交行为模式，同时有不断寻求关注的行为。</p>
+        <ul class="icon-list">
+          <li>可以主动去接近陌生人，可以轻易被领走。</li>
+          <li>完全没有社交边界，不知区分熟人和陌生人。</li>
+          <li>为了吸引注意，可能会出现一些过激行为。</li>
+          <li>童年中期：过分亲密的言语和肢体接触，以及不真切的情感表达，尤其在跟陌生成人打交道时。</li>
+          <li>青少年期：同伴关系受影响，频繁关系冲突，依旧亲疏不分；可能把新朋友认定为“最好的朋友”，朋友关系变化不定；与健康青少年相比，可能有更多“泛泛之交”和更多同伴冲突。</li>
+        </ul>
+        <div class="callout callout-example"><div class="callout-icon">🧠</div><div class="callout-body"><strong>类比理解</strong>正常儿童的社交像“有门槛的房间”：陌生人要先经过照料者这一关；DSED 更像“门没有装锁”：谁都能进来，孩子也会主动跟着走。这个类比只帮助理解“亲疏不分”，不替代诊断。</div></div>
+        <div class="callout callout-info"><div class="callout-icon">📋</div><div class="callout-body"><strong>教材诊断要点（五条）</strong>①儿童主动与陌生成年人亲近和互动，其行为模式至少包括以下两种情况：很少或一点都不害羞；自来熟的言语或肢体接触（超出文化许可的该年龄段社交界限）；冒险离开再回来时很少或完全不跟照料者打招呼；可以心甘情愿跟着陌生成年人走，很少或一点都不犹豫；②上述行为并不只是一时冲动（像 ADHD 表现的那样），而是脱抑制性的社交行为模式；③曾经历极端不被满足的照料模式——社会忽视；④异常表现由上述照料模式导致；⑤病程至少持续 12 个月。诊断时儿童发育年龄需至少 9 个月。</div></div>
+      </div>
+
+      <div class="module module-case">
+        <div class="module-head"><span class="module-index">第四栏</span><h3>教材典型案例</h3></div>
+        <div class="callout callout-info"><div class="callout-icon">📖</div><div class="callout-body"><strong>教材说明</strong>教材本章未提供 DSED 的具体临床病例。以下为教学演练情境，不是教材原文；仅使用教材描述过的表现，不编造具体时间阈值或剂量。</div></div>
+        <div class="callout callout-example"><div class="callout-icon">🩺</div><div class="callout-body"><strong>经典临床情境（教学演练，非教材原文）</strong>一名 4 岁儿童，生命早期经历严重社会忽视，后转入收养家庭。儿童对陌生成人过分亲近，完全不害羞；会主动坐到陌生人腿上，使用过分亲密的言语和肢体接触；在陌生场所离开照料者再回来时，很少或不打招呼；可以心甘情愿跟着陌生成年人走，几乎不犹豫。上述社交模式持续超过 12 个月，发育年龄超过 9 个月，并非只是一时冲动。</div></div>
+        <p><strong>诊断思路：</strong>①严重社会忽视史；②主动与陌生成人亲近，至少具备“不害羞、自来熟、不回头打招呼、愿跟走”中的两项；③是持续的脱抑制性社交模式，而非注意缺陷多动障碍（ADHD）式一时冲动；④病程至少 12 个月，发育年龄至少 9 个月；⑤排除注意缺陷多动障碍等更合适的解释。</p>
+      </div>
+
+      <div class="module module-diff">
+        <div class="module-head"><span class="module-index">第五栏</span><h3>鉴别诊断对对碰</h3></div>
+        <p>教材明确主要与注意缺陷多动障碍（ADHD）鉴别；ADHD 可能共病 DSED。</p>
+        <div class="table-wrap"><table class="comparison-table">
+          <thead><tr><th>维度</th><th>DSED</th><th>ADHD</th></tr></thead>
+          <tbody>
+            <tr><td>核心</td><td>亲疏不分的脱抑制性社交行为模式；对陌生成人过分亲近、无戒备。</td><td>注意缺陷、多动、冲动；社交行为问题多由冲动与注意缺陷解释。</td></tr>
+            <tr><td>起病/背景</td><td>5 岁前起病，要求严重社会忽视史，病程至少 12 个月。</td><td>起病于童年，不要求严重忽视史；症状跨情境存在。</td></tr>
+            <tr><td>关键鉴别点</td><td>行为是持续的社交模式，不是一时冲动；即使面对陌生人也不设边界。</td><td>冲动是广泛的行为控制问题，不特指对陌生人的亲疏不分。</td></tr>
+            <tr><td>一句话鉴别</td><td>“对谁都不设防。” </td><td>“坐不住、管不住冲动。” </td></tr>
+          </tbody>
+        </table></div>
+
+        <div class="table-wrap"><table class="comparison-table">
+          <thead><tr><th>维度</th><th>RAD</th><th>DSED</th></tr></thead>
+          <tbody>
+            <tr><td>社交表型</td><td>情感退缩：痛苦不找照料者、安慰无反应、少笑容、不主动伸手。</td><td>脱抑制：对陌生成人过分亲近、不害羞、自来熟、愿跟走。</td></tr>
+            <tr><td>共同背景</td><td>严重忽视是必要条件、唯一已知风险因素。</td><td>严重社会忽视是必要条件、唯一已知风险因素。</td></tr>
+            <tr><td>年龄/病程</td><td>发育年龄至少 9 个月；5 岁前起病；病程至少 12 个月。</td><td>发育年龄至少 9 个月；5 岁前起病；病程至少 12 个月。</td></tr>
+            <tr><td>一句话鉴别</td><td>“躲着人。” </td><td>“贴着人。” </td></tr>
+          </tbody>
+        </table></div>
+      </div>
+
+      <div class="module module-treat">
+        <div class="module-head"><span class="module-index">第六栏</span><h3>治疗方案工具箱</h3></div>
+        <div class="card-grid">
+          <div class="card card-treatment"><div class="card-header"><span class="card-icon">🥇</span><div class="card-title">首选：心理治疗</div></div><div class="card-body">
+            <ul class="icon-list check">
+              <li>心理治疗是干预 DSED 的最有效方法。</li>
+              <li>治疗目标：促进儿童的多感官体验、增加交流，让儿童学习社交技巧、感受情绪和进行自我探索。</li>
+              <li>可选择游戏疗法和创作性艺术疗法。</li>
+              <li>针对没有形成依恋的患儿，帮助其建立与父母或其他主要照料者的依恋关系应是首要目标。</li>
+            </ul>
+          </div></div>
+          <div class="card card-treatment"><div class="card-header"><span class="card-icon">🚫</span><div class="card-title">不推荐：强制建立依恋</div></div><div class="card-body">不推荐使用任何强制性的治疗措施来促进依恋关系的建立，如治疗性“约束”等。针对有攻击性和对立违抗行为的儿童，可能需要行为矫正治疗。</div></div>
+          <div class="card card-treatment"><div class="card-header"><span class="card-icon">💊</span><div class="card-title">辅助：药物不改善核心症状</div></div><div class="card-body">目前没有证据表明药物可以改善 DSED 的核心症状。当 DSED 与焦虑障碍、ADHD 或情感障碍共病时，可以使用相应药物改善症状；学龄前儿童用药仍需谨慎。教材未给出具体药物与剂量；剂量个体化，遵医嘱。</div></div>
+        </div>
+        <div class="callout callout-success"><div class="callout-icon">🛡️</div><div class="callout-body"><strong>安全稳定原则</strong>先建立稳定、可预测、持续回应的照料关系，再训练社交边界与安全规则；不强制、不约束。教材强调游戏与创作性艺术疗法，未展开具体疗程。</div></div>
+      </div>
+
+      <div class="module module-memory">
+        <div class="module-head"><span class="module-index">第七栏</span><h3>记忆工具箱</h3></div>
+        <div class="memory-grid">
+          <div class="memory-card"><div class="m-title">方法一：关键词法<span class="m-type">关键词</span></div><div class="m-formula">“亲疏不分”</div><p>对陌生成人过分亲近、完全无戒备、没有社交边界。原理：一个词锁定 DSED 的核心表型，与 RAD 的“退缩”形成鲜明对照。</p></div>
+          <div class="memory-card"><div class="m-title">方法二：四条至少两项法<span class="m-type">数字/口诀</span></div><div class="m-formula">不害羞 · 自来熟 · 不回头 · 愿跟走</div><p>诊断要求主动与陌生成人亲近和互动，至少包括四种行为中的两种：很少或不害羞；自来熟的言语/肢体接触；冒险离开再回来很少/不打招呼；心甘情愿跟陌生成人走。原理：四条行为两两成对，背“不害羞、自来熟、不回头、愿跟走”即可。</p></div>
+          <div class="memory-card"><div class="m-title">方法三：数字锚定法<span class="m-type">数字</span></div><div class="m-formula">“9—5—12”</div><p>发育年龄至少 9 个月；5 岁前起病；病程至少 12 个月。原理：与 RAD 共用同一组门槛，合并记忆可减少负担。</p></div>
+          <div class="memory-card"><div class="m-title">方法四：对比法<span class="m-type">对比</span></div><div class="m-formula">DSED vs ADHD</div><p>DSED 是持续的亲疏不分社交模式；ADHD 是注意缺陷、多动、冲动，社交问题由冲动解释。原理：抓住“社交边界”而不是“行为控制”，快速区分。</p></div>
+        </div>
+      </div>
+
+      <div class="module module-link">
+        <div class="module-head"><span class="module-index">第八栏</span><h3>知识联动</h3></div>
+        <ul class="icon-list">
+          <li><strong>与RAD：</strong>两者共享严重忽视背景、9 个月发育年龄、12 个月病程；RAD 情感退缩，DSED 亲疏不分。</li>
+          <li><strong>与ADHD：</strong>ADHD 可能共病 DSED；鉴别核心是“持续社交模式”与“广泛冲动/注意缺陷”。</li>
+          <li><strong>与发育问题：</strong>认知和语言发育迟缓、刻板动作等也可能与 DSED 共存。</li>
+          <li><strong>与焦虑/情感障碍：</strong>共病时可用相应药物改善症状，但药物不改善 DSED 核心症状；学龄前儿童用药需谨慎。</li>
+          <li><strong>与儿童保护/收养服务：</strong>即使养育环境改善，部分患儿症状仍可持续至青春期；需要长期随访与学校/家庭协作。</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="compare" class="section">
+      <div class="section-header"><span class="section-number">12</span><h2>核心鉴别总表</h2></div>
+      <p class="lead">统一用五个维度：核心症状、病程/起病、关键鉴别点、辅助检查/排除要点、一句话鉴别。覆盖教材要求的五组核心对照（PGD 分别与抑郁、正常哀伤对照，共六对）。</p>
+      <div class="table-wrap"><table class="comparison-table">
+        <thead><tr><th>鉴别对</th><th>核心症状</th><th>病程/起病</th><th>关键鉴别点</th><th>辅助/排除</th><th>一句话鉴别</th></tr></thead>
+        <tbody>
+          <tr><td>PTSD vs C-PTSD</td><td>PTSD：侵入、回避、负性认知/情绪、警觉增高。C-PTSD：PTSD 三联征 + 情绪调节、自我认知、人际关系障碍。</td><td>PTSD：创伤后数天至半年起病，≥1 个月；C-PTSD：长期、反复、难逃离的Ⅱ型创伤，教材未给统一时间阈值。</td><td>有无三自我组织障碍；创伤是Ⅰ型还是Ⅱ型。</td><td>均需评估功能损害；C-PTSD 还需与抑郁、焦虑、边缘型人格障碍鉴别。</td><td>C-PTSD 不只是“更重的 PTSD”，而是“创伤改变了自我组织”。</td></tr>
+          <tr><td>PTSD vs 适应障碍</td><td>PTSD：四大症状群。适应障碍：抑郁、焦虑、害怕等情感症状 + 行为变化，无精神病性症状。</td><td>PTSD：数天至半年起病，≥1 个月。适应障碍：1 个月内起病（诊断要点），≥1 个月，去除应激后一般≤6 个月。</td><td>应激源是否异乎寻常；有无创伤性侵入与创伤线索回避；人格基础作用。</td><td>PTSD 需创伤史 + 症状群；适应障碍需排除抑郁、人格障碍等更合适诊断。</td><td>PTSD 的应激源“非同寻常”，适应障碍是“生活改变但非灾难”。</td></tr>
+          <tr><td>PGD vs 抑郁障碍</td><td>PGD：围绕丧亲的持续哀伤、思念、回避离世事实、自我定位混乱。抑郁：情绪低落、兴趣减退、消极悲观。</td><td>PGD：超过 6 个月不缓解。抑郁：按抑郁障碍病程，可生活事件后发生但超出事件本身。</td><td>PGD 对逝者仍有兴趣、相信相聚能重获快乐；抑郁广泛兴趣减退、无价值感泛化。</td><td>PGD 诊断要求排除重性抑郁障碍、广泛性焦虑障碍、PTSD 等解释；两者可共病。</td><td>PGD 是“只围着逝者痛”，抑郁是“整体都低落”。</td></tr>
+          <tr><td>PGD vs 正常哀伤</td><td>PGD：持续极度痛苦、无法接受、功能显著受损。正常哀伤：悲伤但能逐步接受。</td><td>PGD：超过 6 个月且不随时间减轻。正常哀伤：通常半年内逐渐减轻。</td><td>能否接受离世事实、能否适应新环境开始新生活；对生活热情是否丧失。</td><td>PGD 要求有临床意义的显著功能受损；正常哀伤对生活影响有限。</td><td>“半年了还无法接受”倾向 PGD；“半年内慢慢适应”是正常哀伤。</td></tr>
+          <tr><td>适应障碍 vs 其他精神障碍</td><td>适应障碍：抑郁、焦虑、害怕等情感症状 + 适应不良行为。其他：各自达到完整诊断标准。</td><td>适应障碍：应激后 1 个月内起病，≥1 个月，去除应激后≤6 个月。</td><td>症状是否达到抑郁、PTSD、人格障碍等完整诊断标准；应激源是否非灾难性。</td><td>排除精神病性症状；排除抑郁障碍、人格障碍、PTSD 等更合适诊断。</td><td>“事件后才有、未达到别的诊断”，才考虑适应障碍。</td></tr>
+          <tr><td>RAD vs DSED</td><td>RAD：情感退缩、痛苦不寻求安慰、对安慰无反应。DSED：对陌生成人过分亲近、亲疏不分、无戒备。</td><td>两者均：5 岁前起病，发育年龄至少 9 个月，病程至少 12 个月。</td><td>社交表型是“躲”还是“贴”；是否主动接近陌生人、是否回头确认照料者。</td><td>两者均要求严重忽视/社会忽视史；RAD 需排除 ASD，DSED 需排除 ADHD。</td><td>RAD“躲着人”，DSED“贴着人”。</td></tr>
+        </tbody>
+      </table></div>
+      <p class="table-note">表内所有时间阈值均按教材表述；教材未给 C-PTSD 统一时间阈值，表中明确标注“未给”，不作补充。</p>
+    </section>
+
+    <section id="summary" class="section">
+      <div class="section-header"><span class="section-number">13</span><h2>核心要点速览</h2></div>
+      <ol class="numbered-list">
+        <li>应激相关障碍以应激源为必要条件，发生时序、症状内容、病程与预后均与应激因素密切相关。</li>
+        <li>应激源分三类：外部环境、个体内环境、社会心理环境；只有强度与主观体验超出个体耐受能力时才可能致病。</li>
+        <li>易感因素按创伤前、围创伤期、创伤后三时段排列；遗传、HPA 轴、炎症、脑结构与认知评价共同参与。</li>
+        <li>PTSD 是异乎寻常的威胁性、灾难性心理创伤后延迟出现并长期持续的精神障碍；创伤是必要条件，不是充分条件。</li>
+        <li>PTSD 四大症状群：侵入性症状群、持续性回避、认知和心境负性改变、警觉性增高；侵入性再体验最常见、最具特征性。</li>
+        <li>PTSD 多数在创伤后数天至半年内发病，病程至少 1 个月；终生患病率 1%～14%，女性约为男性 2 倍。</li>
+        <li>PTSD 药物一线为 SSRIs（氟西汀、帕罗西汀、舍曲林），SNRIs 也有效；一般 4～6 周起效，8 周或更长疗程，缓解后维持 1 年；剂量同抑郁症、个体化遵医嘱。</li>
+        <li>PTSD 心理治疗包括 CBT（暴露为核心）、EMDR、团体心理治疗，以及蝴蝶拍、安全岛等稳定化技术；早期以危机干预和支持为主。</li>
+        <li>PTSD 预后最差：至少 1/3 慢性化终身不愈，一半以上共病，自杀率约为普通人群 6 倍。</li>
+        <li>C-PTSD 由 Herman 在 1992 年提出；创伤通常长期、反复、难以逃离；人群患病率 1%～8%，精神卫生机构可达 50%。</li>
+        <li>C-PTSD = PTSD 三联征（创伤再现、回避创伤、被威胁感）+ 三自我组织障碍（情绪调节、自我认知、人际关系）+ 功能损害。</li>
+        <li>Ⅰ型创伤突发、一过性，导致单纯型 PTSD；Ⅱ型创伤持续或反复、与虐待或性侵害有关，导致 C-PTSD。</li>
+        <li>C-PTSD 治疗优先心理治疗，以创伤为重点、灵活多组综合；药物不独立、不常规，除非共病；治疗联盟重要，脱落率高。</li>
+        <li>PGD 是亲密者离世后超过 6 个月仍持续、难以缓解的哀伤；每天想念逝者，每天至少 5/9 项症状，功能显著受损，且不能用其他障碍解释。</li>
+        <li>PGD 与正常哀伤：正常哀伤半年内减轻、能接受并适应；PGD 持续超过 6 个月、始终无法接受、功能受损。PGD 与抑郁：PGD 围绕丧亲、对逝者仍有兴趣、自责指向逝者；抑郁泛化、广泛兴趣减退、无价值感。</li>
+        <li>PGD 首选心理治疗（基于哀伤的 CBT），药物疗效不明确，SSRIs 可能有帮助，三环类仅改善抑郁症状；个体治疗脱落率 20%～30%。</li>
+        <li>适应障碍在非灾难性生活事件后 1 个月内起病（诊断要点），至少 1 个月，去除应激后一般不超过 6 个月；不出现精神病性症状；治疗以心理治疗为主，药物低剂量短疗程辅助。</li>
+        <li>RAD 与 DSED 均以严重忽视/社会忽视为必要条件，5 岁前起病，发育年龄至少 9 个月，病程至少 12 个月；RAD 情感退缩，DSED 亲疏不分。</li>
+      </ol>
+    </section>
+
+    <section id="pitfalls" class="section">
+      <div class="section-header"><span class="section-number">14</span><h2>易混易错警示</h2></div>
+      <div class="exam-alert">
+        <h3>易混易错警示</h3>
+        <ul>
+          <li><strong>有创伤经历 ≠ PTSD。</strong>创伤是必要条件，不是充分条件；还必须看到四大症状群、时间关系、至少 1 个月病程和功能损害。</li>
+          <li><strong>三个时间阈值不要混：</strong>PTSD 病程至少 1 个月；PGD 超过 6 个月；适应障碍 1 个月内起病、至少 1 个月、去除应激后一般不超过 6 个月。</li>
+          <li><strong>适应障碍有两处时间表述：</strong>临床表现写“常在 1～3 个月内出现”，诊断要点写“1 个月内起病”。答题时按诊断要点记 1 个月，同时知道临床常见 1～3 个月。</li>
+          <li><strong>C-PTSD 不是“更重的 PTSD”。</strong>核心增量是三自我组织障碍；诊断表述用 PTSD 三联征，不要误写成“四大症状群 + 三障碍”就必须八项齐全。</li>
+          <li><strong>PGD 不是抑郁，也不是所有悲伤都病理化。</strong>正常哀伤半年内减轻、能接受并适应；PGD 才要求超过 6 个月、无法接受、功能显著受损。</li>
+          <li><strong>RAD/DSED 不是“性格内向/外向”。</strong>必须有严重忽视史、5 岁前起病、发育年龄至少 9 个月、病程至少 12 个月；RAD 是情感退缩，DSED 是亲疏不分。</li>
+          <li><strong>DSED 不是 ADHD。</strong>DSED 是持续的脱抑制性社交模式，不是一时冲动；ADHD 可能共病 DSED，但不能用 ADHD 解释亲疏不分。</li>
+          <li><strong>苯二氮䓬不是 PTSD 常规用药。</strong>教材说使用尚有争议，可慎用于并发惊恐障碍但没有精神活性物质滥用史的患者。</li>
+          <li><strong>药物不能覆盖全部症状群。</strong>教材明确目前尚无药物对 PTSD 各组症状群都产生满意疗效；药物主要对症、治共病、减轻干扰心理治疗/日常功能的症状。</li>
+          <li><strong>不要混用其他分类体系的阈值。</strong>本章一律按教材（ICD-11 相关表述）的条目与时间；不要把 DSM-5 等体系的阈值搬进来。</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="quiz" class="section">
+      <div class="section-header"><span class="section-number">15</span><h2>章节自测</h2></div>
+      <p class="lead">共 15 题：单选 4、多选 3、判断 3、名词解释 2、简答 2、案例 1。答案与解析默认折叠，先作答再展开。</p>
+      <div class="quiz-block">
+
+        <div class="quiz-item">
+          <div class="quiz-stem"><span class="q-type">单选</span><span>PTSD 最常见、最具特征性的症状是？</span><span class="difficulty">⭐⭐</span></div>
+          <ul class="quiz-options">
+            <li data-letter="A">持续性回避</li>
+            <li data-letter="B" class="correct">创伤性体验的反复侵入</li>
+            <li data-letter="C">警觉性增高</li>
+            <li data-letter="D">认知和心境的负性改变</li>
+          </ul>
+          <details class="qa"><summary><span class="qa-num">答</span>答案与解析</summary>
+            <div class="qa-body"><span class="answer-key">答案 B</span>教材原文明确：“创伤性体验的反复侵入是 PTSD 最常见也是最特征性的症状。”A、C、D 也都是核心症状群，但“最具特征性”的是侵入性再体验。</div>
+          </details>
+        </div>
+
+        <div class="quiz-item">
+          <div class="quiz-stem"><span class="q-type">单选</span><span>PGD 诊断要求症状持续时间至少达到？</span><span class="difficulty">⭐⭐</span></div>
+          <ul class="quiz-options">
+            <li data-letter="A">1 个月</li>
+            <li data-letter="B">3 个月</li>
+            <li data-letter="C" class="correct">6 个月以上</li>
+            <li data-letter="D">12 个月</li>
+          </ul>
+          <details class="qa"><summary><span class="qa-num">答</span>答案与解析</summary>
+            <div class="qa-body"><span class="answer-key">答案 C</span>教材定义 PGD 的哀伤反应“往往超过 6 个月”，诊断要点第 4 条写“症状持续的时间在亲人离世后 6 个月以上”。不要与 PTSD 的 1 个月或适应障碍的 6 个月上限混淆。</div>
+          </details>
+        </div>
+
+        <div class="quiz-item">
+          <div class="quiz-stem"><span class="q-type">单选</span><span>适应障碍诊断要点中，精神障碍开始于心理社会刺激后？</span><span class="difficulty">⭐⭐</span></div>
+          <ul class="quiz-options">
+            <li data-letter="A">1 周内</li>
+            <li data-letter="B" class="correct">1 个月内</li>
+            <li data-letter="C">1～3 个月内</li>
+            <li data-letter="D">6 个月内</li>
+          </ul>
+          <details class="qa"><summary><span class="qa-num">答</span>答案与解析</summary>
+            <div class="qa-body"><span class="answer-key">答案 B</span>诊断要点第 6 条明确“精神障碍开始于心理社会刺激……发生后 1 个月内，符合诊断标准至少 1 个月”。教材临床表现部分另写“常在 1～3 个月内出现”，两处要分别记住；单选题问“诊断要点”时选 1 个月内。</div>
+          </details>
+        </div>
+
+        <div class="quiz-item">
+          <div class="quiz-stem"><span class="q-type">单选</span><span>诊断 RAD 与 DSED 时，儿童发育年龄至少为？</span><span class="difficulty">⭐⭐⭐</span></div>
+          <ul class="quiz-options">
+            <li data-letter="A">6 个月</li>
+            <li data-letter="B" class="correct">9 个月</li>
+            <li data-letter="C">12 个月</li>
+            <li data-letter="D">5 岁</li>
+          </ul>
+          <details class="qa"><summary><span class="qa-num">答</span>答案与解析</summary>
+            <div class="qa-body"><span class="answer-key">答案 B</span>教材在 RAD 与 DSED 诊断处均写“儿童的发育年龄须至少为 9 个月”。5 岁是“起病年龄”上限，12 个月是“病程”下限，三个数字不要混。</div>
+          </details>
+        </div>
+
+        <div class="quiz-item">
+          <div class="quiz-stem"><span class="q-type">多选</span><span>PTSD 的四大核心症状群包括？</span><span class="difficulty">⭐⭐</span></div>
+          <ul class="quiz-options">
+            <li data-letter="A" class="correct">侵入性症状群</li>
+            <li data-letter="B" class="correct">持续性回避</li>
+            <li data-letter="C" class="correct">认知和心境的负性改变</li>
+            <li data-letter="D" class="correct">警觉性增高</li>
+            <li data-letter="E">自我组织障碍</li>
+          </ul>
+          <details class="qa"><summary><span class="qa-num">答</span>答案与解析</summary>
+            <div class="qa-body"><span class="answer-key">答案 ABCD</span>A～D 是教材列出的四大症状群。E“自我组织障碍”是 C-PTSD 的增量特征，不属于 PTSD 四大症状群。</div>
+          </details>
+        </div>
+
+        <div class="quiz-item">
+          <div class="quiz-stem"><span class="q-type">多选</span><span>C-PTSD 的“自我组织障碍”包括？</span><span class="difficulty">⭐⭐⭐</span></div>
+          <ul class="quiz-options">
+            <li data-letter="A" class="correct">情绪调节异常</li>
+            <li data-letter="B" class="correct">认为自己渺小、失败、无价值</li>
+            <li data-letter="C" class="correct">难以与他人保持亲密的人际关系</li>
+            <li data-letter="D">反复出现创伤性闪回</li>
+            <li data-letter="E">无法记住创伤事件的某个重要方面</li>
+          </ul>
+          <details class="qa"><summary><span class="qa-num">答</span>答案与解析</summary>
+            <div class="qa-body"><span class="answer-key">答案 ABC</span>A 对应情绪调节，B 对应自我认知，C 对应人际关系，三者构成三自我组织障碍。D、E 属于 PTSD 的侵入性与负性认知症状，不是“自我组织”三条。</div>
+          </details>
+        </div>
+
+        <div class="quiz-item">
+          <div class="quiz-stem"><span class="q-type">多选</span><span>PGD 的诊断要点包括？</span><span class="difficulty">⭐⭐</span></div>
+          <ul class="quiz-options">
+            <li data-letter="A" class="correct">亲近关系的人离世</li>
+            <li data-letter="B" class="correct">每天都想念逝者，甚至达到病态程度</li>
+            <li data-letter="C" class="correct">每天有 5 项及以上所列症状，或程度达到病态</li>
+            <li data-letter="D" class="correct">症状持续 6 个月以上</li>
+            <li data-letter="E">症状可以用重性抑郁障碍更好解释</li>
+          </ul>
+          <details class="qa"><summary><span class="qa-num">答</span>答案与解析</summary>
+            <div class="qa-body"><span class="answer-key">答案 ABCD</span>A～D 都是教材诊断要点。E 错：教材要求“上述症状无法用重性抑郁障碍、广泛性焦虑障碍或 PTSD 等疾病来解释”，能被更好解释时不能诊断 PGD。</div>
+          </details>
+        </div>
+
+        <div class="quiz-item">
+          <div class="quiz-stem"><span class="q-type">判断</span><span>PTSD 的病程至少持续 1 个月。</span><span class="difficulty">⭐</span></div>
+          <ul class="quiz-options">
+            <li data-letter="A" class="correct">正确</li>
+            <li data-letter="B">错误</li>
+          </ul>
+          <details class="qa"><summary><span class="qa-num">答</span>答案与解析</summary>
+            <div class="qa-body"><span class="answer-key">答案 正确</span>教材临床表现部分明确“病程至少持续 1 个月”；诊断要点也以创伤后数日至数月起病、罕见延迟半年以上为时间框架。</div>
+          </details>
+        </div>
+
+        <div class="quiz-item">
+          <div class="quiz-stem"><span class="q-type">判断</span><span>适应障碍可出现幻觉、妄想等精神病性症状。</span><span class="difficulty">⭐⭐</span></div>
+          <ul class="quiz-options">
+            <li data-letter="A">正确</li>
+            <li data-letter="B" class="correct">错误</li>
+          </ul>
+          <details class="qa"><summary><span class="qa-num">答</span>答案与解析</summary>
+            <div class="qa-body"><span class="answer-key">答案 错误</span>教材定义明确适应障碍“并不出现精神病性症状”。诊断要点第 4 条也把它限定在情感性精神障碍（不包括妄想和幻觉）、神经症、应激障碍、躯体形式障碍、品行障碍的各种症状范围内。</div>
+          </details>
+        </div>
+
+        <div class="quiz-item">
+          <div class="quiz-stem"><span class="q-type">判断</span><span>RAD 与 DSED 的唯一已知风险因素都是严重的社会忽视/被忽视。</span><span class="difficulty">⭐⭐</span></div>
+          <ul class="quiz-options">
+            <li data-letter="A" class="correct">正确</li>
+            <li data-letter="B">错误</li>
+          </ul>
+          <details class="qa"><summary><span class="qa-num">答</span>答案与解析</summary>
+            <div class="qa-body"><span class="answer-key">答案 正确</span>教材对 RAD 写“严重的被忽视是诊断 RAD 的必要条件，也是该障碍的唯一已知风险因素”；对 DSED 写“严重的社会忽视是诊断 DSED 的必要条件，也是该障碍的唯一已知风险因素”。两者表述一致。</div>
+          </details>
+        </div>
+
+        <div class="quiz-item">
+          <div class="quiz-stem"><span class="q-type">名词解释</span><span>闪回（flashback）</span><span class="difficulty">⭐⭐</span></div>
+          <details class="qa"><summary><span class="qa-num">答</span>答案与解析</summary>
+            <div class="qa-body"><span class="answer-key">答案要点</span>闪回是 PTSD 侵入性症状群的典型表现：患者以错觉、幻觉构成的创伤性事件重新体验，仿佛又完全身临创伤性事件发生时的情景，重新表现出事件发生时所伴发的各种情感。它不是普通的“回忆”，而是带有“身临其境”性质的创伤再体验。</div>
+          </details>
+        </div>
+
+        <div class="quiz-item">
+          <div class="quiz-stem"><span class="q-type">名词解释</span><span>延长哀伤障碍（PGD）</span><span class="difficulty">⭐⭐</span></div>
+          <details class="qa"><summary><span class="qa-num">答</span>答案与解析</summary>
+            <div class="qa-body"><span class="answer-key">答案要点</span>延长哀伤障碍又称病理性哀伤、创伤性哀伤或复杂性哀伤，是丧失亲人之后持续的哀伤反应，往往超过 6 个月，难以随时间缓解；患者难以摆脱失去亲人的痛苦，关于逝者的想法挥之不去，情绪和行为偏离生活常态，社会功能严重受损；诊断还需排除重性抑郁、广泛性焦虑、PTSD 等更好解释。</div>
+          </details>
+        </div>
+
+        <div class="quiz-item">
+          <div class="quiz-stem"><span class="q-type">简答</span><span>简述 PTSD 的四大核心症状群。</span><span class="difficulty">⭐⭐</span></div>
+          <details class="qa"><summary><span class="qa-num">答</span>答案与解析</summary>
+            <div class="qa-body"><span class="answer-key">答案要点</span>①侵入性症状群：反复侵入性创伤体验重现、闪回、创伤相关梦魇、接触线索时强烈心理痛苦和生理反应；②持续性回避：主动回避创伤相关痛苦记忆、思想、感觉及能唤起痛苦的情景、人、对话、地点、活动、物体；③认知和心境的负性改变：无法记住创伤重要方面、持续认知歪曲与自责、持续放大负性信念和预期、持续负性情绪、兴趣丧失、疏远他人、不能体验正性情绪；④警觉性增高：过度警觉、惊跳反应增强、注意力不集中、激惹与愤怒爆发、自我毁灭行为、睡眠障碍。</div>
+          </details>
+        </div>
+
+        <div class="quiz-item">
+          <div class="quiz-stem"><span class="q-type">简答</span><span>简述适应障碍治疗的三个环节。</span><span class="difficulty">⭐⭐⭐</span></div>
+          <details class="qa"><summary><span class="qa-num">答</span>答案与解析</summary>
+            <div class="qa-body"><span class="answer-key">答案要点</span>①消除或减少应激源，包括改变对应激事件的态度和认识；②提高患者的应对能力；③消除或缓解症状。治疗以心理治疗为主，药物只用于情绪异常明显者，低剂量、短疗程，并为心理治疗创造条件。</div>
+          </details>
+        </div>
+
+        <div class="quiz-item">
+          <div class="quiz-stem"><span class="q-type">案例</span><span>5 岁男孩，自幼在严重忽视的机构环境中生活。他对陌生成人过分亲近、完全不害羞，会主动坐到陌生人腿上；外出离开照料者再回来时很少打招呼；可以心甘情愿跟着陌生成年人走。上述社交模式持续超过 1 年，发育年龄超过 9 个月，并非只是一时冲动。最可能诊断、主要鉴别与治疗原则是什么？</span><span class="difficulty">⭐⭐⭐</span></div>
+          <details class="qa"><summary><span class="qa-num">答</span>答案与解析</summary>
+            <div class="qa-body"><span class="answer-key">答案要点</span>最可能诊断：脱抑制性社会参与障碍（DSED）。依据：严重社会忽视史；主动与陌生成人亲近，至少具备“不害羞、自来熟、不回头打招呼、愿跟走”中的两项；是持续的脱抑制性社交模式而非一时冲动；病程至少 12 个月，发育年龄至少 9 个月。主要鉴别：ADHD（ADHD 是注意缺陷、多动、冲动，不能解释对陌生人持续亲疏不分；ADHD 也可能共病 DSED）；RAD（RAD 是情感退缩，不是主动亲近）。治疗原则：心理治疗最有效，可选游戏疗法、创作性艺术疗法；首要目标是帮助建立与主要照料者的依恋关系；不推荐强制性“约束”等措施；有攻击/对立违抗时可行为矫正；药物不改善核心症状，共病时对症使用，学龄前儿童谨慎。</div>
+          </details>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="flashcards" class="section">
+      <div class="section-header"><span class="section-number">16</span><h2>考点速记卡</h2></div>
+      <p class="lead">20 张翻转卡，覆盖概念、诊断、治疗与数据阈值。点击卡片翻转。</p>
+      <div class="flashcard-grid">
+
+        <div class="flashcard"><div class="flashcard-inner">
+          <div class="flashcard-face flashcard-front"><span class="card-tag concept">概念</span><p>什么是应激源？分哪三类？</p><span class="flip-hint">点击翻转</span></div>
+          <div class="flashcard-face flashcard-back"><p>应激源（stressor）是作用于个体并使其产生应激反应的刺激物。三类：外部环境、个体内环境、社会心理环境。</p></div>
+        </div></div>
+
+        <div class="flashcard"><div class="flashcard-inner">
+          <div class="flashcard-face flashcard-front"><span class="card-tag diagnosis">诊断</span><p>PTSD 的四大核心症状群？</p><span class="flip-hint">点击翻转</span></div>
+          <div class="flashcard-face flashcard-back"><p>侵入性症状群、持续性回避、认知和心境的负性改变、警觉性增高。其中创伤性体验反复侵入最常见、最具特征性。</p></div>
+        </div></div>
+
+        <div class="flashcard"><div class="flashcard-inner">
+          <div class="flashcard-face flashcard-front"><span class="card-tag concept">概念</span><p>什么是闪回？</p><span class="flip-hint">点击翻转</span></div>
+          <div class="flashcard-face flashcard-back"><p>闪回（flashback）：以错觉、幻觉构成的创伤性事件重新体验，患者仿佛完全身临创伤现场，重新体验当时的情感。属于侵入性症状群。</p></div>
+        </div></div>
+
+        <div class="flashcard"><div class="flashcard-inner">
+          <div class="flashcard-face flashcard-front"><span class="card-tag diagnosis">诊断</span><p>PTSD 的起病与病程？</p><span class="flip-hint">点击翻转</span></div>
+          <div class="flashcard-face flashcard-back"><p>多数在创伤后数天至半年内发病；病程至少持续 1 个月；诊断要点称罕见延迟半年以上才发生。</p></div>
+        </div></div>
+
+        <div class="flashcard"><div class="flashcard-inner">
+          <div class="flashcard-face flashcard-front"><span class="card-tag diagnosis">数据</span><p>PTSD 的患病率与自杀风险？</p><span class="flip-hint">点击翻转</span></div>
+          <div class="flashcard-face flashcard-back"><p>终生患病率 1%～14%；高危人群 3%～58%；女性约为男性 2 倍；自杀率约为普通人群 6 倍；至少 1/3 慢性化终身不愈。</p></div>
+        </div></div>
+
+        <div class="flashcard"><div class="flashcard-inner">
+          <div class="flashcard-face flashcard-front"><span class="card-tag concept">概念</span><p>C-PTSD 的定义与提出者？</p><span class="flip-hint">点击翻转</span></div>
+          <div class="flashcard-face flashcard-back"><p>由 Judith L. Herman 于 1992 年提出。暴露于长期/反复、难以逃离的极端威胁或恐怖事件后发生；特点是 PTSD 三联征加情绪调节、身份认同、人际关系长期普遍干扰。</p></div>
+        </div></div>
+
+        <div class="flashcard"><div class="flashcard-inner">
+          <div class="flashcard-face flashcard-front"><span class="card-tag diagnosis">诊断</span><p>C-PTSD 的三自我组织障碍？</p><span class="flip-hint">点击翻转</span></div>
+          <div class="flashcard-face flashcard-back"><p>①情绪调节异常；②自我认知改变（渺小、失败、无价值，持续内疚/羞耻/自责）；③难以与他人保持亲密的人际关系。</p></div>
+        </div></div>
+
+        <div class="flashcard"><div class="flashcard-inner">
+          <div class="flashcard-face flashcard-front"><span class="card-tag concept">概念</span><p>Ⅰ型创伤与Ⅱ型创伤？</p><span class="flip-hint">点击翻转</span></div>
+          <div class="flashcard-face flashcard-back"><p>Ⅰ型：突发、一过性创伤，导致单纯型 PTSD。Ⅱ型：持续或反复、与虐待或性侵害有关的创伤，导致 C-PTSD。由 Lenore C. Terr 提出。</p></div>
+        </div></div>
+
+        <div class="flashcard"><div class="flashcard-inner">
+          <div class="flashcard-face flashcard-front"><span class="card-tag concept">概念</span><p>PGD 的三个别名？</p><span class="flip-hint">点击翻转</span></div>
+          <div class="flashcard-face flashcard-back"><p>病理性哀伤（pathological grief）、创伤性哀伤（traumatic grief）、复杂性哀伤（complicated grief）。</p></div>
+        </div></div>
+
+        <div class="flashcard"><div class="flashcard-inner">
+          <div class="flashcard-face flashcard-front"><span class="card-tag diagnosis">诊断</span><p>PGD 的时间阈值？</p><span class="flip-hint">点击翻转</span></div>
+          <div class="flashcard-face flashcard-back"><p>亲人离世后症状持续 6 个月以上，且不随时间缓解。教材定义写“往往超过 6 个月”，诊断要点写“6 个月以上”。</p></div>
+        </div></div>
+
+        <div class="flashcard"><div class="flashcard-inner">
+          <div class="flashcard-face flashcard-front"><span class="card-tag diagnosis">诊断</span><p>PGD 的“5/9”指什么？</p><span class="flip-hint">点击翻转</span></div>
+          <div class="flashcard-face flashcard-back"><p>每天有 5 项及以上教材所列的 9 项症状，或症状程度达到病态。9 项包括自我定位混乱、难以接受离世、回避相关事物、难再信任、痛苦/愤怒、生活难入正轨、情感麻木、空虚无意义、惊慌茫然震惊。</p></div>
+        </div></div>
+
+        <div class="flashcard"><div class="flashcard-inner">
+          <div class="flashcard-face flashcard-front"><span class="card-tag diagnosis">鉴别</span><p>PGD 与正常哀伤的关键区别？</p><span class="flip-hint">点击翻转</span></div>
+          <div class="flashcard-face flashcard-back"><p>正常哀伤通常半年内逐渐减轻，能接受离世事实并适应新生活；PGD 超过 6 个月仍无法接受、严重性迟迟不缓解，社交/职业等功能显著受损。</p></div>
+        </div></div>
+
+        <div class="flashcard"><div class="flashcard-inner">
+          <div class="flashcard-face flashcard-front"><span class="card-tag concept">概念</span><p>适应障碍的定义？</p><span class="flip-hint">点击翻转</span></div>
+          <div class="flashcard-face flashcard-back"><p>明显生活改变或环境变化时产生的、短期的和轻度的烦恼状态和情绪失调，常有一定程度行为变化，但不出现精神病性症状。</p></div>
+        </div></div>
+
+        <div class="flashcard"><div class="flashcard-inner">
+          <div class="flashcard-face flashcard-front"><span class="card-tag diagnosis">诊断</span><p>适应障碍的时间关系？</p><span class="flip-hint">点击翻转</span></div>
+          <div class="flashcard-face flashcard-back"><p>诊断要点：应激后 1 个月内起病，符合标准至少 1 个月，应激消除后症状持续一般不超过 6 个月。临床表现另写常在 1～3 个月内出现。</p></div>
+        </div></div>
+
+        <div class="flashcard"><div class="flashcard-inner">
+          <div class="flashcard-face flashcard-front"><span class="card-tag concept">概念</span><p>RAD 的核心与唯一风险因素？</p><span class="flip-hint">点击翻转</span></div>
+          <div class="flashcard-face flashcard-back"><p>核心：与照料者缺乏依恋或依恋建立不足，表现为情感退缩——痛苦时不寻求安慰、对安慰基本无反应。唯一已知风险因素：严重被忽视。</p></div>
+        </div></div>
+
+        <div class="flashcard"><div class="flashcard-inner">
+          <div class="flashcard-face flashcard-front"><span class="card-tag diagnosis">诊断</span><p>RAD/DSED 的“9—5—12”？</p><span class="flip-hint">点击翻转</span></div>
+          <div class="flashcard-face flashcard-back"><p>发育年龄至少 9 个月；5 岁前起病；病程至少 12 个月。两者均要求严重忽视/社会忽视史。</p></div>
+        </div></div>
+
+        <div class="flashcard"><div class="flashcard-inner">
+          <div class="flashcard-face flashcard-front"><span class="card-tag diagnosis">诊断</span><p>DSED 的核心表现？</p><span class="flip-hint">点击翻转</span></div>
+          <div class="flashcard-face flashcard-back"><p>超出社会预期的、亲疏不分的社交行为：对陌生成人过分亲近、完全无戒备，过分亲密的言语/肢体接触，不真切的情感表达；可轻易被领走。</p></div>
+        </div></div>
+
+        <div class="flashcard"><div class="flashcard-inner">
+          <div class="flashcard-face flashcard-front"><span class="card-tag treatment">治疗</span><p>PTSD 的一线药物与疗程？</p><span class="flip-hint">点击翻转</span></div>
+          <div class="flashcard-face flashcard-back"><p>SSRIs 为一线，氟西汀、帕罗西汀、舍曲林证据较多；SNRIs 也有效。一般 4～6 周起效，8 周或更长疗程，缓解后维持 1 年；剂量同抑郁症、个体化遵医嘱。</p></div>
+        </div></div>
+
+        <div class="flashcard"><div class="flashcard-inner">
+          <div class="flashcard-face flashcard-front"><span class="card-tag treatment">治疗</span><p>PTSD 的心理治疗“三件套”？</p><span class="flip-hint">点击翻转</span></div>
+          <div class="flashcard-face flashcard-back"><p>CBT（核心是暴露疗法）、EMDR（眼动脱敏与再加工）、团体心理治疗；另有蝴蝶拍、安全岛等稳定化技术，早期以危机干预和支持为主。</p></div>
+        </div></div>
+
+        <div class="flashcard"><div class="flashcard-inner">
+          <div class="flashcard-face flashcard-front"><span class="card-tag treatment">治疗</span><p>PGD 的首选治疗与药物地位？</p><span class="flip-hint">点击翻转</span></div>
+          <div class="flashcard-face flashcard-back"><p>心理治疗是首选，尤其是基于哀伤的 CBT；分个体、团体、网络形式，围绕“接受离世”与“重建生活”。药物疗效不明确，SSRIs 可能有帮助，三环类仅改善抑郁症状；药物只能作为辅助。</p></div>
+        </div></div>
+
+      </div>
+    </section>
+
+    <section id="cases" class="section">
+      <div class="section-header"><span class="section-number">17</span><h2>病例挑战</h2></div>
+      <p class="lead">3 个病例，难度递进。病例 1、2 为教材原文病例，病例 3 为教学演练情境；所有病例只使用教材描述过的症状与信息。</p>
+
+      <div class="case-card">
+        <div class="case-meta"><span>病例 1</span><span>难度 ⭐</span><span>教材原文</span></div>
+        <div class="case-title">独自留学后渐起烦躁、情绪低落、不愿交往</div>
+        <div class="case-body"><p>患者，女，15 岁，和母亲居住，留学生，高中在读。因“渐起烦躁，情绪低落，不愿与人交往 2 月余”由父母带至门诊。2 月余前患者独自至国外留学，初期曾抱怨不适应气候、语言、教学环境等，后逐渐出现心情烦躁、控制不住发脾气、情绪低落、对生活感到无望无助，时有哭泣，不愿与人交往，不愿去上学，整天待在宿舍，伴有入睡困难、眠浅易醒及胸闷、心慌等不适感。父母遂将其接回国就诊。入院后，患者定向力正常，问答配合、切题，话少音低，情绪低落，自诉不喜留学生活。</p></div>
+        <ol class="case-questions">
+          <li>最可能的诊断是什么？诊断依据有哪些？</li>
+          <li>需要与哪些障碍鉴别？关键区别是什么？</li>
+          <li>治疗原则与教材给出的转归是什么？</li>
+        </ol>
+        <details class="qa"><summary><span class="qa-num">析</span>答案与诊断思路</summary>
+          <div class="qa-body"><span class="answer-key">诊断：适应障碍（教材原文病例）</span><br>
+          <strong>诊断依据：</strong>①有明显生活事件——独自出国留学，不适应气候、语言、教学环境；②事件前精神状态正常，事件后出现多数人可顺利处理而患者适应不良；③以抑郁、焦虑、害怕等情感症状为主，伴行为退缩（不愿交往、不愿上学、整天待宿舍）和生理功能障碍（入睡困难、眠浅易醒、胸闷心慌）；④社会功能受损；⑤没有精神病性症状。<br>
+          <strong>鉴别：</strong>抑郁障碍——若达到抑郁障碍诊断标准，应优先诊断抑郁障碍；本例症状与留学事件时间关系明确、以适应不良反应为主。人格障碍——人格模式应长期稳定，本例事件前正常。PTSD——应激源不是异乎寻常的灾难性创伤，症状也不是四大症状群。<br>
+          <strong>治疗与转归：</strong>以心理治疗为主，教材采用个体心理治疗；父母暂时将其留在国内。3 个月后情绪低落、胸闷、心慌基本缓解，食欲睡眠好，能正常交流与学习，自诉愿意出国完成学业。药物只用于情绪异常明显者，低剂量、短疗程，教材未给具体药物与剂量。</div>
+        </details>
+      </div>
+
+      <div class="case-card">
+        <div class="case-meta"><span>病例 2</span><span>难度 ⭐⭐</span><span>教材原文</span></div>
+        <div class="case-title">父亲癌症过世 1 年半，仍无法接受、反复想念</div>
+        <div class="case-body"><p>患者，女，38 岁，未婚，公司职员，硕士研究生学历。1 年半前，患者的父亲因癌症过世。从那之后，患者控制不住自己，会反复想念自己的父亲，不知道没有父亲的生活该如何继续。患者觉得无法接受父亲过世的事实，仍旧幻想着改变这个事实。有时候，患者会对父亲离世的问题变得麻木。此外，患者情绪波动不定，害怕自己变得孤独，却又不知道如何继续与男友相处。入院后，患者定向力正常，情绪偏低，问答配合、切题，但话少音低，谈到父亲时会流泪，偶尔会询问“我的父亲还活着，是吧？”“我父亲会来找的我吧？”。</p></div>
+        <ol class="case-questions">
+          <li>最可能的诊断是什么？请列出诊断依据。</li>
+          <li>如何与正常哀伤、抑郁障碍、PTSD 鉴别？</li>
+          <li>首选治疗是什么？教材给出的转归如何？</li>
+        </ol>
+        <details class="qa"><summary><span class="qa-num">析</span>答案与诊断思路</summary>
+          <div class="qa-body"><span class="answer-key">诊断：延长哀伤障碍（教材原文病例）</span><br>
+          <strong>诊断依据：</strong>①亲近关系的人离世——父亲因癌症过世；②每天都想念逝者，达到病态程度——控制不住反复想念，不知道没有父亲的生活如何继续；③难以接受离世事实，仍幻想改变事实，偶尔询问“父亲还活着，是吧”；④情感麻木；⑤症状持续 1 年半，超过 6 个月且不缓解；⑥功能受损——害怕孤独、不知道如何与男友相处、生活难以继续。<br>
+          <strong>鉴别：</strong>正常哀伤——通常半年内减轻、能接受事实并适应新生活；本例 1 年半仍无法接受。抑郁障碍——抑郁的消极想法泛化、广泛兴趣减退、无价值感更常见；本例症状紧紧围绕丧亲，对逝者仍有强烈关注。PTSD——PTSD 的闯入内容是创伤事件、情绪以恐惧愤怒为主、回避创伤线索；本例闯入内容围绕逝者，情绪以哀伤为主，回避的是离世事实。<br>
+          <strong>治疗：</strong>心理治疗是首选，教材采用个体心理治疗，着力接受亲人离世事实与重新开始新生活。3 个月后症状减轻，仍会想念父亲但没那么痛苦，开始结交新朋友并重新开始一份简单工作。药物疗效不明确，不作为首选；教材未给具体药物与剂量。</div>
+        </details>
+      </div>
+
+      <div class="case-card">
+        <div class="case-meta"><span>病例 3</span><span>难度 ⭐⭐⭐</span><span>经典临床情境（教学演练，非教材原文）</span></div>
+        <div class="case-title">长期家庭暴力背景下的情绪失控、自责与关系困难</div>
+        <div class="case-body"><p>患者，女，35 岁。自幼生活在长期家庭暴力环境中，成年后仍处于难以逃离的暴力关系。她长期情绪波动剧烈，常因小事强烈愤怒，随后陷入麻木；持续认为自己渺小、一无是处，对创伤经历深感愧疚；难以信任他人，无法维持亲密关系；同时反复出现创伤场景的闪回，回避相关话题，并持续警觉。上述模式持续多年，个人、家庭与职业功能均明显受损。教材未提供 C-PTSD 的具体病例，本情境仅用于教学演练，不含化验、影像、剂量或具体时间阈值。</p></div>
+        <ol class="case-questions">
+          <li>最可能的诊断是什么？与 PTSD 的核心区别在哪？</li>
+          <li>还需要与哪些障碍鉴别？</li>
+          <li>治疗原则是什么？为什么不能把药物作为独立治疗？</li>
+        </ol>
+        <details class="qa"><summary><span class="qa-num">析</span>答案与诊断思路</summary>
+          <div class="qa-body"><span class="answer-key">诊断：复合性创伤后应激障碍（C-PTSD）（教学演练）</span><br>
+          <strong>诊断思路：</strong>①创伤背景为长期、反复、难以逃离的家庭暴力，符合Ⅱ型创伤；②存在创伤再现（闪回）、回避相关话题、持续警觉/被威胁感等 PTSD 三联征；③叠加三自我组织障碍——情绪调节异常（强烈愤怒后麻木）、自我认知改变（渺小、一无是处、深度愧疚）、人际关系困难（难以信任、无法维持亲密关系）；④个人、家庭、职业功能显著受损。<br>
+          <strong>与 PTSD 的区别：</strong>PTSD 以四大症状群为核心，创伤多为突发一过性Ⅰ型创伤；C-PTSD 在 PTSD 三联征之外，必须有情绪调节、自我认知、人际关系三方面的长期普遍障碍，创伤多为长期反复、难以逃离的Ⅱ型创伤。C-PTSD 不是“更重的 PTSD”。<br>
+          <strong>鉴别：</strong>抑郁障碍——若达到抑郁障碍诊断标准应优先诊断，但抑郁不能解释三自我组织障碍与长期创伤背景；焦虑症——焦虑症状不能解释自我认知与人际关系障碍；边缘型人格障碍——教材提示需鉴别，但未展开具体条目，不能自行补充标准。<br>
+          <strong>治疗原则：</strong>心理治疗优先，采用以创伤为重点的灵活、多组综合治疗；与患者合作制定符合其偏好和价值观的计划；关注心理社会功能，协调药物、身体健康评估与社会服务；治疗联盟是关键，因脱落率高。药物不应作为独立治疗，但可提高心理治疗依从性；相关研究很少，不建议常规用药，除非有共病。教材未给具体药物与剂量。</div>
+        </details>
+        </div>
+    </section>
+
+    <section id="extend" class="section">
+      <div class="section-header"><span class="section-number">18</span><h2>拓展延伸</h2></div>
+      <p class="lead">只列教材本章明确提及、但未展开的点；不补充教材以外的指南、药物或研究。</p>
+      <div class="card-grid">
+        <div class="card card-diagnosis"><div class="card-header"><span class="card-icon">📘</span><div class="card-title">ICD-11 与 C-PTSD</div></div><div class="card-body">教材明确 C-PTSD 的诊断按 ICD-11 标准表述，并称其为“全新的诊断”；但教材未展开完整条目表，也未给出统一时间阈值。</div></div>
+        <div class="card card-diagnosis"><div class="card-header"><span class="card-icon">🧩</span><div class="card-title">Herman 与 Terr 的分类</div></div><div class="card-body">Herman 于 1992 年提出 C-PTSD；Terr 提出Ⅰ型/Ⅱ型创伤。教材用这两个分类帮助理解“单纯型 PTSD”与“复杂型 PTSD”的区别。</div></div>
+        <div class="card card-diagnosis"><div class="card-header"><span class="card-icon">🖼️</span><div class="card-title">影像学研究</div></div><div class="card-body">教材提到 C-PTSD 的结构与功能影像学改变、PGD 伏隔核奖赏区域过度激活；这些是研究线索，不是临床诊断依据。</div></div>
+        <div class="card card-diagnosis"><div class="card-header"><span class="card-icon">📊</span><div class="card-title">数据缺口</div></div><div class="card-body">教材明确：国内缺乏 PGD 流行病学数据；ICD-11 体系下 C-PTSD 缺乏神经内分泌研究；C-PTSD 预后研究尚欠缺。遇到这些点，答题应写“教材未提供”，不要补数字。</div></div>
+        <div class="card card-diagnosis"><div class="card-header"><span class="card-icon">🧭</span><div class="card-title">治疗指南缺口</div></div><div class="card-body">C-PTSD 的心理治疗提到心理动力学、依恋、正念框架，但教材明确“还没有指南明确建议”；PGD 药物疗效不明确。不要把教材未推荐的方案写成标准治疗。</div></div>
+        <div class="card card-diagnosis"><div class="card-header"><span class="card-icon">👶</span><div class="card-title">儿童期转归</div></div><div class="card-body">教材指出部分儿童期应激相关障碍症状可持续整个青春期；DSED 即便养育环境改善，部分患儿社交异常仍可持续至青春期。</div></div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-tag">精神病学 · 第11章 · 学习指南</div>
+      <p>内容依据《精神病学》第9版（2024）第11章整理，仅供学习复习使用。</p>
+      <p>诊断与治疗请以教材原文、现行诊疗规范及专科医师判断为准。</p>
+      <div class="disclaimer">免责声明：本页为学习笔记，不是诊疗建议。文中所有时间阈值、诊断条目与治疗信息均以教材本章为准；教材未提供的内容已标注“教材未提供/未展开”。病例 1、2 为教材原文病例，病例 3 与各“经典临床情境”为教学演练，非教材原文，不包含虚构化验值、影像结果、药物剂量或额外时间阈值。</div>
+    </footer>
+  <nav class="chapter-pager" aria-label="章节间导航"><a class="cp-prev" href="精神病学_第十章_强迫症及相关障碍_学习指南.html">← 上一章：第十章</a><a class="cp-toc" href="index.html">目录</a><a class="cp-next" href="精神病学_第十二章_分离性障碍_学习指南.html">下一章：第十二章 →</a></nav>
+</main>
+</div>
+<button class="back-to-top" id="backTop" aria-label="回到顶部">↑</button>
+
+<script>
+/* ============================================================
+   精神病学学习指南 · 统一交互层 v1（构建期注入，整体替换原 IIFE）
+   兼容 A 族（.tabbar button + [data-panel] + .panel.on）与
+   B 族（.tab-nav + .tab-panel.active）两套 DOM 约定。
+   特性检测 + 防御式查询 + 幂等；不引入任何外部依赖。
+   ============================================================ */
+(function () {
+  'use strict';
+  if (window.__PSY_GUIDE_APP__) { return; }
+  window.__PSY_GUIDE_APP__ = true;
+
+  var d = document;
+
+  function all(sel, root) {
+    return Array.prototype.slice.call((root || d).querySelectorAll(sel));
+  }
+  function on(el, ev, fn, opt) {
+    if (el) { el.addEventListener(ev, fn, opt || false); }
+  }
+  function norm(s) {
+    return String(s || '').replace(/\s+/g, '').toUpperCase();
+  }
+
+  /* ---------- 1. Tab 切换（两族约定都支持） ---------- */
+  function initTabs() {
+    all('.tabs, [data-tabs]').forEach(function (g) {
+      if (g.__psyTabs) { return; }
+      g.__psyTabs = true;
+      var isA = !!g.querySelector('.tabbar button');
+      var btns = all(isA ? '.tabbar button' : '.tab-nav .tab-btn', g);
+      if (!btns.length) { return; }
+      var cls = isA ? 'on' : 'active';
+      var nav = btns[0].closest('.tabbar') || btns[0].closest('.tab-nav');
+      if (nav && !nav.hasAttribute('role')) { nav.setAttribute('role', 'tablist'); }
+      all(isA ? '.panel' : '.tab-panel', g).forEach(function (p) {
+        if (!p.hasAttribute('role')) { p.setAttribute('role', 'tabpanel'); }
+      });
+      function activate(btn) {
+        btns.forEach(function (b) {
+          b.classList.remove(cls);
+          b.setAttribute('aria-selected', 'false');
+        });
+        btn.classList.add(cls);
+        btn.setAttribute('aria-selected', 'true');
+        var id = btn.getAttribute('data-tab');
+        if (!id) { return; }
+        var target = isA
+          ? g.querySelector('[data-panel="' + id + '"]')
+          : (g.querySelector('.tab-panel#' + id) || d.getElementById(id));
+        all(isA ? '.panel' : '.tab-panel', g).forEach(function (p) {
+          var show = isA ? (p.getAttribute('data-panel') === id) : (p === target);
+          p.classList.toggle(cls, show);
+        });
+      }
+      btns.forEach(function (btn, i) {
+        if (!btn.hasAttribute('role')) { btn.setAttribute('role', 'tab'); }
+        btn.setAttribute('aria-selected', btn.classList.contains(cls) ? 'true' : 'false');
+        if (!btn.hasAttribute('tabindex') && !btn.classList.contains(cls)) { btn.setAttribute('tabindex', '0'); }
+        on(btn, 'click', function () { activate(btn); });
+        on(btn, 'keydown', function (e) {
+          if (e.key !== 'ArrowRight' && e.key !== 'ArrowLeft') { return; }
+          e.preventDefault();
+          var nx = btns[(i + (e.key === 'ArrowRight' ? 1 : btns.length - 1)) % btns.length];
+          if (nx) { nx.focus(); activate(nx); }
+        });
+      });
+    });
+  }
+
+  /* ---------- 2. 速记卡：点击/键盘翻转 + 可达性 ---------- */
+  function initCards() {
+    all('.flashcard').forEach(function (card) {
+      if (card.__psyCard) { return; }
+      card.__psyCard = true;
+      card.setAttribute('tabindex', '0');
+      card.setAttribute('role', 'button');
+      function sync() {
+        card.setAttribute('aria-pressed', card.classList.contains('flipped') ? 'true' : 'false');
+      }
+      function flip() { card.classList.toggle('flipped'); sync(); }
+      on(card, 'click', flip);
+      on(card, 'keydown', function (e) {
+        if (e.key === 'Enter' || e.key === ' ' || e.key === 'Spacebar') {
+          e.preventDefault();
+          flip();
+        }
+      });
+      sync();
+    });
+  }
+
+  /* ---------- 3. 自测题交互化（核心新功能） ---------- */
+  function initQuiz() {
+    var questions = all('.quiz-q, .quiz-item');
+    if (!questions.length) { return; }
+    var groups = {};
+
+    function keyOf(o) {
+      var L = o.getAttribute('data-letter');
+      if (L && String(L).replace(/\s+/g, '') !== '') { return norm(L); }
+      var sp = o.querySelector('.l');
+      if (sp) {
+        var t = norm(sp.textContent).replace(/[.．、:：]/g, '');
+        if (t !== '') { return t; }
+      }
+      var txt = norm(o.textContent);
+      if (txt.indexOf('正确') >= 0 || txt.indexOf('错误') >= 0) { return txt; }
+      return txt.charAt(0);
+    }
+
+    function getGroup(q) {
+      var sec = q.closest('.quiz-block') || q.closest('section') || d.body;
+      if (!groups[sec.__psyGid]) {
+        sec.__psyGid = 'g' + (Object.keys(groups).length + 1);
+        groups[sec.__psyGid] = { sec: sec, total: 0, score: 0, row: null, first: null };
+      }
+      var g = groups[sec.__psyGid];
+      if (!g.first) { g.first = q; }
+      return g;
+    }
+
+    function ensureRow(g) {
+      if (g.row) { return g.row; }
+      var row = d.createElement('div');
+      row.className = 'quiz-score';
+      row.setAttribute('role', 'status');
+      row.setAttribute('aria-live', 'polite');
+      row.innerHTML = '<span class="qs-label">自测计分</span>' +
+        '<span class="qs-num">得分 0 / ' + g.total + '</span>' +
+        '<span class="qs-bar"><i></i></span>';
+      g.first.parentNode.insertBefore(row, g.first);
+      g.row = row;
+      return row;
+    }
+
+    function updateRow(g) {
+      var row = ensureRow(g);
+      var num = row.querySelector('.qs-num');
+      var bar = row.querySelector('.qs-bar i');
+      if (num) { num.textContent = '得分 ' + g.score + ' / ' + g.total; }
+      if (bar) { bar.style.width = (g.total ? Math.round(g.score / g.total * 100) : 0) + '%'; }
+    }
+
+    questions.forEach(function (q) {
+      if (q.__psyQuiz) { return; }
+      q.__psyQuiz = true;
+      var opts = all('.opt', q);
+      if (!opts.length) { opts = all('.quiz-options > li', q); }
+      if (!opts.length) { return; }
+
+      /* 正确答案先记入内存：预标 correct 优先（记录后立即移除，消除剧透），
+         否则从解析文本「答案：X / 答案 X」提取（不改动任何文字） */
+      var ansKeys = [];
+      var preset = opts.filter(function (o) { return o.classList.contains('correct'); });
+      preset.forEach(function (o) { o.classList.remove('correct'); });
+      if (preset.length) {
+        ansKeys = preset.map(keyOf);
+      } else {
+        var dt = q.querySelector('details');
+        var txt = dt ? dt.textContent : '';
+        var m = txt.match(/答案\s*[:：]?\s*([A-Za-z](?:[\s、,，·和及]*[A-Za-z])*)/);
+        if (m) {
+          ansKeys = m[1].match(/[A-Za-z]/g) || [];
+        } else {
+          var m2 = txt.match(/答案\s*[:：]?\s*(正确|错误)/);
+          if (m2) { ansKeys = [m2[1]]; }
+        }
+      }
+      if (!ansKeys.length) { return; } /* 无可判定答案（名词解释等），保持原样 */
+
+      var g = getGroup(q);
+      g.total += 1;
+      var multi = ansKeys.length > 1;
+      var ansSet = ansKeys.map(norm);
+      var locked = false;
+      var picked = [];
+
+      function revealAll() {
+        opts.forEach(function (o) {
+          if (ansSet.indexOf(keyOf(o)) >= 0) { o.classList.add('is-reveal'); }
+        });
+      }
+      function finish(ok) {
+        locked = true;
+        q.classList.add('is-locked');
+        var dt = q.querySelector('details');
+        if (dt) { dt.open = true; }
+        if (ok) { g.score += 1; }
+        updateRow(g);
+      }
+
+      opts.forEach(function (o) {
+        o.setAttribute('tabindex', '0');
+        function pick() {
+          if (locked) { return; }
+          var k = keyOf(o);
+          if (ansSet.indexOf(k) >= 0) {
+            o.classList.add('is-right');
+            if (picked.indexOf(k) < 0) { picked.push(k); }
+            if (multi) {
+              if (picked.length === ansSet.length) { finish(true); }
+            } else {
+              finish(true);
+            }
+          } else {
+            o.classList.add('is-wrong');
+            revealAll();
+            finish(false);
+          }
+        }
+        on(o, 'click', pick);
+        on(o, 'keydown', function (e) {
+          if (e.key === 'Enter' || e.key === ' ' || e.key === 'Spacebar') {
+            e.preventDefault();
+            pick();
+          }
+        });
+      });
+    });
+
+    Object.keys(groups).forEach(function (id) {
+      if (groups[id].total > 0) { updateRow(groups[id]); }
+    });
+  }
+
+  /* ---------- 4. 侧栏 scroll spy（本页锚点高亮） ---------- */
+  function initSpy() {
+    var links = all('#sidebar a[href^="#"]');
+    if (!links.length || !('IntersectionObserver' in window)) { return; }
+    var map = {};
+    links.forEach(function (a) {
+      var id = a.getAttribute('href').slice(1);
+      if (id) { map[id] = a; }
+    });
+    var secs = [];
+    Object.keys(map).forEach(function (id) {
+      var s = d.getElementById(id);
+      if (s) { secs.push(s); }
+    });
+    if (!secs.length) { return; }
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting && map[e.target.id]) {
+          links.forEach(function (a) { a.classList.remove('active'); });
+          map[e.target.id].classList.add('active');
+        }
+      });
+    }, { rootMargin: '-15% 0px -70% 0px', threshold: 0 });
+    secs.forEach(function (s) { io.observe(s); });
+  }
+
+  /* ---------- 5. 阅读进度条 + 回顶 ---------- */
+  function initScroll() {
+    var bar = d.getElementById('readbar');
+    var topBtn = d.getElementById('topBtn') || d.getElementById('backTop');
+    var ticking = false;
+    function step() {
+      ticking = false;
+      var h = d.documentElement;
+      var y = window.pageYOffset || h.scrollTop || 0;
+      if (bar) {
+        var max = h.scrollHeight - h.clientHeight;
+        bar.style.width = (max > 0 ? (y / max) * 100 : 0) + '%';
+      }
+      if (topBtn) {
+        topBtn.classList.toggle('show', y > 400);     /* A 族类名 */
+        topBtn.classList.toggle('visible', y > 400);  /* B 族类名 */
+      }
+    }
+    on(window, 'scroll', function () {
+      if (!ticking) { ticking = true; window.requestAnimationFrame(step); }
+    }, { passive: true });
+    step();
+    on(topBtn, 'click', function () {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
+
+  /* ---------- 6. 侧栏开合（存在才绑定；抽屉打开时锁定背景滚动） ---------- */
+  function initSidebar() {
+    var sidebar = d.getElementById('sidebar');
+    if (!sidebar) { return; }
+    var btn = d.getElementById('menuBtn') || d.getElementById('navToggle');
+    var ov = d.getElementById('overlay') || d.getElementById('sidebarOverlay');
+    function lock(open) {
+      /* 仅移动抽屉断点（≤900px）锁滚动；宽屏兜底解除，防布局残留 */
+      d.body.classList.toggle('nav-locked', !!open && window.innerWidth <= 900);
+    }
+    function close() {
+      sidebar.classList.remove('open');
+      if (ov) { ov.classList.remove('show'); }
+      lock(false);
+    }
+    on(btn, 'click', function () {
+      var open = !sidebar.classList.contains('open');
+      sidebar.classList.toggle('open');
+      if (ov) { ov.classList.toggle('show'); }
+      lock(open);
+    });
+    on(ov, 'click', close);
+    all('a', sidebar).forEach(function (a) {
+      on(a, 'click', function () {
+        if (window.innerWidth <= 900) { close(); }
+      });
+    });
+    on(window, 'resize', function () {
+      if (window.innerWidth > 900) { lock(false); }
+    });
+  }
+
+  /* ---------- 启动（脚本位于 body 末尾，DOM 已就绪；防御兜底） ---------- */
+  function boot() {
+    initTabs();
+    initCards();
+    initQuiz();
+    initSpy();
+    initScroll();
+    initSidebar();
+  }
+  if (d.readyState === 'loading') {
+    on(d, 'DOMContentLoaded', boot);
+  } else {
+    boot();
+  }
+})();
+</script>
+
+</body>
+</html>

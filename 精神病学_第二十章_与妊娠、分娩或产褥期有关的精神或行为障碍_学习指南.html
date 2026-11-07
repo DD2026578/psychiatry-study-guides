@@ -1,0 +1,2386 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>精神病学 第二十章 与妊娠、分娩或产褥期有关的精神或行为障碍 · 学习指南</title>
+<style>
+:root{
+  --primary:#0EA5E9; --accent:#10B981; --symptom:#EF4444; --treatment:#10B981;
+  --cause:#3B82F6; --diagnosis:#F59E0B; --memory:#8B5CF6; --danger:#DC2626;
+  --quiz:#EC4899; --flashcard:#06B6D4; --bg:#F0F7FA; --card:#FFFFFF;
+  --ink:#0F172A; --muted:#64748B; --border:#E2E8F0; --accent2:#10B981; --accent3:#06B6D4;
+  --shadow:0 4px 18px rgba(15,23,42,.06); --radius:14px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:'Microsoft YaHei','PingFang SC','Hiragino Sans GB',system-ui,-apple-system,sans-serif;font-size:16px;line-height:1.75;-webkit-font-smoothing:antialiased}
+#readbar{position:fixed;top:0;left:0;height:4px;width:0;background:linear-gradient(135deg,#0EA5E9 0%,#06B6D4 50%,#10B981 100%);z-index:300;transition:width .12s linear}
+a{color:var(--primary);text-decoration:none}
+a:hover{text-decoration:underline}
+.sidebar{position:fixed;top:0;left:0;width:272px;height:100vh;background:#fff;border-right:1px solid var(--border);overflow-y:auto;padding:20px 16px 40px;z-index:120}
+.sidebar h2{font-size:17px;margin:0 0 4px;line-height:1.5}
+.sidebar .sub{font-size:12px;color:var(--muted);line-height:1.6;margin-bottom:14px}
+.toc-group{font-size:12px;letter-spacing:.08em;color:var(--muted);margin:16px 0 6px;font-weight:700}
+.sidebar a.toc{display:block;padding:7px 10px;border-radius:8px;font-size:14px;color:var(--ink);line-height:1.5;margin:2px 0}
+.sidebar a.toc:hover{background:#E0F2FE;text-decoration:none}
+.sidebar a.toc .n{display:inline-block;min-width:26px;color:var(--primary);font-weight:700}
+.sidebar .unitlink{font-weight:600}
+.sidebar .sub2{padding-left:26px;font-size:13px;color:var(--muted)}
+.overlay{display:none}
+.menu-btn{display:none;position:fixed;top:14px;left:14px;z-index:200;width:46px;height:46px;border-radius:12px;border:1px solid var(--border);background:#fff;box-shadow:var(--shadow);font-size:22px;line-height:1;color:var(--primary);cursor:pointer}
+.main{margin-left:272px;padding:0 40px 90px;max-width:1240px}
+.wrap{max-width:980px;margin:0 auto}
+.hero{background:linear-gradient(135deg,#0EA5E9 0%,#06B6D4 50%,#10B981 100%);color:#fff;border-radius:0 0 26px 26px;padding:52px 44px 40px;margin:0 -40px 30px;box-shadow:0 12px 30px rgba(14,165,233,.18)}
+.hero .chap{display:inline-block;font-size:13px;letter-spacing:.22em;background:rgba(255,255,255,.18);padding:5px 14px;border-radius:999px;margin-bottom:16px}
+.hero h1{font-size:42px;line-height:1.25;margin:0 0 10px;font-weight:800}
+.hero .tagline{font-size:18px;opacity:.96;margin:0 0 6px}
+.hero .meta{font-size:13px;opacity:.85}
+.goalbox{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.28);border-radius:14px;padding:18px 20px;margin-top:22px}
+.goalbox h3{margin:0 0 10px;font-size:15px;letter-spacing:.06em}
+.goalbox ul{margin:0;padding-left:20px}
+.goalbox li{margin:4px 0;font-size:14.5px;line-height:1.65}
+.lv{display:inline-block;font-size:11px;font-weight:700;padding:1px 8px;border-radius:999px;background:#fff;color:#0369A1;margin-right:6px;vertical-align:1px}
+.lv.l2{color:#047857}.lv.l3{color:#B45309}.lv.l4{color:#B91C1C}
+section{scroll-margin-top:18px;margin:0 0 46px}
+.sec-head{display:flex;align-items:center;gap:12px;margin:0 0 8px}
+.sec-head .badge{flex:0 0 auto;width:44px;height:44px;border-radius:13px;background:linear-gradient(135deg,#0EA5E9,#06B6D4);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:17px;box-shadow:0 6px 14px rgba(14,165,233,.25)}
+.sec-head h2{font-size:27px;margin:0;line-height:1.35;font-weight:800}
+.sec-head .en{font-size:13px;color:var(--muted);font-weight:400;margin-left:6px}
+.sec-lead{color:#334155;background:#fff;border-left:4px solid var(--primary);border-radius:0 12px 12px 0;padding:13px 18px;margin:12px 0 22px;box-shadow:var(--shadow);font-size:15px}
+.card{background:var(--card);border:1px solid var(--border);border-left:6px solid var(--primary);border-radius:var(--radius);padding:20px 22px;margin:16px 0;box-shadow:var(--shadow)}
+.card.red{border-left-color:var(--symptom)} .card.green{border-left-color:var(--treatment)}
+.card.blue{border-left-color:var(--cause)} .card.orange{border-left-color:var(--diagnosis)}
+.card.purple{border-left-color:var(--memory)} .card.cyan{border-left-color:var(--flashcard)}
+.card.danger{border-left-color:var(--danger)} .card.pink{border-left-color:var(--quiz)}
+.card h3,.col-title{font-size:19px;margin:0 0 10px;line-height:1.45;display:flex;align-items:center;gap:9px;flex-wrap:wrap}
+.col-title .idx{font-size:12px;font-weight:800;color:#fff;background:var(--primary);padding:2px 9px;border-radius:999px;letter-spacing:.03em}
+.card p{margin:8px 0}
+.card ul,.card ol{margin:8px 0;padding-left:22px}
+.card li{margin:5px 0}
+.quote{background:#EFF8FF;border:1px dashed #7DD3FC;border-radius:10px;padding:12px 16px;margin:10px 0;font-size:15px;color:#0C4A6E}
+.quote .lab{display:inline-block;font-size:11px;font-weight:800;background:#0EA5E9;color:#fff;padding:1px 7px;border-radius:5px;margin-right:7px;vertical-align:1px}
+.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.grid4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.grid2>*,.grid3>*,.grid4>*{min-width:0}
+.mini{background:#F8FAFC;border:1px solid var(--border);border-radius:11px;padding:12px 14px}
+.mini h4{margin:0 0 5px;font-size:15px;color:#0F172A}
+.mini p,.mini ul{font-size:14px;color:#334155;margin:4px 0}
+.mini ul{padding-left:18px}
+.stat{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0}
+.stat span{font-size:13px;background:#E0F2FE;color:#075985;border-radius:999px;padding:3px 11px;font-weight:600}
+.table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:12px 0;border-radius:12px;border:1px solid var(--border)}
+table{border-collapse:collapse;width:100%;min-width:560px;background:#fff;font-size:14px}
+th{background:#0F172A;color:#fff;font-weight:700;padding:10px 12px;text-align:left;line-height:1.5;font-size:13.5px}
+td{padding:10px 12px;border-top:1px solid var(--border);vertical-align:top;line-height:1.65}
+tbody tr:nth-child(even){background:#F8FAFC}
+td strong{color:#0C4A6E}
+.callout{border-radius:12px;padding:13px 16px;margin:12px 0;border:1px solid;font-size:14.5px}
+.callout .ct{font-weight:800;display:block;margin-bottom:4px;font-size:14.5px}
+.callout.tip{background:#F5F3FF;border-color:#C4B5FD;color:#4C1D95}
+.callout.warn{background:#FEF2F2;border-color:#FCA5A5;color:#7F1D1D}
+.callout.key{background:#ECFDF5;border-color:#6EE7B7;color:#065F46}
+.callout.book{background:#EFF6FF;border-color:#93C5FD;color:#1E3A8A}
+.callout.quiz{background:#FDF2F8;border-color:#F9A8D4;color:#831843}
+.callout.ext{background:#F0F9FF;border-color:#7DD3FC;color:#0C4A6E}
+.timeline{border-left:3px solid #BAE6FD;margin:14px 0 6px 8px;padding-left:20px}
+.tl-item{position:relative;margin:0 0 16px}
+.tl-item:before{content:"";position:absolute;left:-28px;top:5px;width:13px;height:13px;border-radius:50%;background:#fff;border:3px solid var(--primary)}
+.tl-item h4{margin:0 0 3px;font-size:15px;color:#075985}
+.tl-item p{margin:0;font-size:14px;color:#334155}
+.bar{background:#E2E8F0;border-radius:999px;height:9px;overflow:hidden;margin:6px 0 10px}
+.bar i{display:block;height:100%;border-radius:999px;background:linear-gradient(90deg,#0EA5E9,#10B981)}
+.bar-label{display:flex;justify-content:space-between;font-size:13px;color:#334155}
+.tabs{margin:14px 0}
+.tabbar{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:12px}
+.tabbar button{border:1px solid var(--border);background:#fff;border-radius:999px;padding:7px 15px;font-size:14px;font-family:inherit;cursor:pointer;color:#334155}
+.tabbar button.on{background:var(--primary);color:#fff;border-color:var(--primary)}
+.panel{display:none}
+.panel.on{display:block;animation:fade .25s ease}
+@keyframes fade{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}
+details{background:#fff;border:1px solid var(--border);border-radius:11px;margin:10px 0;overflow:hidden}
+summary{cursor:pointer;padding:11px 15px;font-weight:700;color:#075985;list-style:none;font-size:14.5px;background:#F8FAFC}
+summary::-webkit-details-marker{display:none}
+summary:before{content:"▸";display:inline-block;margin-right:7px;color:var(--primary);transition:transform .2s}
+details[open] summary:before{transform:rotate(90deg)}
+details[open] summary{border-bottom:1px solid var(--border)}
+.dbody{padding:13px 16px;font-size:14.5px;color:#1E293B}
+.flashcard-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin:16px 0}
+.flashcard{perspective:1200px;height:200px;cursor:pointer}
+.fc-inner{position:relative;width:100%;height:100%;transition:transform .55s;transform-style:preserve-3d}
+.flashcard.flipped .fc-inner{transform:rotateY(180deg)}
+.fc-front,.fc-back{position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;border-radius:14px;padding:14px 16px;display:flex;flex-direction:column;justify-content:center;box-shadow:var(--shadow);overflow:auto}
+.fc-front{background:#fff;border:1px solid var(--border);border-top:5px solid var(--flashcard)}
+.fc-back{background:#ECFEFF;border:1px solid #A5F3FC;transform:rotateY(180deg);font-size:13.5px;line-height:1.65;color:#164E63}
+.tag{display:inline-block;align-self:flex-start;font-size:11px;font-weight:800;padding:1px 8px;border-radius:999px;margin-bottom:8px;letter-spacing:.04em}
+.tag.concept{background:#DBEAFE;color:#1E40AF}
+.tag.diag{background:#FFEDD5;color:#9A3412}
+.tag.treat{background:#D1FAE5;color:#065F46}
+.tag.data{background:#FCE7F3;color:#9D174D}
+.tag.risk{background:#FEE2E2;color:#991B1B}
+.fc-front p{margin:0;font-size:14.5px;font-weight:700;line-height:1.6}
+.fc-hint{position:absolute;bottom:10px;left:16px;font-size:11px;color:#94A3B8}
+.quiz-q{background:#fff;border:1px solid var(--border);border-left:5px solid var(--quiz);border-radius:12px;padding:16px 18px;margin:16px 0;box-shadow:var(--shadow)}
+.quiz-q .qh{display:flex;justify-content:space-between;gap:10px;align-items:flex-start;margin-bottom:8px;flex-wrap:wrap}
+.quiz-q .qno{font-size:12px;font-weight:800;color:#fff;background:var(--quiz);border-radius:999px;padding:2px 9px;letter-spacing:.04em}
+.diff{font-size:12px;color:#B45309;background:#FEF3C7;border-radius:999px;padding:2px 10px;font-weight:700;white-space:nowrap}
+.qtype{font-size:12px;color:#6B21A8;background:#F3E8FF;border-radius:999px;padding:2px 10px;font-weight:700;white-space:nowrap}
+.opts{margin:10px 0 4px;display:grid;gap:7px}
+.opt{border:1px solid var(--border);border-radius:9px;padding:8px 12px;font-size:14.5px;background:#F8FAFC}
+.opt.correct{border-color:#6EE7B7;background:#ECFDF5;color:#065F46;font-weight:600}
+.opt .l{font-weight:800;color:var(--primary);margin-right:7px}
+.opt.correct .l{color:#047857}
+.brief{font-size:14px;color:#334155;margin-top:4px}
+.case{border:1px solid var(--border);border-top:5px solid var(--danger);border-radius:14px;background:#fff;padding:20px 22px;margin:18px 0;box-shadow:var(--shadow)}
+.case h3{font-size:19px;margin:0 0 8px;color:#7F1D1D}
+.case .ctag{font-size:11.5px;font-weight:800;background:#FEE2E2;color:#991B1B;padding:2px 9px;border-radius:999px;display:inline-block;margin-bottom:10px}
+.case .scene{background:#FFF7ED;border-left:4px solid #FB923C;border-radius:0 10px 10px 0;padding:12px 16px;font-size:14.5px;margin:8px 0 14px}
+.case .ques{margin:8px 0;padding-left:2px}
+.case .ques li{margin:5px 0;font-size:14.5px}
+.top{position:fixed;right:24px;bottom:26px;width:48px;height:48px;border-radius:50%;background:var(--primary);color:#fff;border:none;font-size:20px;cursor:pointer;box-shadow:0 8px 20px rgba(14,165,233,.35);z-index:150;display:none;font-family:inherit}
+.top.show{display:block}
+.hr{height:1px;background:var(--border);margin:26px 0}
+.note{font-size:13px;color:var(--muted);margin-top:6px}
+.kv{display:flex;gap:10px;flex-wrap:wrap;margin:8px 0}
+.kv .k{font-size:12px;font-weight:800;color:#0369A1;background:#E0F2FE;border-radius:6px;padding:2px 8px;white-space:nowrap}
+.kv .v{font-size:14px;color:#334155}
+.starme{font-size:12.5px;color:#B45309;white-space:nowrap}
+@media (max-width:1100px){
+  .main{padding:0 22px 80px}
+  .hero{margin:0 -22px 26px;padding:44px 26px 34px}
+  .hero h1{font-size:34px}
+  .flashcard-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .grid4{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width:900px){
+  .sidebar{transform:translateX(-100%);transition:transform .25s ease;width:280px;box-shadow:0 0 30px rgba(0,0,0,.18)}
+  .sidebar.open{transform:none}
+  .overlay{display:none;position:fixed;inset:0;background:rgba(15,23,42,.42);z-index:110}
+  .overlay.show{display:block}
+  .menu-btn{display:block}
+  .main{margin-left:0;padding:0 18px 80px}
+  .hero{margin:0 -18px 24px;padding:64px 22px 30px;border-radius:0 0 20px 20px}
+  .hero h1{font-size:30px}
+  .sec-head h2{font-size:23px}
+}
+@media (max-width:680px){
+  .grid2,.grid3,.grid4{grid-template-columns:minmax(0,1fr)}
+  .flashcard-grid{grid-template-columns:minmax(0,1fr)}
+  .flashcard{height:190px}
+  table{min-width:500px}
+}
+</style>
+<style data-refactor="v1">
+/* ============================================================
+   精神病学学习指南 · 统一交互层增量覆盖样式 v1
+   构建期由 apply-refactor.ps1 注入 </head> 前，仅追加修正，
+   不改动 A/B 两族基础样式。全部使用字面色值，兼容两族设计变量。
+   ============================================================ */
+
+/* ---- 1. 全局键盘焦点可见 ---- */
+:focus-visible{outline:2px solid #0EA5E9;outline-offset:2px}
+
+/* ---- 2. 章节导航条（胶囊式三段：上一章 / 目录 / 下一章） ---- */
+.chapter-pager{display:flex;align-items:stretch;justify-content:center;gap:10px;margin:36px 0 10px;flex-wrap:wrap}
+.chapter-pager a,.chapter-pager span{flex:1 1 200px;display:flex;align-items:center;justify-content:center;min-height:44px;padding:10px 18px;border:1px solid #E2E8F0;border-radius:999px;background:#FFFFFF;color:#0F172A;font-size:14px;font-weight:600;line-height:1.4;text-decoration:none;text-align:center;box-shadow:0 1px 2px rgba(15,23,42,.06);transition:border-color .15s ease,box-shadow .15s ease,color .15s ease}
+.chapter-pager a:hover{border-color:#0EA5E9;color:#0EA5E9;box-shadow:0 4px 14px rgba(14,165,233,.18);text-decoration:none}
+.chapter-pager .cp-toc{flex:0 0 auto;min-width:104px;background:linear-gradient(135deg,#0EA5E9,#10B981);border-color:transparent;color:#FFFFFF}
+.chapter-pager .cp-toc:hover{border-color:transparent;color:#FFFFFF;opacity:.92}
+.chapter-pager .cp-disabled{opacity:.45;background:#F8FAFC;box-shadow:none;cursor:default}
+@media (max-width:680px){.chapter-pager{gap:8px;margin:28px 0 8px}.chapter-pager a,.chapter-pager span{flex:1 1 100%}}
+
+/* ---- 3. 自测题交互态（兼容 A 族 .opt 与 B 族 .quiz-options li） ---- */
+/* 3.1 基础可点击 */
+.quiz-q .opt{cursor:pointer}
+.quiz-item .quiz-options li{cursor:pointer}
+/* 3.2 hover / 焦点态 */
+.quiz-q .opt:hover,.quiz-q .opt:focus-visible{border-color:#7DD3FC;background:#F0F9FF}
+.quiz-item .quiz-options li:hover,.quiz-item .quiz-options li:focus-visible{background:#FFFFFF;box-shadow:inset 0 0 0 1px #7DD3FC}
+/* 3.3 判定结果态 */
+.quiz-q .opt.is-right{border-color:#34D399;background:#ECFDF5;color:#065F46;font-weight:600}
+.quiz-q .opt.is-right::after{content:" ✓";color:#059669;font-weight:800}
+.quiz-q .opt.is-right .l{color:#047857}
+.quiz-item .quiz-options li.is-right{background:#DCFCE7;box-shadow:inset 0 0 0 1px #34D399;font-weight:600}
+.quiz-item .quiz-options li.is-right::after{content:" ✓";color:#15803D;font-weight:800}
+.quiz-q .opt.is-wrong{border-color:#FCA5A5;background:#FEF2F2;color:#B91C1C;font-weight:600}
+.quiz-q .opt.is-wrong::after{content:" ✗";color:#DC2626;font-weight:800}
+.quiz-q .opt.is-wrong .l{color:#B91C1C}
+.quiz-item .quiz-options li.is-wrong{background:#FEE2E2;box-shadow:inset 0 0 0 1px #FCA5A5;font-weight:600}
+.quiz-item .quiz-options li.is-wrong::after{content:" ✗";color:#DC2626;font-weight:800}
+.quiz-q .opt.is-reveal{border-color:#6EE7B7;background:#ECFDF5;color:#065F46}
+.quiz-q .opt.is-reveal .l{color:#047857}
+.quiz-item .quiz-options li.is-reveal{background:#ECFDF5;box-shadow:inset 0 0 0 1px #6EE7B7;color:#065F46}
+/* 3.4 已锁定禁用态 */
+.quiz-q.is-locked .opt,.quiz-item.is-locked .quiz-options li{cursor:default;pointer-events:none}
+.quiz-q.is-locked .opt:not(.is-right):not(.is-wrong):not(.is-reveal){opacity:.55}
+.quiz-item.is-locked .quiz-options li:not(.is-right):not(.is-wrong):not(.is-reveal){opacity:.55}
+/* 3.5 计分行（运行时注入） */
+.quiz-score{display:flex;align-items:center;gap:12px;margin:14px 0 18px;padding:12px 18px;border:1px dashed #7DD3FC;border-radius:12px;background:#F0F9FF;font-size:14px;font-weight:700;color:#0F172A}
+.quiz-score .qs-label{white-space:nowrap}
+.quiz-score .qs-num{white-space:nowrap;color:#0284C7;font-size:16px}
+.quiz-score .qs-bar{flex:1 1 60px;min-width:60px;height:8px;border-radius:999px;background:#E2E8F0;overflow:hidden}
+.quiz-score .qs-bar i{display:block;height:100%;width:0;border-radius:999px;background:linear-gradient(90deg,#0EA5E9,#10B981);transition:width .35s ease}
+
+/* ---- 4. 速记卡可达性与长内容 ---- */
+.fc-hint,.flip-hint{color:#64748B}
+.flashcard-face{overflow:auto}
+.flashcard[tabindex]{outline:none}
+.flashcard[tabindex]:focus-visible{outline:3px solid #0EA5E9;outline-offset:3px}
+
+/* ---- 5. 侧栏目录 ---- */
+/* B 族 sticky 侧栏内目录限高滚动（A 族 aside 本身已可滚动，此规则空匹配无害） */
+.sidebar .sidebar-nav{max-height:calc(100vh - 60px);overflow-y:auto;scrollbar-width:thin}
+/* A 族 scroll spy 高亮（B 族高亮由其基础样式提供） */
+.sidebar a.toc.active{background:#E0F2FE;color:#0369A1;font-weight:600}
+
+/* ---- 6. 响应式补充：681–900px 时 grid3 降为两列 ---- */
+@media (min-width:681px) and (max-width:900px){
+  .grid3{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+
+/* ---- 7. 打印样式补充（A 族新增；B 族已有 print，重复声明无害） ---- */
+@media print{
+  .sidebar,.overlay,.sidebar-overlay,#menuBtn,#navToggle,#overlay,#sidebarOverlay,#readbar,#topBtn,#backTop,.chapter-pager,.quiz-score{display:none!important}
+}
+
+/* ---- 8. 手机端增强 v2（触控体验 / 防溢出 / 抽屉滚动锁定） ---- */
+/* 8.1 触控体验：去点按高亮、消除双击缩放延迟（flashcard 高 190-200px 天然达标，不另设 min-height） */
+.opt,.tabbar button,.tab-btn,.quiz-options li,.flashcard,.chapter-pager a,.chapter-pager span,.menu-btn,.mobile-nav-toggle{-webkit-tap-highlight-color:transparent;touch-action:manipulation}
+/* 8.2 触控目标最小 44px（自测选项与 tab 胶囊原高约 33px） */
+.opt,.tabbar button,.tab-btn,.quiz-options li{min-height:44px}
+/* 8.3 防溢出：内容图自适应；svg 不设 height:auto，避免定尺寸图标塌陷 */
+img{max-width:100%;height:auto}
+svg{max-width:100%}
+/* 8.4 长词/URL 断行 */
+body{overflow-wrap:break-word}
+/* 8.5 表格容器触摸惯性滚动（A 族已有同值规则，重复声明无害） */
+.table-wrap{-webkit-overflow-scrolling:touch}
+/* 8.6 抽屉打开时锁定背景滚动（两族抽屉断点均为 900px；类由统一脚本增删） */
+@media (max-width:900px){
+  body.nav-locked{overflow:hidden}
+}
+</style>
+</head>
+<body>
+<div id="readbar"></div>
+<button class="menu-btn" id="menuBtn" aria-label="打开目录">☰</button>
+<div class="overlay" id="overlay"></div>
+<aside class="sidebar" id="sidebar">
+  <h2>第二十章 与妊娠、分娩或产褥期有关的精神或行为障碍</h2>
+  <div class="sub">精神病学（第9版）· 印刷页 240–247<br>学习指南 · 技能标准版</div>
+  <div class="toc-group">开篇</div>
+  <a class="toc" href="#cover"><span class="n">00</span>章节封面与学习目标</a>
+  <a class="toc" href="#status"><span class="n">01</span>本章地位速览</a>
+  <a class="toc" href="#navmap"><span class="n">02</span>章节导航图</a>
+  <a class="toc" href="#mindmap"><span class="n">03</span>本章知识地图</a>
+  <a class="toc" href="#route"><span class="n">04</span>学习路线图</a>
+  <div class="toc-group">正文（四个单元·每单元八栏）</div>
+  <a class="toc unitlink" href="#u1"><span class="n">05</span>围产期精神障碍总论</a>
+  <a class="toc sub2" href="#u1-3">└ 临床表现拼图</a>
+  <a class="toc sub2" href="#u1-5">└ 鉴别诊断对对碰</a>
+  <a class="toc unitlink" href="#u2"><span class="n">06</span>临床分型</a>
+  <a class="toc sub2" href="#u2-3">└ 各类障碍逐一临床特征</a>
+  <a class="toc sub2" href="#u2-5">└ 鉴别诊断对对碰</a>
+  <a class="toc unitlink" href="#u3"><span class="n">07</span>诊断与鉴别</a>
+  <a class="toc sub2" href="#u3-2">└ 评估与诊断依据</a>
+  <a class="toc unitlink" href="#u4"><span class="n">08</span>治疗原则</a>
+  <a class="toc sub2" href="#u4-6">└ 治疗方案工具箱</a>
+  <div class="toc-group">结尾</div>
+  <a class="toc" href="#summary"><span class="n">09</span>全章核心要点速览</a>
+  <a class="toc" href="#pitfalls"><span class="n">10</span>易混易错点警示</a>
+  <a class="toc" href="#quiz"><span class="n">11</span>章节自测系统</a>
+  <a class="toc" href="#cards"><span class="n">12</span>考点速记卡</a>
+  <a class="toc" href="#cases"><span class="n">13</span>病例挑战</a>
+  <a class="toc" href="#ext"><span class="n">14</span>拓展延伸</a>
+</aside>
+<main class="main">
+<div class="wrap">
+
+<!-- ===== 00 封面 ===== -->
+<section id="cover">
+  <div class="hero">
+    <span class="chap">第二十章 · CHAPTER 20</span>
+    <h1>与妊娠、分娩或产褥期有关的精神或行为障碍</h1>
+    <p class="tagline">把"人生大事"看成"高危时间窗"：在妊娠、分娩与产褥期的激素与社会剧变中，识别抑郁、焦虑、精神病性与创伤反应的独特面貌。</p>
+    <p class="meta">教材：精神病学（第9版）｜印刷页 240–247｜全章 6 节：概述、病因与发病机制、临床表现、临床分型、诊断、治疗</p>
+    <div class="goalbox">
+      <h3>学习目标（四级分层）</h3>
+      <ul>
+        <li><span class="lv">了解</span>说出本章疾病概念的历史脉络（Marcé、Pitt、ICD-11）与患病率区间；列出围产期精神障碍的三大症状维度。</li>
+        <li><span class="lv l2">理解</span>解释"激素剧变 + HPA 轴代偿 + 遗传易感"如何构成围产期发病的生物学基础；理解"围产期"一词为何取代"产后"。</li>
+        <li><span class="lv l3">掌握</span>准确划分围产期抑郁障碍、围产期焦虑障碍（4 个亚型）、围产期躁狂发作（双相障碍、产后精神病）与围产期 PTSD，并说出各自的临床特征。</li>
+        <li><span class="lv l4">重点</span>ICD-11 的"伴 / 不伴精神病性症状"两类诊断要求、与"产后忧郁"的边界、产后精神病的危险信号（伤害婴儿与自杀）、以及"轻中度先非药物、重症药物和 / 或 ECT"的治疗分层。</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 01 地位 ===== -->
+<section id="status">
+  <div class="sec-head"><div class="badge">01</div><h2>本章地位速览<span class="en">Why this chapter matters</span></h2></div>
+  <p class="sec-lead">前一章讲老年期，本章讲"生命起点的另一端"：围产期。它既是抑郁、焦虑、双相、强迫、PTSD 各章的"特殊人群版"，也是唯一要求同时为两条生命做风险权衡的章节。</p>
+  <div class="grid3">
+    <div class="card blue">
+      <h3>章节定位与重要性</h3>
+      <p>本章位于教材第二十章（印刷页 240–247），归入"特殊人群精神障碍"板块。教材以"概述—病因与发病机制—临床表现—临床分型—诊断—治疗"六节组织，<strong>不是按单一疾病展开</strong>，而是围绕"围产期"这一时间窗，横向切取多类障碍。</p>
+      <p class="note">考试权重集中在：命名口径与时间窗、临床分型（尤其 4 个焦虑亚型）、ICD-11 两类诊断要求、治疗分层与药物致畸取舍。</p>
+    </div>
+    <div class="card red">
+      <h3>临床意义</h3>
+      <p>教材给出总体患病率<strong>可达 10%～15%</strong>，说明这是产科与精神科门诊都绕不开的高频问题。其危害具有"双向性"：既损害母亲的功能（照顾婴儿能力），也可能波及胎儿与新生儿。</p>
+      <p>最危险的情形是<strong>产后精神病</strong>：教材明确患者可能忽视或虐待婴儿，严重时出现杀害他人（尤其是婴幼儿）和 / 或自杀等危险行为，<strong>需立即送医救治</strong>。</p>
+    </div>
+    <div class="card green">
+      <h3>与前后章节关联</h3>
+      <p><strong>前置：</strong>抑郁障碍、双相障碍、焦虑障碍、强迫症、创伤后应激障碍各章的诊断标准，是本章分型的"骨架"。</p>
+      <p><strong>后续延伸：</strong>治疗学章的 ECT、rTMS 与药物治疗原则，在本章需按"母婴双安全"重新权衡。</p>
+      <p><strong>横向交叉：</strong>产科（不良妊娠结局、死胎死产、母婴分离）、儿科（母乳喂养、婴儿睡眠）、内分泌（甲状腺、肾上腺、性激素）、心理测量（EPDS、PHQ-9）。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 02 导航 ===== -->
+<section id="navmap">
+  <div class="sec-head"><div class="badge">02</div><h2>章节导航图<span class="en">Section map</span></h2></div>
+  <p class="sec-lead">教材六节按认知顺序重组为四个正文单元：总论（第一至三节）→ 临床分型（第四节）→ 诊断与鉴别（第五节）→ 治疗原则（第六节）。</p>
+  <div class="grid4">
+    <a class="card cyan" href="#u1" style="display:block;color:inherit">
+      <h3>单元一 · 总论</h3>
+      <p>概念与命名演进、流行病学、病因与发病机制、三大症状维度。</p>
+      <p class="note">关键词：10%～15% · 分娩后 6 周 · 激素剧变 · HPA 轴</p>
+    </a>
+    <a class="card red" href="#u2" style="display:block;color:inherit">
+      <h3>单元二 · 临床分型</h3>
+      <p>围产期抑郁障碍；围产期焦虑障碍（GAD、惊恐、疾病焦虑、强迫症）；围产期躁狂发作（双相障碍、产后精神病）；围产期 PTSD。</p>
+      <p class="note">关键词：8 个独立障碍名 · 产后第一个月 · 婴儿窒息/猝死</p>
+    </a>
+    <a class="card orange" href="#u3" style="display:block;color:inherit">
+      <h3>单元三 · 诊断与鉴别</h3>
+      <p>病史采集 9 项、6 个量表、4 组辅助检查、6 类重点人群；ICD-11 伴 / 不伴精神病性症状。</p>
+      <p class="note">关键词：排除器质性 · 产后忧郁 · 功能损害</p>
+    </a>
+    <a class="card green" href="#u4" style="display:block;color:inherit">
+      <h3>单元四 · 治疗原则</h3>
+      <p>风险-效益、分层治疗、社会干预与支持、5 种心理治疗、3 类辅助治疗、药物治疗与 ECT。</p>
+      <p class="note">关键词：综合全程分级多学科 · 单一用药 · 丙戊酸盐不再推荐</p>
+    </a>
+  </div>
+  <div class="callout book">
+    <span class="ct">📖 关于"每病八栏"的适配说明</span>
+    本章教材以"概述—病因—表现—分型—诊断—治疗"的<strong>主题式</strong>结构组织，而非逐病独立成节。为遵守技能"栏目顺序固定、不得删栏"的要求，正文按<strong>主题单元</strong>套用八栏：疾病画像→单元画像、病因探秘、临床表现拼图、教材典型案例、鉴别诊断对对碰、治疗方案工具箱、记忆工具箱、知识联动；不适用的栏目保留标题并注明原因。<br>
+    特别说明：教材"第四节 临床分型"实际列出了<strong>8 个独立障碍名称</strong>（围产期抑郁障碍；围产期广泛性焦虑障碍、惊恐障碍、疾病焦虑障碍、强迫症；围产期双相障碍、产后精神病；围产期 PTSD）。为不丢失任何一个，单元二专设"各类障碍逐一临床特征"栏目，逐一覆盖；单元二未把这 8 个障碍拆成 8 个 section，是因为教材把它们合并于同一节叙述、且共用同一套病因与治疗原则（技能 BRIEF 允许"教材节内结构合并为一个单元，但必须说明合并依据"）。
+  </div>
+</section>
+
+<!-- ===== 03 知识地图 ===== -->
+<section id="mindmap">
+  <div class="sec-head"><div class="badge">03</div><h2>本章知识地图<span class="en">Knowledge map</span></h2></div>
+  <p class="sec-lead">全章可压缩为一条主线：<strong>时间窗定义"是不是"→ 症状维度定义"像什么"→ 分型定义"是哪一型"→ 诊断要求定义"够不够"→ 治疗分层定义"怎么办"</strong>。</p>
+  <div class="stat">
+    <span>6 节</span><span>4 个正文单元</span><span>8 个独立障碍名称</span><span>4 类临床分型</span><span>ICD-11 的 2 类诊断</span><span>6 个心理评定量表</span><span>5 种心理治疗</span><span>5 类心理社会风险因素</span>
+  </div>
+  <p class="note">统计口径：8 个障碍名称＝围产期抑郁障碍 1 + 围产期焦虑障碍及其 4 个亚型 4 + 围产期双相障碍 1 + 产后精神病 1 + 围产期 PTSD 1（围产期焦虑障碍本身作为大类不计入）。教材未给出统一的疾病计数，此处按原文点名整理。</p>
+  <div class="grid3">
+    <div class="card cyan">
+      <h3>① 总论：先定"时间窗"</h3>
+      <ul>
+        <li>定义落点是"一组综合征"，不是单一疾病</li>
+        <li>命名演进：Marcé → Pitt（产后 4 周）→ WHO（产后一年）→ DSM-5（妊娠期或产后 4 周）→ ICD-10（产后 6 周）→ ICD-11（分娩后 6 周内）</li>
+        <li>至少 1/3 患者在妊娠期发病，故用"围产期"取代"产后"</li>
+        <li>患病率总体 10%～15%，但各口径数据差异大</li>
+      </ul>
+    </div>
+    <div class="card blue">
+      <h3>② 病因：三线合流</h3>
+      <ul>
+        <li>遗传：GABA 受体结构异常、甲基化模式改变</li>
+        <li>神经生物学：雌激素/孕酮骤升骤降 + HPA 轴激活与代偿</li>
+        <li>心理社会：既往精神障碍史、孕期心理障碍、心理生物学因素、创伤经历、社会心理压力</li>
+        <li>教材定性：病因及病理机制<strong>尚不明确</strong>，为综合作用</li>
+      </ul>
+    </div>
+    <div class="card red">
+      <h3>③ 表现：三个维度</h3>
+      <ul>
+        <li>情绪：焦虑、抑郁、精神病性与双相症状</li>
+        <li>认知与行为：认知受损、意志行为紊乱、强迫症状</li>
+        <li>躯体：自主神经功能失调、全身症状</li>
+        <li>关键提醒：孕期本身的躯体不适会"伪装"成症状</li>
+      </ul>
+    </div>
+    <div class="card orange">
+      <h3>④ 分型：四类八名</h3>
+      <ul>
+        <li>围产期抑郁障碍（PND）：产前 + 产后</li>
+        <li>围产期焦虑障碍（PNA）：GAD、惊恐、疾病焦虑、强迫症</li>
+        <li>围产期躁狂发作：双相障碍（BPAD）、产后精神病（PPP）</li>
+        <li>围产期创伤与 PTSD（P-PTSD）</li>
+      </ul>
+    </div>
+    <div class="card purple">
+      <h3>⑤ 诊断：两条主线</h3>
+      <ul>
+        <li>症候学 + 严重程度 + 病程 + 排除其他疾病</li>
+        <li>ICD-11：不伴精神病性症状 / 伴精神病性症状 / 未特指</li>
+        <li>核心特征都含"严重功能损害"与"排除器质性、物质所致"</li>
+        <li>符合特定精神障碍时<strong>同时诊断</strong>，复发或加重也可诊断</li>
+      </ul>
+    </div>
+    <div class="card green">
+      <h3>⑥ 治疗：一条分层轴</h3>
+      <ul>
+        <li>总体：综合、全程、分级、多学科协作，母婴双安全</li>
+        <li>轻中度：首选非药物（社会干预、支持、心理治疗、辅助治疗）</li>
+        <li>重症/急性起病/精神病性症状/自伤伤人：药物和 / 或 ECT</li>
+        <li>药物：单一用药，抗抑郁倾向 SSRIs；丙戊酸盐不再推荐</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 04 路线 ===== -->
+<section id="route">
+  <div class="sec-head"><div class="badge">04</div><h2>学习路线图<span class="en">Study route</span></h2></div>
+  <p class="sec-lead">本章名词多、时间窗多、亚型多，最容易"混成一团"。建议先立时间轴，再分型，再诊断，最后治疗。</p>
+  <div class="grid2">
+    <div class="card blue">
+      <h3>推荐学习路径</h3>
+      <div class="timeline">
+        <div class="tl-item"><h4>第 1 步 · 立时间轴（约 20 分钟）</h4><p>先背五个口径：Pitt 产后 4 周、WHO 产后一年、DSM-5 妊娠期或产后 4 周、ICD-10 产后 6 周、ICD-11 分娩后 6 周内；再理解为何改用"围产期"。</p></div>
+        <div class="tl-item"><h4>第 2 步 · 记三线病因与三维表现（约 30 分钟）</h4><p>遗传—神经生物学—心理社会三线；情绪—认知行为—躯体三维。重点抓住"孕晚期升高、产后骤降"的激素曲线。</p></div>
+        <div class="tl-item"><h4>第 3 步 · 攻分型（约 50 分钟）</h4><p>先记四大类，再把 PNA 的 4 个亚型逐个过一遍；用"数字锚"记 GAD 与 IAD 的 6 个月、惊恐障碍的 1 个月。</p></div>
+        <div class="tl-item"><h4>第 4 步 · 诊断与鉴别（约 35 分钟）</h4><p>把"不伴 / 伴精神病性症状"的 4 条核心特征对照记忆；重点练"产后忧郁 vs 产后抑郁障碍"的边界。</p></div>
+        <div class="tl-item"><h4>第 5 步 · 治疗 + 刷题（约 30 分钟）</h4><p>背治疗总体原则 16 字与分层轴；三类药物的取舍（SSRIs、锂/丙戊/拉莫三嗪、SGA）逐个过；最后做自测与病例挑战。</p></div>
+      </div>
+      <p class="note">总时长约 2.5～3 小时；建议分 2 次完成，次日用速记卡 + 自测复习 30 分钟。</p>
+    </div>
+    <div class="card purple">
+      <h3>重点优先级与记忆策略</h3>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>内容</th><th>优先级</th><th>推荐记忆法</th></tr></thead>
+          <tbody>
+            <tr><td>ICD-11 两类诊断的核心特征</td><td class="starme">⭐⭐⭐</td><td>对比记忆法 + 数字锚定</td></tr>
+            <tr><td>产后精神病的危险信号与处理</td><td class="starme">⭐⭐⭐</td><td>危险信号清单 + 故事串联</td></tr>
+            <tr><td>PNA 四个亚型的识别</td><td class="starme">⭐⭐⭐</td><td>归类记忆法 + 首字母</td></tr>
+            <tr><td>治疗分层与药物致畸取舍</td><td class="starme">⭐⭐⭐</td><td>口诀 + 对比表</td></tr>
+            <tr><td>"产后忧郁"与 PPD 的边界</td><td class="starme">⭐⭐⭐</td><td>对比记忆法</td></tr>
+            <tr><td>命名口径与时间窗</td><td class="starme">⭐⭐</td><td>时间轴 + 数字编码</td></tr>
+            <tr><td>病因三线与激素曲线</td><td class="starme">⭐⭐</td><td>图解记忆法</td></tr>
+            <tr><td>评估清单（9 项病史、6 个量表）</td><td class="starme">⭐⭐</td><td>数字编码法</td></tr>
+            <tr><td>临床表现三维度</td><td class="starme">⭐⭐</td><td>归类记忆法</td></tr>
+            <tr><td>心理治疗的 5 种方法</td><td class="starme">⭐</td><td>首字母缩拼</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="note">记忆策略总原则：时间窗用"轴"、亚型用"树"、诊断要求用"表"、治疗用"分层"。不要把所有名词平铺硬背。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 05 单元一 总论 ===== -->
+<section id="u1">
+  <div class="sec-head"><div class="badge">05</div><h2>围产期精神障碍总论<span class="en">第一节～第三节 · 概述 / 病因 / 临床表现（p.240–242）</span></h2></div>
+  <p class="sec-lead">这一单元只做三件事：把"围产期"这个时间窗量出来、把病因的三条线拉出来、把症状的三个维度摊开。它是后面所有分型的公共底座。</p>
+
+  <!-- 第一栏 -->
+  <div class="card cyan" id="u1-1">
+    <h3 class="col-title"><span class="idx">第一栏</span>疾病画像 → 总论画像</h3>
+    <div class="quote"><span class="lab">教材原文</span>与妊娠、分娩或产褥期有关的精神或行为障碍（mental or behavioural disorders associated with pregnancy，childbirth or the puerperium）是指在女性妊娠、分娩或产褥期期间发生的与心理和行为相关的一组综合征，包含显著的精神和行为特征。</div>
+    <p><strong>一句话画像：</strong>它不是一个"病"，而是<strong>一段时间窗 + 一组综合征</strong>——只要精神与行为症状落在妊娠、分娩或产褥期这条时间线上，并且达到"显著"与"功能损害"的程度，就进入本章的讨论范围。<span class="note">（此句为对教材定义的通俗复述，非教材原文）</span></p>
+    <div class="stat">
+      <span>总体患病率可达 10%～15%</span>
+      <span>国外围产期抑郁 5%～25%</span>
+      <span>国外围产期焦虑 9%～22%</span>
+      <span>国内围产期抑郁 3.8%～16.7%</span>
+      <span>国内围产期焦虑 6.1%～7.7%</span>
+      <span>国内围产期强迫症 1.2%～5.2%</span>
+      <span>国内产褥期精神障碍 0.1%～0.2%</span>
+    </div>
+    <div class="callout warn">
+      <span class="ct">⚠️ 教材对数据的自我限定</span>
+      教材明确指出：由于尚缺乏统一的名称、定义，且流行病学调查的方法和使用工具也各不相同，导致不同地域、国家所报道的数据<strong>差异较大</strong>。因此上述区间只能作为"量级印象"，不能当作精确患病率来记。
+    </div>
+    <p><strong>概念的三个锚点：</strong></p>
+    <div class="grid3">
+      <div class="mini"><h4>锚点一 · 时间</h4><p>妊娠期、分娩期、产褥期都算；不同诊断体系给的截止点不同（4 周 / 6 周 / 1 年）。</p></div>
+      <div class="mini"><h4>锚点二 · 性质</h4><p>"一组综合征"，包含显著的精神和行为特征；若符合某种特定精神障碍的诊断要求，需<strong>同时诊断</strong>。</p></div>
+      <div class="mini"><h4>锚点三 · 归因</h4><p>无论已知与妊娠、分娩或产褥期相关的生物学因素在病因学上是否与该综合征相关，<strong>均可给出诊断</strong>。</p></div>
+    </div>
+  </div>
+
+  <!-- 第二栏 -->
+  <div class="card blue" id="u1-2">
+    <h3 class="col-title"><span class="idx">第二栏</span>病因探秘</h3>
+    <div class="quote"><span class="lab">教材原文</span>与妊娠、分娩或产褥期有关的精神或行为障碍的病因及病理机制尚不明确，是遗传因素、神经生物学因素、心理因素及社会环境因素综合作用所致。</div>
+    <p>教材先给出"尚不明确"这一前提，再分三条线叙述。学习时应把三条线当成<strong>三根并行的绳子</strong>，而不是三个互相排斥的答案。</p>
+    <div class="grid3">
+      <div class="mini">
+        <h4>① 遗传因素</h4>
+        <ul>
+          <li>遗传因素是抑郁障碍发生的重要因素之一</li>
+          <li>早期研究证实：遗传因素能使围产期抑郁障碍患者在应对激素变化时出现<strong>不同反应</strong></li>
+          <li>产后抑郁障碍的实验小鼠，其 <strong>γ-氨基丁酸受体结构存在遗传性异常</strong></li>
+          <li>多中心研究发现产后抑郁障碍女性的<strong>甲基化模式发生改变</strong></li>
+          <li>这些发现提供了"激素诱发抑郁"与"抑郁易感性"之间的联系</li>
+        </ul>
+      </div>
+      <div class="mini">
+        <h4>② 神经生物学因素</h4>
+        <ul>
+          <li>妊娠期和产后期间，正常生理变化伴随复杂而明显的激素水平波动</li>
+          <li>孕晚期：雌激素和孕酮水平<strong>显著升高</strong>，同时 HPA 轴激活、皮质醇<strong>显著升高</strong></li>
+          <li>胎儿出生、胎盘娩出后：雌激素和孕酮<strong>迅速下降</strong></li>
+          <li>为应对这些波动，HPA 轴功能出现<strong>代偿性变化</strong></li>
+          <li>上述激素变化对大脑和神经递质等系统均产生影响</li>
+        </ul>
+      </div>
+      <div class="mini">
+        <h4>③ 心理社会因素</h4>
+        <p>教材列出与发病密切相关的<strong>风险因素</strong>：</p>
+        <ul>
+          <li>既往有精神障碍病史</li>
+          <li>孕期出现心理障碍</li>
+          <li>心理生物学因素：肥胖、物质滥用、不良妊娠结局或不良分娩结果、睡眠障碍</li>
+          <li>创伤经历</li>
+          <li>社会心理因素：特定人格特质、婚姻等人际冲突、缺乏社会支持，以及经济、工作等方面的压力</li>
+        </ul>
+      </div>
+    </div>
+    <div class="timeline">
+      <div class="tl-item"><h4>孕晚期</h4><p>雌激素、孕酮显著升高；HPA 轴激活；皮质醇显著升高——此时身体处于"高激素、高应激"状态。</p></div>
+      <div class="tl-item"><h4>分娩与胎盘娩出</h4><p>雌激素、孕酮<strong>迅速下降</strong>，是围产期最剧烈的一次内分泌转折。</p></div>
+      <div class="tl-item"><h4>产后</h4><p>HPA 轴功能代偿性变化；激素波动波及大脑与神经递质系统，成为发病的生物学土壤。</p></div>
+    </div>
+    <div class="callout warn">
+      <span class="ct">⚠️ 教材未给出的内容</span>
+      教材<strong>未给出</strong>各遗传因素的具体基因、未给出 HPA 轴具体指标数值、也未给出各风险因素的权重或相对风险（OR/RR）。凡此类数字均属「教材未涉及」，不可自行补充。
+    </div>
+  </div>
+
+  <!-- 第三栏 -->
+  <div class="card red" id="u1-3">
+    <h3 class="col-title"><span class="idx">第三栏</span>临床表现拼图</h3>
+    <p>教材把临床表现分为<strong>情绪症状、认知与行为症状、躯体症状</strong>三个方面。点击标签切换查看。</p>
+    <div class="tabs" data-tabs>
+      <div class="tabbar">
+        <button class="on" data-tab="u1a">情绪症状</button>
+        <button data-tab="u1b">认知与行为症状</button>
+        <button data-tab="u1c">躯体症状</button>
+      </div>
+      <div class="panel on" data-panel="u1a">
+        <div class="mini">
+          <h4>1. 焦虑症状</h4>
+          <p>缘于孕产期女性对<strong>胎儿健康的忧虑</strong>、对<strong>分娩过程的担忧</strong>和对<strong>疼痛的恐惧</strong>，以及对于<strong>育儿能力的担心</strong>，产生恐惧感、紧张感和不安感，这也是焦虑障碍的核心症状。</p>
+        </div>
+        <div class="mini">
+          <h4>2. 抑郁症状</h4>
+          <p>可能包括情绪低落、悲观厌世；对通常令人愉快的活动不感兴趣、体会不到快乐，极度烦躁和愤怒；感到羞耻、内疚或能力不足。</p>
+        </div>
+        <div class="mini">
+          <h4>3. 产褥期精神病性障碍及双相障碍症状</h4>
+          <p>症状多样，如精神分裂症样的紧张恐惧、言行紊乱；躁狂时的兴奋不安、情绪高涨、能力感强、易激惹。</p>
+        </div>
+        <p class="note">记忆抓手：情绪维度只有"三块"——焦虑、抑郁、精神病性与双相。前两块常见，第三块最危险。</p>
+      </div>
+      <div class="panel" data-panel="u1b">
+        <div class="mini">
+          <h4>1. 认知功能受损症状</h4>
+          <p>正常情况下孕产期女性也可能经历注意力和记忆力的变化，表现为<strong>健忘、反应慢、注意力集中困难</strong>。产后抑郁障碍时出现<strong>思维迟缓</strong>；躁狂时则反应快速、思维活跃、注意力转换快速，甚至出现<strong>夸大妄想</strong>。</p>
+        </div>
+        <div class="mini">
+          <h4>2. 意志行为紊乱症状</h4>
+          <p>产后抑郁障碍患者会产生自责自罪，一蹶不振，伴有<strong>自伤、自杀甚至扩大性自杀</strong>等消极观念或行为；或少言寡语、懒散懒动，逐渐与人疏远；严重时出现<strong>退行行为、卧床不起</strong>。躁狂时则精力充沛、反应快速、热情主动、言语活动增多、善交际。伴幻觉妄想等精神病性症状时，会出现自语自笑、乱喊乱叫、毁物伤人等相应行为。</p>
+        </div>
+        <div class="mini">
+          <h4>3. 强迫症状</h4>
+          <p>包括强迫观念和强迫行为，通常与焦虑有关。常体现在对新生婴儿（或未出生胎儿）的<strong>过度关注</strong>，如担心婴儿受伤、被污染或丢失；也可能存在<strong>过度回避行为</strong>，如避免给孩子洗澡或避免接触孩子。</p>
+        </div>
+      </div>
+      <div class="panel" data-panel="u1c">
+        <div class="mini">
+          <h4>1. 自主神经功能失调症状</h4>
+          <ul>
+            <li><strong>孕早期</strong>：便秘、腹胀、恶心、呕吐、食欲减退，或伴嗜睡、乏力、畏寒、容易疲劳等早孕反应</li>
+            <li><strong>孕晚期</strong>：体重增加、活动不便、腰部和骨盆疼痛、易疲劳、睡眠差</li>
+            <li><strong>围产期焦虑障碍时</strong>：头晕、胸闷、心悸、呼吸急促、尿频尿急、出汗、震颤、濒死感、失控感</li>
+            <li><strong>围产期抑郁障碍时</strong>：食欲减退或增加、头晕不适</li>
+          </ul>
+        </div>
+        <div class="mini">
+          <h4>2. 全身症状</h4>
+          <p>焦虑障碍、抑郁障碍时患者会感到<strong>持续的疲惫无力</strong>，即使在休息后也无法恢复；其他可能症状包括体重变化、睡眠障碍（失眠或过度睡眠）、体力衰竭等。</p>
+        </div>
+        <div class="callout warn">
+          <span class="ct">⚠️ 临床陷阱（教材提示性内容）</span>
+          教材专门指出"正常情况下的孕产期女性可能在认知方面会经历注意力和记忆力的变化"。这意味着<strong>健忘、反应慢本身不等于病</strong>；判断的关键是这些症状是否达到显著程度、是否造成功能损害。
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 第四栏 -->
+  <div class="card orange" id="u1-4">
+    <h3 class="col-title"><span class="idx">第四栏</span>教材典型案例</h3>
+    <div class="callout book">
+      <span class="ct">📖 教材未提供具体临床案例</span>
+      本章第一至第三节为概念、流行病学、病因与症状学总论，<strong>全章六节均未列病案</strong>（无患者年龄、孕产次、病史、量表分值或检查结果）。因此本栏不展示案例，也不代为虚构。
+    </div>
+    <p><strong>由教材要点整理出的"症状采集思路"（学习用推演，不是教材案例）：</strong></p>
+    <ol>
+      <li>先问<strong>时间</strong>：症状起于妊娠期、分娩期还是产褥期？距分娩多久？——这决定它落在哪个诊断口径内。</li>
+      <li>再问<strong>维度</strong>：情绪（焦虑/抑郁/高涨）→ 认知与行为（思维速度、自责自伤、强迫检查与回避）→ 躯体（早孕反应、心悸胸闷、睡眠与食欲）。</li>
+      <li>最后问<strong>功能</strong>：是否影响照顾婴儿的能力？教材在鉴别部分反复以"影响功能，包括照顾婴儿的能力"作为分界线。</li>
+    </ol>
+    <p class="note">以上三步均可在教材原文中找到依据（第三栏症状三维度、第五节鉴别中"影响功能"的表述），但组合方式为学习整理，非教材原文。</p>
+  </div>
+
+  <!-- 第五栏 -->
+  <div class="card orange" id="u1-5">
+    <h3 class="col-title"><span class="idx">第五栏</span>鉴别诊断对对碰</h3>
+    <p><strong>表 1　同一个"围产期"，五套时间口径</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>来源</th><th>时间窗 / 命名</th><th>教材原文要点</th></tr></thead>
+        <tbody>
+          <tr><td>Pitt 等（1968）</td><td>产后抑郁障碍（PPD）</td><td>产后 <strong>4 周</strong>内发生的与产褥期相关的精神和行为障碍，是产褥期精神综合征的一种</td></tr>
+          <tr><td>世界卫生组织</td><td>"产后"</td><td>产后<strong>一年</strong>内的任何时间</td></tr>
+          <tr><td>DSM-5</td><td>围产期抑郁发作</td><td>妊娠期或产后 <strong>4 周</strong>内出现的心境症状，妊娠期和产后发病均包括在内</td></tr>
+          <tr><td>ICD-10</td><td>与产褥期有关的轻度精神和行为障碍</td><td>产后 <strong>6 周</strong>内的抑郁发作，未明确提及妊娠期发病</td></tr>
+          <tr><td>ICD-11</td><td>与妊娠、分娩或产褥期有关的精神或行为障碍（不伴 / 伴精神病性症状）</td><td>与妊娠或产褥期（<strong>分娩后 6 周内</strong>）相关的综合征</td></tr>
+          <tr><td>2021 年专家共识</td><td>围产期抑郁障碍（孕产期抑郁障碍）</td><td>妊娠期间或分娩后 <strong>4 周</strong>内出现的抑郁发作，包括产前抑郁障碍和产后抑郁障碍</td></tr>
+          <tr><td><strong>本章采用</strong></td><td>综合 2023 年《围产期精神障碍筛查与诊治专家共识》及 ICD-11</td><td>命名与定义以 ICD-11 为准，时间窗为<strong>分娩后 6 周内</strong></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout key"><span class="ct">📌 一句话鉴别总结</span>"4 周"是 DSM-5 与 2021 共识，"6 周"是 ICD-10 与 ICD-11，"一年"是 WHO——<strong>先认体系，再报数字</strong>，不要把所有时间窗混成一个。</div>
+
+    <p><strong>表 2　"正常波动"与"需要诊断"的三条边界</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>情形</th><th>教材的处理</th><th>关键判别点</th></tr></thead>
+        <tbody>
+          <tr><td>轻度和短暂的抑郁症状（俗称"产后忧郁"或"婴儿忧郁"）</td><td><strong>不适用</strong>"不伴精神病性症状"这一诊断</td><td>症状未达到抑郁发作的诊断要求</td></tr>
+          <tr><td>产后抑郁障碍</td><td>最初可能被误认为"婴儿忧郁"，但应识别为更严重的问题；若满足抑郁发作诊断要求，应诊断为单次发作的抑郁障碍或复发性抑郁障碍</td><td>症状与体征<strong>更严重</strong>、<strong>持续时间更长</strong>、<strong>影响功能状态（包括照顾婴儿的能力）</strong></td></tr>
+          <tr><td>妊娠期间和分娩后对婴儿的担忧与恐惧、一定程度的关于可能的危害的侵入性想法</td><td><strong>不应</strong>诊断为与妊娠、分娩或产褥期有关的精神或行为障碍</td><td>除非<strong>持续存在、与实际痛苦有关、并且影响功能（包括照顾婴儿的能力）</strong></td></tr>
+          <tr><td>一般人群中类似精神病样症状或不寻常主观体验</td><td><strong>不应</strong>诊断</td><td>通常<strong>短暂</strong>、<strong>不影响功能</strong>、本人通常<strong>能意识到是幻觉</strong></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout key"><span class="ct">📌 一句话鉴别总结</span>正常与异常的界线不是"有没有这个念头"，而是<strong>三个词</strong>：持续、痛苦、功能受损。</div>
+
+    <p><strong>表 3　症状群指向哪个分型（总论层面的"导航式鉴别"）</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>主导症状</th><th>优先考虑的分型</th><th>教材依据</th></tr></thead>
+        <tbody>
+          <tr><td>情绪低落、兴趣减退、自责自罪、对婴儿缺乏兴趣</td><td>围产期抑郁障碍</td><td>第四节：症状与抑郁发作相似，但有妊娠特异性特征</td></tr>
+          <tr><td>对分娩恐惧、对新生儿健康担忧、害怕伤害婴儿或伴侣</td><td>围产期焦虑障碍（再细分 4 个亚型）</td><td>第四节：PNA 的临床特征与亚型划分</td></tr>
+          <tr><td>情绪高涨、精力充沛、易激惹，或出现妄想、幻觉、意识模糊</td><td>围产期躁狂发作（双相障碍 / 产后精神病）</td><td>第四节：BPAD 与 PPP 的描述</td></tr>
+          <tr><td>闯入性症状、回避创伤相关刺激、认知情绪负面改变、警觉性增高</td><td>围产期 PTSD</td><td>第四节：P-PTSD 四大核心症状</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout key"><span class="ct">📌 一句话鉴别总结</span>看到"低落"想抑郁、看到"怕"想焦虑、看到"高涨或荒谬"想躁狂与精神病、看到"闪回与回避"想 PTSD——<strong>先按主导症状分流，再进单元二细辨</strong>。</div>
+  </div>
+
+  <!-- 第六栏 -->
+  <div class="card green" id="u1-6">
+    <h3 class="col-title"><span class="idx">第六栏</span>治疗方案工具箱</h3>
+    <div class="callout book">
+      <span class="ct">📖 教材未提供相关内容</span>
+      本单元对应教材第一至第三节（概述、病因与发病机制、临床表现），<strong>不涉及治疗</strong>。教材把全部治疗内容集中在第六节，故本栏在本单元无对应原文；这不是遗漏，而是教材的编排方式。
+    </div>
+    <p><strong>为什么保留此栏：</strong>技能规范要求八栏顺序固定、不得删栏。此处保留标题并说明"教材未提供相关内容"的原因，以免读者误以为总论部分存在治疗建议。</p>
+    <p><strong>本单元与治疗的真实接口（仅为索引，不构成治疗建议）：</strong></p>
+    <div class="mini">
+      <h4>总论 → 治疗的三个"输入变量"</h4>
+      <ul>
+        <li><strong>严重程度</strong>：决定走"非药物"还是"药物和 / 或 ECT"（第四单元）。</li>
+        <li><strong>症状维度</strong>：情绪、认知行为、躯体三类症状决定心理治疗与药物靶点。</li>
+        <li><strong>风险因素清单</strong>：既往精神障碍史、创伤经历、缺乏社会支持等，决定社会干预与社会支持的力度。</li>
+      </ul>
+    </div>
+    <p class="note">以上为按教材结构整理的"索引"，具体治疗原则与药物取舍见 <a href="#u4-6">单元四第六栏</a>。</p>
+  </div>
+
+  <!-- 第七栏 -->
+  <div class="card purple" id="u1-7">
+    <h3 class="col-title"><span class="idx">第七栏</span>记忆工具箱</h3>
+    <div class="callout tip">
+      <span class="ct">🔧 方法一：数字编码法（把时间窗钉在四个数字上）</span>
+      记 <strong>"4—6—6—1"</strong>：Pitt 与 DSM-5 用 <strong>4 周</strong>；ICD-10 用产后 <strong>6 周</strong>；ICD-11 用分娩后 <strong>6 周</strong>内；WHO 用产后 <strong>1 年</strong>。<br>
+      <em>为什么这样记：</em>时间窗是本单元最易混的一组数字，用"由短到长"的顺序排列（4 周 → 6 周 → 1 年），回忆时像拉一把尺子，不会张冠李戴。
+    </div>
+    <div class="callout tip">
+      <span class="ct">🔧 方法二：口诀歌谣法（病因三线 + 表现三维）</span>
+      病因口诀：<strong>"遗、神、心、社，四条绳一股"</strong>——遗传、神经生物学、心理、社会，综合作用。<br>
+      表现口诀：<strong>"情、知、躯，三面镜"</strong>——情绪、认知与行为、躯体。<br>
+      <em>为什么这样记：</em>教材反复强调"综合作用"，用"四股绳"的画面能防止把病因答成单因；"三面镜"则对应教材明确的三分法，答题时逐面清点不漏项。
+    </div>
+    <div class="callout tip">
+      <span class="ct">🔧 方法三：图解记忆法（一条激素"过山车"曲线）</span>
+      画一条曲线：<strong>孕晚期冲高</strong>（雌激素、孕酮显著升高，皮质醇显著升高）→ <strong>胎盘娩出骤降</strong>（雌激素、孕酮迅速下降）→ <strong>产后代偿</strong>（HPA 轴功能代偿性变化）。在曲线的三个点上各写一个词："高、落、偿"。<br>
+      <em>为什么这样记：</em>教材的神经生物学段落本质上是一条时间曲线；把文字转成图形，比背句子更抗遗忘，也直接解释了"为什么产后是发病高峰"。
+    </div>
+    <div class="callout tip">
+      <span class="ct">🔧 方法四：联想记忆法（标注：类比理解，非医学事实）</span>
+      把围产期的内分泌变化想成<strong>一次"急刹车"</strong>：孕晚期是油门踩到底（激素与皮质醇都高），胎盘娩出相当于猛踩刹车（激素骤降），身体的"悬挂系统"（HPA 轴）必须临时重新调校——调不过来的人，就容易在这段时间出现情绪与行为问题。<br>
+      <em>为什么这样记：</em>"急刹车"这个画面把"骤升—骤降—代偿"三个环节锁在一起，比孤立记三个名词更牢。
+    </div>
+  </div>
+
+  <!-- 第八栏 -->
+  <div class="card cyan" id="u1-8">
+    <h3 class="col-title"><span class="idx">第八栏</span>知识联动</h3>
+    <ul>
+      <li><strong>与抑郁障碍章：</strong>教材明确"围产期抑郁障碍症状与抑郁发作相似"，并在诊断部分要求"如果满足抑郁发作的诊断要求，应诊断为单次发作的抑郁障碍或复发性抑郁障碍"——即本章诊断与抑郁障碍章是"叠加"而非"替代"关系。</li>
+      <li><strong>与双相障碍章：</strong>教材指出围产期精神病性症状最常发生在抑郁、躁狂或混合发作背景下，此时还应诊断为单次发作的抑郁障碍、复发性抑郁障碍或<strong>双相障碍Ⅰ型</strong>；病史采集也要求"重点关注任何可能表明以前未确诊的双相障碍的症状"。</li>
+      <li><strong>与焦虑障碍章、强迫症章：</strong>围产期焦虑障碍的症状"符合焦虑障碍的诊断标准"；其 4 个亚型分别对应广泛性焦虑、惊恐障碍、疾病焦虑障碍与强迫症，可直接借用各章的诊断框架。</li>
+      <li><strong>与创伤后应激障碍章：</strong>P-PTSD 的四大核心症状（闯入性、回避、认知与情绪负面改变、警觉性与反应性增高）与 PTSD 的症状群结构一致，差别在于创伤事件为<strong>分娩、产科手术等潜在创伤性事件</strong>。</li>
+      <li><strong>与产科、儿科：</strong>教材在评估部分把"婴儿喂养和哺乳"与"睡眠"单列为产褥期重点评估因素，把死胎、死产、母婴分离、母乳喂养困难列为重点人群线索，说明本章与产科、儿科的工作界面高度重叠。</li>
+      <li><strong>与治疗学章：</strong>ECT、rTMS、心理治疗与药物治疗的一般原则见治疗学章；本章的特殊性在于每一条治疗选择都要额外通过"母亲—胎儿/婴儿"的双重风险审查。</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===== 06 单元二 临床分型 ===== -->
+<section id="u2">
+  <div class="sec-head"><div class="badge">06</div><h2>临床分型<span class="en">第四节 · 临床分型（p.242–243）</span></h2></div>
+  <p class="sec-lead">教材开篇即声明"临床特征归类上目前尚未达成一致"，此处综合国内外专家共识或诊疗指南介绍。全节共 <strong>4 大类、8 个独立障碍名称</strong>，本单元逐个覆盖，一个不漏。</p>
+
+  <!-- 第一栏 -->
+  <div class="card cyan" id="u2-1">
+    <h3 class="col-title"><span class="idx">第一栏</span>疾病画像</h3>
+    <p><strong>一句话画像：</strong>同一个围产期时间窗里，症状的主导方向不同，就分出了四条"平行赛道"——<strong>往下沉的是抑郁、往上飘或崩塌的是躁狂与精神病、始终紧绷的是焦虑、反复重演的是创伤</strong>。<span class="note">（此句为对教材分型的概括，非教材原文）</span></p>
+    <div class="grid2">
+      <div class="mini">
+        <h4>一、围产期抑郁障碍（PND）</h4>
+        <p>又称孕产期抑郁障碍，是妊娠期及分娩后 4 周内或流产后出现的抑郁发作，包括<strong>产前抑郁障碍</strong>与<strong>产后抑郁障碍（PPD）</strong>，是妊娠期及产褥期<strong>常见并发症之一</strong>。</p>
+        <p class="note">教材强调：症状与抑郁发作相似，不同之处是存在明显的<strong>妊娠特异性特征</strong>。</p>
+      </div>
+      <div class="mini">
+        <h4>二、围产期焦虑障碍（PNA）</h4>
+        <p>症状<strong>符合焦虑障碍的诊断标准</strong>，主要源于对分娩过程的恐惧及对新生儿健康的担心；临床特征是<strong>害怕对婴儿或伴侣造成伤害</strong>，伴或不伴抑郁症状；症状持续<strong>数周至数月不等，甚至更长</strong>。</p>
+        <p class="note">可细分为 4 个亚型：广泛性焦虑障碍、惊恐障碍、疾病焦虑障碍、强迫症。</p>
+      </div>
+      <div class="mini">
+        <h4>三、围产期躁狂发作</h4>
+        <p>包含两个名称：<strong>围产期双相障碍（BPAD）</strong>——发生在围产期、临床符合双相障碍的<strong>无精神病性症状</strong>的欣快感、多动性躁狂发作；<strong>产后精神病（PPP）</strong>——通常分娩后<strong>数天至数周内爆发起病</strong>，症状含激越、易怒、情绪不稳定、妄想和行为紊乱，还可能意识模糊。</p>
+      </div>
+      <div class="mini">
+        <h4>四、围产期创伤和 PTSD</h4>
+        <p>围产期分娩、产科手术等经历可能成为<strong>潜在创伤性事件（PTEs）</strong>。围产期 PTSD（P-PTSD）是产妇经历分娩创伤后发生的<strong>精神病理性反应</strong>，核心症状为闯入性症状、回避与创伤有关的刺激、认知与情绪的负面改变、警觉性和反应性增高。</p>
+      </div>
+    </div>
+    <div class="stat">
+      <span>4 大类分型</span><span>8 个独立障碍名称</span><span>PNA 含 4 个亚型</span><span>产后第一个月为高危窗</span>
+    </div>
+    <p class="note">教材未给出各分型各自的患病率——流行病学数据在第一节只按"围产期抑郁、焦虑、强迫症、产褥期精神障碍"粗略分组，未细分到 BPAD、PPP、P-PTSD。</p>
+  </div>
+
+  <!-- 第二栏 -->
+  <div class="card blue" id="u2-2">
+    <h3 class="col-title"><span class="idx">第二栏</span>病因探秘</h3>
+    <div class="quote"><span class="lab">教材原文</span>与妊娠、分娩或产褥期有关的精神或行为障碍的病因及病理机制尚不明确，是遗传因素、神经生物学因素、心理因素及社会环境因素综合作用所致。</div>
+    <p>教材<strong>没有为每个亚型单列病因学模型</strong>，共用总论的三线病因。但原文在描述各型时留下了若干"病因线索"，这些线索是本栏的全部依据：</p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>分型</th><th>教材给出的病因 / 诱因线索</th><th>说明</th></tr></thead>
+        <tbody>
+          <tr><td>围产期抑郁障碍（PND）</td><td>未单列；归入总论的遗传、神经生物学、心理社会三线</td><td>教材仅强调其"妊娠特异性特征"，未给独立病因</td></tr>
+          <tr><td>围产期焦虑障碍（PNA）</td><td>主要源于<strong>对分娩过程的恐惧</strong>及<strong>对新生儿健康的担心</strong></td><td>这是教材对 PNA 来源的明确表述</td></tr>
+          <tr><td>围产期广泛性焦虑障碍</td><td>未单列</td><td>教材只给诊断性描述（持续至少 6 个月、涉及多个事件或活动）</td></tr>
+          <tr><td>围产期惊恐障碍</td><td>未单列</td><td>教材只给发作特征与后续行为改变</td></tr>
+          <tr><td>围产期疾病焦虑障碍</td><td>当患者出现<strong>孕产期并发症</strong>或其胎儿（新生儿）出现<strong>相关并发症</strong>时，<strong>易发生</strong></td><td>教材明确点出的诱发情境</td></tr>
+          <tr><td>围产期强迫症</td><td>既可能是<strong>已有强迫症的加重</strong>，也可能是<strong>新发的强迫症</strong></td><td>教材对"起病来源"的二分表述</td></tr>
+          <tr><td>围产期双相障碍（BPAD）</td><td>与妊娠相比，<strong>分娩似乎是严重精神障碍发作的重要诱因</strong></td><td>教材原文的因果倾向表述</td></tr>
+          <tr><td>产后精神病（PPP）</td><td>未单列；与 BPAD 同段叙述，并指出躁狂、伴精神病性症状的抑郁障碍、产褥期精神障碍<strong>最易发生在产后第一个月内</strong></td><td>"产后第一个月"是教材给出的时间规律，不是病因</td></tr>
+          <tr><td>围产期 PTSD（P-PTSD）</td><td>分娩、产科手术等经历可能成为<strong>潜在创伤性事件（PTEs）</strong></td><td>创伤事件是教材明确的触发因素</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout warn">
+      <span class="ct">⚠️ 不要越界</span>
+      教材<strong>未提供</strong>各分型的独立遗传学证据、未提供激素水平与具体亚型的对应关系、未提供"分娩诱因"的作用机制解释。凡此类内容均标「教材未涉及」，不可用外部资料填补。
+    </div>
+  </div>
+
+  <!-- 第三栏 -->
+  <div class="card red" id="u2-3">
+    <h3 class="col-title"><span class="idx">第三栏</span>临床表现拼图 · 各类障碍逐一临床特征</h3>
+    <p>教材把 8 个障碍名称分别给了独立的描述段落。下表与折叠面板<strong>逐一覆盖</strong>，每个障碍单独成块，不合并、不概括。</p>
+    <div class="tabs" data-tabs>
+      <div class="tabbar">
+        <button class="on" data-tab="u2a">抑郁 + 焦虑</button>
+        <button data-tab="u2b">躁狂发作</button>
+        <button data-tab="u2c">创伤与 PTSD</button>
+      </div>
+
+      <div class="panel on" data-panel="u2a">
+        <div class="mini">
+          <h4>① 围产期抑郁障碍（PND）</h4>
+          <ul>
+            <li>时间：妊娠期及<strong>分娩后 4 周内</strong>，或<strong>流产后</strong>出现的抑郁发作</li>
+            <li>包含两个子类：产前抑郁障碍、产后抑郁障碍（PPD）</li>
+            <li>定位：妊娠期及产褥期<strong>常见并发症之一</strong></li>
+            <li>症状与抑郁发作相似，但存在明显的<strong>妊娠特异性特征</strong>：</li>
+            <li>— 对<strong>伤害新生儿</strong>的持续恐惧</li>
+            <li>— 对<strong>孩子缺乏兴趣</strong></li>
+            <li>— 作为母亲对于<strong>养育和教养孩子</strong>的严重焦虑或烦躁</li>
+          </ul>
+        </div>
+
+        <div class="mini">
+          <h4>② 围产期焦虑障碍（PNA）</h4>
+          <ul>
+            <li>症状<strong>符合焦虑障碍的诊断标准</strong></li>
+            <li>主要源于对分娩过程的恐惧及对新生儿健康的担心</li>
+            <li>临床特征：<strong>害怕对婴儿或伴侣造成伤害</strong>，伴或不伴抑郁症状</li>
+            <li>病程：症状持续<strong>数周至数月不等，甚至更长</strong></li>
+            <li>细分：围产期广泛性焦虑障碍、围产期惊恐障碍、围产期疾病焦虑障碍、围产期强迫症</li>
+          </ul>
+        </div>
+
+        <details>
+          <summary>③ 围产期广泛性焦虑障碍（perinatal GAD）</summary>
+          <div class="dbody">
+            <ul>
+              <li>指<strong>持续的过度担忧</strong>，且<strong>并不局限于妊娠相关的单一领域</strong>，而是涉及<strong>多个事件或活动</strong>。</li>
+              <li>这种担忧<strong>持续至少 6 个月</strong>，<strong>很难控制</strong>。</li>
+              <li>与<strong>至少三种</strong>下列生理症状有关：感到不安、疲劳、难以集中注意力、易怒、肌肉紧张或睡眠困难。</li>
+            </ul>
+            <p class="note">要点提示：教材的原文把"至少三种生理症状"列了 6 项候选，考试常以"至少几种"设问。</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>④ 围产期惊恐障碍（perinatal PD）</summary>
+          <div class="dbody">
+            <ul>
+              <li>指孕产期女性<strong>反复出现惊恐发作</strong>，随后出现<strong>1 个月或更长时间</strong>的显著的、适应不良的行为改变和 / 或对未来惊恐发作及其后果的担忧。</li>
+              <li>惊恐发作表现为<strong>突然发作</strong>的强烈恐惧或不适，<strong>几分钟内达到高峰</strong>。</li>
+              <li>包括<strong>四种及以上</strong>下列惊恐发作症状：</li>
+              <li>— 躯体症状：呼吸困难、胸痛、头晕、颤抖、麻木、不安、激动</li>
+              <li>— 恐惧症状：害怕发疯、害怕失去控制或死亡</li>
+            </ul>
+          </div>
+        </details>
+
+        <details>
+          <summary>⑤ 围产期疾病焦虑障碍（perinatal IAD）</summary>
+          <div class="dbody">
+            <ul>
+              <li>围产期的担忧被放大；当患者出现<strong>孕产期并发症</strong>或其胎儿（新生儿）出现相关并发症时，<strong>易发生</strong>。</li>
+              <li>通常在<strong>没有任何症状</strong>的情况下，对患有或可能发展成严重或<strong>危及个人和子代生命安全</strong>的疾病过度担忧。</li>
+              <li>尽管进行了<strong>正常的身体检查和实验室检测</strong>，仍然害怕存在一种未被确诊的疾病。</li>
+              <li>并在<strong>至少 6 个月</strong>的时间里持续引起焦虑。</li>
+              <li>如过度关注正常身体感觉（如心率加快或出汗），并将这些"症状"解读为"疾病"的证据。</li>
+              <li><strong>诊断时必须排除由其他精神障碍所引起。</strong></li>
+            </ul>
+          </div>
+        </details>
+
+        <details>
+          <summary>⑥ 围产期强迫症（perinatal OCD）</summary>
+          <div class="dbody">
+            <ul>
+              <li>发生在妊娠期间或产后的<strong>强迫思维或强迫行为</strong>，可能伴随抑郁症状。</li>
+              <li>既可能是<strong>已有强迫症的加重</strong>，也可能是<strong>新发的强迫症</strong>。</li>
+              <li>侵入性思维的主要内容是<strong>对婴儿的伤害</strong>，其中最常见的想法涉及<strong>婴儿窒息或婴儿猝死</strong>。</li>
+              <li>症状多为<strong>强迫性检查行为</strong>：如在夜间反复观察婴儿的呼吸；控制不住地担忧婴儿可能会摄入脏东西或被细菌污染等。</li>
+              <li>其次是<strong>令人不适的想法或对孩子伤害的冲动</strong>；会因为害怕对婴儿造成实际伤害而<strong>极度回避婴儿</strong>。</li>
+            </ul>
+            <p class="note">对比记忆点：同样是"担心婴儿"，强迫症的核心是<strong>侵入性思维 + 检查 / 回避行为</strong>；PND 的核心是<strong>持续恐惧 + 缺乏兴趣 + 养育焦虑</strong>。</p>
+          </div>
+        </details>
+      </div>
+
+      <div class="panel" data-panel="u2b">
+        <div class="mini">
+          <h4>⑦ 围产期双相障碍（perinatal BPAD）</h4>
+          <ul>
+            <li>指发生在围产期的、临床符合双相障碍的<strong>无精神病性症状</strong>的欣快感、多动性躁狂的发作。</li>
+            <li>其中<strong>易激惹、激越型躁狂更为常见</strong>。</li>
+            <li>与妊娠相比，<strong>分娩似乎是严重精神障碍发作的重要诱因</strong>。</li>
+            <li>躁狂、伴有精神病性症状的抑郁障碍、产褥期精神障碍<strong>最易发生在产后第一个月内</strong>。</li>
+          </ul>
+          <p class="note">关键词"无精神病性症状"是 BPAD 与 PPP 在教材描述中的第一道分界。</p>
+        </div>
+        <div class="mini">
+          <h4>⑧ 产后精神病（postpartum psychosis，PPP）</h4>
+          <ul>
+            <li>起病：通常在分娩后<strong>数天至数周内爆发起病</strong>。</li>
+            <li>症状：<strong>激越、易怒、情绪不稳定、妄想和行为紊乱</strong>等精神症状。</li>
+            <li>还可能表现为<strong>意识模糊</strong>，以及以<strong>烦躁不安为突出表现</strong>的躁狂症状。</li>
+            <li>自知力：通常对疾病和症状<strong>缺乏自知力</strong>。</li>
+            <li>隐匿性：会在<strong>妄想驱使下</strong>或<strong>担心失去对孩子的监护权</strong>而<strong>隐藏症状</strong>。</li>
+            <li>危险性：由于意识模糊、妄想及心境状态不良，很容易<strong>忽视或虐待婴儿</strong>；严重时可能出现<strong>杀害他人（尤其是婴幼儿）和 / 或自杀</strong>等危险行为，<strong>此时需立即送医救治</strong>。</li>
+          </ul>
+        </div>
+        <div class="callout warn">
+          <span class="ct">⚠️ 三个"必须立刻反应"的词</span>
+          教材对 PPP 的描述里，<strong>意识模糊</strong>、<strong>妄想驱使下隐藏症状</strong>、<strong>伤害婴幼儿和 / 或自杀</strong>三者都指向同一条处置：立即送医。这是全章唯一被教材用"立即"限定的情形。
+        </div>
+      </div>
+
+      <div class="panel" data-panel="u2c">
+        <div class="mini">
+          <h4>⑨ 围产期创伤和创伤后应激障碍（P-PTSD）</h4>
+          <ul>
+            <li>前提：围产期<strong>分娩、产科手术等经历</strong>可能成为<strong>潜在创伤性事件（potentially traumatic events，PTEs）</strong>。</li>
+            <li>定义：P-PTSD 是产妇<strong>经历分娩创伤后发生的精神病理性反应</strong>。</li>
+            <li>核心症状四项：</li>
+            <li>— <strong>闯入性症状</strong></li>
+            <li>— <strong>回避与创伤有关的刺激</strong></li>
+            <li>— <strong>认知与情绪的负面改变</strong></li>
+            <li>— <strong>警觉性和反应性增高</strong></li>
+          </ul>
+        </div>
+        <div class="callout warn">
+          <span class="ct">⚠️ 教材未给出的内容</span>
+          教材<strong>未给出</strong> P-PTSD 的病程阈值（如"持续多久"）、未给出潜伏期、未给出患病率。这些均标「教材未涉及」；答题时不要用 PTSD 章的时长标准直接套用，除非题目明确要求按 PTSD 诊断标准作答。
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 第四栏 -->
+  <div class="card orange" id="u2-4">
+    <h3 class="col-title"><span class="idx">第四栏</span>教材典型案例</h3>
+    <div class="callout book">
+      <span class="ct">📖 教材未提供具体临床案例</span>
+      第四节仅以描述性语言界定各分型，<strong>未附任何病案</strong>：没有患者孕产史、没有起病日数、没有症状清单式记录、没有量表分值。故本栏不作案例展示。
+    </div>
+    <p><strong>按教材描述整理的"分型识别四问"（学习推演，非教材案例）：</strong></p>
+    <ol>
+      <li><strong>情绪往哪个方向偏？</strong>低落 / 紧张 / 高涨或紊乱 / 反复重演创伤 → 分别指向 PND、PNA、躁狂发作、P-PTSD。</li>
+      <li><strong>有没有精神病性症状？</strong>有妄想、幻觉、意识模糊 → 直接进入"伴精神病性症状"路径，首先想到 PPP 与伴精神病性症状的抑郁障碍。</li>
+      <li><strong>担忧的落点在哪里？</strong>怕分娩与新生儿健康 → PNA；怕自己或子代患严重疾病且查不出 → IAD；反复检查婴儿呼吸、怕婴儿窒息猝死 → 围产期强迫症。</li>
+      <li><strong>时间对不对？</strong>PND 限定"分娩后 4 周内或流产后"；PPP 典型在"分娩后数天至数周内"；教材提示产后第一个月是躁狂、伴精神病性症状的抑郁与产褥期精神障碍的高发窗。</li>
+    </ol>
+    <p class="note">以上四问的每一个判断依据都可在教材第四节原文中找到，但"四问"的组织方式为学习整理。</p>
+  </div>
+
+  <!-- 第五栏 -->
+  <div class="card orange" id="u2-5">
+    <h3 class="col-title"><span class="idx">第五栏</span>鉴别诊断对对碰</h3>
+    <p><strong>表 1　四大类分型的横向对比</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>分型</th><th>主导症状</th><th>教材给出的时间特征</th><th>最关键的一句</th></tr></thead>
+        <tbody>
+          <tr><td>围产期抑郁障碍</td><td>抑郁发作 + 妊娠特异性特征</td><td>妊娠期及分娩后 4 周内，或流产后</td><td>对孩子缺乏兴趣、持续恐惧伤害新生儿</td></tr>
+          <tr><td>围产期焦虑障碍</td><td>焦虑，伴或不伴抑郁</td><td>持续数周至数月，甚至更长</td><td>害怕对婴儿或伴侣造成伤害</td></tr>
+          <tr><td>围产期躁狂发作</td><td>躁狂；PPP 可含精神病性症状与意识模糊</td><td>PPP 多在分娩后数天至数周；高发窗为产后第一个月</td><td>BPAD 无精神病性症状，PPP 有</td></tr>
+          <tr><td>围产期 PTSD</td><td>创伤后四大症状群</td><td>教材未给出病程阈值</td><td>创伤事件是分娩、产科手术等 PTEs</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout key"><span class="ct">📌 一句话鉴别总结</span>四条赛道的分水岭只有一句：<strong>情绪方向不同、有无精神病性症状不同、担忧的落点不同、有无创伤事件不同</strong>。</div>
+
+    <p><strong>表 2　围产期焦虑障碍 4 个亚型的"四问辨析"</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>亚型</th><th>担忧对象</th><th>关键数字 / 阈值</th><th>特征性表现</th></tr></thead>
+        <tbody>
+          <tr><td>广泛性焦虑障碍</td><td>多个事件或活动，<strong>不局限</strong>于妊娠相关单一领域</td><td>持续<strong>至少 6 个月</strong>；伴<strong>至少 3 种</strong>生理症状</td><td>担忧难以控制；生理症状可选不安、疲劳、注意力难集中、易怒、肌肉紧张、睡眠困难</td></tr>
+          <tr><td>惊恐障碍</td><td>对未来惊恐发作及其后果的担忧</td><td>发作后<strong>1 个月或更长</strong>的行为改变；发作含<strong>4 种及以上</strong>症状</td><td>突然发作、几分钟内达高峰；躯体症状 + 恐惧症状（怕发疯、怕失控、怕死）</td></tr>
+          <tr><td>疾病焦虑障碍</td><td>自己或子代会患严重、危及生命的疾病</td><td>持续<strong>至少 6 个月</strong></td><td>无任何症状也过度担忧；正常体检与实验室检测不能消除恐惧；须排除其他精神障碍所致</td></tr>
+          <tr><td>强迫症</td><td>婴儿受到伤害（窒息、猝死、污染）</td><td>教材未给时长阈值</td><td>侵入性思维 + 强迫性检查（夜间反复观察呼吸）+ 极度回避婴儿</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout key"><span class="ct">📌 一句话鉴别总结</span>"担忧散开且满 6 个月"是 GAD；"几分钟冲到顶、之后怕再来"是惊恐；"查了正常仍怕有病"是疾病焦虑；"反复检查婴儿呼吸、不敢碰孩子"是强迫症。</div>
+
+    <p><strong>表 3　围产期双相障碍（BPAD）与产后精神病（PPP）</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>对比维度</th><th>围产期双相障碍（BPAD）</th><th>产后精神病（PPP）</th></tr></thead>
+        <tbody>
+          <tr><td>精神病性症状</td><td><strong>无</strong>精神病性症状</td><td><strong>有</strong>妄想、幻觉、行为紊乱等</td></tr>
+          <tr><td>典型起病时间</td><td>围产期；教材提示产后第一个月为高发窗</td><td>分娩后<strong>数天至数周内爆发起病</strong></td></tr>
+          <tr><td>心境色彩</td><td>欣快感、多动性躁狂；<strong>易激惹、激越型更常见</strong></td><td>激越、易怒、情绪不稳定；可有以烦躁不安为突出表现的躁狂症状</td></tr>
+          <tr><td>意识状态</td><td>教材未提及意识障碍</td><td>可能<strong>意识模糊</strong></td></tr>
+          <tr><td>自知力与求助行为</td><td>教材未单列</td><td><strong>缺乏自知力</strong>；可能在妄想驱使下或担心失去监护权而<strong>隐藏症状</strong></td></tr>
+          <tr><td>风险</td><td>教材未单列</td><td>忽视或虐待婴儿；严重时杀害他人（尤其婴幼儿）和 / 或自杀，<strong>需立即送医</strong></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout key"><span class="ct">📌 一句话鉴别总结</span>同一段原文里，"无精神病性症状"归 BPAD，"有精神病性症状 + 意识模糊 + 隐藏症状 + 伤婴风险"归 PPP；后者是<strong>急症</strong>。</div>
+
+    <p><strong>表 4　P-PTSD 与围产期抑郁 / 焦虑的区分</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>对比维度</th><th>P-PTSD</th><th>围产期抑郁 / 焦虑障碍</th></tr></thead>
+        <tbody>
+          <tr><td>触发事件</td><td>必须有分娩、产科手术等<strong>潜在创伤性事件</strong></td><td>教材未要求特定创伤事件；PNA 源于对分娩恐惧与新生儿健康担心</td></tr>
+          <tr><td>核心症状结构</td><td>闯入性、回避、认知与情绪负面改变、警觉性与反应性增高（<strong>四联</strong>）</td><td>以情绪低落或焦虑担忧为主，无"闯入—回避"结构</td></tr>
+          <tr><td>病程阈值</td><td>教材未给出</td><td>PNA 持续数周至数月甚至更长；PND 限定分娩后 4 周内或流产后</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout key"><span class="ct">📌 一句话鉴别总结</span>没有"创伤事件 + 闯入回避"这两项，就不要轻易给 P-PTSD；教材把它单列为"经历分娩创伤后的精神病理性反应"，落点在<strong>创伤</strong>二字。</div>
+  </div>
+
+  <!-- 第六栏 -->
+  <div class="card green" id="u2-6">
+    <h3 class="col-title"><span class="idx">第六栏</span>治疗方案工具箱</h3>
+    <div class="callout book">
+      <span class="ct">📖 教材未提供相关内容（按分型）</span>
+      第四节只做"临床特征归类"，<strong>不为任何单一分型列出专属治疗</strong>；教材把治疗统一放在第六节（见 <a href="#u4">单元四</a>）。因此本栏不写"某型用什么药"，只摘录教材中<strong>与该分型直接相关</strong>的处置语句。
+    </div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>分型</th><th>教材原文中可对应的处置表述</th><th>出处</th></tr></thead>
+        <tbody>
+          <tr><td>产后精神病（PPP）</td><td>出现杀害他人（尤其是婴幼儿）和 / 或自杀等危险行为时，<strong>需立即送医救治</strong></td><td>第四节</td></tr>
+          <tr><td>妊娠、分娩或产褥期严重精神障碍（含突然起病、严重精神病性症状、自伤或伤人风险）</td><td>建议采用<strong>药物治疗和 / 或电抽搐治疗</strong></td><td>第六节 治疗原则</td></tr>
+          <tr><td>轻、中度发作（含轻中度抑郁、焦虑）</td><td>原则上<strong>首选非药物治疗</strong>；疗效不佳或症状持续、反复、加重、出现新症状，才建议药物治疗</td><td>第六节 治疗原则</td></tr>
+          <tr><td>围产期抑郁障碍、焦虑障碍、强迫症、睡眠障碍</td><td>教材点名<strong>认知行为疗法</strong>适用于上述情况</td><td>第六节 心理治疗</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="timeline">
+      <div class="tl-item"><h4>第一步 · 先判危险</h4><p>有无伤害婴儿、自杀、自伤的风险表述？PPP 一旦出现相关危险行为，教材的要求是"立即送医"。</p></div>
+      <div class="tl-item"><h4>第二步 · 再判轻重</h4><p>轻中度 → 非药物治疗优先；严重、急性起病、精神病性症状、自伤伤人 → 药物和 / 或 ECT。</p></div>
+      <div class="tl-item"><h4>第三步 · 选心理治疗靶点</h4><p>抑郁/焦虑/强迫/睡眠 → CBT；情绪调节与应对技能 → DBT；人际角色转换与支持 → IPT。</p></div>
+    </div>
+    <div class="callout warn">
+      <span class="ct">⚠️ 教材未涉及</span>
+      各分型的<strong>具体药物、剂量、疗程</strong>，教材全章均未给出；本指南一律标注「教材未涉及」，不以其他资料补齐。
+    </div>
+  </div>
+
+  <!-- 第七栏 -->
+  <div class="card purple" id="u2-7">
+    <h3 class="col-title"><span class="idx">第七栏</span>记忆工具箱</h3>
+    <div class="callout tip">
+      <span class="ct">🔧 方法一：归类记忆法（四棵分枝的"分型树"）</span>
+      主干写"围产期"，分出四枝：<strong>抑</strong>（围产期抑郁障碍）、<strong>焦</strong>（围产期焦虑障碍）、<strong>躁</strong>（围产期躁狂发作）、<strong>创</strong>（围产期 PTSD）。"焦虑"这一枝再挂四个果：<strong>广、惊、病、强</strong>（广泛性、惊恐、疾病焦虑、强迫症）。"躁"这一枝再挂两个果：<strong>双、精</strong>（双相障碍、产后精神病）。<br>
+      <em>为什么这样记：</em>教材本身就是"大类—亚型"的两层结构；用树形图复刻这个层级，能保证"8 个名称"既不漏也不越级。
+    </div>
+    <div class="callout tip">
+      <span class="ct">🔧 方法二：数字锚定法（把三个数字绑在三个亚型上）</span>
+      <strong>6 个月 → GAD</strong>（持续至少 6 个月）；<strong>6 个月 → 疾病焦虑障碍</strong>（至少 6 个月持续引起焦虑）；<strong>1 个月 → 惊恐障碍</strong>（发作后 1 个月或更长时间的行为改变）；<strong>3 种 → GAD 的生理症状下限</strong>；<strong>4 种 → 惊恐发作的症状下限</strong>。<br>
+      <em>为什么这样记：</em>"两个 6、一个 1、一个 3、一个 4"是本单元唯一成组的数字，用数字做钩子，比记整段描述省力；同时 3 与 4 分别对应"生理症状"与"惊恐症状"，方向不会串。
+    </div>
+    <div class="callout tip">
+      <span class="ct">🔧 方法三：对比记忆法（一组"最易混"的三联对照）</span>
+      把三组最容易答反的配对写在一张卡上：<br>
+      ① <strong>BPAD vs PPP</strong>：前者"<strong>无</strong>精神病性症状"，后者"<strong>有</strong>妄想幻觉 + 意识模糊 + 隐藏症状 + 伤婴风险"。<br>
+      ② <strong>PND vs 围产期强迫症</strong>：PND 是"<strong>缺乏兴趣</strong> + 持续恐惧伤害新生儿"；强迫症是"<strong>侵入性思维</strong> + 反复检查 + 极度回避"。<br>
+      ③ <strong>GAD vs 疾病焦虑障碍</strong>：GAD 担忧"<strong>多个事件或活动</strong>"；IAD 担忧"<strong>自己或子代患严重疾病</strong>"，且体检正常也不能消除。<br>
+      <em>为什么这样记：</em>这三组是教材描述最接近、考卷最常设陷阱的地方；对比记忆把"差异点"而不是"共同点"放进记忆，正好命中出题点。
+    </div>
+    <div class="callout tip">
+      <span class="ct">🔧 方法四：故事串联法（标注：类比理解，非医学事实）</span>
+      想象一位产妇的一天：清晨她<strong>高兴得睡不着、话特别多</strong>（躁狂）；中午突然<strong>坚信孩子被调换</strong>、说话凌乱（精神病性症状）；傍晚她<strong>反复起身摸孩子的鼻息</strong>（强迫检查）；深夜她<strong>梦见产房画面惊醒、再也不敢进那间屋子</strong>（闯入与回避）。四个画面串成一条时间线，对应四个分型。<br>
+      <em>为什么这样记：</em>把抽象分型转成"同一个人一天里的四种状态"，形成画面链；回忆时任一想像一个画面，就能拉出对应的障碍名称与其核心特征。
+    </div>
+  </div>
+
+  <!-- 第八栏 -->
+  <div class="card cyan" id="u2-8">
+    <h3 class="col-title"><span class="idx">第八栏</span>知识联动</h3>
+    <ul>
+      <li><strong>与抑郁障碍章：</strong>PND 的"症状与抑郁发作相似"意味着可直接借用抑郁发作的症状框架；教材又要求"若满足抑郁发作诊断要求，应诊断为单次发作的抑郁障碍或复发性抑郁障碍"，两者是并列诊断关系。</li>
+      <li><strong>与焦虑障碍章：</strong>PNA"符合焦虑障碍的诊断标准"，其 GAD、惊恐障碍两个亚型与焦虑障碍章的分型同名同构；疾病焦虑障碍则对应躯体症状及相关障碍中的疾病焦虑。</li>
+      <li><strong>与强迫症章：</strong>围产期强迫症既可为"已有强迫症的加重"，也可"新发"；其侵入性思维内容被教材具体化为"婴儿窒息或婴儿猝死"，这是围产期特有的内容主题。</li>
+      <li><strong>与双相障碍章：</strong>教材把围产期精神病性症状最常发生的心境背景写明为"抑郁、躁狂或混合发作"，并点名<strong>双相障碍Ⅰ型</strong>；这直接把 PPP 与双相障碍章的诊断体系接上。</li>
+      <li><strong>与创伤后应激障碍章：</strong>P-PTSD 的四项核心症状与 PTSD 的症状群一一对应，差别只在创伤事件类型（分娩、产科手术等 PTEs）。</li>
+      <li><strong>与产科：</strong>"分娩似乎是严重精神障碍发作的重要诱因"这一表述，把产科事件（分娩、手术、并发症、死胎死产、母婴分离）直接写进了精神障碍的诱因清单。</li>
+      <li><strong>与儿科 / 母乳喂养：</strong>围产期强迫症的检查行为与回避行为均围绕婴儿；PNA 的核心是"害怕对婴儿或伴侣造成伤害"——症状内容本身就以婴儿为对象，决定了干预必须把母婴互动纳入视野。</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===== 07 单元三 诊断与鉴别 ===== -->
+<section id="u3">
+  <div class="sec-head"><div class="badge">07</div><h2>诊断与鉴别<span class="en">第五节 · 诊断（p.243–246）</span></h2></div>
+  <p class="sec-lead">教材把诊断拆成两半：先"评估"（把信息收全），再"诊断"（把标准对上）。评估部分给了非常具体的清单，是本单元最值得逐条背的内容。</p>
+
+  <!-- 第一栏 -->
+  <div class="card cyan" id="u3-1">
+    <h3 class="col-title"><span class="idx">第一栏</span>疾病画像 → 诊断单元画像</h3>
+    <div class="quote"><span class="lab">教材原文</span>与妊娠、分娩或产褥期有关的精神或行为障碍的诊断主要是建立在症状学、严重程度、病程和排除其他疾病的基础上。</div>
+    <p><strong>一句话画像：</strong>本章的诊断是"<strong>四根柱子 + 一道门槛</strong>"：症状学、严重程度、病程、排除其他疾病构成四根柱子；"是否造成重要功能领域的严重损害"是跨过去才算病的门槛。</p>
+    <div class="quote"><span class="lab">教材原文</span>ICD-11 关于与妊娠、分娩或产褥期有关的精神或行为障碍的描述是：一组与妊娠或产褥期（分娩后 6 周内）相关的综合征，包含显著的精神和行为特征。如果症状符合某种特定精神障碍的诊断要求，则应同时予以诊断。</div>
+    <div class="grid3">
+      <div class="mini"><h4>分型一 · 不伴精神病性症状</h4><p>最常见的是<strong>抑郁症状</strong>；<strong>不包括</strong>妄想、幻觉或其他精神病性症状。常见表现包括抑郁症状、焦虑症状和强迫症状。</p></div>
+      <div class="mini"><h4>分型二 · 伴精神病性症状</h4><p><strong>包括</strong>妄想、幻觉或其他精神病性症状；通常也会出现心境症状（抑郁和 / 或躁狂）。</p></div>
+      <div class="mini"><h4>分型三 · 未特指的</h4><p>教材原文：该类别是"未指定的"其他类别。教材未对其内涵作进一步展开。</p></div>
+    </div>
+    <p class="note">教材同时强调：无论已知与妊娠、分娩或产褥期相关的生物学因素在病因学上是否与该综合征相关，<strong>均可给出这些诊断</strong>；即使该综合征是先前疾病的复发或恶化，<strong>也可给出该诊断</strong>。</p>
+  </div>
+
+  <!-- 第二栏 -->
+  <div class="card blue" id="u3-2">
+    <h3 class="col-title"><span class="idx">第二栏</span>病因探秘 → 诊断依据的构成</h3>
+    <div class="quote"><span class="lab">教材原文</span>与妊娠、分娩或产褥期有关的精神或行为障碍的诊断主要依靠全面详细的病史采集、精神检查、体格检查、心理评估对疑似患者进行全面的心理、社会和生物学评估，同时辅以其他辅助检查手段，如影像学检查、实验室检查等以排除器质性疾病。</div>
+    <p>把这句话拆开，就是评估的<strong>四步 + 一组排除</strong>：病史采集 → 精神检查 → 体格检查 → 心理评估（心理、社会、生物学三维）→ 辅助检查（排除器质性）。</p>
+    <div class="tabs" data-tabs>
+      <div class="tabbar">
+        <button class="on" data-tab="u3a">病史采集 9 项</button>
+        <button data-tab="u3b">量表与辅助检查</button>
+        <button data-tab="u3c">重点人群与产褥期</button>
+      </div>
+      <div class="panel on" data-panel="u3a">
+        <div class="mini">
+          <h4>教材列出的 9 项病史采集内容</h4>
+          <ol>
+            <li><strong>现病史</strong>：症状出现的时间、进程、变化和严重程度；重点关注任何可能表明<strong>以前未确诊的双相障碍</strong>的症状</li>
+            <li><strong>过去疾病的严重程度</strong>：包括住院治疗经过和自杀倾向</li>
+            <li><strong>个人史和妇科病史</strong>：月经初潮年龄、月经周期相关的情绪症状、对激素避孕和 / 或激素干预的反应，以及既往妊娠、生育史</li>
+            <li><strong>家族史</strong>：任何女性亲属的围产期抑郁障碍或精神障碍信息，以及任何双相障碍的家族史</li>
+            <li><strong>药物治疗经过及患者的反应</strong></li>
+            <li><strong>是否有物质使用史</strong></li>
+            <li><strong>既往生活经历</strong>：过去的创伤史、亲密伴侣暴力、歧视或霸凌所导致的慢性压力，以及患者可获得的社会支持</li>
+            <li><strong>既往疾病史</strong>：尤其是可能影响精神症状的疾病</li>
+            <li><strong>患者对妊娠和即将成为母亲的感受</strong></li>
+          </ol>
+        </div>
+        <p class="note">记忆提示：第 1 项与第 4 项都提到"双相障碍"，说明教材把"漏诊双相"视为围产期评估的首要风险。</p>
+      </div>
+      <div class="panel" data-panel="u3b">
+        <div class="mini">
+          <h4>心理评定量表（教材举出 6 个）</h4>
+          <ul>
+            <li>爱丁堡产后抑郁量表（<strong>EPDS</strong>）</li>
+            <li>患者健康问卷抑郁自评量表（<strong>PHQ-9</strong>）</li>
+            <li>汉密尔顿抑郁量表（<strong>HAMD</strong>）</li>
+            <li>汉密尔顿焦虑量表（<strong>HAMA</strong>）</li>
+            <li>广泛性焦虑障碍量表-7（<strong>GAD-7</strong>）</li>
+            <li>Young 躁狂评定量表（<strong>YMRS</strong>）</li>
+          </ul>
+          <p class="note">教材措辞是"可以根据具体情况有针对性地选择，包括但不限于"，说明这是举例而非封闭清单。</p>
+        </div>
+        <div class="mini">
+          <h4>辅助检查（教材列 4 组）</h4>
+          <ul>
+            <li><strong>常规系列检查</strong>：血常规、尿常规、肝功能、肾功能、血脂、血糖、心电图</li>
+            <li><strong>内分泌系统检查</strong>：甲状腺功能、肾上腺功能、激素等检查</li>
+            <li><strong>感染系列筛查</strong>：乙肝、丙肝、梅毒、艾滋病等检查</li>
+            <li><strong>其他</strong>：脑电图、颅脑影像学（CT 或 MRI）检查</li>
+          </ul>
+        </div>
+        <div class="mini">
+          <h4>第 4 项评估内容（教材单独列出）</h4>
+          <p><strong>评估患者获得和参与非药物治疗的可能性。</strong>——这一条直接连到治疗部分的"轻中度首选非药物治疗"。</p>
+        </div>
+      </div>
+      <div class="panel" data-panel="u3c">
+        <div class="mini">
+          <h4>筛查时点（教材建议）</h4>
+          <p>建议在<strong>孕早期和孕晚期各进行一次</strong>精神障碍的风险筛查；存在高危因素时可以<strong>进行多次筛查</strong>。</p>
+          <p class="note">教材未给出具体筛查间隔与量表阈值。</p>
+        </div>
+        <div class="mini">
+          <h4>风险评估的 6 类重点人群</h4>
+          <ol>
+            <li>在妊娠期或分娩期有<strong>创伤经历</strong>者</li>
+            <li>既往有<strong>精神障碍史</strong>或患有<strong>新发精神障碍</strong>者</li>
+            <li>妊娠期间，因<strong>意外怀孕、婚姻不和谐、家庭虐待或配偶物质滥用</strong>等社会因素出现过心理障碍者</li>
+            <li>发生与分娩有关的<strong>不良事件</strong>，如<strong>死胎、死产</strong>及与<strong>婴儿性别</strong>有关的心理困扰者</li>
+            <li><strong>产科急症或新生儿急症</strong>导致母婴分离而产生心理困扰者</li>
+            <li>产后可能存在<strong>母婴互动以及母乳喂养困难</strong>，出现产后抑郁障碍者</li>
+          </ol>
+        </div>
+        <div class="mini">
+          <h4>产褥期需重点评估的两个因素</h4>
+          <p><strong>① 婴儿喂养和哺乳：</strong>对某些产妇，母乳喂养有可能导致焦虑障碍或抑郁障碍的发生或症状加重；应提供"风险-效益"教育，并考虑：如何进行母乳喂养、如何获得足够睡眠、潜在的饮食限制、<strong>哺乳期药物的安全性</strong>、另一方父母或伴侣的参与。</p>
+          <p><strong>② 睡眠：</strong>无论是否母乳喂养，睡眠不足或睡眠剥夺在新生儿父母中几乎普遍存在，并会影响认知、情感和身体健康，是<strong>产后精神障碍最重要的风险因素</strong>。评估指标：睡眠质量、睡眠潜伏期、睡眠效率、睡眠药物使用、日间功能障碍。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 第三栏 -->
+  <div class="card red" id="u3-3">
+    <h3 class="col-title"><span class="idx">第三栏</span>临床表现拼图 → 诊断线索图谱</h3>
+    <p><strong>两类诊断的"核心特征"逐条对照：</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>核心特征</th><th>不伴精神病性症状</th><th>伴精神病性症状</th></tr></thead>
+        <tbody>
+          <tr><td>① 时间与性质</td><td>妊娠期或产褥期（分娩后 6 周内）出现的、包含显著精神和行为特征的综合征</td><td>妊娠或产褥期（分娩后 6 周内）出现的、包含显著精神和行为特征的综合征</td></tr>
+          <tr><td>② 精神病性症状</td><td><strong>不包括</strong>妄想、幻觉或其他精神病性症状</td><td><strong>包括</strong>精神病性症状（即妄想、幻觉或其他精神病性症状）；心境症状（抑郁和 / 或躁狂）也很常见</td></tr>
+          <tr><td>③ 排除</td><td>不是其他疾病（如<strong>脑瘤</strong>）的表现；也不是某种物质或药物（如<strong>苯二氮䓬类</strong>）对中枢神经系统的影响或戒断效应（如<strong>兴奋剂</strong>）</td><td>同左（措辞一致）</td></tr>
+          <tr><td>④ 功能损害</td><td>导致个人、家庭、社会、教育、职业或其他重要功能领域的<strong>严重损害</strong></td><td>同左（措辞一致）</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="mini">
+      <h4>不伴精神病性症状 · 其他临床特征</h4>
+      <ul>
+        <li>无论已知与妊娠、分娩或产褥期相关的生物学因素在病因学上是否与该综合征相关，<strong>均可给出该诊断</strong></li>
+        <li>常见表现包括：<strong>抑郁症状、焦虑症状和强迫症状</strong></li>
+      </ul>
+    </div>
+    <div class="mini">
+      <h4>伴精神病性症状 · 其他临床特征</h4>
+      <ul>
+        <li>精神病性症状最常发生在<strong>抑郁、躁狂或混合发作</strong>的背景下；在这种情况下，还应诊断为单次发作的抑郁障碍、复发性抑郁障碍或<strong>双相障碍Ⅰ型</strong></li>
+        <li>其他症状可能包括：<strong>意识模糊和定向力障碍</strong>、睡眠障碍、精力旺盛和激越、强迫症状、偏执意念，以及<strong>试图伤害自己或婴儿</strong></li>
+      </ul>
+    </div>
+    <div class="callout warn">
+      <span class="ct">⚠️ 危险信号清单（教材点名）</span>
+      <strong>意识模糊</strong>、<strong>定向力障碍</strong>、<strong>精力旺盛和激越</strong>、<strong>偏执意念</strong>、<strong>试图伤害自己或婴儿</strong>。这五项提示应走"伴精神病性症状"的诊断路径，并同步进行安全风险评估。
+    </div>
+  </div>
+
+  <!-- 第四栏 -->
+  <div class="card orange" id="u3-4">
+    <h3 class="col-title"><span class="idx">第四栏</span>教材典型案例</h3>
+    <div class="callout book">
+      <span class="ct">📖 教材未提供具体临床案例</span>
+      第五节为评估与诊断标准论述，<strong>没有病例</strong>：未给出任何患者的具体症状组合、量表分值或影像结果。因此本栏不展示案例。
+    </div>
+    <p><strong>按教材评估清单整理的"接诊顺序"（学习推演，非教材案例）：</strong></p>
+    <ol>
+      <li><strong>先排急症：</strong>意识模糊、定向力障碍、伤害自己或婴儿的念头 → 先做安全评估与"伴精神病性症状"的路径判断。</li>
+      <li><strong>再排器质与物质：</strong>教材明确要求排除脑瘤等躯体疾病，以及苯二氮䓬类等药物影响或兴奋剂等戒断效应；对应做影像、实验室、内分泌、感染筛查。</li>
+      <li><strong>然后补全病史：</strong>按 9 项清单逐项采集，特别关注"以前未确诊的双相障碍"线索与家族史。</li>
+      <li><strong>最后定功能：</strong>用"是否影响照顾婴儿的能力"作为分界线，区分"产后忧郁"与需要诊断的状态。</li>
+    </ol>
+    <p class="note">以上顺序的依据均为教材原文（核心特征第③项、鉴别部分的功能标准），但"接诊顺序"的组织为学习整理。</p>
+  </div>
+
+  <!-- 第五栏 -->
+  <div class="card orange" id="u3-5">
+    <h3 class="col-title"><span class="idx">第五栏</span>鉴别诊断对对碰</h3>
+    <p><strong>表 1　"产后忧郁 / 婴儿忧郁"与产后抑郁障碍</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>对比维度</th><th>产后忧郁（婴儿忧郁）</th><th>产后抑郁障碍</th></tr></thead>
+        <tbody>
+          <tr><td>是否达到抑郁发作诊断要求</td><td><strong>不符合</strong></td><td><strong>符合</strong></td></tr>
+          <tr><td>症状严重度</td><td>轻度</td><td>症状和体征<strong>更为严重</strong></td></tr>
+          <tr><td>持续时间</td><td>短暂，可能在分娩后不久发生</td><td><strong>持续时间更长</strong></td></tr>
+          <tr><td>功能影响</td><td>教材未描述功能损害</td><td><strong>影响功能状态，包括照顾婴儿的能力</strong></td></tr>
+          <tr><td>诊断归属</td><td>不适用"不伴精神病性症状"这一诊断</td><td>若满足抑郁发作诊断要求，诊断为<strong>单次发作的抑郁障碍或复发性抑郁障碍</strong></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout key"><span class="ct">📌 一句话鉴别总结</span>"产后忧郁"是<strong>不够标准</strong>的轻度短暂抑郁；一旦达到抑郁发作要求、持续时间更长、影响照顾婴儿，就必须升级为正式诊断。</div>
+
+    <p><strong>表 2　"对婴儿的担忧"何时算病</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>情形</th><th>教材判断</th><th>判别要素</th></tr></thead>
+        <tbody>
+          <tr><td>妊娠期间和分娩后对婴儿的担忧与恐惧，以及一定程度的关于可能的危害的侵入性想法</td><td><strong>常见</strong>，不应诊断为与妊娠、分娩或产褥期有关的精神或行为障碍</td><td>无"持续存在 + 实际痛苦 + 功能影响"三要素</td></tr>
+          <tr><td>上述想法持续存在、与实际痛苦有关、并影响功能（包括照顾婴儿的能力）</td><td>应纳入诊断评估</td><td>三要素<strong>同时</strong>具备</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout key"><span class="ct">📌 一句话鉴别总结</span>教材把"想法的存在"与"想法成为病"分得很清楚：<strong>常见不等于正常，持续且致痛且损功能才算病</strong>。</div>
+
+    <p><strong>表 3　与"一般人群的短暂精神病样体验"鉴别</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>对比维度</th><th>一般人群的类似体验</th><th>伴精神病性症状的围产期障碍</th></tr></thead>
+        <tbody>
+          <tr><td>持续时间</td><td><strong>短暂</strong></td><td>教材未给出具体时长，但以"综合征"与"严重损害"为要件</td></tr>
+          <tr><td>功能影响</td><td><strong>不影响</strong>个体功能</td><td>导致重要功能领域的<strong>严重损害</strong></td></tr>
+          <tr><td>自知力</td><td>本人<strong>通常能意识到是幻觉</strong></td><td>教材对 PPP 的描述为<strong>缺乏自知力</strong></td></tr>
+          <tr><td>处理</td><td>不应诊断</td><td>需诊断并评估自伤、伤婴风险</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout key"><span class="ct">📌 一句话鉴别总结</span>"短暂、不影响功能、自己知道是假的"——三条占齐就不诊断；反之要按精神病性症状路径处理。</div>
+
+    <p><strong>表 4　必须排除的"器质性 / 物质所致"</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>排除对象</th><th>教材举例</th><th>排查手段（教材评估清单）</th></tr></thead>
+        <tbody>
+          <tr><td>其他疾病的表现</td><td><strong>脑瘤</strong></td><td>脑电图、颅脑影像学（CT 或 MRI）</td></tr>
+          <tr><td>物质或药物对中枢神经系统的影响</td><td><strong>苯二氮䓬类</strong></td><td>物质使用史采集；实验室与感染筛查</td></tr>
+          <tr><td>戒断效应</td><td><strong>兴奋剂</strong></td><td>物质使用史采集</td></tr>
+          <tr><td>内分泌相关疾病</td><td>教材未具体点名疾病，仅列"内分泌系统检查"</td><td>甲状腺功能、肾上腺功能、激素等检查</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout key"><span class="ct">📌 一句话鉴别总结</span>两类诊断的核心特征第③项都把"脑瘤 / 苯二氮䓬类 / 兴奋剂戒断"写在同一条里——<strong>不排除器质性与物质，就不能下这个诊断</strong>。</div>
+  </div>
+
+  <!-- 第六栏 -->
+  <div class="card green" id="u3-6">
+    <h3 class="col-title"><span class="idx">第六栏</span>治疗方案工具箱 → 评估与诊断实施工具箱</h3>
+    <div class="callout book">
+      <span class="ct">📖 教材未提供相关内容</span>
+      本单元对应教材第五节"诊断"，<strong>不含治疗内容</strong>，故本栏无对应原文。为遵守八栏不删栏的要求，本栏改写为"评估与诊断实施工具箱"，内容全部取自教材评估部分；真正的治疗方案见 <a href="#u4-6">单元四第六栏</a>。
+    </div>
+    <div class="timeline">
+      <div class="tl-item"><h4>第 1 步 · 确定筛查时点</h4><p>孕早期、孕晚期各筛查一次；存在高危因素者可多次筛查。</p></div>
+      <div class="tl-item"><h4>第 2 步 · 圈定重点人群</h4><p>创伤经历、既往或新发精神障碍、社会因素所致心理障碍、不良分娩事件（死胎死产、婴儿性别困扰）、母婴分离、母婴互动与母乳喂养困难——6 类。</p></div>
+      <div class="tl-item"><h4>第 3 步 · 病史采集 9 项</h4><p>现病史（含未确诊双相线索）、过去疾病严重度与自杀倾向、个人史与妇科病史、家族史、用药史与反应、物质使用史、生活经历与社会支持、既往疾病史、对妊娠与成为母亲的感受。</p></div>
+      <div class="tl-item"><h4>第 4 步 · 精神检查 + 体格检查 + 心理评估</h4><p>心理评估覆盖心理、社会、生物学三个维度；按需选用 EPDS、PHQ-9、HAMD、HAMA、GAD-7、YMRS。</p></div>
+      <div class="tl-item"><h4>第 5 步 · 辅助检查排除器质性</h4><p>常规（血尿常规、肝肾功能、血脂血糖、心电图）→ 内分泌（甲状腺、肾上腺、激素）→ 感染筛查（乙肝、丙肝、梅毒、艾滋病）→ 脑电图、颅脑 CT/MRI。</p></div>
+      <div class="tl-item"><h4>第 6 步 · 产褥期补两块</h4><p>婴儿喂养与哺乳（含哺乳期药物安全性、睡眠获取、饮食限制、伴侣参与）；睡眠（质量、潜伏期、效率、睡眠药物使用、日间功能障碍）。</p></div>
+      <div class="tl-item"><h4>第 7 步 · 评估非药物治疗可行性</h4><p>教材单列此项：评估患者获得和参与非药物治疗的可能性——它决定后续治疗路径能否走"非药物优先"。</p></div>
+    </div>
+    <div class="callout tip">
+      <span class="ct">💡 提示</span>
+      教材<strong>未给出</strong>任何量表的分界值（如 EPDS 多少分提示抑郁）、未给出筛查间隔的具体周数、未给出影像学选择的具体指征。这些均标「教材未涉及」。
+    </div>
+  </div>
+
+  <!-- 第七栏 -->
+  <div class="card purple" id="u3-7">
+    <h3 class="col-title"><span class="idx">第七栏</span>记忆工具箱</h3>
+    <div class="callout tip">
+      <span class="ct">🔧 方法一：数字编码法（把评估清单压缩成 "9-6-4-6-2"）</span>
+      <strong>9</strong> 项病史采集 → <strong>6</strong> 个心理评定量表 → <strong>4</strong> 组辅助检查 → <strong>6</strong> 类重点人群 → <strong>2</strong> 个产褥期重点因素（哺乳、睡眠）。<br>
+      <em>为什么这样记：</em>评估部分全是清单，最容易"记得大概、答不全"。用五个数字当五层抽屉，答题时按 9→6→4→6→2 逐层拉开，能显著减少漏项。
+    </div>
+    <div class="callout tip">
+      <span class="ct">🔧 方法二：首字母缩拼法（六个量表）</span>
+      取首字母串成 <strong>"E-P-H-H-G-Y"</strong>：<strong>E</strong>PDS、<strong>P</strong>HQ-9、<strong>H</strong>AMD、<strong>H</strong>AMA、<strong>G</strong>AD-7、<strong>Y</strong>MRS。<br>
+      再按用途分两组：<strong>抑郁</strong>（EPDS、PHQ-9、HAMD）、<strong>焦虑</strong>（HAMA、GAD-7）、<strong>躁狂</strong>（YMRS 单列）。<br>
+      <em>为什么这样记：</em>六个英文缩写彼此没有语义联系，硬背易混；先串字母保证"数量对"，再按"抑郁 / 焦虑 / 躁狂"三桶归类保证"用途对"。
+    </div>
+    <div class="callout tip">
+      <span class="ct">🔧 方法三：对比记忆法（四条核心特征"同与不同"）</span>
+      画两列：四条核心特征中，<strong>①时间、③排除、④功能损害</strong>两栏<strong>完全相同</strong>；只有<strong>②精神病性症状</strong>相反——不伴 = <strong>不包括</strong>妄想幻觉，伴 = <strong>包括</strong>妄想幻觉。<br>
+      <em>为什么这样记：</em>把"三条相同、一条相反"的结构记住，等于用 1/4 的记忆量拿下整张对照表；考试问到哪一条都能立刻定位。
+    </div>
+    <div class="callout tip">
+      <span class="ct">🔧 方法四：关键词锚定法（三个必须排除的对象）</span>
+      把排除项缩成三个词：<strong>"脑瘤、苯二氮䓬、兴奋剂"</strong>。<br>
+      <em>为什么这样记：</em>教材把三类干扰源分别举例为"其他疾病""药物影响""戒断效应"，正对应"器质性—物质—戒断"三条路；三个具体名词比三个抽象类别更好抓，看到题干出现其中任一，条件反射式地想到"能不能下这个诊断"。
+    </div>
+  </div>
+
+  <!-- 第八栏 -->
+  <div class="card cyan" id="u3-8">
+    <h3 class="col-title"><span class="idx">第八栏</span>知识联动</h3>
+    <ul>
+      <li><strong>与抑郁障碍 / 双相障碍章：</strong>评估清单两处点名双相——"重点关注任何可能表明以前未确诊的双相障碍的症状"与"任何双相障碍的家族史"；诊断要求又写明伴精神病性症状者还应诊断"双相障碍Ⅰ型"。这说明围产期评估的核心任务之一是"别把双相漏成单相抑郁"。</li>
+      <li><strong>与焦虑障碍 / 强迫症章：</strong>HAMA 与 GAD-7 对应焦虑维度；围产期强迫症的评估需借用强迫症的思维—行为框架（侵入性思维 + 检查 / 回避）。</li>
+      <li><strong>与创伤后应激障碍章：</strong>病史采集中的"过去的创伤史""亲密伴侣暴力、歧视或霸凌所导致的慢性压力"与重点人群第①条"妊娠期或分娩期有创伤经历者"，共同构成 P-PTSD 的识别入口。</li>
+      <li><strong>与心理测量学：</strong>EPDS 是产后专用量表，PHQ-9、HAMD、HAMA、GAD-7、YMRS 为通用量表；教材只给名称与用途，<strong>未给分界值</strong>。</li>
+      <li><strong>与内科学 / 内分泌：</strong>辅助检查要求查甲状腺、肾上腺与激素，是因为甲状腺等内分泌异常可影响精神症状（教材在既往疾病史中也提示"可能影响精神症状的疾病"）。</li>
+      <li><strong>与产科 / 儿科：</strong>重点人群与产褥期两因素把死胎死产、母婴分离、母乳喂养困难、婴儿睡眠问题直接写进诊断流程，说明诊断不能只在诊室里完成。</li>
+      <li><strong>与治疗学章：</strong>"评估患者获得和参与非药物治疗的可能性"是本章独有的评估项，它把诊断与治疗学章的非药物手段衔接起来。</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===== 08 单元四 治疗原则 ===== -->
+<section id="u4">
+  <div class="sec-head"><div class="badge">08</div><h2>治疗原则<span class="en">第六节 · 治疗（p.246–247）</span></h2></div>
+  <p class="sec-lead">教材开宗明义：本类障碍"研究相对不足，治疗方面也具有挑战性"，因此第六节的重点不是具体方案，而是<strong>原则与边界</strong>——尤其是"母亲与胎儿/婴儿"之间的风险-效益权衡。</p>
+
+  <!-- 第一栏 -->
+  <div class="card cyan" id="u4-1">
+    <h3 class="col-title"><span class="idx">第一栏</span>疾病画像 → 治疗单元画像</h3>
+    <div class="quote"><span class="lab">教材原文</span>对于与妊娠、分娩或产褥期有关的精神或行为障碍的研究相对不足，治疗方面也具有挑战性，要遵循一定的原则。</div>
+    <p><strong>一句话画像：</strong>本章的治疗不是一个"选药流程"，而是一台<strong>双盘天平</strong>：一边是母亲的疾病严重程度，一边是胎儿 / 婴儿的健康风险；所有原则都是为了让这台天平保持平衡。<span class="note">（"双盘天平"为类比理解，非医学事实）</span></p>
+    <div class="quote"><span class="lab">教材原文</span>针对与妊娠、分娩或产褥期有关的精神或行为障碍的治疗，既要考虑疾病的严重程度，又要考虑对母亲和胎儿健康的影响，权衡疾病治疗的"风险-效益"关系。目前主张"综合、全程、分级、多学科协作诊疗，保障孕产妇安全及胎儿安全"的治疗原则。</div>
+    <div class="stat">
+      <span>综合</span><span>全程</span><span>分级</span><span>多学科协作</span><span>保障孕产妇安全</span><span>保障胎儿安全</span>
+    </div>
+    <p class="note">教材把上述 16 字作为"总体原则"，把下面的分层建议作为"一般性原则"；两者是"总—分"关系，不可混为一条。</p>
+  </div>
+
+  <!-- 第二栏 -->
+  <div class="card blue" id="u4-2">
+    <h3 class="col-title"><span class="idx">第二栏</span>病因探秘 → 治疗决策的变量</h3>
+    <p>教材没有为治疗单列"病因"，但把治疗决策的<strong>输入变量</strong>写得相当明确。可以把它看成"决策四变量"：</p>
+    <div class="grid4">
+      <div class="mini">
+        <h4>变量① 疾病严重程度</h4>
+        <p>"既要考虑疾病的严重程度"——轻度与重度走完全不同的路径。</p>
+      </div>
+      <div class="mini">
+        <h4>变量② 对母亲与胎儿健康的影响</h4>
+        <p>"又要考虑对母亲和胎儿健康的影响"——治疗本身也可能是风险源。</p>
+      </div>
+      <div class="mini">
+        <h4>变量③ 风险-效益关系</h4>
+        <p>教材三次提到"风险-效益"：总体原则、社会干预中的教育、药物治疗前的解释。</p>
+      </div>
+      <div class="mini">
+        <h4>变量④ 非药物治疗的可及性</h4>
+        <p>评估部分单列"评估患者获得和参与非药物治疗的可能性"，它决定"非药物优先"能否落地。</p>
+      </div>
+    </div>
+    <div class="callout warn">
+      <span class="ct">⚠️ 教材未涉及</span>
+      教材<strong>未给出</strong>风险-效益的具体量化方法（如致畸绝对风险百分比、哺乳期药物暴露剂量），也<strong>未给出</strong>不同严重程度的分界工具。凡此均标「教材未涉及」。
+    </div>
+  </div>
+
+  <!-- 第三栏 -->
+  <div class="card red" id="u4-3">
+    <h3 class="col-title"><span class="idx">第三栏</span>临床表现拼图 → 治疗分层图谱</h3>
+    <p>教材"一般性原则"给出了二分的分层：<strong>轻中度 → 非药物优先；重症/急性/精神病性/自伤伤人 → 药物和 / 或 ECT</strong>。</p>
+    <div class="tabs" data-tabs>
+      <div class="tabbar">
+        <button class="on" data-tab="u4a">轻、中度发作</button>
+        <button data-tab="u4b">严重精神障碍</button>
+      </div>
+      <div class="panel on" data-panel="u4a">
+        <div class="mini">
+          <h4>教材原文的路径</h4>
+          <ul>
+            <li><strong>原则上首选非药物治疗</strong></li>
+            <li>如果治疗效果不佳，或者<strong>症状持续存在、反复发作</strong>，甚至<strong>症状加重或出现新的症状</strong>，建议使用药物治疗</li>
+          </ul>
+          <p class="note">关键词是"首选"而非"只用"；教材给了一个明确的"升级触发条件"清单，共四条：疗效不佳、持续存在、反复发作、加重或出现新症状。</p>
+        </div>
+        <div class="mini">
+          <h4>非药物治疗的四个组成（教材分类）</h4>
+          <ul>
+            <li>社会干预</li>
+            <li>社会支持</li>
+            <li>心理治疗</li>
+            <li>辅助治疗</li>
+          </ul>
+        </div>
+      </div>
+      <div class="panel" data-panel="u4b">
+        <div class="mini">
+          <h4>教材原文的适用情形（四项）</h4>
+          <ul>
+            <li>妊娠、分娩或产褥期<strong>严重精神障碍</strong></li>
+            <li><strong>突然起病</strong></li>
+            <li>具有<strong>严重的精神病性症状</strong></li>
+            <li>存在<strong>自伤或伤人等风险</strong></li>
+          </ul>
+          <p>处理：建议采用<strong>药物治疗和 / 或电抽搐治疗</strong>。</p>
+        </div>
+        <div class="callout warn">
+          <span class="ct">⚠️ 注意"和 / 或"</span>
+          教材写的是"药物治疗和 / 或电抽搐治疗"，即两者可以单用也可合用；教材<strong>未规定</strong>先后顺序、未规定 ECT 的具体次数与参数。
+        </div>
+      </div>
+    </div>
+    <div class="callout key"><span class="ct">📌 一句话总结</span>分层轴只有一个分界点：<strong>是否严重、是否急性、是否有精神病性症状、是否有自伤伤人风险</strong>；越过这条线，才从"非药物"切换到"药物和 / 或 ECT"。</div>
+  </div>
+
+  <!-- 第四栏 -->
+  <div class="card orange" id="u4-4">
+    <h3 class="col-title"><span class="idx">第四栏</span>教材典型案例</h3>
+    <div class="callout book">
+      <span class="ct">📖 教材未提供具体临床案例</span>
+      第六节为原则性论述，<strong>未提供任何治疗过程记录或用药案例</strong>：没有具体患者、没有用药选择过程、没有剂量与疗程记录。故本栏不展示案例。
+    </div>
+    <p><strong>由教材原则可推出的"决策顺序"（学习推演，非教材案例）：</strong></p>
+    <ol>
+      <li><strong>先做风险评估：</strong>有无自伤或伤人的风险？有无严重精神病性症状？是否突然起病？——这四项决定是否进入"药物和 / 或 ECT"路径。</li>
+      <li><strong>再判断能否走非药物：</strong>患者是否"获得和参与非药物治疗"？社会支持是否可用？</li>
+      <li><strong>若选药物：</strong>遵循"单一用药"，选择循证研究证实对母婴风险最小且有效性更高的药物，并向患者及家属解释"风险-效益"关系。</li>
+      <li><strong>全程沟通：</strong>教材把"风险-效益"教育写进社会干预、药物治疗两处，说明沟通本身就是治疗的一部分。</li>
+    </ol>
+    <p class="note">以上四步的依据均为教材原文（一般性原则、药物治疗段、社会干预段），但顺序编排为学习整理。</p>
+  </div>
+
+  <!-- 第五栏 -->
+  <div class="card orange" id="u4-5">
+    <h3 class="col-title"><span class="idx">第五栏</span>鉴别诊断对对碰</h3>
+    <p><strong>表 1　三种治疗手段的适用边界</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>手段</th><th>教材给出的适用情形</th><th>教材未说明的部分</th></tr></thead>
+        <tbody>
+          <tr><td>非药物治疗</td><td>轻、中度发作<strong>原则上首选</strong>；组成包括社会干预、社会支持、心理治疗、辅助治疗</td><td>具体疗程、频次、实施强度</td></tr>
+          <tr><td>药物治疗</td><td>非药物治疗效果不佳，或症状持续存在、反复发作、加重或出现新症状；严重精神障碍、突然起病、严重精神病性症状、自伤伤人风险者可<strong>和 / 或</strong>使用</td><td>具体药物剂量、疗程、血药浓度目标</td></tr>
+          <tr><td>电抽搐治疗（ECT）</td><td>严重精神障碍患者、经过非药物治疗或药物治疗<strong>疗效不佳</strong>者，或存在<strong>自伤或伤人风险</strong>者，可以考虑</td><td>次数、参数、麻醉方案、禁忌清单</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout key"><span class="ct">📌 一句话鉴别总结</span>"轻中度"先走非药物；"非药物无效或病情升级"加药物；"药物也无效、或风险迫在眉睫"才考虑 ECT——三者的关系是<strong>阶梯</strong>，不是并列任选。</div>
+
+    <p><strong>表 2　三类药物在孕产期的取舍（教材口径）</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>药物类别</th><th>教材原文要点</th><th>关键风险提示</th></tr></thead>
+        <tbody>
+          <tr><td>抗抑郁药</td><td>宫内暴露于抗抑郁药与<strong>先天性畸形和不良胎儿结局</strong>有关；目前多数妊娠期患者<strong>倾向于选用 SSRIs</strong></td><td>教材未给出具体品种与剂量；未给出哺乳期用药推荐</td></tr>
+          <tr><td>锂盐</td><td>具有<strong>胎儿致畸性</strong>，其使用<strong>仍存在争议性</strong></td><td>教材未给出孕期血锂目标浓度与监测频次</td></tr>
+          <tr><td>丙戊酸盐</td><td>较多证据证明该药有增加胎儿<strong>孤独症谱系障碍</strong>的风险；宫内暴露与<strong>儿童认知功能降低</strong>存在相关性，因此<strong>不再推荐使用</strong></td><td>"不再推荐"是教材明确表态，属高频考点</td></tr>
+          <tr><td>拉莫三嗪</td><td><strong>尚无研究</strong>表明妊娠期使用会增加胎儿先天性畸形的风险；但孕产期服用其<strong>血药浓度不稳定</strong>，会导致<strong>皮疹风险增加</strong>，需要<strong>严密监测</strong></td><td>注意"无致畸证据"≠"无需监测"</td></tr>
+          <tr><td>第二代抗精神病药</td><td>据 <strong>NICE 指南</strong>建议，对于药物反应良好的女性，妊娠期间<strong>继续使用</strong>可能是最谨慎的选择；但需注意其相关的<strong>代谢综合征</strong>，尽量避免增加胎儿和产科不良结局的风险</td><td>教材未给出具体品种、剂量与监测指标</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout key"><span class="ct">📌 一句话鉴别总结</span>抗抑郁"倾向 SSRIs"、锂"有致畸且有争议"、丙戊"不再推荐"、拉莫三嗪"无致畸证据但要防皮疹"、SGA"反应良好者可继续、盯住代谢"——<strong>五种态度，五种答法，不能互相套用</strong>。</div>
+
+    <p><strong>表 3　五种心理治疗的适用与教材表述强度</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>疗法</th><th>教材定位</th><th>教材点名的适用情形</th></tr></thead>
+        <tbody>
+          <tr><td>认知行为疗法（CBT）</td><td>认为<strong>歪曲的认知</strong>是情绪和行为障碍的原因；通过<strong>认知重组</strong>帮助患者认识并矫正歪曲认知</td><td>围产期抑郁障碍、焦虑障碍、强迫症和睡眠障碍等</td></tr>
+          <tr><td>辩证行为疗法（DBT）</td><td>全面的认知行为疗法，结合东方辩证思想，强调在<strong>"改变"和"接受"</strong>之间寻找平衡</td><td>对孕产期女性<strong>非常有效</strong>，能改善抑郁症状和焦虑症状、提高应对技能</td></tr>
+          <tr><td>人际心理疗法（IPT）</td><td><strong>短期的聚焦疗法</strong>，通过改善人际功能和增加社会支持来缓解抑郁症状</td><td>直接关注<strong>角色转换、悲伤、角色冲突和人际缺陷</strong></td></tr>
+          <tr><td>伴侣疗法</td><td>教材明确：目前<strong>尚无专门实证研究</strong>证实其对孕产期抑郁障碍的疗效；但临床发现伴侣在症状出现、加重过程中起<strong>至关重要的作用</strong></td><td>教材未给出具体操作形式</td></tr>
+          <tr><td>接纳与承诺疗法（ACT）</td><td>创新的、<strong>具有循证依据</strong>的治疗方法；增加对内部事件的接受与对外部事件的主动参与，而非试图消除、改变或规避</td><td>教材未点名具体适用亚型</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout key"><span class="ct">📌 一句话鉴别总结</span>五种疗法里，只有 <strong>CBT 被教材点明了适用病种</strong>、只有 <strong>伴侣疗法被教材明确说"尚无专门实证研究"</strong>——这两个"唯一"正是最容易被反着考的点。</div>
+  </div>
+
+  <!-- 第六栏 -->
+  <div class="card green" id="u4-6">
+    <h3 class="col-title"><span class="idx">第六栏</span>治疗方案工具箱</h3>
+    <p><strong>一、总体原则（教材原文）</strong></p>
+    <div class="quote"><span class="lab">教材原文</span>既要考虑疾病的严重程度，又要考虑对母亲和胎儿健康的影响，权衡疾病治疗的"风险-效益"关系。目前主张"综合、全程、分级、多学科协作诊疗，保障孕产妇安全及胎儿安全"的治疗原则。</div>
+
+    <p><strong>二、非药物治疗（四个组成部分）</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>组成</th><th>教材内容要点</th></tr></thead>
+        <tbody>
+          <tr><td>社会干预</td><td>产前或产后<strong>健康教育</strong>：规范的孕前生育规划、孕期及产前注意事项的健康教育、疾病管理及药物使用的"风险-效益"决策方面的教育。目的是<strong>增强孕产妇自我保健意识和自我监护能力，培养科学的育儿观</strong>，保障母婴健康与安全。</td></tr>
+          <tr><td>社会支持</td><td>良好的人际关系和可利用的充分的社会资源能带来<strong>积极的情感支持、有效的信息沟通、必要的物质援助及价值传递</strong>。应鼓励孕妇坚持积极的社会活动，形成良好的社交网络，有效利用社会资源。</td></tr>
+          <tr><td>心理治疗</td><td>五种：CBT、DBT、IPT、伴侣疗法、ACT（详见上栏表 3）。</td></tr>
+          <tr><td>辅助治疗</td><td><strong>重复经颅磁刺激（rTMS）、运动疗法、强光治疗</strong>等，作为辅助疗法。</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p><strong>三、药物治疗（教材口径）</strong></p>
+    <div class="callout key">
+      <span class="ct">📌 三条硬规则</span>
+      ① 尽量遵循<strong>"单一用药"</strong>原则；② 选择<strong>循证研究证实对母婴风险最小和有效性更高</strong>的药物；③ 向患者及其家属<strong>解释药物治疗的"风险-效益"关系</strong>。
+    </div>
+    <div class="grid2">
+      <div class="mini">
+        <h4>抗抑郁药</h4>
+        <p>宫内暴露于抗抑郁药与<strong>先天性畸形和不良胎儿结局</strong>有关。目前多数妊娠期患者倾向于选用 <strong>SSRIs</strong>。</p>
+        <p class="note">具体品种、剂量、疗程：教材未涉及。</p>
+      </div>
+      <div class="mini">
+        <h4>情感稳定剂（三种态度不同）</h4>
+        <ul>
+          <li><strong>锂盐</strong>：有胎儿致畸性，使用仍存在争议</li>
+          <li><strong>丙戊酸盐</strong>：增加胎儿孤独症谱系障碍风险，宫内暴露与儿童认知功能降低相关，<strong>不再推荐使用</strong></li>
+          <li><strong>拉莫三嗪</strong>：尚无研究表明增加先天畸形风险；但孕产期血药浓度不稳定、皮疹风险增加，需<strong>严密监测</strong></li>
+        </ul>
+      </div>
+      <div class="mini">
+        <h4>第二代抗精神病药</h4>
+        <p>据 NICE 指南建议，对<strong>药物反应良好</strong>的女性，妊娠期间<strong>继续使用</strong>可能是最谨慎的选择。但需注意其相关的<strong>代谢综合征</strong>，尽量避免增加胎儿和产科不良结局的风险。</p>
+      </div>
+      <div class="mini">
+        <h4>电抽搐治疗（ECT）</h4>
+        <p>适用于：严重精神障碍患者；经过非药物治疗或药物治疗<strong>疗效不佳</strong>者；存在<strong>自伤或伤人风险</strong>者。<br>
+        教材又称电休克治疗（electrical shock therapy）。</p>
+        <p class="note">次数、参数、禁忌：教材未涉及。</p>
+      </div>
+    </div>
+    <div class="callout warn">
+      <span class="ct">⚠️ 关于哺乳期用药（务必按教材口径作答）</span>
+      教材<strong>只在评估部分</strong>提出"哺乳期药物的安全性"是母乳喂养决策中需要考虑的因素之一，<strong>并未给出任何具体的哺乳期用药推荐、品种选择或剂量</strong>。因此本指南<strong>不作任何哺乳期用药推荐</strong>；教材未涉及即答"教材未涉及"。
+    </div>
+
+    <div class="timeline">
+      <div class="tl-item"><h4>第 1 步 · 风险评估</h4><p>疾病严重程度 + 对母亲和胎儿健康的影响 → 权衡"风险-效益"。</p></div>
+      <div class="tl-item"><h4>第 2 步 · 分层决定路径</h4><p>轻中度 → 非药物治疗优先；重症、急性起病、精神病性症状、自伤伤人 → 药物和 / 或 ECT。</p></div>
+      <div class="tl-item"><h4>第 3 步 · 非药物先行</h4><p>社会干预（健康教育）+ 社会支持 + 心理治疗（CBT/DBT/IPT/伴侣/ACT）+ 辅助治疗（rTMS、运动、强光）。</p></div>
+      <div class="tl-item"><h4>第 4 步 · 药物升级</h4><p>单一用药；按"对母婴风险最小 + 有效性更高"选药；逐一向患者及家属解释风险-效益。</p></div>
+      <div class="tl-item"><h4>第 5 步 · ECT</h4><p>用于严重精神障碍、药物或非药物治疗疗效不佳、存在自伤或伤人风险者。</p></div>
+      <div class="tl-item"><h4>第 6 步 · 全程与多学科</h4><p>教材的原则要求"全程""多学科协作诊疗"，并同时保障孕产妇安全与胎儿安全。</p></div>
+    </div>
+    <p class="note">教材未给出随访频次、疗程时长与停药策略，上述步骤之后的安排属「教材未涉及」。</p>
+  </div>
+
+  <!-- 第七栏 -->
+  <div class="card purple" id="u4-7">
+    <h3 class="col-title"><span class="idx">第七栏</span>记忆工具箱</h3>
+    <div class="callout tip">
+      <span class="ct">🔧 方法一：口诀歌谣法（16 字总体原则）</span>
+      口诀：<strong>"综、全、分、协，母婴双安"</strong>——综合、全程、分级、多学科协作，保障孕产妇安全及胎儿安全。<br>
+      <em>为什么这样记：</em>教材用 16 个字概括总体原则，这 16 字本身就是"官方口诀"；压缩成 6 个字后仍保留全部要素，答题时展开即可，不会漏项也不会改写原意。
+    </div>
+    <div class="callout tip">
+      <span class="ct">🔧 方法二：分层记忆法（一条"两级台阶"）</span>
+      台阶一：<strong>轻、中度 → 非药物优先</strong>；台阶二：<strong>重症 / 急性起病 / 严重精神病性症状 / 自伤伤人 → 药物和 / 或 ECT</strong>。升级触发器写在台阶上：<strong>"不佳、持续、反复、加重"</strong>四词。<br>
+      <em>为什么这样记：</em>教材的治疗原则本质是一条"if-then"判断链；把它画成两级台阶 + 四个触发器，比背整段话更贴近临床决策的实际心理过程。
+    </div>
+    <div class="callout tip">
+      <span class="ct">🔧 方法三：对比记忆法（情感稳定剂的"三种态度"）</span>
+      锂盐 = <strong>"有致畸、有争议"</strong>；丙戊酸盐 = <strong>"不再推荐"</strong>（孤独症谱系障碍 + 认知功能降低）；拉莫三嗪 = <strong>"无致畸证据，但要防皮疹、严密监测"</strong>。<br>
+      <em>为什么这样记：</em>三种药常被出成"下列哪种说法正确"的辨析题，把三句态度标签化，看到药名就能立刻调出对应表态，避免把"争议"和"不再推荐"混为一谈。
+    </div>
+    <div class="callout tip">
+      <span class="ct">🔧 方法四：首字母缩拼法（五种心理治疗）</span>
+      取首字母：<strong>C-D-I-伴-A</strong>（CBT、DBT、IPT、伴侣疗法、ACT）。可念成<strong>"C 迪伴 A"</strong>。<br>
+      <em>为什么这样记：</em>五个英文缩写彼此无关，直接硬背容易漏掉"伴侣疗法"这一非标准化项；用一串读音把它们绑在一起，回忆时按顺序清点，五个一个不少。
+    </div>
+  </div>
+
+  <!-- 第八栏 -->
+  <div class="card cyan" id="u4-8">
+    <h3 class="col-title"><span class="idx">第八栏</span>知识联动</h3>
+    <ul>
+      <li><strong>与治疗学章：</strong>ECT 的定义、适应证与操作在治疗学章有系统论述；本章只保留"严重精神障碍、疗效不佳、自伤伤人风险"三条适应证，并把"孕妇可以应用"的边界留给治疗学章的 MECT 部分。</li>
+      <li><strong>与抑郁障碍 / 双相障碍章：</strong>抗抑郁药与情感稳定剂的选择逻辑来自这两章；本章的增量信息是"孕期/围产期的额外风险"——致畸、孤独症谱系障碍、认知功能、血药浓度不稳定与皮疹。</li>
+      <li><strong>与焦虑障碍 / 强迫症章：</strong>CBT 被教材点名适用于围产期抑郁障碍、焦虑障碍、强迫症和睡眠障碍，这四个病种正好对应本章的主要分型。</li>
+      <li><strong>与产科 / 儿科：</strong>"婴儿喂养和哺乳"与"睡眠"是产褥期评估的两大因素；治疗决策必须把母乳喂养方式、睡眠获取、饮食限制与伴侣参与一并纳入。</li>
+      <li><strong>与临床药理学：</strong>教材提到"宫内暴露"与"血药浓度不稳定"，这属于胎盘转运与孕期药代动力学变化的问题；教材未展开机制。</li>
+      <li><strong>与医学伦理 / 知情同意：</strong>教材三次强调"风险-效益"的解释义务，说明治疗决策不是单向医嘱，而是与患者及家属的共同决策过程。</li>
+      <li><strong>与社会精神医学：</strong>社会干预与社会支持被列为独立的治疗组成，且明确指向"增强自我保健意识与自我监护能力、培养科学育儿观"，体现社会资源在围产期治疗中的实体地位。</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===== 09 核心要点 ===== -->
+<section id="summary">
+  <div class="sec-head"><div class="badge">09</div><h2>全章核心要点速览<span class="en">16 key points</span></h2></div>
+  <p class="sec-lead">考前最后一遍只看这里。每条都能独立成题，建议逐条自问"为什么"。</p>
+  <div class="card blue">
+    <div class="grid2">
+      <ol>
+        <li>定义：在女性妊娠、分娩或产褥期期间发生的、与心理和行为相关的一组<strong>综合征</strong>，包含显著的精神和行为特征。</li>
+        <li>总体患病率<strong>可达 10%～15%</strong>；国内产褥期精神障碍患病率 <strong>0.1%～0.2%</strong>；数据因命名、定义与调查工具不同而差异较大。</li>
+        <li>命名演进：Marcé 建立现代 PMADs 描述；<strong>Pitt（1968）</strong>首提 PPD（产后 4 周内）；WHO 为产后一年；DSM-5 为妊娠期或产后 4 周；ICD-10 为产后 6 周；<strong>ICD-11 为分娩后 6 周内</strong>。</li>
+        <li>改用"围产期"的理由：<strong>至少有三分之一的患者是在妊娠期间发病</strong>。</li>
+        <li>病因<strong>尚不明确</strong>，为遗传、神经生物学、心理及社会环境因素综合作用；遗传线索包括 GABA 受体结构异常与甲基化模式改变。</li>
+        <li>神经生物学主线：孕晚期雌激素、孕酮与皮质醇<strong>显著升高</strong> → 胎盘娩出后雌激素、孕酮<strong>迅速下降</strong> → HPA 轴<strong>代偿性变化</strong> → 影响大脑与神经递质。</li>
+        <li>心理社会风险因素 5 类：既往精神障碍病史、孕期心理障碍、心理生物学因素、创伤经历、社会心理因素。</li>
+        <li>临床表现分三面：<strong>情绪症状</strong>（焦虑、抑郁、精神病性与双相症状）、<strong>认知与行为症状</strong>（认知受损、意志行为紊乱、强迫症状）、<strong>躯体症状</strong>（自主神经功能失调、全身症状）。</li>
+      </ol>
+      <ol start="9">
+        <li>临床分型 4 大类、<strong>8 个独立障碍名称</strong>：围产期抑郁障碍；围产期焦虑障碍（GAD、惊恐障碍、疾病焦虑障碍、强迫症）；围产期双相障碍、产后精神病；围产期 PTSD。</li>
+        <li>PND：妊娠期及<strong>分娩后 4 周内或流产后</strong>的抑郁发作，含产前与产后；妊娠特异性特征为持续恐惧伤害新生儿、对孩子缺乏兴趣、养育教养的严重焦虑或烦躁。</li>
+        <li>PNA 四个亚型的时间锚：GAD <strong>至少 6 个月</strong> + 至少 3 种生理症状；惊恐障碍发作后 <strong>1 个月或更长</strong> + 发作含 4 种及以上症状；疾病焦虑障碍<strong>至少 6 个月</strong>；强迫症最常见侵入性思维为<strong>婴儿窒息或婴儿猝死</strong>，多为强迫性检查与极度回避。</li>
+        <li>BPAD 为<strong>无精神病性症状</strong>的欣快感、多动性躁狂，易激惹/激越型更常见；<strong>分娩是严重精神障碍发作的重要诱因</strong>；躁狂、伴精神病性症状的抑郁、产褥期精神障碍最易发生在<strong>产后第一个月内</strong>。</li>
+        <li>PPP：分娩后<strong>数天至数周内爆发起病</strong>；有激越、易怒、情绪不稳定、妄想、行为紊乱，可有<strong>意识模糊</strong>；缺乏自知力，常因妄想或担心失去监护权而<strong>隐藏症状</strong>；可忽视或虐待婴儿，严重时杀害婴幼儿和 / 或自杀，<strong>需立即送医</strong>。</li>
+        <li>P-PTSD：创伤事件为分娩、产科手术等 <strong>PTEs</strong>；核心症状为闯入性、回避创伤相关刺激、认知与情绪负面改变、警觉性和反应性增高。</li>
+        <li>诊断建立在<strong>症状学、严重程度、病程和排除其他疾病</strong>基础上；ICD-11 分"不伴 / 伴精神病性症状 / 未特指"，两类核心特征共四条，第③条均要求排除<strong>脑瘤、苯二氮䓬类影响、兴奋剂戒断</strong>。</li>
+        <li>治疗：总体原则为"<strong>综合、全程、分级、多学科协作诊疗，保障孕产妇安全及胎儿安全</strong>"；轻中度<strong>首选非药物</strong>，重症/急性/精神病性症状/自伤伤人用<strong>药物和 / 或 ECT</strong>；药物坚持<strong>单一用药</strong>，抗抑郁倾向 SSRIs，<strong>丙戊酸盐不再推荐</strong>。</li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 10 易混 ===== -->
+<section id="pitfalls">
+  <div class="sec-head"><div class="badge">10</div><h2>易混易错点警示<span class="en">Common traps</span></h2></div>
+  <p class="sec-lead">这些点不是"没背到"，而是"背反了"。逐条核对你的第一反应。</p>
+  <div class="card danger">
+    <details open>
+      <summary>① "产后忧郁"不是"围产期精神障碍"的一种诊断</summary>
+      <div class="dbody">教材明确：本诊断<strong>不适用于</strong>描述不符合抑郁发作诊断要求的轻度和短暂的抑郁症状，这些症状可能在分娩后不久发生（俗称"产后忧郁"或"婴儿忧郁"）。产后抑郁障碍最初可能被误认为"婴儿忧郁"，但其症状与体征<strong>更严重、持续时间更长、影响功能状态（包括照顾婴儿的能力）</strong>。</div>
+    </details>
+    <details>
+      <summary>② "4 周"与"6 周"不能互换</summary>
+      <div class="dbody">Pitt 与 DSM-5 用<strong>4 周</strong>（DSM-5 称"围产期抑郁发作"，含妊娠期发病）；ICD-10 与 ICD-11 用<strong>6 周</strong>（ICD-11 为分娩后 6 周内）；WHO 用<strong>产后一年</strong>。本章综合 2023 年专家共识与 ICD-11 叙述，故本章口径是<strong>分娩后 6 周内</strong>。</div>
+    </details>
+    <details>
+      <summary>③ 有"伤害婴儿的念头"不等于有病</summary>
+      <div class="dbody">教材原文：妊娠期间和分娩后出现对婴儿的担忧和恐惧，以及一定程度的关于可能的、危害的<strong>侵入性想法都是常见的</strong>，<strong>不应被诊断</strong>，<strong>除非</strong>这些症状持续存在、与实际痛苦有关，并且影响功能（包括照顾婴儿的能力）。三个条件缺一不可。</div>
+    </details>
+    <details>
+      <summary>④ BPAD 与 PPP 的第一分界是"有无精神病性症状"</summary>
+      <div class="dbody">围产期双相障碍是"临床符合双相障碍的<strong>无精神病性症状</strong>的欣快感、多动性躁狂的发作"；产后精神病则含<strong>妄想、幻觉或其他精神病性症状</strong>，还可能意识模糊、缺乏自知力、隐藏症状并有伤婴风险。<strong>不要把 PPP 当成"更重的躁狂"来答</strong>——教材把它作为独立名称列出。</div>
+    </details>
+    <details>
+      <summary>⑤ 围产期焦虑障碍的 4 个亚型里没有"双相"</summary>
+      <div class="dbody">PNA 的亚型是：围产期<strong>广泛性焦虑障碍、惊恐障碍、疾病焦虑障碍、强迫症</strong>。围产期双相障碍属于"围产期躁狂发作"这一大类，<strong>不属于焦虑障碍</strong>。这是最常见的归类错位。</div>
+    </details>
+    <details>
+      <summary>⑥ GAD 的"6 个月"与惊恐障碍的"1 个月"别装反</summary>
+      <div class="dbody">围产期 GAD：担忧持续<strong>至少 6 个月</strong>，很难控制，与<strong>至少三种</strong>生理症状有关。围产期惊恐障碍：反复惊恐发作后出现<strong>1 个月或更长时间</strong>的适应不良行为改变和 / 或对再次发作的担忧，每次发作含<strong>四种及以上</strong>症状。<strong>6 配 3，1 配 4</strong>。</div>
+    </details>
+    <details>
+      <summary>⑦ 丙戊酸盐是"不再推荐"，不是"有争议"</summary>
+      <div class="dbody">教材分别表态：<strong>锂盐</strong>有胎儿致畸性、"其使用仍存在争议性"；<strong>丙戊酸盐</strong>有增加胎儿孤独症谱系障碍风险的较多证据，宫内暴露与儿童认知功能降低相关，"因此<strong>不再推荐使用</strong>"。两种表态强度不同，答题时不能互串。</div>
+    </details>
+    <details>
+      <summary>⑧ 拉莫三嗪"无致畸证据"不等于"无需监测"</summary>
+      <div class="dbody">教材：尚无研究表明妊娠期使用拉莫三嗪会增加胎儿先天性畸形的风险；<strong>但</strong>在孕产期服用其<strong>血药浓度不稳定</strong>，会导致<strong>出现皮疹的风险增加</strong>，需要<strong>严密监测</strong>。前半句与后半句都要写全，只答前半句会丢分。</div>
+    </details>
+    <details>
+      <summary>⑨ "轻中度首选非药物"不等于"不能用药物"</summary>
+      <div class="dbody">教材措辞是"原则上<strong>首选</strong>非药物治疗"；只有出现下列情形才建议用药：治疗效果不佳、症状持续存在、反复发作、症状加重或出现新的症状。反过来，严重精神障碍、突然起病、严重精神病性症状、自伤或伤人风险者，应直接用<strong>药物和 / 或 ECT</strong>，不必先"试非药物"。</div>
+    </details>
+    <details>
+      <summary>⑩ 教材没有哺乳期用药推荐，不要自己补</summary>
+      <div class="dbody">教材仅在产褥期评估中提到"<strong>哺乳期药物的安全性</strong>"是母乳喂养需考虑的因素之一，<strong>未给出任何具体品种、剂量或哺乳期用药建议</strong>。凡涉及"哺乳期该用哪种药/多少量"的问题，正确答法是"<strong>教材未涉及</strong>"，而不是从其他资料补一个答案。</div>
+    </details>
+  </div>
+</section>
+
+<!-- ===== 11 自测 ===== -->
+<section id="quiz">
+  <div class="sec-head"><div class="badge">11</div><h2>章节自测系统<span class="en">12 questions · 6 types</span></h2></div>
+  <p class="sec-lead">覆盖单选、多选、判断、名词解释、简答、案例分析六种题型，按易→中→难排列。先作答，再展开解析。</p>
+
+  <div class="quiz-q">
+    <div class="qh"><span class="qno">第 1 题</span><span class="qtype">单选题</span><span class="diff">易</span></div>
+    <p class="brief">教材给出的"与妊娠、分娩或产褥期有关的精神或行为障碍"总体患病率是？</p>
+    <div class="opts">
+      <div class="opt"><span class="l">A.</span>0.1%～0.2%</div>
+      <div class="opt"><span class="l">B.</span>1%～2%</div>
+      <div class="opt"><span class="l">C.</span>10%～15%</div>
+      <div class="opt"><span class="l">D.</span>30%～40%</div>
+    </div>
+    <details><summary>查看答案与解析</summary><div class="dbody"><strong>答案：C</strong><br>教材原文：患病率可达 <strong>10%～15%</strong>。A 是"产褥期精神障碍"的患病率 0.1%～0.2%，是本章中另一个容易与之混淆的数字，注意区分"总体"与"产褥期精神障碍"两个口径。</div></details>
+  </div>
+
+  <div class="quiz-q">
+    <div class="qh"><span class="qno">第 2 题</span><span class="qtype">单选题</span><span class="diff">易</span></div>
+    <p class="brief">ICD-11 界定的"与妊娠或产褥期相关"的时间窗是？</p>
+    <div class="opts">
+      <div class="opt"><span class="l">A.</span>产后 4 周内</div>
+      <div class="opt"><span class="l">B.</span>产后 6 周内</div>
+      <div class="opt"><span class="l">C.</span>产后 3 个月内</div>
+      <div class="opt"><span class="l">D.</span>产后 1 年内</div>
+    </div>
+    <details><summary>查看答案与解析</summary><div class="dbody"><strong>答案：B</strong><br>教材原文：ICD-11 提出"与妊娠、分娩或产褥期有关的精神或行为障碍，不伴 / 伴精神病性症状"的描述，是"与妊娠或产褥期（<strong>分娩后 6 周内</strong>）相关的综合征"。A 为 DSM-5 与 2021 共识；D 为 WHO 的规定。</div></details>
+  </div>
+
+  <div class="quiz-q">
+    <div class="qh"><span class="qno">第 3 题</span><span class="qtype">单选题</span><span class="diff">中</span></div>
+    <p class="brief">产后精神病（PPP）的典型起病时间是？</p>
+    <div class="opts">
+      <div class="opt"><span class="l">A.</span>妊娠早期</div>
+      <div class="opt"><span class="l">B.</span>分娩后数天至数周内爆发起病</div>
+      <div class="opt"><span class="l">C.</span>产后 3～6 个月</div>
+      <div class="opt"><span class="l">D.</span>断奶后</div>
+    </div>
+    <details><summary>查看答案与解析</summary><div class="dbody"><strong>答案：B</strong><br>教材原文：产后精神病"通常在分娩后<strong>数天至数周内爆发起病</strong>"。同段还提示：躁狂、伴有精神病性症状的抑郁障碍、产褥期精神障碍最易发生在<strong>产后第一个月内</strong>。</div></details>
+  </div>
+
+  <div class="quiz-q">
+    <div class="qh"><span class="qno">第 4 题</span><span class="qtype">单选题</span><span class="diff">难</span></div>
+    <p class="brief">下列哪一项<strong>不属于</strong>教材所列的围产期焦虑障碍的亚型？</p>
+    <div class="opts">
+      <div class="opt"><span class="l">A.</span>围产期广泛性焦虑障碍</div>
+      <div class="opt"><span class="l">B.</span>围产期惊恐障碍</div>
+      <div class="opt"><span class="l">C.</span>围产期疾病焦虑障碍</div>
+      <div class="opt"><span class="l">D.</span>围产期双相障碍</div>
+    </div>
+    <details><summary>查看答案与解析</summary><div class="dbody"><strong>答案：D</strong><br>围产期焦虑障碍的 4 个亚型为：广泛性焦虑障碍、惊恐障碍、疾病焦虑障碍、强迫症。围产期双相障碍（BPAD）属于"三、围产期躁狂发作"这一大类，教材明确其为"无精神病性症状的欣快感、多动性躁狂的发作"。</div></details>
+  </div>
+
+  <div class="quiz-q">
+    <div class="qh"><span class="qno">第 5 题</span><span class="qtype">多选题</span><span class="diff">中</span></div>
+    <p class="brief">下列哪些属于教材列出的、与围产期精神障碍发生密切相关的风险因素？</p>
+    <div class="opts">
+      <div class="opt"><span class="l">A.</span>既往有精神障碍病史</div>
+      <div class="opt"><span class="l">B.</span>孕期出现心理障碍</div>
+      <div class="opt"><span class="l">C.</span>创伤经历</div>
+      <div class="opt"><span class="l">D.</span>缺乏社会支持</div>
+    </div>
+    <details><summary>查看答案与解析</summary><div class="dbody"><strong>答案：ABCD</strong><br>教材列出 5 类风险因素：①既往有精神障碍病史；②孕期出现心理障碍；③心理生物学方面因素（肥胖、物质滥用、不良妊娠结局或不良分娩结果、睡眠障碍）；④创伤经历；⑤社会心理方面因素（特定人格特质、婚姻等人际冲突、缺乏社会支持，以及经济、工作等方面压力）。四项均在其中。</div></details>
+  </div>
+
+  <div class="quiz-q">
+    <div class="qh"><span class="qno">第 6 题</span><span class="qtype">多选题</span><span class="diff">难</span></div>
+    <p class="brief">关于围产期精神障碍的药物治疗，下列哪些符合教材原文？</p>
+    <div class="opts">
+      <div class="opt"><span class="l">A.</span>尽量遵循"单一用药"原则</div>
+      <div class="opt"><span class="l">B.</span>丙戊酸盐因相关证据，不再推荐使用</div>
+      <div class="opt"><span class="l">C.</span>锂盐具有胎儿致畸性，其使用仍存在争议性</div>
+      <div class="opt"><span class="l">D.</span>拉莫三嗪在孕产期血药浓度稳定，无需监测</div>
+    </div>
+    <details><summary>查看答案与解析</summary><div class="dbody"><strong>答案：ABC</strong><br>D 错：教材原文是"在孕产期服用拉莫三嗪其血药浓度<strong>不稳定</strong>，会导致出现<strong>皮疹的风险增加</strong>，需要<strong>严密监测</strong>"。A、B、C 均为教材原文表述：单一用药原则；丙戊酸盐增加胎儿孤独症谱系障碍风险且与儿童认知功能降低相关，故不再推荐；锂盐有致畸性且使用有争议。</div></details>
+  </div>
+
+  <div class="quiz-q">
+    <div class="qh"><span class="qno">第 7 题</span><span class="qtype">判断题</span><span class="diff">易</span></div>
+    <p class="brief">俗称"产后忧郁"的轻度、短暂抑郁症状，符合"与妊娠、分娩或产褥期有关的精神或行为障碍，不伴精神病性症状"的诊断要求。</p>
+    <div class="opts">
+      <div class="opt"><span class="l">A.</span>正确</div>
+      <div class="opt"><span class="l">B.</span>错误</div>
+    </div>
+    <details><summary>查看答案与解析</summary><div class="dbody"><strong>答案：B（错误）</strong><br>教材明确：本诊断<strong>不适用于</strong>描述不符合抑郁发作诊断要求的轻度和短暂的抑郁症状，这些症状可能在分娩后不久发生（俗称"产后忧郁"）。产后抑郁障碍虽可能最初被误认为"婴儿忧郁"，但其症状体征更严重、持续更长、影响照顾婴儿的能力。</div></details>
+  </div>
+
+  <div class="quiz-q">
+    <div class="qh"><span class="qno">第 8 题</span><span class="qtype">判断题</span><span class="diff">中</span></div>
+    <p class="brief">即使该综合征是先前存在的疾病（如心境障碍）的复发或加重，也可以给出"与妊娠、分娩或产褥期有关的精神或行为障碍"的诊断。</p>
+    <div class="opts">
+      <div class="opt"><span class="l">A.</span>正确</div>
+      <div class="opt"><span class="l">B.</span>错误</div>
+    </div>
+    <details><summary>查看答案与解析</summary><div class="dbody"><strong>答案：A（正确）</strong><br>教材在"不伴精神病性症状"与"伴精神病性症状"两处的鉴别诊断中都写明："即使该综合征是先前存在的疾病（如心境障碍）的复发或加重，也可以给出此诊断。"这是本章诊断逻辑的重要特点——<strong>不因"是旧病复发"而排除本章诊断</strong>。</div></details>
+  </div>
+
+  <div class="quiz-q">
+    <div class="qh"><span class="qno">第 9 题</span><span class="qtype">名词解释</span><span class="diff">中</span></div>
+    <p class="brief">请解释"围产期抑郁障碍（PND）"。</p>
+    <details><summary>查看答案与解析</summary><div class="dbody"><strong>参考答案：</strong>围产期抑郁障碍又称孕产期抑郁障碍，是<strong>妊娠期及分娩后 4 周内或流产后</strong>出现的抑郁发作，包括产前抑郁障碍和产后抑郁障碍（PPD），是妊娠期及产褥期<strong>常见并发症之一</strong>。其症状与抑郁发作相似，不同之处在于围产期女性往往存在明显的<strong>妊娠特异性特征</strong>，包括对伤害新生儿的持续恐惧、对孩子缺乏兴趣，以及作为母亲对于养育和教养孩子的严重焦虑或烦躁。</div></details>
+  </div>
+
+  <div class="quiz-q">
+    <div class="qh"><span class="qno">第 10 题</span><span class="qtype">名词解释</span><span class="diff">中</span></div>
+    <p class="brief">请解释"产后精神病（PPP）"。</p>
+    <details><summary>查看答案与解析</summary><div class="dbody"><strong>参考答案：</strong>产后精神病通常在<strong>分娩后数天至数周内爆发起病</strong>，症状包括<strong>激越、易怒、情绪不稳定、妄想和行为紊乱</strong>等精神症状，还可能表现为<strong>意识模糊</strong>，以及以烦躁不安为突出表现的躁狂症状。患者通常对疾病和症状<strong>缺乏自知力</strong>，会在妄想驱使下或担心失去对孩子的监护权而<strong>隐藏症状</strong>。由于意识模糊、妄想及心境状态不良，患者很容易忽视或虐待婴儿，严重时可能出现<strong>杀害他人（尤其是婴幼儿）和 / 或自杀</strong>等危险行为，此时<strong>需立即送医救治</strong>。</div></details>
+  </div>
+
+  <div class="quiz-q">
+    <div class="qh"><span class="qno">第 11 题</span><span class="qtype">简答题</span><span class="diff">难</span></div>
+    <p class="brief">简述教材对围产期精神障碍治疗的一般性原则（分层原则）。</p>
+    <details><summary>查看答案与解析</summary><div class="dbody">
+      <strong>参考答案：</strong>
+      <ol>
+        <li><strong>总体原则：</strong>既要考虑疾病的严重程度，又要考虑对母亲和胎儿健康的影响，权衡疾病治疗的"风险-效益"关系；主张"综合、全程、分级、多学科协作诊疗，保障孕产妇安全及胎儿安全"。</li>
+        <li><strong>轻、中度发作：</strong>原则上<strong>首选非药物治疗</strong>；如果治疗效果不佳，或者症状持续存在、反复发作，甚至症状加重或出现新的症状，建议使用<strong>药物治疗</strong>。</li>
+        <li><strong>严重情形：</strong>妊娠、分娩或产褥期严重精神障碍，突然起病，具有严重的精神病性症状，存在自伤或伤人等风险的患者，建议采用<strong>药物治疗和 / 或电抽搐治疗</strong>。</li>
+      </ol>
+      <span class="note">教材未给出各阶段的具体疗程、剂量与随访频次。</span>
+    </div></details>
+  </div>
+
+  <div class="quiz-q">
+    <div class="qh"><span class="qno">第 12 题</span><span class="qtype">案例分析题</span><span class="diff">难</span></div>
+    <p class="brief">（模拟情境）一位产妇分娩后第 10 天，家属发现其夜间几乎不睡、言语明显凌乱、情绪时而激越时而低落，坚信"孩子被人调换了"，并多次试图独自抱走婴儿、拒绝他人靠近。她本人否认自己有任何问题。<br>请回答：①最可能的诊断方向是什么？②需要与哪些情况鉴别？③处理原则是什么？</p>
+    <details><summary>查看答案与解析</summary><div class="dbody">
+      <strong>①诊断方向：</strong>符合"与妊娠、分娩或产褥期有关的精神或行为障碍，<strong>伴精神病性症状</strong>"，临床首先考虑<strong>产后精神病（PPP）</strong>。依据：分娩后第 10 天（处于教材所说的"数天至数周内"与"产后第一个月"高发窗）；存在妄想（孩子被调换）、行为紊乱、情绪不稳定与激越；本人缺乏自知力。<br>
+      <strong>②鉴别：</strong>
+      <ul>
+        <li>与<strong>围产期双相障碍</strong>鉴别：BPAD 为"无精神病性症状"的欣快感、多动性躁狂发作，本例有明显妄想，故不支持单纯 BPAD。</li>
+        <li>与<strong>不伴精神病性症状</strong>的围产期障碍鉴别：后者明确"不包括妄想、幻觉或其他精神病性症状"。</li>
+        <li>与<strong>器质性 / 物质所致</strong>鉴别：教材要求排除脑瘤等疾病表现，以及苯二氮䓬类等药物影响或兴奋剂等戒断效应。</li>
+        <li>教材还要求：精神病性症状最常发生在抑郁、躁狂或混合发作背景下，此时还应诊断单次发作的抑郁障碍、复发性抑郁障碍或<strong>双相障碍Ⅰ型</strong>——即需评估心境背景。</li>
+      </ul>
+      <strong>③处理原则：</strong>教材明确，出现杀害他人（尤其是婴幼儿）和 / 或自杀等危险行为时<strong>需立即送医救治</strong>；属"严重精神障碍、突然起病、严重精神病性症状、存在自伤或伤人风险"的情形，建议采用<strong>药物治疗和 / 或电抽搐治疗</strong>，并按总体原则实行综合、全程、分级、多学科协作，保障孕产妇安全及胎儿安全。<br>
+      <span class="note">本题为模拟情境，依据教材描述构建，不是教材原案例；教材未给出本例的具体用药与剂量。</span>
+    </div></details>
+  </div>
+</section>
+
+<!-- ===== 12 速记卡 ===== -->
+<section id="cards">
+  <div class="sec-head"><div class="badge">12</div><h2>考点速记卡<span class="en">18 flip cards</span></h2></div>
+  <p class="sec-lead">正面是问题，点击翻面看答案。建议按"概念→分型→诊断→治疗"四轮刷，每轮只追求快速反应。</p>
+  <div class="flashcard-grid">
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag concept">概念</span><p>本章疾病的定义是什么？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">指在女性妊娠、分娩或产褥期期间发生的与心理和行为相关的一组<strong>综合征</strong>，包含显著的精神和行为特征。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag data">数据</span><p>总体患病率与国内产褥期精神障碍患病率？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">总体患病率可达 <strong>10%～15%</strong>；国内产褥期精神障碍患病率 <strong>0.1%～0.2%</strong>。教材提示各口径数据差异较大。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag data">数据</span><p>国内围产期抑郁、焦虑、强迫症的患病率区间？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">围产期抑郁障碍 <strong>3.8%～16.7%</strong>；围产期焦虑障碍 <strong>6.1%～7.7%</strong>；围产期强迫症 <strong>1.2%～5.2%</strong>。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag data">数据</span><p>国外围产期抑郁与焦虑的患病率？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">国外分析显示，围产期抑郁障碍 <strong>5%～25%</strong>，围产期焦虑障碍 <strong>9%～22%</strong>。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag concept">概念</span><p>为什么用"围产期"取代"产后"？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">因为<strong>至少有三分之一的患者是在妊娠期间发病</strong>，只用"产后"会漏掉妊娠期起病者。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag diag">鉴别</span><p>五个体系的时间窗各是多少？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">Pitt 与 DSM-5：<strong>4 周</strong>；ICD-10：产后 <strong>6 周</strong>；ICD-11：<strong>分娩后 6 周内</strong>；WHO：产后 <strong>1 年</strong>。本章采 ICD-11 口径。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag concept">概念</span><p>围产期抑郁障碍的妊娠特异性特征？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">三句话：对<strong>伤害新生儿</strong>的持续恐惧；对孩子<strong>缺乏兴趣</strong>；作为母亲对<strong>养育和教养孩子</strong>的严重焦虑或烦躁。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag diag">分型</span><p>围产期焦虑障碍的四个亚型？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">围产期<strong>广泛性焦虑障碍、惊恐障碍、疾病焦虑障碍、强迫症</strong>。（口诀"广、惊、病、强"）</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag data">数据</span><p>围产期 GAD 的两个关键数字？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">担忧持续<strong>至少 6 个月</strong>、很难控制；与<strong>至少三种</strong>生理症状有关（不安、疲劳、注意力难集中、易怒、肌肉紧张、睡眠困难）。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag data">数据</span><p>围产期惊恐障碍的两个关键数字？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">惊恐发作后出现<strong>1 个月或更长</strong>的行为改变和 / 或对再次发作的担忧；每次发作含<strong>四种及以上</strong>症状，几分钟内达高峰。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag diag">诊断</span><p>围产期疾病焦虑障碍的核心特点？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back"><strong>无任何症状</strong>也过度担忧自己或子代患严重、危及生命的疾病；正常体检与实验室检测仍不能消除恐惧；持续<strong>至少 6 个月</strong>；诊断时必须排除其他精神障碍所致。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag diag">诊断</span><p>围产期强迫症最常见的侵入性思维与行为？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">侵入性思维主要是<strong>对婴儿的伤害</strong>，最常见涉及<strong>婴儿窒息或婴儿猝死</strong>；行为多为<strong>强迫性检查</strong>（夜间反复观察呼吸）与<strong>极度回避婴儿</strong>。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag concept">概念</span><p>围产期双相障碍（BPAD）的界定？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">发生在围产期的、临床符合双相障碍的<strong>无精神病性症状</strong>的欣快感、多动性躁狂发作；<strong>易激惹、激越型躁狂更常见</strong>。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag risk">风险</span><p>产后精神病的危险信号与处理？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">激越、易怒、情绪不稳、妄想、行为紊乱、<strong>意识模糊</strong>；缺乏自知力、常<strong>隐藏症状</strong>；可忽视或虐待婴儿，严重时杀害婴幼儿和 / 或自杀——<strong>需立即送医救治</strong>。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag concept">概念</span><p>围产期 PTSD 的创伤事件与四大核心症状？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">创伤事件为分娩、产科手术等<strong>潜在创伤性事件（PTEs）</strong>；四大核心症状：<strong>闯入性、回避创伤相关刺激、认知与情绪负面改变、警觉性和反应性增高</strong>。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag diag">诊断</span><p>"不伴精神病性症状"的四条核心特征？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">①妊娠期或产褥期（分娩后 6 周内）的综合征；②<strong>不包括</strong>妄想、幻觉或其他精神病性症状；③非其他疾病（如脑瘤）表现，也非药物影响或戒断（如苯二氮䓬类、兴奋剂）；④造成重要功能领域的<strong>严重损害</strong>。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag diag">鉴别</span><p>"产后忧郁"与产后抑郁障碍怎么分？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">产后忧郁：<strong>轻度、短暂、不符合抑郁发作诊断要求</strong>，不适用该诊断。产后抑郁障碍：症状体征<strong>更严重、持续更长、影响功能（包括照顾婴儿）</strong>，若满足抑郁发作要求则诊断为单次发作或复发性抑郁障碍。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag treat">治疗</span><p>治疗总体原则与分层原则？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">总体："<strong>综合、全程、分级、多学科协作诊疗，保障孕产妇安全及胎儿安全</strong>"。分层：轻中度<strong>首选非药物</strong>；重症、突然起病、严重精神病性症状、自伤伤人风险 → <strong>药物和 / 或 ECT</strong>。</div>
+    </div></div>
+  </div>
+</section>
+
+<!-- ===== 13 病例挑战 ===== -->
+<section id="cases">
+  <div class="sec-head"><div class="badge">13</div><h2>病例挑战<span class="en">3 cases · increasing difficulty</span></h2></div>
+  <p class="sec-lead">以下为<strong>模拟临床情境</strong>：依据教材所述典型表现与处理原则构建，用于训练临床推理，<strong>不是教材原案例</strong>；教材全章未提供病案，因此所有病例均为模拟，且刻意不含虚构的化验数值。</p>
+
+  <div class="case">
+    <span class="ctag">难度 ★ · 识别与分层</span>
+    <h3>案例 1：产后第 3 周，"笑不出来"的妈妈</h3>
+    <div class="scene">一位初产妇在分娩后第 3 周由家人陪同就诊。她自述近两周来情绪持续低落，对原本喜欢的活动提不起兴趣，常因小事烦躁发火，反复自责"我不是个好妈妈"，觉得对不起孩子。她承认"有时会突然害怕自己会伤到孩子"，但表示从未真的动手。她仍在坚持母乳喂养，但自述夜里几乎睡不踏实，白天疲乏。她能照顾婴儿的基本起居，但明显比孕前吃力。</div>
+    <ol class="ques">
+      <li>最可能属于哪一类围产期障碍？依据教材的哪些描述？</li>
+      <li>需要与哪些情况鉴别？关键判别点是什么？</li>
+      <li>按教材原则，下一步治疗路径应如何考虑？</li>
+    </ol>
+    <details><summary>查看答案与解析</summary><div class="dbody">
+      <strong>1.</strong>首先考虑<strong>围产期抑郁障碍（PND）</strong>。依据：起病于分娩后 4 周内（第 3 周）；有情绪低落、兴趣减退、自责、烦躁等教材所列抑郁症状；并具备教材所说的"妊娠特异性特征"——对伤害新生儿的恐惧、觉得自己不是好母亲（对应"作为母亲对于养育和教养孩子的严重焦虑"）。<br>
+      <strong>2.</strong>鉴别：<br>
+      · 与<strong>产后忧郁（婴儿忧郁）</strong>：后者轻度、短暂、不符合抑郁发作诊断要求；本例已持续两周、影响照顾婴儿的体验，需按"更严重、更长、影响功能"的标准评估。<br>
+      · 与<strong>围产期焦虑障碍</strong>：本例主导是低落与兴趣减退而非持续过度担忧；但教材也指出 PNA 可"伴或不伴抑郁症状"，故需评估焦虑成分。<br>
+      · 与<strong>伴精神病性症状</strong>：本例无妄想、幻觉、意识模糊，暂不支持。<br>
+      · 需排除<strong>器质性 / 物质所致</strong>：按教材做甲状腺、肾上腺、激素等内分泌检查与常规实验室检查。<br>
+      <strong>3.</strong>按教材一般性原则：若评估为<strong>轻、中度</strong>发作，<strong>原则上首选非药物治疗</strong>——社会干预（健康教育、"风险-效益"决策教育）、社会支持，以及心理治疗（教材点名 CBT 适用于围产期抑郁障碍）。同时评估其<strong>睡眠</strong>（教材称睡眠是产后精神障碍最重要的风险因素）与<strong>母乳喂养</strong>相关的焦虑。若治疗效果不佳、症状持续或反复、加重，再考虑药物治疗；用药须遵循单一用药并解释"风险-效益"。<br>
+      <span class="note">本案例为模拟情境，依据教材知识点构建，不是教材原案例；教材未给出本例的具体用药与疗程。</span>
+    </div></details>
+  </div>
+
+  <div class="case">
+    <span class="ctag">难度 ★★ · 亚型辨析</span>
+    <h3>案例 2：孕晚期的"反复发作的濒死感"</h3>
+    <div class="scene">一位孕 32 周的孕妇，近一个月内数次在夜间突然出现强烈恐惧，伴呼吸困难、胸痛、头晕、颤抖与出汗，每次持续数分钟后自行缓解。此后她不敢独自在家，反复担心"下一次发作会不会要了我的命"，并因此减少外出。她同时表示，自己近来总是担心胎儿发育不好，多次产检结果均未见异常，但仍不放心。她否认持续半年以上的广泛担忧，也否认反复检查婴儿用品的强迫行为。</div>
+    <ol class="ques">
+      <li>最可能的分型是什么？教材的哪些数字支持这一判断？</li>
+      <li>需要与围产期焦虑障碍的哪些其他亚型鉴别？</li>
+      <li>还需完成哪些评估？</li>
+    </ol>
+    <details><summary>查看答案与解析</summary><div class="dbody">
+      <strong>1.</strong>最可能是<strong>围产期惊恐障碍</strong>。教材依据：反复出现惊恐发作；发作<strong>突然</strong>、<strong>几分钟内达到高峰</strong>；含<strong>四种及以上</strong>症状（本例有呼吸困难、胸痛、头晕、颤抖、出汗，已达四种以上，且有"害怕死亡"这一恐惧症状）；发作后出现<strong>1 个月或更长</strong>的适应不良行为改变（不敢独自在家、减少外出）与对再次发作及其后果的担忧。<br>
+      <strong>2.</strong>鉴别：<br>
+      · <strong>围产期广泛性焦虑障碍</strong>：要求持续<strong>至少 6 个月</strong>的过度担忧、涉及多个事件或活动、很难控制，并伴至少 3 种生理症状；本例病程不足 6 个月且以发作性为主，不支持。<br>
+      · <strong>围产期疾病焦虑障碍</strong>：核心是"无任何症状也担忧患严重疾病、正常检查不能消除"，且需持续<strong>至少 6 个月</strong>；本例的担忧更多指向"发作致死"与胎儿健康，且有真实发作，需进一步区分。<br>
+      · <strong>围产期强迫症</strong>：以侵入性思维（婴儿窒息/猝死）与强迫性检查、极度回避为特征；本例明确否认强迫行为。<br>
+      <strong>3.</strong>按教材评估要求：完整病史采集（含既往精神障碍史、家族史、用药与物质使用史、创伤史与社会支持）；精神检查与体格检查；心理评估可选用 HAMA、GAD-7 等量表；辅助检查需做<strong>甲状腺功能、肾上腺功能、激素等内分泌检查</strong>及心电图等常规检查，以<strong>排除器质性疾病</strong>；同时评估其获得和参与非药物治疗的可能性。<br>
+      <span class="note">本案例为模拟情境，依据教材知识点构建，不是教材原案例；教材未给出量表分界值。</span>
+    </div></details>
+  </div>
+
+  <div class="case">
+    <span class="ctag">难度 ★★★ · 急症识别与处置</span>
+    <h3>案例 3：分娩后第 6 天，"藏起来的症状"</h3>
+    <div class="scene">一位产妇分娩后第 6 天，家属发现她整夜不眠、言语凌乱、情绪在激越与低落间快速摆动，时而说"孩子不是我的"，时而说"有人要来抢走孩子"。她拒绝让任何人抱孩子，并多次要求独自带孩子出门。被问及状态时，她坚称自己"很好，只是没睡好"，并刻意在医生面前表现平静。追问病史，家属回忆她此前曾有过一段"情绪特别高、几天不睡也不觉得累"的时期，但从未就诊。</div>
+    <ol class="ques">
+      <li>最可能的诊断是什么？为什么不能在门诊"观察随访"？</li>
+      <li>该诊断与围产期双相障碍如何区分？病史中哪条线索改变判断？</li>
+      <li>按教材，处置原则包括哪些？还需要排除什么？</li>
+    </ol>
+    <details><summary>查看答案与解析</summary><div class="dbody">
+      <strong>1.</strong>最可能是<strong>产后精神病（PPP）</strong>，属于"与妊娠、分娩或产褥期有关的精神或行为障碍，<strong>伴精神病性症状</strong>"。依据：分娩后第 6 天（教材称"数天至数周内爆发起病"，且产后第一个月为高发窗）；存在妄想（孩子不是我的、有人要抢走孩子）、行为紊乱、情绪不稳定与激越；<strong>缺乏自知力</strong>并刻意<strong>隐藏症状</strong>（教材明确描述"会在妄想驱使下或担心失去对孩子的监护权而隐藏症状"）。不能观察随访，因为教材指出她可能忽视或虐待婴儿，严重时可出现杀害他人（尤其是婴幼儿）和 / 或自杀等危险行为，<strong>此时需立即送医救治</strong>。<br>
+      <strong>2.</strong>区分要点：<strong>围产期双相障碍</strong>是"<strong>无精神病性症状</strong>"的欣快感、多动性躁狂发作；本例有明确妄想与行为紊乱，故不是单纯 BPAD。但病史中"曾有一段情绪特别高、几天不睡也不觉得累"提示既往可能存在<strong>未确诊的双相障碍</strong>——教材在病史采集中特别要求"重点关注任何可能表明以前未确诊的双相障碍的症状"，并在诊断要求中写明：精神病性症状最常发生在抑郁、躁狂或混合发作背景下，此时还应诊断为<strong>双相障碍Ⅰ型</strong>等。<br>
+      <strong>3.</strong>处置：教材一般性原则指出，严重精神障碍、突然起病、严重精神病性症状、存在自伤或伤人风险者，建议采用<strong>药物治疗和 / 或电抽搐治疗</strong>；并按总体原则实行综合、全程、分级、多学科协作，<strong>保障孕产妇安全及胎儿安全</strong>。同时需排除器质性与物质所致：教材要求排除其他疾病（如脑瘤）的表现，以及苯二氮䓬类等药物对中枢神经系统的影响或兴奋剂等戒断效应；可借助脑电图、颅脑 CT/MRI、实验室与内分泌检查。<br>
+      <span class="note">本案例为模拟情境，依据教材知识点构建，不是教材原案例；教材未给出本例的具体用药、剂量与 ECT 参数。</span>
+    </div></details>
+  </div>
+</section>
+
+<!-- ===== 14 拓展 ===== -->
+<section id="ext">
+  <div class="sec-head"><div class="badge">14</div><h2>拓展延伸<span class="en">Beyond the chapter</span></h2></div>
+  <p class="sec-lead">本章教材提到但未展开的内容集中列在这里；同时明确标出"教材未涉及"的空白，避免把课外知识误当成教材结论。</p>
+  <div class="grid2">
+    <div class="card cyan">
+      <h3>教材提及、但仅一笔带过的内容</h3>
+      <ul>
+        <li><strong>PMADs（围产期情绪和焦虑障碍）：</strong>教材只说明法国医师 Marcé（1828—1864）帮助建立了第一个现代描述，即"在妊娠期间或产后发生的情绪紊乱或焦虑障碍"，未展开其分类与诊断。</li>
+        <li><strong>产褥期精神障碍的历史：</strong>教材提到相关理论与描述"开始于 18 世纪中期和 19 世纪早期"，未给出具体人物与事件。</li>
+        <li><strong>2021 年《围产期抑郁症筛查与诊治专家共识》与 2023 年《围产期精神障碍筛查与诊治专家共识》：</strong>教材仅引用其命名与定义，未展开共识全文内容。</li>
+        <li><strong>伴侣疗法：</strong>教材明确"目前尚无专门实证研究证实"其对孕产期抑郁障碍的疗效，但临床发现伴侣在症状出现、加重过程中起关键作用——这是教材保留的一处"证据空白"。</li>
+        <li><strong>rTMS、运动疗法、强光治疗：</strong>教材仅列为"辅助疗法"，未给参数、频次与疗程。</li>
+        <li><strong>NICE 指南关于第二代抗精神病药的建议：</strong>教材仅引一句"药物反应良好的女性妊娠期间继续使用可能是最谨慎的选择"，未给出具体药物与监测方案。</li>
+      </ul>
+    </div>
+    <div class="card orange">
+      <h3>教材未涉及 / 本指南不补写的内容</h3>
+      <ul>
+        <li>所有精神药物的<strong>具体剂量、疗程、血药浓度目标</strong>——本章全篇未给。</li>
+        <li><strong>哺乳期用药的具体品种选择与推荐</strong>——教材只把"哺乳期药物的安全性"列为需考虑因素，未给推荐。</li>
+        <li>各心理评定量表的<strong>分界值</strong>（如 EPDS、PHQ-9、GAD-7 的划界分）——教材只给名称。</li>
+        <li>筛查的<strong>具体周数间隔</strong>与随访频次——教材只建议孕早期、孕晚期各一次，高危可多次。</li>
+        <li>ECT 的<strong>次数、电量、麻醉与禁忌清单</strong>——教材未给，需回到治疗学章。</li>
+        <li>P-PTSD 的<strong>病程阈值与患病率</strong>——教材未给。</li>
+        <li>各分型<strong>各自的患病率</strong>——教材的流行病学数据只按粗略分组给出。</li>
+        <li>遗传学与表观遗传学的<strong>具体基因与机制</strong>——教材只提到 GABA 受体结构异常与甲基化模式改变。</li>
+      </ul>
+    </div>
+  </div>
+  <div class="callout ext">
+    <span class="ct">📖 使用提醒</span>
+    本指南所有患病率、时间窗、阈值、药名与治疗表述均取自教材第二十章原文（印刷页 240–247）；凡标注"教材未涉及"之处，不要用其他资料的数字替代，以免与教材答案冲突。尤其注意：<strong>本章没有任何剂量与疗程数据</strong>。
+  </div>
+  <div class="hr"></div>
+  <p class="note" style="text-align:center">精神病学（第9版）· 第二十章 与妊娠、分娩或产褥期有关的精神或行为障碍 · 印刷页 240–247 · 学习指南完</p>
+</section>
+
+</div>
+<nav class="chapter-pager" aria-label="章节间导航"><a class="cp-prev" href="精神病学_第十九章_神经认知障碍_学习指南.html">← 上一章：第十九章</a><a class="cp-toc" href="index.html">目录</a><a class="cp-next" href="精神病学_第二十一章_睡眠觉醒障碍_学习指南.html">下一章：第二十一章 →</a></nav>
+</main>
+<button class="top" id="topBtn" aria-label="回到顶部">↑</button>
+<script>
+/* ============================================================
+   精神病学学习指南 · 统一交互层 v1（构建期注入，整体替换原 IIFE）
+   兼容 A 族（.tabbar button + [data-panel] + .panel.on）与
+   B 族（.tab-nav + .tab-panel.active）两套 DOM 约定。
+   特性检测 + 防御式查询 + 幂等；不引入任何外部依赖。
+   ============================================================ */
+(function () {
+  'use strict';
+  if (window.__PSY_GUIDE_APP__) { return; }
+  window.__PSY_GUIDE_APP__ = true;
+
+  var d = document;
+
+  function all(sel, root) {
+    return Array.prototype.slice.call((root || d).querySelectorAll(sel));
+  }
+  function on(el, ev, fn, opt) {
+    if (el) { el.addEventListener(ev, fn, opt || false); }
+  }
+  function norm(s) {
+    return String(s || '').replace(/\s+/g, '').toUpperCase();
+  }
+
+  /* ---------- 1. Tab 切换（两族约定都支持） ---------- */
+  function initTabs() {
+    all('.tabs, [data-tabs]').forEach(function (g) {
+      if (g.__psyTabs) { return; }
+      g.__psyTabs = true;
+      var isA = !!g.querySelector('.tabbar button');
+      var btns = all(isA ? '.tabbar button' : '.tab-nav .tab-btn', g);
+      if (!btns.length) { return; }
+      var cls = isA ? 'on' : 'active';
+      var nav = btns[0].closest('.tabbar') || btns[0].closest('.tab-nav');
+      if (nav && !nav.hasAttribute('role')) { nav.setAttribute('role', 'tablist'); }
+      all(isA ? '.panel' : '.tab-panel', g).forEach(function (p) {
+        if (!p.hasAttribute('role')) { p.setAttribute('role', 'tabpanel'); }
+      });
+      function activate(btn) {
+        btns.forEach(function (b) {
+          b.classList.remove(cls);
+          b.setAttribute('aria-selected', 'false');
+        });
+        btn.classList.add(cls);
+        btn.setAttribute('aria-selected', 'true');
+        var id = btn.getAttribute('data-tab');
+        if (!id) { return; }
+        var target = isA
+          ? g.querySelector('[data-panel="' + id + '"]')
+          : (g.querySelector('.tab-panel#' + id) || d.getElementById(id));
+        all(isA ? '.panel' : '.tab-panel', g).forEach(function (p) {
+          var show = isA ? (p.getAttribute('data-panel') === id) : (p === target);
+          p.classList.toggle(cls, show);
+        });
+      }
+      btns.forEach(function (btn, i) {
+        if (!btn.hasAttribute('role')) { btn.setAttribute('role', 'tab'); }
+        btn.setAttribute('aria-selected', btn.classList.contains(cls) ? 'true' : 'false');
+        if (!btn.hasAttribute('tabindex') && !btn.classList.contains(cls)) { btn.setAttribute('tabindex', '0'); }
+        on(btn, 'click', function () { activate(btn); });
+        on(btn, 'keydown', function (e) {
+          if (e.key !== 'ArrowRight' && e.key !== 'ArrowLeft') { return; }
+          e.preventDefault();
+          var nx = btns[(i + (e.key === 'ArrowRight' ? 1 : btns.length - 1)) % btns.length];
+          if (nx) { nx.focus(); activate(nx); }
+        });
+      });
+    });
+  }
+
+  /* ---------- 2. 速记卡：点击/键盘翻转 + 可达性 ---------- */
+  function initCards() {
+    all('.flashcard').forEach(function (card) {
+      if (card.__psyCard) { return; }
+      card.__psyCard = true;
+      card.setAttribute('tabindex', '0');
+      card.setAttribute('role', 'button');
+      function sync() {
+        card.setAttribute('aria-pressed', card.classList.contains('flipped') ? 'true' : 'false');
+      }
+      function flip() { card.classList.toggle('flipped'); sync(); }
+      on(card, 'click', flip);
+      on(card, 'keydown', function (e) {
+        if (e.key === 'Enter' || e.key === ' ' || e.key === 'Spacebar') {
+          e.preventDefault();
+          flip();
+        }
+      });
+      sync();
+    });
+  }
+
+  /* ---------- 3. 自测题交互化（核心新功能） ---------- */
+  function initQuiz() {
+    var questions = all('.quiz-q, .quiz-item');
+    if (!questions.length) { return; }
+    var groups = {};
+
+    function keyOf(o) {
+      var L = o.getAttribute('data-letter');
+      if (L && String(L).replace(/\s+/g, '') !== '') { return norm(L); }
+      var sp = o.querySelector('.l');
+      if (sp) {
+        var t = norm(sp.textContent).replace(/[.．、:：]/g, '');
+        if (t !== '') { return t; }
+      }
+      var txt = norm(o.textContent);
+      if (txt.indexOf('正确') >= 0 || txt.indexOf('错误') >= 0) { return txt; }
+      return txt.charAt(0);
+    }
+
+    function getGroup(q) {
+      var sec = q.closest('.quiz-block') || q.closest('section') || d.body;
+      if (!groups[sec.__psyGid]) {
+        sec.__psyGid = 'g' + (Object.keys(groups).length + 1);
+        groups[sec.__psyGid] = { sec: sec, total: 0, score: 0, row: null, first: null };
+      }
+      var g = groups[sec.__psyGid];
+      if (!g.first) { g.first = q; }
+      return g;
+    }
+
+    function ensureRow(g) {
+      if (g.row) { return g.row; }
+      var row = d.createElement('div');
+      row.className = 'quiz-score';
+      row.setAttribute('role', 'status');
+      row.setAttribute('aria-live', 'polite');
+      row.innerHTML = '<span class="qs-label">自测计分</span>' +
+        '<span class="qs-num">得分 0 / ' + g.total + '</span>' +
+        '<span class="qs-bar"><i></i></span>';
+      g.first.parentNode.insertBefore(row, g.first);
+      g.row = row;
+      return row;
+    }
+
+    function updateRow(g) {
+      var row = ensureRow(g);
+      var num = row.querySelector('.qs-num');
+      var bar = row.querySelector('.qs-bar i');
+      if (num) { num.textContent = '得分 ' + g.score + ' / ' + g.total; }
+      if (bar) { bar.style.width = (g.total ? Math.round(g.score / g.total * 100) : 0) + '%'; }
+    }
+
+    questions.forEach(function (q) {
+      if (q.__psyQuiz) { return; }
+      q.__psyQuiz = true;
+      var opts = all('.opt', q);
+      if (!opts.length) { opts = all('.quiz-options > li', q); }
+      if (!opts.length) { return; }
+
+      /* 正确答案先记入内存：预标 correct 优先（记录后立即移除，消除剧透），
+         否则从解析文本「答案：X / 答案 X」提取（不改动任何文字） */
+      var ansKeys = [];
+      var preset = opts.filter(function (o) { return o.classList.contains('correct'); });
+      preset.forEach(function (o) { o.classList.remove('correct'); });
+      if (preset.length) {
+        ansKeys = preset.map(keyOf);
+      } else {
+        var dt = q.querySelector('details');
+        var txt = dt ? dt.textContent : '';
+        var m = txt.match(/答案\s*[:：]?\s*([A-Za-z](?:[\s、,，·和及]*[A-Za-z])*)/);
+        if (m) {
+          ansKeys = m[1].match(/[A-Za-z]/g) || [];
+        } else {
+          var m2 = txt.match(/答案\s*[:：]?\s*(正确|错误)/);
+          if (m2) { ansKeys = [m2[1]]; }
+        }
+      }
+      if (!ansKeys.length) { return; } /* 无可判定答案（名词解释等），保持原样 */
+
+      var g = getGroup(q);
+      g.total += 1;
+      var multi = ansKeys.length > 1;
+      var ansSet = ansKeys.map(norm);
+      var locked = false;
+      var picked = [];
+
+      function revealAll() {
+        opts.forEach(function (o) {
+          if (ansSet.indexOf(keyOf(o)) >= 0) { o.classList.add('is-reveal'); }
+        });
+      }
+      function finish(ok) {
+        locked = true;
+        q.classList.add('is-locked');
+        var dt = q.querySelector('details');
+        if (dt) { dt.open = true; }
+        if (ok) { g.score += 1; }
+        updateRow(g);
+      }
+
+      opts.forEach(function (o) {
+        o.setAttribute('tabindex', '0');
+        function pick() {
+          if (locked) { return; }
+          var k = keyOf(o);
+          if (ansSet.indexOf(k) >= 0) {
+            o.classList.add('is-right');
+            if (picked.indexOf(k) < 0) { picked.push(k); }
+            if (multi) {
+              if (picked.length === ansSet.length) { finish(true); }
+            } else {
+              finish(true);
+            }
+          } else {
+            o.classList.add('is-wrong');
+            revealAll();
+            finish(false);
+          }
+        }
+        on(o, 'click', pick);
+        on(o, 'keydown', function (e) {
+          if (e.key === 'Enter' || e.key === ' ' || e.key === 'Spacebar') {
+            e.preventDefault();
+            pick();
+          }
+        });
+      });
+    });
+
+    Object.keys(groups).forEach(function (id) {
+      if (groups[id].total > 0) { updateRow(groups[id]); }
+    });
+  }
+
+  /* ---------- 4. 侧栏 scroll spy（本页锚点高亮） ---------- */
+  function initSpy() {
+    var links = all('#sidebar a[href^="#"]');
+    if (!links.length || !('IntersectionObserver' in window)) { return; }
+    var map = {};
+    links.forEach(function (a) {
+      var id = a.getAttribute('href').slice(1);
+      if (id) { map[id] = a; }
+    });
+    var secs = [];
+    Object.keys(map).forEach(function (id) {
+      var s = d.getElementById(id);
+      if (s) { secs.push(s); }
+    });
+    if (!secs.length) { return; }
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting && map[e.target.id]) {
+          links.forEach(function (a) { a.classList.remove('active'); });
+          map[e.target.id].classList.add('active');
+        }
+      });
+    }, { rootMargin: '-15% 0px -70% 0px', threshold: 0 });
+    secs.forEach(function (s) { io.observe(s); });
+  }
+
+  /* ---------- 5. 阅读进度条 + 回顶 ---------- */
+  function initScroll() {
+    var bar = d.getElementById('readbar');
+    var topBtn = d.getElementById('topBtn') || d.getElementById('backTop');
+    var ticking = false;
+    function step() {
+      ticking = false;
+      var h = d.documentElement;
+      var y = window.pageYOffset || h.scrollTop || 0;
+      if (bar) {
+        var max = h.scrollHeight - h.clientHeight;
+        bar.style.width = (max > 0 ? (y / max) * 100 : 0) + '%';
+      }
+      if (topBtn) {
+        topBtn.classList.toggle('show', y > 400);     /* A 族类名 */
+        topBtn.classList.toggle('visible', y > 400);  /* B 族类名 */
+      }
+    }
+    on(window, 'scroll', function () {
+      if (!ticking) { ticking = true; window.requestAnimationFrame(step); }
+    }, { passive: true });
+    step();
+    on(topBtn, 'click', function () {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
+
+  /* ---------- 6. 侧栏开合（存在才绑定；抽屉打开时锁定背景滚动） ---------- */
+  function initSidebar() {
+    var sidebar = d.getElementById('sidebar');
+    if (!sidebar) { return; }
+    var btn = d.getElementById('menuBtn') || d.getElementById('navToggle');
+    var ov = d.getElementById('overlay') || d.getElementById('sidebarOverlay');
+    function lock(open) {
+      /* 仅移动抽屉断点（≤900px）锁滚动；宽屏兜底解除，防布局残留 */
+      d.body.classList.toggle('nav-locked', !!open && window.innerWidth <= 900);
+    }
+    function close() {
+      sidebar.classList.remove('open');
+      if (ov) { ov.classList.remove('show'); }
+      lock(false);
+    }
+    on(btn, 'click', function () {
+      var open = !sidebar.classList.contains('open');
+      sidebar.classList.toggle('open');
+      if (ov) { ov.classList.toggle('show'); }
+      lock(open);
+    });
+    on(ov, 'click', close);
+    all('a', sidebar).forEach(function (a) {
+      on(a, 'click', function () {
+        if (window.innerWidth <= 900) { close(); }
+      });
+    });
+    on(window, 'resize', function () {
+      if (window.innerWidth > 900) { lock(false); }
+    });
+  }
+
+  /* ---------- 启动（脚本位于 body 末尾，DOM 已就绪；防御兜底） ---------- */
+  function boot() {
+    initTabs();
+    initCards();
+    initQuiz();
+    initSpy();
+    initScroll();
+    initSidebar();
+  }
+  if (d.readyState === 'loading') {
+    on(d, 'DOMContentLoaded', boot);
+  } else {
+    boot();
+  }
+})();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,2746 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>精神病学 第九章 焦虑或恐惧性相关障碍 - 学习指南</title>
+<style>
+/* ===== 设计系统（请完整复制，勿修改变量与组件样式） ===== */
+:root{
+  --bg:#F0F7FA; --card:#FFFFFF; --ink:#0F172A; --muted:#64748B; --border:#E2E8F0;
+  --primary:#0EA5E9; --accent:#10B981; --symptom:#EF4444; --treatment:#10B981;
+  --cause:#3B82F6; --diagnosis:#F59E0B; --memory:#8B5CF6; --danger:#DC2626;
+  --quiz:#EC4899; --flashcard:#06B6D4;
+  --symptom-bg:#FEF2F2; --treatment-bg:#ECFDF5; --cause-bg:#EFF6FF;
+  --diagnosis-bg:#FFFBEB; --memory-bg:#F5F3FF; --quiz-bg:#FDF2F8; --flash-bg:#ECFEFF;
+  --gradient-main:linear-gradient(135deg,#0EA5E9 0%,#06B6D4 50%,#10B981 100%);
+  --gradient-soft:linear-gradient(135deg,rgba(14,165,233,.08),rgba(6,182,212,.05) 50%,rgba(16,185,129,.08));
+  --radius-sm:8px; --radius-md:12px; --radius-lg:18px;
+  --shadow-sm:0 1px 3px rgba(15,23,42,.06),0 1px 2px rgba(15,23,42,.04);
+  --shadow-md:0 6px 18px rgba(14,165,233,.10),0 2px 6px rgba(15,23,42,.05);
+  --shadow-lg:0 14px 38px rgba(14,165,233,.16),0 4px 12px rgba(15,23,42,.06);
+  --sidebar-w:262px; --content-max:980px;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:"Microsoft YaHei","PingFang SC","Segoe UI",system-ui,sans-serif;
+  font-size:16px;line-height:1.75;color:var(--ink);background:var(--bg);
+  background-image:radial-gradient(ellipse 620px 420px at 8% 0%,rgba(14,165,233,.09),transparent 70%),
+                    radial-gradient(ellipse 520px 380px at 92% 16%,rgba(16,185,129,.07),transparent 70%),
+                    radial-gradient(ellipse 700px 520px at 50% 100%,rgba(6,182,212,.05),transparent 70%);
+  min-height:100vh;
+}
+img{max-width:100%}
+a{color:var(--primary)}
+p{margin-bottom:12px}
+strong{font-weight:700;color:var(--ink)}
+mark.key{background:none;color:var(--primary);font-weight:700}
+.page-wrapper{display:flex;max-width:1420px;margin:0 auto;padding:0 24px}
+.main-content{flex:1;min-width:0;max-width:var(--content-max);padding:36px 0 88px}
+
+/* ===== 侧边导航 ===== */
+.sidebar{width:var(--sidebar-w);flex-shrink:0;position:sticky;top:20px;align-self:flex-start;
+  max-height:calc(100vh - 40px);overflow-y:auto;padding:22px 0;margin-right:30px}
+.sidebar-brand{font-size:.78rem;font-weight:700;letter-spacing:.06em;color:var(--muted);
+  padding:0 14px 12px;border-bottom:1px dashed var(--border);margin-bottom:10px}
+.sidebar-nav ul{list-style:none}
+.sidebar-nav>ul>li>a{display:flex;align-items:center;gap:9px;padding:9px 14px;border-radius:var(--radius-sm);
+  color:var(--ink);text-decoration:none;font-size:.9rem;font-weight:500;border-left:3px solid transparent;
+  transition:all .2s ease;margin-left:-3px}
+.sidebar-nav>ul>li>a:hover{background:rgba(14,165,233,.06);color:var(--primary)}
+.sidebar-nav>ul>li>a.active{background:rgba(14,165,233,.1);color:var(--primary);
+  border-left-color:var(--primary);font-weight:700}
+.toc-num{font-family:Consolas,monospace;font-size:.72rem;color:var(--muted);min-width:22px}
+.sidebar-nav .sub-list{margin:2px 0 8px 22px;padding-left:12px;border-left:1px solid var(--border)}
+.sidebar-nav .sub-list li a{display:block;padding:5px 10px;color:var(--muted);text-decoration:none;
+  font-size:.8rem;border-radius:4px}
+.sidebar-nav .sub-list li a:hover{color:var(--primary);background:rgba(14,165,233,.05)}
+
+/* ===== 封面 ===== */
+.hero{position:relative;overflow:hidden;text-align:center;padding:54px 34px 46px;margin-bottom:48px;
+  background:var(--gradient-soft);border:1px solid rgba(14,165,233,.12);border-radius:var(--radius-lg)}
+.hero::before{content:"";position:absolute;inset:-40% -20% auto;height:180%;
+  background:radial-gradient(circle at 28% 30%,rgba(14,165,233,.1),transparent 55%),
+             radial-gradient(circle at 74% 68%,rgba(16,185,129,.09),transparent 55%);pointer-events:none}
+.hero>*{position:relative}
+.hero-badge{display:inline-flex;align-items:center;gap:6px;padding:6px 15px;border-radius:100px;
+  background:rgba(14,165,233,.12);border:1px solid rgba(14,165,233,.22);color:var(--primary);
+  font-size:.8rem;font-weight:700;margin-bottom:18px}
+.hero h1{font-size:2.35rem;line-height:1.28;font-weight:800;margin-bottom:12px;
+  background:var(--gradient-main);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.hero .subtitle{max-width:680px;margin:0 auto;color:var(--muted);font-size:1.02rem}
+.hero-meta{display:flex;justify-content:center;gap:34px;flex-wrap:wrap;margin-top:26px}
+.hero-meta-item .num{font-size:1.7rem;font-weight:800;line-height:1.2;color:var(--primary)}
+.hero-meta-item .label{font-size:.78rem;color:var(--muted)}
+.hero-quote{margin:24px auto 0;max-width:720px;padding:12px 18px;border-radius:10px;
+  background:rgba(255,255,255,.66);border:1px dashed rgba(14,165,233,.3);
+  font-size:.9rem;color:var(--muted);text-align:left}
+
+/* ===== 区块 ===== */
+.section{margin-bottom:56px;scroll-margin-top:20px}
+.section-header{display:flex;align-items:center;gap:13px;margin-bottom:22px;padding-bottom:12px;
+  border-bottom:2px solid transparent;border-image:var(--gradient-main) 1}
+.section-number{width:40px;height:40px;border-radius:var(--radius-sm);display:inline-flex;
+  align-items:center;justify-content:center;background:var(--gradient-main);color:#fff;
+  font-weight:800;font-size:1rem;flex-shrink:0}
+.section-header h2{font-size:1.55rem;font-weight:800;line-height:1.35}
+.subsection{margin:30px 0;scroll-margin-top:20px}
+.subsection h3{font-size:1.18rem;font-weight:700;margin-bottom:12px;display:flex;align-items:center;gap:8px}
+.sub-subsection{margin:18px 0}
+.sub-subsection h4{font-size:1rem;font-weight:700;margin-bottom:8px}
+.lead{font-size:1rem;color:var(--muted);margin-bottom:18px}
+
+/* ===== 疾病页眉 / 八栏 ===== */
+.disease-hero{background:linear-gradient(135deg,#0f2b46,#155e75 60%,#0f766e);color:#fff;
+  border-radius:var(--radius-lg);padding:28px 30px;margin:26px 0 22px;box-shadow:var(--shadow-md)}
+.disease-hero .en{font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;color:#99f6e4}
+.disease-hero h3{font-size:1.5rem;margin:4px 0 8px;color:#fff}
+.disease-hero p{color:#e0f2fe;font-size:.92rem;margin:0}
+.disease-hero .quick-tags{margin-top:14px;display:flex;gap:8px;flex-wrap:wrap}
+.disease-hero .quick-tags span{background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.28);
+  color:#fff;border-radius:100px;padding:3px 11px;font-size:.76rem}
+.module{background:var(--card);border:1px solid var(--border);border-radius:var(--radius-md);
+  padding:22px 24px;margin:16px 0;box-shadow:var(--shadow-sm)}
+.module-head{display:flex;align-items:center;gap:10px;margin-bottom:14px;padding-bottom:10px;
+  border-bottom:1px solid var(--border)}
+.module-index{font-family:Consolas,monospace;font-size:.72rem;font-weight:700;color:#fff;
+  background:var(--gradient-main);padding:3px 9px;border-radius:100px;white-space:nowrap}
+.module-head h3{font-size:1.08rem;font-weight:700;margin:0}
+.module-head .module-en{font-size:.74rem;color:var(--muted);font-weight:400}
+.module-cause .module-index{background:var(--cause)}
+.module-symptom .module-index{background:var(--symptom)}
+.module-case .module-index{background:var(--diagnosis)}
+.module-diff .module-index{background:#0F766E}
+.module-treat .module-index{background:var(--treatment)}
+.module-memory .module-index{background:var(--memory)}
+.module-link .module-index{background:#475569}
+
+/* ===== 卡片 ===== */
+.card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius-md);
+  padding:18px 20px;box-shadow:var(--shadow-sm);transition:.2s}
+.card:hover{box-shadow:var(--shadow-md);transform:translateY(-1px)}
+.card-header{display:flex;align-items:center;gap:9px;margin-bottom:10px;padding-bottom:9px;
+  border-bottom:1px solid var(--border)}
+.card-icon{font-size:1.2rem}
+.card-title{font-size:1rem;font-weight:700}
+.card-body{font-size:.94rem}
+.card-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px;margin:16px 0}
+.card-grid .card{margin:0}
+.card-symptom{border-left:4px solid var(--symptom)}
+.card-treatment{border-left:4px solid var(--treatment)}
+.card-cause{border-left:4px solid var(--cause)}
+.card-diagnosis{border-left:4px solid var(--diagnosis)}
+.card-memory{border-left:4px solid var(--memory)}
+.card-quiz{border-left:4px solid var(--quiz)}
+.quick-facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin:14px 0}
+.fact{background:var(--bg);border:1px solid var(--border);border-radius:10px;padding:12px 14px}
+.fact b{display:block;font-size:.76rem;color:var(--muted);font-weight:600;margin-bottom:2px}
+.fact span{font-size:.95rem;font-weight:700;color:var(--ink)}
+
+/* ===== 提示框 ===== */
+.callout{display:flex;gap:11px;padding:14px 18px;border-radius:var(--radius-md);margin:14px 0;
+  border-left:4px solid;font-size:.92rem}
+.callout-icon{font-size:1.15rem;flex-shrink:0;margin-top:1px}
+.callout-body{flex:1}
+.callout-body strong{display:block;margin-bottom:3px}
+.callout-info{background:var(--cause-bg);border-left-color:var(--cause)}
+.callout-success{background:var(--treatment-bg);border-left-color:var(--treatment)}
+.callout-warning{background:var(--diagnosis-bg);border-left-color:var(--diagnosis)}
+.callout-danger{background:var(--symptom-bg);border-left-color:var(--danger)}
+.callout-memory{background:var(--memory-bg);border-left-color:var(--memory)}
+.callout-example{background:var(--flash-bg);border-left-color:var(--flashcard)}
+
+/* ===== 列表 ===== */
+.icon-list{list-style:none;margin:10px 0}
+.icon-list li{position:relative;padding-left:26px;margin-bottom:9px;font-size:.94rem;line-height:1.65}
+.icon-list li::before{content:"✦";position:absolute;left:0;top:2px;color:var(--primary);font-size:.8rem}
+.icon-list.check li::before{content:"✓";color:var(--treatment);font-weight:800}
+.icon-list.cross li::before{content:"✗";color:var(--symptom);font-weight:800}
+.numbered-list{list-style:none;counter-reset:n;margin:10px 0}
+.numbered-list li{position:relative;padding-left:38px;margin-bottom:10px;font-size:.94rem;counter-increment:n}
+.numbered-list li::before{content:counter(n);position:absolute;left:0;top:0;width:24px;height:24px;
+  border-radius:50%;background:var(--gradient-main);color:#fff;font-size:.76rem;font-weight:800;
+  display:flex;align-items:center;justify-content:center}
+
+/* ===== 表格 ===== */
+.table-wrap{overflow-x:auto;margin:14px 0;border:1px solid var(--border);border-radius:var(--radius-md)}
+table{width:100%;border-collapse:collapse;font-size:.89rem;min-width:560px}
+thead{background:linear-gradient(135deg,#0EA5E9,#0891B2)}
+thead th{padding:11px 14px;text-align:left;color:#fff;font-size:.84rem;font-weight:700;white-space:nowrap}
+tbody tr{border-bottom:1px solid var(--border)}
+tbody tr:nth-child(even){background:#FAFCFE}
+tbody tr:hover{background:rgba(14,165,233,.05)}
+tbody tr:last-child{border-bottom:0}
+tbody td{padding:10px 14px;vertical-align:top;line-height:1.6}
+tbody td:first-child{font-weight:700;color:#0F766E;background:rgba(14,165,233,.04)}
+.table-note{font-size:.78rem;color:var(--muted);margin-top:-6px}
+
+/* ===== 标签 ===== */
+.tag{display:inline-flex;align-items:center;padding:2px 9px;border-radius:100px;
+  font-size:.75rem;font-weight:700;line-height:1.6}
+.tag-core{background:var(--symptom-bg);color:var(--danger)}
+.tag-master{background:var(--treatment-bg);color:var(--treatment)}
+.tag-understand{background:var(--cause-bg);color:var(--cause)}
+.tag-know{background:var(--diagnosis-bg);color:#B45309}
+.tag-info{background:rgba(14,165,233,.1);color:var(--primary)}
+.tag-memory{background:var(--memory-bg);color:var(--memory)}
+
+/* ===== Tab ===== */
+.tabs{margin:14px 0}
+.tab-nav{display:flex;gap:4px;flex-wrap:wrap;border-bottom:2px solid var(--border);margin-bottom:14px}
+.tab-btn{border:0;background:none;cursor:pointer;font-family:inherit;font-size:.88rem;
+  font-weight:600;color:var(--muted);padding:9px 16px;border-radius:var(--radius-sm) var(--radius-sm) 0 0;
+  border-bottom:2px solid transparent;margin-bottom:-2px}
+.tab-btn:hover{color:var(--primary);background:rgba(14,165,233,.05)}
+.tab-btn.active{color:var(--primary);border-bottom-color:var(--primary)}
+.tab-panel{display:none}
+.tab-panel.active{display:block;animation:fadeIn .25s ease}
+@keyframes fadeIn{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}
+
+/* ===== 折叠问答 ===== */
+details.qa{background:var(--card);border:1px solid var(--border);border-radius:var(--radius-md);
+  margin:10px 0;overflow:hidden}
+details.qa[open]{box-shadow:var(--shadow-sm)}
+details.qa summary{cursor:pointer;padding:13px 16px;font-weight:600;font-size:.94rem;
+  display:flex;align-items:center;gap:10px;list-style:none;user-select:none}
+details.qa summary::-webkit-details-marker{display:none}
+details.qa summary::after{content:"▾";margin-left:auto;color:var(--muted);transition:.2s}
+details.qa[open] summary::after{transform:rotate(180deg)}
+details.qa summary:hover{background:rgba(14,165,233,.04)}
+.qa-body{padding:0 16px 15px 52px;font-size:.92rem;border-top:1px solid var(--border);padding-top:12px}
+.qa-num{display:inline-flex;align-items:center;justify-content:center;min-width:26px;height:26px;
+  border-radius:7px;background:rgba(14,165,233,.1);color:var(--primary);font-size:.78rem;
+  font-weight:800;flex-shrink:0}
+
+/* ===== 自测题 ===== */
+.quiz-block{background:var(--quiz-bg);border:1px solid #FBCFE8;border-radius:var(--radius-md);
+  padding:20px 22px;margin:18px 0}
+.quiz-item{background:#fff;border:1px solid #F9D5E5;border-radius:10px;padding:16px 18px;margin:12px 0}
+.quiz-stem{font-weight:600;font-size:.95rem;margin-bottom:10px;display:flex;gap:8px;align-items:flex-start}
+.q-type{display:inline-block;padding:1px 8px;border-radius:5px;background:var(--quiz-bg);
+  color:var(--quiz);font-size:.72rem;font-weight:800;white-space:nowrap;margin-top:2px}
+.quiz-options{list-style:none;margin:8px 0}
+.quiz-options li{position:relative;padding:6px 10px 6px 30px;font-size:.9rem;border-radius:6px;margin:3px 0}
+.quiz-options li::before{content:attr(data-letter);position:absolute;left:8px;top:6px;
+  font-weight:800;color:var(--quiz)}
+.quiz-options li.correct{background:#DCFCE7;font-weight:600}
+.quiz-options li.correct::after{content:" ✓ 正确";color:#15803D;font-size:.76rem;font-weight:700}
+.quiz-options li.wrong{background:#FEE2E2}
+.quiz-options li.wrong::after{content:" ✗";color:var(--danger);font-size:.76rem;font-weight:700}
+.answer-key{display:inline-block;background:#DCFCE7;color:#15803D;border-radius:6px;
+  padding:2px 9px;font-size:.8rem;font-weight:800;margin-right:6px}
+.difficulty{color:#B45309;font-size:.8rem;letter-spacing:1px;white-space:nowrap}
+
+/* ===== 闪卡 ===== */
+.flashcard-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:14px;margin:18px 0}
+.flashcard{perspective:1000px;height:210px;cursor:pointer}
+.flashcard-inner{position:relative;width:100%;height:100%;transition:transform .55s;
+  transform-style:preserve-3d}
+.flashcard.flipped .flashcard-inner{transform:rotateY(180deg)}
+.flashcard-face{position:absolute;inset:0;backface-visibility:hidden;border-radius:var(--radius-md);
+  padding:18px 18px 14px;display:flex;flex-direction:column;justify-content:center;
+  border:1px solid var(--border);background:#fff;box-shadow:var(--shadow-sm)}
+.flashcard-front{border-top:5px solid var(--flashcard)}
+.flashcard-back{transform:rotateY(180deg);background:var(--flash-bg);border-top:5px solid var(--primary);
+  justify-content:flex-start;overflow-y:auto;font-size:.88rem;line-height:1.65}
+.flashcard-front p{font-size:.95rem;font-weight:600;margin:0;text-align:center}
+.card-tag{align-self:center;margin-bottom:10px;padding:2px 9px;border-radius:100px;
+  font-size:.72rem;font-weight:800;background:var(--flash-bg);color:#0E7490}
+.card-tag.concept{background:var(--cause-bg);color:var(--cause)}
+.card-tag.diagnosis{background:var(--diagnosis-bg);color:#B45309}
+.card-tag.treatment{background:var(--treatment-bg);color:#047857}
+.card-tag.memory{background:var(--memory-bg);color:var(--memory)}
+.flip-hint{text-align:center;font-size:.74rem;color:var(--muted);margin-top:auto;padding-top:8px}
+
+/* ===== 病例挑战 ===== */
+.case-card{background:#fff;border:1px solid var(--border);border-top:5px solid var(--diagnosis);
+  border-radius:var(--radius-md);padding:20px 22px;margin:18px 0;box-shadow:var(--shadow-sm)}
+.case-meta{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:10px}
+.case-meta span{background:var(--diagnosis-bg);color:#B45309;border-radius:100px;
+  padding:2px 10px;font-size:.75rem;font-weight:700}
+.case-title{font-size:1.02rem;font-weight:800;margin-bottom:8px}
+.case-body{font-size:.93rem;color:var(--ink)}
+.case-questions{margin:12px 0 0;padding:12px 16px;background:var(--bg);border-radius:10px}
+.case-questions li{margin-bottom:6px;font-size:.9rem}
+
+/* ===== 记忆工具箱 ===== */
+.memory-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px;margin:14px 0}
+.memory-card{background:var(--memory-bg);border:1px solid #DDD6FE;border-radius:var(--radius-md);padding:16px 18px}
+.memory-card .m-title{font-weight:800;color:var(--memory);font-size:.9rem;margin-bottom:6px}
+.memory-card .m-type{display:inline-block;font-size:.7rem;font-weight:700;color:var(--memory);
+  background:#fff;border:1px solid #DDD6FE;border-radius:100px;padding:1px 8px;margin-left:6px}
+.memory-card .m-formula{font-weight:700;background:#fff;border-left:3px solid var(--memory);
+  padding:8px 10px;border-radius:6px;margin:8px 0;font-size:.92rem}
+.memory-card p{font-size:.88rem;margin:6px 0}
+
+/* ===== 学习路线 / 知识地图 ===== */
+.route-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin:16px 0}
+.route-card{background:#fff;border:1px solid var(--border);border-radius:var(--radius-md);padding:16px 18px}
+.route-card h4{font-size:.95rem;margin-bottom:6px;color:var(--primary)}
+.route-card p{font-size:.86rem;color:var(--muted);margin:0}
+.priority{display:inline-flex;gap:2px;font-size:.8rem;color:#F59E0B;margin-left:4px}
+.knowledge-map{display:grid;grid-template-columns:repeat(auto-fit,minmax(165px,1fr));gap:12px;margin:16px 0}
+.km-card{background:#fff;border:1px solid var(--border);border-radius:var(--radius-md);
+  padding:15px 12px;text-align:center;transition:.2s}
+.km-card:hover{border-color:var(--primary);transform:translateY(-2px);box-shadow:var(--shadow-md)}
+.km-icon{font-size:1.8rem;margin-bottom:6px}
+.km-title{font-weight:700;font-size:.9rem;margin-bottom:2px}
+.km-count{font-size:.76rem;color:var(--muted)}
+.km-count strong{color:var(--primary);font-size:1rem}
+
+/* ===== 数据 / 时间线 ===== */
+.stat-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(135px,1fr));gap:12px;margin:16px 0}
+.stat-card{background:#fff;border:1px solid var(--border);border-radius:var(--radius-md);
+  padding:16px 12px;text-align:center}
+.stat-num{font-size:1.65rem;font-weight:800;color:var(--primary);line-height:1.2}
+.stat-label{font-size:.77rem;color:var(--muted);margin-top:3px}
+.timeline{position:relative;margin:18px 0;padding-left:28px}
+.timeline::before{content:"";position:absolute;left:8px;top:4px;bottom:4px;width:2px;
+  background:linear-gradient(to bottom,var(--primary),var(--accent));border-radius:2px}
+.tl-item{position:relative;margin-bottom:18px}
+.tl-item::before{content:"";position:absolute;left:-25px;top:5px;width:11px;height:11px;
+  border-radius:50%;background:#fff;border:3px solid var(--primary)}
+.tl-title{font-weight:700;font-size:.94rem;margin-bottom:3px}
+.tl-desc{font-size:.86rem;color:var(--muted)}
+.progress-item{margin-bottom:12px}
+.progress-label{display:flex;justify-content:space-between;font-size:.84rem;margin-bottom:4px}
+.progress-bar{height:8px;background:var(--border);border-radius:100px;overflow:hidden}
+.progress-fill{height:100%;border-radius:100px;background:var(--gradient-main)}
+
+/* ===== 易错警示 ===== */
+.exam-alert{background:#FFF7ED;border:1px solid #FED7AA;border-left:5px solid var(--diagnosis);
+  border-radius:var(--radius-md);padding:18px 22px;margin:18px 0}
+.exam-alert h3{color:#C2410C;font-size:1rem;margin-bottom:10px}
+.exam-alert li{font-size:.92rem;margin-bottom:8px}
+.exam-alert li::before{content:"⚠️"}
+
+/* ===== 页脚 ===== */
+.footer{margin-top:56px;padding-top:28px;border-top:1px solid var(--border);
+  text-align:center;font-size:.82rem;color:var(--muted)}
+.footer .footer-tag{display:inline-block;padding:6px 16px;border-radius:100px;color:#fff;
+  background:var(--gradient-main);font-weight:700;margin-bottom:10px}
+.disclaimer{font-size:.78rem;color:var(--muted);background:#fff;border:1px dashed var(--border);
+  border-radius:10px;padding:12px 16px;margin:18px 0;text-align:left}
+
+/* ===== 浮动按钮 ===== */
+.back-to-top{position:fixed;right:22px;bottom:22px;width:44px;height:44px;border:0;border-radius:50%;
+  background:var(--gradient-main);color:#fff;font-size:1.05rem;cursor:pointer;box-shadow:var(--shadow-lg);
+  opacity:0;visibility:hidden;transform:translateY(10px);transition:.25s;z-index:60}
+.back-to-top.visible{opacity:1;visibility:visible;transform:none}
+.mobile-nav-toggle{display:none;position:fixed;top:14px;left:14px;z-index:100;width:44px;height:44px;
+  border:1px solid var(--border);border-radius:var(--radius-sm);background:#fff;box-shadow:var(--shadow-md);
+  cursor:pointer;font-size:1.15rem;align-items:center;justify-content:center}
+.sidebar-overlay{display:none;position:fixed;inset:0;background:rgba(15,23,42,.35);z-index:98}
+
+/* ===== 响应式 ===== */
+@media(max-width:1100px){.sidebar{width:220px;margin-right:22px}.main-content{max-width:100%}}
+@media(max-width:900px){
+  .mobile-nav-toggle{display:flex}
+  .sidebar{position:fixed;left:-290px;top:0;height:100vh;width:270px;background:#fff;
+    border-right:1px solid var(--border);z-index:99;transition:left .28s ease;padding:70px 16px 24px;
+    margin:0;max-height:100vh}
+  .sidebar.open{left:0}
+  .sidebar-overlay.show{display:block}
+  .page-wrapper{padding:0 16px}
+  .main-content{padding-top:66px}
+  .hero{padding:38px 20px 30px}.hero h1{font-size:1.75rem}
+  .section-header h2{font-size:1.3rem}
+  .module{padding:18px 16px}
+  .qa-body{padding-left:16px}
+}
+@media(max-width:680px){
+  body{font-size:15px}
+  .hero h1{font-size:1.45rem}
+  .hero-meta{gap:18px}
+  .knowledge-map{grid-template-columns:repeat(2,1fr)}
+  .flashcard-grid{grid-template-columns:1fr}
+  .flashcard{height:200px}
+  .stat-row{grid-template-columns:repeat(2,1fr)}
+  .section{margin-bottom:40px}
+  table{min-width:520px}
+}
+@media print{
+  .sidebar,.mobile-nav-toggle,.back-to-top,.sidebar-overlay{display:none!important}
+  .page-wrapper{display:block;padding:0}
+  .main-content{max-width:100%}
+  details.qa{break-inside:avoid}
+  details.qa .qa-body{display:block}
+}
+::-webkit-scrollbar{width:8px;height:8px}
+::-webkit-scrollbar-thumb{background:var(--border);border-radius:4px}
+::-webkit-scrollbar-thumb:hover{background:var(--muted)}
+</style>
+<style data-refactor="v1">
+/* ============================================================
+   精神病学学习指南 · 统一交互层增量覆盖样式 v1
+   构建期由 apply-refactor.ps1 注入 </head> 前，仅追加修正，
+   不改动 A/B 两族基础样式。全部使用字面色值，兼容两族设计变量。
+   ============================================================ */
+
+/* ---- 1. 全局键盘焦点可见 ---- */
+:focus-visible{outline:2px solid #0EA5E9;outline-offset:2px}
+
+/* ---- 2. 章节导航条（胶囊式三段：上一章 / 目录 / 下一章） ---- */
+.chapter-pager{display:flex;align-items:stretch;justify-content:center;gap:10px;margin:36px 0 10px;flex-wrap:wrap}
+.chapter-pager a,.chapter-pager span{flex:1 1 200px;display:flex;align-items:center;justify-content:center;min-height:44px;padding:10px 18px;border:1px solid #E2E8F0;border-radius:999px;background:#FFFFFF;color:#0F172A;font-size:14px;font-weight:600;line-height:1.4;text-decoration:none;text-align:center;box-shadow:0 1px 2px rgba(15,23,42,.06);transition:border-color .15s ease,box-shadow .15s ease,color .15s ease}
+.chapter-pager a:hover{border-color:#0EA5E9;color:#0EA5E9;box-shadow:0 4px 14px rgba(14,165,233,.18);text-decoration:none}
+.chapter-pager .cp-toc{flex:0 0 auto;min-width:104px;background:linear-gradient(135deg,#0EA5E9,#10B981);border-color:transparent;color:#FFFFFF}
+.chapter-pager .cp-toc:hover{border-color:transparent;color:#FFFFFF;opacity:.92}
+.chapter-pager .cp-disabled{opacity:.45;background:#F8FAFC;box-shadow:none;cursor:default}
+@media (max-width:680px){.chapter-pager{gap:8px;margin:28px 0 8px}.chapter-pager a,.chapter-pager span{flex:1 1 100%}}
+
+/* ---- 3. 自测题交互态（兼容 A 族 .opt 与 B 族 .quiz-options li） ---- */
+/* 3.1 基础可点击 */
+.quiz-q .opt{cursor:pointer}
+.quiz-item .quiz-options li{cursor:pointer}
+/* 3.2 hover / 焦点态 */
+.quiz-q .opt:hover,.quiz-q .opt:focus-visible{border-color:#7DD3FC;background:#F0F9FF}
+.quiz-item .quiz-options li:hover,.quiz-item .quiz-options li:focus-visible{background:#FFFFFF;box-shadow:inset 0 0 0 1px #7DD3FC}
+/* 3.3 判定结果态 */
+.quiz-q .opt.is-right{border-color:#34D399;background:#ECFDF5;color:#065F46;font-weight:600}
+.quiz-q .opt.is-right::after{content:" ✓";color:#059669;font-weight:800}
+.quiz-q .opt.is-right .l{color:#047857}
+.quiz-item .quiz-options li.is-right{background:#DCFCE7;box-shadow:inset 0 0 0 1px #34D399;font-weight:600}
+.quiz-item .quiz-options li.is-right::after{content:" ✓";color:#15803D;font-weight:800}
+.quiz-q .opt.is-wrong{border-color:#FCA5A5;background:#FEF2F2;color:#B91C1C;font-weight:600}
+.quiz-q .opt.is-wrong::after{content:" ✗";color:#DC2626;font-weight:800}
+.quiz-q .opt.is-wrong .l{color:#B91C1C}
+.quiz-item .quiz-options li.is-wrong{background:#FEE2E2;box-shadow:inset 0 0 0 1px #FCA5A5;font-weight:600}
+.quiz-item .quiz-options li.is-wrong::after{content:" ✗";color:#DC2626;font-weight:800}
+.quiz-q .opt.is-reveal{border-color:#6EE7B7;background:#ECFDF5;color:#065F46}
+.quiz-q .opt.is-reveal .l{color:#047857}
+.quiz-item .quiz-options li.is-reveal{background:#ECFDF5;box-shadow:inset 0 0 0 1px #6EE7B7;color:#065F46}
+/* 3.4 已锁定禁用态 */
+.quiz-q.is-locked .opt,.quiz-item.is-locked .quiz-options li{cursor:default;pointer-events:none}
+.quiz-q.is-locked .opt:not(.is-right):not(.is-wrong):not(.is-reveal){opacity:.55}
+.quiz-item.is-locked .quiz-options li:not(.is-right):not(.is-wrong):not(.is-reveal){opacity:.55}
+/* 3.5 计分行（运行时注入） */
+.quiz-score{display:flex;align-items:center;gap:12px;margin:14px 0 18px;padding:12px 18px;border:1px dashed #7DD3FC;border-radius:12px;background:#F0F9FF;font-size:14px;font-weight:700;color:#0F172A}
+.quiz-score .qs-label{white-space:nowrap}
+.quiz-score .qs-num{white-space:nowrap;color:#0284C7;font-size:16px}
+.quiz-score .qs-bar{flex:1 1 60px;min-width:60px;height:8px;border-radius:999px;background:#E2E8F0;overflow:hidden}
+.quiz-score .qs-bar i{display:block;height:100%;width:0;border-radius:999px;background:linear-gradient(90deg,#0EA5E9,#10B981);transition:width .35s ease}
+
+/* ---- 4. 速记卡可达性与长内容 ---- */
+.fc-hint,.flip-hint{color:#64748B}
+.flashcard-face{overflow:auto}
+.flashcard[tabindex]{outline:none}
+.flashcard[tabindex]:focus-visible{outline:3px solid #0EA5E9;outline-offset:3px}
+
+/* ---- 5. 侧栏目录 ---- */
+/* B 族 sticky 侧栏内目录限高滚动（A 族 aside 本身已可滚动，此规则空匹配无害） */
+.sidebar .sidebar-nav{max-height:calc(100vh - 60px);overflow-y:auto;scrollbar-width:thin}
+/* A 族 scroll spy 高亮（B 族高亮由其基础样式提供） */
+.sidebar a.toc.active{background:#E0F2FE;color:#0369A1;font-weight:600}
+
+/* ---- 6. 响应式补充：681–900px 时 grid3 降为两列 ---- */
+@media (min-width:681px) and (max-width:900px){
+  .grid3{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+
+/* ---- 7. 打印样式补充（A 族新增；B 族已有 print，重复声明无害） ---- */
+@media print{
+  .sidebar,.overlay,.sidebar-overlay,#menuBtn,#navToggle,#overlay,#sidebarOverlay,#readbar,#topBtn,#backTop,.chapter-pager,.quiz-score{display:none!important}
+}
+
+/* ---- 8. 手机端增强 v2（触控体验 / 防溢出 / 抽屉滚动锁定） ---- */
+/* 8.1 触控体验：去点按高亮、消除双击缩放延迟（flashcard 高 190-200px 天然达标，不另设 min-height） */
+.opt,.tabbar button,.tab-btn,.quiz-options li,.flashcard,.chapter-pager a,.chapter-pager span,.menu-btn,.mobile-nav-toggle{-webkit-tap-highlight-color:transparent;touch-action:manipulation}
+/* 8.2 触控目标最小 44px（自测选项与 tab 胶囊原高约 33px） */
+.opt,.tabbar button,.tab-btn,.quiz-options li{min-height:44px}
+/* 8.3 防溢出：内容图自适应；svg 不设 height:auto，避免定尺寸图标塌陷 */
+img{max-width:100%;height:auto}
+svg{max-width:100%}
+/* 8.4 长词/URL 断行 */
+body{overflow-wrap:break-word}
+/* 8.5 表格容器触摸惯性滚动（A 族已有同值规则，重复声明无害） */
+.table-wrap{-webkit-overflow-scrolling:touch}
+/* 8.6 抽屉打开时锁定背景滚动（两族抽屉断点均为 900px；类由统一脚本增删） */
+@media (max-width:900px){
+  body.nav-locked{overflow:hidden}
+}
+</style>
+</head>
+<body>
+<button class="mobile-nav-toggle" id="navToggle" aria-label="打开目录">☰</button>
+<div class="sidebar-overlay" id="sidebarOverlay"></div>
+<div class="page-wrapper">
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-brand">《精神病学》第9版 · 学习指南</div>
+    <nav class="sidebar-nav">
+      <ul>
+        <li><a href="#cover" class="active"><span class="toc-num">00</span>章节封面</a></li>
+        <li><a href="#position"><span class="toc-num">01</span>本章地位速览</a></li>
+        <li><a href="#map"><span class="toc-num">02</span>本章知识地图</a></li>
+        <li><a href="#route"><span class="toc-num">03</span>学习路线图</a></li>
+        <li><a href="#nav"><span class="toc-num">04</span>章节导航</a></li>
+        <li><a href="#common"><span class="toc-num">05</span>共同特征与鉴别主线</a></li>
+        <li><a href="#gad"><span class="toc-num">06</span>广泛性焦虑障碍（GAD）</a></li>
+        <li><a href="#pd"><span class="toc-num">07</span>惊恐障碍（PD）</a></li>
+        <li><a href="#agoraphobia"><span class="toc-num">08</span>场所恐惧症</a></li>
+        <li><a href="#sad"><span class="toc-num">09</span>社交焦虑障碍（SAD）</a></li>
+        <li><a href="#specific"><span class="toc-num">10</span>特定恐惧症</a></li>
+        <li><a href="#separation"><span class="toc-num">11</span>分离焦虑障碍</a></li>
+        <li><a href="#mutism"><span class="toc-num">12</span>选择性缄默症</a></li>
+        <li><a href="#compare"><span class="toc-num">13</span>五组核心鉴别对照</a></li>
+        <li><a href="#summary"><span class="toc-num">14</span>全章核心要点速览</a></li>
+        <li><a href="#pitfalls"><span class="toc-num">15</span>易混易错点警示</a></li>
+        <li><a href="#quiz"><span class="toc-num">16</span>章节自测</a></li>
+        <li><a href="#flashcards"><span class="toc-num">17</span>考点速记卡</a></li>
+        <li><a href="#cases"><span class="toc-num">18</span>病例挑战</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <main class="main-content">
+
+    <!-- ==================== 封面 ==================== -->
+    <section id="cover" class="hero">
+      <div class="hero-badge">《精神病学》第9版（2024） · 第九章</div>
+      <h1>焦虑或恐惧性相关障碍</h1>
+      <p class="subtitle">从“人人都会有的焦虑”到七类需要识别的障碍：先看恐惧指向，再看持续时间，最后看功能损害与排除条件。</p>
+      <div class="hero-meta">
+        <div class="hero-meta-item"><div class="num">7</div><div class="label">核心障碍</div></div>
+        <div class="hero-meta-item"><div class="num">5</div><div class="label">组核心鉴别</div></div>
+        <div class="hero-meta-item"><div class="num">15</div><div class="label">自测题目</div></div>
+      </div>
+      <div class="hero-quote">
+        <strong>学习目标</strong><br>
+        <span class="tag tag-know">了解</span> ICD-11 分类框架与七种障碍的流行病学要点<br>
+        <span class="tag tag-understand">理解</span> 病理性焦虑的特征与本章六条共同特征<br>
+        <span class="tag tag-master">掌握</span> 七种障碍的核心临床表现与“恐惧指向”<br>
+        <span class="tag tag-core">必考</span> 惊恐发作 vs 惊恐障碍、场所恐惧症 vs 特定恐惧症等五组鉴别<br>
+        <span class="tag tag-master">掌握</span> CBT/暴露治疗与 SSRI/SNRI 的一线地位、苯二氮䓬类短期使用原则
+      </div>
+    </section>
+
+    <!-- ==================== 01 本章地位速览 ==================== -->
+    <section id="position" class="section">
+      <div class="section-header"><span class="section-number">01</span><h2>本章地位速览</h2></div>
+      <p class="lead">本章把“焦虑、恐惧、回避”这些症状学词汇，转化为七个可诊断、可鉴别的障碍。学习的重点不是背七段定义，而是建立一条临床定位主线。</p>
+      <div class="card-grid">
+        <div class="card card-diagnosis">
+          <div class="card-header"><span class="card-icon">📍</span><div class="card-title">章节定位</div></div>
+          <div class="card-body">承接症状学中的焦虑、恐惧与自主神经症状，进入 ICD-11 的障碍分类；是焦虑谱系的核心章节，也是后续强迫症、抑郁障碍等鉴别的基础。</div>
+        </div>
+        <div class="card card-symptom">
+          <div class="card-header"><span class="card-icon">🏥</span><div class="card-title">临床意义</div></div>
+          <div class="card-body">教材指出焦虑障碍（anxiety disorder）是我国患病率最高的精神障碍（中国精神卫生调查，CMHS：终生患病率 7.6%，时点患病率 5%）。患者常反复就诊于综合医院急诊科、心内科，识别不足会造成过度检查，识别过度又会漏掉躯体疾病。</div>
+        </div>
+        <div class="card card-cause">
+          <div class="card-header"><span class="card-icon">⬅️</span><div class="card-title">前置知识</div></div>
+          <div class="card-body">精神障碍的症状学（焦虑、恐惧、惊恐发作（panic attack）、自主神经功能紊乱）、ICD-11 分类与诊断思路、抑郁障碍与精神分裂症的核心表现。</div>
+        </div>
+        <div class="card card-cause">
+          <div class="card-header"><span class="card-icon">➡️</span><div class="card-title">后续延伸</div></div>
+          <div class="card-body">强迫症及相关障碍、抑郁障碍、物质使用障碍；心理治疗中的认知行为疗法（cognitive behavioral therapy，CBT）、暴露治疗（exposure therapy）与习惯化/消退（habituation/extinction）原理。</div>
+        </div>
+        <div class="card card-treatment">
+          <div class="card-header"><span class="card-icon">🔀</span><div class="card-title">横向交叉</div></div>
+          <div class="card-body">与心内科（心悸、胸痛）、呼吸科（气短、窒息感）、内分泌科（甲亢、低血糖、嗜铬细胞瘤）、神经科（癫痫、短暂性脑缺血发作）形成排除诊断交叉。</div>
+        </div>
+      </div>
+      <div class="callout callout-info">
+        <div class="callout-icon">💡</div>
+        <div class="callout-body"><strong>本章主线</strong>七种障碍不是按“焦虑有多重”排序，而是按“焦虑/恐惧指向什么、持续多久、造成多大功能损害”定位。</div>
+      </div>
+    </section>
+
+    <!-- ==================== 02 本章知识地图 ==================== -->
+    <section id="map" class="section">
+      <div class="section-header"><span class="section-number">02</span><h2>本章知识地图</h2></div>
+      <p class="lead">先记住七个“恐惧锚点”，再往每个障碍里填病因、表现、鉴别与治疗。</p>
+      <div class="knowledge-map">
+        <a href="#gad" style="text-decoration:none;color:inherit;display:block"><div class="km-card"><div class="km-icon">🌫️</div><div class="km-title">广泛性焦虑障碍</div><div class="km-count"><strong>GAD</strong> · 弥漫担忧</div></div></a>
+        <a href="#pd" style="text-decoration:none;color:inherit;display:block"><div class="km-card"><div class="km-icon">💥</div><div class="km-title">惊恐障碍</div><div class="km-count"><strong>PD</strong> · 急性发作</div></div></a>
+        <a href="#agoraphobia" style="text-decoration:none;color:inherit;display:block"><div class="km-card"><div class="km-icon">🚇</div><div class="km-title">场所恐惧症</div><div class="km-count"><strong>Agoraphobia</strong> · 难逃离</div></div></a>
+        <a href="#sad" style="text-decoration:none;color:inherit;display:block"><div class="km-card"><div class="km-icon">👥</div><div class="km-title">社交焦虑障碍</div><div class="km-count"><strong>SAD</strong> · 怕被评价</div></div></a>
+        <a href="#specific" style="text-decoration:none;color:inherit;display:block"><div class="km-card"><div class="km-icon">🕷️</div><div class="km-title">特定恐惧症</div><div class="km-count"><strong>Specific phobia</strong> · 单一客体</div></div></a>
+        <a href="#separation" style="text-decoration:none;color:inherit;display:block"><div class="km-card"><div class="km-icon">🧸</div><div class="km-title">分离焦虑障碍</div><div class="km-count"><strong>Separation</strong> · 依恋对象</div></div></a>
+        <a href="#mutism" style="text-decoration:none;color:inherit;display:block"><div class="km-card"><div class="km-icon">🤫</div><div class="km-title">选择性缄默症</div><div class="km-count"><strong>Selective mutism</strong> · 情境性失语</div></div></a>
+        <a href="#common" style="text-decoration:none;color:inherit;display:block"><div class="km-card"><div class="km-icon">🧩</div><div class="km-title">共同特征</div><div class="km-count"><strong>6</strong> 条共同规律</div></div></a>
+        <a href="#compare" style="text-decoration:none;color:inherit;display:block"><div class="km-card"><div class="km-icon">⚖️</div><div class="km-title">核心鉴别</div><div class="km-count"><strong>5</strong> 组对照表</div></div></a>
+        <a href="#quiz" style="text-decoration:none;color:inherit;display:block"><div class="km-card"><div class="km-icon">🎯</div><div class="km-title">自测与闪卡</div><div class="km-count"><strong>15</strong> 题 · <strong>20</strong> 卡</div></div></a>
+      </div>
+      <div class="callout callout-memory">
+        <div class="callout-icon">🧠</div>
+        <div class="callout-body"><strong>恐惧对象谱系（先记这一条）</strong>多域日常 → GAD；发作本身 → PD；难逃离情境的后果 → 场所恐惧症；他人负面评价 → SAD；单一客体/情境 → 特定恐惧症；依恋对象 → 分离焦虑障碍；特定情境的言语表达 → 选择性缄默症。</div>
+      </div>
+    </section>
+
+    <!-- ==================== 03 学习路线图 ==================== -->
+    <section id="route" class="section">
+      <div class="section-header"><span class="section-number">03</span><h2>学习路线图</h2></div>
+      <div class="route-grid">
+        <div class="route-card">
+          <h4>第一步 · 建框架</h4>
+          <p>读病理性焦虑定义、六条共同特征与“指向—时间—损害”三轴。<span class="priority">⭐⭐</span></p>
+        </div>
+        <div class="route-card">
+          <h4>第二步 · 攻核心</h4>
+          <p>GAD 与 PD 是本章高频考点：一个“弥漫慢”，一个“发作快”，先把对比打牢。<span class="priority">⭐⭐⭐</span></p>
+        </div>
+        <div class="route-card">
+          <h4>第三步 · 辨恐惧</h4>
+          <p>场所恐惧症、SAD、特定恐惧症：用“恐惧指向”区分，不靠程度轻重。<span class="priority">⭐⭐⭐</span></p>
+        </div>
+        <div class="route-card">
+          <h4>第四步 · 补特殊人群</h4>
+          <p>分离焦虑障碍与选择性缄默症：抓住儿童、依恋、情境性言语三个关键词。<span class="priority">⭐⭐</span></p>
+        </div>
+        <div class="route-card">
+          <h4>第五步 · 做鉴别与输出</h4>
+          <p>五组对比表 → 易错点 → 自测 → 闪卡 → 病例挑战，完成闭环。<span class="priority">⭐⭐⭐</span></p>
+        </div>
+      </div>
+      <div class="callout callout-success">
+        <div class="callout-icon">📅</div>
+        <div class="callout-body"><strong>复习节奏</strong>当日理解一遍 → 第 3 天用五组对比表复述 → 第 7 天做 15 题自测 → 考前只看易错点与 20 张闪卡。每轮都先复述“恐惧指向”，再补细节。</div>
+      </div>
+      <div class="callout callout-memory">
+        <div class="callout-icon">🧠</div>
+        <div class="callout-body"><strong>记忆策略</strong>先谱系、后细节；先对比、后定义；所有治疗都按“首选 → 次选/合并 → 辅助/短期”三层记，避免把药物顺序记乱。</div>
+      </div>
+    </section>
+
+    <!-- ==================== 04 章节导航 ==================== -->
+    <section id="nav" class="section">
+      <div class="section-header"><span class="section-number">04</span><h2>章节导航</h2></div>
+      <div class="card-grid">
+        <a href="#gad" style="text-decoration:none;color:inherit"><div class="card card-diagnosis"><div class="card-header"><span class="card-icon">🌫️</span><div class="card-title">GAD · 弥漫担忧</div></div><div class="card-body">完整八栏：多域担忧、自主神经症状、CBT 与 SSRI/SNRI。</div></div></a>
+        <a href="#pd" style="text-decoration:none;color:inherit"><div class="card card-symptom"><div class="card-header"><span class="card-icon">💥</span><div class="card-title">PD · 急性发作</div></div><div class="card-body">完整八栏：惊恐发作、预期焦虑、回避与“对恐惧的恐惧”。</div></div></a>
+        <a href="#agoraphobia" style="text-decoration:none;color:inherit"><div class="card card-diagnosis"><div class="card-header"><span class="card-icon">🚇</span><div class="card-title">场所恐惧症</div></div><div class="card-body">完整八栏：难逃离/难获助、暴露治疗与鉴别。</div></div></a>
+        <a href="#sad" style="text-decoration:none;color:inherit"><div class="card card-diagnosis"><div class="card-header"><span class="card-icon">👥</span><div class="card-title">SAD · 怕被评价</div></div><div class="card-body">完整八栏：表现型/广泛型、脸红、CBT 与 SSRIs。</div></div></a>
+        <a href="#specific" style="text-decoration:none;color:inherit"><div class="card card-diagnosis"><div class="card-header"><span class="card-icon">🕷️</span><div class="card-title">特定恐惧症</div></div><div class="card-body">精简八栏：单一客体、血液-损伤-注射特殊性与暴露。</div></div></a>
+        <a href="#separation" style="text-decoration:none;color:inherit"><div class="card card-diagnosis"><div class="card-header"><span class="card-icon">🧸</span><div class="card-title">分离焦虑障碍</div></div><div class="card-body">精简八栏：依恋对象、拒学、心理治疗为主。</div></div></a>
+        <a href="#mutism" style="text-decoration:none;color:inherit"><div class="card card-diagnosis"><div class="card-header"><span class="card-icon">🤫</span><div class="card-title">选择性缄默症</div></div><div class="card-body">精简八栏：家能说校不说、≥1 个月、行为干预。</div></div></a>
+        <a href="#compare" style="text-decoration:none;color:inherit"><div class="card card-memory"><div class="card-header"><span class="card-icon">⚖️</span><div class="card-title">五组核心鉴别</div></div><div class="card-body">惊恐发作/障碍、场所/特定、社交/害羞/回避型人格、分离/拒学、缄默/害羞。</div></div></a>
+      </div>
+    </section>
+
+    <!-- ==================== 05 共同特征与鉴别主线 ==================== -->
+    <section id="common" class="section">
+      <div class="section-header"><span class="section-number">05</span><h2>共同特征与鉴别主线</h2></div>
+      <p class="lead">教材把焦虑障碍（anxiety disorder，ICD-11 称焦虑或恐惧性相关障碍）的共同点归纳为六条。它们既是“共同底色”，也是排除其他精神障碍与躯体疾病的起点。</p>
+
+      <h3 class="subsection" style="font-size:1.18rem;font-weight:700;margin:30px 0 12px">一、病理性焦虑（pathological anxiety）：与正常焦虑的边界</h3>
+      <div class="callout callout-info">
+        <div class="callout-icon">📖</div>
+        <div class="callout-body"><strong>教材定义</strong>焦虑是内心紧张不安、预感到似乎将要发生某种不利情况而又难以应付的不愉快情绪体验。适度的焦虑具有积极意义，可调动身体各脏器功能、提高大脑反应速度和警觉性；病理性焦虑（pathological anxiety）则是持续、无明显诱因的紧张不安，或无现实依据地预感灾难、威胁或大祸临头，伴明显自主神经功能紊乱及运动性不安，常伴主观痛苦或社会功能受损。</div>
+      </div>
+      <div class="table-wrap">
+        <table class="comparison-table">
+          <thead><tr><th>维度</th><th>本章共同规律</th><th>七种障碍的落点</th></tr></thead>
+          <tbody>
+            <tr><td>焦虑/恐惧指向</td><td>指向越具体，越倾向于恐惧症；指向越弥漫，越倾向于 GAD；指向“发作本身或再次发作”则考虑 PD。</td><td>GAD 多域日常；PD 发作/再发作；场所恐惧症怕“难逃离的后果”；SAD 怕他人负面评价；特定恐惧症怕单一客体/情境；分离焦虑怕与依恋对象分开；选择性缄默怕在特定情境开口。</td></tr>
+            <tr><td>持续时间</td><td>不能用“当时很焦虑”下诊断，必须看症状是否持续、是否反复。</td><td>GAD 至少数月；PD 发作数分钟至 2 小时，发作后持续担忧（如数周）；场所恐惧症至少数月；SAD 持续数月；特定恐惧症常持续数十年；分离焦虑至少数月；选择性缄默至少 1 个月且不限于入学第 1 个月。</td></tr>
+            <tr><td>功能损害</td><td>诊断的落脚点是“显著痛苦或重要功能损害”，不是症状数量。</td><td>七种障碍均要求症状导致个人、家庭、社会、教育、职业等重要领域显著困扰或损害；特定恐惧症的损害程度取决于回避程度；选择性缄默突出影响学习成就或社交交流。</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="table-note">一句话总结：先问“怕什么”，再问“怕了多久”，最后问“因为怕，失去了什么”。</p>
+
+      <h3 class="subsection" style="font-size:1.18rem;font-weight:700;margin:30px 0 12px">二、六条共同特征</h3>
+      <div class="table-wrap">
+        <table class="comparison-table">
+          <thead><tr><th>序号</th><th>共同特征</th><th>教材要点</th></tr></thead>
+          <tbody>
+            <tr><td>①</td><td>起病与心理-社会因素有关</td><td>发病前常有生活事件或应激，人格上具有一定易感性，如胆小、敏感、易紧张、追求完美、严谨、刻板等；性格特征是其发病基础。</td></tr>
+            <tr><td>②</td><td>核心临床表现相似</td><td>以过度的紧张、恐惧、担忧、回避及自主神经系统功能紊乱为主要表现。</td></tr>
+            <tr><td>③</td><td>无器质性病变基础</td><td>症状没有任何可以证实的脑或器质性病变的基础。</td></tr>
+            <tr><td>④</td><td>自知力保持</td><td>患者对疾病保持一定自知力，自感痛苦，主动求治。</td></tr>
+            <tr><td>⑤</td><td>现实检验能力完好</td><td>能够正确感知自我与周围环境，保持自我与外在环境的协调统一。</td></tr>
+            <tr><td>⑥</td><td>社会功能相对完好</td><td>社会功能相对完好；严重时仍可明显受损。</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3 class="subsection" style="font-size:1.18rem;font-weight:700;margin:30px 0 12px">三、临床鉴别主线（五步）</h3>
+      <ol class="numbered-list">
+        <li><strong>先排除“器质性”和“物质性”</strong>：甲亢、低血糖、嗜铬细胞瘤、系统性红斑狼疮、心血管疾病、癫痫、短暂性脑缺血发作；哌甲酯、甲状腺素、类固醇、茶碱、酒精、镇静催眠药戒断等。</li>
+        <li><strong>看时间结构</strong>：持续弥漫的担忧 → GAD 方向；反复突发的发作 → PD 方向；进入特定情境才出现 → 恐惧症方向。</li>
+        <li><strong>锁定恐惧指向</strong>：多域日常 / 发作本身 / 难逃离的后果 / 他人评价 / 单一客体 / 依恋对象 / 特定情境的言语表达。</li>
+        <li><strong>核对病程与功能损害</strong>：是否达到教材要求的持续时间，是否造成显著痛苦或重要功能损害。</li>
+        <li><strong>处理共病与“就重原则”</strong>：GAD 常共病抑郁，二者均符合时可共病诊断并优先考虑抑郁障碍；惊恐继发于抑郁时同理；同时评估自杀风险与物质使用。</li>
+      </ol>
+      <div class="callout callout-warning">
+        <div class="callout-icon">⚠️</div>
+        <div class="callout-body"><strong>最容易犯的错</strong>把“焦虑”当成一个病名，直接给所有焦虑症状都贴上“焦虑障碍”。教材强调的是“综合征/障碍”层面的诊断，必须先排除躯体疾病、物质/药物影响，并核对病程与功能损害。</div>
+      </div>
+    </section>
+
+    <!-- ==================== 06 GAD ==================== -->
+    <section id="gad" class="section">
+      <div class="section-header"><span class="section-number">06</span><h2>广泛性焦虑障碍（GAD）</h2></div>
+      <div class="disease-hero">
+        <div class="en">Generalized Anxiety Disorder</div>
+        <h3>广泛性焦虑障碍（GAD）</h3>
+        <p>不是“某一次很焦虑”，而是对生活方方面面的过度、难以自控的担忧，成为一种慢性背景状态。</p>
+        <div class="quick-tags"><span>核心：自由浮动的焦虑</span><span>病程：慢性波动，至少数月</span><span>治疗：SSRI/SNRI + CBT</span></div>
+      </div>
+
+      <div class="module">
+        <div class="module-head"><span class="module-index">第一栏</span><h3>疾病画像</h3><span class="module-en">Definition &amp; Epidemiology</span></div>
+        <p><strong>定义：</strong>广泛性焦虑障碍（generalized anxiety disorder，GAD）表现为对多种境遇感到过分焦虑或担忧，并伴随显著的自主神经功能紊乱症状及运动性不安。患者的焦虑或担忧难以自控，常涉及生活的方方面面，例如简单的日常活动、时间管理、财务或者健康。呈慢性波动性病程，明显影响个体的正常生活和工作。</p>
+        <div class="quick-facts">
+          <div class="fact"><b>我国终生患病率</b><span>约 0.3%</span></div>
+          <div class="fact"><b>发达国家平均终生患病率</b><span>约 4.9%</span></div>
+          <div class="fact"><b>发展中国家平均终生患病率</b><span>约 1.4%</span></div>
+          <div class="fact"><b>遗传度</b><span>15%～20%</span></div>
+          <div class="fact"><b>性别</b><span>女性约为男性 2 倍</span></div>
+          <div class="fact"><b>年龄</b><span>35 岁以上更常见</span></div>
+        </div>
+        <div class="callout callout-info">
+          <div class="callout-icon">💡</div>
+          <div class="callout-body"><strong>一句话画像</strong>“担忧很多、症状很多、共病很多”的慢性焦虑：担忧涉及家庭、健康、财务、学习/工作，且明知过度却停不下来。</div>
+        </div>
+      </div>
+
+      <div class="module module-cause">
+        <div class="module-head"><span class="module-index">第二栏</span><h3>病因探秘</h3><span class="module-en">Etiology</span></div>
+        <div class="card-grid">
+          <div class="card card-cause">
+            <div class="card-header"><span class="card-icon">🧬</span><div class="card-title">生物学：遗传与脑环路</div></div>
+            <div class="card-body">
+              <ul class="icon-list">
+                <li>GAD 有明显家族聚集性，遗传度为 15%～20%；5-羟色胺转运体启动区（5-HTTLPR）的 SS 基因型、脑源性神经营养因子（BDNF）基因、22q11.2 基因等与 GAD 密切相关，但结果未完全一致，具体遗传机制不清楚。</li>
+                <li>经典神经解剖学假说认为，焦虑障碍与大脑恐惧环路（fear circuit，丘脑-大脑皮质-杏仁核通路）异常有关；杏仁核异常激活后，向臂旁核、外侧下丘脑、脑干蓝斑、下丘脑室旁核、HPA（下丘脑-垂体-肾上腺）轴传递异常，引起病理性焦虑症状。</li>
+                <li>神经影像学发现 GAD 患者可能存在前额叶、杏仁核、下丘脑、海马、边缘系统、扣带回等控制情绪脑区的结构和功能异常。</li>
+              </ul>
+            </div>
+          </div>
+          <div class="card card-cause">
+            <div class="card-header"><span class="card-icon">⚗️</span><div class="card-title">神经生化与内分泌</div></div>
+            <div class="card-body">
+              <ul class="icon-list">
+                <li><strong>GABA（γ-氨基丁酸）系统：</strong>BZD 激动 GABA 受体有抗焦虑作用；PET 发现 GAD 患者左颞极 GABA 受体结合率降低，外周血细胞 GABA 受体密度及 mRNA 下降，焦虑下降时恢复。由此推测 GABA 能功能不足或受体敏感性下降可能是发病机制。</li>
+                <li><strong>5-HT（5-羟色胺）系统：</strong>SSRIs 治疗 GAD 有效提示 5-HT 参与；5-HT1A、5-HT2A 受体的动物实验支持其与焦虑样行为相关。</li>
+                <li><strong>NE（去甲肾上腺素）系统：</strong>蓝斑是脑中合成 NE 的主要部位，持续刺激可导致焦虑样症状；NE 升高刺激丘脑 α 受体，导致警觉性增加、易激惹和睡眠障碍。</li>
+                <li><strong>神经内分泌：</strong>交感肾上腺素系统激活和 HPA 轴异常是 GAD 的重要内分泌发病机制；皮肤电导较短提示难以放松；既往研究多提示高皮质醇水平。</li>
+              </ul>
+            </div>
+          </div>
+          <div class="card card-cause">
+            <div class="card-header"><span class="card-icon">🧠</span><div class="card-title">心理社会因素</div></div>
+            <div class="card-body">
+              <ul class="icon-list">
+                <li>童年不安全依恋、照料者矛盾情感、父母过度保护、被虐待、与养育者过多分离，均可能是 GAD 产生的原因。</li>
+                <li><strong>精神分析：</strong>潜意识、本我、本能的强大心理能量与超我控制、外界现实相冲突，压抑与抵抗的矛盾演变为 GAD。</li>
+                <li><strong>行为主义：</strong>焦虑是对刺激的条件反应，是习得并广泛泛化的条件反应；刺激情景更普遍，患者甚至意识不到为什么焦虑，呈慢性弥散焦虑。</li>
+                <li><strong>认知理论：</strong>焦虑来源于认知偏差；GAD 患者常具有“难以耐受不确定性（intolerance of uncertainty）”“元担忧（meta-worry）”“灾难化认知（catastrophic cognition）”等特点。</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="callout callout-warning">
+          <div class="callout-icon">🔬</div>
+          <div class="callout-body"><strong>已证实 vs 假说</strong>教材明确称交感-肾上腺素系统和 HPA 轴异常在 GAD 发病中的作用“早已经被证实”；遗传的具体机制“不清楚”；GABA 能功能不足是“推测”；恐惧环路主要是基于动物实验的“经典神经解剖学假说”。答题时不要把假说写成定论。</div>
+        </div>
+      </div>
+
+      <div class="module module-symptom">
+        <div class="module-head"><span class="module-index">第三栏</span><h3>临床表现拼图</h3><span class="module-en">Clinical Picture</span></div>
+        <p><strong>场景化描述（非具体病例）：</strong>一位成年人同时担心家人健康、孩子上学途中的安全、自己工作出错、家庭财务和晚上睡不着；明知这些担心过度，却无法停止。紧张时肩颈肌肉酸痛、心慌、胸闷、出汗，坐着不久又起身来回走动，入睡前脑子里反复“预演”明天可能发生的事。</p>
+        <div class="card-grid">
+          <div class="card card-symptom">
+            <div class="card-header"><span class="card-icon">🧠</span><div class="card-title">认知</div></div>
+            <div class="card-body">
+              <ul class="icon-list">
+                <li><strong>精神性焦虑：</strong>对未来可能发生、难以预料的危险或不幸事件经常担心。</li>
+                <li><strong>游离性焦虑（free-floating anxiety）：</strong>不能明确意识到担心的对象或内容，只是一种提心吊胆、惶恐不安的强烈内心体验。</li>
+                <li><strong>预期焦虑（anticipatory anxiety）：</strong>担心现实中可能发生的事，但担心、焦虑和烦恼的程度与现实很不相称。</li>
+                <li>认知特点：难以耐受不确定性、元担忧、灾难化认知；注意力难以集中，易受干扰。</li>
+              </ul>
+            </div>
+          </div>
+          <div class="card card-symptom">
+            <div class="card-header"><span class="card-icon">❤️</span><div class="card-title">情感</div></div>
+            <div class="card-body">
+              <ul class="icon-list">
+                <li>持续的提心吊胆、惶恐不安、内心不踏实。</li>
+                <li>对自身状态感到痛苦，担心“一直好不了怎么办”。</li>
+                <li>易激惹；对声音、光线等外界刺激敏感，易出现惊跳反应。</li>
+              </ul>
+            </div>
+          </div>
+          <div class="card card-symptom">
+            <div class="card-header"><span class="card-icon">🫀</span><div class="card-title">躯体</div></div>
+            <div class="card-body">
+              <ul class="icon-list">
+                <li><strong>运动性不安与肌肉紧张：</strong>搓手顿足、不能静坐、不停来回走动、无目的小动作增多；胸部、颈部、肩背部肌肉紧张、酸痛，紧张性头痛，肢体震颤，甚至语音发颤。</li>
+                <li><strong>自主神经功能紊乱：</strong>心动过速、胸闷气短、头晕头痛、皮肤潮红、出汗或苍白、口干、吞咽梗阻感、胃部不适、恶心、腹痛、腹胀、便秘或腹泻、尿频；也可有早泄、勃起功能障碍、月经紊乱、性欲缺乏。</li>
+                <li><strong>睡眠：</strong>难以入睡、睡眠不实、睡中易醒。</li>
+              </ul>
+            </div>
+          </div>
+          <div class="card card-symptom">
+            <div class="card-header"><span class="card-icon">🚶</span><div class="card-title">行为</div></div>
+            <div class="card-body">
+              <ul class="icon-list">
+                <li>坐立不安、来回踱步，难以安静坐着。</li>
+                <li>因注意力下降、易疲劳而工作能力下降；做事反复检查、难以放心（教材案例中表现为反复询问医师病情）。</li>
+                <li>整体社会功能相对完好，但严重时明显影响生活和工作。</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="table-wrap">
+          <table class="comparison-table">
+            <thead><tr><th>教材分类</th><th>核心内容</th><th>关键词</th></tr></thead>
+            <tbody>
+              <tr><td>精神性焦虑</td><td>对未来危险/不幸的经常担心；游离性焦虑、预期焦虑</td><td>担忧</td></tr>
+              <tr><td>躯体性焦虑</td><td>运动性不安与肌肉紧张；肌肉酸痛、紧张性头痛、震颤</td><td>紧张</td></tr>
+              <tr><td>警觉性增高</td><td>对声光敏感、易惊跳；注意力难集中；入睡困难、睡眠不实、易醒</td><td>警觉</td></tr>
+              <tr><td>自主神经功能紊乱</td><td>心动过速、胸闷气短、头晕头痛、出汗、口干、胃肠症状、尿频、性功能/月经改变</td><td>紊乱</td></tr>
+              <tr><td>其他症状</td><td>常合并抑郁、强迫、恐惧、惊恐发作、人格解体，但常不是主要临床相</td><td>共病</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="callout callout-info">
+          <div class="callout-icon">📋</div>
+          <div class="callout-body"><strong>ICD-11 诊断要点</strong>①明显焦虑，焦虑对象无所不在（自由浮动的焦虑）或为日常琐事（家庭、健康、财务、学习/工作）；②伴肌肉紧张、运动性不安、交感神经过度活动、主观紧张、注意力难保持、易激惹、睡眠障碍；③症状至少持续数月；④导致个人、家庭、社会、教育、职业或其他重要功能的显著困扰或损害。</div>
+        </div>
+        <div class="callout callout-danger">
+          <div class="callout-icon">🔎</div>
+          <div class="callout-body"><strong>共病提示</strong>GAD 共病率高：约 2/3 患者合并抑郁，约 1/4 伴惊恐障碍，部分伴社交焦虑障碍、强迫症；也常合并酒精/物质依赖及功能性胃肠病、高血压、糖尿病等躯体疾病。合并抑郁者自杀风险明显增高，中老年人相对多见。</div>
+        </div>
+      </div>
+
+      <div class="module module-case">
+        <div class="module-head"><span class="module-index">第四栏</span><h3>教材典型案例</h3><span class="module-en">Textbook Case</span></div>
+        <div class="case-card">
+          <div class="case-meta"><span>教材原文（摘要整理）</span><span>典型病例</span><span>GAD</span></div>
+          <div class="case-title">中年女性：紧张担心、坐立不安、心慌胸闷 8 个月</div>
+          <div class="case-body">
+            <p><strong>现病史摘要：</strong>母亲肺癌去世后逐渐出现入睡困难、容易醒、不明原因的紧张担心，整天提心吊胆；担心孩子上学路上有危险、丈夫出差遇交通事故、家人健康、晚上睡不着怎么办。有时坐立难安、来回踱步；工作能力下降、注意力不能集中，担心工作出错；对现状痛苦，担心一直好不了。一想到这些就心慌、胸闷、出汗、四肢发麻、坐立不安。</p>
+            <p><strong>病前性格与家族史：</strong>内向、胆小、做事认真仔细、合群；母亲容易焦虑、失眠。</p>
+            <p><strong>精神检查：</strong>意识清、定向力完整、接触主动、表情愁苦、倾诉欲望强烈；主诉焦虑紧张，总感觉会发生不好的事情；内心不踏实、无法放松；有时一阵阵心慌、胸闷、出汗、手脚麻木；坐卧难安；入睡前浮想联翩；多次询问医师自己的病能不能治好。焦虑明显，情感反应协调，对自身精神状态有一定认识，主动求治。</p>
+          </div>
+        </div>
+        <div class="callout callout-example">
+          <div class="callout-icon">📝</div>
+          <div class="callout-body"><strong>读案要点</strong>本病例同时具备：多域、持续的担忧（精神性焦虑）；坐立不安与肌肉紧张（躯体性焦虑）；心慌、胸闷、出汗、四肢发麻（自主神经功能紊乱）；入睡困难与注意力下降（警觉性增高/功能损害）；自知力与主动求治。教材原文未提供具体实验室检查，诊断仍需结合排除标准。</div>
+        </div>
+      </div>
+
+      <div class="module module-diff">
+        <div class="module-head"><span class="module-index">第五栏</span><h3>鉴别诊断对对碰</h3><span class="module-en">Differential Diagnosis</span></div>
+        <div class="table-wrap">
+          <table class="comparison-table">
+            <thead><tr><th>维度</th><th>GAD</th><th>抑郁障碍</th><th>惊恐障碍</th></tr></thead>
+            <tbody>
+              <tr><td>核心症状</td><td>多域、持续、难以自控的担忧；游离性/预期焦虑；运动性不安与自主神经症状</td><td>心境低落、兴趣/愉悦感减退为核心，可伴焦虑</td><td>反复、不可预期的惊恐发作；发作间期预期焦虑与回避</td></tr>
+              <tr><td>病程/起病</td><td>慢性波动，症状至少数月</td><td>发作性或慢性；需分别评估抑郁与焦虑的严重度和病程</td><td>发作性起病，数分钟达峰；发作后持续担忧</td></tr>
+              <tr><td>关键鉴别点</td><td>担忧内容涉及家庭、健康、财务、学习/工作等多个领域，且与现实不相称</td><td>GAD 约 2/3 共病抑郁；两者均符合诊断标准时可共病诊断，并优先考虑抑郁障碍</td><td>PD 的焦虑围绕“再次发作/死亡/失控”，不是多域担忧</td></tr>
+              <tr><td>辅助检查/排除要点</td><td>排除甲亢、低血糖、嗜铬细胞瘤、系统性红斑狼疮；询问药物、酒精、镇静催眠药</td><td>评估自杀风险；注意抑郁症状的严重度与病程</td><td>排除心血管疾病、甲亢、癫痫、短暂性脑缺血发作、低血糖及物质/药物</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="table-note">一句话鉴别：GAD 的关键不是“有没有焦虑”，而是“担忧是否多域、持续数月、无法自控并造成损害”。</p>
+        <ul class="icon-list">
+          <li><strong>强迫症：</strong>焦虑继发于强迫思维，常伴大量强迫或仪式化行为。</li>
+          <li><strong>疾病焦虑障碍：</strong>对身体健康的过度关注和适应不良的疾病行为。</li>
+          <li><strong>进食障碍：</strong>焦虑表现为身材焦虑、过度关注体重。</li>
+          <li><strong>精神分裂症：</strong>可伴明显焦虑，但通常有幻觉妄想综合征，社会功能显著受损。</li>
+          <li><strong>物质/药物：</strong>哌甲酯、甲状腺素、类固醇、茶碱、酒精、镇静催眠药戒断等可致典型焦虑症状，根据服药史鉴别。</li>
+        </ul>
+      </div>
+
+      <div class="module module-treat">
+        <div class="module-head"><span class="module-index">第六栏</span><h3>治疗方案工具箱</h3><span class="module-en">Treatment</span></div>
+        <p><strong>治疗原则：</strong>GAD 是慢性高复发性疾病，遵循个体化综合干预、全病程治疗；按生物-心理-社会医学模式，药物治疗和心理治疗均有效。全病程包括急性期、巩固期和维持期：急性期主要控制焦虑、尽量达到临床治愈；巩固期一般至少 2～6 个月，预防复燃；维持期一般至少 12 个月，防止复发。维持结束后病情稳定可缓慢减药，但需密切监测复发早期征象。</p>
+        <div class="table-wrap">
+          <table class="comparison-table">
+            <thead><tr><th>层级</th><th>措施</th><th>教材要点</th></tr></thead>
+            <tbody>
+              <tr><td>药物治疗首选</td><td>SSRIs（选择性 5-羟色胺再摄取抑制剂）、SNRIs（5-羟色胺和去甲肾上腺素再摄取抑制剂）</td><td>无成瘾性，整体不良反应较轻，常被推荐为治疗 GAD 的一线药物。</td></tr>
+              <tr><td>教材列出的 NMPA 批准药物</td><td>国家药品监督管理局（NMPA）批准用于 GAD 的药物：文拉法辛、度洛西汀、丁螺环酮、坦度螺酮、曲唑酮、多塞平（三环类抗抑郁药）</td><td>教材列举的我国批准用于 GAD 的药物；其中 SSRIs/SNRIs 为一线，丁螺环酮/坦度螺酮为 5-HT1A 受体部分激动剂，曲唑酮、多塞平属其他抗焦虑药物。</td></tr>
+              <tr><td>心理治疗首选</td><td>认知行为疗法（CBT）</td><td>多个国际指南推荐为一线；多数研究提示 CBT 可显著改善 GAD 症状，有效率为 47%～75%。</td></tr>
+              <tr><td>次选/合并</td><td>5-HT1A 受体部分激动剂</td><td>常为合并用药；对轻症患者也可单独使用。</td></tr>
+              <tr><td>辅助/短期</td><td>苯二氮䓬类（BZDs）</td><td>为快速控制焦虑症状，早期可合并使用；不宜长期使用。教材在 PD 治疗中明确一般 2～4 周逐渐停用，SAD 章节亦指出 BZD 不宜长期服用。</td></tr>
+              <tr><td>其他心理治疗</td><td>放松训练、GAD 特定症状的心理治疗、精神动力学治疗、元认知治疗、正念</td><td>放松训练、精神动力学等可能有效但需更多研究；元认知治疗和正念对广泛性焦虑疗效不错，有助于提高生活质量。</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="callout callout-warning">
+          <div class="callout-icon">⚠️</div>
+          <div class="callout-body"><strong>用药安全</strong>教材未给出具体剂量，临床应“剂量个体化，遵医嘱”。SSRIs/SNRIs 无成瘾性；BZD 仅作早期短期辅助，长期使用存在依赖与戒断风险，停药应逐渐减量并监测复发。</div>
+        </div>
+        <div class="callout callout-success">
+          <div class="callout-icon">✅</div>
+          <div class="callout-body"><strong>答题模板</strong>“首选 SSRI/SNRI + CBT；早期可短期合并 BZD 快速控制；5-HT1A 部分激动剂可合并或用于轻症；全病程为急性期—巩固期（至少 2～6 个月）—维持期（至少 12 个月）。”</div>
+        </div>
+      </div>
+
+      <div class="module module-memory">
+        <div class="module-head"><span class="module-index">第七栏</span><h3>记忆工具箱</h3><span class="module-en">Memory Tools</span></div>
+        <div class="memory-grid">
+          <div class="memory-card">
+            <div class="m-title">方法一：“三多”归类<span class="m-type">归类</span></div>
+            <div class="m-formula">担忧多 · 症状多 · 共病多</div>
+            <p>原理：把 GAD 的零散特征压缩成三个高频词。担忧多＝多域、自由浮动；症状多＝精神、躯体、警觉、自主神经；共病多＝抑郁（约 2/3）、惊恐（约 1/4）、社交焦虑、强迫、物质依赖。</p>
+          </div>
+          <div class="memory-card">
+            <div class="m-title">方法二：五字症状串<span class="m-type">口诀</span></div>
+            <div class="m-formula">精 · 躯 · 警 · 自 · 共</div>
+            <p>原理：首字串联五类临床表现——精神性焦虑、躯体性焦虑、警觉性增高、自主神经功能紊乱、其他/共病。答题时按顺序展开，不易漏项。</p>
+          </div>
+          <div class="memory-card">
+            <div class="m-title">方法三：GAD vs PD 对比<span class="m-type">对比</span></div>
+            <div class="m-formula">GAD 慢而弥散，PD 快而发作</div>
+            <p>原理：用时间结构做锚点（类比理解：GAD 像“背景音”式的持续担忧，PD 像“警报”式的突发发作，数分钟达峰，发作后有预期焦虑和回避）。</p>
+          </div>
+          <div class="memory-card">
+            <div class="m-title">方法四：病因链条<span class="m-type">图解</span></div>
+            <div class="m-formula">基因 → 恐惧环路 → 递质 → 内分泌 → 心理社会</div>
+            <p>原理：按“生物学→心理→社会”串联，先记大环节再填细节。递质可再分 GABA、5-HT、NE 三条支链；心理社会再分精神分析、行为主义、认知理论。</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="module module-link">
+        <div class="module-head"><span class="module-index">第八栏</span><h3>知识联动</h3><span class="module-en">Connections</span></div>
+        <ul class="icon-list">
+          <li><strong>抑郁障碍：</strong>GAD 约 2/3 合并抑郁，常被视为抑郁的危险因素；合并抑郁者自杀风险明显增高，二者均符合诊断标准时考虑共病并优先考虑抑郁障碍。</li>
+          <li><strong>惊恐障碍：</strong>约 1/4 GAD 患者伴惊恐障碍；GAD 可有惊恐发作，但惊恐发作不是主要临床相时不能诊断 PD。</li>
+          <li><strong>强迫症、社交焦虑障碍、疾病焦虑障碍、进食障碍：</strong>都可有焦虑/担忧，但焦虑的对象和表现形式不同，是本章鉴别题的高频交叉点。</li>
+          <li><strong>躯体疾病：</strong>功能性胃肠病、高血压、糖尿病常与 GAD 共病；同时甲亢、低血糖、嗜铬细胞瘤、SLE 可模拟焦虑，需先排除。</li>
+          <li><strong>症状学与诊断学：</strong>游离性焦虑、预期焦虑、运动性不安、自主神经功能紊乱是连接症状学与本章的四个关键词；诊断思维遵循 ICD-11 的“症状持续 + 功能损害 + 排除”。</li>
+          <li><strong>心理治疗理论：</strong>CBT、元认知治疗、正念、放松训练；行为主义条件反射与认知偏差理论是理解 GAD 的心理机制基础。</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ==================== 07 PD ==================== -->
+    <section id="pd" class="section">
+      <div class="section-header"><span class="section-number">07</span><h2>惊恐障碍（PD）</h2></div>
+      <div class="disease-hero">
+        <div class="en">Panic Disorder</div>
+        <h3>惊恐障碍（PD）</h3>
+        <p>核心是“反复、不可预期的惊恐发作”，以及发作之后对再次发作的持续担忧与回避；惊恐发作本身只是症状，不等于惊恐障碍。</p>
+        <div class="quick-tags"><span>核心：急性焦虑发作</span><span>病程：发作性→慢性波动</span><span>治疗：SSRI/SNRI + CBT，BZD 短期</span></div>
+      </div>
+
+      <div class="module">
+        <div class="module-head"><span class="module-index">第一栏</span><h3>疾病画像</h3><span class="module-en">Definition &amp; Epidemiology</span></div>
+        <p><strong>定义：</strong>惊恐障碍（panic disorder，PD）是一种以急性焦虑发作为主要临床表现的焦虑障碍。初期多为发作性病程，随着病情发展及共病出现，有慢性化趋势，呈波动性病程；症状时轻时重，后期可合并场所恐惧症、抑郁障碍、酒精滥用和其他焦虑障碍，导致个体社会功能明显损害。</p>
+        <div class="quick-facts">
+          <div class="fact"><b>普通人群时点患病率</b><span>可高达 5%</span></div>
+          <div class="fact"><b>我国终生患病率</b><span>0.5%</span></div>
+          <div class="fact"><b>典型发作时长</b><span>数分钟达峰，持续半小时至 2 小时</span></div>
+          <div class="fact"><b>就诊特点</b><span>反复就诊急诊科、心内科</span></div>
+        </div>
+        <div class="callout callout-info">
+          <div class="callout-icon">💡</div>
+          <div class="callout-body"><strong>一句话画像</strong>“突如其来的濒死感 + 反复发作 + 发作后怕再来 + 回避可能诱发的场合”。患者常先被当作心脏病、甲亢等躯体问题排查。</div>
+        </div>
+      </div>
+
+      <div class="module module-cause">
+        <div class="module-head"><span class="module-index">第二栏</span><h3>病因探秘</h3><span class="module-en">Etiology</span></div>
+        <div class="card-grid">
+          <div class="card card-cause">
+            <div class="card-header"><span class="card-icon">🧬</span><div class="card-title">遗传因素</div></div>
+            <div class="card-body">
+              <ul class="icon-list">
+                <li>家系研究发现 PD 先证者一级亲属的发病风险明显高于正常对照组一级亲属。</li>
+                <li>双生子研究显示同卵双生子同病率高于异卵双生子，提示遗传因素对发病有重要作用。</li>
+              </ul>
+            </div>
+          </div>
+          <div class="card card-cause">
+            <div class="card-header"><span class="card-icon">⚗️</span><div class="card-title">神经生物学：递质、脑区与乳酸盐/CO₂</div></div>
+            <div class="card-body">
+              <ul class="icon-list">
+                <li>涉及中枢神经递质（去甲肾上腺素、5-HT、多巴胺、GABA）及以蓝斑为主的脑区、大脑恐惧环路。</li>
+                <li>5-HT1A 受体在肺通气调节方面的作用可能与 PD 直接相关；SSRIs 治疗 PD 有效也提示 5-HT 系统异常参与。</li>
+                <li>PD 患者血中乳酸盐含量高于正常对照；乳酸盐滴注或吸入二氧化碳混合气体可诱发类似自然状态下的惊恐发作。</li>
+                <li>二氧化碳升高和乳酸增加均可引起窒息感；教材据此认为 PD 者可能存在中枢二氧化碳感受器异常，发出错误的窒息警报，这可能与濒死体验有关（学说/假说）。</li>
+              </ul>
+            </div>
+          </div>
+          <div class="card card-cause">
+            <div class="card-header"><span class="card-icon">🧠</span><div class="card-title">心理社会与 CBT 模型</div></div>
+            <div class="card-body">
+              <ul class="icon-list">
+                <li>儿童期和成人期经历创伤性事件或负性生活事件的个体患 PD 风险增加；PD 患者对创伤事件（特别是涉及分离和依恋关系破裂的创伤）更敏感。</li>
+                <li>CBT 认为 PD 的核心可简单归纳为“对恐惧的恐惧（fear to fear）”。</li>
+                <li>恐惧感来自两方面：其一是对内部线索恐惧的条件反射，即内部线索（如躯体不适）与强烈恐惧建立联系，称“内部感觉条件作用（interoceptive conditioning）”；其二是对躯体感觉的灾难化认知，如“心慌就是我的心脏病即将发作”“开始出汗就是我要晕倒的前兆”。</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="callout callout-warning">
+          <div class="callout-icon">🔬</div>
+          <div class="callout-body"><strong>学说标注</strong>“中枢二氧化碳感受器异常/错误窒息警报”是教材用以解释 PD 的学说/假说，不是已证实的病因；乳酸盐与 CO₂ 诱发试验是支持该假说的研究线索。</div>
+        </div>
+      </div>
+
+      <div class="module module-symptom">
+        <div class="module-head"><span class="module-index">第三栏</span><h3>临床表现拼图</h3><span class="module-en">Clinical Picture</span></div>
+        <p><strong>场景化描述（非具体病例）：</strong>在堵车、乘地铁或人群拥挤时，突然心慌、胸闷、气短、出汗、手脚发麻，强烈感觉“马上要死了/要失控了”；数分钟内达到高峰，持续一段时间后自行缓解。急诊心电图可能仅提示心动过速，其他检查未见异常。此后患者反复担心再次发作，开始回避交通工具或要求有人陪伴。</p>
+        <div class="card-grid">
+          <div class="card card-symptom">
+            <div class="card-header"><span class="card-icon">🧠</span><div class="card-title">认知</div></div>
+            <div class="card-body">
+              <ul class="icon-list">
+                <li>发作时出现濒死恐惧、害怕失控或“发疯”、害怕死亡。</li>
+                <li>对躯体感觉灾难化解释：“心慌＝心脏病发作”“出汗＝要晕倒”。</li>
+                <li>发作后持续担心再次发作，或担心发作的负面意义（如生理症状可能是心肌梗死）。</li>
+              </ul>
+            </div>
+          </div>
+          <div class="card card-symptom">
+            <div class="card-header"><span class="card-icon">❤️</span><div class="card-title">情感</div></div>
+            <div class="card-body">
+              <ul class="icon-list">
+                <li>发作时强烈的恐惧、紧张、无助感。</li>
+                <li>发作间期的预期焦虑：提心吊胆，担心下一次何时到来。</li>
+                <li>因反复发作而痛苦、焦虑不安，部分患者合并抑郁。</li>
+              </ul>
+            </div>
+          </div>
+          <div class="card card-symptom">
+            <div class="card-header"><span class="card-icon">🫀</span><div class="card-title">躯体</div></div>
+            <div class="card-body">
+              <ul class="icon-list">
+                <li>心血管/呼吸：心悸或心率加快、出汗、颤抖、呼吸急促感、窒息感、胸痛。</li>
+                <li>其他：恶心或腹部不适、眩晕感或头晕感、发冷或潮热、刺痛感或四肢缺乏感觉（感觉异常）、人格解体或现实解体。</li>
+                <li>发作突如其来，数分钟内达高峰，持续半小时至 2 小时，可自行缓解；单次发作通常仅持续数分钟，部分可更久。</li>
+              </ul>
+            </div>
+          </div>
+          <div class="card card-symptom">
+            <div class="card-header"><span class="card-icon">🚶</span><div class="card-title">行为</div></div>
+            <div class="card-body">
+              <ul class="icon-list">
+                <li>竭力逃避可能诱发发作的场合（如密闭空间、空旷广场等），以防出现生命危险、失控或发疯。</li>
+                <li>仅在有可信的人陪伴时才肯出门；反复就诊急诊/心内科，反复拨打急救电话（教材案例中可见）。</li>
+                <li>临床分为惊恐障碍伴场所恐惧症与惊恐障碍不伴场所恐惧症两型。</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="table-wrap">
+          <table class="comparison-table">
+            <thead><tr><th>临床相</th><th>教材描述</th><th>时间特征</th></tr></thead>
+            <tbody>
+              <tr><td>惊恐发作（急性焦虑发作）</td><td>反复的、有时不可预料的发作性焦虑、紧张或恐惧，伴明显心血管和呼吸系统症状，重者濒死体验或担心失控、发疯、死亡</td><td>突如其来，数分钟内达高峰，持续半小时至 2 小时，可自行缓解；不限于特定可预料情境</td></tr>
+              <tr><td>预期焦虑</td><td>一次惊恐发作后持续担心再次发作</td><td>发作之后持续存在</td></tr>
+              <tr><td>回避行为</td><td>逃避诱发紧张、恐惧、害怕的场合（密闭空间、空旷广场等），以防生命危险、失控或发疯</td><td>反复发作后逐渐形成</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="callout callout-info">
+          <div class="callout-icon">⏱️</div>
+          <div class="callout-body"><strong>时间读法</strong>教材描述惊恐发作“持续半小时至 2 小时”，同时指出“单次惊恐发作通常仅持续数分钟，部分可持续更久”。案例中的每次 3～5 分钟属于“数分钟”范畴，并不矛盾。</div>
+        </div>
+        <div class="callout callout-danger">
+          <div class="callout-icon">🚨</div>
+          <div class="callout-body"><strong>惊恐发作 ≠ 惊恐障碍</strong>惊恐发作可发生于其他焦虑及恐惧相关障碍，也可见于其他精神障碍；存在惊恐发作本身并不足以做出惊恐障碍的诊断。PD 还要求“至少部分发作是非预期的”“发作后持续担忧或采取回避行为”“不限于另一精神障碍所致焦虑”“排除躯体疾病/物质药物”“导致功能严重损害”。</div>
+        </div>
+      </div>
+
+      <div class="module module-case">
+        <div class="module-head"><span class="module-index">第四栏</span><h3>教材典型案例</h3><span class="module-en">Textbook Case</span></div>
+        <div class="case-card">
+          <div class="case-meta"><span>教材原文（摘要整理）</span><span>典型病例</span><span>PD</span></div>
+          <div class="case-title">32 岁男性：阵发性心慌、胸闷气短、紧张恐惧半年</div>
+          <div class="case-body">
+            <p><strong>现病史摘要：</strong>半年前工作压力大，某次堵车时出现心慌、胸闷气短、心悸，怀疑自己心脏病发作，紧张恐惧，感觉“挺不过去了”，被 120 送至急诊，身体未见异常。此后常在乘车/地铁时出现心慌、胸闷、气急、呼吸困难，每次发作感觉“像马上要死了一样”，每周发作 1～2 次，每次 3～5 分钟；发作时面色苍白、四肢冰冷、心慌、胸闷气短；曾多次拨打 120，急诊心电图为心动过速，其他检查正常。近一月症状加重，不敢外出乘坐交通工具，担心再次出现症状、失去控制、疯掉，为此焦虑不安。</p>
+            <p><strong>病前性格：</strong>谨慎胆小、细心、内向。</p>
+            <p><strong>相关生活经历：</strong>父亲教育方式严厉、总忽略患者、喜欢泼冷水；3 年前母亲乳腺癌晚期伴淋巴结转移，不到半年去世；近 1 年岳母心力衰竭在家养病，看到其虚弱或听到咳嗽就莫名紧张、压抑；近 3 个月看到年轻人猝死新闻很害怕；近半年准备职称晋升，压力大。家族史阴性。</p>
+          </div>
+        </div>
+        <div class="callout callout-example">
+          <div class="callout-icon">📝</div>
+          <div class="callout-body"><strong>读案要点</strong>不可预期的反复发作 + 强烈心血管/呼吸症状 + 濒死感 + 发作后预期焦虑 + 回避交通工具 + 急诊检查未发现器质性异常。教材原文未提供完整实验室检查清单，临床仍需按 ICD-11 排除躯体疾病与物质/药物。</div>
+        </div>
+      </div>
+
+      <div class="module module-diff">
+        <div class="module-head"><span class="module-index">第五栏</span><h3>鉴别诊断对对碰</h3><span class="module-en">Differential Diagnosis</span></div>
+        <div class="table-wrap">
+          <table class="comparison-table">
+            <thead><tr><th>维度</th><th>惊恐障碍</th><th>躯体疾病所致</th><th>药物/精神活性物质所致</th></tr></thead>
+            <tbody>
+              <tr><td>核心症状</td><td>反复、不可预期的惊恐发作；发作后持续担忧/回避</td><td>心血管疾病、甲亢、癫痫、短暂性脑缺血发作、低血糖等可出现类似惊恐发作的表现</td><td>哌甲酯、甲状腺素、类固醇、茶碱等可导致惊恐发作；酒精、苯丙胺、可卡因、BZD 使用及戒断也可导致</td></tr>
+              <tr><td>病程/起病</td><td>发作性起病，数分钟达峰；病程可慢性波动</td><td>与原发躯体疾病病程相关</td><td>与使用/戒断时间关系密切</td></tr>
+              <tr><td>关键鉴别点</td><td>惊恐发作不局限于社交情景或特定物体/场所；否则不考虑 PD</td><td>详细询问相关病史，及时进行相应实验室和功能检查</td><td>详细病史可帮助确定个体是否在物质使用之前已有惊恐发作</td></tr>
+              <tr><td>辅助检查/排除要点</td><td>排除其他健康问题（如嗜铬细胞瘤）、物质/药物直接效应或戒断；症状导致重要功能严重损害</td><td>针对相应躯体疾病进行检查</td><td>核查用药史、物质使用史与戒断史</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="table-note">一句话鉴别：PD 的“检查正常”不是排除躯体疾病的理由，而是建立在充分病史与必要检查之上的排除诊断。</p>
+        <ul class="icon-list">
+          <li><strong>其他精神障碍：</strong>惊恐发作仅局限于社交情景或某种特定物体/场所时，不考虑 PD。</li>
+          <li><strong>抑郁障碍：</strong>惊恐可继发于抑郁；若同时符合抑郁障碍诊断标准，考虑共病诊断或按就重原则优先考虑抑郁障碍。</li>
+          <li><strong>场所恐惧症：</strong>PD 的回避若未延伸到两种或多种广场恐怖情景，不诊断场所恐惧症。</li>
+        </ul>
+      </div>
+
+      <div class="module module-treat">
+        <div class="module-head"><span class="module-index">第六栏</span><h3>治疗方案工具箱</h3><span class="module-en">Treatment</span></div>
+        <p><strong>治疗目标：</strong>减少或消除惊恐发作，缓解预期焦虑，减少恐惧性回避，提高生活质量，改善社会功能。治疗包括心理治疗和药物治疗；许多国家的防治指南建议药物合并心理治疗，研究显示联合治疗疗效优于单一药物治疗或心理治疗。</p>
+        <div class="table-wrap">
+          <table class="comparison-table">
+            <thead><tr><th>层级</th><th>措施</th><th>教材要点</th></tr></thead>
+            <tbody>
+              <tr><td>药物治疗首选</td><td>具有抗焦虑作用的抗抑郁药：SSRIs、SNRIs</td><td>SSRIs 如草酸艾司西酞普兰、舍曲林、帕罗西汀等；SNRIs 如文拉法辛。</td></tr>
+              <tr><td>辅助/短期</td><td>苯二氮䓬类</td><td>抗抑郁药起效较慢，治疗初期常合并 BZD 迅速控制焦虑，如奥沙西泮、阿普唑仑等；一般在 2～4 周逐渐停用，以抗抑郁药维持治疗。</td></tr>
+              <tr><td>心理治疗</td><td>CBT</td><td>研究证实 CBT 可有效治疗 PD。关键是打破症状恶性循环，改变对躯体症状的灾难性认知，降低对躯体症状的敏感性，增加对躯体不适的耐受能力及控制感，从而减少惊恐发作和回避行为，恢复社会功能。</td></tr>
+              <tr><td>联合治疗</td><td>药物 + 心理治疗</td><td>研究显示联合治疗疗效优于单一药物治疗或心理治疗。</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="callout callout-warning">
+          <div class="callout-icon">⚠️</div>
+          <div class="callout-body"><strong>用药安全</strong>教材未给出具体剂量，应“剂量个体化，遵医嘱”。BZD 只作初期短期辅助，教材明确一般 2～4 周逐渐停用；长期使用有依赖与戒断风险。SSRIs/SNRIs 无成瘾性，作为维持治疗基础。</div>
+        </div>
+        <div class="callout callout-success">
+          <div class="callout-icon">✅</div>
+          <div class="callout-body"><strong>答题模板</strong>“首选 SSRI/SNRI；早期合并 BZD 快速控制，2～4 周逐渐停用；以抗抑郁药维持；CBT 针对灾难化认知与回避；联合治疗优于单一治疗。”</div>
+        </div>
+      </div>
+
+      <div class="module module-memory">
+        <div class="module-head"><span class="module-index">第七栏</span><h3>记忆工具箱</h3><span class="module-en">Memory Tools</span></div>
+        <div class="memory-grid">
+          <div class="memory-card">
+            <div class="m-title">方法一：“突发突止”时间轴<span class="m-type">数字</span></div>
+            <div class="m-formula">突发 → 数分钟达峰 → 半小时至 2 小时 → 自行缓解</div>
+            <p>原理：用一条时间轴记住惊恐发作的四个节点。与 GAD 的“持续数月”形成鲜明对比，考试常以“持续时间”设干扰项。</p>
+          </div>
+          <div class="memory-card">
+            <div class="m-title">方法二：“恐惧的恐惧”双机制<span class="m-type">机制串联</span></div>
+            <div class="m-formula">内部感觉条件作用 + 灾难化认知</div>
+            <p>原理：先记核心词“对恐惧的恐惧（fear to fear）”，再展开两条链：躯体不适→强烈恐惧（条件反射）；躯体感觉→灾难化解释（认知）。两条链共同维持恶性循环。</p>
+          </div>
+          <div class="memory-card">
+            <div class="m-title">方法三：诊断“三排除”<span class="m-type">归类</span></div>
+            <div class="m-formula">排躯体 · 排物质 · 排其他精神障碍</div>
+            <p>原理：PD 是排除性诊断。躯体疾病（心血管、甲亢、癫痫、TIA、低血糖）；物质/药物（哌甲酯、甲状腺素、类固醇、茶碱、酒精、苯丙胺、可卡因、BZD）；其他精神障碍（社交/特定情境的惊恐发作不诊断 PD）。</p>
+          </div>
+          <div class="memory-card">
+            <div class="m-title">方法四：关键数字<span class="m-type">数字</span></div>
+            <div class="m-formula">5% · 0.5% · 2～4 周</div>
+            <p>原理：普通人群时点患病率可高达 5%；我国终生患病率 0.5%；BZD 一般 2～4 周逐渐停用。数字与“患病率/疗程”两类考点绑定。</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="module module-link">
+        <div class="module-head"><span class="module-index">第八栏</span><h3>知识联动</h3><span class="module-en">Connections</span></div>
+        <ul class="icon-list">
+          <li><strong>场所恐惧症：</strong>PD 后期常合并场所恐惧症；临床上分为“伴场所恐惧症”与“不伴场所恐惧症”两型。回避未延伸到两种或多种广场恐怖情景时，不诊断场所恐惧症。</li>
+          <li><strong>抑郁障碍：</strong>惊恐可继发于抑郁；同时符合抑郁诊断标准时考虑共病或按就重原则优先抑郁。</li>
+          <li><strong>酒精与其他物质：</strong>PD 后期可合并酒精滥用；酒精、BZD 的戒断也可导致惊恐发作，需追问使用史。</li>
+          <li><strong>急诊/心内科：</strong>患者常反复就诊急诊科、心内科，过度就医导致经济负担和医疗资源浪费；识别 PD 能减少不必要的重复检查。</li>
+          <li><strong>呼吸生理与 CBT：</strong>乳酸盐/CO₂ 研究与“错误窒息警报”假说连接呼吸生理；CBT 的内部感觉条件作用与灾难化认知模型连接心理治疗。</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ==================== 08 场所恐惧症 ==================== -->
+    <section id="agoraphobia" class="section">
+      <div class="section-header"><span class="section-number">08</span><h2>场所恐惧症</h2></div>
+      <div class="disease-hero">
+        <div class="en">Agoraphobia</div>
+        <h3>场所恐惧症</h3>
+        <p>害怕的不是“场所”本身，而是身处难以逃离、难以获得帮助的情境时，万一出现惊恐样症状、失能或令人尴尬的情况，会无法脱身。</p>
+        <div class="quick-tags"><span>核心：难逃离/难获助</span><span>病程：持续、慢性</span><span>治疗：暴露治疗 + 药物</span></div>
+      </div>
+
+      <div class="module">
+        <div class="module-head"><span class="module-index">第一栏</span><h3>疾病画像</h3><span class="module-en">Definition &amp; Epidemiology</span></div>
+        <p><strong>定义：</strong>场所恐惧症（agoraphobia）表现为对特定场所或情境的恐惧，包括人多拥挤的场所，公交汽车、地铁、飞机等交通工具，密闭或空旷开放的空间，单独离家外出，甚至害怕单独留在家里。患者可以同时伴有或不伴有惊恐发作。</p>
+        <div class="quick-facts">
+          <div class="fact"><b>年诊断比例</b><span>约 1.7% 的青少年和成年人</span></div>
+          <div class="fact"><b>性别</b><span>女性约为男性 2 倍</span></div>
+          <div class="fact"><b>发病高峰</b><span>青少年晚期和成年早期</span></div>
+          <div class="fact"><b>遗传度</b><span>61%</span></div>
+          <div class="fact"><b>病程</b><span>通常持续、慢性</span></div>
+          <div class="fact"><b>后果</b><span>常继发抑郁和酒精滥用；严重者被困家中</span></div>
+        </div>
+        <div class="callout callout-info">
+          <div class="callout-icon">💡</div>
+          <div class="callout-body"><strong>一句话画像</strong>“不是怕广场，而是怕在广场上发作后逃不掉、没人帮。”因此患者常回避、需人陪伴，或带着强烈恐惧去耐受。</div>
+        </div>
+      </div>
+
+      <div class="module module-cause">
+        <div class="module-head"><span class="module-index">第二栏</span><h3>病因探秘</h3><span class="module-en">Etiology</span></div>
+        <div class="card-grid">
+          <div class="card card-cause">
+            <div class="card-header"><span class="card-icon">🧬</span><div class="card-title">气质与遗传</div></div>
+            <div class="card-body">
+              <ul class="icon-list">
+                <li>行为抑制（behavioral inhibition）和神经质倾向的气质类型与场所恐惧症密切相关。</li>
+                <li>有研究报道场所恐惧症的遗传度为 61%。</li>
+              </ul>
+            </div>
+          </div>
+          <div class="card card-cause">
+            <div class="card-header"><span class="card-icon">🧸</span><div class="card-title">童年负性应激</div></div>
+            <div class="card-body">
+              <ul class="icon-list">
+                <li>儿童时期的负性应激事件与场所恐惧症明显相关，如分离、父母过世或被攻击等。</li>
+              </ul>
+            </div>
+          </div>
+          <div class="card card-cause">
+            <div class="card-header"><span class="card-icon">🔁</span><div class="card-title">认知行为理论</div></div>
+            <div class="card-body">
+              <ul class="icon-list">
+                <li>恐惧情绪和行为表现是习得性的适应不良行为。</li>
+                <li>最初对恐惧性场景采取逃避等不适当方式获得安全感，从而逐级形成对某些场景的回避行为。</li>
+                <li>教材描述的是“逃避获得安全感→回避逐级形成”的习得过程，治疗上用暴露打破它。</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="callout callout-warning">
+          <div class="callout-icon">🔬</div>
+          <div class="callout-body"><strong>说明</strong>教材本节把气质、遗传、童年负性事件与认知行为理论并列，未进一步给出统一的生物-心理-社会整合模型；遗传度 61% 是教材引用的研究数据，不是诊断依据。</div>
+        </div>
+      </div>
+
+      <div class="module module-symptom">
+        <div class="module-head"><span class="module-index">第三栏</span><h3>临床表现拼图</h3><span class="module-en">Clinical Picture</span></div>
+        <p><strong>场景化描述（非具体病例）：</strong>患者进入或预期进入商场、地铁、电影院、排队人群等“难以迅速离开”的地方时，立刻紧张害怕，出现头晕、心慌、胸闷、出汗；严重时出现非真实感、人格解体或“晕厥”。因此尽量回避，必须出门时要求家人陪伴；无法回避时只能带着强烈害怕/焦虑去耐受。</p>
+        <div class="card-grid">
+          <div class="card card-symptom">
+            <div class="card-header"><span class="card-icon">🧠</span><div class="card-title">认知</div></div>
+            <div class="card-body">
+              <ul class="icon-list">
+                <li>预期进入情境就出现灾难化预期：万一惊恐发作、晕倒、大小便失禁，没人能帮我。</li>
+                <li>关注“能否迅速离开/获得帮助”，而不是场所本身的危险。</li>
+                <li>一次或多次类似经历后产生预期焦虑。</li>
+              </ul>
+            </div>
+          </div>
+          <div class="card card-symptom">
+            <div class="card-header"><span class="card-icon">❤️</span><div class="card-title">情感</div></div>
+            <div class="card-body">
+              <ul class="icon-list">
+                <li>进入或预期进入情境时紧张、害怕、焦虑。</li>
+                <li>对“被困住/无法脱身”有强烈恐惧。</li>
+                <li>因回避导致生活受限而痛苦、沮丧，常继发抑郁。</li>
+              </ul>
+            </div>
+          </div>
+          <div class="card card-symptom">
+            <div class="card-header"><span class="card-icon">🫀</span><div class="card-title">躯体</div></div>
+            <div class="card-body">
+              <ul class="icon-list">
+                <li>头晕、心慌、胸闷、出汗等自主神经反应。</li>
+                <li>严重时可出现非真实感、人格解体或“晕厥”。</li>
+                <li>这些躯体反应常被患者解释为“要出事”的证据，进一步加重恐惧。</li>
+              </ul>
+            </div>
+          </div>
+          <div class="card card-symptom">
+            <div class="card-header"><span class="card-icon">🚶</span><div class="card-title">行为</div></div>
+            <div class="card-body">
+              <ul class="icon-list">
+                <li>主动回避多种情境；只有在特定情况下（如有人陪伴）才进入。</li>
+                <li>难以回避时带着强烈恐惧/焦虑去耐受。</li>
+                <li>严重者完全被困在家中，无法外出工作或社交；常继发酒精滥用。</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="callout callout-danger">
+          <div class="callout-icon">🔑</div>
+          <div class="callout-body"><strong>核心恐惧公式</strong>场所恐惧症怕的是“在难以逃离/难以获得帮助的情境中，出现惊恐样症状或其他失能/窘迫情况（如晕倒、大小便失禁）”。如果怕的是“飞机失事”这类情境本身的直接伤害，更符合特定恐惧症。</div>
+        </div>
+        <div class="callout callout-info">
+          <div class="callout-icon">📋</div>
+          <div class="callout-body"><strong>ICD-11 诊断要点</strong>①置身多种难以逃离或难以获得帮助的情境时，产生或预期产生明显且过度的恐惧/焦虑；②害怕这些情境导致惊恐发作、惊恐症状、失能或令人尴尬的躯体症状；③主动回避，或仅在特定情况（如有人陪伴）下进入，否则承受强烈恐惧/焦虑；④症状持续一段时间（如至少数月）；⑤不能用其他精神障碍更好解释；⑥导致显著痛苦或重要功能严重损害。</div>
+        </div>
+      </div>
+
+      <div class="module module-case">
+        <div class="module-head"><span class="module-index">第四栏</span><h3>教材典型案例</h3><span class="module-en">Textbook Case</span></div>
+        <div class="callout callout-example">
+          <div class="callout-icon">📚</div>
+          <div class="callout-body"><strong>教材未提供具体临床案例。</strong>教材举例的典型情境包括：人多拥挤的场所；公交汽车、地铁、飞机等交通工具；密闭或空旷开放的空间；单独离家外出；甚至单独留在家里。教材同时指出，场所恐惧症可伴或不伴惊恐发作，严重者可完全被困在家中。</div>
+        </div>
+      </div>
+
+      <div class="module module-diff">
+        <div class="module-head"><span class="module-index">第五栏</span><h3>鉴别诊断对对碰</h3><span class="module-en">Differential Diagnosis</span></div>
+        <div class="table-wrap">
+          <table class="comparison-table">
+            <thead><tr><th>维度</th><th>场所恐惧症</th><th>特定恐惧症（情境型）</th></tr></thead>
+            <tbody>
+              <tr><td>核心症状</td><td>对多种难以逃离/难获帮助的情境产生明显过度恐惧；害怕惊恐样症状、失能或尴尬的躯体症状</td><td>恐惧局限于某一特定情境；害怕情境本身的直接伤害</td></tr>
+              <tr><td>恐惧指向</td><td>怕“发作后逃不掉/没人帮”的后果</td><td>怕“情境本身”，如怕飞机失事、怕电梯坠落</td></tr>
+              <tr><td>情境范围</td><td>多种情境（交通、人群、商场/剧院/排队、独自离家等）</td><td>通常仅一种情境</td></tr>
+              <tr><td>病程/起病</td><td>持续、慢性；青少年晚期/成年早期达峰</td><td>童年或成年早期出现；不治疗可持续数十年</td></tr>
+              <tr><td>诊断归属</td><td>症状不能更好地用其他精神障碍解释，且持续至少数月、功能受损</td><td>若害怕/回避仅局限于广场恐怖情境中的一种，应诊断特定恐惧症（情境型）</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="table-note">一句话鉴别：场所恐惧症“怕后果、怕多处”，特定恐惧症“怕本体、怕一处”。</p>
+        <ul class="icon-list">
+          <li><strong>分离焦虑障碍：</strong>焦虑在于与重要他人及家庭成员（父母或其他依恋对象）分开。</li>
+          <li><strong>社交焦虑障碍：</strong>焦点是害怕他人的负面评价。</li>
+          <li><strong>惊恐障碍：</strong>当症状符合 PD 诊断标准时，如果与惊恐发作有关的回避行为没有延伸到对两种或多种广场恐怖情景的回避，就不应诊断为场所恐惧症。</li>
+          <li><strong>其他躯体疾病：</strong>如果确定对情境的回避是某种躯体疾病的生理性后果，就不能诊断场所恐惧症；判断基于病史、实验室检查和体格检查。</li>
+        </ul>
+      </div>
+
+      <div class="module module-treat">
+        <div class="module-head"><span class="module-index">第六栏</span><h3>治疗方案工具箱</h3><span class="module-en">Treatment</span></div>
+        <p><strong>治疗原则：</strong>场所恐惧症的治疗主要是心理治疗和药物治疗，或二者相结合。药物治疗的目的是减轻焦虑恐惧情绪、减轻警觉性增高、减轻焦虑的自主神经症状和躯体症状，改善社会功能损害，提高生活质量。在药物治疗的同时，通常还需要使患者反复进入引起恐惧和回避的场景中进行暴露治疗。</p>
+        <div class="table-wrap">
+          <table class="comparison-table">
+            <thead><tr><th>层级</th><th>措施</th><th>教材要点</th></tr></thead>
+            <tbody>
+              <tr><td>核心心理治疗</td><td>暴露治疗</td><td>反复进入引起恐惧和回避的场景，打破“回避—暂时安全—恐惧维持”的循环。</td></tr>
+              <tr><td>药物治疗</td><td>抗焦虑药物</td><td>教材本节未列出具体药物名称与剂量；治疗目标为减轻焦虑恐惧、警觉性增高及自主神经/躯体症状，改善社会功能。剂量个体化，遵医嘱。</td></tr>
+              <tr><td>联合</td><td>心理治疗 + 药物治疗</td><td>教材明确二者可结合；药物同时通常仍需暴露治疗。</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="callout callout-warning">
+          <div class="callout-icon">⚠️</div>
+          <div class="callout-body"><strong>不要擅自补药名</strong>教材场所恐惧症治疗节只写“药物治疗”的目的，没有列出具体药物。考试若问“首选药物”，应按教材体系回答“抗焦虑药物”，不要自行套用 GAD/PD 的具体药名。</div>
+        </div>
+      </div>
+
+      <div class="module module-memory">
+        <div class="module-head"><span class="module-index">第七栏</span><h3>记忆工具箱</h3><span class="module-en">Memory Tools</span></div>
+        <div class="memory-grid">
+          <div class="memory-card">
+            <div class="m-title">方法一：五类场所清单<span class="m-type">归类</span></div>
+            <div class="m-formula">车 · 众 · 闭/旷 · 独出 · 独留</div>
+            <p>原理：把教材列举的场所压缩成五类——公共交通工具、人群、密闭或空旷空间、独自离家、独自留在家。答题时按“车众闭旷独”展开。</p>
+          </div>
+          <div class="memory-card">
+            <div class="m-title">方法二：核心恐惧公式<span class="m-type">口诀</span></div>
+            <div class="m-formula">不是怕场所，是怕“发作后逃不掉、没人帮”</div>
+            <p>原理：用一句因果句锁定“恐惧的后果”，与特定恐惧症“怕情境本身”形成对照。只要题干出现“晕倒/失禁/惊恐发作时无法逃离”，优先考虑场所恐惧症。</p>
+          </div>
+          <div class="memory-card">
+            <div class="m-title">方法三：与特定恐惧症对比<span class="m-type">对比</span></div>
+            <div class="m-formula">场所：多处 + 怕后果；特定：一处 + 怕本体</div>
+            <p>原理：用“数量 + 指向”双维度区分。仅局限于一种广场情境，或害怕飞机失事等情境本身直接伤害，诊断特定恐惧症（情境型）。</p>
+          </div>
+          <div class="memory-card">
+            <div class="m-title">方法四：数字锚点<span class="m-type">数字</span></div>
+            <div class="m-formula">1.7% · 61% · 2 倍</div>
+            <p>原理：年诊断比例约 1.7%；遗传度 61%；女性约为男性 2 倍。数字与“流行病学/遗传”考点绑定，避免与 GAD、PD 的数字混淆。</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="module module-link">
+        <div class="module-head"><span class="module-index">第八栏</span><h3>知识联动</h3><span class="module-en">Connections</span></div>
+        <ul class="icon-list">
+          <li><strong>惊恐障碍：</strong>场所恐惧症可伴或不伴惊恐发作；PD 的回避若延伸到两种或多种广场恐怖情景，可考虑伴场所恐惧症。</li>
+          <li><strong>抑郁与酒精：</strong>场所恐惧症常继发抑郁症和酒精滥用；严重者完全被困家中，无法外出工作或社交。</li>
+          <li><strong>特定恐惧症：</strong>两者都用暴露治疗，但鉴别点在于“情境数量 + 害怕的后果”；场所恐惧症怕后果，特定恐惧症怕情境本身。</li>
+          <li><strong>分离焦虑与社交焦虑：</strong>前者怕与依恋对象分开，后者怕他人负面评价；场所恐惧症怕难以逃离/难获帮助。</li>
+          <li><strong>认知行为理论：</strong>“逃避获得安全感→回避逐级形成”是理解场所恐惧症维持机制与暴露治疗的关键。</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ==================== 09 SAD ==================== -->
+    <section id="sad" class="section">
+      <div class="section-header"><span class="section-number">09</span><h2>社交焦虑障碍（SAD）</h2></div>
+      <div class="disease-hero">
+        <div class="en">Social Anxiety Disorder</div>
+        <h3>社交焦虑障碍（SAD）</h3>
+        <p>核心不是“不会社交”，而是害怕在可能被他人审视的社交情境中遭到负面评价，因而焦虑、脸红、回避。</p>
+        <div class="quick-tags"><span>核心：怕他人负面评价</span><span>起病：中位 13 岁</span><span>治疗：CBT / SSRI 一线</span></div>
+      </div>
+
+      <div class="module">
+        <div class="module-head"><span class="module-index">第一栏</span><h3>疾病画像</h3><span class="module-en">Definition &amp; Epidemiology</span></div>
+        <p><strong>定义：</strong>社交焦虑障碍（social anxiety disorder，SAD），又称社交恐惧症（social phobia），指面对可能被他人审视的一种或多种社交情况时产生显著的害怕和焦虑。</p>
+        <div class="quick-facts">
+          <div class="fact"><b>中位起病年龄</b><span>13 岁</span></div>
+          <div class="fact"><b>起病窗口</b><span>85% 起病于 8～15 岁</span></div>
+          <div class="fact"><b>患病率</b><span>3%～13%</span></div>
+          <div class="fact"><b>占焦虑障碍患者</b><span>10%～20%</span></div>
+          <div class="fact"><b>遗传度</b><span>30%～65%</span></div>
+          <div class="fact"><b>性别</b><span>男女发病率相近</span></div>
+        </div>
+        <div class="callout callout-info">
+          <div class="callout-icon">💡</div>
+          <div class="callout-body"><strong>一句话画像</strong>“怕被看、怕被评、怕出丑”：在公开演讲、会见陌生人、他人注视下操作或使用公共卫生间时，出现与环境实际威胁不相称的强烈恐惧，常伴害羞脸红。</div>
+        </div>
+      </div>
+
+      <div class="module module-cause">
+        <div class="module-head"><span class="module-index">第二栏</span><h3>病因探秘</h3><span class="module-en">Etiology</span></div>
+        <div class="card-grid">
+          <div class="card card-cause">
+            <div class="card-header"><span class="card-icon">🧬</span><div class="card-title">家庭与遗传</div></div>
+            <div class="card-body">
+              <ul class="icon-list">
+                <li>SAD 存在显著的家庭因素影响，其中部分是遗传因素，遗传度为 30%～65%。</li>
+                <li>部分是后天习得性影响：父母有精神疾病史、父母婚姻冲突、父母过分保护、儿童期虐待或被忽略、儿童期缺乏与成年人的亲近关系、儿童期经常搬迁、学习成绩落后等。</li>
+                <li>部分患者可能经历过创伤性、羞辱性的社交事件。</li>
+              </ul>
+            </div>
+          </div>
+          <div class="card card-cause">
+            <div class="card-header"><span class="card-icon">🧠</span><div class="card-title">气质与认知</div></div>
+            <div class="card-body">
+              <ul class="icon-list">
+                <li>潜在的气质类型使个体更易罹患 SAD，如行为抑制和对负面评价的害怕。</li>
+                <li>患者对他人的评价较为敏感，自我评价低。</li>
+                <li>在社交情景中过度关注自己的表情和行为，回避他人的目光接触。</li>
+              </ul>
+            </div>
+          </div>
+          <div class="card card-cause">
+            <div class="card-header"><span class="card-icon">⚗️</span><div class="card-title">神经生物学</div></div>
+            <div class="card-body">
+              <ul class="icon-list">
+                <li>临床上 SSRIs 治疗 SAD 有效，提示 SAD 与 5-HT 功能异常相关。</li>
+                <li>神经影像研究显示 SAD 患者前额叶皮质功能降低，纹状体中多巴胺转运体存在功能异常，杏仁核过度反应。</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="callout callout-warning">
+          <div class="callout-icon">🔬</div>
+          <div class="callout-body"><strong>说明</strong>教材把家庭/遗传、气质、5-HT 与神经影像并列，未给出单一确定病因；SSRIs 有效是“提示”5-HT 参与，不是因果证明。</div>
+        </div>
+      </div>
+
+      <div class="module module-symptom">
+        <div class="module-head"><span class="module-index">第三栏</span><h3>临床表现拼图</h3><span class="module-en">Clinical Picture</span></div>
+        <p><strong>场景化描述（非具体病例）：</strong>患者在公开演讲、会见陌生人、在他人注视下操作或使用公共卫生间时，强烈担心自己的言行或紧张状态被负面评价，甚至成为嘲笑对象；出现脸红、出汗、口干，过度关注自己的表情和动作，回避目光接触。多数患者只对少数社交情境恐惧（表现型）；部分患者对很多社交场合都紧张，甚至与亲人面对面也焦虑（广泛型）。</p>
+        <div class="card-grid">
+          <div class="card card-symptom">
+            <div class="card-header"><span class="card-icon">🧠</span><div class="card-title">认知</div></div>
+            <div class="card-body">
+              <ul class="icon-list">
+                <li>害怕被他人关注、审视、评价；担心自己的言行或焦虑状态遭负面评判。</li>
+                <li>担心成为别人嘲笑的对象；自我评价低。</li>
+                <li>过度关注自己的表情和行为，回避他人的目光接触。</li>
+              </ul>
+            </div>
+          </div>
+          <div class="card card-symptom">
+            <div class="card-header"><span class="card-icon">❤️</span><div class="card-title">情感</div></div>
+            <div class="card-body">
+              <ul class="icon-list">
+                <li>在社交/公共场合出现与环境实际威胁不相称的强烈恐惧和/或焦虑。</li>
+                <li>焦虑紧张、害羞、局促不安、尴尬。</li>
+                <li>严重者极度紧张时可诱发惊恐发作；病程漫长迁延，遇压力或应激症状加重。</li>
+              </ul>
+            </div>
+          </div>
+          <div class="card card-symptom">
+            <div class="card-header"><span class="card-icon">🫀</span><div class="card-title">躯体</div></div>
+            <div class="card-body">
+              <ul class="icon-list">
+                <li>常伴脸红、出汗、口干等自主神经症状。</li>
+                <li><strong>害羞脸红是社交恐惧最突出的自主神经表现。</strong></li>
+                <li>严重者可出现惊恐发作；但惊恐发作若仅局限于社交情景，不考虑 PD。</li>
+              </ul>
+            </div>
+          </div>
+          <div class="card card-symptom">
+            <div class="card-header"><span class="card-icon">🚶</span><div class="card-title">行为</div></div>
+            <div class="card-body">
+              <ul class="icon-list">
+                <li>持续回避相关社交场景，或带着强烈恐惧/焦虑去忍受。</li>
+                <li>广泛型患者常害怕出门、不敢与人交往，甚至长期脱离社会生活、无法工作。</li>
+                <li>严重者完全与社会隔离；部分患者共病回避型人格障碍。</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="table-wrap">
+          <table class="comparison-table">
+            <thead><tr><th>分型</th><th>恐惧范围</th><th>典型表现</th></tr></thead>
+            <tbody>
+              <tr><td>表现型社交焦虑障碍</td><td>只对少数社交情境恐惧</td><td>当众发言、表演或写字等</td></tr>
+              <tr><td>广泛型社交焦虑障碍</td><td>对很多社交场合都紧张</td><td>排队、与人乘同一电梯，甚至与过去非常熟悉的亲人面对面都焦虑；常害怕出门、长期脱离社会</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="callout callout-info">
+          <div class="callout-icon">📋</div>
+          <div class="callout-body"><strong>ICD-11 诊断要点</strong>①个体在一个或多个社交情境（社交互动/谈话、被观看吃喝、在他人面前表演/演讲）中持续出现显著和过度的恐惧或焦虑；②担心自己的言行或表现出的焦虑症状会被他人负面评价；③持续回避相关社交场景，或带着强烈恐惧/焦虑去忍受。上述症状持续数月，并造成严重痛苦或重要功能严重受损。</div>
+        </div>
+        <div class="callout callout-danger">
+          <div class="callout-icon">🔑</div>
+          <div class="callout-body"><strong>核心鉴别线索</strong>SAD 恐惧的是“社交情境中他人的评判”，而不是社交情境本身的直接危险。恐惧对象可以是陌生人、熟人，甚至是自己的亲属、配偶；较常见的是异性、严厉的上司和未婚夫/妻的父亲等权威人士。</div>
+        </div>
+      </div>
+
+      <div class="module module-case">
+        <div class="module-head"><span class="module-index">第四栏</span><h3>教材典型案例</h3><span class="module-en">Textbook Case</span></div>
+        <div class="callout callout-example">
+          <div class="callout-icon">📚</div>
+          <div class="callout-body"><strong>教材未提供具体临床案例。</strong>教材举例的典型场合包括：公开演讲、会见陌生人、在他人注视下操作、使用公共卫生间等；常见恐惧对象为异性、严厉的上司、未婚夫/妻的父亲等权威人士。教材还指出，多数患者只对少数社交情境恐惧（表现型），部分患者对很多社交场合都紧张（广泛型）。</div>
+        </div>
+      </div>
+
+      <div class="module module-diff">
+        <div class="module-head"><span class="module-index">第五栏</span><h3>鉴别诊断对对碰</h3><span class="module-en">Differential Diagnosis</span></div>
+        <div class="table-wrap">
+          <table class="comparison-table">
+            <thead><tr><th>维度</th><th>社交焦虑障碍</th><th>正常害羞</th><th>回避型人格障碍</th></tr></thead>
+            <tbody>
+              <tr><td>核心症状</td><td>一个或多个社交情境中持续、显著、过度的恐惧/焦虑；担心被负面评价</td><td>害羞是常见人格特质，本身不是病理性</td><td>回避模式更宽泛，几乎没有人际亲密关系</td></tr>
+              <tr><td>病程/起病</td><td>中位起病 13 岁，85% 于 8～15 岁；持续数月，病程缓慢持久</td><td>长期人格特质，不一定起病</td><td>长期、广泛的人际回避模式</td></tr>
+              <tr><td>关键鉴别点</td><td>恐惧指向“他人的评判”，不是社交情境本身</td><td>当害羞在社会职业和其他重要领域功能上存在显著负面影响，且符合 SAD 全部诊断标准时，才诊断 SAD</td><td>SAD 通常容易与回避型人格障碍共病；后者的回避更宽泛、亲密关系几乎缺失</td></tr>
+              <tr><td>辅助检查/排除要点</td><td>排除精神分裂症等其他精神病性症状；排除物质/药物所致</td><td>无病理基础，功能损害不显著</td><td>需评估人格模式与亲密关系史</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="table-note">一句话鉴别：害羞是“性格里的怕”，SAD 是“怕到功能受损并符合全部诊断标准”，回避型人格则是“连亲密关系都整体回避”。</p>
+        <ul class="icon-list">
+          <li><strong>特定恐惧症：</strong>SAD 恐惧的是社交相关情境中他人的评判，而不是社交情境本身。</li>
+          <li><strong>精神分裂症：</strong>社交焦虑、恐惧可能作为精神分裂症的一部分发生，但精神分裂症患者还存在其他精神病性症状的证据。</li>
+          <li><strong>惊恐障碍：</strong>若惊恐发作仅局限于社交情景，不考虑 PD。</li>
+        </ul>
+      </div>
+
+      <div class="module module-treat">
+        <div class="module-head"><span class="module-index">第六栏</span><h3>治疗方案工具箱</h3><span class="module-en">Treatment</span></div>
+        <p><strong>治疗原则：</strong>社交焦虑障碍可以通过心理治疗以及药物进行干预，主要取决于医师的临床评估以及患者的偏好。</p>
+        <div class="table-wrap">
+          <table class="comparison-table">
+            <thead><tr><th>层级</th><th>措施</th><th>教材要点</th></tr></thead>
+            <tbody>
+              <tr><td>心理治疗</td><td>认知行为疗法（CBT）</td><td>英国 NICE 认为 CBT 的优先级别高于药物治疗；加拿大 CPA 则将 CBT 和药物干预都作为一线治疗。</td></tr>
+              <tr><td>药物治疗首选</td><td>SSRIs</td><td>SSRIs 为治疗社交焦虑障碍的一线首选药物；SNRIs 也有效。</td></tr>
+              <tr><td>辅助/短期</td><td>苯二氮䓬类（BZDs）</td><td>可快速缓解焦虑恐惧的症状，但不宜长期服用；长期使用有依赖与戒断风险。</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="callout callout-warning">
+          <div class="callout-icon">⚠️</div>
+          <div class="callout-body"><strong>用药安全</strong>教材未给出具体剂量，应“剂量个体化，遵医嘱”。BZD 只作短期快速缓解，不宜长期服用；SSRIs 为一线首选，SNRIs 也有效。</div>
+        </div>
+      </div>
+
+      <div class="module module-memory">
+        <div class="module-head"><span class="module-index">第七栏</span><h3>记忆工具箱</h3><span class="module-en">Memory Tools</span></div>
+        <div class="memory-grid">
+          <div class="memory-card">
+            <div class="m-title">方法一：“三怕”口诀<span class="m-type">口诀</span></div>
+            <div class="m-formula">怕被看 · 怕被评 · 怕出丑</div>
+            <p>原理：三句话覆盖 SAD 的认知核心——被审视、负面评价、尴尬出丑。与场所恐惧症“怕逃不掉”、分离焦虑“怕分开”形成三组对照。</p>
+          </div>
+          <div class="memory-card">
+            <div class="m-title">方法二：两型分类<span class="m-type">归类</span></div>
+            <div class="m-formula">表现型：少数情境；广泛型：多数情境</div>
+            <p>原理：用“情境数量”区分两型。表现型多见于当众发言、表演、写字；广泛型可波及排队、乘电梯，甚至与亲人面对面。</p>
+          </div>
+          <div class="memory-card">
+            <div class="m-title">方法三：一个标志 + 一组数字<span class="m-type">数字</span></div>
+            <div class="m-formula">脸红 · 13 岁 · 8～15 岁 · 3%～13%</div>
+            <p>原理：害羞脸红是 SAD 最突出的自主神经表现；中位起病 13 岁，85% 于 8～15 岁，患病率 3%～13%。把“标志”与“数字”绑定，选择题不易丢分。</p>
+          </div>
+          <div class="memory-card">
+            <div class="m-title">方法四：治疗双轨<span class="m-type">对比</span></div>
+            <div class="m-formula">NICE：CBT 优先；CPA：CBT 与药物均一线</div>
+            <p>原理：用两个机构观点做对照，记住“CBT 地位高、SSRIs 是一线药、SNRIs 也有效、BZD 不宜长期”。</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="module module-link">
+        <div class="module-head"><span class="module-index">第八栏</span><h3>知识联动</h3><span class="module-en">Connections</span></div>
+        <ul class="icon-list">
+          <li><strong>共病：</strong>最常见共病是情感障碍（41.4%），其次为物质滥用（39.6%）和其他焦虑障碍；青少年更易共病抑郁，引起学习困难、缺勤、沉迷网络及酒精/物质滥用。</li>
+          <li><strong>特定恐惧症与 PD：</strong>约 25% 的 SAD 患者同时符合特定恐惧症诊断标准；约 17% 共病 PD 并伴场所恐惧症。</li>
+          <li><strong>回避型人格障碍：</strong>部分 SAD 患者可同时伴回避型人格障碍；两者常共病，但回避型人格的回避模式更宽泛、几乎无亲密关系。</li>
+          <li><strong>精神分裂症：</strong>社交焦虑/恐惧可作为精分的一部分出现，但精分还有幻觉妄想等精神病性症状。</li>
+          <li><strong>心理治疗：</strong>CBT 通过改变“他人会负面评价我”的认知与回避行为起效；NICE/CPA 的推荐差异是考试常考的“指南态度”。</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ==================== 10 特定恐惧症 ==================== -->
+    <section id="specific" class="section">
+      <div class="section-header"><span class="section-number">10</span><h2>特定恐惧症</h2></div>
+      <div class="disease-hero">
+        <div class="en">Specific Phobia</div>
+        <h3>特定恐惧症</h3>
+        <p>恐惧或回避对象局限于特定的物体、场景或活动；患者知道恐惧过分、不合理，却无法减少，暴露治疗疗效显著。</p>
+        <div class="quick-tags"><span>核心：单一客体/情境</span><span>起病：童年或成年早期</span><span>治疗：暴露治疗</span></div>
+      </div>
+
+      <div class="module">
+        <div class="module-head"><span class="module-index">第一栏</span><h3>疾病画像</h3><span class="module-en">Definition</span></div>
+        <p><strong>定义：</strong>特定恐惧症主要指特殊恐怖症或单一恐怖症，患者的恐惧或回避对象局限于特定的物体、场景或活动。害怕的对象多是特定的自然环境（如高处、雷鸣、黑暗）、动物（如昆虫）、行为（如注射）、情景（如飞行、电梯、密闭空间）等。</p>
+        <p>这些恐惧是过分的、不合理的和持久的；患者主观上意识到自己的恐惧过度且不符合现实，但并不能减少恐惧。一般在童年或成年早期出现，如果不治疗，可以持续数十年；社会功能损害程度取决于对恐惧情境的回避程度。教材未提供患病率数据。</p>
+        <div class="callout callout-danger">
+          <div class="callout-icon">🩸</div>
+          <div class="callout-body"><strong>特殊类型</strong>血液-损伤-注射恐惧与其他恐惧不同，其可导致心动过缓，易出现晕厥，而不是心率加快。这是本章最容易被反选的知识点。</div>
+        </div>
+      </div>
+
+      <div class="module module-cause">
+        <div class="module-head"><span class="module-index">第二栏</span><h3>病因探秘</h3><span class="module-en">Etiology</span></div>
+        <p>教材本节未展开特定恐惧症的病因与发病机制，未提供遗传、神经生化或心理社会因素的系统论述。</p>
+        <p>治疗部分的暴露治疗以“习惯化和消退”解释机制：帮助患者面对害怕的情境，并适当地使其心理反应维持一定时间，通过自然的条件作用过程使害怕程度降低；暴露不仅能打破恐惧刺激与恐惧反应之间的条件反射，还能让患者通过现实检验挑战自己的歪曲认知。</p>
+        <div class="callout callout-info">
+          <div class="callout-icon">📖</div>
+          <div class="callout-body"><strong>诚实标注</strong>不要把其他焦虑障碍的遗传度、递质机制硬套到特定恐惧症；教材在本节没有给出这些内容。</div>
+        </div>
+      </div>
+
+      <div class="module module-symptom">
+        <div class="module-head"><span class="module-index">第三栏</span><h3>临床表现拼图</h3><span class="module-en">Clinical Picture</span></div>
+        <p><strong>场景化描述（非具体病例）：</strong>患者面对高处、雷鸣、黑暗、昆虫、注射、飞行、电梯或密闭空间等特定对象时，产生异乎寻常的恐惧，出现脸红、出汗、心慌、血压变化、恶心、无力，甚至昏厥；为减少恐惧而采取回避行为。</p>
+        <div class="card-grid">
+          <div class="card card-symptom"><div class="card-header"><span class="card-icon">🧠</span><div class="card-title">认知</div></div><div class="card-body">知道恐惧过分、不合理、不符合现实，但无法减少；恐惧高度局限于某一客体/情境。</div></div>
+          <div class="card card-symptom"><div class="card-header"><span class="card-icon">❤️</span><div class="card-title">情感</div></div><div class="card-body">面对恐惧对象时出现异乎寻常的强烈恐惧；预期要接触时也会紧张不安。</div></div>
+          <div class="card card-symptom"><div class="card-header"><span class="card-icon">🫀</span><div class="card-title">躯体</div></div><div class="card-body">脸红、出汗、心慌、血压变化、恶心、无力，甚至昏厥；血液-损伤-注射型可心动过缓、易晕厥。</div></div>
+          <div class="card card-symptom"><div class="card-header"><span class="card-icon">🚶</span><div class="card-title">行为</div></div><div class="card-body">为减少恐惧而回避特定物体/场景/活动；回避程度决定社会功能损害程度。</div></div>
+        </div>
+        <div class="table-wrap">
+          <table class="comparison-table">
+            <thead><tr><th>恐惧对象类别</th><th>教材举例</th></tr></thead>
+            <tbody>
+              <tr><td>自然环境</td><td>高处、雷鸣、黑暗</td></tr>
+              <tr><td>动物</td><td>昆虫</td></tr>
+              <tr><td>行为</td><td>注射</td></tr>
+              <tr><td>情景</td><td>飞行、电梯、密闭空间</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="module module-case">
+        <div class="module-head"><span class="module-index">第四栏</span><h3>教材典型案例</h3><span class="module-en">Textbook Case</span></div>
+        <div class="callout callout-example">
+          <div class="callout-icon">📚</div>
+          <div class="callout-body"><strong>教材未提供具体临床案例。</strong>教材仅列举恐惧对象类别与临床表现，并特别指出血液-损伤-注射恐惧可导致心动过缓、易晕厥，而不是心率加快。</div>
+        </div>
+      </div>
+
+      <div class="module module-diff">
+        <div class="module-head"><span class="module-index">第五栏</span><h3>鉴别诊断对对碰</h3><span class="module-en">Differential Diagnosis</span></div>
+        <div class="table-wrap">
+          <table class="comparison-table">
+            <thead><tr><th>维度</th><th>特定恐惧症</th><th>强迫性障碍</th><th>精神分裂症</th></tr></thead>
+            <tbody>
+              <tr><td>核心症状</td><td>恐惧局限于特定物体/场景/活动；患者知道恐惧过分且不合理</td><td>恐惧源于强迫思维，担心自我失去控制给自己或他人带来伤害，或做出违背道德标准的行为</td><td>恐惧可见于精分，但还有幻觉妄想等精神病性症状</td></tr>
+              <tr><td>病程/起病</td><td>童年或成年早期出现；不治疗可持续数十年</td><td>强迫思维/行为慢性病程</td><td>精神病性病程，社会功能显著受损</td></tr>
+              <tr><td>关键鉴别点</td><td>恐惧对象单一，回避由恐惧本身驱动</td><td>害怕和回避是强迫思维的继发表现，常伴仪式化行为</td><td>恐惧症患者对恐惧的不合理性有深刻认识，且无精分核心症状</td></tr>
+              <tr><td>辅助检查/排除要点</td><td>排除物质使用（如致幻剂）、中枢神经系统肿瘤、脑血管疾病等躯体原因</td><td>评估强迫思维与仪式行为</td><td>评估精神病性症状</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="table-note">一句话鉴别：特定恐惧症“只怕一个东西、知道不该怕”；强迫症“怕的是脑子里停不下来的念头”；精分“还有精神病性症状”。</p>
+      </div>
+
+      <div class="module module-treat">
+        <div class="module-head"><span class="module-index">第六栏</span><h3>治疗方案工具箱</h3><span class="module-en">Treatment</span></div>
+        <p><strong>核心治疗：</strong>认知行为疗法中的暴露治疗对特定恐惧症疗效显著。暴露的目的是帮助患者面对他们害怕的情境，并适当地使其心理反应维持一定时间，通过自然的条件作用过程使其害怕的程度降低（习惯化和消退）。</p>
+        <p>暴露不仅能有效打破恐惧刺激与恐惧反应之间的条件反射，还能让恐惧症患者通过现实检验来挑战自己的歪曲认知。</p>
+        <div class="callout callout-warning">
+          <div class="callout-icon">⚠️</div>
+          <div class="callout-body"><strong>教材未提及药物治疗</strong>特定恐惧症治疗节只讲暴露治疗，未列出药物；不要自行补 SSRI 或 BZD。若临床需要，应遵循专科评估，不能写进本章“教材答案”。</div>
+        </div>
+      </div>
+
+      <div class="module module-memory">
+        <div class="module-head"><span class="module-index">第七栏</span><h3>记忆工具箱</h3><span class="module-en">Memory Tools</span></div>
+        <div class="memory-grid">
+          <div class="memory-card">
+            <div class="m-title">方法一：四类对象谱系<span class="m-type">归类</span></div>
+            <div class="m-formula">自然 · 动物 · 行为 · 情景</div>
+            <p>原理：把教材举例分成四类——高处/雷鸣/黑暗、昆虫、注射、飞行/电梯/密闭空间。先记类别，再填例子。</p>
+          </div>
+          <div class="memory-card">
+            <div class="m-title">方法二：血液-损伤-注射“反常识”<span class="m-type">对比</span></div>
+            <div class="m-formula">别的恐惧心率快，它却心动过缓 → 晕厥</div>
+            <p>原理：用“反常识”制造记忆冲突。普通恐惧多心率加快；血液-损伤-注射恐惧可心动过缓、易晕厥，是选择题的高频陷阱。</p>
+          </div>
+          <div class="memory-card">
+            <div class="m-title">方法三：诊断“三排除”<span class="m-type">口诀</span></div>
+            <div class="m-formula">排强迫 · 排精分 · 排躯体/物质</div>
+            <p>原理：特定恐惧症诊断不难，难点在鉴别。强迫症的恐惧源于强迫思维；精分有精神病性症状；致幻剂、中枢神经系统肿瘤、脑血管疾病等也可导致恐惧症状。</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="module module-link">
+        <div class="module-head"><span class="module-index">第八栏</span><h3>知识联动</h3><span class="module-en">Connections</span></div>
+        <ul class="icon-list">
+          <li><strong>与场所恐惧症：</strong>两者都可表现为对情境的恐惧；场所恐惧症怕“难逃离的后果”，特定恐惧症怕“情境本身直接伤害”。</li>
+          <li><strong>与强迫症：</strong>强迫症也可对高处、尖锐物品等产生害怕和回避，但恐惧源于强迫思维，担心失控伤害自己/他人或违背道德。</li>
+          <li><strong>与精神分裂症：</strong>精分可有恐惧，但缺乏“对不合理性的深刻认识”，且存在其他精神病性症状。</li>
+          <li><strong>与躯体/物质因素：</strong>致幻剂、中枢神经系统肿瘤、脑血管疾病等可导致恐惧障碍，常伴其他躯体、神经和精神状态异常。</li>
+          <li><strong>与暴露治疗理论：</strong>习惯化与消退是暴露治疗的核心机制，也是 CBT 治疗恐惧症的共同基础。</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ==================== 11 分离焦虑障碍 ==================== -->
+    <section id="separation" class="section">
+      <div class="section-header"><span class="section-number">11</span><h2>分离焦虑障碍</h2></div>
+      <div class="disease-hero">
+        <div class="en">Separation Anxiety Disorder</div>
+        <h3>分离焦虑障碍</h3>
+        <p>与依恋对象分离时出现与年龄不相符、过度、损害行为能力的害怕或焦虑；12 岁以下儿童中最常见的焦虑障碍。</p>
+        <div class="quick-tags"><span>核心：怕与依恋对象分开</span><span>人群：12 岁以下最常见</span><span>治疗：心理治疗为主</span></div>
+      </div>
+
+      <div class="module">
+        <div class="module-head"><span class="module-index">第一栏</span><h3>疾病画像</h3><span class="module-en">Definition &amp; Epidemiology</span></div>
+        <p><strong>定义：</strong>分离焦虑障碍是指个体离开熟悉的环境或与依恋对象分离时，存在与年龄不相符的、过度的、损害行为能力的害怕或焦虑。患者过分担心亲人的健康或担心自己发生意外，不愿意或拒绝单独外出，极度害怕独处。</p>
+        <p>教材未提供具体患病率数字，仅说明从儿童期到青少年期和成年期患病率呈下降趋势；在 12 岁以下儿童中，分离焦虑障碍是最常见的一种焦虑障碍。儿童最常见的分离焦虑对象包括父母照料者及其他家庭成员；成人最常见的对象包括配偶、伴侣或子女。</p>
+      </div>
+
+      <div class="module module-cause">
+        <div class="module-head"><span class="module-index">第二栏</span><h3>病因探秘</h3><span class="module-en">Etiology</span></div>
+        <p>教材本节未展开分离焦虑障碍的病因与发病机制，未列出遗传、神经生化或心理社会的系统病因。</p>
+        <p>教材强调：由于害怕与依恋对象分开而出现分离焦虑，是正常早期发育的一部分，可能标志着安全依恋关系的发展；但分离焦虑障碍患者的焦虑持续时间和严重程度大大超出同龄人在分离场合的常见水平，并且使其社会功能受到明显影响。</p>
+        <div class="callout callout-warning">
+          <div class="callout-icon">⚠️</div>
+          <div class="callout-body"><strong>正常 vs 障碍</strong>正常分离焦虑是发育的一部分；“障碍”的界限在于与年龄不相符、过度、持续时间长、严重程度超出同龄水平并造成功能损害。</div>
+        </div>
+      </div>
+
+      <div class="module module-symptom">
+        <div class="module-head"><span class="module-index">第三栏</span><h3>临床表现拼图</h3><span class="module-en">Clinical Picture</span></div>
+        <p><strong>场景化描述（非具体病例）：</strong>儿童在预感到要离开家或与主要依恋对象分离时，或分离真实发生时，出现焦虑紧张、自主神经功能失调、运动性不安；可哭闹、腹痛、恶心、呕吐，或表现为社交退缩、冷淡、难以集中注意力于学习或玩耍。成人则可能过分担心亲人健康、拒绝单独外出、极度害怕独处。</p>
+        <div class="card-grid">
+          <div class="card card-symptom"><div class="card-header"><span class="card-icon">🧠</span><div class="card-title">认知</div></div><div class="card-body">持续担心伤害或某些其他不良事件（如被绑架）会导致与依恋对象分离；过分担心亲人的健康或担心自己发生意外。</div></div>
+          <div class="card card-symptom"><div class="card-header"><span class="card-icon">❤️</span><div class="card-title">情感</div></div><div class="card-body">分离时显著且过度的恐惧或焦虑；反复、过度的痛苦（如发脾气、社会退缩）；极度害怕独处。</div></div>
+          <div class="card card-symptom"><div class="card-header"><span class="card-icon">🫀</span><div class="card-title">躯体</div></div><div class="card-body">分离场合出现躯体症状：恶心、呕吐、腹痛、头痛；也可有自主神经功能失调、运动性不安。</div></div>
+          <div class="card card-symptom"><div class="card-header"><span class="card-icon">🚶</span><div class="card-title">行为</div></div><div class="card-body">不愿或拒绝去上学或工作；依恋对象不在附近时不愿或拒绝睡觉；不愿或拒绝单独外出；有的患者面临分离时可诱发急性焦虑发作。</div></div>
+        </div>
+        <div class="table-wrap">
+          <table class="comparison-table">
+            <thead><tr><th>ICD-11 诊断要点</th><th>教材内容</th></tr></thead>
+            <tbody>
+              <tr><td>核心</td><td>个体与其依恋对象（存在深厚情感联结的人）分离时出现显著且过度的恐惧或焦虑。</td></tr>
+              <tr><td>表现（随发育水平）</td><td>持续担心伤害或不良事件导致分离；不愿/拒绝上学或工作；分离相关的反复、过度痛苦；依恋对象不在附近时不愿/拒绝睡觉；分离场合出现躯体症状。</td></tr>
+              <tr><td>病程</td><td>症状非一过性，已持续存在较长时间（如至少数月）。</td></tr>
+              <tr><td>排除</td><td>症状无法用另一种精神与行为障碍更好地解释（如场所恐惧症）。</td></tr>
+              <tr><td>严重度</td><td>持续存在的焦虑症状导致显著痛苦，或导致个人、家庭、社会、教育、职业或其他重要领域功能显著受损。</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="module module-case">
+        <div class="module-head"><span class="module-index">第四栏</span><h3>教材典型案例</h3><span class="module-en">Textbook Case</span></div>
+        <div class="callout callout-example">
+          <div class="callout-icon">📚</div>
+          <div class="callout-body"><strong>教材未提供具体临床案例。</strong>教材举例的儿童表现包括哭闹、腹痛、恶心、呕吐等躯体症状，或社交退缩、冷淡、难以集中注意力于学习或玩耍；有的患者在面临分离时甚至可诱发急性焦虑发作。</div>
+        </div>
+      </div>
+
+      <div class="module module-diff">
+        <div class="module-head"><span class="module-index">第五栏</span><h3>鉴别诊断对对碰</h3><span class="module-en">Differential Diagnosis</span></div>
+        <div class="table-wrap">
+          <table class="comparison-table">
+            <thead><tr><th>维度</th><th>分离焦虑障碍</th><th>场所恐惧症</th><th>逃学/拒学（临床现象）</th></tr></thead>
+            <tbody>
+              <tr><td>核心症状</td><td>与依恋对象分离时出现显著、过度的恐惧/焦虑</td><td>对难以逃离/难获帮助的情境产生过度恐惧</td><td>拒绝上学，可伴焦虑、躯体不适或行为问题</td></tr>
+              <tr><td>恐惧指向</td><td>怕与父母、照料者、配偶、伴侣或子女分开</td><td>怕在场所中发生惊恐样症状/失能/尴尬时无法脱身</td><td>指向学校情境本身、学业压力、人际冲突或分离等多重原因</td></tr>
+              <tr><td>病程/起病</td><td>症状至少数月；12 岁以下儿童最常见</td><td>持续、慢性；青少年晚期/成年早期达峰</td><td>常与学校阶段、应激事件相关</td></tr>
+              <tr><td>关键鉴别点</td><td>拒学/拒工作只是表现之一，背后是分离恐惧</td><td>回避的是多种“难逃离”情境，不是单一学校</td><td>教材未单列“逃学/拒学”诊断；若不以分离恐惧为核心、不符合分离焦虑全部标准，不能诊断为分离焦虑障碍</td></tr>
+              <tr><td>辅助检查/排除要点</td><td>排除场所恐惧症等其他障碍；核对发育水平与功能损害</td><td>排除躯体疾病所致回避；核对情境数量与后果</td><td>需评估学校/家庭/同伴/学业等多维原因</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="table-note">一句话鉴别：分离焦虑的拒学是“怕离开妈妈”，拒学现象则可能是“怕学校里的某件事”；前者必须把分离恐惧放在核心位置。</p>
+        <div class="callout callout-warning">
+          <div class="callout-icon">📌</div>
+          <div class="callout-body"><strong>教材边界</strong>教材没有把“逃学/拒学”列为独立诊断，而是在分离焦虑障碍的诊断要点中写到“不愿或拒绝去上学或工作”。因此对比时应说明：拒学是现象，分离焦虑障碍是诊断；不能把一切拒学都归为分离焦虑。</div>
+        </div>
+      </div>
+
+      <div class="module module-treat">
+        <div class="module-head"><span class="module-index">第六栏</span><h3>治疗方案工具箱</h3><span class="module-en">Treatment</span></div>
+        <p><strong>治疗原则：</strong>以心理治疗为主，主要心理治疗方法有支持性心理治疗、家庭治疗和认知行为疗法（CBT）。</p>
+        <p>教材未提及分离焦虑障碍的药物治疗；不要自行补充药物名称或剂量。若临床需要，应由专科医师综合评估。</p>
+        <div class="callout callout-success">
+          <div class="callout-icon">✅</div>
+          <div class="callout-body"><strong>答题模板</strong>“心理治疗为主：支持性心理治疗 + 家庭治疗 + CBT；教材未提及药物治疗。”</div>
+        </div>
+      </div>
+
+      <div class="module module-memory">
+        <div class="module-head"><span class="module-index">第七栏</span><h3>记忆工具箱</h3><span class="module-en">Memory Tools</span></div>
+        <div class="memory-grid">
+          <div class="memory-card">
+            <div class="m-title">方法一：“三过度”<span class="m-type">口诀</span></div>
+            <div class="m-formula">过度担心 · 过度痛苦 · 过度躯体反应</div>
+            <p>原理：教材定义的核心是“与年龄不相符的、过度的、损害行为能力的”。用“三过度”抓住诊断边界：过度担心失去依恋对象、分离时过度痛苦、分离场合过度躯体症状。</p>
+          </div>
+          <div class="memory-card">
+            <div class="m-title">方法二：四类分离场景<span class="m-type">归类</span></div>
+            <div class="m-formula">上学/工作 · 睡觉 · 独处/外出 · 真实分离</div>
+            <p>原理：把症状挂到四个场景上——拒绝上学/工作、依恋对象不在不愿睡觉、不愿独处/单独外出、分离真实发生时的焦虑与躯体反应。</p>
+          </div>
+          <div class="memory-card">
+            <div class="m-title">方法三：年龄倒挂<span class="m-type">数字</span></div>
+            <div class="m-formula">12 岁以下最常见 → 随年龄下降</div>
+            <p>原理：用“年龄倒挂”记住流行病学特点：儿童期到青少年/成年期患病率下降；12 岁以下儿童中最常见。与 SAD 的“中位 13 岁起病”形成对照。</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="module module-link">
+        <div class="module-head"><span class="module-index">第八栏</span><h3>知识联动</h3><span class="module-en">Connections</span></div>
+        <ul class="icon-list">
+          <li><strong>依恋理论：</strong>分离焦虑是正常早期发育的一部分，可能标志安全依恋关系的发展；障碍的关键是持续时间、严重程度与功能损害超出同龄水平。</li>
+          <li><strong>场所恐惧症：</strong>两者都可表现为不愿外出/独处；分离焦虑怕“与依恋对象分开”，场所恐惧症怕“难逃离/难获帮助”。ICD-11 明确要求排除场所恐惧症。</li>
+          <li><strong>学校与家庭：</strong>拒学/拒绝工作只是症状之一；评估需同时看家庭互动、学校环境与同伴关系，治疗以家庭治疗和支持性心理治疗为重要组成。</li>
+          <li><strong>成人分离焦虑：</strong>成人最常见对象为配偶、伴侣或子女；不要以为只有儿童才会患分离焦虑障碍。</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ==================== 12 选择性缄默症 ==================== -->
+    <section id="mutism" class="section">
+      <div class="section-header"><span class="section-number">12</span><h2>选择性缄默症</h2></div>
+      <div class="disease-hero">
+        <div class="en">Selective Mutism</div>
+        <h3>选择性缄默症</h3>
+        <p>语言理解和表达能力正常，却在某些特定、需要语言表达的情境中持续不能说话；不是“不会说”，而是“在某些场合说不了”。</p>
+        <div class="quick-tags"><span>核心：情境性沉默</span><span>起病：平均 2.7～4.1 岁</span><span>治疗：行为干预/CBT，必要时 SSRI</span></div>
+      </div>
+
+      <div class="module">
+        <div class="module-head"><span class="module-index">第一栏</span><h3>疾病画像</h3><span class="module-en">Definition &amp; Epidemiology</span></div>
+        <p><strong>定义：</strong>选择性缄默症是一种比较少见的儿童焦虑障碍，患者的语言理解能力和表达能力正常，却在某些特定的、需要语言表达的情景中选择性地保持沉默不语。</p>
+        <p>教材未提供患病率数据。平均发病年龄在 2.7～4.1 岁，女孩多于男孩。选择性缄默症不是单一病因引起的，而是遗传、环境、气质类型和神经发育等多种因素相互作用的结果。</p>
+      </div>
+
+      <div class="module module-cause">
+        <div class="module-head"><span class="module-index">第二栏</span><h3>病因探秘</h3><span class="module-en">Etiology</span></div>
+        <p>教材明确指出：选择性缄默症不是单一病因引起的，而是遗传、环境、气质类型和神经发育等多种因素相互作用的结果。</p>
+        <p>教材本节未进一步展开各因素的具体机制，也未列出遗传度、神经递质或影像学证据。</p>
+        <div class="callout callout-info">
+          <div class="callout-icon">📖</div>
+          <div class="callout-body"><strong>记忆抓手</strong>“四因素交互”＝遗传 + 环境 + 气质类型 + 神经发育。答题时不要写成单一的心理原因或单纯“家庭溺爱”。</div>
+        </div>
+      </div>
+
+      <div class="module module-symptom">
+        <div class="module-head"><span class="module-index">第三栏</span><h3>临床表现拼图</h3><span class="module-en">Clinical Picture</span></div>
+        <p><strong>场景化描述（非具体病例）：</strong>孩子在家里能正常说话、交流，但到了学校或某些需要开口的社交情境就持续沉默；老师提问、同伴交流时说不出话。这种沉默不是因为不懂当地语言，也不是因为口语知识不足或身体不舒服，而是特定情境下的选择性讲话障碍。</p>
+        <div class="card-grid">
+          <div class="card card-symptom"><div class="card-header"><span class="card-icon">🧠</span><div class="card-title">认知</div></div><div class="card-body">语言理解与表达能力正常；沉默并非因缺乏所需口语知识或对口语感到不适。</div></div>
+          <div class="card card-symptom"><div class="card-header"><span class="card-icon">❤️</span><div class="card-title">情感</div></div><div class="card-body">在需要说话的特定情境中可能出现焦虑、紧张；教材将其归入儿童焦虑障碍。</div></div>
+          <div class="card card-symptom"><div class="card-header"><span class="card-icon">🫀</span><div class="card-title">躯体</div></div><div class="card-body">教材未描述特征性躯体症状；需排除因身体不舒服而缄默的情况。</div></div>
+          <div class="card card-symptom"><div class="card-header"><span class="card-icon">🚶</span><div class="card-title">行为</div></div><div class="card-body">在特定社交情境（通常在学校）持续不能讲话，而在另一些情境（通常在家里）表现出充分语言能力。</div></div>
+        </div>
+        <div class="table-wrap">
+          <table class="comparison-table">
+            <thead><tr><th>ICD-11 核心特征</th><th>教材内容</th></tr></thead>
+            <tbody>
+              <tr><td>① 选择性讲话</td><td>在特定社交情境下（通常在家里）表现出充分的语言能力，但在另外的场合（通常在学校）则持续不能讲话。</td></tr>
+              <tr><td>② 持续时间</td><td>困扰持续至少 1 个月，不限于入学的第 1 个月。</td></tr>
+              <tr><td>③ 非知识/不适所致</td><td>困扰并非因为缺乏社交情景所需的口语知识，或对所需口语感到不适。</td></tr>
+              <tr><td>④ 排除其他障碍</td><td>不能用其他精神障碍更好地解释（如神经发育障碍中的孤独症谱系障碍或发育性语言障碍）。</td></tr>
+              <tr><td>⑤ 功能损害</td><td>选择性讲话足以妨碍患者的学习成就或社交交流，或与其他生活重要方面的功能严重损害相关。</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="callout callout-danger">
+          <div class="callout-icon">🚫</div>
+          <div class="callout-body"><strong>三种情况不能诊断</strong>①刚入学第 1 个月，因对环境感到陌生而不愿说话，这仅算环境适应问题；②不具备在特定社交情境所需的知识或语言，或因身体不舒服而缄默；③儿童在精神分裂症、身心发展障碍等精神问题发作时，在需要说话的特定社交场合不说话。</div>
+        </div>
+      </div>
+
+      <div class="module module-case">
+        <div class="module-head"><span class="module-index">第四栏</span><h3>教材典型案例</h3><span class="module-en">Textbook Case</span></div>
+        <div class="callout callout-example">
+          <div class="callout-icon">📚</div>
+          <div class="callout-body"><strong>教材未提供具体临床案例。</strong>教材仅描述“在家里能充分说话、在学校持续不能说话”的情境性差异，并列出诊断与排除条件。</div>
+        </div>
+      </div>
+
+      <div class="module module-diff">
+        <div class="module-head"><span class="module-index">第五栏</span><h3>鉴别诊断对对碰</h3><span class="module-en">Differential Diagnosis</span></div>
+        <div class="table-wrap">
+          <table class="comparison-table">
+            <thead><tr><th>维度</th><th>选择性缄默症</th><th>单纯害羞</th><th>入学适应/语言障碍</th></tr></thead>
+            <tbody>
+              <tr><td>核心症状</td><td>特定情境持续不能讲话，其他情境语言能力充分</td><td>害羞是人格特质或情境性拘谨，仍能在需要时讲话</td><td>刚入学首月因陌生不愿说话，或缺乏所需语言知识/身体不适</td></tr>
+              <tr><td>持续时间</td><td>至少 1 个月，且不限于入学第 1 个月</td><td>不固定，随熟悉程度缓解</td><td>入学首月属环境适应；语言障碍为持续性语言能力问题</td></tr>
+              <tr><td>关键鉴别点</td><td>“能说却在某些场合说不了”，且影响学习/社交</td><td>无明显功能损害，不符合全部诊断标准</td><td>沉默有明确环境/语言/身体原因，不能诊断选择性缄默症</td></tr>
+              <tr><td>辅助检查/排除要点</td><td>排除孤独症谱系障碍、发育性语言障碍、精神分裂症等</td><td>无病理基础</td><td>评估语言能力、听力、发育与学校适应</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="table-note">一句话鉴别：害羞是“有点不敢说”，选择性缄默是“在某些场合持续说不了，且已影响学习或社交至少 1 个月”。</p>
+      </div>
+
+      <div class="module module-treat">
+        <div class="module-head"><span class="module-index">第六栏</span><h3>治疗方案工具箱</h3><span class="module-en">Treatment</span></div>
+        <p><strong>原则：</strong>早期评估和干预对选择性缄默症非常重要。</p>
+        <div class="table-wrap">
+          <table class="comparison-table">
+            <thead><tr><th>层级</th><th>措施</th><th>教材要点</th></tr></thead>
+            <tbody>
+              <tr><td>心理/行为干预首选</td><td>选择性缄默症综合行为干预方法、CBT、游戏治疗</td><td>目前比较成熟的治疗方式主要是这三类。</td></tr>
+              <tr><td>药物（心理干预无效时）</td><td>SSRI 类药物</td><td>对于心理干预无效的患者，可选择药物治疗，比较常用的是 SSRI 类药物；教材未给具体剂量，剂量个体化，遵医嘱。</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="callout callout-warning">
+          <div class="callout-icon">⚠️</div>
+          <div class="callout-body"><strong>顺序不能反</strong>先心理/行为干预，心理干预无效才考虑药物；不要把 SSRI 写成一线首选。教材未提供具体疗程与剂量。</div>
+        </div>
+      </div>
+
+      <div class="module module-memory">
+        <div class="module-head"><span class="module-index">第七栏</span><h3>记忆工具箱</h3><span class="module-en">Memory Tools</span></div>
+        <div class="memory-grid">
+          <div class="memory-card">
+            <div class="m-title">方法一：场景对照<span class="m-type">对比</span></div>
+            <div class="m-formula">家里能说，学校不说</div>
+            <p>原理：用“家 vs 校”的强烈对照记住“选择性”三个字。核心不是语言能力缺失，而是情境选择性。</p>
+          </div>
+          <div class="memory-card">
+            <div class="m-title">方法二：时间门槛<span class="m-type">数字</span></div>
+            <div class="m-formula">≥1 个月，且不是入学第 1 个月</div>
+            <p>原理：两个时间条件同时记：困扰持续至少 1 个月；不限于入学第 1 个月。入学首月的沉默只算环境适应。</p>
+          </div>
+          <div class="memory-card">
+            <div class="m-title">方法三：三排除<span class="m-type">口诀</span></div>
+            <div class="m-formula">排环境适应 · 排语言/身体原因 · 排精分/发育障碍</div>
+            <p>原理：与教材列出的三种“不能诊断”情况一一对应，避免把正常适应、语言障碍或精神病性缄默误诊为选择性缄默症。</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="module module-link">
+        <div class="module-head"><span class="module-index">第八栏</span><h3>知识联动</h3><span class="module-en">Connections</span></div>
+        <ul class="icon-list">
+          <li><strong>与儿童焦虑障碍：</strong>教材把选择性缄默症归入儿童焦虑障碍；治疗以行为干预/CBT/游戏治疗为主，必要时 SSRI。</li>
+          <li><strong>与神经发育障碍：</strong>需排除孤独症谱系障碍、发育性语言障碍；这些障碍的语言/社交缺陷更广泛，不能简单归为“选择性”。</li>
+          <li><strong>与学校适应：</strong>刚入学第 1 个月的沉默是环境适应问题，不是选择性缄默症；评估要问“在其他情境是否能正常说话”。</li>
+          <li><strong>与精神分裂症/身心发展障碍：</strong>这些疾病发作时也可在需要说话的场合不说话，属于排除条件。</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ==================== 13 五组核心鉴别 ==================== -->
+    <section id="compare" class="section">
+      <div class="section-header"><span class="section-number">13</span><h2>五组核心鉴别对照</h2></div>
+      <p class="lead">五组对比表统一按“核心症状—指向/对象—病程/起病—关键鉴别点—排除/辅助”展开。每组末尾给一句话鉴别，考场先抓这一句。</p>
+
+      <h3 class="subsection" style="font-size:1.18rem;font-weight:700;margin:26px 0 12px">一、惊恐发作 vs 惊恐障碍</h3>
+      <div class="table-wrap">
+        <table class="comparison-table">
+          <thead><tr><th>维度</th><th>惊恐发作（panic attack）</th><th>惊恐障碍（PD）</th></tr></thead>
+          <tbody>
+            <tr><td>核心症状</td><td>数个典型症状快速同时出现，强烈恐惧或忧虑；心悸、出汗、颤抖、呼吸急促、窒息感、胸痛、头晕、感觉异常、人格解体/现实解体、害怕失控/发疯、濒死恐惧</td><td>反复、不可预期的惊恐发作，加上发作后持续担忧/回避，并排除躯体、物质及其他精神障碍</td></tr>
+            <tr><td>指向/对象</td><td>指向发作本身；可发生于任何情境，不限于特定可预料情境</td><td>指向“再次发作”及其负面意义；至少部分发作是非预期的</td></tr>
+            <tr><td>病程/起病</td><td>突如其来，数分钟达峰，持续半小时至 2 小时，可自行缓解；单次通常仅数分钟</td><td>发作反复出现，病程可慢性波动；频率个体差异大（1 天多次或 1 个月几次）</td></tr>
+            <tr><td>关键鉴别点</td><td>是一种症状/发作表现，可见于多种精神障碍；存在发作本身不足以诊断 PD</td><td>需满足 ICD-11 基本特征：非预期发作 + 发作后担忧/回避 + 排除 + 功能损害</td></tr>
+            <tr><td>辅助检查/排除要点</td><td>需看是否局限于社交/特定情境、是否继发于其他障碍</td><td>排除躯体疾病（如嗜铬细胞瘤）、物质/药物直接效应或戒断；检查正常不等于没有 PD</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="table-note">一句话鉴别：惊恐发作是“症状”，惊恐障碍是“障碍”；有发作不等于有 PD。</p>
+
+      <h3 class="subsection" style="font-size:1.18rem;font-weight:700;margin:26px 0 12px">二、场所恐惧症 vs 特定恐惧症（情境型）</h3>
+      <div class="table-wrap">
+        <table class="comparison-table">
+          <thead><tr><th>维度</th><th>场所恐惧症</th><th>特定恐惧症（情境型）</th></tr></thead>
+          <tbody>
+            <tr><td>核心症状</td><td>对多种难以逃离/难获帮助的情境产生明显过度恐惧</td><td>对某一特定情境产生明显过度恐惧</td></tr>
+            <tr><td>指向/对象</td><td>怕惊恐样症状、失能或令人尴尬的躯体症状（如晕倒、失禁）发生时无法逃离/得不到帮助</td><td>怕情境本身的直接伤害（如怕飞机失事、怕电梯坠落）</td></tr>
+            <tr><td>病程/起病</td><td>持续、慢性；青少年晚期/成年早期达峰</td><td>童年或成年早期；不治疗可持续数十年</td></tr>
+            <tr><td>关键鉴别点</td><td>多种情境 + 怕“后果”；症状持续至少数月、功能受损</td><td>通常仅一种情境 + 怕“本体”；若仅局限于一种广场情境，诊断特定恐惧症</td></tr>
+            <tr><td>辅助检查/排除要点</td><td>排除躯体疾病所致回避；不能用其他精神障碍更好解释</td><td>排除物质使用、中枢神经系统肿瘤、脑血管疾病等躯体原因</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="table-note">一句话鉴别：场所恐惧症“怕多处、怕后果”，特定恐惧症“怕一处、怕本体”。</p>
+
+      <h3 class="subsection" style="font-size:1.18rem;font-weight:700;margin:26px 0 12px">三、社交焦虑障碍 vs 正常害羞 vs 回避型人格障碍</h3>
+      <div class="table-wrap">
+        <table class="comparison-table">
+          <thead><tr><th>维度</th><th>社交焦虑障碍</th><th>正常害羞</th><th>回避型人格障碍</th></tr></thead>
+          <tbody>
+            <tr><td>核心症状</td><td>一个或多个社交情境中持续、显著、过度的恐惧/焦虑；担心被负面评价</td><td>害羞是常见人格特质，本身不是病理性</td><td>回避模式更宽泛，几乎没有人际亲密关系</td></tr>
+            <tr><td>指向/对象</td><td>指向“他人的评判”，不是社交情境本身</td><td>指向陌生/被关注时的拘谨，无持续评价恐惧</td><td>指向广泛的人际接触与亲密关系</td></tr>
+            <tr><td>病程/起病</td><td>中位起病 13 岁，85% 于 8～15 岁；持续数月，缓慢持久</td><td>长期人格特质，不一定起病</td><td>长期、广泛的人格模式</td></tr>
+            <tr><td>关键鉴别点</td><td>显著功能损害 + 符合全部诊断标准</td><td>功能损害不显著；只有当害羞显著影响社会职业功能并符合全部标准时才诊断 SAD</td><td>SAD 常与之共病；后者回避更宽泛、亲密关系几乎缺失</td></tr>
+            <tr><td>辅助检查/排除要点</td><td>排除精神分裂症等精神病性症状；排除物质/药物所致</td><td>无病理基础，不符合全部标准</td><td>评估人格模式与亲密关系史</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="table-note">一句话鉴别：害羞是“性格”，SAD 是“病到功能受损”，回避型人格是“连亲密关系都整体回避”。</p>
+
+      <h3 class="subsection" style="font-size:1.18rem;font-weight:700;margin:26px 0 12px">四、分离焦虑障碍 vs 逃学/拒学（临床现象）</h3>
+      <div class="table-wrap">
+        <table class="comparison-table">
+          <thead><tr><th>维度</th><th>分离焦虑障碍</th><th>逃学/拒学（临床现象）</th></tr></thead>
+          <tbody>
+            <tr><td>核心症状</td><td>与依恋对象分离时显著、过度的恐惧/焦虑</td><td>拒绝上学，可伴焦虑、躯体不适、行为问题或学业/人际困难</td></tr>
+            <tr><td>指向/对象</td><td>怕与父母、照料者、配偶、伴侣或子女分开</td><td>指向学校情境、学业压力、同伴关系、师生冲突或分离等多重原因</td></tr>
+            <tr><td>病程/起病</td><td>症状至少数月；12 岁以下儿童最常见，随年龄下降</td><td>常与学校阶段或应激事件相关，持续时间不定</td></tr>
+            <tr><td>关键鉴别点</td><td>拒学/拒工作只是表现之一，背后是分离恐惧；还可有不愿睡觉、不愿独处、分离时躯体症状</td><td>教材未单列“逃学/拒学”诊断；若不以分离恐惧为核心、不符合分离焦虑全部标准，不能诊断分离焦虑障碍</td></tr>
+            <tr><td>辅助检查/排除要点</td><td>排除场所恐惧症等其他障碍；核对发育水平与功能损害</td><td>评估学校、家庭、同伴、学业等多维原因</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="table-note">一句话鉴别：分离焦虑的拒学是“怕离开依恋对象”，拒学现象则可能是“怕学校里的某件事”；不要把现象直接当诊断。</p>
+
+      <h3 class="subsection" style="font-size:1.18rem;font-weight:700;margin:26px 0 12px">五、选择性缄默症 vs 单纯害羞</h3>
+      <div class="table-wrap">
+        <table class="comparison-table">
+          <thead><tr><th>维度</th><th>选择性缄默症</th><th>单纯害羞</th></tr></thead>
+          <tbody>
+            <tr><td>核心症状</td><td>特定情境持续不能讲话，其他情境语言能力充分</td><td>害羞是人格特质或情境性拘谨，仍能在需要时讲话</td></tr>
+            <tr><td>指向/对象</td><td>指向需要语言表达的特定情境（通常学校）</td><td>指向陌生/被关注时的拘谨，熟悉后可缓解</td></tr>
+            <tr><td>病程/起病</td><td>困扰持续至少 1 个月，且不限于入学第 1 个月</td><td>不固定，随环境熟悉而改善</td></tr>
+            <tr><td>关键鉴别点</td><td>“能说却在某些场合说不了”，且影响学习/社交</td><td>无明显功能损害，不符合全部诊断标准</td></tr>
+            <tr><td>辅助检查/排除要点</td><td>排除孤独症谱系障碍、发育性语言障碍、精神分裂症、入学适应、语言/身体原因</td><td>无病理基础</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="table-note">一句话鉴别：害羞是“有点不敢说”，选择性缄默是“在某些场合持续说不了，且已影响学习/社交至少 1 个月”。</p>
+
+      <div class="callout callout-memory">
+        <div class="callout-icon">🧠</div>
+        <div class="callout-body"><strong>把五组压成一句</strong>“发作不是障碍；场所怕后果、特定怕本体；害羞不是病、回避型人格更广泛；拒学看动机、缄默看情境。”</div>
+      </div>
+    </section>
+
+    <!-- ==================== 14 核心要点 ==================== -->
+    <section id="summary" class="section">
+      <div class="section-header"><span class="section-number">14</span><h2>全章核心要点速览</h2></div>
+      <ol class="numbered-list">
+        <li><strong>病理性焦虑</strong>是持续、无明显诱因或无现实依据的紧张不安，伴自主神经功能紊乱、运动性不安、主观痛苦或功能损害；正常焦虑则有现实基础且适度。</li>
+        <li>病理性焦虑的六个特点：强度与现实不相称；导致精神痛苦和自我效能下降（非适应性）；相对持久、不随客观问题解决而消失；伴自主神经症状；预感到灾难/不幸；对威胁缺乏应对能力。</li>
+        <li>焦虑或恐惧性相关障碍是我国患病率最高的精神障碍：终生患病率 7.6%，时点患病率 5%（CMHS 结果）。</li>
+        <li>ICD-11 分类包括 GAD、PD、SAD（社交恐惧症）、场所恐惧症、分离焦虑障碍、选择性缄默症、特定恐惧症，以及其他/未特指的焦虑和恐惧相关障碍。</li>
+        <li>六条共同特征：心理社会因素+性格基础；过度紧张/恐惧/担忧/回避+自主神经紊乱；无器质性基础；自知力保持、主动求治；现实检验能力完好；社会功能相对完好。</li>
+        <li>本章定位三轴：焦虑/恐惧指向、持续时间、功能损害；先排除躯体疾病与物质/药物，再处理共病与就重原则。</li>
+        <li><strong>GAD</strong>的核心是多域、持续、难以自控的担忧，呈慢性波动；典型“三多”：担忧多、症状多、共病多。</li>
+        <li>GAD 五类表现：精神性焦虑（游离性/预期焦虑）、躯体性焦虑（运动性不安+肌肉紧张）、警觉性增高、自主神经功能紊乱、其他/共病。</li>
+        <li>GAD 流行病学：发达国家终生患病率约 4.9%，发展中国家约 1.4%，我国约 0.3%；女性约为男性 2 倍，35 岁以上更常见；遗传度 15%～20%。</li>
+        <li>GAD 治疗：SSRIs/SNRIs 一线（无成瘾性、不良反应较轻），CBT 一线（有效率 47%～75%）；早期可短期合并 BZD；5-HT1A 部分激动剂可合并或用于轻症；全病程为急性期—巩固期（至少 2～6 个月）—维持期（至少 12 个月）。</li>
+        <li><strong>PD</strong> 以反复、不可预期的惊恐发作为核心；发作突如其来、数分钟达峰、持续半小时至 2 小时、可自行缓解，并伴强烈心血管/呼吸症状、濒死感或失控感。</li>
+        <li>PD 的诊断不能只看“有没有惊恐发作”，还要看“至少部分非预期、发作后持续担忧/回避、排除躯体/物质/其他精神障碍、功能严重损害”。</li>
+        <li>PD 治疗：首选 SSRI/SNRI（如艾司西酞普兰、舍曲林、帕罗西汀、文拉法辛）；早期合并 BZD（奥沙西泮、阿普唑仑）快速控制，一般 2～4 周逐渐停用；CBT 打破灾难化认知与回避；联合治疗优于单一治疗。</li>
+        <li><strong>场所恐惧症</strong>的核心是怕“在难以逃离/难获帮助的情境中出现惊恐样症状、失能或尴尬情况”；涉及多种情境，持续慢性，治疗以暴露治疗为核心，可联合药物。</li>
+        <li><strong>SAD</strong> 的核心是怕被他人审视和负面评价，中位起病 13 岁，85% 于 8～15 岁；害羞脸红是最突出的自主神经表现；CBT 与 SSRIs 为一线，SNRIs 也有效，BZD 不宜长期。</li>
+        <li><strong>特定恐惧症</strong>的恐惧局限于单一客体/情境，患者知道过分且不合理；血液-损伤-注射恐惧可心动过缓、易晕厥；暴露治疗疗效显著。</li>
+        <li><strong>分离焦虑障碍</strong>是与发展年龄不相符、过度、损害行为能力的分离恐惧；12 岁以下儿童最常见，随年龄下降；治疗以支持性心理治疗、家庭治疗和 CBT 为主。</li>
+        <li><strong>选择性缄默症</strong>是少见的儿童焦虑障碍：语言能力正常，却在特定情境持续不能说话；困扰至少 1 个月且不限于入学第 1 个月；治疗以综合行为干预、CBT、游戏治疗为主，心理干预无效可考虑 SSRI。</li>
+        <li><strong>治疗总原则</strong>：生物-心理-社会综合干预；药物与心理治疗并重；首选 SSRI/SNRI + CBT；BZD 只作短期辅助，警惕依赖与戒断；所有剂量“个体化，遵医嘱”。</li>
+      </ol>
+    </section>
+
+    <!-- ==================== 15 易混易错 ==================== -->
+    <section id="pitfalls" class="section">
+      <div class="section-header"><span class="section-number">15</span><h2>易混易错点警示</h2></div>
+      <div class="exam-alert">
+        <h3>⚠️ 考前必须避开的 12 个坑</h3>
+        <ul style="list-style:none">
+          <li><strong>把惊恐发作直接当成惊恐障碍。</strong>惊恐发作是症状，可见于多种障碍；PD 还要求非预期发作、持续担忧/回避、排除标准与功能损害。</li>
+          <li><strong>把 GAD 的“担忧”当成普通担心。</strong>GAD 要求多域、持续至少数月、难以自控，并造成显著痛苦或功能损害。</li>
+          <li><strong>场所恐惧症 vs 特定恐惧症只看“怕的地方”。</strong>关键看“情境数量 + 害怕的后果”：多处、怕逃不掉 → 场所；一处、怕情境本身 → 特定。</li>
+          <li><strong>把社交焦虑等同于害羞。</strong>害羞是人格特质；只有显著影响社会职业功能并符合全部诊断标准，才诊断 SAD。</li>
+          <li><strong>把 SAD 与回避型人格障碍混为一谈。</strong>回避型人格的回避模式更宽泛，几乎无亲密关系；两者常共病，但不等同。</li>
+          <li><strong>把一切拒学都归为分离焦虑。</strong>教材未单列“逃学/拒学”诊断；分离焦虑的拒学必须以“怕与依恋对象分开”为核心，并符合全部标准。</li>
+          <li><strong>把选择性缄默当成单纯害羞或语言障碍。</strong>核心是“能说却在某些情境持续说不了”，至少 1 个月、非入学首月，并影响学习/社交；需排除孤独症谱系障碍、发育性语言障碍等。</li>
+          <li><strong>忘记血液-损伤-注射恐惧的“反常”表现。</strong>它可导致心动过缓、易晕厥，而不是心率加快，是典型反选题。</li>
+          <li><strong>把 BZD 当成长期维持药。</strong>SSRIs/SNRIs 无成瘾性；BZD 只作早期短期辅助，PD 教材明确 2～4 周逐渐停用，长期使用有依赖/戒断风险。</li>
+          <li><strong>忽略抑郁共病与自杀风险。</strong>GAD 约 2/3 合并抑郁，合并抑郁者自杀风险明显增高；两者均符合时考虑共病并优先考虑抑郁障碍。</li>
+          <li><strong>不做躯体疾病与物质/药物排除。</strong>甲亢、低血糖、嗜铬细胞瘤、SLE、心血管疾病、癫痫、TIA，以及哌甲酯、甲状腺素、类固醇、茶碱、酒精、BZD 戒断都可模拟焦虑。</li>
+          <li><strong>把“自知力完好、现实检验完好”套到精神分裂症。</strong>这是本章六条共同特征之一；精分通常有幻觉妄想且社会功能显著受损，不能混用。</li>
+        </ul>
+      </div>
+      <div class="callout callout-warning">
+        <div class="callout-icon">📌</div>
+        <div class="callout-body"><strong>诊断体系提醒</strong>本章诊断要点按教材的 ICD-11 取向书写；答题时以教材列出的 ICD-11 要点为准，不要自行混入其他分类体系的诊断条目。</div>
+      </div>
+    </section>
+
+    <!-- ==================== 16 章节自测 ==================== -->
+    <section id="quiz" class="section">
+      <div class="section-header"><span class="section-number">16</span><h2>章节自测</h2></div>
+      <p class="lead">共 15 题：单选 4、多选 3、判断 3、名词解释 2、简答 2、案例 1。先独立作答，再展开答案与解析。</p>
+      <div class="quiz-block">
+
+        <div class="quiz-item">
+          <div class="quiz-stem"><span class="q-type">单选</span><span>“不能明确意识到担心的对象或内容，只是一种提心吊胆、惶恐不安的强烈内心体验”，教材称其为：</span><span class="difficulty">⭐⭐</span></div>
+          <ul class="quiz-options">
+            <li data-letter="A">预期焦虑</li>
+            <li data-letter="B" class="correct">游离性焦虑（free-floating anxiety）</li>
+            <li data-letter="C">惊恐发作</li>
+            <li data-letter="D">社交焦虑</li>
+          </ul>
+          <details class="qa"><summary><span class="qa-num">答</span>答案与解析</summary>
+            <div class="qa-body"><span class="answer-key">答案 B</span>教材在 GAD 的精神性焦虑中明确区分：游离性焦虑是“不能明确意识到担心对象”的提心吊胆体验；预期焦虑则是担心现实中可能发生的事，但程度与现实不相称。惊恐发作是急性发作，社交焦虑指向他人评价，均不符合题干。</div>
+          </details>
+        </div>
+
+        <div class="quiz-item">
+          <div class="quiz-stem"><span class="q-type">单选</span><span>惊恐发作的时间特点，教材描述为：</span><span class="difficulty">⭐⭐</span></div>
+          <ul class="quiz-options">
+            <li data-letter="A">持续数天，逐渐加重</li>
+            <li data-letter="B" class="correct">突如其来，数分钟内达到高峰，持续半小时至 2 小时，可自行缓解</li>
+            <li data-letter="C">持续数秒，瞬间缓解</li>
+            <li data-letter="D">仅在夜间睡眠中发生</li>
+          </ul>
+          <details class="qa"><summary><span class="qa-num">答</span>答案与解析</summary>
+            <div class="qa-body"><span class="answer-key">答案 B</span>教材原文：惊恐发作“发作突如其来，在数分钟内达到高峰，持续半小时至 2 小时，可自行缓解”，且“不限于特定的可预料的情境中，可在任何情境中”。A、C、D 均无教材依据。</div>
+          </details>
+        </div>
+
+        <div class="quiz-item">
+          <div class="quiz-stem"><span class="q-type">单选</span><span>社交焦虑障碍最突出的自主神经表现是：</span><span class="difficulty">⭐</span></div>
+          <ul class="quiz-options">
+            <li data-letter="A">心动过缓</li>
+            <li data-letter="B">晕厥</li>
+            <li data-letter="C" class="correct">害羞脸红</li>
+            <li data-letter="D">大小便失禁</li>
+          </ul>
+          <details class="qa"><summary><span class="qa-num">答</span>答案与解析</summary>
+            <div class="qa-body"><span class="answer-key">答案 C</span>教材明确：“害羞脸红是社交恐惧最突出的自主神经表现”。心动过缓/晕厥是血液-损伤-注射恐惧的特点；大小便失禁是场所恐惧症患者害怕的尴尬后果之一，不是 SAD 的突出表现。</div>
+          </details>
+        </div>
+
+        <div class="quiz-item">
+          <div class="quiz-stem"><span class="q-type">单选</span><span>ICD-11 对选择性缄默症的病程要求是：</span><span class="difficulty">⭐⭐</span></div>
+          <ul class="quiz-options">
+            <li data-letter="A" class="correct">困扰持续至少 1 个月，且不限于入学的第 1 个月</li>
+            <li data-letter="B">至少 6 个月</li>
+            <li data-letter="C">至少 1 年</li>
+            <li data-letter="D">至少 2 周</li>
+          </ul>
+          <details class="qa"><summary><span class="qa-num">答</span>答案与解析</summary>
+            <div class="qa-body"><span class="answer-key">答案 A</span>教材核心特征第②条：困扰持续至少 1 个月，不限于入学的第 1 个月。入学第 1 个月因环境陌生不愿说话仅算环境适应问题，不能诊断选择性缄默症。</div>
+          </details>
+        </div>
+
+        <div class="quiz-item">
+          <div class="quiz-stem"><span class="q-type">多选</span><span>下列属于病理性焦虑特点的有：</span><span class="difficulty">⭐⭐</span></div>
+          <ul class="quiz-options">
+            <li data-letter="A" class="correct">焦虑情绪的强度并无现实基础或与现实的威胁明显不相称</li>
+            <li data-letter="B" class="correct">焦虑相对持久，并不随客观问题的解决而消失</li>
+            <li data-letter="C" class="correct">常伴随自主神经系统功能紊乱的躯体症状</li>
+            <li data-letter="D">一定存在可证实的脑器质性病变</li>
+            <li data-letter="E" class="correct">对预感到的威胁感到异常痛苦和害怕，并缺乏应对能力</li>
+          </ul>
+          <details class="qa"><summary><span class="qa-num">答</span>答案与解析</summary>
+            <div class="qa-body"><span class="answer-key">答案 ABCE</span>A、B、C、E 均对应教材病理性焦虑的六个特点。D 错：教材强调本章症状“没有任何可以证实的脑或器质性病变的基础”，器质性病变恰恰是要排除的对象。</div>
+          </details>
+        </div>
+
+        <div class="quiz-item">
+          <div class="quiz-stem"><span class="q-type">多选</span><span>关于广泛性焦虑障碍治疗，下列正确的有：</span><span class="difficulty">⭐⭐⭐</span></div>
+          <ul class="quiz-options">
+            <li data-letter="A" class="correct">SSRIs 和 SNRIs 无成瘾性，整体不良反应较轻，常被推荐为一线药物</li>
+            <li data-letter="B" class="correct">CBT 在多个国际指南中推荐为一线治疗</li>
+            <li data-letter="C" class="correct">为快速控制焦虑，早期可合并使用苯二氮䓬类</li>
+            <li data-letter="D">苯二氮䓬类应长期维持，以预防复发</li>
+            <li data-letter="E" class="correct">5-HT1A 受体部分激动剂常为合并用药，对轻症患者也可单独使用</li>
+          </ul>
+          <details class="qa"><summary><span class="qa-num">答</span>答案与解析</summary>
+            <div class="qa-body"><span class="answer-key">答案 ABCE</span>A、B、C、E 均可在教材 GAD 治疗节找到依据。D 错：BZD 只作早期短期辅助；教材在 PD 治疗中明确一般 2～4 周逐渐停用，SAD 章节也指出 BZD 不宜长期服用，长期使用有依赖/戒断风险。</div>
+          </details>
+        </div>
+
+        <div class="quiz-item">
+          <div class="quiz-stem"><span class="q-type">多选</span><span>ICD-11 场所恐惧症的核心特征包括：</span><span class="difficulty">⭐⭐⭐</span></div>
+          <ul class="quiz-options">
+            <li data-letter="A" class="correct">置身于多种难以逃离或难以获得帮助的情境时，产生或预期产生明显且过度的恐惧或焦虑</li>
+            <li data-letter="B" class="correct">害怕这些情境导致惊恐发作、惊恐症状或其他失能或令人尴尬的躯体症状</li>
+            <li data-letter="C" class="correct">主动回避以上情境，只有特定情况下（如有人陪伴）才会进入</li>
+            <li data-letter="D" class="correct">症状持续一段时间（如至少数月），并导致显著痛苦或功能损害</li>
+            <li data-letter="E">若害怕仅局限于广场恐怖情境中的一种，应诊断场所恐惧症</li>
+          </ul>
+          <details class="qa"><summary><span class="qa-num">答</span>答案与解析</summary>
+            <div class="qa-body"><span class="answer-key">答案 ABCD</span>A、B、C、D 对应教材列出的 ICD-11 核心特征。E 错：如果害怕、焦虑或回避仅局限于广场恐怖情境中的一种，应诊断特定恐惧症（情境型），不是场所恐惧症。</div>
+          </details>
+        </div>
+
+        <div class="quiz-item">
+          <div class="quiz-stem"><span class="q-type">判断</span><span>只要出现惊恐发作，就可以诊断惊恐障碍。</span><span class="difficulty">⭐⭐</span></div>
+          <ul class="quiz-options">
+            <li data-letter="A">正确</li>
+            <li data-letter="B" class="correct">错误</li>
+          </ul>
+          <details class="qa"><summary><span class="qa-num">答</span>答案与解析</summary>
+            <div class="qa-body"><span class="answer-key">答案 错误</span>教材明确：惊恐发作可发生于其他焦虑及恐惧相关障碍，也可见于其他精神障碍；“存在惊恐发作本身并不足以做出惊恐障碍的诊断”。PD 还需非预期发作、发作后持续担忧/回避、排除标准与功能损害。</div>
+          </details>
+        </div>
+
+        <div class="quiz-item">
+          <div class="quiz-stem"><span class="q-type">判断</span><span>社交焦虑障碍与正常害羞的界限，在于害羞是否显著损害社会职业功能并符合社交焦虑障碍的全部诊断标准。</span><span class="difficulty">⭐⭐</span></div>
+          <ul class="quiz-options">
+            <li data-letter="A" class="correct">正确</li>
+            <li data-letter="B">错误</li>
+          </ul>
+          <details class="qa"><summary><span class="qa-num">答</span>答案与解析</summary>
+            <div class="qa-body"><span class="answer-key">答案 正确</span>教材原文：害羞是常见人格特质，本身并不是病理性的；但当害羞在社会职业和其他重要领域功能上存在显著负面影响时，如果症状符合社交焦虑障碍的全部诊断标准，就应诊断为社交焦虑障碍。</div>
+          </details>
+        </div>
+
+        <div class="quiz-item">
+          <div class="quiz-stem"><span class="q-type">判断</span><span>选择性缄默症患者的语言理解和表达能力通常存在明显异常。</span><span class="difficulty">⭐</span></div>
+          <ul class="quiz-options">
+            <li data-letter="A">正确</li>
+            <li data-letter="B" class="correct">错误</li>
+          </ul>
+          <details class="qa"><summary><span class="qa-num">答</span>答案与解析</summary>
+            <div class="qa-body"><span class="answer-key">答案 错误</span>教材定义明确：选择性缄默症患者的语言理解能力和表达能力正常，只是在某些特定的、需要语言表达的情景中选择性地保持沉默。若确实存在语言理解/表达异常，应考虑发育性语言障碍等，而不是选择性缄默症。</div>
+          </details>
+        </div>
+
+        <div class="quiz-item">
+          <div class="quiz-stem"><span class="q-type">名词解释</span><span>病理性焦虑</span><span class="difficulty">⭐⭐</span></div>
+          <details class="qa"><summary><span class="qa-num">答</span>答案与解析</summary>
+            <div class="qa-body"><span class="answer-key">参考答案</span>病理性焦虑是指持续地、无明显诱因地感到紧张不安，或无现实依据地预感到灾难、威胁或大祸临头，伴有明显的自主神经功能紊乱及运动性不安，常伴随主观痛苦感或社会功能受损。其特点包括：强度与现实不相称；导致精神痛苦和自我效能下降（非适应性）；相对持久、不随客观问题解决而消失；伴自主神经症状；预感到灾难/不幸；对威胁异常痛苦且缺乏应对能力。</div>
+          </details>
+        </div>
+
+        <div class="quiz-item">
+          <div class="quiz-stem"><span class="q-type">名词解释</span><span>游离性焦虑（free-floating anxiety）</span><span class="difficulty">⭐⭐</span></div>
+          <details class="qa"><summary><span class="qa-num">答</span>答案与解析</summary>
+            <div class="qa-body"><span class="answer-key">参考答案</span>游离性焦虑是 GAD 精神性焦虑的一种表现：患者不能明确意识到担心的对象或内容，而只是一种提心吊胆、惶恐不安的强烈内心体验。它与“预期焦虑”不同，后者担心的是现实中可能发生的事，但焦虑程度与现实不相称。</div>
+          </details>
+        </div>
+
+        <div class="quiz-item">
+          <div class="quiz-stem"><span class="q-type">简答</span><span>简述焦虑或恐惧性相关障碍的六条共同特征。</span><span class="difficulty">⭐⭐⭐</span></div>
+          <details class="qa"><summary><span class="qa-num">答</span>答案与解析</summary>
+            <div class="qa-body"><span class="answer-key">参考答案</span>①起病常与心理-社会因素有关，并以性格特征为发病基础；患者发病前常有生活事件或应激，人格上具有易感性（胆小、敏感、易紧张、追求完美、严谨、刻板等）。②以过度的紧张、恐惧、担忧、回避及自主神经系统功能紊乱为主要临床表现。③症状没有任何可以证实的脑或器质性病变的基础。④患者对疾病保持一定自知力，自感痛苦，主动求治。⑤社会现实检验能力未受损害，能正确感知自我与周围环境，保持自我与外在环境的协调统一。⑥社会功能相对完好。</div>
+          </details>
+        </div>
+
+        <div class="quiz-item">
+          <div class="quiz-stem"><span class="q-type">简答</span><span>简述广泛性焦虑障碍的全病程治疗分期及时间要求。</span><span class="difficulty">⭐⭐</span></div>
+          <details class="qa"><summary><span class="qa-num">答</span>答案与解析</summary>
+            <div class="qa-body"><span class="answer-key">参考答案</span>GAD 遵循个体化综合干预、全病程治疗。全病程包括：①急性期，主要控制焦虑症状，尽量达到临床治愈；②巩固期，一般至少 2～6 个月，预防复燃；③维持期，一般至少 12 个月，防止复发。维持治疗结束后病情稳定可缓慢减药直至终止，但应密切监测复发早期征象，一旦发现迅速恢复原治疗。</div>
+          </details>
+        </div>
+
+        <div class="quiz-item">
+          <div class="quiz-stem"><span class="q-type">案例</span><span>（教材案例改编）中年女性，母亲去世后 8 个月，持续担心孩子上学途中安全、丈夫出差遇交通事故、家人健康及自己睡不着，坐立不安、来回踱步，心慌、胸闷、出汗、四肢发麻，入睡困难，注意力下降。明知担心过度却无法控制，主动求治。既往身体健康，无脑外伤及食物、药物过敏史。请回答：最可能诊断、需要鉴别的主要方向、治疗原则。</span><span class="difficulty">⭐⭐⭐</span></div>
+          <details class="qa"><summary><span class="qa-num">析</span>答案与诊断思路</summary>
+            <div class="qa-body"><span class="answer-key">参考答案</span>①最可能诊断：广泛性焦虑障碍（GAD）。依据：多域、持续（8 个月）且难以自控的担忧，伴运动性不安、肌肉紧张、自主神经症状、入睡困难与注意力下降，自知力存在并主动求治。②鉴别：抑郁障碍（GAD 约 2/3 共病抑郁，需评估心境低落/兴趣减退、严重度与自杀风险；两者均符合时可共病并优先抑郁）；惊恐障碍（本例为持续担忧，不是反复不可预期的惊恐发作）；躯体疾病（甲亢、低血糖、嗜铬细胞瘤、SLE 等，需相应检查）；物质/药物所致焦虑。③治疗：SSRIs/SNRIs 一线 + CBT 一线；早期可短期合并 BZD 快速控制；5-HT1A 部分激动剂可合并或用于轻症；全病程急性期—巩固期（至少 2～6 个月）—维持期（至少 12 个月）；剂量个体化，遵医嘱。</div>
+          </details>
+        </div>
+
+      </div>
+      <div class="callout callout-info">
+        <div class="callout-icon">📊</div>
+        <div class="callout-body"><strong>得分自评</strong>12～15 题：本章框架已稳；9～11 题：回看五组对比与治疗顺序；≤8 题：先背“恐惧对象谱系 + 六条共同特征”，再重做一遍。</div>
+      </div>
+    </section>
+
+    <!-- ==================== 17 闪卡 ==================== -->
+    <section id="flashcards" class="section">
+      <div class="section-header"><span class="section-number">17</span><h2>考点速记卡</h2></div>
+      <p class="lead">20 张翻转卡，分概念、诊断、治疗、记忆四组。点击卡片翻转，先自己回答再对照。</p>
+      <div class="flashcard-grid">
+
+        <div class="flashcard"><div class="flashcard-inner">
+          <div class="flashcard-face flashcard-front"><span class="card-tag concept">概念</span><p>病理性焦虑的定义？</p><span class="flip-hint">点击翻转</span></div>
+          <div class="flashcard-face flashcard-back"><p>持续、无明显诱因的紧张不安，或无现实依据地预感灾难/威胁，伴明显自主神经功能紊乱及运动性不安，常伴主观痛苦或社会功能受损。</p></div>
+        </div></div>
+
+        <div class="flashcard"><div class="flashcard-inner">
+          <div class="flashcard-face flashcard-front"><span class="card-tag concept">概念</span><p>焦虑或恐惧性相关障碍的六条共同特征？</p><span class="flip-hint">点击翻转</span></div>
+          <div class="flashcard-face flashcard-back"><p>①心理社会因素+性格基础；②过度紧张/恐惧/担忧/回避+自主神经紊乱；③无器质性基础；④自知力保持、主动求治；⑤现实检验能力完好；⑥社会功能相对完好。</p></div>
+        </div></div>
+
+        <div class="flashcard"><div class="flashcard-inner">
+          <div class="flashcard-face flashcard-front"><span class="card-tag concept">概念</span><p>游离性焦虑（free-floating anxiety）是什么？</p><span class="flip-hint">点击翻转</span></div>
+          <div class="flashcard-face flashcard-back"><p>GAD 精神性焦虑的一种：不能明确意识到担心对象或内容，只是提心吊胆、惶恐不安的强烈内心体验。</p></div>
+        </div></div>
+
+        <div class="flashcard"><div class="flashcard-inner">
+          <div class="flashcard-face flashcard-front"><span class="card-tag concept">概念</span><p>预期焦虑是什么？</p><span class="flip-hint">点击翻转</span></div>
+          <div class="flashcard-face flashcard-back"><p>担心现实中可能将会发生的事情，但担心、焦虑和烦恼的程度与现实很不相称；也可指惊恐发作后持续担心再次发作。</p></div>
+        </div></div>
+
+        <div class="flashcard"><div class="flashcard-inner">
+          <div class="flashcard-face flashcard-front"><span class="card-tag diagnosis">诊断</span><p>GAD 的 ICD-11 核心是什么？</p><span class="flip-hint">点击翻转</span></div>
+          <div class="flashcard-face flashcard-back"><p>明显焦虑，焦虑对象无所不在（自由浮动的焦虑）或为日常琐事（家庭、健康、财务、学习/工作）；伴肌肉紧张、运动性不安、交感神经过度活动、主观紧张、注意力难保持、易激惹、睡眠障碍；至少数月并致显著困扰/损害。</p></div>
+        </div></div>
+
+        <div class="flashcard"><div class="flashcard-inner">
+          <div class="flashcard-face flashcard-front"><span class="card-tag memory">记忆</span><p>GAD 的“三多”是什么？</p><span class="flip-hint">点击翻转</span></div>
+          <div class="flashcard-face flashcard-back"><p>担忧多（多域、自由浮动）、症状多（精神/躯体/警觉/自主神经）、共病多（抑郁约 2/3、惊恐约 1/4、社交焦虑、强迫、物质依赖）。</p></div>
+        </div></div>
+
+        <div class="flashcard"><div class="flashcard-inner">
+          <div class="flashcard-face flashcard-front"><span class="card-tag diagnosis">诊断</span><p>GAD 的五类临床表现？</p><span class="flip-hint">点击翻转</span></div>
+          <div class="flashcard-face flashcard-back"><p>精神性焦虑（游离性/预期焦虑）；躯体性焦虑（运动性不安+肌肉紧张）；警觉性增高；自主神经功能紊乱；其他症状/共病。</p></div>
+        </div></div>
+
+        <div class="flashcard"><div class="flashcard-inner">
+          <div class="flashcard-face flashcard-front"><span class="card-tag diagnosis">数据</span><p>GAD 的患病率与遗传度？</p><span class="flip-hint">点击翻转</span></div>
+          <div class="flashcard-face flashcard-back"><p>发达国家平均终生患病率约 4.9%，发展中国家约 1.4%，我国约 0.3%；遗传度 15%～20%；女性约为男性 2 倍，35 岁以上更常见。</p></div>
+        </div></div>
+
+        <div class="flashcard"><div class="flashcard-inner">
+          <div class="flashcard-face flashcard-front"><span class="card-tag treatment">治疗</span><p>GAD 的一线治疗与全病程？</p><span class="flip-hint">点击翻转</span></div>
+          <div class="flashcard-face flashcard-back"><p>SSRIs/SNRIs 一线；CBT 一线（有效率 47%～75%）；早期可短期合并 BZD。全病程：急性期—巩固期（至少 2～6 个月）—维持期（至少 12 个月）。</p></div>
+        </div></div>
+
+        <div class="flashcard"><div class="flashcard-inner">
+          <div class="flashcard-face flashcard-front"><span class="card-tag concept">概念</span><p>惊恐发作（panic attack）是什么？</p><span class="flip-hint">点击翻转</span></div>
+          <div class="flashcard-face flashcard-back"><p>反复的、有时不可预料的发作性焦虑、紧张或恐惧；伴明显心血管和呼吸系统症状，重者有濒死体验或担心失控、发疯、死亡；突如其来，数分钟达峰，持续半小时至 2 小时，可自行缓解。</p></div>
+        </div></div>
+
+        <div class="flashcard"><div class="flashcard-inner">
+          <div class="flashcard-face flashcard-front"><span class="card-tag diagnosis">诊断</span><p>惊恐障碍的 ICD-11 基本特征？</p><span class="flip-hint">点击翻转</span></div>
+          <div class="flashcard-face flashcard-back"><p>①反复惊恐发作，数个典型症状快速同时出现；②至少部分非预期、“突如其来”；③发作后持续担忧再发/负面意义或采取回避；④不限于另一精神障碍所致焦虑；⑤排除躯体疾病与物质/药物；⑥功能严重损害。</p></div>
+        </div></div>
+
+        <div class="flashcard"><div class="flashcard-inner">
+          <div class="flashcard-face flashcard-front"><span class="card-tag concept">概念</span><p>“对恐惧的恐惧（fear to fear）”指什么？</p><span class="flip-hint">点击翻转</span></div>
+          <div class="flashcard-face flashcard-back"><p>CBT 对 PD 核心机制的概括：其一是内部感觉条件作用（躯体不适与强烈恐惧建立联系）；其二是对躯体感觉的灾难化认知（如“心慌就是心脏病发作”）。</p></div>
+        </div></div>
+
+        <div class="flashcard"><div class="flashcard-inner">
+          <div class="flashcard-face flashcard-front"><span class="card-tag treatment">治疗</span><p>PD 的药物治疗如何分工？</p><span class="flip-hint">点击翻转</span></div>
+          <div class="flashcard-face flashcard-back"><p>首选 SSRI/SNRI（艾司西酞普兰、舍曲林、帕罗西汀、文拉法辛）；早期合并 BZD（奥沙西泮、阿普唑仑）快速控制，一般 2～4 周逐渐停用；以抗抑郁药维持；CBT 联合更优。</p></div>
+        </div></div>
+
+        <div class="flashcard"><div class="flashcard-inner">
+          <div class="flashcard-face flashcard-front"><span class="card-tag diagnosis">诊断</span><p>场所恐惧症的核心恐惧是什么？</p><span class="flip-hint">点击翻转</span></div>
+          <div class="flashcard-face flashcard-back"><p>担心在难以逃离/难以获得帮助的情境中出现惊恐样症状或其他失能/窘迫情况（如晕倒、大小便失禁）时无法脱身或得不到帮助。</p></div>
+        </div></div>
+
+        <div class="flashcard"><div class="flashcard-inner">
+          <div class="flashcard-face flashcard-front"><span class="card-tag diagnosis">鉴别</span><p>场所恐惧症与特定恐惧症（情境型）如何区分？</p><span class="flip-hint">点击翻转</span></div>
+          <div class="flashcard-face flashcard-back"><p>场所恐惧症：多种情境，怕“发作后逃不掉/没人帮”的后果；特定恐惧症：通常一种情境，怕情境本身的直接伤害。仅局限于一种广场情境时诊断特定恐惧症（情境型）。</p></div>
+        </div></div>
+
+        <div class="flashcard"><div class="flashcard-inner">
+          <div class="flashcard-face flashcard-front"><span class="card-tag diagnosis">诊断</span><p>社交焦虑障碍的核心与起病特点？</p><span class="flip-hint">点击翻转</span></div>
+          <div class="flashcard-face flashcard-back"><p>面对可能被他人审视的社交情境时显著害怕/焦虑，担心言行或焦虑症状被负面评价；中位起病 13 岁，85% 于 8～15 岁；害羞脸红是最突出自主神经表现。</p></div>
+        </div></div>
+
+        <div class="flashcard"><div class="flashcard-inner">
+          <div class="flashcard-face flashcard-front"><span class="card-tag treatment">治疗</span><p>社交焦虑障碍的治疗推荐？</p><span class="flip-hint">点击翻转</span></div>
+          <div class="flashcard-face flashcard-back"><p>NICE：CBT 优先于药物；CPA：CBT 与药物均一线。SSRIs 为一线首选，SNRIs 也有效；BZD 可快速缓解但不宜长期服用。</p></div>
+        </div></div>
+
+        <div class="flashcard"><div class="flashcard-inner">
+          <div class="flashcard-face flashcard-front"><span class="card-tag diagnosis">诊断</span><p>特定恐惧症的“反常识”考点是什么？</p><span class="flip-hint">点击翻转</span></div>
+          <div class="flashcard-face flashcard-back"><p>血液-损伤-注射恐惧可导致心动过缓、易出现晕厥，而不是心率加快；其他恐惧症多表现为心率加快。</p></div>
+        </div></div>
+
+        <div class="flashcard"><div class="flashcard-inner">
+          <div class="flashcard-face flashcard-front"><span class="card-tag diagnosis">诊断</span><p>分离焦虑障碍的关键特点？</p><span class="flip-hint">点击翻转</span></div>
+          <div class="flashcard-face flashcard-back"><p>与依恋对象分离时出现与年龄不相符、过度、损害行为能力的恐惧/焦虑；12 岁以下儿童中最常见，随年龄下降；可拒学/拒工作、不愿睡觉、不愿独处、分离时躯体症状。</p></div>
+        </div></div>
+
+        <div class="flashcard"><div class="flashcard-inner">
+          <div class="flashcard-face flashcard-front"><span class="card-tag diagnosis">诊断</span><p>选择性缄默症的核心标准？</p><span class="flip-hint">点击翻转</span></div>
+          <div class="flashcard-face flashcard-back"><p>语言理解/表达正常；在特定情境（通常学校）持续不能讲话，另一些情境（通常家里）能充分说话；困扰至少 1 个月且不限于入学第 1 个月；排除孤独症谱系障碍、发育性语言障碍等；影响学习/社交。</p></div>
+        </div></div>
+
+      </div>
+    </section>
+
+    <!-- ==================== 18 病例挑战 ==================== -->
+    <section id="cases" class="section">
+      <div class="section-header"><span class="section-number">18</span><h2>病例挑战</h2></div>
+      <p class="lead">3 个病例，难度递进。病例 1、2 来自教材典型病例；病例 3 为教学演练，只使用教材描述过的症状，不编造化验值、剂量或具体时间阈值。</p>
+
+      <div class="case-card">
+        <div class="case-meta"><span>病例 1</span><span>难度 ⭐</span><span>教材原文（摘要整理）</span></div>
+        <div class="case-title">中年女性，母亲去世后持续担忧 8 个月</div>
+        <div class="case-body"><p>中年女性，母亲肺癌去世后逐渐出现入睡困难、易醒、不明原因紧张担心，整天提心吊胆；担心孩子上学路上有危险、丈夫出差遇交通事故、家人健康、晚上睡不着怎么办。有时坐立难安、来回踱步；工作能力下降、注意力不集中，担心工作出错；对现状痛苦。一想到这些就心慌、胸闷、出汗、四肢发麻、坐立不安。病前性格内向、胆小、做事认真仔细；母亲容易焦虑、失眠。精神检查：意识清、定向力完整、接触主动、表情愁苦、倾诉欲望强烈；焦虑明显，情感反应协调；对自身精神状态有一定认识，主动求治。</p></div>
+        <ol class="case-questions">
+          <li>最可能的诊断是什么？依据有哪些？</li>
+          <li>需要与哪些障碍鉴别？</li>
+          <li>治疗原则与全病程如何安排？</li>
+        </ol>
+        <details class="qa"><summary><span class="qa-num">析</span>答案与诊断思路</summary><div class="qa-body"><span class="answer-key">参考答案</span>①诊断 GAD：多域、持续 8 个月、难以自控的担忧，伴运动性不安、肌肉紧张、自主神经症状、入睡困难、注意力下降，自知力存在并主动求治。②鉴别：抑郁障碍（约 2/3 共病，评估心境/兴趣与自杀风险，二者均符合时共病并优先抑郁）；惊恐障碍（本例为持续担忧而非反复不可预期发作）；躯体疾病（甲亢、低血糖、嗜铬细胞瘤、SLE 等）；物质/药物所致焦虑。③治疗：SSRIs/SNRIs 一线 + CBT 一线；早期可短期合并 BZD；5-HT1A 部分激动剂可合并/轻症单用；急性期—巩固期（至少 2～6 个月）—维持期（至少 12 个月）；剂量个体化，遵医嘱。</div></details>
+      </div>
+
+      <div class="case-card">
+        <div class="case-meta"><span>病例 2</span><span>难度 ⭐⭐</span><span>教材原文（摘要整理）</span></div>
+        <div class="case-title">32 岁男性，阵发性心慌、胸闷、濒死感半年</div>
+        <div class="case-body"><p>半年前工作压力大，堵车时出现心慌、胸闷气短、心悸，怀疑心脏病发作，紧张恐惧，感觉“挺不过去了”，被 120 送至急诊，身体未见异常。此后常在乘车/地铁时出现心慌、胸闷、气急、呼吸困难，每次感觉“像马上要死了一样”，每周 1～2 次，每次 3～5 分钟；发作时面色苍白、四肢冰冷。曾多次拨打 120，急诊心电图提示心动过速，其他检查正常。近一月症状加重，不敢外出乘坐交通工具，担心再次出现症状、失去控制、疯掉。病前性格谨慎胆小、细心、内向；父亲教育严厉、总忽略患者；母亲乳腺癌晚期去世；岳母心力衰竭在家养病；近半年职称晋升压力大。</p></div>
+        <ol class="case-questions">
+          <li>最可能的诊断是什么？诊断要点如何对应？</li>
+          <li>是否需要诊断场所恐惧症？为什么？</li>
+          <li>药物治疗与心理治疗如何安排？</li>
+        </ol>
+        <details class="qa"><summary><span class="qa-num">析</span>答案与诊断思路</summary><div class="qa-body"><span class="answer-key">参考答案</span>①诊断 PD：反复、不可预期的惊恐发作（乘车/地铁等多情境，非局限于单一社交/特定场所），数分钟达峰、持续 3～5 分钟，强烈心血管/呼吸症状与濒死感；发作后持续担心再发、失控、发疯，并回避交通工具；急诊检查未见明显器质性异常（教材原文仅提示心动过速）。②是否伴场所恐惧症：患者回避交通工具，但教材未说明回避是否延伸到两种或多种广场恐怖情景；按 ICD-11，若回避未延伸到两种或多种广场恐怖情景，不诊断场所恐惧症。答题应写“需进一步评估回避的情境数量与后果”，不要武断下结论。③治疗：首选 SSRI/SNRI（艾司西酞普兰、舍曲林、帕罗西汀、文拉法辛）；早期合并 BZD（奥沙西泮、阿普唑仑）快速控制，一般 2～4 周逐渐停用；CBT 针对灾难化认知与回避；联合治疗优于单一治疗。</div></details>
+      </div>
+
+      <div class="case-card">
+        <div class="case-meta"><span>病例 3</span><span>难度 ⭐⭐⭐</span><span>经典临床情境（教学演练，非教材原文）</span></div>
+        <div class="case-title">8 岁男孩，母亲经常出差后拒绝上学、分离时腹痛恶心</div>
+        <div class="case-body"><p>8 岁男孩，平素发育正常，在家能正常说话、玩耍。母亲因工作经常出差后，孩子逐渐不愿去上学；每到上学前就哭闹，诉腹痛、恶心，有时呕吐；反复问“妈妈会不会出事”“妈妈什么时候回来”；母亲不在家时不愿睡觉，必须等母亲回来；不愿单独留在家里，也不愿单独外出。症状持续数月，明显影响上学与家庭生活。无幻觉、妄想，无持续情绪低落，无社交回避的广泛表现。</p></div>
+        <ol class="case-questions">
+          <li>最可能的诊断是什么？诊断依据有哪些？</li>
+          <li>如何与逃学/拒学、场所恐惧症、正常分离焦虑区分？</li>
+          <li>治疗原则是什么？</li>
+        </ol>
+        <details class="qa"><summary><span class="qa-num">析</span>答案与诊断思路</summary><div class="qa-body"><span class="answer-key">参考答案</span>①最可能诊断：分离焦虑障碍。依据：与依恋对象（母亲）分离时出现与年龄不相符、过度的恐惧/焦虑；持续担心母亲出事；拒绝上学；母亲不在不愿睡觉；不愿独处/单独外出；分离场合出现腹痛、恶心、呕吐等躯体症状；持续数月并影响功能；无精神病性症状。②鉴别：逃学/拒学是临床现象，教材未单列诊断；若拒学不以分离恐惧为核心、不符合分离焦虑全部标准，不能诊断分离焦虑障碍。场所恐惧症怕“难逃离/难获帮助”，不是怕与母亲分开；且 ICD-11 要求排除场所恐惧症。正常分离焦虑是发育的一部分，但本例持续时间、严重程度与功能损害超出同龄水平。③治疗：心理治疗为主——支持性心理治疗、家庭治疗、CBT；教材未提及药物治疗。</div></details>
+      </div>
+
+      <div class="callout callout-memory">
+        <div class="callout-icon">🧠</div>
+        <div class="callout-body"><strong>病例思维总模板</strong>症状 → 恐惧指向 → 病程/功能损害 → 排除躯体/物质/其他精神障碍 → 诊断 → 首选/次选/辅助治疗。三题都按这条线走，就不会被“表面症状”带偏。</div>
+      </div>
+    </section>
+
+    <div class="disclaimer">
+      <strong>免责声明：</strong>本学习指南依据《精神病学》第9版（2024）第九章内容整理，仅用于学习复习，不替代教材原文、现行诊疗规范、临床评估或专科医师判断。文中未标注“教材原文/教材举例”的病例均为教学演练情境，不包含虚构的化验值、影像结果、药物剂量或具体时间阈值；药物剂量与疗程请以教材、药品说明书及临床医嘱为准。
+    </div>
+
+    <footer class="footer">
+      <div class="footer-tag">精神病学 · 第九章 · 学习指南</div>
+      <p>内容依据《精神病学》第9版（2024）第九章“焦虑或恐惧性相关障碍”整理，仅供学习复习使用。</p>
+      <p>诊断与治疗请以教材原文、现行诊疗规范及专科医师判断为准。</p>
+    </footer>
+  <nav class="chapter-pager" aria-label="章节间导航"><a class="cp-prev" href="精神病学_第八章_抑郁障碍_学习指南.html">← 上一章：第八章</a><a class="cp-toc" href="index.html">目录</a><a class="cp-next" href="精神病学_第十章_强迫症及相关障碍_学习指南.html">下一章：第十章 →</a></nav>
+</main>
+</div>
+<button class="back-to-top" id="backTop" aria-label="回到顶部">↑</button>
+
+<script>
+/* ============================================================
+   精神病学学习指南 · 统一交互层 v1（构建期注入，整体替换原 IIFE）
+   兼容 A 族（.tabbar button + [data-panel] + .panel.on）与
+   B 族（.tab-nav + .tab-panel.active）两套 DOM 约定。
+   特性检测 + 防御式查询 + 幂等；不引入任何外部依赖。
+   ============================================================ */
+(function () {
+  'use strict';
+  if (window.__PSY_GUIDE_APP__) { return; }
+  window.__PSY_GUIDE_APP__ = true;
+
+  var d = document;
+
+  function all(sel, root) {
+    return Array.prototype.slice.call((root || d).querySelectorAll(sel));
+  }
+  function on(el, ev, fn, opt) {
+    if (el) { el.addEventListener(ev, fn, opt || false); }
+  }
+  function norm(s) {
+    return String(s || '').replace(/\s+/g, '').toUpperCase();
+  }
+
+  /* ---------- 1. Tab 切换（两族约定都支持） ---------- */
+  function initTabs() {
+    all('.tabs, [data-tabs]').forEach(function (g) {
+      if (g.__psyTabs) { return; }
+      g.__psyTabs = true;
+      var isA = !!g.querySelector('.tabbar button');
+      var btns = all(isA ? '.tabbar button' : '.tab-nav .tab-btn', g);
+      if (!btns.length) { return; }
+      var cls = isA ? 'on' : 'active';
+      var nav = btns[0].closest('.tabbar') || btns[0].closest('.tab-nav');
+      if (nav && !nav.hasAttribute('role')) { nav.setAttribute('role', 'tablist'); }
+      all(isA ? '.panel' : '.tab-panel', g).forEach(function (p) {
+        if (!p.hasAttribute('role')) { p.setAttribute('role', 'tabpanel'); }
+      });
+      function activate(btn) {
+        btns.forEach(function (b) {
+          b.classList.remove(cls);
+          b.setAttribute('aria-selected', 'false');
+        });
+        btn.classList.add(cls);
+        btn.setAttribute('aria-selected', 'true');
+        var id = btn.getAttribute('data-tab');
+        if (!id) { return; }
+        var target = isA
+          ? g.querySelector('[data-panel="' + id + '"]')
+          : (g.querySelector('.tab-panel#' + id) || d.getElementById(id));
+        all(isA ? '.panel' : '.tab-panel', g).forEach(function (p) {
+          var show = isA ? (p.getAttribute('data-panel') === id) : (p === target);
+          p.classList.toggle(cls, show);
+        });
+      }
+      btns.forEach(function (btn, i) {
+        if (!btn.hasAttribute('role')) { btn.setAttribute('role', 'tab'); }
+        btn.setAttribute('aria-selected', btn.classList.contains(cls) ? 'true' : 'false');
+        if (!btn.hasAttribute('tabindex') && !btn.classList.contains(cls)) { btn.setAttribute('tabindex', '0'); }
+        on(btn, 'click', function () { activate(btn); });
+        on(btn, 'keydown', function (e) {
+          if (e.key !== 'ArrowRight' && e.key !== 'ArrowLeft') { return; }
+          e.preventDefault();
+          var nx = btns[(i + (e.key === 'ArrowRight' ? 1 : btns.length - 1)) % btns.length];
+          if (nx) { nx.focus(); activate(nx); }
+        });
+      });
+    });
+  }
+
+  /* ---------- 2. 速记卡：点击/键盘翻转 + 可达性 ---------- */
+  function initCards() {
+    all('.flashcard').forEach(function (card) {
+      if (card.__psyCard) { return; }
+      card.__psyCard = true;
+      card.setAttribute('tabindex', '0');
+      card.setAttribute('role', 'button');
+      function sync() {
+        card.setAttribute('aria-pressed', card.classList.contains('flipped') ? 'true' : 'false');
+      }
+      function flip() { card.classList.toggle('flipped'); sync(); }
+      on(card, 'click', flip);
+      on(card, 'keydown', function (e) {
+        if (e.key === 'Enter' || e.key === ' ' || e.key === 'Spacebar') {
+          e.preventDefault();
+          flip();
+        }
+      });
+      sync();
+    });
+  }
+
+  /* ---------- 3. 自测题交互化（核心新功能） ---------- */
+  function initQuiz() {
+    var questions = all('.quiz-q, .quiz-item');
+    if (!questions.length) { return; }
+    var groups = {};
+
+    function keyOf(o) {
+      var L = o.getAttribute('data-letter');
+      if (L && String(L).replace(/\s+/g, '') !== '') { return norm(L); }
+      var sp = o.querySelector('.l');
+      if (sp) {
+        var t = norm(sp.textContent).replace(/[.．、:：]/g, '');
+        if (t !== '') { return t; }
+      }
+      var txt = norm(o.textContent);
+      if (txt.indexOf('正确') >= 0 || txt.indexOf('错误') >= 0) { return txt; }
+      return txt.charAt(0);
+    }
+
+    function getGroup(q) {
+      var sec = q.closest('.quiz-block') || q.closest('section') || d.body;
+      if (!groups[sec.__psyGid]) {
+        sec.__psyGid = 'g' + (Object.keys(groups).length + 1);
+        groups[sec.__psyGid] = { sec: sec, total: 0, score: 0, row: null, first: null };
+      }
+      var g = groups[sec.__psyGid];
+      if (!g.first) { g.first = q; }
+      return g;
+    }
+
+    function ensureRow(g) {
+      if (g.row) { return g.row; }
+      var row = d.createElement('div');
+      row.className = 'quiz-score';
+      row.setAttribute('role', 'status');
+      row.setAttribute('aria-live', 'polite');
+      row.innerHTML = '<span class="qs-label">自测计分</span>' +
+        '<span class="qs-num">得分 0 / ' + g.total + '</span>' +
+        '<span class="qs-bar"><i></i></span>';
+      g.first.parentNode.insertBefore(row, g.first);
+      g.row = row;
+      return row;
+    }
+
+    function updateRow(g) {
+      var row = ensureRow(g);
+      var num = row.querySelector('.qs-num');
+      var bar = row.querySelector('.qs-bar i');
+      if (num) { num.textContent = '得分 ' + g.score + ' / ' + g.total; }
+      if (bar) { bar.style.width = (g.total ? Math.round(g.score / g.total * 100) : 0) + '%'; }
+    }
+
+    questions.forEach(function (q) {
+      if (q.__psyQuiz) { return; }
+      q.__psyQuiz = true;
+      var opts = all('.opt', q);
+      if (!opts.length) { opts = all('.quiz-options > li', q); }
+      if (!opts.length) { return; }
+
+      /* 正确答案先记入内存：预标 correct 优先（记录后立即移除，消除剧透），
+         否则从解析文本「答案：X / 答案 X」提取（不改动任何文字） */
+      var ansKeys = [];
+      var preset = opts.filter(function (o) { return o.classList.contains('correct'); });
+      preset.forEach(function (o) { o.classList.remove('correct'); });
+      if (preset.length) {
+        ansKeys = preset.map(keyOf);
+      } else {
+        var dt = q.querySelector('details');
+        var txt = dt ? dt.textContent : '';
+        var m = txt.match(/答案\s*[:：]?\s*([A-Za-z](?:[\s、,，·和及]*[A-Za-z])*)/);
+        if (m) {
+          ansKeys = m[1].match(/[A-Za-z]/g) || [];
+        } else {
+          var m2 = txt.match(/答案\s*[:：]?\s*(正确|错误)/);
+          if (m2) { ansKeys = [m2[1]]; }
+        }
+      }
+      if (!ansKeys.length) { return; } /* 无可判定答案（名词解释等），保持原样 */
+
+      var g = getGroup(q);
+      g.total += 1;
+      var multi = ansKeys.length > 1;
+      var ansSet = ansKeys.map(norm);
+      var locked = false;
+      var picked = [];
+
+      function revealAll() {
+        opts.forEach(function (o) {
+          if (ansSet.indexOf(keyOf(o)) >= 0) { o.classList.add('is-reveal'); }
+        });
+      }
+      function finish(ok) {
+        locked = true;
+        q.classList.add('is-locked');
+        var dt = q.querySelector('details');
+        if (dt) { dt.open = true; }
+        if (ok) { g.score += 1; }
+        updateRow(g);
+      }
+
+      opts.forEach(function (o) {
+        o.setAttribute('tabindex', '0');
+        function pick() {
+          if (locked) { return; }
+          var k = keyOf(o);
+          if (ansSet.indexOf(k) >= 0) {
+            o.classList.add('is-right');
+            if (picked.indexOf(k) < 0) { picked.push(k); }
+            if (multi) {
+              if (picked.length === ansSet.length) { finish(true); }
+            } else {
+              finish(true);
+            }
+          } else {
+            o.classList.add('is-wrong');
+            revealAll();
+            finish(false);
+          }
+        }
+        on(o, 'click', pick);
+        on(o, 'keydown', function (e) {
+          if (e.key === 'Enter' || e.key === ' ' || e.key === 'Spacebar') {
+            e.preventDefault();
+            pick();
+          }
+        });
+      });
+    });
+
+    Object.keys(groups).forEach(function (id) {
+      if (groups[id].total > 0) { updateRow(groups[id]); }
+    });
+  }
+
+  /* ---------- 4. 侧栏 scroll spy（本页锚点高亮） ---------- */
+  function initSpy() {
+    var links = all('#sidebar a[href^="#"]');
+    if (!links.length || !('IntersectionObserver' in window)) { return; }
+    var map = {};
+    links.forEach(function (a) {
+      var id = a.getAttribute('href').slice(1);
+      if (id) { map[id] = a; }
+    });
+    var secs = [];
+    Object.keys(map).forEach(function (id) {
+      var s = d.getElementById(id);
+      if (s) { secs.push(s); }
+    });
+    if (!secs.length) { return; }
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting && map[e.target.id]) {
+          links.forEach(function (a) { a.classList.remove('active'); });
+          map[e.target.id].classList.add('active');
+        }
+      });
+    }, { rootMargin: '-15% 0px -70% 0px', threshold: 0 });
+    secs.forEach(function (s) { io.observe(s); });
+  }
+
+  /* ---------- 5. 阅读进度条 + 回顶 ---------- */
+  function initScroll() {
+    var bar = d.getElementById('readbar');
+    var topBtn = d.getElementById('topBtn') || d.getElementById('backTop');
+    var ticking = false;
+    function step() {
+      ticking = false;
+      var h = d.documentElement;
+      var y = window.pageYOffset || h.scrollTop || 0;
+      if (bar) {
+        var max = h.scrollHeight - h.clientHeight;
+        bar.style.width = (max > 0 ? (y / max) * 100 : 0) + '%';
+      }
+      if (topBtn) {
+        topBtn.classList.toggle('show', y > 400);     /* A 族类名 */
+        topBtn.classList.toggle('visible', y > 400);  /* B 族类名 */
+      }
+    }
+    on(window, 'scroll', function () {
+      if (!ticking) { ticking = true; window.requestAnimationFrame(step); }
+    }, { passive: true });
+    step();
+    on(topBtn, 'click', function () {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
+
+  /* ---------- 6. 侧栏开合（存在才绑定；抽屉打开时锁定背景滚动） ---------- */
+  function initSidebar() {
+    var sidebar = d.getElementById('sidebar');
+    if (!sidebar) { return; }
+    var btn = d.getElementById('menuBtn') || d.getElementById('navToggle');
+    var ov = d.getElementById('overlay') || d.getElementById('sidebarOverlay');
+    function lock(open) {
+      /* 仅移动抽屉断点（≤900px）锁滚动；宽屏兜底解除，防布局残留 */
+      d.body.classList.toggle('nav-locked', !!open && window.innerWidth <= 900);
+    }
+    function close() {
+      sidebar.classList.remove('open');
+      if (ov) { ov.classList.remove('show'); }
+      lock(false);
+    }
+    on(btn, 'click', function () {
+      var open = !sidebar.classList.contains('open');
+      sidebar.classList.toggle('open');
+      if (ov) { ov.classList.toggle('show'); }
+      lock(open);
+    });
+    on(ov, 'click', close);
+    all('a', sidebar).forEach(function (a) {
+      on(a, 'click', function () {
+        if (window.innerWidth <= 900) { close(); }
+      });
+    });
+    on(window, 'resize', function () {
+      if (window.innerWidth > 900) { lock(false); }
+    });
+  }
+
+  /* ---------- 启动（脚本位于 body 末尾，DOM 已就绪；防御兜底） ---------- */
+  function boot() {
+    initTabs();
+    initCards();
+    initQuiz();
+    initSpy();
+    initScroll();
+    initSidebar();
+  }
+  if (d.readyState === 'loading') {
+    on(d, 'DOMContentLoaded', boot);
+  } else {
+    boot();
+  }
+})();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,2830 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>精神病学 第十章 强迫症及相关障碍 · 学习指南</title>
+<style>
+:root{
+  --primary:#0EA5E9; --accent:#10B981; --symptom:#EF4444; --treatment:#10B981;
+  --cause:#3B82F6; --diagnosis:#F59E0B; --memory:#8B5CF6; --danger:#DC2626;
+  --quiz:#EC4899; --flashcard:#06B6D4; --bg:#F0F7FA; --card:#FFFFFF;
+  --ink:#0F172A; --muted:#64748B; --border:#E2E8F0; --accent2:#10B981; --accent3:#06B6D4;
+  --shadow:0 4px 18px rgba(15,23,42,.06); --radius:14px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:'Microsoft YaHei','PingFang SC','Hiragino Sans GB',system-ui,-apple-system,sans-serif;font-size:16px;line-height:1.75;-webkit-font-smoothing:antialiased}
+#readbar{position:fixed;top:0;left:0;height:4px;width:0;background:linear-gradient(135deg,#0EA5E9 0%,#06B6D4 50%,#10B981 100%);z-index:300;transition:width .12s linear}
+a{color:var(--primary);text-decoration:none}
+a:hover{text-decoration:underline}
+.sidebar{position:fixed;top:0;left:0;width:272px;height:100vh;background:#fff;border-right:1px solid var(--border);overflow-y:auto;padding:20px 16px 40px;z-index:120}
+.sidebar h2{font-size:17px;margin:0 0 4px;line-height:1.5}
+.sidebar .sub{font-size:12px;color:var(--muted);line-height:1.6;margin-bottom:14px}
+.toc-group{font-size:12px;letter-spacing:.08em;color:var(--muted);margin:16px 0 6px;font-weight:700}
+.sidebar a.toc{display:block;padding:7px 10px;border-radius:8px;font-size:14px;color:var(--ink);line-height:1.5;margin:2px 0}
+.sidebar a.toc:hover{background:#E0F2FE;text-decoration:none}
+.sidebar a.toc .n{display:inline-block;min-width:26px;color:var(--primary);font-weight:700}
+.sidebar .unitlink{font-weight:600}
+.sidebar .sub2{padding-left:26px;font-size:13px;color:var(--muted)}
+.overlay{display:none}
+.menu-btn{display:none;position:fixed;top:14px;left:14px;z-index:200;width:46px;height:46px;border-radius:12px;border:1px solid var(--border);background:#fff;box-shadow:var(--shadow);font-size:22px;line-height:1;color:var(--primary);cursor:pointer}
+.main{margin-left:272px;padding:0 40px 90px;max-width:1240px}
+.wrap{max-width:980px;margin:0 auto}
+.hero{background:linear-gradient(135deg,#0EA5E9 0%,#06B6D4 50%,#10B981 100%);color:#fff;border-radius:0 0 26px 26px;padding:52px 44px 40px;margin:0 -40px 30px;box-shadow:0 12px 30px rgba(14,165,233,.18)}
+.hero .chap{display:inline-block;font-size:13px;letter-spacing:.22em;background:rgba(255,255,255,.18);padding:5px 14px;border-radius:999px;margin-bottom:16px}
+.hero h1{font-size:42px;line-height:1.25;margin:0 0 10px;font-weight:800}
+.hero .tagline{font-size:18px;opacity:.96;margin:0 0 6px}
+.hero .meta{font-size:13px;opacity:.85}
+.goalbox{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.28);border-radius:14px;padding:18px 20px;margin-top:22px}
+.goalbox h3{margin:0 0 10px;font-size:15px;letter-spacing:.06em}
+.goalbox ul{margin:0;padding-left:20px}
+.goalbox li{margin:4px 0;font-size:14.5px;line-height:1.65}
+.lv{display:inline-block;font-size:11px;font-weight:700;padding:1px 8px;border-radius:999px;background:#fff;color:#0369A1;margin-right:6px;vertical-align:1px}
+.lv.l2{color:#047857}.lv.l3{color:#B45309}.lv.l4{color:#B91C1C}
+section{scroll-margin-top:18px;margin:0 0 46px}
+.sec-head{display:flex;align-items:center;gap:12px;margin:0 0 8px}
+.sec-head .badge{flex:0 0 auto;width:44px;height:44px;border-radius:13px;background:linear-gradient(135deg,#0EA5E9,#06B6D4);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:17px;box-shadow:0 6px 14px rgba(14,165,233,.25)}
+.sec-head h2{font-size:27px;margin:0;line-height:1.35;font-weight:800}
+.sec-head .en{font-size:13px;color:var(--muted);font-weight:400;margin-left:6px}
+.sec-lead{color:#334155;background:#fff;border-left:4px solid var(--primary);border-radius:0 12px 12px 0;padding:13px 18px;margin:12px 0 22px;box-shadow:var(--shadow);font-size:15px}
+.card{background:var(--card);border:1px solid var(--border);border-left:6px solid var(--primary);border-radius:var(--radius);padding:20px 22px;margin:16px 0;box-shadow:var(--shadow)}
+.card.red{border-left-color:var(--symptom)} .card.green{border-left-color:var(--treatment)}
+.card.blue{border-left-color:var(--cause)} .card.orange{border-left-color:var(--diagnosis)}
+.card.purple{border-left-color:var(--memory)} .card.cyan{border-left-color:var(--flashcard)}
+.card.danger{border-left-color:var(--danger)} .card.pink{border-left-color:var(--quiz)}
+.card h3,.col-title{font-size:19px;margin:0 0 10px;line-height:1.45;display:flex;align-items:center;gap:9px;flex-wrap:wrap}
+.col-title .idx{font-size:12px;font-weight:800;color:#fff;background:var(--primary);padding:2px 9px;border-radius:999px;letter-spacing:.03em}
+.card p{margin:8px 0}
+.card ul,.card ol{margin:8px 0;padding-left:22px}
+.card li{margin:5px 0}
+.quote{background:#EFF8FF;border:1px dashed #7DD3FC;border-radius:10px;padding:12px 16px;margin:10px 0;font-size:15px;color:#0C4A6E}
+.quote .lab{display:inline-block;font-size:11px;font-weight:800;background:#0EA5E9;color:#fff;padding:1px 7px;border-radius:5px;margin-right:7px;vertical-align:1px}
+.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.grid4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.grid2>*,.grid3>*,.grid4>*{min-width:0}
+.mini{background:#F8FAFC;border:1px solid var(--border);border-radius:11px;padding:12px 14px}
+.mini h4{margin:0 0 5px;font-size:15px;color:#0F172A}
+.mini p,.mini ul{font-size:14px;color:#334155;margin:4px 0}
+.mini ul{padding-left:18px}
+.stat{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0}
+.stat span{font-size:13px;background:#E0F2FE;color:#075985;border-radius:999px;padding:3px 11px;font-weight:600}
+.table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:12px 0;border-radius:12px;border:1px solid var(--border)}
+table{border-collapse:collapse;width:100%;min-width:560px;background:#fff;font-size:14px}
+th{background:#0F172A;color:#fff;font-weight:700;padding:10px 12px;text-align:left;line-height:1.5;font-size:13.5px}
+td{padding:10px 12px;border-top:1px solid var(--border);vertical-align:top;line-height:1.65}
+tbody tr:nth-child(even){background:#F8FAFC}
+td strong{color:#0C4A6E}
+.callout{border-radius:12px;padding:13px 16px;margin:12px 0;border:1px solid;font-size:14.5px}
+.callout .ct{font-weight:800;display:block;margin-bottom:4px;font-size:14.5px}
+.callout.tip{background:#F5F3FF;border-color:#C4B5FD;color:#4C1D95}
+.callout.warn{background:#FEF2F2;border-color:#FCA5A5;color:#7F1D1D}
+.callout.key{background:#ECFDF5;border-color:#6EE7B7;color:#065F46}
+.callout.book{background:#EFF6FF;border-color:#93C5FD;color:#1E3A8A}
+.callout.quiz{background:#FDF2F8;border-color:#F9A8D4;color:#831843}
+.callout.ext{background:#F0F9FF;border-color:#7DD3FC;color:#0C4A6E}
+.timeline{border-left:3px solid #BAE6FD;margin:14px 0 6px 8px;padding-left:20px}
+.tl-item{position:relative;margin:0 0 16px}
+.tl-item:before{content:"";position:absolute;left:-28px;top:5px;width:13px;height:13px;border-radius:50%;background:#fff;border:3px solid var(--primary)}
+.tl-item h4{margin:0 0 3px;font-size:15px;color:#075985}
+.tl-item p{margin:0;font-size:14px;color:#334155}
+.bar{background:#E2E8F0;border-radius:999px;height:9px;overflow:hidden;margin:6px 0 10px}
+.bar i{display:block;height:100%;border-radius:999px;background:linear-gradient(90deg,#0EA5E9,#10B981)}
+.bar-label{display:flex;justify-content:space-between;font-size:13px;color:#334155}
+.tabs{margin:14px 0}
+.tabbar{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:12px}
+.tabbar button{border:1px solid var(--border);background:#fff;border-radius:999px;padding:7px 15px;font-size:14px;font-family:inherit;cursor:pointer;color:#334155}
+.tabbar button.on{background:var(--primary);color:#fff;border-color:var(--primary)}
+.panel{display:none}
+.panel.on{display:block;animation:fade .25s ease}
+@keyframes fade{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}
+details{background:#fff;border:1px solid var(--border);border-radius:11px;margin:10px 0;overflow:hidden}
+summary{cursor:pointer;padding:11px 15px;font-weight:700;color:#075985;list-style:none;font-size:14.5px;background:#F8FAFC}
+summary::-webkit-details-marker{display:none}
+summary:before{content:"▸";display:inline-block;margin-right:7px;color:var(--primary);transition:transform .2s}
+details[open] summary:before{transform:rotate(90deg)}
+details[open] summary{border-bottom:1px solid var(--border)}
+.dbody{padding:13px 16px;font-size:14.5px;color:#1E293B}
+.flashcard-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin:16px 0}
+.flashcard{perspective:1200px;height:200px;cursor:pointer}
+.fc-inner{position:relative;width:100%;height:100%;transition:transform .55s;transform-style:preserve-3d}
+.flashcard.flipped .fc-inner{transform:rotateY(180deg)}
+.fc-front,.fc-back{position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;border-radius:14px;padding:14px 16px;display:flex;flex-direction:column;justify-content:center;box-shadow:var(--shadow);overflow:auto}
+.fc-front{background:#fff;border:1px solid var(--border);border-top:5px solid var(--flashcard)}
+.fc-back{background:#ECFEFF;border:1px solid #A5F3FC;transform:rotateY(180deg);font-size:13.5px;line-height:1.65;color:#164E63}
+.tag{display:inline-block;align-self:flex-start;font-size:11px;font-weight:800;padding:1px 8px;border-radius:999px;margin-bottom:8px;letter-spacing:.04em}
+.tag.concept{background:#DBEAFE;color:#1E40AF}
+.tag.diag{background:#FFEDD5;color:#9A3412}
+.tag.treat{background:#D1FAE5;color:#065F46}
+.tag.data{background:#FCE7F3;color:#9D174D}
+.tag.risk{background:#FEE2E2;color:#991B1B}
+.fc-front p{margin:0;font-size:14.5px;font-weight:700;line-height:1.6}
+.fc-hint{position:absolute;bottom:10px;left:16px;font-size:11px;color:#94A3B8}
+.quiz-q{background:#fff;border:1px solid var(--border);border-left:5px solid var(--quiz);border-radius:12px;padding:16px 18px;margin:16px 0;box-shadow:var(--shadow)}
+.quiz-q .qh{display:flex;justify-content:space-between;gap:10px;align-items:flex-start;margin-bottom:8px;flex-wrap:wrap}
+.quiz-q .qno{font-size:12px;font-weight:800;color:#fff;background:var(--quiz);border-radius:999px;padding:2px 9px;letter-spacing:.04em}
+.diff{font-size:12px;color:#B45309;background:#FEF3C7;border-radius:999px;padding:2px 10px;font-weight:700;white-space:nowrap}
+.qtype{font-size:12px;color:#6B21A8;background:#F3E8FF;border-radius:999px;padding:2px 10px;font-weight:700;white-space:nowrap}
+.opts{margin:10px 0 4px;display:grid;gap:7px}
+.opt{border:1px solid var(--border);border-radius:9px;padding:8px 12px;font-size:14.5px;background:#F8FAFC}
+.opt.correct{border-color:#6EE7B7;background:#ECFDF5;color:#065F46;font-weight:600}
+.opt .l{font-weight:800;color:var(--primary);margin-right:7px}
+.opt.correct .l{color:#047857}
+.brief{font-size:14px;color:#334155;margin-top:4px}
+.case{border:1px solid var(--border);border-top:5px solid var(--danger);border-radius:14px;background:#fff;padding:20px 22px;margin:18px 0;box-shadow:var(--shadow)}
+.case h3{font-size:19px;margin:0 0 8px;color:#7F1D1D}
+.case .ctag{font-size:11.5px;font-weight:800;background:#FEE2E2;color:#991B1B;padding:2px 9px;border-radius:999px;display:inline-block;margin-bottom:10px}
+.case .scene{background:#FFF7ED;border-left:4px solid #FB923C;border-radius:0 10px 10px 0;padding:12px 16px;font-size:14.5px;margin:8px 0 14px}
+.case .ques{margin:8px 0;padding-left:2px}
+.case .ques li{margin:5px 0;font-size:14.5px}
+.top{position:fixed;right:24px;bottom:26px;width:48px;height:48px;border-radius:50%;background:var(--primary);color:#fff;border:none;font-size:20px;cursor:pointer;box-shadow:0 8px 20px rgba(14,165,233,.35);z-index:150;display:none;font-family:inherit}
+.top.show{display:block}
+.hr{height:1px;background:var(--border);margin:26px 0}
+.note{font-size:13px;color:var(--muted);margin-top:6px}
+.kv{display:flex;gap:10px;flex-wrap:wrap;margin:8px 0}
+.kv .k{font-size:12px;font-weight:800;color:#0369A1;background:#E0F2FE;border-radius:6px;padding:2px 8px;white-space:nowrap}
+.kv .v{font-size:14px;color:#334155}
+.starme{font-size:12.5px;color:#B45309;white-space:nowrap}
+@media (max-width:1100px){
+  .main{padding:0 22px 80px}
+  .hero{margin:0 -22px 26px;padding:44px 26px 34px}
+  .hero h1{font-size:34px}
+  .flashcard-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .grid4{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width:900px){
+  .sidebar{transform:translateX(-100%);transition:transform .25s ease;width:280px;box-shadow:0 0 30px rgba(0,0,0,.18)}
+  .sidebar.open{transform:none}
+  .overlay{display:none;position:fixed;inset:0;background:rgba(15,23,42,.42);z-index:110}
+  .overlay.show{display:block}
+  .menu-btn{display:block}
+  .main{margin-left:0;padding:0 18px 80px}
+  .hero{margin:0 -18px 24px;padding:64px 22px 30px;border-radius:0 0 20px 20px}
+  .hero h1{font-size:30px}
+  .sec-head h2{font-size:23px}
+}
+@media (max-width:680px){
+  .grid2,.grid3,.grid4{grid-template-columns:minmax(0,1fr)}
+  .flashcard-grid{grid-template-columns:minmax(0,1fr)}
+  .flashcard{height:190px}
+  table{min-width:500px}
+}
+</style>
+<style data-refactor="v1">
+/* ============================================================
+   精神病学学习指南 · 统一交互层增量覆盖样式 v1
+   构建期由 apply-refactor.ps1 注入 </head> 前，仅追加修正，
+   不改动 A/B 两族基础样式。全部使用字面色值，兼容两族设计变量。
+   ============================================================ */
+
+/* ---- 1. 全局键盘焦点可见 ---- */
+:focus-visible{outline:2px solid #0EA5E9;outline-offset:2px}
+
+/* ---- 2. 章节导航条（胶囊式三段：上一章 / 目录 / 下一章） ---- */
+.chapter-pager{display:flex;align-items:stretch;justify-content:center;gap:10px;margin:36px 0 10px;flex-wrap:wrap}
+.chapter-pager a,.chapter-pager span{flex:1 1 200px;display:flex;align-items:center;justify-content:center;min-height:44px;padding:10px 18px;border:1px solid #E2E8F0;border-radius:999px;background:#FFFFFF;color:#0F172A;font-size:14px;font-weight:600;line-height:1.4;text-decoration:none;text-align:center;box-shadow:0 1px 2px rgba(15,23,42,.06);transition:border-color .15s ease,box-shadow .15s ease,color .15s ease}
+.chapter-pager a:hover{border-color:#0EA5E9;color:#0EA5E9;box-shadow:0 4px 14px rgba(14,165,233,.18);text-decoration:none}
+.chapter-pager .cp-toc{flex:0 0 auto;min-width:104px;background:linear-gradient(135deg,#0EA5E9,#10B981);border-color:transparent;color:#FFFFFF}
+.chapter-pager .cp-toc:hover{border-color:transparent;color:#FFFFFF;opacity:.92}
+.chapter-pager .cp-disabled{opacity:.45;background:#F8FAFC;box-shadow:none;cursor:default}
+@media (max-width:680px){.chapter-pager{gap:8px;margin:28px 0 8px}.chapter-pager a,.chapter-pager span{flex:1 1 100%}}
+
+/* ---- 3. 自测题交互态（兼容 A 族 .opt 与 B 族 .quiz-options li） ---- */
+/* 3.1 基础可点击 */
+.quiz-q .opt{cursor:pointer}
+.quiz-item .quiz-options li{cursor:pointer}
+/* 3.2 hover / 焦点态 */
+.quiz-q .opt:hover,.quiz-q .opt:focus-visible{border-color:#7DD3FC;background:#F0F9FF}
+.quiz-item .quiz-options li:hover,.quiz-item .quiz-options li:focus-visible{background:#FFFFFF;box-shadow:inset 0 0 0 1px #7DD3FC}
+/* 3.3 判定结果态 */
+.quiz-q .opt.is-right{border-color:#34D399;background:#ECFDF5;color:#065F46;font-weight:600}
+.quiz-q .opt.is-right::after{content:" ✓";color:#059669;font-weight:800}
+.quiz-q .opt.is-right .l{color:#047857}
+.quiz-item .quiz-options li.is-right{background:#DCFCE7;box-shadow:inset 0 0 0 1px #34D399;font-weight:600}
+.quiz-item .quiz-options li.is-right::after{content:" ✓";color:#15803D;font-weight:800}
+.quiz-q .opt.is-wrong{border-color:#FCA5A5;background:#FEF2F2;color:#B91C1C;font-weight:600}
+.quiz-q .opt.is-wrong::after{content:" ✗";color:#DC2626;font-weight:800}
+.quiz-q .opt.is-wrong .l{color:#B91C1C}
+.quiz-item .quiz-options li.is-wrong{background:#FEE2E2;box-shadow:inset 0 0 0 1px #FCA5A5;font-weight:600}
+.quiz-item .quiz-options li.is-wrong::after{content:" ✗";color:#DC2626;font-weight:800}
+.quiz-q .opt.is-reveal{border-color:#6EE7B7;background:#ECFDF5;color:#065F46}
+.quiz-q .opt.is-reveal .l{color:#047857}
+.quiz-item .quiz-options li.is-reveal{background:#ECFDF5;box-shadow:inset 0 0 0 1px #6EE7B7;color:#065F46}
+/* 3.4 已锁定禁用态 */
+.quiz-q.is-locked .opt,.quiz-item.is-locked .quiz-options li{cursor:default;pointer-events:none}
+.quiz-q.is-locked .opt:not(.is-right):not(.is-wrong):not(.is-reveal){opacity:.55}
+.quiz-item.is-locked .quiz-options li:not(.is-right):not(.is-wrong):not(.is-reveal){opacity:.55}
+/* 3.5 计分行（运行时注入） */
+.quiz-score{display:flex;align-items:center;gap:12px;margin:14px 0 18px;padding:12px 18px;border:1px dashed #7DD3FC;border-radius:12px;background:#F0F9FF;font-size:14px;font-weight:700;color:#0F172A}
+.quiz-score .qs-label{white-space:nowrap}
+.quiz-score .qs-num{white-space:nowrap;color:#0284C7;font-size:16px}
+.quiz-score .qs-bar{flex:1 1 60px;min-width:60px;height:8px;border-radius:999px;background:#E2E8F0;overflow:hidden}
+.quiz-score .qs-bar i{display:block;height:100%;width:0;border-radius:999px;background:linear-gradient(90deg,#0EA5E9,#10B981);transition:width .35s ease}
+
+/* ---- 4. 速记卡可达性与长内容 ---- */
+.fc-hint,.flip-hint{color:#64748B}
+.flashcard-face{overflow:auto}
+.flashcard[tabindex]{outline:none}
+.flashcard[tabindex]:focus-visible{outline:3px solid #0EA5E9;outline-offset:3px}
+
+/* ---- 5. 侧栏目录 ---- */
+/* B 族 sticky 侧栏内目录限高滚动（A 族 aside 本身已可滚动，此规则空匹配无害） */
+.sidebar .sidebar-nav{max-height:calc(100vh - 60px);overflow-y:auto;scrollbar-width:thin}
+/* A 族 scroll spy 高亮（B 族高亮由其基础样式提供） */
+.sidebar a.toc.active{background:#E0F2FE;color:#0369A1;font-weight:600}
+
+/* ---- 6. 响应式补充：681–900px 时 grid3 降为两列 ---- */
+@media (min-width:681px) and (max-width:900px){
+  .grid3{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+
+/* ---- 7. 打印样式补充（A 族新增；B 族已有 print，重复声明无害） ---- */
+@media print{
+  .sidebar,.overlay,.sidebar-overlay,#menuBtn,#navToggle,#overlay,#sidebarOverlay,#readbar,#topBtn,#backTop,.chapter-pager,.quiz-score{display:none!important}
+}
+
+/* ---- 8. 手机端增强 v2（触控体验 / 防溢出 / 抽屉滚动锁定） ---- */
+/* 8.1 触控体验：去点按高亮、消除双击缩放延迟（flashcard 高 190-200px 天然达标，不另设 min-height） */
+.opt,.tabbar button,.tab-btn,.quiz-options li,.flashcard,.chapter-pager a,.chapter-pager span,.menu-btn,.mobile-nav-toggle{-webkit-tap-highlight-color:transparent;touch-action:manipulation}
+/* 8.2 触控目标最小 44px（自测选项与 tab 胶囊原高约 33px） */
+.opt,.tabbar button,.tab-btn,.quiz-options li{min-height:44px}
+/* 8.3 防溢出：内容图自适应；svg 不设 height:auto，避免定尺寸图标塌陷 */
+img{max-width:100%;height:auto}
+svg{max-width:100%}
+/* 8.4 长词/URL 断行 */
+body{overflow-wrap:break-word}
+/* 8.5 表格容器触摸惯性滚动（A 族已有同值规则，重复声明无害） */
+.table-wrap{-webkit-overflow-scrolling:touch}
+/* 8.6 抽屉打开时锁定背景滚动（两族抽屉断点均为 900px；类由统一脚本增删） */
+@media (max-width:900px){
+  body.nav-locked{overflow:hidden}
+}
+</style>
+</head>
+<body>
+<div id="readbar"></div>
+<button class="menu-btn" id="menuBtn" aria-label="打开目录">☰</button>
+<div class="overlay" id="overlay"></div>
+<aside class="sidebar" id="sidebar">
+  <h2>第十章 强迫症及相关障碍</h2>
+  <div class="sub">精神病学（第9版）· 印刷页 124–133<br>学习指南 · 技能标准版</div>
+  <div class="toc-group">开篇</div>
+  <a class="toc" href="#cover"><span class="n">00</span>章节封面与学习目标</a>
+  <a class="toc" href="#status"><span class="n">01</span>本章地位速览</a>
+  <a class="toc" href="#navmap"><span class="n">02</span>章节导航图</a>
+  <a class="toc" href="#mindmap"><span class="n">03</span>本章知识地图</a>
+  <a class="toc" href="#route"><span class="n">04</span>学习路线图</a>
+  <div class="toc-group">正文（疾病单元八栏）</div>
+  <a class="toc unitlink" href="#u1"><span class="n">05</span>强迫症</a>
+  <a class="toc sub2" href="#u1-1">└ 疾病画像 / 鉴别 / 治疗 / 记忆</a>
+  <a class="toc unitlink" href="#u2"><span class="n">06</span>躯体变形障碍</a>
+  <a class="toc sub2" href="#u2-5">└ 鉴别诊断对对碰</a>
+  <a class="toc unitlink" href="#u3"><span class="n">07</span>嗅觉牵连障碍</a>
+  <a class="toc unitlink" href="#u4"><span class="n">08</span>疑病症</a>
+  <a class="toc unitlink" href="#u5"><span class="n">09</span>囤积障碍</a>
+  <a class="toc unitlink" href="#u6"><span class="n">10</span>拔毛症</a>
+  <a class="toc unitlink" href="#u7"><span class="n">11</span>皮肤搔抓症</a>
+  <div class="toc-group">结尾</div>
+  <a class="toc" href="#summary"><span class="n">12</span>全章核心要点速览</a>
+  <a class="toc" href="#pitfalls"><span class="n">13</span>易混易错点警示</a>
+  <a class="toc" href="#quiz"><span class="n">14</span>章节自测系统</a>
+  <a class="toc" href="#cards"><span class="n">15</span>考点速记卡</a>
+  <a class="toc" href="#cases"><span class="n">16</span>病例挑战</a>
+  <a class="toc" href="#ext"><span class="n">17</span>拓展延伸</a>
+</aside>
+<main class="main">
+<div class="wrap">
+
+<!-- ===== 00 封面 ===== -->
+<section id="cover">
+  <div class="hero">
+    <span class="chap">第十章 · CHAPTER 10</span>
+    <h1>强迫症及相关障碍</h1>
+    <p class="tagline">从"反复闯入的想法"到"反复执行的动作"：一条强迫谱系的识别、鉴别与治疗主线。</p>
+    <p class="meta">教材：精神病学（第9版）｜印刷页 124–133｜全章 3 节：强迫症、躯体变形障碍、其他强迫相关障碍（嗅觉牵连障碍、疑病症、囤积障碍、拔毛症、皮肤搔抓症）</p>
+    <div class="goalbox">
+      <h3>学习目标（四级分层）</h3>
+      <ul>
+        <li><span class="lv">了解</span>说出 OCRD 在 ICD-11 中的疾病构成，以及疑病症、躯体变形障碍、拔毛症在 ICD-10/ICD-11/DSM-5 中的分类变迁。</li>
+        <li><span class="lv l2">理解</span>解释强迫思维与强迫行为的"反强迫"本质、自知力两级水平，以及皮质-纹状体-丘脑-皮质环路在发病中的位置。</li>
+        <li><span class="lv l3">掌握</span>强迫症诊断三要点与五个主要鉴别诊断；SSRIs 一线药物、CBT/ERP 的核心技术与疗程节点。</li>
+        <li><span class="lv l4">重点</span>强迫症与广泛性焦虑、抑郁障碍、疑病症、精神分裂症的鉴别；躯体变形障碍的高自杀风险；其他 OCRD 各自的"专注点"与治疗要点——高频考点与临床易错点。</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 01 地位 ===== -->
+<section id="status">
+  <div class="sec-head"><div class="badge">01</div><h2>本章地位速览<span class="en">Why this chapter matters</span></h2></div>
+  <p class="sec-lead">本章不是一个病，而是一组"共享强迫机制、专注点各不相同"的障碍。抓住"先占观念 + 重复行为 + 自知力"这三根轴，就能把 7 个疾病分开。</p>
+  <div class="grid3">
+    <div class="card blue">
+      <h3>章节定位与重要性</h3>
+      <p>教材以 ICD-11 新设立的独立分类 <strong>OCRD</strong> 开篇，依次展开<strong>三节</strong>：强迫症、躯体变形障碍、其他强迫相关障碍。第三节又分出嗅觉牵连障碍、疑病症、囤积障碍、聚焦于躯体的重复行为障碍（拔毛症、皮肤搔抓症）。全章共 <strong>7 个疾病</strong>。</p>
+      <p class="note">考试权重集中于：强迫症诊断与鉴别、SSRIs/CBT 治疗、各病"专注点"的对应关系、分类变迁。</p>
+    </div>
+    <div class="card red">
+      <h3>临床意义</h3>
+      <p>教材称强迫症是<strong>世界卫生组织排名第十位的致残性疾病</strong>，对职业、情感、婚姻和社会功能都有严重影响；但只有 <strong>34%</strong> 的患者主动寻求医治，从症状出现到确诊约需 <strong>17 年</strong>。</p>
+      <p>躯体变形障碍伴高自杀风险（教材给出 79.5% 曾有过自杀想法、27.6% 曾企图自杀）；囤积障碍因自知力与动机不足被视为难治性精神障碍。识别率低、延误久，是本章最现实的临床问题。</p>
+    </div>
+    <div class="card green">
+      <h3>与前后章节关联</h3>
+      <p><strong>前置：</strong>症状学（强迫观念、先占观念、自知力）、焦虑障碍、抑郁障碍、躯体形式障碍——都是本章鉴别的参照系。</p>
+      <p><strong>后续延伸：</strong>儿童青少年精神障碍（儿童强迫症、拔毛症起病于青春期）、抽动障碍（教材指出与强迫症的遗传学和现象学联系）。</p>
+      <p><strong>横向交叉：</strong>神经科学（CSTC 环路、奖赏回路）、心理治疗（CBT/ERP/习惯逆转）、皮肤科与整形外科（BDD、拔毛、搔抓）。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 02 导航 ===== -->
+<section id="navmap">
+  <div class="sec-head"><div class="badge">02</div><h2>章节导航图<span class="en">Section map</span></h2></div>
+  <p class="sec-lead">按教材三节顺序排列；第三节内每个独立命名的疾病各设一个完整八栏单元，点击卡片可直接跳转。</p>
+  <div class="grid3">
+    <a class="card red" href="#u1" style="display:block;color:inherit">
+      <h3>第一节 · 强迫症</h3>
+      <p>定义、流行病学、病因、强迫思维六亚型与强迫行为四型、诊断与五个鉴别、药物/CBT/物理治疗、病程预后。</p>
+      <p class="note">关键词：反强迫 · 自知力 · 1 小时 · ERP</p>
+    </a>
+    <a class="card orange" href="#u2" style="display:block;color:inherit">
+      <h3>第二节 · 躯体变形障碍</h3>
+      <p>外表"缺陷"先占观念、重复检查与掩饰、自我牵连观念、四项诊断要点、四个鉴别、SSRIs 与 CBT。</p>
+      <p class="note">关键词：照镜子 · 整形手术 · 自杀风险</p>
+    </a>
+    <a class="card cyan" href="#u3" style="display:block;color:inherit">
+      <h3>第三节（一）· 嗅觉牵连障碍</h3>
+      <p>持续关注自身臭味、反复检查与掩盖、回避社交；四项诊断要点；SSRIs 有效。</p>
+      <p class="note">关键词：口臭 · 体味 · 25 岁</p>
+    </a>
+    <a class="card cyan" href="#u4" style="display:block;color:inherit">
+      <h3>第三节（二）· 疑病症</h3>
+      <p>疾病先占观念、健康相关重复行为、回避就医；ICD-11 移入 OCRD；CBT 一线。</p>
+      <p class="note">关键词：疾病焦虑障碍 · 反复求医 · 慢性波动</p>
+    </a>
+    <a class="card cyan" href="#u5" style="display:block;color:inherit">
+      <h3>第三节（三）· 囤积障碍</h3>
+      <p>难以丢弃、过度获取、生活空间杂乱与安全隐患；DSM-5 独立；CBT 有效率约 15%。</p>
+      <p class="note">关键词：1.5% · 遗传度 51% · 难治</p>
+    </a>
+    <a class="card cyan" href="#u6" style="display:block;color:inherit">
+      <h3>第三节（四）· 拔毛症</h3>
+      <p>反复拔毛导致脱发、拔毛前后的情绪变化、掩饰与回避；SSRIs 与习惯逆转训练。</p>
+      <p class="note">关键词：11～16 岁 · 头皮/眉毛/睫毛 · HRT</p>
+    </a>
+    <a class="card cyan" href="#u7" style="display:block;color:inherit">
+      <h3>第三节（五）· 皮肤搔抓症</h3>
+      <p>反复搔抓造成皮损、仪式行为、感染与败血症风险；HRT/CBT/ACT 与 SSRIs。</p>
+      <p class="note">关键词：ICD-11 新诊断 · 12～16 岁 · 皮损</p>
+    </a>
+  </div>
+  <div class="callout book">
+    <span class="ct">📖 关于单元划分与八栏适配的说明</span>
+    教材第三节标题为"其他强迫相关障碍"，但其下用<strong>独立小标题</strong>分别叙述嗅觉牵连障碍、疑病症、囤积障碍、聚焦于躯体的重复行为障碍（再分拔毛症、皮肤搔抓症）。为不丢失教材列出的每一种疾病，本指南<strong>不把第三节合并成一个单元</strong>，而是按疾病拆为 u3～u7 五个单元，每个单元均完整保留八栏。教材对嗅觉牵连障碍、疑病症、拔毛症、皮肤搔抓症的病因/治疗着墨较少，相应栏目保留标题并如实标注"教材未提供相关内容"或"教材未涉及"，不以课外资料补写。
+  </div>
+</section>
+
+<!-- ===== 03 知识地图 ===== -->
+<section id="mindmap">
+  <div class="sec-head"><div class="badge">03</div><h2>本章知识地图<span class="en">Knowledge map</span></h2></div>
+  <p class="sec-lead">按"共同机制 → 强迫症原型 → 专注点变体 → 鉴别与治疗"的逻辑重组，而不是照抄目录。全章可压缩为一句：<strong>同一套强迫机制，不同的专注点，决定不同的病名与治疗重点。</strong></p>
+  <div class="stat">
+    <span>3 节</span><span>7 个疾病</span><span>2 级自知力</span><span>3 类治疗手段</span><span>1 个核心环路（CSTC）</span><span>5 组强迫症主要鉴别</span>
+  </div>
+  <div class="grid3">
+    <div class="card blue">
+      <h3>① 分类底座</h3>
+      <ul>
+        <li>ICD-11 新设 OCRD 独立分类</li>
+        <li>成员：强迫症、躯体变形障碍、嗅觉牵连障碍、疑病症、囤积障碍、聚焦于躯体的重复行为障碍</li>
+        <li>共同点：相似的病理生理基础、临床特征、治疗手段</li>
+        <li>DSM-5 把疑病症归入"躯体症状及相关障碍"，称疾病焦虑障碍</li>
+      </ul>
+    </div>
+    <div class="card red">
+      <h3>② 强迫症原型</h3>
+      <ul>
+        <li>强迫思维六亚型：表象、穷思竭虑、怀疑、对立思维、联想、回忆</li>
+        <li>强迫行为四型：检查、洗涤、计数、仪式动作</li>
+        <li>外加：强迫意向、回避行为、继发焦虑抑郁</li>
+        <li>诊断三要点：持续症状、耗时（如 ≥1 小时/天）、痛苦/功能损害</li>
+        <li>自知力：一般或良好 / 较差到缺乏</li>
+      </ul>
+    </div>
+    <div class="card cyan">
+      <h3>③ 专注点变体</h3>
+      <ul>
+        <li>躯体变形障碍 → 外表"缺陷"</li>
+        <li>嗅觉牵连障碍 → 自身臭味/体味</li>
+        <li>疑病症 → 患严重疾病</li>
+        <li>囤积障碍 → 无用物品难以丢弃</li>
+        <li>拔毛症 → 毛发</li>
+        <li>皮肤搔抓症 → 皮肤抠剥</li>
+      </ul>
+    </div>
+    <div class="card orange">
+      <h3>④ 鉴别主轴</h3>
+      <ul>
+        <li>是否"自我抵抗"：强迫症强，疑病症/BDD 弱</li>
+        <li>担心对象是否广泛：GAD 广泛不固定</li>
+        <li>是否躯体局限：躯体形式障碍以躯体不适为主</li>
+        <li>有无幻觉妄想/言行紊乱：精神分裂症</li>
+        <li>原发症状谁占主导：抑郁共病时可双诊断</li>
+      </ul>
+    </div>
+    <div class="card green">
+      <h3>⑤ 治疗骨架</h3>
+      <ul>
+        <li>药物：SSRIs 一线（氟西汀、氟伏沙明、舍曲林、帕罗西汀）；氯米帕明等 TCAs 亦具抗强迫作用</li>
+        <li>心理：CBT 一线，核心是暴露与反应阻止 + 认知重组</li>
+        <li>物理：rTMS、DBS、VNS、MECT</li>
+        <li>联合优于单用；CBT 在维持治疗中重要</li>
+        <li>其他 OCRD 各有侧重：HRT、ACT、SSRIs</li>
+      </ul>
+    </div>
+    <div class="card purple">
+      <h3>⑥ 易错数字锚</h3>
+      <ul>
+        <li>终生患病率 0.8%～3.0%</li>
+        <li>同时有思维+行为约 70%，仅思维约 25%</li>
+        <li>共病至少一种 60%～90%</li>
+        <li>确诊延迟约 17 年；仅 34% 求医</li>
+        <li>SSRIs 有效率 65%～70%，症状改善仅 30%～60%</li>
+        <li>BDD 患病率约 11%，起病 12～13 岁</li>
+      </ul>
+    </div>
+  </div>
+  <p class="note">统计口径：疾病数按教材本章独立命名的小标题计（强迫症、躯体变形障碍、嗅觉牵连障碍、疑病症、囤积障碍、拔毛症、皮肤搔抓症）；教材未给出统一计数，此为按原文整理。</p>
+</section>
+
+<!-- ===== 04 路线 ===== -->
+<section id="route">
+  <div class="sec-head"><div class="badge">04</div><h2>学习路线图<span class="en">Study route</span></h2></div>
+  <p class="sec-lead">先学"原型"强迫症，再用"专注点"一把尺子量其余六个病，最后用鉴别表和题目收口。不要在第一节就陷进数字堆。</p>
+  <div class="grid2">
+    <div class="card blue">
+      <h3>推荐学习路径</h3>
+      <div class="timeline">
+        <div class="tl-item"><h4>第 1 步 · 建分类框架（约 20 分钟）</h4><p>先记 OCRD 的 6 类成员与 ICD-11/DSM-5 的两处分类差异，再看知识地图，明确"一个机制、多个专注点"的总纲。</p></div>
+        <div class="tl-item"><h4>第 2 步 · 攻强迫症（约 70 分钟）</h4><p>按"定义 → 思维六型/行为四型 → 诊断三要点与自知力 → 五个鉴别 → 三线治疗"顺序推进，数字边看边写。</p></div>
+        <div class="tl-item"><h4>第 3 步 · 躯体变形障碍（约 35 分钟）</h4><p>抓住"外表缺陷先占观念 + 重复检查/掩饰/回避 + 高自杀风险"，与强迫症、进食障碍做对比。</p></div>
+        <div class="tl-item"><h4>第 4 步 · 其他五个病（约 45 分钟）</h4><p>只记每个病的"专注点 + 诊断四要点 + 治疗首选项"，病因栏教材空白处直接记"未明确"。</p></div>
+        <div class="tl-item"><h4>第 5 步 · 刷题与闪卡（约 30 分钟）</h4><p>做完 15 道自测，翻 20 张速记卡，最后看 3 个病例挑战，训练"先诊断、再鉴别、后处理"的表达顺序。</p></div>
+      </div>
+      <p class="note">总时长约 3.5 小时；建议分 2 次完成，次日用速记卡 + 易混点复习 25 分钟。</p>
+    </div>
+    <div class="card purple">
+      <h3>重点优先级与记忆策略</h3>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>内容</th><th>优先级</th><th>推荐记忆法</th></tr></thead>
+          <tbody>
+            <tr><td>强迫症诊断三要点与自知力两级</td><td class="starme">⭐⭐⭐</td><td>数字编码 + 对比</td></tr>
+            <tr><td>强迫思维六亚型 / 强迫行为四型</td><td class="starme">⭐⭐⭐</td><td>口诀歌谣 + 举例联想</td></tr>
+            <tr><td>强迫症五个主要鉴别</td><td class="starme">⭐⭐⭐</td><td>对比表 + "抵抗轴"</td></tr>
+            <tr><td>SSRIs 一线四药与 CBT/ERP</td><td class="starme">⭐⭐⭐</td><td>归类 + 首字母</td></tr>
+            <tr><td>各 OCRD 的"专注点"</td><td class="starme">⭐⭐⭐</td><td>归类记忆 + 一句话画像</td></tr>
+            <tr><td>躯体变形障碍诊断与自杀风险</td><td class="starme">⭐⭐⭐</td><td>数字锚定 + 故事</td></tr>
+            <tr><td>ICD-11 / DSM-5 分类变迁</td><td class="starme">⭐⭐</td><td>对比记忆</td></tr>
+            <tr><td>流行病学与共病数字</td><td class="starme">⭐⭐</td><td>数字编码</td></tr>
+            <tr><td>物理治疗四种手段</td><td class="starme">⭐⭐</td><td>首字母缩拼</td></tr>
+            <tr><td>拔毛/搔抓的行为治疗名称</td><td class="starme">⭐</td><td>归类 + 首字母</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="note">记忆策略总原则：先理解"为什么反复"（反强迫与焦虑中和），再记"反复什么"（专注点），最后记"怎么治"（SSRIs + CBT）。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 05 强迫症 ===== -->
+<section id="u1">
+  <div class="sec-head"><div class="badge">05</div><h2>强迫症<span class="en">Obsessive-Compulsive Disorder · 第一节（p.124–129）</span></h2></div>
+  <p class="sec-lead">全章原型与分值核心。抓住"反复闯入 + 反强迫 + 耗时/损害"三步诊断，再用"自我抵抗"这把尺子把它与焦虑、疑病、精分分开。</p>
+
+  <!-- 第一栏 -->
+  <div class="card red" id="u1-1">
+    <h3 class="col-title"><span class="idx">第一栏</span>疾病画像</h3>
+    <div class="quote"><span class="lab">教材原文</span>强迫症（obsessive-compulsive disorder，OCD）又称强迫障碍，是一种以反复持久出现的强迫观念和/或强迫行为等为主要临床表现的精神疾病。</div>
+    <div class="quote"><span class="lab">教材原文</span>强迫观念是指反复闯入患者头脑中的意向或表象，患者常试图忽略或抵制，或通过强迫动作来中和它们；强迫行为则是为应对强迫思维而被迫执行的、反复出现的行为或仪式性动作。</div>
+    <p><strong>一句话画像：</strong>大脑像卡住了一张"必须再想一遍、再做一遍"的唱片——想法反复闯入，患者明知多余却赶不走；为了压住焦虑，只能用重复动作"赎买"片刻安心。<span class="note">（后半句为类比理解，不是教材定义）</span></p>
+    <div class="stat">
+      <span>终生患病率 0.8%～3.0%</span><span>亚临床强迫症状约 25%</span><span>平均发病 19～35 岁</span><span>男女比 (1∶1)～(1∶1.5)</span><span>共病 ≥1 种 60%～90%</span><span>确诊延迟约 17 年</span>
+    </div>
+    <div class="grid2">
+      <div class="mini">
+        <h4>核心特征（教材表述）</h4>
+        <ul>
+          <li><strong>反复持久：</strong>强迫观念和/或强迫行为反复出现，不是一次性的担忧。</li>
+          <li><strong>反强迫：</strong>多数患者明知没有必要、不正常、违背意愿，却无法控制和摆脱，因而焦虑痛苦。</li>
+          <li><strong>功能损害：</strong>耗时（如每天 1 小时或以上），或导致个人、家庭、社会、学业、事业等领域损害；若维持功能需付出大量额外努力。</li>
+          <li><strong>异质性：</strong>同一患者可有多种强迫思维/行为，不同患者症状可完全不同。</li>
+        </ul>
+      </div>
+      <div class="mini">
+        <h4>三个关键比例</h4>
+        <ul>
+          <li><strong>约 70%</strong>：同时具有强迫思维和强迫行为。</li>
+          <li><strong>约 25%</strong>：只有强迫思维。</li>
+          <li><strong>34%</strong>：主动寻求医治的比例；从症状出现到确诊约 <strong>17 年</strong>。</li>
+        </ul>
+        <p class="note">仅出现强迫行为的病例少见（教材原文）。</p>
+      </div>
+    </div>
+    <p><strong>疾病负担：</strong>教材称强迫症是<strong>世界卫生组织排名第十位的致残性疾病</strong>，对职业、情感、婚姻和社会功能都有严重影响；病因复杂、症状多样、病程迁延、易慢性化。</p>
+    <p class="note">儿童强迫症：患病率 2%～4%，男性多于女性（约 3∶2），平均起病 7.5～12.5 岁，约 20% 在 10 岁或更早出现症状；约 1/3 的患者起病于 15 岁前。</p>
+  </div>
+
+  <!-- 第二栏 -->
+  <div class="card blue" id="u1-2">
+    <h3 class="col-title"><span class="idx">第二栏</span>病因探秘</h3>
+    <p><strong>总纲：</strong>强迫症是一种多维度、多因素的疾病，生物学因素、心理因素和社会因素共同参与其发生；病因和发病机制复杂，目前尚未完全明确。以下按"遗传 → 神经生化 → 内分泌 → 影像 → 电生理 → 心理社会"串联。</p>
+    <div class="grid2">
+      <div class="mini">
+        <h4>① 遗传因素</h4>
+        <ul>
+          <li>明显的家族聚集性；一级亲属患病率比普通人群高 <strong>5～6 倍</strong>。</li>
+          <li>遗传度在 <strong>30%～65%</strong> 之间。</li>
+          <li>遗传方式为<strong>多基因遗传</strong>，主基因在多基因背景下起重要作用。</li>
+          <li>相关基因：DA 能通路和血清素基因等；<strong>谷氨酸转运体基因异常</strong>具有全基因组意义。</li>
+        </ul>
+      </div>
+      <div class="mini">
+        <h4>② 神经生化</h4>
+        <ul>
+          <li>5-HT、DA、NE、谷氨酸等存在不同程度异常；各种递质失衡在发病机制中起重要作用。</li>
+          <li>与脑内 <strong>5-HT 功能异常</strong>联系最密切；最早、最有说服力的证据来自<strong>氯米帕明</strong>治疗强迫症的有效性。</li>
+          <li>SSRIs 不仅改变突触间隙 5-HT 浓度，也提高突触间 5-HT 神经传递；但有效率仅 <strong>40%～60%</strong>，提示 5-HT 异常只说明部分病理基础。</li>
+          <li><strong>DA 阻滞剂</strong>能增强 SSRIs 的抗强迫作用，提示与脑内 DA 功能亢进有关。</li>
+        </ul>
+      </div>
+      <div class="mini">
+        <h4>③ 神经内分泌</h4>
+        <ul>
+          <li>丘脑下部和垂体激素水平异常。</li>
+          <li>脑脊液（CSF）<strong>血管升压素</strong>水平明显增加，并与强迫症严重程度相关。</li>
+          <li>CSF <strong>促肾上腺皮质激素释放因子（CRF）</strong>浓度升高。</li>
+          <li><strong>白细胞介素-6（IL-6）</strong>浓度与强迫行为的严重程度相关。</li>
+        </ul>
+      </div>
+      <div class="mini">
+        <h4>④ 神经影像学</h4>
+        <ul>
+          <li>神经结构基础是<strong>皮质-纹状体-丘脑-皮质环路</strong>，主要包括眶额皮质、背外侧前额叶、前扣带回、纹状体和丘脑。</li>
+          <li>结构：双侧眶额叶皮质、前扣带回灰质体积减少，且与严重程度相关；双侧尾状核灰质体积增加。</li>
+          <li>功能：静息状态下环路代谢率/活动明显增加；有效治疗后相应脑区代谢率或血流量明显下降。</li>
+          <li>默认网络、执行控制网络、突显网络存在网络内活动及网络间连接异常；边缘系统和奖赏环路可能参与。</li>
+        </ul>
+      </div>
+      <div class="mini">
+        <h4>⑤ 神经电生理</h4>
+        <ul>
+          <li>事件相关电位（ERP）：刺激相关任务中 N2、P3 潜伏期缩短。</li>
+          <li>刺激无关任务中 N1 潜伏期延长、N2 波幅降低，提示与刺激无关的过程受损。</li>
+          <li>执行/停止刺激研究中，患者对两种刺激均活跃（健康人仅对停止刺激活跃）；P3 波幅明显低于健康人，提示抑制能力不足。</li>
+          <li>错误相关负波表现活跃，可能与对刺激的过度觉醒和专注有关。</li>
+        </ul>
+      </div>
+      <div class="mini">
+        <h4>⑥ 心理社会因素</h4>
+        <ul>
+          <li>约 <strong>2/3</strong> 的患者存在强迫性人格：①追求完美、按部就班、墨守成规；②对自己要求极严、固执、灵活性差；③不安全感、反复检查反思；④拘泥细节、生活琐事也"程序化"。</li>
+          <li>不良家庭环境：成员缺少责任、亲密程度低、约束力不够、矛盾冲突多、自我控制能力差。</li>
+          <li>生活压力、挫折、躯体疾病均可作为诱发因素。</li>
+        </ul>
+      </div>
+    </div>
+    <div class="callout tip">
+      <span class="ct">💡 证据强度要分清</span>
+      教材明确"尚未完全明确"。可视为<strong>较确定的关联</strong>：家族聚集、CSTC 环路、5-HT 系统（氯米帕明与 SSRIs 有效）。仍属<strong>假说/相关线索</strong>：具体易感基因、DA 功能亢进、血管升压素/CRF/IL-6 的意义。答题时不要把"相关"写成"已证实病因"。
+    </div>
+    <div class="callout warn">
+      <span class="ct">⚠️ 5-HT 不是全部</span>
+      教材特别指出：SSRIs 治疗强迫症的有效率仅 40%～60%，"提示 5-HT 功能异常仅能说明强迫症的部分病理基础"。因此不能把强迫症简单等同于"5-HT 缺乏"。
+    </div>
+  </div>
+
+  <!-- 第三栏 -->
+  <div class="card red" id="u1-3">
+    <h3 class="col-title"><span class="idx">第三栏</span>临床表现拼图</h3>
+    <p><strong>教材分类体系：</strong>强迫思维、强迫行为、强迫意向、回避行为、其他（焦虑抑郁等）。用标签页分别展开，症状名称与举例均取自教材原文。</p>
+    <div class="tabs" data-tabs>
+      <div class="tabbar">
+        <button class="on" data-tab="c1">强迫思维（六亚型）</button>
+        <button data-tab="c2">强迫行为（四型）</button>
+        <button data-tab="c3">强迫意向与回避</button>
+        <button data-tab="c4">伴随症状与共病</button>
+      </div>
+      <div class="panel on" data-panel="c1">
+        <p><strong>定义：</strong>以刻板形式反复闯入头脑中并持续存在的观念、表象、冲动或渴望；患者有强烈的反强迫意识，能意识到想法没有现实意义、不必要，试图忽略、压抑或用其他思想行为对抗，但无法摆脱，因而苦恼焦虑。</p>
+        <div class="grid2">
+          <div class="mini"><h4>1. 强迫表象</h4><p>头脑中反复出现过去感受到的、令患者不愉快和厌恶的体验。如不断闪现刚刚看过的恐怖画面，试图抵抗、极力控制但不成功。</p></div>
+          <div class="mini"><h4>2. 强迫性穷思竭虑（思维反刍）</h4><p>对毫无意义的"问题"反复思索、刨根究底，自知毫无意义却不能停止。如反复思考"人为什么会说话？""天为什么会下雨？"</p></div>
+          <div class="mini"><h4>3. 强迫怀疑</h4><p>对自己已完成的事情产生不必要的怀疑，需要反复检查、核对。如出门怀疑门窗是否关好，检查一遍又一遍仍不放心。</p></div>
+          <div class="mini"><h4>4. 强迫对立思维</h4><p>出现一个观念或看到一句话时，不由自主联想起另一个性质对立的观念或词句。如想到"和平"立即联想到"战争"；看到"拥护"马上出现"打倒"。</p></div>
+          <div class="mini"><h4>5. 强迫联想</h4><p>看到、听到或想到某事物时，不由自主联想到令人不愉快或不祥的情境。如看见打火机就联想到炸药爆炸；见到有人抽烟就想到火灾。</p></div>
+          <div class="mini"><h4>6. 强迫回忆</h4><p>反复回忆经历过的事情，无法摆脱，感到苦恼；可与强迫怀疑同时出现。若被打断或认为"想得不对"，须从头再次想起。</p></div>
+        </div>
+      </div>
+      <div class="panel" data-panel="c2">
+        <p><strong>定义：</strong>患者不得不反复进行的行为或仪式化动作，目的是阻止或降低强迫思维带来的焦虑和痛苦。但行为与所担心事情之间的联系常常<strong>不合逻辑</strong>（如把物品排列整齐是为了防止心爱的人受伤害），或明显超过正常界限（如每天花几小时洗澡来防止生病）。</p>
+        <p><strong>形式：</strong>可以是外显的仪式或行为（反复检查门窗、清洗等），也可以是<strong>内隐的思维</strong>——"头脑中的强迫行为"，如默默计数或祷告。患者不仅要求自己重复，也要求周围人进行强迫行为，常导致不良人际关系。</p>
+        <div class="grid2">
+          <div class="mini"><h4>1. 强迫检查</h4><p>为减轻强迫怀疑所致焦虑而采取的措施。反复检查门窗、煤气是否关好，电插头是否拔掉，作业是否做对；严重者检查数十遍仍不放心。</p></div>
+          <div class="mini"><h4>2. 强迫洗涤</h4><p>为消除对脏物、毒物或细菌污染的担心，反复洗手、洗澡或洗衣服、餐具；往往要遵循一定程序进行。</p></div>
+          <div class="mini"><h4>3. 强迫计数</h4><p>对数字发生强迫观念，整日沉浸于无意义计数；偶然碰到的电话号码、汽车牌号也要反复默记，或反复数楼梯、门窗、电线杆；怀疑遗漏则重新数起。</p></div>
+          <div class="mini"><h4>4. 强迫性仪式动作</h4><p>必须重复刻板的仪式性动作以预防灾难性结果；常按一定顺序，否则重新开始。如出门必须左脚先迈，否则退回再迈；鞋子头必须朝东摆放。可占去大部分时间，常伴强迫性迟缓和犹豫不决。</p></div>
+        </div>
+      </div>
+      <div class="panel" data-panel="c3">
+        <div class="grid2">
+          <div class="mini">
+            <h4>强迫意向</h4>
+            <p>反复体会到一种强烈的、违背自己意愿的内在冲动，明知非理性、荒谬，却不能控制这种意愿的出现，因此十分苦恼。如想把小孩扔到窗外、站在高处就想往下跳。</p>
+            <p class="note">教材强调：虽然内心冲动十分强烈，但<strong>往往不会转变为行动</strong>。</p>
+          </div>
+          <div class="mini">
+            <h4>回避行为</h4>
+            <p>积极回避与强迫有关的情景，以尽量减少或避免触发强迫及相关的痛苦或冲动。</p>
+            <p class="note">教材数据：<strong>50% 以上</strong>的患者存在回避行为；既加重疾病严重程度，也加重社会功能损害；<strong>常预示治疗效果不佳</strong>。</p>
+          </div>
+        </div>
+      </div>
+      <div class="panel" data-panel="c4">
+        <ul>
+          <li><strong>焦虑、紧张、抑郁：</strong>常为继发，与强迫症状相互影响；焦虑或抑郁的加重/减轻常伴强迫症状平行变化。焦虑程度取决于强迫内容的性质和强度，以及其与"以缓解焦虑为目的的强迫行为"之间相互作用的结果。</li>
+          <li><strong>自残与自杀：</strong>强迫症状严重频繁，或长期治疗效果不明显，可产生抑郁情绪，严重时出现自残和自杀行为。</li>
+          <li><strong>抽动相关：</strong>约 <strong>8.8%</strong> 的患者伴慢性抽动；患者同胞中抽动障碍患病率约 <strong>41.2%</strong>；合并抽动障碍者的一级亲属中抽动障碍患病率约 <strong>90.9%</strong>。</li>
+          <li><strong>人格障碍：</strong>约 <strong>28%</strong> 伴人格障碍，其中以强迫性人格障碍为主，约 <strong>18.9%</strong>；伴人格障碍者治疗效果较差。</li>
+          <li><strong>一过性精神病性症状：</strong>慢性病程中约 <strong>13.3%</strong> 出现；并非精神分裂症的特征性症状，<strong>可逆</strong>，且无精神衰退现象。</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- 第四栏 -->
+  <div class="card orange" id="u1-4">
+    <h3 class="col-title"><span class="idx">第四栏</span>教材典型案例</h3>
+    <div class="callout book">
+      <span class="ct">📖 教材未提供具体临床案例</span>
+      本节为疾病学叙述，教材<strong>没有</strong>给出带姓名、年龄、病程、检查结果的完整病例。教材提供的是大量<strong>典型症状举例</strong>（"如……"），以下按原文摘录，用于"由举例识别症状"，不构成真实病例。
+    </div>
+    <div class="grid2">
+      <div class="mini">
+        <h4>教材原文举例 A · 强迫怀疑 → 强迫检查</h4>
+        <p>"出门时怀疑门窗是否关好，虽然检查了一遍又一遍，但还是不放心。患者明知毫无必要，但不能摆脱。"</p>
+        <p class="note">症状链：怀疑（思维）→ 检查（行为）→ 暂时安心 → 再次怀疑。</p>
+      </div>
+      <div class="mini">
+        <h4>教材原文举例 B · 强迫性仪式动作</h4>
+        <p>"患者出门一定要左脚先迈出家门，否则就一定要退回来再迈一次"；"鞋子头必须朝东摆放，否则就会有'不好'的事情发生"。</p>
+        <p class="note">关键：仪式有"吉凶祸福"意义，顺序被打破就要重来。</p>
+      </div>
+      <div class="mini">
+        <h4>教材原文举例 C · 强迫联想</h4>
+        <p>"看见打火机，就联想到炸药爆炸的恐怖情景；见到有人抽烟，就想到火灾。明知不必要，但不能控制，常引发恐惧和紧张情绪。"</p>
+        <p class="note">与强迫对立思维的差别：联想是"不祥情境"，对立思维是"性质相反的词句"。</p>
+      </div>
+      <div class="mini">
+        <h4>教材原文举例 D · 强迫性穷思竭虑</h4>
+        <p>"反复思考'人为什么会说话？''天为什么会下雨？''地球为什么是圆的？'"</p>
+        <p class="note">自知毫无意义却不能停止，是"思维反刍"的典型。</p>
+      </div>
+    </div>
+    <p><strong>由举例到诊断的思维路径（依据教材诊断要点）：</strong></p>
+    <div class="timeline">
+      <div class="tl-item"><h4>第 1 问 · 是不是强迫？</h4><p>想法/动作是否反复持久、是否"闯入"且患者试图抵制或用动作中和？有无反强迫意识？</p></div>
+      <div class="tl-item"><h4>第 2 问 · 够不够诊断阈值？</h4><p>是否占据一定时间（如每天 ≥1 小时）？是否引起明显痛苦或功能损害？</p></div>
+      <div class="tl-item"><h4>第 3 问 · 要不要鉴别？</h4><p>担心是否广泛不固定（GAD）？是否以躯体不适为主（躯体形式障碍）？是否对疾病深信不疑且无自我抵抗（疑病症）？有无幻觉妄想（精神分裂症）？</p></div>
+    </div>
+  </div>
+
+  <!-- 第五栏 -->
+  <div class="card orange" id="u1-5">
+    <h3 class="col-title"><span class="idx">第五栏</span>鉴别诊断对对碰</h3>
+    <p><strong>表 1　强迫症的五个主要鉴别（教材原文要点）</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>疾病</th><th>对方的核心表现</th><th>强迫症的特点</th><th>一句话鉴别钥匙</th></tr></thead>
+        <tbody>
+          <tr><td><strong>广泛性焦虑障碍</strong></td><td>持续的担忧、紧张、预期焦虑不安；担心内容广泛、多不固定；自己的控制愿望不强，甚至没有控制愿望；伴明显躯体性焦虑</td><td>担心、焦虑的对象是<strong>强迫症状</strong>；<strong>自我抵抗、控制愿望强烈</strong></td><td>问"你想不想控制"：想控制且控制不住 → 强迫症</td></tr>
+          <tr><td><strong>抑郁障碍</strong></td><td>可与强迫症经常共存；抑郁患者可表现某些强迫症状，强迫症患者也可出现某些抑郁症状</td><td>鉴别主要根据<strong>哪种症状是原发的、并占主要地位</strong></td><td>谁先出现、谁占主导；两者均达诊断标准可<strong>同时诊断两种疾病</strong></td></tr>
+          <tr><td><strong>躯体形式障碍</strong></td><td>主要临床表现为躯体的不适感和个人的主观关注</td><td>强迫症症状<strong>不仅仅局限于躯体症状</strong></td><td>症状是否只在"身体"这一亩地里</td></tr>
+          <tr><td><strong>疑病症</strong></td><td>主要是疾病的先占观念，认为自己患某种严重疾病并深信不疑；大多数并不认为疑病观念没有必要，<strong>无自我抵抗和强烈控制愿望</strong></td><td>明知观念不必要，有自我抵抗和强烈控制愿望</td><td>"你觉得这想法多余吗"：觉得多余 → 强迫症</td></tr>
+          <tr><td><strong>精神分裂症</strong></td><td>往往出现幻觉、妄想、言行紊乱等其他精神病性症状</td><td>患者<strong>为之苦恼</strong>；与环境、现实协调</td><td>三看：有无精神病性症状、是否苦恼还是淡漠处之、是否与现实协调</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout key">
+      <span class="ct">📌 一句话鉴别总结</span>
+      <strong>强迫症是"我知道没必要，但我停不下来，并且我很痛苦"；疑病症是"我确信有病"；GAD 是"什么都担心，也不太想控制"；精分是"幻觉妄想里，我不觉得这有问题"。</strong>
+    </div>
+    <p><strong>表 2　与其他强迫相关障碍的鉴别（教材原文：专注点不同）</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>疾病</th><th>专注点</th><th>与强迫症的关键差异</th></tr></thead>
+        <tbody>
+          <tr><td>嗅觉牵连障碍</td><td>不好闻的气味（口臭、体味等）</td><td>强迫症状围绕"气味"及其来源，而非广泛的强迫思维</td></tr>
+          <tr><td>囤积障碍</td><td>无意义或无价值物品，并难以舍弃</td><td>核心是"丢弃痛苦"与"过度获取"，而非典型的强迫思维—中和行为链</td></tr>
+          <tr><td>拔毛症</td><td>拔毛发</td><td>聚焦于毛发拔除这一重复行为</td></tr>
+          <tr><td>皮肤搔抓症</td><td>对皮肤的抠、剥等行为</td><td>聚焦于皮肤抠剥及皮损</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note">教材未给出上述四种障碍与强迫症的逐条量化鉴别标准，仅以"专注点不同"作原则性区分；本表不额外添加诊断标准。</p>
+  </div>
+
+  <!-- 第六栏 -->
+  <div class="card green" id="u1-6">
+    <h3 class="col-title"><span class="idx">第六栏</span>治疗方案工具箱</h3>
+    <p><strong>教材总纲：</strong>强迫症的治疗主要包括<strong>药物治疗、心理治疗和物理治疗</strong>；对多数患者，药物与心理治疗同时或相继进行的疗效均高于单独使用任一种方法。</p>
+    <p><strong>一、药物治疗（教材称"主要治疗方法"）</strong></p>
+    <div class="quote"><span class="lab">教材原文</span>具有抗强迫作用的药物有选择性 5-羟色胺再摄取抑制剂（SSRIs）和三环类抗抑郁药物等。</div>
+    <ol>
+      <li><strong>选择合适的药物：</strong>从推荐的一线药物开始；疗效欠佳者按治疗程序逐步换药或联合治疗。</li>
+      <li><strong>足量足疗程：</strong>每种 SSRIs 都有不同的最大推荐剂量、有效剂量和起始剂量；多数患者治疗 4～6 周后显著效果，有些 10～12 周方有改善；一般建议 <strong>10～12 周</strong>的急性期治疗。</li>
+      <li><strong>充分临床评估：</strong>治疗前充分评估、确定方案，兼顾患者主观意见、病情严重程度、药物依赖性、共病情况及不良反应。</li>
+      <li><strong>及时处理不良反应：</strong>出现任何新症状或状况恶化，均应及时处理。</li>
+      <li><strong>定期随访：</strong>随访症状严重程度、共病情况及自杀风险等。</li>
+    </ol>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>药物</th><th>教材定位</th><th>教材提到的要点</th></tr></thead>
+        <tbody>
+          <tr><td><strong>氟西汀、氟伏沙明、舍曲林、帕罗西汀</strong></td><td>国家市场监督管理总局批准的<strong>一线药物</strong></td><td>抗胆碱能副作用和心血管不良反应较小，个体耐受性较好</td></tr>
+          <tr><td><strong>氟西汀、氟伏沙明、舍曲林</strong></td><td>可考虑<strong>高剂量</strong> SSRIs</td><td>高剂量可以有更好的抗强迫疗效；应从小剂量开始，逐渐加量至治疗剂量</td></tr>
+          <tr><td><strong>氯米帕明</strong></td><td>三环类抗抑郁药；可作 SSRIs 联合用药</td><td>联合疗效较好，但<strong>安全性较差</strong>，一般不作为联合方案的首选</td></tr>
+          <tr><td><strong>利培酮、阿立哌唑、喹硫平、奥氮平</strong></td><td>非典型抗精神病药，联合 SSRIs 增效</td><td>足量足疗程单一用药疗效欠佳时可考虑联合用药</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout warn">
+      <span class="ct">⚠️ 剂量与疗程的边界</span>
+      教材只给"起始剂量—有效剂量—最大推荐剂量"的原则与起效时间，<strong>未给出任何具体 mg 剂量</strong>，也未说明巩固期/维持期的具体时长。本指南不补写剂量数字。
+    </div>
+    <div class="timeline">
+      <div class="tl-item"><h4>起效节点</h4><p>通常起效时间 <strong>4～6 周</strong>；多数患者 4～6 周显著效果，有些需 10～12 周才改善。</p></div>
+      <div class="tl-item"><h4>急性期</h4><p>一般建议 <strong>10～12 周</strong>的急性期治疗；足量足疗程后评估疗效。</p></div>
+      <div class="tl-item"><h4>疗效预期</h4><p>SSRIs 有效率 <strong>65%～70%</strong>，但症状仅改善 <strong>30%～60%</strong>——"有效"不等于"痊愈"。</p></div>
+      <div class="tl-item"><h4>下一步</h4><p>单一用药足量足疗程疗效欠佳 → 联合用药（非典型抗精神病药；氯米帕明因安全性不作联合首选）。教材未涉及换药的具体顺序与维持时长。</p></div>
+    </div>
+    <p><strong>二、心理治疗（CBT 为一线）</strong></p>
+    <p>教材列出认知行为疗法、支持性心理治疗、精神分析疗法、森田疗法、家庭疗法和正念疗法，其中<strong>认知行为疗法是治疗强迫症的一线心理治疗方法</strong>。</p>
+    <div class="grid2">
+      <div class="mini">
+        <h4>原理与主要技术</h4>
+        <p>原理：认知评价模型、闯入性想法和认知重构。</p>
+        <p>技术：心理教育和正常化、案例分析、饼图法、序列事件概率分析、成本效益分析、证据检查、行为实验、暴露与仪式行为阻止等。</p>
+        <p class="note"><strong>暴露与反应阻止（ERP）和认知重组是 CBT 的核心。</strong></p>
+      </div>
+      <div class="mini">
+        <h4>频次与形式</h4>
+        <p>一般<strong>每周 1 次，每次 60～90 分钟，共 8～20 次</strong>；对难治性患者可以有更长程治疗。</p>
+        <p>有个体和团体两种形式。</p>
+        <p class="note">CBT 在维持治疗中发挥重要作用。</p>
+      </div>
+    </div>
+    <p><strong>CBT 的四个主要内容（教材原文顺序）：</strong>①心理教育（解释强迫症状、闯入性思维、认知模型、ERP 原理与实施过程）；②暴露阶段（按引发焦虑程度从小到大排列症状，暴露于相应情景，学会忍受焦虑）；③反应预防（逐渐减少至消除强迫行为）；④认知重组（重新评估诱发因素，发展可替代性想法）。</p>
+    <p><strong>三、物理治疗</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>手段</th><th>教材定位与原理</th></tr></thead>
+        <tbody>
+          <tr><td><strong>重复经颅磁刺激（rTMS）</strong></td><td>由美国食品药品监督管理局（FDA）批准用于<strong>难治性强迫症</strong>；利用磁场诱发感应电场激活大脑皮质神经细胞，影响脑内代谢和神经电活动</td></tr>
+          <tr><td><strong>深部脑刺激（DBS）</strong></td><td>对特定脑区持续高频电刺激，抑制神经元异常活动；是一种<strong>可逆</strong>的治疗方式</td></tr>
+          <tr><td><strong>迷走神经刺激（VNS）</strong></td><td>植入颈部迷走神经周围电极，反复刺激迷走神经</td></tr>
+          <tr><td><strong>改良电抽搐治疗（MECT）</strong></td><td>当共患有 MECT 适应证的疾病（如精神分裂症、重度抑郁障碍等）时，可考虑采用</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p><strong>四、病程与预后（教材数据）</strong></p>
+    <div class="stat"><span>持续进行性 54%～61%</span><span>波动性 24%～30%</span><span>间歇性 11%～14%</span></div>
+    <div class="grid2">
+      <div class="mini"><h4>预后良好指标</h4><p>病前人格较为健全；有一定的诱发因素；症状呈发作性；病程较短；社会功能保持良好。</p></div>
+      <div class="mini"><h4>预后不良指标</h4><p>病前有明显人格障碍；发病年龄较早；童年期起病；症状弥散且严重。</p></div>
+    </div>
+    <p class="note">多数患者起病缓慢、常无明显诱因；若无恰当治疗，强迫症易慢性化。治疗方法的改进与创新很大程度上提高了预后。</p>
+  </div>
+
+  <!-- 第七栏 -->
+  <div class="card purple" id="u1-7">
+    <h3 class="col-title"><span class="idx">第七栏</span>记忆工具箱</h3>
+    <p><strong>🔧 方法一：口诀歌谣法——把"六型四式"压缩成两句</strong></p>
+    <p>口诀：<strong>"表象穷思疑，对立联想忆；检查洗涤数，仪式四行为。"</strong></p>
+    <p>解释：前一句七个字对应强迫思维六亚型（表象、穷思竭虑、怀疑、对立思维、联想、回忆）；后一句对应强迫行为四型（检查、洗涤、计数、仪式动作）。每句七个字，朗读两遍即可顺出。</p>
+    <p class="note">为什么这样记：把"6+4"的清单压成有节奏的短句，降低回忆时的检索负担；先记类别名，再用教材例子为每个词"挂画面"。</p>
+
+    <p><strong>🔧 方法二：数字编码法——六个数字串起全节</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>数字</th><th>对应事实</th></tr></thead>
+        <tbody>
+          <tr><td><strong>70% / 25%</strong></td><td>同时有强迫思维+行为 / 仅有强迫思维</td></tr>
+          <tr><td><strong>50%</strong></td><td>存在回避行为，且预示治疗效果不佳</td></tr>
+          <tr><td><strong>34% / 17 年</strong></td><td>主动求医比例 / 从症状到确诊的延迟</td></tr>
+          <tr><td><strong>60%～90%</strong></td><td>至少共患一种其他精神障碍</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note">为什么这样记：孤立百分比重叠易混，把数字放进"就诊链条"（多少人有症状→多少人回避→多少人求医→延迟多久）就有逻辑锚点。</p>
+
+    <p><strong>🔧 方法三：对比记忆法——用"自我抵抗"一把尺子</strong></p>
+    <p>把四个易混病排成一条轴：<strong>强迫症（强抵抗）→ 躯体变形障碍（自知力可好可差）→ 疑病症（多不认为多余、无强抵抗）→ 精神分裂症（妄想，无抵抗且与现实不协调）</strong>。GAD 则另立一轴：<strong>担忧广泛、控制愿望不强</strong>。</p>
+    <p class="note">为什么这样记：鉴别题往往只考"一个关键词"，把关键词排成连续谱比背五段文字更稳。</p>
+
+    <p><strong>🔧 方法四：故事串联法——跟着一个"检查者"走一遍</strong></p>
+    <p>想象一个人出门：怀疑门没锁（<strong>强迫怀疑</strong>）→ 回去检查三遍（<strong>强迫检查</strong>）→ 路上看到打火机就想到爆炸（<strong>强迫联想</strong>）→ 必须左脚先迈（<strong>仪式动作</strong>）→ 干脆不出门（<strong>回避</strong>）。五步把"思维—行为—回避"串成一条线。</p>
+    <p class="note">为什么这样记：症状本来就有时间顺序，故事化后能同时记住类别与相互关系。</p>
+
+    <p><strong>🔧 方法五（补充）：归类记忆法——治疗三线一张表</strong></p>
+    <p><strong>药（SSRIs 四药 + 氯米帕明 + 四个联合药）→ 心（CBT/ERP）→ 物（rTMS/DBS/VNS/MECT）</strong>，每条后面只跟一个"教材关键词"：一线、核心、难治。</p>
+  </div>
+
+  <!-- 第八栏 -->
+  <div class="card blue" id="u1-8">
+    <h3 class="col-title"><span class="idx">第八栏</span>知识联动</h3>
+    <p><strong>共病网络（教材数据）：</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>共病</th><th>教材数据</th><th>临床提示</th></tr></thead>
+        <tbody>
+          <tr><td>至少一种其他精神障碍</td><td><strong>60%～90%</strong></td><td>强迫症很少"单独存在"，评估必须问共病</td></tr>
+          <tr><td>抑郁障碍</td><td><strong>65%</strong></td><td>最常见共病；抑郁加重时强迫症状常平行变化</td></tr>
+          <tr><td>焦虑障碍</td><td><strong>60%～90%</strong></td><td>与 GAD 的鉴别需回到"担心对象是否强迫症状"</td></tr>
+          <tr><td>抽动障碍（教材原文写作"抽搐障碍"）</td><td>约 <strong>30%</strong></td><td>教材另给：8.8% 伴慢性抽动；同胞抽动障碍 41.2%</td></tr>
+          <tr><td>注意缺陷多动障碍</td><td>约 <strong>20%</strong></td><td>儿童青少年评估时需一并询问</td></tr>
+          <tr><td>酒精使用障碍、进食障碍、人格障碍</td><td>教材称"均有较高的共病率"</td><td>人格障碍者治疗效果较差（28%，OCPD 18.9%）</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p><strong>跨章节与跨学科联系（均有教材依据）：</strong></p>
+    <ul>
+      <li><strong>与抽动障碍：</strong>教材明确强迫症与抽动秽语综合征、抽动障碍之间存在遗传学和现象学上的联系，并给出上述家系数据。</li>
+      <li><strong>与人格障碍：</strong>约 2/3 患者存在强迫性人格；约 28% 伴人格障碍，以强迫性人格障碍为主。</li>
+      <li><strong>与抑郁/焦虑障碍：</strong>强迫症状与焦虑、抑郁相互影响；严重而频繁或长期治疗无效时可出现自残、自杀。</li>
+      <li><strong>与躯体变形障碍等 OCRD：</strong>教材开篇指出这些疾病具有相似的病理生理基础、临床特征和治疗手段，因此 SSRIs、CBT 的思路可横向迁移。</li>
+      <li><strong>与神经科学：</strong>CSTC 环路（眶额皮质、背外侧前额叶、前扣带回、纹状体、丘脑）是神经结构基础；rTMS/DBS 正是针对该环路与脑区活动的物理手段。</li>
+      <li><strong>分类学联系：</strong>ICD-11 将 OCRD 设为独立分类；DSM-5 将疑病症归入"躯体症状及相关障碍"并称疾病焦虑障碍——同一疾病在不同分类系统中的"户口"不同，是考试常设的陷阱。</li>
+    </ul>
+    <p class="note">教材未展开"强迫症与强迫性人格障碍的因果方向"，本指南不作推断。</p>
+  </div>
+</section>
+
+<!-- ===== 06 躯体变形障碍 ===== -->
+<section id="u2">
+  <div class="sec-head"><div class="badge">06</div><h2>躯体变形障碍<span class="en">Body Dysmorphic Disorder · 第二节（p.129–131）</span></h2></div>
+  <p class="sec-lead">强迫症的"外表版"：同一套反复检查与回避，专注点从"门窗煤气"换成了"鼻子、皮肤、体型"。难点在识别高自杀风险，并与正常爱美、进食障碍分开。</p>
+
+  <!-- 第一栏 -->
+  <div class="card red" id="u2-1">
+    <h3 class="col-title"><span class="idx">第一栏</span>疾病画像</h3>
+    <div class="quote"><span class="lab">教材原文</span>躯体变形障碍（body dysmorphic disorder，BDD）是一种强迫相关障碍，是指患者过分关注自己想象出来的或轻微的外表缺陷，觉得自己丑陋不堪或令人厌恶，且已引起他人注意。患者十分痛苦并伴有不同程度的社会功能损害。</div>
+    <p><strong>一句话画像：</strong>镜子里放大了别人看不见的"缺陷"——患者反复照镜、反复比较、反复遮掩，确信别人都在盯着那个部位。<span class="note">（"放大镜"为类比理解）</span></p>
+    <div class="stat">
+      <span>荟萃分析患病率约 11%</span><span>整形/皮肤科患者 1.8%～57.0%</span><span>起病 12～13 岁</span><span>常起于青春期或儿童期</span><span>病程较长，治疗不当多转慢性</span>
+    </div>
+    <div class="grid2">
+      <div class="mini">
+        <h4>核心三要素</h4>
+        <ul>
+          <li><strong>先占观念：</strong>持久认为外表存在一处或多处缺陷/丑陋，或整体外貌丑陋，但在他人看来微不足道或不能察觉。</li>
+          <li><strong>重复与过度行为：</strong>反复检查外观（照镜子）、与他人比较；过度掩饰或改变（如不必要的外科美容手术）。</li>
+          <li><strong>回避：</strong>回避能增加痛苦的社交场合或事物（如更衣室、游泳池）。</li>
+        </ul>
+      </div>
+      <div class="mini">
+        <h4>分类变迁（教材原文）</h4>
+        <ul>
+          <li><strong>ICD-10：</strong>躯体变形障碍<strong>不是</strong>一个独立的诊断单元。</li>
+          <li><strong>ICD-11：</strong>因普通人群中较高患病率和独特症状，将其作为<strong>独立的精神障碍</strong>，强调对身体外表"缺陷"的持续性先占观念，并伴重复和过度的行为。</li>
+          <li><strong>本章位置：</strong>ICD-11 的 OCRD 成员之一。</li>
+        </ul>
+      </div>
+    </div>
+    <p class="note">教材未给出 BDD 的男女患病比例；只提到女性患者多关注体重、皮肤、乳房等部位，男性则困扰体形、头发稀疏和生殖器。</p>
+  </div>
+
+  <!-- 第二栏 -->
+  <div class="card blue" id="u2-2">
+    <h3 class="col-title"><span class="idx">第二栏</span>病因探秘</h3>
+    <p><strong>总纲（教材原文）：</strong>躯体变形障碍的病因和发病机制<strong>尚不明确</strong>，它是生物、心理、社会文化等多因素相互作用的结果。</p>
+    <div class="grid2">
+      <div class="mini">
+        <h4>① 遗传</h4>
+        <p>患者一级亲属的患病率明显高于普通人群，且与强迫症状有<strong>共同的遗传学基础</strong>。</p>
+        <p class="note">教材未给出 BDD 的遗传度或具体易感基因。</p>
+      </div>
+      <div class="mini">
+        <h4>② 神经生化</h4>
+        <p><strong>5-HT 类药物</strong>治疗该症有效，提示患者存在脑内 5-HT 系统功能的异常。</p>
+        <p class="note">教材未展开受体亚型或具体通路。</p>
+      </div>
+      <div class="mini">
+        <h4>③ 神经影像</h4>
+        <p>大脑<strong>额叶-纹状体环路、边缘系统和视觉处理皮质</strong>受损。</p>
+        <p class="note">与强迫症的 CSTC 环路有重叠，但教材未作逐条比较。</p>
+      </div>
+      <div class="mini">
+        <h4>④ 社会文化与心理</h4>
+        <p>童年遭受过多的讥讽、嘲笑或虐待；家庭成员或同龄人过度关注其外表。</p>
+        <p class="note">教材将之列为参与因素，未给出量化风险。</p>
+      </div>
+    </div>
+    <div class="callout tip">
+      <span class="ct">💡 与强迫症的机制对照</span>
+      共同点：一级亲属患病率升高、与强迫症状共享遗传基础、5-HT 系统异常、CBT/SSRIs 有效。不同点：BDD 的影像学描述强调<strong>视觉处理皮质</strong>，与其"外表—视觉"专注点一致。<span class="note">（对照为教材信息的整理，不是教材原文结论）</span>
+    </div>
+  </div>
+
+  <!-- 第三栏 -->
+  <div class="card red" id="u2-3">
+    <h3 class="col-title"><span class="idx">第三栏</span>临床表现拼图</h3>
+    <div class="tabs" data-tabs>
+      <div class="tabbar">
+        <button class="on" data-tab="d1">关注部位</button>
+        <button data-tab="d2">重复行为与掩饰</button>
+        <button data-tab="d3">自我牵连与回避</button>
+        <button data-tab="d4">共病与自杀风险</button>
+      </div>
+      <div class="panel on" data-panel="d1">
+        <ul>
+          <li>患者外表<strong>正常或近似正常</strong>，但总认为自己外形有缺陷或丑陋，如认为自己鼻子过大、双耳不对称。</li>
+          <li>躯体<strong>任何部位</strong>都可能成为关注部位，<strong>最常见的是面部</strong>。</li>
+          <li>关注部位常<strong>多个并存</strong>，比较固定，也会随时间的推移有所变化。</li>
+          <li>女性多关注体重、皮肤、乳房等；男性则困扰体形、头发稀疏和生殖器等。</li>
+        </ul>
+      </div>
+      <div class="panel" data-panel="d2">
+        <ul>
+          <li><strong>重复检查：</strong>花费大量时间重复检查"缺陷或丑陋"的外观或其严重程度（如照镜子），或与他人比较相关特征。</li>
+          <li><strong>过度伪装修饰：</strong>过度试图掩饰或改变缺陷，如实施不必要的外科美容手术。</li>
+          <li>症状导致社会心理功能和生活质量明显降低。</li>
+        </ul>
+        <p class="note">教材强调：这些行为是"重复和过度"的，而非一般的爱美打扮。</p>
+      </div>
+      <div class="panel" data-panel="d3">
+        <ul>
+          <li><strong>自我牵连观念：</strong>感到或坚信自己的"缺陷或丑陋"受到他人注意、谈论或讥笑；诊断要点中表述为"坚信别人会注意、评价、议论这些缺陷或丑陋"。</li>
+          <li><strong>回避社交：</strong>因自认缺陷或丑陋而羞愧，回避能够增加痛苦的社交场合或事物，如更衣室、游泳池。</li>
+          <li>患者十分痛苦，并伴不同程度的社会功能损害；若维持功能需付出大量额外努力。</li>
+        </ul>
+      </div>
+      <div class="panel" data-panel="d4">
+        <p><strong>共病：</strong>最常见的是<strong>焦虑障碍、心境障碍和物质滥用</strong>等。</p>
+        <div class="stat"><span>79.5% 曾有过自杀想法</span><span>27.6% 曾企图自杀</span><span>0.3% 自杀成功</span></div>
+        <p>教材明确：此类患者<strong>伴有高自杀风险</strong>。这组数字是本章最需要单独记住的风险信号。</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 第四栏 -->
+  <div class="card orange" id="u2-4">
+    <h3 class="col-title"><span class="idx">第四栏</span>教材典型案例</h3>
+    <div class="callout book">
+      <span class="ct">📖 教材未提供具体临床案例</span>
+      教材本节只有概括性描述与"鼻子过大、双耳不对称"这类<strong>症状举例</strong>，没有完整病史、检查与随访的病例。以下按原文整理为"表现片段"，不构成真实案例。
+    </div>
+    <div class="grid2">
+      <div class="mini">
+        <h4>教材原文片段 A · "别人看不见的缺陷"</h4>
+        <p>"患者的外表正常或近似正常，但患者总认为自己外形有缺陷或丑陋，如认为自己鼻子过大、双耳不对称等。"</p>
+        <p class="note">诊断线索：缺陷在他人看来"微不足道或不能察觉"。</p>
+      </div>
+      <div class="mini">
+        <h4>教材原文片段 B · "照镜子—比较—掩饰"</h4>
+        <p>花费大量时间重复检查"缺陷"或与他人比较相关特征；过度伪装修饰；甚至实施不必要的外科美容手术。</p>
+        <p class="note">诊断线索：行为"重复且过度"，已明显超出正常爱美范畴。</p>
+      </div>
+      <div class="mini">
+        <h4>教材原文片段 C · "他们都盯着我"</h4>
+        <p>感到或坚信自己的"缺陷或丑陋"受到他人注意、谈论或讥笑，从而回避社交场所（如更衣室、游泳池）。</p>
+        <p class="note">诊断线索：自我牵连观念 + 回避，二者常同时出现。</p>
+      </div>
+      <div class="mini">
+        <h4>教材原文片段 D · "痛苦到想死"</h4>
+        <p>患者十分痛苦，社会心理功能和生活质量明显降低；约 79.5% 曾有过自杀想法，27.6% 曾企图自杀。</p>
+        <p class="note">临床提醒：BDD 不是"爱美过度"，而是高自杀风险的精神障碍。</p>
+      </div>
+    </div>
+    <p><strong>由片段到诊断的思路：</strong>先确认"缺陷在他人看来微不足道/不能察觉"→ 再确认"重复过度行为或过度掩饰/回避"→ 最后评估痛苦与功能损害，并<strong>常规询问自杀风险</strong>。</p>
+  </div>
+
+  <!-- 第五栏 -->
+  <div class="card orange" id="u2-5">
+    <h3 class="col-title"><span class="idx">第五栏</span>鉴别诊断对对碰</h3>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>鉴别对象</th><th>对方特点（教材原文）</th><th>BDD 的关键点</th><th>鉴别钥匙</th></tr></thead>
+        <tbody>
+          <tr><td><strong>正常外表关注</strong></td><td>关注体貌在正常人群中很常见，特别是青少年</td><td>关注<strong>程度</strong>、重复行为<strong>频率</strong>、症状带来的<strong>痛苦和困扰程度</strong>显著更重</td><td>看"三度"：程度、频率、痛苦度</td></tr>
+          <tr><td><strong>广泛性焦虑障碍</strong></td><td>担忧和重复行为涉及日常生活各个方面；有些也会过度担心外表，但<strong>极少伴妄想</strong>，也<strong>不会出现反复的检查行为</strong></td><td>先占观念集中于外表，伴反复检查/比较/掩饰</td><td>有没有"反复照镜子式"的检查行为</td></tr>
+          <tr><td><strong>抑郁障碍</strong></td><td>特别是伴精神病性症状的抑郁发作患者，会过分关注自己的缺陷；BDD 患者也常伴抑郁症状</td><td>从<strong>原发症状和继发症状</strong>鉴别</td><td>谁先出现、谁为主；抑郁继发于 BDD 时按 BDD 处理</td></tr>
+          <tr><td><strong>进食障碍</strong></td><td>对体重和身材的过度担心是进食障碍患者的<strong>核心症状</strong></td><td>BDD 的先占观念<strong>不仅限于体重和身材</strong>，还涉及外表理想化的各个方面；关注全身肌肉时可出现异常摄食和/或过度身体锻炼</td><td>先占观念是否"只围绕体重身材"</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout key">
+      <span class="ct">📌 一句话鉴别总结</span>
+      <strong>BDD 的"缺陷"是局部的、被放大的、别人看不见的；进食障碍的核心是体重与身材；GAD 的担心是四处漫游的；正常爱美则没有"反复检查 + 强烈痛苦"。</strong>
+    </div>
+    <p class="note">教材未提供 BDD 与强迫症的单独鉴别段落；二者同属 OCRD，教材在强迫症鉴别中仅以"专注点不同"区分其他强迫相关障碍。</p>
+  </div>
+
+  <!-- 第六栏 -->
+  <div class="card green" id="u2-6">
+    <h3 class="col-title"><span class="idx">第六栏</span>治疗方案工具箱</h3>
+    <p><strong>治疗原则（教材原文两条）：</strong>①<strong>早期干预</strong>，有助于改善预后；②<strong>长程治疗</strong>——症状缓解后应继续服药相对较长时间，以减少复发。</p>
+    <p><strong>一、药物治疗</strong></p>
+    <div class="quote"><span class="lab">教材原文</span>SSRIs 类药物是治疗躯体变形障碍的一线药物，疗效显著且耐受性较好，需要高剂量长疗程服药。</div>
+    <ul>
+      <li><strong>安全警示：</strong>使用初期，抗抑郁药物可增加青少年的自杀意念，应注意评估其自杀风险。</li>
+      <li><strong>难治性 BDD：</strong>SSRIs 联合非典型抗精神病药物（如利培酮、喹硫平、奥氮平等）对治疗可能有增效作用，其中<strong>利培酮增效作用较为明显</strong>。</li>
+      <li class="note">教材未给出 SSRIs 的具体药名清单、mg 剂量与"长疗程"的具体时长。</li>
+    </ul>
+    <p><strong>二、心理治疗</strong></p>
+    <ul>
+      <li>心理治疗在 BDD 临床治疗中具有<strong>不可替代的作用</strong>。</li>
+      <li><strong>认知行为疗法</strong>可以改变患者的特殊信念和假设，以及适应不良行为；具有针对性，<strong>尤其对青少年患者疗效较好</strong>。</li>
+      <li>一般来说，CBT 的疗效<strong>优于药物治疗</strong>；CBT 联合药物治疗的效果较为理想。</li>
+      <li class="note">教材未展开 CBT 的具体次数、单次时长与操作步骤。</li>
+    </ul>
+    <p><strong>三、预后数据（教材原文）</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>时间点</th><th>完全缓解率</th><th>部分缓解率</th></tr></thead>
+        <tbody>
+          <tr><td>心理治疗或药物治疗 1 年</td><td>9%～25%</td><td>21%～33%</td></tr>
+          <tr><td>治疗 4 年</td><td>20%～58.2%</td><td>25%～56%</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>复发率从 <strong>14% 到 42%</strong> 不等，因此需长期持续治疗以预防复发。初期症状严重、病程长、共病人格障碍等常预示<strong>预后不良</strong>。</p>
+    <div class="callout warn">
+      <span class="ct">⚠️ 临床底线</span>
+      评估 BDD 时必须同时评估<strong>自杀风险</strong>（教材给出 79.5%/27.6%/0.3% 三组数字），并在使用抗抑郁药初期特别关注<strong>青少年自杀意念</strong>。
+    </div>
+  </div>
+
+  <!-- 第七栏 -->
+  <div class="card purple" id="u2-7">
+    <h3 class="col-title"><span class="idx">第七栏</span>记忆工具箱</h3>
+    <p><strong>🔧 方法一：四字口诀法——"丑、查、遮、避"</strong></p>
+    <p>口诀：<strong>"一丑二查三遮四避"</strong>：①自认丑陋/缺陷的先占观念；②重复检查（照镜子、比较）；③过度掩饰或改变（化妆、整形）；④回避社交场合。</p>
+    <p class="note">为什么这样记：这四步正好对应教材诊断要点（1）先占观念 +（3）的三种表现，背四个字就能把诊断框架还原。</p>
+
+    <p><strong>🔧 方法二：数字锚定法——三个自杀数字 + 两个患病数字</strong></p>
+    <p><strong>79.5% 想过、27.6% 尝试过、0.3% 成功</strong>；<strong>普通人群约 11%</strong>（荟萃分析）、<strong>整形/皮肤科 1.8%～57.0%</strong>；起病 <strong>12～13 岁</strong>。</p>
+    <p class="note">为什么这样记：BDD 的考点集中在"高自杀风险"和"患病率跨度大"，数字与临床后果绑定后不容易与强迫症的数字混淆。</p>
+
+    <p><strong>🔧 方法三：对比记忆法——"照镜子"vs"照体重秤"</strong></p>
+    <p>BDD：反复<strong>照镜子/比较五官</strong>，先占观念涉及外表各个方面；进食障碍：反复<strong>称体重/量身材</strong>，核心是体重和身材。GAD：担心"工作、家庭、健康"到处跑，不做反复检查。</p>
+    <p class="note">为什么这样记：把抽象的"先占观念范围"换成一个具体动作，考场上一想"镜子还是体重秤"就能分出。</p>
+
+    <p><strong>🔧 方法四：治疗配对法——"药高长、心 CBT、难加精"</strong></p>
+    <p><strong>药：SSRIs 一线、高剂量、长疗程；心：CBT 不可替代、青少年更好、优于药物；难治：加非典型抗精神病药，利培酮增效较明显。</strong></p>
+    <p class="note">为什么这样记：三句各压一个治疗决策，避免把"高剂量长疗程"错记到强迫症（教材对 OCD 只说"高剂量可以有更好疗效"，未说长疗程）。</p>
+  </div>
+
+  <!-- 第八栏 -->
+  <div class="card blue" id="u2-8">
+    <h3 class="col-title"><span class="idx">第八栏</span>知识联动</h3>
+    <ul>
+      <li><strong>与强迫症：</strong>同属 OCRD；教材明确 BDD 与强迫症状有<strong>共同的遗传学基础</strong>，且 5-HT 类药物有效；治疗思路（SSRIs + CBT）高度相似。</li>
+      <li><strong>与焦虑、抑郁、物质滥用：</strong>教材称这是 BDD 最常见的共病；抑郁症状既可能是共病，也可能是继发，鉴别需看原发/继发。</li>
+      <li><strong>与进食障碍：</strong>女性关注体重、皮肤、乳房，男性关注体形、肌肉时，容易与进食障碍交叉；教材以"先占观念是否仅限于体重和身材"作分界。</li>
+      <li><strong>与整形外科、皮肤科：</strong>教材给出整形外科和皮肤科患者中 BDD 患病率约 <strong>1.8%～57.0%</strong>，并提到"实施不必要的外科美容手术"——提示手术前筛查的重要性。</li>
+      <li><strong>与自杀预防：</strong>BDD 的高自杀风险使其成为精神科急症评估的一部分；教材的三组数字可作为风险沟通的依据。</li>
+      <li><strong>与分类学：</strong>ICD-10 无独立诊断单元 → ICD-11 独立精神障碍，这一变迁本身常被命题。</li>
+    </ul>
+    <p class="note">教材未讨论 BDD 与文化审美标准的量化关系，本指南不作延伸。</p>
+  </div>
+</section>
+
+<!-- ===== 07 嗅觉牵连障碍 ===== -->
+<section id="u3">
+  <div class="sec-head"><div class="badge">07</div><h2>嗅觉牵连障碍<span class="en">Olfactory Reference Disorder · 第三节（一）（p.131）</span></h2></div>
+  <p class="sec-lead">强迫谱系里"最容易被耳鼻喉科漏掉"的一个：气味在别人鼻子里几乎不存在，在患者心里却是全场焦点。</p>
+
+  <!-- 第一栏 -->
+  <div class="card red" id="u3-1">
+    <h3 class="col-title"><span class="idx">第一栏</span>疾病画像</h3>
+    <div class="quote"><span class="lab">教材原文</span>ICD-11 将嗅觉牵连障碍（olfactory reference disorder）归纳入 OCRD，主要特征是持续地关注自身感觉到的臭味或令他人不快的气味（如口臭或体味）。</div>
+    <div class="quote"><span class="lab">教材原文</span>而这些气味在他人看来微不足道或难以被察觉；即使气味存在，别人也不太关注。</div>
+    <p><strong>一句话画像：</strong>患者坚信自己身上有一股"别人都闻得到"的臭味，反复刷牙、洗澡、换衣、喷香水，甚至不敢靠近人；而周围人往往什么也没闻到。<span class="note">（场景化为类比理解）</span></p>
+    <div class="stat">
+      <span>平均发病年龄约 25 岁</span><span>常与强迫症共病</span><span>SSRIs 类药物治疗有效</span><span>ICD-11 归入 OCRD</span>
+    </div>
+    <div class="grid2">
+      <div class="mini">
+        <h4>气味来源（教材举例）</h4>
+        <p>患者通常认为气味来源于<strong>嘴巴、腋下、肛门、生殖器</strong>等部位。</p>
+        <p class="note">教材以"口臭或体味"为典型例子。</p>
+      </div>
+      <div class="mini">
+        <h4>核心心理机制（教材表述）</h4>
+        <p>害怕或<strong>坚信</strong>注意到这些气味的人会<strong>议论、评价、拒绝或侮辱</strong>他们。</p>
+        <p>有时对自身想法和行为的不合理性<strong>缺乏自知力，甚至达到妄想程度</strong>。</p>
+      </div>
+    </div>
+    <p class="note">教材未给出本病的患病率、性别比例与遗传数据。</p>
+  </div>
+
+  <!-- 第二栏 -->
+  <div class="card blue" id="u3-2">
+    <h3 class="col-title"><span class="idx">第二栏</span>病因探秘</h3>
+    <div class="callout book">
+      <span class="ct">📖 教材未提供相关内容</span>
+      教材对嗅觉牵连障碍<strong>没有</strong>展开病因与发病机制，既未列遗传、神经生化、影像学证据，也未提心理社会因素。可用的只有两条间接线索：
+    </div>
+    <ul>
+      <li><strong>分类学线索：</strong>本章开篇指出 OCRD 各病"具有相似的病理生理基础、临床特征和治疗手段"——这是教材对整组疾病的概括，<strong>不是</strong>针对嗅觉牵连障碍的具体机制。</li>
+      <li><strong>治疗线索：</strong>教材明确"SSRIs 类药物治疗有效"，提示其与强迫症共享 5-HT 相关的治疗靶点；但教材<strong>未</strong>据此写明病因。</li>
+    </ul>
+    <p class="note">因此本栏不作推断。答题时如问"嗅觉牵连障碍的病因"，应按教材回答"教材未展开/与 OCRD 共享相似病理生理基础"。</p>
+  </div>
+
+  <!-- 第三栏 -->
+  <div class="card red" id="u3-3">
+    <h3 class="col-title"><span class="idx">第三栏</span>临床表现拼图</h3>
+    <p><strong>教材把诊断强调点写成四条，正好可作为临床表现的四个维度：</strong></p>
+    <div class="grid2">
+      <div class="mini">
+        <h4>① 先占观念 + 重复过度行为</h4>
+        <p>持续关注自身臭味/令他人不快的气味；必须伴有重复和过度的行为，如<strong>反复检查气味的存在或来源</strong>，或<strong>反复寻求保证</strong>。</p>
+      </div>
+      <div class="mini">
+        <h4>② 过度掩盖或改变</h4>
+        <p>过度尝试掩盖、改变或阻止气味：使用香水或除臭剂，重复洗澡、刷牙或更换衣服，回避进食某些食物等。</p>
+      </div>
+      <div class="mini">
+        <h4>③ 明显回避</h4>
+        <p>明显回避能增加痛苦的社交场合或诱发因素。</p>
+      </div>
+      <div class="mini">
+        <h4>④ 痛苦与功能损害</h4>
+        <p>症状引起患者明显痛苦或社会功能损害。</p>
+      </div>
+    </div>
+    <div class="callout tip">
+      <span class="ct">💡 与强迫症的"同构"关系</span>
+      "先占观念 → 重复检查/求保证 → 掩盖或回避 → 痛苦损害"这条链，与强迫症的"强迫思维 → 强迫行为 → 回避 → 损害"结构相同，只是内容锁定在<strong>气味</strong>上。<span class="note">（结构对照为学习整理，教材未逐条比较）</span>
+    </div>
+    <p><strong>自知力：</strong>教材特别提示"有时对自身想法和行为的不合理性缺乏自知力，甚至达到妄想程度"——这是本病与强迫症自知力分级最明显的差异点。</p>
+  </div>
+
+  <!-- 第四栏 -->
+  <div class="card orange" id="u3-4">
+    <h3 class="col-title"><span class="idx">第四栏</span>教材典型案例</h3>
+    <div class="callout book">
+      <span class="ct">📖 教材未提供具体临床案例</span>
+      教材本节为定义 + 诊断强调点的概述，<strong>没有</strong>任何带病史、检查、随访的病例，也没有"如某患者……"式的症状举例。可引用的只有"口臭或体味"这一典型气味举例。
+    </div>
+    <p><strong>教材原文中的示例要素：</strong></p>
+    <ul>
+      <li>气味类型：<strong>口臭、体味</strong>。</li>
+      <li>气味来源：嘴巴、腋下、肛门、生殖器等。</li>
+      <li>他人视角：气味"微不足道或难以被察觉"，"即使气味存在，别人也不太关注"。</li>
+      <li>患者反应：反复检查气味、反复求保证；喷香水/除臭剂、重复洗澡刷牙换衣；回避社交。</li>
+    </ul>
+    <p class="note">上述要素足以构成"表现清单"，但教材未把它们组织成病例。本指南不补写姓名、年龄、病程等虚构信息。</p>
+  </div>
+
+  <!-- 第五栏 -->
+  <div class="card orange" id="u3-5">
+    <h3 class="col-title"><span class="idx">第五栏</span>鉴别诊断对对碰</h3>
+    <p><strong>教材给出的唯一明确鉴别原则是"专注点不同"。据此可作三组对比：</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>鉴别对象</th><th>对方的专注点</th><th>嗅觉牵连障碍的专注点</th><th>一句话鉴别</th></tr></thead>
+        <tbody>
+          <tr><td><strong>强迫症</strong></td><td>强迫思维/强迫行为内容多样，可涉及污染、检查、对称、仪式等</td><td>持续锁定"自身臭味/体味"及其来源与掩盖</td><td>把强迫症的所有内容换成"气味"这一件事</td></tr>
+          <tr><td><strong>疑病症</strong></td><td>认为自己患有一种或多种严重、进展性或危及生命的疾病</td><td>担心的是"气味被人厌恶/拒绝"，不是"得了重病"</td><td>怕"臭"还是怕"病"</td></tr>
+          <tr><td><strong>躯体变形障碍</strong></td><td>外表"缺陷或丑陋"（如鼻子过大、双耳不对称）</td><td>气味（嗅觉属性），而非可见的外形</td><td>怕"丑"还是怕"臭"</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout key">
+      <span class="ct">📌 一句话鉴别总结</span>
+      <strong>同一条"先占观念 + 重复行为"的链子，挂在"气味"上是嗅觉牵连障碍，挂在"外貌"上是 BDD，挂在"疾病"上是疑病症，挂在"多种强迫内容"上是强迫症。</strong>
+    </div>
+    <p class="note">教材未给嗅觉牵连障碍与精神分裂症的专门鉴别段落。若患者已达妄想程度，可按教材强迫症鉴别中"有无幻觉妄想、是否为之苦恼、是否与环境现实协调"的三看原则作临床判断，但<strong>教材未就此作出明确规定</strong>。</p>
+  </div>
+
+  <!-- 第六栏 -->
+  <div class="card green" id="u3-6">
+    <h3 class="col-title"><span class="idx">第六栏</span>治疗方案工具箱</h3>
+    <div class="quote"><span class="lab">教材原文</span>本病常与强迫症共病，SSRIs 类药物治疗有效。</div>
+    <ul>
+      <li><strong>药物治疗：</strong>SSRIs 类药物有效；教材<strong>未给出具体药名、剂量、疗程与维持时间</strong>。</li>
+      <li><strong>心理治疗：</strong>教材<strong>未涉及</strong>本病的心理治疗方法（未提 CBT、ERP 等）。不可把强迫症的 CBT 方案直接写成"教材推荐用于本病"。</li>
+      <li><strong>物理治疗：</strong>教材<strong>未涉及</strong>。</li>
+      <li><strong>共病处理：</strong>教材强调本病常与强迫症共病；临床评估时应同时评估强迫症状。</li>
+    </ul>
+    <div class="callout warn">
+      <span class="ct">⚠️ 不要越界补写</span>
+      教材对嗅觉牵连障碍的治疗只有"SSRIs 有效"这一句。凡涉及剂量、疗程、CBT 次数、rTMS 适应证的内容，本指南一律标注"教材未涉及"。
+    </div>
+  </div>
+
+  <!-- 第七栏 -->
+  <div class="card purple" id="u3-7">
+    <h3 class="col-title"><span class="idx">第七栏</span>记忆工具箱</h3>
+    <p><strong>🔧 方法一：四字口诀法——"臭、查、掩、避"</strong></p>
+    <p>口诀：<strong>"臭（先占气味）、查（反复检查/求保证）、掩（掩盖改变）、避（回避社交）"</strong>，再加一句"苦（痛苦损害）"收尾。</p>
+    <p class="note">为什么这样记：这五个字与教材四条诊断强调点一一对应，考场按序清点即可不漏项。</p>
+
+    <p><strong>🔧 方法二：对比归类法——"气味挂件"</strong></p>
+    <p>把 OCRD 想象成一排挂钩：<strong>气味→嗅觉牵连；外貌→BDD；疾病→疑病症；物品→囤积；毛发→拔毛；皮肤→搔抓</strong>。强迫症则是"整面墙都挂"。</p>
+    <p class="note">为什么这样记：用"专注点"作为唯一分类轴，能把七个病的名称一次性串起来，也能直接应对"下列哪项对应正确"的多选题。</p>
+
+    <p><strong>🔧 方法三：数字 + 线索法</strong></p>
+    <p>记住三件事：<strong>25 岁</strong>（平均发病）、<strong>常共病强迫症</strong>、<strong>SSRIs 有效</strong>；再加"可达妄想程度"这一自知力特点。</p>
+    <p class="note">为什么这样记：本病教材信息量少，只需抓住"年龄—共病—治疗—自知力"四个锚点，避免与其他 OCRD 的数字互相污染。</p>
+  </div>
+
+  <!-- 第八栏 -->
+  <div class="card blue" id="u3-8">
+    <h3 class="col-title"><span class="idx">第八栏</span>知识联动</h3>
+    <ul>
+      <li><strong>与强迫症：</strong>教材明确"本病常与强迫症共病"，且二者同属 OCRD、共享"先占观念 + 重复行为"的结构；治疗上都以 SSRIs 有效。</li>
+      <li><strong>与躯体变形障碍、疑病症：</strong>三者都以"他人如何看我"为核心（气味被厌恶、外貌被议论、疾病被确认），教材以专注点区分。</li>
+      <li><strong>与分类学：</strong>ICD-11 将其纳入 OCRD，这是本章开篇所列的六个成员之一。</li>
+      <li><strong>与临床各科的交叉（拓展补充）：</strong>患者常先到口腔科、耳鼻喉科、皮肤科排查"气味来源"；教材只提到气味来源部位，<strong>未展开</strong>跨科就诊路径。此条为拓展补充，不是教材结论。</li>
+      <li><strong>与自知力评估：</strong>教材提示可达妄想程度，提示临床需评估自知力水平，并与其他精神病性障碍鉴别。</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===== 08 疑病症 ===== -->
+<section id="u4">
+  <div class="sec-head"><div class="badge">08</div><h2>疑病症<span class="en">Hypochondriasis · 第三节（二）（p.131）</span></h2></div>
+  <p class="sec-lead">"我不是怕臭、不是怕丑，我是确信自己得了重病"——同一强迫谱系里的"疾病版"。分类变迁（ICD-11 入 OCRD、DSM-5 称疾病焦虑障碍）是必考点。</p>
+
+  <!-- 第一栏 -->
+  <div class="card red" id="u4-1">
+    <h3 class="col-title"><span class="idx">第一栏</span>疾病画像</h3>
+    <div class="quote"><span class="lab">教材原文</span>ICD-11 将疑病症（hypochondriasis）从"躯体形式障碍"移至 OCRD 中，其主要临床特征是患者存在持续的先占观念或担心，认为自己患有一种或多种严重的、进展性的或危及生命的疾病。</div>
+    <div class="quote"><span class="lab">教材原文</span>同时伴有与健康相关的重复和过度的行为，如反复寻找疾病的证据、花费大量时间寻找关于疾病的信息、反复寻求安慰等，或适应不良性回避行为，如回避就医。</div>
+    <p><strong>一句话画像：</strong>体检报告写着"未见异常"，患者却只看见"还没查出来"——反复查资料、反复求安慰，或者干脆不敢去医院。<span class="note">（场景化为类比理解）</span></p>
+    <div class="stat">
+      <span>ICD-11：由躯体形式障碍移入 OCRD</span><span>DSM-5：归入躯体症状及相关障碍，称疾病焦虑障碍</span><span>病程：慢性波动性</span>
+    </div>
+    <div class="grid2">
+      <div class="mini">
+        <h4>认知核心</h4>
+        <p>持续的先占观念或担心：认为自己患有一种或多种<strong>严重的、进展性的或危及生命的疾病</strong>。</p>
+      </div>
+      <div class="mini">
+        <h4>行为两端</h4>
+        <p>一端是<strong>反复求证</strong>（找证据、查信息、求安慰）；另一端是<strong>回避就医</strong>。两者都是"适应不良"的应对。</p>
+      </div>
+    </div>
+    <p class="note">教材未给出疑病症的患病率、性别比、起病年龄与遗传数据。</p>
+  </div>
+
+  <!-- 第二栏 -->
+  <div class="card blue" id="u4-2">
+    <h3 class="col-title"><span class="idx">第二栏</span>病因探秘</h3>
+    <div class="quote"><span class="lab">教材原文</span>疑病症的病因和发病机制尚不明确，生物学因素、社会心理因素、人格因素、躯体疾病、情绪障碍等可以与本病有关。</div>
+    <p><strong>教材只给出"有关因素"的清单，未展开任何一条的具体机制：</strong></p>
+    <div class="grid2">
+      <div class="mini"><h4>生物学因素</h4><p>教材列为可能相关因素，<strong>未说明</strong>遗传度、神经生化或影像学证据。</p></div>
+      <div class="mini"><h4>社会心理因素</h4><p>教材列为可能相关因素，<strong>未展开</strong>具体生活事件或应激类型。</p></div>
+      <div class="mini"><h4>人格因素</h4><p>教材列为可能相关因素，<strong>未说明</strong>具体人格特质。</p></div>
+      <div class="mini"><h4>躯体疾病与情绪障碍</h4><p>教材列为可能相关因素，提示"真实的躯体疾病"与"焦虑抑郁情绪"都可能是背景，但<strong>未给出因果关系方向</strong>。</p></div>
+    </div>
+    <p class="note">答题时按教材原文回答"尚不明确，多因素相关"即可，不要补写具体机制。</p>
+  </div>
+
+  <!-- 第三栏 -->
+  <div class="card red" id="u4-3">
+    <h3 class="col-title"><span class="idx">第三栏</span>临床表现拼图</h3>
+    <div class="tabs" data-tabs>
+      <div class="tabbar">
+        <button class="on" data-tab="e1">认知：疾病先占观念</button>
+        <button data-tab="e2">行为：反复求证</button>
+        <button data-tab="e3">行为：回避就医</button>
+        <button data-tab="e4">病程特点</button>
+      </div>
+      <div class="panel on" data-panel="e1">
+        <ul>
+          <li>持续认为自己患有一种或多种<strong>严重的、进展性的或危及生命的疾病</strong>。</li>
+          <li>这种担心是<strong>先占观念</strong>——持续占据思维的中心，反复出现。</li>
+          <li>与强迫症的关键差别：教材指出大多数疑病症患者<strong>并不认为疑病观念是没有必要的</strong>，也<strong>无自我抵抗和强烈的控制愿望</strong>。</li>
+        </ul>
+      </div>
+      <div class="panel" data-panel="e2">
+        <ul>
+          <li>反复寻找疾病的证据。</li>
+          <li>花费大量时间寻找关于疾病的信息。</li>
+          <li>反复寻求安慰。</li>
+        </ul>
+        <p class="note">教材把这些统称为"与健康相关的重复和过度的行为"。</p>
+      </div>
+      <div class="panel" data-panel="e3">
+        <ul>
+          <li>适应不良性回避行为，如<strong>回避就医</strong>。</li>
+          <li>与"反复求证"看似相反，实则同源：两者都在试图降低"可能患重病"的焦虑，却都维持了焦虑。</li>
+        </ul>
+        <p class="note">"同源"为理解性表述，教材只并列描述两种行为，未解释其心理机制。</p>
+      </div>
+      <div class="panel" data-panel="e4">
+        <ul>
+          <li>教材明确：该疾病的症状以及病程具有<strong>慢性波动性</strong>特点。</li>
+          <li>教材未给出分期、缓解率或复发率。</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- 第四栏 -->
+  <div class="card orange" id="u4-4">
+    <h3 class="col-title"><span class="idx">第四栏</span>教材典型案例</h3>
+    <div class="callout book">
+      <span class="ct">📖 教材未提供具体临床案例</span>
+      教材对疑病症仅有定义、病因清单与治疗概述，<strong>没有</strong>病例，也没有"如某患者……"式举例。本栏不补写虚构病例。
+    </div>
+    <p><strong>教材原文可提取的表现要素：</strong></p>
+    <ul>
+      <li>认知："认为自己患有一种或多种严重的、进展性的或危及生命的疾病"。</li>
+      <li>行为："反复寻找疾病的证据、花费大量时间寻找关于疾病的信息、反复寻求安慰"。</li>
+      <li>回避："回避就医"。</li>
+      <li>病程："慢性波动性"。</li>
+    </ul>
+    <p class="note">若考试要求"举例说明"，可用上述要素做结构化描述，但应说明这是依据教材要点的归纳，不是教材原案例。</p>
+  </div>
+
+  <!-- 第五栏 -->
+  <div class="card orange" id="u4-5">
+    <h3 class="col-title"><span class="idx">第五栏</span>鉴别诊断对对碰</h3>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>鉴别对象</th><th>对方特点</th><th>疑病症的关键点</th><th>一句话鉴别</th></tr></thead>
+        <tbody>
+          <tr><td><strong>强迫症</strong></td><td>明知观念不必要，有<strong>自我抵抗</strong>和强烈控制愿望；担心对象是强迫症状</td><td>大多数<strong>不认为疑病观念没有必要</strong>，<strong>无自我抵抗和强烈控制愿望</strong>；担心"患重病"</td><td>"你觉得这担心多余吗"——不多余 → 疑病症</td></tr>
+          <tr><td><strong>躯体形式障碍</strong></td><td>主要临床表现为<strong>躯体的不适感和个人的主观关注</strong>（教材在强迫症鉴别中的表述）</td><td>核心是"患有严重疾病"的<strong>先占观念</strong>，并伴健康相关重复行为或回避</td><td>主诉是"不舒服"还是"我怕得了重病"</td></tr>
+          <tr><td><strong>广泛性焦虑障碍</strong></td><td>担忧内容<strong>广泛、多不固定</strong>，涉及生活各方面；控制愿望不强</td><td>担忧<strong>锁定在疾病</strong>这一主题，并伴反复检查/求安慰或回避就医</td><td>担心是"到处跑"还是"只围着病转"</td></tr>
+          <tr><td><strong>躯体变形障碍</strong></td><td>先占观念锁定<strong>外表缺陷或丑陋</strong></td><td>先占观念锁定<strong>疾病</strong>，而非外貌</td><td>怕"丑"还是怕"病"</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout key">
+      <span class="ct">📌 一句话鉴别总结</span>
+      <strong>疑病症＝"我确信有病"＋"反复查/问或不敢查"；强迫症＝"我知道没必要"＋"停不下来"；躯体形式障碍＝"我不舒服"＋"我很关注"；GAD＝"什么都担心"。</strong>
+    </div>
+    <p class="note">教材未给出疑病症与精神分裂症、抑郁障碍的专门鉴别段落；如出现幻觉妄想，应按精神病性障碍评估。此处不额外添加诊断标准。</p>
+  </div>
+
+  <!-- 第六栏 -->
+  <div class="card green" id="u4-6">
+    <h3 class="col-title"><span class="idx">第六栏</span>治疗方案工具箱</h3>
+    <p><strong>教材总述：</strong>治疗方法主要包括<strong>药物治疗和心理治疗</strong>。</p>
+    <div class="grid2">
+      <div class="mini">
+        <h4>药物治疗（只列类别）</h4>
+        <ul>
+          <li>常用的药物有<strong>抗抑郁药</strong>和<strong>抗焦虑药</strong>。</li>
+          <li>以及<strong>小剂量抗精神病药物</strong>。</li>
+        </ul>
+        <p class="note">教材未给出具体药名、剂量、疗程与维持时间——本指南不补写。</p>
+      </div>
+      <div class="mini">
+        <h4>心理治疗（CBT 一线）</h4>
+        <ul>
+          <li>认知行为疗法</li>
+          <li>支持性心理治疗</li>
+          <li>森田疗法</li>
+          <li>精神动力学治疗</li>
+        </ul>
+        <p class="note">教材明确：其中<strong>认知行为疗法是一线治疗方法</strong>。</p>
+      </div>
+    </div>
+    <div class="callout warn">
+      <span class="ct">⚠️ 教材空白清单</span>
+      疑病症的<strong>具体药物剂量</strong>、<strong>疗程/维持时长</strong>、<strong>CBT 次数与操作步骤</strong>、<strong>物理治疗</strong>，教材均未涉及。答题时如被追问，应明确说"教材未涉及"。
+    </div>
+    <p><strong>治疗逻辑（依据教材分类）：</strong>以 CBT 为一线心理治疗，同时按症状需要选用抗抑郁药、抗焦虑药或小剂量抗精神病药；教材未规定二者的先后顺序或联合方案。</p>
+  </div>
+
+  <!-- 第七栏 -->
+  <div class="card purple" id="u4-7">
+    <h3 class="col-title"><span class="idx">第七栏</span>记忆工具箱</h3>
+    <p><strong>🔧 方法一：口诀歌谣法——"一观两行，慢波动"</strong></p>
+    <p>口诀：<strong>"一观（疾病先占观念）、两行（反复求证 / 回避就医）、慢波动（慢性波动病程）"</strong>。</p>
+    <p class="note">为什么这样记：教材对疑病症的临床描述就三块，口诀把"认知—行为—病程"一次打包，避免与 BDD 的"查—遮—避"混淆。</p>
+
+    <p><strong>🔧 方法二：对照记忆法——"抵抗与否"</strong></p>
+    <p>强迫症：<strong>明知多余 + 强烈抵抗</strong>；疑病症：<strong>不认为多余 + 无强烈抵抗</strong>。两句话只差一个"抵抗"，却是鉴别的核心。</p>
+    <p class="note">为什么这样记：把两个病做成"镜像对"，大脑对差异更敏感；考试中只要出现"自知力/抵抗"关键词，就能立刻定位。</p>
+
+    <p><strong>🔧 方法三：分类清单法——"药三样、心四样"</strong></p>
+    <p><strong>药：抗抑郁药、抗焦虑药、小剂量抗精神病药；心：CBT（一线）、支持性、森田、精神动力学。</strong>用"3+4"两个数字锚定。</p>
+    <p class="note">为什么这样记：治疗栏信息少但容易漏，数字分组可在考场快速复原清单。</p>
+
+    <p><strong>🔧 方法四：分类变迁故事法</strong></p>
+    <p>讲一个"搬家"故事：疑病症原来住在"躯体形式障碍"楼里（ICD-10/ICD-11 之前），ICD-11 让它搬到"OCRD"；DSM-5 则给它改名叫"疾病焦虑障碍"，住进"躯体症状及相关障碍"。</p>
+    <p class="note">为什么这样记：两个分类系统方向不同，故事化后不易记反。</p>
+  </div>
+
+  <!-- 第八栏 -->
+  <div class="card blue" id="u4-8">
+    <h3 class="col-title"><span class="idx">第八栏</span>知识联动</h3>
+    <ul>
+      <li><strong>与强迫症：</strong>同属"先占观念 + 重复行为"家族；教材用"是否认为观念多余、有无自我抵抗"作分界，这也是本章最重要的鉴别轴。</li>
+      <li><strong>与躯体形式障碍：</strong>ICD-11 把疑病症从"躯体形式障碍"移至 OCRD，说明二者在分类上已分家；教材在强迫症鉴别中仍以"躯体不适感 + 主观关注"描述躯体形式障碍。</li>
+      <li><strong>与躯体变形障碍：</strong>两者都有"他人评价"的自我牵连色彩，但一个锁定外貌、一个锁定疾病。</li>
+      <li><strong>与焦虑、抑郁障碍：</strong>教材把"情绪障碍"列为疑病症的可能相关因素，提示临床上需评估共病情绪问题。</li>
+      <li><strong>与临床各科：</strong>反复求证（检查、搜信息、求安慰）会带来大量医疗资源消耗；回避就医则可能延误真实躯体疾病。教材只描述行为，未讨论卫生经济学后果——此句为拓展补充。</li>
+      <li><strong>与分类学考试：</strong>ICD-11（OCRD）与 DSM-5（躯体症状及相关障碍/疾病焦虑障碍）的差异，是本章跨章联动的高频命题点。</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===== 09 囤积障碍 ===== -->
+<section id="u5">
+  <div class="sec-head"><div class="badge">09</div><h2>囤积障碍<span class="en">Hoarding Disorder · 第三节（三）（p.131–132）</span></h2></div>
+  <p class="sec-lead">从"舍不得扔"到"屋里下不去脚"：核心不是强迫思维，而是<strong>丢弃时的异常痛苦</strong>。教材称其为难治性精神障碍，治疗期望值要现实。</p>
+
+  <!-- 第一栏 -->
+  <div class="card red" id="u5-1">
+    <h3 class="col-title"><span class="idx">第一栏</span>疾病画像</h3>
+    <div class="quote"><span class="lab">教材原文</span>囤积障碍（hoarding disorder）是以持续的难以丢弃无用或价值不大物品为主要表现的精神障碍。</div>
+    <p><strong>一句话画像：</strong>每一件"也许以后用得上"的东西都不能扔——报纸、旧衣服、包装盒越堆越多，最后厨房不能做饭、床上不能睡觉，但患者仍然舍不得。<span class="note">（场景化为类比理解）</span></p>
+    <div class="stat">
+      <span>患病率约 1.5%（部分研究 2%～6%）</span><span>老年人患病率约为中青年的 3 倍</span><span>通常起病于青少年早期，持续终身</span><span>男女无差异，独居者常见</span>
+    </div>
+    <div class="grid2">
+      <div class="mini">
+        <h4>分类变迁（教材原文）</h4>
+        <ul>
+          <li>早期将囤积障碍归为<strong>强迫症的一种亚型</strong>。</li>
+          <li><strong>DSM-5</strong> 首次将其从强迫症中分离，成为独立的精神疾病。</li>
+          <li><strong>ICD-11</strong> 将囤积障碍归纳入 OCRD。</li>
+        </ul>
+      </div>
+      <div class="mini">
+        <h4>核心特征</h4>
+        <ul>
+          <li>持续的<strong>难以丢弃</strong>大量看似无用或没有价值的物品。</li>
+          <li>丢弃或不能收集新物品时感到<strong>异常痛苦</strong>。</li>
+          <li>物品多且放置杂乱无章，导致<strong>生活空间使用或安全受损</strong>。</li>
+        </ul>
+      </div>
+    </div>
+    <p class="note">教材未给出囤积障碍的性别比具体数字，仅称"男女无差异"；也未给出起病平均年龄。</p>
+  </div>
+
+  <!-- 第二栏 -->
+  <div class="card blue" id="u5-2">
+    <h3 class="col-title"><span class="idx">第二栏</span>病因探秘</h3>
+    <p><strong>总纲（教材原文）：</strong>目前囤积障碍的病因和发病机制尚未明确，但越来越多的证据显示遗传因素、人格因素、环境因素等多种因素与囤积障碍有关。</p>
+    <div class="grid2">
+      <div class="mini">
+        <h4>① 遗传因素</h4>
+        <ul>
+          <li>有研究显示囤积障碍的<strong>遗传度约为 51%</strong>。</li>
+          <li><strong>同卵双生子同病率显著高于异卵双生子</strong>。</li>
+        </ul>
+      </div>
+      <div class="mini">
+        <h4>② 环境与童年应激</h4>
+        <p>回顾性研究发现，囤积障碍的发生可能与个体<strong>幼年经历的应激性生活事件</strong>有关。</p>
+      </div>
+      <div class="mini">
+        <h4>③ 人格因素</h4>
+        <p>教材将人格因素列为相关因素，<strong>未说明</strong>具体人格特质或人格障碍类型。</p>
+      </div>
+      <div class="mini">
+        <h4>④ 中介机制（教材假说性表述）</h4>
+        <p>对物品的信念、依恋问题和回避行为可能是<strong>调节遗传和环境因素的中介因素</strong>。</p>
+      </div>
+    </div>
+    <p class="note">"中介因素"是教材的假说性表述，不宜写成已证实的因果链。</p>
+  </div>
+
+  <!-- 第三栏 -->
+  <div class="card red" id="u5-3">
+    <h3 class="col-title"><span class="idx">第三栏</span>临床表现拼图</h3>
+    <div class="tabs" data-tabs>
+      <div class="tabbar">
+        <button class="on" data-tab="f1">囤什么、怎么囤</button>
+        <button data-tab="f2">生活空间与家庭后果</button>
+        <button data-tab="f3">共病</button>
+      </div>
+      <div class="panel on" data-panel="f1">
+        <ul>
+          <li>持续难以丢弃大量看似无用或没有价值的物品；最常见囤积<strong>报纸、旧衣服、包、书和文书</strong>等。</li>
+          <li>约 <strong>80%～90%</strong> 的患者可同时表现出<strong>过度获取或收集</strong>，最常见的形式是过度购物或获得免费的商品。</li>
+          <li>在丢弃或不能收集新的物品时，患者会感到<strong>异常的痛苦</strong>。</li>
+        </ul>
+      </div>
+      <div class="panel" data-panel="f2">
+        <ul>
+          <li>物品多且放置杂乱无章，导致居所混乱不堪，<strong>无法在厨房做饭、无法在床上睡觉</strong>等。</li>
+          <li>影响患者及家属的生活质量，从而引起<strong>家庭矛盾</strong>。</li>
+          <li>可造成环境脏、乱、差，甚至产生<strong>安全隐患</strong>，危及他人。</li>
+        </ul>
+      </div>
+      <div class="panel" data-panel="f3">
+        <div class="stat"><span>约 75% 合并焦虑和情绪障碍</span><span>抑郁障碍 50%（最常见）</span><span>约 20% 合并强迫症</span></div>
+        <p>教材另称广泛性焦虑障碍和社交恐惧症也很多见。</p>
+      </div>
+    </div>
+    <p><strong>诊断四要点（教材原文）：</strong>①囤积导致生活空间杂乱，空间的使用或安全受到损害；②与积累物品相关的重复冲动或行为，可以是被动的（如收到大量传单或邮件），也可以是主动的（如过度获得免费的、购买的或偷来的物品）；③难以丢弃物品，并因丢弃产生异常痛苦；④症状使患者十分痛苦，或导致个人、家庭、社会、教育、职业或其他重要功能领域的严重损害。</p>
+  </div>
+
+  <!-- 第四栏 -->
+  <div class="card orange" id="u5-4">
+    <h3 class="col-title"><span class="idx">第四栏</span>教材典型案例</h3>
+    <div class="callout book">
+      <span class="ct">📖 教材未提供具体临床案例</span>
+      教材本节只有概括性描述，<strong>没有</strong>带姓名、年龄、居住情况的病例。以下仅摘录教材中的"后果性描述"，不构成真实案例。
+    </div>
+    <div class="grid2">
+      <div class="mini">
+        <h4>教材原文片段 A · 囤什么</h4>
+        <p>"最常见囤积报纸、旧衣服、包、书和文书等"；约 80%～90% 同时有过度获取或收集，最常见是过度购物或获得免费商品。</p>
+      </div>
+      <div class="mini">
+        <h4>教材原文片段 B · 囤到什么程度</h4>
+        <p>"导致居所混乱不堪，无法在厨房做饭、无法在床上睡觉"；"造成环境脏、乱、差，甚至产生安全隐患，危及他人"。</p>
+      </div>
+      <div class="mini">
+        <h4>教材原文片段 C · 扔的时候什么感受</h4>
+        <p>"在丢弃或不能收集新的物品时，患者会感到异常的痛苦。"</p>
+      </div>
+      <div class="mini">
+        <h4>教材原文片段 D · 家庭与共病</h4>
+        <p>影响患者及家属生活质量，引起家庭矛盾；约 75% 合并焦虑和情绪障碍，抑郁障碍最常见（50%）。</p>
+      </div>
+    </div>
+    <p><strong>由片段到诊断：</strong>先看"是否难以丢弃 + 丢弃是否异常痛苦"→ 再看"生活空间是否因杂乱而无法使用或不安全"→ 最后看"是否伴过度获取"与功能损害。</p>
+  </div>
+
+  <!-- 第五栏 -->
+  <div class="card orange" id="u5-5">
+    <h3 class="col-title"><span class="idx">第五栏</span>鉴别诊断对对碰</h3>
+    <p><strong>教材未单列囤积障碍的鉴别诊断段，可依据原文作两组对比：</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>鉴别对象</th><th>对方特点（教材原文）</th><th>囤积障碍的关键点</th><th>一句话鉴别</th></tr></thead>
+        <tbody>
+          <tr><td><strong>强迫症</strong></td><td>以强迫思维和/或强迫行为为核心；早期曾把囤积障碍归为强迫症的一种亚型，DSM-5 才将其分离</td><td>以<strong>难以丢弃</strong>和<strong>丢弃痛苦</strong>为核心；教材称对"无意义或无价值物品的关注并难以舍弃"；约 20% 与强迫症共病</td><td>有没有典型的"强迫思维—中和行为"链：有 → 强迫症；只有"扔不掉" → 囤积障碍</td></tr>
+          <tr><td><strong>其他强迫相关障碍</strong></td><td>嗅觉牵连障碍专注气味；拔毛症专注毛发；皮肤搔抓症专注皮肤抠剥</td><td>专注点为<strong>物品的获取与丢弃</strong></td><td>看"专注点"落在哪里</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout key">
+      <span class="ct">📌 一句话鉴别总结</span>
+      <strong>强迫症怕"没检查好"，囤积障碍怕"扔掉了"；前者围绕"仪式"，后者围绕"物品"。</strong>
+    </div>
+    <div class="callout warn">
+      <span class="ct">⚠️ 与共病焦虑/抑郁的关系</span>
+      教材只给出"约 75% 合并焦虑和情绪障碍、抑郁障碍 50%"的共病数据，<strong>未提供</strong>囤积障碍与抑郁障碍的鉴别要点。临床上不能因为"情绪低落 + 屋子乱"就直接归因于抑郁，也不能把共病当作替代诊断；具体先后关系教材未涉及。
+    </div>
+  </div>
+
+  <!-- 第六栏 -->
+  <div class="card green" id="u5-6">
+    <h3 class="col-title"><span class="idx">第六栏</span>治疗方案工具箱</h3>
+    <div class="quote"><span class="lab">教材原文</span>因囤积障碍患者缺乏治疗动机或自知力不足，且病程较长，因此，囤积障碍被视为一种难治性精神障碍。</div>
+    <p><strong>治疗总纲：</strong>主要的治疗方法包括<strong>心理治疗和药物治疗</strong>。</p>
+    <div class="grid2">
+      <div class="mini">
+        <h4>心理治疗</h4>
+        <ul>
+          <li>目前建议将<strong>认知行为疗法作为囤积障碍的一线疗法</strong>。</li>
+          <li>但<strong>有效率较低，仅为 15% 左右</strong>。</li>
+        </ul>
+        <p class="note">教材未展开 CBT 的具体次数、形式与操作步骤。</p>
+      </div>
+      <div class="mini">
+        <h4>药物治疗</h4>
+        <ul>
+          <li><strong>SSRIs 可能对囤积障碍有效。</strong></li>
+          <li>近来研究发现 <strong>SNRIs 类药物</strong>对囤积障碍可能会有良好疗效，<strong>但需进一步证实</strong>。</li>
+        </ul>
+        <p class="note">教材未给出具体药名、剂量与疗程。</p>
+      </div>
+    </div>
+    <div class="callout warn">
+      <span class="ct">⚠️ 治疗期望要现实</span>
+      本病"缺乏治疗动机或自知力不足 + 病程长"→ 难治；CBT 虽为一线，但教材给出的有效率仅约 15%。与患者沟通时应如实说明，不宜承诺"几次就好"。
+    </div>
+    <p class="note">教材未涉及囤积障碍的物理治疗，也未给出住院指征或强制干预的说明。</p>
+  </div>
+
+  <!-- 第七栏 -->
+  <div class="card purple" id="u5-7">
+    <h3 class="col-title"><span class="idx">第七栏</span>记忆工具箱</h3>
+    <p><strong>🔧 方法一：三字口诀法——"扔不掉、舍不得、堆不下"</strong></p>
+    <p>口诀：<strong>"扔不掉（难以丢弃）、舍不得（丢弃痛苦/过度获取）、堆不下（空间杂乱、安全受损）"</strong>。</p>
+    <p class="note">为什么这样记：三个"不"对应诊断要点的核心三块，且押韵易复述；"堆不下"还能带出功能损害。</p>
+
+    <p><strong>🔧 方法二：数字编码法——"1.5、51、80-90、75、50、20、15"</strong></p>
+    <p><strong>1.5%</strong> 患病率；<strong>51%</strong> 遗传度；<strong>80%～90%</strong> 过度获取；<strong>75%</strong> 合并焦虑/情绪障碍；<strong>50%</strong> 共病抑郁；<strong>20%</strong> 共病强迫症；<strong>15%</strong> CBT 有效率。</p>
+    <p class="note">为什么这样记：这组数字是本章最密的一组，按"患病—遗传—行为—共病—治疗"顺序串起来，避免乱序回忆。</p>
+
+    <p><strong>🔧 方法三：对比记忆法——"仪式 vs 物品"</strong></p>
+    <p>强迫症的核心是"用仪式中和焦虑"；囤积障碍的核心是"用保留物品避免丢弃痛苦"。一个怕"没做够"，一个怕"扔错了"。</p>
+    <p class="note">为什么这样记：抓住"怕什么"而不是"做什么"，更接近两个病的情绪本质。</p>
+
+    <p><strong>🔧 方法四：治疗预期法——"一线 CBT，只有一成半"</strong></p>
+    <p>记住"CBT 是一线，但有效率约 15%"这一对反差；药物只记"SSRIs 可能有效、SNRIs 待证实"。</p>
+    <p class="note">为什么这样记：反差本身形成记忆钩子，也能防止把 CBT 的疗效说得过高。</p>
+  </div>
+
+  <!-- 第八栏 -->
+  <div class="card blue" id="u5-8">
+    <h3 class="col-title"><span class="idx">第八栏</span>知识联动</h3>
+    <ul>
+      <li><strong>与强迫症：</strong>历史上曾是强迫症亚型，DSM-5 才分离；教材仍给出"约 20% 合并强迫症"的高共病率，说明二者临床常交织。</li>
+      <li><strong>与焦虑、抑郁障碍：</strong>约 75% 合并焦虑和情绪障碍，抑郁障碍最常见（50%）；广泛性焦虑障碍、社交恐惧症也很多见。</li>
+      <li><strong>与老年精神医学：</strong>老年人患病率约为中青年的 3 倍，且不加干预会进行性加重——提示老年评估中应主动询问囤积。</li>
+      <li><strong>与公共安全与家庭医学：</strong>居所脏乱差可产生安全隐患、危及他人，并引起家庭矛盾；教材把这些列为疾病后果，而非单纯"生活习惯问题"。</li>
+      <li><strong>与分类学：</strong>ICD-11 归入 OCRD，DSM-5 独立成病——与强迫症"分家"的过程是常考的分类变迁。</li>
+      <li><strong>与治疗动机：</strong>缺乏动机或自知力不足是"难治"的来源之一，提示评估时应同时评估自知力与改变意愿。</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===== 10 拔毛症 ===== -->
+<section id="u6">
+  <div class="sec-head"><div class="badge">10</div><h2>拔毛症<span class="en">Trichotillomania · 第三节（四）1（p.132）</span></h2></div>
+  <p class="sec-lead">"越焦虑越拔、拔完更羞耻"的循环。诊断靠"反复拔毛 + 试图停止失败 + 明显脱发 + 痛苦/损害"四条，治疗靠 SSRIs 与习惯逆转训练。</p>
+
+  <!-- 第一栏 -->
+  <div class="card red" id="u6-1">
+    <h3 class="col-title"><span class="idx">第一栏</span>疾病画像</h3>
+    <div class="quote"><span class="lab">教材原文</span>拔毛症（trichotillomania）又称拔毛癖，是以反复拔除自己或他人毛发为主要临床表现的一种致残性精神疾病。</div>
+    <p><strong>一句话画像：</strong>手在无意识中伸向头发，拔下的那一刻紧张感下降，随后又被羞耻感淹没；久而久之，头皮、眉毛、睫毛出现斑片状缺失。<span class="note">（场景化为类比理解）</span></p>
+    <div class="stat">
+      <span>终生患病率 1%～3%</span><span>成年女性多见，男女比约 1∶4</span><span>儿童期男女发病率无显著差异</span><span>一级亲属患病率 5%</span><span>发病年龄 11～16 岁</span>
+    </div>
+    <div class="grid2">
+      <div class="mini">
+        <h4>分类变迁（教材原文）</h4>
+        <ul>
+          <li><strong>ICD-10：</strong>归属于"成人人格与行为障碍"中的"习惯与冲动障碍"。</li>
+          <li><strong>ICD-11：</strong>把拔毛症归纳入 <strong>OCRD</strong>。</li>
+        </ul>
+      </div>
+      <div class="mini">
+        <h4>核心后果</h4>
+        <ul>
+          <li>反复拔毛导致<strong>脱发或斑秃</strong>，患者感到异常焦虑和痛苦。</li>
+          <li>严重干扰正常社会功能；常因羞愧而回避社交，或以戴帽子、假发、画眉毛等方式掩饰。</li>
+        </ul>
+      </div>
+    </div>
+    <p class="note">教材未给出拔毛症的共病数据（未提焦虑、抑郁、强迫症共病率），本指南不补写。</p>
+  </div>
+
+  <!-- 第二栏 -->
+  <div class="card blue" id="u6-2">
+    <h3 class="col-title"><span class="idx">第二栏</span>病因探秘</h3>
+    <p><strong>教材从四条线索展开（均为"可能相关"，未称已证实）：</strong></p>
+    <div class="grid2">
+      <div class="mini">
+        <h4>① 遗传与家族</h4>
+        <p>患者一级亲属的患病率（<strong>5%</strong>）高于普通人群，提示该病有<strong>家族遗传性</strong>。</p>
+      </div>
+      <div class="mini">
+        <h4>② 神经生化与激素</h4>
+        <p>中枢神经递质（<strong>5-羟色胺、谷氨酸、多巴胺</strong>）代谢异常及相应受体功能改变，以及<strong>激素水平改变</strong>，可能与拔毛行为相关。</p>
+      </div>
+      <div class="mini">
+        <h4>③ 神经影像与奖赏回路</h4>
+        <p>患者在进行奖励任务时<strong>伏隔核活动异常</strong>，提示该病可能与<strong>奖赏回路</strong>有关。</p>
+      </div>
+      <div class="mini">
+        <h4>④ 心理社会因素</h4>
+        <p>应对压力时的<strong>自我抚慰</strong>、<strong>模仿父母</strong>、<strong>情绪控制失调</strong>，以及<strong>童年创伤和负性生活事件</strong>等也可能参与发生。</p>
+      </div>
+    </div>
+    <p class="note">教材未给出各因素的权重或因果模型；上述均为"可能相关"。</p>
+  </div>
+
+  <!-- 第三栏 -->
+  <div class="card red" id="u6-3">
+    <h3 class="col-title"><span class="idx">第三栏</span>临床表现拼图</h3>
+    <div class="tabs" data-tabs>
+      <div class="tabbar">
+        <button class="on" data-tab="g1">拔哪里、怎么拔</button>
+        <button data-tab="g2">拔毛时的情绪过程</button>
+        <button data-tab="g3">后果与掩饰</button>
+      </div>
+      <div class="panel on" data-panel="g1">
+        <ul>
+          <li>大多开始于<strong>青春期早期</strong>，发病年龄 <strong>11～16 岁</strong>。</li>
+          <li>拔毛行为可涉及身体的<strong>任何长毛发区域</strong>，以<strong>头皮、眉毛和睫毛</strong>最多见。</li>
+          <li>同一患者的拔毛部位较<strong>固定</strong>，但不同患者拔毛部位各异。</li>
+          <li>患者反复试图减少或停止拔毛行为，<strong>但不成功</strong>。</li>
+        </ul>
+      </div>
+      <div class="panel" data-panel="g2">
+        <ul>
+          <li>拔毛行为通常伴随<strong>情绪的调节和唤起、减少紧张、增加快感</strong>等过程。</li>
+          <li>但在拔毛之后，个体也会出现<strong>负面情绪</strong>，如<strong>羞耻感或失控感</strong>。</li>
+          <li>教材将其描述为一种"先缓解、后羞耻"的循环，这正是行为被强化的原因之一。</li>
+        </ul>
+        <p class="note">"循环"为对教材两句描述的整理，教材未使用"循环"一词。</p>
+      </div>
+      <div class="panel" data-panel="g3">
+        <ul>
+          <li>由于反复拔除，可导致个体<strong>脱发或斑秃</strong>。</li>
+          <li>患者常对行为感到<strong>羞愧</strong>，因而回避社交或其他公共场所。</li>
+          <li>或以<strong>戴帽子、假发、画眉毛</strong>等方式进行掩饰。</li>
+          <li>严重干扰正常社会功能，感到异常焦虑和痛苦。</li>
+        </ul>
+      </div>
+    </div>
+    <p><strong>诊断四要点（教材原文）：</strong>①反复拔除毛发；②反复试图减少或停止拔毛行为，但不成功；③拔毛行为导致明显脱发；④症状引起明显痛苦，或导致个体、家庭、社交、教育、职业或其他重要功能的损害。</p>
+  </div>
+
+  <!-- 第四栏 -->
+  <div class="card orange" id="u6-4">
+    <h3 class="col-title"><span class="idx">第四栏</span>教材典型案例</h3>
+    <div class="callout book">
+      <span class="ct">📖 教材未提供具体临床案例</span>
+      教材本节为定义、流行病学、病因线索、临床表现与治疗的概述，<strong>没有</strong>病例，也没有"如某患者……"式具体举例。本栏不补写虚构病程。
+    </div>
+    <p><strong>教材原文可提取的表现要素：</strong></p>
+    <ul>
+      <li>行为：反复拔除自己或他人毛发；反复试图减少/停止但不成功。</li>
+      <li>部位：任何长毛发区域，以头皮、眉毛、睫毛最多见；同一患者部位较固定。</li>
+      <li>情绪：拔毛时情绪调节、减少紧张、增加快感；拔毛后羞耻感或失控感。</li>
+      <li>后果：脱发或斑秃；回避社交；戴帽子、假发、画眉毛掩饰。</li>
+    </ul>
+    <p class="note">以上为教材要点的结构化摘录，不是教材原案例。</p>
+  </div>
+
+  <!-- 第五栏 -->
+  <div class="card orange" id="u6-5">
+    <h3 class="col-title"><span class="idx">第五栏</span>鉴别诊断对对碰</h3>
+    <p><strong>教材明确列出需要排除的四类情况，但未给出逐条鉴别标准。下表按"要排除什么"整理，不额外添加诊断阈值：</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>需排除的情况</th><th>教材表述</th><th>临床思考方向</th></tr></thead>
+        <tbody>
+          <tr><td><strong>正常拔毛现象</strong></td><td>教材将其列为需排除项，未给具体标准</td><td>是否有"反复试图停止但不成功"、明显脱发与痛苦/损害——教材诊断要点中的四条</td></tr>
+          <tr><td><strong>皮肤病（如皮炎）</strong></td><td>教材将其列为需排除项，未给具体标准</td><td>脱发/断发是否有皮肤病理基础；教材未展开皮肤科检查要点</td></tr>
+          <tr><td><strong>物质滥用</strong></td><td>教材将其列为需排除项，未给具体标准</td><td>教材未说明具体物质或判断方法，临床需另行评估</td></tr>
+          <tr><td><strong>精神分裂症所引起的拔毛行为</strong></td><td>教材将其列为需排除项，未给具体标准</td><td>是否存在幻觉、妄想、言行紊乱等精神病性症状（可参照教材强迫症鉴别的"三看"原则）</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout key">
+      <span class="ct">📌 一句话鉴别总结</span>
+      <strong>拔毛症的关键不是"拔没拔"，而是"停不停得下来 + 有没有明显脱发 + 是否因此痛苦/功能受损"，并排除皮肤病、物质与精神病性原因。</strong>
+    </div>
+    <p class="note">教材未提供拔毛症与强迫症、拔毛症与皮肤搔抓症的专门鉴别段落；二者同属 OCRD 的"聚焦于躯体的重复行为障碍"。本表不自行添加鉴别标准。</p>
+  </div>
+
+  <!-- 第六栏 -->
+  <div class="card green" id="u6-6">
+    <h3 class="col-title"><span class="idx">第六栏</span>治疗方案工具箱</h3>
+    <div class="quote"><span class="lab">教材原文</span>拔毛症的治疗主要包括药物治疗和行为治疗。</div>
+    <div class="grid2">
+      <div class="mini">
+        <h4>药物治疗</h4>
+        <ul>
+          <li>药物以 <strong>SSRIs 最常使用</strong>。</li>
+          <li><strong>抗精神病药</strong>和<strong>多巴胺能药</strong>也有一定疗效。</li>
+        </ul>
+        <p class="note">教材未给出具体药名、剂量与疗程。</p>
+      </div>
+      <div class="mini">
+        <h4>行为治疗</h4>
+        <ul>
+          <li>包括<strong>习惯逆转训练</strong>和<strong>认知行为疗法</strong>。</li>
+          <li>习惯逆转训练主要包括<strong>自我检测、意识训练、刺激控制和竞争反应训练</strong>四个部分。</li>
+          <li>研究发现，习惯逆转训练的疗效<strong>优于药物治疗</strong>。</li>
+        </ul>
+        <p class="note">教材未展开 CBT 的具体次数与操作步骤。</p>
+      </div>
+    </div>
+    <div class="callout key">
+      <span class="ct">📌 治疗优先级</span>
+      教材的表述顺序是"药物 + 行为治疗"，但研究结论明确<strong>习惯逆转训练优于药物治疗</strong>。答题时两者都要写，别把"最常使用"（SSRIs）误写成"疗效最好"。
+    </div>
+    <p class="note">教材未涉及拔毛症的物理治疗。</p>
+  </div>
+
+  <!-- 第七栏 -->
+  <div class="card purple" id="u6-7">
+    <h3 class="col-title"><span class="idx">第七栏</span>记忆工具箱</h3>
+    <p><strong>🔧 方法一：四字诊断口诀——"拔、停、秃、苦"</strong></p>
+    <p>口诀：<strong>"拔（反复拔毛）、停（想停停不下）、秃（明显脱发）、苦（痛苦/功能损害）"</strong>。</p>
+    <p class="note">为什么这样记：四个字与教材四条诊断要点一一对应，顺序一致，答题时按序展开即可。</p>
+
+    <p><strong>🔧 方法二：首字母/四步法——HRT 的"自、意、刺、竞"</strong></p>
+    <p><strong>自</strong>我检测 → <strong>意</strong>识训练 → <strong>刺</strong>激控制 → <strong>竞</strong>争反应训练。</p>
+    <p class="note">为什么这样记：习惯逆转训练四部分名称抽象，用四个单字做钩子，比整句背诵更容易提取。</p>
+
+    <p><strong>🔧 方法三：对比记忆法——"拔毛 vs 抠皮"</strong></p>
+    <p>拔毛症：专注<strong>毛发</strong>，以头皮、眉毛、睫毛最多见，后果是<strong>脱发/斑秃</strong>；皮肤搔抓症：专注<strong>皮肤</strong>，以面部、手、手臂最多见，后果是<strong>皮损/瘢痕/感染</strong>。</p>
+    <p class="note">为什么这样记：两个病同属"聚焦于躯体的重复行为障碍"，用"毛发—皮肤"一对反差点即可分开。</p>
+
+    <p><strong>🔧 方法四：数字锚定法——"1～3%、1∶4、5%、11～16"</strong></p>
+    <p>终生患病率 <strong>1%～3%</strong>；成年男女比 <strong>1∶4</strong>；一级亲属 <strong>5%</strong>；发病 <strong>11～16 岁</strong>。</p>
+    <p class="note">为什么这样记：把数字按"人群—性别—家族—年龄"排成一条线，避免与搔抓症的 1.25%～5.4%、12～16 岁混淆。</p>
+  </div>
+
+  <!-- 第八栏 -->
+  <div class="card blue" id="u6-8">
+    <h3 class="col-title"><span class="idx">第八栏</span>知识联动</h3>
+    <ul>
+      <li><strong>与皮肤搔抓症：</strong>同属"聚焦于躯体的重复行为障碍"，共享"反复动作—尝试停止失败—躯体后遗症—痛苦"的结构；ICD-11 将二者均纳入 OCRD。</li>
+      <li><strong>与强迫症：</strong>教材把拔毛症归入 OCRD，并在强迫症鉴别中以"专注点不同"区分；二者在"重复行为"上有现象学相似，但拔毛症的核心是躯体聚焦的重复行为。</li>
+      <li><strong>与皮肤科：</strong>脱发/斑秃是就诊的常见原因，需排除皮肤病（如皮炎）；教材把皮肤病列为鉴别排除项。</li>
+      <li><strong>与奖赏回路：</strong>神经影像发现奖励任务时伏隔核活动异常，提示与奖赏回路有关，这也解释了"拔毛—快感—负性情绪"的强化过程。</li>
+      <li><strong>与童年创伤：</strong>教材将童年创伤和负性生活事件列为可能参与因素，提示评估时应询问相关经历。</li>
+      <li><strong>与分类学：</strong>ICD-10"习惯与冲动障碍"→ ICD-11 OCRD，是本章分类变迁的又一个考点。</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===== 11 皮肤搔抓症 ===== -->
+<section id="u7">
+  <div class="sec-head"><div class="badge">11</div><h2>皮肤搔抓症<span class="en">Skin-Picking Disorder · 第三节（四）2（p.132–133）</span></h2></div>
+  <p class="sec-lead">ICD-11 新提出的诊断单元：反复抠抓造成皮损，甚至感染、败血症。识别要点是"抓—停不下—皮损—痛苦"，并与自伤、做作性障碍分开。</p>
+
+  <!-- 第一栏 -->
+  <div class="card red" id="u7-1">
+    <h3 class="col-title"><span class="idx">第一栏</span>疾病画像</h3>
+    <div class="quote"><span class="lab">教材原文</span>皮肤搔抓症（skin-picking disorder，SPD）又称皮肤抓痕症或抠皮症，是 ICD-11 新提出的诊断单元。</div>
+    <div class="quote"><span class="lab">教材原文</span>其临床表现为反复、强迫性地搔抓皮肤，造成皮损，患者因此感到痛苦，并尝试停止搔抓。</div>
+    <p><strong>一句话画像：</strong>手指在皮肤上"找瑕疵"——粉刺、结痂、老茧都要抠掉，越抠越破损，越破损越忍不住；夏天也只能用衣服遮住手臂。<span class="note">（场景化为类比理解）</span></p>
+    <div class="stat">
+      <span>普通人群患病率约 1.25%～5.4%</span><span>12～16 岁为高峰年龄段</span><span>任何年龄均可起病</span><span>一级亲属同病率 28.3%～43%</span>
+    </div>
+    <div class="grid2">
+      <div class="mini">
+        <h4>核心特征</h4>
+        <ul>
+          <li>反复、强迫性地搔抓皮肤，<strong>造成皮损</strong>。</li>
+          <li>患者因此<strong>感到痛苦</strong>，并<strong>尝试停止搔抓</strong>。</li>
+          <li>常伴仪式行为，如玩弄、吞咽抠剥下来的皮肤或皮痂。</li>
+        </ul>
+      </div>
+      <div class="mini">
+        <h4>分类地位</h4>
+        <ul>
+          <li><strong>ICD-11 新提出的诊断单元</strong>。</li>
+          <li>属于"聚焦于躯体的重复行为障碍"，与拔毛症并列。</li>
+          <li>本章归入 OCRD。</li>
+        </ul>
+      </div>
+    </div>
+    <p class="note">教材未给出皮肤搔抓症的性别比例。</p>
+  </div>
+
+  <!-- 第二栏 -->
+  <div class="card blue" id="u7-2">
+    <h3 class="col-title"><span class="idx">第二栏</span>病因探秘</h3>
+    <p><strong>教材给出三条线索：</strong></p>
+    <div class="grid3">
+      <div class="mini">
+        <h4>① 家族遗传</h4>
+        <p>皮肤搔抓症可能具有家族遗传性，患者的一级亲属同病率约为 <strong>28.3%～43%</strong>。</p>
+      </div>
+      <div class="mini">
+        <h4>② 神经影像</h4>
+        <p>存在<strong>前额叶-纹状体环路、奖赏回路异常</strong>。</p>
+      </div>
+      <div class="mini">
+        <h4>③ 创伤与压力</h4>
+        <p>创伤及压力可能与发病有关；<strong>童年期遭受的强奸或性骚扰</strong>与年轻女性发生皮肤搔抓症<strong>密切相关</strong>。</p>
+      </div>
+    </div>
+    <p class="note">教材未给出遗传度数字，也未说明具体神经递质机制；上述均为教材原文的关联性表述。</p>
+  </div>
+
+  <!-- 第三栏 -->
+  <div class="card red" id="u7-3">
+    <h3 class="col-title"><span class="idx">第三栏</span>临床表现拼图</h3>
+    <div class="tabs" data-tabs>
+      <div class="tabbar">
+        <button class="on" data-tab="h1">抓哪里、怎么抓</button>
+        <button data-tab="h2">仪式行为与情绪</button>
+        <button data-tab="h3">皮损与共病</button>
+      </div>
+      <div class="panel on" data-panel="h1">
+        <ul>
+          <li>核心症状是反复、强迫地搔抓皮肤造成皮损。</li>
+          <li><strong>面部、手、手臂</strong>是最常见的搔抓部位。</li>
+          <li>搔抓部位可以是<strong>正常皮肤</strong>，也可以在<strong>粉刺、老茧或痂痕</strong>处。</li>
+          <li>任何年龄都可起病，<strong>12～16 岁为高峰年龄段</strong>。</li>
+        </ul>
+      </div>
+      <div class="panel" data-panel="h2">
+        <ul>
+          <li>通常伴有<strong>仪式行为</strong>，如玩弄、吞咽抠剥下来的皮肤或皮痂。</li>
+          <li>搔抓行为一般能<strong>调节情绪、减少压力和增加快感</strong>，但这些又会<strong>增强搔抓行为</strong>。</li>
+          <li>部分患者搔抓后焦虑缓解；也有一部分患者出现<strong>羞耻感</strong>等负面情绪。</li>
+        </ul>
+      </div>
+      <div class="panel" data-panel="h3">
+        <ul>
+          <li>患者常试图通过<strong>衣服或化妆</strong>掩饰受损部位。</li>
+          <li>反复搔抓可带来严重的<strong>瘢痕、组织损害</strong>或躯体问题，如<strong>局部皮肤感染、败血症</strong>等。</li>
+          <li>常与<strong>焦虑、情绪障碍、物质滥用及进食障碍</strong>共病。</li>
+        </ul>
+      </div>
+    </div>
+    <p><strong>诊断四要点（教材原文）：</strong>①反复搔抓皮肤；②尝试停止或减少搔抓行为，但不成功；③因搔抓行为造成明显的皮肤损伤；④症状引起明显痛苦，或导致个体、家庭、社交、教育、职业或其他重要功能的损害。</p>
+  </div>
+
+  <!-- 第四栏 -->
+  <div class="card orange" id="u7-4">
+    <h3 class="col-title"><span class="idx">第四栏</span>教材典型案例</h3>
+    <div class="callout book">
+      <span class="ct">📖 教材未提供具体临床案例</span>
+      教材本节为定义、流行病学、病因线索、临床表现与治疗的概述，<strong>没有</strong>病例，也没有"如某患者……"式具体举例。本栏不补写虚构皮损照片或化验结果。
+    </div>
+    <p><strong>教材原文可提取的表现要素：</strong></p>
+    <ul>
+      <li>行为：反复、强迫性地搔抓皮肤；尝试停止或减少但不成功。</li>
+      <li>部位：面部、手、手臂最常见；可在正常皮肤，也可在粉刺、老茧或痂痕处。</li>
+      <li>仪式：玩弄、吞咽抠剥下来的皮肤或皮痂。</li>
+      <li>后果：瘢痕、组织损害、局部皮肤感染、败血症；用衣服或化妆掩饰。</li>
+    </ul>
+    <p class="note">以上为教材要点的结构化摘录，不是教材原案例。</p>
+  </div>
+
+  <!-- 第五栏 -->
+  <div class="card orange" id="u7-5">
+    <h3 class="col-title"><span class="idx">第五栏</span>鉴别诊断对对碰</h3>
+    <p><strong>教材列出五类需要鉴别的对象，但未给出逐条鉴别标准。下表按"要排除/区分什么"整理：</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>鉴别对象</th><th>教材表述</th><th>临床思考方向</th></tr></thead>
+        <tbody>
+          <tr><td><strong>正常抠皮行为</strong></td><td>教材列为鉴别项，未给具体标准</td><td>是否达到"反复强迫 + 停不下来 + 明显皮损 + 痛苦/损害"四条</td></tr>
+          <tr><td><strong>精神病性障碍</strong></td><td>教材列为鉴别项，未给具体标准</td><td>有无幻觉、妄想、言行紊乱等精神病性症状</td></tr>
+          <tr><td><strong>其他强迫及相关障碍</strong></td><td>教材列为鉴别项，未给具体标准</td><td>专注点是否在皮肤；若为毛发则为拔毛症</td></tr>
+          <tr><td><strong>做作性障碍</strong></td><td>教材列为鉴别项，未给具体标准</td><td>教材未说明判断方法，临床需评估行为动机与病史一致性</td></tr>
+          <tr><td><strong>非自杀性自伤</strong></td><td>教材列为鉴别项，未给具体标准</td><td>教材未说明判断方法，临床需区分行为的意图与功能</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout key">
+      <span class="ct">📌 一句话鉴别总结</span>
+      <strong>皮肤搔抓症的"抓"是为调节情绪/快感而反复抠皮，并造成皮损；自伤、做作性障碍、精神病性原因则需要从意图、动机与精神病性症状去区分。</strong>
+    </div>
+    <p class="note">教材未给出上述五组的具体鉴别标准，本表仅整理"需要排除的对象"，不替代临床判断。</p>
+  </div>
+
+  <!-- 第六栏 -->
+  <div class="card green" id="u7-6">
+    <h3 class="col-title"><span class="idx">第六栏</span>治疗方案工具箱</h3>
+    <div class="grid2">
+      <div class="mini">
+        <h4>心理治疗（教材点名的三种）</h4>
+        <ul>
+          <li><strong>习惯逆转疗法</strong></li>
+          <li><strong>认知行为疗法</strong></li>
+          <li><strong>接纳承诺疗法</strong></li>
+        </ul>
+        <p class="note">教材称这三种是"治疗皮肤搔抓症的主要心理治疗方法"，未说明孰为一线、具体次数与操作步骤。</p>
+      </div>
+      <div class="mini">
+        <h4>药物治疗</h4>
+        <ul>
+          <li>主要以 <strong>SSRIs 类药物</strong>为主。</li>
+          <li>但其疗效<strong>有待于进一步研究</strong>。</li>
+        </ul>
+        <p class="note">教材未给出具体药名、剂量与疗程。</p>
+      </div>
+    </div>
+    <div class="callout warn">
+      <span class="ct">⚠️ 躯体并发症要一起处理</span>
+      教材明确反复搔抓可带来瘢痕、组织损害，甚至<strong>局部皮肤感染、败血症</strong>。因此评估不能只看行为，还要看皮损与感染征象；教材未展开具体的皮肤科处理方案。
+    </div>
+    <p class="note">教材未涉及皮肤搔抓症的物理治疗。</p>
+  </div>
+
+  <!-- 第七栏 -->
+  <div class="card purple" id="u7-7">
+    <h3 class="col-title"><span class="idx">第七栏</span>记忆工具箱</h3>
+    <p><strong>🔧 方法一：四字诊断口诀——"抓、停、损、苦"</strong></p>
+    <p>口诀：<strong>"抓（反复搔抓）、停（想停停不下）、损（明显皮损）、苦（痛苦/功能损害）"</strong>。</p>
+    <p class="note">为什么这样记：与拔毛症的"拔、停、秃、苦"只差第二字，成对记忆既快又不易混。</p>
+
+    <p><strong>🔧 方法二：三疗法首字法——"习、认、纳"</strong></p>
+    <p><strong>习</strong>惯逆转疗法、<strong>认</strong>知行为疗法、<strong>纳</strong>接承诺疗法；药物只记"SSRIs，疗效待研究"。</p>
+    <p class="note">为什么这样记：三个疗法名称长，首字串联后可在考场快速写全；再补一句"SSRIs 待证实"防止过度肯定。</p>
+
+    <p><strong>🔧 方法三：对比记忆法——"毛发 vs 皮肤"</strong></p>
+    <p>拔毛症：<strong>毛发</strong>（头皮、眉毛、睫毛）→ 脱发/斑秃；皮肤搔抓症：<strong>皮肤</strong>（面部、手、手臂）→ 皮损/瘢痕/感染。</p>
+    <p class="note">为什么这样记：两病同组、结构相同，只有"靶组织"不同，用一对具体部位即可锁定。</p>
+
+    <p><strong>🔧 方法四：数字锚定法——"1.25～5.4%、12～16、28.3～43%"</strong></p>
+    <p>患病率 <strong>1.25%～5.4%</strong>；高峰 <strong>12～16 岁</strong>；一级亲属同病率 <strong>28.3%～43%</strong>。</p>
+    <p class="note">为什么这样记：与拔毛症的"1%～3%、11～16 岁、5%"并排背，差异点正是命题点。</p>
+  </div>
+
+  <!-- 第八栏 -->
+  <div class="card blue" id="u7-8">
+    <h3 class="col-title"><span class="idx">第八栏</span>知识联动</h3>
+    <ul>
+      <li><strong>与拔毛症：</strong>同属"聚焦于躯体的重复行为障碍"，共享"反复动作—停止失败—躯体后遗症—痛苦"的结构；教材把二者放在同一小标题下。</li>
+      <li><strong>与强迫症：</strong>ICD-11 将皮肤搔抓症纳入 OCRD；强迫症鉴别中以"专注点不同"区分（皮肤搔抓症专注于对皮肤的抠、剥）。</li>
+      <li><strong>与焦虑、情绪障碍、物质滥用、进食障碍：</strong>教材明确列为其常见共病，提示评估需覆盖这些轴。</li>
+      <li><strong>与皮肤科：</strong>皮损、瘢痕、局部感染甚至败血症是就诊原因；教材把这些列为躯体后果，提示精神科与皮肤科协作的必要性。</li>
+      <li><strong>与创伤：</strong>教材指出童年期强奸或性骚扰与年轻女性发病密切相关，提示创伤史询问的重要性。</li>
+      <li><strong>与分类学：</strong>ICD-11 新提出的诊断单元——"新"本身就是考点；它与拔毛症共同构成"聚焦于躯体的重复行为障碍"。</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===== 12 核心要点 ===== -->
+<section id="summary">
+  <div class="sec-head"><div class="badge">12</div><h2>全章核心要点速览<span class="en">20 key points</span></h2></div>
+  <p class="sec-lead">考前最后一遍只看这里。每条都能独立成题，建议逐条自问"为什么"。</p>
+  <div class="card blue">
+    <div class="grid2">
+      <ol>
+        <li>OCRD 是 ICD-11 新设的独立疾病分类，包括强迫症、躯体变形障碍、嗅觉牵连障碍、疑病症、囤积障碍和聚焦于躯体的重复行为障碍（拔毛症、皮肤搔抓症）。</li>
+        <li>DSM-5 把疑病症归入"躯体症状及相关障碍"，称为<strong>疾病焦虑障碍</strong>。</li>
+        <li>强迫症＝反复持久的强迫观念和/或强迫行为；核心是<strong>反强迫</strong>——明知没有必要、违背意愿，却无法控制摆脱。</li>
+        <li>终生患病率 <strong>0.8%～3.0%</strong>；平均发病 <strong>19～35 岁</strong>；约 1/3 起病于 15 岁前；儿童患病率 2%～4%（男∶女约 3∶2）。</li>
+        <li>WHO 排名第十位的致残性疾病；仅 <strong>34%</strong> 主动求医；从症状到确诊约 <strong>17 年</strong>。</li>
+        <li>共病：<strong>60%～90%</strong> 至少共患一种；抑郁障碍 65%；焦虑障碍 60%～90%；抽动障碍约 30%；ADHD 约 20%。</li>
+        <li>遗传：一级亲属患病率高 <strong>5～6 倍</strong>，遗传度 <strong>30%～65%</strong>，多基因遗传；谷氨酸转运体基因异常具全基因组意义。</li>
+        <li>5-HT 异常与强迫症关系最密切（氯米帕明有效），但 SSRIs 有效率仅 40%～60%，说明只是部分病理基础；DA 阻滞剂可增强 SSRIs 疗效。</li>
+        <li>神经结构基础是<strong>皮质-纹状体-丘脑-皮质环路</strong>：眶额皮质、背外侧前额叶、前扣带回、纹状体、丘脑。</li>
+        <li>临床表现：同时有强迫思维+行为约 <strong>70%</strong>，仅强迫思维约 <strong>25%</strong>；强迫行为可为外显仪式，也可为内隐的"头脑中行为"。</li>
+      </ol>
+      <ol start="11">
+        <li>强迫思维六亚型：表象、穷思竭虑（思维反刍）、怀疑、对立思维、联想、回忆；强迫行为四型：检查、洗涤、计数、仪式动作。</li>
+        <li>强迫意向是强烈的、违背意愿的内在冲动，但<strong>往往不会转变为行动</strong>；回避行为见于 50% 以上患者，常预示疗效不佳。</li>
+        <li>诊断三要点：持续强迫症状；占据一定时间（如每天 ≥1 小时）；引起明显痛苦或功能损害。自知力分"一般或良好"与"较差到缺乏"两级。</li>
+        <li>五个主要鉴别：GAD（担忧广泛、控制愿望不强）；抑郁障碍（看原发/主要，可双诊断）；躯体形式障碍（以躯体不适为主）；疑病症（无自我抵抗）；精神分裂症（幻觉妄想、淡漠、现实不协调）。</li>
+        <li>药物：一线为<strong>氟西汀、氟伏沙明、舍曲林、帕罗西汀</strong>；高剂量可能更有效；通常 4～6 周起效，急性期 10～12 周；有效率 65%～70%，症状改善仅 30%～60%。</li>
+        <li>难治时联合非典型抗精神病药（利培酮、阿立哌唑、喹硫平、奥氮平）；氯米帕明联合疗效较好但安全性较差，不作联合首选。</li>
+        <li>CBT 是一线心理治疗，核心为<strong>暴露与反应阻止 + 认知重组</strong>；每周 1 次、每次 60～90 分钟、共 8～20 次；药物+心理联合优于单用。</li>
+        <li>物理治疗：rTMS（FDA 批准用于难治性强迫症）、DBS、VNS、MECT（仅当共患其适应证时）。</li>
+        <li>躯体变形障碍：患病率约 <strong>11%</strong>，起病 12～13 岁；SSRIs 一线、高剂量长疗程；CBT 尤其对青少年较好、疗效优于药物；自杀风险高（79.5%/27.6%/0.3%）。</li>
+        <li>其他 OCRD 的专注点与治疗：嗅觉牵连—气味（SSRIs 有效）；疑病症—疾病（CBT 一线）；囤积—物品（CBT 一线，有效率约 15%）；拔毛—毛发（SSRIs + 习惯逆转训练）；搔抓—皮肤（HRT/CBT/ACT + SSRIs）。</li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 13 易混 ===== -->
+<section id="pitfalls">
+  <div class="sec-head"><div class="badge">13</div><h2>易混易错点警示<span class="en">Common traps</span></h2></div>
+  <p class="sec-lead">这些点不是"没背到"，而是"背反了"。逐条核对你的第一反应。</p>
+  <div class="card danger">
+    <details open>
+      <summary>① 强迫症不是"想不开"：自知力一般/良好也能诊断</summary>
+      <div class="dbody">教材把自知力分为"一般或良好"与"较差到缺乏"两级。多数患者<strong>明知</strong>观念和行为没有必要、不正常，但<strong>无法控制摆脱</strong>。诊断靠"持续症状 + 耗时（如 ≥1 小时/天）+ 痛苦/功能损害"，不要求自知力丧失。</div>
+    </details>
+    <details>
+      <summary>② "强迫观念"与"强迫行为"的比例不要记反</summary>
+      <div class="dbody">同时具有强迫思维和强迫行为约 <strong>70%</strong>；只有强迫思维约 <strong>25%</strong>；仅出现强迫行为<strong>少见</strong>。不要把 70% 记成"只有强迫思维"。</div>
+    </details>
+    <details>
+      <summary>③ 强迫意向 ≠ 会付诸行动</summary>
+      <div class="dbody">强迫意向是"想把小孩扔到窗外、站在高处想往下跳"等强烈内在冲动，但教材明确：<strong>往往不会转变为行动</strong>。临床上要评估风险，但不能把"有冲动"直接等同于"会实施"。</div>
+    </details>
+    <details>
+      <summary>④ 强迫症 vs GAD：看"控制愿望"，不看"焦虑程度"</summary>
+      <div class="dbody">GAD 担心内容<strong>广泛、多不固定</strong>，自己的控制愿望不强甚至没有，伴明显躯体性焦虑；强迫症的担心对象是<strong>强迫症状</strong>，<strong>自我抵抗、控制愿望强烈</strong>。</div>
+    </details>
+    <details>
+      <summary>⑤ 强迫症 vs 疑病症：一个"知道多余"，一个"确信有病"</summary>
+      <div class="dbody">多数疑病症患者<strong>并不认为疑病观念没有必要</strong>，也<strong>无自我抵抗和强烈控制愿望</strong>；强迫症恰好相反。这是本章鉴别题的"题眼"。</div>
+    </details>
+    <details>
+      <summary>⑥ 强迫症合并抑郁 ≠ 只能下一个诊断</summary>
+      <div class="dbody">教材明确：二者经常共存，鉴别主要根据<strong>哪种症状原发并占主要地位</strong>；如果强迫症状与抑郁症状<strong>均达到诊断标准</strong>，可以做出<strong>两种疾病的诊断</strong>。不要习惯性"二选一"。</div>
+    </details>
+    <details>
+      <summary>⑦ 13.3% 的一过性精神病性症状 ≠ 精神分裂症</summary>
+      <div class="dbody">教材指出，慢性病程中约 13.3% 出现一过性精神病性症状，但<strong>并非精神分裂症的特征性症状</strong>，是<strong>可逆</strong>的，且<strong>无精神衰退</strong>。与精神分裂症的鉴别要看幻觉妄想、是否苦恼、现实协调。</div>
+    </details>
+    <details>
+      <summary>⑧ 氯米帕明不是一线，也不是联合首选</summary>
+      <div class="dbody">国家批准的一线药物是<strong>氟西汀、氟伏沙明、舍曲林、帕罗西汀</strong>。氯米帕明属三环类，虽"联合疗效较好"，但<strong>安全性较差，一般不作为联合方案的首选</strong>。</div>
+    </details>
+    <details>
+      <summary>⑨ "有效"不等于"痊愈"：65%～70% vs 30%～60%</summary>
+      <div class="dbody">SSRIs 治疗强迫症的<strong>有效率 65%～70%</strong>，但<strong>症状仅改善 30%～60%</strong>。不要把"有效率"当成"症状改善比例"。</div>
+    </details>
+    <details>
+      <summary>⑩ CBT 的核心是 ERP + 认知重组，不是"谈心"</summary>
+      <div class="dbody">教材列出的技术包括心理教育、案例分析、饼图法、序列事件概率分析、成本效益分析、证据检查、行为实验、暴露与仪式行为阻止；<strong>暴露与反应阻止和认知重组是核心</strong>。频次为每周 1 次、60～90 分钟、共 8～20 次。</div>
+    </details>
+    <details>
+      <summary>⑪ rTMS 与 MECT 的定位不同</summary>
+      <div class="dbody">rTMS 由 FDA 批准用于<strong>难治性强迫症</strong>；MECT 只在强迫症患者<strong>共患有 MECT 适应证的疾病</strong>（如精神分裂症、重度抑郁障碍）时才考虑。不要把 MECT 写成强迫症的常规治疗。</div>
+    </details>
+    <details>
+      <summary>⑫ BDD 的"高剂量长疗程"不要搬到强迫症身上</summary>
+      <div class="dbody">教材对 BDD 明说"SSRIs 一线、<strong>高剂量长疗程</strong>"；对强迫症只说"高剂量可以有更好的抗强迫疗效""一般建议 10～12 周急性期"，<strong>未说长疗程</strong>。两病的治疗表述不能互换。</div>
+    </details>
+  </div>
+</section>
+
+<!-- ===== 14 自测 ===== -->
+<section id="quiz">
+  <div class="sec-head"><div class="badge">14</div><h2>章节自测系统<span class="en">15 questions · 6 types</span></h2></div>
+  <p class="sec-lead">覆盖单选、多选、判断、名词解释、简答、案例分析六种题型，按易→中→难排列。先作答，再展开解析。</p>
+
+  <div class="quiz-q">
+    <div class="qh"><span class="qno">第 1 题</span><span class="qtype">单选题</span><span class="diff">易</span></div>
+    <p class="brief">教材在强迫症诊断要点中举例：强迫症状需占据一定时间，如每天至少多少时间？</p>
+    <div class="opts">
+      <div class="opt"><span class="l">A.</span>30 分钟</div>
+      <div class="opt correct"><span class="l">B.</span>1 小时</div>
+      <div class="opt"><span class="l">C.</span>2 小时</div>
+      <div class="opt"><span class="l">D.</span>4 小时</div>
+    </div>
+    <details><summary>查看答案与解析</summary><div class="dbody"><strong>答案：B</strong><br>教材诊断要点第（2）条：强迫症状需占据一定时间（如每天花费 1 小时或以上）。这是"阈值"而非绝对标准，核心仍是痛苦与功能损害。</div></details>
+  </div>
+
+  <div class="quiz-q">
+    <div class="qh"><span class="qno">第 2 题</span><span class="qtype">单选题</span><span class="diff">易</span></div>
+    <p class="brief">"看到'拥护'，头脑中马上出现'打倒'"，属于哪种强迫思维？</p>
+    <div class="opts">
+      <div class="opt"><span class="l">A.</span>强迫联想</div>
+      <div class="opt correct"><span class="l">B.</span>强迫对立思维</div>
+      <div class="opt"><span class="l">C.</span>强迫回忆</div>
+      <div class="opt"><span class="l">D.</span>强迫表象</div>
+    </div>
+    <details><summary>查看答案与解析</summary><div class="dbody"><strong>答案：B</strong><br>教材原文："患者头脑中出现一个观念或看到一句话时，便不由自主地联想起另一个观念或词句，且性质对立。"故为强迫对立思维。A 强迫联想是联想到"不祥情境"（如打火机→爆炸）；C 是反复回忆经历；D 是反复出现厌恶的体验画面。</div></details>
+  </div>
+
+  <div class="quiz-q">
+    <div class="qh"><span class="qno">第 3 题</span><span class="qtype">单选题</span><span class="diff">中</span></div>
+    <p class="brief">关于强迫症的自知力，下列哪项符合教材表述？</p>
+    <div class="opts">
+      <div class="opt"><span class="l">A.</span>所有患者都缺乏自知力</div>
+      <div class="opt correct"><span class="l">B.</span>自知力一般或良好者，在大部分时间内能接受强迫信念可能不是真实的</div>
+      <div class="opt"><span class="l">C.</span>自知力较差者愿意接受对经历的其他解释</div>
+      <div class="opt"><span class="l">D.</span>自知力水平与诊断无关，可忽略</div>
+    </div>
+    <details><summary>查看答案与解析</summary><div class="dbody"><strong>答案：B</strong><br>教材两级自知力：（1）一般或良好——大部分时间内能接受强迫信念可能不是真实的，并愿意接受其他解释；（2）较差到缺乏——大部分或全部时间内确信强迫信念真实，不能接受其他解释。故 A、C 错；自知力是诊断要点中的独立条目，D 错。</div></details>
+  </div>
+
+  <div class="quiz-q">
+    <div class="qh"><span class="qno">第 4 题</span><span class="qtype">单选题</span><span class="diff">中</span></div>
+    <p class="brief">下列哪种药物<strong>不属于</strong>国家市场监督管理总局批准的一线抗强迫药物？</p>
+    <div class="opts">
+      <div class="opt"><span class="l">A.</span>氟西汀</div>
+      <div class="opt"><span class="l">B.</span>氟伏沙明</div>
+      <div class="opt"><span class="l">C.</span>舍曲林</div>
+      <div class="opt correct"><span class="l">D.</span>氯米帕明</div>
+    </div>
+    <details><summary>查看答案与解析</summary><div class="dbody"><strong>答案：D</strong><br>教材原文：国家市场监督管理总局批准使用的一线药物有<strong>氟西汀、氟伏沙明、舍曲林和帕罗西汀</strong>。氯米帕明属三环类抗抑郁药，可作 SSRIs 的联合用药，疗效较好但安全性较差，一般不作为联合方案的首选。</div></details>
+  </div>
+
+  <div class="quiz-q">
+    <div class="qh"><span class="qno">第 5 题</span><span class="qtype">单选题</span><span class="diff">难</span></div>
+    <p class="brief">关于 SSRIs 治疗强迫症，下列哪项表述是<strong>错误</strong>的？</p>
+    <div class="opts">
+      <div class="opt"><span class="l">A.</span>通常起效时间为 4～6 周</div>
+      <div class="opt"><span class="l">B.</span>一般建议 10～12 周的急性期治疗</div>
+      <div class="opt"><span class="l">C.</span>高剂量 SSRIs 可以有更好的抗强迫疗效</div>
+      <div class="opt correct"><span class="l">D.</span>有效率为 65%～70%，症状也同比例改善 65%～70%</div>
+    </div>
+    <details><summary>查看答案与解析</summary><div class="dbody"><strong>答案：D</strong><br>教材原文：SSRIs 治疗强迫症的<strong>有效率为 65%～70%</strong>，但<strong>症状仅改善 30%～60%</strong>。A、B、C 均可在教材找到对应表述。</div></details>
+  </div>
+
+  <div class="quiz-q">
+    <div class="qh"><span class="qno">第 6 题</span><span class="qtype">多选题</span><span class="diff">中</span></div>
+    <p class="brief">关于强迫症的临床表现与共病，下列哪些正确？</p>
+    <div class="opts">
+      <div class="opt"><span class="l">A.</span>同时具有强迫思维和强迫行为的患者约占 70%</div>
+      <div class="opt"><span class="l">B.</span>只有强迫思维的患者约占 25%</div>
+      <div class="opt"><span class="l">C.</span>50% 以上患者存在回避行为，常预示治疗效果不佳</div>
+      <div class="opt"><span class="l">D.</span>约 28% 伴人格障碍，其中强迫性人格障碍约 18.9%</div>
+    </div>
+    <details><summary>查看答案与解析</summary><div class="dbody"><strong>答案：ABCD</strong><br>四项均为教材原文数据。补充：仅出现强迫行为的病例少见；伴人格障碍者治疗效果较差。</div></details>
+  </div>
+
+  <div class="quiz-q">
+    <div class="qh"><span class="qno">第 7 题</span><span class="qtype">多选题</span><span class="diff">中</span></div>
+    <p class="brief">关于躯体变形障碍的鉴别，下列哪些符合教材表述？</p>
+    <div class="opts">
+      <div class="opt"><span class="l">A.</span>与正常外表关注鉴别，主要看关注程度、重复行为频率、痛苦与困扰程度</div>
+      <div class="opt"><span class="l">B.</span>GAD 患者极少伴妄想，也不会出现反复的检查行为</div>
+      <div class="opt"><span class="l">C.</span>伴精神病性症状的抑郁发作患者会过分关注自己的缺陷</div>
+      <div class="opt"><span class="l">D.</span>进食障碍的核心症状是对体重和身材的过度担心</div>
+    </div>
+    <details><summary>查看答案与解析</summary><div class="dbody"><strong>答案：ABCD</strong><br>四项均对应教材"鉴别诊断"四条。补充：BDD 的先占观念不仅限于体重和身材，还涉及外表理想化的各个方面。</div></details>
+  </div>
+
+  <div class="quiz-q">
+    <div class="qh"><span class="qno">第 8 题</span><span class="qtype">多选题</span><span class="diff">难</span></div>
+    <p class="brief">下列"疾病—专注点"的对应，哪些正确？</p>
+    <div class="opts">
+      <div class="opt"><span class="l">A.</span>嗅觉牵连障碍——自身臭味或体味</div>
+      <div class="opt"><span class="l">B.</span>囤积障碍——无用或无价值物品并难以舍弃</div>
+      <div class="opt"><span class="l">C.</span>拔毛症——毛发</div>
+      <div class="opt"><span class="l">D.</span>皮肤搔抓症——对皮肤的抠、剥</div>
+      <div class="opt"><span class="l">E.</span>疑病症——患严重疾病的先占观念</div>
+    </div>
+    <details><summary>查看答案与解析</summary><div class="dbody"><strong>答案：ABCDE</strong><br>教材在强迫症鉴别第 6 条明确以"专注点不同"区分：嗅觉牵连障碍专注不好闻的气味；囤积障碍关注无意义或无价值物品并难以舍弃；拔毛症专注拔毛发；皮肤搔抓症专注对皮肤的抠、剥。疑病症的核心是疾病先占观念。</div></details>
+  </div>
+
+  <div class="quiz-q">
+    <div class="qh"><span class="qno">第 9 题</span><span class="qtype">判断题</span><span class="diff">易</span></div>
+    <p class="brief">强迫症只发生于成年人，儿童期不会出现。</p>
+    <div class="opts">
+      <div class="opt"><span class="l">A.</span>正确</div>
+      <div class="opt correct"><span class="l">B.</span>错误</div>
+    </div>
+    <details><summary>查看答案与解析</summary><div class="dbody"><strong>答案：B（错误）</strong><br>教材明确：约 1/3 的患者起病于 15 岁前；儿童强迫症患病率 2%～4%，男性多于女性（约 3∶2），平均起病 7.5～12.5 岁；约 20% 在 10 岁或更早出现症状。</div></details>
+  </div>
+
+  <div class="quiz-q">
+    <div class="qh"><span class="qno">第 10 题</span><span class="qtype">判断题</span><span class="diff">中</span></div>
+    <p class="brief">ICD-11 仍将疑病症归入"躯体形式障碍"。</p>
+    <div class="opts">
+      <div class="opt"><span class="l">A.</span>正确</div>
+      <div class="opt correct"><span class="l">B.</span>错误</div>
+    </div>
+    <details><summary>查看答案与解析</summary><div class="dbody"><strong>答案：B（错误）</strong><br>教材原文：ICD-11 将疑病症从"躯体形式障碍"<strong>移至 OCRD</strong>。DSM-5 则将它归入"躯体症状及相关障碍"，称为疾病焦虑障碍。</div></details>
+  </div>
+
+  <div class="quiz-q">
+    <div class="qh"><span class="qno">第 11 题</span><span class="qtype">判断题</span><span class="diff">中</span></div>
+    <p class="brief">教材提到，习惯逆转训练治疗拔毛症的疗效优于药物治疗。</p>
+    <div class="opts">
+      <div class="opt correct"><span class="l">A.</span>正确</div>
+      <div class="opt"><span class="l">B.</span>错误</div>
+    </div>
+    <details><summary>查看答案与解析</summary><div class="dbody"><strong>答案：A（正确）</strong><br>教材原文："研究发现其疗效优于药物治疗。"习惯逆转训练包括自我检测、意识训练、刺激控制和竞争反应训练四部分。注意：药物中 SSRIs "最常使用"，但"最常用"不等于"疗效最好"。</div></details>
+  </div>
+
+  <div class="quiz-q">
+    <div class="qh"><span class="qno">第 12 题</span><span class="qtype">名词解释</span><span class="diff">中</span></div>
+    <p class="brief">请解释"强迫思维（obsession）"。</p>
+    <details><summary>查看答案与解析</summary><div class="dbody"><strong>参考答案：</strong>强迫思维是指以刻板形式反复闯入患者头脑中并持续存在的观念、表象、冲动或渴望。患者有强烈的反强迫意识，即能意识到这些想法没有现实意义、不必要，试图忽略、压抑或用其他思想、行为来对抗，但无法摆脱，因而十分苦恼和焦虑。教材所列亚型包括强迫表象、强迫性穷思竭虑、强迫怀疑、强迫对立思维、强迫联想、强迫回忆。</div></details>
+  </div>
+
+  <div class="quiz-q">
+    <div class="qh"><span class="qno">第 13 题</span><span class="qtype">名词解释</span><span class="diff">中</span></div>
+    <p class="brief">请解释"躯体变形障碍（BDD）"。</p>
+    <details><summary>查看答案与解析</summary><div class="dbody"><strong>参考答案：</strong>躯体变形障碍是一种强迫相关障碍，指患者过分关注自己想象出来的或轻微的外表缺陷，觉得自己丑陋不堪或令人厌恶，且已引起他人注意；患者十分痛苦并伴有不同程度的社会功能损害。ICD-11 将其作为独立精神障碍，强调对身体外表"缺陷"的持续性先占观念，并伴重复和过度的行为，试图改变或遮掩这些"缺陷"，或回避引起焦虑的情景。</div></details>
+  </div>
+
+  <div class="quiz-q">
+    <div class="qh"><span class="qno">第 14 题</span><span class="qtype">简答题</span><span class="diff">难</span></div>
+    <p class="brief">简述强迫症药物治疗的五条原则，并写出 CBT 的核心技术与频次安排。</p>
+    <details><summary>查看答案与解析</summary><div class="dbody"><strong>参考答案：</strong><br><strong>药物治疗五原则：</strong>①选择合适的药物——从推荐的一线药物开始，疗效欠佳者按治疗程序逐步换药或联合治疗；②足量足疗程——多数患者 4～6 周显著效果，有些 10～12 周方改善，一般建议 10～12 周急性期治疗；③充分临床评估——兼顾主观意见、病情严重程度、药物依赖性、共病及不良反应；④及时处理不良反应——出现任何新症状或恶化均及时处理；⑤定期随访——症状严重程度、共病及自杀风险。<br><strong>CBT：</strong>一线心理治疗；核心是<strong>暴露与反应阻止（ERP）和认知重组</strong>；一般每周 1 次、每次 60～90 分钟、共 8～20 次，难治性可更长程；有个体和团体两种形式。教材另强调药物与心理治疗同时或相继进行，疗效高于单用。</div></details>
+  </div>
+
+  <div class="quiz-q">
+    <div class="qh"><span class="qno">第 15 题</span><span class="qtype">案例分析题</span><span class="diff">难</span></div>
+    <p class="brief">（模拟情境，非教材原案例）男，23 岁。近 2 年反复怀疑门窗、煤气未关好，出门后必须回家检查，严重时检查数十遍；每天因此耗时约 3 小时，明知没有必要，但一停止检查就心慌、出汗。为避免触发，他拒绝出差和旅行。无幻觉、妄想，无持续心境低落，未诉躯体不适。请回答下列问题。</p>
+    <ol class="ques">
+      <li>最可能的诊断及诊断依据是什么？</li>
+      <li>需与哪些疾病鉴别？各自的鉴别要点是什么？</li>
+      <li>治疗原则应如何安排？</li>
+    </ol>
+    <details><summary>查看答案与解析</summary><div class="dbody">
+      <strong>1. 诊断：</strong>强迫症。依据教材诊断三要点：①持续的强迫思维（强迫怀疑）和强迫行为（强迫检查）；②症状占据一定时间（每天约 3 小时，超过"1 小时或以上"的举例）；③引起明显痛苦并导致功能损害（回避出差、旅行）。患者有反强迫意识（明知没有必要却控制不住），符合强迫症特征。<br>
+      <strong>2. 鉴别：</strong>①广泛性焦虑障碍——其担忧广泛、多不固定，控制愿望不强，伴明显躯体性焦虑；本例担心对象固定于"门窗煤气"，自我抵抗强烈。②抑郁障碍——看哪种症状原发并占主要地位；本例无持续心境低落，若二者均达标准可双诊断。③疑病症——疑病症是疾病先占观念、深信不疑、无自我抵抗；本例怕的是"没关好"而非"患重病"，且有强烈抵抗。④精神分裂症——需有幻觉、妄想、言行紊乱等；本例无，且为之苦恼、与现实协调。⑤躯体形式障碍——以躯体不适感和主观关注为主；本例症状不局限于躯体。<br>
+      <strong>3. 治疗：</strong>药物+心理治疗联合优于单用。药物从一线 SSRIs 开始（氟西汀、氟伏沙明、舍曲林、帕罗西汀），足量足疗程，通常 4～6 周起效、急性期 10～12 周；疗效欠佳可联合非典型抗精神病药（利培酮、阿立哌唑、喹硫平、奥氮平），氯米帕明因安全性不作为联合首选。心理治疗首选 CBT，核心为 ERP + 认知重组，每周 1 次、60～90 分钟、共 8～20 次。难治性可考虑 rTMS（FDA 批准用于难治性强迫症）；若共患 MECT 适应证疾病再考虑 MECT。教材未给出具体 mg 剂量与维持期时长。
+    </div></details>
+  </div>
+</section>
+
+<!-- ===== 15 速记卡 ===== -->
+<section id="cards">
+  <div class="sec-head"><div class="badge">15</div><h2>考点速记卡<span class="en">20 flip cards</span></h2></div>
+  <p class="sec-lead">正面是问题，点击翻面看答案。建议按"概念→诊断→治疗/数据"三轮刷，每轮只追求快速反应。</p>
+  <div class="flashcard-grid">
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag concept">概念</span><p>ICD-11 的 OCRD 包括哪些疾病？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">强迫症、躯体变形障碍、嗅觉牵连障碍、疑病症、囤积障碍和聚焦于躯体的重复行为障碍（如拔毛症、皮肤搔抓症）。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag diag">分类</span><p>疑病症在 ICD-11 与 DSM-5 中分别归到哪里？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">ICD-11：从"躯体形式障碍"移至 OCRD。DSM-5：归入"躯体症状及相关障碍"，称疾病焦虑障碍。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag concept">概念</span><p>什么是强迫症？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">以反复持久出现的强迫观念和/或强迫行为为主要临床表现的精神疾病。多数患者明知没有必要、违背意愿，却无法控制摆脱，因而焦虑痛苦。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag diag">诊断</span><p>强迫思维有哪六个亚型？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">强迫表象、强迫性穷思竭虑（思维反刍）、强迫怀疑、强迫对立思维、强迫联想、强迫回忆。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag diag">诊断</span><p>强迫行为有哪四个类型？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">强迫检查、强迫洗涤、强迫计数、强迫性仪式动作。强迫行为可外显，也可内隐（如默默计数或祷告）。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag concept">概念</span><p>什么是强迫意向？会付诸行动吗？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">反复体会到一种强烈的、违背自己意愿的内在冲动，明知非理性、荒谬却不能控制其出现。教材明确：内心冲动虽强烈，但往往不会转变为行动。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag data">数据</span><p>强迫症患者的回避行为比例与预后意义？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">50% 以上患者存在回避行为；既加重疾病严重程度，也加重社会功能损害，常预示治疗效果不佳。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag diag">诊断</span><p>强迫症的诊断三要点是什么？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">①持续的强迫思维和/或强迫行为；②强迫症状占据一定时间（如每天 1 小时或以上）；③引起明显痛苦，导致个人、家庭、社会、学业、事业或其他重要领域功能损害。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag diag">诊断</span><p>强迫症的自知力分哪两级？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">①一般或良好：大部分时间内能接受强迫信念可能不是真实的，愿意接受其他解释。②较差到缺乏：大部分或全部时间内确信强迫信念真实，不能接受其他解释。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag data">数据</span><p>强迫症的患病率、发病年龄与男女比？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">终生患病率 0.8%～3.0%；平均发病 19～35 岁；男女比 (1∶1)～(1∶1.5)，女性略高；约 1/3 起病于 15 岁前。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag data">数据</span><p>强迫症的共病率与前三位共病？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">60%～90% 至少共患一种其他精神障碍；最常见抑郁障碍（65%）和焦虑障碍（60%～90%）；约 30% 共病抽搐障碍，约 20% 共病 ADHD。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag data">数据</span><p>强迫症的遗传数据？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">一级亲属患病率比普通人群高 5～6 倍；遗传度 30%～65%；多基因遗传；谷氨酸转运体基因异常具有全基因组意义。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag concept">机制</span><p>强迫症的神经结构基础是什么？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">皮质-纹状体-丘脑-皮质环路，主要包括眶额皮质、背外侧前额叶、前扣带回、纹状体和丘脑；静息时代谢率/活动增加，有效治疗后下降。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag treat">治疗</span><p>强迫症的一线药物有哪些？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">氟西汀、氟伏沙明、舍曲林、帕罗西汀（国家市场监督管理总局批准的一线药物）。氯米帕明等三环类也具抗强迫作用，但安全性较差。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag data">数据</span><p>SSRIs 治疗强迫症的起效时间与疗效数字？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">通常 4～6 周起效；多数 4～6 周显著效果，有些 10～12 周改善；一般建议 10～12 周急性期。有效率 65%～70%，症状仅改善 30%～60%。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag treat">治疗</span><p>CBT 的核心技术与频次？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">核心是暴露与反应阻止（ERP）和认知重组。一般每周 1 次、每次 60～90 分钟、共 8～20 次；有个体和团体两种形式。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag treat">治疗</span><p>强迫症的四种物理治疗及定位？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">rTMS（FDA 批准用于难治性强迫症）、DBS（可逆）、VNS、MECT（仅当共患其适应证疾病如精神分裂症、重度抑郁障碍时考虑）。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag concept">概念</span><p>什么是躯体变形障碍？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">过分关注自己想象出来的或轻微的外表缺陷，觉得丑陋不堪或令人厌恶，且已引起他人注意；十分痛苦并伴社会功能损害。ICD-11 将其列为独立精神障碍。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag data">数据</span><p>躯体变形障碍的患病率、起病年龄与自杀风险？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">荟萃分析约 11%；整形外科/皮肤科患者 1.8%～57.0%；起病 12～13 岁。79.5% 曾有过自杀想法，27.6% 曾企图自杀，0.3% 自杀成功。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag diag">鉴别</span><p>其他 OCRD 的"专注点"分别是什么？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">嗅觉牵连—气味；疑病症—疾病；囤积—物品；拔毛—毛发；皮肤搔抓—皮肤抠剥。强迫症则是多种强迫内容并存。</div>
+    </div></div>
+  </div>
+</section>
+
+<!-- ===== 16 病例 ===== -->
+<section id="cases">
+  <div class="sec-head"><div class="badge">16</div><h2>病例挑战<span class="en">3 cases · increasing difficulty</span></h2></div>
+  <p class="sec-lead">以下为<strong>模拟临床情境</strong>：依据教材所述典型表现与处理原则构建，用于训练临床推理，<strong>不是教材原案例</strong>，也不含虚构的化验数值。</p>
+
+  <div class="case">
+    <span class="ctag">难度 ★ · 识别与诊断</span>
+    <h3>案例 1：洗到双手破皮的大学生</h3>
+    <div class="scene">男，20 岁，大学生。近 1 年反复洗手，每次按固定顺序洗 20 余遍，每天累计约 2 小时；双手皮肤皲裂、脱皮。他明知"手并不脏、洗得过分"，但一停下来就极度焦虑，必须重新洗。因害怕使用公共卫生间，他尽量避免去教学楼，成绩下降。无幻觉、妄想，无持续情绪低落。</div>
+    <ol class="ques">
+      <li>最可能的诊断是什么？依据教材哪几条诊断要点？</li>
+      <li>需要与哪些疾病鉴别？最关键的一条鉴别点分别是什么？</li>
+      <li>治疗应如何组合？教材对药物与心理治疗的先后有何表述？</li>
+    </ol>
+    <details><summary>查看答案与解析</summary><div class="dbody">
+      <strong>1.</strong>强迫症。依据：①持续存在的强迫行为（强迫洗涤，按固定程序反复洗手）与强迫思维（对污染的担心）；②症状占据一定时间（每天约 2 小时，达到"1 小时或以上"的举例）；③引起明显痛苦与功能损害（皮肤皲裂、回避教学楼、成绩下降）；并有反强迫意识（明知过分却停不下来）。<br>
+      <strong>2.</strong>①GAD：担忧广泛不固定、控制愿望不强；本例固定于"污染/洗手"，抵抗强烈。②疑病症：疾病先占观念、无自我抵抗；本例不是怕患病。③抑郁障碍：看原发/主要症状；本例无持续心境低落，若均达标准可双诊断。④精神分裂症：无幻觉妄想、言行紊乱，且为之苦恼。⑤躯体形式障碍：症状不局限于躯体不适。<br>
+      <strong>3.</strong>药物+心理治疗联合优于单用。药物选一线 SSRIs（氟西汀、氟伏沙明、舍曲林、帕罗西汀），足量足疗程，4～6 周起效、急性期 10～12 周；心理治疗首选 CBT，核心为 ERP + 认知重组（本例可从"减少洗手遍数/延长等待时间"做暴露与反应阻止），每周 1 次、60～90 分钟、共 8～20 次。教材未给出具体剂量。
+    </div></details>
+  </div>
+
+  <div class="case">
+    <span class="ctag">难度 ★★ · 识别风险与鉴别</span>
+    <h3>案例 2：每天照镜子三小时的女孩</h3>
+    <div class="scene">女，19 岁。近 3 年总觉得自己"鼻子太大、左右脸不对称"，每天照镜子、拍照对比 3 小时以上，出门必用头发遮住半边脸，拒绝参加聚会和游泳。多次咨询整形手术，认为"做完就能好"。她说"别人都在看我的鼻子、议论我"。近半年情绪低落，曾说过"活着没意思"，但未具体计划。无幻觉、妄想。体重正常，无暴食或催吐。</div>
+    <ol class="ques">
+      <li>最可能的诊断及依据？</li>
+      <li>与进食障碍、GAD、抑郁障碍如何鉴别？</li>
+      <li>治疗与风险评估的重点是什么？</li>
+    </ol>
+    <details><summary>查看答案与解析</summary><div class="dbody">
+      <strong>1.</strong>躯体变形障碍。依据教材诊断要点：①持久认为外表存在缺陷（鼻子太大、脸不对称），在他人看来微不足道或不能察觉；②因自认缺陷而羞愧，并有自我牵连观念（坚信别人注意、评价、议论）；③有重复和过度行为（每天照镜、拍照对比），并过度试图掩饰（用头发遮脸），且回避社交（聚会、游泳）；④引起明显痛苦和功能损害。自知力可能处于"较差到缺乏"水平（坚信缺陷真实、考虑整形）。<br>
+      <strong>2.</strong>①进食障碍：其核心是体重和身材的过度担心；本例先占观念涉及鼻子、面部，体重正常、无异常摄食行为。②GAD：担忧涉及生活各方面，极少妄想，也不会出现反复检查行为；本例有明确的外表先占观念与反复照镜。③抑郁障碍：可从原发/继发鉴别；本例抑郁情绪出现在外表困扰之后，需评估是否共病，但不能替代 BDD 诊断。<br>
+      <strong>3.</strong>风险评估：教材给出 BDD 高自杀风险（79.5% 曾有过自杀想法、27.6% 曾企图自杀、0.3% 自杀成功），本例已出现"活着没意思"，必须直接评估自杀风险。治疗：SSRIs 一线、高剂量长疗程；CBT 不可替代、对青少年疗效较好、一般优于药物；二者联合较理想。难治可联合非典型抗精神病药（利培酮增效较明显）。早期干预 + 长程治疗以预防复发（复发率 14%～42%）。对"整形手术"诉求应谨慎，教材将"不必要的外科美容手术"列为过度改变缺陷的表现之一。
+    </div></details>
+  </div>
+
+  <div class="case">
+    <span class="ctag">难度 ★★★ · 跨病鉴别</span>
+    <h3>案例 3："我身上有臭味，全办公室都知道"</h3>
+    <div class="scene">男，28 岁。近 2 年坚信自己有严重口臭和腋下臭味，认为同事在背后议论、捂鼻子、拒绝与他同桌。他每天刷牙 10 余次、洗澡 3 次、频繁更换衣服并大量使用香水；反复对着手掌哈气检查、反复问家人"有没有味道"。家人和同事均称闻不到。他因此回避聚餐、不敢坐地铁。无幻觉，无其他妄想；情绪低落但无持续心境障碍。口腔科、耳鼻喉科检查未发现明显异常（此检查信息为情境设定，教材未涉及具体检查）。</div>
+    <ol class="ques">
+      <li>最可能的诊断是什么？教材的四项诊断强调点如何对应？</li>
+      <li>与强迫症、疑病症、躯体变形障碍如何区分？</li>
+      <li>教材对本病的治疗只明确到什么程度？还缺少哪些信息？</li>
+    </ol>
+    <details><summary>查看答案与解析</summary><div class="dbody">
+      <strong>1.</strong>嗅觉牵连障碍。对应教材四项强调点：①持续关注自身臭味/令他人不快的气味，并伴重复过度行为（反复哈气检查、反复求保证）；②过度尝试掩盖、改变或阻止气味（刷牙、洗澡、换衣、香水）；③明显回避能增加痛苦的社交场合（聚餐、地铁）；④引起明显痛苦或社会功能损害。患者"坚信"同事议论，提示自知力较差，教材称本病有时可达妄想程度。<br>
+      <strong>2.</strong>①强迫症：强迫内容多样（污染、检查、对称等），而本例全部围绕"气味"；②疑病症：担心患严重疾病，本例担心"被厌恶/拒绝"而非"得病"；③BDD：关注外表"缺陷/丑陋"，本例关注嗅觉属性（气味），不是可见外形。三者都以"先占观念 + 重复行为"为结构，教材以专注点区分。<br>
+      <strong>3.</strong>教材只明确"本病常与强迫症共病，SSRIs 类药物治疗有效"；<strong>未给出</strong>具体药名、剂量、疗程，<strong>未涉及</strong>心理治疗与物理治疗，也<strong>未提供</strong>病因机制。因此不能补写 CBT、抗精神病药或剂量方案；若已达妄想程度，应与精神病性障碍进一步鉴别，教材未给出具体处理。
+    </div></details>
+  </div>
+</section>
+
+<!-- ===== 17 拓展 ===== -->
+<section id="ext">
+  <div class="sec-head"><div class="badge">17</div><h2>拓展延伸<span class="en">Beyond the chapter</span></h2></div>
+  <p class="sec-lead">本章教材已提及但未展开的内容集中列在这里；同时明确标出"教材未涉及"的空白，避免把课外知识误当成教材结论。</p>
+  <div class="grid2">
+    <div class="card cyan">
+      <h3>教材提及、但仅一笔带过的内容</h3>
+      <ul>
+        <li><strong>分类变迁：</strong>ICD-11 新设 OCRD；DSM-5 将疑病症归入"躯体症状及相关障碍"并称疾病焦虑障碍；BDD 在 ICD-10 无独立诊断单元、ICD-11 独立；囤积障碍 DSM-5 从强迫症中分离；拔毛症 ICD-10 属"习惯与冲动障碍"。</li>
+        <li><strong>疾病负担：</strong>强迫症为 WHO 排名第十位的致残性疾病；仅 34% 主动求医；确诊延迟约 17 年。</li>
+        <li><strong>共病网络：</strong>强迫症 60%～90% 至少共患一种；BDD 共病焦虑、心境、物质滥用；囤积 75% 合并焦虑/情绪障碍；搔抓共病焦虑、情绪、物质、进食障碍。</li>
+        <li><strong>物理治疗：</strong>rTMS 获 FDA 批准用于难治性强迫症；DBS 为可逆方式；VNS 需植入电极；MECT 仅在共患适应证时考虑。</li>
+        <li><strong>研究性线索：</strong>强迫症的血管升压素、CRF、IL-6；BDD 的视觉处理皮质；拔毛症的伏隔核奖赏回路；搔抓症的前额叶-纹状体环路与奖赏回路。</li>
+      </ul>
+    </div>
+    <div class="card orange">
+      <h3>教材未涉及 / 本指南不补写的内容</h3>
+      <ul>
+        <li>所有抗强迫药物的<strong>具体 mg 剂量</strong>、加量速度与最大剂量——教材只给"起始/有效/最大推荐剂量"的原则。</li>
+        <li>强迫症、BDD 的<strong>巩固期/维持期具体时长</strong>——教材只说"10～12 周急性期""长程治疗"，未给月数。</li>
+        <li>嗅觉牵连障碍、疑病症的<strong>病因机制</strong>与<strong>流行病学数字</strong>——教材未提供。</li>
+        <li>嗅觉牵连障碍的<strong>心理治疗/物理治疗</strong>、疑病症的<strong>物理治疗</strong>、囤积/拔毛/搔抓的<strong>物理治疗</strong>——教材均未涉及。</li>
+        <li>各病的<strong>CBT/HRT 具体操作步骤与次数</strong>——除强迫症给出"每周 1 次、60～90 分钟、共 8～20 次"外，其余多未展开。</li>
+        <li>拔毛症与皮肤搔抓症的<strong>共病率</strong>、<strong>性别比</strong>（搔抓）等——教材未给出。</li>
+        <li>嗅觉牵连障碍、疑病症、拔毛症、搔抓症与精神分裂症的<strong>逐条鉴别标准</strong>——教材未提供。</li>
+      </ul>
+    </div>
+  </div>
+  <div class="callout ext">
+    <span class="ct">📖 使用提醒</span>
+    本指南所有疾病名称、诊断要点、药物类别、流行病学与疗效数字均取自教材第十章原文；凡标注"教材未涉及/未提供"的地方，不要用其他资料的数字替代，以免与教材答案冲突。文中标注"类比理解""场景化"的句子仅用于帮助记忆，不构成医学事实。
+  </div>
+  <div class="hr"></div>
+  <p class="note" style="text-align:center">精神病学（第9版）· 第十章 强迫症及相关障碍 · 印刷页 124–133 · 学习指南完</p>
+</section>
+</div>
+<nav class="chapter-pager" aria-label="章节间导航"><a class="cp-prev" href="精神病学_第九章_焦虑或恐惧性相关障碍_学习指南.html">← 上一章：第九章</a><a class="cp-toc" href="index.html">目录</a><a class="cp-next" href="精神病学_第十一章_应激相关障碍_学习指南.html">下一章：第十一章 →</a></nav>
+</main>
+
+<button class="top" id="topBtn" aria-label="回到顶部">↑</button>
+<script>
+/* ============================================================
+   精神病学学习指南 · 统一交互层 v1（构建期注入，整体替换原 IIFE）
+   兼容 A 族（.tabbar button + [data-panel] + .panel.on）与
+   B 族（.tab-nav + .tab-panel.active）两套 DOM 约定。
+   特性检测 + 防御式查询 + 幂等；不引入任何外部依赖。
+   ============================================================ */
+(function () {
+  'use strict';
+  if (window.__PSY_GUIDE_APP__) { return; }
+  window.__PSY_GUIDE_APP__ = true;
+
+  var d = document;
+
+  function all(sel, root) {
+    return Array.prototype.slice.call((root || d).querySelectorAll(sel));
+  }
+  function on(el, ev, fn, opt) {
+    if (el) { el.addEventListener(ev, fn, opt || false); }
+  }
+  function norm(s) {
+    return String(s || '').replace(/\s+/g, '').toUpperCase();
+  }
+
+  /* ---------- 1. Tab 切换（两族约定都支持） ---------- */
+  function initTabs() {
+    all('.tabs, [data-tabs]').forEach(function (g) {
+      if (g.__psyTabs) { return; }
+      g.__psyTabs = true;
+      var isA = !!g.querySelector('.tabbar button');
+      var btns = all(isA ? '.tabbar button' : '.tab-nav .tab-btn', g);
+      if (!btns.length) { return; }
+      var cls = isA ? 'on' : 'active';
+      var nav = btns[0].closest('.tabbar') || btns[0].closest('.tab-nav');
+      if (nav && !nav.hasAttribute('role')) { nav.setAttribute('role', 'tablist'); }
+      all(isA ? '.panel' : '.tab-panel', g).forEach(function (p) {
+        if (!p.hasAttribute('role')) { p.setAttribute('role', 'tabpanel'); }
+      });
+      function activate(btn) {
+        btns.forEach(function (b) {
+          b.classList.remove(cls);
+          b.setAttribute('aria-selected', 'false');
+        });
+        btn.classList.add(cls);
+        btn.setAttribute('aria-selected', 'true');
+        var id = btn.getAttribute('data-tab');
+        if (!id) { return; }
+        var target = isA
+          ? g.querySelector('[data-panel="' + id + '"]')
+          : (g.querySelector('.tab-panel#' + id) || d.getElementById(id));
+        all(isA ? '.panel' : '.tab-panel', g).forEach(function (p) {
+          var show = isA ? (p.getAttribute('data-panel') === id) : (p === target);
+          p.classList.toggle(cls, show);
+        });
+      }
+      btns.forEach(function (btn, i) {
+        if (!btn.hasAttribute('role')) { btn.setAttribute('role', 'tab'); }
+        btn.setAttribute('aria-selected', btn.classList.contains(cls) ? 'true' : 'false');
+        if (!btn.hasAttribute('tabindex') && !btn.classList.contains(cls)) { btn.setAttribute('tabindex', '0'); }
+        on(btn, 'click', function () { activate(btn); });
+        on(btn, 'keydown', function (e) {
+          if (e.key !== 'ArrowRight' && e.key !== 'ArrowLeft') { return; }
+          e.preventDefault();
+          var nx = btns[(i + (e.key === 'ArrowRight' ? 1 : btns.length - 1)) % btns.length];
+          if (nx) { nx.focus(); activate(nx); }
+        });
+      });
+    });
+  }
+
+  /* ---------- 2. 速记卡：点击/键盘翻转 + 可达性 ---------- */
+  function initCards() {
+    all('.flashcard').forEach(function (card) {
+      if (card.__psyCard) { return; }
+      card.__psyCard = true;
+      card.setAttribute('tabindex', '0');
+      card.setAttribute('role', 'button');
+      function sync() {
+        card.setAttribute('aria-pressed', card.classList.contains('flipped') ? 'true' : 'false');
+      }
+      function flip() { card.classList.toggle('flipped'); sync(); }
+      on(card, 'click', flip);
+      on(card, 'keydown', function (e) {
+        if (e.key === 'Enter' || e.key === ' ' || e.key === 'Spacebar') {
+          e.preventDefault();
+          flip();
+        }
+      });
+      sync();
+    });
+  }
+
+  /* ---------- 3. 自测题交互化（核心新功能） ---------- */
+  function initQuiz() {
+    var questions = all('.quiz-q, .quiz-item');
+    if (!questions.length) { return; }
+    var groups = {};
+
+    function keyOf(o) {
+      var L = o.getAttribute('data-letter');
+      if (L && String(L).replace(/\s+/g, '') !== '') { return norm(L); }
+      var sp = o.querySelector('.l');
+      if (sp) {
+        var t = norm(sp.textContent).replace(/[.．、:：]/g, '');
+        if (t !== '') { return t; }
+      }
+      var txt = norm(o.textContent);
+      if (txt.indexOf('正确') >= 0 || txt.indexOf('错误') >= 0) { return txt; }
+      return txt.charAt(0);
+    }
+
+    function getGroup(q) {
+      var sec = q.closest('.quiz-block') || q.closest('section') || d.body;
+      if (!groups[sec.__psyGid]) {
+        sec.__psyGid = 'g' + (Object.keys(groups).length + 1);
+        groups[sec.__psyGid] = { sec: sec, total: 0, score: 0, row: null, first: null };
+      }
+      var g = groups[sec.__psyGid];
+      if (!g.first) { g.first = q; }
+      return g;
+    }
+
+    function ensureRow(g) {
+      if (g.row) { return g.row; }
+      var row = d.createElement('div');
+      row.className = 'quiz-score';
+      row.setAttribute('role', 'status');
+      row.setAttribute('aria-live', 'polite');
+      row.innerHTML = '<span class="qs-label">自测计分</span>' +
+        '<span class="qs-num">得分 0 / ' + g.total + '</span>' +
+        '<span class="qs-bar"><i></i></span>';
+      g.first.parentNode.insertBefore(row, g.first);
+      g.row = row;
+      return row;
+    }
+
+    function updateRow(g) {
+      var row = ensureRow(g);
+      var num = row.querySelector('.qs-num');
+      var bar = row.querySelector('.qs-bar i');
+      if (num) { num.textContent = '得分 ' + g.score + ' / ' + g.total; }
+      if (bar) { bar.style.width = (g.total ? Math.round(g.score / g.total * 100) : 0) + '%'; }
+    }
+
+    questions.forEach(function (q) {
+      if (q.__psyQuiz) { return; }
+      q.__psyQuiz = true;
+      var opts = all('.opt', q);
+      if (!opts.length) { opts = all('.quiz-options > li', q); }
+      if (!opts.length) { return; }
+
+      /* 正确答案先记入内存：预标 correct 优先（记录后立即移除，消除剧透），
+         否则从解析文本「答案：X / 答案 X」提取（不改动任何文字） */
+      var ansKeys = [];
+      var preset = opts.filter(function (o) { return o.classList.contains('correct'); });
+      preset.forEach(function (o) { o.classList.remove('correct'); });
+      if (preset.length) {
+        ansKeys = preset.map(keyOf);
+      } else {
+        var dt = q.querySelector('details');
+        var txt = dt ? dt.textContent : '';
+        var m = txt.match(/答案\s*[:：]?\s*([A-Za-z](?:[\s、,，·和及]*[A-Za-z])*)/);
+        if (m) {
+          ansKeys = m[1].match(/[A-Za-z]/g) || [];
+        } else {
+          var m2 = txt.match(/答案\s*[:：]?\s*(正确|错误)/);
+          if (m2) { ansKeys = [m2[1]]; }
+        }
+      }
+      if (!ansKeys.length) { return; } /* 无可判定答案（名词解释等），保持原样 */
+
+      var g = getGroup(q);
+      g.total += 1;
+      var multi = ansKeys.length > 1;
+      var ansSet = ansKeys.map(norm);
+      var locked = false;
+      var picked = [];
+
+      function revealAll() {
+        opts.forEach(function (o) {
+          if (ansSet.indexOf(keyOf(o)) >= 0) { o.classList.add('is-reveal'); }
+        });
+      }
+      function finish(ok) {
+        locked = true;
+        q.classList.add('is-locked');
+        var dt = q.querySelector('details');
+        if (dt) { dt.open = true; }
+        if (ok) { g.score += 1; }
+        updateRow(g);
+      }
+
+      opts.forEach(function (o) {
+        o.setAttribute('tabindex', '0');
+        function pick() {
+          if (locked) { return; }
+          var k = keyOf(o);
+          if (ansSet.indexOf(k) >= 0) {
+            o.classList.add('is-right');
+            if (picked.indexOf(k) < 0) { picked.push(k); }
+            if (multi) {
+              if (picked.length === ansSet.length) { finish(true); }
+            } else {
+              finish(true);
+            }
+          } else {
+            o.classList.add('is-wrong');
+            revealAll();
+            finish(false);
+          }
+        }
+        on(o, 'click', pick);
+        on(o, 'keydown', function (e) {
+          if (e.key === 'Enter' || e.key === ' ' || e.key === 'Spacebar') {
+            e.preventDefault();
+            pick();
+          }
+        });
+      });
+    });
+
+    Object.keys(groups).forEach(function (id) {
+      if (groups[id].total > 0) { updateRow(groups[id]); }
+    });
+  }
+
+  /* ---------- 4. 侧栏 scroll spy（本页锚点高亮） ---------- */
+  function initSpy() {
+    var links = all('#sidebar a[href^="#"]');
+    if (!links.length || !('IntersectionObserver' in window)) { return; }
+    var map = {};
+    links.forEach(function (a) {
+      var id = a.getAttribute('href').slice(1);
+      if (id) { map[id] = a; }
+    });
+    var secs = [];
+    Object.keys(map).forEach(function (id) {
+      var s = d.getElementById(id);
+      if (s) { secs.push(s); }
+    });
+    if (!secs.length) { return; }
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting && map[e.target.id]) {
+          links.forEach(function (a) { a.classList.remove('active'); });
+          map[e.target.id].classList.add('active');
+        }
+      });
+    }, { rootMargin: '-15% 0px -70% 0px', threshold: 0 });
+    secs.forEach(function (s) { io.observe(s); });
+  }
+
+  /* ---------- 5. 阅读进度条 + 回顶 ---------- */
+  function initScroll() {
+    var bar = d.getElementById('readbar');
+    var topBtn = d.getElementById('topBtn') || d.getElementById('backTop');
+    var ticking = false;
+    function step() {
+      ticking = false;
+      var h = d.documentElement;
+      var y = window.pageYOffset || h.scrollTop || 0;
+      if (bar) {
+        var max = h.scrollHeight - h.clientHeight;
+        bar.style.width = (max > 0 ? (y / max) * 100 : 0) + '%';
+      }
+      if (topBtn) {
+        topBtn.classList.toggle('show', y > 400);     /* A 族类名 */
+        topBtn.classList.toggle('visible', y > 400);  /* B 族类名 */
+      }
+    }
+    on(window, 'scroll', function () {
+      if (!ticking) { ticking = true; window.requestAnimationFrame(step); }
+    }, { passive: true });
+    step();
+    on(topBtn, 'click', function () {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
+
+  /* ---------- 6. 侧栏开合（存在才绑定；抽屉打开时锁定背景滚动） ---------- */
+  function initSidebar() {
+    var sidebar = d.getElementById('sidebar');
+    if (!sidebar) { return; }
+    var btn = d.getElementById('menuBtn') || d.getElementById('navToggle');
+    var ov = d.getElementById('overlay') || d.getElementById('sidebarOverlay');
+    function lock(open) {
+      /* 仅移动抽屉断点（≤900px）锁滚动；宽屏兜底解除，防布局残留 */
+      d.body.classList.toggle('nav-locked', !!open && window.innerWidth <= 900);
+    }
+    function close() {
+      sidebar.classList.remove('open');
+      if (ov) { ov.classList.remove('show'); }
+      lock(false);
+    }
+    on(btn, 'click', function () {
+      var open = !sidebar.classList.contains('open');
+      sidebar.classList.toggle('open');
+      if (ov) { ov.classList.toggle('show'); }
+      lock(open);
+    });
+    on(ov, 'click', close);
+    all('a', sidebar).forEach(function (a) {
+      on(a, 'click', function () {
+        if (window.innerWidth <= 900) { close(); }
+      });
+    });
+    on(window, 'resize', function () {
+      if (window.innerWidth > 900) { lock(false); }
+    });
+  }
+
+  /* ---------- 启动（脚本位于 body 末尾，DOM 已就绪；防御兜底） ---------- */
+  function boot() {
+    initTabs();
+    initCards();
+    initQuiz();
+    initSpy();
+    initScroll();
+    initSidebar();
+  }
+  if (d.readyState === 'loading') {
+    on(d, 'DOMContentLoaded', boot);
+  } else {
+    boot();
+  }
+})();
+</script>
+
+</body>
+</html>

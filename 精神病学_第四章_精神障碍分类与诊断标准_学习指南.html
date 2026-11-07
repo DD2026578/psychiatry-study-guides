@@ -1,0 +1,1983 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>精神病学 第四章 精神障碍分类与诊断标准 · 学习指南</title>
+<style>
+:root{
+  --primary:#0EA5E9; --accent:#10B981; --symptom:#EF4444; --treatment:#10B981;
+  --cause:#3B82F6; --diagnosis:#F59E0B; --memory:#8B5CF6; --danger:#DC2626;
+  --quiz:#EC4899; --flashcard:#06B6D4; --bg:#F0F7FA; --card:#FFFFFF;
+  --ink:#0F172A; --muted:#64748B; --border:#E2E8F0; --accent2:#10B981; --accent3:#06B6D4;
+  --shadow:0 4px 18px rgba(15,23,42,.06); --radius:14px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:'Microsoft YaHei','PingFang SC','Hiragino Sans GB',system-ui,-apple-system,sans-serif;font-size:16px;line-height:1.75;-webkit-font-smoothing:antialiased}
+#readbar{position:fixed;top:0;left:0;height:4px;width:0;background:linear-gradient(135deg,#0EA5E9 0%,#06B6D4 50%,#10B981 100%);z-index:300;transition:width .12s linear}
+a{color:var(--primary);text-decoration:none}
+a:hover{text-decoration:underline}
+.sidebar{position:fixed;top:0;left:0;width:272px;height:100vh;background:#fff;border-right:1px solid var(--border);overflow-y:auto;padding:20px 16px 40px;z-index:120}
+.sidebar h2{font-size:17px;margin:0 0 4px;line-height:1.5}
+.sidebar .sub{font-size:12px;color:var(--muted);line-height:1.6;margin-bottom:14px}
+.toc-group{font-size:12px;letter-spacing:.08em;color:var(--muted);margin:16px 0 6px;font-weight:700}
+.sidebar a.toc{display:block;padding:7px 10px;border-radius:8px;font-size:14px;color:var(--ink);line-height:1.5;margin:2px 0}
+.sidebar a.toc:hover{background:#E0F2FE;text-decoration:none}
+.sidebar a.toc .n{display:inline-block;min-width:26px;color:var(--primary);font-weight:700}
+.sidebar .unitlink{font-weight:600}
+.sidebar .sub2{padding-left:26px;font-size:13px;color:var(--muted)}
+.overlay{display:none}
+.menu-btn{display:none;position:fixed;top:14px;left:14px;z-index:200;width:46px;height:46px;border-radius:12px;border:1px solid var(--border);background:#fff;box-shadow:var(--shadow);font-size:22px;line-height:1;color:var(--primary);cursor:pointer}
+.main{margin-left:272px;padding:0 40px 90px;max-width:1240px}
+.wrap{max-width:980px;margin:0 auto}
+.hero{background:linear-gradient(135deg,#0EA5E9 0%,#06B6D4 50%,#10B981 100%);color:#fff;border-radius:0 0 26px 26px;padding:52px 44px 40px;margin:0 -40px 30px;box-shadow:0 12px 30px rgba(14,165,233,.18)}
+.hero .chap{display:inline-block;font-size:13px;letter-spacing:.22em;background:rgba(255,255,255,.18);padding:5px 14px;border-radius:999px;margin-bottom:16px}
+.hero h1{font-size:42px;line-height:1.25;margin:0 0 10px;font-weight:800}
+.hero .tagline{font-size:18px;opacity:.96;margin:0 0 6px}
+.hero .meta{font-size:13px;opacity:.85}
+.goalbox{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.28);border-radius:14px;padding:18px 20px;margin-top:22px}
+.goalbox h3{margin:0 0 10px;font-size:15px;letter-spacing:.06em}
+.goalbox ul{margin:0;padding-left:20px}
+.goalbox li{margin:4px 0;font-size:14.5px;line-height:1.65}
+.lv{display:inline-block;font-size:11px;font-weight:700;padding:1px 8px;border-radius:999px;background:#fff;color:#0369A1;margin-right:6px;vertical-align:1px}
+.lv.l2{color:#047857}.lv.l3{color:#B45309}.lv.l4{color:#B91C1C}
+section{scroll-margin-top:18px;margin:0 0 46px}
+.sec-head{display:flex;align-items:center;gap:12px;margin:0 0 8px}
+.sec-head .badge{flex:0 0 auto;width:44px;height:44px;border-radius:13px;background:linear-gradient(135deg,#0EA5E9,#06B6D4);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:17px;box-shadow:0 6px 14px rgba(14,165,233,.25)}
+.sec-head h2{font-size:27px;margin:0;line-height:1.35;font-weight:800}
+.sec-head .en{font-size:13px;color:var(--muted);font-weight:400;margin-left:6px}
+.sec-lead{color:#334155;background:#fff;border-left:4px solid var(--primary);border-radius:0 12px 12px 0;padding:13px 18px;margin:12px 0 22px;box-shadow:var(--shadow);font-size:15px}
+.card{background:var(--card);border:1px solid var(--border);border-left:6px solid var(--primary);border-radius:var(--radius);padding:20px 22px;margin:16px 0;box-shadow:var(--shadow)}
+.card.red{border-left-color:var(--symptom)} .card.green{border-left-color:var(--treatment)}
+.card.blue{border-left-color:var(--cause)} .card.orange{border-left-color:var(--diagnosis)}
+.card.purple{border-left-color:var(--memory)} .card.cyan{border-left-color:var(--flashcard)}
+.card.danger{border-left-color:var(--danger)} .card.pink{border-left-color:var(--quiz)}
+.card h3,.col-title{font-size:19px;margin:0 0 10px;line-height:1.45;display:flex;align-items:center;gap:9px;flex-wrap:wrap}
+.col-title .idx{font-size:12px;font-weight:800;color:#fff;background:var(--primary);padding:2px 9px;border-radius:999px;letter-spacing:.03em}
+.card p{margin:8px 0}
+.card ul,.card ol{margin:8px 0;padding-left:22px}
+.card li{margin:5px 0}
+.quote{background:#EFF8FF;border:1px dashed #7DD3FC;border-radius:10px;padding:12px 16px;margin:10px 0;font-size:15px;color:#0C4A6E}
+.quote .lab{display:inline-block;font-size:11px;font-weight:800;background:#0EA5E9;color:#fff;padding:1px 7px;border-radius:5px;margin-right:7px;vertical-align:1px}
+.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.grid4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.grid2>*,.grid3>*,.grid4>*{min-width:0}
+.mini{background:#F8FAFC;border:1px solid var(--border);border-radius:11px;padding:12px 14px}
+.mini h4{margin:0 0 5px;font-size:15px;color:#0F172A}
+.mini p,.mini ul{font-size:14px;color:#334155;margin:4px 0}
+.mini ul{padding-left:18px}
+.stat{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0}
+.stat span{font-size:13px;background:#E0F2FE;color:#075985;border-radius:999px;padding:3px 11px;font-weight:600}
+.table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:12px 0;border-radius:12px;border:1px solid var(--border)}
+table{border-collapse:collapse;width:100%;min-width:560px;background:#fff;font-size:14px}
+th{background:#0F172A;color:#fff;font-weight:700;padding:10px 12px;text-align:left;line-height:1.5;font-size:13.5px}
+td{padding:10px 12px;border-top:1px solid var(--border);vertical-align:top;line-height:1.65}
+tbody tr:nth-child(even){background:#F8FAFC}
+td strong{color:#0C4A6E}
+.callout{border-radius:12px;padding:13px 16px;margin:12px 0;border:1px solid;font-size:14.5px}
+.callout .ct{font-weight:800;display:block;margin-bottom:4px;font-size:14.5px}
+.callout.tip{background:#F5F3FF;border-color:#C4B5FD;color:#4C1D95}
+.callout.warn{background:#FEF2F2;border-color:#FCA5A5;color:#7F1D1D}
+.callout.key{background:#ECFDF5;border-color:#6EE7B7;color:#065F46}
+.callout.book{background:#EFF6FF;border-color:#93C5FD;color:#1E3A8A}
+.callout.quiz{background:#FDF2F8;border-color:#F9A8D4;color:#831843}
+.callout.ext{background:#F0F9FF;border-color:#7DD3FC;color:#0C4A6E}
+.timeline{border-left:3px solid #BAE6FD;margin:14px 0 6px 8px;padding-left:20px}
+.tl-item{position:relative;margin:0 0 16px}
+.tl-item:before{content:"";position:absolute;left:-28px;top:5px;width:13px;height:13px;border-radius:50%;background:#fff;border:3px solid var(--primary)}
+.tl-item h4{margin:0 0 3px;font-size:15px;color:#075985}
+.tl-item p{margin:0;font-size:14px;color:#334155}
+.bar{background:#E2E8F0;border-radius:999px;height:9px;overflow:hidden;margin:6px 0 10px}
+.bar i{display:block;height:100%;border-radius:999px;background:linear-gradient(90deg,#0EA5E9,#10B981)}
+.bar-label{display:flex;justify-content:space-between;font-size:13px;color:#334155}
+.tabs{margin:14px 0}
+.tabbar{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:12px}
+.tabbar button{border:1px solid var(--border);background:#fff;border-radius:999px;padding:7px 15px;font-size:14px;font-family:inherit;cursor:pointer;color:#334155}
+.tabbar button.on{background:var(--primary);color:#fff;border-color:var(--primary)}
+.panel{display:none}
+.panel.on{display:block;animation:fade .25s ease}
+@keyframes fade{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}
+details{background:#fff;border:1px solid var(--border);border-radius:11px;margin:10px 0;overflow:hidden}
+summary{cursor:pointer;padding:11px 15px;font-weight:700;color:#075985;list-style:none;font-size:14.5px;background:#F8FAFC}
+summary::-webkit-details-marker{display:none}
+summary:before{content:"▸";display:inline-block;margin-right:7px;color:var(--primary);transition:transform .2s}
+details[open] summary:before{transform:rotate(90deg)}
+details[open] summary{border-bottom:1px solid var(--border)}
+.dbody{padding:13px 16px;font-size:14.5px;color:#1E293B}
+.flashcard-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin:16px 0}
+.flashcard{perspective:1200px;height:200px;cursor:pointer}
+.fc-inner{position:relative;width:100%;height:100%;transition:transform .55s;transform-style:preserve-3d}
+.flashcard.flipped .fc-inner{transform:rotateY(180deg)}
+.fc-front,.fc-back{position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;border-radius:14px;padding:14px 16px;display:flex;flex-direction:column;justify-content:center;box-shadow:var(--shadow);overflow:auto}
+.fc-front{background:#fff;border:1px solid var(--border);border-top:5px solid var(--flashcard)}
+.fc-back{background:#ECFEFF;border:1px solid #A5F3FC;transform:rotateY(180deg);font-size:13.5px;line-height:1.65;color:#164E63}
+.tag{display:inline-block;align-self:flex-start;font-size:11px;font-weight:800;padding:1px 8px;border-radius:999px;margin-bottom:8px;letter-spacing:.04em}
+.tag.concept{background:#DBEAFE;color:#1E40AF}
+.tag.diag{background:#FFEDD5;color:#9A3412}
+.tag.treat{background:#D1FAE5;color:#065F46}
+.tag.data{background:#FCE7F3;color:#9D174D}
+.tag.risk{background:#FEE2E2;color:#991B1B}
+.fc-front p{margin:0;font-size:14.5px;font-weight:700;line-height:1.6}
+.fc-hint{position:absolute;bottom:10px;left:16px;font-size:11px;color:#94A3B8}
+.quiz-q{background:#fff;border:1px solid var(--border);border-left:5px solid var(--quiz);border-radius:12px;padding:16px 18px;margin:16px 0;box-shadow:var(--shadow)}
+.quiz-q .qh{display:flex;justify-content:space-between;gap:10px;align-items:flex-start;margin-bottom:8px;flex-wrap:wrap}
+.quiz-q .qno{font-size:12px;font-weight:800;color:#fff;background:var(--quiz);border-radius:999px;padding:2px 9px;letter-spacing:.04em}
+.diff{font-size:12px;color:#B45309;background:#FEF3C7;border-radius:999px;padding:2px 10px;font-weight:700;white-space:nowrap}
+.qtype{font-size:12px;color:#6B21A8;background:#F3E8FF;border-radius:999px;padding:2px 10px;font-weight:700;white-space:nowrap}
+.opts{margin:10px 0 4px;display:grid;gap:7px}
+.opt{border:1px solid var(--border);border-radius:9px;padding:8px 12px;font-size:14.5px;background:#F8FAFC}
+.opt.correct{border-color:#6EE7B7;background:#ECFDF5;color:#065F46;font-weight:600}
+.opt .l{font-weight:800;color:var(--primary);margin-right:7px}
+.opt.correct .l{color:#047857}
+.brief{font-size:14px;color:#334155;margin-top:4px}
+.case{border:1px solid var(--border);border-top:5px solid var(--danger);border-radius:14px;background:#fff;padding:20px 22px;margin:18px 0;box-shadow:var(--shadow)}
+.case h3{font-size:19px;margin:0 0 8px;color:#7F1D1D}
+.case .ctag{font-size:11.5px;font-weight:800;background:#FEE2E2;color:#991B1B;padding:2px 9px;border-radius:999px;display:inline-block;margin-bottom:10px}
+.case .scene{background:#FFF7ED;border-left:4px solid #FB923C;border-radius:0 10px 10px 0;padding:12px 16px;font-size:14.5px;margin:8px 0 14px}
+.case .ques{margin:8px 0;padding-left:2px}
+.case .ques li{margin:5px 0;font-size:14.5px}
+.top{position:fixed;right:24px;bottom:26px;width:48px;height:48px;border-radius:50%;background:var(--primary);color:#fff;border:none;font-size:20px;cursor:pointer;box-shadow:0 8px 20px rgba(14,165,233,.35);z-index:150;display:none;font-family:inherit}
+.top.show{display:block}
+.hr{height:1px;background:var(--border);margin:26px 0}
+.note{font-size:13px;color:var(--muted);margin-top:6px}
+.kv{display:flex;gap:10px;flex-wrap:wrap;margin:8px 0}
+.kv .k{font-size:12px;font-weight:800;color:#0369A1;background:#E0F2FE;border-radius:6px;padding:2px 8px;white-space:nowrap}
+.kv .v{font-size:14px;color:#334155}
+.starme{font-size:12.5px;color:#B45309;white-space:nowrap}
+@media (max-width:1100px){
+  .main{padding:0 22px 80px}
+  .hero{margin:0 -22px 26px;padding:44px 26px 34px}
+  .hero h1{font-size:34px}
+  .flashcard-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .grid4{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width:900px){
+  .sidebar{transform:translateX(-100%);transition:transform .25s ease;width:280px;box-shadow:0 0 30px rgba(0,0,0,.18)}
+  .sidebar.open{transform:none}
+  .overlay{display:none;position:fixed;inset:0;background:rgba(15,23,42,.42);z-index:110}
+  .overlay.show{display:block}
+  .menu-btn{display:block}
+  .main{margin-left:0;padding:0 18px 80px}
+  .hero{margin:0 -18px 24px;padding:64px 22px 30px;border-radius:0 0 20px 20px}
+  .hero h1{font-size:30px}
+  .sec-head h2{font-size:23px}
+}
+@media (max-width:680px){
+  .grid2,.grid3,.grid4{grid-template-columns:minmax(0,1fr)}
+  .flashcard-grid{grid-template-columns:minmax(0,1fr)}
+  .flashcard{height:190px}
+  table{min-width:500px}
+}
+</style>
+<style data-refactor="v1">
+/* ============================================================
+   精神病学学习指南 · 统一交互层增量覆盖样式 v1
+   构建期由 apply-refactor.ps1 注入 </head> 前，仅追加修正，
+   不改动 A/B 两族基础样式。全部使用字面色值，兼容两族设计变量。
+   ============================================================ */
+
+/* ---- 1. 全局键盘焦点可见 ---- */
+:focus-visible{outline:2px solid #0EA5E9;outline-offset:2px}
+
+/* ---- 2. 章节导航条（胶囊式三段：上一章 / 目录 / 下一章） ---- */
+.chapter-pager{display:flex;align-items:stretch;justify-content:center;gap:10px;margin:36px 0 10px;flex-wrap:wrap}
+.chapter-pager a,.chapter-pager span{flex:1 1 200px;display:flex;align-items:center;justify-content:center;min-height:44px;padding:10px 18px;border:1px solid #E2E8F0;border-radius:999px;background:#FFFFFF;color:#0F172A;font-size:14px;font-weight:600;line-height:1.4;text-decoration:none;text-align:center;box-shadow:0 1px 2px rgba(15,23,42,.06);transition:border-color .15s ease,box-shadow .15s ease,color .15s ease}
+.chapter-pager a:hover{border-color:#0EA5E9;color:#0EA5E9;box-shadow:0 4px 14px rgba(14,165,233,.18);text-decoration:none}
+.chapter-pager .cp-toc{flex:0 0 auto;min-width:104px;background:linear-gradient(135deg,#0EA5E9,#10B981);border-color:transparent;color:#FFFFFF}
+.chapter-pager .cp-toc:hover{border-color:transparent;color:#FFFFFF;opacity:.92}
+.chapter-pager .cp-disabled{opacity:.45;background:#F8FAFC;box-shadow:none;cursor:default}
+@media (max-width:680px){.chapter-pager{gap:8px;margin:28px 0 8px}.chapter-pager a,.chapter-pager span{flex:1 1 100%}}
+
+/* ---- 3. 自测题交互态（兼容 A 族 .opt 与 B 族 .quiz-options li） ---- */
+/* 3.1 基础可点击 */
+.quiz-q .opt{cursor:pointer}
+.quiz-item .quiz-options li{cursor:pointer}
+/* 3.2 hover / 焦点态 */
+.quiz-q .opt:hover,.quiz-q .opt:focus-visible{border-color:#7DD3FC;background:#F0F9FF}
+.quiz-item .quiz-options li:hover,.quiz-item .quiz-options li:focus-visible{background:#FFFFFF;box-shadow:inset 0 0 0 1px #7DD3FC}
+/* 3.3 判定结果态 */
+.quiz-q .opt.is-right{border-color:#34D399;background:#ECFDF5;color:#065F46;font-weight:600}
+.quiz-q .opt.is-right::after{content:" ✓";color:#059669;font-weight:800}
+.quiz-q .opt.is-right .l{color:#047857}
+.quiz-item .quiz-options li.is-right{background:#DCFCE7;box-shadow:inset 0 0 0 1px #34D399;font-weight:600}
+.quiz-item .quiz-options li.is-right::after{content:" ✓";color:#15803D;font-weight:800}
+.quiz-q .opt.is-wrong{border-color:#FCA5A5;background:#FEF2F2;color:#B91C1C;font-weight:600}
+.quiz-q .opt.is-wrong::after{content:" ✗";color:#DC2626;font-weight:800}
+.quiz-q .opt.is-wrong .l{color:#B91C1C}
+.quiz-item .quiz-options li.is-wrong{background:#FEE2E2;box-shadow:inset 0 0 0 1px #FCA5A5;font-weight:600}
+.quiz-item .quiz-options li.is-wrong::after{content:" ✗";color:#DC2626;font-weight:800}
+.quiz-q .opt.is-reveal{border-color:#6EE7B7;background:#ECFDF5;color:#065F46}
+.quiz-q .opt.is-reveal .l{color:#047857}
+.quiz-item .quiz-options li.is-reveal{background:#ECFDF5;box-shadow:inset 0 0 0 1px #6EE7B7;color:#065F46}
+/* 3.4 已锁定禁用态 */
+.quiz-q.is-locked .opt,.quiz-item.is-locked .quiz-options li{cursor:default;pointer-events:none}
+.quiz-q.is-locked .opt:not(.is-right):not(.is-wrong):not(.is-reveal){opacity:.55}
+.quiz-item.is-locked .quiz-options li:not(.is-right):not(.is-wrong):not(.is-reveal){opacity:.55}
+/* 3.5 计分行（运行时注入） */
+.quiz-score{display:flex;align-items:center;gap:12px;margin:14px 0 18px;padding:12px 18px;border:1px dashed #7DD3FC;border-radius:12px;background:#F0F9FF;font-size:14px;font-weight:700;color:#0F172A}
+.quiz-score .qs-label{white-space:nowrap}
+.quiz-score .qs-num{white-space:nowrap;color:#0284C7;font-size:16px}
+.quiz-score .qs-bar{flex:1 1 60px;min-width:60px;height:8px;border-radius:999px;background:#E2E8F0;overflow:hidden}
+.quiz-score .qs-bar i{display:block;height:100%;width:0;border-radius:999px;background:linear-gradient(90deg,#0EA5E9,#10B981);transition:width .35s ease}
+
+/* ---- 4. 速记卡可达性与长内容 ---- */
+.fc-hint,.flip-hint{color:#64748B}
+.flashcard-face{overflow:auto}
+.flashcard[tabindex]{outline:none}
+.flashcard[tabindex]:focus-visible{outline:3px solid #0EA5E9;outline-offset:3px}
+
+/* ---- 5. 侧栏目录 ---- */
+/* B 族 sticky 侧栏内目录限高滚动（A 族 aside 本身已可滚动，此规则空匹配无害） */
+.sidebar .sidebar-nav{max-height:calc(100vh - 60px);overflow-y:auto;scrollbar-width:thin}
+/* A 族 scroll spy 高亮（B 族高亮由其基础样式提供） */
+.sidebar a.toc.active{background:#E0F2FE;color:#0369A1;font-weight:600}
+
+/* ---- 6. 响应式补充：681–900px 时 grid3 降为两列 ---- */
+@media (min-width:681px) and (max-width:900px){
+  .grid3{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+
+/* ---- 7. 打印样式补充（A 族新增；B 族已有 print，重复声明无害） ---- */
+@media print{
+  .sidebar,.overlay,.sidebar-overlay,#menuBtn,#navToggle,#overlay,#sidebarOverlay,#readbar,#topBtn,#backTop,.chapter-pager,.quiz-score{display:none!important}
+}
+
+/* ---- 8. 手机端增强 v2（触控体验 / 防溢出 / 抽屉滚动锁定） ---- */
+/* 8.1 触控体验：去点按高亮、消除双击缩放延迟（flashcard 高 190-200px 天然达标，不另设 min-height） */
+.opt,.tabbar button,.tab-btn,.quiz-options li,.flashcard,.chapter-pager a,.chapter-pager span,.menu-btn,.mobile-nav-toggle{-webkit-tap-highlight-color:transparent;touch-action:manipulation}
+/* 8.2 触控目标最小 44px（自测选项与 tab 胶囊原高约 33px） */
+.opt,.tabbar button,.tab-btn,.quiz-options li{min-height:44px}
+/* 8.3 防溢出：内容图自适应；svg 不设 height:auto，避免定尺寸图标塌陷 */
+img{max-width:100%;height:auto}
+svg{max-width:100%}
+/* 8.4 长词/URL 断行 */
+body{overflow-wrap:break-word}
+/* 8.5 表格容器触摸惯性滚动（A 族已有同值规则，重复声明无害） */
+.table-wrap{-webkit-overflow-scrolling:touch}
+/* 8.6 抽屉打开时锁定背景滚动（两族抽屉断点均为 900px；类由统一脚本增删） */
+@media (max-width:900px){
+  body.nav-locked{overflow:hidden}
+}
+</style>
+</head>
+<body>
+<div id="readbar"></div>
+<button class="menu-btn" id="menuBtn" aria-label="打开目录">☰</button>
+<div class="overlay" id="overlay"></div>
+<aside class="sidebar" id="sidebar">
+  <h2>第四章 精神障碍分类与诊断标准</h2>
+  <div class="sub">精神病学（第9版）· 印刷页 37–46<br>学习指南 · 技能标准版</div>
+  <div class="toc-group">开篇</div>
+  <a class="toc" href="#cover"><span class="n">00</span>章节封面与学习目标</a>
+  <a class="toc" href="#status"><span class="n">01</span>本章地位速览</a>
+  <a class="toc" href="#navmap"><span class="n">02</span>章节导航图与八栏适配说明</a>
+  <a class="toc" href="#mindmap"><span class="n">03</span>本章知识地图</a>
+  <a class="toc" href="#route"><span class="n">04</span>学习路线图</a>
+  <div class="toc-group">正文（主题单元八栏）</div>
+  <a class="toc unitlink" href="#u1"><span class="n">05</span>精神障碍分类</a>
+  <a class="toc sub2" href="#u1-3">└ 分类结构与系统图景</a>
+  <a class="toc sub2" href="#u1-5">└ 分类系统对对碰</a>
+  <a class="toc unitlink" href="#u2"><span class="n">06</span>精神障碍诊断标准</a>
+  <a class="toc sub2" href="#u2-3">└ 诊断标准的层次图景</a>
+  <a class="toc sub2" href="#u2-5">└ 诊断标准辨析</a>
+  <div class="toc-group">结尾</div>
+  <a class="toc" href="#summary"><span class="n">07</span>全章核心要点速览</a>
+  <a class="toc" href="#pitfalls"><span class="n">08</span>易混易错点警示</a>
+  <a class="toc" href="#quiz"><span class="n">09</span>章节自测系统</a>
+  <a class="toc" href="#cards"><span class="n">10</span>考点速记卡</a>
+  <a class="toc" href="#cases"><span class="n">11</span>病例挑战</a>
+  <a class="toc" href="#ext"><span class="n">12</span>拓展延伸</a>
+</aside>
+<main class="main">
+<div class="wrap">
+
+<!-- ===== 00 封面 ===== -->
+<section id="cover">
+  <div class="hero">
+    <span class="chap">第四章 · CHAPTER 4</span>
+    <h1>精神障碍分类与诊断标准</h1>
+    <p class="tagline">先给疾病贴标签，再规定贴标签的规矩——本章是全书诊断活动的“语法书”。</p>
+    <p class="meta">教材：精神病学（第9版）｜印刷页 37–46｜全章 2 节：精神障碍分类、精神障碍诊断标准</p>
+    <div class="goalbox">
+      <h3>学习目标（四级分层）</h3>
+      <ul>
+        <li><span class="lv">了解</span>说出疾病分类学、精神障碍、障碍（disorder）、综合征、诊断标准的基本含义；列出 ICD、DSM、CCMD 三大系统的制定机构与定位。</li>
+        <li><span class="lv l2">理解</span>解释精神障碍为何难以照搬躯体疾病的病因诊断；理解症状学分类的合理性与局限性；理解内涵标准与排除标准的关系。</li>
+        <li><span class="lv l3">掌握</span>ICD-11 与 DSM-5 的六组主要差异；诊断标准内涵标准的四项指标；SSD（症状—综合征—诊断）思维方法与四个诊断环节。</li>
+        <li><span class="lv l4">重点</span>ICD-11 的章节位置、6 个描述模块、20 个分类单元与编码框架；DSM-5 舍弃多轴、停用 GAF；ICD-11 与 DSM-5 精神分裂症病程的“1 个月 vs 6 个月”——高频考点与最易混点。</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 01 地位 ===== -->
+<section id="status">
+  <div class="sec-head"><div class="badge">01</div><h2>本章地位速览<span class="en">Why this chapter matters</span></h2></div>
+  <p class="sec-lead">其他章回答“这是什么病、怎么治”，本章回答“凭什么把它叫作这个病”。它不提供任何一个疾病的完整知识，却规定了后面所有章节的命名与归类规则。</p>
+  <div class="grid3">
+    <div class="card blue">
+      <h3>章节定位与重要性</h3>
+      <p>本章位于教材第四章（印刷页 37–46），属<strong>总论性、方法论</strong>章节。全章只有两节：第一节“精神障碍分类”，第二节“精神障碍诊断标准”。</p>
+      <p>教材开篇即点明：精神障碍的诊断“几乎完全依靠医师对患者精神症状、临床特征、病程演变的认识与辨析”，因此分类与诊断标准是精神科临床工作的<strong>共同语言</strong>。</p>
+      <p class="note">考试权重集中于：三大系统版本与年份、ICD-11 结构与编码、ICD-11 与 DSM-5 差异、诊断标准的层次、SSD 与四个诊断环节。</p>
+    </div>
+    <div class="card red">
+      <h3>临床意义</h3>
+      <p>教材指出，统一的分类与诊断标准使不同国家地区、不同学术流派“有了相互交流的统一标准和讨论基础”，并有利于<strong>制定个体化治疗方案、预测疗效和预后、探索病因</strong>。</p>
+      <p>同一章又提醒：诊断标准“仅仅是工具”，可靠的病史、仔细的体格查体及神经系统检查（尤其是精神状态检查）以及必要的实验室检查，才是正确诊断的<strong>必要条件</strong>。</p>
+      <p>误诊的六条原因中，有一条正是“采用的诊断标准不够完善或不能正确使用诊断标准”——这正是本章要解决的问题。</p>
+    </div>
+    <div class="card green">
+      <h3>与前后章节关联</h3>
+      <p><strong>前置：</strong>精神症状学、精神检查、病史采集等基本临床技能，是理解和执行诊断标准的前提。</p>
+      <p><strong>后续延伸：</strong>后续各疾病章所用的疾病名称、亚型、病程阈值，均来自本章介绍的 ICD-11 或 DSM-5；本章第二节以 ICD-11 精神分裂症（6A20）标准为范例，可直接对照精神分裂症章。</p>
+      <p><strong>横向交叉：</strong>与流行病学及卫生统计（患病率、病死率统计）、医疗付费与精细化管理（ICD 编码）、司法鉴定（DSM-5 司法鉴定注意事项）、神经科学与心理学（RDoC）交叉。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 02 导航 ===== -->
+<section id="navmap">
+  <div class="sec-head"><div class="badge">02</div><h2>章节导航图<span class="en">Section map</span></h2></div>
+  <p class="sec-lead">本章按教材两节重组为两个“主题单元”。点击卡片可直接跳到对应单元。</p>
+  <div class="grid2">
+    <a class="card cyan" href="#u1" style="display:block;color:inherit">
+      <h3>单元一 · 精神障碍分类</h3>
+      <p>对应教材第一节（p.37–43）。分类的目的与困难、从克雷丕林到 ICD/DSM/CCMD 的历史、症状学分类原则、ICD-11 与 DSM-5 的结构与差异、RDoC。</p>
+      <p class="note">关键词：疾病分类学 · 症状学分类 · 基础组件／线性组合 · 多轴诊断 · 6A20</p>
+    </a>
+    <a class="card orange" href="#u2" style="display:block;color:inherit">
+      <h3>单元二 · 精神障碍诊断标准</h3>
+      <p>对应教材第二节（p.43–46）。诊断的定义与目的、误诊六因、诊断标准的内涵与排除、ICD-11 精神分裂症标准范例、SSD 思维方法与四个诊断环节。</p>
+      <p class="note">关键词：内涵标准 · 排除标准 · 6A20 · SSD · 发病基础／起病及病程／临床表现／病因与诱因</p>
+    </a>
+  </div>
+  <div class="callout warn">
+    <span class="ct">📌 关于八栏适配的说明（必读）</span>
+    <p>本章<strong>不是疾病章</strong>：教材两节都以“分类体系”和“诊断标准”本身为叙述对象，没有把任何一种精神障碍作为独立单元展开。因此无法按“每病八栏”直接书写。本指南按 BRIEF 的非疾病章适配规则处理：</p>
+    <ul>
+      <li><strong>单元划分依据：</strong>教材第一节含“概述／历史与现状／常用分类系统”三小节，逻辑连续，合并为<strong>单元一</strong>；第二节含“概述／精神障碍诊断标准”两小节，合并为<strong>单元二</strong>。共 <strong>2 个主题单元、2×8＝16 栏</strong>，教材列出的 ICD、DSM、CCMD、RDoC、诊断标准与 SSD 均无遗漏。</li>
+      <li><strong>栏目名称与顺序一律不变</strong>（第一栏疾病画像 → 第八栏知识联动），仅将“疾病”替换为对应对象：第一栏“疾病画像 → 分类体系画像／诊断标准画像”；第二栏“病因探秘 → 分类依据探秘／诊断困境探秘”；第三栏“临床表现拼图 → 分类结构与系统图景／诊断标准的层次图景”。</li>
+      <li><strong>第四栏：</strong>两个单元均<strong>无临床案例</strong>，统一标注「教材未提供具体临床案例」。教材中出现的“幻觉症”“囤积障碍 6B24.1”“精神分裂症 6A20”都是<strong>分类或标准示例</strong>，不是患者案例，本指南不补写病史、不虚构检查。</li>
+      <li><strong>第六栏：</strong>本章<strong>不涉及治疗</strong>，教材没有给出任何药物、剂量、疗程或干预技术，故统一写「教材未提供相关内容」并说明原因；只保留教材关于“分类／诊断服务于治疗”的原文表述，不越界写处方。</li>
+      <li><strong>第五栏：</strong>以“分类系统对比／标准层次辨析”替代疾病鉴别，仍用表格呈现，每表附一句话总结。</li>
+      <li><strong>第七栏：</strong>每单元仍提供<strong>不少于 3 种</strong>记忆方法，并注明方法类型与“为什么这样记”。</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===== 03 知识地图 ===== -->
+<section id="mindmap">
+  <div class="sec-head"><div class="badge">03</div><h2>本章知识地图<span class="en">Knowledge map</span></h2></div>
+  <p class="sec-lead">不按教材目录复制，而按“为什么分类 → 怎么分类 → 有哪几套系统 → 诊断怎么落地”四层重排。</p>
+  <div class="grid2">
+    <div class="card cyan">
+      <h3>第一层 · 为什么分类：目的与对象</h3>
+      <ul>
+        <li><strong>疾病分类学：</strong>按特点与从属关系划分类、种、型等层次并归成系统。</li>
+        <li><strong>分类目的：</strong>加深对疾病关系的认识；便于讨论预防、诊断、鉴别诊断和治疗；为基础与临床研究提供统一参照。</li>
+        <li><strong>对象特殊性：</strong>精神障碍是社会—心理—生理综合作用的外在表征，“病”与“非病”界限在部分障碍中较模糊，故分类需更细致、明确边界、减少重叠。</li>
+        <li><strong>术语：</strong>精神障碍＝精神疾病（同义使用）；精神的＝精神病学的（互换）；因缺乏医学意义上明确疾病类别，更多使用“障碍（disorder）”。</li>
+      </ul>
+    </div>
+    <div class="card blue">
+      <h3>第二层 · 怎么分类：原则与历史</h3>
+      <ul>
+        <li><strong>两条原则：</strong>病因学／病理生理学分类 vs 症状学分类。前者仅约 10% 患者适用，90% 病因不明，故现行系统以症状学为主、兼顾可能病因。</li>
+        <li><strong>历史雏形：</strong>克雷丕林按症状、病程与转归划出早发痴呆（精神分裂症）、躁郁症、妄想狂等疾病单元。</li>
+        <li><strong>统一前分歧：</strong>布鲁勒“4A 症状”偏重阴性症状；施耐德“一级症状”偏重阳性症状；且无法肯定需出现几个症状才能确诊。</li>
+        <li><strong>统一后：</strong>WHO 的 ICD 与 APA 的 DSM 渐趋统一；我国制定 CCMD，CCMD-3 后停止再版，临床主要使用 ICD。</li>
+      </ul>
+    </div>
+    <div class="card orange">
+      <h3>第三层 · 有哪几套系统：结构与差异</h3>
+      <ul>
+        <li><strong>ICD-11：</strong>2007 启动修订、2012 年 5 月完成框架、2014 年评审、2022 年正式生效；第 6 章；6 个描述模块；20 个分类单元；编码 6D1E.EE（E）；基础组件与线性组合。</li>
+        <li><strong>DSM-5：</strong>1952 年 DSM-Ⅰ → 1968 年 DSM-Ⅱ → 1980 年 DSM-Ⅲ → 1994 年 DSM-Ⅳ → 2013 年 DSM-5；按谱系分组；舍弃多轴；停用 GAF；三部分＋附录。</li>
+        <li><strong>CCMD：</strong>中华医学会精神医学分会制定推行；CCMD-3 后停止再版。</li>
+        <li><strong>RDoC：</strong>NIMH 2008 年提出、2009 年启动；5 个方面、7 个分类单元；维度系统，涵盖正常到异常。</li>
+      </ul>
+    </div>
+    <div class="card green">
+      <h3>第四层 · 诊断怎么落地：标准与思维</h3>
+      <ul>
+        <li><strong>诊断：</strong>把具体患者病情纳入疾病分类的某一项目，是对个人、家庭、社会状况或潜在健康问题所作的临床判断。</li>
+        <li><strong>诊断标准：</strong>将症状按不同组合、以条理化形式列出的标准化条目＝内涵标准＋排除标准；内涵含症状学、病程、病情严重程度、社会功能损害。</li>
+        <li><strong>范例：</strong>ICD-11 精神分裂症 6A20——持续至少 1 个月；（1）项至少 1 条和／或（2）项至少 2 条；排除 6A22、6A23。</li>
+        <li><strong>思维：</strong>SSD（症状→综合征→诊断）；四个环节（发病基础、起病及病程、临床表现、病因与诱因）；六条误诊原因。</li>
+      </ul>
+    </div>
+  </div>
+  <div class="stat"><span>2 个主题单元</span><span>8 栏 × 2＝16 栏</span><span>核心概念 18 个</span><span>3 大分类系统</span><span>教材 2 节全覆盖</span></div>
+  <p class="note">“核心概念 18 个”统计口径：疾病分类学、精神障碍、障碍、综合征、症状学分类、病因学分类、基础组件、线性组合、多轴诊断、亚型、标注、主要诊断、诊断标准、内涵标准、排除标准、诊断性症状、SSD、RDoC。均为教材本章明确定义或明确使用的概念。</p>
+</section>
+
+<!-- ===== 04 路线 ===== -->
+<section id="route">
+  <div class="sec-head"><div class="badge">04</div><h2>学习路线图<span class="en">Study route</span></h2></div>
+  <p class="sec-lead">本章概念多、年份多、系统差异多。建议“先建坐标，再记版本，最后练标准落地”，不要一上来就背分类列表。</p>
+  <div class="card blue">
+    <h3>推荐顺序与重点优先级</h3>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>顺序</th><th>内容</th><th>优先级</th><th>理由</th></tr></thead>
+        <tbody>
+          <tr><td>①</td><td>分类目的、精神障碍定义（ICD-10 与 DSM）</td><td><span class="starme">⭐⭐⭐ 必考</span></td><td>全部后续概念的起点；两种定义的“共同点”是简答题常客</td></tr>
+          <tr><td>②</td><td>症状学分类 vs 病因学分类（10%／90%）</td><td><span class="starme">⭐⭐⭐ 必考</span></td><td>解释“为什么现行系统都按症状分”，也是易错点</td></tr>
+          <tr><td>③</td><td>ICD 历史节点与 ICD-11 结构、编码</td><td><span class="starme">⭐⭐⭐ 必考</span></td><td>年份与编码题密集，6B24.1 是教材唯一完整编码示例</td></tr>
+          <tr><td>④</td><td>DSM 五代版本、DSM-5 三部分与多轴变迁</td><td><span class="starme">⭐⭐⭐ 必考</span></td><td>“DSM-5 是否保留多轴”是最常见的判断陷阱</td></tr>
+          <tr><td>⑤</td><td>ICD-11 与 DSM-5 六组差异</td><td><span class="starme">⭐⭐⭐ 必考</span></td><td>六组差异可出单选、多选、简答，尤其精分病程与人格障碍</td></tr>
+          <tr><td>⑥</td><td>诊断标准＝内涵＋排除；内涵四指标</td><td><span class="starme">⭐⭐⭐ 必考</span></td><td>名词解释与简答的固定考点</td></tr>
+          <tr><td>⑦</td><td>ICD-11 精神分裂症 6A20 标准范例</td><td><span class="starme">⭐⭐ 重点</span></td><td>理解“条目如何组合”，不必逐字背长句</td></tr>
+          <tr><td>⑧</td><td>SSD、四环节、六条误诊原因</td><td><span class="starme">⭐⭐⭐ 必考</span></td><td>本章唯一的“临床思维”考点，案例题直接调用</td></tr>
+          <tr><td>⑨</td><td>RDoC 的提出、五方面、七单元</td><td><span class="starme">⭐⭐ 重点</span></td><td>易与 DSM 混记；抓住“维度系统、正常到异常”</td></tr>
+          <tr><td>⑩</td><td>ICD-11 二十个分类单元的逐条名称</td><td><span class="starme">⭐ 了解</span></td><td>只需认得编码与大致归属，不必逐字背</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="grid3">
+    <div class="mini">
+      <h4>复习时间规划</h4>
+      <ul>
+        <li><strong>首学 80 分钟：</strong>单元一 55 分钟（分类原则＋ICD＋DSM＋差异），单元二 25 分钟（标准与 SSD）。</li>
+        <li><strong>当日复盘 20 分钟：</strong>只默写 ICD／DSM 年份轴与六组差异。</li>
+        <li><strong>次日 15 分钟：</strong>刷 20 张速记卡，错卡抄成“年份—系统—结论”三列。</li>
+        <li><strong>考前 10 分钟：</strong>只看核心要点与易混警示。</li>
+      </ul>
+    </div>
+    <div class="mini">
+      <h4>记忆策略推荐</h4>
+      <ul>
+        <li><strong>时间轴串联法：</strong>适合 ICD 与 DSM 的版本年份，按一条线记到底。</li>
+        <li><strong>对比记忆法：</strong>适合 ICD-11 vs DSM-5 六组差异，成对记。</li>
+        <li><strong>数字编码法：</strong>适合 10%/90%、6 模块、20 单元、11 指标、5 轴、7 单元。</li>
+        <li><strong>口诀法：</strong>适合内涵四指标“症、程、重、功”与四环节。</li>
+      </ul>
+    </div>
+    <div class="mini">
+      <h4>本章三个“不要”</h4>
+      <ul>
+        <li>不要把 DSM-Ⅳ 的多轴系统安到 DSM-5 头上。</li>
+        <li>不要把 ICD-11 的“1 个月”与 DSM-5 的“6 个月”记反。</li>
+        <li>不要用教材以外的诊断条目“补全”本章——教材只给 6A20 一个完整范例。</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 05 单元一 ===== -->
+<section id="u1">
+  <div class="sec-head"><div class="badge">05</div><h2>精神障碍分类<span class="en">第一节 · 分类的目的、历史与三大系统（p.37–43）</span></h2></div>
+  <p class="sec-lead">本节回答三个问题：为什么要分类、凭什么这样分、世界上有哪几套系统。抓住“症状学分类是现实妥协、ICD-11 是当前主系统”这两条主线。</p>
+
+  <!-- 第一栏 -->
+  <div class="card red" id="u1-1">
+    <h3 class="col-title"><span class="idx">第一栏</span>疾病画像 → 分类体系画像</h3>
+    <div class="quote"><span class="lab">教材原文</span>疾病分类学是将不同疾病按各自的特点和从属关系，划分为类、种、型等层次，并归成系统。</div>
+    <div class="quote"><span class="lab">教材原文</span>在ICD-10中，精神障碍定义为“一系列临床可识别的、引起大多数患者痛苦或妨碍个人功能的症状或行为。单独的社会偏离或冲突，而没有个人功能障碍，不应该包括在这里所定义的精神障碍中”。</div>
+    <div class="quote"><span class="lab">教材原文</span>DSM中给出的定义与之相近，为“一种有临床意义的行为、心理综合征或模式，发生于个体，并伴有当前的痛苦（痛苦的症状）或功能障碍（一个或多个重要功能领域的损害），或具有死亡、疼痛、功能障碍的高度风险，或可造成自由的重大丧失。另外，这种综合征或模式决不能仅仅是对某一特定事件的可预知的反应，如亲人的死亡等。不管最初的原因是什么，目前必须被视为是个人的一种行为、心理或生物学功能障碍的表现；既不是指那些偏离常规的行为（如政治的、宗教的或性的），也不是指本来就存在于个人与社会之间的冲突，除非这些偏离行为或冲突是如以上描述的个体功能障碍的一种症状”。</div>
+    <p><strong>一句话画像：</strong>精神障碍的分类，是把“说不清病因、但能看出症状群”的精神问题，按<strong>可识别的症状或行为</strong>装进一套有层级的抽屉；分类系统则是这套抽屉的<strong>命名与编号规则</strong>。<span class="note">（此句为类比理解，非教材原文）</span></p>
+    <div class="grid2">
+      <div class="mini">
+        <h4>两种定义的三条共同边界</h4>
+        <ul>
+          <li><strong>必须有临床意义：</strong>是症状或行为，不是单纯的社会偏离。</li>
+          <li><strong>必须有痛苦或功能损害：</strong>或伴死亡、疼痛、功能障碍的高风险，或造成自由的重大丧失。</li>
+          <li><strong>必须是个人的功能障碍表现：</strong>不能仅是对特定事件的可预知反应，也不是个人与社会之间本来的冲突。</li>
+        </ul>
+      </div>
+      <div class="mini">
+        <h4>教材点明的术语习惯</h4>
+        <ul>
+          <li>精神障碍（mental disorder）与精神疾病（mental disease）常作<strong>同义词</strong>使用。</li>
+          <li>精神的（mental）与精神病学的（psychiatric）常<strong>互换</strong>使用。</li>
+          <li>由于缺乏医学意义上明确的疾病类别，精神病学中更多使用<strong>障碍（disorder）</strong>这一术语。</li>
+        </ul>
+      </div>
+    </div>
+    <div class="callout key"><span class="ct">📌 最关键的一句</span>两种定义均表明，大多数精神障碍都不是基于理论概念或病因学的推测，而是<strong>基于可识别的症状群或行为</strong>。这句话是理解后面“症状学分类”的钥匙。</div>
+    <div class="stat"><span>约 10% 病因／病理相对明确</span><span>约 90% 病因不明</span><span>ICD-11 20 个分类单元</span><span>ICD-11 6 个描述模块</span></div>
+    <p class="note">流行病学：本章为分类与标准章，教材<strong>未提供</strong>任何精神障碍患病率、发病率或病死率的具体数字，故本栏不列。</p>
+  </div>
+
+  <!-- 第二栏 -->
+  <div class="card blue" id="u1-2">
+    <h3 class="col-title"><span class="idx">第二栏</span>病因探秘 → 分类依据探秘</h3>
+    <p><strong>为什么精神障碍不能像躯体疾病那样“按病因分类”？</strong>教材在开篇就给出四层原因：</p>
+    <div class="grid4">
+      <div class="mini"><h4>① 依靠辨析</h4><p>诊断“几乎完全依靠医师对患者精神症状、临床特征、病程演变的认识与辨析”。</p></div>
+      <div class="mini"><h4>② 文化差异</h4><p>不同群体、不同文化、不同地域对心理活动、行为举止的“得体”或“失常”评判标准不同。</p></div>
+      <div class="mini"><h4>③ 病因不清</h4><p>现阶段许多精神障碍的病因尚不清楚。</p></div>
+      <div class="mini"><h4>④ 概念分歧</h4><p>精神医学界在某些具体疾病的概念、名称、内涵上往往存在分歧与异议。</p></div>
+    </div>
+    <p><strong>表 1　两种分类原则的“可行性对照”</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>维度</th><th>病因学／病理生理学分类</th><th>症状学分类（现行主流）</th></tr></thead>
+        <tbody>
+          <tr><td>建立依据</td><td>根据疾病的病因和／或病理生理改变建立</td><td>根据共同症状或综合征建立诊断</td></tr>
+          <tr><td>现实可行性</td><td>只有约 <strong>10%</strong> 患者病因、病理改变相对明确，<strong>90%</strong> 病因不明，无法贯彻</td><td>绝大多数障碍病因未明，只能按主要症状或症状群分类</td></tr>
+          <tr><td>诊断依据的稳定性</td><td>诊断建立在病因和／或病理生理改变之上</td><td>症状或综合征改变时，临床诊断会作相应改变；只能反映疾病当时的状态</td></tr>
+          <tr><td>病因与诊断的关系</td><td>按病因和／或病理生理改变归入相应类别</td><td>同一症状或综合征可有不同病因；病因不同但症状相似，可得出<strong>相同诊断</strong></td></tr>
+          <tr><td>对治疗的意义</td><td>病因诊断比症状诊断更有利于治疗</td><td><strong>有利于对症治疗</strong></td></tr>
+          <tr><td>多诊断</td><td>—</td><td>临床表现符合 2 种或多种疾病诊断标准时，可<strong>同时给予多个诊断</strong></td></tr>
+          <tr><td>根本局限</td><td>多数精神障碍不具备条件</td><td>不能认为每一特定诊断类别属于真正意义上的不同疾病；未来必被病因及发病机制分类替代</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="quote"><span class="lab">教材原文</span>综合征是指同时存在于某些个体的一组症状或行为表现。人们认为这一组症状之所以共同出现有其内在原因，它们可能反映共同的病因过程，也可能预示着共同的疾病转归、预后以及可能有效的治疗措施等。</div>
+    <p><strong>教材用“幻觉症”说明症状学诊断的“同名不同因”：</strong>同一种以精神症状命名的疾病（如幻觉症），可以是<strong>生物性的</strong>，也可以是<strong>心因性或反应性的</strong>，或者是<strong>药源性的</strong>，还有<strong>器质性的</strong>（如脑动脉硬化）或<strong>物质滥用所致的</strong>。</p>
+    <div class="callout warn">
+      <span class="ct">⚠️ 症状学分类的四个直接推论（考试常按此设问）</span>
+      ① 诊断随主要症状改变而变更；② 不同病因、相似症状可得到相同诊断；③ 可同时给出多个诊断；④ <strong>不能把每一个诊断类别当成真正独立的疾病</strong>。教材明确判断：随着科学进展，基于症状学的分类体系“必然会被病因及发病机制的分类方法所替代”。
+    </div>
+    <div class="callout key"><span class="ct">📌 现行两大系统的定位</span>目前影响最大的两大分类系统——WHO 的 <strong>ICD-11</strong> 与美国的 <strong>DSM-5</strong>，主要按照<strong>症状学分类原则</strong>，兼顾可能的病因学、病理生理学特征进行分类。</div>
+  </div>
+
+  <!-- 第三栏 -->
+  <div class="card red" id="u1-3">
+    <h3 class="col-title"><span class="idx">第三栏</span>临床表现拼图 → 分类结构与系统图景</h3>
+    <div class="tabs" data-tabs>
+      <div class="tabbar">
+        <button class="on" data-tab="h1">历史脉络</button>
+        <button data-tab="h2">ICD 系统</button>
+        <button data-tab="h3">DSM 系统</button>
+        <button data-tab="h4">CCMD 与 RDoC</button>
+      </div>
+      <div class="panel on" data-panel="h1">
+        <p><strong>从“各自为政”到“统一标签”的四步：</strong></p>
+        <div class="timeline">
+          <div class="tl-item"><h4>20 世纪初 · 雏形</h4><p>德国精神病学家<strong>克雷丕林（Kraepelin）</strong>根据精神障碍的不同症状、病程与转归，划分出<strong>早发痴呆（精神分裂症）、躁郁症、妄想狂</strong>等疾病单元，成为现代精神障碍分类的“雏形”。</p></div>
+          <div class="tl-item"><h4>20 世纪中叶以前 · 各自为政</h4><p>诊断分类进展甚慢，各国学界基本处于“各自为政”状态，未形成统一而公认的诊断标准。以精神分裂症为例：有人以布鲁勒（E. Bleuler）的<strong>联想障碍、情感淡漠、矛盾意向、内向性“4A 症状”</strong>为依据；有人强调施耐德（Schneider）的<strong>“一级症状”</strong>才具诊断价值。</p></div>
+          <div class="tl-item"><h4>两套标准的缺陷</h4><p>从现代观点看：前者<strong>过于重视阴性症状</strong>，后者<strong>有忽视阴性症状的倾向</strong>；而且无法肯定究竟要出现几个“4A 症状”或“一级症状”才能确诊，因而均未获得更大范围、更长时间、更多学者的广泛认同。</p></div>
+          <div class="tl-item"><h4>20 世纪后期 · 渐趋统一</h4><p>随着 WHO 的 ICD 与美国的 DSM 两大系统制定，各国诊断分类标准渐趋统一；我国也根据国情制定了 CCMD。教材评价：这对整个学科发展具有<strong>划时代的重大意义</strong>。</p></div>
+        </div>
+        <div class="callout key"><span class="ct">📌 统一带来了什么</span>使不同国家和地区、各种学术观点流派之间有了相互交流的统一标准和讨论基础；用描述性或纪实方法把临床表现与病程基本相同的病例归为同类，有利于制定个体化治疗方案、预测疗效和预后、探索病因；也有益于教学趋同、提高科研资料收集的一致性与发现的可比性。</div>
+      </div>
+
+      <div class="panel" data-panel="h2">
+        <p><strong>ICD 的名称：</strong>WHO 编写的《疾病和有关问题的国际统计分类》（International Statistical Classification of Diseases and Related Health Problems），简称为《国际疾病分类》。</p>
+        <div class="timeline">
+          <div class="tl-item"><h4>1890 年 · 巴黎</h4><p>第一次国际死因分类修订会议首次提出<strong>国际死因分类法（ILCD）</strong>，教材明确“这才是第一版的 ICD”。</p></div>
+          <div class="tl-item"><h4>1893 年 · ICD-1 问世</h4><p>法国<strong>贝蒂荣（Bertillon）</strong>提出的疾病死亡原因统计分类是 ICD-1 的雏形；26 个国家代表在其基础上共同探讨修订，ICD-1 由此问世。之后每隔十年左右补充完善，并先后出版了 5 版。</p></div>
+          <div class="tl-item"><h4>1948 年 · WHO 接手</h4><p>WHO 将其接手并更名为《国际疾病、外伤与死亡统计分类（第 6 版）》，<strong>首次在第 5 章介绍精神障碍</strong>；但因分类简单、不具实用性，未被各国重视。此后每 10 年修订一次。</p></div>
+          <div class="tl-item"><h4>ICD-8 起 · 被广泛采用</h4><p>直至 ICD-8 出版，各国才逐渐注意到这一分类系统，并纷纷予以采用。</p></div>
+          <div class="tl-item"><h4>ICD-10 · 应用最广</h4><p>是世界上应用最广泛的版本，主要功能是解决疾病和死因的统计问题；但精细化管理与医疗付费要求提高，基于其固有体系架构，修订和应用受到限制。</p></div>
+          <div class="tl-item"><h4>ICD-11 · 修订与生效</h4><p><strong>2007 年</strong>WHO 启动修订，<strong>2012 年 5 月</strong>完成建立基本框架，<strong>2014 年</strong>开始评审修订，<strong>2022 年</strong>正式生效。首次搭建基于网络平台、面向全球的意见征集和修订评审机制。</p></div>
+        </div>
+        <p><strong>三种使用方式：</strong>ICD 纸质版、在线工具（ICD-11 beta browser）、本地软件；允许通过网络服务存取到本地软件中。</p>
+        <p><strong>两个核心概念：</strong></p>
+        <div class="grid2">
+          <div class="mini"><h4>基础组件（foundation component）</h4><p>所有 ICD 分类单元的总和，包含 ICD 的全部内容。</p></div>
+          <div class="mini"><h4>线性组合（linearization）</h4><p>分类单元具有不同的用途属性（分类属性），可根据使用目的不同从基础组件中衍生出不同的子集。</p></div>
+        </div>
+        <p><strong>线性组合的实例：</strong>供低资源初级医疗机构使用的 <strong>ICD-11-PCL</strong>、供中等资源初级医疗机构使用的 <strong>ICD-11-PCM</strong>；还可通过对分类属性定义，产生适用不同专科的线性组合。教材判断：与 ICD-10 相比，ICD-11 的结构体系和应用范畴要大得多。</p>
+        <p><strong>ICD-11 精神障碍分类的四个保留特点：</strong>①适合患病率和病死率统计结果的国际交流；②作为各国制定分类系统的参照；③适合在临床与研究中应用；④有助于培训和教学。</p>
+        <p><strong>结构变化：</strong>精神障碍分类由 ICD-10 的<strong>第 5 章</strong>变为 ICD-11 的<strong>第 6 章</strong>；描述方式由过去的“未给出明确定义”改为<strong>6 个模块结构化描述</strong>：症状、病因、发病过程和结果、治疗反应、与基因的关系、与环境的交互关系。</p>
+        <p><strong>编码变化：</strong>ICD-10 精神和行为障碍章节仅含 <strong>10 个分类单元</strong>，ICD-11 精神、行为或神经发育障碍章节增至 <strong>20 个分类单元</strong>；编码框架为 <strong>6D1E.EE（E）</strong>：前 4 位为类目编码，第 1 位“6”代表第 6 章，“D”取除 O 和 I 以外的 A～Z 字母，“1”取 0～9，“E”取 0～9 和除 O 和 I 以外的 A～Z；小数点后 2 位为 2 级亚目编码，末尾“Y”代表“其他特定”、“Z”代表“未特定”。</p>
+        <div class="callout book"><span class="ct">📖 教材唯一的完整编码示例</span><strong>6B24.1</strong>：“6”代表第 6 章；第 6 章中的“B2”代表<strong>强迫性或相关障碍</strong>；“4.1”代表<strong>囤积障碍伴较差自知力或缺乏自知力</strong>。</div>
+        <p><strong>表 1　ICD-11 精神障碍的 20 个分类单元（教材原文照录）</strong></p>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>编码</th><th>类别</th><th>编码</th><th>类别</th></tr></thead>
+            <tbody>
+              <tr><td>6A0</td><td>神经发育障碍</td><td>6C2</td><td>躯体忧虑或躯体体验障碍</td></tr>
+              <tr><td>6A2</td><td>精神分裂症或其他原发性精神病性障碍</td><td>6C4</td><td>物质使用或成瘾行为所致障碍</td></tr>
+              <tr><td>6A4</td><td>紧张症</td><td>6C7</td><td>冲动控制障碍</td></tr>
+              <tr><td>6A6</td><td>心境障碍</td><td>6C9</td><td>破坏性行为或品行障碍</td></tr>
+              <tr><td>6B0</td><td>焦虑或恐惧相关障碍</td><td>6D1</td><td>人格障碍及相关特质</td></tr>
+              <tr><td>6B2</td><td>强迫或相关障碍</td><td>6D3</td><td>性欲倒错障碍</td></tr>
+              <tr><td>6B2</td><td>应激相关障碍</td><td>6D5</td><td>做作性障碍</td></tr>
+              <tr><td>6B6</td><td>分离性障碍</td><td>6D7</td><td>神经认知障碍</td></tr>
+              <tr><td>6B8</td><td>喂食或进食障碍</td><td>6E2</td><td>与妊娠、分娩和产褥有关的精神或行为障碍</td></tr>
+              <tr><td>6C0</td><td>排泄障碍</td><td>6E6</td><td>与其他疾病分类相关的继发性精神或行为综合征</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="callout warn"><span class="ct">⚠️ 照录说明</span>教材原文中“强迫或相关障碍”与“应激相关障碍”两行编码<strong>均印作 6B2</strong>。本表严格照录，未作改动；考试以教材为准，若题目给出其他编码，请回到原文核对。</div>
+      </div>
+
+      <div class="panel" data-panel="h3">
+        <div class="timeline">
+          <div class="tl-item"><h4>1952 年 · DSM-Ⅰ</h4><p>美国精神病学协会（APA）在 <strong>ICD-6 基础上补充</strong>后出版，此后每 5 年修订一次。</p></div>
+          <div class="tl-item"><h4>1968 年 · DSM-Ⅱ</h4><p>与 <strong>ICD-8 基本一致</strong>，编码也一致，仅根据美国情况有少量变更。</p></div>
+          <div class="tl-item"><h4>1980 年 · DSM-Ⅲ</h4><p>对前两版有较大修订，<strong>对每个诊断都定出明确的诊断标准</strong>，是精神障碍诊断史上的重大改革；特别是提出<strong>以临床轴为主的多轴诊断概念</strong>，促进临床医师把患者作为整体全面考虑（躯体状况、个性特征、社会文化背景等）。</p></div>
+          <div class="tl-item"><h4>1994 年 · DSM-Ⅳ</h4><p>补充了编码与多轴诊断。分类诊断<strong>主要按症状学</strong>进行。</p></div>
+          <div class="tl-item"><h4>2013 年 · DSM-5</h4><p>最新版本。教材评价：DSM 系统虽主要通用于美国精神医学界，但因其有详细的诊断标准，具有<strong>巨大的国际影响力</strong>。</p></div>
+        </div>
+        <p><strong>DSM-5 的分组逻辑：</strong>不同于 DSM-Ⅳ 按症状学分类，DSM-5 按<strong>疾病的谱系障碍</strong>进行分类，对相关障碍进行新的分组。章节结构改变主要基于 <strong>11 个指标</strong>：共享神经机制、家族特质、遗传风险因素、特定的环境风险因素、生物学标志、气质、情绪或认知过程异常、症状相似性、病程、共病及共享治疗反应。教材称其修订将使 DSM-5 成为一个<strong>“活文件”</strong>，能适应未来神经生物学、遗传学和流行病学方面的发现。</p>
+        <p><strong>DSM-Ⅳ 的五轴诊断（注意：这是旧版，不是 DSM-5）：</strong></p>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>轴</th><th>记录内容</th><th>教材要点</th></tr></thead>
+            <tbody>
+              <tr><td>轴Ⅰ</td><td>临床障碍；可能成为临床注意焦点的其他情况</td><td>记录求医主要的精神障碍，除人格障碍和精神发育迟滞外，也包括其他需关注情况</td></tr>
+              <tr><td>轴Ⅱ</td><td>人格障碍；精神发育迟滞</td><td>还包括突出的适应不良的人格特征和防御机制，单独列出以免被忽略</td></tr>
+              <tr><td>轴Ⅲ</td><td>一般医学情况（精神科以外的各科疾病）</td><td>可能与认识和处治患者的精神障碍及其药物治疗有关</td></tr>
+              <tr><td>轴Ⅳ</td><td>心理社会问题和环境问题</td><td>可归纳为 9 点：基本支持集体（家庭）、社会环境、教育、职业、住房、经济、求医、与司法单位有关、其他</td></tr>
+              <tr><td>轴Ⅴ</td><td>全面功能评估</td><td>按功能大体评定量表（GAF），百分制，最好功能状况评为 100 分</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="note">教材说明：轴Ⅳ和轴Ⅴ为特殊的临床科研所设置，便于制定治疗计划和预测转归。</p>
+        <p><strong>DSM-5 的三部分＋附录：</strong></p>
+        <div class="grid3">
+          <div class="mini"><h4>第一部分 · DSM-5 基础</h4><p>概述、手册使用、DSM-5 应用于司法鉴定的注意事项。</p></div>
+          <div class="mini"><h4>第二部分 · 诊断标准及编码</h4><p>极具临床价值，但<strong>并不能作为诊断的唯一依据</strong>。</p></div>
+          <div class="mini"><h4>第三部分 · 新的评估工具及模式</h4><p>含 WHO 残疾评估量表（WHODAS），可在所有医学和卫生保健领域使用。</p></div>
+        </div>
+        <p><strong>DSM-5 对多轴系统的处理：</strong>舍弃 DSM-Ⅳ 的多轴系统，改为<strong>非轴性的诊断记录</strong>（原轴Ⅰ、Ⅱ和Ⅲ），并对重要的心理、社会、背景因素的注解（先前轴Ⅳ）和残疾评估（先前轴Ⅴ）进行记录；建议<strong>停止使用 GAF</strong>，因其概念缺乏清晰性（包括症状、自杀风险和残疾描述）和日常实践中有问题的心理测量。</p>
+        <p><strong>亚型与标注：</strong>亚型是<strong>互相排斥</strong>的，各种亚型联合起来构成完整诊断的现象学；标注<strong>并不是互相排斥</strong>的，联合起来也不能完全描述现象学，所以可以给予 1 个以上标注。标注有助于对具备共同特征的同质性亚群准确划分（如“重度抑郁障碍，伴混合特征”），并提供与障碍管理相关的信息（如睡眠-觉醒障碍中“伴其他躯体共病”）。</p>
+        <p><strong>主要诊断规则：</strong>住院患者的主要诊断是经研究认为引起个体入院的<strong>主要状况</strong>；门诊患者的主要诊断是此次就诊接受门诊医疗服务的<strong>主要状况</strong>。主要诊断应首先列出，其余障碍按治疗和关注焦点的顺序依次列出。当主要诊断或就诊原因是其他躯体疾病所致的精神障碍时，<strong>ICD 编码规则要求病因上的躯体疾病首先列出</strong>，作为主要诊断的躯体疾病所致精神障碍应列在第二位。</p>
+        <p><strong>DSM-5 主要精神障碍分类（教材原文列举）：</strong>神经发育障碍；精神分裂症谱系及其他精神病性障碍；双相及相关障碍；抑郁障碍；焦虑障碍；强迫及相关障碍；创伤及应激相关障碍；分离性障碍；躯体症状及相关障碍；喂食及进食障碍；排泄障碍；睡眠-觉醒障碍；性功能失调；性别烦躁；破坏性、冲动控制及品行障碍；物质相关及成瘾障碍；神经认知障碍；人格障碍；性欲倒错障碍；其他精神障碍；药物所致的运动障碍及其他不良反应；可能成为临床关注焦点的其他状况。</p>
+      </div>
+
+      <div class="panel" data-panel="h4">
+        <h3>（一）CCMD：本土系统与“停止再版”</h3>
+        <div class="quote"><span class="lab">教材原文</span>中华医学会精神医学分会曾制定并推行了《中国精神障碍分类与诊断标准》（Chinese Classification of Mental Disorders，CCMD），由于国际学术交流接轨的需要，其后我国临床医学中主要使用ICD系统，因而在CCMD-3发布之后停止了再版。</div>
+        <p>要点：①制定并推行者是<strong>中华医学会精神医学分会</strong>；②制定依据是<strong>国情特点</strong>、适用于临床实践；③我国临床此后<strong>主要使用 ICD 系统</strong>；④<strong>CCMD-3 之后停止再版</strong>——教材没有“CCMD-4”，也没有给出更晚版本。</p>
+        <h3>（二）RDoC：不是诊断系统，而是研究框架</h3>
+        <div class="quote"><span class="lab">教材原文</span>美国国立精神卫生研究院（National Institute of Mental Health，NIMH）在2008年提出了研究领域标准（Research Domain Criteria，RDoC），这是一个整合多个领域研究信息单元的研究框架。</div>
+        <p><strong>它要解决什么问题：</strong>现行诊断以临床观察为基础，对症状群识别，确定症状出现时间、是否缓解、复发或慢性化；但定义方式<strong>并不包括整合神经科学研究的当前信息</strong>，很难对复杂症状和行为进行拆解并与潜在神经生物学系统联系。许多精神障碍可被认为沿多个维度（认知、情绪、社会交往）存在，多个障碍共同发生可能表现不同症状模式，而这些症状由共同风险因素和潜在疾病基础引起。</p>
+        <div class="grid2">
+          <div class="mini">
+            <h4>与 DSM 的根本不同</h4>
+            <ul>
+              <li>DSM 基于<strong>对临床症状群诊断的共识</strong>。</li>
+              <li>RDoC 旨在为精神障碍诊断提供有效的<strong>生物学框架</strong>，跨越传统诊断方法。</li>
+              <li>RDoC 是<strong>“维度系统”</strong>，涵盖范围从正常到异常。</li>
+              <li>RDoC 不是从疾病定义出发寻求神经生物学基础，而是从目前对<strong>行为-大脑关系</strong>的理解出发，并与临床现象联系。</li>
+            </ul>
+          </div>
+          <div class="mini">
+            <h4>时间线与目标</h4>
+            <ul>
+              <li><strong>2008 年</strong>提出；<strong>2009 年</strong>正式启动。</li>
+              <li>建立动态模板，广泛沟通，不断加入最新研究进展并实现数据分享。</li>
+              <li>目标一：通过行为及神经生物指标，为分类提供新方法。</li>
+              <li>目标二：针对精神病性障碍、情感障碍、注意缺陷多动障碍，提出基于基因组学、认知维度、生理特征或影像学信息的分类方法。</li>
+              <li>目标三：综合、多维度审视，检测遗传背景、神经指标、生理指标和行为状态，协助精准诊断。</li>
+            </ul>
+          </div>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>RDoC 的 5 个方面</th><th>教材列出的内容</th></tr></thead>
+            <tbody>
+              <tr><td>① 负价系统</td><td>恐惧、焦虑、失落、挫败</td></tr>
+              <tr><td>② 正价系统</td><td>奖励学习、奖励估价、习惯</td></tr>
+              <tr><td>③ 认知系统</td><td>注意、知觉、陈述性记忆、工作记忆、认知控制</td></tr>
+              <tr><td>④ 社会系统</td><td>依恋形成、社会交往、自我感知、他人感知</td></tr>
+              <tr><td>⑤ 觉醒／调节系统</td><td>昼夜节律、睡眠和觉醒</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p><strong>7 个分类单元（分析单元）：</strong>基因、分子、细胞、神经回路、生理学、行为、自我评估。每个方面均可使用不同变量（或分析单元）进行研究。</p>
+        <div class="callout key"><span class="ct">📌 一句话区分</span><strong>ICD-11／DSM-5 是“给今天的临床用的分类与诊断系统”；RDoC 是“为未来的研究准备的维度框架”。</strong>不要把 RDoC 当成第三套临床诊断标准。</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 第四栏 -->
+  <div class="card orange" id="u1-4">
+    <h3 class="col-title"><span class="idx">第四栏</span>教材典型案例</h3>
+    <div class="callout book">
+      <span class="ct">📖 教材未提供具体临床案例</span>
+      本节为分类学与分类系统叙述，教材<strong>没有给出任何带姓名、主诉、病史、体格检查或实验室结果的完整病例</strong>。教材中出现的“精神分裂症”“幻觉症”“囤积障碍”等，都是为说明分类原则或编码规则而举的<strong>疾病名称式示例</strong>，不是案例。
+    </div>
+    <p><strong>教材给出的三个“示例”（均非病例，不可当病例题素材）：</strong></p>
+    <div class="grid3">
+      <div class="mini">
+        <h4>示例 A · 幻觉症</h4>
+        <p>用来说明“同一症状可由不同病因引起”：生物性、心因性／反应性、药源性、器质性（如脑动脉硬化）、物质滥用所致。</p>
+        <p class="note">教材原文举例，不含患者信息。</p>
+      </div>
+      <div class="mini">
+        <h4>示例 B · 6B24.1</h4>
+        <p>用来讲解 ICD-11 编码结构：6＝第 6 章；B2＝强迫性或相关障碍；4.1＝囤积障碍伴较差自知力或缺乏自知力。</p>
+        <p class="note">教材唯一的完整编码示例。</p>
+      </div>
+      <div class="mini">
+        <h4>示例 C · 早发痴呆等</h4>
+        <p>克雷丕林划分的“早发痴呆（精神分裂症）、躁郁症、妄想狂”疾病单元，用来说明分类的“雏形”。</p>
+        <p class="note">历史分类示例，不是现代诊断。</p>
+      </div>
+    </div>
+    <div class="callout warn"><span class="ct">⚠️ 使用提醒</span>以上内容只能用于“原则—示例”配对记忆（症状学分类↔幻觉症；编码规则↔6B24.1；分类史↔克雷丕林）。<strong>不得据此虚构患者、补写病程或推断个体诊断。</strong></div>
+  </div>
+
+  <!-- 第五栏 -->
+  <div class="card orange" id="u1-5">
+    <h3 class="col-title"><span class="idx">第五栏</span>鉴别诊断对对碰 → 分类系统对对碰</h3>
+
+    <p><strong>表 1　ICD-11 vs DSM-5：教材列出的六组主要差异</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>维度</th><th>ICD-11</th><th>DSM-5</th><th>一句话记忆</th></tr></thead>
+        <tbody>
+          <tr><td>整体结构</td><td>“心境障碍”单独为一章；睡眠-觉醒障碍单独列为第 7 章；性功能相关障碍单独列为第 17 章；“与其他障碍或疾病相关的精神行为异常”单独列为一章</td><td>“双相及相关障碍”与“抑郁障碍”分为两章；睡眠-觉醒障碍留在精神障碍中；性功能相关障碍未单独成章；继发性精神障碍分布在各个章节</td><td>ICD 爱“单列”，DSM 爱“分章”</td></tr>
+          <tr><td>诊断标准</td><td><strong>未列出精准的诊断条目和刻板的诊断流程</strong>，通过临床描述及诊断指南，给医师更多弹性；惊恐障碍列 9 条症状，仅要求“若干下述症状”；病程写“数周”</td><td>条目精确：惊恐障碍需满足 1 个症状中的 <strong>4 个或更多</strong>；病程明确为“<strong>1 个月</strong>”</td><td>ICD 给弹性，DSM 给刻度</td></tr>
+          <tr><td>人格障碍</td><td>基本采用<strong>维度诊断法</strong>：分轻度、中度、重度三类；列 5 个人格特质维度（脱抑制、消极情绪、分离特点、强迫刻板、疏离感）；另单列“人格困难”</td><td>虽尝试维度描述，但<strong>最终未通过 APA 理事会</strong>，沿用<strong>类别诊断法</strong>（包括 10 种人格）</td><td>ICD 量“程度”，DSM 分“类型”</td></tr>
+          <tr><td>精神分裂症</td><td>所列 <strong>7 项</strong>活跃期症状中至少 <strong>2 项</strong>；取消 ICD-10 的全部亚型，改用 <strong>6 个维度</strong>；病程 <strong>1 个月</strong>即可诊断</td><td>教材只说明其采用 <strong>5 个维度</strong>；病程要求 <strong>6 个月</strong></td><td>症状 7 选 2、维度 6 对 5、病程 1 月对 6 月</td></tr>
+          <tr><td>物质相关及成瘾障碍</td><td>包括“物质有害性使用模式”，大致相当于 DSM-5 的轻度物质使用障碍和物质依赖两类；危害包括对<strong>自己和对他人</strong>（胎儿、家人、交通事故受害人）；物质所致精神障碍<strong>保留在相应物质类别</strong></td><td>物质所致精神障碍<strong>按临床表现归类到相应临床障碍</strong>（如酒精所致抑郁归入抑郁障碍）</td><td>ICD 跟着“物质”走，DSM 跟着“表现”走</td></tr>
+          <tr><td>新增诊断</td><td>未单独分类 DSM-5 新增的破坏性心境失调障碍（DMDD），而作为<strong>对立违抗性障碍（ODD）</strong>的一个亚型，标注语为“伴慢性易激惹-愤怒”</td><td><strong>新增</strong>破坏性心境失调障碍（DMDD）</td><td>DMDD：DSM 独立，ICD 降为亚型</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout key"><span class="ct">📌 一句话鉴别总结</span><strong>两套系统“基本框架高度相似、都尽量按病因学分类”，差异集中在结构单列、标准弹性、人格障碍维度／类别、精神分裂症病程与物质障碍归属。</strong></div>
+
+    <p><strong>表 2　症状学分类 vs 病因学分类：不是“好坏”，而是“能不能做到”</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>对比项</th><th>症状学分类</th><th>病因学／病理生理学分类</th></tr></thead>
+        <tbody>
+          <tr><td>适用比例</td><td>约 90%（教材：约 90% 病例病因不明）</td><td>约 10%（教材：约 10% 病因、病理改变相对明确）</td></tr>
+          <tr><td>诊断依据</td><td>共同症状或综合征</td><td>病因和／或病理生理改变</td></tr>
+          <tr><td>诊断变更</td><td>症状改变则诊断相应改变，只反映当时状态</td><td>教材未就此作进一步比较</td></tr>
+          <tr><td>治疗针对性</td><td>有利于<strong>对症治疗</strong></td><td>病因治疗更彻底，<strong>更有利于治疗</strong></td></tr>
+          <tr><td>教材评价</td><td>现行主流，但有局限，未来会被替代</td><td>最理想的医学诊断思路</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout key"><span class="ct">📌 一句话鉴别总结</span><strong>不是“症状学更先进”，而是“病因学暂时做不到”，所以只能先用症状学。</strong></div>
+
+    <p><strong>表 3　ICD、DSM、CCMD 三套系统的“身份卡”</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>系统</th><th>制定机构</th><th>版本节点（教材）</th><th>在我国的地位</th></tr></thead>
+        <tbody>
+          <tr><td><strong>ICD</strong></td><td>世界卫生组织（WHO）</td><td>1890 提出 ILCD → 1893 ICD-1 → 1948 ICD-6（第 5 章首列精神障碍）→ ICD-8 起被广泛采用 → ICD-10 应用最广 → 2007 启动、2012 框架、2014 评审、2022 生效 ICD-11</td><td>我国临床医学<strong>主要使用</strong> ICD 系统</td></tr>
+          <tr><td><strong>DSM</strong></td><td>美国精神病学协会（APA）</td><td>1952 Ⅰ → 1968 Ⅱ → 1980 Ⅲ → 1994 Ⅳ → 2013 5</td><td>主要通用于美国，但因诊断标准详细而有巨大国际影响力</td></tr>
+          <tr><td><strong>CCMD</strong></td><td>中华医学会精神医学分会</td><td>曾制定并推行；<strong>CCMD-3 后停止再版</strong></td><td>历史性本土系统；此后主要使用 ICD</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout key"><span class="ct">📌 一句话鉴别总结</span><strong>ICD 是 WHO 的全球统计与临床系统，DSM 是 APA 的详细诊断手册，CCMD 是我国曾用、现已停止再版的本土系统。</strong></div>
+  </div>
+
+  <!-- 第六栏 -->
+  <div class="card green" id="u1-6">
+    <h3 class="col-title"><span class="idx">第六栏</span>治疗方案工具箱</h3>
+    <div class="callout warn">
+      <span class="ct">📌 教材未提供相关内容</span>
+      本节讲<strong>分类</strong>，不涉及任何具体治疗。教材<strong>没有</strong>给出药物名称、剂量、疗程、心理治疗技术或物理治疗方案，因此本栏不写治疗处方，只保留教材关于“分类对治疗有什么用”的原文表述，避免把外部治疗知识混入本章。
+    </div>
+    <div class="grid2">
+      <div class="mini">
+        <h4>教材明确写出的“分类→治疗”关系</h4>
+        <ul>
+          <li>分类可“有助于进一步讨论具体疾病的<strong>预防、诊断、鉴别诊断和治疗</strong>”。</li>
+          <li>把表现与病程基本相同的病例归为同类，有利于“<strong>制定个体化的治疗方案、预测不同个体的疗效和预后、探索不同的病因</strong>”。</li>
+          <li>症状学分类“<strong>有利于对症治疗</strong>”；病因诊断比症状诊断更有利于治疗。</li>
+          <li>诊断的基本目的之一是“<strong>选择合适的治疗和预测疾病的结果</strong>”（见第二节）。</li>
+        </ul>
+      </div>
+      <div class="mini">
+        <h4>教材在本节未给出的内容</h4>
+        <ul>
+          <li>任何精神障碍的具体治疗方案——<strong>教材未提供</strong>。</li>
+          <li>任何药物名称、剂量、疗程——<strong>教材未提供</strong>（本章不涉及）。</li>
+          <li>心理治疗、物理治疗的操作细节——<strong>教材未提供</strong>。</li>
+          <li>按分类结果选择治疗的具体流程——<strong>教材未提供</strong>，只说明分类有利于治疗。</li>
+        </ul>
+      </div>
+    </div>
+    <div class="callout tip"><span class="ct">💡 分类章的“工具箱”是什么</span>不是药箱，而是<strong>坐标系</strong>：拿到一个病例，先能说出它属于哪一章、哪一类、编码大致落在哪里，再谈治疗。分类不解决“怎么治”，但决定了“和谁比、按什么标准治、疗效和预后怎么预测”。</div>
+  </div>
+
+  <!-- 第七栏 -->
+  <div class="card purple" id="u1-7">
+    <h3 class="col-title"><span class="idx">第七栏</span>记忆工具箱</h3>
+    <p><strong>🔧 方法一：时间轴串联法（故事串联法）</strong></p>
+        <p>把 ICD 与 DSM 两条线分别串成一句话：</p>
+    <ul>
+      <li><strong>ICD 线：</strong>1890 巴黎提 ILCD → 1893 ICD-1 → 1948 WHO 接手 ICD-6（第 5 章首次列精神障碍）→ ICD-8 被各国采用 → ICD-10 用得最广 → 2007 启动、2012 框架、2014 评审、2022 生效 ICD-11。</li>
+      <li><strong>DSM 线：</strong>1952 Ⅰ（在 ICD-6 基础上）→ 1968 Ⅱ（与 ICD-8 基本一致）→ 1980 Ⅲ（明确诊断标准＋多轴）→ 1994 Ⅳ（补编码与多轴）→ 2013 5（按谱系、舍多轴、停 GAF）。</li>
+    </ul>
+    <p class="note"><strong>为什么这样记：</strong>年份是本章最密集的硬数据，孤立背必混。串成一条“因果链”（因为 ICD-6 才有 DSM-Ⅰ，因为 ICD-8 才有 DSM-Ⅱ）后，忘了一个节点可从相邻节点推回。</p>
+
+    <p><strong>🔧 方法二：数字编码法（数字锚定）</strong></p>
+    <p>记一组“本章数字串”：<strong>10%／90% → 2 大系统 → 6 个描述模块 → 20 个分类单元 → 11 个分组指标 → 5 个旧轴 → 3 部分 → 6 组差异 → 7 个 RDoC 单元</strong>。</p>
+    <p class="note"><strong>为什么这样记：</strong>这些数字各自绑定一个结构，回忆时先报数字再展开内容，能迅速判断自己漏了哪一块；也便于应对“下列哪项数字正确”的选择题。</p>
+
+    <p><strong>🔧 方法三：口诀法（人名—主张配对）</strong></p>
+    <p>口诀：<strong>“克分单元，布重阴性，施重阳性”</strong>——克雷丕林划疾病单元；布鲁勒 4A 偏重阴性症状；施耐德一级症状偏重阳性症状。</p>
+    <p class="note"><strong>为什么这样记：</strong>三个人名极容易张冠李戴。用七个字把“谁—偏什么”锁死，且不改变教材对两套标准缺陷的判断（前者过重阴性、后者忽视阴性）。</p>
+
+    <p><strong>🔧 方法四：对比记忆法（六组差异成对背）</strong></p>
+    <p>把 ICD-11 与 DSM-5 的差异压成六对：<strong>结构（单列 vs 分章）—标准（弹性 vs 精确）—人格（维度 vs 类别）—精分（6 维 1 月 vs 5 维 6 月）—物质（随物质 vs 随表现）—DMDD（亚型 vs 独立）</strong>。</p>
+    <p class="note"><strong>为什么这样记：</strong>六组差异是简答题的骨架，成对出现时“哪个属于哪边”不会颠倒；尤其“1 月 vs 6 月”必须与“6 维 vs 5 维”绑在同一对里记。</p>
+
+    <p><strong>🔧 方法五：类比理解（标注：类比理解，非医学事实）</strong></p>
+    <p>把三套系统想成三份地图：<strong>ICD</strong> 是 WHO 出版的“全球通用地图”，重点在各国能共用、能统计；<strong>DSM</strong> 是 APA 出版的“详细路书”，每条路都标了精确刻度，所以别国也爱用；<strong>CCMD</strong> 是曾经的本土地图，因为要与国际接轨，出到第 3 版就停止再版；<strong>RDoC</strong> 则不是地图，而是“测绘新方法的实验方案”。</p>
+    <p class="note"><strong>为什么这样记：</strong>“地图／路书／实验方案”三个画面能同时锁住“用途、精确度、是否用于临床诊断”三个维度，避免把 RDoC 误当成第三套诊断标准。<strong>（仅用于记忆，不是教材原文。）</strong></p>
+    <div class="callout tip"><span class="ct">💡 五种方法怎么配合</span>时间轴管年份，数字管结构，口诀管人物，对比管差异，类比管“系统定位”。前四种应付客观题，第五种应付“谈谈你的理解”式简答。</div>
+  </div>
+
+  <!-- 第八栏 -->
+  <div class="card cyan" id="u1-8">
+    <h3 class="col-title"><span class="idx">第八栏</span>知识联动</h3>
+    <div class="grid2">
+      <div class="mini">
+        <h4>与后续疾病章</h4>
+        <ul>
+          <li><strong>精神分裂症：</strong>本章第二节以 ICD-11 6A20 为诊断标准范例；本节又提及其在 ICD-11 中取消 ICD-10 亚型、改用 6 个维度。</li>
+          <li><strong>心境障碍：</strong>ICD-11 单独为一章；DSM-5 分为“双相及相关障碍”与“抑郁障碍”两章——后续双相障碍章、抑郁障碍章即按此归属。</li>
+          <li><strong>人格障碍：</strong>ICD-11 维度诊断（轻／中／重＋5 特质）与 DSM-5 类别诊断（10 种）的差异，直接影响后续人格障碍章的诊断写法。</li>
+          <li><strong>物质相关及成瘾障碍：</strong>“有害性使用模式”与“物质所致精神障碍”的归属差异，是后续成瘾章与抑郁章交叉处的考点。</li>
+          <li><strong>神经发育障碍、神经认知障碍等：</strong>均在 ICD-11 20 个分类单元与 DSM-5 分类列表中各有一席，后续章节的病名可回到本表定位。</li>
+        </ul>
+      </div>
+      <div class="mini">
+        <h4>跨学科与跨章方法</h4>
+        <ul>
+          <li><strong>流行病学与卫生统计：</strong>ICD 的首要功能是疾病和死因统计；ICD-11 保留了“适合患病率和病死率统计结果的国际交流”这一特点。</li>
+          <li><strong>医疗管理与付费：</strong>教材提到精细化管理与医疗付费对 ICD-10 的要求越来越高，这正是 ICD-11 修订的现实动力之一。</li>
+          <li><strong>司法鉴定：</strong>DSM-5 第一部分专设“应用于司法鉴定的注意事项”。</li>
+          <li><strong>神经科学与心理学：</strong>RDoC 整合遗传学、神经科学和行为科学，用 7 个分析单元从基因到自我评估。</li>
+          <li><strong>本章第二节：</strong>分类是诊断的前提——“不同的分类体系有不同的诊断名称，因而在诊断前首先应该掌握疾病的分类”。</li>
+        </ul>
+      </div>
+    </div>
+    <div class="callout key"><span class="ct">📌 联动要点</span>本单元提供的是<strong>“命名坐标”</strong>：后续任何一个疾病章，都可以先问三句——它在 ICD-11 第 6 章的哪个编码下？在 DSM-5 的哪一章？两套系统在这一处的差异是什么？问完这三句，诊断名称与病程阈值就不会混。</div>
+  </div>
+</section>
+
+<!-- ===== 06 单元二 ===== -->
+<section id="u2">
+  <div class="sec-head"><div class="badge">06</div><h2>精神障碍诊断标准<span class="en">第二节 · 概念、层次与使用（p.43–46）</span></h2></div>
+  <p class="sec-lead">本节把“分类”落到“这一个患者”身上：诊断是什么、为什么会错、标准由哪些层次组成、怎样用 SSD 一步步走到诊断。</p>
+
+  <!-- 第一栏 -->
+  <div class="card red" id="u2-1">
+    <h3 class="col-title"><span class="idx">第一栏</span>疾病画像 → 诊断标准画像</h3>
+    <div class="quote"><span class="lab">教材原文</span>诊断是指把一个具体患者的病情纳入疾病分类的某一项目中，其具体过程为医师凭借专业知识和技能，通过与患者进行面谈、观察和检查（包括实验室检查），对其个人、家庭、社会的状况或潜在健康问题和生命过程的重大事件所做的临床判断。</div>
+    <div class="quote"><span class="lab">教材原文</span>诊断标准是将疾病的症状按照不同的组合，以条理化形式列出的一种标准化条目。诊断标准包括内涵标准和排除标准两个主要部分。内涵标准又包括症状学、病程标准、病情严重程度、社会功能损害等指标，其中症状学指标是最基本的，又分必备症状和伴随症状。</div>
+    <p><strong>一句话画像：</strong>分类系统是书架，诊断是把这本书放进某个格子；诊断标准则是<strong>入库规则</strong>——先看“必须有哪些内容”（内涵标准），再看“哪些情况必须排除”（排除标准）。<span class="note">（此句为类比理解，非教材原文）</span></p>
+    <div class="grid2">
+      <div class="mini">
+        <h4>诊断的三个动作（教材原文拆解）</h4>
+        <ul>
+          <li><strong>面谈：</strong>获取病史与主观体验。</li>
+          <li><strong>观察：</strong>获取精神状态与行为表现。</li>
+          <li><strong>检查：</strong>包括实验室检查，用于排除与佐证。</li>
+          <li>最终形成对个人、家庭、社会状况或潜在健康问题、生命过程重大事件的<strong>临床判断</strong>。</li>
+        </ul>
+      </div>
+      <div class="mini">
+        <h4>教材强调的两个前提</h4>
+        <ul>
+          <li><strong>先掌握分类：</strong>“不同的分类体系有不同的诊断名称，因而在诊断前首先应该掌握疾病的分类”。</li>
+          <li><strong>标准只是工具：</strong>可靠病史、仔细体格查体及神经系统检查（尤其精神状态检查）、必要实验室检查，才是正确诊断的<strong>必要条件</strong>。</li>
+        </ul>
+      </div>
+    </div>
+    <div class="stat"><span>内涵标准 4 项指标</span><span>排除标准 1 类</span><span>误诊原因 6 条</span><span>SSD 3 步</span><span>诊断环节 4 个</span><span>起病分档 4 级</span></div>
+    <p class="note">流行病学与诊断数据：教材本节<strong>未提供</strong>任何诊断符合率、误诊率或信度／效度数值，故不列具体数字。</p>
+  </div>
+
+  <!-- 第二栏 -->
+  <div class="card blue" id="u2-2">
+    <h3 class="col-title"><span class="idx">第二栏</span>病因探秘 → 诊断困境探秘</h3>
+    <p><strong>为什么精神科的诊断比内外科更难？</strong>教材从“工具缺口”讲起：</p>
+    <div class="grid4">
+      <div class="mini"><h4>① 病因未明</h4><p>精神障碍多数确切病因不明。</p></div>
+      <div class="mini"><h4>② 无客观指标</h4><p>至今尚未发现可确切帮助明确诊断并且客观的生物学指标。</p></div>
+      <div class="mini"><h4>③ 缺辅助诊断</h4><p>缺少像内外科那样的物理诊断、化学诊断和影像诊断工具。</p></div>
+      <div class="mini"><h4>④ 只能靠观察</h4><p>长期以来只能依靠最基本的临床医学科学观察方法。</p></div>
+    </div>
+    <p>由此产生一个后果：<strong>轻度的精神症状与正常的精神活动之间常有交叉重叠</strong>，因此对某些疾病的诊断就存在“松紧不一、尺度各异”的现象。教材举出历史上的两种应对：</p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>标准</th><th>提出者</th><th>核心内容</th><th>偏向</th><th>共同缺陷</th></tr></thead>
+        <tbody>
+          <tr><td>“4A”症状（基本症状）</td><td>E. 布鲁勒（Eugen Bleuler）</td><td>联想障碍、情感淡漠、矛盾意向、内向性</td><td>以<strong>阴性症状</strong>为主，过于重视阴性症状</td><td rowspan="2">无法肯定究竟要出现几个症状才能确诊，未能获得广泛认同；不同医师对同一疾病理解不同，造成诊断差异</td></tr>
+          <tr><td>“一级症状”</td><td>库尔特·施耐德（Kurt Schneider）</td><td>以阳性症状为主（教材未逐条展开）</td><td>以<strong>阳性症状</strong>为主，有忽视阴性症状的倾向</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p><strong>教材列出的六条误诊原因（可视为“诊断困境”的清单）：</strong></p>
+    <div class="grid3">
+      <div class="mini"><h4>① 病史</h4><p>病史收集欠详细可靠。</p></div>
+      <div class="mini"><h4>② 表现</h4><p>病情表现不够充分。</p></div>
+      <div class="mini"><h4>③ 观察</h4><p>病情观察不够客观，症状识别不正确。</p></div>
+      <div class="mini"><h4>④ 标准</h4><p>采用的诊断标准不够完善或不能正确使用诊断标准。</p></div>
+      <div class="mini"><h4>⑤ 思维</h4><p>诊断思维过程不科学，例如对初始诊断假设采取固定和排他性思维方式，陷于“先入为主”的主观偏见。</p></div>
+      <div class="mini"><h4>⑥ 科学水平</h4><p>科学发展水平所限，对某些疾病尚不能很好识别。</p></div>
+    </div>
+    <div class="callout key"><span class="ct">📌 为什么会有 ICD／DSM</span>正因为上述困境，WHO 及美国 APA 都先后“依照疾病定义的方式”制定了针对各精神障碍的统一诊断标准，并根据学科发展不断补充修订，成为国际上广为接受的 ICD 和 DSM 诊断系统；这些系统目前已成为<strong>指导我国精神病学临床工作的主要工具</strong>。</div>
+    <div class="quote"><span class="lab">教材原文</span>临床思维方法是指临床医师根据收集的感性资料，运用专业知识和经验，按客观规律进行分析综合，判断推理找出疾病本质特点，确定诊断和处置原则的过程。</div>
+  </div>
+
+  <!-- 第三栏 -->
+  <div class="card red" id="u2-3">
+    <h3 class="col-title"><span class="idx">第三栏</span>临床表现拼图 → 诊断标准的层次图景</h3>
+    <div class="tabs" data-tabs>
+      <div class="tabbar">
+        <button class="on" data-tab="d1">标准的两大部分</button>
+        <button data-tab="d2">6A20 范例</button>
+        <button data-tab="d3">SSD 三步</button>
+        <button data-tab="d4">四个诊断环节</button>
+      </div>
+      <div class="panel on" data-panel="d1">
+        <p><strong>诊断标准的层级结构（教材原文的“骨架”）：</strong></p>
+        <div class="grid2">
+          <div class="mini">
+            <h4>内涵标准（回答“必须有什么”）</h4>
+            <ul>
+              <li><strong>症状学指标：</strong>最基本；又分<strong>必备症状</strong>与<strong>伴随症状</strong>。</li>
+              <li><strong>病程标准：</strong>症状需持续多久。</li>
+              <li><strong>病情严重程度：</strong>达到何种程度。</li>
+              <li><strong>社会功能损害：</strong>功能受影响的程度。</li>
+            </ul>
+          </div>
+          <div class="mini">
+            <h4>排除标准（回答“必须不是谁”）</h4>
+            <ul>
+              <li>用于排除临床表现相似、但归属不同的其他障碍。</li>
+              <li>教材以 6A20 为例，要求排除<strong>分裂型障碍（6A22）</strong>与<strong>急性短暂性精神障碍（6A23）</strong>。</li>
+              <li>排除不是“否定症状”，而是“否定这个诊断名称”。</li>
+            </ul>
+          </div>
+        </div>
+        <div class="callout key"><span class="ct">📌 一句话理解</span><strong>内涵标准决定“够不够格”，排除标准决定“是不是别人”。</strong>两者都过，才落到这个诊断名称上。</div>
+      </div>
+
+      <div class="panel" data-panel="d2">
+        <p><strong>教材以 ICD-11 精神分裂症（6A20）为例，说明各类标准的意义。</strong></p>
+        <div class="quote"><span class="lab">教材原文 · 症状学及病程标准</span>在持续至少一个月的精神病性发作期的大多数时间内（或大多数日子里的某些时间），存在下述第（1）项中的综合征、症状和病症至少一条，和/或下述第（2）项中的症状和病症至少两条。</div>
+        <p><strong>第（1）项：至少存在下述中的一条</strong></p>
+        <ol>
+          <li>思维鸣响、思维被插入或被夺及、思维被广播。</li>
+          <li>被控制、被影响或被动妄想，明显地与躯体或肢体运动、特殊思维、行为或感觉有关；妄想性知觉。</li>
+          <li>言语幻觉，对患者的行为持续不断的评论或声音，对患者进行相互讨论或来自躯体某些部分的言语性幻觉。</li>
+          <li>其他持久的与文化不相应和完全不可能的妄想，如具有某种宗教或政治身份，具有超人的力量和能力的（如具有控制气候的能力，或能与来自另一个星球的人交流信息）。</li>
+        </ol>
+        <p><strong>第（2）项：至少存在下述中的两条</strong></p>
+        <ol>
+          <li>任何形式的持久的幻觉，每天发生，至少一个月；并伴有短暂的或未充分形成的无明显情感内容的妄想；或伴有持久的超价观念。</li>
+          <li>思维过程中断或插入无关语，导致言语不连贯或不切题，或语词新作。</li>
+          <li>紧张症行为，如兴奋、特殊姿势或蜡样屈曲、违拗、缄默和木僵。</li>
+          <li>“阴性”症状，如显著的情感淡漠、言语贫乏及情绪反应迟钝或不适切（必须明确这些情况不是由于抑郁发作或抗精神病药物引起）。</li>
+        </ol>
+        <p><strong>排除标准：须除外以下疾病。</strong></p>
+        <div class="grid2">
+          <div class="mini">
+            <h4>分裂型障碍（6A22）</h4>
+            <p>特征是在行为、外表和言语中具有持久的模式，伴随认知和感知扭曲、不寻常的信仰以及人际关系能力下降。症状可包括收缩或不恰当的影响和快感缺失（阴性分裂型）；可能出现偏执的想法、参照的想法或其他精神病症状，包括任何形式的幻觉（阳性分裂型），但强度或持续时间<strong>未满足</strong>精神分裂症、分裂情感性精神障碍或妄想症的诊断要求。</p>
+          </div>
+          <div class="mini">
+            <h4>急性短暂性精神障碍（6A23）</h4>
+            <p>在没有其他精神障碍病史的个体中、没有前驱症状的情况下出现精神病症状的急性发作，并在<strong>两周内</strong>达到其最大严重性；发病通常与社会和职业功能迅速恶化有关。症状可包括妄想、幻觉、思维过程紊乱、混乱或迷惑，情感和情绪失调；可能存在紧张性精神运动障碍；症状通常每天在性质和强度方面迅速变化。<strong>这段时间不超过 3 个月</strong>，最常见的是从几天到 1 个月。</p>
+          </div>
+        </div>
+        <div class="callout warn"><span class="ct">⚠️ 读标准的顺序</span>先数“1 条／2 条”是否够，再看“持续至少 1 个月”是否够，最后逐条过排除。三步顺序颠倒，最容易把“症状够”误当成“诊断成立”。</div>
+      </div>
+
+      <div class="panel" data-panel="d3">
+        <div class="quote"><span class="lab">教材原文</span>精神障碍的诊断主要遵循“症状-综合征-诊断”（SSD）的过程式思维方法。具体的过程为：首先确定精神症状（symptom，S），再根据症状组合确定综合征（syndrome，S），然后结合发病过程、病程、病前性格、社会功能等相关资料对精神症状或综合征的动态发展趋势进行综合分析，提出各种可能的诊断假设，并根据可能性从小到大的次序逐一予以排除，最后做出结论性诊断（diagnosis，D），即做出症状性诊断或结合病因做出病因性诊断。</div>
+        <div class="timeline">
+          <div class="tl-item"><h4>第 1 步 · S：确定症状</h4><p>先把一个个精神症状辨清、命名，不让“印象”代替“症状”。</p></div>
+          <div class="tl-item"><h4>第 2 步 · S：组合成综合征</h4><p>根据症状组合确定综合征，并与类似现象比较，弄清性质特点及与心理背景、环境的关系。</p></div>
+          <div class="tl-item"><h4>第 3 步 · D：提出假设并逐一排除</h4><p>结合发病过程、病程、病前性格、社会功能等动态趋势，提出各种可能诊断假设，按可能性<strong>从小到大</strong>依次排除，最后作出症状性诊断或病因性诊断。</p></div>
+        </div>
+        <p><strong>教材强调的循环：</strong>诊断必须遵循<strong>实践、认识、再实践、再认识</strong>的原则；临床诊断确定以后，应继续观察和随访，通过实践检验诊断的正确性。</p>
+        <div class="callout tip"><span class="ct">💡 最容易漏掉的一句</span>“按可能性<strong>从小到大</strong>的次序逐一予以排除”——不是先排除最像的，而是先排除最不可能的，逐步收窄。这一点常被答反。</div>
+      </div>
+
+      <div class="panel" data-panel="d4">
+        <p><strong>教材给出的 SSD 四个环节：发病基础、起病及病程、临床表现、病因与诱因。</strong></p>
+        <div class="grid2">
+          <div class="mini">
+            <h4>① 发病基础</h4>
+            <ul>
+              <li>一般资料、家族遗传史、病前性格、既往疾病史。</li>
+              <li><strong>职业：</strong>有无接触有害物质；农民农药接触史、工人化学物质接触史。</li>
+              <li><strong>既往疾病史：</strong>急慢性躯体疾病及发展过程、与精神障碍的关系和病程特点、治疗情况及目前疗效。有时精神障碍发生前的躯体症状（发热、口角疱疹、上呼吸道感染）可能是<strong>散发性脑炎的前驱症状</strong>。</li>
+              <li><strong>病前性格：</strong>家庭与学校教育对个性形成和发展的影响；个性健全与否或某些偏向常与罹患某种疾病有一定联系。</li>
+              <li><strong>家族史：</strong>精神疾病、癫痫、精神发育迟滞及性格异常等病史。</li>
+            </ul>
+          </div>
+          <div class="mini">
+            <h4>② 起病及病程</h4>
+            <p>教材明确：时间界定<strong>尚无统一规定</strong>；按 RDoC 所描述的情形分为四档：</p>
+            <ul>
+              <li><strong>急性：</strong>2 周以内。</li>
+              <li><strong>亚急性：</strong>2 周以上到 3 个月。</li>
+              <li><strong>亚慢性：</strong>3 个月以上至 2 年。</li>
+              <li><strong>慢性：</strong>2 年以上。</li>
+            </ul>
+            <p>急性发病多见于<strong>器质性精神障碍</strong>（感染、中毒所致）或<strong>急性心因性精神障碍</strong>，应特别注意寻找病因；阵发性或反复发作的病程常见于<strong>心境障碍、癫痫及转换性障碍</strong>。</p>
+          </div>
+          <div class="mini">
+            <h4>③ 临床表现</h4>
+            <ul>
+              <li>先确定精神症状，再据症状组合确定综合征。</li>
+              <li>把每一症状或综合征与类似现象比较，弄清性质特点及与心理背景、环境的关系。</li>
+              <li>意识障碍或痴呆（包括相应综合征）常提示<strong>脑器质性精神障碍或躯体疾病所致精神障碍</strong>。</li>
+              <li>一种症状或综合征可见于多种障碍：如<strong>脑衰弱综合征</strong>既可能是精神分裂症的早期症状，也可能为脑动脉硬化的前期表现，或者仅仅是神经症。</li>
+              <li>要透过表象了解其真正内涵与实质，需从临床实践反复分析主次关系，并根据不同疾病的其他特征性表现进行鉴别。</li>
+            </ul>
+          </div>
+          <div class="mini">
+            <h4>④ 病因与诱因</h4>
+            <ul>
+              <li>理想状态下应尽量做出<strong>病因性诊断</strong>。</li>
+              <li>致病因素大致分<strong>生物因素</strong>与<strong>心理社会因素</strong>。</li>
+              <li>生物因素所致者一般伴相关阳性症状与体征，通过体格检查或实验室检查可获异常发现。</li>
+              <li>心理社会因素所致者，起病前必然有明显精神创伤或应激性事件。</li>
+              <li>部分障碍（如精神分裂症或心境障碍）病因未明，可能为个体素质因素和环境影响共同作用；此时通常将病前心理社会因素归为<strong>诱因或偶然巧合</strong>，须仔细分辨发病与精神刺激的<strong>时间关系</strong>，并注意应激事件前是否已存在或偶尔出现不适当言行。</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 第四栏 -->
+  <div class="card orange" id="u2-4">
+    <h3 class="col-title"><span class="idx">第四栏</span>教材典型案例</h3>
+    <div class="callout book">
+      <span class="ct">📖 教材未提供具体临床案例</span>
+      本节为诊断标准的概念与使用说明，教材<strong>没有给出任何患者案例、病史、精神检查记录或实验室数据</strong>。教材中的 ICD-11 精神分裂症（6A20）标准是<strong>诊断标准范例</strong>，用于说明“内涵标准＋排除标准”如何书写，<strong>不是病例</strong>；不得据此虚构患者或补写症状。
+    </div>
+    <div class="grid2">
+      <div class="mini">
+        <h4>教材给出的“标准示例”是什么</h4>
+        <ul>
+          <li>对象：ICD-11 精神分裂症（6A20）。</li>
+          <li>用途：说明症状学及病程标准、排除标准各是什么样子。</li>
+          <li>结构：（1）项至少 1 条和／或（2）项至少 2 条＋持续至少 1 个月＋排除 6A22／6A23。</li>
+          <li>性质：<strong>标准文本</strong>，不含任何个体信息。</li>
+        </ul>
+      </div>
+      <div class="mini">
+        <h4>按教材结构整理的“读标准三步”（学习步骤，非教材原文）</h4>
+        <ol>
+          <li><strong>数条目：</strong>（1）项够不够 1 条？（2）项够不够 2 条？是“和／或”关系。</li>
+          <li><strong>看时间：</strong>是否持续至少 1 个月？</li>
+          <li><strong>过排除：</strong>是否更符合 6A22 或 6A23？</li>
+        </ol>
+        <p class="note">这三步只是把教材标准条文拆成可操作的阅读顺序，未增加任何教材外诊断条目。</p>
+      </div>
+    </div>
+    <div class="callout warn"><span class="ct">⚠️ 使用提醒</span>不要把“符合 6A20 的条目”直接写成“某患者诊断为精神分裂症”。教材明确：诊断标准<strong>仅仅是工具</strong>，还必须有可靠病史、体格与神经系统检查（尤其精神状态检查）、必要实验室检查。</div>
+  </div>
+
+  <!-- 第五栏 -->
+  <div class="card orange" id="u2-5">
+    <h3 class="col-title"><span class="idx">第五栏</span>鉴别诊断对对碰 → 诊断标准辨析</h3>
+
+    <p><strong>表 1　内涵标准 vs 排除标准</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>维度</th><th>内涵标准</th><th>排除标准</th></tr></thead>
+        <tbody>
+          <tr><td>回答的问题</td><td>“必须有哪些症状、持续多久、多重、功能损到何种程度”</td><td>“必须不是哪些更相似或更优先的障碍”</td></tr>
+          <tr><td>包含内容</td><td>症状学（必备症状＋伴随症状）、病程、病情严重程度、社会功能损害</td><td>需除外的其他障碍（6A20 中为 6A22、6A23）</td></tr>
+          <tr><td>作用</td><td>决定“够不够这个诊断的门槛”</td><td>决定“会不会被另一个诊断顶替”</td></tr>
+          <tr><td>常见错误</td><td>只数症状、不看病程与功能损害</td><td>把“症状相似”直接当成“不能诊断”，而不逐条比对排除条件</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout key"><span class="ct">📌 一句话鉴别总结</span><strong>内涵标准管“够格”，排除标准管“别错人”，两者缺一不可。</strong></div>
+
+    <p><strong>表 2　症状诊断 vs 病因诊断：教材的明确排序</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>对比项</th><th>症状诊断（症状性诊断）</th><th>病因诊断（病因性诊断）</th></tr></thead>
+        <tbody>
+          <tr><td>依据</td><td>主要症状或症状群</td><td>病因和／或病理生理改变</td></tr>
+          <tr><td>治疗对应</td><td>对应<strong>对症治疗</strong></td><td>对应<strong>病因治疗</strong></td></tr>
+          <tr><td>彻底性</td><td>较低，只反映当时状态</td><td>更高，“病因治疗比对症治疗更彻底”</td></tr>
+          <tr><td>教材评价</td><td>现实中最常用</td><td>“最理想的医学诊断思路”</td></tr>
+          <tr><td>现实限制</td><td>症状改变可致诊断变更</td><td>许多精神疾病病因尚未明确阐明</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout key"><span class="ct">📌 一句话鉴别总结</span><strong>能病因就病因，不能病因才症状；但“理想”不等于“现在做得到”。</strong></div>
+
+    <p><strong>表 3　四种起病速度：教材按 RDoC 描述的时间界值</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>分档</th><th>时间界值</th><th>教材提示的常见情形</th></tr></thead>
+        <tbody>
+          <tr><td>急性起病</td><td>2 周以内</td><td>器质性精神障碍（感染、中毒所致）、急性心因性精神障碍——应特别注意寻找病因</td></tr>
+          <tr><td>亚急性起病</td><td>2 周以上到 3 个月</td><td>教材未单列对应疾病</td></tr>
+          <tr><td>亚慢性发病</td><td>3 个月以上至 2 年</td><td>教材未单列对应疾病</td></tr>
+          <tr><td>慢性起病</td><td>2 年以上</td><td>教材未单列对应疾病</td></tr>
+          <tr><td>阵发性／反复发作</td><td>—（按病程形态，不按起病速度）</td><td>心境障碍、癫痫及转换性障碍等</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout key"><span class="ct">📌 一句话鉴别总结</span><strong>2 周、3 个月、2 年是三道分界线；教材明说“尚无统一规定”，别把它当成绝对定律。</strong></div>
+
+    <p><strong>表 4　症状 vs 综合征：脑衰弱综合征为什么不能直接定病</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>层次</th><th>教材定义／举例</th><th>诊断价值</th></tr></thead>
+        <tbody>
+          <tr><td>症状（S）</td><td>单个精神症状，如某一幻觉、某一思维障碍</td><td>是最小单位，必须辨清、命名</td></tr>
+          <tr><td>综合征（S）</td><td>同时存在于某些个体的一组症状或行为表现；可能反映共同病因过程，也可能预示共同转归、预后与可能有效的治疗措施</td><td>比症状更接近诊断，但<strong>仍不等于疾病</strong></td></tr>
+          <tr><td>诊断（D）</td><td>把病情纳入分类的某一项目</td><td>需结合发病基础、病程、功能、病因与诱因综合判断</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout book"><span class="ct">📖 教材举例</span>脑衰弱综合征“既可能是精神分裂症的早期症状，也可能为脑动脉硬化的前期表现，或者仅仅是神经症”。同一综合征可有完全不同的归属，必须靠“其他特征性表现”鉴别。</div>
+    <div class="callout key"><span class="ct">📌 一句话鉴别总结</span><strong>症状是零件，综合征是组件，诊断是整机——不能拿组件当整机出厂。</strong></div>
+  </div>
+
+  <!-- 第六栏 -->
+  <div class="card green" id="u2-6">
+    <h3 class="col-title"><span class="idx">第六栏</span>治疗方案工具箱</h3>
+    <div class="callout warn">
+      <span class="ct">📌 教材未提供相关内容</span>
+      本节讲<strong>诊断标准</strong>，<strong>不涉及任何具体治疗</strong>。教材没有给出药物名称、剂量、疗程、心理治疗或物理治疗技术，因此本栏不写治疗方案；只保留教材关于“诊断目的指向治疗”的原文表述。
+    </div>
+    <div class="grid2">
+      <div class="mini">
+        <h4>教材明确写出的“诊断→治疗”关系</h4>
+        <ul>
+          <li>诊断的基本目的是“<strong>选择合适的治疗和预测疾病的结果</strong>”，当然也有利于统计分析和交流。</li>
+          <li>疾病的治疗可分为两大类：<strong>病因治疗和对症治疗</strong>；前者比后者更彻底。</li>
+          <li>因此<strong>病因诊断比症状诊断更有利于治疗</strong>，根据病因的诊断分类远比症状性分类更理想。</li>
+          <li>诊断步骤主要从症状分析开始，“越早认识症状就能越早做出诊断，及时进行治疗”。</li>
+        </ul>
+      </div>
+      <div class="mini">
+        <h4>教材在本节未给出的内容</h4>
+        <ul>
+          <li>任何具体治疗方案或药物——<strong>教材未提供</strong>。</li>
+          <li>任何剂量、疗程、给药途径——<strong>教材未提供</strong>。</li>
+          <li>按诊断结果分流的治疗路径——<strong>教材未提供</strong>。</li>
+          <li>诊断标准与疗效评估的具体对应关系——<strong>教材未提供</strong>。</li>
+        </ul>
+      </div>
+    </div>
+    <div class="callout tip"><span class="ct">💡 诊断章的“工具箱”是什么</span>不是治疗箱，而是<strong>判断箱</strong>：病史采集清单、精神状态检查、体格与神经系统检查、必要的实验室检查，加上一套可复核的诊断标准。工具越完整，误诊的六条原因就越少。</div>
+  </div>
+
+  <!-- 第七栏 -->
+  <div class="card purple" id="u2-7">
+    <h3 class="col-title"><span class="idx">第七栏</span>记忆工具箱</h3>
+    <p><strong>🔧 方法一：口诀法（内涵四指标＋一排除）</strong></p>
+    <p>口诀：<strong>“症、程、重、功，再加一排除”</strong>——症状学、病程、病情严重程度、社会功能损害，构成内涵标准；再加排除标准，才是完整的诊断标准。</p>
+    <p class="note"><strong>为什么这样记：</strong>“症程重功”四字押韵、顺序与教材一致；最后补“排除”二字，防止只答内涵而漏掉另一半。口诀只压缩条目，不改变含义。</p>
+
+    <p><strong>🔧 方法二：数字编码法（诊断的“四六四三”）</strong></p>
+    <p>记四组数字：<strong>4</strong> 项内涵指标（症、程、重、功）→ <strong>6</strong> 条误诊原因 → <strong>4</strong> 个诊断环节（发病基础、起病及病程、临床表现、病因与诱因）→ <strong>3</strong> 步 SSD（症状、综合征、诊断）。另记起病 <strong>4</strong> 档：2 周、3 个月、2 年。</p>
+    <p class="note"><strong>为什么这样记：</strong>本节内容全是“清单”，用数字把清单长度固定住，答题时按数量清点，少一条立刻能发现。</p>
+
+    <p><strong>🔧 方法三：对比记忆法（三对概念）</strong></p>
+    <p>三对必须成对记：<strong>内涵标准 ↔ 排除标准</strong>；<strong>症状诊断 ↔ 病因诊断</strong>；<strong>症状 ↔ 综合征</strong>。再补一对时间概念：<strong>急性（≤2 周）↔ 慢性（＞2 年）</strong>。</p>
+    <p class="note"><strong>为什么这样记：</strong>本节所有选择题的干扰项，几乎都来自“把一对概念拆开单记”。成对记忆时，错误选项会自然“别扭”。</p>
+
+    <p><strong>🔧 方法四：图解记忆法（SSD 链条）</strong></p>
+    <p>画一条三步链：<strong>S（症状）→ S（综合征）→ D（诊断）</strong>；在 D 下面再挂四个环节：<strong>发病基础、起病及病程、临床表现、病因与诱因</strong>；在链条末端写一句“实践—认识—再实践—再认识”。</p>
+    <p class="note"><strong>为什么这样记：</strong>教材把诊断写成“过程”，过程最适合用链条图记；一旦图像成型，案例题可按链条逐段作答，不会跳步。</p>
+
+    <p><strong>🔧 方法五：类比理解（教材自带“侦探”比喻）</strong></p>
+    <p>教材原文说：“有经验的医师就像老练的侦探一样，能够从错综复杂的蛛丝马迹或不典型的症状表现中找出诊断的依据。”把 SSD 想成办案：先收集痕迹（症状）→ 拼成案情模式（综合征）→ 提出并排除嫌疑人（鉴别）→ 定案（诊断）→ 结案后复查（随访）。</p>
+    <p class="note"><strong>为什么这样记：</strong>“侦探”比喻来自教材本身，不是外加装饰；它同时解释了为什么“本领无法从书本直接获得，而需要靠不断总结实践经验习得”。<strong>（比喻用于理解，不替代医学定义。）</strong></p>
+    <div class="callout tip"><span class="ct">💡 五种方法怎么配合</span>口诀管“标准不漏项”，数字管“清单长度”，对比管“易错边界”，图解管“过程顺序”，侦探比喻管“为什么经验重要”。</div>
+  </div>
+
+  <!-- 第八栏 -->
+  <div class="card cyan" id="u2-8">
+    <h3 class="col-title"><span class="idx">第八栏</span>知识联动</h3>
+    <div class="grid2">
+      <div class="mini">
+        <h4>与本章第一节</h4>
+        <ul>
+          <li><strong>先分类后诊断：</strong>“不同的分类体系有不同的诊断名称，因而在诊断前首先应该掌握疾病的分类”。</li>
+          <li><strong>标准来自系统：</strong>6A20 的条目与编码均属 ICD-11；同一患者在 DSM-5 下可能对应另一套名称与病程阈值。</li>
+          <li><strong>症状学分类的烙印：</strong>正因为按症状群分类，诊断标准才以“症状条目＋病程”为核心，而非病因。</li>
+        </ul>
+      </div>
+      <div class="mini">
+        <h4>与后续章节及跨学科</h4>
+        <ul>
+          <li><strong>精神分裂症章：</strong>可直接对照 6A20 的（1）（2）项症状、1 个月病程与 6A22／6A23 排除。</li>
+          <li><strong>心境障碍、人格障碍、物质相关障碍章：</strong>其诊断名称与亚型／维度写法，受 ICD-11 与 DSM-5 差异影响。</li>
+          <li><strong>精神检查与病史采集：</strong>对应“发病基础”与“临床表现”两个环节。</li>
+          <li><strong>实验室与影像：</strong>对应排除器质性障碍、寻找生物因素所致证据。</li>
+          <li><strong>司法鉴定：</strong>DSM-5 第一部分专设司法鉴定注意事项；诊断名称与标准是鉴定的基础语言。</li>
+          <li><strong>科研与 RDoC：</strong>现行标准以症状群为入口，RDoC 则尝试以维度与神经生物学指标重做分类。</li>
+        </ul>
+      </div>
+    </div>
+    <div class="callout key"><span class="ct">📌 联动要点</span>把本章当成一条“从系统到个体”的传送带：<strong>分类系统给出名称与编码 → 诊断标准给出条目与阈值 → SSD 与四环节把条目落到这一个患者 → 随访检验诊断</strong>。任何一环缺失，都会落进教材列出的六条误诊原因。</div>
+  </div>
+</section>
+
+<!-- ===== 07 要点 ===== -->
+<section id="summary">
+  <div class="sec-head"><div class="badge">07</div><h2>全章核心要点速览<span class="en">18 key points</span></h2></div>
+  <p class="sec-lead">考前最后一遍只看这里。每条都能独立成题，建议逐条自问“为什么”。</p>
+  <div class="card blue">
+    <div class="grid2">
+      <ol>
+        <li>疾病诊断是把某一患者的病情纳入疾病分类系统某一类别中的医学过程。</li>
+        <li>精神障碍诊断几乎完全依靠医师对精神症状、临床特征、病程演变的认识与辨析；不同群体、文化、地域对“得体／失常”的评判不同，且许多病因不清。</li>
+        <li>ICD-10 与 DSM 的精神障碍定义均强调：有临床意义的症状或行为，伴痛苦或功能损害；单纯社会偏离或冲突不算；共同点是<strong>基于可识别的症状群或行为</strong>。</li>
+        <li>精神障碍与精神疾病常作同义词；因缺乏明确的疾病类别，更多使用“障碍（disorder）”。</li>
+        <li>疾病分类学是把不同疾病按特点与从属关系划分为类、种、型等层次并归成系统；分类目的包括认识疾病关系、讨论预防／诊断／鉴别／治疗、为研究提供统一参照。</li>
+        <li>克雷丕林按症状、病程与转归划分出早发痴呆（精神分裂症）、躁郁症、妄想狂等疾病单元，是现代分类的“雏形”。</li>
+        <li>布鲁勒“4A 症状”（联想障碍、情感淡漠、矛盾意向、内向性）偏重阴性症状；施耐德“一级症状”偏重阳性症状；两者都无法肯定需几个症状才能确诊。</li>
+        <li>只有约 <strong>10%</strong> 精神障碍患者病因、病理改变相对明确，约 <strong>90%</strong> 病因不明，因此现行系统无法贯彻病因学分类。</li>
+        <li>ICD-11 与 DSM-5 主要按<strong>症状学分类原则</strong>，兼顾可能的病因学、病理生理学特征；症状学分类有利于对症治疗，但诊断随症状改变、同一症状可对应不同病因、可给多个诊断，且不能把每个诊断类别当成真正独立的疾病。</li>
+      </ol>
+      <ol start="10">
+        <li>ICD 历史：1890 巴黎提 ILCD（第一版 ICD）→ 1893 ICD-1 → 1948 WHO 接手 ICD-6，首次在第 5 章介绍精神障碍 → ICD-8 起被各国采用 → ICD-10 应用最广。</li>
+        <li>ICD-11：2007 启动、2012 年 5 月完成框架、2014 年评审、<strong>2022 年正式生效</strong>；精神障碍由第 5 章变为<strong>第 6 章</strong>；6 个描述模块；<strong>20 个分类单元</strong>；编码 <strong>6D1E.EE（E）</strong>；基础组件＋线性组合（含 ICD-11-PCL、ICD-11-PCM）。</li>
+        <li>DSM：1952 Ⅰ（在 ICD-6 基础上）→ 1968 Ⅱ（与 ICD-8 基本一致）→ 1980 Ⅲ（明确诊断标准＋多轴诊断）→ 1994 Ⅳ → <strong>2013 年 DSM-5</strong>；DSM-5 按谱系分组，基于 11 个指标，成为“活文件”。</li>
+        <li>DSM-5 舍弃 DSM-Ⅳ 的五轴系统，改为非轴性诊断记录；建议<strong>停止使用 GAF</strong>，第三部分纳入 WHO 残疾评估量表（WHODAS）。</li>
+        <li>CCMD 由中华医学会精神医学分会制定推行；因国际接轨需要，我国临床主要使用 ICD，<strong>CCMD-3 之后停止再版</strong>。</li>
+        <li>ICD-11 与 DSM-5 六组主要差异：整体结构、诊断标准、人格障碍、精神分裂症、物质相关及成瘾障碍、新增诊断（DMDD）。</li>
+        <li>关键差异：ICD-11 精神分裂症 <strong>1 个月</strong>即可诊断、取消 ICD-10 亚型改用 <strong>6 个维度</strong>、活跃期 7 项中至少 2 项；DSM-5 要求 <strong>6 个月</strong>、教材称其用 5 个维度。</li>
+        <li>RDoC 由 NIMH 于 2008 年提出、2009 年启动；含 5 个方面（负价、正价、认知、社会、觉醒／调节）与 7 个分类单元（基因、分子、细胞、神经回路、生理学、行为、自我评估）；是<strong>维度系统</strong>，不是临床诊断标准。</li>
+        <li>诊断标准＝<strong>内涵标准＋排除标准</strong>；内涵含症状学（必备＋伴随）、病程、病情严重程度、社会功能损害；SSD＝症状→综合征→诊断，四个环节为发病基础、起病及病程、临床表现、病因与诱因。</li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 08 易混 ===== -->
+<section id="pitfalls">
+  <div class="sec-head"><div class="badge">08</div><h2>易混易错点警示<span class="en">Common traps</span></h2></div>
+  <p class="sec-lead">这些点不是“没背到”，而是“背反了”。逐条核对你的第一反应。</p>
+  <div class="card danger">
+    <details open>
+      <summary>① 两个“生效年”别记反：DSM-5 是 2013，ICD-11 是 2022</summary>
+      <div class="dbody">教材明确：DSM-5 已在 <strong>2013 年</strong>正式批准出版，而 ICD-11 在 <strong>2022 年</strong>才正式生效。两者的修订“几乎同时开始”，但出版时间相差许多；不要因为“ICD-11 更新”就把它记成 2013。</div>
+    </details>
+    <details>
+      <summary>② 精神分裂症病程：ICD-11 一个月，DSM-5 六个月</summary>
+      <div class="dbody">教材原文：ICD-11 认为精神分裂症病程 <strong>1 个月</strong>即可诊断，而 DSM-5 则要求 <strong>6 个月</strong>。同时别把症状条目混进去：ICD-11 是“所列 7 项活跃期症状中至少 2 项”，教材<strong>没有</strong>给出 DSM-5 的条目数，不要自行补写。</div>
+    </details>
+    <details>
+      <summary>③ 人格障碍：ICD-11 是维度，DSM-5 是类别</summary>
+      <div class="dbody">ICD-11 基本采用<strong>维度诊断法</strong>：分轻度、中度、重度三类，列 5 个人格特质维度（脱抑制、消极情绪、分离特点、强迫刻板、疏离感），另单列“人格困难”。DSM-5 虽尝试维度描述，但<strong>最终未通过 APA 理事会</strong>，沿用<strong>类别诊断法</strong>（包括 10 种人格）。</div>
+    </details>
+    <details>
+      <summary>④ 多轴诊断是 DSM-Ⅳ 的，不是 DSM-5 的</summary>
+      <div class="dbody">DSM-Ⅳ 列 5 个轴：Ⅰ 临床障碍、Ⅱ 人格障碍与精神发育迟滞、Ⅲ 一般医学情况、Ⅳ 心理社会和环境问题、Ⅴ 全面功能评估（GAF，百分制）。DSM-5 <strong>舍弃多轴系统</strong>，改为非轴性诊断记录；并建议停止使用 GAF，因其概念缺乏清晰性、心理测量有问题。</div>
+    </details>
+    <details>
+      <summary>⑤ ICD-11 把睡眠、性功能、“继发性精神障碍”单列成章</summary>
+      <div class="dbody">ICD-11 将 DSM-5 的睡眠-觉醒障碍从精神障碍中分出，单独列为<strong>第 7 章</strong>；将性功能相关障碍单独列为<strong>第 17 章</strong>；将“与其他障碍或疾病相关的精神行为异常”单独列为一章。DSM-5 则把继发性精神障碍分布在各个章节。这是“整体结构”差异，不是诊断条目差异。</div>
+    </details>
+    <details>
+      <summary>⑥ 物质所致精神障碍的归属：ICD 跟物质走，DSM 跟表现走</summary>
+      <div class="dbody">ICD-11 中，物质所致的精神障碍（如抑郁或焦虑障碍）<strong>保留在相应的物质类别</strong>中，如酒精所致抑郁障碍归类在酒精相关障碍。DSM-5 则根据临床表现归类到相应临床障碍中，如将酒精所致抑郁障碍归入抑郁障碍。另有“物质有害性使用模式”，大致相当于 DSM-5 的轻度物质使用障碍和物质依赖两类，且危害包括对他人（胎儿、家人、交通事故受害人）。</div>
+    </details>
+    <details>
+      <summary>⑦ DMDD：DSM-5 新增独立诊断，ICD-11 降为 ODD 亚型</summary>
+      <div class="dbody">DSM-5 新增<strong>破坏性心境失调障碍（DMDD）</strong>；ICD-11 未单独分类，而作为<strong>对立违抗性障碍（ODD）</strong>的一个亚型，标注语为“伴慢性易激惹-愤怒”。不要把 DMDD 写成 ICD-11 的独立诊断。</div>
+    </details>
+    <details>
+      <summary>⑧ CCMD 没有“第 4 版”：CCMD-3 之后停止再版</summary>
+      <div class="dbody">教材原文：由于国际学术交流接轨的需要，其后我国临床医学中主要使用 ICD 系统，因而在 <strong>CCMD-3 发布之后停止了再版</strong>。教材全章没有出现 CCMD-4；答题时不要自造更晚版本。</div>
+    </details>
+    <details>
+      <summary>⑨ 症状学分类 ≠ 每个诊断类别都是独立疾病</summary>
+      <div class="dbody">教材明确提醒：由于症状学分类方法的局限性，使用现有分类系统时<strong>不能认为每一特定的诊断类别属于真正意义上的不同疾病</strong>；同一症状或综合征可有不同病因，病因不同但症状相似时可得出相同诊断；诊断只反映当时状态。教材还判断，症状学分类体系未来必被病因及发病机制分类替代。</div>
+    </details>
+    <details>
+      <summary>⑩ 诊断标准只是工具，不是诊断本身</summary>
+      <div class="dbody">教材强调：诊断标准“仅仅是工具”，可靠的病史、仔细的体格查体及神经系统检查（尤其是精神状态的检查），以及必要的实验室等辅助检查，才是正确使用诊断标准做出正确诊断的<strong>必要条件</strong>。只数够条目就下诊断，正是六条误诊原因中“不能正确使用诊断标准”的表现。</div>
+    </details>
+    <details>
+      <summary>⑪ 教材 ICD-11 列表有两行同印为 6B2，照录不改</summary>
+      <div class="dbody">教材“ICD-11 精神障碍主要分类”中，“强迫或相关障碍”与“应激相关障碍”两行<strong>均印作 6B2</strong>。本指南按原文照录，不擅自改动；若考试题目给出不同编码，应以题目或教材原文核对，不要用记忆去“纠正”它。</div>
+    </details>
+  </div>
+</section>
+
+<!-- ===== 09 自测 ===== -->
+<section id="quiz">
+  <div class="sec-head"><div class="badge">09</div><h2>章节自测系统<span class="en">13 questions · 6 types</span></h2></div>
+  <p class="sec-lead">覆盖单选、多选、判断、名词解释、简答、案例分析六种题型，按易→中→难排列。先作答，再展开解析。</p>
+
+  <div class="quiz-q">
+    <div class="qh"><span class="qno">第 1 题</span><span class="qtype">单选题</span><span class="diff">易</span></div>
+    <p class="brief">目前影响最大的精神疾病两大分类系统是？</p>
+    <div class="opts">
+      <div class="opt"><span class="l">A.</span>ICD-10 与 CCMD-3</div>
+      <div class="opt"><span class="l">B.</span>ICD-11 与 DSM-5</div>
+      <div class="opt"><span class="l">C.</span>DSM-Ⅳ 与 CCMD-3</div>
+      <div class="opt"><span class="l">D.</span>RDoC 与 DSM-5</div>
+    </div>
+    <details><summary>查看答案与解析</summary><div class="dbody"><strong>答案：B</strong><br>教材原文：目前影响最大的精神疾病两大分类系统——WHO 的 ICD-11 与美国的 DSM-5，主要按照症状学分类原则，兼顾可能的病因学、病理生理学特征。CCMD-3 之后已停止再版；RDoC 是研究框架，不是临床诊断系统。</div></details>
+  </div>
+
+  <div class="quiz-q">
+    <div class="qh"><span class="qno">第 2 题</span><span class="qtype">单选题</span><span class="diff">易</span></div>
+    <p class="brief">ICD-11 中，精神、行为或神经发育障碍位于第几章？</p>
+    <div class="opts">
+      <div class="opt"><span class="l">A.</span>第 5 章</div>
+      <div class="opt"><span class="l">B.</span>第 6 章</div>
+      <div class="opt"><span class="l">C.</span>第 7 章</div>
+      <div class="opt"><span class="l">D.</span>第 17 章</div>
+    </div>
+    <details><summary>查看答案与解析</summary><div class="dbody"><strong>答案：B</strong><br>教材原文：ICD-11 的精神障碍分类由 ICD-10 的第 5 章变为 ICD-11 的第 6 章。编码首位“6”也代表本章为第 6 章。第 7 章是睡眠-觉醒障碍，第 17 章是性功能相关障碍。</div></details>
+  </div>
+
+  <div class="quiz-q">
+    <div class="qh"><span class="qno">第 3 题</span><span class="qtype">单选题</span><span class="diff">中</span></div>
+    <p class="brief">按教材，ICD-11 认为精神分裂症病程多久即可诊断？</p>
+    <div class="opts">
+      <div class="opt"><span class="l">A.</span>1 个月</div>
+      <div class="opt"><span class="l">B.</span>3 个月</div>
+      <div class="opt"><span class="l">C.</span>6 个月</div>
+      <div class="opt"><span class="l">D.</span>2 年</div>
+    </div>
+    <details><summary>查看答案与解析</summary><div class="dbody"><strong>答案：A</strong><br>教材在“精神分裂症”差异中明确：ICD-11 认为精神分裂症病程 <strong>1 个月</strong>即可诊断，而 DSM-5 则要求 <strong>6 个月</strong>。3 个月是 6A23 急性短暂性精神障碍“这段时间不超过 3 个月”的上限，不要混用。</div></details>
+  </div>
+
+  <div class="quiz-q">
+    <div class="qh"><span class="qno">第 4 题</span><span class="qtype">单选题</span><span class="diff">难</span></div>
+    <p class="brief">关于 ICD-11 与 DSM-5 的差异，下列哪项表述是<strong>错误</strong>的？</p>
+    <div class="opts">
+      <div class="opt"><span class="l">A.</span>ICD-11 将“心境障碍”单独为一章，DSM-5 分为双相及相关障碍、抑郁障碍两章</div>
+      <div class="opt"><span class="l">B.</span>ICD-11 基本采用人格障碍的维度诊断法，DSM-5 沿用类别诊断法</div>
+      <div class="opt"><span class="l">C.</span>ICD-11 人格障碍分为轻度、中度、重度三类</div>
+      <div class="opt"><span class="l">D.</span>ICD-11 精神分裂症取消了 ICD-10 的全部亚型，改用 5 个维度</div>
+    </div>
+    <details><summary>查看答案与解析</summary><div class="dbody"><strong>答案：D</strong><br>D 错在“5 个维度”。教材原文：ICD-11 取消 ICD-10 中精神分裂症的所有亚型，通过 <strong>6 个维度</strong>（不同于 DSM-5 的 5 个维度）展示临床表现，包括阳性症状、阴性症状、抑郁症状、躁狂症状、精神运动性症状及认知症状。A、B、C 均与教材一致。</div></details>
+  </div>
+
+  <div class="quiz-q">
+    <div class="qh"><span class="qno">第 5 题</span><span class="qtype">多选题</span><span class="diff">中</span></div>
+    <p class="brief">下列哪些属于诊断标准的<strong>内涵标准</strong>？</p>
+    <div class="opts">
+      <div class="opt"><span class="l">A.</span>症状学指标</div>
+      <div class="opt"><span class="l">B.</span>病程标准</div>
+      <div class="opt"><span class="l">C.</span>病情严重程度</div>
+      <div class="opt"><span class="l">D.</span>社会功能损害</div>
+      <div class="opt"><span class="l">E.</span>排除标准</div>
+    </div>
+    <details><summary>查看答案与解析</summary><div class="dbody"><strong>答案：ABCD</strong><br>教材原文：诊断标准包括内涵标准和排除标准两个主要部分；内涵标准又包括症状学、病程标准、病情严重程度、社会功能损害等指标，其中症状学指标是最基本的，又分必备症状和伴随症状。E 与内涵标准并列，不属于内涵标准。</div></details>
+  </div>
+
+  <div class="quiz-q">
+    <div class="qh"><span class="qno">第 6 题</span><span class="qtype">多选题</span><span class="diff">难</span></div>
+    <p class="brief">关于症状学分类，下列哪些说法符合教材？</p>
+    <div class="opts">
+      <div class="opt"><span class="l">A.</span>根据共同症状或综合征建立诊断</div>
+      <div class="opt"><span class="l">B.</span>症状或综合征发生改变时，临床诊断会作相应改变</div>
+      <div class="opt"><span class="l">C.</span>同一症状或综合征可有不同病因，病因不同但症状相似时可得出相同诊断</div>
+      <div class="opt"><span class="l">D.</span>临床表现符合 2 种或多种疾病诊断标准时，可同时给予多个诊断</div>
+      <div class="opt"><span class="l">E.</span>每一特定的诊断类别都属于真正意义上的不同疾病</div>
+    </div>
+    <details><summary>查看答案与解析</summary><div class="dbody"><strong>答案：ABCD</strong><br>E 错。教材明确：由于症状学分类方法的局限性，在使用现有分类系统时<strong>不能认为每一特定的诊断类别属于真正意义上的不同疾病</strong>。A、B、C、D 均为教材原文表述；其中 C 还解释了为什么症状学分类“有利于对症治疗”。</div></details>
+  </div>
+
+  <div class="quiz-q">
+    <div class="qh"><span class="qno">第 7 题</span><span class="qtype">判断题</span><span class="diff">易</span></div>
+    <p class="brief">DSM-5 仍然保留 DSM-Ⅳ 的五个轴的多轴诊断系统。</p>
+    <div class="opts">
+      <div class="opt"><span class="l">A.</span>正确</div>
+      <div class="opt"><span class="l">B.</span>错误</div>
+    </div>
+    <details><summary>查看答案与解析</summary><div class="dbody"><strong>答案：B（错误）</strong><br>教材原文：DSM-5 舍弃了 DSM-Ⅳ 的多轴系统，改为非轴性的诊断记录（原轴Ⅰ、Ⅱ和Ⅲ），并对重要的心理、社会、背景因素的注解（先前的轴Ⅳ）和残疾评估（先前的轴Ⅴ）进行了记录；还建议停止使用 GAF。多轴系统属于 DSM-Ⅳ。</div></details>
+  </div>
+
+  <div class="quiz-q">
+    <div class="qh"><span class="qno">第 8 题</span><span class="qtype">判断题</span><span class="diff">中</span></div>
+    <p class="brief">ICD-11 取消了 ICD-10 中精神分裂症的所有亚型，通过 6 个维度展示不同的临床表现。</p>
+    <div class="opts">
+      <div class="opt"><span class="l">A.</span>正确</div>
+      <div class="opt"><span class="l">B.</span>错误</div>
+    </div>
+    <details><summary>查看答案与解析</summary><div class="dbody"><strong>答案：A（正确）</strong><br>教材原文：ICD-11 取消了 ICD-10 中精神分裂症的所有亚型，通过 6 个维度（不同于 DSM-5 的 5 个维度）展示不同的临床表现，包括阳性症状、阴性症状、抑郁症状、躁狂症状、精神运动性症状及认知症状。</div></details>
+  </div>
+
+  <div class="quiz-q">
+    <div class="qh"><span class="qno">第 9 题</span><span class="qtype">判断题</span><span class="diff">难</span></div>
+    <p class="brief">病因诊断比症状诊断更有利于治疗，且目前约 90% 的精神障碍可以做出病因诊断。</p>
+    <div class="opts">
+      <div class="opt"><span class="l">A.</span>正确</div>
+      <div class="opt"><span class="l">B.</span>错误</div>
+    </div>
+    <details><summary>查看答案与解析</summary><div class="dbody"><strong>答案：B（错误）</strong><br>前半句正确：教材说病因治疗比对症治疗更彻底，因此病因诊断比症状诊断更有利于治疗。后半句错：教材的数字恰好相反——只有约 <strong>10%</strong> 的精神障碍患者病因、病理改变相对明确，而约 <strong>90%</strong> 病因不明。这正是否定“病因学分类可行”的理由。</div></details>
+  </div>
+
+  <div class="quiz-q">
+    <div class="qh"><span class="qno">第 10 题</span><span class="qtype">名词解释</span><span class="diff">中</span></div>
+    <p class="brief">请解释“诊断标准”。</p>
+    <details><summary>查看答案与解析</summary><div class="dbody"><strong>参考答案：</strong>诊断标准是将疾病的症状按照不同的组合、以条理化形式列出的一种<strong>标准化条目</strong>。它包括<strong>内涵标准</strong>和<strong>排除标准</strong>两个主要部分；内涵标准又包括<strong>症状学、病程标准、病情严重程度、社会功能损害</strong>等指标，其中症状学指标是最基本的，又分<strong>必备症状和伴随症状</strong>。<br><span class="note">教材还强调：诊断标准仅仅是工具，不能替代病史、体格检查、精神状态检查与必要的实验室检查。</span></div></details>
+  </div>
+
+  <div class="quiz-q">
+    <div class="qh"><span class="qno">第 11 题</span><span class="qtype">名词解释</span><span class="diff">中</span></div>
+    <p class="brief">请解释“综合征”。</p>
+    <details><summary>查看答案与解析</summary><div class="dbody"><strong>参考答案：</strong>综合征是指同时存在于某些个体的一组症状或行为表现。教材认为，这一组症状之所以共同出现有其内在原因，它们<strong>可能反映共同的病因过程，也可能预示着共同的疾病转归、预后以及可能有效的治疗措施</strong>。<br><span class="note">注意：综合征是 SSD 中的第二个 S，仍不等于疾病诊断；如脑衰弱综合征可见于精神分裂症早期、脑动脉硬化前期，也可能仅仅是神经症。</span></div></details>
+  </div>
+
+  <div class="quiz-q">
+    <div class="qh"><span class="qno">第 12 题</span><span class="qtype">简答题</span><span class="diff">难</span></div>
+    <p class="brief">简述 ICD-11 与 DSM-5 在精神分裂症上的三点差异。</p>
+    <details><summary>查看答案与解析</summary><div class="dbody">
+      <strong>参考答案：</strong>
+      <ol>
+        <li><strong>症状条目：</strong>ICD-11 要求在所列 <strong>7 项</strong>活跃期症状中至少有 <strong>2 项</strong>（其中包括严重的解体症状、被控制体验及思维插入等）。</li>
+        <li><strong>亚型与维度：</strong>ICD-11 取消了 ICD-10 中精神分裂症的所有亚型，通过 <strong>6 个维度</strong>展示临床表现（阳性、阴性、抑郁、躁狂、精神运动性、认知）；教材说明这不同于 DSM-5 的 <strong>5 个维度</strong>。</li>
+        <li><strong>病程：</strong>ICD-11 认为病程 <strong>1 个月</strong>即可诊断，DSM-5 则要求 <strong>6 个月</strong>。</li>
+      </ol>
+      <span class="note">答题提醒：教材只给出以上三点，不要补充 DSM-5 的具体症状条目数或其他教材未写的诊断细节。</span>
+    </div></details>
+  </div>
+
+  <div class="quiz-q">
+    <div class="qh"><span class="qno">第 13 题</span><span class="qtype">案例分析题</span><span class="diff">难</span></div>
+    <p class="brief">某住院患者的临床表现同时符合“酒精所致抑郁障碍”与“抑郁障碍”的描述，病历需记录诊断。请依据教材说明：①在 ICD-11 与 DSM-5 下，这个“酒精所致抑郁”分别归到哪里？②能否给多个诊断？③若主要状况是其他躯体疾病所致的精神障碍，ICD 编码规则要求怎样排列？</p>
+    <details><summary>查看答案与解析</summary><div class="dbody">
+      <strong>参考答案：</strong>
+      <ol>
+        <li><strong>归属：</strong>ICD-11 中，物质所致的精神障碍（如抑郁或焦虑障碍）<strong>保留在相应的物质类别</strong>中，酒精所致的抑郁障碍归类在<strong>酒精相关障碍</strong>；DSM-5 则根据临床表现归类到相应的临床障碍中，将酒精所致的抑郁障碍归入<strong>抑郁障碍</strong>。</li>
+        <li><strong>多诊断：</strong>可以。教材明确：传统上，可以对符合一个以上 DSM-5 障碍诊断标准的临床表现给出多个诊断；症状学分类下，临床表现符合 2 种或多种疾病诊断标准时，也可同时给予多个诊断。主要诊断应首先列出，其余按治疗和关注焦点的顺序依次列出。</li>
+        <li><strong>编码排列：</strong>当主要诊断或就诊原因是其他躯体疾病所致的精神障碍时，ICD 编码规则要求<strong>病因上的躯体疾病首先列出</strong>，作为主要诊断的躯体疾病所致精神障碍应列在<strong>第二位</strong>。</li>
+      </ol>
+      <span class="note">本题为“分类操作情境”，依据教材的分类归属、多诊断与主要诊断规则构建，不涉及具体患者身份或教材未给的诊断条目。</span>
+    </div></details>
+  </div>
+</section>
+
+<!-- ===== 10 速记卡 ===== -->
+<section id="cards">
+  <div class="sec-head"><div class="badge">10</div><h2>考点速记卡<span class="en">20 flip cards</span></h2></div>
+  <p class="sec-lead">正面是问题，点击翻面看答案。建议按“概念→系统→标准”三轮刷，每轮只追求快速反应。</p>
+  <div class="flashcard-grid">
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag concept">概念</span><p>疾病分类学的定义？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">将不同疾病按各自的特点和从属关系，划分为类、种、型等层次，并归成系统。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag concept">概念</span><p>ICD-10 中“精神障碍”的定义？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">一系列临床可识别的、引起大多数患者痛苦或妨碍个人功能的症状或行为；单独的社会偏离或冲突，而没有个人功能障碍，不应包括在内。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag concept">概念</span><p>ICD-10 与 DSM 的精神障碍定义，共同点是什么？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">大多数精神障碍都不是基于理论概念或病因学的推测，而是基于可识别的症状群或行为；都要求有临床意义并伴痛苦或功能损害。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag concept">概念</span><p>精神病学为什么更多使用“障碍（disorder）”而非“疾病”？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">因为缺乏医学意义上明确的疾病类别；精神障碍与精神疾病虽常作同义词，但“障碍”更符合其现状。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag concept">概念</span><p>“综合征”的定义？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">同时存在于某些个体的一组症状或行为表现；可能反映共同的病因过程，也可能预示共同的疾病转归、预后以及可能有效的治疗措施。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag data">历史</span><p>现代精神障碍分类的“雏形”由谁提出？包括哪些疾病单元？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">德国精神病学家克雷丕林（Kraepelin）；按症状、病程与转归划分出早发痴呆（精神分裂症）、躁郁症、妄想狂等疾病单元。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag data">历史</span><p>布鲁勒的“4A 症状”是哪四项？偏向哪类症状？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">联想障碍、情感淡漠、矛盾意向、内向性；以阴性症状为主，教材评价其“过于重视阴性症状”。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag diag">对比</span><p>布鲁勒与施耐德两套精神分裂症诊断依据的偏向？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">布鲁勒“4A 症状”偏重阴性症状；施耐德“一级症状”以阳性症状为主、有忽视阴性症状的倾向。两者都无法肯定需几个症状才能确诊。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag data">数据</span><p>精神障碍中病因／病理改变“相对明确”与“病因不明”的比例？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">只有约 10% 的患者病因、病理改变相对明确，约 90% 病因不明——这是不能贯彻病因学分类的根本原因。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag data">历史</span><p>ICD 的起点：ILCD 与 ICD-1 分别是哪一年？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">1890 年巴黎第一次国际死因分类修订会议提出国际死因分类法（ILCD），教材称其为第一版 ICD；1893 年 26 国代表修订后 ICD-1 问世。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag data">历史</span><p>WHO 何时接手 ICD？何时首次列入精神障碍？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">1948 年 WHO 接手，更名为《国际疾病、外伤与死亡统计分类（第 6 版）》，首次在第 5 章介绍精神障碍；因分类简单未受重视。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag data">数据</span><p>ICD-11 的修订与生效时间轴？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">2007 年启动修订；2012 年 5 月完成建立基本框架；2014 年开始评审修订；2022 年正式生效。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag concept">概念</span><p>ICD-11 的“基础组件”与“线性组合”？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">基础组件是所有 ICD 分类单元的总和，包含 ICD 全部内容；线性组合是按用途属性从基础组件衍生出的子集，如 ICD-11-PCL、ICD-11-PCM 及各专科组合。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag data">数据</span><p>ICD-11 描述疾病的 6 个模块？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">症状、病因、发病过程和结果、治疗反应、与基因的关系、与环境的交互关系。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag diag">编码</span><p>ICD-11 编码 6B24.1 怎么读？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">6＝第 6 章；B2＝强迫性或相关障碍；4.1＝囤积障碍伴较差自知力或缺乏自知力。编码框架为 6D1E.EE（E），末尾 Y＝其他特定、Z＝未特定。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag data">数据</span><p>DSM 五个版本的出版年份？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">DSM-Ⅰ 1952；DSM-Ⅱ 1968；DSM-Ⅲ 1980；DSM-Ⅳ 1994；DSM-5 2013。DSM-Ⅰ 在 ICD-6 基础上编写，DSM-Ⅱ 与 ICD-8 基本一致。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag diag">对比</span><p>DSM-5 对多轴系统与 GAF 做了什么？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">舍弃 DSM-Ⅳ 的五轴系统，改为非轴性诊断记录；建议停止使用 GAF，因概念缺乏清晰性、心理测量有问题；第三部分纳入 WHODAS。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag diag">对比</span><p>ICD-11 与 DSM-5 精神分裂症的三点差异？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">①症状：ICD-11 为 7 项活跃期症状中至少 2 项；②亚型／维度：ICD-11 取消亚型、用 6 个维度，DSM-5 教材称 5 个维度；③病程：ICD-11 1 个月，DSM-5 6 个月。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag concept">概念</span><p>诊断标准的两大部分与内涵四指标？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">内涵标准＋排除标准；内涵包括症状学（必备＋伴随）、病程标准、病情严重程度、社会功能损害。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag diag">思维</span><p>SSD 与四个诊断环节？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">SSD＝症状（S）→综合征（S）→诊断（D）；四环节＝发病基础、起病及病程、临床表现、病因与诱因。诊断后仍须随访，按“实践—认识—再实践—再认识”检验。</div>
+    </div></div>
+  </div>
+</section>
+
+<!-- ===== 11 病例挑战 ===== -->
+<section id="cases">
+  <div class="sec-head"><div class="badge">11</div><h2>病例挑战<span class="en">3 simulated scenarios · increasing difficulty</span></h2></div>
+  <p class="sec-lead">以下均为<strong>模拟临床情境</strong>：依据教材知识点构建，用于训练“该用哪个分类系统、诊断标准如何落地”的推理，<strong>不是教材原案例</strong>，不虚构具体患者身份与化验数值，也<strong>不对任何模拟对象作出诊断结论</strong>。</p>
+
+  <div class="case">
+    <span class="ctag">难度 ★ · 分类归属</span>
+    <h3>情境 1：病历上只写了“幻觉症”</h3>
+    <div class="scene">某临床记录在诊断栏只写了“幻觉症”。上级医师要求补充：这个名称在现行分类下意味着什么？能否据此推断病因？下一步应补哪些资料？</div>
+    <ol class="ques">
+      <li>“幻觉症”在症状学分类下是一种什么性质的诊断名称？</li>
+      <li>教材列举了哪些可能病因？</li>
+      <li>按 SSD 与四个诊断环节，下一步应补充哪些资料？</li>
+    </ol>
+    <details><summary>查看答案与解析</summary><div class="dbody">
+      <strong>1.</strong>它是一个<strong>以精神症状命名的症状学诊断名称</strong>，只能反映疾病当时的状态；若主要症状改变，诊断也可能变更。<br>
+      <strong>2.</strong>教材明确：幻觉症可以是<strong>生物性的</strong>，也可以是<strong>心因性或反应性的</strong>，或者是<strong>药源性的</strong>，还有<strong>器质性的</strong>（如脑动脉硬化）或<strong>物质滥用所致的</strong>。<br>
+      <strong>3.</strong>按 SSD：先辨清症状、再组合综合征；按四环节补<strong>发病基础</strong>（一般资料、家族史、病前性格、既往疾病史、职业接触）、<strong>起病及病程</strong>（2 周／3 个月／2 年分档）、<strong>临床表现</strong>（与类似现象比较、寻找特征性表现）、<strong>病因与诱因</strong>（生物因素查体征与实验室，心理社会因素查创伤与时间关系）。同时补做体格、神经系统与精神状态检查及必要实验室检查——教材强调这些是正确使用诊断标准的必要条件。
+    </div></details>
+  </div>
+
+  <div class="case">
+    <span class="ctag">难度 ★★ · 两套系统</span>
+    <h3>情境 2：同一表现，两套标准</h3>
+    <div class="scene">某教学讨论中，一份<strong>去除身份信息的表现描述</strong>被两组医师分别套用 DSM-5 与 ICD-11：一组按 DSM-5 的“6 个月”把握病程，另一组按 ICD-11 的“1 个月”；有人主张按 ICD-11 的 6 个维度描述，有人坚持按 DSM-5 的 5 个维度。讨论一度陷入“到底听谁的”。本情境只比较两套系统的规则，不对该描述作诊断结论。</div>
+    <ol class="ques">
+      <li>教材对两套系统在精神分裂症病程上的表述分别是什么？</li>
+      <li>两套系统各用几个维度？ICD-11 对亚型做了什么处理？</li>
+      <li>能否把两套系统的条目“混着用”？为什么？</li>
+    </ol>
+    <details><summary>查看答案与解析</summary><div class="dbody">
+      <strong>1.</strong>ICD-11 认为精神分裂症病程 <strong>1 个月</strong>即可诊断；DSM-5 则要求 <strong>6 个月</strong>。<br>
+      <strong>2.</strong>ICD-11 取消 ICD-10 中精神分裂症的所有亚型，通过 <strong>6 个维度</strong>（阳性、阴性、抑郁、躁狂、精神运动性、认知）展示临床表现；教材称 DSM-5 用 <strong>5 个维度</strong>。<br>
+      <strong>3.</strong>不能混用。教材指出两套系统虽“基本框架高度相似”，但因 ICD 要兼顾 WHO 各成员国情况、传统与实践，并延续前版，差异仍明显存在；诊断标准、病程阈值、维度数目都是<strong>系统内部的规定</strong>。做临床记录或答题时，应先声明使用哪套系统，再按该系统的标准执行；跨系统比较只能作为“差异”来讨论，不能拼接成一套新标准。<br>
+      <span class="note">本题为模拟讨论情境，不含具体患者诊断；答案严格限于教材给出的差异。</span>
+    </div></details>
+  </div>
+
+  <div class="case">
+    <span class="ctag">难度 ★★★ · 编码与并列诊断</span>
+    <h3>情境 3：主要状况不是精神障碍时，诊断怎么排</h3>
+    <div class="scene">编码室收到一份<strong>用于教学讨论、已去除身份信息的病历摘要</strong>：入院主要状况一栏记为“躯体疾病所致的精神障碍”，另记录有酒精所致抑郁与抑郁表现。摘要要求编码员列出主要诊断与其余诊断，并给出 ICD 编码顺序，但编码员与临床医师在“谁排第一”上产生分歧。本情境只讨论排列规则，不对该摘要所描述的状况作诊断结论。</div>
+    <ol class="ques">
+      <li>按 ICD 编码规则，当主要诊断是其他躯体疾病所致的精神障碍时，应怎样排列？</li>
+      <li>DSM-5 对住院与门诊患者的“主要诊断”分别如何定义？诊断应怎样排序？</li>
+      <li>“酒精所致抑郁”在 ICD-11 与 DSM-5 中各归到哪里？可以给多个诊断吗？</li>
+    </ol>
+    <details><summary>查看答案与解析</summary><div class="dbody">
+      <strong>1.</strong>教材明确：当主要诊断或就诊原因是其他躯体疾病所致的精神障碍时，<strong>ICD 编码规则要求病因上的躯体疾病首先列出</strong>；作为主要诊断的躯体疾病所致的精神障碍，应列在<strong>第二位</strong>。<br>
+      <strong>2.</strong>住院患者的主要诊断是经研究认为<strong>引起个体入院的主要状况</strong>；门诊患者的主要诊断是<strong>此次就诊接受门诊医疗服务的主要状况</strong>。大多数病例中，主要诊断或就诊原因也是关注或治疗的焦点；主要诊断应<strong>首先列出</strong>，其余障碍按治疗和关注焦点的顺序依次列出。<br>
+      <strong>3.</strong>ICD-11 中，物质所致的精神障碍保留在相应物质类别，酒精所致抑郁障碍归类在<strong>酒精相关障碍</strong>；DSM-5 中则按临床表现归入<strong>抑郁障碍</strong>。可以给多个诊断：教材明确，传统上对符合一个以上 DSM-5 障碍诊断标准的临床表现可给出多个诊断；症状学分类下符合 2 种或多种诊断标准时也可同时给予多个诊断。<br>
+      <span class="note">本题为模拟编码情境，依据教材的主要诊断规则与物质障碍归属构建，不虚构患者身份、化验值或教材未给的诊断条目。</span>
+    </div></details>
+  </div>
+</section>
+
+<!-- ===== 12 拓展 ===== -->
+<section id="ext">
+  <div class="sec-head"><div class="badge">12</div><h2>拓展延伸<span class="en">Beyond the chapter</span></h2></div>
+  <p class="sec-lead">只列教材明确提到但未展开的内容；教材没有写的，明确标为“教材未涉及”，不把课外知识当作教材结论。</p>
+  <div class="grid2">
+    <div class="card cyan">
+      <h3>教材提及、但仅一笔带过的内容</h3>
+      <ul>
+        <li><strong>ICD-11 的在线使用：</strong>教材提到 ICD-11 beta browser、在线工具与本地软件三种方式，以及通过网络服务存取到本地软件；具体操作与界面<strong>教材未展开</strong>。</li>
+        <li><strong>线性组合的专科版本：</strong>教材只举例 ICD-11-PCL 与 ICD-11-PCM，并说明可按分类属性产生专科组合；各专科组合的清单<strong>教材未列出</strong>。</li>
+        <li><strong>RDoC 的测量方法：</strong>教材列出 5 个方面与 7 个分类单元，但每个单元用什么工具测量、如何评分<strong>教材未展开</strong>。</li>
+        <li><strong>DSM-5 各章的具体诊断条目：</strong>教材只列出分类名称与“11 个分组指标”，未逐条列出各障碍的诊断标准；本章唯一的完整标准范例是 ICD-11 6A20。</li>
+        <li><strong>CCMD 的具体分类与条目：</strong>教材只说明其制定机构、国情依据与“CCMD-3 后停止再版”，未展开其分类结构。</li>
+        <li><strong>ICD-11 二十个分类单元下的具体病种：</strong>教材只给到分类单元一级，未逐个展开。</li>
+      </ul>
+    </div>
+    <div class="card orange">
+      <h3>教材未涉及 / 本指南不补写的内容</h3>
+      <ul>
+        <li><strong>DSM-5 之后的版本修订情况：</strong>教材以 2013 年 DSM-5 为最新版本，未再提及后续版本。</li>
+        <li><strong>ICD-10 与 ICD-11 的编码对照表：</strong>教材未给。</li>
+        <li><strong>各分类系统的诊断信度／效度研究数据：</strong>教材未给具体数值。</li>
+        <li><strong>我国采用 ICD-11 的正式文件与时间表：</strong>教材只说“我国临床医学中主要使用 ICD 系统”，未给实施时间。</li>
+        <li><strong>医疗付费与精细化管理中 ICD 编码的具体规则：</strong>教材只提需求与限制，未展开操作细则。</li>
+        <li><strong>各分类系统在司法鉴定中的法律效力差异：</strong>教材只提 DSM-5 第一部分有“应用于司法鉴定的注意事项”，未展开。</li>
+      </ul>
+    </div>
+  </div>
+  <div class="callout ext">
+    <span class="ct">📖 使用提醒</span>
+    本指南所有年份、版本、编码、差异与标准条目均取自教材第四章原文；凡标注“教材未提供／未展开”的地方，不要用其他资料补齐后当作教材结论，以免与教材答案冲突。尤其注意：本章<strong>不涉及治疗</strong>，任何药物、剂量、疗程都不属本章范围。
+  </div>
+  <div class="hr"></div>
+  <p class="note" style="text-align:center">精神病学（第9版）· 第四章 精神障碍分类与诊断标准 · 印刷页 37–46 · 学习指南完</p>
+</section>
+
+</div>
+<nav class="chapter-pager" aria-label="章节间导航"><a class="cp-prev" href="精神病学_第三章_精神障碍的检查与诊断_学习指南.html">← 上一章：第三章</a><a class="cp-toc" href="index.html">目录</a><a class="cp-next" href="精神病学_第五章_神经发育障碍_学习指南.html">下一章：第五章 →</a></nav>
+</main>
+
+<button class="top" id="topBtn" aria-label="回到顶部">↑</button>
+<script>
+/* ============================================================
+   精神病学学习指南 · 统一交互层 v1（构建期注入，整体替换原 IIFE）
+   兼容 A 族（.tabbar button + [data-panel] + .panel.on）与
+   B 族（.tab-nav + .tab-panel.active）两套 DOM 约定。
+   特性检测 + 防御式查询 + 幂等；不引入任何外部依赖。
+   ============================================================ */
+(function () {
+  'use strict';
+  if (window.__PSY_GUIDE_APP__) { return; }
+  window.__PSY_GUIDE_APP__ = true;
+
+  var d = document;
+
+  function all(sel, root) {
+    return Array.prototype.slice.call((root || d).querySelectorAll(sel));
+  }
+  function on(el, ev, fn, opt) {
+    if (el) { el.addEventListener(ev, fn, opt || false); }
+  }
+  function norm(s) {
+    return String(s || '').replace(/\s+/g, '').toUpperCase();
+  }
+
+  /* ---------- 1. Tab 切换（两族约定都支持） ---------- */
+  function initTabs() {
+    all('.tabs, [data-tabs]').forEach(function (g) {
+      if (g.__psyTabs) { return; }
+      g.__psyTabs = true;
+      var isA = !!g.querySelector('.tabbar button');
+      var btns = all(isA ? '.tabbar button' : '.tab-nav .tab-btn', g);
+      if (!btns.length) { return; }
+      var cls = isA ? 'on' : 'active';
+      var nav = btns[0].closest('.tabbar') || btns[0].closest('.tab-nav');
+      if (nav && !nav.hasAttribute('role')) { nav.setAttribute('role', 'tablist'); }
+      all(isA ? '.panel' : '.tab-panel', g).forEach(function (p) {
+        if (!p.hasAttribute('role')) { p.setAttribute('role', 'tabpanel'); }
+      });
+      function activate(btn) {
+        btns.forEach(function (b) {
+          b.classList.remove(cls);
+          b.setAttribute('aria-selected', 'false');
+        });
+        btn.classList.add(cls);
+        btn.setAttribute('aria-selected', 'true');
+        var id = btn.getAttribute('data-tab');
+        if (!id) { return; }
+        var target = isA
+          ? g.querySelector('[data-panel="' + id + '"]')
+          : (g.querySelector('.tab-panel#' + id) || d.getElementById(id));
+        all(isA ? '.panel' : '.tab-panel', g).forEach(function (p) {
+          var show = isA ? (p.getAttribute('data-panel') === id) : (p === target);
+          p.classList.toggle(cls, show);
+        });
+      }
+      btns.forEach(function (btn, i) {
+        if (!btn.hasAttribute('role')) { btn.setAttribute('role', 'tab'); }
+        btn.setAttribute('aria-selected', btn.classList.contains(cls) ? 'true' : 'false');
+        if (!btn.hasAttribute('tabindex') && !btn.classList.contains(cls)) { btn.setAttribute('tabindex', '0'); }
+        on(btn, 'click', function () { activate(btn); });
+        on(btn, 'keydown', function (e) {
+          if (e.key !== 'ArrowRight' && e.key !== 'ArrowLeft') { return; }
+          e.preventDefault();
+          var nx = btns[(i + (e.key === 'ArrowRight' ? 1 : btns.length - 1)) % btns.length];
+          if (nx) { nx.focus(); activate(nx); }
+        });
+      });
+    });
+  }
+
+  /* ---------- 2. 速记卡：点击/键盘翻转 + 可达性 ---------- */
+  function initCards() {
+    all('.flashcard').forEach(function (card) {
+      if (card.__psyCard) { return; }
+      card.__psyCard = true;
+      card.setAttribute('tabindex', '0');
+      card.setAttribute('role', 'button');
+      function sync() {
+        card.setAttribute('aria-pressed', card.classList.contains('flipped') ? 'true' : 'false');
+      }
+      function flip() { card.classList.toggle('flipped'); sync(); }
+      on(card, 'click', flip);
+      on(card, 'keydown', function (e) {
+        if (e.key === 'Enter' || e.key === ' ' || e.key === 'Spacebar') {
+          e.preventDefault();
+          flip();
+        }
+      });
+      sync();
+    });
+  }
+
+  /* ---------- 3. 自测题交互化（核心新功能） ---------- */
+  function initQuiz() {
+    var questions = all('.quiz-q, .quiz-item');
+    if (!questions.length) { return; }
+    var groups = {};
+
+    function keyOf(o) {
+      var L = o.getAttribute('data-letter');
+      if (L && String(L).replace(/\s+/g, '') !== '') { return norm(L); }
+      var sp = o.querySelector('.l');
+      if (sp) {
+        var t = norm(sp.textContent).replace(/[.．、:：]/g, '');
+        if (t !== '') { return t; }
+      }
+      var txt = norm(o.textContent);
+      if (txt.indexOf('正确') >= 0 || txt.indexOf('错误') >= 0) { return txt; }
+      return txt.charAt(0);
+    }
+
+    function getGroup(q) {
+      var sec = q.closest('.quiz-block') || q.closest('section') || d.body;
+      if (!groups[sec.__psyGid]) {
+        sec.__psyGid = 'g' + (Object.keys(groups).length + 1);
+        groups[sec.__psyGid] = { sec: sec, total: 0, score: 0, row: null, first: null };
+      }
+      var g = groups[sec.__psyGid];
+      if (!g.first) { g.first = q; }
+      return g;
+    }
+
+    function ensureRow(g) {
+      if (g.row) { return g.row; }
+      var row = d.createElement('div');
+      row.className = 'quiz-score';
+      row.setAttribute('role', 'status');
+      row.setAttribute('aria-live', 'polite');
+      row.innerHTML = '<span class="qs-label">自测计分</span>' +
+        '<span class="qs-num">得分 0 / ' + g.total + '</span>' +
+        '<span class="qs-bar"><i></i></span>';
+      g.first.parentNode.insertBefore(row, g.first);
+      g.row = row;
+      return row;
+    }
+
+    function updateRow(g) {
+      var row = ensureRow(g);
+      var num = row.querySelector('.qs-num');
+      var bar = row.querySelector('.qs-bar i');
+      if (num) { num.textContent = '得分 ' + g.score + ' / ' + g.total; }
+      if (bar) { bar.style.width = (g.total ? Math.round(g.score / g.total * 100) : 0) + '%'; }
+    }
+
+    questions.forEach(function (q) {
+      if (q.__psyQuiz) { return; }
+      q.__psyQuiz = true;
+      var opts = all('.opt', q);
+      if (!opts.length) { opts = all('.quiz-options > li', q); }
+      if (!opts.length) { return; }
+
+      /* 正确答案先记入内存：预标 correct 优先（记录后立即移除，消除剧透），
+         否则从解析文本「答案：X / 答案 X」提取（不改动任何文字） */
+      var ansKeys = [];
+      var preset = opts.filter(function (o) { return o.classList.contains('correct'); });
+      preset.forEach(function (o) { o.classList.remove('correct'); });
+      if (preset.length) {
+        ansKeys = preset.map(keyOf);
+      } else {
+        var dt = q.querySelector('details');
+        var txt = dt ? dt.textContent : '';
+        var m = txt.match(/答案\s*[:：]?\s*([A-Za-z](?:[\s、,，·和及]*[A-Za-z])*)/);
+        if (m) {
+          ansKeys = m[1].match(/[A-Za-z]/g) || [];
+        } else {
+          var m2 = txt.match(/答案\s*[:：]?\s*(正确|错误)/);
+          if (m2) { ansKeys = [m2[1]]; }
+        }
+      }
+      if (!ansKeys.length) { return; } /* 无可判定答案（名词解释等），保持原样 */
+
+      var g = getGroup(q);
+      g.total += 1;
+      var multi = ansKeys.length > 1;
+      var ansSet = ansKeys.map(norm);
+      var locked = false;
+      var picked = [];
+
+      function revealAll() {
+        opts.forEach(function (o) {
+          if (ansSet.indexOf(keyOf(o)) >= 0) { o.classList.add('is-reveal'); }
+        });
+      }
+      function finish(ok) {
+        locked = true;
+        q.classList.add('is-locked');
+        var dt = q.querySelector('details');
+        if (dt) { dt.open = true; }
+        if (ok) { g.score += 1; }
+        updateRow(g);
+      }
+
+      opts.forEach(function (o) {
+        o.setAttribute('tabindex', '0');
+        function pick() {
+          if (locked) { return; }
+          var k = keyOf(o);
+          if (ansSet.indexOf(k) >= 0) {
+            o.classList.add('is-right');
+            if (picked.indexOf(k) < 0) { picked.push(k); }
+            if (multi) {
+              if (picked.length === ansSet.length) { finish(true); }
+            } else {
+              finish(true);
+            }
+          } else {
+            o.classList.add('is-wrong');
+            revealAll();
+            finish(false);
+          }
+        }
+        on(o, 'click', pick);
+        on(o, 'keydown', function (e) {
+          if (e.key === 'Enter' || e.key === ' ' || e.key === 'Spacebar') {
+            e.preventDefault();
+            pick();
+          }
+        });
+      });
+    });
+
+    Object.keys(groups).forEach(function (id) {
+      if (groups[id].total > 0) { updateRow(groups[id]); }
+    });
+  }
+
+  /* ---------- 4. 侧栏 scroll spy（本页锚点高亮） ---------- */
+  function initSpy() {
+    var links = all('#sidebar a[href^="#"]');
+    if (!links.length || !('IntersectionObserver' in window)) { return; }
+    var map = {};
+    links.forEach(function (a) {
+      var id = a.getAttribute('href').slice(1);
+      if (id) { map[id] = a; }
+    });
+    var secs = [];
+    Object.keys(map).forEach(function (id) {
+      var s = d.getElementById(id);
+      if (s) { secs.push(s); }
+    });
+    if (!secs.length) { return; }
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting && map[e.target.id]) {
+          links.forEach(function (a) { a.classList.remove('active'); });
+          map[e.target.id].classList.add('active');
+        }
+      });
+    }, { rootMargin: '-15% 0px -70% 0px', threshold: 0 });
+    secs.forEach(function (s) { io.observe(s); });
+  }
+
+  /* ---------- 5. 阅读进度条 + 回顶 ---------- */
+  function initScroll() {
+    var bar = d.getElementById('readbar');
+    var topBtn = d.getElementById('topBtn') || d.getElementById('backTop');
+    var ticking = false;
+    function step() {
+      ticking = false;
+      var h = d.documentElement;
+      var y = window.pageYOffset || h.scrollTop || 0;
+      if (bar) {
+        var max = h.scrollHeight - h.clientHeight;
+        bar.style.width = (max > 0 ? (y / max) * 100 : 0) + '%';
+      }
+      if (topBtn) {
+        topBtn.classList.toggle('show', y > 400);     /* A 族类名 */
+        topBtn.classList.toggle('visible', y > 400);  /* B 族类名 */
+      }
+    }
+    on(window, 'scroll', function () {
+      if (!ticking) { ticking = true; window.requestAnimationFrame(step); }
+    }, { passive: true });
+    step();
+    on(topBtn, 'click', function () {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
+
+  /* ---------- 6. 侧栏开合（存在才绑定；抽屉打开时锁定背景滚动） ---------- */
+  function initSidebar() {
+    var sidebar = d.getElementById('sidebar');
+    if (!sidebar) { return; }
+    var btn = d.getElementById('menuBtn') || d.getElementById('navToggle');
+    var ov = d.getElementById('overlay') || d.getElementById('sidebarOverlay');
+    function lock(open) {
+      /* 仅移动抽屉断点（≤900px）锁滚动；宽屏兜底解除，防布局残留 */
+      d.body.classList.toggle('nav-locked', !!open && window.innerWidth <= 900);
+    }
+    function close() {
+      sidebar.classList.remove('open');
+      if (ov) { ov.classList.remove('show'); }
+      lock(false);
+    }
+    on(btn, 'click', function () {
+      var open = !sidebar.classList.contains('open');
+      sidebar.classList.toggle('open');
+      if (ov) { ov.classList.toggle('show'); }
+      lock(open);
+    });
+    on(ov, 'click', close);
+    all('a', sidebar).forEach(function (a) {
+      on(a, 'click', function () {
+        if (window.innerWidth <= 900) { close(); }
+      });
+    });
+    on(window, 'resize', function () {
+      if (window.innerWidth > 900) { lock(false); }
+    });
+  }
+
+  /* ---------- 启动（脚本位于 body 末尾，DOM 已就绪；防御兜底） ---------- */
+  function boot() {
+    initTabs();
+    initCards();
+    initQuiz();
+    initSpy();
+    initScroll();
+    initSidebar();
+  }
+  if (d.readyState === 'loading') {
+    on(d, 'DOMContentLoaded', boot);
+  } else {
+    boot();
+  }
+})();
+</script>
+
+</body>
+</html>

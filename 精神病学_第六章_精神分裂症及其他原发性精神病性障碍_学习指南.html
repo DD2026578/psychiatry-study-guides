@@ -1,0 +1,1972 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>精神病学 第六章 精神分裂症及其他原发性精神病性障碍 - 学习指南</title>
+<style>
+/* ===== 设计系统（请完整复制，勿修改变量与组件样式） ===== */
+:root{
+  --bg:#F0F7FA; --card:#FFFFFF; --ink:#0F172A; --muted:#64748B; --border:#E2E8F0;
+  --primary:#0EA5E9; --accent:#10B981; --symptom:#EF4444; --treatment:#10B981;
+  --cause:#3B82F6; --diagnosis:#F59E0B; --memory:#8B5CF6; --danger:#DC2626;
+  --quiz:#EC4899; --flashcard:#06B6D4;
+  --symptom-bg:#FEF2F2; --treatment-bg:#ECFDF5; --cause-bg:#EFF6FF;
+  --diagnosis-bg:#FFFBEB; --memory-bg:#F5F3FF; --quiz-bg:#FDF2F8; --flash-bg:#ECFEFF;
+  --gradient-main:linear-gradient(135deg,#0EA5E9 0%,#06B6D4 50%,#10B981 100%);
+  --gradient-soft:linear-gradient(135deg,rgba(14,165,233,.08),rgba(6,182,212,.05) 50%,rgba(16,185,129,.08));
+  --radius-sm:8px; --radius-md:12px; --radius-lg:18px;
+  --shadow-sm:0 1px 3px rgba(15,23,42,.06),0 1px 2px rgba(15,23,42,.04);
+  --shadow-md:0 6px 18px rgba(14,165,233,.10),0 2px 6px rgba(15,23,42,.05);
+  --shadow-lg:0 14px 38px rgba(14,165,233,.16),0 4px 12px rgba(15,23,42,.06);
+  --sidebar-w:262px; --content-max:980px;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:"Microsoft YaHei","PingFang SC","Segoe UI",system-ui,sans-serif;
+  font-size:16px;line-height:1.75;color:var(--ink);background:var(--bg);
+  background-image:radial-gradient(ellipse 620px 420px at 8% 0%,rgba(14,165,233,.09),transparent 70%),
+                    radial-gradient(ellipse 520px 380px at 92% 16%,rgba(16,185,129,.07),transparent 70%),
+                    radial-gradient(ellipse 700px 520px at 50% 100%,rgba(6,182,212,.05),transparent 70%);
+  min-height:100vh;
+}
+img{max-width:100%}
+a{color:var(--primary)}
+p{margin-bottom:12px}
+strong{font-weight:700;color:var(--ink)}
+mark.key{background:none;color:var(--primary);font-weight:700}
+.page-wrapper{display:flex;max-width:1420px;margin:0 auto;padding:0 24px}
+.main-content{flex:1;min-width:0;max-width:var(--content-max);padding:36px 0 88px}
+
+/* ===== 侧边导航 ===== */
+.sidebar{width:var(--sidebar-w);flex-shrink:0;position:sticky;top:20px;align-self:flex-start;
+  max-height:calc(100vh - 40px);overflow-y:auto;padding:22px 0;margin-right:30px}
+.sidebar-brand{font-size:.78rem;font-weight:700;letter-spacing:.06em;color:var(--muted);
+  padding:0 14px 12px;border-bottom:1px dashed var(--border);margin-bottom:10px}
+.sidebar-nav ul{list-style:none}
+.sidebar-nav>ul>li>a{display:flex;align-items:center;gap:9px;padding:9px 14px;border-radius:var(--radius-sm);
+  color:var(--ink);text-decoration:none;font-size:.9rem;font-weight:500;border-left:3px solid transparent;
+  transition:all .2s ease;margin-left:-3px}
+.sidebar-nav>ul>li>a:hover{background:rgba(14,165,233,.06);color:var(--primary)}
+.sidebar-nav>ul>li>a.active{background:rgba(14,165,233,.1);color:var(--primary);
+  border-left-color:var(--primary);font-weight:700}
+.toc-num{font-family:Consolas,monospace;font-size:.72rem;color:var(--muted);min-width:22px}
+.sidebar-nav .sub-list{margin:2px 0 8px 22px;padding-left:12px;border-left:1px solid var(--border)}
+.sidebar-nav .sub-list li a{display:block;padding:5px 10px;color:var(--muted);text-decoration:none;
+  font-size:.8rem;border-radius:4px}
+.sidebar-nav .sub-list li a:hover{color:var(--primary);background:rgba(14,165,233,.05)}
+
+/* ===== 封面 ===== */
+.hero{position:relative;overflow:hidden;text-align:center;padding:54px 34px 46px;margin-bottom:48px;
+  background:var(--gradient-soft);border:1px solid rgba(14,165,233,.12);border-radius:var(--radius-lg)}
+.hero::before{content:"";position:absolute;inset:-40% -20% auto;height:180%;
+  background:radial-gradient(circle at 28% 30%,rgba(14,165,233,.1),transparent 55%),
+             radial-gradient(circle at 74% 68%,rgba(16,185,129,.09),transparent 55%);pointer-events:none}
+.hero>*{position:relative}
+.hero-badge{display:inline-flex;align-items:center;gap:6px;padding:6px 15px;border-radius:100px;
+  background:rgba(14,165,233,.12);border:1px solid rgba(14,165,233,.22);color:var(--primary);
+  font-size:.8rem;font-weight:700;margin-bottom:18px}
+.hero h1{font-size:2.35rem;line-height:1.28;font-weight:800;margin-bottom:12px;
+  background:var(--gradient-main);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.hero .subtitle{max-width:680px;margin:0 auto;color:var(--muted);font-size:1.02rem}
+.hero-meta{display:flex;justify-content:center;gap:34px;flex-wrap:wrap;margin-top:26px}
+.hero-meta-item .num{font-size:1.7rem;font-weight:800;line-height:1.2;color:var(--primary)}
+.hero-meta-item .label{font-size:.78rem;color:var(--muted)}
+.hero-quote{margin:24px auto 0;max-width:720px;padding:12px 18px;border-radius:10px;
+  background:rgba(255,255,255,.66);border:1px dashed rgba(14,165,233,.3);
+  font-size:.9rem;color:var(--muted);text-align:left}
+
+/* ===== 区块 ===== */
+.section{margin-bottom:56px;scroll-margin-top:20px}
+.section-header{display:flex;align-items:center;gap:13px;margin-bottom:22px;padding-bottom:12px;
+  border-bottom:2px solid transparent;border-image:var(--gradient-main) 1}
+.section-number{width:40px;height:40px;border-radius:var(--radius-sm);display:inline-flex;
+  align-items:center;justify-content:center;background:var(--gradient-main);color:#fff;
+  font-weight:800;font-size:1rem;flex-shrink:0}
+.section-header h2{font-size:1.55rem;font-weight:800;line-height:1.35}
+.subsection{margin:30px 0;scroll-margin-top:20px}
+.subsection h3{font-size:1.18rem;font-weight:700;margin-bottom:12px;display:flex;align-items:center;gap:8px}
+.sub-subsection{margin:18px 0}
+.sub-subsection h4{font-size:1rem;font-weight:700;margin-bottom:8px}
+.lead{font-size:1rem;color:var(--muted);margin-bottom:18px}
+
+/* ===== 疾病页眉 / 八栏 ===== */
+.disease-hero{background:linear-gradient(135deg,#0f2b46,#155e75 60%,#0f766e);color:#fff;
+  border-radius:var(--radius-lg);padding:28px 30px;margin:26px 0 22px;box-shadow:var(--shadow-md)}
+.disease-hero .en{font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;color:#99f6e4}
+.disease-hero h3{font-size:1.5rem;margin:4px 0 8px;color:#fff}
+.disease-hero p{color:#e0f2fe;font-size:.92rem;margin:0}
+.disease-hero .quick-tags{margin-top:14px;display:flex;gap:8px;flex-wrap:wrap}
+.disease-hero .quick-tags span{background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.28);
+  color:#fff;border-radius:100px;padding:3px 11px;font-size:.76rem}
+.module{background:var(--card);border:1px solid var(--border);border-radius:var(--radius-md);
+  padding:22px 24px;margin:16px 0;box-shadow:var(--shadow-sm)}
+.module-head{display:flex;align-items:center;gap:10px;margin-bottom:14px;padding-bottom:10px;
+  border-bottom:1px solid var(--border)}
+.module-index{font-family:Consolas,monospace;font-size:.72rem;font-weight:700;color:#fff;
+  background:var(--gradient-main);padding:3px 9px;border-radius:100px;white-space:nowrap}
+.module-head h3{font-size:1.08rem;font-weight:700;margin:0}
+.module-head .module-en{font-size:.74rem;color:var(--muted);font-weight:400}
+.module-cause .module-index{background:var(--cause)}
+.module-symptom .module-index{background:var(--symptom)}
+.module-case .module-index{background:var(--diagnosis)}
+.module-diff .module-index{background:#0F766E}
+.module-treat .module-index{background:var(--treatment)}
+.module-memory .module-index{background:var(--memory)}
+.module-link .module-index{background:#475569}
+
+/* ===== 卡片 ===== */
+.card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius-md);
+  padding:18px 20px;box-shadow:var(--shadow-sm);transition:.2s}
+.card:hover{box-shadow:var(--shadow-md);transform:translateY(-1px)}
+.card-header{display:flex;align-items:center;gap:9px;margin-bottom:10px;padding-bottom:9px;
+  border-bottom:1px solid var(--border)}
+.card-icon{font-size:1.2rem}
+.card-title{font-size:1rem;font-weight:700}
+.card-body{font-size:.94rem}
+.card-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px;margin:16px 0}
+.card-grid .card{margin:0}
+.card-symptom{border-left:4px solid var(--symptom)}
+.card-treatment{border-left:4px solid var(--treatment)}
+.card-cause{border-left:4px solid var(--cause)}
+.card-diagnosis{border-left:4px solid var(--diagnosis)}
+.card-memory{border-left:4px solid var(--memory)}
+.card-quiz{border-left:4px solid var(--quiz)}
+.quick-facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin:14px 0}
+.fact{background:var(--bg);border:1px solid var(--border);border-radius:10px;padding:12px 14px}
+.fact b{display:block;font-size:.76rem;color:var(--muted);font-weight:600;margin-bottom:2px}
+.fact span{font-size:.95rem;font-weight:700;color:var(--ink)}
+
+/* ===== 提示框 ===== */
+.callout{display:flex;gap:11px;padding:14px 18px;border-radius:var(--radius-md);margin:14px 0;
+  border-left:4px solid;font-size:.92rem}
+.callout-icon{font-size:1.15rem;flex-shrink:0;margin-top:1px}
+.callout-body{flex:1}
+.callout-body strong{display:block;margin-bottom:3px}
+.callout-info{background:var(--cause-bg);border-left-color:var(--cause)}
+.callout-success{background:var(--treatment-bg);border-left-color:var(--treatment)}
+.callout-warning{background:var(--diagnosis-bg);border-left-color:var(--diagnosis)}
+.callout-danger{background:var(--symptom-bg);border-left-color:var(--danger)}
+.callout-memory{background:var(--memory-bg);border-left-color:var(--memory)}
+.callout-example{background:var(--flash-bg);border-left-color:var(--flashcard)}
+
+/* ===== 列表 ===== */
+.icon-list{list-style:none;margin:10px 0}
+.icon-list li{position:relative;padding-left:26px;margin-bottom:9px;font-size:.94rem;line-height:1.65}
+.icon-list li::before{content:"✦";position:absolute;left:0;top:2px;color:var(--primary);font-size:.8rem}
+.icon-list.check li::before{content:"✓";color:var(--treatment);font-weight:800}
+.icon-list.cross li::before{content:"✗";color:var(--symptom);font-weight:800}
+.numbered-list{list-style:none;counter-reset:n;margin:10px 0}
+.numbered-list li{position:relative;padding-left:38px;margin-bottom:10px;font-size:.94rem;counter-increment:n}
+.numbered-list li::before{content:counter(n);position:absolute;left:0;top:0;width:24px;height:24px;
+  border-radius:50%;background:var(--gradient-main);color:#fff;font-size:.76rem;font-weight:800;
+  display:flex;align-items:center;justify-content:center}
+
+/* ===== 表格 ===== */
+.table-wrap{overflow-x:auto;margin:14px 0;border:1px solid var(--border);border-radius:var(--radius-md)}
+table{width:100%;border-collapse:collapse;font-size:.89rem;min-width:560px}
+thead{background:linear-gradient(135deg,#0EA5E9,#0891B2)}
+thead th{padding:11px 14px;text-align:left;color:#fff;font-size:.84rem;font-weight:700;white-space:nowrap}
+tbody tr{border-bottom:1px solid var(--border)}
+tbody tr:nth-child(even){background:#FAFCFE}
+tbody tr:hover{background:rgba(14,165,233,.05)}
+tbody tr:last-child{border-bottom:0}
+tbody td{padding:10px 14px;vertical-align:top;line-height:1.6}
+tbody td:first-child{font-weight:700;color:#0F766E;background:rgba(14,165,233,.04)}
+.table-note{font-size:.78rem;color:var(--muted);margin-top:-6px}
+
+/* ===== 标签 ===== */
+.tag{display:inline-flex;align-items:center;padding:2px 9px;border-radius:100px;
+  font-size:.75rem;font-weight:700;line-height:1.6}
+.tag-core{background:var(--symptom-bg);color:var(--danger)}
+.tag-master{background:var(--treatment-bg);color:var(--treatment)}
+.tag-understand{background:var(--cause-bg);color:var(--cause)}
+.tag-know{background:var(--diagnosis-bg);color:#B45309}
+.tag-info{background:rgba(14,165,233,.1);color:var(--primary)}
+.tag-memory{background:var(--memory-bg);color:var(--memory)}
+
+/* ===== Tab ===== */
+.tabs{margin:14px 0}
+.tab-nav{display:flex;gap:4px;flex-wrap:wrap;border-bottom:2px solid var(--border);margin-bottom:14px}
+.tab-btn{border:0;background:none;cursor:pointer;font-family:inherit;font-size:.88rem;
+  font-weight:600;color:var(--muted);padding:9px 16px;border-radius:var(--radius-sm) var(--radius-sm) 0 0;
+  border-bottom:2px solid transparent;margin-bottom:-2px}
+.tab-btn:hover{color:var(--primary);background:rgba(14,165,233,.05)}
+.tab-btn.active{color:var(--primary);border-bottom-color:var(--primary)}
+.tab-panel{display:none}
+.tab-panel.active{display:block;animation:fadeIn .25s ease}
+@keyframes fadeIn{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}
+
+/* ===== 折叠问答 ===== */
+details.qa{background:var(--card);border:1px solid var(--border);border-radius:var(--radius-md);
+  margin:10px 0;overflow:hidden}
+details.qa[open]{box-shadow:var(--shadow-sm)}
+details.qa summary{cursor:pointer;padding:13px 16px;font-weight:600;font-size:.94rem;
+  display:flex;align-items:center;gap:10px;list-style:none;user-select:none}
+details.qa summary::-webkit-details-marker{display:none}
+details.qa summary::after{content:"▾";margin-left:auto;color:var(--muted);transition:.2s}
+details.qa[open] summary::after{transform:rotate(180deg)}
+details.qa summary:hover{background:rgba(14,165,233,.04)}
+.qa-body{padding:0 16px 15px 52px;font-size:.92rem;border-top:1px solid var(--border);padding-top:12px}
+.qa-num{display:inline-flex;align-items:center;justify-content:center;min-width:26px;height:26px;
+  border-radius:7px;background:rgba(14,165,233,.1);color:var(--primary);font-size:.78rem;
+  font-weight:800;flex-shrink:0}
+
+/* ===== 自测题 ===== */
+.quiz-block{background:var(--quiz-bg);border:1px solid #FBCFE8;border-radius:var(--radius-md);
+  padding:20px 22px;margin:18px 0}
+.quiz-item{background:#fff;border:1px solid #F9D5E5;border-radius:10px;padding:16px 18px;margin:12px 0}
+.quiz-stem{font-weight:600;font-size:.95rem;margin-bottom:10px;display:flex;gap:8px;align-items:flex-start}
+.q-type{display:inline-block;padding:1px 8px;border-radius:5px;background:var(--quiz-bg);
+  color:var(--quiz);font-size:.72rem;font-weight:800;white-space:nowrap;margin-top:2px}
+.quiz-options{list-style:none;margin:8px 0}
+.quiz-options li{position:relative;padding:6px 10px 6px 30px;font-size:.9rem;border-radius:6px;margin:3px 0}
+.quiz-options li::before{content:attr(data-letter);position:absolute;left:8px;top:6px;
+  font-weight:800;color:var(--quiz)}
+.quiz-options li.correct{background:#DCFCE7;font-weight:600}
+.quiz-options li.correct::after{content:" ✓ 正确";color:#15803D;font-size:.76rem;font-weight:700}
+.quiz-options li.wrong{background:#FEE2E2}
+.quiz-options li.wrong::after{content:" ✗";color:var(--danger);font-size:.76rem;font-weight:700}
+.answer-key{display:inline-block;background:#DCFCE7;color:#15803D;border-radius:6px;
+  padding:2px 9px;font-size:.8rem;font-weight:800;margin-right:6px}
+.difficulty{color:#B45309;font-size:.8rem;letter-spacing:1px;white-space:nowrap}
+
+/* ===== 闪卡 ===== */
+.flashcard-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:14px;margin:18px 0}
+.flashcard{perspective:1000px;height:210px;cursor:pointer}
+.flashcard-inner{position:relative;width:100%;height:100%;transition:transform .55s;
+  transform-style:preserve-3d}
+.flashcard.flipped .flashcard-inner{transform:rotateY(180deg)}
+.flashcard-face{position:absolute;inset:0;backface-visibility:hidden;border-radius:var(--radius-md);
+  padding:18px 18px 14px;display:flex;flex-direction:column;justify-content:center;
+  border:1px solid var(--border);background:#fff;box-shadow:var(--shadow-sm)}
+.flashcard-front{border-top:5px solid var(--flashcard)}
+.flashcard-back{transform:rotateY(180deg);background:var(--flash-bg);border-top:5px solid var(--primary);
+  justify-content:flex-start;overflow-y:auto;font-size:.88rem;line-height:1.65}
+.flashcard-front p{font-size:.95rem;font-weight:600;margin:0;text-align:center}
+.card-tag{align-self:center;margin-bottom:10px;padding:2px 9px;border-radius:100px;
+  font-size:.72rem;font-weight:800;background:var(--flash-bg);color:#0E7490}
+.card-tag.concept{background:var(--cause-bg);color:var(--cause)}
+.card-tag.diagnosis{background:var(--diagnosis-bg);color:#B45309}
+.card-tag.treatment{background:var(--treatment-bg);color:#047857}
+.card-tag.memory{background:var(--memory-bg);color:var(--memory)}
+.flip-hint{text-align:center;font-size:.74rem;color:var(--muted);margin-top:auto;padding-top:8px}
+
+/* ===== 病例挑战 ===== */
+.case-card{background:#fff;border:1px solid var(--border);border-top:5px solid var(--diagnosis);
+  border-radius:var(--radius-md);padding:20px 22px;margin:18px 0;box-shadow:var(--shadow-sm)}
+.case-meta{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:10px}
+.case-meta span{background:var(--diagnosis-bg);color:#B45309;border-radius:100px;
+  padding:2px 10px;font-size:.75rem;font-weight:700}
+.case-title{font-size:1.02rem;font-weight:800;margin-bottom:8px}
+.case-body{font-size:.93rem;color:var(--ink)}
+.case-questions{margin:12px 0 0;padding:12px 16px;background:var(--bg);border-radius:10px}
+.case-questions li{margin-bottom:6px;font-size:.9rem}
+
+/* ===== 记忆工具箱 ===== */
+.memory-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px;margin:14px 0}
+.memory-card{background:var(--memory-bg);border:1px solid #DDD6FE;border-radius:var(--radius-md);padding:16px 18px}
+.memory-card .m-title{font-weight:800;color:var(--memory);font-size:.9rem;margin-bottom:6px}
+.memory-card .m-type{display:inline-block;font-size:.7rem;font-weight:700;color:var(--memory);
+  background:#fff;border:1px solid #DDD6FE;border-radius:100px;padding:1px 8px;margin-left:6px}
+.memory-card .m-formula{font-weight:700;background:#fff;border-left:3px solid var(--memory);
+  padding:8px 10px;border-radius:6px;margin:8px 0;font-size:.92rem}
+.memory-card p{font-size:.88rem;margin:6px 0}
+
+/* ===== 学习路线 / 知识地图 ===== */
+.route-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin:16px 0}
+.route-card{background:#fff;border:1px solid var(--border);border-radius:var(--radius-md);padding:16px 18px}
+.route-card h4{font-size:.95rem;margin-bottom:6px;color:var(--primary)}
+.route-card p{font-size:.86rem;color:var(--muted);margin:0}
+.priority{display:inline-flex;gap:2px;font-size:.8rem;color:#F59E0B;margin-left:4px}
+.knowledge-map{display:grid;grid-template-columns:repeat(auto-fit,minmax(165px,1fr));gap:12px;margin:16px 0}
+.km-card{background:#fff;border:1px solid var(--border);border-radius:var(--radius-md);
+  padding:15px 12px;text-align:center;transition:.2s}
+.km-card:hover{border-color:var(--primary);transform:translateY(-2px);box-shadow:var(--shadow-md)}
+.km-icon{font-size:1.8rem;margin-bottom:6px}
+.km-title{font-weight:700;font-size:.9rem;margin-bottom:2px}
+.km-count{font-size:.76rem;color:var(--muted)}
+.km-count strong{color:var(--primary);font-size:1rem}
+
+/* ===== 数据 / 时间线 ===== */
+.stat-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(135px,1fr));gap:12px;margin:16px 0}
+.stat-card{background:#fff;border:1px solid var(--border);border-radius:var(--radius-md);
+  padding:16px 12px;text-align:center}
+.stat-num{font-size:1.65rem;font-weight:800;color:var(--primary);line-height:1.2}
+.stat-label{font-size:.77rem;color:var(--muted);margin-top:3px}
+.timeline{position:relative;margin:18px 0;padding-left:28px}
+.timeline::before{content:"";position:absolute;left:8px;top:4px;bottom:4px;width:2px;
+  background:linear-gradient(to bottom,var(--primary),var(--accent));border-radius:2px}
+.tl-item{position:relative;margin-bottom:18px}
+.tl-item::before{content:"";position:absolute;left:-25px;top:5px;width:11px;height:11px;
+  border-radius:50%;background:#fff;border:3px solid var(--primary)}
+.tl-title{font-weight:700;font-size:.94rem;margin-bottom:3px}
+.tl-desc{font-size:.86rem;color:var(--muted)}
+.progress-item{margin-bottom:12px}
+.progress-label{display:flex;justify-content:space-between;font-size:.84rem;margin-bottom:4px}
+.progress-bar{height:8px;background:var(--border);border-radius:100px;overflow:hidden}
+.progress-fill{height:100%;border-radius:100px;background:var(--gradient-main)}
+
+/* ===== 易错警示 ===== */
+.exam-alert{background:#FFF7ED;border:1px solid #FED7AA;border-left:5px solid var(--diagnosis);
+  border-radius:var(--radius-md);padding:18px 22px;margin:18px 0}
+.exam-alert h3{color:#C2410C;font-size:1rem;margin-bottom:10px}
+.exam-alert li{font-size:.92rem;margin-bottom:8px}
+.exam-alert li::before{content:"⚠️"}
+
+/* ===== 页脚 ===== */
+.footer{margin-top:56px;padding-top:28px;border-top:1px solid var(--border);
+  text-align:center;font-size:.82rem;color:var(--muted)}
+.footer .footer-tag{display:inline-block;padding:6px 16px;border-radius:100px;color:#fff;
+  background:var(--gradient-main);font-weight:700;margin-bottom:10px}
+.disclaimer{font-size:.78rem;color:var(--muted);background:#fff;border:1px dashed var(--border);
+  border-radius:10px;padding:12px 16px;margin:18px 0;text-align:left}
+
+/* ===== 浮动按钮 ===== */
+.back-to-top{position:fixed;right:22px;bottom:22px;width:44px;height:44px;border:0;border-radius:50%;
+  background:var(--gradient-main);color:#fff;font-size:1.05rem;cursor:pointer;box-shadow:var(--shadow-lg);
+  opacity:0;visibility:hidden;transform:translateY(10px);transition:.25s;z-index:60}
+.back-to-top.visible{opacity:1;visibility:visible;transform:none}
+.mobile-nav-toggle{display:none;position:fixed;top:14px;left:14px;z-index:100;width:44px;height:44px;
+  border:1px solid var(--border);border-radius:var(--radius-sm);background:#fff;box-shadow:var(--shadow-md);
+  cursor:pointer;font-size:1.15rem;align-items:center;justify-content:center}
+.sidebar-overlay{display:none;position:fixed;inset:0;background:rgba(15,23,42,.35);z-index:98}
+
+/* ===== 响应式 ===== */
+@media(max-width:1100px){.sidebar{width:220px;margin-right:22px}.main-content{max-width:100%}}
+@media(max-width:900px){
+  .mobile-nav-toggle{display:flex}
+  .sidebar{position:fixed;left:-290px;top:0;height:100vh;width:270px;background:#fff;
+    border-right:1px solid var(--border);z-index:99;transition:left .28s ease;padding:70px 16px 24px;
+    margin:0;max-height:100vh}
+  .sidebar.open{left:0}
+  .sidebar-overlay.show{display:block}
+  .page-wrapper{padding:0 16px}
+  .main-content{padding-top:66px}
+  .hero{padding:38px 20px 30px}.hero h1{font-size:1.75rem}
+  .section-header h2{font-size:1.3rem}
+  .module{padding:18px 16px}
+  .qa-body{padding-left:16px}
+}
+@media(max-width:680px){
+  body{font-size:15px}
+  .hero h1{font-size:1.45rem}
+  .hero-meta{gap:18px}
+  .knowledge-map{grid-template-columns:repeat(2,1fr)}
+  .flashcard-grid{grid-template-columns:1fr}
+  .flashcard{height:200px}
+  .stat-row{grid-template-columns:repeat(2,1fr)}
+  .section{margin-bottom:40px}
+  table{min-width:520px}
+}
+@media print{
+  .sidebar,.mobile-nav-toggle,.back-to-top,.sidebar-overlay{display:none!important}
+  .page-wrapper{display:block;padding:0}
+  .main-content{max-width:100%}
+  details.qa{break-inside:avoid}
+  details.qa .qa-body{display:block}
+}
+::-webkit-scrollbar{width:8px;height:8px}
+::-webkit-scrollbar-thumb{background:var(--border);border-radius:4px}
+::-webkit-scrollbar-thumb:hover{background:var(--muted)}
+</style>
+<style data-refactor="v1">
+/* ============================================================
+   精神病学学习指南 · 统一交互层增量覆盖样式 v1
+   构建期由 apply-refactor.ps1 注入 </head> 前，仅追加修正，
+   不改动 A/B 两族基础样式。全部使用字面色值，兼容两族设计变量。
+   ============================================================ */
+
+/* ---- 1. 全局键盘焦点可见 ---- */
+:focus-visible{outline:2px solid #0EA5E9;outline-offset:2px}
+
+/* ---- 2. 章节导航条（胶囊式三段：上一章 / 目录 / 下一章） ---- */
+.chapter-pager{display:flex;align-items:stretch;justify-content:center;gap:10px;margin:36px 0 10px;flex-wrap:wrap}
+.chapter-pager a,.chapter-pager span{flex:1 1 200px;display:flex;align-items:center;justify-content:center;min-height:44px;padding:10px 18px;border:1px solid #E2E8F0;border-radius:999px;background:#FFFFFF;color:#0F172A;font-size:14px;font-weight:600;line-height:1.4;text-decoration:none;text-align:center;box-shadow:0 1px 2px rgba(15,23,42,.06);transition:border-color .15s ease,box-shadow .15s ease,color .15s ease}
+.chapter-pager a:hover{border-color:#0EA5E9;color:#0EA5E9;box-shadow:0 4px 14px rgba(14,165,233,.18);text-decoration:none}
+.chapter-pager .cp-toc{flex:0 0 auto;min-width:104px;background:linear-gradient(135deg,#0EA5E9,#10B981);border-color:transparent;color:#FFFFFF}
+.chapter-pager .cp-toc:hover{border-color:transparent;color:#FFFFFF;opacity:.92}
+.chapter-pager .cp-disabled{opacity:.45;background:#F8FAFC;box-shadow:none;cursor:default}
+@media (max-width:680px){.chapter-pager{gap:8px;margin:28px 0 8px}.chapter-pager a,.chapter-pager span{flex:1 1 100%}}
+
+/* ---- 3. 自测题交互态（兼容 A 族 .opt 与 B 族 .quiz-options li） ---- */
+/* 3.1 基础可点击 */
+.quiz-q .opt{cursor:pointer}
+.quiz-item .quiz-options li{cursor:pointer}
+/* 3.2 hover / 焦点态 */
+.quiz-q .opt:hover,.quiz-q .opt:focus-visible{border-color:#7DD3FC;background:#F0F9FF}
+.quiz-item .quiz-options li:hover,.quiz-item .quiz-options li:focus-visible{background:#FFFFFF;box-shadow:inset 0 0 0 1px #7DD3FC}
+/* 3.3 判定结果态 */
+.quiz-q .opt.is-right{border-color:#34D399;background:#ECFDF5;color:#065F46;font-weight:600}
+.quiz-q .opt.is-right::after{content:" ✓";color:#059669;font-weight:800}
+.quiz-q .opt.is-right .l{color:#047857}
+.quiz-item .quiz-options li.is-right{background:#DCFCE7;box-shadow:inset 0 0 0 1px #34D399;font-weight:600}
+.quiz-item .quiz-options li.is-right::after{content:" ✓";color:#15803D;font-weight:800}
+.quiz-q .opt.is-wrong{border-color:#FCA5A5;background:#FEF2F2;color:#B91C1C;font-weight:600}
+.quiz-q .opt.is-wrong::after{content:" ✗";color:#DC2626;font-weight:800}
+.quiz-q .opt.is-wrong .l{color:#B91C1C}
+.quiz-item .quiz-options li.is-wrong{background:#FEE2E2;box-shadow:inset 0 0 0 1px #FCA5A5;font-weight:600}
+.quiz-item .quiz-options li.is-wrong::after{content:" ✗";color:#DC2626;font-weight:800}
+.quiz-q .opt.is-reveal{border-color:#6EE7B7;background:#ECFDF5;color:#065F46}
+.quiz-q .opt.is-reveal .l{color:#047857}
+.quiz-item .quiz-options li.is-reveal{background:#ECFDF5;box-shadow:inset 0 0 0 1px #6EE7B7;color:#065F46}
+/* 3.4 已锁定禁用态 */
+.quiz-q.is-locked .opt,.quiz-item.is-locked .quiz-options li{cursor:default;pointer-events:none}
+.quiz-q.is-locked .opt:not(.is-right):not(.is-wrong):not(.is-reveal){opacity:.55}
+.quiz-item.is-locked .quiz-options li:not(.is-right):not(.is-wrong):not(.is-reveal){opacity:.55}
+/* 3.5 计分行（运行时注入） */
+.quiz-score{display:flex;align-items:center;gap:12px;margin:14px 0 18px;padding:12px 18px;border:1px dashed #7DD3FC;border-radius:12px;background:#F0F9FF;font-size:14px;font-weight:700;color:#0F172A}
+.quiz-score .qs-label{white-space:nowrap}
+.quiz-score .qs-num{white-space:nowrap;color:#0284C7;font-size:16px}
+.quiz-score .qs-bar{flex:1 1 60px;min-width:60px;height:8px;border-radius:999px;background:#E2E8F0;overflow:hidden}
+.quiz-score .qs-bar i{display:block;height:100%;width:0;border-radius:999px;background:linear-gradient(90deg,#0EA5E9,#10B981);transition:width .35s ease}
+
+/* ---- 4. 速记卡可达性与长内容 ---- */
+.fc-hint,.flip-hint{color:#64748B}
+.flashcard-face{overflow:auto}
+.flashcard[tabindex]{outline:none}
+.flashcard[tabindex]:focus-visible{outline:3px solid #0EA5E9;outline-offset:3px}
+
+/* ---- 5. 侧栏目录 ---- */
+/* B 族 sticky 侧栏内目录限高滚动（A 族 aside 本身已可滚动，此规则空匹配无害） */
+.sidebar .sidebar-nav{max-height:calc(100vh - 60px);overflow-y:auto;scrollbar-width:thin}
+/* A 族 scroll spy 高亮（B 族高亮由其基础样式提供） */
+.sidebar a.toc.active{background:#E0F2FE;color:#0369A1;font-weight:600}
+
+/* ---- 6. 响应式补充：681–900px 时 grid3 降为两列 ---- */
+@media (min-width:681px) and (max-width:900px){
+  .grid3{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+
+/* ---- 7. 打印样式补充（A 族新增；B 族已有 print，重复声明无害） ---- */
+@media print{
+  .sidebar,.overlay,.sidebar-overlay,#menuBtn,#navToggle,#overlay,#sidebarOverlay,#readbar,#topBtn,#backTop,.chapter-pager,.quiz-score{display:none!important}
+}
+
+/* ---- 8. 手机端增强 v2（触控体验 / 防溢出 / 抽屉滚动锁定） ---- */
+/* 8.1 触控体验：去点按高亮、消除双击缩放延迟（flashcard 高 190-200px 天然达标，不另设 min-height） */
+.opt,.tabbar button,.tab-btn,.quiz-options li,.flashcard,.chapter-pager a,.chapter-pager span,.menu-btn,.mobile-nav-toggle{-webkit-tap-highlight-color:transparent;touch-action:manipulation}
+/* 8.2 触控目标最小 44px（自测选项与 tab 胶囊原高约 33px） */
+.opt,.tabbar button,.tab-btn,.quiz-options li{min-height:44px}
+/* 8.3 防溢出：内容图自适应；svg 不设 height:auto，避免定尺寸图标塌陷 */
+img{max-width:100%;height:auto}
+svg{max-width:100%}
+/* 8.4 长词/URL 断行 */
+body{overflow-wrap:break-word}
+/* 8.5 表格容器触摸惯性滚动（A 族已有同值规则，重复声明无害） */
+.table-wrap{-webkit-overflow-scrolling:touch}
+/* 8.6 抽屉打开时锁定背景滚动（两族抽屉断点均为 900px；类由统一脚本增删） */
+@media (max-width:900px){
+  body.nav-locked{overflow:hidden}
+}
+</style>
+</head>
+<body>
+<button class="mobile-nav-toggle" id="navToggle" aria-label="打开目录">☰</button>
+<div class="sidebar-overlay" id="sidebarOverlay"></div>
+<div class="page-wrapper">
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-brand">《精神病学》第9版 · 学习指南</div>
+    <nav class="sidebar-nav">
+      <ul>
+        <li><a href="#cover" class="active"><span class="toc-num">00</span>章节封面</a></li>
+        <li><a href="#position"><span class="toc-num">01</span>本章地位速览</a></li>
+        <li><a href="#map"><span class="toc-num">02</span>本章知识地图</a></li>
+        <li><a href="#route"><span class="toc-num">03</span>学习路线图</a></li>
+        <li><a href="#nav"><span class="toc-num">04</span>章节导航</a></li>
+        <li><a href="#schizophrenia"><span class="toc-num">05</span>精神分裂症</a></li>
+        <li><a href="#sad"><span class="toc-num">06</span>分裂情感障碍</a></li>
+        <li><a href="#schizotypal"><span class="toc-num">07</span>分裂型障碍</a></li>
+        <li><a href="#atpd"><span class="toc-num">08</span>急性短暂性精神病性障碍</a></li>
+        <li><a href="#delusional"><span class="toc-num">09</span>妄想性障碍</a></li>
+        <li><a href="#summary"><span class="toc-num">10</span>全章核心要点速览</a></li>
+        <li><a href="#pitfalls"><span class="toc-num">11</span>易混易错点警示</a></li>
+        <li><a href="#quiz"><span class="toc-num">12</span>章节自测</a></li>
+        <li><a href="#flashcards"><span class="toc-num">13</span>考点速记卡</a></li>
+        <li><a href="#cases"><span class="toc-num">14</span>病例挑战</a></li>
+        <li><a href="#extend"><span class="toc-num">15</span>拓展延伸</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <main class="main-content">
+    <section id="cover" class="hero">
+      <div class="hero-badge">《精神病学》第9版（2024） · 第六章</div>
+      <h1>精神分裂症及其他原发性精神病性障碍</h1>
+      <p class="subtitle">本章聚焦精神分裂症（schizophrenia）及其他原发性精神病性障碍（primary psychotic disorders），是重性精神病性障碍的核心章节，也是考试与临床权重最高的一章：以“现实检验能力受损”为主线，掌握五类疾病的症状、病程、鉴别与治疗闭环。</p>
+      <div class="hero-meta">
+        <div class="hero-meta-item"><div class="num">5</div><div class="label">核心疾病</div></div>
+        <div class="hero-meta-item"><div class="num">8</div><div class="label">每病八栏</div></div>
+        <div class="hero-meta-item"><div class="num">15</div><div class="label">自测题目</div></div>
+        <div class="hero-meta-item"><div class="num">20</div><div class="label">考点闪卡</div></div>
+      </div>
+      <div class="hero-quote">
+        <p><strong>本章学习目标</strong></p>
+        <p><span class="tag tag-master">掌握</span> 精神分裂症前驱期与显症期症状、阳性/阴性/认知症状、ICD-11 诊断要点、病程预后、药物与物理治疗、心理社会干预。</p>
+        <p><span class="tag tag-master">掌握</span> 精神分裂症与分裂情感障碍、分裂型障碍、妄想性障碍、急性短暂性精神病性障碍，以及双相/抑郁伴精神病性症状、物质/药物所致、器质性精神障碍的鉴别。</p>
+        <p><span class="tag tag-understand">理解</span> 其余四病的诊断门槛、治疗原则与预后定位。</p>
+        <p><span class="tag tag-know">了解</span> 遗传、神经发育、神经影像与神经生化假说，以及心理社会因素的定位。</p>
+        <p><span class="tag tag-core">必考</span> 时间数字：1 个月、2 周、3 个月、2 年、4～6 周、6 个月、5 年。</p>
+      </div>
+    </section>
+
+    <section id="position" class="section">
+      <div class="section-header"><span class="section-number">01</span><h2>本章地位速览</h2></div>
+      <p class="lead">本章是《精神病学》重性精神病性障碍板块的<strong>核心章节</strong>，也是考试与临床权重最高的一章。它划出了“原发性”与“继发性”精神病性障碍的分水岭；学不好这一章，后面的心境障碍、器质性精神障碍、物质使用障碍都会失去对照坐标。</p>
+      <div class="card-grid">
+        <div class="card card-diagnosis">
+          <div class="card-header"><span class="card-icon">📍</span><span class="card-title">章节定位</span></div>
+          <div class="card-body">
+            <p>教材把本章限定为<strong>原发性精神病性障碍（primary psychotic disorders）</strong>：以明显的阳性症状、阴性症状、精神运动性障碍及现实检验能力严重受损为特征，且不是心境障碍、谵妄、物质使用或躯体疾病的表现形式。</p>
+            <p>五个疾病从“最重、最慢性”的精神分裂症，向“发作性、短暂性、人格性、妄想性”逐级展开，构成一条<strong>严重度与病程连续谱</strong>。</p>
+          </div>
+        </div>
+        <div class="card card-symptom">
+          <div class="card-header"><span class="card-icon">🏥</span><span class="card-title">临床意义</span></div>
+          <div class="card-body">
+            <ul class="icon-list">
+              <li>精神分裂症终生患病率约 1%，是最常见的重性精神障碍之一，功能损害严重而持续。</li>
+              <li>约 5% 最终死于自杀，平均寿命缩短约 13～15 年，躯体共病与病耻感负担重。</li>
+              <li>诊断没有绝对特异性症状，必须依靠病史、精神检查、病程与排除法。</li>
+              <li>治疗以抗精神病药为首选，心理社会干预贯穿全程，二者不可偏废。</li>
+            </ul>
+          </div>
+        </div>
+        <div class="card card-cause">
+          <div class="card-header"><span class="card-icon">🔗</span><span class="card-title">前后关联</span></div>
+          <div class="card-body">
+            <p><strong>前置知识：</strong>症状学中的幻觉、妄想、思维形式障碍、情感症状、自知力；精神检查与病史采集。</p>
+            <p><strong>后续延伸：</strong>心境障碍（伴精神病性症状）、器质性精神障碍、物质使用所致精神障碍、人格障碍、治疗学中的抗精神病药与 ECT。</p>
+            <p><strong>横向交叉：</strong>神经影像、遗传学、神经心理、康复医学、公共卫生与司法精神病学。</p>
+          </div>
+        </div>
+      </div>
+      <div class="stat-row">
+        <div class="stat-card"><div class="stat-num">5</div><div class="stat-label">原发性精神病性障碍</div></div>
+        <div class="stat-card"><div class="stat-num">~1%</div><div class="stat-label">精神分裂症终生患病率</div></div>
+        <div class="stat-card"><div class="stat-num">1 个月</div><div class="stat-label">ICD-11 首次发作病程门槛</div></div>
+        <div class="stat-card"><div class="stat-num">4～6 周</div><div class="stat-label">急性治疗期</div></div>
+        <div class="stat-card"><div class="stat-num">≥5 年</div><div class="stat-label">部分患者维持治疗</div></div>
+      </div>
+      <div class="callout callout-warning">
+        <div class="callout-icon">⚠️</div>
+        <div class="callout-body"><strong>本章最容易混淆的一句话</strong>“有精神病性症状”不等于“精神分裂症”。心境障碍、物质使用、脑器质性疾病都可以出现幻觉和妄想；本章五病的诊断，本质上是在<strong>症状组合 + 病程长度 + 功能结局 + 排除依据</strong>四个维度上做分层。</div>
+      </div>
+    </section>
+
+    <section id="map" class="section">
+      <div class="section-header"><span class="section-number">02</span><h2>本章知识地图</h2></div>
+      <p class="lead">先记住“五病 + 三组机制 + 两类门槛 + 一套治疗”，再把细节挂到骨架上。</p>
+      <div class="knowledge-map">
+        <div class="km-card"><div class="km-icon">🧠</div><div class="km-title">精神分裂症</div><div class="km-count"><strong>1</strong> 个核心疾病 · 八栏重点</div></div>
+        <div class="km-card"><div class="km-icon">🌗</div><div class="km-title">分裂情感障碍</div><div class="km-count"><strong>2</strong> 类症状 · 同一次发作</div></div>
+        <div class="km-card"><div class="km-icon">🕸️</div><div class="km-title">分裂型障碍</div><div class="km-count"><strong>8</strong> 类异常 · 持续 2 年</div></div>
+        <div class="km-card"><div class="km-icon">⚡</div><div class="km-title">急性短暂性精神病性障碍</div><div class="km-count"><strong>2</strong> 周达峰 · 3 个月上限</div></div>
+        <div class="km-card"><div class="km-icon">🔒</div><div class="km-title">妄想性障碍</div><div class="km-count"><strong>5</strong> 种常见妄想类型</div></div>
+        <div class="km-card"><div class="km-icon">🧬</div><div class="km-title">病因机制</div><div class="km-count"><strong>4</strong> 组假说 · 1 个神经发育主线</div></div>
+        <div class="km-card"><div class="km-icon">⚖️</div><div class="km-title">诊断与鉴别</div><div class="km-count"><strong>7</strong> 组核心鉴别</div></div>
+        <div class="km-card"><div class="km-icon">🧰</div><div class="km-title">治疗干预</div><div class="km-count"><strong>3</strong> 阶段 · 5 类心理社会干预</div></div>
+      </div>
+      <h4>五个精神病性障碍一张表</h4>
+      <div class="table-wrap">
+        <table class="comparison-table">
+          <thead><tr><th>疾病</th><th>一句话核心</th><th>病程门槛（ICD-11）</th><th>功能/预后</th><th>治疗关键词</th></tr></thead>
+          <tbody>
+            <tr><td>精神分裂症</td><td>阳性 + 阴性 + 瓦解/认知症状，现实检验严重受损</td><td>≥1 个月；≥2 项症状且至少 1 项为妄想、幻觉、思维紊乱、被动体验</td><td>多慢性化，复发致功能恶化，预后异质</td><td>抗精神病药首选 + 心理社会干预全程</td></tr>
+            <tr><td>分裂情感障碍</td><td>同一次发作中，精神分裂症与心境发作“双达标”</td><td>精神病性症状与情感症状共同存在 ≥1 个月</td><td>好于精神分裂症，差于心境障碍</td><td>抗精神病药 + 心境稳定剂（+ 抗抑郁药）</td></tr>
+            <tr><td>分裂型障碍</td><td>古怪模式 + 感知认知异常 + 人际不良，未达精神病</td><td>持续 ≥2 年；短暂精神病性症状不超过 1 个月</td><td>慢性，类似人格障碍；部分发展为精神分裂症</td><td>抗精神病药 + 心理治疗；抑郁时加抗抑郁药</td></tr>
+            <tr><td>急性短暂性精神病性障碍</td><td>无前驱、急性起病、2 周达峰、症状多变</td><td>≤3 个月</td><td>完全缓解，恢复病前功能；约半数后续可发展为其他精神障碍</td><td>短期住院 + 抗精神病药/苯二氮䓬类对症</td></tr>
+            <tr><td>妄想性障碍</td><td>系统、固定、非怪异的妄想，除此之外功能相对正常</td><td>妄想持续 ≥3 个月</td><td>慢性，少人格衰退；部分老年期缓解</td><td>抗精神病药 + 个别心理治疗，不争辩妄想</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="table-note">记忆抓手：精神分裂症 1 个月、分裂情感 1 个月、分裂型 2 年（精神病性症状 ≤1 个月）、急性短暂 ≤3 个月、妄想性 3 个月。</p>
+    </section>
+
+    <section id="route" class="section">
+      <div class="section-header"><span class="section-number">03</span><h2>学习路线图</h2></div>
+      <p class="lead">推荐“先总后分、先重后轻、先诊断后治疗”的顺序，避免一上来就陷进药物名称。</p>
+      <div class="route-grid">
+        <div class="route-card"><h4>第一步 · 建框架</h4><p>读本章开篇界定，弄清“原发性”排除哪些情况；背下五病各自的病程门槛。<span class="priority">⭐⭐⭐</span></p></div>
+        <div class="route-card"><h4>第二步 · 攻重点</h4><p>精读精神分裂症：前驱期→显症期→五维症状→ICD-11 诊断→鉴别→治疗。八栏逐栏过。<span class="priority">⭐⭐⭐</span></p></div>
+        <div class="route-card"><h4>第三步 · 做对照</h4><p>把分裂情感、分裂型、急性短暂、妄想性放进同一张表，按“症状/病程/功能/结局”四列比较。<span class="priority">⭐⭐⭐</span></p></div>
+        <div class="route-card"><h4>第四步 · 练鉴别</h4><p>重点练四组：vs 分裂情感、vs 分裂型、vs 妄想性、vs 急性短暂；再练 vs 心境/物质/器质性。<span class="priority">⭐⭐⭐</span></p></div>
+        <div class="route-card"><h4>第五步 · 收治疗</h4><p>记住药物选择原则、三阶段时长、氯氮平与长效针剂的定位；剂量不背数字。<span class="priority">⭐⭐</span></p></div>
+        <div class="route-card"><h4>第六步 · 刷输出</h4><p>用闪卡自测时间数字，用病例训练“症状→鉴别→诊断→处理”的表达。<span class="priority">⭐⭐</span></p></div>
+      </div>
+      <div class="table-wrap">
+        <table class="comparison-table">
+          <thead><tr><th>复习节奏</th><th>任务</th><th>产出检验</th></tr></thead>
+          <tbody>
+            <tr><td>第 1 天</td><td>通读开篇 + 精神分裂症画像、病因</td><td>能画出概念变迁时间轴，说出 5 个流行病学数字</td></tr>
+            <tr><td>第 2 天</td><td>精神分裂症临床表现 + 诊断</td><td>能区分前驱期与病前人格，复述 ICD-11 两项要求</td></tr>
+            <tr><td>第 3 天</td><td>鉴别诊断 + 治疗</td><td>能完成 4 组鉴别的四维表格，说出三阶段时长</td></tr>
+            <tr><td>第 4 天</td><td>其余四病八栏</td><td>能不看书画出五病病程门槛对照表</td></tr>
+            <tr><td>第 5 天</td><td>易错点 + 自测</td><td>15 题正确率 ≥ 80%</td></tr>
+            <tr><td>第 6 天</td><td>闪卡 + 病例</td><td>20 张闪卡能连续翻对 16 张以上</td></tr>
+            <tr><td>第 7 天</td><td>回炉薄弱项</td><td>用 3 分钟讲清“为什么不是分裂情感障碍”</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="callout callout-memory">
+        <div class="callout-icon">🧠</div>
+        <div class="callout-body"><strong>记忆策略建议</strong>时间数字用“<strong>1-1-2-3-3</strong>”串：精神分裂症 1 个月、分裂情感 1 个月、分裂型 2 年、急性短暂 3 个月、妄想性 3 个月。治疗时长用“<strong>4-6-5</strong>”：急性 4～6 周、巩固至少 6 个月、维持至少 5 年（部分患者）。数字先锁死，再填症状。</div>
+      </div>
+    </section>
+
+    <section id="nav" class="section">
+      <div class="section-header"><span class="section-number">04</span><h2>章节导航</h2></div>
+      <p class="lead">按疾病跳转。每个疾病都按固定八栏展开，方便横向对照。</p>
+      <div class="card-grid">
+        <div class="card card-symptom"><div class="card-header"><span class="card-icon">🧠</span><span class="card-title">精神分裂症</span></div><div class="card-body"><p>本章重点。前驱期、五维症状、ICD-11 诊断、七组鉴别、三阶段治疗与心理社会干预。</p><p><a href="#schizophrenia">进入八栏 →</a></p></div></div>
+        <div class="card card-diagnosis"><div class="card-header"><span class="card-icon">🌗</span><span class="card-title">分裂情感障碍</span></div><div class="card-body"><p>“同一次发作、双达标、至少 1 个月”。重点是与精神分裂症、伴精神病性症状的心境障碍划界。</p><p><a href="#sad">进入八栏 →</a></p></div></div>
+        <div class="card card-memory"><div class="card-header"><span class="card-icon">🕸️</span><span class="card-title">分裂型障碍</span></div><div class="card-body"><p>古怪模式持续 2 年，短暂精神病性症状不超过 1 个月；与人格障碍、精神分裂症前驱期的关系。</p><p><a href="#schizotypal">进入八栏 →</a></p></div></div>
+        <div class="card card-treatment"><div class="card-header"><span class="card-icon">⚡</span><span class="card-title">急性短暂性精神病性障碍</span></div><div class="card-body"><p>无前驱、2 周达峰、症状每天可变、3 个月内完全缓解；治疗以短期住院与对症为主。</p><p><a href="#atpd">进入八栏 →</a></p></div></div>
+        <div class="card card-cause"><div class="card-header"><span class="card-icon">🔒</span><span class="card-title">妄想性障碍</span></div><div class="card-body"><p>系统、固定、非怪异妄想持续 3 个月；不涉妄想时功能基本正常；重点排除器质性。</p><p><a href="#delusional">进入八栏 →</a></p></div></div>
+        <div class="card card-quiz"><div class="card-header"><span class="card-icon">🎯</span><span class="card-title">冲刺区</span></div><div class="card-body"><p>先看核心要点与易错点，再做 15 题自测，最后用 20 张闪卡和 3 个病例收口。</p><p><a href="#summary">核心要点</a> · <a href="#quiz">章节自测</a> · <a href="#flashcards">考点速记卡</a></p></div></div>
+      </div>
+    </section>
+
+    <section id="schizophrenia" class="section">
+      <div class="section-header"><span class="section-number">05</span><h2>精神分裂症</h2></div>
+      <p class="lead">本章重点。主线：<strong>阳性症状让人看见病，阴性症状让人看见残，认知症状决定回归社会的能力，病程决定诊断归属。</strong></p>
+      <div class="disease-hero"><div class="en">SCHIZOPHRENIA</div><h3>精神分裂症</h3><p>一组病因未明、以感知、思维、情感、认知和行为异常为表现的重性精神障碍；多起病于青壮年，影响严重而持续，诊断依赖病史与精神检查。</p><div class="quick-tags"><span>核心：现实检验受损</span><span>病程：多持续/复发缓解</span><span>治疗：抗精神病药首选</span><span>预后：异质，前 5 年关键</span></div></div>
+      <div class="quick-facts"><div class="fact"><b>终生患病率</b><span>约 1%</span></div><div class="fact"><b>遗传率</b><span>64%～81%</span></div><div class="fact"><b>自杀死亡</b><span>约 5%</span></div><div class="fact"><b>尼古丁依赖</b><span>约 90%</span></div><div class="fact"><b>寿命缩短</b><span>13～15 年</span></div><div class="fact"><b>ICD-11 首次发作</b><span>≥1 个月</span></div></div>
+
+      <div class="module">
+        <div class="module-head"><span class="module-index">第一栏</span><h3>疾病画像</h3></div>
+        <div class="card-grid">
+          <div class="card card-diagnosis"><div class="card-header"><span class="card-icon">📖</span><span class="card-title">定义与本质</span></div><div class="card-body"><p>属<strong>原发性精神病性障碍</strong>：以明显阳性症状（positive symptoms）、阴性症状（negative symptoms）、精神运动性障碍及现实检验能力严重受损为特征；症状是疾病的原发表现，不是心境障碍、谵妄、物质使用或躯体疾病的表现形式。</p><p>多起病于青壮年，是最常见的重性精神障碍之一；不同患者、不同时期表现差异很大。诊断依靠病史、精神检查、病程与排除，缺乏特异实验指标和病理生理体征。</p></div></div>
+          <div class="card card-symptom"><div class="card-header"><span class="card-icon">🧩</span><span class="card-title">4A 与现代观点</span></div><div class="card-body"><p>Bleuler 提出 4A 基本症状：联想障碍（association disturbance）、情感淡漠（apathy）、矛盾意向（ambivalence）、孤独症（autism）；幻觉、妄想为附加症状。</p><p>现代观点认为，本病是一组病因、临床表现、治疗反应及病程表现不同的疾病，是一个<strong>疾病群</strong>而非单一实体。</p></div></div>
+          <div class="card card-cause"><div class="card-header"><span class="card-icon">🔍</span><span class="card-title">诊断现实</span></div><div class="card-body"><p>没有绝对特异性症状；症状随病程演变，横断面检查不足以确诊；教育、智力、文化背景影响判断。诊断 = 全面病史 + 精神检查 + 病程特征 + 排除。</p></div></div>
+        </div>
+        <h4>概念变迁</h4>
+        <div class="timeline">
+          <div class="tl-item"><div class="tl-title">1857 Morel</div><div class="tl-desc">早发性痴呆（démence précoce）：青少年起病、智能严重衰退。</div></div>
+          <div class="tl-item"><div class="tl-title">1870 Hecker / 1874 Kahlbaum</div><div class="tl-desc">青春痴呆（hebephrenia）／紧张症（catatonia）。</div></div>
+          <div class="tl-item"><div class="tl-title">1896 Kraepelin</div><div class="tl-desc">将上述表现视为同一疾病单元，命名早发性痴呆（dementia praecox），强调早发与衰退。</div></div>
+          <div class="tl-item"><div class="tl-title">20 世纪初 Bleuler</div><div class="tl-desc">指出核心是人格分裂（splitting of the mind），因并非都以衰退为结局，改称精神分裂症，并提出 4A。</div></div>
+        </div>
+        <h4>流行病学关键数字</h4>
+        <div class="quick-facts"><div class="fact"><b>时点/终生中位值</b><span>4.6‰ / 7.2‰</span></div><div class="fact"><b>年发病率中位值</b><span>0.15‰</span></div><div class="fact"><b>男/女高峰</b><span>20 岁早期 / 25～35 岁</span></div><div class="fact"><b>儿童期发病率</b><span>约 1/40 000</span></div><div class="fact"><b>我国 1993 年</b><span>6.55‰</span></div><div class="fact"><b>我国 2012 年 12 个月</b><span>5.59‰</span></div></div>
+        <ul class="icon-list">
+          <li>世界各国发病率与患病率大致相等；2019 年荟萃分析显示<strong>男性发病率略高于女性</strong>，“男女同样易患”不再被支持。</li>
+          <li>男性 20 岁早期达峰后下降；女性 25～35 岁达峰，起病不如男性急骤；教材<strong>不支持</strong>女性 40 岁后第二次发病高峰。</li>
+          <li>儿童期（13 岁前）不常见，最大儿童病例系列平均 10 岁、最小 4 岁，性别差异不明显。</li>
+          <li>我国 1982 年终生患病率 5.69‰；2012 年 18 岁以上社区人群 12 个月患病率 5.59‰；患病率与家庭经济水平呈负相关。</li>
+          <li>约 90% 共患尼古丁依赖（国外资料）；约 5% 死于自杀；平均寿命缩短 13～15 年；糖尿病、高血压、心脏疾病及意外伤害概率高于常人。</li>
+          <li>2000 年失能调整生命年（DALYs）估算，15～44 岁组 135 种疾病中列总负担<strong>第八位</strong>（2.6%）；发达国家直接花费占卫生资源 1.4%～2.8%，约占精神疾病花费 1/5。</li>
+        </ul>
+      </div>
+
+      <div class="module module-cause">
+        <div class="module-head"><span class="module-index">第二栏</span><h3>病因探秘</h3></div>
+        <p>总基调：<strong>遗传易感 + 神经发育危险因素相互作用</strong>；心理社会因素多为促发，不决定结局。以下机制均为学说/假说。</p>
+        <div class="card-grid">
+          <div class="card card-cause"><div class="card-header"><span class="card-icon">🧬</span><span class="card-title">遗传</span></div><div class="card-body"><ul class="icon-list"><li>遗传率（heritability）家系研究 64%、双生子研究 81%；血缘越近、亲属患病越多，风险越大。</li><li>单卵双生子同病率约 50%，至少为双卵双生子的 3 倍。</li><li>2014 年最大全基因组关联分析（GWAS）确定 108 个位点，支持<strong>多基因疾病</strong>：数百至数千基因累积，每个效应很小。</li><li>常见单核苷酸变异只解释一小部分；罕见拷贝数变异（copy number variant）、基因破坏变异效应大但罕见，多为从头发生。</li><li>男性超过 60 岁所生子女风险增加，推测与精子表观遗传损害有关。</li></ul></div></div>
+          <div class="card card-cause"><div class="card-header"><span class="card-icon">🌱</span><span class="card-title">神经发育理论</span></div><div class="card-body"><p>遗传易感与妊娠/出生不良事件相互作用，使胚胎期神经细胞向皮质迁移紊乱，导致心理整合异常；即刻效应不显著，青春期/成年早期在环境刺激下显现。</p><ul class="icon-list"><li>出生队列：日后发病者平均智商较差、发育标志轻度延迟、言语问题、儿童期行为异常、出生缺氧增加；11 岁前精神病样体验报告增加。</li><li>脑病理：边缘系统与颞叶结构缩小、半球不对称；海马、额叶、扣带回、内嗅皮质细胞结构紊乱，不伴退行性改变。</li><li>病前轻度躯体异常：腭部升高、内眦赘皮、眼裂下斜、鼻翼不对称、通贯掌等；神经软体征、眼平稳跟踪异常、P300 波幅减低。</li></ul></div></div>
+          <div class="card card-cause"><div class="card-header"><span class="card-icon">🖥️</span><span class="card-title">神经影像</span></div><div class="card-body"><ul class="icon-list"><li>1976 年 Johnstone 等对 17 名长期住院患者行 CT，发现侧脑室扩大。</li><li>MRI：侧脑室扩大约 <strong>25%</strong>，脑体积减小约 <strong>2%</strong>；灰质减少比白质明显，以额叶、颞叶、海马显著。</li><li>功能：额叶功能低下（hypofrontality，尤其背外侧前额叶）、部分内侧额叶功能亢进（hyperfrontality）、执行任务时内侧额叶<strong>失活失败</strong>。</li><li>内侧额叶是默认网络（default mode network）关键区；可能为任务正性网络与任务负性网络交互失调。</li><li>部分改变病前已存在、也见于一级亲属，与病程和药物无关；单卵双生子发病者脑室扩大更明显。</li></ul></div></div>
+          <div class="card card-cause"><div class="card-header"><span class="card-icon">⚗️</span><span class="card-title">神经生化</span></div><div class="card-body"><ul class="icon-list"><li><strong>多巴胺（dopamine，DA）：</strong>中枢 DA 功能亢进。D2 拮抗剂对幻觉妄想有效，苯丙胺可致类似精神病；未用药活体成像未见 D2 数量增加；前驱期/首发患者 DA 合成增加，影响奖励突出性；D2 阻断峰值与应答有 2～4 周滞后。</li><li><strong>谷氨酸：</strong>功能不足；苯环己哌啶（phencyclidine，PCP）可致幻觉、妄想、淡漠、退缩；部分患者中颞叶受体亚型减少；DA 异常可能继发于谷氨酸调节紊乱。</li><li><strong>5-羟色胺（5-HT）：</strong>功能过度参与阳性/阴性症状；麦角酸二乙胺（LSD）可致幻觉；第二代药强拮抗 5-HT2A 可减轻阳性症状。</li><li><strong>γ-氨基丁酸（GABA）：</strong>主要抑制性递质；部分患者皮质 GABA 合成酶下降、海马 GABA 能神经元丧失；抑制不足使 DA 活动增加。</li></ul></div></div>
+        </div>
+        <div class="table-wrap"><table class="comparison-table"><thead><tr><th>亲属</th><th>平均患病率</th><th>记忆要点</th></tr></thead><tbody><tr><td>普通人群</td><td>0.9%</td><td>教材对照值</td></tr><tr><td>父母</td><td>5.6%</td><td>一级亲属</td></tr><tr><td>同胞</td><td>10.1%</td><td>约为父母两倍</td></tr><tr><td>子女</td><td>12.8%</td><td>一级亲属中最高</td></tr><tr><td>单卵双生子</td><td>约 50%</td><td>至少为双卵双生子的 3 倍</td></tr></tbody></table></div>
+        <p class="table-note">教材未给双卵双生子具体同病率，不要自行推算成“17%”等数字。</p>
+        <div class="callout callout-warning"><div class="callout-icon">⚠️</div><div class="callout-body"><strong>心理社会因素的定位</strong>教材明确：至今未发现任何能决定是否发生精神分裂症的心理社会因素；应激可促发，但常难以左右最终病程与结局。学说也不等于定论：DA、谷氨酸、5-HT、GABA 改变是原因、结果还是伴随状态，尚无定论。</div></div>
+      </div>
+
+      <div class="module module-symptom">
+        <div class="module-head"><span class="module-index">第三栏</span><h3>临床表现拼图</h3></div>
+        <div class="callout callout-warning"><div class="callout-icon">⏳</div><div class="callout-body"><strong>前驱期 ≠ 病前人格</strong>前驱期指明显精神病性症状出现前的<strong>非特异性症状</strong>，是疾病过程的一部分；安静、被动、内向、朋友少等分裂样/分裂型人格特征<strong>不应</strong>视为前驱期。多数持续几天到几年，中位稍低于 12 个月，常回顾性认定。</div></div>
+        <div class="table-wrap"><table class="comparison-table"><thead><tr><th>前驱期类别</th><th>教材表现</th></tr></thead><tbody><tr><td>情绪改变</td><td>抑郁、焦虑、情绪波动、易激惹</td></tr><tr><td>认知改变</td><td>古怪或异常的观念和想法</td></tr><tr><td>感知改变</td><td>对自身和外界的感知改变</td></tr><tr><td>行为改变</td><td>社交退缩、丧失兴趣、多疑敏感、职业功能下降；痴迷抽象概念/哲学等“新爱好”</td></tr><tr><td>躯体改变</td><td>睡眠食欲改变、虚弱感、头痛、背痛、消化道症状</td></tr><tr><td>强迫症状</td><td>少数青少年以突然出现的强迫症状为首发</td></tr></tbody></table></div>
+        <p class="table-note">前驱期患者功能常大致正常，且对症状有“合理”解释，故家人常不重视，导致就诊延迟。</p>
+        <div class="callout callout-info"><div class="callout-icon">🧭</div><div class="callout-body"><strong>显症期五个症状维度</strong>幻觉妄想症状群、阴性症状群、瓦解症状群（disorganization symptoms）、焦虑抑郁症状群、激越症状群；前三个对诊断精神分裂症特异性较高。</div></div>
+        <div class="tabs">
+          <div class="tab-nav"><button class="tab-btn active" data-tab="sc-pos">阳性症状</button><button class="tab-btn" data-tab="sc-neg">阴性症状</button><button class="tab-btn" data-tab="sc-cog">认知症状</button><button class="tab-btn" data-tab="sc-aff">情感症状</button><button class="tab-btn" data-tab="sc-beh">行为症状</button></div>
+          <div class="tab-panel active" id="sc-pos">
+            <div class="card-grid">
+              <div class="card card-symptom"><div class="card-header"><span class="card-icon">👂</span><span class="card-title">幻觉：幻听最常见</span></div><div class="card-body"><p>幻听（auditory hallucination）、幻视、幻嗅、幻味、幻触均可出现，以幻听最常见；可非言语性（虫鸣、机器声、音乐），也可言语性（喊名字、秽语、议论、神灵/外星人讲话）。</p><p>意识清晰下<strong>持续评论性、争论性或命令性幻听</strong>常指向本病；思维鸣响指思考内容被自己的声音读出。幻视较常见；幻嗅/幻味/幻触不常见，一旦出现需排除躯体疾病、中毒、物质或脑器质性疾病。内脏幻觉如大脑烧灼感、骨髓切割感。</p></div></div>
+              <div class="card card-symptom"><div class="card-header"><span class="card-icon">🔒</span><span class="card-title">妄想：频率最高之一</span></div><div class="card-body"><p>妄想（delusion）属思维内容障碍，荒谬显而易见却坚信不疑；初期可将信将疑，随病程与病态信念融合。内容与生活经历、教育、文化有关。</p><p>以<strong>被害、关系、嫉妒、钟情、非血统、躯体</strong>妄想多见；同一患者可有一种或几种。意识清晰下持续离奇古怪妄想（脑内芯片监视、控制太阳升降、阻止地震）常提示本病。</p></div></div>
+              <div class="card card-symptom"><div class="card-header"><span class="card-icon">🌀</span><span class="card-title">思维形式与过程障碍</span></div><div class="card-body"><p><strong>思维形式障碍（thought form disorder）：</strong>病理性赘述 → 思维散漫离题 → 思维破裂 → 词的杂拌；另有语词新作、模仿/重复/刻板言语、缄默、思维中断（插入）、思维云集、思维被夺、逻辑倒错、病理性象征性思维。</p><p><strong>思维过程障碍：</strong>思维奔逸、阻滞、贫乏、抽象概括受损、持续言语、音连意联、过度包含。思维被广播、读心症属被控制体验。</p></div></div>
+            </div>
+            <div class="callout callout-example"><div class="callout-icon">📚</div><div class="callout-body"><strong>教材原文</strong>“在意识清晰状态下出现持续的评论性、争论性或命令性幻听常指向精神分裂症。”三个限定词缺一不可。</div></div>
+          </div>
+          <div class="tab-panel" id="sc-neg">
+            <p>阴性症状（negative symptoms）指<strong>正常心理功能的缺失</strong>，涉及情感、社交及认知缺陷。美国国立精神卫生研究院（NIMH）专家共识会建议五条，以<strong>意志减退和快感缺失</strong>最常见。</p>
+            <div class="table-wrap"><table class="comparison-table"><thead><tr><th>阴性症状</th><th>教材描述</th><th>考点</th></tr></thead><tbody>
+              <tr><td>意志减退（avolition）</td><td>有目的活动的意愿/动机减退或丧失；轻者安于现状、个人卫生懒于料理，重者卧床少动、生活不能自理、本能欲望缺乏。</td><td>最常见之一；常缺乏主观痛苦</td></tr>
+              <tr><td>快感缺失（anhedonia）</td><td>持续不能从日常活动获得愉快感，尤其缺乏<strong>期待快感</strong>；约半数患者有。</td><td>注意“期待快感”</td></tr>
+              <tr><td>情感迟钝（affective blunting）</td><td>不能理解/识别他人情感表露，和/或不能正确表达；反应性、面部表情、眼神、体态、语音、亲情交流均有缺陷。</td><td>社会功能差、疗效差的重要预测因子</td></tr>
+              <tr><td>社交退缩（social withdrawal）</td><td>对社会关系冷淡、社交兴趣减退；与家人亲友交往减少，性兴趣下降，难体会亲情。</td><td>需与人格特征区分</td></tr>
+              <tr><td>言语贫乏（poverty of speech）</td><td>言语产生减少或缺乏；回答空洞、简单，严重者几乎无自发言语。</td><td>语量不少但内容空洞属瓦解症状</td></tr>
+            </tbody></table></div>
+            <div class="callout callout-memory"><div class="callout-icon">🧠</div><div class="callout-body"><strong>一句话区分</strong>阳性是“多了不该有的”，阴性是“少了本该有的”。<span class="tag tag-info">类比理解</span>阳性像收音机多杂音，阴性像音量被调小。</div></div>
+          </div>
+          <div class="tab-panel" id="sc-cog">
+            <div class="card-grid">
+              <div class="card card-symptom"><div class="card-header"><span class="card-icon">🧮</span><span class="card-title">定向、记忆与智能</span></div><div class="card-body"><p>对时间、空间和人物一般能正确定向，意识通常清晰，一般记忆和智能无明显障碍。慢性衰退患者可因社会交流和接受新知识缺乏而出现智能减退。</p></div></div>
+              <div class="card card-symptom"><div class="card-header"><span class="card-icon">🎯</span><span class="card-title">认知缺陷</span></div><div class="card-body"><p>涉及注意、执行功能、工作记忆、情景记忆（episodic memory）、抽象概括和创造力。不少研究认为认知缺陷是<strong>素质特征而非状态特征</strong>，是疾病的核心症状或内表型。</p><p>认知功能不能作为诊断指标，但常是判断预后、制定治疗计划的重要参考；改善认知也是治疗干预的重要目标。</p></div></div>
+              <div class="card card-symptom"><div class="card-header"><span class="card-icon">🪞</span><span class="card-title">自知力</span></div><div class="card-body"><p>疾病发作期常缺乏自知力。自知力是影响治疗依从性的重要因素，临床医师应仔细评估，以利于治疗策略的制定。</p></div></div>
+            </div>
+          </div>
+          <div class="tab-panel" id="sc-aff">
+            <div class="card-grid">
+              <div class="card card-symptom"><div class="card-header"><span class="card-icon">😔</span><span class="card-title">焦虑、抑郁</span></div><div class="card-body"><p>约 <strong>80%</strong> 病程中体验明显抑郁焦虑，尤以疾病早期和缓解后期多见；可能属疾病一部分，也可继发于疾病影响、药物不良反应、对病态的认识和担心。抑郁明显者阴性症状较少、情感体验保持较好、思维概括能力较好、预后较好，但<strong>自杀与物质使用风险更高</strong>。</p></div></div>
+              <div class="card card-symptom"><div class="card-header"><span class="card-icon">🎭</span><span class="card-title">不适当的情感</span></div><div class="card-body"><p>情感表达与外界环境和内心体验不协调：反应性降低者情感淡漠迟钝，甚至缺乏快感；反应过度或不适当者对小事极端暴怒、高兴或焦虑，或表现情感倒错（高兴的事出现悲伤体验，悲伤的事出现愉快体验），或持续独自发笑，或幻想性狂喜狂悲。</p></div></div>
+              <div class="card card-symptom"><div class="card-header"><span class="card-icon">⚠️</span><span class="card-title">自杀风险</span></div><div class="card-body"><p>约 <strong>20%～50%</strong> 有自杀企图，约 <strong>5%</strong> 死于自杀；多在疾病早期，或入院/出院不久。最可能原因是抑郁症状（期望值高、病后失落感重、意识到理想难实现、对治疗失去信心的年轻男性）；虚无妄想、命令性幻听、逃避精神痛苦、物质使用为促发因素。<strong>氯氮平</strong>对降低自杀意念较有效。</p></div></div>
+            </div>
+          </div>
+          <div class="tab-panel" id="sc-beh">
+            <div class="card-grid">
+              <div class="card card-symptom"><div class="card-header"><span class="card-icon">🎪</span><span class="card-title">怪异行为与作态</span></div><div class="card-body"><p>单调重复、杂乱无章或缺乏目的性；可为单个肢体细微运动，也可为躯体和四肢粗大动作；旁人无法理解的仪式化行为（作态）；扮鬼脸、幼稚愚蠢的傻笑或声调、脱衣脱裤、当众手淫；意向倒错，吃不能吃的东西或伤害自己的身体。</p></div></div>
+              <div class="card card-symptom"><div class="card-header"><span class="card-icon">🛏️</span><span class="card-title">紧张症行为</span></div><div class="card-body"><p>紧张性木僵与紧张性兴奋可交替或单独发生。木僵轻者动作缓慢、少语少动（亚木僵），重者终日卧床、不语不动、肌张力高，可见蜡样屈曲、被动服从、主动违拗、模仿动作/言语；<strong>意识清楚、能感知周围、病后能回忆</strong>。兴奋者突然发生不可理解的冲动行为，言语单调刻板、行为无目的。</p></div></div>
+              <div class="card card-symptom"><div class="card-header"><span class="card-icon">💥</span><span class="card-title">攻击暴力</span></div><div class="card-body"><p>部分患者激越、冲动控制减退、社交敏感性降低；严重者可冲动攻击与暴力。发生攻击暴力行为的可能性约为常人的<strong>四倍</strong>，但成为受害者的可能性更大。高危因素：男性、病前品行障碍/反社会人格特征、共病物质使用、受幻觉妄想支配；<strong>既往攻击暴力史</strong>是最佳预测因子。</p></div></div>
+            </div>
+          </div>
+        </div>
+        <div class="callout callout-danger"><div class="callout-icon">⚠️</div><div class="callout-body"><strong>紧张症不是第 6 个症状维度</strong>它属于精神运动性症状与瓦解症状群；若紧张症出现于精神分裂症，应<strong>同时诊断</strong>“与其他精神障碍相关的紧张症”。</div></div>
+      </div>
+
+      <div class="module module-case">
+        <div class="module-head"><span class="module-index">第四栏</span><h3>教材典型案例</h3></div>
+        <div class="callout callout-warning"><div class="callout-icon">📌</div><div class="callout-body"><strong>来源说明</strong>教材本章<strong>未提供</strong>完整临床病例（无起病经过、诊疗过程、量表分或实验室数值），仅在“妄想”部分给出 3 个症状举例。</div></div>
+        <div class="card-grid">
+          <div class="card card-diagnosis"><div class="card-header"><span class="card-title">教材举例一</span></div><div class="card-body"><p>化学工程师认为喝水的杯子被人做手脚，每天释放定量毒素，造成自己慢性中毒。</p><p><strong>定位：</strong>被害妄想，内容与职业知识结合，说明妄想可“借题发挥”。</p></div></div>
+          <div class="card card-diagnosis"><div class="card-header"><span class="card-title">教材举例二</span></div><div class="card-body"><p>老护士认为自己在上次住院时被人注射了人类免疫缺陷病毒。</p><p><strong>定位：</strong>被害妄想，内容与职业经历相关。</p></div></div>
+          <div class="card card-diagnosis"><div class="card-header"><span class="card-title">教材举例三</span></div><div class="card-body"><p>生活在交通闭塞山区的患者坚信自己被人施以巫术，导致长期躯体不适。</p><p><strong>定位：</strong>被害/躯体相关妄想，内容受文化处境影响；判断荒谬须结合所属文化。</p></div></div>
+        </div>
+        <div class="callout callout-example"><div class="callout-icon">📚</div><div class="callout-body"><strong>教材原文</strong>“妄想的内容可与患者的生活经历、教育程度与文化背景有一定联系。”教学价值：妄想可以很生活化，但<strong>持续、固定、不可纠正 + 功能改变 + 排除其他原因</strong>才是诊断关键。</div></div>
+      </div>
+
+      <div class="module module-diff">
+        <div class="module-head"><span class="module-index">第五栏</span><h3>鉴别诊断对对碰</h3></div>
+        <p>精神分裂症诊断“实际上依靠排除法”。下表统一按核心症状、病程/起病、关键鉴别点、辅助检查/排除要点比较，并覆盖本章四病及三类继发性/共病情况。</p>
+        <div class="table-wrap"><table class="comparison-table"><thead><tr><th>对照疾病</th><th>核心症状</th><th>病程/起病</th><th>关键鉴别点</th><th>辅助检查/排除要点</th></tr></thead><tbody>
+          <tr><td>分裂情感障碍</td><td>精神分裂症症状 + 心境发作症状，二者均突出</td><td>同一次发作，同时或只差几天；共同 ≥1 个月</td><td>两套诊断要求同时满足；不同发作分别出现不算</td><td>排除躯体/物质；评估心境症状强度与时间</td></tr>
+          <tr><td>分裂型障碍</td><td>持久古怪模式 + 感知认知异常 + 人际不良；精神病性症状短暂、片段</td><td>古怪模式 ≥2 年；精神病性症状 ≤1 个月</td><td>从未满足精神分裂症标准；异常信念未达妄想程度</td><td>纵向评估；排除躯体/物质/其他精神障碍</td></tr>
+          <tr><td>妄想性障碍</td><td>妄想系统、固定、非怪异；无持久幻听、思维形式障碍、阴性症状</td><td>≥3 个月；平均约 40 岁</td><td>不涉妄想时功能基本正常；无人格衰退和古怪行为</td><td>排除器质、物质、谵妄/痴呆</td></tr>
+          <tr><td>急性短暂性精神病性障碍</td><td>片段妄想/幻觉、症状多变、可有困惑；一般无阴性症状</td><td>无前驱、2 周达峰、≤3 个月，多完全缓解</td><td>症状每天甚至一天内变；恢复病前功能</td><td>排除物质/躯体；随访功能恢复</td></tr>
+          <tr><td>双相/抑郁伴精神病性症状</td><td>精神病性症状与心境协调或不协调，但心境是主相</td><td>精神病性症状随心境改善较快消失</td><td>精神病性症状不是独立、持续主相</td><td>纵向病程最重要；警惕谵妄性躁狂</td></tr>
+          <tr><td>物质/药物所致精神障碍</td><td>幻觉、妄想、激越，可伴意识障碍或幻视</td><td>与使用/戒断时间密切相关</td><td>有确定用药史；用药前精神状况正常；停用后多较快缓解</td><td>物质筛查、用药史、知情者补充</td></tr>
+          <tr><td>器质性精神障碍</td><td>幻觉常以幻视为主，可有意识障碍、昼轻夜重；症状不典型</td><td>与原发躯体/脑病病情平行</td><td>精神症状与躯体病时间密切相关；较少“特征性”症状</td><td>体检阳性发现；实验室、影像、神经系统检查</td></tr>
+        </tbody></table></div>
+        <p class="table-note">一句话：<strong>精神分裂症 = 荒谬离奇/结构松散 + 幻觉 + 功能衰退 + 病程迁延；分裂型 = 古怪模式 2 年、精神病性症状 ≤1 个月；妄想性 = 系统非怪异 + 功能保留；分裂情感 = 同一次发作双达标；急性短暂 = 无前驱、2 周达峰、3 个月内完全好；器质性/物质 = 时间相关 + 意识/幻视 + 阳性证据。</strong></p>
+        <div class="card-grid">
+          <div class="card card-diagnosis"><div class="card-header"><span class="card-icon">🛏️</span><span class="card-title">抑郁性木僵 vs 紧张性木僵</span></div><div class="card-body"><p><strong>抑郁木僵：</strong>情感不淡漠，耐心询问可得到简短切题应答；动作慢但眼神忧心忡忡、欲语难言；肌张力不高，仍与周围有情感交流。<strong>紧张性木僵：</strong>无应答、表情淡漠、不语不动，伴违拗、紧张性兴奋及肌张力增高。<span class="tag tag-info">类比理解</span>抑郁木僵“心里有人”，紧张木僵“人不在场”。</p></div></div>
+          <div class="card card-diagnosis"><div class="card-header"><span class="card-icon">🎢</span><span class="card-title">躁狂 vs 精神运动性兴奋</span></div><div class="card-body"><p><strong>躁狂：</strong>情感活跃生动，外部表现反映思维，与周围保持交流；主动接触人，情绪随外部刺激变化。<strong>精神分裂症兴奋：</strong>不协调，动作多但情绪不高涨，表情呆板淡漠，动作单调杂乱、怪异，与环境不协调，伴思维破裂、幻觉妄想。谵妄性躁狂伴意识障碍，鉴别需结合病史、病程、治疗反应与转归。</p></div></div>
+        </div>
+        <div class="callout callout-warning"><div class="callout-icon">⚠️</div><div class="callout-body"><strong>教材三条硬规则</strong>① 有符合抑郁/躁狂发作标准的心境症状，<strong>不诊断</strong>精神分裂症；② 精神病性症状与心境症状同时发生且均衡，即使前者达标，也诊断<strong>分裂情感障碍</strong>；③ 精神症状能用脑器质性疾病、躯体疾病或物质使用更好解释，<strong>不诊断</strong>精神分裂症。</div></div>
+        <div class="callout callout-info"><div class="callout-icon">💡</div><div class="callout-body"><strong>焦虑强迫与人格障碍</strong>焦虑/强迫症多有较好自知力、求治心切、情感反应强烈；精神分裂症早期虽可有自知力却不迫切求治，强迫内容离奇多变、摆脱愿望不强烈。人格障碍是固定模式、无明显持续精神病性症状、无确切发病点；精神分裂症病前病后有明显转折，情感行为有“质”的异常。</div></div>
+        <p class="table-note">教材在鉴别中还提到“分裂样精神障碍”，其主要特点是病程不足一个月；它不属于本章重点五病，了解即可，本章诊断体系以 ICD-11 为主。</p>
+      </div>
+
+      <div class="module module-treat">
+        <div class="module-head"><span class="module-index">第六栏</span><h3>治疗方案工具箱</h3></div>
+        <div class="callout callout-success"><div class="callout-icon">✅</div><div class="callout-body"><strong>首选</strong>首次发作或复发者，抗精神病药为首选；循证心理社会干预贯穿全程。药物疗效不佳和/或有木僵违拗、频繁自杀、攻击冲动者，急性期可单用或合用电抽搐治疗（electroconvulsive therapy，ECT）。</div></div>
+        <h4>首选 → 次选 → 辅助</h4>
+        <div class="table-wrap"><table class="comparison-table"><thead><tr><th>层级</th><th>措施</th><th>教材依据/要点</th></tr></thead><tbody>
+          <tr><td>首选</td><td>单一抗精神病药 + 心理社会干预贯穿全程</td><td>早期、适量（药品说明书推荐治疗剂量）、足疗程、单一、个体化；大多数口服</td></tr>
+          <tr><td>次选</td><td>两种不同作用机制药物足疗程不佳 → 氯氮平；口服依从性差 → 长效注射针剂；药物疗效不佳/木僵违拗/频繁自杀/攻击冲动 → ECT（单用或合用）</td><td>教材明确这些路径；氯氮平对降低自杀意念也较有效</td></tr>
+          <tr><td>辅助</td><td>增效药物（苯二氮䓬类、情绪稳定剂、抗抑郁药）、重复经颅磁刺激（rTMS）、联合不同种类抗精神病药</td><td>仅在单一用药（包括氯氮平）疗效不佳后考虑；联合 8～12 周无效益则调整</td></tr>
+        </tbody></table></div>
+        <h4>治疗时间线</h4>
+        <div class="timeline">
+          <div class="tl-item"><div class="tl-title">急性治疗期 · 一般 4～6 周</div><div class="tl-desc">尽快控制症状，防止疾病所致的继发性伤害；多数口服，兴奋激越者可短期非口服给药。</div></div>
+          <div class="tl-item"><div class="tl-title">巩固治疗期 · 至少 6 个月</div><div class="tl-desc">防止疾病复燃，协助患者恢复病前社会功能；原则上不应减量，除非患者难以耐受。</div></div>
+          <div class="tl-item"><div class="tl-title">维持治疗期 · 时间不定</div><div class="tl-desc">防止复发，进一步改善社会功能与生活质量。首发、缓慢起病或多次复发者至少 5 年或更长，部分患者可能终身；急性发作、缓解迅速彻底者可较短；总体上不足 1/5 的患者有可能停药。</div></div>
+        </div>
+        <div class="callout callout-danger"><div class="callout-icon">💊</div><div class="callout-body"><strong>剂量说明</strong>教材本章<strong>未给具体毫克剂量</strong>，只要求“适量（药品说明书推荐治疗剂量）”。本指南不写 mg 数字：<strong>剂量个体化，遵医嘱</strong>。</div></div>
+        <div class="card-grid">
+          <div class="card card-treatment"><div class="card-header"><span class="card-icon">🎯</span><span class="card-title">选药</span></div><div class="card-body"><ul class="icon-list"><li>综合依从性、疗效、耐受性、既往治疗体验、长期计划、年龄、性别、经济状况；让患者参与。</li><li>阳性症状总体控制：<strong>奥氮平、氨磺必利、利培酮</strong>可能优于其他第一代、第二代抗精神病药。</li><li>两种不同机制药物适当治疗不佳 → <strong>氯氮平</strong>；口服依从性差 → <strong>长效针剂</strong>。</li><li>个体反应差异大，没有适合所有患者的一线药；治疗是个体化临床试验。</li></ul></div></div>
+          <div class="card card-treatment"><div class="card-header"><span class="card-icon">📏</span><span class="card-title">使用原则</span></div><div class="card-body"><ul class="icon-list"><li>早期、适量、足疗程、单一、个体化；从小剂量渐加。</li><li>加至最低有效治疗剂量后至少 <strong>1～2 周</strong>评估再决定是否加量。</li><li>无大剂量优于标准剂量的确切证据；标准剂量足疗程、部分改善且耐受良好时，才可在知情同意下考虑超标用药。</li><li>巩固期不减量；维持期可酌情减；一般不要突然停药，除非紧急情况。</li></ul></div></div>
+          <div class="card card-treatment"><div class="card-header"><span class="card-icon">🧩</span><span class="card-title">合并用药</span></div><div class="card-body"><ul class="icon-list"><li>持续焦虑/抑郁/敌意可对症合用。</li><li>经合适药物（含氯氮平）仍持续阳性症状，可加增效药、ECT、rTMS，或联合不同种类抗精神病药，亦可单用 ECT。</li><li>联合仅在单一用药失败后考虑；<strong>8～12 周</strong>无效益则换回单一或更换种类；以化学结构不同、药理作用不尽相同者联用较合适。</li></ul></div></div>
+        </div>
+        <h4>安全监测与不良反应</h4>
+        <ul class="icon-list check"><li>用药前常规检查血压、心率、体重指数，血常规，心、肝、肾功能，血糖、血脂、血电解质；服药期间定期复查对比。</li><li>常见不良反应：锥体外系反应、药源性激越、过度镇静、催乳素分泌增加、代谢综合征。</li><li>发现问题及时分析处理；具体表现及处理详见教材治疗学相关章节。</li></ul>
+        <h4>物理治疗与心理社会干预</h4>
+        <div class="card-grid">
+          <div class="card card-treatment"><div class="card-header"><span class="card-icon">⚡</span><span class="card-title">物理治疗</span></div><div class="card-body"><p>电抽搐治疗（electroconvulsive therapy，ECT）对精神分裂症有效；对急性发作患者疗效与抗精神病药物相当而优于心理治疗；药物合并 ECT 优于单用药物。国内医院大多已使用改良电抽搐治疗（modified electroconvulsive therapy，MECT）。重复经颅磁刺激（rTMS）和深部脑刺激（DBS）可能有前景，但尚需更多临床验证。</p></div></div>
+          <div class="card card-treatment"><div class="card-header"><span class="card-icon">🧑‍🤝‍🧑</span><span class="card-title">心理社会干预</span></div><div class="card-body"><ul class="icon-list"><li><strong>社会技能训练：</strong>基于学习理论，用录像、示范、角色扮演训练决策、解决问题、人际、应对应激等。</li><li><strong>家庭干预：</strong>心理教育、问题行为解决、家庭支持、危机处理；家庭治疗对降低复发率有效。</li><li><strong>认知行为疗法（CBT）：</strong>针对持续妄想和幻觉；对精神病性症状效应小至中等，对症状相关痛苦效应较大；多用于持续症状且保留自知力者。</li><li><strong>个案管理与 ACT：</strong>主动性社区治疗（assertive community treatment，ACT）由多功能团队提供每天 24 小时、一周 7 天服务，降低住院率但成本较高。</li><li>其他：个体/小组治疗、辩证行为疗法、认知训练、职业治疗、艺术治疗等。</li></ul></div></div>
+        </div>
+        <div class="callout callout-warning"><div class="callout-icon">🏥</div><div class="callout-body"><strong>住院指征</strong>有潜在危险（自杀、攻击暴力、共患严重躯体疾病、生活自理困难等）、治疗不合作、诊断不明确、需要调整药物治疗方案者。诊断明确、治疗合作且无潜在风险者可门诊治疗。</div></div>
+      </div>
+
+      <div class="module module-memory">
+        <div class="module-head"><span class="module-index">第七栏</span><h3>记忆工具箱</h3></div>
+        <div class="memory-grid">
+          <div class="memory-card"><div class="m-title">方法一：结构口诀<span class="m-type">口诀</span></div><div class="m-formula">“六前驱、三阳性、五阴性、五维度”</div><p>六前驱 = 情绪、认知、感知、行为、躯体、强迫；三阳性 = 幻觉、妄想、瓦解；五阴性 = 意志减退、快感缺失、情感迟钝、社交退缩、言语贫乏；五维度 = 幻觉妄想、阴性、瓦解、焦虑抑郁、激越。原理：用数字分组压缩并列条目。</p></div>
+          <div class="memory-card"><div class="m-title">方法二：数字锚定<span class="m-type">数字</span></div><div class="m-formula">“1-2-1-4-6-5”</div><p>1 个月病程；≥2 项症状；至少 1 项来自（1）～（4）；急性 4～6 周；巩固至少 6 个月；维持至少 5 年（部分患者）。原理：把时间门槛与治疗阶段绑定成一条数字链。</p></div>
+          <div class="memory-card"><div class="m-title">方法三：4A 首字母<span class="m-type">首字母</span></div><div class="m-formula">Association、Apathy、Ambivalence、Autism</div><p>联想障碍、情感淡漠、矛盾意向、孤独症；是 Bleuler 的“基本症状”，幻觉妄想为“附加症状”。原理：四词同首字母，形成组块。</p></div>
+          <div class="memory-card"><div class="m-title">方法四：鉴别四问<span class="m-type">归类</span></div><div class="m-formula">荒谬？心境同步？功能保留？器质/物质？</div><p>荒谬 + 幻觉 + 衰退 → 精神分裂症；系统非怪异 + 功能保留 → 妄想性障碍；心境同步双达标 → 分裂情感障碍；时间相关 + 意识/幻视 + 阳性体征 → 继发性。原理：用四个二元问题快速分流。</p></div>
+        </div>
+      </div>
+
+      <div class="module module-link">
+        <div class="module-head"><span class="module-index">第八栏</span><h3>知识联动</h3></div>
+        <div class="card-grid">
+          <div class="card card-diagnosis"><div class="card-header"><span class="card-icon">🧩</span><span class="card-title">症状学与诊断学</span></div><div class="card-body"><p>幻觉、妄想、思维形式障碍、情感症状、自知力、紧张症都是症状学条目的具体化；病史要覆盖起病形式、前驱期、病程、功能、心境症状、物质使用、躯体疾病与家族史。</p></div></div>
+          <div class="card card-treatment"><div class="card-header"><span class="card-icon">💊</span><span class="card-title">治疗学与相关障碍</span></div><div class="card-body"><p>具体药物特征、剂量、不良反应处理见教材治疗学相关章节（教材注明第二十四章）。横向关联心境障碍（共享精神病性症状与遗传重叠）、器质性/物质所致障碍（排除路径不同）、人格障碍（“质/量”不同）。</p></div></div>
+          <div class="card card-cause"><div class="card-header"><span class="card-icon">🌐</span><span class="card-title">共病与康复</span></div><div class="card-body"><p>约 90% 尼古丁依赖；糖尿病、高血压、心脏病风险高；自杀风险高；ACT 降低住院率但成本高；家庭干预降低复发率；DALYs 负担第八位。</p></div></div>
+        </div>
+        <div class="callout callout-memory"><div class="callout-icon">🔗</div><div class="callout-body"><strong>一句话串章</strong>一个核心（现实检验受损），两组症状（阳性/阴性），三条病因线索（遗传、神经发育、神经生化），四个鉴别方向（器质、心境、分裂情感、妄想性），五个治疗环节（药、物理、心理、家庭、社区）。</div></div>
+      </div>
+    </section>
+
+    <section id="sad" class="section">
+      <div class="section-header"><span class="section-number">06</span><h2>分裂情感障碍</h2></div>
+      <p class="lead">分裂情感障碍（schizoaffective disorder，SAD）不是“精神分裂症 + 抑郁症”的简单相加，而是<strong>同一次发作里两套诊断标准同时被满足，并共同存在至少 1 个月</strong>。</p>
+      <div class="disease-hero"><div class="en">SCHIZOAFFECTIVE DISORDER</div><h3>分裂情感障碍</h3><p>在同一次疾病发作期内，同时满足精神分裂症和心境障碍诊断要求的发作性障碍；精神病性症状与情感症状同时或相隔几天出现。</p><div class="quick-tags"><span>核心：同一次发作双达标</span><span>病程：共同 ≥1 个月</span><span>治疗：抗精神病药 + 心境稳定剂</span><span>预后：介于两病之间</span></div></div>
+      <div class="quick-facts"><div class="fact"><b>终生患病率</b><span>0.5%～0.8%</span></div><div class="fact"><b>共同病程</b><span>≥1 个月</span></div><div class="fact"><b>抑郁型性别</b><span>女约为男 2 倍</span></div><div class="fact"><b>ICD-11 分型</b><span>未再分型</span></div><div class="fact"><b>预后定位</b><span>好于精分，差于心境障碍</span></div></div>
+
+      <div class="module">
+        <div class="module-head"><span class="module-index">第一栏</span><h3>疾病画像</h3></div>
+        <div class="card-grid">
+          <div class="card card-diagnosis"><div class="card-header"><span class="card-icon">📖</span><span class="card-title">ICD-11 定义</span></div><div class="card-body"><p><strong>教材原文：</strong>“在同一次疾病发作期内同时满足精神分裂症和心境障碍诊断要求的发作性疾病，精神分裂症症状和心境障碍症状可以同时出现或相隔几天出现。”症状必须持续至少 1 个月。</p><p>典型分裂症症状（妄想、幻觉、思维形式障碍及被动体验）与典型抑郁（情绪低落、兴趣丧失、精力减退）、躁狂（情绪高涨、躯体和精神活动增加）或混合发作相伴；紧张症症状群也可出现。</p></div></div>
+          <div class="card card-cause"><div class="card-header"><span class="card-icon">🕰️</span><span class="card-title">概念史与流行病学</span></div><div class="card-body"><p>Kirby（1913）、Hoch（1921）描述具有精神分裂症和心境障碍混合特征、但无衰退病程的患者；1933 年 Kasanin 引入“分裂情感障碍”这一术语，其特征为青少年期突然起病、病前社会功能较好、常有应激因素、心境障碍家族史常见。1970 年代因锂盐有效及美英诊断差异，属性从精神分裂症转向心境障碍。</p><p>终生患病率可能 <strong>0.5%～0.8%</strong>；躁狂型男女患病率类似，抑郁型女性为男性 <strong>2 倍</strong>；抑郁型多见于年长者，躁狂型相反；女性发病晚于男性；男性更常出现反社会行为、情感平淡或不适当的情感反应。</p></div></div>
+        </div>
+      </div>
+
+      <div class="module module-cause">
+        <div class="module-head"><span class="module-index">第二栏</span><h3>病因探秘</h3></div>
+        <div class="card-grid">
+          <div class="card card-cause"><div class="card-header"><span class="card-icon">❓</span><span class="card-title">病因不明且异质</span></div><div class="card-body"><p>既往家系、生物学标记、短期治疗反应与长期预后研究多假设 SAD 为同质性疾病；新研究提示躁狂型/抑郁型之间、SAD 与精神分裂症之间既有重叠也有差异。教材倾向认为 SAD 是异质性疾病：有的为伴明显心境症状的精神分裂症，有的为伴明显精神分裂症症状的心境障碍，少数可能是独立临床综合征。</p></div></div>
+          <div class="card card-cause"><div class="card-header"><span class="card-icon">🧬</span><span class="card-title">遗传线索</span></div><div class="card-body"><p>精神分裂症与心境障碍存在遗传相关性；染色体 <strong>1q42</strong> 的 <strong>DISC1</strong> 基因与 SAD、精神分裂症及心境障碍都有关。教材未展开更多基因、遗传率或影像改变。</p></div></div>
+        </div>
+        <div class="callout callout-warning"><div class="callout-icon">⚠️</div><div class="callout-body"><strong>病因重叠 ≠ 诊断等同</strong>诊断仍靠“同一次发作、双达标、1 个月、排除”四条；不能用“遗传重叠”替代临床标准。</div></div>
+      </div>
+
+      <div class="module module-symptom">
+        <div class="module-head"><span class="module-index">第三栏</span><h3>临床表现拼图</h3></div>
+        <div class="card-grid">
+          <div class="card card-symptom"><div class="card-header"><span class="card-icon">🌞</span><span class="card-title">分裂 + 躁狂</span></div><div class="card-body"><p>情绪高涨、自我评价增高、夸大；有时兴奋或易激惹更明显，伴攻击行为和被害观念；精力旺盛、活动过多、注意力集中受损、正常社会约束力丧失。可有关系/夸大/被害妄想，但需更典型精神分裂症症状才能确立诊断，如思维被广播/干扰、被控制、凭空听到不同说话声、古怪妄想。常急性起病、症状鲜明，多在<strong>数周内</strong>明显缓解。</p></div></div>
+          <div class="card card-symptom"><div class="card-header"><span class="card-icon">🌧️</span><span class="card-title">分裂 + 抑郁</span></div><div class="card-body"><p>情绪低落、思维迟滞、快感缺失、失眠、无精力、食欲/体重下降、兴趣减少、注意力受损、内疚、无望、自杀观念/行为。典型精神分裂症症状包括奇怪妄想、<strong>第三人称幻听</strong>及各种被动体验。表现不如躁狂鲜明生动，但<strong>持续时间较长、预后较差</strong>。</p></div></div>
+          <div class="card card-symptom"><div class="card-header"><span class="card-icon">🌗</span><span class="card-title">分裂 + 混合型双相</span></div><div class="card-body"><p>部分患者分裂性症状与混合型双相障碍同时存在。教材未展开混合发作细节；抓住“同一次发作 + 双达标”。</p></div></div>
+        </div>
+        <div class="table-wrap"><table class="comparison-table"><thead><tr><th>维度</th><th>躁狂型表现</th><th>抑郁型表现</th></tr></thead><tbody><tr><td>起病/鲜明度</td><td>常急性、鲜明生动</td><td>相对缓、不如躁狂鲜明</td></tr><tr><td>核心情感</td><td>高涨、夸大；或兴奋易激惹</td><td>低落、兴趣丧失、精力减退、无望/内疚</td></tr><tr><td>精神病性症状</td><td>关系/夸大/被害，但需更典型分裂症症状</td><td>奇怪妄想、第三人称幻听、被动体验</td></tr><tr><td>病程/预后</td><td>数周内可明显缓解</td><td>持续时间较长、预后较差</td></tr></tbody></table></div>
+        <p class="table-note">一句话：躁狂型“来得急、去得快”，抑郁型“拖得长、预后差”。</p>
+      </div>
+
+      <div class="module module-case">
+        <div class="module-head"><span class="module-index">第四栏</span><h3>教材典型案例</h3></div>
+        <div class="callout callout-warning"><div class="callout-icon">📌</div><div class="callout-body"><strong>教材未提供相关内容</strong>教材仅有定义、诊断要点、临床表现与治疗原则，<strong>无具体临床案例</strong>，也无量表分、实验室数据或剂量。本栏不虚构；教学演练见文末病例挑战（已标注非教材原文）。</div></div>
+      </div>
+
+      <div class="module module-diff">
+        <div class="module-head"><span class="module-index">第五栏</span><h3>鉴别诊断对对碰</h3></div>
+        <p>先立标准，再谈鉴别。ICD-11 诊断要点如下：</p>
+        <div class="table-wrap"><table class="comparison-table"><thead><tr><th>序号</th><th>要求</th><th>易错点</th></tr></thead><tbody>
+          <tr><td>1</td><td>在同一次疾病发作中，精神病性症状和情感症状同时出现或只差几天出现。</td><td>不同发作分别出现，不诊断 SAD。</td></tr>
+          <tr><td>2</td><td>该发作在符合精神分裂症<strong>全部</strong>诊断要求的同时存在情感症状，且情感症状需满足中度/重度抑郁发作、躁狂发作或混合发作之一的诊断要求。</td><td>抑郁发作必须包括<strong>情绪低落</strong>，不能只依据兴趣减退或愉悦感降低。</td></tr>
+          <tr><td>3</td><td>精神病性症状和情感症状<strong>共同存在至少 1 个月</strong>。</td><td>不是“总病程 1 个月”。</td></tr>
+          <tr><td>4</td><td>不是其他躯体疾病（如脑肿瘤）所致，也不是物质或药物（如皮质类固醇，包括戒断反应）作用于中枢神经系统的效应。</td><td>必须完成排除。</td></tr>
+        </tbody></table></div>
+        <p class="table-note">教材注明：DSM-5 分双相型/抑郁型；<strong>ICD-11 未对 SAD 具体分型</strong>。本章以 ICD-11 为准。</p>
+        <div class="table-wrap"><table class="comparison-table"><thead><tr><th>对照</th><th>核心症状</th><th>病程/起病</th><th>关键鉴别点</th><th>辅助检查/排除要点</th></tr></thead><tbody>
+          <tr><td>躯体疾病及物质/药物所致障碍</td><td>精神病性与情感症状均可有，常伴意识改变、幻视或不典型表现</td><td>与躯体病/药物使用在时间上密切相关</td><td>有确定用药史或躯体病；治原发病/停药后变化</td><td>病史、体检、必要辅助检查、物质筛查</td></tr>
+          <tr><td>精神分裂症</td><td>可伴情感症状，但时间/强度不够 SAD</td><td>以精神病性症状为主，情感症状不构成独立心境发作</td><td>按“当前/最近一次发作”诊断；既往 SAD 不妨碍目前诊断精分，反之亦然</td><td>纵向评估；若仅情感症状缓解、不伴情感症状的精神病性症状远超过共存时间，宜诊断精分</td></tr>
+          <tr><td>伴精神病性症状的心境障碍</td><td>心境为主相，精神病性症状与其协调或不协调</td><td>精神病性症状随心境改善较快消失</td><td>精神病性症状<strong>不符合精神分裂症诊断要求</strong></td><td>评估精神病性症状持续时间、种类、独立性</td></tr>
+          <tr><td>急性短暂性精神病性障碍</td><td>症状强度/类型更多变，不符合精分或心境发作</td><td>一般无阴性症状；≤3 个月，多数数天～1 个月</td><td>快速变化、完全缓解、恢复病前功能</td><td>随访病程与功能</td></tr>
+        </tbody></table></div>
+        <p class="table-note">一句话：<strong>SAD = 同一次发作、两套标准都满足、共同 1 个月；精分 = 情感症状不够格；伴精神病性症状的心境障碍 = 精神病性症状不够格；急性短暂 = 太多变、太短。</strong></p>
+        <div class="callout callout-danger"><div class="callout-icon">⚠️</div><div class="callout-body"><strong>三条反向规则</strong>① 既往 SAD 不妨碍目前诊断精神分裂症；② 若只有情感症状缓解，不伴情感症状的精神病性症状持续时间<strong>远超过</strong>共存时间，宜诊断精神分裂症；③ 不同发作分别出现精神分裂症与情感症状，<strong>不诊断</strong> SAD。</div></div>
+      </div>
+
+      <div class="module module-treat">
+        <div class="module-head"><span class="module-index">第六栏</span><h3>治疗方案工具箱</h3></div>
+        <div class="callout callout-success"><div class="callout-icon">✅</div><div class="callout-body"><strong>总原则</strong>治疗与精神分裂症和心境障碍一致：针对主要症状使用<strong>抗精神病药、心境稳定剂、抗抑郁药</strong>；作为双相障碍治疗基石的心境稳定剂在此病中起重要作用。</div></div>
+        <h4>首选 → 次选 → 辅助</h4>
+        <div class="table-wrap"><table class="comparison-table"><thead><tr><th>层级</th><th>措施</th><th>教材依据/要点</th></tr></thead><tbody>
+          <tr><td>首选</td><td>抗精神病药 + 心境稳定剂，针对主要症状</td><td>心境稳定剂常单独使用或与抗精神病药和/或抗抑郁药合用；躁狂期常需中、高剂量</td></tr>
+          <tr><td>次选</td><td>抑郁发作期加用抗抑郁药（参考双相障碍抑郁发作选药方案），同时<strong>合用抗精神病药</strong></td><td>警惕抗抑郁药诱发快速循环发作和转相；选药参考既往治疗效果</td></tr>
+          <tr><td>辅助</td><td>难治患者心境稳定剂 + 抗精神病药 + 抗抑郁药联合；家庭治疗、社会技能训练、认知康复</td><td>难治者可参考难治性精神分裂症和难治性心境障碍的治疗程序</td></tr>
+        </tbody></table></div>
+        <h4>治疗时间线（教材描述）</h4>
+        <div class="timeline">
+          <div class="tl-item"><div class="tl-title">发作期</div><div class="tl-desc">躁狂发作期常需中、高剂量药物控制症状；抑郁发作期参考双相抑郁抗抑郁药方案，同时合用抗精神病药。</div></div>
+          <div class="tl-item"><div class="tl-title">维持期</div><div class="tl-desc">可使用低、中剂量，以避免或减少药物不良反应。</div></div>
+        </div>
+        <p class="table-note">教材未提供 SAD 急性期、巩固期、维持期的具体时长，也未给具体 mg 剂量；<strong>剂量个体化，遵医嘱</strong>。</p>
+        <div class="card-grid">
+          <div class="card card-treatment"><div class="card-header"><span class="card-icon">🧪</span><span class="card-title">监测重点</span></div><div class="card-body"><p>治疗期间定期评估症状、监测血药浓度，检查甲状腺功能、肝肾功能及血常规等指标，适时调整治疗方案。注意抗抑郁药可能诱发快速循环发作和转相。</p></div></div>
+          <div class="card card-treatment"><div class="card-header"><span class="card-icon">👨‍👩‍👧</span><span class="card-title">心理社会干预</span></div><div class="card-body"><p>家庭治疗、社会技能训练及认知康复治疗有益。患者症状范围变化大，家庭成员常难以适应疾病变化及患者需求；应向患者及家属解释疾病性质、诊断和预后的不确定性，提高治疗依从性。</p></div></div>
+        </div>
+        <h4>预后三层定位</h4>
+        <div class="table-wrap"><table class="comparison-table"><thead><tr><th>比较</th><th>位置</th><th>教材依据</th></tr></thead><tbody><tr><td>vs 精神分裂症</td><td>总体更好</td><td>较少出现恶化性病程，对锂盐治疗反应更好；但八年随访显示预后更类似精神分裂症</td></tr><tr><td>vs 心境障碍</td><td>总体更差</td><td>教材明确“好于精神分裂症而差于心境障碍”</td></tr><tr><td>症状优势</td><td>情感症状占优势者更好</td><td>精神分裂症症状增加提示较差预后</td></tr></tbody></table></div>
+        <p class="table-note">按题干问“总体印象”还是“长期随访”分别作答。</p>
+      </div>
+
+      <div class="module module-memory">
+        <div class="module-head"><span class="module-index">第七栏</span><h3>记忆工具箱</h3></div>
+        <div class="memory-grid">
+          <div class="memory-card"><div class="m-title">方法一：三词锁诊断<span class="m-type">口诀</span></div><div class="m-formula">“同一次、双达标、一个月”</div><p>同一次发作；精神分裂症全部要求 + 心境发作全部要求；共同至少 1 个月。原理：三个关键词对应三条不可替代的诊断条件。</p></div>
+          <div class="memory-card"><div class="m-title">方法二：SAD 首字母<span class="m-type">首字母</span></div><div class="m-formula">Same episode + All criteria + Duration 1 month</div><p>用英文首字母编码“同一次发作、全部标准、持续 1 个月”。仅作记忆编码，不是教材原文，不改变医学事实。</p></div>
+          <div class="memory-card"><div class="m-title">方法三：躁郁对比<span class="m-type">对比</span></div><div class="m-formula">躁狂“急、短、鲜明”；抑郁“缓、长、较差”</div><p>躁狂型数周内可明显缓解；抑郁型持续更长、预后更差；抑郁型女性为男性 2 倍、多见于年长者。</p></div>
+          <div class="memory-card"><div class="m-title">方法四：归属演变<span class="m-type">故事</span></div><div class="m-formula">Kasanin 命名 → 1970 转向心境障碍 → ICD-11 不分型</div><p>1933 年命名；1970 年代因锂盐有效和美英诊断差异转向；ICD-11 不分型。原理：用时间故事串起概念变迁。</p></div>
+        </div>
+      </div>
+
+      <div class="module module-link">
+        <div class="module-head"><span class="module-index">第八栏</span><h3>知识联动</h3></div>
+        <ul class="icon-list">
+          <li><strong>心境障碍：</strong>情感症状须达中度/重度抑郁、躁狂或混合发作；抑郁必须含情绪低落；共享心境稳定剂与双相选药逻辑。</li>
+          <li><strong>精神分裂症：</strong>两者按“当前/最近一次发作”诊断，可随病程转换；关键是情感症状的时间与强度是否达标。</li>
+          <li><strong>治疗学：</strong>锂盐定位、抗抑郁药转相/快速循环、血药浓度监测需回治疗学章节核对。</li>
+          <li><strong>家庭：</strong>症状范围变化大，心理教育核心是解释诊断与预后的不确定性。</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="schizotypal" class="section">
+      <div class="section-header"><span class="section-number">07</span><h2>分裂型障碍</h2></div>
+      <p class="lead">分裂型障碍（schizotypal disorder）不是“轻度精分”：核心是<strong>持久的古怪模式</strong>，精神病性症状只能短暂、片段，永远达不到精分门槛。</p>
+      <div class="disease-hero"><div class="en">SCHIZOTYPAL DISORDER</div><h3>分裂型障碍</h3><p>以持久（通常至少几年）的外表、语言和行为古怪反常模式为特征，伴感知和认知障碍、不寻常信念，以及对人际关系不适导致人际不良。</p><div class="quick-tags"><span>核心：古怪 + 感知认知异常</span><span>病程：≥2 年</span><span>精神病性症状：≤1 个月</span><span>归属：ICD-11 并入本章</span></div></div>
+      <div class="quick-facts"><div class="fact"><b>患病率</b><span>约 3%</span></div><div class="fact"><b>持续病程</b><span>≥2 年</span></div><div class="fact"><b>精神病性症状</b><span>≤1 个月</span></div><div class="fact"><b>同卵/异卵双生</b><span>33% / 4%</span></div><div class="fact"><b>自杀死亡</b><span>约 10%</span></div></div>
+
+      <div class="module">
+        <div class="module-head"><span class="module-index">第一栏</span><h3>疾病画像</h3></div>
+        <div class="card-grid">
+          <div class="card card-diagnosis"><div class="card-header"><span class="card-icon">📖</span><span class="card-title">定义与归属</span></div><div class="card-body"><p><strong>教材原文：</strong>“以持久的（通常至少几年）表现为外表、语言和行为的古怪而反常的模式，伴有感知和认知障碍、不寻常的信念，以及对人际关系感到不适并导致人际关系不良为特征。”</p><p>ICD-11 将<strong>分裂型人格障碍与分裂型障碍合并</strong>，放在精神分裂症及其他原发性精神病性障碍类别中；教材另注明，DSM-5 将两者等同。</p></div></div>
+          <div class="card card-cause"><div class="card-header"><span class="card-icon">📊</span><span class="card-title">流行病学与关系</span></div><div class="card-body"><p>普通人群患病率约 <strong>3%</strong>，性别比例不详；女性脆性 X 染色体综合征中常见；教材另注明，DSM-5 提示男性可能更常见；精神分裂症亲属中更常见；同卵双生子发病率 <strong>33%</strong>、异卵 <strong>4%</strong>。</p><p>寄养子、家系和双生子研究提示此病与精神分裂症可能存在病因与发病机制上的重叠；分裂型障碍可视为精神分裂症患者的病前人格之一，但部分患者终身稳定、能结婚和工作。</p></div></div>
+        </div>
+      </div>
+
+      <div class="module module-cause">
+        <div class="module-head"><span class="module-index">第二栏</span><h3>病因探秘</h3></div>
+        <div class="callout callout-warning"><div class="callout-icon">❓</div><div class="callout-body"><strong>教材未提供完整病因机制</strong>教材明确“病因不明”，仅给三条线索：与精神分裂症存在病因机制重叠；精神分裂症亲属中患病率升高；无共病心境障碍时升高更显著。教材未展开具体基因、神经递质或影像改变，本栏不补造。</div></div>
+      </div>
+
+      <div class="module module-symptom">
+        <div class="module-head"><span class="module-index">第三栏</span><h3>临床表现拼图</h3></div>
+        <div class="card-grid">
+          <div class="card card-symptom"><div class="card-header"><span class="card-icon">🗣️</span><span class="card-title">思维与交流</span></div><div class="card-body"><p>有思维和交流障碍，但<strong>无明显的思维形式和思维内容障碍</strong>；语言可能特殊、独特，只有自己能理解，常需要向他人解释。可能不清楚自己的感受，但对他人的感受尤其是愤怒等负性情绪很敏感。</p></div></div>
+          <div class="card card-symptom"><div class="card-header"><span class="card-icon">🔮</span><span class="card-title">信念与知觉</span></div><div class="card-body"><p>可能很迷信，声称自己有特殊的思想和洞察力；内心世界充满想象生动的人际关系、孩童般的恐惧和幻想；可能承认自己有错觉或幻觉，并认为其他人看起来都像木偶。这些体验的强度和持续时间不足以满足精神分裂症、SAD、妄想性障碍标准。</p></div></div>
+          <div class="card card-symptom"><div class="card-header"><span class="card-icon">🚪</span><span class="card-title">行为、人际与分型</span></div><div class="card-body"><p>行为古怪、不合时宜，被孤立、几乎没有朋友、人际关系差；应激状态下可出现<strong>短暂精神病性症状</strong>；严重者可出现快感缺失和重度抑郁发作；部分有边缘型人格障碍特征。</p><p><strong>阴性分裂型：</strong>情感受限和不协调、快感缺失。<strong>阳性分裂型：</strong>偏执信念、牵连观念，或其他精神病性症状（如各种形式幻觉），但强度/时间不达标。</p></div></div>
+        </div>
+        <div class="callout callout-info"><div class="callout-icon">💡</div><div class="callout-body"><strong>与精分的关键差异</strong>分裂型障碍的精神病性症状短暂、片段（≤1 个月），古怪模式已 ≥2 年；精神分裂症要求精神病性症状 ≥1 个月并伴显著功能损害。</div></div>
+      </div>
+
+      <div class="module module-case">
+        <div class="module-head"><span class="module-index">第四栏</span><h3>教材典型案例</h3></div>
+        <div class="callout callout-warning"><div class="callout-icon">📌</div><div class="callout-body"><strong>教材未提供相关内容</strong>教材未提供分裂型障碍的具体案例，仅有定义、表现、诊断与治疗原则。本栏不虚构；教学演练见病例挑战。</div></div>
+      </div>
+
+      <div class="module module-diff">
+        <div class="module-head"><span class="module-index">第五栏</span><h3>鉴别诊断对对碰</h3></div>
+        <p>ICD-11 诊断要点是鉴别的“标尺”：</p>
+        <div class="table-wrap"><table class="comparison-table"><thead><tr><th>序号</th><th>要求</th><th>关键词</th></tr></thead><tbody>
+          <tr><td>1</td><td>言语、感知、信念及行为等方面持续异常的模式，强度或持续时间不足以满足精神分裂症、SAD 或妄想性障碍的诊断要求。</td><td>八类症状：情感表达异常；古怪行为/外表；人际关系差/社会退缩；异常信念/离奇思维（未达妄想）；异常扭曲知觉（错觉、人格解体、现实解体、幻听等）；猜疑/偏执；语言异常（模糊、赘述、隐喻、过分加工修饰、刻板，但无明显前后矛盾）；强迫性思维反刍。</td></tr>
+          <tr><td>2</td><td>从未符合精神分裂症、SAD、妄想性障碍；可能出现短暂妄想、幻觉、思维形式障碍或被动/被控制体验，但持续<strong>不超过 1 个月</strong>。</td><td>短暂、片段</td></tr>
+          <tr><td>3</td><td>症状连续性或发作性，至少持续 <strong>2 年</strong>。</td><td>2 年硬门槛</td></tr>
+          <tr><td>4</td><td>症状引起个体痛苦，或导致个人、家庭、社交、学业、工作或其他重要领域功能受损。</td><td>必须有痛苦/损害</td></tr>
+          <tr><td>5</td><td>不是其他躯体疾病的表现，不是物质/药物（含戒断）所致，且不能更好地被另一种精神、行为或神经发育障碍解释。</td><td>排除</td></tr>
+        </tbody></table></div>
+        <p class="table-note">八项口诀：“情、行、人、信、知、疑、语、反”。</p>
+        <div class="table-wrap"><table class="comparison-table"><thead><tr><th>对照</th><th>核心症状</th><th>病程/起病</th><th>关键鉴别点</th><th>排除/评估要点</th></tr></thead><tbody>
+          <tr><td>分裂样人格障碍</td><td>社会隔离、情感冷淡</td><td>长期稳定的人格模式</td><td>分裂型在感知觉、思维、行为和人际交往上更接近精神分裂症；分裂样缺乏古怪认知知觉</td><td>纵向人格史；无短暂精神病性症状</td></tr>
+          <tr><td>回避型人格障碍</td><td>怕被否定而回避，但内心渴望关系</td><td>长期稳定的人格模式</td><td>分裂型“古怪 + 疏离”，回避型“恐惧 + 渴望”</td><td>评估人际动机与认知知觉异常</td></tr>
+          <tr><td>精神分裂症</td><td>持续妄想/幻觉、思维形式障碍、阴性症状、功能衰退</td><td>精神病性症状 ≥1 个月</td><td>分裂型精神病性症状 ≤1 个月，从未满足精神分裂症标准</td><td>纵向评估症状持续时间与功能</td></tr>
+          <tr><td>偏执型人格障碍</td><td>以怀疑猜忌为主要特征</td><td>长期稳定的人格模式</td><td>偏执型行为不像分裂型那样古怪；分裂型有古怪外表/语言/知觉异常</td><td>评估古怪程度与知觉异常</td></tr>
+          <tr><td>边缘型人格障碍</td><td>情绪不稳、冲动、人际波动</td><td>长期稳定的人格模式</td><td>同时符合两者可<strong>下两个诊断</strong></td><td>分别评估两套标准，不互相排除</td></tr>
+        </tbody></table></div>
+        <p class="table-note">一句话：<strong>分裂型 = 古怪 + 感知认知异常 + 人际差 + 2 年；分裂样 = 冷淡无古怪认知；偏执型 = 猜疑但行为不古怪；精分 = 精神病性症状够久够重。</strong></p>
+        <div class="callout callout-warning"><div class="callout-icon">⚠️</div><div class="callout-body"><strong>教材说明</strong>分裂型障碍与分裂型人格障碍最主要的区别是前者与精神分裂症在感知觉、思维、行为和人际交往等方面<strong>更相似</strong>。ICD-11 已合并；按题干分类体系作答。</div></div>
+      </div>
+
+      <div class="module module-treat">
+        <div class="module-head"><span class="module-index">第六栏</span><h3>治疗方案工具箱</h3></div>
+        <div class="callout callout-warning"><div class="callout-icon">📌</div><div class="callout-body"><strong>教材未明确“首选/次选”排序</strong>以下按教材内容归纳，不补造层级。</div></div>
+        <div class="table-wrap"><table class="comparison-table"><thead><tr><th>层级（按教材归纳）</th><th>措施</th><th>教材依据/要点</th></tr></thead><tbody>
+          <tr><td>基础</td><td>谨慎言行 + 心理治疗</td><td>患者有特殊思维模式，可能参与宗教、神秘组织等活动；治疗师<strong>不应嘲笑或评判</strong>这些信仰或活动。</td></tr>
+          <tr><td>针对症状</td><td>抗精神病药，与心理治疗联合更有效</td><td>对牵连观念、错觉等症状有用；教材未给剂量与疗程：<strong>剂量个体化，遵医嘱</strong>。</td></tr>
+          <tr><td>辅助</td><td>抑郁情绪明显者合并抗抑郁药</td><td>教材明确；未展开具体药物与剂量。</td></tr>
+        </tbody></table></div>
+        <p class="table-note">教材未提供分裂型障碍的急性期/巩固期/维持期划分；本病为慢性病程，无明确起病时间，演化类似人格障碍。</p>
+        <div class="callout callout-danger"><div class="callout-icon">⚠️</div><div class="callout-body"><strong>不过度治疗，不漏抑郁</strong>抗精神病药主要针对牵连观念、错觉；教材未推荐所有患者长期用药；明显抑郁要识别处理，并评估自杀风险（长期随访中 10% 最终自杀死亡）。</div></div>
+      </div>
+
+      <div class="module module-memory">
+        <div class="module-head"><span class="module-index">第七栏</span><h3>记忆工具箱</h3></div>
+        <div class="memory-grid">
+          <div class="memory-card"><div class="m-title">方法一：数字三连<span class="m-type">数字</span></div><div class="m-formula">“2 年、1 个月、3%、10%”</div><p>古怪模式 ≥2 年；精神病性症状 ≤1 个月；患病率约 3%；10% 最终自杀死亡。原理：四个数字对应病程、精神病性症状、患病率、结局。</p></div>
+          <div class="memory-card"><div class="m-title">方法二：八项口诀<span class="m-type">口诀</span></div><div class="m-formula">“情、行、人、信、知、疑、语、反”</div><p>情感异常、古怪行为/外表、人际差、异常信念、扭曲知觉、猜疑偏执、语言异常、强迫性反刍。原理：首字压缩八类症状。</p></div>
+          <div class="memory-card"><div class="m-title">方法三：人格谱系<span class="m-type">对比</span></div><div class="m-formula">分裂型“怪”，分裂样“冷”，偏执型“疑”，边缘型“乱”</div><p>一字标签抓核心；分裂型与边缘型可共诊。原理：用对比锚定相邻人格障碍。</p></div>
+        </div>
+      </div>
+
+      <div class="module module-link">
+        <div class="module-head"><span class="module-index">第八栏</span><h3>知识联动</h3></div>
+        <ul class="icon-list">
+          <li><strong>与精分：</strong>病前人格之一，但非全部发展；家系/双生子支持病因机制重叠。</li>
+          <li><strong>与人格障碍：</strong>ICD-11 将分裂型人格障碍并入本章；与分裂样、回避型、偏执型、边缘型鉴别是高频考点；分裂型与边缘型可共诊。</li>
+          <li><strong>遗传/发育：</strong>女性脆性 X 染色体综合征中常见；同卵 33%、异卵 4%。</li>
+          <li><strong>自杀预防：</strong>10% 最终自杀死亡；严重者伴快感缺失和重度抑郁，应常规评估。</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="atpd" class="section">
+      <div class="section-header"><span class="section-number">08</span><h2>急性短暂性精神病性障碍</h2></div>
+      <p class="lead">急性短暂性精神病性障碍（acute and transient psychotic disorder）的名字就是框架：<strong>急性</strong>（无前驱、2 周达峰）、<strong>短暂</strong>（≤3 个月）、<strong>精神病性</strong>（妄想/幻觉/紊乱/困惑），最后<strong>完全缓解</strong>。</p>
+      <div class="disease-hero"><div class="en">ACUTE AND TRANSIENT PSYCHOTIC DISORDER</div><h3>急性短暂性精神病性障碍</h3><p>既往精神状况正常，无前驱期症状，急性起病，2 周内达峰，伴社会/职业功能急剧恶化；症状多变，病程短暂，缓解完全。</p><div class="quick-tags"><span>核心：无前驱、急性、多变</span><span>达峰：2 周内</span><span>病程：≤3 个月</span><span>结局：完全恢复</span></div></div>
+      <div class="quick-facts"><div class="fact"><b>达峰</b><span>2 周内</span></div><div class="fact"><b>ICD-11 病程</b><span>≤3 个月</span></div><div class="fact"><b>常见诱因</b><span>重大应激源</span></div><div class="fact"><b>年龄</b><span>20～30 多岁</span></div><div class="fact"><b>性别</b><span>女多于男</span></div></div>
+
+      <div class="module">
+        <div class="module-head"><span class="module-index">第一栏</span><h3>疾病画像</h3></div>
+        <div class="card-grid">
+          <div class="card card-diagnosis"><div class="card-header"><span class="card-icon">📖</span><span class="card-title">定义</span></div><div class="card-body"><p>一类<strong>急性发作、病程短暂</strong>的精神病性综合征：既往精神状况正常、<strong>无前驱期症状</strong>、急性起病、<strong>2 周内达峰</strong>、社会与职业功能急剧恶化。症状包括妄想、幻觉、思维形式和结构障碍、困惑或意识模糊、情感与心境障碍，也可出现紧张症性精神运动性障碍；性质与强度每天甚至一天内快速变化。病程 ≤3 个月，多数数天～1 个月（教材注明 DSM-5 为 1 天～1 个月），缓解完全，恢复病前功能。</p></div></div>
+          <div class="card card-cause"><div class="card-header"><span class="card-icon">📊</span><span class="card-title">边界与流行病学</span></div><div class="card-body"><p>以往被分类为反应性、癔症性、应激性及心因性精神病。因分类、定义、亚型及诊断标准国内外意见很不一致，确切流行病学资料难以获得；一般认为不常见，多发生于 20 岁到 30 多岁的年轻人，<strong>女性多于男性</strong>，明显不同于精神分裂症。低社会经济阶层、遭受灾难和文化变迁（如移民）者易患；重大心理社会应激源是危险因素；常与表演型、自恋型、偏执型、分裂型及边缘型人格障碍共病。</p></div></div>
+        </div>
+      </div>
+
+      <div class="module module-cause">
+        <div class="module-head"><span class="module-index">第二栏</span><h3>病因探秘</h3></div>
+        <div class="card-grid">
+          <div class="card card-cause"><div class="card-header"><span class="card-icon">⚖️</span><span class="card-title">应激 + 素质</span></div><div class="card-body"><p>病因不明；<strong>应激因素和躯体素质因素</strong>在病因学中可能起重要作用。不良人格特征（尤其边缘型、分裂型或偏执型人格特征）是发生精神症状的生物和心理易感素质。部分患者有精神分裂症或心境障碍家族史，但这些发现与该病的关系尚无定论；教材未给遗传率或基因。</p></div></div>
+          <div class="card card-cause"><div class="card-header"><span class="card-icon">🧠</span><span class="card-title">精神动力学解释</span></div><div class="card-body"><p>精神动力学机制强调患者的精神症状与<strong>不恰当的应对机制</strong>及<strong>继发性获益</strong>有关，是患者对被禁止的幻想、不能满足的欲望或痛苦处境的一种防御方式。属机制学说，不是诊断标准。</p></div></div>
+        </div>
+      </div>
+
+      <div class="module module-symptom">
+        <div class="module-head"><span class="module-index">第三栏</span><h3>临床表现拼图</h3></div>
+        <div class="card-grid">
+          <div class="card card-symptom"><div class="card-header"><span class="card-icon">⚡</span><span class="card-title">起病与症状</span></div><div class="card-body"><p>通常在 2 周内或更短时间内出现急性精神病状态；<strong>片段的妄想或幻觉</strong>，形式多种多样；言语和行为紊乱；情绪可淡漠、迷惑恍惚、焦虑激越。特征性症状包括情绪反复无常、行为紊乱或怪异行为、缄默不语或尖叫以及近事记忆受损。症状每天之间甚至 1 天之内有明显变化。</p></div></div>
+          <div class="card card-symptom"><div class="card-header"><span class="card-icon">🔍</span><span class="card-title">早期信号与谵妄排查</span></div><div class="card-body"><p>发病早期较那些最后变成慢性精神障碍的患者更常出现<strong>心境不稳定、意识模糊和注意障碍</strong>。有些症状提示有谵妄的可能，应进行仔细的躯体检查，尤其要排除药物不良反应所致。</p></div></div>
+          <div class="card card-symptom"><div class="card-header"><span class="card-icon">🧨</span><span class="card-title">应激源与病程</span></div><div class="card-body"><p>最明确的应激源是指在类似环境下<strong>对该文化处境中的大多数人构成应激反应</strong>的事件，如亲人亡故、非预期性失去工作或婚姻、战争/恐怖主义/酷刑所致的心理创伤。部分患者发病前有应激源，但应激源可能与精神疾病发作只是巧合。病程一般几天到 1 个月，少数可达 3 个月；缓解完全。</p></div></div>
+        </div>
+        <div class="callout callout-info"><div class="callout-icon">⏱️</div><div class="callout-body"><strong>超过 3 个月要改问</strong>若精神病性症状持续超过 3 个月，需考虑精神分裂症、分裂情感障碍、伴精神病性症状的心境障碍及妄想性障碍等。</div></div>
+      </div>
+
+      <div class="module module-case">
+        <div class="module-head"><span class="module-index">第四栏</span><h3>教材典型案例</h3></div>
+        <div class="callout callout-warning"><div class="callout-icon">📌</div><div class="callout-body"><strong>教材未提供相关内容</strong>教材未提供具体案例，仅有定义、临床特征、诊断与治疗原则。本栏不虚构；教学演练见病例挑战。</div></div>
+      </div>
+
+      <div class="module module-diff">
+        <div class="module-head"><span class="module-index">第五栏</span><h3>鉴别诊断对对碰</h3></div>
+        <p>诊断三条硬门槛：</p>
+        <div class="numbered-list">
+          <li>急性起病的精神病性症状持续<strong>≤3 个月</strong>（教材注明 DSM-5 要求不超过 1 个月）。</li>
+          <li>精神症状不能用精神分裂症、心境障碍、分裂情感障碍、妄想性障碍及物质使用或躯体疾病等更好地解释。</li>
+          <li>不能单纯依靠患者提供的病史，要从其他知情者处获取前驱期症状、既往精神疾病史、最近有无精神活性物质或药物使用、发病前有无促发因素等信息综合判断。</li>
+        </div>
+        <div class="callout callout-example"><div class="callout-icon">📚</div><div class="callout-body"><strong>教材列出的 DSM-5 三型</strong>有应激源、没有应激源、产后发作。ICD-11 核心是急性起病、2 周达峰、≤3 个月、完全缓解。</div></div>
+        <div class="table-wrap"><table class="comparison-table"><thead><tr><th>对照</th><th>核心症状</th><th>病程/起病</th><th>关键鉴别点</th><th>排除/评估要点</th></tr></thead><tbody>
+          <tr><td>精神分裂症</td><td>持续妄想/幻觉、思维形式障碍、阴性症状、衰退</td><td>精神病性症状 ≥1 个月，多持续/复发缓解</td><td>本病无前驱、多变、完全缓解；3 个月不缓解或社会功能恢复不好 → 考虑精分</td><td>纵向随访病程与功能</td></tr>
+          <tr><td>分裂情感障碍</td><td>精神病性与心境症状双达标</td><td>同一次发作，共同 ≥1 个月</td><td>本病更多变、不符合精分或心境发作、一般无阴性症状、更短</td><td>评估心境发作是否达标</td></tr>
+          <tr><td>伴精神病性症状的心境障碍</td><td>心境为主相，精神病性随心境改善消失</td><td>随心境波动</td><td>本病精神病性症状独立突出，不满足心境发作</td><td>纵向评估心境与精神病性症状关系</td></tr>
+          <tr><td>妄想性障碍</td><td>系统、固定、非怪异妄想，功能保留</td><td>≥3 个月</td><td>本病短、多变、可完全缓解</td><td>评估妄想系统性与功能</td></tr>
+          <tr><td>做作性障碍/诈病</td><td>症状故意产生；诈病为特定目的装精神病</td><td>与获益情境相关</td><td>做作性障碍症状是故意产生的；诈病是为了某种特殊目的（如获得住院）</td><td>多源信息、观察、既往史；谨慎结论</td></tr>
+          <tr><td>躯体疾病/物质所致</td><td>可有意识障碍、幻视、不典型表现</td><td>与躯体病/物质使用时间相关</td><td>医学和药学检查可明确病因；需评估中毒还是戒断</td><td>体检、实验室检查、物质筛查</td></tr>
+        </tbody></table></div>
+        <p class="table-note">一句话：<strong>急性短暂 = 无前驱 + 2 周达峰 + 症状天天变 + 3 个月内完全好；超过 3 个月改问精分/分裂情感/心境/妄想性。</strong></p>
+        <div class="callout callout-warning"><div class="callout-icon">⚠️</div><div class="callout-body"><strong>还需考虑</strong>分离性身份障碍，以及与边缘型和分裂型人格障碍有关的精神病性发作。有心理社会诱因也不一定是本病——诱因可能只是巧合。</div></div>
+      </div>
+
+      <div class="module module-treat">
+        <div class="module-head"><span class="module-index">第六栏</span><h3>治疗方案工具箱</h3></div>
+        <div class="callout callout-warning"><div class="callout-icon">📌</div><div class="callout-body"><strong>教材未明确“首选/次选”排序</strong>以下按治疗场景归纳，不补造层级。</div></div>
+        <div class="table-wrap"><table class="comparison-table"><thead><tr><th>层级（按教材归纳）</th><th>措施</th><th>教材依据/要点</th></tr></thead><tbody>
+          <tr><td>首选</td><td>短期住院 + 安静结构化病房 + 抗精神病药对症</td><td>短期住院有利于评估和保护患者，监测症状变化及有无潜在危险；安静和结构化的病房环境有利于患者重新获得真实感。</td></tr>
+          <tr><td>次选</td><td>兴奋激越者：氟哌啶醇、齐拉西酮肌内注射；或奥氮平、喹硫平口服；苯二氮䓬类（BZDs）短期使用</td><td>BZDs 短期有效且不良反应较抗精神病药物少而轻，但长期对精神病性症状疗效有限或无益。</td></tr>
+          <tr><td>辅助</td><td>心理治疗；症状缓解后前 2～3 周抗焦虑药</td><td>心理治疗解释应激源与发作关系、探索新应对策略；帮助处理丧失的自尊、重建自信；家属参与效果更好。</td></tr>
+        </tbody></table></div>
+        <p class="table-note">教材未给具体 mg 剂量：<strong>剂量个体化，遵医嘱</strong>。</p>
+        <h4>治疗时间线（教材描述）</h4>
+        <div class="timeline">
+          <div class="tl-item"><div class="tl-title">急性期 · 短期住院与对症</div><div class="tl-desc">住院前或等待药物起效过程中，有时需对患者进行必要的隔离、保护及看护；抗精神病药和 BZDs 对症，兴奋激越者可肌内注射。</div></div>
+          <div class="tl-item"><div class="tl-title">缓解期 · 症状缓解后前 2～3 周</div><div class="tl-desc">部分患者在此阶段使用抗焦虑药常有效；同时进行心理治疗，处理丧失的自尊、重建自信。</div></div>
+          <div class="tl-item"><div class="tl-title">随访期 · 常不需长期药物</div><div class="tl-desc">总体上此类患者常不需长期药物治疗；如果患者需要药物维持治疗，则要考虑诊断的正确性。注意发作期与发作后抑郁期都要防止自杀。</div></div>
+        </div>
+        <div class="card-grid">
+          <div class="card card-treatment"><div class="card-header"><span class="card-icon">💬</span><span class="card-title">治疗难点</span></div><div class="card-body"><p>尽管住院和药物治疗大多能解决短期状况，但治疗的难处在于如何消除疾病对患者及其亲属可能造成的心理创伤。心理治疗有利于解释应激源与精神疾病发作之间的关系，探索和发展新的应对策略。</p></div></div>
+          <div class="card card-treatment"><div class="card-header"><span class="card-icon">📈</span><span class="card-title">预后</span></div><div class="card-body"><p>整体预后较好。国外随访发现，首诊患者约<strong>半数</strong>其后疾病发展成精神分裂症、心境障碍等；少数患者在精神病性症状消失后出现抑郁症状。良好因素：病前适应能力良好、病前没有分裂特质、有严重促发因素、起病急、情感症状明显、发作期有意识模糊和困惑、没有情感迟钝、症状持续时间短、无精神分裂症家族史。</p></div></div>
+        </div>
+      </div>
+
+      <div class="module module-memory">
+        <div class="module-head"><span class="module-index">第七栏</span><h3>记忆工具箱</h3></div>
+        <div class="memory-grid">
+          <div class="memory-card"><div class="m-title">方法一：数字三连<span class="m-type">数字</span></div><div class="m-formula">“0 前驱、2 周达峰、3 个月上限”</div><p>0 = 无前驱；2 周 = 达峰；3 个月 = ICD-11 上限。原理：三个数字对应三个时间特征。</p></div>
+          <div class="memory-card"><div class="m-title">方法二：四字口诀<span class="m-type">口诀</span></div><div class="m-formula">“急、变、短、全”</div><p>急性起病；症状天天变；病程短；完全缓解、恢复病前功能。原理：四字概括四个核心特征。</p></div>
+          <div class="memory-card"><div class="m-title">方法三：应激三问<span class="m-type">归类</span></div><div class="m-formula">大多数人也会受不了？有时间关系？功能回来了吗？</div><p>三条都成立才强烈提示本病；否则应激可能只是巧合。原理：把“应激源”拆成可操作的三问。</p></div>
+          <div class="memory-card"><div class="m-title">方法四：预后对照<span class="m-type">对比</span></div><div class="m-formula">好：急起、有因、有情感、有困惑、无分裂特质</div><p>坏：缓起、无因、阴性症状、分裂特质、家族史。原理：用正反两组特征对照记忆。</p></div>
+        </div>
+      </div>
+
+      <div class="module module-link">
+        <div class="module-head"><span class="module-index">第八栏</span><h3>知识联动</h3></div>
+        <ul class="icon-list">
+          <li><strong>应激相关障碍：</strong>旧称含反应性/心因性精神病；但有应激源不等于本病，需看症状程度、病程与缓解方式。</li>
+          <li><strong>人格障碍：</strong>常与表演型、自恋型、偏执型、分裂型、边缘型共病；不良人格是易感素质。</li>
+          <li><strong>围产期：</strong>教材另列出“产后发作”亚型；教材未展开机制与处理，仍需先排躯体/物质。</li>
+          <li><strong>急诊：</strong>短期住院、结构化环境、隔离保护、抗精神病药 + BZDs 对症，同时防自杀/冲动。</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="delusional" class="section">
+      <div class="section-header"><span class="section-number">09</span><h2>妄想性障碍</h2></div>
+      <p class="lead">妄想性障碍（delusional disorder）的核心不是“妄想有多怪”，而是<strong>妄想有多系统、多固定，以及妄想之外功能保留得有多好</strong>。</p>
+      <div class="disease-hero"><div class="en">DELUSIONAL DISORDER</div><h3>妄想性障碍</h3><p>又称偏执障碍（paranoid disorder）：病因未明，以发展成一种或一整套相互关联的系统妄想为主要表现，妄想持续 3 个月及以上。</p><div class="quick-tags"><span>核心：系统、固定、非怪异</span><span>病程：≥3 个月</span><span>功能：除妄想外相对完好</span><span>预后：慢性，少人格衰退</span></div></div>
+      <div class="quick-facts"><div class="fact"><b>美国患病率</b><span>0.2%～0.3%</span></div><div class="fact"><b>年新发</b><span>1～3/10 万</span></div><div class="fact"><b>平均发病</b><span>约 40 岁</span></div><div class="fact"><b>年龄范围</b><span>18～90 多岁</span></div><div class="fact"><b>病程门槛</b><span>≥3 个月</span></div></div>
+
+      <div class="module">
+        <div class="module-head"><span class="module-index">第一栏</span><h3>疾病画像</h3></div>
+        <div class="card-grid">
+          <div class="card card-diagnosis"><div class="card-header"><span class="card-icon">📖</span><span class="card-title">定义</span></div><div class="card-body"><p>以发展成一种或一整套相互关联的<strong>系统妄想</strong>为主要表现，妄想持续 <strong>≥3 个月</strong>；妄想发作时<strong>没有</strong>抑郁、躁狂及混合发作的心境障碍，也<strong>没有</strong>精神分裂症的特征性症状（如持续性幻听、思维形式障碍及阴性症状）。患者可出现与妄想主题相一致的各种形式感知觉障碍（如幻觉、错觉和身份认同障碍）以及情绪、态度和行为反应；但<strong>不涉及妄想内容时，其他方面精神功能基本正常</strong>。</p></div></div>
+          <div class="card card-cause"><div class="card-header"><span class="card-icon">📊</span><span class="card-title">流行病学与鉴别依据</span></div><div class="card-body"><p>国内无确切发病率和患病率；美国普通人群患病率 <strong>0.2%～0.3%</strong>，年新发患者数 <strong>1～3 人/10 万</strong>；大多中年起病，平均约 <strong>40 岁</strong>（范围 18 岁到 90 多岁）；女性略多于男性，男性以被害型多见，女性以情爱型多见；大多数为已婚和有职业者。</p><p>提示病因学可能有别于精神分裂症和心境障碍：患病率明显更低、发病年龄更晚、性别构成不同、先证者亲属患精分和心境障碍的比例不增加、诊断相对稳定（最终发展为精分不足 25%、心境障碍不足 10%）。</p></div></div>
+        </div>
+      </div>
+
+      <div class="module module-cause">
+        <div class="module-head"><span class="module-index">第二栏</span><h3>病因探秘</h3></div>
+        <div class="card-grid">
+          <div class="card card-cause"><div class="card-header"><span class="card-icon">🧬</span><span class="card-title">生物 + 人格 + 应激</span></div><div class="card-body"><p>确切病因不明，可能是生物学因素、不良性格特征及精神应激因素相互作用。高危因素：较大年龄、妄想性障碍家族史、社会隔离、特殊人格特征、新近移民、感觉器官功能异常。家系调查发现此病具有家族聚集性，患者的某些性格特点（多疑敏感、主观固执、好嫉妒、行事诡秘、高傲自负）也具有家族聚集性。</p></div></div>
+          <div class="card card-cause"><div class="card-header"><span class="card-icon">🧠</span><span class="card-title">脑部疾病线索</span></div><div class="card-body"><p>有脑部疾病及物质使用的部分患者可以出现妄想：无智力损害的脑部疾病可出现复杂妄想，有智力损害者常为简单、片段妄想。提示系统妄想的形成更可能与<strong>边缘系统及基底节受损而大脑皮质功能相对完好</strong>有关。此为机制推测，不是确诊依据；多数患者常规检查无阳性发现。</p></div></div>
+        </div>
+      </div>
+
+      <div class="module module-symptom">
+        <div class="module-head"><span class="module-index">第三栏</span><h3>临床表现拼图</h3></div>
+        <div class="table-wrap"><table class="comparison-table"><thead><tr><th>类型</th><th>教材描述</th><th>别名/特点</th></tr></thead><tbody>
+          <tr><td>被害妄想</td><td>坚信被人用一种或一些恶意的方式陷害，包括躯体、名誉和权利方面的受害；搜集证据、罗列事实或反复诉讼（诉讼狂），不屈不挠。</td><td>男性多见</td></tr>
+          <tr><td>夸大妄想</td><td>夸大自身价值、权力、知识、身份和地位，或坚信与神仙或名人有某些特殊关系。</td><td>内容可有一定现实影子</td></tr>
+          <tr><td>嫉妒妄想</td><td>怀疑配偶不贞，常对配偶采取跟踪、检查、限制外出等方式防止“外遇”。</td><td>Othello 综合征</td></tr>
+          <tr><td>钟情妄想</td><td>坚信某异性对自己钟情。</td><td>Clerambanlt 综合征；女性多见</td></tr>
+          <tr><td>躯体妄想</td><td>坚信自己有某一躯体缺陷或疾病状态，反复求医、检查，客观事实无法纠正其信念。</td><td>易与躯体形式障碍混淆</td></tr>
+        </tbody></table></div>
+        <p class="table-note">口诀：“被、夸、嫉、钟、躯”。</p>
+        <h4>五条共同特点</h4>
+        <div class="numbered-list">
+          <li>妄想形式各异但比较<strong>固定</strong>，内容不显荒谬离奇，是现实生活中有可能发生的事情。</li>
+          <li>妄想的发展符合逻辑，可有一定的现实基础，结构比较<strong>系统、严密</strong>。</li>
+          <li>患者的情感、态度和行为与妄想系统<strong>一致</strong>；在不涉及妄想内容的情况下，其他方面精神功能基本正常。</li>
+          <li>典型病例缺乏其他精神病理改变：没有清晰、持久的幻听和精神分裂症的其他特征性症状，也无脑器质性疾病、物质滥用等的证据。</li>
+          <li>病程演进较慢，妄想往往持久甚至持续终身，但一般<strong>不会出现人格衰退和智能缺损</strong>，并有一定的工作生活能力。</li>
+        </div>
+        <div class="callout callout-example"><div class="callout-icon">📚</div><div class="callout-body"><strong>教材原文</strong>“妄想形式各异但比较固定，内容不显荒谬离奇，是现实生活中有可能发生的事情。”这是与精神分裂症妄想的核心分界。</div></div>
+      </div>
+
+      <div class="module module-case">
+        <div class="module-head"><span class="module-index">第四栏</span><h3>教材典型案例</h3></div>
+        <div class="callout callout-warning"><div class="callout-icon">📌</div><div class="callout-body"><strong>教材未提供相关内容</strong>教材未提供具体案例，只有五种妄想类型描述与鉴别要点，无起病经过、诊疗过程或检查数值。本栏不虚构；病例挑战中的钟情妄想情境为教学演练。</div></div>
+      </div>
+
+      <div class="module module-diff">
+        <div class="module-head"><span class="module-index">第五栏</span><h3>鉴别诊断对对碰</h3></div>
+        <h4>诊断三要点</h4>
+        <div class="numbered-list">
+          <li>存在一个或多个妄想，妄想是<strong>最突出或唯一</strong>的临床特征，持续存在至少 <strong>3 个月</strong>（教材注明 DSM-5 要求至少 1 个月）。</li>
+          <li>除了受妄想本身或其结果的影响，患者的功能<strong>没有明显损害</strong>，没有明显的离奇或古怪行为。</li>
+          <li>从不符合精神分裂症、心境障碍的诊断标准；妄想不是躯体疾病或某种物质的生理效应所致；也不能用另一种精神障碍更好地解释。</li>
+        </div>
+        <p class="table-note">诊断前首先要与患者、患者家人和知情人沟通，澄清妄想是否存在。</p>
+        <div class="table-wrap"><table class="comparison-table"><thead><tr><th>对照</th><th>核心症状</th><th>病程/起病</th><th>关键鉴别点</th><th>排除/评估要点</th></tr></thead><tbody>
+          <tr><td>躯体疾病所致妄想</td><td>复杂或片段妄想，取决于脑受损部位与智能</td><td>与躯体病病程相关</td><td>复杂妄想多见于皮质下（边缘系统、基底节）功能受损</td><td>体检、神经系统检查、辅助检查；警惕亨廷顿病、特发性基底节钙化、右侧脑梗死、Capgras、B12 缺乏、肝性脑病、糖尿病、甲减、癫痫等</td></tr>
+          <tr><td>谵妄</td><td>妄想 + 波动性意识水平障碍 + 认知功能受损</td><td>急性、波动</td><td>意识波动是核心</td><td>评估意识/注意/认知波动</td></tr>
+          <tr><td>痴呆</td><td>妄想 + 进行性认知损害</td><td>慢性进行性</td><td>神经心理测验有损害</td><td>神经心理测验、影像、实验室</td></tr>
+          <tr><td>物质使用障碍</td><td>兴奋剂、大麻及其他物质或药物可致妄想</td><td>与使用时间相关</td><td>停用物质后妄想多数较快消失；酒精依赖所致精神障碍常伴幻觉</td><td>物质筛查、使用史</td></tr>
+          <tr><td>精神分裂症</td><td>妄想荒谬、泛化、松散，常伴幻觉与人格衰退</td><td>精神病性症状 ≥1 个月</td><td>本病系统、非怪异、功能保留、无其他特征性症状</td><td>评估幻觉、思维形式障碍、阴性症状、衰退</td></tr>
+          <tr><td>分裂情感障碍</td><td>同一次发作中精神病性与心境症状双达标</td><td>共同 ≥1 个月</td><td>本病发作时没有抑郁、躁狂及混合发作</td><td>纵向评估心境症状</td></tr>
+          <tr><td>心境障碍</td><td>妄想与心境同步，心境为主相</td><td>随心境波动</td><td>本病发作时无抑郁/躁狂/混合发作</td><td>纵向评估心境症状</td></tr>
+          <tr><td>急性短暂性精神病性障碍</td><td>片段、多变妄想/幻觉，可完全缓解</td><td>≤3 个月，2 周达峰</td><td>本病妄想系统、固定、持续 ≥3 个月</td><td>随访病程与功能恢复</td></tr>
+          <tr><td>躯体形式障碍/偏执型人格障碍</td><td>躯体关注或广泛猜忌</td><td>长期</td><td>躯体形式障碍对躯体疾病坚信程度不如本病；偏执型人格极度偏执时难鉴别</td><td>评估坚信程度、系统性、功能；不确定时不要轻易诊断</td></tr>
+        </tbody></table></div>
+        <p class="table-note">一句话：<strong>妄想性障碍 = 系统 + 非怪异 + 功能保留 + 无其他特征 + 3 个月；精分 = 荒谬 + 松散 + 幻觉/阴性 + 衰退；分裂情感 = 心境发作同时达标。</strong></p>
+        <div class="callout callout-danger"><div class="callout-icon">⚠️</div><div class="callout-body"><strong>器质性排查不能省</strong>半数以上亨廷顿病和特发性基底节钙化患者病程中出现妄想；右侧脑梗死常伴病感失认和双重性记忆错误；Capgras 可见于多种中枢神经疾病、维生素 B12 缺乏、肝性脑病、糖尿病及甲减；寄生虫妄想、变兽妄想、双重自身症及钟情妄想也可见于癫痫、中枢神经损伤及代谢中毒性疾病。</div></div>
+      </div>
+
+      <div class="module module-treat">
+        <div class="module-head"><span class="module-index">第六栏</span><h3>治疗方案工具箱</h3></div>
+        <div class="callout callout-warning"><div class="callout-icon">🚧</div><div class="callout-body"><strong>治疗难点</strong>大多患者缺乏自知力而不愿求医，即使住院也难以建立良好医患关系，治疗依从性差。对有敌意和攻击、自杀隐患的患者有必要进行适当监管和强制性住院治疗。</div></div>
+        <div class="callout callout-warning"><div class="callout-icon">📌</div><div class="callout-body"><strong>教材未明确“首选/次选”排序</strong>以下按教材内容归纳，不补造层级。</div></div>
+        <div class="table-wrap"><table class="comparison-table"><thead><tr><th>层级（按教材归纳）</th><th>措施</th><th>教材依据/要点</th></tr></thead><tbody>
+          <tr><td>首选</td><td>抗精神病药 + 个别心理治疗</td><td>抗精神病药可改善妄想症状并防止恶化或复发，尤其对妄想伴发的激越症状有效；心理干预有助于建立良好医患关系、提高依从性。</td></tr>
+          <tr><td>次选</td><td>依从性差者用长效抗精神病药制剂；伴焦虑/抑郁者用抗焦虑/抗抑郁药；躯体妄想可试用抗抑郁药</td><td>教材明确；抗精神病药剂量和疗程可参照精神分裂症治疗常规。</td></tr>
+          <tr><td>辅助</td><td>支持性心理治疗、认知治疗、社交技能训练</td><td>心理干预常配合药物治疗进行；推荐个别心理治疗。</td></tr>
+        </tbody></table></div>
+        <p class="table-note">教材未给本病独立的分期时长与 mg 剂量；剂量和疗程参照精神分裂症常规，具体<strong>剂量个体化，遵医嘱</strong>。</p>
+        <h4>沟通策略（教材要点）</h4>
+        <ul class="icon-list check">
+          <li>以<strong>共情</strong>的态度对待患者，治疗方式围绕患者对于妄想信念产生的<strong>主观痛苦</strong>来进行。</li>
+          <li><strong>不要支持、反对或质疑</strong>患者的妄想信念，也不要试图让患者马上改变他的想法。</li>
+          <li>心理干预常配合药物治疗进行；患者大多敏感多疑，推荐个别心理治疗。</li>
+        </ul>
+        <div class="card-grid">
+          <div class="card card-treatment"><div class="card-header"><span class="card-icon">📈</span><span class="card-title">病程与预后</span></div><div class="card-body"><p>病程多呈持续性，有的可终身不愈。部分患者老年由于体力与精力日趋衰退，症状可有所缓解；少数患者经治疗可有较好的缓解。</p></div></div>
+          <div class="card card-treatment"><div class="card-header"><span class="card-icon">🛡️</span><span class="card-title">预防</span></div><div class="card-body"><p>由于病因不明，尚无有效的预防方法。培养开朗、乐观的个性可能对预防本组疾病有好处。</p></div></div>
+        </div>
+      </div>
+
+      <div class="module module-memory">
+        <div class="module-head"><span class="module-index">第七栏</span><h3>记忆工具箱</h3></div>
+        <div class="memory-grid">
+          <div class="memory-card"><div class="m-title">方法一：五型口诀<span class="m-type">口诀</span></div><div class="m-formula">“被、夸、嫉、钟、躯”</div><p>被害（诉讼狂）、夸大、嫉妒（Othello）、钟情（Clerambanlt）、躯体；男性被害型多，女性情爱型多。原理：五字压缩五种妄想类型。</p></div>
+          <div class="memory-card"><div class="m-title">方法二：数字锚定<span class="m-type">数字</span></div><div class="m-formula">“3 个月、40 岁、0.2%～0.3%、1～3/10 万”</div><p>病程 ≥3 个月；平均 40 岁；美国患病率 0.2%～0.3%；年新发 1～3/10 万。原理：四个数字覆盖病程、年龄、患病率、发病率。</p></div>
+          <div class="memory-card"><div class="m-title">方法三：五条特点<span class="m-type">归类</span></div><div class="m-formula">“固定、系统、一致、干净、不衰退”</div><p>妄想固定；系统严密；情感/行为一致；无其他精神病理；无人格衰退和智能缺损。原理：五个短语对应五条共同特点。</p></div>
+          <div class="memory-card"><div class="m-title">方法四：鉴别四问<span class="m-type">对比</span></div><div class="m-formula">怪不怪？系统不系统？有幻觉/阴性吗？功能垮不垮？</div><p>怪 + 松散 + 幻觉/阴性 + 功能垮 → 精分；不怪 + 系统 + 无其他特征 + 功能保留 → 妄想性障碍；再问器质/物质证据。原理：四问快速分流。</p></div>
+        </div>
+      </div>
+
+      <div class="module module-link">
+        <div class="module-head"><span class="module-index">第八栏</span><h3>知识联动</h3></div>
+        <ul class="icon-list">
+          <li><strong>器质性精神障碍：</strong>系统妄想可见于边缘系统/基底节受损而皮质相对完好的脑病；Capgras、双重自身症、钟情妄想也可见于癫痫、中枢损伤、代谢中毒。</li>
+          <li><strong>老年精神医学：</strong>平均 40 岁但可见于 90 多岁；老年起病更要排查痴呆、谵妄、感官功能异常与药物。</li>
+          <li><strong>司法/依从性：</strong>被害型可反复诉讼、跟踪配偶、反复求医；有风险时需监管与强制住院；联盟与依从性是长期管理核心。</li>
+          <li><strong>预防/人格：</strong>无有效预防；培养开朗乐观个性可能有益；多疑敏感、主观固执、好嫉妒、行事诡秘、高傲自负有人格聚集性。</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="summary" class="section">
+      <div class="section-header"><span class="section-number">10</span><h2>全章核心要点速览</h2></div>
+      <p class="lead">考前最后一遍，只看这 18 条。每一条都能在教材本章找到依据。</p>
+      <div class="numbered-list">
+        <li><strong>本章界定：</strong>精神分裂症及其他原发性精神病性障碍，以明显阳性症状、阴性症状、精神运动性障碍及现实检验能力严重受损为特征；症状是疾病的原发表现，不是心境障碍、谵妄、物质使用或躯体疾病的表现形式。本章是重性精神病性障碍的核心章节，考试与临床权重最高。</li>
+        <li><strong>概念变迁：</strong>Morel（1857）早发性痴呆 → Hecker（1870）青春痴呆 → Kahlbaum（1874）紧张症 → Kraepelin（1896）统一为疾病单元 → Bleuler（20 世纪初）改名精神分裂症并提出 4A。</li>
+        <li><strong>流行病学：</strong>终生患病率约 1%；时点/终生患病率中位值 4.6‰/7.2‰；年发病率中位值 0.15‰；男性发病率略高于女性；男高峰 20 岁早期，女 25～35 岁。</li>
+        <li><strong>我国数据：</strong>1993 年终生患病率 6.55‰；1982 年 5.69‰；2012 年 18 岁及以上人群 12 个月患病率 5.59‰；患病率与家庭经济水平呈负相关。</li>
+        <li><strong>负担与结局：</strong>约 90% 共患尼古丁依赖；约 5% 死于自杀；平均寿命缩短 13～15 年；2000 年 DALYs 疾病总负担第八位（2.6%）；发达国家直接花费占卫生资源 1.4%～2.8%，约占精神疾病花费 1/5。</li>
+        <li><strong>遗传：</strong>遗传率 64%～81%；一级亲属平均患病率父母 5.6%、同胞 10.1%、子女 12.8%，普通人群 0.9%；单卵双生子同病率约 50%，至少为双卵双生子的 3 倍；2014 年 GWAS 确定 108 个位点，支持多基因疾病。</li>
+        <li><strong>神经发育与影像：</strong>神经发育理论为核心假说；侧脑室扩大约 25%，脑体积减小约 2%；额叶功能低下、部分内侧额叶功能亢进、内侧额叶失活失败；默认网络与任务正性网络交互失调。</li>
+        <li><strong>神经生化：</strong>多巴胺、谷氨酸、5-HT、GABA 四组假说；D2 阻断有效、苯丙胺可致精神病、PCP 可致类似症状、LSD 可致幻觉；但因果与伴随关系尚无定论。</li>
+        <li><strong>前驱期：</strong>不是病前人格；指明显精神病性症状出现前的非特异性症状，持续几天到几年，中位稍低于 12 个月；六类：情绪、认知、感知、行为、躯体、强迫。</li>
+        <li><strong>阳性症状：</strong>幻觉（幻听最常见；意识清晰下持续评论性/争论性/命令性幻听常提示精神分裂症；思维鸣响）、妄想（被害/关系/嫉妒/钟情/非血统/躯体多见；离奇荒谬者提示本病）、瓦解症状群（思维形式/过程障碍、怪异行为、紧张症行为、不适当情感）。</li>
+        <li><strong>阴性症状五条：</strong>意志减退、快感缺失、情感迟钝、社交退缩、言语贫乏；以意志减退和快感缺失最常见；情感迟钝是社会功能不良、治疗效果差的重要预测因子。</li>
+        <li><strong>其他维度：</strong>约 80% 有焦虑抑郁；约 20%～50% 有自杀企图、约 5% 死于自杀；攻击暴力可能性为常人四倍，但更常成为受害者；认知缺陷是素质特征/内表型，不能作诊断指标。</li>
+        <li><strong>ICD-11 诊断：</strong>首次发作通常要求在一个月及以上时期的大部分时间内持续存在（1）～（7）中至少 2 项，且至少符合（1）～（4）中的 1 项（妄想、幻觉、思维紊乱、被动/被控制体验）。</li>
+        <li><strong>核心鉴别：</strong>继发性精神病性障碍（时间相关、意识/幻视、阳性体征/实验室证据）；分裂情感障碍（同一次发作双达标、共同 ≥1 个月）；分裂型障碍（古怪模式 ≥2 年、精神病性症状 ≤1 个月）；妄想性障碍（系统非怪异、功能保留）；急性短暂性（无前驱、2 周达峰、≤3 个月、完全缓解）。</li>
+        <li><strong>治疗程序：</strong>急性期一般 4～6 周；巩固期至少 6 个月；维持期时间不定，首发/缓慢起病/多次复发者至少 5 年或更长，部分终身；不足 1/5 可能停药。</li>
+        <li><strong>药物定位：</strong>抗精神病药首选；奥氮平、氨磺必利、利培酮在阳性症状总体控制上可能更优；两种不同机制药物不佳者用氯氮平；依从性差用长效针剂；剂量个体化，教材未给 mg 数字。</li>
+        <li><strong>其他四病：</strong>SAD 终生患病率 0.5%～0.8%，ICD-11 不分型；分裂型障碍患病率约 3%，古怪模式 ≥2 年、精神病性症状 ≤1 个月、10% 自杀死亡；急性短暂 2 周达峰、≤3 个月、完全缓解；妄想性障碍患病率 0.2%～0.3%、平均 40 岁、妄想 ≥3 个月。</li>
+        <li><strong>治疗总览：</strong>心理社会干预贯穿精神分裂症全程（社会技能、家庭、CBT、ACT）；SAD 用抗精神病药 + 心境稳定剂 + 抗抑郁药；分裂型用抗精神病药 + 心理治疗、抑郁加抗抑郁药；急性短暂短期住院 + 对症；妄想性障碍以抗精神病药 + 个别心理治疗、不争辩妄想。</li>
+      </div>
+    </section>
+
+    <section id="pitfalls" class="section">
+      <div class="section-header"><span class="section-number">11</span><h2>易混易错点警示</h2></div>
+      <p class="lead">这些点最容易在选择题、病例题里“埋雷”。每一条都给出纠错口径。</p>
+      <div class="exam-alert">
+        <h3>十个高频雷区</h3>
+        <ul>
+          <li><strong>前驱期 ≠ 病前人格。</strong>安静、被动、内向、朋友少是病前人格特征，不是前驱期症状；前驱期是疾病过程的一部分，必须是非特异症状且出现在明显精神病性症状之前。</li>
+          <li><strong>阳性 ≠ 重，阴性 ≠ 轻。</strong>阳性是异常心理过程“出现”，阴性是正常心理功能“缺失”；阴性症状中的情感迟钝常提示社会功能差、治疗效果差。</li>
+          <li><strong>言语贫乏 vs 言语内容空洞。</strong>语量减少属阴性症状；语量不少但内容空洞、单调、缺乏意义属瓦解症状。两者不能混。</li>
+          <li><strong>1 个月、3 个月、2 年要分清。</strong>精神分裂症首次发作 ≥1 个月；SAD 共同 ≥1 个月；分裂型障碍 ≥2 年且精神病性症状 ≤1 个月；急性短暂 ≤3 个月；妄想性障碍 ≥3 个月。教材中出现的 DSM-5 时限（如 ATPD 1 天～1 个月、妄想性 ≥1 个月）只作对照，答题以 ICD-11 为准。</li>
+          <li><strong>SAD 必须“同一次发作、双达标”。</strong>不同发作分别出现精神分裂症症状和情感症状，不诊断 SAD；ICD-11 未再分型，DSM-5 才分双相型/抑郁型。</li>
+          <li><strong>精神分裂症 vs 妄想性障碍，看的不是“有没有妄想”，而是妄想的“质感”。</strong>前者荒谬离奇、泛化、结构松散，常伴幻觉和人格衰退；后者系统、固定、非怪异，功能相对保留，无人格衰退。</li>
+          <li><strong>分裂型障碍不是“轻度精分”。</strong>古怪模式 ≥2 年，但精神病性症状 ≤1 个月，且从未满足精神分裂症、SAD 或妄想性障碍标准；与分裂样人格障碍的区别是前者更接近精分。</li>
+          <li><strong>抑郁性木僵 vs 紧张性木僵。</strong>抑郁木僵：情感不淡漠、可简短切题应答、眼神忧心忡忡、肌张力不高；紧张性木僵：无应答、表情淡漠、违拗、肌张力高、可有蜡样屈曲。</li>
+          <li><strong>治疗时长单位。</strong>急性期 4～6 <strong>周</strong>，不是 4～6 个月；巩固期至少 6 <strong>个月</strong>，不是 6 周；维持期部分患者至少 5 <strong>年</strong>，不是 5 个月。</li>
+          <li><strong>教材没有 mg 剂量。</strong>本章只要求“适量（药品说明书推荐治疗剂量）”；不要背网上剂量，答题写“剂量个体化，遵医嘱”。</li>
+        </ul>
+      </div>
+      <div class="callout callout-memory">
+        <div class="callout-icon">🧠</div>
+        <div class="callout-body"><strong>纠错口诀</strong>“前驱不是人格，阴性不是轻；一月是精分，三月是妄想；同一次才叫分裂情感，两套标准都要硬；剂量不背数字，时长记住周月年。”</div>
+      </div>
+    </section>
+
+    <section id="quiz" class="section">
+      <div class="section-header"><span class="section-number">12</span><h2>章节自测</h2></div>
+      <p class="lead">共 15 题：单选 4、多选 3、判断 3、名词解释 2、简答 2、案例 1。答案与解析默认折叠，先自己做再展开。</p>
+
+      <div class="quiz-block">
+        <h3>一、单项选择题（4 题）</h3>
+        <div class="quiz-item">
+          <div class="quiz-stem"><span class="q-type">单选</span><span>按 ICD-11，精神分裂症首次发作通常要求症状持续至少多长时间？</span><span class="difficulty">⭐⭐</span></div>
+          <ul class="quiz-options">
+            <li data-letter="A">2 周</li>
+            <li data-letter="B" class="correct">1 个月</li>
+            <li data-letter="C">3 个月</li>
+            <li data-letter="D">6 个月</li>
+          </ul>
+          <details class="qa"><summary><span class="qa-num">答</span>答案与解析</summary>
+            <div class="qa-body"><span class="answer-key">答案 B</span>教材明确：按照 ICD-11，首次发作者通常要求在一个月及以上时期的大部分时间内持续存在症状条目（1）～（7）中至少 2 项，且至少符合（1）～（4）中的 1 项。A 是急性短暂性障碍的达峰时间；C 是急性短暂性障碍的病程上限，也是妄想性障碍的病程门槛；D 不是本章诊断门槛。</div>
+          </details>
+        </div>
+        <div class="quiz-item">
+          <div class="quiz-stem"><span class="q-type">单选</span><span>精神分裂症最常见、且意识清晰下持续出现常提示本病的幻觉是？</span><span class="difficulty">⭐</span></div>
+          <ul class="quiz-options">
+            <li data-letter="A">幻视</li>
+            <li data-letter="B" class="correct">幻听</li>
+            <li data-letter="C">幻嗅</li>
+            <li data-letter="D">幻触</li>
+          </ul>
+          <details class="qa"><summary><span class="qa-num">答</span>答案与解析</summary>
+            <div class="qa-body"><span class="answer-key">答案 B</span>教材：幻觉以幻听最常见；意识清晰状态下出现持续的评论性、争论性或命令性幻听常指向精神分裂症。幻视亦较常见；幻嗅、幻味、幻触不常见，一旦出现要排除躯体疾病、中毒、物质使用或脑器质性疾病。</div>
+          </details>
+        </div>
+        <div class="quiz-item">
+          <div class="quiz-stem"><span class="q-type">单选</span><span>下列哪一组是教材所说“最常见”的阴性症状？</span><span class="difficulty">⭐⭐</span></div>
+          <ul class="quiz-options">
+            <li data-letter="A">情感迟钝 + 社交退缩</li>
+            <li data-letter="B" class="correct">意志减退 + 快感缺失</li>
+            <li data-letter="C">言语贫乏 + 情感迟钝</li>
+            <li data-letter="D">社交退缩 + 言语贫乏</li>
+          </ul>
+          <details class="qa"><summary><span class="qa-num">答</span>答案与解析</summary>
+            <div class="qa-body"><span class="answer-key">答案 B</span>教材：NIMH 专家共识会建议五条阴性症状，其中以意志减退和快感缺乏最常见。情感迟钝是社会功能不良、治疗效果差的重要预测因子，但不是“最常见”。</div>
+          </details>
+        </div>
+        <div class="quiz-item">
+          <div class="quiz-stem"><span class="q-type">单选</span><span>按 ICD-11，妄想性障碍的妄想至少持续多长时间？</span><span class="difficulty">⭐⭐</span></div>
+          <ul class="quiz-options">
+            <li data-letter="A">1 个月</li>
+            <li data-letter="B">2 个月</li>
+            <li data-letter="C" class="correct">3 个月</li>
+            <li data-letter="D">6 个月</li>
+          </ul>
+          <details class="qa"><summary><span class="qa-num">答</span>答案与解析</summary>
+            <div class="qa-body"><span class="answer-key">答案 C</span>教材：妄想性障碍的妄想持续存在至少 3 个月（教材注明 DSM-5 要求至少 1 个月）。A 是 DSM-5 的标准，不要与 ICD-11 混淆。</div>
+          </details>
+        </div>
+      </div>
+
+      <div class="quiz-block">
+        <h3>二、多项选择题（3 题）</h3>
+        <div class="quiz-item">
+          <div class="quiz-stem"><span class="q-type">多选</span><span>下列属于精神分裂症 NIMH 五条阴性症状的有？</span><span class="difficulty">⭐⭐</span></div>
+          <ul class="quiz-options">
+            <li data-letter="A" class="correct">意志减退</li>
+            <li data-letter="B" class="correct">快感缺失</li>
+            <li data-letter="C" class="correct">情感迟钝</li>
+            <li data-letter="D" class="correct">社交退缩</li>
+            <li data-letter="E" class="correct">言语贫乏</li>
+            <li data-letter="F">幻觉</li>
+            <li data-letter="G">思维破裂</li>
+          </ul>
+          <details class="qa"><summary><span class="qa-num">答</span>答案与解析</summary>
+            <div class="qa-body"><span class="answer-key">答案 A、B、C、D、E</span>A～E 正是教材列出的五条阴性症状：意志减退、快感缺失、情感迟钝、社交退缩、言语贫乏。F 幻觉属阳性症状；G 思维破裂属瓦解症状群（阳性症状中的言语行为紊乱）。</div>
+          </details>
+        </div>
+        <div class="quiz-item">
+          <div class="quiz-stem"><span class="q-type">多选</span><span>下列哪些因素提示精神分裂症结局良好？</span><span class="difficulty">⭐⭐</span></div>
+          <ul class="quiz-options">
+            <li data-letter="A" class="correct">女性</li>
+            <li data-letter="B" class="correct">急性或亚急性起病</li>
+            <li data-letter="C" class="correct">病前人际关系和职业功能良好</li>
+            <li data-letter="D">以阴性症状为主症</li>
+            <li data-letter="E" class="correct">家庭社会支持多、家庭情感表达适度</li>
+            <li data-letter="F">治疗不及时、维持治疗依从性差</li>
+          </ul>
+          <details class="qa"><summary><span class="qa-num">答</span>答案与解析</summary>
+            <div class="qa-body"><span class="answer-key">答案 A、B、C、E</span>教材列出的良好因素包括女性、已婚、初发年龄较大、急性或亚急性起病、病前人际关系和职业功能良好、以阳性症状为主症、情感症状成分较多、家庭社会支持多、家庭情感表达适度、治疗及时系统、维持治疗依从性好。D 应为“以阳性症状为主”，阴性为主是不良指征；F 正好相反。</div>
+          </details>
+        </div>
+        <div class="quiz-item">
+          <div class="quiz-stem"><span class="q-type">多选</span><span>关于分裂情感障碍的 ICD-11 诊断要点，正确的有？</span><span class="difficulty">⭐⭐⭐</span></div>
+          <ul class="quiz-options">
+            <li data-letter="A" class="correct">精神病性症状和情感症状在同一次发作中同时或只差几天出现</li>
+            <li data-letter="B" class="correct">符合精神分裂症全部诊断要求，同时情感症状达到中度/重度抑郁、躁狂或混合发作之一</li>
+            <li data-letter="C" class="correct">两类症状共同存在至少 1 个月</li>
+            <li data-letter="D" class="correct">排除躯体疾病、物质或药物所致</li>
+            <li data-letter="E">ICD-11 将 SAD 分为躁狂型、抑郁型和混合型</li>
+            <li data-letter="F">抑郁发作只需有“兴趣减退或愉悦感降低”即可</li>
+          </ul>
+          <details class="qa"><summary><span class="qa-num">答</span>答案与解析</summary>
+            <div class="qa-body"><span class="answer-key">答案 A、B、C、D</span>A～D 对应教材 ICD-11 四条诊断要点。E 错：DSM-5 才分双相型/抑郁型，ICD-11 未对 SAD 具体分型；F 错：教材特别强调抑郁发作必须包括情绪低落，不能只依据兴趣减退或愉悦感降低。</div>
+          </details>
+        </div>
+      </div>
+
+      <div class="quiz-block">
+        <h3>三、判断题（3 题）</h3>
+        <div class="quiz-item">
+          <div class="quiz-stem"><span class="q-type">判断</span><span>精神分裂症前驱期症状就是病前的人格特征，如安静、被动、内向、朋友少。</span><span class="difficulty">⭐</span></div>
+          <ul class="quiz-options">
+            <li data-letter="A">正确</li>
+            <li data-letter="B" class="correct">错误</li>
+          </ul>
+          <details class="qa"><summary><span class="qa-num">答</span>答案与解析</summary>
+            <div class="qa-body"><span class="answer-key">答案 B（错误）</span>教材明确：病前人格特征类似分裂样或分裂型者不少见，但这些<strong>不应该</strong>视为前驱期症状，因为前驱期症状应是疾病过程的一部分。前驱期指明显精神病性症状出现前的非特异性症状。</div>
+          </details>
+        </div>
+        <div class="quiz-item">
+          <div class="quiz-stem"><span class="q-type">判断</span><span>对于首发、缓慢起病或多次复发的精神分裂症患者，维持治疗时间应为至少 5 年或更长，部分患者可能需要终身服药。</span><span class="difficulty">⭐⭐</span></div>
+          <ul class="quiz-options">
+            <li data-letter="A" class="correct">正确</li>
+            <li data-letter="B">错误</li>
+          </ul>
+          <details class="qa"><summary><span class="qa-num">答</span>答案与解析</summary>
+            <div class="qa-body"><span class="answer-key">答案 A（正确）</span>教材原文：对于首发、缓慢起病的患者或多次复发的患者，维持治疗时间应为至少 5 年或更长，部分患者可能需要终身服药；对急性发作、缓解迅速彻底的患者，维持治疗时间可相应较短。</div>
+          </details>
+        </div>
+        <div class="quiz-item">
+          <div class="quiz-stem"><span class="q-type">判断</span><span>ICD-11 规定急性短暂性精神病性障碍的病程不应超过 1 个月。</span><span class="difficulty">⭐⭐</span></div>
+          <ul class="quiz-options">
+            <li data-letter="A">正确</li>
+            <li data-letter="B" class="correct">错误</li>
+          </ul>
+          <details class="qa"><summary><span class="qa-num">答</span>答案与解析</summary>
+            <div class="qa-body"><span class="answer-key">答案 B（错误）</span>ICD-11 规定病程不应超过 <strong>3 个月</strong>；教材注明 DSM-5 对病程的要求才是 1 天到 1 个月。教材同时指出，大多数患者持续数天到 1 个月。</div>
+          </details>
+        </div>
+      </div>
+
+      <div class="quiz-block">
+        <h3>四、名词解释（2 题）</h3>
+        <div class="quiz-item">
+          <div class="quiz-stem"><span class="q-type">名词解释</span><span>4A 症状</span><span class="difficulty">⭐⭐</span></div>
+          <details class="qa"><summary><span class="qa-num">答</span>答案与解析</summary>
+            <div class="qa-body"><span class="answer-key">参考答案</span>Bleuler 提出的精神分裂症“基本症状”，包括联想障碍（association disturbance）、情感淡漠（apathy）、矛盾意向（ambivalence）及孤独症（autism）。教材指出，幻觉、妄想等属于“附加症状”。答题时要把四个英文词与中文一一对应，并说明“基本/附加”的区分。</div>
+          </details>
+        </div>
+        <div class="quiz-item">
+          <div class="quiz-stem"><span class="q-type">名词解释</span><span>阴性症状</span><span class="difficulty">⭐⭐</span></div>
+          <details class="qa"><summary><span class="qa-num">答</span>答案与解析</summary>
+            <div class="qa-body"><span class="answer-key">参考答案</span>指正常心理功能的缺失，涉及情感、社交及认知方面的缺陷。NIMH 专家共识会建议五条：意志减退、快感缺失、情感迟钝、社交退缩、言语贫乏，其中以意志减退和快感缺乏最常见。注意与“阳性症状是异常心理过程出现”相对照。</div>
+          </details>
+        </div>
+      </div>
+
+      <div class="quiz-block">
+        <h3>五、简答题（2 题）</h3>
+        <div class="quiz-item">
+          <div class="quiz-stem"><span class="q-type">简答</span><span>简述精神分裂症与妄想性障碍的鉴别要点。</span><span class="difficulty">⭐⭐⭐</span></div>
+          <details class="qa"><summary><span class="qa-num">答</span>答案与解析</summary>
+            <div class="qa-body"><span class="answer-key">参考答案</span>从四方面作答：① <strong>妄想性质</strong>：精神分裂症妄想常离奇、荒谬、泛化、结构松散而不系统、常人不能理解；妄想性障碍妄想系统、严密、固定，内容不显荒谬离奇，有一定现实基础。② <strong>伴随症状</strong>：精神分裂症常伴幻觉（尤其持久幻听）、思维形式障碍、阴性症状及精神/人格衰退；妄想性障碍一般没有幻觉或不为主要表现，无其他特征性症状。③ <strong>功能与病程</strong>：精神分裂症功能损害明显、病程迁延/复发；妄想性障碍除妄想及其结果外功能无明显损害，无离奇古怪行为，病程慢但一般无人格衰退和智能缺损。④ <strong>排除</strong>：妄想性障碍需排除躯体疾病、物质使用、谵妄/痴呆、心境障碍；精神分裂症同样需排除继发性原因。最后补一句：不确定时不要轻易诊断妄想性障碍。</div>
+          </details>
+        </div>
+        <div class="quiz-item">
+          <div class="quiz-stem"><span class="q-type">简答</span><span>简述精神分裂症急性治疗期、巩固治疗期、维持治疗期的目的与时长。</span><span class="difficulty">⭐⭐</span></div>
+          <details class="qa"><summary><span class="qa-num">答</span>答案与解析</summary>
+            <div class="qa-body"><span class="answer-key">参考答案</span>① <strong>急性治疗期</strong>：一般 4～6 周，目的是尽快控制症状、防止疾病所致的继发性伤害。② <strong>巩固治疗期</strong>：至少 6 个月，目的是防止疾病复燃、协助患者恢复病前社会功能；原则上不应减量，除非难以耐受。③ <strong>维持治疗期</strong>：时间不定，目的是防止疾病复发、进一步改善社会功能的整合和提高生活质量；首发、缓慢起病或多次复发者至少 5 年或更长，部分患者可能终身；急性发作、缓解迅速彻底者可相应较短；总体上不足 1/5 的患者有可能停药。</div>
+          </details>
+        </div>
+      </div>
+
+      <div class="quiz-block">
+        <h3>六、案例题（1 题）</h3>
+        <div class="quiz-item">
+          <div class="quiz-stem"><span class="q-type">案例</span><span>24 岁男性，既往精神状况正常。近 8 个月逐渐出现耳边有人评论他的一举一动，有时命令他“别出门”；坚信邻居在楼道装了设备监视自己，认为自己的想法会被广播出去。近 3 个月不愿上班、个人卫生差、整日躺着。无持续情绪低落或情绪高涨，无物质使用史，无意识波动。最可能诊断？还需与哪些疾病鉴别？治疗原则？<span class="tag tag-info">教学演练</span></span><span class="difficulty">⭐⭐⭐</span></div>
+          <details class="qa"><summary><span class="qa-num">析</span>答案与诊断思路</summary>
+            <div class="qa-body"><span class="answer-key">参考答案</span><strong>诊断：</strong>精神分裂症。依据：意识清晰下持续评论性/命令性幻听、被监视妄想、思维被广播（被动体验），症状持续 8 个月（≥1 个月），且至少 2 项症状中包含（1）～（4）中的多项；伴明显功能下降（不能上班、个人卫生差）；无符合诊断要求的心境发作，无物质使用与意识波动。<br><strong>鉴别：</strong>① 分裂情感障碍：需同一次发作中情感症状达到中度/重度抑郁、躁狂或混合发作，且两类症状共同 ≥1 个月；本例无持续心境发作。② 分裂型障碍：需古怪模式 ≥2 年、精神病性症状 ≤1 个月，且从未满足精神分裂症标准；本例精神病性症状持续 8 个月，不符合。③ 妄想性障碍：妄想需系统、非怪异、功能相对保留，且无持久幻听/思维形式障碍/阴性症状；本例妄想离奇、伴幻听与功能衰退，不符合。④ 急性短暂性：需无前驱、2 周达峰、≤3 个月且完全缓解；本例病程 8 个月，不符合。⑤ 器质性/物质所致：需据病史、躯体与神经系统检查、必要辅助检查排除；本例虽无物质使用史，仍应完成评估。⑥ 心境障碍伴精神病性症状：精神病性症状应随心境症状改善而消失，且心境为主相；本例不符。<br><strong>治疗原则：</strong>抗精神病药首选，早期、适量、足疗程、单一、个体化；心理社会干预贯穿全程（心理教育、家庭干预、社会技能、CBT）；有攻击/自杀风险或治疗不合作时住院；药物疗效不佳或有木僵违拗、频繁自杀、攻击冲动时可考虑 ECT。剂量个体化，遵医嘱。</div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section id="flashcards" class="section">
+      <div class="section-header"><span class="section-number">13</span><h2>考点速记卡</h2></div>
+      <p class="lead">20 张翻转卡，分概念、诊断、治疗、数据四组。点击卡片翻面，先答后看。</p>
+      <div class="flashcard-grid">
+        <div class="flashcard"><div class="flashcard-inner">
+          <div class="flashcard-face flashcard-front"><span class="card-tag concept">概念</span><p>精神分裂症的核心定义是什么？</p><span class="flip-hint">点击翻转</span></div>
+          <div class="flashcard-face flashcard-back"><p>以明显阳性症状、阴性症状、精神运动性障碍及现实检验能力严重受损为特征的原发性精神病性障碍；多起病于青壮年，影响严重而持续，诊断依赖病史与精神检查。</p></div>
+        </div></div>
+        <div class="flashcard"><div class="flashcard-inner">
+          <div class="flashcard-face flashcard-front"><span class="card-tag concept">概念</span><p>阳性症状包括哪三类？</p><span class="flip-hint">点击翻转</span></div>
+          <div class="flashcard-face flashcard-back"><p>幻觉、妄想、言语和行为的紊乱（瓦解症状群）。阳性症状是异常心理过程的“出现”。</p></div>
+        </div></div>
+        <div class="flashcard"><div class="flashcard-inner">
+          <div class="flashcard-face flashcard-front"><span class="card-tag concept">概念</span><p>阴性症状五条是什么？</p><span class="flip-hint">点击翻转</span></div>
+          <div class="flashcard-face flashcard-back"><p>意志减退、快感缺失、情感迟钝、社交退缩、言语贫乏。以意志减退和快感缺失最常见；情感迟钝提示社会功能差、疗效差。</p></div>
+        </div></div>
+        <div class="flashcard"><div class="flashcard-inner">
+          <div class="flashcard-face flashcard-front"><span class="card-tag concept">概念</span><p>前驱期症状的定义与最常见六类？</p><span class="flip-hint">点击翻转</span></div>
+          <div class="flashcard-face flashcard-back"><p>明显精神病性症状出现前的非特异性症状，是疾病过程的一部分（不是病前人格）。六类：情绪、认知、感知、行为、躯体、强迫。中位持续稍低于 12 个月。</p></div>
+        </div></div>
+        <div class="flashcard"><div class="flashcard-inner">
+          <div class="flashcard-face flashcard-front"><span class="card-tag concept">概念</span><p>Bleuler 的 4A 是哪四项？</p><span class="flip-hint">点击翻转</span></div>
+          <div class="flashcard-face flashcard-back"><p>联想障碍（Association）、情感淡漠（Apathy）、矛盾意向（Ambivalence）、孤独症（Autism）。幻觉、妄想是附加症状。</p></div>
+        </div></div>
+        <div class="flashcard"><div class="flashcard-inner">
+          <div class="flashcard-face flashcard-front"><span class="card-tag concept">概念</span><p>精神分裂症显症期的五个症状维度？</p><span class="flip-hint">点击翻转</span></div>
+          <div class="flashcard-face flashcard-back"><p>幻觉妄想症状群、阴性症状群、瓦解症状群、焦虑抑郁症状群、激越症状群。前三个对诊断特异性较高。</p></div>
+        </div></div>
+        <div class="flashcard"><div class="flashcard-inner">
+          <div class="flashcard-face flashcard-front"><span class="card-tag diagnosis">诊断</span><p>ICD-11 精神分裂症首次发作的症状与病程要求？</p><span class="flip-hint">点击翻转</span></div>
+          <div class="flashcard-face flashcard-back"><p>一个月及以上时期的大部分时间内，持续存在（1）～（7）中至少 2 项，且至少符合（1）～（4）中的 1 项（妄想、幻觉、思维紊乱、被动/被控制体验）。</p></div>
+        </div></div>
+        <div class="flashcard"><div class="flashcard-inner">
+          <div class="flashcard-face flashcard-front"><span class="card-tag diagnosis">诊断</span><p>分裂情感障碍 ICD-11 的四条诊断要点？</p><span class="flip-hint">点击翻转</span></div>
+          <div class="flashcard-face flashcard-back"><p>同一次发作中精神病性症状与情感症状同时或只差几天；符合精神分裂症全部要求 + 中度/重度抑郁、躁狂或混合发作之一；共同 ≥1 个月；排除躯体疾病与物质/药物。ICD-11 不分型。</p></div>
+        </div></div>
+        <div class="flashcard"><div class="flashcard-inner">
+          <div class="flashcard-face flashcard-front"><span class="card-tag diagnosis">诊断</span><p>分裂型障碍的两个时间门槛？</p><span class="flip-hint">点击翻转</span></div>
+          <div class="flashcard-face flashcard-back"><p>古怪模式持续至少 2 年；短暂妄想、幻觉、思维形式障碍或被动体验持续不超过 1 个月，且从未满足精神分裂症/SAD/妄想性障碍标准。</p></div>
+        </div></div>
+        <div class="flashcard"><div class="flashcard-inner">
+          <div class="flashcard-face flashcard-front"><span class="card-tag diagnosis">诊断</span><p>急性短暂性精神病性障碍的起病与病程？</p><span class="flip-hint">点击翻转</span></div>
+          <div class="flashcard-face flashcard-back"><p>无前驱、急性起病，2 周内达峰；ICD-11 病程 ≤3 个月，多数数天到 1 个月；缓解完全，恢复病前功能。</p></div>
+        </div></div>
+        <div class="flashcard"><div class="flashcard-inner">
+          <div class="flashcard-face flashcard-front"><span class="card-tag diagnosis">诊断</span><p>妄想性障碍的病程与功能要求？</p><span class="flip-hint">点击翻转</span></div>
+          <div class="flashcard-face flashcard-back"><p>一个或多个妄想，是最突出或唯一临床特征，持续 ≥3 个月；除妄想及其结果外功能无明显损害，无离奇古怪行为；不符合精神分裂症/心境障碍。</p></div>
+        </div></div>
+        <div class="flashcard"><div class="flashcard-inner">
+          <div class="flashcard-face flashcard-front"><span class="card-tag diagnosis">诊断</span><p>精神分裂症与妄想性障碍的一句话鉴别？</p><span class="flip-hint">点击翻转</span></div>
+          <div class="flashcard-face flashcard-back"><p>精神分裂症：妄想荒谬离奇、结构松散、常伴幻觉与人格衰退；妄想性障碍：妄想系统固定、非怪异、功能保留、无人格衰退。</p></div>
+        </div></div>
+        <div class="flashcard"><div class="flashcard-inner">
+          <div class="flashcard-face flashcard-front"><span class="card-tag diagnosis">诊断</span><p>抑郁性木僵与紧张性木僵怎么分？</p><span class="flip-hint">点击翻转</span></div>
+          <div class="flashcard-face flashcard-back"><p>抑郁木僵：情感不淡漠、可简短切题应答、眼神忧心忡忡、肌张力不高；紧张性木僵：无应答、表情淡漠、违拗、肌张力高、可有蜡样屈曲。</p></div>
+        </div></div>
+        <div class="flashcard"><div class="flashcard-inner">
+          <div class="flashcard-face flashcard-front"><span class="card-tag diagnosis">数据</span><p>精神分裂症的患病率与中国数据？</p><span class="flip-hint">点击翻转</span></div>
+          <div class="flashcard-face flashcard-back"><p>终生患病率约 1%；时点/终生中位值 4.6‰/7.2‰；年发病率中位值 0.15‰。中国 1993 年终生 6.55‰；2012 年 12 个月 5.59‰。</p></div>
+        </div></div>
+        <div class="flashcard"><div class="flashcard-inner">
+          <div class="flashcard-face flashcard-front"><span class="card-tag diagnosis">数据</span><p>精神分裂症的三个“结局数字”？</p><span class="flip-hint">点击翻转</span></div>
+          <div class="flashcard-face flashcard-back"><p>约 90% 共患尼古丁依赖；约 5% 最终死于自杀；平均寿命缩短约 13～15 年。20%～50% 有自杀企图。</p></div>
+        </div></div>
+        <div class="flashcard"><div class="flashcard-inner">
+          <div class="flashcard-face flashcard-front"><span class="card-tag diagnosis">数据</span><p>精神分裂症的遗传率与一级亲属患病率？</p><span class="flip-hint">点击翻转</span></div>
+          <div class="flashcard-face flashcard-back"><p>遗传率 64%～81%；父母 5.6%、同胞 10.1%、子女 12.8%，普通人群 0.9%；单卵双生子约 50%，至少为双卵双生子的 3 倍。</p></div>
+        </div></div>
+        <div class="flashcard"><div class="flashcard-inner">
+          <div class="flashcard-face flashcard-front"><span class="card-tag treatment">治疗</span><p>精神分裂症首选治疗与三阶段时长？</p><span class="flip-hint">点击翻转</span></div>
+          <div class="flashcard-face flashcard-back"><p>抗精神病药首选，心理社会干预贯穿全程。急性期一般 4～6 周；巩固期至少 6 个月；维持期时间不定，首发/缓慢起病/多次复发者至少 5 年或更长。</p></div>
+        </div></div>
+        <div class="flashcard"><div class="flashcard-inner">
+          <div class="flashcard-face flashcard-front"><span class="card-tag treatment">治疗</span><p>氯氮平与长效针剂分别什么时候用？</p><span class="flip-hint">点击翻转</span></div>
+          <div class="flashcard-face flashcard-back"><p>两种不同作用机制的抗精神病药适当治疗后反应不佳 → 氯氮平；口服依从性不佳 → 长效注射针剂。氯氮平对降低自杀意念也较有效。</p></div>
+        </div></div>
+        <div class="flashcard"><div class="flashcard-inner">
+          <div class="flashcard-face flashcard-front"><span class="card-tag treatment">治疗</span><p>分裂情感障碍的治疗组合与注意？</p><span class="flip-hint">点击翻转</span></div>
+          <div class="flashcard-face flashcard-back"><p>抗精神病药 + 心境稳定剂 + 抗抑郁药；躁狂期中高剂量、维持期低中剂量；抑郁期抗抑郁药需合用抗精神病药，警惕转相与快速循环；监测血药浓度、甲状腺、肝肾功能、血常规。</p></div>
+        </div></div>
+        <div class="flashcard"><div class="flashcard-inner">
+          <div class="flashcard-face flashcard-front"><span class="card-tag treatment">治疗</span><p>急性短暂性精神病性障碍的治疗要点？</p><span class="flip-hint">点击翻转</span></div>
+          <div class="flashcard-face flashcard-back"><p>短期住院 + 安静结构化病房；抗精神病药与 BZDs 对症；兴奋激越可用氟哌啶醇、齐拉西酮肌内注射，或奥氮平、喹硫平口服；症状缓解后前 2～3 周抗焦虑药常有效；常不需长期药物，若需维持治疗要考虑诊断正确性。</p></div>
+        </div></div>
+      </div>
+    </section>
+
+    <section id="cases" class="section">
+      <div class="section-header"><span class="section-number">14</span><h2>病例挑战</h2></div>
+      <p class="lead">教材本章没有完整病例，以下 3 例均为<strong>经典临床情境（教学演练，非教材原文）</strong>。只使用教材描述过的典型症状，不编造化验值、影像结果或剂量；实际诊疗需以真实检查和专科判断为准。</p>
+
+      <div class="case-card">
+        <div class="case-meta"><span>病例 1</span><span>难度 ⭐⭐</span><span>经典临床情境（教学演练，非教材原文）</span></div>
+        <div class="case-title">“耳边有人评论我，邻居在监视我”</div>
+        <div class="case-body">
+          <p>22 岁男性，既往精神状况正常。近 10 个月逐渐出现耳边有声音评论他正在做什么，有时命令他“别出门”；坚信同学在他手机里装了监视装置，认为自己的想法会被广播出去，别人能读到。近 4 个月不愿上班，个人卫生差，整日躺着，对以前喜欢的球赛也不感兴趣。无持续情绪低落或情绪高涨，无物质使用史，无头部外伤史，无意识波动。</p>
+        </div>
+        <ol class="case-questions">
+          <li>最可能的诊断是什么？请按 ICD-11 说出诊断依据。</li>
+          <li>需要与哪些疾病鉴别？各自的否定点是什么？</li>
+          <li>治疗原则与安全评估要点是什么？</li>
+        </ol>
+        <details class="qa"><summary><span class="qa-num">析</span>答案与诊断思路</summary>
+          <div class="qa-body"><span class="answer-key">诊断思路</span><strong>诊断：精神分裂症。</strong>症状层面：持续评论性/命令性幻听、被监视妄想、思维被广播（被动体验），均为（1）～（4）中的核心条目；病程 10 个月，远超过 1 个月；功能明显下降（不能上班、个人卫生差、兴趣丧失）；意识清晰；无符合诊断要求的心境发作；无物质使用与头部外伤线索。<br><strong>鉴别：</strong>① SAD——需同一次发作中情感症状达到中度/重度抑郁、躁狂或混合发作，且与精神病性症状共同 ≥1 个月；本例无持续心境发作。② 分裂型障碍——需古怪模式 ≥2 年、精神病性症状 ≤1 个月，且从未满足精神分裂症标准；本例精神病性症状持续 10 个月，不符合。③ 妄想性障碍——妄想需系统、非怪异、功能相对保留，且无持久幻听/思维形式障碍/阴性症状；本例妄想离奇、伴幻听和功能衰退。④ 急性短暂性——需无前驱、2 周达峰、≤3 个月且完全缓解；本例病程 10 个月。⑤ 心境障碍伴精神病性症状——精神病性症状应随心境改善较快消失，且心境为主相；本例不符。⑥ 器质性/物质所致——需依据病史、躯体与神经系统检查、必要辅助检查排除；本例虽无相关线索，仍不能省略。<br><strong>治疗：</strong>抗精神病药首选，早期、适量、足疗程、单一、个体化；心理社会干预贯穿全程（心理教育、家庭干预、社会技能训练、CBT）；评估自杀/攻击风险、生活自理能力与治疗合作性，必要时住院；药物疗效不佳或有木僵违拗、频繁自杀、攻击冲动时考虑 ECT。剂量个体化，遵医嘱。</div>
+        </details>
+      </div>
+
+      <div class="case-card">
+        <div class="case-meta"><span>病例 2</span><span>难度 ⭐⭐⭐</span><span>经典临床情境（教学演练，非教材原文）</span></div>
+        <div class="case-title">“情绪高涨的同时，声音在讨论我”</div>
+        <div class="case-body">
+          <p>27 岁女性，既往精神状况正常。近 5 周出现情绪异常高涨，自我评价明显增高，声称自己“能做成别人十年都做不成的事”，睡眠需求减少、整日忙碌、话多、注意力易转移，常因小事与同事激烈争执。同一时期，她凭空听到第三人称的声音在讨论她，坚信自己的想法被广播、有外部力量试图控制她。两类症状在同一周内出现并持续存在。无物质使用史，无意识波动，无明确躯体疾病线索。</p>
+        </div>
+        <ol class="case-questions">
+          <li>最可能的诊断是什么？诊断的关键“时间—结构”条件是什么？</li>
+          <li>为什么不能只诊断精神分裂症？</li>
+          <li>治疗应如何组合？有哪些监测重点？</li>
+        </ol>
+        <details class="qa"><summary><span class="qa-num">析</span>答案与诊断思路</summary>
+          <div class="qa-body"><span class="answer-key">诊断思路</span><strong>诊断：分裂情感障碍（躁狂型表现；按 ICD-11 不分型）。</strong>关键条件：① <strong>同一次发作</strong>中精神病性症状与情感症状同时或只差几天出现（本例同一周内）；② 精神病性症状满足精神分裂症全部要求（第三人称幻听、思维被广播、被控制体验，持续足够时间）；③ 情感症状达到<strong>躁狂发作</strong>标准（情绪高涨、自我评价增高、睡眠需求减少、活动增多、话多、注意力易转移、社会约束力下降）；④ 两类症状共同存在至少 1 个月；⑤ 排除躯体疾病与物质/药物。<br><strong>为什么不能只诊断精神分裂症：</strong>精神分裂症可以伴情感症状，但其时间和强度达不到独立心境发作的要求；本例躁狂症状完整、突出，且与精神病性症状同一次发作并存，达到“双达标”，按教材应诊断 SAD。<br><strong>治疗：</strong>抗精神病药 + 心境稳定剂（教材提及锂盐对部分 SAD 有效）为主；躁狂期常需中、高剂量控制症状，维持期可低、中剂量；抑郁期抗抑郁药需合用抗精神病药，并警惕转相和快速循环；定期评估症状、监测血药浓度、甲状腺功能、肝肾功能、血常规。心理社会干预包括家庭治疗、社会技能训练、认知康复，并向家属解释诊断与预后的不确定性。剂量个体化，遵医嘱。</div>
+        </details>
+      </div>
+
+      <div class="case-card">
+        <div class="case-meta"><span>病例 3</span><span>难度 ⭐⭐⭐⭐</span><span>经典临床情境（教学演练，非教材原文）</span></div>
+        <div class="case-title">“他一定是爱我的”</div>
+        <div class="case-body">
+          <p>46 岁女性，已婚，工作能力基本保持。近 8 个月坚信同单位一位已婚男同事深爱自己，认为对方的问候、递文件、开会时看她一眼都是“爱的信号”；多次打电话、写信、到对方办公室等候，被明确拒绝后仍认为“他是在保护我，怕连累我”。她可以正常工作、料理家务，除了围绕这件事反复纠缠外，没有明显古怪行为；无幻听，无持续情绪低落或情绪高涨，无物质使用史，无意识波动，未诉神经系统症状。</p>
+        </div>
+        <ol class="case-questions">
+          <li>最可能的诊断及类型是什么？诊断门槛有哪些？</li>
+          <li>需要排除哪些器质性、物质性及其他精神障碍？</li>
+          <li>治疗与沟通策略的关键点是什么？</li>
+        </ol>
+        <details class="qa"><summary><span class="qa-num">析</span>答案与诊断思路</summary>
+          <div class="qa-body"><span class="answer-key">诊断思路</span><strong>诊断：妄想性障碍，钟情（情爱）型。</strong>依据：① 一个突出的系统妄想（坚信某异性对自己钟情），内容不显荒谬离奇，是现实生活中可能发生的事；② 妄想持续 8 个月（≥3 个月）；③ 除妄想及其结果外，工作与生活功能基本保留，无离奇古怪行为；④ 无持久幻听、无思维形式障碍、无阴性症状，无抑郁/躁狂/混合发作；⑤ 无物质使用与意识波动线索。女性、中年起病也与教材描述相符。<br><strong>排除：</strong>躯体/脑部疾病所致妄想（教材列举亨廷顿病、特发性基底节钙化、右侧脑梗死、Capgras、B12 缺乏、肝性脑病、糖尿病、甲减、癫痫等）；谵妄（意识波动）；痴呆（神经心理损害）；物质使用（停用后妄想多较快消失）；精神分裂症（妄想荒谬松散、伴幻觉/阴性症状/衰退）；分裂情感障碍/心境障碍（妄想与心境同步、情感症状达标）；躯体形式障碍（坚信程度不如妄想性障碍）；偏执型人格障碍（极度偏执时难鉴别，不确定时不要轻易诊断）。<br><strong>治疗与沟通：</strong>患者多缺乏自知力、不愿求医，建立联盟困难；有敌意、攻击或自杀隐患时需监管与强制住院。抗精神病药可改善妄想、防止恶化/复发，尤其对激越有效；伴焦虑抑郁可加抗焦虑/抗抑郁药；依从性差可用长效针剂；剂量与疗程参照精神分裂症常规，具体剂量个体化、遵医嘱。心理干预选个别心理治疗，以共情态度围绕妄想带来的主观痛苦工作；<strong>不要支持、反对或质疑妄想</strong>，也不要试图让她马上改变想法；可用支持性心理治疗、认知治疗、社交技能训练。</div>
+        </details>
+      </div>
+    </section>
+
+    <section id="extend" class="section">
+      <div class="section-header"><span class="section-number">15</span><h2>拓展延伸</h2></div>
+      <p class="lead">只收录教材本章明确提及、但正文未展开的内容；教材没有的，统一标注“教材未展开”。</p>
+      <div class="card-grid">
+        <div class="card card-diagnosis">
+          <div class="card-header"><span class="card-icon">🧊</span><span class="card-title">拓展补充 · 紧张症性障碍（教材附节）</span></div>
+          <div class="card-body">
+            <p>DSM-5 和 ICD-11 将紧张症作为新的诊断类别单独描述。住院紧张症患者中，<strong>25%～50%</strong> 与心境障碍有关，约 <strong>10%</strong> 与精神分裂症有关；躯体疾病（非痉挛性癫痫持续状态、脑外伤、脑炎、肝性脑病、低钠血症、高钙血症等）和药物（皮质激素、免疫抑制剂、抗精神病药等）也可引起。</p>
+            <p>核心是运动的随意控制紊乱：运动极度缓慢或不动，或与外界刺激无关的无目的性兴奋激越；木僵、肌肉僵硬、蜡样屈曲、缄默、违拗或被动服从、奇特姿势、做作、扮鬼脸、刻板动作、模仿言语/动作等。</p>
+            <p>处理：确定并治疗可能导致紧张症的躯体疾病；药物所致者减量或换药；苯二氮䓬类可短期改善症状；ECT 对躯体疾病所致紧张症，尤其有潜在生命危险（长期拒食）及致死性紧张症适用；注意水电解质平衡、营养与生活护理，兴奋者需仔细监护。</p>
+          </div>
+        </div>
+        <div class="card card-cause">
+          <div class="card-header"><span class="card-icon">🖥️</span><span class="card-title">拓展补充 · 默认网络与任务网络</span></div>
+          <div class="card-body">
+            <p>教材提到：内侧额叶皮质是<strong>默认网络</strong>的关键区域；默认网络在休息时活跃，执行需要注意力的任务时失活。精神分裂症患者在认知任务中出现内侧额叶皮质<strong>失活失败</strong>，这可能是“额叶功能低下”与“额叶功能亢进”并存的原因。由此推测，本病可能是任务正性激活网络（含外侧前额叶）与任务负性激活网络（默认网络）交互失调的结果。</p>
+            <p>这是教材明确提出的解释框架，仍属假说，不是诊断依据。</p>
+          </div>
+        </div>
+        <div class="card card-treatment">
+          <div class="card-header"><span class="card-icon">🌐</span><span class="card-title">拓展补充 · ACT 模式</span></div>
+          <div class="card-body">
+            <p>主动性社区治疗（ACT）把每位患者交给一个多功能团队（个案管理者、精神科医师和护士、心理治疗师、内科医师、康复治疗师等），为一定数量患者提供每天 24 小时、每周 7 天全方位服务。实践表明对降低住院率很有效，但成本较高。</p>
+            <p>教材未展开 ACT 的准入标准、团队人数、服务时长等操作细节。</p>
+          </div>
+        </div>
+        <div class="card card-cause">
+          <div class="card-header"><span class="card-icon">🧬</span><span class="card-title">拓展补充 · DISC1 与儿童期发病</span></div>
+          <div class="card-body">
+            <p><strong>DISC1：</strong>位于染色体 1q42，与 SAD、精神分裂症及心境障碍都有关（教材在 SAD 病因部分提及）。</p>
+            <p><strong>儿童期精神分裂症：</strong>13 岁以前发病不常见，人口发病率约 1/40 000；最大儿童病例系列中平均发病年龄 10 岁，最小 4 岁，性别差异不明显。教材未展开儿童期的具体诊断调整与治疗策略。</p>
+          </div>
+        </div>
+      </div>
+      <div class="callout callout-warning">
+        <div class="callout-icon">📌</div>
+        <div class="callout-body"><strong>教材未展开的内容</strong>① 抗精神病药的具体 mg 剂量、滴定方案与血药浓度阈值；② 基因检测、神经影像报告如何用于个体诊断；③ 早期干预/前驱期预防的具体方案与疗效；④ 精神分裂症的一级预防措施；⑤ 各心理社会干预的疗程、频次与操作手册。以上均不在本章范围内，答题时不要补造。</div>
+      </div>
+      <div class="disclaimer">
+        <strong>免责声明：</strong>本学习指南依据《精神病学》第9版（2024）第六章整理，仅用于学习与复习，不构成诊断或治疗建议。文中所有药物名称、疗程与原则均以教材表述为限；教材未提供具体剂量者已标注“剂量个体化，遵医嘱”。临床实践请以教材原文、现行诊疗规范及专科医师判断为准。
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-tag">精神病学 · 第六章 · 学习指南</div>
+      <p>内容依据《精神病学》第9版（2024）第六章整理，仅供学习复习使用。</p>
+      <p>诊断与治疗请以教材原文、现行诊疗规范及专科医师判断为准。</p>
+    </footer>
+  <nav class="chapter-pager" aria-label="章节间导航"><a class="cp-prev" href="精神病学_第五章_神经发育障碍_学习指南.html">← 上一章：第五章</a><a class="cp-toc" href="index.html">目录</a><a class="cp-next" href="精神病学_第七章_双相及相关障碍_学习指南.html">下一章：第七章 →</a></nav>
+</main>
+</div>
+<button class="back-to-top" id="backTop" aria-label="回到顶部">↑</button>
+
+<script>
+/* ============================================================
+   精神病学学习指南 · 统一交互层 v1（构建期注入，整体替换原 IIFE）
+   兼容 A 族（.tabbar button + [data-panel] + .panel.on）与
+   B 族（.tab-nav + .tab-panel.active）两套 DOM 约定。
+   特性检测 + 防御式查询 + 幂等；不引入任何外部依赖。
+   ============================================================ */
+(function () {
+  'use strict';
+  if (window.__PSY_GUIDE_APP__) { return; }
+  window.__PSY_GUIDE_APP__ = true;
+
+  var d = document;
+
+  function all(sel, root) {
+    return Array.prototype.slice.call((root || d).querySelectorAll(sel));
+  }
+  function on(el, ev, fn, opt) {
+    if (el) { el.addEventListener(ev, fn, opt || false); }
+  }
+  function norm(s) {
+    return String(s || '').replace(/\s+/g, '').toUpperCase();
+  }
+
+  /* ---------- 1. Tab 切换（两族约定都支持） ---------- */
+  function initTabs() {
+    all('.tabs, [data-tabs]').forEach(function (g) {
+      if (g.__psyTabs) { return; }
+      g.__psyTabs = true;
+      var isA = !!g.querySelector('.tabbar button');
+      var btns = all(isA ? '.tabbar button' : '.tab-nav .tab-btn', g);
+      if (!btns.length) { return; }
+      var cls = isA ? 'on' : 'active';
+      var nav = btns[0].closest('.tabbar') || btns[0].closest('.tab-nav');
+      if (nav && !nav.hasAttribute('role')) { nav.setAttribute('role', 'tablist'); }
+      all(isA ? '.panel' : '.tab-panel', g).forEach(function (p) {
+        if (!p.hasAttribute('role')) { p.setAttribute('role', 'tabpanel'); }
+      });
+      function activate(btn) {
+        btns.forEach(function (b) {
+          b.classList.remove(cls);
+          b.setAttribute('aria-selected', 'false');
+        });
+        btn.classList.add(cls);
+        btn.setAttribute('aria-selected', 'true');
+        var id = btn.getAttribute('data-tab');
+        if (!id) { return; }
+        var target = isA
+          ? g.querySelector('[data-panel="' + id + '"]')
+          : (g.querySelector('.tab-panel#' + id) || d.getElementById(id));
+        all(isA ? '.panel' : '.tab-panel', g).forEach(function (p) {
+          var show = isA ? (p.getAttribute('data-panel') === id) : (p === target);
+          p.classList.toggle(cls, show);
+        });
+      }
+      btns.forEach(function (btn, i) {
+        if (!btn.hasAttribute('role')) { btn.setAttribute('role', 'tab'); }
+        btn.setAttribute('aria-selected', btn.classList.contains(cls) ? 'true' : 'false');
+        if (!btn.hasAttribute('tabindex') && !btn.classList.contains(cls)) { btn.setAttribute('tabindex', '0'); }
+        on(btn, 'click', function () { activate(btn); });
+        on(btn, 'keydown', function (e) {
+          if (e.key !== 'ArrowRight' && e.key !== 'ArrowLeft') { return; }
+          e.preventDefault();
+          var nx = btns[(i + (e.key === 'ArrowRight' ? 1 : btns.length - 1)) % btns.length];
+          if (nx) { nx.focus(); activate(nx); }
+        });
+      });
+    });
+  }
+
+  /* ---------- 2. 速记卡：点击/键盘翻转 + 可达性 ---------- */
+  function initCards() {
+    all('.flashcard').forEach(function (card) {
+      if (card.__psyCard) { return; }
+      card.__psyCard = true;
+      card.setAttribute('tabindex', '0');
+      card.setAttribute('role', 'button');
+      function sync() {
+        card.setAttribute('aria-pressed', card.classList.contains('flipped') ? 'true' : 'false');
+      }
+      function flip() { card.classList.toggle('flipped'); sync(); }
+      on(card, 'click', flip);
+      on(card, 'keydown', function (e) {
+        if (e.key === 'Enter' || e.key === ' ' || e.key === 'Spacebar') {
+          e.preventDefault();
+          flip();
+        }
+      });
+      sync();
+    });
+  }
+
+  /* ---------- 3. 自测题交互化（核心新功能） ---------- */
+  function initQuiz() {
+    var questions = all('.quiz-q, .quiz-item');
+    if (!questions.length) { return; }
+    var groups = {};
+
+    function keyOf(o) {
+      var L = o.getAttribute('data-letter');
+      if (L && String(L).replace(/\s+/g, '') !== '') { return norm(L); }
+      var sp = o.querySelector('.l');
+      if (sp) {
+        var t = norm(sp.textContent).replace(/[.．、:：]/g, '');
+        if (t !== '') { return t; }
+      }
+      var txt = norm(o.textContent);
+      if (txt.indexOf('正确') >= 0 || txt.indexOf('错误') >= 0) { return txt; }
+      return txt.charAt(0);
+    }
+
+    function getGroup(q) {
+      var sec = q.closest('.quiz-block') || q.closest('section') || d.body;
+      if (!groups[sec.__psyGid]) {
+        sec.__psyGid = 'g' + (Object.keys(groups).length + 1);
+        groups[sec.__psyGid] = { sec: sec, total: 0, score: 0, row: null, first: null };
+      }
+      var g = groups[sec.__psyGid];
+      if (!g.first) { g.first = q; }
+      return g;
+    }
+
+    function ensureRow(g) {
+      if (g.row) { return g.row; }
+      var row = d.createElement('div');
+      row.className = 'quiz-score';
+      row.setAttribute('role', 'status');
+      row.setAttribute('aria-live', 'polite');
+      row.innerHTML = '<span class="qs-label">自测计分</span>' +
+        '<span class="qs-num">得分 0 / ' + g.total + '</span>' +
+        '<span class="qs-bar"><i></i></span>';
+      g.first.parentNode.insertBefore(row, g.first);
+      g.row = row;
+      return row;
+    }
+
+    function updateRow(g) {
+      var row = ensureRow(g);
+      var num = row.querySelector('.qs-num');
+      var bar = row.querySelector('.qs-bar i');
+      if (num) { num.textContent = '得分 ' + g.score + ' / ' + g.total; }
+      if (bar) { bar.style.width = (g.total ? Math.round(g.score / g.total * 100) : 0) + '%'; }
+    }
+
+    questions.forEach(function (q) {
+      if (q.__psyQuiz) { return; }
+      q.__psyQuiz = true;
+      var opts = all('.opt', q);
+      if (!opts.length) { opts = all('.quiz-options > li', q); }
+      if (!opts.length) { return; }
+
+      /* 正确答案先记入内存：预标 correct 优先（记录后立即移除，消除剧透），
+         否则从解析文本「答案：X / 答案 X」提取（不改动任何文字） */
+      var ansKeys = [];
+      var preset = opts.filter(function (o) { return o.classList.contains('correct'); });
+      preset.forEach(function (o) { o.classList.remove('correct'); });
+      if (preset.length) {
+        ansKeys = preset.map(keyOf);
+      } else {
+        var dt = q.querySelector('details');
+        var txt = dt ? dt.textContent : '';
+        var m = txt.match(/答案\s*[:：]?\s*([A-Za-z](?:[\s、,，·和及]*[A-Za-z])*)/);
+        if (m) {
+          ansKeys = m[1].match(/[A-Za-z]/g) || [];
+        } else {
+          var m2 = txt.match(/答案\s*[:：]?\s*(正确|错误)/);
+          if (m2) { ansKeys = [m2[1]]; }
+        }
+      }
+      if (!ansKeys.length) { return; } /* 无可判定答案（名词解释等），保持原样 */
+
+      var g = getGroup(q);
+      g.total += 1;
+      var multi = ansKeys.length > 1;
+      var ansSet = ansKeys.map(norm);
+      var locked = false;
+      var picked = [];
+
+      function revealAll() {
+        opts.forEach(function (o) {
+          if (ansSet.indexOf(keyOf(o)) >= 0) { o.classList.add('is-reveal'); }
+        });
+      }
+      function finish(ok) {
+        locked = true;
+        q.classList.add('is-locked');
+        var dt = q.querySelector('details');
+        if (dt) { dt.open = true; }
+        if (ok) { g.score += 1; }
+        updateRow(g);
+      }
+
+      opts.forEach(function (o) {
+        o.setAttribute('tabindex', '0');
+        function pick() {
+          if (locked) { return; }
+          var k = keyOf(o);
+          if (ansSet.indexOf(k) >= 0) {
+            o.classList.add('is-right');
+            if (picked.indexOf(k) < 0) { picked.push(k); }
+            if (multi) {
+              if (picked.length === ansSet.length) { finish(true); }
+            } else {
+              finish(true);
+            }
+          } else {
+            o.classList.add('is-wrong');
+            revealAll();
+            finish(false);
+          }
+        }
+        on(o, 'click', pick);
+        on(o, 'keydown', function (e) {
+          if (e.key === 'Enter' || e.key === ' ' || e.key === 'Spacebar') {
+            e.preventDefault();
+            pick();
+          }
+        });
+      });
+    });
+
+    Object.keys(groups).forEach(function (id) {
+      if (groups[id].total > 0) { updateRow(groups[id]); }
+    });
+  }
+
+  /* ---------- 4. 侧栏 scroll spy（本页锚点高亮） ---------- */
+  function initSpy() {
+    var links = all('#sidebar a[href^="#"]');
+    if (!links.length || !('IntersectionObserver' in window)) { return; }
+    var map = {};
+    links.forEach(function (a) {
+      var id = a.getAttribute('href').slice(1);
+      if (id) { map[id] = a; }
+    });
+    var secs = [];
+    Object.keys(map).forEach(function (id) {
+      var s = d.getElementById(id);
+      if (s) { secs.push(s); }
+    });
+    if (!secs.length) { return; }
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting && map[e.target.id]) {
+          links.forEach(function (a) { a.classList.remove('active'); });
+          map[e.target.id].classList.add('active');
+        }
+      });
+    }, { rootMargin: '-15% 0px -70% 0px', threshold: 0 });
+    secs.forEach(function (s) { io.observe(s); });
+  }
+
+  /* ---------- 5. 阅读进度条 + 回顶 ---------- */
+  function initScroll() {
+    var bar = d.getElementById('readbar');
+    var topBtn = d.getElementById('topBtn') || d.getElementById('backTop');
+    var ticking = false;
+    function step() {
+      ticking = false;
+      var h = d.documentElement;
+      var y = window.pageYOffset || h.scrollTop || 0;
+      if (bar) {
+        var max = h.scrollHeight - h.clientHeight;
+        bar.style.width = (max > 0 ? (y / max) * 100 : 0) + '%';
+      }
+      if (topBtn) {
+        topBtn.classList.toggle('show', y > 400);     /* A 族类名 */
+        topBtn.classList.toggle('visible', y > 400);  /* B 族类名 */
+      }
+    }
+    on(window, 'scroll', function () {
+      if (!ticking) { ticking = true; window.requestAnimationFrame(step); }
+    }, { passive: true });
+    step();
+    on(topBtn, 'click', function () {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
+
+  /* ---------- 6. 侧栏开合（存在才绑定；抽屉打开时锁定背景滚动） ---------- */
+  function initSidebar() {
+    var sidebar = d.getElementById('sidebar');
+    if (!sidebar) { return; }
+    var btn = d.getElementById('menuBtn') || d.getElementById('navToggle');
+    var ov = d.getElementById('overlay') || d.getElementById('sidebarOverlay');
+    function lock(open) {
+      /* 仅移动抽屉断点（≤900px）锁滚动；宽屏兜底解除，防布局残留 */
+      d.body.classList.toggle('nav-locked', !!open && window.innerWidth <= 900);
+    }
+    function close() {
+      sidebar.classList.remove('open');
+      if (ov) { ov.classList.remove('show'); }
+      lock(false);
+    }
+    on(btn, 'click', function () {
+      var open = !sidebar.classList.contains('open');
+      sidebar.classList.toggle('open');
+      if (ov) { ov.classList.toggle('show'); }
+      lock(open);
+    });
+    on(ov, 'click', close);
+    all('a', sidebar).forEach(function (a) {
+      on(a, 'click', function () {
+        if (window.innerWidth <= 900) { close(); }
+      });
+    });
+    on(window, 'resize', function () {
+      if (window.innerWidth > 900) { lock(false); }
+    });
+  }
+
+  /* ---------- 启动（脚本位于 body 末尾，DOM 已就绪；防御兜底） ---------- */
+  function boot() {
+    initTabs();
+    initCards();
+    initQuiz();
+    initSpy();
+    initScroll();
+    initSidebar();
+  }
+  if (d.readyState === 'loading') {
+    on(d, 'DOMContentLoaded', boot);
+  } else {
+    boot();
+  }
+})();
+</script>
+
+</body>
+</html>

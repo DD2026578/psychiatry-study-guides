@@ -1,0 +1,2330 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>精神病学 第二章 精神障碍的症状学 - 学习指南</title>
+<style>
+/* ===== 设计系统（请完整复制，勿修改变量与组件样式） ===== */
+:root{
+  --bg:#F0F7FA; --card:#FFFFFF; --ink:#0F172A; --muted:#64748B; --border:#E2E8F0;
+  --primary:#0EA5E9; --accent:#10B981; --symptom:#EF4444; --treatment:#10B981;
+  --cause:#3B82F6; --diagnosis:#F59E0B; --memory:#8B5CF6; --danger:#DC2626;
+  --quiz:#EC4899; --flashcard:#06B6D4;
+  --symptom-bg:#FEF2F2; --treatment-bg:#ECFDF5; --cause-bg:#EFF6FF;
+  --diagnosis-bg:#FFFBEB; --memory-bg:#F5F3FF; --quiz-bg:#FDF2F8; --flash-bg:#ECFEFF;
+  --gradient-main:linear-gradient(135deg,#0EA5E9 0%,#06B6D4 50%,#10B981 100%);
+  --gradient-soft:linear-gradient(135deg,rgba(14,165,233,.08),rgba(6,182,212,.05) 50%,rgba(16,185,129,.08));
+  --radius-sm:8px; --radius-md:12px; --radius-lg:18px;
+  --shadow-sm:0 1px 3px rgba(15,23,42,.06),0 1px 2px rgba(15,23,42,.04);
+  --shadow-md:0 6px 18px rgba(14,165,233,.10),0 2px 6px rgba(15,23,42,.05);
+  --shadow-lg:0 14px 38px rgba(14,165,233,.16),0 4px 12px rgba(15,23,42,.06);
+  --sidebar-w:262px; --content-max:980px;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:"Microsoft YaHei","PingFang SC","Segoe UI",system-ui,sans-serif;
+  font-size:16px;line-height:1.75;color:var(--ink);background:var(--bg);
+  background-image:radial-gradient(ellipse 620px 420px at 8% 0%,rgba(14,165,233,.09),transparent 70%),
+                    radial-gradient(ellipse 520px 380px at 92% 16%,rgba(16,185,129,.07),transparent 70%),
+                    radial-gradient(ellipse 700px 520px at 50% 100%,rgba(6,182,212,.05),transparent 70%);
+  min-height:100vh;
+}
+img{max-width:100%}
+a{color:var(--primary)}
+p{margin-bottom:12px}
+strong{font-weight:700;color:var(--ink)}
+mark.key{background:none;color:var(--primary);font-weight:700}
+.page-wrapper{display:flex;max-width:1420px;margin:0 auto;padding:0 24px}
+.main-content{flex:1;min-width:0;max-width:var(--content-max);padding:36px 0 88px}
+
+/* ===== 侧边导航 ===== */
+.sidebar{width:var(--sidebar-w);flex-shrink:0;position:sticky;top:20px;align-self:flex-start;
+  max-height:calc(100vh - 40px);overflow-y:auto;padding:22px 0;margin-right:30px}
+.sidebar-brand{font-size:.78rem;font-weight:700;letter-spacing:.06em;color:var(--muted);
+  padding:0 14px 12px;border-bottom:1px dashed var(--border);margin-bottom:10px}
+.sidebar-nav ul{list-style:none}
+.sidebar-nav>ul>li>a{display:flex;align-items:center;gap:9px;padding:9px 14px;border-radius:var(--radius-sm);
+  color:var(--ink);text-decoration:none;font-size:.9rem;font-weight:500;border-left:3px solid transparent;
+  transition:all .2s ease;margin-left:-3px}
+.sidebar-nav>ul>li>a:hover{background:rgba(14,165,233,.06);color:var(--primary)}
+.sidebar-nav>ul>li>a.active{background:rgba(14,165,233,.1);color:var(--primary);
+  border-left-color:var(--primary);font-weight:700}
+.toc-num{font-family:Consolas,monospace;font-size:.72rem;color:var(--muted);min-width:22px}
+.sidebar-nav .sub-list{margin:2px 0 8px 22px;padding-left:12px;border-left:1px solid var(--border)}
+.sidebar-nav .sub-list li a{display:block;padding:5px 10px;color:var(--muted);text-decoration:none;
+  font-size:.8rem;border-radius:4px}
+.sidebar-nav .sub-list li a:hover{color:var(--primary);background:rgba(14,165,233,.05)}
+
+/* ===== 封面 ===== */
+.hero{position:relative;overflow:hidden;text-align:center;padding:54px 34px 46px;margin-bottom:48px;
+  background:var(--gradient-soft);border:1px solid rgba(14,165,233,.12);border-radius:var(--radius-lg)}
+.hero::before{content:"";position:absolute;inset:-40% -20% auto;height:180%;
+  background:radial-gradient(circle at 28% 30%,rgba(14,165,233,.1),transparent 55%),
+             radial-gradient(circle at 74% 68%,rgba(16,185,129,.09),transparent 55%);pointer-events:none}
+.hero>*{position:relative}
+.hero-badge{display:inline-flex;align-items:center;gap:6px;padding:6px 15px;border-radius:100px;
+  background:rgba(14,165,233,.12);border:1px solid rgba(14,165,233,.22);color:var(--primary);
+  font-size:.8rem;font-weight:700;margin-bottom:18px}
+.hero h1{font-size:2.35rem;line-height:1.28;font-weight:800;margin-bottom:12px;
+  background:var(--gradient-main);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.hero .subtitle{max-width:680px;margin:0 auto;color:var(--muted);font-size:1.02rem}
+.hero-meta{display:flex;justify-content:center;gap:34px;flex-wrap:wrap;margin-top:26px}
+.hero-meta-item .num{font-size:1.7rem;font-weight:800;line-height:1.2;color:var(--primary)}
+.hero-meta-item .label{font-size:.78rem;color:var(--muted)}
+.hero-quote{margin:24px auto 0;max-width:720px;padding:12px 18px;border-radius:10px;
+  background:rgba(255,255,255,.66);border:1px dashed rgba(14,165,233,.3);
+  font-size:.9rem;color:var(--muted);text-align:left}
+
+/* ===== 区块 ===== */
+.section{margin-bottom:56px;scroll-margin-top:20px}
+.section-header{display:flex;align-items:center;gap:13px;margin-bottom:22px;padding-bottom:12px;
+  border-bottom:2px solid transparent;border-image:var(--gradient-main) 1}
+.section-number{width:40px;height:40px;border-radius:var(--radius-sm);display:inline-flex;
+  align-items:center;justify-content:center;background:var(--gradient-main);color:#fff;
+  font-weight:800;font-size:1rem;flex-shrink:0}
+.section-header h2{font-size:1.55rem;font-weight:800;line-height:1.35}
+.subsection{margin:30px 0;scroll-margin-top:20px}
+.subsection h3{font-size:1.18rem;font-weight:700;margin-bottom:12px;display:flex;align-items:center;gap:8px}
+.sub-subsection{margin:18px 0}
+.sub-subsection h4{font-size:1rem;font-weight:700;margin-bottom:8px}
+.lead{font-size:1rem;color:var(--muted);margin-bottom:18px}
+
+/* ===== 疾病页眉 / 八栏 ===== */
+.disease-hero{background:linear-gradient(135deg,#0f2b46,#155e75 60%,#0f766e);color:#fff;
+  border-radius:var(--radius-lg);padding:28px 30px;margin:26px 0 22px;box-shadow:var(--shadow-md)}
+.disease-hero .en{font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;color:#99f6e4}
+.disease-hero h3{font-size:1.5rem;margin:4px 0 8px;color:#fff}
+.disease-hero p{color:#e0f2fe;font-size:.92rem;margin:0}
+.disease-hero .quick-tags{margin-top:14px;display:flex;gap:8px;flex-wrap:wrap}
+.disease-hero .quick-tags span{background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.28);
+  color:#fff;border-radius:100px;padding:3px 11px;font-size:.76rem}
+.module{background:var(--card);border:1px solid var(--border);border-radius:var(--radius-md);
+  padding:22px 24px;margin:16px 0;box-shadow:var(--shadow-sm)}
+.module-head{display:flex;align-items:center;gap:10px;margin-bottom:14px;padding-bottom:10px;
+  border-bottom:1px solid var(--border)}
+.module-index{font-family:Consolas,monospace;font-size:.72rem;font-weight:700;color:#fff;
+  background:var(--gradient-main);padding:3px 9px;border-radius:100px;white-space:nowrap}
+.module-head h3{font-size:1.08rem;font-weight:700;margin:0}
+.module-head .module-en{font-size:.74rem;color:var(--muted);font-weight:400}
+.module-cause .module-index{background:var(--cause)}
+.module-symptom .module-index{background:var(--symptom)}
+.module-case .module-index{background:var(--diagnosis)}
+.module-diff .module-index{background:#0F766E}
+.module-treat .module-index{background:var(--treatment)}
+.module-memory .module-index{background:var(--memory)}
+.module-link .module-index{background:#475569}
+
+/* ===== 卡片 ===== */
+.card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius-md);
+  padding:18px 20px;box-shadow:var(--shadow-sm);transition:.2s}
+.card:hover{box-shadow:var(--shadow-md);transform:translateY(-1px)}
+.card-header{display:flex;align-items:center;gap:9px;margin-bottom:10px;padding-bottom:9px;
+  border-bottom:1px solid var(--border)}
+.card-icon{font-size:1.2rem}
+.card-title{font-size:1rem;font-weight:700}
+.card-body{font-size:.94rem}
+.card-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px;margin:16px 0}
+.card-grid .card{margin:0}
+.card-symptom{border-left:4px solid var(--symptom)}
+.card-treatment{border-left:4px solid var(--treatment)}
+.card-cause{border-left:4px solid var(--cause)}
+.card-diagnosis{border-left:4px solid var(--diagnosis)}
+.card-memory{border-left:4px solid var(--memory)}
+.card-quiz{border-left:4px solid var(--quiz)}
+.quick-facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin:14px 0}
+.fact{background:var(--bg);border:1px solid var(--border);border-radius:10px;padding:12px 14px}
+.fact b{display:block;font-size:.76rem;color:var(--muted);font-weight:600;margin-bottom:2px}
+.fact span{font-size:.95rem;font-weight:700;color:var(--ink)}
+
+/* ===== 提示框 ===== */
+.callout{display:flex;gap:11px;padding:14px 18px;border-radius:var(--radius-md);margin:14px 0;
+  border-left:4px solid;font-size:.92rem}
+.callout-icon{font-size:1.15rem;flex-shrink:0;margin-top:1px}
+.callout-body{flex:1}
+.callout-body strong{display:block;margin-bottom:3px}
+.callout-info{background:var(--cause-bg);border-left-color:var(--cause)}
+.callout-success{background:var(--treatment-bg);border-left-color:var(--treatment)}
+.callout-warning{background:var(--diagnosis-bg);border-left-color:var(--diagnosis)}
+.callout-danger{background:var(--symptom-bg);border-left-color:var(--danger)}
+.callout-memory{background:var(--memory-bg);border-left-color:var(--memory)}
+.callout-example{background:var(--flash-bg);border-left-color:var(--flashcard)}
+
+/* ===== 列表 ===== */
+.icon-list{list-style:none;margin:10px 0}
+.icon-list li{position:relative;padding-left:26px;margin-bottom:9px;font-size:.94rem;line-height:1.65}
+.icon-list li::before{content:"✦";position:absolute;left:0;top:2px;color:var(--primary);font-size:.8rem}
+.icon-list.check li::before{content:"✓";color:var(--treatment);font-weight:800}
+.icon-list.cross li::before{content:"✗";color:var(--symptom);font-weight:800}
+.numbered-list{list-style:none;counter-reset:n;margin:10px 0}
+.numbered-list li{position:relative;padding-left:38px;margin-bottom:10px;font-size:.94rem;counter-increment:n}
+.numbered-list li::before{content:counter(n);position:absolute;left:0;top:0;width:24px;height:24px;
+  border-radius:50%;background:var(--gradient-main);color:#fff;font-size:.76rem;font-weight:800;
+  display:flex;align-items:center;justify-content:center}
+
+/* ===== 表格 ===== */
+.table-wrap{overflow-x:auto;margin:14px 0;border:1px solid var(--border);border-radius:var(--radius-md)}
+table{width:100%;border-collapse:collapse;font-size:.89rem;min-width:560px}
+thead{background:linear-gradient(135deg,#0EA5E9,#0891B2)}
+thead th{padding:11px 14px;text-align:left;color:#fff;font-size:.84rem;font-weight:700;white-space:nowrap}
+tbody tr{border-bottom:1px solid var(--border)}
+tbody tr:nth-child(even){background:#FAFCFE}
+tbody tr:hover{background:rgba(14,165,233,.05)}
+tbody tr:last-child{border-bottom:0}
+tbody td{padding:10px 14px;vertical-align:top;line-height:1.6}
+tbody td:first-child{font-weight:700;color:#0F766E;background:rgba(14,165,233,.04)}
+.table-note{font-size:.78rem;color:var(--muted);margin-top:-6px}
+
+/* ===== 标签 ===== */
+.tag{display:inline-flex;align-items:center;padding:2px 9px;border-radius:100px;
+  font-size:.75rem;font-weight:700;line-height:1.6}
+.tag-core{background:var(--symptom-bg);color:var(--danger)}
+.tag-master{background:var(--treatment-bg);color:var(--treatment)}
+.tag-understand{background:var(--cause-bg);color:var(--cause)}
+.tag-know{background:var(--diagnosis-bg);color:#B45309}
+.tag-info{background:rgba(14,165,233,.1);color:var(--primary)}
+.tag-memory{background:var(--memory-bg);color:var(--memory)}
+
+/* ===== Tab ===== */
+.tabs{margin:14px 0}
+.tab-nav{display:flex;gap:4px;flex-wrap:wrap;border-bottom:2px solid var(--border);margin-bottom:14px}
+.tab-btn{border:0;background:none;cursor:pointer;font-family:inherit;font-size:.88rem;
+  font-weight:600;color:var(--muted);padding:9px 16px;border-radius:var(--radius-sm) var(--radius-sm) 0 0;
+  border-bottom:2px solid transparent;margin-bottom:-2px}
+.tab-btn:hover{color:var(--primary);background:rgba(14,165,233,.05)}
+.tab-btn.active{color:var(--primary);border-bottom-color:var(--primary)}
+.tab-panel{display:none}
+.tab-panel.active{display:block;animation:fadeIn .25s ease}
+@keyframes fadeIn{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}
+
+/* ===== 折叠问答 ===== */
+details.qa{background:var(--card);border:1px solid var(--border);border-radius:var(--radius-md);
+  margin:10px 0;overflow:hidden}
+details.qa[open]{box-shadow:var(--shadow-sm)}
+details.qa summary{cursor:pointer;padding:13px 16px;font-weight:600;font-size:.94rem;
+  display:flex;align-items:center;gap:10px;list-style:none;user-select:none}
+details.qa summary::-webkit-details-marker{display:none}
+details.qa summary::after{content:"▾";margin-left:auto;color:var(--muted);transition:.2s}
+details.qa[open] summary::after{transform:rotate(180deg)}
+details.qa summary:hover{background:rgba(14,165,233,.04)}
+.qa-body{padding:0 16px 15px 52px;font-size:.92rem;border-top:1px solid var(--border);padding-top:12px}
+.qa-num{display:inline-flex;align-items:center;justify-content:center;min-width:26px;height:26px;
+  border-radius:7px;background:rgba(14,165,233,.1);color:var(--primary);font-size:.78rem;
+  font-weight:800;flex-shrink:0}
+
+/* ===== 自测题 ===== */
+.quiz-block{background:var(--quiz-bg);border:1px solid #FBCFE8;border-radius:var(--radius-md);
+  padding:20px 22px;margin:18px 0}
+.quiz-item{background:#fff;border:1px solid #F9D5E5;border-radius:10px;padding:16px 18px;margin:12px 0}
+.quiz-stem{font-weight:600;font-size:.95rem;margin-bottom:10px;display:flex;gap:8px;align-items:flex-start}
+.q-type{display:inline-block;padding:1px 8px;border-radius:5px;background:var(--quiz-bg);
+  color:var(--quiz);font-size:.72rem;font-weight:800;white-space:nowrap;margin-top:2px}
+.quiz-options{list-style:none;margin:8px 0}
+.quiz-options li{position:relative;padding:6px 10px 6px 30px;font-size:.9rem;border-radius:6px;margin:3px 0}
+.quiz-options li::before{content:attr(data-letter);position:absolute;left:8px;top:6px;
+  font-weight:800;color:var(--quiz)}
+.quiz-options li.correct{background:#DCFCE7;font-weight:600}
+.quiz-options li.correct::after{content:" ✓ 正确";color:#15803D;font-size:.76rem;font-weight:700}
+.quiz-options li.wrong{background:#FEE2E2}
+.quiz-options li.wrong::after{content:" ✗";color:var(--danger);font-size:.76rem;font-weight:700}
+.answer-key{display:inline-block;background:#DCFCE7;color:#15803D;border-radius:6px;
+  padding:2px 9px;font-size:.8rem;font-weight:800;margin-right:6px}
+.difficulty{color:#B45309;font-size:.8rem;letter-spacing:1px;white-space:nowrap}
+
+/* ===== 闪卡 ===== */
+.flashcard-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:14px;margin:18px 0}
+.flashcard{perspective:1000px;height:210px;cursor:pointer}
+.flashcard-inner{position:relative;width:100%;height:100%;transition:transform .55s;
+  transform-style:preserve-3d}
+.flashcard.flipped .flashcard-inner{transform:rotateY(180deg)}
+.flashcard-face{position:absolute;inset:0;backface-visibility:hidden;border-radius:var(--radius-md);
+  padding:18px 18px 14px;display:flex;flex-direction:column;justify-content:center;
+  border:1px solid var(--border);background:#fff;box-shadow:var(--shadow-sm)}
+.flashcard-front{border-top:5px solid var(--flashcard)}
+.flashcard-back{transform:rotateY(180deg);background:var(--flash-bg);border-top:5px solid var(--primary);
+  justify-content:flex-start;overflow-y:auto;font-size:.88rem;line-height:1.65}
+.flashcard-front p{font-size:.95rem;font-weight:600;margin:0;text-align:center}
+.card-tag{align-self:center;margin-bottom:10px;padding:2px 9px;border-radius:100px;
+  font-size:.72rem;font-weight:800;background:var(--flash-bg);color:#0E7490}
+.card-tag.concept{background:var(--cause-bg);color:var(--cause)}
+.card-tag.diagnosis{background:var(--diagnosis-bg);color:#B45309}
+.card-tag.treatment{background:var(--treatment-bg);color:#047857}
+.card-tag.memory{background:var(--memory-bg);color:var(--memory)}
+.flip-hint{text-align:center;font-size:.74rem;color:var(--muted);margin-top:auto;padding-top:8px}
+
+/* ===== 病例挑战 ===== */
+.case-card{background:#fff;border:1px solid var(--border);border-top:5px solid var(--diagnosis);
+  border-radius:var(--radius-md);padding:20px 22px;margin:18px 0;box-shadow:var(--shadow-sm)}
+.case-meta{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:10px}
+.case-meta span{background:var(--diagnosis-bg);color:#B45309;border-radius:100px;
+  padding:2px 10px;font-size:.75rem;font-weight:700}
+.case-title{font-size:1.02rem;font-weight:800;margin-bottom:8px}
+.case-body{font-size:.93rem;color:var(--ink)}
+.case-questions{margin:12px 0 0;padding:12px 16px;background:var(--bg);border-radius:10px}
+.case-questions li{margin-bottom:6px;font-size:.9rem}
+
+/* ===== 记忆工具箱 ===== */
+.memory-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px;margin:14px 0}
+.memory-card{background:var(--memory-bg);border:1px solid #DDD6FE;border-radius:var(--radius-md);padding:16px 18px}
+.memory-card .m-title{font-weight:800;color:var(--memory);font-size:.9rem;margin-bottom:6px}
+.memory-card .m-type{display:inline-block;font-size:.7rem;font-weight:700;color:var(--memory);
+  background:#fff;border:1px solid #DDD6FE;border-radius:100px;padding:1px 8px;margin-left:6px}
+.memory-card .m-formula{font-weight:700;background:#fff;border-left:3px solid var(--memory);
+  padding:8px 10px;border-radius:6px;margin:8px 0;font-size:.92rem}
+.memory-card p{font-size:.88rem;margin:6px 0}
+
+/* ===== 学习路线 / 知识地图 ===== */
+.route-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin:16px 0}
+.route-card{background:#fff;border:1px solid var(--border);border-radius:var(--radius-md);padding:16px 18px}
+.route-card h4{font-size:.95rem;margin-bottom:6px;color:var(--primary)}
+.route-card p{font-size:.86rem;color:var(--muted);margin:0}
+.priority{display:inline-flex;gap:2px;font-size:.8rem;color:#F59E0B;margin-left:4px}
+.knowledge-map{display:grid;grid-template-columns:repeat(auto-fit,minmax(165px,1fr));gap:12px;margin:16px 0}
+.km-card{background:#fff;border:1px solid var(--border);border-radius:var(--radius-md);
+  padding:15px 12px;text-align:center;transition:.2s}
+.km-card:hover{border-color:var(--primary);transform:translateY(-2px);box-shadow:var(--shadow-md)}
+.km-icon{font-size:1.8rem;margin-bottom:6px}
+.km-title{font-weight:700;font-size:.9rem;margin-bottom:2px}
+.km-count{font-size:.76rem;color:var(--muted)}
+.km-count strong{color:var(--primary);font-size:1rem}
+
+/* ===== 数据 / 时间线 ===== */
+.stat-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(135px,1fr));gap:12px;margin:16px 0}
+.stat-card{background:#fff;border:1px solid var(--border);border-radius:var(--radius-md);
+  padding:16px 12px;text-align:center}
+.stat-num{font-size:1.65rem;font-weight:800;color:var(--primary);line-height:1.2}
+.stat-label{font-size:.77rem;color:var(--muted);margin-top:3px}
+.timeline{position:relative;margin:18px 0;padding-left:28px}
+.timeline::before{content:"";position:absolute;left:8px;top:4px;bottom:4px;width:2px;
+  background:linear-gradient(to bottom,var(--primary),var(--accent));border-radius:2px}
+.tl-item{position:relative;margin-bottom:18px}
+.tl-item::before{content:"";position:absolute;left:-25px;top:5px;width:11px;height:11px;
+  border-radius:50%;background:#fff;border:3px solid var(--primary)}
+.tl-title{font-weight:700;font-size:.94rem;margin-bottom:3px}
+.tl-desc{font-size:.86rem;color:var(--muted)}
+.progress-item{margin-bottom:12px}
+.progress-label{display:flex;justify-content:space-between;font-size:.84rem;margin-bottom:4px}
+.progress-bar{height:8px;background:var(--border);border-radius:100px;overflow:hidden}
+.progress-fill{height:100%;border-radius:100px;background:var(--gradient-main)}
+
+/* ===== 易错警示 ===== */
+.exam-alert{background:#FFF7ED;border:1px solid #FED7AA;border-left:5px solid var(--diagnosis);
+  border-radius:var(--radius-md);padding:18px 22px;margin:18px 0}
+.exam-alert h3{color:#C2410C;font-size:1rem;margin-bottom:10px}
+.exam-alert li{font-size:.92rem;margin-bottom:8px}
+.exam-alert li::before{content:"⚠️"}
+
+/* ===== 页脚 ===== */
+.footer{margin-top:56px;padding-top:28px;border-top:1px solid var(--border);
+  text-align:center;font-size:.82rem;color:var(--muted)}
+.footer .footer-tag{display:inline-block;padding:6px 16px;border-radius:100px;color:#fff;
+  background:var(--gradient-main);font-weight:700;margin-bottom:10px}
+.disclaimer{font-size:.78rem;color:var(--muted);background:#fff;border:1px dashed var(--border);
+  border-radius:10px;padding:12px 16px;margin:18px 0;text-align:left}
+
+/* ===== 浮动按钮 ===== */
+.back-to-top{position:fixed;right:22px;bottom:22px;width:44px;height:44px;border:0;border-radius:50%;
+  background:var(--gradient-main);color:#fff;font-size:1.05rem;cursor:pointer;box-shadow:var(--shadow-lg);
+  opacity:0;visibility:hidden;transform:translateY(10px);transition:.25s;z-index:60}
+.back-to-top.visible{opacity:1;visibility:visible;transform:none}
+.mobile-nav-toggle{display:none;position:fixed;top:14px;left:14px;z-index:100;width:44px;height:44px;
+  border:1px solid var(--border);border-radius:var(--radius-sm);background:#fff;box-shadow:var(--shadow-md);
+  cursor:pointer;font-size:1.15rem;align-items:center;justify-content:center}
+.sidebar-overlay{display:none;position:fixed;inset:0;background:rgba(15,23,42,.35);z-index:98}
+
+/* ===== 响应式 ===== */
+@media(max-width:1100px){.sidebar{width:220px;margin-right:22px}.main-content{max-width:100%}}
+@media(max-width:900px){
+  .mobile-nav-toggle{display:flex}
+  .sidebar{position:fixed;left:-290px;top:0;height:100vh;width:270px;background:#fff;
+    border-right:1px solid var(--border);z-index:99;transition:left .28s ease;padding:70px 16px 24px;
+    margin:0;max-height:100vh}
+  .sidebar.open{left:0}
+  .sidebar-overlay.show{display:block}
+  .page-wrapper{padding:0 16px}
+  .main-content{padding-top:66px}
+  .hero{padding:38px 20px 30px}.hero h1{font-size:1.75rem}
+  .section-header h2{font-size:1.3rem}
+  .module{padding:18px 16px}
+  .qa-body{padding-left:16px}
+}
+@media(max-width:680px){
+  body{font-size:15px}
+  .hero h1{font-size:1.45rem}
+  .hero-meta{gap:18px}
+  .knowledge-map{grid-template-columns:repeat(2,1fr)}
+  .flashcard-grid{grid-template-columns:1fr}
+  .flashcard{height:200px}
+  .stat-row{grid-template-columns:repeat(2,1fr)}
+  .section{margin-bottom:40px}
+  table{min-width:520px}
+}
+@media print{
+  .sidebar,.mobile-nav-toggle,.back-to-top,.sidebar-overlay{display:none!important}
+  .page-wrapper{display:block;padding:0}
+  .main-content{max-width:100%}
+  details.qa{break-inside:avoid}
+  details.qa .qa-body{display:block}
+}
+::-webkit-scrollbar{width:8px;height:8px}
+::-webkit-scrollbar-thumb{background:var(--border);border-radius:4px}
+::-webkit-scrollbar-thumb:hover{background:var(--muted)}
+</style>
+<style data-refactor="v1">
+/* ============================================================
+   精神病学学习指南 · 统一交互层增量覆盖样式 v1
+   构建期由 apply-refactor.ps1 注入 </head> 前，仅追加修正，
+   不改动 A/B 两族基础样式。全部使用字面色值，兼容两族设计变量。
+   ============================================================ */
+
+/* ---- 1. 全局键盘焦点可见 ---- */
+:focus-visible{outline:2px solid #0EA5E9;outline-offset:2px}
+
+/* ---- 2. 章节导航条（胶囊式三段：上一章 / 目录 / 下一章） ---- */
+.chapter-pager{display:flex;align-items:stretch;justify-content:center;gap:10px;margin:36px 0 10px;flex-wrap:wrap}
+.chapter-pager a,.chapter-pager span{flex:1 1 200px;display:flex;align-items:center;justify-content:center;min-height:44px;padding:10px 18px;border:1px solid #E2E8F0;border-radius:999px;background:#FFFFFF;color:#0F172A;font-size:14px;font-weight:600;line-height:1.4;text-decoration:none;text-align:center;box-shadow:0 1px 2px rgba(15,23,42,.06);transition:border-color .15s ease,box-shadow .15s ease,color .15s ease}
+.chapter-pager a:hover{border-color:#0EA5E9;color:#0EA5E9;box-shadow:0 4px 14px rgba(14,165,233,.18);text-decoration:none}
+.chapter-pager .cp-toc{flex:0 0 auto;min-width:104px;background:linear-gradient(135deg,#0EA5E9,#10B981);border-color:transparent;color:#FFFFFF}
+.chapter-pager .cp-toc:hover{border-color:transparent;color:#FFFFFF;opacity:.92}
+.chapter-pager .cp-disabled{opacity:.45;background:#F8FAFC;box-shadow:none;cursor:default}
+@media (max-width:680px){.chapter-pager{gap:8px;margin:28px 0 8px}.chapter-pager a,.chapter-pager span{flex:1 1 100%}}
+
+/* ---- 3. 自测题交互态（兼容 A 族 .opt 与 B 族 .quiz-options li） ---- */
+/* 3.1 基础可点击 */
+.quiz-q .opt{cursor:pointer}
+.quiz-item .quiz-options li{cursor:pointer}
+/* 3.2 hover / 焦点态 */
+.quiz-q .opt:hover,.quiz-q .opt:focus-visible{border-color:#7DD3FC;background:#F0F9FF}
+.quiz-item .quiz-options li:hover,.quiz-item .quiz-options li:focus-visible{background:#FFFFFF;box-shadow:inset 0 0 0 1px #7DD3FC}
+/* 3.3 判定结果态 */
+.quiz-q .opt.is-right{border-color:#34D399;background:#ECFDF5;color:#065F46;font-weight:600}
+.quiz-q .opt.is-right::after{content:" ✓";color:#059669;font-weight:800}
+.quiz-q .opt.is-right .l{color:#047857}
+.quiz-item .quiz-options li.is-right{background:#DCFCE7;box-shadow:inset 0 0 0 1px #34D399;font-weight:600}
+.quiz-item .quiz-options li.is-right::after{content:" ✓";color:#15803D;font-weight:800}
+.quiz-q .opt.is-wrong{border-color:#FCA5A5;background:#FEF2F2;color:#B91C1C;font-weight:600}
+.quiz-q .opt.is-wrong::after{content:" ✗";color:#DC2626;font-weight:800}
+.quiz-q .opt.is-wrong .l{color:#B91C1C}
+.quiz-item .quiz-options li.is-wrong{background:#FEE2E2;box-shadow:inset 0 0 0 1px #FCA5A5;font-weight:600}
+.quiz-item .quiz-options li.is-wrong::after{content:" ✗";color:#DC2626;font-weight:800}
+.quiz-q .opt.is-reveal{border-color:#6EE7B7;background:#ECFDF5;color:#065F46}
+.quiz-q .opt.is-reveal .l{color:#047857}
+.quiz-item .quiz-options li.is-reveal{background:#ECFDF5;box-shadow:inset 0 0 0 1px #6EE7B7;color:#065F46}
+/* 3.4 已锁定禁用态 */
+.quiz-q.is-locked .opt,.quiz-item.is-locked .quiz-options li{cursor:default;pointer-events:none}
+.quiz-q.is-locked .opt:not(.is-right):not(.is-wrong):not(.is-reveal){opacity:.55}
+.quiz-item.is-locked .quiz-options li:not(.is-right):not(.is-wrong):not(.is-reveal){opacity:.55}
+/* 3.5 计分行（运行时注入） */
+.quiz-score{display:flex;align-items:center;gap:12px;margin:14px 0 18px;padding:12px 18px;border:1px dashed #7DD3FC;border-radius:12px;background:#F0F9FF;font-size:14px;font-weight:700;color:#0F172A}
+.quiz-score .qs-label{white-space:nowrap}
+.quiz-score .qs-num{white-space:nowrap;color:#0284C7;font-size:16px}
+.quiz-score .qs-bar{flex:1 1 60px;min-width:60px;height:8px;border-radius:999px;background:#E2E8F0;overflow:hidden}
+.quiz-score .qs-bar i{display:block;height:100%;width:0;border-radius:999px;background:linear-gradient(90deg,#0EA5E9,#10B981);transition:width .35s ease}
+
+/* ---- 4. 速记卡可达性与长内容 ---- */
+.fc-hint,.flip-hint{color:#64748B}
+.flashcard-face{overflow:auto}
+.flashcard[tabindex]{outline:none}
+.flashcard[tabindex]:focus-visible{outline:3px solid #0EA5E9;outline-offset:3px}
+
+/* ---- 5. 侧栏目录 ---- */
+/* B 族 sticky 侧栏内目录限高滚动（A 族 aside 本身已可滚动，此规则空匹配无害） */
+.sidebar .sidebar-nav{max-height:calc(100vh - 60px);overflow-y:auto;scrollbar-width:thin}
+/* A 族 scroll spy 高亮（B 族高亮由其基础样式提供） */
+.sidebar a.toc.active{background:#E0F2FE;color:#0369A1;font-weight:600}
+
+/* ---- 6. 响应式补充：681–900px 时 grid3 降为两列 ---- */
+@media (min-width:681px) and (max-width:900px){
+  .grid3{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+
+/* ---- 7. 打印样式补充（A 族新增；B 族已有 print，重复声明无害） ---- */
+@media print{
+  .sidebar,.overlay,.sidebar-overlay,#menuBtn,#navToggle,#overlay,#sidebarOverlay,#readbar,#topBtn,#backTop,.chapter-pager,.quiz-score{display:none!important}
+}
+
+/* ---- 8. 手机端增强 v2（触控体验 / 防溢出 / 抽屉滚动锁定） ---- */
+/* 8.1 触控体验：去点按高亮、消除双击缩放延迟（flashcard 高 190-200px 天然达标，不另设 min-height） */
+.opt,.tabbar button,.tab-btn,.quiz-options li,.flashcard,.chapter-pager a,.chapter-pager span,.menu-btn,.mobile-nav-toggle{-webkit-tap-highlight-color:transparent;touch-action:manipulation}
+/* 8.2 触控目标最小 44px（自测选项与 tab 胶囊原高约 33px） */
+.opt,.tabbar button,.tab-btn,.quiz-options li{min-height:44px}
+/* 8.3 防溢出：内容图自适应；svg 不设 height:auto，避免定尺寸图标塌陷 */
+img{max-width:100%;height:auto}
+svg{max-width:100%}
+/* 8.4 长词/URL 断行 */
+body{overflow-wrap:break-word}
+/* 8.5 表格容器触摸惯性滚动（A 族已有同值规则，重复声明无害） */
+.table-wrap{-webkit-overflow-scrolling:touch}
+/* 8.6 抽屉打开时锁定背景滚动（两族抽屉断点均为 900px；类由统一脚本增删） */
+@media (max-width:900px){
+  body.nav-locked{overflow:hidden}
+}
+</style>
+</head>
+<body>
+<button class="mobile-nav-toggle" id="navToggle" aria-label="打开目录">☰</button>
+<div class="sidebar-overlay" id="sidebarOverlay"></div>
+<div class="page-wrapper">
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-brand">《精神病学》第9版 · 学习指南</div>
+    <nav class="sidebar-nav">
+      <ul>
+        <li><a href="#cover" class="active"><span class="toc-num">00</span>章节封面</a></li>
+        <li><a href="#position"><span class="toc-num">01</span>本章地位速览</a></li>
+        <li><a href="#map"><span class="toc-num">02</span>本章知识地图</a></li>
+        <li><a href="#route"><span class="toc-num">03</span>学习路线图</a></li>
+        <li><a href="#nav"><span class="toc-num">04</span>章节导航</a></li>
+        <li><a href="#basics"><span class="toc-num">05</span>症状学总论</a></li>
+        <li><a href="#perception"><span class="toc-num">06</span>感知觉障碍</a></li>
+        <li><a href="#thinking"><span class="toc-num">07</span>思维障碍</a></li>
+        <li><a href="#attention"><span class="toc-num">08</span>注意障碍</a></li>
+        <li><a href="#memory"><span class="toc-num">09</span>记忆障碍</a></li>
+        <li><a href="#intelligence"><span class="toc-num">10</span>智能障碍</a></li>
+        <li><a href="#orientation"><span class="toc-num">11</span>定向力障碍</a></li>
+        <li><a href="#emotion"><span class="toc-num">12</span>情感障碍</a></li>
+        <li><a href="#volition"><span class="toc-num">13</span>意志障碍</a></li>
+        <li><a href="#behavior"><span class="toc-num">14</span>动作行为障碍</a></li>
+        <li><a href="#consciousness"><span class="toc-num">15</span>意识障碍</a></li>
+        <li><a href="#insight"><span class="toc-num">16</span>自知力障碍</a></li>
+        <li><a href="#syndrome"><span class="toc-num">17</span>常见精神疾病综合征</a></li>
+        <li><a href="#linkage"><span class="toc-num">18</span>症状—常见疾病纵向联动</a></li>
+        <li><a href="#summary"><span class="toc-num">19</span>全章核心要点速览</a></li>
+        <li><a href="#pitfalls"><span class="toc-num">20</span>易混易错点警示</a></li>
+        <li><a href="#quiz"><span class="toc-num">21</span>章节自测</a></li>
+        <li><a href="#flashcards"><span class="toc-num">22</span>考点速记卡</a></li>
+        <li><a href="#cases"><span class="toc-num">23</span>病例挑战</a></li>
+        <li><a href="#extend"><span class="toc-num">24</span>拓展延伸</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <main class="main-content">
+    <section id="cover" class="hero">
+      <div class="hero-badge">《精神病学》第9版（2024） · 第二章 · CHAPTER 02</div>
+      <h1>精神障碍的症状学</h1>
+      <p class="subtitle">Symptomatology（症状学）· 精神科一切诊断的共同语言：先识别症状，再谈疾病。</p>
+      <div class="hero-meta">
+        <div class="hero-meta-item"><div class="num">11</div><div class="label">类精神症状</div></div>
+        <div class="hero-meta-item"><div class="num">5</div><div class="label">个常见综合征</div></div>
+        <div class="hero-meta-item"><div class="num">15</div><div class="label">道章节自测</div></div>
+        <div class="hero-meta-item"><div class="num">3</div><div class="label">个病例挑战</div></div>
+      </div>
+      <div class="hero-quote">本章为症状学基础章节，不按“每病八栏”组织；八栏（定义—机制—表现—举例—鉴别/评估—应用—记忆—联动）按知识模块适配。学习主线：会判定 → 会分类 → 会举例 → 会鉴别 → 会落到疾病。</div>
+    </section>
+
+    <section id="position" class="section">
+      <div class="section-header"><span class="section-number">01</span><h2>本章地位速览</h2></div>
+      <p class="lead">第2章不讨论某一个病，而是提供描述、识别、归类精神症状的“共同语”。本章为症状学基础章节，八栏（定义—机制—表现—举例—鉴别/评估—应用—记忆—联动）按知识模块适配，不按“每病八栏”机械套用。教材把它定位为“学习精神病学的基础”和“精神科医师必备的基本功”。</p>
+
+      <div class="card-grid">
+        <div class="card card-cause">
+          <div class="card-header"><span class="card-icon">🧭</span><span class="card-title">章节定位</span></div>
+          <div class="card-body">位于全书总论之后、各疾病各论之前。教材明确：精神障碍病因复杂，涉及生物、心理、社会多方面，目前仍缺乏有效的生物学诊断指标；诊断主要依赖病史采集和精神检查。因此，必须先“发现和识别精神症状”，才能初步判断个体是否有精神障碍。</div>
+        </div>
+        <div class="card card-symptom">
+          <div class="card-header"><span class="card-icon">🩺</span><span class="card-title">临床意义</span></div>
+          <div class="card-body">症状是诊断的最小单位，也是疗效比较的共同尺度。能否发现症状——特别是隐蔽症状——取决于医患关系与检查技巧；仅凭短暂交谈和片面观察下结论，很容易漏诊和误诊。</div>
+        </div>
+        <div class="card card-diagnosis">
+          <div class="card-header"><span class="card-icon">🔗</span><span class="card-title">诊断价值</span></div>
+          <div class="card-body">症状学承担三重任务：①判断精神活动是否异常；②区分原发症状与继发症状，理清症状之间的因果层次；③把成组症状识别为综合征，为疾病分类和鉴别提供入口。</div>
+        </div>
+      </div>
+
+      <div class="table-wrap"><table class="comparison-table">
+        <thead><tr><th>关联方向</th><th>具体内容</th><th>学习建议</th></tr></thead>
+        <tbody>
+          <tr><td>前置知识</td><td>普通心理学把正常精神活动分为认知、情感、意志行为三大心理过程；本章正是按这一框架逐项讲“异常版”。</td><td>先回忆正常的感觉/知觉、思维四特征、注意三特征、记忆三过程、意志四品质，再学障碍。</td></tr>
+          <tr><td>后续延伸</td><td>第三章精神检查与诊断、后续各疾病各论（精神分裂症、抑郁障碍、双相障碍、焦虑障碍、痴呆等），都要反复调用本章术语。</td><td>每学一个疾病，回头在“症状—疾病联动表”上标一次，形成双向索引。</td></tr>
+          <tr><td>横向交叉</td><td>神经病学（意识障碍、癫痫、颞叶器质性损害）、内科学（躯体疾病所致谵妄）、急诊与中毒（意识障碍）、老年医学（痴呆）。</td><td>遇到意识障碍、幻嗅、视物变形，先想器质性线索，再想功能性精神障碍。</td></tr>
+        </tbody>
+      </table></div>
+      <p class="table-note">一句话：本章不是“背名词”，而是训练“把异常体验翻译成症状术语”的能力。</p>
+    </section>
+
+    <section id="map" class="section">
+      <div class="section-header"><span class="section-number">02</span><h2>本章知识地图</h2></div>
+      <p class="lead">教材第二节按心理过程分十一项讲症状，第三节把成组症状归为五个综合征。下图给出“数量骨架”，便于先建树、再填叶。</p>
+
+      <div class="knowledge-map">
+        <div class="km-card"><div class="km-icon">👁️</div><div class="km-title">感知觉障碍</div><div class="km-count"><strong>3</strong> 组 / 11 项</div></div>
+        <div class="km-card"><div class="km-icon">💭</div><div class="km-title">思维障碍</div><div class="km-count"><strong>14</strong> 项形式 + <strong>11</strong> 型妄想</div></div>
+        <div class="km-card"><div class="km-icon">🎯</div><div class="km-title">注意障碍</div><div class="km-count"><strong>5</strong> 种</div></div>
+        <div class="km-card"><div class="km-icon">🧩</div><div class="km-title">记忆障碍</div><div class="km-count"><strong>5</strong> 类（遗忘 <strong>4</strong> 亚型）</div></div>
+        <div class="km-card"><div class="km-icon">🧠</div><div class="km-title">智能障碍</div><div class="km-count"><strong>2</strong> 类 + 痴呆 <strong>3</strong> 型</div></div>
+        <div class="km-card"><div class="km-icon">🧭</div><div class="km-title">定向力障碍</div><div class="km-count"><strong>3</strong> 维环境 + 自我定向</div></div>
+        <div class="km-card"><div class="km-icon">❤️</div><div class="km-title">情感障碍</div><div class="km-count"><strong>10</strong> 种</div></div>
+        <div class="km-card"><div class="km-icon">⚙️</div><div class="km-title">意志障碍</div><div class="km-count"><strong>4</strong> 种</div></div>
+        <div class="km-card"><div class="km-icon">🚶</div><div class="km-title">动作行为障碍</div><div class="km-count"><strong>10</strong> 项（兴奋2+抑制4+其他4）</div></div>
+        <div class="km-card"><div class="km-icon">🌫️</div><div class="km-title">意识障碍</div><div class="km-count"><strong>7</strong> 种（4+3）</div></div>
+        <div class="km-card"><div class="km-icon">🪞</div><div class="km-title">自知力障碍</div><div class="km-count">完整 / 缺乏 / 恢复程度</div></div>
+        <div class="km-card"><div class="km-icon">🧷</div><div class="km-title">精神疾病综合征</div><div class="km-count"><strong>5</strong> 个</div></div>
+      </div>
+
+      <div class="callout callout-info"><div class="callout-icon">💡</div><div class="callout-body"><strong>地图用法</strong>先记住 11 个类别名（这是“抽屉”），再往每个抽屉里放具体症状（这是“卡片”）。考试失分往往不是没背症状，而是把卡片放错抽屉，例如把“思维化声”只当成幻觉、把“木僵”当成昏迷。</div></div>
+    </section>
+
+    <section id="route" class="section">
+      <div class="section-header"><span class="section-number">03</span><h2>学习路线图</h2></div>
+      <p class="lead">建议按“总论打底 → 两大高分模块 → 认知簇 → 意志行为簇 → 器质性哨兵 → 综合征与联动”的顺序推进，每步都配一次主动回忆。</p>
+
+      <div class="route-grid">
+        <div class="route-card"><h4>第一步 · 总论打底</h4><p>判定四方面、症状四共同特点、精神检查五要点。<span class="priority">⭐⭐⭐</span></p></div>
+        <div class="route-card"><h4>第二步 · 感知觉 + 思维</h4><p>本章分值最集中的两块：幻觉分类、妄想分类与思维形式障碍。<span class="priority">⭐⭐⭐</span></p></div>
+        <div class="route-card"><h4>第三步 · 认知簇</h4><p>注意、记忆、智能、定向力，抓住“过程—障碍”对应关系。<span class="priority">⭐⭐</span></p></div>
+        <div class="route-card"><h4>第四步 · 意志行为簇</h4><p>情感、意志、动作行为，用“协调/不协调”“增多/减少/缺乏”两条轴统摄。<span class="priority">⭐⭐</span></p></div>
+        <div class="route-card"><h4>第五步 · 器质性哨兵</h4><p>意识障碍七型与自知力，重点区分嗜睡—混浊—昏睡—昏迷，以及谵妄的昼轻夜重。<span class="priority">⭐⭐⭐</span></p></div>
+        <div class="route-card"><h4>第六步 · 综合征与联动</h4><p>五个综合征 + 症状—疾病纵向表 + 刷题查漏。<span class="priority">⭐⭐⭐</span></p></div>
+      </div>
+
+      <div class="card-grid">
+        <div class="card card-diagnosis">
+          <div class="card-header"><span class="card-icon">🗓️</span><span class="card-title">复习节奏</span></div>
+          <div class="card-body">当天精读并做一次分类默写；第 2 天只看“易混点 + 闪卡”；第 7 天做自测并回炉错题；考前只过知识地图、症状—疾病联动表和 15 道错题。</div>
+        </div>
+        <div class="card card-memory">
+          <div class="card-header"><span class="card-icon">🧠</span><span class="card-title">记忆策略</span></div>
+          <div class="card-body">先树后叶：先背 11 类名，再背每类数量，最后填定义。所有成对概念一律做“对比表”（有/无客观刺激、同一/两个感官、自己的/外力的、真实经历/想象经历）。每个症状至少配一个教材例子，用例子反推定义。</div>
+        </div>
+        <div class="card card-symptom">
+          <div class="card-header"><span class="card-icon">✍️</span><span class="card-title">主动输出</span></div>
+          <div class="card-body">合上书，用 3 分钟画出“感知觉—思维—注意—记忆—智能—定向—情感—意志—动作—意识—自知力”十一条分支；再随机抽 5 个症状，说出定义、教材例子、常见疾病各一句。说不出的立刻回读对应小节。</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="nav" class="section">
+      <div class="section-header"><span class="section-number">04</span><h2>章节导航</h2></div>
+      <p class="lead">按教材顺序排列。每个卡片可直接跳转；括号内为该模块的“必抓点”。</p>
+
+      <div class="card-grid">
+        <div class="card card-cause"><div class="card-header"><span class="card-icon">📖</span><span class="card-title"><a href="#basics">症状学总论</a></span></div><div class="card-body">定义、判定四方面、共同特点、检查五要点、诊断价值。</div></div>
+        <div class="card card-symptom"><div class="card-header"><span class="card-icon">👁️</span><span class="card-title"><a href="#perception">感知觉障碍</a></span></div><div class="card-body">感觉 3 项、错觉与幻觉、幻觉三种分类、感知综合障碍 5 项。</div></div>
+        <div class="card card-symptom"><div class="card-header"><span class="card-icon">💭</span><span class="card-title"><a href="#thinking">思维障碍</a></span></div><div class="card-body">思维形式 14 项、妄想 11 型、超价观念。</div></div>
+        <div class="card card-symptom"><div class="card-header"><span class="card-icon">🎯</span><span class="card-title"><a href="#attention">注意障碍</a></span></div><div class="card-body">增强、减退、涣散、狭窄、转移。</div></div>
+        <div class="card card-symptom"><div class="card-header"><span class="card-icon">🧩</span><span class="card-title"><a href="#memory">记忆障碍</a></span></div><div class="card-body">记忆三过程、遗忘四型、虚构与错构。</div></div>
+        <div class="card card-symptom"><div class="card-header"><span class="card-icon">🧠</span><span class="card-title"><a href="#intelligence">智能障碍</a></span></div><div class="card-body">智力发育障碍、痴呆三型、刚塞综合征与童样痴呆。</div></div>
+        <div class="card card-symptom"><div class="card-header"><span class="card-icon">🧭</span><span class="card-title"><a href="#orientation">定向力障碍</a></span></div><div class="card-body">环境/自我定向、意识障碍标志、双重定向。</div></div>
+        <div class="card card-symptom"><div class="card-header"><span class="card-icon">❤️</span><span class="card-title"><a href="#emotion">情感障碍</a></span></div><div class="card-body">高涨与欣快、倒错与矛盾、焦虑与恐惧。</div></div>
+        <div class="card card-symptom"><div class="card-header"><span class="card-icon">⚙️</span><span class="card-title"><a href="#volition">意志障碍</a></span></div><div class="card-body">增强、减退、缺失、矛盾意向。</div></div>
+        <div class="card card-symptom"><div class="card-header"><span class="card-icon">🚶</span><span class="card-title"><a href="#behavior">动作行为障碍</a></span></div><div class="card-body">协调/不协调兴奋、木僵、蜡样屈曲、违拗、模仿刻板装相。</div></div>
+        <div class="card card-symptom"><div class="card-header"><span class="card-icon">🌫️</span><span class="card-title"><a href="#consciousness">意识障碍</a></span></div><div class="card-body">嗜睡—混浊—昏睡—昏迷；朦胧、谵妄、梦样。</div></div>
+        <div class="card card-symptom"><div class="card-header"><span class="card-icon">🪞</span><span class="card-title"><a href="#insight">自知力障碍</a></span></div><div class="card-body">完整与缺乏、病情轻重与康复指标。</div></div>
+        <div class="card card-diagnosis"><div class="card-header"><span class="card-icon">🧷</span><span class="card-title"><a href="#syndrome">常见精神疾病综合征</a></span></div><div class="card-body">幻觉妄想、躁狂、抑郁、紧张、遗忘综合征。</div></div>
+        <div class="card card-diagnosis"><div class="card-header"><span class="card-icon">🗂️</span><span class="card-title"><a href="#linkage">症状—常见疾病纵向联动</a></span></div><div class="card-body">把 11 类症状压缩成一张“看到症状想到病”的表。</div></div>
+      </div>
+    </section>
+
+    <section id="basics" class="section">
+      <div class="section-header"><span class="section-number">05</span><h2>症状学总论</h2></div>
+      <p class="lead">教材第一节回答三个问题：什么是症状学、怎样判定一个体验是不是症状、发现症状后怎样把它查清楚。总论是后面所有分类的“使用方法”。</p>
+
+      <div class="module module-cause">
+        <div class="module-head"><span class="module-index">定义</span><h3>症状学与精神病理学</h3></div>
+        <p><strong>精神症状</strong>是异常精神活动的表现。异常的精神活动通常通过外显行为表现出来，如仪表动作、言谈举止、神态表情以及书写内容等。<strong>症状学</strong>是研究精神症状的学科；<strong>精神病理学（psychopathology）</strong>是研究精神症状及其产生机制的学科。教材特别提醒：两者内涵并不完全一致——症状学关注症状本身，需评估和识别精神症状；精神病理学除此以外，还关注患者的内心体验及症状发生的机制。</p>
+        <div class="table-wrap"><table class="comparison-table">
+          <thead><tr><th>维度</th><th>描述性精神病理学<br>descriptive psychopathology</th><th>实验性精神病理学<br>experimental psychopathology</th></tr></thead>
+          <tbody>
+            <tr><td>核心任务</td><td>对异常精神活动进行客观描述，即通常临床所认为的症状学</td><td>不仅描述异常精神活动，还探索其发生机制</td></tr>
+            <tr><td>关注点</td><td>患者的主观意识与体验、症状发展；描述时避免主观偏见和行为预设</td><td>起源自弗洛伊德精神动力学，以无意识心理活动解释异常精神活动；后结合认知和行为心理学、神经电生理、脑影像等，研究可测量、可证实的有意识心理过程</td></tr>
+            <tr><td>一句话</td><td>“看见什么，如实写下来”</td><td>“为什么会这样，拿证据解释”</td></tr>
+          </tbody>
+        </table></div>
+        <p class="table-note">提示：本章正文绝大多数定义属于描述性精神病理学；涉及“机制”的表述，教材并未展开实验性研究证据。</p>
+      </div>
+
+      <div class="module module-symptom">
+        <div class="module-head"><span class="module-index">判定</span><h3>精神症状的判定：四方面 + 四共同特点</h3></div>
+        <p>教材给出的判定框架是四个“比较”，缺一不可：</p>
+        <div class="card-grid">
+          <div class="card card-diagnosis"><div class="card-header"><span class="card-icon">①</span><span class="card-title">纵向比较</span></div><div class="card-body">与其过去一贯的表现进行比较，看精神活动是否具有明显改变。</div></div>
+          <div class="card card-diagnosis"><div class="card-header"><span class="card-icon">②</span><span class="card-title">横向比较</span></div><div class="card-body">与大多数正常人的精神活动相比较，是否具有明显差别；某种精神状态的持续时间是否超出了一般限度。</div></div>
+          <div class="card card-diagnosis"><div class="card-header"><span class="card-icon">③</span><span class="card-title">与现实环境相符</span></div><div class="card-body">结合当事人的心理背景和当时的周围环境，对其精神活动进行具体分析和判断。</div></div>
+          <div class="card card-diagnosis"><div class="card-header"><span class="card-icon">④</span><span class="card-title">符合精神病理学表现</span></div><div class="card-body">该体验是否符合精神病理学所描述的症状学表现。</div></div>
+        </div>
+
+        <p>不论哪一类症状，教材归纳出四个共同特点：</p>
+        <ul class="icon-list check">
+          <li><strong>不受意志控制</strong>：症状的出现不受患者意志的控制。</li>
+          <li><strong>难以转移消失</strong>：症状一旦出现，难以通过注意力转移等方法令其消失。</li>
+          <li><strong>与环境不相称</strong>：症状的内容与周围客观环境不相称。</li>
+          <li><strong>造成痛苦与损害</strong>：症状往往给患者带来不同程度的痛苦和社会功能损害。</li>
+        </ul>
+        <div class="callout callout-warning"><div class="callout-icon">⚠️</div><div class="callout-body"><strong>易错点</strong>“有幻觉”不等于“有精神病”。教材明确：正常人也可能有幻觉，但多发生于睡眠和觉醒的交替阶段，多数情况下是单纯的、短暂的，对精神疾病的诊断无明显意义。判定必须回到四方面与四特点，不能只抓一个名词。</div></div>
+      </div>
+
+      <div class="module module-case">
+        <div class="module-head"><span class="module-index">检查</span><h3>精神检查：五步查清一个症状</h3></div>
+        <p>教材指出，精神障碍患者的症状一般不会随时随地表现出来，有时需要医师仔细观察和反复检查才能发现。精神检查的方法主要为<strong>交谈和观察</strong>；能否发现症状，特别是某些隐蔽的症状，常取决于医患关系及检查技巧；与家属的沟通也尤为重要。根据短暂交谈和片面观察所做出的结论，很容易导致漏诊和误诊。</p>
+        <ol class="numbered-list">
+          <li>仔细检查，确定精神症状是否存在。</li>
+          <li>确定精神症状出现的频度、持续时间和严重程度。</li>
+          <li>分析各症状之间的关系，确定原发症状和继发症状。</li>
+          <li>注意类似症状之间的鉴别。</li>
+          <li>探讨可能影响症状发生的生物学因素和社会心理因素。</li>
+        </ol>
+        <p>检查和分析症状时，还须考虑<strong>性别、年龄、受教育程度、躯体状况、人格特征、社会地位、文化背景、生活环境</strong>等影响因素，以便对具体情况作具体分析。</p>
+        <div class="callout callout-example"><div class="callout-icon">📎</div><div class="callout-body"><strong>教材说明</strong>总论部分教材未提供临床病例，仅以操作要点和定义呈现；因此本模块不虚构病例，举例留到各症状类别。</div></div>
+      </div>
+
+      <div class="module module-diff">
+        <div class="module-head"><span class="module-index">价值</span><h3>症状学的诊断价值：为什么它是“基本功”</h3></div>
+        <p>教材用一条清晰的逻辑链说明症状学的地位：精神障碍病因复杂，涉及生物、心理、社会等多方面，<strong>目前仍缺乏有效的生物学诊断指标</strong> → 诊断主要依赖<strong>病史采集和精神检查</strong> → 通过对精神活动的综合分析和判断，<strong>发现和识别精神症状</strong>，才能初步判断个体是否有精神障碍。由此，症状学成为学习精神病学的基础，熟练掌握症状学是精神科医师必备的基本功。</p>
+        <div class="table-wrap"><table class="comparison-table">
+          <thead><tr><th>诊断环节</th><th>症状学提供什么</th><th>教材依据/说明</th></tr></thead>
+          <tbody>
+            <tr><td>是否存在异常</td><td>四方面比较 + 四共同特点</td><td>教材第一节“如何判断个体是否有精神症状”</td></tr>
+            <tr><td>异常属于哪一类</td><td>按感知觉、思维、注意、记忆、智能、定向力、情感、意志、动作行为、意识、自知力归类</td><td>教材第二节按心理过程逐项描述</td></tr>
+            <tr><td>症状之间谁主谁次</td><td>区分原发症状与继发症状</td><td>精神检查第 3 要点</td></tr>
+            <tr><td>能否组成一个诊断单元</td><td>识别精神疾病综合征（幻觉妄想、躁狂、抑郁、紧张、遗忘）</td><td>教材第三节</td></tr>
+            <tr><td>病情轻重与康复</td><td>自知力有无及恢复程度</td><td>教材“自知力缺乏是重性精神障碍的重要标志”</td></tr>
+            <tr><td>器质性还是功能性</td><td>意识障碍、定向力障碍、注意狭窄、记忆障碍等线索</td><td>教材：意识障碍主要见于脑器质性、躯体疾病及中毒所致精神障碍</td></tr>
+          </tbody>
+        </table></div>
+        <p class="table-note">一句话：症状学不是诊断标准本身，而是诊断标准之前那一步——没有可靠症状，后面的分类和鉴别都无从谈起。</p>
+      </div>
+
+      <div class="callout callout-memory"><div class="callout-icon">🧠</div><div class="callout-body"><strong>记忆提示｜“纵横现病”+“四不”</strong>判定四方面记“纵（比过去）—横（比常人）—现（合现实）—病（合病理）”；共同特点记“不控、不散、不称、不轻”（不受意志控制、难以转移消失、与环境不相称、带来痛苦/功能损害）。</div></div>
+    </section>
+
+    <section id="perception" class="section">
+      <div class="section-header"><span class="section-number">06</span><h2>感知觉障碍</h2></div>
+      <p class="lead">教材把“感知觉”拆成感觉与知觉两个过程，再把异常分为感觉障碍、知觉障碍、感知综合障碍三层。三层的关键差别是：感觉错在“个别属性”，知觉错在“整体印象”，感知综合障碍则是“整体对、个别属性错”。</p>
+
+      <div class="module module-cause">
+        <div class="module-head"><span class="module-index">定义</span><h3>感觉、知觉与感知综合障碍</h3></div>
+        <p><strong>感觉（sensation）</strong>：大脑对客观刺激作用于感觉器官所产生的对事物<strong>个别属性</strong>的反映，如形状、颜色、大小、重量和气味等；视觉、听觉、味觉、嗅觉、触觉、平衡觉均属于感觉。</p>
+        <p><strong>知觉（perception）</strong>：在感觉基础上，大脑对事物的各种不同属性进行整合，并结合以往经验，形成的<strong>整体印象</strong>。教材以桃子为例：根据桃子的形状、气味、颜色等感觉，结合既往对桃子的认知，在大脑中产生的桃子的印象就是知觉。</p>
+        <p><strong>感知综合障碍（psychosensory disturbance）</strong>：患者对客观事物的<strong>整体属性能够正确感知</strong>，但对某些<strong>个别属性</strong>（如大小、形状、颜色、距离、空间位置等）产生错误的感知。</p>
+        <div class="callout callout-info"><div class="callout-icon">💡</div><div class="callout-body"><strong>正常前提</strong>正常情况下，人体的感觉和知觉是与外界客观事物相一致的。判断病理性感知，仍要回到总论四方面：是否有客观刺激、是否与环境相称、能否纠正、是否造成痛苦。</div></div>
+      </div>
+
+      <div class="module module-symptom">
+        <div class="module-head"><span class="module-index">分类</span><h3>一、感觉障碍（3 项）</h3></div>
+        <div class="table-wrap"><table class="comparison-table">
+          <thead><tr><th>症状（英文）</th><th>核心表现</th><th>教材举例</th><th>多见于</th></tr></thead>
+          <tbody>
+            <tr><td>感觉减退<br>hypoesthesia</td><td>对刺激的感受性降低、感觉阈值增高；对外界强烈刺激只产生轻微感觉体验，或完全不能感知。完全不能感知称<strong>感觉缺失（anesthesia）</strong>。</td><td>教材未给具体生活例子，仅作阈值描述</td><td>神经系统疾病；精神科多见于抑郁障碍、木僵状态、意识障碍和分离性障碍</td></tr>
+            <tr><td>感觉过敏<br>hyperesthesia</td><td>对刺激的感受性增高、感觉阈值降低；对外界一般强度刺激产生强烈感觉体验。</td><td>阳光特别刺眼、轻柔的音乐特别刺耳、轻微触摸皮肤感到疼痛难忍</td><td>神经系统疾病；精神科多见于分离性障碍、躯体不适障碍</td></tr>
+            <tr><td>内感性不适<br>senestopathia</td><td>又称体感异常：躯体内部产生的不舒适和难以忍受的异样感觉，可继发疑病观念。</td><td>咽喉部堵塞感、胃肠扭转感、腹部气流上涌感</td><td>躯体不适障碍、精神分裂症和抑郁障碍</td></tr>
+          </tbody>
+        </table></div>
+        <p class="table-note">内感性不适 vs 内脏幻觉：前者是“躯体内部异样感”，后者是“某一脏器虚幻的知觉体验”（见下文本体幻觉），教材将二者分置不同层级。</p>
+      </div>
+
+      <div class="module module-symptom">
+        <div class="module-head"><span class="module-index">分类</span><h3>二、知觉障碍：错觉与幻觉</h3></div>
+        <div class="card-grid">
+          <div class="card card-symptom"><div class="card-header"><span class="card-icon">🔀</span><span class="card-title">错觉 illusion</span></div><div class="card-body">对<strong>客观事物歪曲的知觉</strong>。正常人也可出现：光线暗淡时错视、恐惧紧张和期待时错听、疲劳时错视；但正常人能很快认识并纠正。病理性错觉常在意识障碍或其他精神障碍时出现，不容易被纠正，多表现为错视和错听，常带恐怖色彩。<br><strong>教材举例：</strong>患者把输液管看成一条蛇。<br><strong>多见于：</strong>谵妄状态、精神分裂症。</div></div>
+          <div class="card card-symptom"><div class="card-header"><span class="card-icon">👂</span><span class="card-title">幻觉 hallucination</span></div><div class="card-body"><strong>没有现实刺激作用于感觉器官时出现的知觉体验</strong>，是一种虚幻的知觉。正常人也可能有幻觉，但多发生于睡眠和觉醒的交替阶段，多数情况下是单纯的、短暂的，对精神疾病的诊断无明显意义。幻觉是精神科临床上常见且重要的精神病性症状之一。</div></div>
+        </div>
+
+        <h4>（1）按所涉及的感觉器官分类</h4>
+        <div class="table-wrap"><table class="comparison-table">
+          <thead><tr><th>类型（英文）</th><th>核心表现与教材举例</th><th>临床提示</th></tr></thead>
+          <tbody>
+            <tr><td>幻听<br>auditory hallucination</td><td>听到并不存在的声音；可单调或复杂，言语性（评论、赞扬、辱骂、斥责、命令等）或非言语性（机器轰鸣、流水、鸟叫等）。言语性幻听最常见，声音可直接与患者对话，也可作为第三者听到他人对话。内容通常与患者有关且多不利。</td><td>精神科最常见的幻觉；<strong>评论性、议论性、命令性幻听是精神分裂症的典型症状</strong>。可继发自言自语、对空谩骂、拒饮拒食、自杀自伤或伤人毁物。</td></tr>
+            <tr><td>幻视<br>visual hallucination</td><td>看到并不存在的事物；可为单调的光、色、片段形象，也可为复杂的人物、景象、场面。教材举例：墙上有壁虎在爬、房间内有龙在飞舞。</td><td>意识清晰状态下多见于精神分裂症；意识障碍时多见于谵妄状态，内容常形象、生动、鲜明，多具恐怖性质。</td></tr>
+            <tr><td>幻味<br>gustatory hallucination</td><td>尝到食物或水中并不存在的特殊怪味道，因而常拒饮拒食。</td><td>经常与被害妄想同时存在（认为“怪味道”是被人投毒）；多见于精神分裂症。</td></tr>
+            <tr><td>幻嗅<br>olfactory hallucination</td><td>闻到环境中并不存在的难闻气味，如腐败的尸体气味、化学物品烧焦味、浓烈刺鼻的药物气味、体内发出的怪味。</td><td>常与幻味同时出现，并经常与被害妄想结合，多见于精神分裂症；<strong>单一出现的幻嗅，多见于颞叶癫痫或颞叶器质性损害</strong>。</td></tr>
+            <tr><td>幻触<br>tactile hallucination</td><td>没有任何刺激时，感到皮肤上有异常感觉，如电麻感、虫爬感、针刺感。感到自己的性器官被刺激称<strong>性幻觉（sexual hallucination）</strong>。</td><td>可见于精神分裂症等。</td></tr>
+            <tr><td>本体幻觉<br>body-sensory hallucination</td><td>包括<strong>内脏幻觉</strong>（骨头里的虫爬感、血管拉扯感、肠道扭转感、肺叶被挤压感）与<strong>运动幻觉</strong>（静止时自觉身体某部位在动；未说话却感受到唇舌运动为言语运动性幻觉，感受到肢体、躯干运动为精神运动性幻觉）。</td><td>内脏幻觉常伴随疑病妄想，多见于精神分裂症和抑郁障碍；运动幻觉多见于精神分裂症。</td></tr>
+          </tbody>
+        </table></div>
+
+        <h4>（2）按体验的来源分类</h4>
+        <div class="table-wrap"><table class="comparison-table">
+          <thead><tr><th>维度</th><th>真性幻觉 genuine hallucination</th><th>假性幻觉 pseudo hallucination</th></tr></thead>
+          <tbody>
+            <tr><td>空间位置</td><td>来自<strong>外部客观空间</strong></td><td>存在于<strong>自己的主观空间</strong>内</td></tr>
+            <tr><td>获得途径</td><td><strong>通过感觉器官</strong>获得</td><td><strong>不通过感觉器官</strong>获得</td></tr>
+            <tr><td>清晰度</td><td>内容就像感知外界真实事物一样生动形象</td><td>内容往往比较模糊、不清晰和不完整</td></tr>
+            <tr><td>患者表述</td><td>常述说是亲耳听到或亲眼看到的，深信不疑，并做出相应情感与行为反应</td><td>常描述为没有通过耳朵或眼睛，大脑内就隐约出现了某种声音或影像；但仍比较肯定地相信</td></tr>
+          </tbody>
+        </table></div>
+
+        <h4>（3）按产生的条件分类</h4>
+        <div class="card-grid">
+          <div class="card card-symptom"><div class="card-header"><span class="card-icon">🔁</span><span class="card-title">功能性幻觉 functional hallucination</span></div><div class="card-body">伴随现实刺激出现：某种感觉器官处于功能活动状态时，出现涉及<strong>该器官</strong>的幻觉，<strong>正常知觉与幻觉并存</strong>。临床常见功能性幻听，多见于精神分裂症。</div></div>
+          <div class="card card-symptom"><div class="card-header"><span class="card-icon">↔️</span><span class="card-title">反射性幻觉 reflex hallucination</span></div><div class="card-body">也伴随现实刺激，但涉及<strong>两个不同的感觉器官</strong>：某一感官处于功能活动状态时，出现涉及另一感官的幻觉。如听到广播声音的同时就看到播音员的人像站在面前。多见于精神分裂症。</div></div>
+          <div class="card card-symptom"><div class="card-header"><span class="card-icon">🌙</span><span class="card-title">入睡前幻觉 hypnagogic hallucination</span></div><div class="card-body">出现在入睡前的幻觉，多为幻视。闭眼就能看见许多幻觉形象，如各种动物、风景或人体的某部分，与睡梦时的体验相近。</div></div>
+          <div class="card card-symptom"><div class="card-header"><span class="card-icon">💔</span><span class="card-title">心因性幻觉 psychogenic hallucination</span></div><div class="card-body">在强烈心理因素影响下出现，幻觉内容与心理因素有密切联系，如看到亡故亲人的影子在房间里走动。多见于应激相关障碍、分离性障碍等。</div></div>
+        </div>
+      </div>
+
+      <div class="module module-symptom">
+        <div class="module-head"><span class="module-index">分类</span><h3>三、感知综合障碍（5 项）</h3></div>
+        <div class="table-wrap"><table class="comparison-table">
+          <thead><tr><th>类型（英文）</th><th>核心表现</th><th>教材举例</th><th>多见于</th></tr></thead>
+          <tbody>
+            <tr><td>视物变形症<br>metamorphopsia</td><td>看到周围的人或物体的形状、大小、体积等发生变化。比实际增大称<strong>视物显大症（macropsia）</strong>，比实际缩小称<strong>视物显小症（micropsia）</strong>。</td><td>宠物猫像老虎一样大；母亲像小布娃娃一样大</td><td>癫痫</td></tr>
+            <tr><td>自身感知综合障碍</td><td>感到自己身体某一部分在大小、形状等方面发生变化。</td><td>手臂变得特别长，伸手可抓到空中飞鸟；面部扭曲、眼睛大小不一致、鼻子像蒜头，反复照镜子</td><td>精神分裂症、癫痫等</td></tr>
+            <tr><td>时间感知综合障碍</td><td>对时间快慢出现不正确的感知体验。</td><td>感到时间凝固、岁月不再流逝、外界事物停滞不前；或感到时间飞逝，似身处“时空隧道”，外界变化异乎寻常地快</td><td>抑郁障碍、躁狂发作、精神分裂症等</td></tr>
+            <tr><td>空间感知综合障碍</td><td>对周围事物的距离、空间位置等感知错误。</td><td>候车时汽车已驶进站台，患者仍感觉汽车离自己很远</td><td>教材未注明具体疾病</td></tr>
+            <tr><td>现实解体<br>derealization</td><td>感到周围事物和环境变得不真实，犹如隔了一层窗纱。</td><td>房屋、树木像纸板糊成的，毫无生气；周围人像没有生命的木偶</td><td>抑郁障碍、精神分裂症等</td></tr>
+          </tbody>
+        </table></div>
+        <div class="callout callout-warning"><div class="callout-icon">⚠️</div><div class="callout-body"><strong>教材边界</strong>“空间感知综合障碍”教材只给定义与候车例子，未标注常见疾病；不要凭印象补“癫痫”。同理，人格解体教材本章未展开，不属本章内容。</div></div>
+      </div>
+
+      <div class="module module-case">
+        <div class="module-head"><span class="module-index">举例</span><h3>教材原文病例</h3></div>
+        <div class="callout callout-example"><div class="callout-icon">📎</div><div class="callout-body"><strong>教材原文｜幻听（男，30 岁，精神分裂症）</strong>“我经常听到许多人在议论我，其中有些人说我是杀人犯、贩毒集团的头子，还有人说我是正义的使者。我在单位上班时，他们在隔壁说，回到家里他们就在我家的院子里说。我走到哪里他们就跟到哪里，但到处找也找不到他们，他们就像隐形人一样。我让家里人帮我去找，但家里人说没有听到。”</div></div>
+        <p>这个例子同时呈现了幻听的三个要点：<strong>无现实刺激</strong>（到处找不到人）、<strong>言语性内容</strong>（议论、评价）、<strong>与患者相关且不利</strong>（说他是杀人犯）。家属听不到，提示声音只存在于患者知觉中。</p>
+        <div class="callout callout-example"><div class="callout-icon">📎</div><div class="callout-body"><strong>教材原文｜功能性幻听（男，21 岁，精神分裂症）</strong>“走在街上时，只要听到汽车喇叭响就能同时听到还有一个女的骂我是流氓，这个声音是从汽车喇叭里传出来的。只要喇叭响，她就开始骂我。”</div></div>
+        <p>此例是鉴别功能性幻觉与反射性幻觉的“标准题”：现实刺激（喇叭声）与幻觉（骂声）都落在<strong>听觉</strong>这一个感官，且同时并存，所以是功能性幻听；若“听到广播声同时看到播音员人像”，涉及听、视两个感官，才是反射性幻觉。</p>
+        <p class="table-note">教材另举：错觉——把输液管看成蛇；幻视——墙上有壁虎在爬、房间内有龙在飞舞；视物显大/显小——猫像老虎、母亲像布娃娃；空间感知——汽车已进站仍觉很远。</p>
+      </div>
+
+      <div class="module module-diff">
+        <div class="module-head"><span class="module-index">鉴别</span><h3>临床意义与易混点</h3></div>
+        <p>感知觉障碍的临床价值集中在三件事：①区分“有客观刺激的歪曲”与“无客观刺激的虚幻”；②根据伴随意识状态判断器质性线索；③根据单一/复合特征提示特定部位或特定障碍。</p>
+        <div class="table-wrap"><table class="comparison-table">
+          <thead><tr><th>易混对</th><th>关键差别</th><th>一句话鉴别</th></tr></thead>
+          <tbody>
+            <tr><td>错觉 vs 幻觉</td><td>错觉有客观事物作用，只是被歪曲；幻觉没有现实刺激作用于感觉器官。</td><td>“有东西看错”是错觉，“没东西却听到/看到”是幻觉。</td></tr>
+            <tr><td>功能性 vs 反射性幻觉</td><td>功能性涉及同一感官，正常知觉与幻觉并存；反射性涉及两个不同感官。</td><td>同官并存=功能性，跨官联动=反射性。</td></tr>
+            <tr><td>真性 vs 假性幻觉</td><td>真性在外部客观空间、经感官获得；假性在主观空间、不经感官获得。</td><td>“亲耳听到”多真性，“脑内隐约出现”多假性。</td></tr>
+            <tr><td>幻觉 vs 感知综合障碍</td><td>幻觉是无中生有；感知综合障碍是整体属性正确、个别属性（大小/形状/距离等）错误。</td><td>“多了一个东西”是幻觉，“东西还是那个但变了形”是感知综合障碍。</td></tr>
+            <tr><td>内感性不适 vs 内脏幻觉</td><td>前者为躯体内部异样感，后者为某一脏器的虚幻知觉体验。</td><td>“说不清的难受”偏内感性不适，“清楚感到某脏器在动/被挤压”偏内脏幻觉。</td></tr>
+          </tbody>
+        </table></div>
+        <ul class="icon-list">
+          <li><strong>意识状态是分水岭：</strong>意识清晰时的幻视多见于精神分裂症；意识障碍时的恐怖性幻视多见于谵妄状态。</li>
+          <li><strong>单一幻嗅是器质性警报：</strong>教材明确单一出现的幻嗅多见于颞叶癫痫或颞叶器质性损害。</li>
+          <li><strong>幻味/幻嗅常与被害妄想捆绑：</strong>解释“怪味道/怪气味是有人害我”，不能只记幻觉而漏掉妄想。</li>
+          <li><strong>正常人的错觉/幻觉：</strong>正常人错觉可很快纠正；正常人幻觉多在睡眠与觉醒交替阶段、单纯短暂，诊断意义无明显。</li>
+        </ul>
+      </div>
+
+      <div class="callout callout-memory"><div class="callout-icon">🧠</div><div class="callout-body"><strong>记忆提示｜“感三、错一、幻三轴、综五”</strong>感觉 3 项：减退、过敏、内感性不适；知觉障碍先记错觉 1 项；幻觉按三条轴展开——<strong>感官六</strong>（听视味嗅触本体）、<strong>来源二</strong>（真/假）、<strong>条件四</strong>（功/反/心/睡）；感知综合 5 项：视物变形、自身、时间、空间、现实解体。条件四字诀：“功同官、反两官、心相关、睡之前”。</div></div>
+    </section>
+
+    <section id="thinking" class="section">
+      <div class="section-header"><span class="section-number">07</span><h2>思维障碍</h2></div>
+      <p class="lead">思维障碍是本章最大的一块：教材先讲“思维怎么断了、乱了、被外力控制了”（思维形式障碍），再讲“思维内容错成了什么信念”（思维内容障碍，核心是妄想），最后补上介于妄想与正常之间的超价观念。</p>
+
+      <div class="module module-cause">
+        <div class="module-head"><span class="module-index">定义</span><h3>思维与正常思维四特征</h3></div>
+        <p><strong>思维</strong>是人脑对客观事物间接概括的反映，可以揭露事物内在的、本质的特征，是人类认识活动的最高形式；包括分析、综合、比较、抽象、概括、判断和推理等基本过程。</p>
+        <p>正常人的思维具有四个特征：<strong>目的性</strong>（围绕一定目的进行并解决某一问题）、<strong>连贯性</strong>（概念前后衔接、相互联系）、<strong>逻辑性</strong>（符合思维逻辑规律、有一定道理）、<strong>实践性</strong>（能通过客观实践检验）。</p>
+        <div class="table-wrap"><table class="comparison-table">
+          <thead><tr><th>大类</th><th>教材定义</th><th>包含内容</th></tr></thead>
+          <tbody>
+            <tr><td>思维形式障碍<br>thought form disorder</td><td>主要为思维过程的联想及逻辑障碍。联想障碍表现为思维速度、数量、表现形式或思维内容连接形式的异常；逻辑障碍表现为逻辑推理过程的异常。</td><td>教材以 14 个编号呈现；其中第 4 项含思维散漫、思维破裂、语词杂拌，第 7 项含思维被夺、思维插入，拆开共 17 个症状名。</td></tr>
+            <tr><td>思维内容障碍</td><td>最主要的表现形式是妄想（delusion）。</td><td>妄想 + 超价观念（教材单列于思维内容之后）。</td></tr>
+          </tbody>
+        </table></div>
+      </div>
+
+      <div class="module module-symptom">
+        <div class="module-head"><span class="module-index">分类</span><h3>一、思维形式障碍（17 个症状名）</h3></div>
+        <div class="table-wrap"><table class="comparison-table">
+          <thead><tr><th>症状（英文）</th><th>核心表现（教材表述）</th><th>多见于</th></tr></thead>
+          <tbody>
+            <tr><td>思维奔逸<br>flight of thought</td><td>联想速度加快、数量增多和转换加速。特别健谈、滔滔不绝、口若悬河，感到脑子像加了“润滑油”一样难以停顿；语速快、语量多，主题极易随环境改变（<strong>随境转移</strong>），可有<strong>音联</strong>（音韵联想）或<strong>意联</strong>（字意联想）。</td><td>躁狂发作</td></tr>
+            <tr><td>思维迟缓<br>inhibition of thought</td><td>联想速度减慢、数量减少和转换困难。语量少、语速慢、语音低、反应迟缓；患者感到脑子像生锈的机器，变笨、反应变慢、思考困难。</td><td>抑郁障碍</td></tr>
+            <tr><td>思维贫乏<br>poverty of thought</td><td>联想概念与词汇贫乏，感到脑子空空荡荡；寡言少语，言语内容空洞单调或词穷句短，回答简单，严重者对什么问题都回答“不知道”。</td><td>精神分裂症、痴呆及智力发育障碍等</td></tr>
+            <tr><td>思维散漫<br>loosening of thinking</td><td>联想松弛、内容散漫、缺乏主题，话题转换缺乏必要联系；说话东拉西扯，别人不理解其主题思想，对问话回答不切题，交流困难。</td><td>精神分裂症及智力发育障碍</td></tr>
+            <tr><td>思维破裂<br>splitting of thought</td><td>言语或书写内容有结构完整的句子，但各句含意互不相关，变成语句堆积，整段内容令人不能理解。</td><td>精神分裂症</td></tr>
+            <tr><td>语词杂拌<br>word salad</td><td>言语支离破碎，句子结构不完整，为一些不相干字、词的堆积。教材例：问姓名答“张华，地上的云彩，汽车煮水饺，计算机，鸟在水中飞飞飞，奥氮平……”</td><td>精神分裂症</td></tr>
+            <tr><td>思维不连贯<br>incoherence of thought</td><td>表现与语词杂拌类似，但产生背景不同：是在<strong>意识障碍背景下</strong>出现的言语支离破碎和杂乱无章状态。</td><td>谵妄状态</td></tr>
+            <tr><td>思维中断<br>thought blocking</td><td>联想过程突然中断。无意识障碍、无外界干扰时言语突然停顿，片刻后重新开始，但所谈主题已经转换。</td><td>精神分裂症</td></tr>
+            <tr><td>思维被夺<br>thought deprivation<br>思维插入<br>thought insertion</td><td>同属思维联想障碍。被夺：感到自己的思想被某种外力突然抽走；插入：感到有某种不属于自己的思想被强行塞入脑中。两者均不受个人意志支配。</td><td>精神分裂症</td></tr>
+            <tr><td>强制性思维<br>forced thought</td><td>思维联想的自主性障碍。脑内涌现大量无现实意义、不属于自己的联想，被外力强加；常突然出现、突然消失，内容多变。</td><td>精神分裂症</td></tr>
+            <tr><td>病理性赘述<br>circumstantiality</td><td>联想活动迂回曲折、枝节过多；对事物作不必要的过分详尽描述，言语啰唆，但最终能回答出有关问题；要求简明扼要时无法做到。</td><td>癫痫、痴呆等</td></tr>
+            <tr><td>思维化声<br>audible thought</td><td>同时包含思维障碍和感知觉障碍：思考时同时感到自己的思想在脑子里变成了言语声，自己和他人均能听到。</td><td>精神分裂症</td></tr>
+            <tr><td>语词新作<br>neologism</td><td>概念的融合、浓缩和无关概念的拼凑；自创奇特文字、符号、图形或语言并赋予特殊意义，他人无法理解。教材例：“∞”表示亲密友好；“犭巿”代表狼心狗肺；“±”代表若即若离。</td><td>精神分裂症</td></tr>
+            <tr><td>象征性思维<br>symbolic thinking</td><td>概念转换障碍：以无关的具体概念代替某一抽象概念，不经患者本人解释，他人无法理解。教材例：反穿衣服表示“表里合一、心地坦白”。</td><td>精神分裂症</td></tr>
+            <tr><td>逻辑倒错性思维<br>paralogic thinking</td><td>以推理缺乏逻辑性为特点：推理过程缺乏前提依据或因果倒置，令人不可理解、离奇古怪。</td><td>精神分裂症</td></tr>
+            <tr><td>强迫思维<br>obsession</td><td>脑中反复出现的某一概念或相同内容的思维，明知不合理和没有必要，但无法摆脱，常伴痛苦体验。可表现为强迫怀疑、强迫回忆、强迫性对立思维、强迫性穷思竭虑等。</td><td>强迫症，也可见于精神分裂症</td></tr>
+          </tbody>
+        </table></div>
+        <div class="callout callout-warning"><div class="callout-icon">⚠️</div><div class="callout-body"><strong>不要数错</strong>教材标题写“常见症状如下”并以 1—14 编号，但第 4 项实际含三个症状（散漫、破裂、语词杂拌），第 7 项含两个症状（被夺、插入）。因此可称“14 个编号、17 个症状名”，不要笼统写“14 种”。</div></div>
+      </div>
+
+      <div class="module module-case">
+        <div class="module-head"><span class="module-index">举例</span><h3>教材原文病例</h3></div>
+        <div class="callout callout-example"><div class="callout-icon">📎</div><div class="callout-body"><strong>教材原文（节录）｜思维奔逸（男，23 岁，双相障碍躁狂发作）</strong>“我叫马林，‘马’是美国总统‘奥巴马’的‘马’，‘林’是民族英雄‘林则徐’的‘林’。他们的优良特性在我身上也得到了充分体现，勇敢、聪明……”问住址答“中国济南，南部山区”，随后唱“我家住在黄土高坡……”看到女医师立即赞美“睫毛长长，高高鼻梁，细细身材，皮肤白白……”</div></div>
+        <p>例子中的“奥巴马—林则徐”是<strong>意联</strong>（字意联想）；从住址突然转到唱歌，体现主题随话题迅速转换（<strong>随境转移</strong>）；语速快、语量多、难以停顿，是思维奔逸的速度特征。</p>
+        <div class="callout callout-example"><div class="callout-icon">📎</div><div class="callout-body"><strong>教材原文（情节摘述）｜病理性赘述（男，62 岁，癫痫）</strong>问“你怎么来医院的？”患者从“家门口有 K50 路公交车”讲起，逐一交代碰到老李、老张、买菜、跑着上车、6 站到趵突泉、等 3 分钟换 K59、过泉城广场/解放路/历山路/文化东路，最后才说“看见了精神卫生中心的牌子，老伴扶着我就走来了”。</div></div>
+        <p>关键不是“话多”，而是<strong>枝节过多、迂回曲折，但最终回答了问题</strong>；这与思维散漫“主题缺失、答不切题”不同。</p>
+        <p class="table-note">教材另举：象征性思维——患者拿眼镜晃，表示“像戴着眼镜一样看得清清楚楚”；逻辑倒错——患者不愿在空调房睡觉，称“我是恒温动物，我不需要冬眠”；强迫思维——睡前反复检查门窗、天然气（强迫怀疑）。</p>
+      </div>
+
+      <div class="module module-diff">
+        <div class="module-head"><span class="module-index">鉴别</span><h3>形式障碍的易混点</h3></div>
+        <div class="table-wrap"><table class="comparison-table">
+          <thead><tr><th>易混组</th><th>关键差别</th><th>一句话鉴别</th></tr></thead>
+          <tbody>
+            <tr><td>思维散漫 / 思维破裂 / 语词杂拌</td><td>连贯性由轻到重：散漫是话题散、缺乏主题但仍成段；破裂是句子完整而成段无意义；语词杂拌是句子结构也不完整，只剩字词堆积。</td><td>散漫“跑题”，破裂“句句无关”，杂拌“词词拼盘”。</td></tr>
+            <tr><td>思维破裂 vs 思维不连贯</td><td>表现类似，分水岭是<strong>意识障碍背景</strong>：有意识障碍归思维不连贯（谵妄），无意识障碍归思维破裂（精神分裂症）。</td><td>先看意识，再定名词。</td></tr>
+            <tr><td>思维迟缓 vs 思维贫乏</td><td>迟缓是“速度慢、数量少但内容仍有”，多见于抑郁；贫乏是“概念与词汇贫乏、脑子空”，多见于精神分裂症、痴呆。</td><td>“转得慢”是迟缓，“没东西可转”是贫乏。</td></tr>
+            <tr><td>思维中断 vs 思维被夺</td><td>中断是联想过程突然停，片刻后换主题；被夺是患者感到思想被外力抽走。</td><td>中断是“断片”，被夺是“被抢走”。</td></tr>
+            <tr><td>强迫思维 vs 强制性思维</td><td>强迫思维是<strong>自己的</strong>思想，同一内容反复持续出现，患者痛苦并力图摆脱，多见于强迫症；强制性思维是<strong>外力强加、不属于自己</strong>的思想，内容变化多端、突然出现突然消失，多见于精神分裂症。</td><td>“我的、反复”=强迫；“别人的、强塞”=强制。</td></tr>
+            <tr><td>思维插入 vs 强制性思维</td><td>插入时患者仍有属于自己的、受意愿支配的思维活动；强制性思维时患者认为思维活动完全不受自己意愿支配，已没有属于自己的思维活动。</td><td>插入是“混入”，强制是“全被接管”。</td></tr>
+            <tr><td>病理性赘述 vs 思维散漫</td><td>赘述啰嗦但最终答出问题；散漫缺乏主题、回答不切题。</td><td>“绕路能到”是赘述，“走到丢”是散漫。</td></tr>
+          </tbody>
+        </table></div>
+        <div class="callout callout-info"><div class="callout-icon">💡</div><div class="callout-body"><strong>临床意义</strong>思维形式障碍是“思维怎么组织”的窗口：速度/数量异常多指向情感发作（奔逸—躁狂、迟缓—抑郁）；连贯性与自主性异常多指向精神分裂症；意识障碍背景下的不连贯指向谵妄；赘述指向癫痫、痴呆等器质性/认知损害。</div></div>
+      </div>
+
+      <div class="module module-symptom">
+        <div class="module-head"><span class="module-index">内容</span><h3>二、思维内容障碍：妄想</h3></div>
+        <p><strong>妄想（delusion）</strong>是在病态推理和判断基础上形成的一种<strong>病理性的歪曲的信念</strong>。教材给出四个特征：</p>
+        <ol class="numbered-list">
+          <li>内容通常与事实不符，缺乏客观现实基础，但患者仍<strong>坚信不疑</strong>。</li>
+          <li>内容通常<strong>涉及患者本人</strong>，且与个人具有利害关系。</li>
+          <li>内容常具有<strong>个体独特性</strong>，是个体的心理现象，并非集体信念。</li>
+          <li>内容与患者的<strong>文化背景和经历</strong>有关，且通常有浓厚的时代色彩。</li>
+        </ol>
+        <div class="callout callout-warning"><div class="callout-icon">⚠️</div><div class="callout-body"><strong>妄想 vs 幻想</strong>幻想是一种超现实的遐想，是把不同元素或内容组合在一起的思考形式；部分人遇到挫折或难以解决的问题时想入非非，把自己放到想象世界以应付挫折、获得心理满足。但幻想通常<strong>具有一定目的性，易于纠正</strong>。妄想则坚信不疑、难以纠正。</div></div>
+
+        <h4>按起源与结构分类</h4>
+        <div class="table-wrap"><table class="comparison-table">
+          <thead><tr><th>分类轴</th><th>类型</th><th>教材定义与要点</th><th>临床意义</th></tr></thead>
+          <tbody>
+            <tr><td>起源</td><td>原发性妄想<br>primary delusion</td><td>没有发生基础的妄想；内容不可理解，不能用既往经历、当前处境及其他心理活动等加以解释。</td><td><strong>精神分裂症的典型症状，对精神分裂症具有重要诊断价值</strong></td></tr>
+            <tr><td>起源</td><td>继发性妄想<br>secondary delusion</td><td>发生在其他病理心理基础上的妄想，或与某种经历、情境等有关的妄想。如抑郁基础上产生的自罪妄想；亲人死于某种疾病后过分关注自己健康而逐渐产生的疑病妄想。</td><td>可见于多种精神障碍</td></tr>
+            <tr><td>结构</td><td>系统性妄想<br>systematized delusion</td><td>内容前后相互联系、结构严密；形成过程较漫长，逻辑性较强，与现实有一定联系或围绕某一核心思想，不仔细辨别往往难以发现。</td><td>强调“结构完整”，不等于“内容真实”</td></tr>
+            <tr><td>结构</td><td>非系统性妄想<br>unsystematized delusion</td><td>片段、零散、内容不固定、结构不严密；产生较快，缺乏逻辑性，内容明显脱离现实，易变化甚至自相矛盾。</td><td>强调“碎片化、易变”</td></tr>
+          </tbody>
+        </table></div>
+
+        <h4>按主要内容归类（11 型）</h4>
+        <div class="table-wrap"><table class="comparison-table">
+          <thead><tr><th>类型（英文）</th><th>核心表现</th><th>教材例子（摘述）</th><th>多见于</th></tr></thead>
+          <tbody>
+            <tr><td>关系妄想<br>delusion of reference</td><td>认为周围环境中与自己无关的事情均与自己有关。</td><td>别人谈话是在议论自己、咳嗽针对自己，电视报纸内容也与自己有关</td><td>精神分裂症和其他妄想性障碍</td></tr>
+            <tr><td>被害妄想<br>delusion of persecution</td><td>坚信自己被某些人或某组织迫害，如投毒、跟踪、监视、诽谤等；可继发拒食、逃跑、报警、自伤、伤人。</td><td>认为父母与单位合伙投毒、房间被安装监控器</td><td>主要见于精神分裂症和其他妄想性障碍</td></tr>
+            <tr><td>夸大妄想<br>grandiose delusion</td><td>认为自己拥有非凡的才能、智慧、财富、权力、地位等。</td><td>自称发明家，发明电脑快千万倍、汽车水陆空三用</td><td>躁狂发作、精神分裂症和痴呆等</td></tr>
+            <tr><td>罪恶妄想<br>delusion of guilt</td><td>又称自罪妄想：坚信自己犯了严重错误，甚至罪大恶极、死有余辜，应受严厉惩罚；可拒食、自杀。</td><td>因孩子发热未送医、打过孩子屁股而认为应去自首</td><td>多见于抑郁障碍，也可见于精神分裂症</td></tr>
+            <tr><td>疑病妄想<br>hypochondriacal delusion</td><td>坚信自己患了某种严重躯体疾病或不治之症，到处求医，详细检查和反复医学验证也不能纠正。</td><td>认为“内脏都腐烂了”“大脑成了一个空壳”“血液干枯了”</td><td>抑郁障碍、精神分裂症及躯体不适障碍等</td></tr>
+            <tr><td>虚无妄想<br>nihilistic delusion</td><td>又称否定妄想：认为客观存在的事物已不复存在，一切都是虚假的，甚至自身也不复存在。</td><td>认为自己的器官已消失，因此无须进食、无须休息</td><td>抑郁障碍、精神分裂症等</td></tr>
+            <tr><td>钟情妄想<br>delusion of love</td><td>坚信自己被某异性或许多异性钟情，对方的一言一行都是对自己爱的表达；遭拒绝仍认为是考验。</td><td>男生朝她笑、跟在后面出教室、读《简·爱》都被当作喜欢证据</td><td>精神分裂症</td></tr>
+            <tr><td>嫉妒妄想<br>delusion of jealousy</td><td>坚信配偶对自己不忠诚、另有外遇；反复查手机、跟踪监视、检查衣物等以寻觅“证据”。</td><td>丈夫晚几分钟回家即追问，闻香水味、查包</td><td>精神分裂症、痴呆等</td></tr>
+            <tr><td>非血统妄想<br>delusion of non-consanguinity</td><td>坚信自己不是父母亲生，虽经反复解释和证实仍坚信不疑；有时认为被抱养或寄养，但说不清缘由。</td><td>反复要求做亲子鉴定，称“可能我和他们长得不像”</td><td>精神分裂症</td></tr>
+            <tr><td>物理影响妄想<br>delusion of physical influence</td><td>又称被控制感：感到自己的思想、情感和意志行为受到某种外界力量控制而身不由己。</td><td>称被红外线、电磁波、超声波或特殊先进仪器控制，“让我笑我就得笑”</td><td>精神分裂症</td></tr>
+            <tr><td>内心被揭露感<br>experience of being revealed</td><td>又称被洞悉感：感到内心所想的事虽未说出、未写出，但被别人都知道了；说不清别人通过什么方式知道。</td><td>“我像一个透明人一样，所有人都知道我在想什么”</td><td>精神分裂症</td></tr>
+          </tbody>
+        </table></div>
+      </div>
+
+      <div class="module module-diff">
+        <div class="module-head"><span class="module-index">鉴别</span><h3>三、超价观念与妄想的边界</h3></div>
+        <p><strong>超价观念（overvalued idea）</strong>是一种具有<strong>强烈情感色彩</strong>的错误观念。其发生一般均有一定事实依据，不十分荒谬离奇，也没有明显的逻辑推理错误；此种观念片面而偏激，可明显地影响患者的行为及其他心理活动。多见于人格障碍。</p>
+        <div class="table-wrap"><table class="comparison-table">
+          <thead><tr><th>维度</th><th>超价观念</th><th>妄想</th></tr></thead>
+          <tbody>
+            <tr><td>事实基础</td><td>形成有一定性格基础与现实基础</td><td>内容通常与事实不符，缺乏客观现实基础</td></tr>
+            <tr><td>情绪色彩</td><td>伴有强烈情绪体验，内容比较符合客观实际</td><td>坚信不疑，情感反应随妄想内容而定</td></tr>
+            <tr><td>可纠正性</td><td>强烈情绪体验消退时，可随之减弱和消退</td><td>难以纠正，各种反证不能动摇</td></tr>
+            <tr><td>荒谬程度</td><td>不十分荒谬离奇，无明显逻辑推理错误</td><td>病态推理和判断，内容歪曲</td></tr>
+            <tr><td>典型人群</td><td>人格障碍</td><td>精神分裂症、妄想性障碍、抑郁障碍、躁狂发作、痴呆等</td></tr>
+          </tbody>
+        </table></div>
+        <p class="table-note">一句话：超价观念“有根、有情绪、可松动”；妄想“无根、坚信、不动摇”。</p>
+        <div class="callout callout-info"><div class="callout-icon">💡</div><div class="callout-body"><strong>诊断价值再强调</strong>教材只把“原发性妄想”明确写成“精神分裂症的典型症状，对精神分裂症具有重要诊断价值”。不要把“任何妄想”都等同于精神分裂症：被害、关系等妄想也见于其他妄想性障碍，夸大妄想还见于躁狂发作和痴呆，罪恶/疑病/虚无妄想常见于抑郁障碍。</div></div>
+      </div>
+
+      <div class="callout callout-memory"><div class="callout-icon">🧠</div><div class="callout-body"><strong>记忆提示｜形式“五看”+ 妄想“11 字”</strong>形式障碍按“看速度（奔逸/迟缓）、看数量（贫乏）、看连接（散漫/破裂/杂拌/不连贯）、看自主性（中断/被夺/插入/强制）、看概念逻辑（赘述/化声/新作/象征/逻辑倒错/强迫）”五看归位。11 型妄想口诀：<strong>“关被夸罪疑，虚钟嫉非物，洞”</strong>——关系、被害、夸大、罪恶、疑病、虚无、钟情、嫉妒、非血统、物理影响、内心被揭露（洞悉）。原发/继发记“原发无源不可解、精分价值高；继发有基有境、多人可见”。</div></div>
+    </section>
+
+    <section id="attention" class="section">
+      <div class="section-header"><span class="section-number">08</span><h2>注意障碍</h2></div>
+      <p class="lead">注意障碍只有 5 种，但每一种都对应“主动/被动”和“兴奋性/稳定性”的不同组合。把这两条轴握住，就不需要死记。</p>
+
+      <div class="module module-cause">
+        <div class="module-head"><span class="module-index">定义</span><h3>注意与正常注意三特征</h3></div>
+        <p><strong>注意（attention）</strong>是指个体精神活动集中指向一定对象的心理过程。教材把注意分为两类：<strong>主动注意</strong>（又称有意注意）是自觉的、有目的的注意；<strong>被动注意</strong>（又称无意注意）是外界刺激所激发、没有目的的注意。</p>
+        <p>教材举例：上课时学生听讲属于主动注意；有的同学突然把注意力转向教室外的脚步声则为被动注意。前者与意志活动、环境要求及个人兴趣爱好有关，需要个体做出努力；后者是对外界刺激的定向性反射反应，不需要自觉努力。</p>
+        <p>正常人的注意具有三个特征：<strong>集中性</strong>（心理活动只集中于一定事物上，具有一定范围和广度）、<strong>稳定性</strong>（心理活动能够长时间集中于某一客体或活动）、<strong>转移性</strong>（根据新的任务，主动把注意由一个对象转移到另一个对象）。</p>
+      </div>
+
+      <div class="module module-symptom">
+        <div class="module-head"><span class="module-index">分类</span><h3>五种注意障碍</h3></div>
+        <div class="table-wrap"><table class="comparison-table">
+          <thead><tr><th>症状（英文）</th><th>机制（教材表述）</th><th>核心表现与教材举例</th><th>多见于</th></tr></thead>
+          <tbody>
+            <tr><td>注意增强<br>hyperprosexia</td><td><strong>主动注意</strong>的兴奋性增高</td><td>过分关注某些事物。有被害妄想的患者对周围环境保持高度警惕，过分注意别人的一举一动；有疑病妄想的患者对身体的各种细微变化十分敏感，过分注意自己的健康状态。</td><td>精神分裂症、躯体不适障碍等</td></tr>
+            <tr><td>注意减退<br>hypoprosexia</td><td><strong>主动及被动注意</strong>的兴奋性减弱，注意稳定性降低</td><td>注意力难以唤起和维持。</td><td>抑郁障碍、精神分裂症等</td></tr>
+            <tr><td>注意涣散<br>divergence of attention</td><td><strong>被动注意</strong>兴奋性增强，注意稳定性降低</td><td>注意力不集中，容易受外界干扰而分心。</td><td>注意缺陷多动障碍、焦虑障碍、精神分裂症等</td></tr>
+            <tr><td>注意狭窄<br>narrowing of attention</td><td>注意的<strong>广度和范围</strong>显著缩小</td><td>当注意集中于某一事物时，不能再注意与之有关的其他事物。</td><td>意识障碍、智能障碍等</td></tr>
+            <tr><td>注意转移<br>transference of attention</td><td>注意<strong>转换性</strong>增强，稳定性降低</td><td>主动注意不能持久，很容易受外界环境影响而使注意对象不断转换。</td><td>躁狂发作等</td></tr>
+          </tbody>
+        </table></div>
+      </div>
+
+      <div class="module module-case">
+        <div class="module-head"><span class="module-index">举例</span><h3>教材举例</h3></div>
+        <div class="callout callout-example"><div class="callout-icon">📎</div><div class="callout-body"><strong>教材举例（非病例）</strong>①正常对照：上课听讲是主动注意，突然转向教室外脚步声是被动注意。②病理表现：被害妄想患者对周围环境高度警惕、过分注意别人一举一动；疑病妄想患者对身体细微变化十分敏感、过分注意健康状态。</div></div>
+        <p class="table-note">教材本节未提供独立典型病例，上述为教材在定义与症状描述中给出的例子，已如实标注。</p>
+      </div>
+
+      <div class="module module-diff">
+        <div class="module-head"><span class="module-index">鉴别</span><h3>临床意义与易混点</h3></div>
+        <div class="table-wrap"><table class="comparison-table">
+          <thead><tr><th>易混对</th><th>关键差别</th><th>一句话鉴别</th></tr></thead>
+          <tbody>
+            <tr><td>注意增强 vs 注意转移</td><td>增强是主动注意兴奋性增高、固定在关注对象上；转移是主动注意不能持久、对象不断转换。</td><td>“盯住不放”=增强，“坐不住、换台”=转移。</td></tr>
+            <tr><td>注意减退 vs 注意涣散</td><td>减退是主动+被动都减弱、难以唤起和维持；涣散是被动兴奋增强、稳定性降低、易分心。</td><td>“叫不起来”=减退，“一有风吹草动就跑”=涣散。</td></tr>
+            <tr><td>注意狭窄 vs 注意涣散</td><td>狭窄是范围缩小（集中在一点，顾不上其他）；涣散是范围不集中（到处都被吸引）。</td><td>“只看一点”=狭窄，“点点都看”=涣散。</td></tr>
+          </tbody>
+        </table></div>
+        <ul class="icon-list">
+          <li><strong>注意狭窄是器质性/认知损害的线索：</strong>教材把它归于意识障碍、智能障碍，而不是焦虑或躁狂。</li>
+          <li><strong>注意转移是躁狂的配套症状：</strong>与思维奔逸的“随境转移”常同时出现，但一个是注意障碍，一个是思维形式障碍，不可混称。</li>
+          <li><strong>注意增强不是“注意力好”：</strong>它是病理性过度关注，常被妄想内容驱动。</li>
+        </ul>
+      </div>
+
+      <div class="callout callout-memory"><div class="callout-icon">🧠</div><div class="callout-body"><strong>记忆提示｜“两轴五点”</strong>横轴记“主动—被动”，纵轴记“兴奋性—稳定性—范围—转换”：主动兴奋↑=增强；主动+被动兴奋↓=减退；被动兴奋↑+稳定↓=涣散；范围↓=狭窄；转换↑+稳定↓=转移。五字口诀：“增、减、散、窄、移”。</div></div>
+    </section>
+
+    <section id="memory" class="section">
+      <div class="section-header"><span class="section-number">09</span><h2>记忆障碍</h2></div>
+      <p class="lead">记忆障碍的题眼是“时间方向”和“真假经历”：顺行/逆行看疾病前后，界限性看特定时段，进行性看病程；虚构是“编造未经历”，错构是“真实经历记错位”。</p>
+
+      <div class="module module-cause">
+        <div class="module-head"><span class="module-index">定义</span><h3>记忆与三个基本过程</h3></div>
+        <p><strong>记忆（memory）</strong>是既往事物经验在大脑中的重现。记忆是在感知觉和思维基础上建立起来的精神活动，包括<strong>识记、保持及再认和回忆</strong>三个基本过程：</p>
+        <ol class="numbered-list">
+          <li><strong>识记</strong>：事物或经验在脑子里留下痕迹的过程，是一种反复感知的过程。</li>
+          <li><strong>保持</strong>：识记痕迹保存于大脑免于消失的过程。</li>
+          <li><strong>再认和回忆</strong>：再认是现实刺激与既往痕迹的联系过程；回忆是既往痕迹的重新活跃或复现。</li>
+        </ol>
+        <p>教材强调关系：<strong>识记是记忆痕迹保存的前提，再认和回忆是记忆痕迹的显现过程。</strong></p>
+      </div>
+
+      <div class="module module-symptom">
+        <div class="module-head"><span class="module-index">分类</span><h3>一、记忆增强、记忆减退与遗忘</h3></div>
+        <div class="table-wrap"><table class="comparison-table">
+          <thead><tr><th>症状（英文）</th><th>核心表现</th><th>教材举例</th><th>多见于</th></tr></thead>
+          <tbody>
+            <tr><td>记忆增强<br>hypermnesia</td><td><strong>病理性</strong>的记忆力增强：对病前已经遗忘且不重要的事都能重新回忆起来，甚至包括事件的细节。</td><td>教材未给具体事例</td><td>躁狂发作和精神分裂症等</td></tr>
+            <tr><td>记忆减退<br>hypomnesia</td><td>记忆各个基本过程功能的<strong>普遍减退</strong>。轻者近记忆力减弱；严重时远记忆力也减退。</td><td>记不住刚见过人的名字、别人刚告诉的电话号码；难以回忆个人经历</td><td>痴呆，也可见于正常老年人</td></tr>
+            <tr><td>遗忘<br>amnesia</td><td>记忆痕迹在大脑中的<strong>丧失</strong>，表现为对既往感知过的事物不能回忆。</td><td>见下四种时间关系型</td><td>视类型而定</td></tr>
+          </tbody>
+        </table></div>
+        <p>遗忘还可按两个维度切分：<strong>能否恢复</strong>——暂时性遗忘（适宜条件下还可能恢复）与永久性遗忘（不经重新学习不可能恢复）；<strong>遗忘程度</strong>——部分性遗忘（仅部分经历或事件不能回忆）与完全性遗忘（一段时间内全部事件或经历完全不能回忆）。临床上通常按<strong>遗忘与疾病的时间关系</strong>分为四型：</p>
+        <div class="table-wrap"><table class="comparison-table">
+          <thead><tr><th>类型（英文）</th><th>时间关系与表现</th><th>教材举例/机制</th><th>多见于</th></tr></thead>
+          <tbody>
+            <tr><td>顺行性遗忘<br>anterograde amnesia</td><td>对<strong>紧接着疾病以后</strong>一段时间内发生的经历不能回忆。</td><td>多由意识障碍导致不能识记；脑挫伤患者不能回忆受伤后一段时间内所发生的事</td><td>脑挫伤等伴意识障碍者</td></tr>
+            <tr><td>逆行性遗忘<br>retrograde amnesia</td><td>对<strong>疾病发生之前</strong>一段时间内的经历不能回忆。</td><td>遗忘时段的长短与外伤的严重程度及意识障碍的持续时间长短有关</td><td>脑外伤、脑卒中发作、急性意识障碍等</td></tr>
+            <tr><td>界限性遗忘<br>circumscribed amnesia</td><td>对<strong>某一特定时间段</strong>的经历不能回忆，遗忘的发生通常与该时间段内的不愉快事件有关。</td><td>又称心因性遗忘；又称分离性遗忘症</td><td>分离性障碍</td></tr>
+            <tr><td>进行性遗忘<br>progressive amnesia</td><td>随着疾病的发展，遗忘<strong>逐渐加重</strong>。</td><td>除遗忘外，同时伴有日益加重的痴呆和淡漠</td><td>主要见于痴呆</td></tr>
+          </tbody>
+        </table></div>
+      </div>
+
+      <div class="module module-symptom">
+        <div class="module-head"><span class="module-index">分类</span><h3>二、虚构与错构</h3></div>
+        <div class="table-wrap"><table class="comparison-table">
+          <thead><tr><th>维度</th><th>虚构 confabulation</th><th>错构 paramnesia</th></tr></thead>
+          <tbody>
+            <tr><td>前提</td><td>在<strong>遗忘</strong>的基础上</td><td>在<strong>遗忘</strong>的基础上</td></tr>
+            <tr><td>内容来源</td><td>以<strong>想象的、未曾亲身经历</strong>的事件来填补记忆缺损</td><td>对<strong>过去所经历过</strong>的事件进行回忆</td></tr>
+            <tr><td>错误性质</td><td>“无中生有”</td><td>在发生的地点、情节，<strong>特别是时间上</strong>出现错误回忆</td></tr>
+            <tr><td>稳定性</td><td>内容常常不能记住，叙述内容常变化，容易受暗示影响</td><td>患者<strong>坚信不疑</strong></td></tr>
+            <tr><td>多见于</td><td>各种原因引起的痴呆及酒精所致精神病性障碍</td><td>各种原因引起的痴呆和酒精所致精神病性障碍</td></tr>
+          </tbody>
+        </table></div>
+        <p class="table-note">一句话：虚构是“编了一段没发生过的”，错构是“把发生过的搬错了时间地点”。两者都以遗忘为前提，且都常见于痴呆与酒精所致精神病性障碍。</p>
+      </div>
+
+      <div class="module module-case">
+        <div class="module-head"><span class="module-index">举例</span><h3>教材举例</h3></div>
+        <div class="callout callout-example"><div class="callout-icon">📎</div><div class="callout-body"><strong>教材举例（非病例）</strong>记忆减退：记不住刚见过人的名字、别人刚告诉的电话号码；严重时难以回忆个人经历。顺行性遗忘：脑挫伤患者不能回忆受伤后一段时间内所发生的事。进行性遗忘：随疾病发展遗忘逐渐加重，伴日益加重的痴呆和淡漠。</div></div>
+        <p class="table-note">教材记忆障碍一节未提供完整病例，以上为教材在定义中给出的说明性例子。</p>
+      </div>
+
+      <div class="module module-diff">
+        <div class="module-head"><span class="module-index">鉴别</span><h3>临床意义与易混点</h3></div>
+        <div class="table-wrap"><table class="comparison-table">
+          <thead><tr><th>易混对</th><th>关键差别</th><th>一句话鉴别</th></tr></thead>
+          <tbody>
+            <tr><td>顺行性 vs 逆行性遗忘</td><td>顺行性忘“病后”，逆行性忘“病前”。</td><td>“伤后的事记不住”=顺行；“受伤前的事想不起”=逆行。</td></tr>
+            <tr><td>界限性 vs 进行性遗忘</td><td>界限性局限于某一特定时间段、与不愉快事件有关；进行性随病程逐渐加重。</td><td>“只忘那一段”=界限性；“越来越忘”=进行性。</td></tr>
+            <tr><td>虚构 vs 错构</td><td>虚构是想象、未经历的事件；错构是真实经历但时间/地点/情节记错。</td><td>“编新故事”=虚构；“老故事说错时间”=错构。</td></tr>
+            <tr><td>记忆减退 vs 遗忘</td><td>减退是各过程功能普遍减退、可轻可重；遗忘是记忆痕迹丧失、对既往感知事物不能回忆。</td><td>“记性变差”=减退；“那件事完全想不起来”=遗忘。</td></tr>
+          </tbody>
+        </table></div>
+        <ul class="icon-list">
+          <li><strong>界限性遗忘是分离性障碍的线索：</strong>教材明确它又称心因性遗忘、分离性遗忘症。</li>
+          <li><strong>虚构+错构+近事记忆障碍+定向力障碍：</strong>要想到遗忘综合征（科尔萨科夫综合征），见本章综合征部分。</li>
+          <li><strong>记忆增强是病理性的：</strong>不是“记性好”，而是对病前已遗忘且不重要的事都能回忆，甚至细节。</li>
+        </ul>
+      </div>
+
+      <div class="callout callout-memory"><div class="callout-icon">🧠</div><div class="callout-body"><strong>记忆提示｜“识保再”+“顺后逆前，界心进痴”</strong>三过程记“识—保—再认回忆”；遗忘四型记“顺行忘病后、逆行忘病前、界限忘一段（心因/分离）、进行越来越重（痴呆）”。虚构/错构记“虚构编新、错构错位”。</div></div>
+    </section>
+
+    <section id="intelligence" class="section">
+      <div class="section-header"><span class="section-number">10</span><h2>智能障碍</h2></div>
+      <p class="lead">智能障碍的分水岭只有一个：脑子“发育完成”没有。18 岁以前出问题叫智力发育障碍，发育成熟以后原有智能被损害叫痴呆；痴呆再按损害范围分全面、部分、假性。</p>
+
+      <div class="module module-cause">
+        <div class="module-head"><span class="module-index">定义</span><h3>智能与评估</h3></div>
+        <p><strong>智能（intelligence）</strong>是人们获得和运用知识解决实际问题的能力，包括在经验中学习或理解的能力、获得和保持知识的能力、迅速而又成功地对新情境做出反应的能力、运用推理有效地解决问题的能力等；它涉及感知、记忆、注意和思维等一系列认知过程。</p>
+        <p>临床上常通过检查患者的<strong>一般常识、理解力、判断力、分析概括力、计算力、记忆力</strong>对智能水平进行初步判断；也可通过智力测验方法获得患者的<strong>智商（intelligence quotient，IQ）</strong>，对其智能水平进行定量评价。</p>
+      </div>
+
+      <div class="module module-symptom">
+        <div class="module-head"><span class="module-index">分类</span><h3>一、两类智能障碍</h3></div>
+        <div class="table-wrap"><table class="comparison-table">
+          <thead><tr><th>维度</th><th>智力发育障碍<br>intellectual developmental disorder</th><th>痴呆<br>dementia</th></tr></thead>
+          <tbody>
+            <tr><td>发生时机</td><td>先天或发育成熟以前（<strong>18 岁以前</strong>）</td><td>智力发育成熟以后</td></tr>
+            <tr><td>本质</td><td>各种原因影响智能发育所造成的智能低下和社会适应困难状态</td><td>各种原因损害原有智能所造成的智能低下状态</td></tr>
+            <tr><td>病因线索</td><td>遗传、感染、中毒、缺氧、脑外伤、内分泌异常等</td><td>往往有脑器质性病变基础，如脑外伤、颅脑感染、脑缺氧、脑血管病变等</td></tr>
+            <tr><td>核心表现</td><td>智力水平明显低于正常同龄人；随年龄增长可能有所提高，但仍明显低于正常同龄人</td><td>记忆力、计算力、理解力、判断力下降；工作和学习能力下降；后天获得的知识与技能丧失；严重时生活不能自理；常伴人格改变、情感淡漠、行为幼稚及本能意向亢进</td></tr>
+          </tbody>
+        </table></div>
+      </div>
+
+      <div class="module module-symptom">
+        <div class="module-head"><span class="module-index">分类</span><h3>二、痴呆的三种类型</h3></div>
+        <div class="table-wrap"><table class="comparison-table">
+          <thead><tr><th>类型</th><th>损害范围与表现</th><th>人格/定向/自知力</th><th>多见于</th></tr></thead>
+          <tbody>
+            <tr><td>全面性痴呆</td><td>大脑<strong>弥散性损害</strong>，智能活动的各个方面均受累及，从而影响患者全部的精神活动。</td><td>常出现人格改变、定向力障碍及<strong>自知力缺乏</strong></td><td>阿尔茨海默病和梅毒所致痴呆等</td></tr>
+            <tr><td>部分性痴呆</td><td>大脑病变只侵犯脑的<strong>局部</strong>，患者可只产生记忆力减退、理解力削弱或分析综合困难等。</td><td>人格仍保持良好，定向力完整，<strong>有一定自知力</strong></td><td>血管性痴呆和脑外伤后痴呆的早期</td></tr>
+            <tr><td>假性痴呆</td><td>强烈精神创伤后产生一种类似痴呆的表现，而<strong>大脑组织结构无任何器质性损害</strong>；经治疗后痴呆样表现很容易消失。</td><td>教材未单列人格/定向/自知力描述</td><td>分离性障碍及应激障碍等</td></tr>
+          </tbody>
+        </table></div>
+        <h4>假性痴呆的两个特殊类型</h4>
+        <div class="card-grid">
+          <div class="card card-symptom"><div class="card-header"><span class="card-icon">🎭</span><span class="card-title">刚塞综合征 Ganser syndrome</span></div><div class="card-body">又称<strong>心因性假性痴呆</strong>：对简单问题给予<strong>近似而错误</strong>的回答，往往给人以故意或开玩笑的感觉。如问牛有几条腿，答“3 条腿”；问“2+2=？”，答“等于 5”。表明患者能理解问题意义，回答内容切题，但不正确。行为方面也可出现类似错误，如将钥匙倒过来开锁。但对某些复杂问题却往往能正确应付，如上网、下棋、打牌等，一般生活也能自理。</div></div>
+          <div class="card card-symptom"><div class="card-header"><span class="card-icon">🧸</span><span class="card-title">童样痴呆 puerilism</span></div><div class="card-body">以行为幼稚、模仿幼儿的言行为特征，表现为成人患者的言行类似儿童。教材例：32 岁女性患者以幼童讲话的声调称自己才 5 岁，见了刚工作的护士叫阿姨，见了 20 多岁的医师叫叔叔，走路时蹦蹦跳跳，并喊着要吃棒棒糖。</div></div>
+        </div>
+      </div>
+
+      <div class="module module-case">
+        <div class="module-head"><span class="module-index">举例</span><h3>教材举例</h3></div>
+        <div class="callout callout-example"><div class="callout-icon">📎</div><div class="callout-body"><strong>教材举例｜刚塞综合征</strong>牛有 3 条腿；“2+2=5”；钥匙倒过来开锁；但上网、下棋、打牌等复杂问题能正确应付，生活能自理。<br><strong>教材举例｜童样痴呆</strong>32 岁女性自称 5 岁，叫护士阿姨、医师叔叔，蹦蹦跳跳要棒棒糖。</div></div>
+        <p>这两个例子的共同点是“像痴呆但不像”：刚塞综合征保留“理解问题意义”的能力，错误是<strong>近似而不正确</strong>；童样痴呆保留“幼稚行为”的主动性，且无器质性损害基础。</p>
+      </div>
+
+      <div class="module module-diff">
+        <div class="module-head"><span class="module-index">鉴别</span><h3>临床意义与易混点</h3></div>
+        <div class="table-wrap"><table class="comparison-table">
+          <thead><tr><th>易混对</th><th>关键差别</th><th>一句话鉴别</th></tr></thead>
+          <tbody>
+            <tr><td>智力发育障碍 vs 痴呆</td><td>分水岭是 18 岁：18 岁以前智能发育受影响为智力发育障碍；发育成熟后原有智能被损害为痴呆。</td><td>“从小没长起来” vs “长成后被破坏”。</td></tr>
+            <tr><td>全面性 vs 部分性痴呆</td><td>全面性为弥散损害、人格改变、定向力障碍、自知力缺乏；部分性病变局限、人格保持、定向完整、有一定自知力。</td><td>“整个人都变了”=全面；“只坏了某些能力”=部分。</td></tr>
+            <tr><td>真性痴呆 vs 假性痴呆</td><td>真性痴呆有脑器质性病变基础；假性痴呆无任何器质性损害，治疗后痴呆样表现很容易消失。</td><td>“有器质基础、难逆转”=真性；“精神创伤后、可恢复”=假性。</td></tr>
+            <tr><td>刚塞综合征 vs 童样痴呆</td><td>刚塞以“近似而错误”的回答为核心；童样以“行为幼稚、模仿幼儿言行”为核心。</td><td>“答错但懂题”=刚塞；“装小孩”=童样。</td></tr>
+          </tbody>
+        </table></div>
+        <ul class="icon-list">
+          <li><strong>智能障碍不是“笨”：</strong>教材强调社会适应困难、后天知识技能丧失、生活不能自理等维度。</li>
+          <li><strong>部分性痴呆仍可有自知力：</strong>不要一见“痴呆”就套“自知力缺乏”。</li>
+          <li><strong>假性痴呆可见于分离性障碍及应激障碍：</strong>提示心理创伤路径，而非脑器质路径。</li>
+        </ul>
+      </div>
+
+      <div class="callout callout-memory"><div class="callout-icon">🧠</div><div class="callout-body"><strong>记忆提示｜“18 岁一刀切，三型看人格”</strong>18 岁前=智力发育障碍，18 岁后=痴呆。痴呆三型记“全面人格倒、部分人格保、假性无器质”。假性两型记“刚塞近似错答、童样幼稚言行”。</div></div>
+    </section>
+
+    <section id="orientation" class="section">
+      <div class="section-header"><span class="section-number">11</span><h2>定向力障碍</h2></div>
+      <p class="lead">定向力是“我是谁、这是哪、现在何时、你是何人”的认识能力。它是意识障碍的重要标志，但不是意识障碍的专属：痴呆和精神分裂症都能在意识清晰时出现定向力障碍。</p>
+
+      <div class="module module-cause">
+        <div class="module-head"><span class="module-index">定义</span><h3>定向力的两个维度</h3></div>
+        <p><strong>定向力（orientation）</strong>指一个人对时间、地点、人物以及自身状态的认识能力。前者称为对<strong>周围环境的定向力</strong>，后者称为<strong>自我定向力</strong>。</p>
+        <div class="table-wrap"><table class="comparison-table">
+          <thead><tr><th>维度</th><th>具体内容</th><th>教材举例</th></tr></thead>
+          <tbody>
+            <tr><td>时间定向</td><td>对当时时间的认识</td><td>年、季、月、日、白天或晚上、上午或下午等</td></tr>
+            <tr><td>地点定向</td><td>对所处地点的认识</td><td>城市的名称、身处医院还是家里等</td></tr>
+            <tr><td>人物定向</td><td>对周围环境中人物的认识</td><td>周围人的姓名、身份、与患者的关系等</td></tr>
+            <tr><td>自我定向</td><td>对自己姓名、性别、年龄及职业等状况的认识</td><td>教材未另给例子</td></tr>
+          </tbody>
+        </table></div>
+        <p><strong>定向力障碍（disorientation）</strong>是指对环境或自身状况认识能力的丧失或认识错误。</p>
+      </div>
+
+      <div class="module module-case">
+        <div class="module-head"><span class="module-index">举例</span><h3>教材举例：双重定向</h3></div>
+        <div class="callout callout-example"><div class="callout-icon">📎</div><div class="callout-body"><strong>教材举例｜双重定向</strong>一住院患者感到病房<strong>既是医院又是看守所</strong>，工作人员<strong>既是医师又是迫害他的人</strong>。</div></div>
+        <p>双重定向的机制是：对周围环境的时间、地点、人物出现<strong>双重体验</strong>，其中一种体验是正确的，另一种体验与妄想有关，是妄想性的判断或解释。教材明确它可发生于<strong>意识清晰的精神分裂症患者</strong>。</p>
+      </div>
+
+      <div class="module module-diff">
+        <div class="module-head"><span class="module-index">鉴别</span><h3>临床意义与易混点</h3></div>
+        <div class="table-wrap"><table class="comparison-table">
+          <thead><tr><th>命题</th><th>教材结论</th><th>解释</th></tr></thead>
+          <tbody>
+            <tr><td>定向力障碍是否等于意识障碍</td><td><strong>不等于</strong></td><td>定向力障碍多见于意识障碍时，是意识障碍的一个重要标志；但有定向力障碍者并不一定存在意识障碍。</td></tr>
+            <tr><td>痴呆患者能否有定向力障碍</td><td><strong>能</strong></td><td>痴呆患者可出现定向力障碍，但意识清晰。</td></tr>
+            <tr><td>精神分裂症能否有定向力障碍</td><td><strong>能</strong></td><td>可在意识清晰状态下出现，通常表现为双重定向。</td></tr>
+            <tr><td>双重定向是否等于定向力完全丧失</td><td><strong>不等于</strong></td><td>双重体验中仍有一种体验是正确的，另一种是妄想性判断。</td></tr>
+          </tbody>
+        </table></div>
+        <p class="table-note">一句话：定向力障碍是意识障碍的“重要标志”，不是“诊断等同物”；判断意识状态还要看意识清晰度、注意、思维、记忆等整体表现。</p>
+      </div>
+
+      <div class="callout callout-memory"><div class="callout-icon">🧠</div><div class="callout-body"><strong>记忆提示｜“时地人+自我，双重不算丢”</strong>环境定向三维“时、地、人”，加自我定向（姓名、性别、年龄、职业）。双重定向记“一份真实、一份妄想”，且意识清晰，多见于精神分裂症。定向障碍与意识障碍记“是标志、非等同”。</div></div>
+    </section>
+
+    <section id="emotion" class="section">
+      <div class="section-header"><span class="section-number">12</span><h2>情感障碍</h2></div>
+      <p class="lead">情感障碍 10 种，真正容易混的是三对：情感高涨 vs 欣快、情感倒错 vs 情感矛盾、焦虑 vs 恐惧。抓住“是否与处境协调”“是否有对象”“是否伴回避”三个问题即可拆开。</p>
+
+      <div class="module module-cause">
+        <div class="module-head"><span class="module-index">定义</span><h3>情感、情绪与心境</h3></div>
+        <p><strong>情感（affection）和情绪（emotion）</strong>是指个体对客观事物的态度和因之而产生的相应的内心体验，两者既有区别又有联系。教材的区分是：情感主要与人的<strong>社会性需要</strong>相联系，具有稳定性、持久性，不一定有明显的外部表现，如爱与恨；情绪主要与人的<strong>自然性需要</strong>相联系，具有情景性、暂时性和明显的外部表现，如喜与怒。</p>
+        <p>两者关系：情感是在多次情绪体验的基础上形成的，并通过情绪表现出来；反过来，情绪的表现和变化又受已形成的情感的制约。在精神病学中，情感和情绪往往作为同义词使用。</p>
+        <p><strong>心境（mood）</strong>是指一种较微弱而持续的情绪状态，是一段时间内精神活动的基本背景。</p>
+      </div>
+
+      <div class="module module-symptom">
+        <div class="module-head"><span class="module-index">分类</span><h3>十种情感障碍</h3></div>
+        <div class="table-wrap"><table class="comparison-table">
+          <thead><tr><th>症状（英文）</th><th>核心表现（教材表述）</th><th>教材举例</th><th>多见于</th></tr></thead>
+          <tbody>
+            <tr><td>情感高涨<br>elation</td><td><strong>正性情感活动</strong>的明显增强：不同程度的、与周围环境不相称的病态喜悦；自我感觉良好，整日喜笑颜开，语音高昂，眉飞色舞，表情丰富。因与精神活动其他方面比较协调、与周围环境保持一定联系，故有较强感染性，易引起周围人共鸣。</td><td>教材未给具体事例，仅作表现描述</td><td>躁狂发作</td></tr>
+            <tr><td>欣快<br>euphoria</td><td>在<strong>智能障碍基础上</strong>出现的与周围环境不协调的愉快体验：自得其乐，似乎十分幸福；但因智能障碍影响，表情比较单调刻板，往往给人呆傻、愚蠢的感觉。</td><td>教材未给具体事例</td><td>痴呆</td></tr>
+            <tr><td>情感低落<br>depression</td><td><strong>负性情感活动</strong>的明显增强：忧愁、苦闷、唉声叹气、暗自落泪；有时感到前途灰暗、没有希望，严重时可因悲观绝望出现自杀企图及行为。</td><td>教材未给具体事例</td><td>抑郁障碍</td></tr>
+            <tr><td>情感淡漠<br>apathy</td><td>对外界刺激<strong>缺乏相应的情感反应</strong>，缺乏内心体验；面部表情呆板，对周围发生的事物漠不关心，即使对与自身有密切利害关系的事情也如此。</td><td>教材未给具体事例</td><td>晚期精神分裂症</td></tr>
+            <tr><td>焦虑<br>anxiety</td><td>在<strong>缺乏相应客观刺激</strong>的情况下出现的内心不安状态：顾虑重重、紧张恐惧、坐立不安；严重时搓手顿足、惶惶不可终日、似有大祸临头，常伴心悸、出汗、手抖、尿频等自主神经功能紊乱。</td><td>教材未给具体事例</td><td>焦虑障碍</td></tr>
+            <tr><td>恐惧<br>fear</td><td>面临某种事物或处境时出现的紧张不安反应。正常人也可有（如对危险动物或处境）；<strong>病态恐惧</strong>指与现实威胁不相符的恐惧反应，过分害怕、提心吊胆，常伴明显自主神经功能紊乱，甚至大小便失禁；往往伴有<strong>回避行为</strong>。</td><td>教材未给具体事例</td><td>恐惧障碍</td></tr>
+            <tr><td>易激惹<br>irritability</td><td>情感活动的激惹性增高：极易因一般小事引起强烈的不愉快情感反应，如暴怒发作。</td><td>教材未给具体事例</td><td>人格障碍、躁狂发作等</td></tr>
+            <tr><td>情绪不稳<br>emotional instability</td><td>情感活动的稳定性障碍：情感反应极易发生变化，从一个极端波动至另一个极端，显得喜怒无常、变化莫测。</td><td>教材未给具体事例</td><td>脑器质性损害所致的精神障碍</td></tr>
+            <tr><td>情感倒错<br>parathymia</td><td>情感表现与其<strong>内心体验或处境</strong>明显不相协调，甚至截然相反。</td><td>某精神分裂症患者描述自己被人跟踪、投毒等妄想性体验时，却表现出愉快的表情；听到亲人去世时，却放声高歌</td><td>精神分裂症</td></tr>
+            <tr><td>情感矛盾<br>affective ambivalence</td><td>在<strong>同一时间</strong>对<strong>同一人或事物</strong>产生两种截然不同的情感反应，但患者并不感到这两种情感的矛盾和对立，没有痛苦和不安。</td><td>患者因怀疑母亲迫害自己而憎恨她，但同时又对她亲近关心</td><td>精神分裂症</td></tr>
+          </tbody>
+        </table></div>
+        <p class="table-note">读情感高涨时注意教材的两句并存描述：“与周围环境不相称的病态喜悦”指喜悦程度与场合不匹配；“与周围环境保持一定联系”指情感仍可与环境沟通、具有感染性。二者并不矛盾，不要只抓一句。</p>
+      </div>
+
+      <div class="module module-case">
+        <div class="module-head"><span class="module-index">举例</span><h3>教材举例</h3></div>
+        <div class="callout callout-example"><div class="callout-icon">📎</div><div class="callout-body"><strong>教材举例｜情感倒错</strong>描述自己被人跟踪、投毒等妄想性体验时，却表现出愉快的表情；听到亲人去世时，却放声高歌。<br><strong>教材举例｜情感矛盾</strong>因怀疑母亲迫害自己而憎恨她，但同时又对她亲近关心。</div></div>
+        <p class="table-note">教材情感障碍一节未提供完整病例，上述为其在定义中给出的典型表现，已标注为“教材举例”。</p>
+      </div>
+
+      <div class="module module-diff">
+        <div class="module-head"><span class="module-index">鉴别</span><h3>临床意义与易混点</h3></div>
+        <div class="table-wrap"><table class="comparison-table">
+          <thead><tr><th>易混对</th><th>关键差别</th><th>一句话鉴别</th></tr></thead>
+          <tbody>
+            <tr><td>情感高涨 vs 欣快</td><td>高涨是正性情感明显增强、与精神活动其他方面较协调、有感染性，见于躁狂；欣快建立在智能障碍基础上、与周围环境不协调、表情单调刻板，见于痴呆。</td><td>“能感染别人”=高涨；“自得其乐但呆傻”=欣快。</td></tr>
+            <tr><td>情感倒错 vs 情感矛盾</td><td>倒错是“表现与内心体验/处境相反”（一个情感对外错位）；矛盾是“同时存在两种相反情感”（两个情感并存），且患者不觉得矛盾、无痛苦。</td><td>“该哭却笑”=倒错；“又恨又亲近”=矛盾。</td></tr>
+            <tr><td>焦虑 vs 恐惧</td><td>焦虑缺乏相应客观刺激、无明确对象；恐惧面临某种事物或处境、有对象，且常伴回避行为。</td><td>“无对象的不安”=焦虑；“怕某物并躲开”=恐惧。</td></tr>
+            <tr><td>情感淡漠 vs 情感低落</td><td>淡漠是缺乏情感反应与内心体验；低落是负性情感明显增强、痛苦明显。</td><td>“没反应”=淡漠；“很难受”=低落。</td></tr>
+            <tr><td>情绪不稳 vs 易激惹</td><td>不稳是情感在两个极端间波动；易激惹是小事情引发强烈不愉快反应。</td><td>“忽高忽低”=不稳；“一点就炸”=易激惹。</td></tr>
+          </tbody>
+        </table></div>
+        <ul class="icon-list">
+          <li><strong>情感倒错/矛盾高度提示精神分裂症：</strong>教材两处都写“多见于精神分裂症”。</li>
+          <li><strong>欣快一定是“智能障碍基础上”：</strong>不要把它当成躁狂的情感高涨。</li>
+          <li><strong>恐惧有回避行为，焦虑没有明确对象：</strong>这是临床上最快的分法。</li>
+        </ul>
+      </div>
+
+      <div class="callout callout-memory"><div class="callout-icon">🧠</div><div class="callout-body"><strong>记忆提示｜“高欣低淡、焦恐激不稳、倒错矛盾”</strong>按四组记：①高低组——高涨/欣快/低落/淡漠；②焦虑恐惧组；③激惹/情绪不稳组；④倒错/矛盾组。每组只记一个鉴别词：高涨“感染”、欣快“呆傻”、低落“想死”、淡漠“没反应”；焦虑“无对象”、恐惧“有对象+回避”；倒错“相反”、矛盾“并存不觉”。</div></div>
+    </section>
+
+    <section id="volition" class="section">
+      <div class="section-header"><span class="section-number">13</span><h2>意志障碍</h2></div>
+      <p class="lead">意志障碍只有 4 种，本质是一条“量”的轴：增多（增强）→ 减少（减退）→ 缺乏（缺失），外加一个“方向相反却并存”的矛盾意向。</p>
+
+      <div class="module module-cause">
+        <div class="module-head"><span class="module-index">定义</span><h3>意志与四种意志品质</h3></div>
+        <p><strong>意志（volition）</strong>是人自觉地确定目标，并根据目标调节和支配自身的行动，克服困难，实现预定目标的心理过程。教材强调：意志是人类特有的心理现象，是在人类认识世界和改造世界的需要中产生的，也在人类不断深入认识世界和更有效改造世界的过程中得到发展；意志与认知活动、情感活动及行为紧密联系又相互影响。</p>
+        <p>意志品质一般归纳为四个方面：<strong>自觉性、果断性、自制性和坚持性</strong>。</p>
+      </div>
+
+      <div class="module module-symptom">
+        <div class="module-head"><span class="module-index">分类</span><h3>四种意志障碍</h3></div>
+        <div class="table-wrap"><table class="comparison-table">
+          <thead><tr><th>症状（英文）</th><th>核心表现</th><th>教材举例</th><th>多见于</th></tr></thead>
+          <tbody>
+            <tr><td>意志增强<br>hyperbulia</td><td>意志活动<strong>增多</strong>：在病态情感或妄想的支配下，患者持续地坚持某些行为，具有极大的顽固性。</td><td>被害妄想患者反复报警或向有关部门求助；嫉妒妄想患者长期对配偶跟踪、监视、检查；夸大妄想患者夜以继日地从事所谓的发明创造</td><td>精神分裂症、躁狂发作等</td></tr>
+            <tr><td>意志减退<br>hypobulia</td><td>意志活动<strong>减少</strong>：动机不足，缺乏积极主动性及进取心，对周围一切事物缺乏兴趣，不愿活动，工作学习感到非常吃力；严重时整日呆坐或卧床不起，日常生活也懒于料理。</td><td>教材未给具体事例，仅作表现描述</td><td>抑郁障碍和精神分裂症</td></tr>
+            <tr><td>意志缺失<br>abulia</td><td>意志活动<strong>缺乏</strong>：对任何活动都缺乏动机、要求，生活处于被动状态，处处需要别人督促和管理；严重时行为孤僻、退缩，也没有对饮水、进食等本能的要求，且常伴情感淡漠和思维贫乏。</td><td>教材未给具体事例</td><td>精神分裂症、智力发育障碍和痴呆</td></tr>
+            <tr><td>矛盾意向<br>ambivalence</td><td>对同一事物，<strong>同时出现两种完全相反的意向</strong>，但患者并不感到这两种意向的矛盾和对立，没有痛苦和不安。</td><td>患者碰到朋友时，想去握手，却把手缩回来</td><td>精神分裂症</td></tr>
+          </tbody>
+        </table></div>
+      </div>
+
+      <div class="module module-case">
+        <div class="module-head"><span class="module-index">举例</span><h3>教材举例</h3></div>
+        <div class="callout callout-example"><div class="callout-icon">📎</div><div class="callout-body"><strong>教材举例｜意志增强</strong>被害妄想者反复报警求助；嫉妒妄想者长期跟踪、监视、检查配偶；夸大妄想者夜以继日搞“发明创造”。<br><strong>教材举例｜矛盾意向</strong>碰到朋友时想去握手，却把手缩回来。</div></div>
+        <p class="table-note">教材意志障碍一节未提供完整病例，以上为定义中给出的说明性例子。</p>
+      </div>
+
+      <div class="module module-diff">
+        <div class="module-head"><span class="module-index">鉴别</span><h3>临床意义与易混点</h3></div>
+        <div class="table-wrap"><table class="comparison-table">
+          <thead><tr><th>易混对</th><th>关键差别</th><th>一句话鉴别</th></tr></thead>
+          <tbody>
+            <tr><td>意志增强 vs 意志减退</td><td>增强是意志活动增多且顽固，常被妄想/病态情感驱动；减退是动机不足、兴趣缺乏、活动减少。</td><td>“停不下来”=增强；“提不起劲”=减退。</td></tr>
+            <tr><td>意志减退 vs 意志缺失</td><td>减退是“减少”，尚有一定动机但主动性差；缺失是“缺乏”，对任何活动都无动机要求，本能要求也可消失。</td><td>“不想做”=减退；“连吃都不想吃”=缺失。</td></tr>
+            <tr><td>矛盾意向 vs 情感矛盾</td><td>矛盾意向是两种相反<strong>意向/行为倾向</strong>并存；情感矛盾是两种相反<strong>情感</strong>并存。两者都不觉矛盾、无痛苦。</td><td>“想握手又缩手”=矛盾意向；“又恨又亲近”=情感矛盾。</td></tr>
+            <tr><td>意志增强 vs 躁狂活动增多</td><td>教材将意志增强的驱动力归于病态情感或妄想，且具极大顽固性；躁狂的活动增多属协调性精神运动性兴奋，伴情感高涨、思维奔逸。</td><td>“被妄想驱动、死磕一件事”=意志增强；“全面兴奋、样样都来”=躁狂。</td></tr>
+          </tbody>
+        </table></div>
+        <ul class="icon-list">
+          <li><strong>意志缺失常伴情感淡漠和思维贫乏：</strong>这三个阴性症状常成组出现，指向精神分裂症。</li>
+          <li><strong>矛盾意向只见于精神分裂症（教材）：</strong>与情感矛盾、矛盾情感一样，核心是“并存而不觉矛盾”。</li>
+          <li><strong>意志减退不等同于抑郁：</strong>也见于精神分裂症，需结合情感、思维、病程判断。</li>
+        </ul>
+      </div>
+
+      <div class="callout callout-memory"><div class="callout-icon">🧠</div><div class="callout-body"><strong>记忆提示｜“多、少、无、反”</strong>意志增强=多，意志减退=少，意志缺失=无，矛盾意向=反（两种相反意向并存）。再记意志四品质“自觉、果断、自制、坚持”。</div></div>
+    </section>
+
+    <section id="behavior" class="section">
+      <div class="section-header"><span class="section-number">14</span><h2>动作行为障碍</h2></div>
+      <p class="lead">动作行为障碍分三簇：兴奋（协调/不协调）、抑制（木僵、蜡样屈曲、缄默、违拗）、其他（模仿、刻板、装相作态、强迫动作）。判断的关键是“动作与思维情感意志是否协调”和“是否受意志控制”。</p>
+
+      <div class="module module-cause">
+        <div class="module-head"><span class="module-index">定义</span><h3>动作与行为</h3></div>
+        <p><strong>动作（action）</strong>是指简单的随意和不随意运动，如挥手、点头等。<strong>行为（behavior）</strong>是一系列动作的有机组合，是为达到一定目的而进行的复杂的随意运动。两者既有区别，又有联系，故往往被同时联合使用，称为动作行为。</p>
+        <p>人们的动作行为受到动机和目的的制约，并与认知、情感和意志活动保持协调一致。精神障碍患者由于病理性感知、思维、情感等影响，可以出现不同形式的动作行为障碍（disorder of action and behavior）。</p>
+      </div>
+
+      <div class="module module-symptom">
+        <div class="module-head"><span class="module-index">分类</span><h3>一、精神运动性兴奋（2 类）</h3></div>
+        <div class="table-wrap"><table class="comparison-table">
+          <thead><tr><th>类型（英文）</th><th>核心表现</th><th>教材举例/归属</th><th>多见于</th></tr></thead>
+          <tbody>
+            <tr><td>协调性精神运动性兴奋<br>coherent psychomotor excitement</td><td>增多的动作行为及言语与思维、情感、意志等精神活动<strong>协调一致</strong>，并与环境保持较密切联系；整个精神活动比较协调，行为具有目的，可以被周围人理解。</td><td>教材未给具体事例</td><td>躁狂发作</td></tr>
+            <tr><td>不协调性精神运动性兴奋<br>incoherent psychomotor excitement</td><td>增多的动作行为及言语与思维、情感、意志等精神活动<strong>不相协调</strong>，脱离周围现实环境；整个精神活动不相协调，动作行为杂乱无章，缺乏动机及目的，使人难以理解。</td><td>紧张性兴奋、青春性兴奋、谵妄时的精神错乱状态</td><td>精神分裂症、谵妄状态</td></tr>
+          </tbody>
+        </table></div>
+
+        <h4>二、精神运动性抑制（4 类）</h4>
+        <div class="table-wrap"><table class="comparison-table">
+          <thead><tr><th>症状（英文）</th><th>核心表现</th><th>教材举例</th><th>多见于</th></tr></thead>
+          <tbody>
+            <tr><td>木僵<br>stupor</td><td>动作行为和言语活动被<strong>完全抑制</strong>：不语、不动、不饮、不食，肌张力增高，面部表情固定，对刺激缺乏反应，经常保持一种固定姿势，甚至大小便潴留。较轻者表现为少语、少动、表情呆滞，无人时能自动进食、可自行大小便，称<strong>亚木僵状态</strong>。</td><td>教材未给具体事例</td><td>精神分裂症、严重抑郁障碍、应激障碍、脑器质性损害所致精神障碍和严重药物反应等</td></tr>
+            <tr><td>蜡样屈曲<br>waxy flexibility</td><td>在木僵的基础上，患者肢体可任人摆布，即使是极不舒服的姿势，也能较长时间维持不动，形似蜡塑。若平躺时取走枕头，仍能长时间保持头部抬高的姿势不变，称<strong>“空气枕头”</strong>。</td><td>空气枕头</td><td>精神分裂症</td></tr>
+            <tr><td>缄默症<br>mutism</td><td>言语活动的明显抑制：缄默不语，不回答任何问题，有时仅以手示意或者通过书写交流。</td><td>某患者入院后一直不说话，精神检查时仅用书写的方式回答医师提问</td><td>分离性障碍及精神分裂症</td></tr>
+            <tr><td>违拗症<br>negativism</td><td>对他人要求加以抗拒。分<strong>主动违拗</strong>（不但拒绝执行，还做出与要求截然相反的行为）与<strong>被动违拗</strong>（对他人各种要求一概拒绝执行）。</td><td>让患者睁眼时，患者把眼睛闭得更紧（主动违拗）</td><td>精神分裂症</td></tr>
+          </tbody>
+        </table></div>
+
+        <h4>三、其他动作行为障碍（4 项）</h4>
+        <div class="table-wrap"><table class="comparison-table">
+          <thead><tr><th>症状（英文）</th><th>核心表现</th><th>教材举例</th><th>多见于</th></tr></thead>
+          <tbody>
+            <tr><td>模仿动作<br>echopraxia</td><td>无目的地模仿别人的动作，常与<strong>模仿言语（echolalia）</strong>同时存在。</td><td>医师动一下头发，患者也跟着动一下自己的头发</td><td>精神分裂症</td></tr>
+            <tr><td>刻板动作<br>stereotyped act</td><td>机械刻板地重复某一单调的动作，常与<strong>刻板言语（stereotyped speech）</strong>同时出现。</td><td>长时间反复地将苹果拿起和放下</td><td>精神分裂症、孤独症谱系障碍等</td></tr>
+            <tr><td>装相<br>mannerism<br>作态<br>posturing</td><td>用不常用的表情、姿势或动作来表达某一有目的的行为；常做出古怪的、愚蠢的、幼稚做作的动作、姿势、步态与表情。</td><td>教材未给具体事例</td><td>精神分裂症</td></tr>
+            <tr><td>强迫动作<br>compulsive act</td><td>明知没有必要，却难以克制地重复做某种动作行为；如果不重复，往往焦虑不安。多与强迫思维有关。</td><td>强迫性洗涤、强迫性检查</td><td>强迫症</td></tr>
+          </tbody>
+        </table></div>
+      </div>
+
+      <div class="module module-case">
+        <div class="module-head"><span class="module-index">举例</span><h3>教材举例</h3></div>
+        <div class="callout callout-example"><div class="callout-icon">📎</div><div class="callout-body"><strong>教材举例</strong>①蜡样屈曲：取走枕头仍长时间保持头部抬高（“空气枕头”）。②缄默症：入院后一直不说话，精神检查仅用书写回答。③主动违拗：让睁眼时把眼睛闭得更紧。④模仿动作：医师动头发，患者也动头发。⑤刻板动作：反复把苹果拿起、放下。⑥强迫动作：强迫性洗涤、强迫性检查。</div></div>
+        <p class="table-note">教材动作行为一节未提供完整病例，以上为教材在定义中给出的典型动作例。</p>
+      </div>
+
+      <div class="module module-diff">
+        <div class="module-head"><span class="module-index">鉴别</span><h3>临床意义与易混点</h3></div>
+        <div class="table-wrap"><table class="comparison-table">
+          <thead><tr><th>易混对</th><th>关键差别</th><th>一句话鉴别</th></tr></thead>
+          <tbody>
+            <tr><td>协调性 vs 不协调性兴奋</td><td>协调性：动作言语与思维、情感、意志协调，与环境有联系，行为有目的、可理解，见于躁狂；不协调性：各方面不协调、脱离现实、杂乱无章、无目的、难理解，见于精神分裂症、谵妄。</td><td>“看得懂”=协调；“看不懂”=不协调。</td></tr>
+            <tr><td>木僵 vs 昏迷</td><td>木僵属动作行为障碍：动作言语被完全抑制，但肌张力增高、保持固定姿势；昏迷属意识障碍最重的一级：意识完全丧失，痛觉反应和随意运动消失，反射消失。教材分属不同章节，不可混用。</td><td>“能维持姿势、肌张力高”偏木僵；“任何刺激无反应、反射消失”偏昏迷。</td></tr>
+            <tr><td>主动违拗 vs 被动违拗</td><td>主动违拗是“反着做”；被动违拗是“一概不做”。</td><td>“让睁眼偏闭眼”=主动；“什么都不配合”=被动。</td></tr>
+            <tr><td>模仿动作 vs 刻板动作</td><td>模仿是复制别人的动作；刻板是重复自己的某一单调动作。</td><td>“跟着你做”=模仿；“自己循环做”=刻板。</td></tr>
+            <tr><td>装相作态 vs 刻板动作</td><td>装相作态是用不常用表情/姿势表达有目的的行为，带做作、古怪、幼稚色彩；刻板是机械重复同一动作。</td><td>“摆造型”=装相作态；“机械循环”=刻板。</td></tr>
+          </tbody>
+        </table></div>
+        <ul class="icon-list">
+          <li><strong>木僵可见于多种情况：</strong>精神分裂症、严重抑郁障碍、应激障碍、脑器质性损害所致精神障碍、严重药物反应，不是精神分裂症的“专属”。</li>
+          <li><strong>缄默症可见于分离性障碍：</strong>与木僵的“全面抑制”不同，缄默主要是言语活动抑制，患者可用书写交流。</li>
+          <li><strong>强迫动作多与强迫思维有关：</strong>不重复则焦虑不安，这一点可与刻板动作区分。</li>
+          <li><strong>紧张综合征的核心是肌张力增高：</strong>见综合征部分，不要把“紧张”理解为情绪紧张。</li>
+        </ul>
+      </div>
+
+      <div class="callout callout-memory"><div class="callout-icon">🧠</div><div class="callout-body"><strong>记忆提示｜“兴奋二、抑制四、其他四”</strong>兴奋：协调/不协调；抑制四字“木、蜡、缄、违”；其他四项“模、刻、装、强”。再记配对关系：模仿动作配模仿言语，刻板动作配刻板言语，强迫动作配强迫思维。</div></div>
+    </section>
+
+    <section id="consciousness" class="section">
+      <div class="section-header"><span class="section-number">15</span><h2>意识障碍</h2></div>
+      <p class="lead">意识障碍是本章的“器质性哨兵”。先按清晰度排出四级（嗜睡—混浊—昏睡—昏迷），再看“清晰度降低 + 范围缩小/内容变化”的三型（朦胧、谵妄、梦样）。谵妄的昼轻夜重和恐怖性幻视是必考点。</p>
+
+      <div class="module module-cause">
+        <div class="module-head"><span class="module-index">定义</span><h3>意识与意识障碍的六项表现</h3></div>
+        <p>在临床医学上，<strong>意识（consciousness）</strong>是指个体对周围环境、自身状态感知的清晰程度及认识反应能力。大脑皮质及脑干的网状上行激活系统的兴奋性对维持意识起着重要作用。</p>
+        <p><strong>意识障碍（disorder of consciousness）</strong>可表现为<strong>意识清晰度的降低、意识范围的缩小及意识内容的变化</strong>。意识清晰度降低时可出现：</p>
+        <ol class="numbered-list">
+          <li>感觉减退或缺失。</li>
+          <li>注意减退，注意力难以集中。</li>
+          <li>思维能力减退，思维迟缓、思维不连贯。</li>
+          <li>记忆减退，因此事后常有遗忘。</li>
+          <li>行为和动作缺乏目的和指向，反应迟钝。</li>
+          <li>定向力障碍，对周围环境认识能力的减退，对时间、地点和人物定向错误。</li>
+        </ol>
+        <p>教材强调：<strong>定向力障碍是判断意识障碍的重要指标。</strong>意识障碍主要见于脑器质性损害所致精神障碍、躯体疾病所致精神障碍及中毒所致精神障碍等。</p>
+      </div>
+
+      <div class="module module-symptom">
+        <div class="module-head"><span class="module-index">分类</span><h3>一、以意识清晰度降低为主（4 级）</h3></div>
+        <div class="table-wrap"><table class="comparison-table">
+          <thead><tr><th>程度</th><th>症状（英文）</th><th>核心表现</th><th>反射状态</th></tr></thead>
+          <tbody>
+            <tr><td>最轻</td><td>嗜睡<br>drowsiness</td><td>意识清晰度降低较轻微：安静环境中经常昏昏入睡，但给予刺激后可以立即转醒，并能进行简单应答，停止刺激后又进入睡眠状态。</td><td>教材未单列反射变化</td></tr>
+            <tr><td>轻度</td><td>混浊<br>confusion</td><td>意识清晰度轻度受损：反应迟钝、思维缓慢，注意、记忆、理解困难；能回答简单问题，但对复杂问题茫然不知所措；存在时间、地点、人物等周围环境定向力障碍。</td><td>吞咽反射、角膜反射、对光反射存在；可出现强握反射、吸吮反射等原始反射</td></tr>
+            <tr><td>更重</td><td>昏睡<br>sopor</td><td>意识清晰度较混浊更低：周围环境定向力和自我定向力均丧失，没有言语功能；对一般刺激没有反应，只有强刺激才引起防御性反射，如压眶反应。</td><td>角膜、睫毛等反射减弱；对光反射、吞咽反射迟钝；深反射亢进，病理反射阳性；可出现不自主运动及震颤</td></tr>
+            <tr><td>最重</td><td>昏迷<br>coma</td><td>意识完全丧失，以<strong>痛觉反应和随意运动消失</strong>为特征；任何刺激均不能引起反应。</td><td>吞咽反射、防御反射甚至对光反射均消失，并可出现病理反射</td></tr>
+          </tbody>
+        </table></div>
+
+        <h4>二、意识清晰度降低伴范围缩小或内容变化（3 型）</h4>
+        <div class="table-wrap"><table class="comparison-table">
+          <thead><tr><th>类型（英文）</th><th>核心表现</th><th>病程与遗忘</th><th>教材举例/归属</th></tr></thead>
+          <tbody>
+            <tr><td>朦胧状态<br>twilight state</td><td>意识清晰度降低的同时伴有<strong>意识范围缩小</strong>：在狭窄的意识范围内，可有相对正常的感知觉，以及协调连贯的复杂行为，但对除此范围以外的事物却不能进行正确感知；表情呆板或茫然，联想困难。仔细精神检查可发现定向力障碍，片段的幻觉、错觉、妄想以及相应的行为障碍。</td><td>常突然发作与中止，持续数分钟至数小时不等，事后遗忘或部分遗忘。</td><td>教材未注明具体疾病</td></tr>
+            <tr><td>谵妄<br>delirium</td><td>意识清晰度降低的同时出现<strong>大量的幻觉、错觉</strong>，以形象鲜明的<strong>恐怖性幻视和错视</strong>为主（如猛兽、毒蛇）；在恐怖性幻视及错视影响下产生紧张和恐惧情绪反应，出现喊叫、逃跑、双手在空间不停抓摸等<strong>不协调性精神运动性兴奋</strong>；思维不连贯，理解困难，可有片段的妄想；常有周围定向力障碍，部分患者甚至丧失自我定向力。</td><td>往往<strong>夜间加重，具有昼轻夜重的规律</strong>；一般持续数小时至数日，意识恢复后可有部分遗忘或全部遗忘。</td><td>教材以“谵妄状态”作为不协调性兴奋与思维不连贯的归属</td></tr>
+            <tr><td>梦样状态<br>oneiroid state</td><td>意识清晰程度降低的同时出现梦样的体验：外表好像清醒，但患者完全沉浸于幻觉、妄想中，就像做梦一样，与外界失去联系。</td><td>一般持续数日或数月，恢复后对梦样内容能够部分回忆。</td><td>教材未注明具体疾病</td></tr>
+          </tbody>
+        </table></div>
+      </div>
+
+      <div class="module module-case">
+        <div class="module-head"><span class="module-index">举例</span><h3>教材举例</h3></div>
+        <div class="callout callout-example"><div class="callout-icon">📎</div><div class="callout-body"><strong>教材举例｜谵妄</strong>恐怖性幻视与错视以猛兽、毒蛇等形象为主；患者喊叫、逃跑、双手在空间不停抓摸；昼轻夜重；恢复后部分或全部遗忘。<br><strong>教材举例｜昏睡</strong>只有强刺激才引起防御性反射，如压眶反应。</div></div>
+        <p class="table-note">教材意识障碍一节未提供完整病例，以上为定义中的典型表现与检查例子，已如实标注。</p>
+      </div>
+
+      <div class="module module-diff">
+        <div class="module-head"><span class="module-index">鉴别</span><h3>临床意义与易混点</h3></div>
+        <div class="table-wrap"><table class="comparison-table">
+          <thead><tr><th>易混组</th><th>关键差别</th><th>一句话鉴别</th></tr></thead>
+          <tbody>
+            <tr><td>嗜睡 / 混浊 / 昏睡 / 昏迷</td><td>四级递进：嗜睡刺激即醒能简单应答；混浊反应迟钝、定向障碍、简单问题能答；昏睡无言语、一般刺激无反应、强刺激有防御反射；昏迷任何刺激无反应、痛觉与随意运动消失、反射消失。</td><td>“叫得醒—答得慢—叫不醒但压眶有反应—怎么都没反应”。</td></tr>
+            <tr><td>朦胧 / 谵妄 / 梦样</td><td>朦胧以<strong>范围缩小</strong>为核心，窄范围内行为可相对正常；谵妄以<strong>大量恐怖性幻觉错觉+不协调兴奋</strong>为核心，昼轻夜重；梦样以<strong>沉浸于梦样幻觉妄想</strong>为核心，外表似清醒但与外界失去联系。</td><td>“范围窄”=朦胧；“恐怖、昼轻夜重”=谵妄；“做梦般沉浸”=梦样。</td></tr>
+            <tr><td>谵妄 vs 精神分裂症兴奋</td><td>谵妄有意识清晰度降低、定向力障碍、事后遗忘、昼轻夜重；精神分裂症的不协调兴奋通常意识清晰。</td><td>先看意识和遗忘，再谈兴奋。</td></tr>
+            <tr><td>昏迷 vs 木僵</td><td>昏迷是意识完全丧失、反射消失；木僵是动作言语完全抑制但意识状态按病因而定，且肌张力增高、可保持固定姿势。</td><td>“反射没了”=昏迷；“摆成什么姿势就保持什么姿势”=木僵/蜡样屈曲。</td></tr>
+          </tbody>
+        </table></div>
+        <ul class="icon-list">
+          <li><strong>昼轻夜重是谵妄的招牌：</strong>教材原文明确“谵妄状态往往夜间加重，具有昼轻夜重的规律”。</li>
+          <li><strong>谵妄的幻视是恐怖性的：</strong>猛兽、毒蛇等，与意识清晰状态下的幻视不同。</li>
+          <li><strong>定向力障碍是重要指标，但不是唯一指标：</strong>还要看清晰度、注意、思维不连贯、事后遗忘。</li>
+          <li><strong>教材边界：</strong>朦胧状态、梦样状态教材未标注具体疾病，不要凭印象补“癫痫/精神分裂症”。</li>
+        </ul>
+      </div>
+
+      <div class="callout callout-memory"><div class="callout-icon">🧠</div><div class="callout-body"><strong>记忆提示｜“嗜混昏昏，朦胧谵梦”</strong>四级记“嗜睡→混浊→昏睡→昏迷”，每级抓一个检查点：叫得醒、答得慢、压眶有反应、全无反应。三型记“朦胧窄、谵妄恐怖昼轻夜重、梦样沉浸”。六项表现记“感、注、思、记、行、定”（感觉、注意、思维、记忆、行为、定向）。</div></div>
+    </section>
+
+    <section id="insight" class="section">
+      <div class="section-header"><span class="section-number">16</span><h2>自知力障碍</h2></div>
+      <p class="lead">自知力不是“知不知道自己有病”这么简单，而是“对自己精神状态的认知和判断能力”。教材没有给数字化分级，只给“完整—缺乏—恢复程度”的判定框架。</p>
+
+      <div class="module module-cause">
+        <div class="module-head"><span class="module-index">定义</span><h3>自知力是什么</h3></div>
+        <p><strong>自知力（insight）</strong>又称领悟力或内省力，是指患者对自己精神状态的<strong>认识和判断能力</strong>。</p>
+        <p>教材按疾病举例说明损害程度不同：<strong>焦虑障碍</strong>患者的自知力一般保持完整，即患者能够认识到自己的异常精神活动，并为此感到痛苦而积极寻求医疗帮助；<strong>精神分裂症等重性精神障碍</strong>患者的自知力一般是缺乏的，即患者不能认识到自己的病态表现，否认存在精神方面的问题，认为自己的幻觉、妄想等精神病理症状都是客观现实，故往往拒绝就医、治疗。</p>
+      </div>
+
+      <div class="module module-symptom">
+        <div class="module-head"><span class="module-index">分级</span><h3>教材的“程度框架”，不是数字量表</h3></div>
+        <div class="table-wrap"><table class="comparison-table">
+          <thead><tr><th>程度</th><th>教材依据的表述</th><th>典型表现</th><th>临床含义</th></tr></thead>
+          <tbody>
+            <tr><td>完整</td><td>“自知力一般保持完整”</td><td>能认识到自己的异常精神活动，并为此感到痛苦，积极寻求医疗帮助</td><td>多见于焦虑障碍等；不等于病情轻</td></tr>
+            <tr><td>缺乏</td><td>“自知力一般是缺乏的”</td><td>不能认识到病态表现，否认存在精神方面的问题，认为幻觉、妄想都是客观现实，拒绝就医、治疗</td><td><strong>重性精神障碍的重要标志</strong></td></tr>
+            <tr><td>恢复程度</td><td>“有无自知力及自知力恢复的程度”作为判定指标</td><td>治疗过程中自知力由无到有、由部分到完全恢复</td><td>判定病情轻重和疾病好转程度；<strong>自知力完全恢复是精神疾病康复的重要指标之一</strong></td></tr>
+          </tbody>
+        </table></div>
+        <div class="callout callout-warning"><div class="callout-icon">⚠️</div><div class="callout-body"><strong>教材边界</strong>教材<strong>未给出</strong>“自知力 1—4 级”之类的数字分级，也未使用“部分自知力”作为独立等级名称，更未给各级阈值。这里的三行是按教材“有无 + 恢复程度”的表述整理的程度框架；考试若问“分级”，应回答“完整/缺乏，并以恢复程度判定好转”，不要自创数字级别。</div></div>
+      </div>
+
+      <div class="module module-case">
+        <div class="module-head"><span class="module-index">举例</span><h3>教材说明</h3></div>
+        <div class="callout callout-example"><div class="callout-icon">📎</div><div class="callout-body"><strong>教材说明（非病例）</strong>焦虑障碍：自知力完整，能认识异常并痛苦求医。精神分裂症等重性精神障碍：自知力缺乏，否认有病，认为幻觉妄想是现实，拒绝就医治疗。</div></div>
+        <p class="table-note">教材自知力一节未提供完整病例，仅有上述疾病层面的对照说明。</p>
+      </div>
+
+      <div class="module module-diff">
+        <div class="module-head"><span class="module-index">鉴别</span><h3>临床意义与易混点</h3></div>
+        <ul class="icon-list">
+          <li><strong>自知力缺乏是重性精神障碍的重要标志：</strong>教材原文，不是“所有精神障碍都缺乏”。</li>
+          <li><strong>自知力完整不等于病轻：</strong>焦虑障碍自知力完整，但患者痛苦并主动求医；重性障碍可能外表平静却完全缺乏自知力。</li>
+          <li><strong>自知力是动态指标：</strong>临床上把有无自知力及恢复程度作为判定病情轻重和疾病好转程度的重要指标。</li>
+          <li><strong>自知力完全恢复是康复指标之一：</strong>不是“症状消失”的同义词，教材将其单列为康复的重要指标。</li>
+          <li><strong>自知力与意识障碍不同：</strong>自知力是对自己精神状态的判断；意识是对周围环境与自身状态的感知清晰度。意识清晰的患者也可能完全缺乏自知力。</li>
+        </ul>
+      </div>
+
+      <div class="callout callout-memory"><div class="callout-icon">🧠</div><div class="callout-body"><strong>记忆提示｜“完整—缺乏—恢复”三步走</strong>完整：知道异常、痛苦、求医（焦虑障碍）；缺乏：否认有病、坚信幻觉妄想是真的、拒绝治疗（精神分裂症等重性）；恢复程度：判断好转，完全恢复=康复指标。记“自知力看三步，不看数字级”。</div></div>
+    </section>
+
+    <section id="syndrome" class="section">
+      <div class="section-header"><span class="section-number">17</span><h2>常见精神疾病综合征</h2></div>
+      <p class="lead">综合征是“症状的组合包”。教材第三节只列 5 个：幻觉妄想、躁狂、抑郁、紧张、遗忘（科尔萨科夫）。它们不是疾病本身，而是通向疾病诊断的中间站。</p>
+
+      <div class="module module-cause">
+        <div class="module-head"><span class="module-index">定义</span><h3>什么是精神疾病综合征</h3></div>
+        <p>虽然精神症状的表现复杂多样，但许多精神症状之间往往具有一定联系。在临床上，通常将<strong>具有一定内在联系且往往同时出现的一组精神症状</strong>称为精神疾病综合征。</p>
+      </div>
+
+      <div class="module module-symptom">
+        <div class="module-head"><span class="module-index">分类</span><h3>五个综合征对照表</h3></div>
+        <div class="table-wrap"><table class="comparison-table">
+          <thead><tr><th>综合征（英文）</th><th>构成与核心</th><th>教材要点</th><th>多见于</th></tr></thead>
+          <tbody>
+            <tr><td>幻觉妄想综合征<br>hallucinatory-paranoid syndrome</td><td>以<strong>幻觉为主</strong>，并在幻觉的基础上产生相应<strong>妄想</strong>；幻觉和妄想联系紧密、相互影响。</td><td>教材举例：耳边出现同学议论的声音（幻听），此后逐渐怀疑同学跟踪迫害（妄想）。</td><td>精神分裂症；也可见于脑器质性损害和精神活性物质所致精神障碍等</td></tr>
+            <tr><td>躁狂综合征<br>manic syndrome</td><td>以<strong>情感高涨、思维奔逸和活动增多</strong>为特征。</td><td>教材称“三高”式组合；某些药物（如糖皮质激素、抗抑郁药物等）也可引起类似发作。</td><td>躁狂发作；也可见于脑器质性损害所致精神障碍</td></tr>
+            <tr><td>抑郁综合征<br>depressive syndrome</td><td>以<strong>情感低落、思维迟缓和活动减少</strong>为特征。</td><td>某些药物如利血平等也可引起类似发作。</td><td>抑郁障碍；也可见于脑器质性损害所致精神障碍</td></tr>
+            <tr><td>紧张综合征<br>catatonic syndrome</td><td>最突出的症状是<strong>全身肌张力增高</strong>，包括紧张性木僵和紧张性兴奋两种状态。</td><td>木僵常伴违拗、刻板言语及刻板动作、模仿言语及模仿动作、蜡样屈曲；兴奋表现为突然爆发的兴奋激动和暴烈行为。木僵可持续数日或数年，可无任何原因转入兴奋；兴奋持续较短暂，发作后往往再次进入木僵或缓解。</td><td>精神分裂症、抑郁障碍、急性应激障碍、脑器质性损害所致精神障碍、药物中毒等</td></tr>
+            <tr><td>遗忘综合征<br>amnestic syndrome<br>（科尔萨科夫综合征 Korsakoff syndrome）</td><td>通常<strong>无意识障碍，智能相对完好</strong>；主要表现为<strong>近事记忆障碍、定向力障碍和虚构</strong>。</td><td>三主征同时出现是识别要点；教材明确智能相对完好，区别于全面性痴呆。</td><td>慢性酒精中毒所致精神障碍、颅脑损伤所致精神障碍、脑肿瘤及其他脑器质性精神障碍</td></tr>
+          </tbody>
+        </table></div>
+      </div>
+
+      <div class="module module-case">
+        <div class="module-head"><span class="module-index">举例</span><h3>教材举例</h3></div>
+        <div class="callout callout-example"><div class="callout-icon">📎</div><div class="callout-body"><strong>教材举例｜幻觉妄想综合征</strong>一患者耳边出现同学议论的声音（幻听），在此之后逐渐怀疑同学对其进行跟踪迫害（妄想）。</div></div>
+        <p>这个例子说明综合征的“时间顺序”：先有幻觉，幻觉内容为妄想提供了素材，妄想再反过来解释幻觉，两者相互强化。</p>
+      </div>
+
+      <div class="module module-diff">
+        <div class="module-head"><span class="module-index">鉴别</span><h3>临床意义与易混点</h3></div>
+        <div class="table-wrap"><table class="comparison-table">
+          <thead><tr><th>易混点</th><th>关键差别</th><th>一句话鉴别</th></tr></thead>
+          <tbody>
+            <tr><td>躁狂综合征 vs 抑郁综合征</td><td>躁狂是“情感高涨+思维奔逸+活动增多”；抑郁是“情感低落+思维迟缓+活动减少”。</td><td>“三高” vs “三低”。</td></tr>
+            <tr><td>紧张综合征 vs 普通“紧张”</td><td>紧张综合征的核心是<strong>全身肌张力增高</strong>，含紧张性木僵与紧张性兴奋；不是情绪上的紧张不安。</td><td>“肌张力高、木僵/暴烈兴奋”=紧张综合征。</td></tr>
+            <tr><td>遗忘综合征 vs 痴呆</td><td>遗忘综合征无意识障碍、智能相对完好，以近事记忆障碍、定向力障碍、虚构为主；痴呆为全面智能损害，常伴人格改变等。</td><td>“只忘了近事还编故事、智能尚可”=遗忘综合征。</td></tr>
+            <tr><td>幻觉妄想综合征 vs 单纯幻觉/单纯妄想</td><td>前者要求幻觉为主并在其基础上产生相应妄想，两者联系紧密；后者只有单一症状。</td><td>“幻觉带出妄想、互相解释”=综合征。</td></tr>
+          </tbody>
+        </table></div>
+        <ul class="icon-list">
+          <li><strong>综合征提示病因范围，不等于病因诊断：</strong>幻觉妄想综合征可见于精神分裂症，也可见于脑器质性损害和物质所致障碍，必须继续排查。</li>
+          <li><strong>药物也能造出综合征：</strong>教材明确糖皮质激素、抗抑郁药可引起躁狂样发作，利血平可引起抑郁样发作。</li>
+          <li><strong>紧张性木僵可持续数日至数年：</strong>且可无任何原因转入兴奋，这是紧张综合征的独特病程描述。</li>
+        </ul>
+      </div>
+
+      <div class="callout callout-memory"><div class="callout-icon">🧠</div><div class="callout-body"><strong>记忆提示｜“幻、躁、抑、紧、忘”</strong>五字顺口：“幻觉妄想、躁狂三高、抑郁三低、紧张肌张力、遗忘柯萨科夫”。遗忘综合征三主征记“近事忘、定向丢、虚构补”。</div></div>
+    </section>
+
+    <section id="linkage" class="section">
+      <div class="section-header"><span class="section-number">18</span><h2>症状—常见疾病纵向联动</h2></div>
+      <p class="lead">这张表只做一件事：把教材在每个症状后标注的“多见于/可见于”原样汇总，训练“看到症状，想到疾病范围”的条件反射。表中不添加教材未提及的疾病，也不把“多见于”改写成“就是”。</p>
+
+      <div class="table-wrap"><table class="comparison-table">
+        <thead><tr><th>症状/症状群</th><th>教材标注的常见疾病或状态</th><th>限定与易错</th></tr></thead>
+        <tbody>
+          <tr><td>评论性、议论性、命令性幻听</td><td>精神分裂症的典型症状</td><td>“典型”不等于“独有”；其他幻觉也可见于多种障碍</td></tr>
+          <tr><td>幻视（意识清晰）</td><td>多见于精神分裂症</td><td>与意识障碍时的幻视分开记</td></tr>
+          <tr><td>幻视（意识障碍）</td><td>多见于谵妄状态</td><td>内容常形象、生动、鲜明，多具恐怖性质</td></tr>
+          <tr><td>单一幻嗅</td><td>多见于颞叶癫痫或颞叶器质性损害</td><td>幻嗅与幻味同时出现、合并被害妄想时多见于精神分裂症</td></tr>
+          <tr><td>心因性幻觉</td><td>多见于应激相关障碍、分离性障碍等</td><td>内容与心理因素密切联系</td></tr>
+          <tr><td>病理性错觉</td><td>多见于谵妄状态、精神分裂症</td><td>正常人错觉可很快纠正</td></tr>
+          <tr><td>视物变形症、自身感知综合障碍</td><td>视物变形多见于癫痫；自身感知综合障碍可见于精神分裂症、癫痫等</td><td>空间感知综合障碍教材未注明疾病</td></tr>
+          <tr><td>现实解体</td><td>可见于抑郁障碍、精神分裂症等</td><td>属感知综合障碍，不是幻觉</td></tr>
+          <tr><td>原发性妄想</td><td>精神分裂症（典型症状，具有重要诊断价值）</td><td>教材唯一明确写“重要诊断价值”的妄想类型</td></tr>
+          <tr><td>关系妄想、被害妄想</td><td>精神分裂症和其他妄想性障碍</td><td>被害妄想可继发拒食、逃跑、报警、自伤、伤人</td></tr>
+          <tr><td>夸大妄想</td><td>躁狂发作、精神分裂症和痴呆等</td><td>不是精神分裂症专属</td></tr>
+          <tr><td>罪恶（自罪）、疑病、虚无妄想</td><td>罪恶多见于抑郁障碍，也可见于精神分裂症；疑病多见于抑郁障碍、精神分裂症及躯体不适障碍；虚无多见于抑郁障碍、精神分裂症</td><td>三者常与抑郁综合征相邻，注意原发/继发</td></tr>
+          <tr><td>钟情、嫉妒、非血统、物理影响、内心被揭露感</td><td>多见于精神分裂症；嫉妒妄想也见于痴呆等</td><td>教材未展开该症状与其他猜疑的鉴别</td></tr>
+          <tr><td>思维奔逸 / 思维迟缓</td><td>躁狂发作 / 抑郁障碍</td><td>速度轴的两端</td></tr>
+          <tr><td>思维贫乏</td><td>精神分裂症、痴呆及智力发育障碍等</td><td>与思维迟缓的“内容仍有”不同</td></tr>
+          <tr><td>思维散漫</td><td>精神分裂症及智力发育障碍</td><td>破裂、语词杂拌、中断、被夺、插入、强制性思维、思维化声、语词新作、象征性思维、逻辑倒错性思维多见于精神分裂症</td></tr>
+          <tr><td>思维不连贯</td><td>谵妄状态</td><td>意识障碍背景是关键词</td></tr>
+          <tr><td>病理性赘述</td><td>癫痫、痴呆等</td><td>啰嗦但最终能回答问题</td></tr>
+          <tr><td>强迫思维</td><td>强迫症，也可见于精神分裂症</td><td>与强制性思维的区别见“易混点”</td></tr>
+          <tr><td>注意增强</td><td>精神分裂症、躯体不适障碍等</td><td>常被被害/疑病妄想驱动</td></tr>
+          <tr><td>注意减退</td><td>抑郁障碍、精神分裂症等</td><td>主动+被动均减弱</td></tr>
+          <tr><td>注意涣散</td><td>注意缺陷多动障碍、焦虑障碍、精神分裂症等</td><td>被动兴奋增强、稳定降低</td></tr>
+          <tr><td>注意狭窄</td><td>意识障碍、智能障碍等</td><td>器质性/认知损害线索</td></tr>
+          <tr><td>注意转移</td><td>躁狂发作等</td><td>与思维奔逸的“随境转移”并列但不同</td></tr>
+          <tr><td>记忆增强</td><td>躁狂发作和精神分裂症等</td><td>病理性增强，不是“记性好”</td></tr>
+          <tr><td>记忆减退</td><td>痴呆，也可见于正常老年人</td><td>正常老年人也可有，需结合程度与功能</td></tr>
+          <tr><td>顺行性遗忘 / 逆行性遗忘</td><td>顺行性多由意识障碍导致不能识记，如脑挫伤；逆行性多见于脑外伤、脑卒中发作、急性意识障碍等</td><td>时间方向相反</td></tr>
+          <tr><td>界限性遗忘 / 进行性遗忘</td><td>界限性多见于分离性障碍；进行性主要见于痴呆</td><td>心因性 vs 器质性/退行性</td></tr>
+          <tr><td>虚构、错构</td><td>各种原因引起的痴呆及酒精所致精神病性障碍</td><td>都以遗忘为前提</td></tr>
+          <tr><td>智力发育障碍 / 痴呆</td><td>智力发育障碍与遗传、感染、中毒、缺氧、脑外伤、内分泌异常等有关；痴呆常有脑器质性病变基础</td><td>18 岁是分界</td></tr>
+          <tr><td>全面性 / 部分性 / 假性痴呆</td><td>全面性多见于阿尔茨海默病和梅毒所致痴呆；部分性可见于血管性痴呆和脑外伤后痴呆早期；假性可见于分离性障碍及应激障碍</td><td>看人格、定向、自知力与器质基础</td></tr>
+          <tr><td>定向力障碍</td><td>多见于意识障碍，是重要标志；痴呆患者意识清晰也可出现；双重定向见于意识清晰的精神分裂症</td><td>“标志”不等于“等同”</td></tr>
+          <tr><td>情感高涨 / 欣快 / 情感低落 / 情感淡漠</td><td>躁狂发作 / 痴呆 / 抑郁障碍 / 晚期精神分裂症</td><td>欣快必须建立在智能障碍基础上</td></tr>
+          <tr><td>焦虑 / 恐惧 / 易激惹 / 情绪不稳</td><td>焦虑障碍 / 恐惧障碍 / 人格障碍、躁狂发作等 / 脑器质性损害所致精神障碍</td><td>恐惧有对象和回避，焦虑无明确对象</td></tr>
+          <tr><td>情感倒错、情感矛盾</td><td>精神分裂症</td><td>倒错是“相反”，矛盾是“并存不觉”</td></tr>
+          <tr><td>意志增强 / 意志减退 / 意志缺失</td><td>精神分裂症、躁狂发作等 / 抑郁障碍和精神分裂症 / 精神分裂症、智力发育障碍和痴呆</td><td>量变轴：多—少—无</td></tr>
+          <tr><td>矛盾意向</td><td>精神分裂症</td><td>与情感矛盾同属“并存不觉”，但对象是意向</td></tr>
+          <tr><td>协调性 / 不协调性精神运动性兴奋</td><td>协调性多见于躁狂发作；不协调性多见于精神分裂症、谵妄状态</td><td>“看得懂/看不懂”</td></tr>
+          <tr><td>木僵</td><td>精神分裂症、严重抑郁障碍、应激障碍、脑器质性损害所致精神障碍和严重药物反应等</td><td>不是精神分裂症专属</td></tr>
+          <tr><td>蜡样屈曲、违拗症、模仿动作、刻板动作、装相作态</td><td>多见于精神分裂症；刻板动作也见于孤独症谱系障碍等</td><td>蜡样屈曲可见“空气枕头”</td></tr>
+          <tr><td>缄默症</td><td>多见于分离性障碍及精神分裂症</td><td>可用书写交流</td></tr>
+          <tr><td>强迫动作</td><td>常见于强迫症</td><td>多与强迫思维有关</td></tr>
+          <tr><td>各类意识障碍</td><td>主要见于脑器质性损害所致精神障碍、躯体疾病所致精神障碍及中毒所致精神障碍等</td><td>谵妄有昼轻夜重；朦胧、梦样教材未注明具体疾病</td></tr>
+          <tr><td>自知力完整 / 缺乏</td><td>焦虑障碍一般完整；精神分裂症等重性精神障碍一般缺乏</td><td>缺乏是重性精神障碍的重要标志</td></tr>
+          <tr><td>幻觉妄想综合征</td><td>精神分裂症，也可见于脑器质性损害和精神活性物质所致精神障碍等</td><td>幻觉为主，继发妄想</td></tr>
+          <tr><td>躁狂综合征 / 抑郁综合征</td><td>躁狂发作、脑器质性损害所致精神障碍；抑郁障碍、脑器质性损害所致精神障碍</td><td>药物（糖皮质激素/抗抑郁药；利血平）也可引起类似发作</td></tr>
+          <tr><td>紧张综合征</td><td>精神分裂症、抑郁障碍、急性应激障碍、脑器质性损害所致精神障碍、药物中毒等</td><td>核心是全身肌张力增高</td></tr>
+          <tr><td>遗忘综合征（科尔萨科夫）</td><td>慢性酒精中毒所致精神障碍、颅脑损伤所致精神障碍、脑肿瘤及其他脑器质性精神障碍</td><td>近事记忆障碍+定向力障碍+虚构；智能相对完好</td></tr>
+        </tbody>
+      </table></div>
+
+      <div class="callout callout-info"><div class="callout-icon">💡</div><div class="callout-body"><strong>用法</strong>①正向：给出症状，先答“教材标注的疾病范围”，再答“限定语”（典型/多见于/可见于）。②反向：给出疾病，回到本章找它的症状群（如精神分裂症→评论性幻听、原发性妄想、思维中断、情感倒错、矛盾意向、缄默、违拗等）。③遇到“教材未注明具体疾病”的格子，如实说“教材未注明”，不要脑补。</div></div>
+      <div class="callout callout-warning"><div class="callout-icon">⚠️</div><div class="callout-body"><strong>不要过度联动</strong>本表是“症状→可能疾病范围”，不是诊断标准。教材明确精神障碍目前仍缺乏有效的生物学诊断指标，诊断主要依赖病史采集和精神检查；单凭一个症状不能下疾病诊断。</div></div>
+    </section>
+
+    <section id="summary" class="section">
+      <div class="section-header"><span class="section-number">19</span><h2>全章核心要点速览</h2></div>
+      <p class="lead">以下 18 条覆盖本章全部必考骨架。建议先默写条目名，再补细节。</p>
+
+      <ol class="numbered-list">
+        <li><strong>学科定位与诊断价值：</strong>症状学研究精神症状；精神病理学研究症状及其产生机制。描述性精神病理学做客观描述，实验性精神病理学探索机制（起源于弗洛伊德精神动力学，后结合认知行为、神经电生理、脑影像）。精神障碍目前仍缺乏有效生物学诊断指标，诊断主要依赖病史采集和精神检查；识别症状才能初步判断有无精神障碍，症状学是基础、是精神科医师基本功。</li>
+        <li><strong>判定四方面与四共同特点：</strong>纵向比较（比过去）、横向比较（比常人，含持续时间）、是否与现实环境相符、是否符合精神病理学表现；共同特点为不受意志控制、难以转移消失、内容与客观环境不相称、带来痛苦和社会功能损害。</li>
+        <li><strong>检查五要点：</strong>确定是否存在→确定频度/持续时间/严重程度→分析原发/继发→鉴别类似症状→探讨生物学与社会心理因素。还要考虑性别、年龄、教育、躯体状况、人格、社会地位、文化背景、生活环境。</li>
+        <li><strong>感知觉障碍：</strong>感觉 3 项（减退/含感觉缺失、过敏、内感性不适）；感知综合障碍 5 项（视物变形、自身、时间、空间、现实解体），共同点是整体属性正确、个别属性错误。</li>
+        <li><strong>错觉、幻觉与幻觉三轴：</strong>错觉有客观事物但被歪曲，病理性错觉多见于谵妄状态、精神分裂症；幻觉无现实刺激。幻觉按感官分听/视/味/嗅/触/本体，按来源分真性（外部客观空间、经感官）与假性（主观空间、不经感官），按条件分功能性（同官并存）、反射性（两官交叉）、心因性、入睡前。</li>
+        <li><strong>幻觉要点：</strong>幻听最常见，评论性/议论性/命令性幻听是精神分裂症典型症状；意识清晰时幻视多见于精神分裂症，意识障碍时多见于谵妄；单一幻嗅多见于颞叶癫痫或颞叶器质性损害。</li>
+        <li><strong>思维形式障碍：</strong>教材 14 个编号、拆开 17 个症状名。速度（奔逸/迟缓）、数量（贫乏）、连贯性（散漫/破裂/杂拌/不连贯）、自主性（中断/被夺/插入/强制）、概念逻辑（赘述/化声/新作/象征/逻辑倒错/强迫）。</li>
+        <li><strong>妄想定义与四特征：</strong>病态推理判断基础上形成的病理性歪曲信念；与事实不符但坚信不疑、涉及本人且有利害关系、个体独特性、与文化和经历有关且有时代色彩。按起源分原发/继发，按结构分系统/非系统。</li>
+        <li><strong>妄想 11 型：</strong>关系、被害、夸大、罪恶、疑病、虚无、钟情、嫉妒、非血统、物理影响、内心被揭露感。原发性妄想对精神分裂症有重要诊断价值。</li>
+        <li><strong>超价观念：</strong>有强烈情感色彩的错误观念，有一定事实与性格基础、不十分荒谬、无明显逻辑错误；情绪消退时可减弱消退；多见于人格障碍。与妄想的关键差别是“有根、可松动”。</li>
+        <li><strong>注意 5 种：</strong>增强（主动兴奋↑）、减退（主动+被动↓）、涣散（被动兴奋↑+稳定↓）、狭窄（范围↓）、转移（转换↑+稳定↓）。</li>
+        <li><strong>记忆与遗忘：</strong>记忆三过程识记—保持—再认回忆；遗忘四型顺行（病后）、逆行（病前）、界限（特定时段/心因/分离）、进行（逐渐加重/痴呆）；虚构是编造未经历，错构是真实经历记错位，两者均见于痴呆与酒精所致精神病性障碍。</li>
+        <li><strong>智能与痴呆：</strong>18 岁前为智力发育障碍，18 岁后为痴呆；痴呆分全面（弥散、人格改变、定向障碍、自知力缺乏）、部分（局限、人格保持、定向完整、有自知力）、假性（无器质损害、可恢复）；假性两型为刚塞综合征（近似错答）与童样痴呆（幼稚言行）。</li>
+        <li><strong>定向力：</strong>环境定向（时间/地点/人物）+自我定向（姓名/性别/年龄/职业）；定向障碍是意识障碍重要标志但非等同；双重定向见于意识清晰的精神分裂症。</li>
+        <li><strong>情感 10 种：</strong>高涨、欣快、低落、淡漠、焦虑、恐惧、易激惹、情绪不稳、情感倒错、情感矛盾。高涨有感染性（躁狂），欣快伴智能障碍（痴呆）；倒错是表现与体验相反，矛盾是两种相反情感并存且不觉矛盾。</li>
+        <li><strong>意志 4 种：</strong>增强（多）、减退（少）、缺失（无）、矛盾意向（反）。<strong>动作行为 10 项：</strong>协调/不协调兴奋；木僵、蜡样屈曲、缄默、违拗；模仿、刻板、装相作态、强迫动作。</li>
+        <li><strong>意识障碍与自知力：</strong>意识障碍 7 种——清晰度四级嗜睡/混浊/昏睡/昏迷，伴范围缩小或内容变化三型朦胧（范围窄）、谵妄（恐怖幻视错视+不协调兴奋+昼轻夜重）、梦样（沉浸梦样体验）。自知力是对自身精神状态的认识和判断能力；焦虑障碍多完整，精神分裂症等重性多缺乏；缺乏是重性重要标志，有无及恢复程度判定病情与好转，完全恢复是康复重要指标；教材未给数字分级。</li>
+        <li><strong>五个综合征：</strong>幻觉妄想（幻觉为主继发妄想）、躁狂（三高）、抑郁（三低）、紧张（肌张力增高+木僵/兴奋）、遗忘（科尔萨科夫：近事记忆障碍+定向力障碍+虚构，智能相对完好）。</li>
+      </ol>
+
+      <div class="module module-memory">
+        <div class="module-head"><span class="module-index">记忆</span><h3>全章记忆工具箱（4 种方法）</h3></div>
+        <div class="memory-grid">
+          <div class="memory-card">
+            <div class="m-title">方法一：归类树法<span class="m-type">图解 / 归类</span></div>
+            <div class="m-formula">11 类 → 每类数量 → 每项定义 → 教材例子</div>
+            <p><strong>操作：</strong>先默写“感知觉、思维、注意、记忆、智能、定向力、情感、意志、动作行为、意识、自知力”，再在每类下写数量（如思维 14 编号/17 名、妄想 11 型、意识 7 型），最后填定义与例子。</p>
+            <p><strong>原理：</strong>组块化与层级编码。大脑对“有结构的上位类别”比对无序清单更容易提取；先建索引可避免“名词都会、放错抽屉”。</p>
+          </div>
+          <div class="memory-card">
+            <div class="m-title">方法二：对比表法<span class="m-type">对比</span></div>
+            <div class="m-formula">成对概念 → 只记一个判据 → 一句话鉴别</div>
+            <p><strong>操作：</strong>把错觉/幻觉、功能性/反射性、真性/假性、妄想/超价、强迫/强制、错构/虚构、倒错/矛盾、高涨/欣快、木僵/昏迷等列成两列表，每对只写“判据”和“一句话”。</p>
+            <p><strong>原理：</strong>差异编码。相似材料放在一起时，大脑依赖“区别特征”来区分；把差异压缩成一个判据，可显著降低混淆。</p>
+          </div>
+          <div class="memory-card">
+            <div class="m-title">方法三：病例反推法<span class="m-type">故事 / 情境</span></div>
+            <div class="m-formula">读教材病例 → 圈症状词 → 反推定义 → 改一个条件再鉴别</div>
+            <p><strong>操作：</strong>用幻听病例反推“无现实刺激”；用喇叭病例反推“同一感官”；用被害妄想病例反推“坚信被害”；用谵妄情境反推“恐怖幻视+昼轻夜重”。再把“同一感官”改成“两个感官”，自问应换成什么名词。</p>
+            <p><strong>原理：</strong>情境记忆与生成效应。把抽象定义挂在具体故事上，提取时有线索；自己改条件、做对比，比被动重读更能形成可迁移的判别能力。</p>
+          </div>
+          <div class="memory-card">
+            <div class="m-title">方法四：口诀首字法<span class="m-type">口诀</span></div>
+            <div class="m-formula">“关被夸罪疑，虚钟嫉非物，洞”／“嗜混昏昏，朦胧谵梦”</div>
+            <p><strong>操作：</strong>只背首字串，再展开全称。妄想 11 型用“关被夸罪疑、虚钟嫉非物、洞”；意识四级用“嗜混昏昏”（嗜睡、混浊、昏睡、昏迷）；三型用“朦胧窄、谵妄恐怖、梦样沉浸”。</p>
+            <p><strong>原理：</strong>首字提取与韵律线索。押韵/短串降低工作记忆负担，先保证“提取路径”存在，再逐步补全细节；口诀只做索引，不替代定义。</p>
+          </div>
+        </div>
+        <p class="table-note">四种方法配合使用：归类树给“框架”，对比表给“边界”，病例反推给“迁移”，口诀给“提取速度”。</p>
+      </div>
+    </section>
+
+    <section id="pitfalls" class="section">
+      <div class="section-header"><span class="section-number">20</span><h2>易混易错点警示</h2></div>
+      <p class="lead">以下 16 条是本章选择题、名词解释和病例题的高频翻车点。每条都给“判据”，不要只背结论。</p>
+
+      <div class="exam-alert">
+        <h3>⚠️ 高频易混清单</h3>
+        <ul class="icon-list">
+          <li><strong>错觉 ≠ 幻觉：</strong>判据是“有没有客观刺激”。有物而看歪=错觉；无物却感知=幻觉。</li>
+          <li><strong>功能性 ≠ 反射性幻觉：</strong>判据是“涉及几个感官”。同一感官、正常知觉与幻觉并存=功能性；两个感官交叉=反射性。</li>
+          <li><strong>真性 ≠ 假性幻觉：</strong>判据是“空间与通道”。外部客观空间、经感官=真性；主观空间、不经感官=假性。</li>
+          <li><strong>妄想 ≠ 超价观念：</strong>判据是“事实基础与可纠正性”。有性格/现实基础、情绪消退可减弱=超价；无基础、坚信不疑=妄想。</li>
+          <li><strong>原发性 ≠ 继发性妄想：</strong>判据是“有没有发生基础”。无源、不可解释=原发（精分重要诊断价值）；建立在其他病理心理或经历上=继发。</li>
+          <li><strong>强迫思维 ≠ 强制性思维：</strong>判据是“是谁的、变不变”。自己的、同一内容反复=强迫；外力强加、不属于自己、内容多变=强制。</li>
+          <li><strong>散漫/破裂/杂拌/不连贯：</strong>判据是“连贯性损伤程度+意识背景”。散漫跑题、破裂句意无关、杂拌字词堆积；有意识障碍则称思维不连贯（谵妄）。</li>
+          <li><strong>错构 ≠ 虚构：</strong>判据是“事件是否真实发生”。真实经历记错时间地点=错构；想象未经历的事件=虚构；两者都建立在遗忘上。</li>
+          <li><strong>情感倒错 ≠ 情感矛盾：</strong>判据是“一个错位还是两个并存”。表现与体验/处境相反=倒错；同时两种相反情感且不觉矛盾=矛盾。</li>
+          <li><strong>情感高涨 ≠ 欣快：</strong>判据是“有无智能障碍+能否感染”。协调、有感染性=高涨（躁狂）；智能障碍基础上、单调呆傻=欣快（痴呆）。</li>
+          <li><strong>意志减退 ≠ 意志缺失：</strong>判据是“减少还是缺乏”。尚有一点动机=减退；任何活动都无动机、本能要求也可无=缺失。</li>
+          <li><strong>木僵 ≠ 昏迷：</strong>木僵属动作行为障碍（肌张力增高、可保持固定姿势）；昏迷属意识障碍最重级（意识完全丧失、反射消失）。教材分属不同章节，不能互换。</li>
+          <li><strong>朦胧/谵妄/梦样：</strong>判据是“核心机制”。范围缩小=朦胧；恐怖性幻视错视+不协调兴奋+昼轻夜重=谵妄；沉浸梦样体验、外表似清醒=梦样。</li>
+          <li><strong>定向力障碍 ≠ 意识障碍：</strong>定向障碍是意识障碍的重要标志，但痴呆（意识清晰）和精神分裂症（双重定向）也可出现。</li>
+          <li><strong>幻觉 ≠ 精神分裂症：</strong>幻觉可见于谵妄、颞叶癫痫/器质性损害（单一幻嗅）、应激相关障碍/分离性障碍（心因性），正常人在睡眠觉醒交替阶段也可有短暂单纯幻觉。</li>
+          <li><strong>自知力没有数字分级：</strong>教材只讲“完整/缺乏”，并以“恢复程度”判定好转；不要自创“1—4 级”。</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="quiz" class="section">
+      <div class="section-header"><span class="section-number">21</span><h2>章节自测</h2></div>
+      <p class="lead">共 15 题：单选 4、多选 3、判断 3、名词解释 3、简答 1、案例 1。答案与解析默认折叠，先独立作答再展开。</p>
+
+      <div class="quiz-block">
+        <div class="quiz-item">
+          <div class="quiz-stem"><span class="q-type">单选</span><span>1. 关于错觉与幻觉，下列表述正确的是？</span><span class="difficulty">⭐⭐</span></div>
+          <ul class="quiz-options">
+            <li data-letter="A">错觉没有客观刺激，幻觉有客观刺激</li>
+            <li data-letter="B" class="correct">错觉是对客观事物歪曲的知觉，幻觉是没有现实刺激作用于感觉器官时出现的知觉体验</li>
+            <li data-letter="C">正常人不会出现错觉</li>
+            <li data-letter="D">病理性错觉一般很容易被纠正</li>
+          </ul>
+          <details class="qa"><summary><span class="qa-num">答</span>答案与解析</summary>
+            <div class="qa-body"><span class="answer-key">答案 B</span>教材定义：错觉是对客观事物歪曲的知觉；幻觉是没有现实刺激作用于感觉器官时出现的知觉体验。A 把两者说反；C 错，正常人光线暗淡、恐惧紧张、疲劳时也可出现错觉；D 错，病理性错觉常在意识障碍或其他精神障碍时出现，不容易被纠正。</div>
+          </details>
+        </div>
+
+        <div class="quiz-item">
+          <div class="quiz-stem"><span class="q-type">单选</span><span>2. 患者听到汽车喇叭响的同时，听到一个女声骂自己，声音来自喇叭。该症状最符合？</span><span class="difficulty">⭐⭐</span></div>
+          <ul class="quiz-options">
+            <li data-letter="A">反射性幻听</li>
+            <li data-letter="B" class="correct">功能性幻听</li>
+            <li data-letter="C">心因性幻听</li>
+            <li data-letter="D">假性幻听</li>
+          </ul>
+          <details class="qa"><summary><span class="qa-num">答</span>答案与解析</summary>
+            <div class="qa-body"><span class="answer-key">答案 B</span>功能性幻觉是伴随现实刺激出现、涉及<strong>同一感官</strong>、正常知觉与幻觉并存的幻觉；本例现实刺激（喇叭）与幻觉（骂声）都在听觉。反射性幻觉涉及两个不同感官（如听到广播同时看到播音员人像）；心因性幻觉与强烈心理因素相关；假性幻觉在主观空间、不经感官获得。</div>
+          </details>
+        </div>
+
+        <div class="quiz-item">
+          <div class="quiz-stem"><span class="q-type">单选</span><span>3. 教材明确认为对精神分裂症具有重要诊断价值的症状是？</span><span class="difficulty">⭐⭐⭐</span></div>
+          <ul class="quiz-options">
+            <li data-letter="A">关系妄想</li>
+            <li data-letter="B">继发性妄想</li>
+            <li data-letter="C" class="correct">原发性妄想</li>
+            <li data-letter="D">超价观念</li>
+          </ul>
+          <details class="qa"><summary><span class="qa-num">答</span>答案与解析</summary>
+            <div class="qa-body"><span class="answer-key">答案 C</span>教材原文：原发性妄想是精神分裂症的典型症状，对精神分裂症具有重要诊断价值。关系妄想多见于精神分裂症和其他妄想性障碍，并非“重要诊断价值”的表述；继发性妄想可见于多种精神障碍；超价观念多见于人格障碍。</div>
+          </details>
+        </div>
+
+        <div class="quiz-item">
+          <div class="quiz-stem"><span class="q-type">单选</span><span>4. 下列哪项最符合谵妄的特征？</span><span class="difficulty">⭐⭐⭐</span></div>
+          <ul class="quiz-options">
+            <li data-letter="A">意识清晰，以评论性幻听为主</li>
+            <li data-letter="B" class="correct">意识清晰度降低，出现大量恐怖性幻视、错视，常有昼轻夜重</li>
+            <li data-letter="C">意识范围缩小，狭窄范围内行为相对正常</li>
+            <li data-letter="D">外表好像清醒，完全沉浸于梦样体验</li>
+          </ul>
+          <details class="qa"><summary><span class="qa-num">答</span>答案与解析</summary>
+            <div class="qa-body"><span class="answer-key">答案 B</span>谵妄是意识清晰度降低伴大量幻觉、错觉，以形象鲜明的恐怖性幻视和错视为主要；有紧张恐惧、喊叫逃跑、双手抓摸等不协调性兴奋，思维不连贯，常有定向障碍；往往夜间加重、昼轻夜重。A 是意识清晰状态下的幻听；C 是朦胧状态；D 是梦样状态。</div>
+          </details>
+        </div>
+
+        <div class="quiz-item">
+          <div class="quiz-stem"><span class="q-type">多选</span><span>5. 精神症状的共同特点包括？</span><span class="difficulty">⭐⭐</span></div>
+          <ul class="quiz-options">
+            <li data-letter="A" class="correct">症状的出现不受患者意志的控制</li>
+            <li data-letter="B" class="correct">症状一旦出现，难以通过注意力转移等方法令其消失</li>
+            <li data-letter="C">症状的内容与周围客观环境总是协调一致</li>
+            <li data-letter="D" class="correct">症状往往给患者带来不同程度的痛苦和社会功能损害</li>
+          </ul>
+          <details class="qa"><summary><span class="qa-num">答</span>答案与解析</summary>
+            <div class="qa-body"><span class="answer-key">答案 ABD</span>A、B、D 均为教材原文四共同特点。C 错：教材说“症状的内容与周围客观环境<strong>不相称</strong>”，不是协调一致。</div>
+          </details>
+        </div>
+
+        <div class="quiz-item">
+          <div class="quiz-stem"><span class="q-type">多选</span><span>6. 教材将其列为精神分裂症典型症状或明确多见于精神分裂症的有？</span><span class="difficulty">⭐⭐⭐</span></div>
+          <ul class="quiz-options">
+            <li data-letter="A" class="correct">评论性幻听</li>
+            <li data-letter="B" class="correct">命令性幻听</li>
+            <li data-letter="C" class="correct">原发性妄想</li>
+            <li data-letter="D" class="correct">思维中断</li>
+          </ul>
+          <details class="qa"><summary><span class="qa-num">答</span>答案与解析</summary>
+            <div class="qa-body"><span class="answer-key">答案 ABCD</span>教材明确：评论性、议论性、命令性幻听是精神分裂症的典型症状；原发性妄想是精神分裂症的典型症状并有重要诊断价值；思维中断多见于精神分裂症。四项均符合。</div>
+          </details>
+        </div>
+
+        <div class="quiz-item">
+          <div class="quiz-stem"><span class="q-type">多选</span><span>7. 关于痴呆的类型，下列正确的是？</span><span class="difficulty">⭐⭐</span></div>
+          <ul class="quiz-options">
+            <li data-letter="A" class="correct">全面性痴呆常出现人格改变、定向力障碍及自知力缺乏</li>
+            <li data-letter="B" class="correct">部分性痴呆人格仍保持良好、定向力完整、有一定自知力</li>
+            <li data-letter="C" class="correct">假性痴呆大脑组织结构无任何器质性损害，治疗后痴呆样表现很容易消失</li>
+            <li data-letter="D">假性痴呆主要见于阿尔茨海默病和梅毒所致痴呆</li>
+          </ul>
+          <details class="qa"><summary><span class="qa-num">答</span>答案与解析</summary>
+            <div class="qa-body"><span class="answer-key">答案 ABC</span>A、B、C 均符合教材。D 错：阿尔茨海默病和梅毒所致痴呆是<strong>全面性痴呆</strong>的常见疾病；假性痴呆可见于分离性障碍及应激障碍等。</div>
+          </details>
+        </div>
+
+        <div class="quiz-item">
+          <div class="quiz-stem"><span class="q-type">判断</span><span>8. 有定向力障碍者一定存在意识障碍。</span><span class="difficulty">⭐⭐</span></div>
+          <ul class="quiz-options">
+            <li data-letter="A">正确</li>
+            <li data-letter="B" class="correct">错误</li>
+          </ul>
+          <details class="qa"><summary><span class="qa-num">答</span>答案与解析</summary>
+            <div class="qa-body"><span class="answer-key">答案 B（错误）</span>教材明确：定向力障碍多见于意识障碍时，是意识障碍的一个重要标志；但有定向力障碍者并不一定存在意识障碍。痴呆患者可出现定向力障碍但意识清晰；精神分裂症患者也可在意识清晰状态下出现双重定向。</div>
+          </details>
+        </div>
+
+        <div class="quiz-item">
+          <div class="quiz-stem"><span class="q-type">判断</span><span>9. 错构是在遗忘基础上，对过去所经历过的事件，在发生的地点、情节，特别是在时间上出现错误回忆，并坚信不疑。</span><span class="difficulty">⭐⭐⭐</span></div>
+          <ul class="quiz-options">
+            <li data-letter="A" class="correct">正确</li>
+            <li data-letter="B">错误</li>
+          </ul>
+          <details class="qa"><summary><span class="qa-num">答</span>答案与解析</summary>
+            <div class="qa-body"><span class="answer-key">答案 A（正确）</span>这是教材对错构的原文定义。注意与虚构区分：虚构是以想象的、未曾亲身经历的事件填补记忆缺损，内容常变化、易受暗示；错构是真实经历过的事件记错时间/地点/情节，且坚信不疑。</div>
+          </details>
+        </div>
+
+        <div class="quiz-item">
+          <div class="quiz-stem"><span class="q-type">判断</span><span>10. 超价观念与妄想一样，均缺乏现实基础且不能被纠正。</span><span class="difficulty">⭐⭐</span></div>
+          <ul class="quiz-options">
+            <li data-letter="A">正确</li>
+            <li data-letter="B" class="correct">错误</li>
+          </ul>
+          <details class="qa"><summary><span class="qa-num">答</span>答案与解析</summary>
+            <div class="qa-body"><span class="answer-key">答案 B（错误）</span>超价观念的发生一般均有一定事实依据，有一定性格基础与现实基础，不十分荒谬离奇，也没有明显逻辑推理错误；当强烈情绪体验消退时，可随之减弱和消退。妄想则是缺乏客观现实基础、坚信不疑、难以纠正。</div>
+          </details>
+        </div>
+
+        <div class="quiz-item">
+          <div class="quiz-stem"><span class="q-type">名词解释</span><span>11. 幻觉（hallucination）</span><span class="difficulty">⭐⭐</span></div>
+          <details class="qa"><summary><span class="qa-num">答</span>答案与解析</summary>
+            <div class="qa-body"><span class="answer-key">参考答案</span>幻觉是没有现实刺激作用于感觉器官时出现的知觉体验，是一种虚幻的知觉。正常人也可能有幻觉，但多发生于睡眠和觉醒的交替阶段，多数情况下是单纯的、短暂的，对精神疾病的诊断无明显意义。幻觉是精神科临床上常见且重要的精神病性症状之一。</div>
+          </details>
+        </div>
+
+        <div class="quiz-item">
+          <div class="quiz-stem"><span class="q-type">名词解释</span><span>12. 妄想（delusion）</span><span class="difficulty">⭐⭐⭐</span></div>
+          <details class="qa"><summary><span class="qa-num">答</span>答案与解析</summary>
+            <div class="qa-body"><span class="answer-key">参考答案</span>妄想是在病态推理和判断基础上形成的一种病理性的歪曲的信念。其特征包括：①内容通常与事实不符，缺乏客观现实基础，但患者仍坚信不疑；②内容通常涉及患者本人，且与个人具有利害关系；③内容常具有个体独特性，是个体的心理现象，并非集体信念；④内容与患者的文化背景和经历有关，且通常有浓厚的时代色彩。</div>
+          </details>
+        </div>
+
+        <div class="quiz-item">
+          <div class="quiz-stem"><span class="q-type">名词解释</span><span>13. 超价观念（overvalued idea）</span><span class="difficulty">⭐⭐</span></div>
+          <details class="qa"><summary><span class="qa-num">答</span>答案与解析</summary>
+            <div class="qa-body"><span class="answer-key">参考答案</span>超价观念是一种具有强烈情感色彩的错误观念。其发生一般均有一定事实依据，不十分荒谬离奇，也没有明显的逻辑推理错误；此种观念片面而偏激，可明显地影响患者的行为及其他心理活动。多见于人格障碍。与妄想的区别在于其形成有一定性格基础与现实基础，伴有强烈情绪体验，内容比较符合客观实际；强烈情绪体验消退时，可随之减弱和消退。</div>
+          </details>
+        </div>
+
+        <div class="quiz-item">
+          <div class="quiz-stem"><span class="q-type">简答</span><span>14. 简述判定个体是否有精神症状的四个方面，以及精神症状的共同特点。</span><span class="difficulty">⭐⭐⭐</span></div>
+          <details class="qa"><summary><span class="qa-num">答</span>答案与解析</summary>
+            <div class="qa-body"><span class="answer-key">参考答案</span><strong>判定四方面：</strong>①纵向比较，即与其过去一贯的表现进行比较，精神活动是否具有明显改变；②横向比较，即与大多数正常人的精神活动相比较，是否具有明显差别，某种精神状态的持续时间是否超出了一般限度；③是否与现实环境相符，结合当事人的心理背景和当时周围环境具体分析；④是否符合精神病理学的表现。<br><strong>共同特点：</strong>①症状的出现不受患者意志的控制；②症状一旦出现，难以通过注意力转移等方法令其消失；③症状的内容与周围客观环境不相称；④症状往往给患者带来不同程度的痛苦和社会功能损害。</div>
+          </details>
+        </div>
+
+        <div class="quiz-item">
+          <div class="quiz-stem"><span class="q-type">案例</span><span>15. 男，28 岁，精神分裂症（教材原文病例）。患者称：“我一出门就有人指指点点地在说我，刚开始是同事和邻居等一些认识的人，后来马路上不认识的人也开始议论我，说我人品不好，说我工作不认真。他们虽然没有说我的名字，有时也听不清在说什么，但我肯定他们就是在说我。有时他们还故意在我面前吐痰、咳嗽，用特别的眼光看我等。近来，电视上也在含沙射影地说我。前天，电视上演一个人利用职务之便贪污被判了刑，这实际上就是在警告我要好好工作。”请回答：①最突出的症状是什么？②按内容属于哪一型？按起源能否判定为原发性？③教材认为该症状多见于哪些障碍？</span><span class="difficulty">⭐⭐⭐</span></div>
+          <details class="qa"><summary><span class="qa-num">析</span>答案与诊断思路</summary>
+            <div class="qa-body"><span class="answer-key">参考答案</span>①最突出的症状是<strong>关系妄想</strong>：患者认为周围环境中与自己无关的事情（同事邻居议论、陌生人吐痰咳嗽、电视内容）均与自己有关。②按内容归类属于<strong>关系妄想</strong>；按起源看，教材该病例未描述其发生基础，不能擅自判定为原发性。③教材明确关系妄想多见于<strong>精神分裂症和其他妄想性障碍</strong>。<br><strong>思路提醒：</strong>“没有说名字、有时听不清，但我肯定在说我”体现了妄想的“坚信不疑、缺乏现实基础”；“电视含沙射影、贪污判刑是警告我”体现了关系妄想的泛化。不要只看到“议论”就误判为幻听——本例是患者对外界真实事件的<strong>错误解释</strong>，不是无现实刺激的虚幻听觉。</div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section id="flashcards" class="section">
+      <div class="section-header"><span class="section-number">22</span><h2>考点速记卡</h2></div>
+      <p class="lead">共 18 张，点击翻转。本章为症状学，教材不含治疗方案，故不设“治疗”组卡片；卡片分为概念、诊断/归属、记忆三组。</p>
+
+      <div class="flashcard-grid">
+        <div class="flashcard"><div class="flashcard-inner">
+          <div class="flashcard-face flashcard-front"><span class="card-tag concept">概念</span><p>幻觉的定义？</p><span class="flip-hint">点击翻转</span></div>
+          <div class="flashcard-face flashcard-back"><p>没有现实刺激作用于感觉器官时出现的知觉体验，是一种虚幻的知觉。</p></div>
+        </div></div>
+
+        <div class="flashcard"><div class="flashcard-inner">
+          <div class="flashcard-face flashcard-front"><span class="card-tag concept">概念</span><p>错觉的定义？</p><span class="flip-hint">点击翻转</span></div>
+          <div class="flashcard-face flashcard-back"><p>对客观事物歪曲的知觉。正常人也可出现，但能很快认识并纠正。</p></div>
+        </div></div>
+
+        <div class="flashcard"><div class="flashcard-inner">
+          <div class="flashcard-face flashcard-front"><span class="card-tag diagnosis">诊断</span><p>真性幻觉与假性幻觉怎么分？</p><span class="flip-hint">点击翻转</span></div>
+          <div class="flashcard-face flashcard-back"><p>真性：来自外部客观空间、通过感觉器官获得，生动形象，患者说“亲耳听到/亲眼看到”。假性：存在于主观空间、不通过感觉器官获得，内容模糊不完整，患者说“大脑内隐约出现”。</p></div>
+        </div></div>
+
+        <div class="flashcard"><div class="flashcard-inner">
+          <div class="flashcard-face flashcard-front"><span class="card-tag diagnosis">诊断</span><p>功能性幻觉与反射性幻觉怎么分？</p><span class="flip-hint">点击翻转</span></div>
+          <div class="flashcard-face flashcard-back"><p>功能性：伴随现实刺激，涉及<strong>同一感官</strong>，正常知觉与幻觉并存。反射性：伴随现实刺激，涉及<strong>两个不同感官</strong>。</p></div>
+        </div></div>
+
+        <div class="flashcard"><div class="flashcard-inner">
+          <div class="flashcard-face flashcard-front"><span class="card-tag diagnosis">诊断</span><p>原发性妄想的定义与诊断价值？</p><span class="flip-hint">点击翻转</span></div>
+          <div class="flashcard-face flashcard-back"><p>没有发生基础的妄想，内容不可理解，不能用既往经历、当前处境及其他心理活动解释。是精神分裂症的典型症状，对精神分裂症具有重要诊断价值。</p></div>
+        </div></div>
+
+        <div class="flashcard"><div class="flashcard-inner">
+          <div class="flashcard-face flashcard-front"><span class="card-tag concept">概念</span><p>妄想的四个特征？</p><span class="flip-hint">点击翻转</span></div>
+          <div class="flashcard-face flashcard-back"><p>①与事实不符、缺乏客观现实基础但坚信不疑；②涉及患者本人且有利害关系；③个体独特性、非集体信念；④与文化和经历有关、有时代色彩。</p></div>
+        </div></div>
+
+        <div class="flashcard"><div class="flashcard-inner">
+          <div class="flashcard-face flashcard-front"><span class="card-tag concept">概念</span><p>超价观念与妄想的关键区别？</p><span class="flip-hint">点击翻转</span></div>
+          <div class="flashcard-face flashcard-back"><p>超价观念有一定性格基础与现实基础，伴强烈情绪体验，内容较符合客观实际；情绪消退时可减弱消退。妄想缺乏现实基础、坚信不疑、难以纠正。</p></div>
+        </div></div>
+
+        <div class="flashcard"><div class="flashcard-inner">
+          <div class="flashcard-face flashcard-front"><span class="card-tag diagnosis">诊断</span><p>强迫思维与强制性思维怎么分？</p><span class="flip-hint">点击翻转</span></div>
+          <div class="flashcard-face flashcard-back"><p>强迫思维：自己的思想，同一内容反复持续出现，痛苦并力图摆脱，多见于强迫症。强制性思维：外力强加、不属于自己，内容变化多端、突然出现突然消失，多见于精神分裂症。</p></div>
+        </div></div>
+
+        <div class="flashcard"><div class="flashcard-inner">
+          <div class="flashcard-face flashcard-front"><span class="card-tag diagnosis">诊断</span><p>思维散漫、思维破裂、语词杂拌怎么分？</p><span class="flip-hint">点击翻转</span></div>
+          <div class="flashcard-face flashcard-back"><p>散漫：联想松弛、缺乏主题、回答不切题。破裂：句子结构完整但各句含意互不相关、语句堆积。语词杂拌：句子结构不完整，只剩不相干字词堆积。</p></div>
+        </div></div>
+
+        <div class="flashcard"><div class="flashcard-inner">
+          <div class="flashcard-face flashcard-front"><span class="card-tag diagnosis">诊断</span><p>错构与虚构怎么分？</p><span class="flip-hint">点击翻转</span></div>
+          <div class="flashcard-face flashcard-back"><p>错构：遗忘基础上，对<strong>真实经历过</strong>的事件在地点、情节、特别是时间上错误回忆，并坚信不疑。虚构：遗忘基础上，以<strong>想象的、未曾经历</strong>的事件填补记忆缺损，内容常变化、易受暗示。</p></div>
+        </div></div>
+
+        <div class="flashcard"><div class="flashcard-inner">
+          <div class="flashcard-face flashcard-front"><span class="card-tag diagnosis">诊断</span><p>顺行性遗忘与逆行性遗忘怎么分？</p><span class="flip-hint">点击翻转</span></div>
+          <div class="flashcard-face flashcard-back"><p>顺行性：对紧接着疾病<strong>以后</strong>一段时间的经历不能回忆，多由意识障碍不能识记。逆行性：对疾病发生<strong>之前</strong>一段时间的经历不能回忆。</p></div>
+        </div></div>
+
+        <div class="flashcard"><div class="flashcard-inner">
+          <div class="flashcard-face flashcard-front"><span class="card-tag diagnosis">诊断</span><p>情感倒错与情感矛盾怎么分？</p><span class="flip-hint">点击翻转</span></div>
+          <div class="flashcard-face flashcard-back"><p>情感倒错：情感表现与内心体验或处境明显不协调甚至相反（该哭却笑）。情感矛盾：同一时间对同一对象有两种截然相反的情感，但患者不觉矛盾、无痛苦（又恨又亲近）。</p></div>
+        </div></div>
+
+        <div class="flashcard"><div class="flashcard-inner">
+          <div class="flashcard-face flashcard-front"><span class="card-tag diagnosis">诊断</span><p>情感高涨与欣快怎么分？</p><span class="flip-hint">点击翻转</span></div>
+          <div class="flashcard-face flashcard-back"><p>情感高涨：正性情感明显增强，与精神活动其他方面较协调、与环境有联系，有感染性，多见于躁狂发作。欣快：在智能障碍基础上出现的与环境不协调的愉快，表情单调刻板、给人呆傻感，多见于痴呆。</p></div>
+        </div></div>
+
+        <div class="flashcard"><div class="flashcard-inner">
+          <div class="flashcard-face flashcard-front"><span class="card-tag diagnosis">诊断</span><p>谵妄的三个核心特征？</p><span class="flip-hint">点击翻转</span></div>
+          <div class="flashcard-face flashcard-back"><p>①意识清晰度降低+大量恐怖性幻视、错视；②不协调性精神运动性兴奋（喊叫、逃跑、双手抓摸）、思维不连贯、定向障碍；③昼轻夜重，事后部分或全部遗忘。</p></div>
+        </div></div>
+
+        <div class="flashcard"><div class="flashcard-inner">
+          <div class="flashcard-face flashcard-front"><span class="card-tag memory">记忆</span><p>意识清晰度降低的四级顺序？</p><span class="flip-hint">点击翻转</span></div>
+          <div class="flashcard-face flashcard-back"><p>嗜睡→混浊→昏睡→昏迷。检查点：刺激即醒能应答→反应迟钝/定向障碍→无言语/强刺激有防御反射（压眶）→任何刺激无反应、反射消失。</p></div>
+        </div></div>
+
+        <div class="flashcard"><div class="flashcard-inner">
+          <div class="flashcard-face flashcard-front"><span class="card-tag concept">概念</span><p>自知力的定义与教材分级框架？</p><span class="flip-hint">点击翻转</span></div>
+          <div class="flashcard-face flashcard-back"><p>自知力是患者对自己精神状态的认识和判断能力。教材按“完整—缺乏”，并以“恢复程度”判定病情轻重和好转；完全恢复是康复重要指标。教材未给数字分级。</p></div>
+        </div></div>
+
+        <div class="flashcard"><div class="flashcard-inner">
+          <div class="flashcard-face flashcard-front"><span class="card-tag memory">记忆</span><p>五个精神疾病综合征？</p><span class="flip-hint">点击翻转</span></div>
+          <div class="flashcard-face flashcard-back"><p>幻觉妄想综合征、躁狂综合征（三高）、抑郁综合征（三低）、紧张综合征（肌张力增高）、遗忘综合征（科尔萨科夫：近事记忆障碍+定向力障碍+虚构）。</p></div>
+        </div></div>
+
+        <div class="flashcard"><div class="flashcard-inner">
+          <div class="flashcard-face flashcard-front"><span class="card-tag memory">记忆</span><p>本章 11 类症状的完整顺序？</p><span class="flip-hint">点击翻转</span></div>
+          <div class="flashcard-face flashcard-back"><p>感知觉、思维、注意、记忆、智能、定向力、情感、意志、动作行为、意识、自知力。</p></div>
+        </div></div>
+      </div>
+    </section>
+
+    <section id="cases" class="section">
+      <div class="section-header"><span class="section-number">23</span><h2>病例挑战</h2></div>
+      <p class="lead">3 个病例，难度递进。前两个为教材原文病例，第三个为教材症状组合的教学演练；所有病例只使用教材描述过的症状，不添加化验值、剂量或时间阈值。</p>
+
+      <div class="case-card">
+        <div class="case-meta"><span>病例 1</span><span>难度 ⭐⭐</span><span>教材原文</span></div>
+        <div class="case-title">“喇叭一响，她就骂我”</div>
+        <div class="case-body"><p>男，21 岁，精神分裂症。近半年来，患者出门时经常用耳塞将耳朵堵起来。问其原因，患者回答：“走在街上时，只要听到汽车喇叭响就能同时听到还有一个女的骂我是流氓，这个声音是从汽车喇叭里传出来的。只要喇叭响，她就开始骂我。”</p></div>
+        <ol class="case-questions">
+          <li>患者的核心症状属于哪一种幻觉？</li>
+          <li>如果患者是“听到广播声音的同时看到播音员人像站在面前”，应改称什么？两者判据是什么？</li>
+          <li>该症状教材认为多见于哪些疾病？患者用耳塞的行为说明什么？</li>
+        </ol>
+        <details class="qa"><summary><span class="qa-num">析</span>答案与诊断思路</summary>
+          <div class="qa-body"><span class="answer-key">参考答案</span>①<strong>功能性幻听</strong>：现实刺激（喇叭声）与幻觉（骂声）同属听觉，正常知觉与幻觉并存。②应改称<strong>反射性幻觉</strong>：涉及听、视两个不同感官。判据就是“涉及一个还是两个感官”。③教材明确功能性幻听多见于精神分裂症。用耳塞说明患者已察觉“喇叭响—骂声”的固定关联，并试图回避这一现实刺激；教材未进一步说明该行为的效果。</div>
+        </details>
+      </div>
+
+      <div class="case-card">
+        <div class="case-meta"><span>病例 2</span><span>难度 ⭐⭐⭐</span><span>教材原文</span></div>
+        <div class="case-title">“饭里有迷幻药，房间有监视器”</div>
+        <div class="case-body"><p>男，26 岁，精神分裂症。近半年来，患者不敢在家里吃饭喝水，总是买袋装的食品吃。晚上睡觉时总要反复检查自己的房间，认为有人安装了监控器在监视自己。精神检查时，患者解释称：“我父母和我单位上的人合伙要毒害我，在饭里放了迷幻药，想把我弄成傻瓜或者植物人，所以我只能自己买袋装食品吃。另外，他们还在我的房间里安装了监视器，想监控我的一言一行，所以我得处处小心。”</p></div>
+        <ol class="case-questions">
+          <li>最突出的症状是什么？属于哪一类妄想？</li>
+          <li>为什么不是关系妄想或物理影响妄想？</li>
+          <li>教材认为该症状主要见于哪些障碍？该病例还提示要排查哪些病因范围？</li>
+        </ol>
+        <details class="qa"><summary><span class="qa-num">析</span>答案与诊断思路</summary>
+          <div class="qa-body"><span class="answer-key">参考答案</span>①<strong>被害妄想</strong>：坚信被父母与单位人员合伙迫害（投毒、监视），并因此拒食家中饮食、反复检查房间。②关系妄想是“把无关事件当作与自己有关”，本例是明确的“有人要害我”，已超出关系层面；物理影响妄想是“思想、情感、意志行为被外界力量控制而身不由己”，本例是“被监视、被投毒”，不是“被控制”。③教材明确被害妄想主要见于精神分裂症和其他妄想性障碍。病因范围上，幻觉妄想综合征也可见于<strong>脑器质性损害和精神活性物质所致精神障碍</strong>，因此不能只凭妄想锁定精神分裂症，需结合病史与检查排查器质性、物质因素（教材未给具体检查项目）。</div>
+        </details>
+      </div>
+
+      <div class="case-card">
+        <div class="case-meta"><span>病例 3</span><span>难度 ⭐⭐⭐</span><span>经典临床情境（教学演练，非教材原文）</span></div>
+        <div class="case-title">“夜里把输液管看成蛇”</div>
+        <div class="case-body"><p>一位住院的老年患者，白天相对安静，夜间变得不识病房地点，也不认陪护家属。夜间把输液管看成一条蛇，说墙上有猛兽和毒蛇，紧张恐惧，喊叫、逃跑，双手在空中不停抓摸。与其交谈时言语支离破碎、难以理解，事后对夜间发生的事不能完整回忆。</p></div>
+        <ol class="case-questions">
+          <li>最符合哪一种意识障碍？依据是什么？</li>
+          <li>与朦胧状态、梦样状态如何鉴别？</li>
+          <li>教材指出意识障碍主要见于哪些情况？为什么不能把它当作精神分裂症的不协调性兴奋？</li>
+        </ol>
+        <details class="qa"><summary><span class="qa-num">析</span>答案与诊断思路</summary>
+          <div class="qa-body"><span class="answer-key">参考答案</span>①<strong>谵妄</strong>：意识清晰度降低，出现大量恐怖性幻视、错视（输液管看成蛇、墙上有猛兽毒蛇），伴紧张恐惧、喊叫逃跑、双手抓摸等不协调性精神运动性兴奋，思维不连贯、理解困难，有周围定向力障碍，且昼轻夜重、事后部分或全部遗忘。②朦胧状态以<strong>意识范围缩小</strong>为核心，狭窄范围内可有相对正常的感知和协调连贯的复杂行为；梦样状态是<strong>外表好像清醒、完全沉浸于梦样幻觉妄想</strong>，与外界失去联系。本例以恐怖性幻视错视+不协调兴奋+昼轻夜重为主，故为谵妄。③教材指出意识障碍主要见于<strong>脑器质性损害所致精神障碍、躯体疾病所致精神障碍及中毒所致精神障碍</strong>。精神分裂症的不协调性兴奋通常意识清晰，而本例有意识清晰度降低、定向力障碍、思维不连贯和事后遗忘，故不能归为精神分裂症的兴奋。<br><strong>边界说明：</strong>本情境只组合教材描述过的谵妄症状，未编造化验值、影像结果、药物剂量或具体病程阈值；临床处理须由专科医师结合完整检查决定。</div>
+        </details>
+      </div>
+    </section>
+
+    <section id="extend" class="section">
+      <div class="section-header"><span class="section-number">24</span><h2>拓展延伸</h2></div>
+      <p class="lead">教材本章开头标注“本章数字资源”“本章思维导图”，正文末尾署“王高华”。除下列两点外，教材未展开更多拓展内容。</p>
+
+      <div class="card-grid">
+        <div class="card card-cause">
+          <div class="card-header"><span class="card-icon">📚</span><span class="card-title">拓展补充｜精神病理学的两条路线</span></div>
+          <div class="card-body">教材在总论中区分描述性精神病理学与实验性精神病理学：前者做客观描述、避免主观偏见和行为预设；后者探索机制，起源于弗洛伊德精神动力学，后来借助认知和行为心理学、神经电生理、脑影像等研究可测量、可证实的有意识心理过程。教材未进一步展开各流派的具体观点与研究证据。</div>
+        </div>
+        <div class="card card-diagnosis">
+          <div class="card-header"><span class="card-icon">🗺️</span><span class="card-title">拓展补充｜数字资源与思维导图</span></div>
+          <div class="card-body">教材本章开头列有“本章数字资源”和“本章思维导图”入口。教材正文未给出其具体内容，本指南不代拟、不补链接。复习时可将本页“本章知识地图”作为纸质版思维导图使用。</div>
+        </div>
+      </div>
+      <div class="callout callout-info"><div class="callout-icon">💡</div><div class="callout-body"><strong>诚实标注</strong>本章为症状学章节，教材未提供治疗方案、药物剂量、诊断标准条目或流行病学数据；因此本指南不涉及治疗与数据，遇到临床决策请回到教材后续疾病章节与现行诊疗规范。</div></div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-tag">精神病学 · 第二章 · 学习指南</div>
+      <p>内容依据《精神病学》第9版（2024）第二章“精神障碍的症状学”整理，仅供学习复习使用。</p>
+      <p>章节作者：王高华（据教材本章末署名）。</p>
+      <div class="disclaimer">免责声明：本页为学习笔记，不是诊断标准或临床指南。所有症状描述、疾病归属均以教材原文为限；教材未提供的诊断阈值、药物剂量、检查数值与流行病学数据，本页一律未补。实际诊疗请以教材原文、现行诊疗规范及专科医师判断为准。</div>
+    </footer>
+  <nav class="chapter-pager" aria-label="章节间导航"><a class="cp-prev" href="精神病学_第一章_绪论_学习指南.html">← 上一章：第一章</a><a class="cp-toc" href="index.html">目录</a><a class="cp-next" href="精神病学_第三章_精神障碍的检查与诊断_学习指南.html">下一章：第三章 →</a></nav>
+</main>
+</div>
+<button class="back-to-top" id="backTop" aria-label="回到顶部">↑</button>
+
+<script>
+/* ============================================================
+   精神病学学习指南 · 统一交互层 v1（构建期注入，整体替换原 IIFE）
+   兼容 A 族（.tabbar button + [data-panel] + .panel.on）与
+   B 族（.tab-nav + .tab-panel.active）两套 DOM 约定。
+   特性检测 + 防御式查询 + 幂等；不引入任何外部依赖。
+   ============================================================ */
+(function () {
+  'use strict';
+  if (window.__PSY_GUIDE_APP__) { return; }
+  window.__PSY_GUIDE_APP__ = true;
+
+  var d = document;
+
+  function all(sel, root) {
+    return Array.prototype.slice.call((root || d).querySelectorAll(sel));
+  }
+  function on(el, ev, fn, opt) {
+    if (el) { el.addEventListener(ev, fn, opt || false); }
+  }
+  function norm(s) {
+    return String(s || '').replace(/\s+/g, '').toUpperCase();
+  }
+
+  /* ---------- 1. Tab 切换（两族约定都支持） ---------- */
+  function initTabs() {
+    all('.tabs, [data-tabs]').forEach(function (g) {
+      if (g.__psyTabs) { return; }
+      g.__psyTabs = true;
+      var isA = !!g.querySelector('.tabbar button');
+      var btns = all(isA ? '.tabbar button' : '.tab-nav .tab-btn', g);
+      if (!btns.length) { return; }
+      var cls = isA ? 'on' : 'active';
+      var nav = btns[0].closest('.tabbar') || btns[0].closest('.tab-nav');
+      if (nav && !nav.hasAttribute('role')) { nav.setAttribute('role', 'tablist'); }
+      all(isA ? '.panel' : '.tab-panel', g).forEach(function (p) {
+        if (!p.hasAttribute('role')) { p.setAttribute('role', 'tabpanel'); }
+      });
+      function activate(btn) {
+        btns.forEach(function (b) {
+          b.classList.remove(cls);
+          b.setAttribute('aria-selected', 'false');
+        });
+        btn.classList.add(cls);
+        btn.setAttribute('aria-selected', 'true');
+        var id = btn.getAttribute('data-tab');
+        if (!id) { return; }
+        var target = isA
+          ? g.querySelector('[data-panel="' + id + '"]')
+          : (g.querySelector('.tab-panel#' + id) || d.getElementById(id));
+        all(isA ? '.panel' : '.tab-panel', g).forEach(function (p) {
+          var show = isA ? (p.getAttribute('data-panel') === id) : (p === target);
+          p.classList.toggle(cls, show);
+        });
+      }
+      btns.forEach(function (btn, i) {
+        if (!btn.hasAttribute('role')) { btn.setAttribute('role', 'tab'); }
+        btn.setAttribute('aria-selected', btn.classList.contains(cls) ? 'true' : 'false');
+        if (!btn.hasAttribute('tabindex') && !btn.classList.contains(cls)) { btn.setAttribute('tabindex', '0'); }
+        on(btn, 'click', function () { activate(btn); });
+        on(btn, 'keydown', function (e) {
+          if (e.key !== 'ArrowRight' && e.key !== 'ArrowLeft') { return; }
+          e.preventDefault();
+          var nx = btns[(i + (e.key === 'ArrowRight' ? 1 : btns.length - 1)) % btns.length];
+          if (nx) { nx.focus(); activate(nx); }
+        });
+      });
+    });
+  }
+
+  /* ---------- 2. 速记卡：点击/键盘翻转 + 可达性 ---------- */
+  function initCards() {
+    all('.flashcard').forEach(function (card) {
+      if (card.__psyCard) { return; }
+      card.__psyCard = true;
+      card.setAttribute('tabindex', '0');
+      card.setAttribute('role', 'button');
+      function sync() {
+        card.setAttribute('aria-pressed', card.classList.contains('flipped') ? 'true' : 'false');
+      }
+      function flip() { card.classList.toggle('flipped'); sync(); }
+      on(card, 'click', flip);
+      on(card, 'keydown', function (e) {
+        if (e.key === 'Enter' || e.key === ' ' || e.key === 'Spacebar') {
+          e.preventDefault();
+          flip();
+        }
+      });
+      sync();
+    });
+  }
+
+  /* ---------- 3. 自测题交互化（核心新功能） ---------- */
+  function initQuiz() {
+    var questions = all('.quiz-q, .quiz-item');
+    if (!questions.length) { return; }
+    var groups = {};
+
+    function keyOf(o) {
+      var L = o.getAttribute('data-letter');
+      if (L && String(L).replace(/\s+/g, '') !== '') { return norm(L); }
+      var sp = o.querySelector('.l');
+      if (sp) {
+        var t = norm(sp.textContent).replace(/[.．、:：]/g, '');
+        if (t !== '') { return t; }
+      }
+      var txt = norm(o.textContent);
+      if (txt.indexOf('正确') >= 0 || txt.indexOf('错误') >= 0) { return txt; }
+      return txt.charAt(0);
+    }
+
+    function getGroup(q) {
+      var sec = q.closest('.quiz-block') || q.closest('section') || d.body;
+      if (!groups[sec.__psyGid]) {
+        sec.__psyGid = 'g' + (Object.keys(groups).length + 1);
+        groups[sec.__psyGid] = { sec: sec, total: 0, score: 0, row: null, first: null };
+      }
+      var g = groups[sec.__psyGid];
+      if (!g.first) { g.first = q; }
+      return g;
+    }
+
+    function ensureRow(g) {
+      if (g.row) { return g.row; }
+      var row = d.createElement('div');
+      row.className = 'quiz-score';
+      row.setAttribute('role', 'status');
+      row.setAttribute('aria-live', 'polite');
+      row.innerHTML = '<span class="qs-label">自测计分</span>' +
+        '<span class="qs-num">得分 0 / ' + g.total + '</span>' +
+        '<span class="qs-bar"><i></i></span>';
+      g.first.parentNode.insertBefore(row, g.first);
+      g.row = row;
+      return row;
+    }
+
+    function updateRow(g) {
+      var row = ensureRow(g);
+      var num = row.querySelector('.qs-num');
+      var bar = row.querySelector('.qs-bar i');
+      if (num) { num.textContent = '得分 ' + g.score + ' / ' + g.total; }
+      if (bar) { bar.style.width = (g.total ? Math.round(g.score / g.total * 100) : 0) + '%'; }
+    }
+
+    questions.forEach(function (q) {
+      if (q.__psyQuiz) { return; }
+      q.__psyQuiz = true;
+      var opts = all('.opt', q);
+      if (!opts.length) { opts = all('.quiz-options > li', q); }
+      if (!opts.length) { return; }
+
+      /* 正确答案先记入内存：预标 correct 优先（记录后立即移除，消除剧透），
+         否则从解析文本「答案：X / 答案 X」提取（不改动任何文字） */
+      var ansKeys = [];
+      var preset = opts.filter(function (o) { return o.classList.contains('correct'); });
+      preset.forEach(function (o) { o.classList.remove('correct'); });
+      if (preset.length) {
+        ansKeys = preset.map(keyOf);
+      } else {
+        var dt = q.querySelector('details');
+        var txt = dt ? dt.textContent : '';
+        var m = txt.match(/答案\s*[:：]?\s*([A-Za-z](?:[\s、,，·和及]*[A-Za-z])*)/);
+        if (m) {
+          ansKeys = m[1].match(/[A-Za-z]/g) || [];
+        } else {
+          var m2 = txt.match(/答案\s*[:：]?\s*(正确|错误)/);
+          if (m2) { ansKeys = [m2[1]]; }
+        }
+      }
+      if (!ansKeys.length) { return; } /* 无可判定答案（名词解释等），保持原样 */
+
+      var g = getGroup(q);
+      g.total += 1;
+      var multi = ansKeys.length > 1;
+      var ansSet = ansKeys.map(norm);
+      var locked = false;
+      var picked = [];
+
+      function revealAll() {
+        opts.forEach(function (o) {
+          if (ansSet.indexOf(keyOf(o)) >= 0) { o.classList.add('is-reveal'); }
+        });
+      }
+      function finish(ok) {
+        locked = true;
+        q.classList.add('is-locked');
+        var dt = q.querySelector('details');
+        if (dt) { dt.open = true; }
+        if (ok) { g.score += 1; }
+        updateRow(g);
+      }
+
+      opts.forEach(function (o) {
+        o.setAttribute('tabindex', '0');
+        function pick() {
+          if (locked) { return; }
+          var k = keyOf(o);
+          if (ansSet.indexOf(k) >= 0) {
+            o.classList.add('is-right');
+            if (picked.indexOf(k) < 0) { picked.push(k); }
+            if (multi) {
+              if (picked.length === ansSet.length) { finish(true); }
+            } else {
+              finish(true);
+            }
+          } else {
+            o.classList.add('is-wrong');
+            revealAll();
+            finish(false);
+          }
+        }
+        on(o, 'click', pick);
+        on(o, 'keydown', function (e) {
+          if (e.key === 'Enter' || e.key === ' ' || e.key === 'Spacebar') {
+            e.preventDefault();
+            pick();
+          }
+        });
+      });
+    });
+
+    Object.keys(groups).forEach(function (id) {
+      if (groups[id].total > 0) { updateRow(groups[id]); }
+    });
+  }
+
+  /* ---------- 4. 侧栏 scroll spy（本页锚点高亮） ---------- */
+  function initSpy() {
+    var links = all('#sidebar a[href^="#"]');
+    if (!links.length || !('IntersectionObserver' in window)) { return; }
+    var map = {};
+    links.forEach(function (a) {
+      var id = a.getAttribute('href').slice(1);
+      if (id) { map[id] = a; }
+    });
+    var secs = [];
+    Object.keys(map).forEach(function (id) {
+      var s = d.getElementById(id);
+      if (s) { secs.push(s); }
+    });
+    if (!secs.length) { return; }
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting && map[e.target.id]) {
+          links.forEach(function (a) { a.classList.remove('active'); });
+          map[e.target.id].classList.add('active');
+        }
+      });
+    }, { rootMargin: '-15% 0px -70% 0px', threshold: 0 });
+    secs.forEach(function (s) { io.observe(s); });
+  }
+
+  /* ---------- 5. 阅读进度条 + 回顶 ---------- */
+  function initScroll() {
+    var bar = d.getElementById('readbar');
+    var topBtn = d.getElementById('topBtn') || d.getElementById('backTop');
+    var ticking = false;
+    function step() {
+      ticking = false;
+      var h = d.documentElement;
+      var y = window.pageYOffset || h.scrollTop || 0;
+      if (bar) {
+        var max = h.scrollHeight - h.clientHeight;
+        bar.style.width = (max > 0 ? (y / max) * 100 : 0) + '%';
+      }
+      if (topBtn) {
+        topBtn.classList.toggle('show', y > 400);     /* A 族类名 */
+        topBtn.classList.toggle('visible', y > 400);  /* B 族类名 */
+      }
+    }
+    on(window, 'scroll', function () {
+      if (!ticking) { ticking = true; window.requestAnimationFrame(step); }
+    }, { passive: true });
+    step();
+    on(topBtn, 'click', function () {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
+
+  /* ---------- 6. 侧栏开合（存在才绑定；抽屉打开时锁定背景滚动） ---------- */
+  function initSidebar() {
+    var sidebar = d.getElementById('sidebar');
+    if (!sidebar) { return; }
+    var btn = d.getElementById('menuBtn') || d.getElementById('navToggle');
+    var ov = d.getElementById('overlay') || d.getElementById('sidebarOverlay');
+    function lock(open) {
+      /* 仅移动抽屉断点（≤900px）锁滚动；宽屏兜底解除，防布局残留 */
+      d.body.classList.toggle('nav-locked', !!open && window.innerWidth <= 900);
+    }
+    function close() {
+      sidebar.classList.remove('open');
+      if (ov) { ov.classList.remove('show'); }
+      lock(false);
+    }
+    on(btn, 'click', function () {
+      var open = !sidebar.classList.contains('open');
+      sidebar.classList.toggle('open');
+      if (ov) { ov.classList.toggle('show'); }
+      lock(open);
+    });
+    on(ov, 'click', close);
+    all('a', sidebar).forEach(function (a) {
+      on(a, 'click', function () {
+        if (window.innerWidth <= 900) { close(); }
+      });
+    });
+    on(window, 'resize', function () {
+      if (window.innerWidth > 900) { lock(false); }
+    });
+  }
+
+  /* ---------- 启动（脚本位于 body 末尾，DOM 已就绪；防御兜底） ---------- */
+  function boot() {
+    initTabs();
+    initCards();
+    initQuiz();
+    initSpy();
+    initScroll();
+    initSidebar();
+  }
+  if (d.readyState === 'loading') {
+    on(d, 'DOMContentLoaded', boot);
+  } else {
+    boot();
+  }
+})();
+</script>
+
+</body>
+</html>

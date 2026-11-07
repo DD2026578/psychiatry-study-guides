@@ -1,0 +1,3228 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>精神病学 第十六章 冲动控制障碍、破坏性行为或去社会障碍 · 学习指南</title>
+<style>
+:root{
+  --primary:#0EA5E9; --accent:#10B981; --symptom:#EF4444; --treatment:#10B981;
+  --cause:#3B82F6; --diagnosis:#F59E0B; --memory:#8B5CF6; --danger:#DC2626;
+  --quiz:#EC4899; --flashcard:#06B6D4; --bg:#F0F7FA; --card:#FFFFFF;
+  --ink:#0F172A; --muted:#64748B; --border:#E2E8F0; --accent2:#10B981; --accent3:#06B6D4;
+  --shadow:0 4px 18px rgba(15,23,42,.06); --radius:14px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:'Microsoft YaHei','PingFang SC','Hiragino Sans GB',system-ui,-apple-system,sans-serif;font-size:16px;line-height:1.75;-webkit-font-smoothing:antialiased}
+#readbar{position:fixed;top:0;left:0;height:4px;width:0;background:linear-gradient(135deg,#0EA5E9 0%,#06B6D4 50%,#10B981 100%);z-index:300;transition:width .12s linear}
+a{color:var(--primary);text-decoration:none}
+a:hover{text-decoration:underline}
+.sidebar{position:fixed;top:0;left:0;width:272px;height:100vh;background:#fff;border-right:1px solid var(--border);overflow-y:auto;padding:20px 16px 40px;z-index:120}
+.sidebar h2{font-size:17px;margin:0 0 4px;line-height:1.5}
+.sidebar .sub{font-size:12px;color:var(--muted);line-height:1.6;margin-bottom:14px}
+.toc-group{font-size:12px;letter-spacing:.08em;color:var(--muted);margin:16px 0 6px;font-weight:700}
+.sidebar a.toc{display:block;padding:7px 10px;border-radius:8px;font-size:14px;color:var(--ink);line-height:1.5;margin:2px 0}
+.sidebar a.toc:hover{background:#E0F2FE;text-decoration:none}
+.sidebar a.toc .n{display:inline-block;min-width:26px;color:var(--primary);font-weight:700}
+.sidebar .unitlink{font-weight:600}
+.sidebar .sub2{padding-left:26px;font-size:13px;color:var(--muted)}
+.overlay{display:none}
+.menu-btn{display:none;position:fixed;top:14px;left:14px;z-index:200;width:46px;height:46px;border-radius:12px;border:1px solid var(--border);background:#fff;box-shadow:var(--shadow);font-size:22px;line-height:1;color:var(--primary);cursor:pointer}
+.main{margin-left:272px;padding:0 40px 90px;max-width:1240px}
+.wrap{max-width:980px;margin:0 auto}
+.hero{background:linear-gradient(135deg,#0EA5E9 0%,#06B6D4 50%,#10B981 100%);color:#fff;border-radius:0 0 26px 26px;padding:52px 44px 40px;margin:0 -40px 30px;box-shadow:0 12px 30px rgba(14,165,233,.18)}
+.hero .chap{display:inline-block;font-size:13px;letter-spacing:.22em;background:rgba(255,255,255,.18);padding:5px 14px;border-radius:999px;margin-bottom:16px}
+.hero h1{font-size:42px;line-height:1.25;margin:0 0 10px;font-weight:800}
+.hero .tagline{font-size:18px;opacity:.96;margin:0 0 6px}
+.hero .meta{font-size:13px;opacity:.85}
+.goalbox{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.28);border-radius:14px;padding:18px 20px;margin-top:22px}
+.goalbox h3{margin:0 0 10px;font-size:15px;letter-spacing:.06em}
+.goalbox ul{margin:0;padding-left:20px}
+.goalbox li{margin:4px 0;font-size:14.5px;line-height:1.65}
+.lv{display:inline-block;font-size:11px;font-weight:700;padding:1px 8px;border-radius:999px;background:#fff;color:#0369A1;margin-right:6px;vertical-align:1px}
+.lv.l2{color:#047857}.lv.l3{color:#B45309}.lv.l4{color:#B91C1C}
+section{scroll-margin-top:18px;margin:0 0 46px}
+.sec-head{display:flex;align-items:center;gap:12px;margin:0 0 8px}
+.sec-head .badge{flex:0 0 auto;width:44px;height:44px;border-radius:13px;background:linear-gradient(135deg,#0EA5E9,#06B6D4);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:17px;box-shadow:0 6px 14px rgba(14,165,233,.25)}
+.sec-head h2{font-size:27px;margin:0;line-height:1.35;font-weight:800}
+.sec-head .en{font-size:13px;color:var(--muted);font-weight:400;margin-left:6px}
+.sec-lead{color:#334155;background:#fff;border-left:4px solid var(--primary);border-radius:0 12px 12px 0;padding:13px 18px;margin:12px 0 22px;box-shadow:var(--shadow);font-size:15px}
+.card{background:var(--card);border:1px solid var(--border);border-left:6px solid var(--primary);border-radius:var(--radius);padding:20px 22px;margin:16px 0;box-shadow:var(--shadow)}
+.card.red{border-left-color:var(--symptom)} .card.green{border-left-color:var(--treatment)}
+.card.blue{border-left-color:var(--cause)} .card.orange{border-left-color:var(--diagnosis)}
+.card.purple{border-left-color:var(--memory)} .card.cyan{border-left-color:var(--flashcard)}
+.card.danger{border-left-color:var(--danger)} .card.pink{border-left-color:var(--quiz)}
+.card h3,.col-title{font-size:19px;margin:0 0 10px;line-height:1.45;display:flex;align-items:center;gap:9px;flex-wrap:wrap}
+.col-title .idx{font-size:12px;font-weight:800;color:#fff;background:var(--primary);padding:2px 9px;border-radius:999px;letter-spacing:.03em}
+.card p{margin:8px 0}
+.card ul,.card ol{margin:8px 0;padding-left:22px}
+.card li{margin:5px 0}
+.quote{background:#EFF8FF;border:1px dashed #7DD3FC;border-radius:10px;padding:12px 16px;margin:10px 0;font-size:15px;color:#0C4A6E}
+.quote .lab{display:inline-block;font-size:11px;font-weight:800;background:#0EA5E9;color:#fff;padding:1px 7px;border-radius:5px;margin-right:7px;vertical-align:1px}
+.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.grid4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.grid2>*,.grid3>*,.grid4>*{min-width:0}
+.mini{background:#F8FAFC;border:1px solid var(--border);border-radius:11px;padding:12px 14px}
+.mini h4{margin:0 0 5px;font-size:15px;color:#0F172A}
+.mini p,.mini ul{font-size:14px;color:#334155;margin:4px 0}
+.mini ul{padding-left:18px}
+.stat{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0}
+.stat span{font-size:13px;background:#E0F2FE;color:#075985;border-radius:999px;padding:3px 11px;font-weight:600}
+.table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:12px 0;border-radius:12px;border:1px solid var(--border)}
+table{border-collapse:collapse;width:100%;min-width:560px;background:#fff;font-size:14px}
+th{background:#0F172A;color:#fff;font-weight:700;padding:10px 12px;text-align:left;line-height:1.5;font-size:13.5px}
+td{padding:10px 12px;border-top:1px solid var(--border);vertical-align:top;line-height:1.65}
+tbody tr:nth-child(even){background:#F8FAFC}
+td strong{color:#0C4A6E}
+.callout{border-radius:12px;padding:13px 16px;margin:12px 0;border:1px solid;font-size:14.5px}
+.callout .ct{font-weight:800;display:block;margin-bottom:4px;font-size:14.5px}
+.callout.tip{background:#F5F3FF;border-color:#C4B5FD;color:#4C1D95}
+.callout.warn{background:#FEF2F2;border-color:#FCA5A5;color:#7F1D1D}
+.callout.key{background:#ECFDF5;border-color:#6EE7B7;color:#065F46}
+.callout.book{background:#EFF6FF;border-color:#93C5FD;color:#1E3A8A}
+.callout.quiz{background:#FDF2F8;border-color:#F9A8D4;color:#831843}
+.callout.ext{background:#F0F9FF;border-color:#7DD3FC;color:#0C4A6E}
+.timeline{border-left:3px solid #BAE6FD;margin:14px 0 6px 8px;padding-left:20px}
+.tl-item{position:relative;margin:0 0 16px}
+.tl-item:before{content:"";position:absolute;left:-28px;top:5px;width:13px;height:13px;border-radius:50%;background:#fff;border:3px solid var(--primary)}
+.tl-item h4{margin:0 0 3px;font-size:15px;color:#075985}
+.tl-item p{margin:0;font-size:14px;color:#334155}
+.bar{background:#E2E8F0;border-radius:999px;height:9px;overflow:hidden;margin:6px 0 10px}
+.bar i{display:block;height:100%;border-radius:999px;background:linear-gradient(90deg,#0EA5E9,#10B981)}
+.bar-label{display:flex;justify-content:space-between;font-size:13px;color:#334155}
+.tabs{margin:14px 0}
+.tabbar{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:12px}
+.tabbar button{border:1px solid var(--border);background:#fff;border-radius:999px;padding:7px 15px;font-size:14px;font-family:inherit;cursor:pointer;color:#334155}
+.tabbar button.on{background:var(--primary);color:#fff;border-color:var(--primary)}
+.panel{display:none}
+.panel.on{display:block;animation:fade .25s ease}
+@keyframes fade{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}
+details{background:#fff;border:1px solid var(--border);border-radius:11px;margin:10px 0;overflow:hidden}
+summary{cursor:pointer;padding:11px 15px;font-weight:700;color:#075985;list-style:none;font-size:14.5px;background:#F8FAFC}
+summary::-webkit-details-marker{display:none}
+summary:before{content:"▸";display:inline-block;margin-right:7px;color:var(--primary);transition:transform .2s}
+details[open] summary:before{transform:rotate(90deg)}
+details[open] summary{border-bottom:1px solid var(--border)}
+.dbody{padding:13px 16px;font-size:14.5px;color:#1E293B}
+.flashcard-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin:16px 0}
+.flashcard{perspective:1200px;height:200px;cursor:pointer}
+.fc-inner{position:relative;width:100%;height:100%;transition:transform .55s;transform-style:preserve-3d}
+.flashcard.flipped .fc-inner{transform:rotateY(180deg)}
+.fc-front,.fc-back{position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;border-radius:14px;padding:14px 16px;display:flex;flex-direction:column;justify-content:center;box-shadow:var(--shadow);overflow:auto}
+.fc-front{background:#fff;border:1px solid var(--border);border-top:5px solid var(--flashcard)}
+.fc-back{background:#ECFEFF;border:1px solid #A5F3FC;transform:rotateY(180deg);font-size:13.5px;line-height:1.65;color:#164E63}
+.tag{display:inline-block;align-self:flex-start;font-size:11px;font-weight:800;padding:1px 8px;border-radius:999px;margin-bottom:8px;letter-spacing:.04em}
+.tag.concept{background:#DBEAFE;color:#1E40AF}
+.tag.diag{background:#FFEDD5;color:#9A3412}
+.tag.treat{background:#D1FAE5;color:#065F46}
+.tag.data{background:#FCE7F3;color:#9D174D}
+.tag.risk{background:#FEE2E2;color:#991B1B}
+.fc-front p{margin:0;font-size:14.5px;font-weight:700;line-height:1.6}
+.fc-hint{position:absolute;bottom:10px;left:16px;font-size:11px;color:#94A3B8}
+.quiz-q{background:#fff;border:1px solid var(--border);border-left:5px solid var(--quiz);border-radius:12px;padding:16px 18px;margin:16px 0;box-shadow:var(--shadow)}
+.quiz-q .qh{display:flex;justify-content:space-between;gap:10px;align-items:flex-start;margin-bottom:8px;flex-wrap:wrap}
+.quiz-q .qno{font-size:12px;font-weight:800;color:#fff;background:var(--quiz);border-radius:999px;padding:2px 9px;letter-spacing:.04em}
+.diff{font-size:12px;color:#B45309;background:#FEF3C7;border-radius:999px;padding:2px 10px;font-weight:700;white-space:nowrap}
+.qtype{font-size:12px;color:#6B21A8;background:#F3E8FF;border-radius:999px;padding:2px 10px;font-weight:700;white-space:nowrap}
+.opts{margin:10px 0 4px;display:grid;gap:7px}
+.opt{border:1px solid var(--border);border-radius:9px;padding:8px 12px;font-size:14.5px;background:#F8FAFC}
+.opt.correct{border-color:#6EE7B7;background:#ECFDF5;color:#065F46;font-weight:600}
+.opt .l{font-weight:800;color:var(--primary);margin-right:7px}
+.opt.correct .l{color:#047857}
+.brief{font-size:14px;color:#334155;margin-top:4px}
+.case{border:1px solid var(--border);border-top:5px solid var(--danger);border-radius:14px;background:#fff;padding:20px 22px;margin:18px 0;box-shadow:var(--shadow)}
+.case h3{font-size:19px;margin:0 0 8px;color:#7F1D1D}
+.case .ctag{font-size:11.5px;font-weight:800;background:#FEE2E2;color:#991B1B;padding:2px 9px;border-radius:999px;display:inline-block;margin-bottom:10px}
+.case .scene{background:#FFF7ED;border-left:4px solid #FB923C;border-radius:0 10px 10px 0;padding:12px 16px;font-size:14.5px;margin:8px 0 14px}
+.case .ques{margin:8px 0;padding-left:2px}
+.case .ques li{margin:5px 0;font-size:14.5px}
+.top{position:fixed;right:24px;bottom:26px;width:48px;height:48px;border-radius:50%;background:var(--primary);color:#fff;border:none;font-size:20px;cursor:pointer;box-shadow:0 8px 20px rgba(14,165,233,.35);z-index:150;display:none;font-family:inherit}
+.top.show{display:block}
+.hr{height:1px;background:var(--border);margin:26px 0}
+.note{font-size:13px;color:var(--muted);margin-top:6px}
+.kv{display:flex;gap:10px;flex-wrap:wrap;margin:8px 0}
+.kv .k{font-size:12px;font-weight:800;color:#0369A1;background:#E0F2FE;border-radius:6px;padding:2px 8px;white-space:nowrap}
+.kv .v{font-size:14px;color:#334155}
+.starme{font-size:12.5px;color:#B45309;white-space:nowrap}
+@media (max-width:1100px){
+  .main{padding:0 22px 80px}
+  .hero{margin:0 -22px 26px;padding:44px 26px 34px}
+  .hero h1{font-size:34px}
+  .flashcard-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .grid4{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width:900px){
+  .sidebar{transform:translateX(-100%);transition:transform .25s ease;width:280px;box-shadow:0 0 30px rgba(0,0,0,.18)}
+  .sidebar.open{transform:none}
+  .overlay{display:none;position:fixed;inset:0;background:rgba(15,23,42,.42);z-index:110}
+  .overlay.show{display:block}
+  .menu-btn{display:block}
+  .main{margin-left:0;padding:0 18px 80px}
+  .hero{margin:0 -18px 24px;padding:64px 22px 30px;border-radius:0 0 20px 20px}
+  .hero h1{font-size:30px}
+  .sec-head h2{font-size:23px}
+}
+@media (max-width:680px){
+  .grid2,.grid3,.grid4{grid-template-columns:minmax(0,1fr)}
+  .flashcard-grid{grid-template-columns:minmax(0,1fr)}
+  .flashcard{height:190px}
+  table{min-width:500px}
+}
+</style>
+<style data-refactor="v1">
+/* ============================================================
+   精神病学学习指南 · 统一交互层增量覆盖样式 v1
+   构建期由 apply-refactor.ps1 注入 </head> 前，仅追加修正，
+   不改动 A/B 两族基础样式。全部使用字面色值，兼容两族设计变量。
+   ============================================================ */
+
+/* ---- 1. 全局键盘焦点可见 ---- */
+:focus-visible{outline:2px solid #0EA5E9;outline-offset:2px}
+
+/* ---- 2. 章节导航条（胶囊式三段：上一章 / 目录 / 下一章） ---- */
+.chapter-pager{display:flex;align-items:stretch;justify-content:center;gap:10px;margin:36px 0 10px;flex-wrap:wrap}
+.chapter-pager a,.chapter-pager span{flex:1 1 200px;display:flex;align-items:center;justify-content:center;min-height:44px;padding:10px 18px;border:1px solid #E2E8F0;border-radius:999px;background:#FFFFFF;color:#0F172A;font-size:14px;font-weight:600;line-height:1.4;text-decoration:none;text-align:center;box-shadow:0 1px 2px rgba(15,23,42,.06);transition:border-color .15s ease,box-shadow .15s ease,color .15s ease}
+.chapter-pager a:hover{border-color:#0EA5E9;color:#0EA5E9;box-shadow:0 4px 14px rgba(14,165,233,.18);text-decoration:none}
+.chapter-pager .cp-toc{flex:0 0 auto;min-width:104px;background:linear-gradient(135deg,#0EA5E9,#10B981);border-color:transparent;color:#FFFFFF}
+.chapter-pager .cp-toc:hover{border-color:transparent;color:#FFFFFF;opacity:.92}
+.chapter-pager .cp-disabled{opacity:.45;background:#F8FAFC;box-shadow:none;cursor:default}
+@media (max-width:680px){.chapter-pager{gap:8px;margin:28px 0 8px}.chapter-pager a,.chapter-pager span{flex:1 1 100%}}
+
+/* ---- 3. 自测题交互态（兼容 A 族 .opt 与 B 族 .quiz-options li） ---- */
+/* 3.1 基础可点击 */
+.quiz-q .opt{cursor:pointer}
+.quiz-item .quiz-options li{cursor:pointer}
+/* 3.2 hover / 焦点态 */
+.quiz-q .opt:hover,.quiz-q .opt:focus-visible{border-color:#7DD3FC;background:#F0F9FF}
+.quiz-item .quiz-options li:hover,.quiz-item .quiz-options li:focus-visible{background:#FFFFFF;box-shadow:inset 0 0 0 1px #7DD3FC}
+/* 3.3 判定结果态 */
+.quiz-q .opt.is-right{border-color:#34D399;background:#ECFDF5;color:#065F46;font-weight:600}
+.quiz-q .opt.is-right::after{content:" ✓";color:#059669;font-weight:800}
+.quiz-q .opt.is-right .l{color:#047857}
+.quiz-item .quiz-options li.is-right{background:#DCFCE7;box-shadow:inset 0 0 0 1px #34D399;font-weight:600}
+.quiz-item .quiz-options li.is-right::after{content:" ✓";color:#15803D;font-weight:800}
+.quiz-q .opt.is-wrong{border-color:#FCA5A5;background:#FEF2F2;color:#B91C1C;font-weight:600}
+.quiz-q .opt.is-wrong::after{content:" ✗";color:#DC2626;font-weight:800}
+.quiz-q .opt.is-wrong .l{color:#B91C1C}
+.quiz-item .quiz-options li.is-wrong{background:#FEE2E2;box-shadow:inset 0 0 0 1px #FCA5A5;font-weight:600}
+.quiz-item .quiz-options li.is-wrong::after{content:" ✗";color:#DC2626;font-weight:800}
+.quiz-q .opt.is-reveal{border-color:#6EE7B7;background:#ECFDF5;color:#065F46}
+.quiz-q .opt.is-reveal .l{color:#047857}
+.quiz-item .quiz-options li.is-reveal{background:#ECFDF5;box-shadow:inset 0 0 0 1px #6EE7B7;color:#065F46}
+/* 3.4 已锁定禁用态 */
+.quiz-q.is-locked .opt,.quiz-item.is-locked .quiz-options li{cursor:default;pointer-events:none}
+.quiz-q.is-locked .opt:not(.is-right):not(.is-wrong):not(.is-reveal){opacity:.55}
+.quiz-item.is-locked .quiz-options li:not(.is-right):not(.is-wrong):not(.is-reveal){opacity:.55}
+/* 3.5 计分行（运行时注入） */
+.quiz-score{display:flex;align-items:center;gap:12px;margin:14px 0 18px;padding:12px 18px;border:1px dashed #7DD3FC;border-radius:12px;background:#F0F9FF;font-size:14px;font-weight:700;color:#0F172A}
+.quiz-score .qs-label{white-space:nowrap}
+.quiz-score .qs-num{white-space:nowrap;color:#0284C7;font-size:16px}
+.quiz-score .qs-bar{flex:1 1 60px;min-width:60px;height:8px;border-radius:999px;background:#E2E8F0;overflow:hidden}
+.quiz-score .qs-bar i{display:block;height:100%;width:0;border-radius:999px;background:linear-gradient(90deg,#0EA5E9,#10B981);transition:width .35s ease}
+
+/* ---- 4. 速记卡可达性与长内容 ---- */
+.fc-hint,.flip-hint{color:#64748B}
+.flashcard-face{overflow:auto}
+.flashcard[tabindex]{outline:none}
+.flashcard[tabindex]:focus-visible{outline:3px solid #0EA5E9;outline-offset:3px}
+
+/* ---- 5. 侧栏目录 ---- */
+/* B 族 sticky 侧栏内目录限高滚动（A 族 aside 本身已可滚动，此规则空匹配无害） */
+.sidebar .sidebar-nav{max-height:calc(100vh - 60px);overflow-y:auto;scrollbar-width:thin}
+/* A 族 scroll spy 高亮（B 族高亮由其基础样式提供） */
+.sidebar a.toc.active{background:#E0F2FE;color:#0369A1;font-weight:600}
+
+/* ---- 6. 响应式补充：681–900px 时 grid3 降为两列 ---- */
+@media (min-width:681px) and (max-width:900px){
+  .grid3{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+
+/* ---- 7. 打印样式补充（A 族新增；B 族已有 print，重复声明无害） ---- */
+@media print{
+  .sidebar,.overlay,.sidebar-overlay,#menuBtn,#navToggle,#overlay,#sidebarOverlay,#readbar,#topBtn,#backTop,.chapter-pager,.quiz-score{display:none!important}
+}
+
+/* ---- 8. 手机端增强 v2（触控体验 / 防溢出 / 抽屉滚动锁定） ---- */
+/* 8.1 触控体验：去点按高亮、消除双击缩放延迟（flashcard 高 190-200px 天然达标，不另设 min-height） */
+.opt,.tabbar button,.tab-btn,.quiz-options li,.flashcard,.chapter-pager a,.chapter-pager span,.menu-btn,.mobile-nav-toggle{-webkit-tap-highlight-color:transparent;touch-action:manipulation}
+/* 8.2 触控目标最小 44px（自测选项与 tab 胶囊原高约 33px） */
+.opt,.tabbar button,.tab-btn,.quiz-options li{min-height:44px}
+/* 8.3 防溢出：内容图自适应；svg 不设 height:auto，避免定尺寸图标塌陷 */
+img{max-width:100%;height:auto}
+svg{max-width:100%}
+/* 8.4 长词/URL 断行 */
+body{overflow-wrap:break-word}
+/* 8.5 表格容器触摸惯性滚动（A 族已有同值规则，重复声明无害） */
+.table-wrap{-webkit-overflow-scrolling:touch}
+/* 8.6 抽屉打开时锁定背景滚动（两族抽屉断点均为 900px；类由统一脚本增删） */
+@media (max-width:900px){
+  body.nav-locked{overflow:hidden}
+}
+</style>
+</head>
+<body>
+<div id="readbar"></div>
+<button class="menu-btn" id="menuBtn" aria-label="打开目录">☰</button>
+<div class="overlay" id="overlay"></div>
+<aside class="sidebar" id="sidebar">
+  <h2>第十六章<br>冲动控制障碍、破坏性行为或去社会障碍</h2>
+  <div class="sub">精神病学（第9版）· 印刷页 197–205<br>学习指南 · 技能标准版</div>
+  <div class="toc-group">开篇</div>
+  <a class="toc" href="#cover"><span class="n">00</span>章节封面与学习目标</a>
+  <a class="toc" href="#status"><span class="n">01</span>本章地位速览</a>
+  <a class="toc" href="#navmap"><span class="n">02</span>章节导航图</a>
+  <a class="toc" href="#mindmap"><span class="n">03</span>本章知识地图</a>
+  <a class="toc" href="#route"><span class="n">04</span>学习路线图</a>
+  <div class="toc-group">正文 · 第一节 冲动控制障碍</div>
+  <a class="toc unitlink" href="#u1"><span class="n">05</span>第一节总论：冲动控制障碍</a>
+  <a class="toc sub2" href="#u1-5">└ 鉴别诊断对对碰</a>
+  <a class="toc unitlink" href="#u2"><span class="n">06</span>纵火狂</a>
+  <a class="toc sub2" href="#u2-5">└ 鉴别诊断对对碰</a>
+  <a class="toc unitlink" href="#u3"><span class="n">07</span>偷窃狂</a>
+  <a class="toc sub2" href="#u3-6">└ 治疗方案工具箱</a>
+  <a class="toc unitlink" href="#u4"><span class="n">08</span>强迫性性行为障碍</a>
+  <a class="toc unitlink" href="#u5"><span class="n">09</span>间歇性暴怒障碍</a>
+  <a class="toc sub2" href="#u5-5">└ 鉴别诊断对对碰</a>
+  <div class="toc-group">正文 · 第二节 破坏性行为或去社会障碍</div>
+  <a class="toc unitlink" href="#u6"><span class="n">10</span>第二节总论：破坏性行为或去社会障碍</a>
+  <a class="toc unitlink" href="#u7"><span class="n">11</span>对立违抗障碍（ODD）</a>
+  <a class="toc sub2" href="#u7-5">└ 鉴别诊断对对碰</a>
+  <a class="toc unitlink" href="#u8"><span class="n">12</span>品行障碍（CD）</a>
+  <a class="toc unitlink" href="#u9"><span class="n">13</span>去社会品行障碍</a>
+  <div class="toc-group">结尾</div>
+  <a class="toc" href="#summary"><span class="n">14</span>全章核心要点速览</a>
+  <a class="toc" href="#pitfalls"><span class="n">15</span>易混易错点警示</a>
+  <a class="toc" href="#quiz"><span class="n">16</span>章节自测系统</a>
+  <a class="toc" href="#cards"><span class="n">17</span>考点速记卡</a>
+  <a class="toc" href="#cases"><span class="n">18</span>病例挑战</a>
+  <a class="toc" href="#ext"><span class="n">19</span>拓展延伸</a>
+</aside>
+<main class="main">
+<div class="wrap">
+
+<!-- ===== 00 封面 ===== -->
+<section id="cover">
+  <div class="hero">
+    <span class="chap">第十六章 · CHAPTER 16</span>
+    <h1>冲动控制障碍、破坏性行为或去社会障碍</h1>
+    <p class="tagline">两类"控制不住"的精神障碍：一类由短时冲动与快感驱动，一类由持续对抗规则与侵害他人权益构成。</p>
+    <p class="meta">教材：精神病学（第9版）｜印刷页 197–205｜全章 2 节：冲动控制障碍（4 种）／破坏性行为或去社会障碍（3 种）</p>
+    <div class="goalbox">
+      <h3>学习目标（四级分层）</h3>
+      <ul>
+        <li><span class="lv">了解</span>说出本章在 ICD-11、ICD-10 与 DSM-5 中的位置；说出病理性赌博、拔发狂在新分类中的归属。</li>
+        <li><span class="lv l2">理解</span>解释冲动控制障碍"短期对个人有益、长期对个人和他人有害"的共性；理解"冲动—紧张—行为—释放—悔恨"的行为循环。</li>
+        <li><span class="lv l3">掌握</span>掌握 7 种障碍的诊断要点与病程阈值（6 个月／3 个月／1 年）；按教材完成与双相、人格障碍、物质所致、ODD、DMDD 的鉴别。</li>
+        <li><span class="lv l4">重点</span>"无明确动机"是纵火狂与偷窃狂的钥匙；间歇性暴怒障碍"超过 3 个月、暴发不足 30 分钟"；ODD 与 DMDD 诊断不能共存；去社会品行障碍"至少 1 年、10 岁前起病"。</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 01 地位 ===== -->
+<section id="status">
+  <div class="sec-head"><div class="badge">01</div><h2>本章地位速览<span class="en">Why this chapter matters</span></h2></div>
+  <p class="sec-lead">本章是全书与"法律"距离最近的一章：行为本身可能触犯规范甚至法律，诊断却要求辨清"有没有内省、有没有动机、有没有其他障碍解释"。</p>
+  <div class="grid3">
+    <div class="card blue">
+      <h3>章节定位与重要性</h3>
+      <p>本章位于教材第十六章（印刷页 197–205），内容对应 ICD-11 第六章的两节：<strong>冲动控制障碍</strong>与<strong>破坏性行为或去社会障碍</strong>；DSM-5 中表述为"破坏性、冲动控制及品行障碍"。</p>
+      <p>全章设 <strong>2 节、7 个独立障碍</strong>：第一节 4 种（纵火狂、偷窃狂、强迫性性行为障碍、间歇性暴怒障碍），第二节 3 种（对立违抗障碍、品行障碍、去社会品行障碍）。</p>
+      <p class="note">考试权重集中在：定义中的"无明确动机"、病程阈值、鉴别排除项、教材点名的治疗手段。</p>
+    </div>
+    <div class="card red">
+      <h3>临床意义</h3>
+      <p>教材开篇即指出：本章障碍常造成<strong>个人、家庭、学业（职业）和法律的困境</strong>，与法律问题密切相关，常涉及精神疾病司法鉴定，特别是<strong>刑事责任能力的认定</strong>。</p>
+      <p>临床难点不在"认出行为"，而在"解释行为"：同样一次纵火或偷窃，可能是有明确动机的故意行为、品行障碍的表现、妄想或幻听驱使，也可能是意识障碍下的非故意行为——诊断不同，处置与法律后果截然不同。</p>
+    </div>
+    <div class="card green">
+      <h3>与前后章节关联</h3>
+      <p><strong>前置知识：</strong>人格障碍、心境障碍（尤其躁狂与破坏性心境失调障碍）、精神分裂症、物质使用与器质性精神障碍——它们都是本章最重要的"排除项"。</p>
+      <p><strong>后续延伸：</strong>司法精神病学与刑事责任能力评定；儿童青少年精神障碍的长期随访。</p>
+      <p><strong>横向交叉：</strong>成瘾行为（赌博障碍）、以身体为中心的重复行为障碍（拔毛癖）、神经病学（额叶与器质性损害）、内分泌（性激素异常）。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 02 导航 ===== -->
+<section id="navmap">
+  <div class="sec-head"><div class="badge">02</div><h2>章节导航图<span class="en">Section map</span></h2></div>
+  <p class="sec-lead">按教材两节顺序排列：每节先设"总论单元"交代定义、分类与共性，再逐个障碍展开八栏。点击卡片直接跳转。</p>
+  <div class="grid3">
+    <a class="card cyan" href="#u1" style="display:block;color:inherit">
+      <h3>第一节总论 · 冲动控制障碍</h3>
+      <p>定义、四型谱系、ICD-10→ICD-11 的分类变迁、共同冲动循环。</p>
+      <p class="note">关键词：无法控制 · 短期有益 · 长期损害</p>
+    </a>
+    <a class="card red" href="#u2" style="display:block;color:inherit">
+      <h3>纵火狂<span class="en">pyromania</span></h3>
+      <p>无明确动机、迷恋燃火、纵火前紧张后兴奋；成人疗效不满意，重在儿童期预防。</p>
+      <p class="note">关键数字：犯罪程度纵火人群中 3.3%</p>
+    </a>
+    <a class="card red" href="#u3" style="display:block;color:inherit">
+      <h3>偷窃狂<span class="en">kleptomania</span></h3>
+      <p>无明确动机、单独行窃、"紧张与释放"；所偷不值钱、不需要、却买得起。</p>
+      <p class="note">关键数字：普通人群 0.3%～0.6%；女∶男 3∶1</p>
+    </a>
+    <a class="card red" href="#u4" style="display:block;color:inherit">
+      <h3>强迫性性行为障碍<span class="en">CSBD</span></h3>
+      <p>性幻想、性冲动或性行为成为生活中心，反复想停却停不下来，功能明显受损。</p>
+      <p class="note">关键数字：男女之比 4∶1；80% 合并其他行为问题</p>
+    </a>
+    <a class="card red" href="#u5" style="display:block;color:inherit">
+      <h3>间歇性暴怒障碍<span class="en">IED</span></h3>
+      <p>轻微激惹即暴发，强度与刺激不成比例，通常不足 30 分钟，事后后悔自责。</p>
+      <p class="note">关键数字：美国终生患病率 7%；持续模式超过 3 个月</p>
+    </a>
+    <a class="card blue" href="#u6" style="display:block;color:inherit">
+      <h3>第二节总论 · 破坏性行为或去社会障碍</h3>
+      <p>从对立违抗到侵害他人权益的连续谱；偏离同龄同文化标准；多起病于儿童期。</p>
+      <p class="note">关键词：破坏性 · 去社会 · 持续至成年</p>
+    </a>
+    <a class="card orange" href="#u7" style="display:block;color:inherit">
+      <h3>对立违抗障碍（ODD）</h3>
+      <p>对抗、消极抵抗、易激惹、挑衅、报复；有情绪失调，但无侵害他人权益行为。</p>
+      <p class="note">关键数字：持续 6 个月以上；患病率平均约 3.3%</p>
+    </a>
+    <a class="card orange" href="#u8" style="display:block;color:inherit">
+      <h3>品行障碍（CD）</h3>
+      <p>主观故意的恶意违规、违纪、违法，缺乏内省自责；攻击、破坏、欺诈盗窃、严重违规。</p>
+      <p class="note">关键数字：全球患病率 2%～2.5%；约半数成年期违法犯罪</p>
+    </a>
+    <a class="card orange" href="#u9" style="display:block;color:inherit">
+      <h3>去社会品行障碍</h3>
+      <p>ICD-11 类别，核心特征与 DSM-5 品行障碍基本相同；按起病年龄与亲社会情感分型。</p>
+      <p class="note">关键数字：至少持续 1 年；儿童期起病须在 10 岁前</p>
+    </a>
+  </div>
+  <div class="callout book">
+    <span class="ct">📖 单元划分说明（八栏适配）</span>
+    ① 教材第一节先给"冲动控制障碍"总定义，再依次介绍 4 种障碍，故设"总论 + 4 障碍"共 5 个单元。<br>
+    ② 教材第二节先给"破坏性行为或去社会障碍"总定义，再介绍 ODD，最后以"二、品行障碍与去社会品行障碍"一小节分（一）（二）叙述。两者分属 ICD-10（F91）与 ICD-11（6C91）两个诊断类别，教材亦分别给出定义、诊断与治疗，故本指南<strong>不合并</strong>，各设独立八栏单元。<br>
+    ③ 教材只在分类沿革中提及<strong>病理性赌博</strong>与<strong>拔发狂</strong>，未展开任何临床描述；按"零编造"原则不单设单元，其新分类归属放在第一节总论与拓展延伸中说明。
+  </div>
+</section>
+
+<!-- ===== 03 知识地图 ===== -->
+<section id="mindmap">
+  <div class="sec-head"><div class="badge">03</div><h2>本章知识地图<span class="en">Knowledge map</span></h2></div>
+  <p class="sec-lead">全章 <strong>2 节、7 个独立障碍、2 个总论单元</strong>，共 9 个正文单元。知识结构可按"三条轴"重组：行为靶点轴、内省与动机轴、病程阈值轴。</p>
+  <div class="grid2">
+    <div class="card red">
+      <h3>轴一 · 行为靶点：控制不住的是什么</h3>
+      <ul>
+        <li><strong>纵火</strong>：反复纵火或企图纵火，迷恋燃火场景。</li>
+        <li><strong>偷窃</strong>：反复偷窃，物品不值钱、不需要、买得起。</li>
+        <li><strong>性</strong>：性幻想、性冲动、性行为成为生活中心。</li>
+        <li><strong>暴怒</strong>：言语或躯体攻击、破坏财产，强度与刺激不成比例。</li>
+        <li><strong>对抗与侵权</strong>：从 ODD 的对立违抗，到 CD／去社会品行障碍的攻击、破坏、欺诈盗窃、严重违规。</li>
+      </ul>
+    </div>
+    <div class="card blue">
+      <h3>轴二 · 内省与动机：有没有"想要"和"后悔"</h3>
+      <ul>
+        <li><strong>纵火狂／偷窃狂</strong>：教材反复强调"<strong>没有任何明显的动机</strong>"，行为只为心理满足；偷窃狂能意识到错误、害怕被捕、感到内疚，但抵抗失败。</li>
+        <li><strong>间歇性暴怒障碍</strong>：暴发"非预谋、没有其他获益"，事后常有后悔、自责、内疚、羞愧。</li>
+        <li><strong>品行障碍</strong>：本质是"<strong>主观故意的恶意违规、违纪、违法，缺乏内省自责</strong>"，不同于冲动控制障碍与 ODD。</li>
+        <li><strong>去社会品行障碍</strong>：持续侵犯他人基本权益或违反适龄规范，攻击往往有预谋和获益性。</li>
+      </ul>
+    </div>
+    <div class="card orange">
+      <h3>轴三 · 病程与年龄阈值：数字就是考点</h3>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>障碍</th><th>教材阈值</th><th>起病／年龄要点</th></tr></thead>
+          <tbody>
+            <tr><td>纵火狂</td><td>反复、阵发，频率起伏</td><td>成人多有儿童期纵火史；通常男性</td></tr>
+            <tr><td>偷窃狂</td><td>反复偷窃</td><td>通常青春期起病，也可儿童期或成年早期</td></tr>
+            <tr><td>强迫性性行为障碍</td><td>模式通常持续 <strong>6 个月或更长</strong></td><td>多发于男性</td></tr>
+            <tr><td>间歇性暴怒障碍</td><td>持续攻击模式<strong>超过 3 个月</strong>；单次暴发通常<strong>不足 30 分钟</strong></td><td>多见于 40 岁及以下年轻男性</td></tr>
+            <tr><td>对立违抗障碍</td><td>行为模式<strong>持续 6 个月以上</strong></td><td>最早学龄前期，多见于 10 岁以下</td></tr>
+            <tr><td>品行障碍</td><td>行为特征<strong>持续 6 个月以上</strong></td><td>儿童青少年期；13 岁前可出现逃学等违规</td></tr>
+            <tr><td>去社会品行障碍</td><td>行为模式<strong>至少持续 1 年</strong></td><td>儿童期起病须在 <strong>10 岁之前</strong></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="card purple">
+      <h3>横轴 · 治疗与预后的一句话结论</h3>
+      <ul>
+        <li><strong>纵火狂</strong>：无特效，综合个体化；成人缺乏治疗动机，疗效常不满意；重在儿童期预防。</li>
+        <li><strong>偷窃狂</strong>：无特效；药物"主要用于合并的精神心理障碍的治疗"。</li>
+        <li><strong>强迫性性行为障碍</strong>：先找病因（内分泌、压力、关系、网瘾、共病），康复不是禁欲。</li>
+        <li><strong>间歇性暴怒障碍</strong>：早发现早干预；心理干预 + 药物，奥卡西平与氟西汀有循证证据。</li>
+        <li><strong>ODD</strong>：家庭、学校、社区共同参与的心理社会干预为主；药物仅用于共病。</li>
+        <li><strong>CD</strong>：父母管理培训是一线；7 岁以上可做认知行为技能训练；约半数成年期违法犯罪或反社会型人格障碍。</li>
+        <li><strong>去社会品行障碍</strong>：按起病年龄与亲社会情感分型，不同群体用不同策略。</li>
+      </ul>
+    </div>
+  </div>
+  <div class="stat">
+    <span>2 节</span><span>7 个独立障碍</span><span>2 个总论单元</span><span>9 个正文单元 · 72 个栏目</span><span>4 个关键阈值：6 个月／3 个月／1 年／10 岁</span>
+  </div>
+</section>
+
+<!-- ===== 04 路线 ===== -->
+<section id="route">
+  <div class="sec-head"><div class="badge">04</div><h2>学习路线图<span class="en">Study route</span></h2></div>
+  <p class="sec-lead">本章病名多、数字多、鉴别多，最忌"从头背到尾"。建议先建两节框架，再按"冲动四病 → 破坏性三病"推进，最后用对比表和自测收口。</p>
+  <div class="grid2">
+    <div class="card blue">
+      <h3>推荐学习路径</h3>
+      <div class="timeline">
+        <div class="tl-item"><h4>第 1 步 · 建框架（约 20 分钟）</h4><p>读两节总论 + 知识地图，先记住"第一节 4 病、第二节 3 病"和三条轴，不急着记细节。</p></div>
+        <div class="tl-item"><h4>第 2 步 · 攻纵火狂与偷窃狂（约 45 分钟）</h4><p>这两病结构最像，抓"无明确动机 + 前紧张后释放 + 排除项"三件事，用对比表一起记。</p></div>
+        <div class="tl-item"><h4>第 3 步 · 攻 CSBD 与 IED（约 40 分钟）</h4><p>CSBD 抓"生活中心 + 反复失败 + 功能损害 + 6 个月"；IED 抓"不成比例 + 不足 30 分钟 + 超过 3 个月 + 六组鉴别"。</p></div>
+        <div class="tl-item"><h4>第 4 步 · 攻 ODD 与 CD（约 55 分钟）</h4><p>先记 ODD 三组表现与两套标注，再用"有侵权即排除 ODD"切开 ODD 与 CD；最后记 CD 的五组表现与父母管理培训。</p></div>
+        <div class="tl-item"><h4>第 5 步 · 去社会 + 刷题（约 35 分钟）</h4><p>去社会品行障碍只需抓 4 核心、1 年、10 岁分型、三类人群策略；随后做 14 题自测、翻 20 张速记卡、看 3 个病例。</p></div>
+      </div>
+      <p class="note">总时长约 3 小时 15 分；建议分两次完成，次日用速记卡 + 易混警示复习 25 分钟。</p>
+    </div>
+    <div class="card purple">
+      <h3>重点优先级与记忆策略</h3>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>内容</th><th>优先级</th><th>推荐记忆法</th></tr></thead>
+          <tbody>
+            <tr><td>纵火狂／偷窃狂"无明确动机"与排除项</td><td class="starme">⭐⭐⭐</td><td>对比记忆 + 口诀</td></tr>
+            <tr><td>IED 的 3 个月、30 分钟与六组鉴别</td><td class="starme">⭐⭐⭐</td><td>数字编码 + 归类</td></tr>
+            <tr><td>ODD 与 CD 的切开点（有侵权即排除 ODD）</td><td class="starme">⭐⭐⭐</td><td>对比表 + 一句话规则</td></tr>
+            <tr><td>ODD／DMDD 不能共存</td><td class="starme">⭐⭐⭐</td><td>危险信号清单</td></tr>
+            <tr><td>去社会品行障碍 1 年、10 岁分型</td><td class="starme">⭐⭐⭐</td><td>数字锚定</td></tr>
+            <tr><td>CD 的本质（故意、缺乏内省）</td><td class="starme">⭐⭐⭐</td><td>关键词拆解</td></tr>
+            <tr><td>CSBD 的 6 个月与"康复不是禁欲"</td><td class="starme">⭐⭐</td><td>对比 + 反常识记忆</td></tr>
+            <tr><td>ICD-10→ICD-11 分类变迁</td><td class="starme">⭐⭐</td><td>归类记忆</td></tr>
+            <tr><td>各病患病率与性别比</td><td class="starme">⭐⭐</td><td>数字编码</td></tr>
+            <tr><td>病因与神经生物学细节</td><td class="starme">⭐</td><td>因果链 + 类比</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="note">记忆策略总原则：先用"动机—内省"这条轴判断归属，再用病程数字锁定诊断，最后用排除项排他。顺序错了，题就容易做反。</p>
+    </div>
+  </div>
+</section>
+<!-- ===== 05 第一节总论 ===== -->
+<section id="u1">
+  <div class="sec-head"><div class="badge">05</div><h2>第一节总论：冲动控制障碍<span class="en">第一节 · 概述（p.197）</span></h2></div>
+  <p class="sec-lead">教材先给一把统一的尺子——"反复、无法控制、短期有益、长期有害"，再用纵火、偷窃、性、暴怒四种行为落地。后面四个病，都是这把尺子的不同刻度。</p>
+
+  <!-- 第一栏 -->
+  <div class="card cyan" id="u1-1">
+    <h3 class="col-title"><span class="idx">第一栏</span>疾病画像</h3>
+    <div class="quote"><span class="lab">教材原文</span>冲动控制障碍（impulse control disorder）的特征是反复地、无法控制地实施某种行为的冲动，行为的实施至少在短期内对个人有益，但长期来看对个人及他人均有损害或明显困扰等不良后果，或对个人、家庭、社交、教育、职业或其他重要功能领域有明显损害。</div>
+    <p><strong>一句话画像：</strong>不是"想做"，而是"停不下来"——行为当下像泄洪一样带来快感或释放，事后却把自己和身边人的功能一点点冲垮。<span class="note">（此句为类比理解式概括，非教材原文）</span></p>
+    <div class="grid4">
+      <div class="mini"><h4>① 反复</h4><p>不是一次性冲动，而是反复发生的行为模式。</p></div>
+      <div class="mini"><h4>② 无法控制</h4><p>主观上有冲动，且抵抗失败。</p></div>
+      <div class="mini"><h4>③ 短期有益</h4><p>行为实施至少在短期内对个人有益。</p></div>
+      <div class="mini"><h4>④ 长期损害</h4><p>长期对个人及他人均有损害或明显困扰。</p></div>
+    </div>
+    <p><strong>行为靶点：</strong>教材明确"主要涉及纵火、偷窃、性行为和暴怒等一系列特定行为"，相应临床类型为<strong>纵火狂、偷窃狂、强迫性性行为障碍、间歇性暴怒障碍</strong>。</p>
+    <div class="stat">
+      <span>本节 4 种障碍</span>
+      <span>纵火狂：人群患病率尚不清楚</span>
+      <span>CSBD：流行病学资料匮乏</span>
+      <span>偷窃狂：0.3%～0.6%</span>
+      <span>IED：美国终生 7%</span>
+    </div>
+    <p class="note">注意：教材对四种障碍的流行病学掌握程度差异很大，不能用"某一个病的数字"去推另一个病。</p>
+  </div>
+
+  <!-- 第二栏 -->
+  <div class="card blue" id="u1-2">
+    <h3 class="col-title"><span class="idx">第二栏</span>病因探秘</h3>
+    <p><strong>教材没有给出四种障碍的统一病因模型。</strong>以下是把教材分散在四病中的线索横向归并，便于建立"生物学—心理—社会"的检索框架；每条都注明教材出处，不能当作统一机制。</p>
+    <div class="grid3">
+      <div class="mini">
+        <h4>生物学线索</h4>
+        <ul>
+          <li><strong>5-HT：</strong>偷窃狂与 IED 均提到 5-羟色胺通路或水平异常。</li>
+          <li><strong>多巴胺／阿片肽：</strong>偷窃狂提到与行为成瘾有关的递质通路。</li>
+          <li><strong>额叶与抑制：</strong>偷窃狂前额叶皮质功能及皮质抑制功能较差。</li>
+          <li><strong>杏仁核：</strong>IED 对愤怒刺激反应更强烈。</li>
+        </ul>
+      </div>
+      <div class="mini">
+        <h4>心理线索</h4>
+        <ul>
+          <li><strong>早年经历：</strong>有学者强调，成人纵火狂多数有儿童期纵火史或偷窃、逃学、攻击行为；IED 有儿童青少年期躯体和情感创伤史。</li>
+          <li><strong>诱发情绪：</strong>偷窃冲动常由压力大、焦虑、无聊、悲伤诱发；CSBD 在愤怒、焦虑、烦躁、抑郁时更易寻求性活动。</li>
+          <li><strong>人格特质：</strong>偷窃狂存在高冲动和感觉寻求特质。</li>
+        </ul>
+      </div>
+      <div class="mini">
+        <h4>社会与器质性线索</h4>
+        <ul>
+          <li><strong>家庭：</strong>纵火狂多发生在家庭破裂、学习成绩差或边缘智力者。</li>
+          <li><strong>关系与媒体：</strong>CSBD 与缺乏亲密家庭关系、婚外恋、色情书刊和影视的诱惑有关。</li>
+          <li><strong>器质性：</strong>偷窃狂病例报告与脑炎、蛛网膜下腔出血、额叶肿瘤和头部外伤相关。</li>
+        </ul>
+      </div>
+    </div>
+    <div class="callout warn">
+      <span class="ct">⚠️ 三条边界，答题时必须守住</span>
+      ① <strong>纵火狂</strong>教材明确写"病因和发病机制不明"，精神分析的解释属于学派假说，不能写成"已证实病因"。<br>
+      ② 偷窃狂的遗传、器质性、神经生化线索多为"提示""病例报告显示""研究显示"，不是定论。<br>
+      ③ CSBD 教材只列"密切相关"的因素，未给出因果链，也未给出患病率数字。
+    </div>
+    <p><strong>一个可迁移的临床思路：</strong>遇到冲动行为，先排"器质性／物质"，再看"心理社会诱因"，最后才归入冲动控制障碍。教材在纵火狂、偷窃狂的鉴别中都把器质性、中毒、痴呆放在排除项里。</p>
+  </div>
+
+  <!-- 第三栏 -->
+  <div class="card red" id="u1-3">
+    <h3 class="col-title"><span class="idx">第三栏</span>临床表现拼图</h3>
+    <p>四种障碍的行为不同，但教材对它们的体验描述高度相似：<strong>冲动升起 → 紧张增强 → 实施 → 释放或满足 → 内疚与损害</strong>。这条循环是把教材分散描述串起来的结构，不是教材原图。</p>
+    <div class="tabs" data-tabs>
+      <div class="tabbar">
+        <button class="on" data-tab="b1">共同循环</button>
+        <button data-tab="b2">四种行为靶点</button>
+        <button data-tab="b3">共同后果</button>
+      </div>
+      <div class="panel on" data-panel="b1">
+        <div class="timeline">
+          <div class="tl-item"><h4>① 冲动升起</h4><p>反复出现不能克制的强烈冲动或欲望；CSBD 还表现为强烈、强迫性、连续或周期性的性幻想、性冲动。</p></div>
+          <div class="tl-item"><h4>② 紧张增强</h4><p>纵火狂、偷窃狂在行为前都有"逐渐增强的紧张感"；IED 暴发前可有震颤、胸闷、紧张或兴奋等先兆。</p></div>
+          <div class="tl-item"><h4>③ 实施行为</h4><p>纵火前常周密准备；偷窃常单独进行；IED 常在极轻微激惹下突然暴发；CSBD 花费大量时间寻求性活动。</p></div>
+          <div class="tl-item"><h4>④ 释放或满足</h4><p>纵火后轻松愉悦、兴奋、释放或满足；偷窃后同样有释放感；IED 暴发后常转为疲劳、后悔、自责；CSBD 事后自责悔恨但不足以阻止下次。</p></div>
+          <div class="tl-item"><h4>⑤ 内疚与损害</h4><p>偷窃狂能意识到行为错误、害怕被捕、常感抑郁或内疚；四病最终都指向个人、家庭、社交、教育、职业或其他重要功能领域的损害。</p></div>
+        </div>
+        <p class="note">说明：教材并未把四病写成同一条时间线，此图为按教材各病描述整理的学习结构。</p>
+      </div>
+      <div class="panel" data-panel="b2">
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>障碍</th><th>反复实施的行为</th><th>教材描述的关键体验</th></tr></thead>
+            <tbody>
+              <tr><td>纵火狂</td><td>多次纵火或企图纵火烧毁财物或其他物品</td><td>对燃火及相关场景持续迷恋或专注；纵火前紧张增强，纵火后轻松愉悦、兴奋、释放或满足</td></tr>
+              <tr><td>偷窃狂</td><td>多次偷窃行为</td><td>偷窃前紧张增强，偷窃后轻松愉悦、兴奋、释放或满足；明显的"紧张与释放"特征</td></tr>
+              <tr><td>CSBD</td><td>重复的性行为，成为生活中心和焦点</td><td>性欲望亢进，性反应超常迅速、容易和强烈；得不到满足就焦虑不安、痛苦不堪</td></tr>
+              <tr><td>IED</td><td>言语攻击、躯体攻击或破坏财产</td><td>轻微激惹即突然暴发，迅速升级至完全失控；事后疲劳、后悔、自责、内疚、羞愧或抑郁</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="panel" data-panel="b3">
+        <ul>
+          <li><strong>个人层面：</strong>反复行为带来内疚、抑郁、焦虑，CSBD 还可出现头昏、四肢无力、发呆、浑身难受、失眠等表现。</li>
+          <li><strong>家庭层面：</strong>CSBD 可影响婚姻生活；纵火狂、偷窃狂的家庭关系常因行为后果而紧张。</li>
+          <li><strong>社会与学业职业：</strong>四病均被教材写入"个人、家庭、社交、教育、职业或其他重要功能领域"的损害框架。</li>
+          <li><strong>法律层面：</strong>本章开篇即指出，这类障碍常造成法律困境，常涉及精神疾病司法鉴定，特别是刑事责任能力认定。</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- 第四栏 -->
+  <div class="card orange" id="u1-4">
+    <h3 class="col-title"><span class="idx">第四栏</span>教材典型案例</h3>
+    <div class="callout book">
+      <span class="ct">📖 教材未提供具体临床案例</span>
+      第一节总论及后续四种障碍，教材均未给出患者案例、病史、检查结果或随访经过。本栏不虚构案例，只把教材的诊断要点转成可操作的"四问识别法"。
+    </div>
+    <p><strong>四问识别法（由教材要点整理，不是教材原文病例）：</strong></p>
+    <ol>
+      <li><strong>问动机：</strong>这次行为有没有明确的外在目的——得到金钱、报复、宣泄愤怒或复仇、表达社会政治观点、隐瞒犯罪活动？有，则先考虑故意行为或其他障碍，而不是纵火狂／偷窃狂。</li>
+      <li><strong>问体验：</strong>行为前是否逐渐紧张，行为后是否轻松、兴奋、释放或满足？这是纵火狂、偷窃狂的"紧张—释放"核心。</li>
+      <li><strong>问控制：</strong>是否反复出现、无法控制、抵抗失败？CSBD 还要求性活动成为生活中心并造成明显功能损害。</li>
+      <li><strong>问排除：</strong>能否用智力障碍、另一种精神和行为障碍、物质中毒、器质性疾病更好地解释？教材在纵火狂、偷窃狂的鉴别中列了整串排除项。</li>
+    </ol>
+    <p class="note">以上为按教材诊断逻辑整理的学习工具，不能替代正式诊断标准。</p>
+  </div>
+
+  <!-- 第五栏 -->
+  <div class="card orange" id="u1-5">
+    <h3 class="col-title"><span class="idx">第五栏</span>鉴别诊断对对碰</h3>
+    <p><strong>表 1　四种冲动控制障碍的横向定位</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>维度</th><th>纵火狂</th><th>偷窃狂</th><th>CSBD</th><th>IED</th></tr></thead>
+        <tbody>
+          <tr><td>行为靶点</td><td>纵火／企图纵火</td><td>偷窃</td><td>性幻想、性冲动、性行为</td><td>言语／躯体攻击、破坏财产</td></tr>
+          <tr><td>教材强调的动机</td><td><strong>没有明显动机</strong></td><td><strong>没有明显动机</strong></td><td>行为成为生活中心，反复想减少却失败</td><td>非预谋、没有其他获益</td></tr>
+          <tr><td>行为前后体验</td><td>前紧张、后兴奋释放</td><td>前紧张、后释放，明显"紧张与释放"</td><td>不满足则焦虑痛苦，事后自责悔恨</td><td>暴发后疲劳、后悔、自责、内疚</td></tr>
+          <tr><td>教材给出的数字</td><td>犯罪程度纵火人群 3.3%；人群患病率尚不清楚</td><td>普通人群 0.3%～0.6%；被捕商店行窃者 4%～24%；女∶男 3∶1</td><td>男女之比 4∶1；80% 合并酗酒、赌博等行为问题</td><td>美国终生 7%，年 2.7%（狭义）；男∶女 OR 1.4～2.3</td></tr>
+          <tr><td>教材明确的空白</td><td>人群患病率尚不清楚；病因不明</td><td>未给治疗剂量；药物主要用于共病</td><td>流行病学资料匮乏；未列逐条诊断标准</td><td>未给药物剂量与疗程</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p><strong>表 2　第一节与第二节的边界</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>对比点</th><th>冲动控制障碍（第一节）</th><th>破坏性行为或去社会障碍（第二节）</th></tr></thead>
+        <tbody>
+          <tr><td>行为性质</td><td>以某种特定冲动行为为核心，如纵火、偷窃、性、暴怒</td><td>持续的行为问题，从对立违抗到侵犯他人基本权益或违反法律</td></tr>
+          <tr><td>内省与自责</td><td>教材明确偷窃狂能意识到错误、感到内疚；IED 事后常后悔自责</td><td>CD 的本质是"主观故意的恶意违规、违纪、违法，<strong>缺乏内省自责</strong>"</td></tr>
+          <tr><td>动机</td><td>纵火狂、偷窃狂"没有明显动机"；IED"非预谋、没有其他获益"</td><td>去社会品行障碍的攻击行为往往有预谋和获益性；持续侵犯他人权益</td></tr>
+          <tr><td>病程锚点</td><td>各病不同，CSBD 通常 6 个月或更长；IED 模式超过 3 个月</td><td>ODD、CD 持续 6 个月以上；去社会品行障碍至少 1 年</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout key"><span class="ct">📌 一句话鉴别总结</span>先看"有没有内省和自责"：有内省、行为只为短时释放的，往第一节的冲动控制障碍靠；缺乏内省、行为是故意违规或侵害他人权益的，往第二节的破坏性行为或去社会障碍靠。</div>
+    <p class="note">说明：教材未给出"四病互相鉴别"的正式条目，表 1 是按教材各病描述整理的横向对比；表 2 的边界依据来自教材对 CD 本质的界定及 IED 的鉴别条目。</p>
+  </div>
+
+  <!-- 第六栏 -->
+  <div class="card green" id="u1-6">
+    <h3 class="col-title"><span class="idx">第六栏</span>治疗方案工具箱</h3>
+    <p><strong>教材对第一节四种障碍的总态度：均"尚没有特效措施"，以综合的个体化治疗为主。</strong>具体到每个病，教材点名的心理治疗与药物并不完全相同。</p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>障碍</th><th>教材点名的心理治疗／行为治疗</th><th>教材点名的药物</th><th>教材特别说明</th></tr></thead>
+        <tbody>
+          <tr><td>纵火狂</td><td>认知治疗（改善不良人际社会关系）；行为治疗可选厌恶疗法与系统脱敏疗法</td><td>SSRIs、心境稳定剂等，可尝试用于纵火狂的治疗以及合并精神心理障碍的治疗</td><td>成人常缺乏治疗动机；有学者认为监禁也许是防止反复纵火的唯一有效方法</td></tr>
+          <tr><td>偷窃狂</td><td>认知治疗（改善不良人际社会关系）；行为治疗可选厌恶疗法与系统脱敏疗法</td><td>SSRIs、锂盐、丙戊酸盐、纳曲酮等，<strong>主要用于合并的精神心理障碍的治疗</strong></td><td>教材未把药物定位为偷窃狂本身的特效治疗</td></tr>
+          <tr><td>CSBD</td><td>按病因处理：健康方式减压、重建伴侣亲密关系、戒除网瘾、治疗焦虑强迫等心理问题</td><td>教材未给出针对 CSBD 本身的药物</td><td>康复不是禁欲，而是重拾健康的性行为</td></tr>
+          <tr><td>IED</td><td>心理干预（教材未展开具体流派）</td><td>抗惊厥药和抗抑郁药；有循证医学证据显示<strong>奥卡西平</strong>和<strong>氟西汀</strong>有效</td><td>早发现、早干预、防止恶化；尚缺乏特效干预方法</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="timeline">
+      <div class="tl-item"><h4>第一步 · 全面分析</h4><p>分析行为的原因、诱因、不良后果——教材对纵火狂、偷窃狂都明确要求这一步。</p></div>
+      <div class="tl-item"><h4>第二步 · 定个体化方案</h4><p>在分析基础上采取综合性个体化措施，而不是套用单一处方。</p></div>
+      <div class="tl-item"><h4>第三步 · 心理与行为干预</h4><p>认知治疗、行为治疗（厌恶疗法、系统脱敏）等；CSBD 则按病因做减压、关系修复、戒网瘾与共病治疗。</p></div>
+      <div class="tl-item"><h4>第四步 · 药物与安全管理</h4><p>药物按病选择；纵火狂成人需在监控措施或封闭管理基础上选择治疗，并重视儿童期预防。</p></div>
+    </div>
+    <div class="callout warn">
+      <span class="ct">⚠️ 剂量与疗程：教材全章未涉及</span>
+      教材在本章没有给出任何抗精神病药、抗抑郁药、心境稳定剂、纳曲酮、奥卡西平或氟西汀的<strong>具体剂量、疗程或血药浓度</strong>。本指南一律不补写数字；考试若问剂量，应按"教材未涉及"处理，不要从其他章节或网络资料移植。
+    </div>
+  </div>
+
+  <!-- 第七栏 -->
+  <div class="card purple" id="u1-7">
+    <h3 class="col-title"><span class="idx">第七栏</span>记忆工具箱</h3>
+    <div class="callout tip">
+      <span class="ct">🔧 方法一：口诀歌谣法</span>
+      口诀：<strong>"纵、偷、性、暴，四型记牢；短爽长害，功能垮掉。"</strong><br>
+      解释：前四字是第一节四种障碍的行为靶点；后八字是冲动控制障碍的共同定义——短期对个人有益、长期对个人和他人有害，并造成重要功能领域损害。<br>
+      <em>为什么这样记：</em>用四个单字先锁定病名，再用一句对照句锁住定义，避免把"冲动控制障碍"记成空泛概念。
+    </div>
+    <div class="callout tip">
+      <span class="ct">🔧 方法二：数字编码法</span>
+      记 <strong>"4—2—4"</strong>：第一节 <strong>4</strong> 种障碍；教材明确 <strong>2</strong> 个"尚不清楚／资料匮乏"（纵火狂人群患病率、CSBD 流行病学）；<strong>4</strong> 个功能损害领域关键词（个人、家庭、社交／教育／职业、其他重要功能）。<br>
+      <em>为什么这样记：</em>数字当"抽屉编号"，尤其"两个空白"能防止考试时硬编患病率。
+    </div>
+    <div class="callout tip">
+      <span class="ct">🔧 方法三：对比记忆法（与第二节划界）</span>
+      把两节想成两条轨道：<br>
+      <strong>第一节轨道：</strong>停不下来的冲动 → 做了会短暂舒服 → 事后内疚 → 仍属"有内省"。<br>
+      <strong>第二节轨道：</strong>持续的对抗与侵权 → 故意违规违纪违法 → 缺乏内省自责 → "不觉得自己错"。<br>
+      <em>为什么这样记：</em>只要抓住"内省"这一根轴，就能在 ODD、CD 与冲动控制障碍之间快速定位，而不必死背七段定义。
+    </div>
+    <div class="callout key"><span class="ct">📌 本节最容易被忽略的一句</span>教材说冲动控制障碍的行为"<strong>至少在短期内对个人有益</strong>"——这个"有益"不是道德判断，而是指行为带来即时快感、释放或满足。答题时不要把它理解成"有获利动机"。</div>
+  </div>
+
+  <!-- 第八栏 -->
+  <div class="card cyan" id="u1-8">
+    <h3 class="col-title"><span class="idx">第八栏</span>知识联动</h3>
+    <ul>
+      <li><strong>与 ICD-11 分类：</strong>本节四病属于 ICD-11"冲动控制障碍"；病理性赌博被归入"成瘾行为所致障碍"中的"赌博障碍"；拔发狂被归入"以身体为中心的重复行为障碍"中的"拔毛癖（拔毛障碍）"。这是本章最常考的分类变迁。</li>
+      <li><strong>与人格障碍章：</strong>纵火狂需与"有人格障碍的成年人纵火"鉴别；IED 需与反社会型、边缘型人格障碍鉴别，教材明确后两者冲动性攻击水平低于 IED。</li>
+      <li><strong>与心境障碍章：</strong>偷窃行为出现在躁狂发作时不应单独诊断偷窃狂；IED 需与破坏性心境失调障碍及双相鉴别思路相连。</li>
+      <li><strong>与精神分裂症章：</strong>精神分裂症患者纵火应是对妄想或命令性幻听的反应，不诊断纵火狂。</li>
+      <li><strong>与器质性／物质使用：</strong>痴呆、意识障碍、急性醉酒、慢性酒精依赖或其他药物中毒可导致非故意纵火；器质性精神障碍也可能反复不付款。</li>
+      <li><strong>与司法精神病学：</strong>本章开篇点明与法律问题密切相关，常涉及刑事责任能力认定；这是本章区别于其他疾病章的最大横向联系。</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===== 06 纵火狂 ===== -->
+<section id="u2">
+  <div class="sec-head"><div class="badge">06</div><h2>纵火狂<span class="en">Pyromania · 第一节（p.197–198）</span></h2></div>
+  <p class="sec-lead">一句话抓本质："没有理由地点火，只为看火、只为那一下释放。"只要存在明确动机，或能被其他障碍解释，就不是纵火狂。</p>
+
+  <!-- 第一栏 -->
+  <div class="card red" id="u2-1">
+    <h3 class="col-title"><span class="idx">第一栏</span>疾病画像</h3>
+    <div class="quote"><span class="lab">教材原文</span>纵火狂（pyromania）的特征是在没有明确动机的情况下，反复出现无法控制的强烈纵火冲动，导致多次纵火或企图纵火烧毁财物或其他物品。</div>
+    <p><strong>一句话画像：</strong>纵火狂点的不是"有用的火"，而是"心里那团火"——行为不为钱、不为报复、不为泄愤，只为获得心理上的满足。<span class="note">（类比理解式概括，非教材原文）</span></p>
+    <div class="quote"><span class="lab">教材原文</span>纵火者对燃火及相关场景存在持续的迷恋或专注。纵火前有逐渐增强的紧张感，纵火后有轻松愉悦、兴奋、释放或满足感。</div>
+    <div class="stat">
+      <span>人群患病率：尚不清楚</span>
+      <span>作为主要诊断：临床比较少见</span>
+      <span>犯罪程度纵火人群：3.3% 符合</span>
+      <span>性别：通常见于男性</span>
+    </div>
+    <p><strong>教材对人群的进一步描述：</strong>纵火狂通常见于男性，特别是那些<strong>社交技能差、学习困难</strong>的男性。</p>
+    <p class="note">不要把"3.3%"误读为人群患病率——它的分母是"反复纵火、达到犯罪程度的人群样本"。</p>
+  </div>
+
+  <!-- 第二栏 -->
+  <div class="card blue" id="u2-2">
+    <h3 class="col-title"><span class="idx">第二栏</span>病因探秘</h3>
+    <div class="quote"><span class="lab">教材原文</span>纵火狂的病因和发病机制不明。</div>
+    <p>教材没有给出确定病因，只交代了三条"观察线索"和一条"学派解释"。学习时要把它们分层，不能并列成"病因"：</p>
+    <div class="grid2">
+      <div class="mini">
+        <h4>① 童年行为史（观察线索）</h4>
+        <p>有学者强调，成人纵火狂多数在儿童期有<strong>纵火史或偷窃、逃学、攻击行为</strong>等。这提示纵火行为可能有一条从童年延续到成年的轨迹，也为"儿童期干预可预防成人纵火狂"提供了依据。</p>
+      </div>
+      <div class="mini">
+        <h4>② 家庭与智力（观察线索）</h4>
+        <p>有学者认为纵火狂多发生在<strong>家庭破裂、学习成绩差或边缘智力</strong>者。教材用"有学者认为"，属于相关观察，不是因果结论。</p>
+      </div>
+      <div class="mini">
+        <h4>③ 精神分析解释（学派假说）</h4>
+        <p>精神分析学派把纵火理解为一种<strong>无意识性活动的象征</strong>，是取得性满足的一种代替；火焰和温度可唤起类似于性兴奋的感觉。</p>
+      </div>
+      <div class="mini">
+        <h4>④ 生物学机制（教材空白）</h4>
+        <p>教材在本节没有给出纵火狂的遗传、神经递质、脑影像或神经生理研究。凡遇到"纵火狂的 5-HT 机制"之类说法，本章教材<strong>未涉及</strong>。</p>
+      </div>
+    </div>
+    <div class="callout warn"><span class="ct">⚠️ 答题红线</span>教材原文只有一句"病因和发病机制不明"。精神分析内容必须标注为学派解释；不能写成"纵火狂是因为性欲异常"这样的确定结论。</div>
+  </div>
+
+  <!-- 第三栏 -->
+  <div class="card red" id="u2-3">
+    <h3 class="col-title"><span class="idx">第三栏</span>临床表现拼图</h3>
+    <p><strong>纵向看一次纵火：</strong>教材把它拆成"事前—事中—事后"三段，每段都有可观察的体验。</p>
+    <div class="timeline">
+      <div class="tl-item"><h4>事前 · 冲动与准备</h4><p>反复出现不能克制的强烈纵火欲望；对纵火和焚烧场面有强烈兴趣、迷恋和好奇；纵火前常进行<strong>周密的准备</strong>；紧张感逐渐增强。</p></div>
+      <div class="tl-item"><h4>事中 · 实施</h4><p>多次故意地、有目的地纵火；纵火事件<strong>阵发</strong>，频率有起伏变化；纵火并非由精神症状驱使，也非由其他明确动机引发。</p></div>
+      <div class="tl-item"><h4>事后 · 释放</h4><p>轻松愉悦、兴奋、释放或满足感；纵火仅仅是为了获得心理上的满足。</p></div>
+    </div>
+    <div class="grid2">
+      <div class="mini">
+        <h4>"故意、有目的"与"无明确动机"矛盾吗？</h4>
+        <p>不矛盾。教材的"故意地、有目的地"指行为是有意实施、不是意外；"没有明确动机"指没有金钱、报复、宣泄愤怒、表达政治观点、隐瞒犯罪等<strong>外在目的</strong>。两者描述的是不同层面。</p>
+      </div>
+      <div class="mini">
+        <h4>特殊类型：色情纵火狂</h4>
+        <p>教材原文：个别人纵火时可产生特殊的性快感或伴手淫射精，称为<strong>色情纵火狂</strong>。教材仅点名，未展开诊断或治疗。</p>
+      </div>
+    </div>
+    <div class="callout key"><span class="ct">📌 三个"不是"</span>不是为钱、不是为报复、不是受幻觉妄想指使。只要三者中任何一条成立，诊断方向就要改写。</div>
+  </div>
+
+  <!-- 第四栏 -->
+  <div class="card orange" id="u2-4">
+    <h3 class="col-title"><span class="idx">第四栏</span>教材典型案例</h3>
+    <div class="callout book">
+      <span class="ct">📖 教材未提供具体临床案例</span>
+      教材在本节只给定义、诊断要点与鉴别条目，没有患者个案、纵火次数、财物损失或检查数据。本栏不补写案例，改用"诊断路径"训练推理。
+    </div>
+    <p><strong>由教材要点整理的诊断路径：</strong></p>
+    <ol>
+      <li><strong>先确认行为：</strong>是否反复纵火或企图纵火烧毁财物或其他物品，且为有意实施。</li>
+      <li><strong>再查动机：</strong>是否有得到金钱、报复、宣泄愤怒或复仇、表达社会政治观点、隐瞒犯罪活动等明显动机。有 → 不诊断纵火狂。</li>
+      <li><strong>抓核心体验：</strong>对观看燃火是否有强烈兴趣；纵火前是否紧张增强，纵火后是否有强烈兴奋。</li>
+      <li><strong>做排除：</strong>能否用智力障碍、另一种精神和行为障碍或物质中毒更好地解释。教材列出六类需要排除的情况。</li>
+    </ol>
+    <p class="note">以上是把教材诊断要点转成操作顺序，不是教材原文病例，也不构成诊断标准全文。</p>
+  </div>
+
+  <!-- 第五栏 -->
+  <div class="card orange" id="u2-5">
+    <h3 class="col-title"><span class="idx">第五栏</span>鉴别诊断对对碰</h3>
+    <p><strong>表 1　纵火狂的六组"不诊断"情形（教材原文顺序）</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>情形</th><th>教材给出的识别依据</th><th>为什么不是纵火狂</th></tr></thead>
+        <tbody>
+          <tr><td>无精神障碍表现的故意纵火</td><td>有明显的纵火动机</td><td>"没有明确动机"这一核心不成立</td></tr>
+          <tr><td>有品行障碍的青少年纵火</td><td>同时伴有其他品行障碍证据，如偷窃、攻击或逃学等</td><td>行为是更广泛的品行问题的一部分</td></tr>
+          <tr><td>有人格障碍的成年人纵火</td><td>伴有其他持久的社会行为紊乱证据，如攻击、对他人利益和感情缺乏关心等</td><td>纵火从属于持久的人格与社会行为异常</td></tr>
+          <tr><td>精神分裂症患者纵火</td><td>纵火是对妄想或命令性幻听的反应</td><td>行为由精神病性症状驱使</td></tr>
+          <tr><td>器质性精神障碍患者纵火</td><td>由于意识模糊、记忆力减退、对行为后果缺乏认识或多种因素综合影响而意外发生</td><td>非有意、非冲动满足</td></tr>
+          <tr><td>痴呆、意识障碍、急性醉酒、慢性酒精依赖或其他药物中毒</td><td>可导致非故意的纵火，应具体情况具体分析</td><td>意识／中毒状态下的非故意行为</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout key"><span class="ct">📌 一句话鉴别总结</span>纵火狂的鉴别就是一句："<strong>有动机、有别的病、或不是故意，都不是纵火狂。</strong>"六组情形全部围绕这三点展开。</div>
+    <p class="note">教材原文：上述情况不应诊断为纵火狂。</p>
+  </div>
+
+  <!-- 第六栏 -->
+  <div class="card green" id="u2-6">
+    <h3 class="col-title"><span class="idx">第六栏</span>治疗方案工具箱</h3>
+    <div class="quote"><span class="lab">教材原文</span>纵火狂的治疗尚没有特效措施，通常在全面分析纵火原因、诱因、不良后果等基础上采取综合性个体化治疗措施，包括认知治疗、行为治疗和药物治疗等。</div>
+    <div class="grid3">
+      <div class="mini">
+        <h4>心理治疗</h4>
+        <ul>
+          <li><strong>认知治疗：</strong>着重于改善患者的不良人际社会关系。</li>
+          <li><strong>行为治疗：</strong>可选择厌恶疗法与系统脱敏疗法。</li>
+        </ul>
+      </div>
+      <div class="mini">
+        <h4>药物治疗</h4>
+        <ul>
+          <li>精神药物（如 <strong>SSRIs、心境稳定剂</strong>等）可尝试用于纵火狂的治疗，以及合并精神心理障碍的治疗。</li>
+          <li>教材未给具体剂量、疗程或血药浓度。</li>
+        </ul>
+      </div>
+      <div class="mini">
+        <h4>管理与预防</h4>
+        <ul>
+          <li>成人常缺乏治疗动机，难以及时接受治疗，疗效常不满意。</li>
+          <li>有学者认为<strong>监禁</strong>也许是防止患者反复纵火的唯一有效方法。</li>
+          <li>强调在监控措施或封闭管理基础上，依具体情况选择治疗。</li>
+        </ul>
+      </div>
+    </div>
+    <div class="callout book">
+      <span class="ct">📖 教材对预防的明确表述</span>
+      鉴于成人纵火狂的治疗十分困难，应重视纵火狂的预防。患者的纵火行为常开始于儿童时期，若对儿童纵火行为及时积极干预，<strong>多可完全缓解，很少迁延至成年或发展为纵火狂患者</strong>。
+    </div>
+    <div class="timeline">
+      <div class="tl-item"><h4>评估</h4><p>全面分析纵火的原因、诱因、不良后果。</p></div>
+      <div class="tl-item"><h4>心理干预</h4><p>认知治疗改善人际社会关系；行为治疗用厌恶疗法、系统脱敏。</p></div>
+      <div class="tl-item"><h4>药物尝试</h4><p>SSRIs、心境稳定剂等，兼顾合并的精神心理障碍。</p></div>
+      <div class="tl-item"><h4>安全管理与预防</h4><p>监控／封闭管理；把重点前移到儿童期纵火行为的早期干预。</p></div>
+    </div>
+    <p class="note">教材未给药物剂量、疗程、随访时长；也未给出心理治疗的具体次数或操作手册。</p>
+  </div>
+
+  <!-- 第七栏 -->
+  <div class="card purple" id="u2-7">
+    <h3 class="col-title"><span class="idx">第七栏</span>记忆工具箱</h3>
+    <div class="callout tip">
+      <span class="ct">🔧 方法一：口诀歌谣法（四条诊断要点）</span>
+      口诀：<strong>"无动机、爱看火、前紧张、后兴奋。"</strong><br>
+      解释：对应教材四条诊断要点——①反复纵火且无明显动机；②对观看燃火有强烈兴趣；③纵火前紧张增强，纵火后强烈兴奋；④不能用智力障碍、其他精神障碍或物质中毒解释。<br>
+      <em>为什么这样记：</em>四句各四到五字，把"动机—兴趣—体验—排除"四层一次说完，答题时按顺序展开即可。
+    </div>
+    <div class="callout tip">
+      <span class="ct">🔧 方法二：首字母缩拼法（六组鉴别）</span>
+      <strong>"故、品、人、精、器、毒"</strong>——故意纵火、品行障碍、人格障碍、精神分裂症、器质性精神障碍、痴呆／意识障碍／醉酒／药物中毒。<br>
+      <em>为什么这样记：</em>六个字就是六个排除方向；看到"某人纵火"的题干，先在脑中过一遍这六字，再决定诊断。
+    </div>
+    <div class="callout tip">
+      <span class="ct">🔧 方法三：数字锚定法</span>
+      记 <strong>"3.3%"</strong>：只属于"反复纵火、达到犯罪程度的人群样本"，<strong>不是</strong>人群患病率；纵火狂人群患病率教材明说"尚不清楚"。<br>
+      <em>为什么这样记：</em>把最容易张冠李戴的数字和它的分母绑在一起，避免把 3.3% 写成"患病率 3.3%"。
+    </div>
+    <div class="callout key"><span class="ct">📌 一句话总记</span>纵火狂＝<strong>无动机 + 迷恋火 + 前紧后释 + 排他</strong>；治疗＝<strong>无特效、综合个体化、成人难治、儿童预防</strong>。</div>
+  </div>
+
+  <!-- 第八栏 -->
+  <div class="card cyan" id="u2-8">
+    <h3 class="col-title"><span class="idx">第八栏</span>知识联动</h3>
+    <ul>
+      <li><strong>与品行障碍单元：</strong>青少年纵火若同时有偷窃、攻击、逃学等其他品行障碍证据，应归入品行障碍，而不是纵火狂。这是本章内部最重要的一条纵向联系。</li>
+      <li><strong>与人格障碍章：</strong>成人纵火若伴有持久的社会行为紊乱（攻击、对他人利益和感情缺乏关心），应考虑人格障碍。</li>
+      <li><strong>与精神分裂症章：</strong>纵火若是对妄想或命令性幻听的反应，不诊断纵火狂。</li>
+      <li><strong>与器质性精神障碍／物质使用：</strong>意识模糊、记忆力减退、对后果缺乏认识，或痴呆、急性醉酒、慢性酒精依赖、其他药物中毒，都可导致非故意纵火。</li>
+      <li><strong>与儿童青少年精神医学：</strong>教材把预防窗口明确放在儿童期——儿童纵火行为及时干预多可完全缓解。</li>
+      <li><strong>与司法精神病学：</strong>纵火是典型涉法行为；教材提醒本章常涉及刑事责任能力认定，诊断必须写清"动机、意识状态、有无其他障碍解释"。</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===== 07 偷窃狂 ===== -->
+<section id="u3">
+  <div class="sec-head"><div class="badge">07</div><h2>偷窃狂<span class="en">Kleptomania · 第一节（p.198–199）</span></h2></div>
+  <p class="sec-lead">与纵火狂结构最像：无明确动机、前紧张后释放、反复失控。区别在于"偷的东西不值钱、自己不需要、却完全买得起"，而且多为女性、单独行动。</p>
+
+  <!-- 第一栏 -->
+  <div class="card red" id="u3-1">
+    <h3 class="col-title"><span class="idx">第一栏</span>疾病画像</h3>
+    <div class="quote"><span class="lab">教材原文</span>偷窃狂（kleptomania）的特征是在没有明确动机的情况下，反复出现无法控制的强烈偷窃冲动，导致多次偷窃行为。偷窃前有逐渐增强的紧张感，偷窃后有轻松愉悦、兴奋、释放或满足感。</div>
+    <p><strong>一句话画像：</strong>偷窃狂偷的不是"需要的东西"，而是"那一下紧张后的释放"；物品拿回家可能被囤着、送人、归还甚至丢掉。<span class="note">（类比理解式概括，非教材原文）</span></p>
+    <div class="stat">
+      <span>普通人群患病率 0.3%～0.6%</span>
+      <span>被捕商店行窃者中 4%～24%</span>
+      <span>女性多于男性，3∶1</span>
+      <span>起病：通常青春期，也可儿童期或成年早期</span>
+    </div>
+    <div class="grid3">
+      <div class="mini"><h4>核心一</h4><p>反复、无法控制的强烈偷窃冲动，导致多次偷窃。</p></div>
+      <div class="mini"><h4>核心二</h4><p>偷窃前紧张增强，偷窃后轻松、愉悦、兴奋、释放或满足。</p></div>
+      <div class="mini"><h4>核心三</h4><p>没有明显动机；所偷物品不是为了个人使用或金钱利益。</p></div>
+    </div>
+    <p class="note">教材原文用"临床上比较少见"描述偷窃狂；0.3%～0.6% 是普通人群患病率，4%～24% 的分母是"被捕的商店行窃者"，两者不可混用。</p>
+  </div>
+
+  <!-- 第二栏 -->
+  <div class="card blue" id="u3-2">
+    <h3 class="col-title"><span class="idx">第二栏</span>病因探秘</h3>
+    <p>教材对偷窃狂的病因给出了一组"诱因—遗传—神经—器质—生化"的线索，层次比纵火狂清楚，但仍多为"提示""研究显示"。按从诱因到机制的层次排列如下：</p>
+    <div class="grid2">
+      <div class="mini">
+        <h4>① 直接诱因</h4>
+        <p>偷窃冲动的产生常有一定诱因，如<strong>压力大、焦虑、无聊、悲伤</strong>等。这是教材最贴近临床的一层，说明冲动不是凭空出现，常与情绪状态相连。</p>
+      </div>
+      <div class="mini">
+        <h4>② 遗传</h4>
+        <p>患者<strong>一级亲属</strong>中偷窃狂发生率较高，提示遗传因素在发病中的作用。教材未给出具体遗传率或基因位点。</p>
+      </div>
+      <div class="mini">
+        <h4>③ 神经心理与人格</h4>
+        <p>患者<strong>前额叶皮质功能及皮质抑制功能较差</strong>，存在<strong>高冲动和感觉寻求</strong>的人格特质。可理解为"刹车弱、油门敏感"——这是类比理解，不是教材原文。</p>
+      </div>
+      <div class="mini">
+        <h4>④ 器质性线索</h4>
+        <p>病例报告显示，偷窃狂的发生与<strong>脑炎、蛛网膜下腔出血、额叶肿瘤和头部外伤</strong>等器质性原因相关。提示临床要问神经系统病史。</p>
+      </div>
+      <div class="mini">
+        <h4>⑤ 神经生化</h4>
+        <p>与行为成瘾有关的神经递质传导通路（<strong>5-羟色胺、多巴胺、阿片肽系统</strong>等）在偷窃狂中也起到了作用。</p>
+      </div>
+      <div class="mini">
+        <h4>⑥ 教材空白</h4>
+        <p>教材未给出偷窃狂的脑影像定量结果、遗传方式或特异性生物标志物；不要补写教材之外的基因位点或影像指标。</p>
+      </div>
+    </div>
+    <div class="callout tip"><span class="ct">💡 理解要点</span>把"诱因—人格—神经抑制—器质—递质"串成一条链：情绪压力点燃冲动，前额叶抑制不足让冲动更容易落地，器质损害可能进一步削弱控制，5-HT／多巴胺／阿片肽通路则解释"为什么偷窃会带来释放感"。这是学习用的因果链，教材未如此整合。</div>
+  </div>
+
+  <!-- 第三栏 -->
+  <div class="card red" id="u3-3">
+    <h3 class="col-title"><span class="idx">第三栏</span>临床表现拼图</h3>
+    <div class="tabs" data-tabs>
+      <div class="tabbar">
+        <button class="on" data-tab="c1">冲动与释放</button>
+        <button data-tab="c2">行为特征</button>
+        <button data-tab="c3">物品与场所</button>
+      </div>
+      <div class="panel on" data-panel="c1">
+        <ul>
+          <li><strong>无法抵抗：</strong>反复出现不能克制的强烈偷窃冲动与偷窃行为。</li>
+          <li><strong>前紧张：</strong>偷窃前有逐渐增强的紧张感。</li>
+          <li><strong>后释放：</strong>偷窃后有轻松愉悦、兴奋、释放或满足感，教材称之为明显的<strong>"紧张与释放"</strong>特征。</li>
+          <li><strong>间歇期：</strong>可出现焦虑、沮丧及内疚，但并不会阻止其重复偷窃。</li>
+        </ul>
+      </div>
+      <div class="panel" data-panel="c2">
+        <ul>
+          <li><strong>单独行动：</strong>常单独偷窃，没有同伙。</li>
+          <li><strong>知道错：</strong>能意识到偷窃行为是错误的和没有意义的，也害怕被捕。</li>
+          <li><strong>仍失败：</strong>经常感到抑郁或偷窃所带来的内疚，但抵抗偷窃冲动的努力总是失败。</li>
+          <li><strong>不策划：</strong>尽管在可能立即被捕的情景下（如在警察视线内）不会偷窃，但通常不会事前策划偷窃或充分考虑被捕概率。</li>
+        </ul>
+      </div>
+      <div class="panel" data-panel="c3">
+        <ul>
+          <li><strong>不值钱：</strong>所偷物品常为日常生活用品，并不值钱。</li>
+          <li><strong>不需要：</strong>自身也不需要，个体完全有能力支付。</li>
+          <li><strong>非钱财：</strong>通常所偷并非钱财。</li>
+          <li><strong>地点：</strong>大部分从商店偷，也有从亲戚、朋友、工作处偷。</li>
+          <li><strong>处置：</strong>偷窃物品可保留、囤积、送人、归还或丢弃。</li>
+        </ul>
+      </div>
+    </div>
+    <div class="callout key"><span class="ct">📌 三个"不"是偷窃狂的指纹</span><strong>不值钱、不需要、买得起。</strong>再加上"单独行动、知道错却停不下"，基本就把偷窃狂与有获利动机的商店行窃分开了。</div>
+  </div>
+
+  <!-- 第四栏 -->
+  <div class="card orange" id="u3-4">
+    <h3 class="col-title"><span class="idx">第四栏</span>教材典型案例</h3>
+    <div class="callout book">
+      <span class="ct">📖 教材未提供具体临床案例</span>
+      教材在本节没有个案、偷窃次数、物品清单、法律处理或检查数据。本栏不虚构案例，只把教材的五条诊断要点转成问诊清单。
+    </div>
+    <p><strong>五问清单（由教材诊断要点整理）：</strong></p>
+    <ol>
+      <li><strong>问动机：</strong>所获物品是否为了个人使用或金钱利益？若明显为获利，先不考虑偷窃狂。</li>
+      <li><strong>问体验：</strong>偷窃前是否紧张增强，偷窃后是否有满足感？</li>
+      <li><strong>问同伴：</strong>是否单独进行、没有同伙？</li>
+      <li><strong>问间歇期：</strong>是否出现焦虑、沮丧及内疚，但仍重复偷窃？</li>
+      <li><strong>问排除：</strong>能否用智力障碍、另一种精神和行为障碍或物质中毒更好地解释？</li>
+    </ol>
+    <p class="note">教材未给出偷窃狂的正式诊断标准全文，以上五条是教材列出的"诊断要点"，不是逐条核对表。</p>
+  </div>
+
+  <!-- 第五栏 -->
+  <div class="card orange" id="u3-5">
+    <h3 class="col-title"><span class="idx">第五栏</span>鉴别诊断对对碰</h3>
+    <p><strong>表 1　偷窃狂的四组鉴别（教材原文顺序）</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>易混情形</th><th>教材给出的识别依据</th><th>鉴别落点</th></tr></thead>
+        <tbody>
+          <tr><td>无精神障碍表现的反复商店偷窃</td><td>偷窃时<strong>计划周密</strong>，有明显<strong>个人获利动机</strong></td><td>有策划、有获利 → 不是偷窃狂</td></tr>
+          <tr><td>器质性精神障碍患者</td><td>由于<strong>记忆减退和智能减退</strong>等，可能反复不为商品付款</td><td>认知损害导致的"未付款" → 不是偷窃狂</td></tr>
+          <tr><td>抑郁障碍患者</td><td>偷窃可能是为了<strong>被抓现行而获取处罚</strong>等</td><td>行为服务于自我惩罚等心理目的 → 不是偷窃狂</td></tr>
+          <tr><td>去社会品行障碍或躁狂发作</td><td>在去社会品行障碍或躁狂发作情况下的偷窃行为</td><td>不应<strong>单独诊断</strong>偷窃狂</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p><strong>表 2　偷窃狂 vs 纵火狂：同构对比</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>对比点</th><th>偷窃狂</th><th>纵火狂</th></tr></thead>
+        <tbody>
+          <tr><td>核心行为</td><td>反复偷窃</td><td>反复纵火或企图纵火</td></tr>
+          <tr><td>动机</td><td>没有明显动机；所获物品不为个人使用或金钱利益</td><td>没有任何明显动机（不为金钱、报复、泄愤、政治表达、隐瞒犯罪）</td></tr>
+          <tr><td>行为前</td><td>紧张感逐渐增强</td><td>紧张感逐渐增强，常周密准备</td></tr>
+          <tr><td>行为后</td><td>轻松愉悦、兴奋、释放或满足</td><td>轻松愉悦、兴奋、释放或满足</td></tr>
+          <tr><td>同伴</td><td>常单独偷窃，没有同伙</td><td>教材未提同伴问题</td></tr>
+          <tr><td>性别与数字</td><td>女性多于男性，3∶1；普通人群 0.3%～0.6%</td><td>通常见于男性；犯罪程度纵火人群 3.3%</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout key"><span class="ct">📌 一句话鉴别总结</span>偷窃狂看"三不"（不值钱、不需要、买得起）＋"单独、紧张、释放"；只要出现周密计划、获利动机、为受罚而偷，或躁狂／去社会品行障碍背景，就不单独诊断偷窃狂。</div>
+  </div>
+
+  <!-- 第六栏 -->
+  <div class="card green" id="u3-6">
+    <h3 class="col-title"><span class="idx">第六栏</span>治疗方案工具箱</h3>
+    <div class="quote"><span class="lab">教材原文</span>偷窃狂的治疗尚没有特效措施，通常在全面分析偷窃原因、诱因、不良后果等基础上采取综合性个体化治疗措施，包括认知治疗、行为治疗和药物治疗等。</div>
+    <div class="grid3">
+      <div class="mini">
+        <h4>心理治疗</h4>
+        <ul>
+          <li><strong>认知治疗：</strong>着重于改善患者的不良人际社会关系。</li>
+          <li><strong>行为治疗：</strong>可选择厌恶疗法与系统脱敏疗法。</li>
+        </ul>
+      </div>
+      <div class="mini">
+        <h4>药物治疗（注意定位）</h4>
+        <ul>
+          <li>精神药物（如 <strong>SSRIs、锂盐、丙戊酸盐、纳曲酮</strong>等）</li>
+          <li>教材原文：<strong>主要用于偷窃狂合并的精神心理障碍的治疗</strong>。</li>
+          <li>教材未把上述药物写成偷窃狂本身的特效治疗。</li>
+        </ul>
+      </div>
+      <div class="mini">
+        <h4>教材未给出</h4>
+        <ul>
+          <li>具体剂量、疗程、血药浓度。</li>
+          <li>心理治疗的次数、频率与操作手册。</li>
+          <li>随访时长与复发率数据。</li>
+        </ul>
+      </div>
+    </div>
+    <div class="callout warn">
+      <span class="ct">⚠️ 纵火狂 vs 偷窃狂：一句药物表述的差别</span>
+      纵火狂：SSRIs、心境稳定剂等"可尝试用于<strong>纵火狂的治疗</strong>以及合并精神心理障碍的治疗"。<br>
+      偷窃狂：SSRIs、锂盐、丙戊酸盐、纳曲酮等"<strong>主要用于合并的精神心理障碍的治疗</strong>"。<br>
+      考试若把这两句互换，就是错的。教材对偷窃狂本身的药物疗效没有给出肯定定位。
+    </div>
+    <div class="timeline">
+      <div class="tl-item"><h4>评估</h4><p>全面分析偷窃的原因、诱因、不良后果。</p></div>
+      <div class="tl-item"><h4>心理干预</h4><p>认知治疗改善人际社会关系；行为治疗用厌恶疗法、系统脱敏。</p></div>
+      <div class="tl-item"><h4>共病治疗</h4><p>药物主要用于合并的精神心理障碍；不要把它包装成"偷窃狂特效药"。</p></div>
+    </div>
+  </div>
+
+  <!-- 第七栏 -->
+  <div class="card purple" id="u3-7">
+    <h3 class="col-title"><span class="idx">第七栏</span>记忆工具箱</h3>
+    <div class="callout tip">
+      <span class="ct">🔧 方法一：数字编码法（"三不"）</span>
+      记 <strong>"三不"</strong>：<strong>不值钱、不需要、买得起</strong>（教材原话是"并不值钱，自身也不需要，个体完全有能力支付"）。再加一句"通常所偷并非钱财"。<br>
+      <em>为什么这样记：</em>"三不"是偷窃狂最独特的指纹，比背五条诊断要点更快；看到题干写"偷昂贵商品转卖"，立刻排除。
+    </div>
+    <div class="callout tip">
+      <span class="ct">🔧 方法二：口诀歌谣法（诊断要点）</span>
+      口诀：<strong>"无动机、前紧后满；单独干、间歇愧；排他病。"</strong><br>
+      解释：①反复偷窃且无明显动机；②偷窃前紧张增强、偷窃后有满足感；③单独进行无同伙；④间歇期焦虑沮丧内疚但不阻止重复；⑤不能用智力障碍、其他精神障碍或物质中毒解释。<br>
+      <em>为什么这样记：</em>三小句对应五要点，把"动机—体验—形式—间歇—排除"串成一条顺口溜。
+    </div>
+    <div class="callout tip">
+      <span class="ct">🔧 方法三：对比记忆法（纵火狂孪生兄弟）</span>
+      两病共享"无明确动机 + 前紧张 + 后释放 + 无特效 + 认知／行为治疗"；不同点只记三处：<br>
+      ① <strong>靶点</strong>：火 vs 物；② <strong>性别</strong>：男 vs 女（3∶1）；③ <strong>药物定位</strong>：可尝试用于本病 vs 主要用于共病。<br>
+      <em>为什么这样记：</em>先记同、再记异，能用最少的记忆量覆盖两个高频考点，且不会把药物表述记反。
+    </div>
+    <div class="callout key"><span class="ct">📌 一句话总记</span>偷窃狂＝<strong>无动机 + 三不 + 单独 + 紧张释放 + 内疚失败</strong>；治疗＝<strong>无特效、综合个体化、药物主攻共病</strong>。</div>
+  </div>
+
+  <!-- 第八栏 -->
+  <div class="card cyan" id="u3-8">
+    <h3 class="col-title"><span class="idx">第八栏</span>知识联动</h3>
+    <ul>
+      <li><strong>与抑郁障碍章：</strong>抑郁障碍患者偷窃可能是为了被抓现行而获取处罚，不应诊断偷窃狂；偷窃狂本身也常感抑郁与内疚，两者需要双向辨。</li>
+      <li><strong>与躁狂发作／双相障碍：</strong>躁狂发作情况下的偷窃行为不应单独诊断偷窃狂。</li>
+      <li><strong>与去社会品行障碍单元：</strong>去社会品行障碍背景下的偷窃同样不单独诊断偷窃狂；这是第一节与第二节的交叉点。</li>
+      <li><strong>与器质性精神障碍：</strong>记忆减退、智能减退可导致反复不付款，需先排器质性。</li>
+      <li><strong>与成瘾行为：</strong>教材把偷窃狂的递质通路与"行为成瘾"相连（5-HT、多巴胺、阿片肽），这是理解纳曲酮被点名的背景；但教材未展开纳曲酮的机制。</li>
+      <li><strong>与司法／法律：</strong>偷窃是涉法行为；教材在鉴别中专门区分"有获利动机的商店行窃"与偷窃狂，这一区分对刑事责任与处置判断都很关键。</li>
+    </ul>
+  </div>
+</section>
+<!-- ===== 08 强迫性性行为障碍 ===== -->
+<section id="u4">
+  <div class="sec-head"><div class="badge">08</div><h2>强迫性性行为障碍<span class="en">Compulsive Sexual Behaviour Disorder · 第一节（p.199）</span></h2></div>
+  <p class="sec-lead">它的名字里有"强迫"，但教材把它放在冲动控制障碍里。判别关键不是性欲强弱，而是"性成为生活唯一中心 + 反复想停却失败 + 功能明显受损"。</p>
+
+  <!-- 第一栏 -->
+  <div class="card red" id="u4-1">
+    <h3 class="col-title"><span class="idx">第一栏</span>疾病画像</h3>
+    <div class="quote"><span class="lab">教材原文</span>强迫性性行为障碍（compulsive sexual behaviour disorder）的特征是持久、强烈、无法控制、重复的性幻想、性冲动或性行为，其成为生活的中心和焦点，患者忽视个体健康或其他兴趣、活动和责任，减少重复性行为的努力总归失败，引起显著痛苦或导致个人、家庭、社会、教育、职业或其他重要功能领域的明显损害。</div>
+    <p><strong>一句话画像：</strong>不是"性欲比别人强"，而是"性把生活挤成了一个单间"——健康、兴趣、责任都被挪到门外，患者想关门却关不上。<span class="note">（类比理解式概括，非教材原文）</span></p>
+    <div class="grid4">
+      <div class="mini"><h4>① 生活中心</h4><p>性幻想、性冲动或性行为成为生活的中心和焦点。</p></div>
+      <div class="mini"><h4>② 忽视责任</h4><p>忽视个体健康或其他兴趣、活动和责任。</p></div>
+      <div class="mini"><h4>③ 反复失败</h4><p>减少重复性行为的努力总归失败。</p></div>
+      <div class="mini"><h4>④ 显著损害</h4><p>引起显著痛苦，或造成多个重要功能领域明显损害。</p></div>
+    </div>
+    <div class="stat">
+      <span>流行病学资料匮乏</span>
+      <span>多发于男性，男女之比 4∶1</span>
+      <span>80% 同时有酗酒、赌博等其他行为问题</span>
+      <span>性行为模式通常持续 6 个月或更长</span>
+    </div>
+    <p class="note">教材明确"流行病学资料匮乏"，因此没有普通人群患病率。不要用其他资料补写一个百分数。</p>
+  </div>
+
+  <!-- 第二栏 -->
+  <div class="card blue" id="u4-2">
+    <h3 class="col-title"><span class="idx">第二栏</span>病因探秘</h3>
+    <p>教材把 CSBD 的发生归为"与生物学、心理学、社会学因素密切相关"，并给出一串并列因素。注意：教材用的是"密切相关"和"可能的"，没有给出因果结论。</p>
+    <div class="grid3">
+      <div class="mini">
+        <h4>生物学因素</h4>
+        <ul>
+          <li><strong>可能的性腺与性激素异常。</strong>教材用"可能的"限定，未给出具体激素水平或检查值。</li>
+          <li>教材未提供遗传、脑影像或神经递质研究。</li>
+        </ul>
+      </div>
+      <div class="mini">
+        <h4>心理学因素</h4>
+        <ul>
+          <li><strong>儿童期受虐。</strong></li>
+          <li><strong>缺乏亲密家庭关系。</strong></li>
+          <li><strong>心理压力过大。</strong>压力是行为升级的重要背景。</li>
+          <li><strong>婚外恋。</strong>教材把它列为相关因素之一，未展开因果方向。</li>
+        </ul>
+      </div>
+      <div class="mini">
+        <h4>社会学因素</h4>
+        <ul>
+          <li><strong>色情书刊和影视的诱惑。</strong></li>
+          <li>教材未讨论社会文化、网络平台等更广的因素。</li>
+        </ul>
+      </div>
+    </div>
+    <div class="callout warn">
+      <span class="ct">⚠️ 不要把"相关"写成"导致"</span>
+      教材的表述是"其发生与生物学、心理学、社会学因素密切相关，如……"。这些因素中既有易感背景（儿童期受虐、缺乏亲密家庭关系），也有诱发条件（压力、色情材料、婚外恋），不能简化成单一病因。
+    </div>
+    <p><strong>临床推理的落点：</strong>正因为教材列出的因素横跨内分泌、心理、关系与社会，治疗第一步才是"寻找可能的生物学病因"，而不是直接上药。</p>
+  </div>
+
+  <!-- 第三栏 -->
+  <div class="card red" id="u4-3">
+    <h3 class="col-title"><span class="idx">第三栏</span>临床表现拼图</h3>
+    <div class="tabs" data-tabs>
+      <div class="tabbar">
+        <button class="on" data-tab="d1">性欲望与反应</button>
+        <button data-tab="d2">失控与代价</button>
+        <button data-tab="d3">诱因与病程</button>
+      </div>
+      <div class="panel on" data-panel="d1">
+        <ul>
+          <li><strong>欲望亢进：</strong>表现出异于常人的性欲望亢进，出现强烈、强迫性、连续或周期性的性幻想、性冲动或性行为。</li>
+          <li><strong>反应超常：</strong>不但性行为要求强烈，性反应也超常性地迅速、容易和强烈；<strong>拥抱、接吻、轻触即能产生强烈的性高潮</strong>。</li>
+          <li><strong>频率强度：</strong>终日沉溺于性爱中，频率和强度明显超出常态，难以自拔。</li>
+        </ul>
+      </div>
+      <div class="panel" data-panel="d2">
+        <ul>
+          <li><strong>不满足就痛苦：</strong>若得不到性满足就会焦虑不安、痛苦不堪，甚至出现头昏、四肢无力、发呆、浑身难受、失眠等表现。</li>
+          <li><strong>时间被吞噬：</strong>整日追逐异性，想入非非，花费大量时间寻求性活动。</li>
+          <li><strong>想停停不下：</strong>常尝试停止寻求性活动，但最终无法控制，呈现出欲罢不能的性行为模式。</li>
+          <li><strong>自责无效：</strong>尽管在寻求性活动之后又自责和悔恨，但不足以阻止下次再次寻求性活动。</li>
+          <li><strong>功能受损：</strong>最终可影响患者的社交、职业或婚姻生活。</li>
+        </ul>
+      </div>
+      <div class="panel" data-panel="d3">
+        <ul>
+          <li><strong>病程：</strong>该种性行为模式一般持续较长时间，<strong>通常为 6 个月或更长</strong>。</li>
+          <li><strong>情绪诱因：</strong>在应激期间或愤怒、焦虑、烦躁不安、抑郁时，患者更易寻求性活动。</li>
+          <li><strong>正常变异：</strong>教材特别提醒，诊断时应充分考虑与正常状态（较大的个体差异）的鉴别——性欲本身存在很大的个体差异，不能把"频率高"直接当成病。</li>
+        </ul>
+      </div>
+    </div>
+    <div class="callout key"><span class="ct">📌 三条诊断支点</span><strong>生活中心化 + 反复失败 + 功能损害（或显著痛苦）</strong>。三者缺一，都不能仅凭"性欲强"下诊断。</div>
+  </div>
+
+  <!-- 第四栏 -->
+  <div class="card orange" id="u4-4">
+    <h3 class="col-title"><span class="idx">第四栏</span>教材典型案例</h3>
+    <div class="callout book">
+      <span class="ct">📖 教材未提供具体临床案例</span>
+      教材在本节只给定义、流行病学片段、临床描述与治疗原则，没有患者个案、性行为频率记录、激素检查或心理测评数据。本栏不虚构案例。
+    </div>
+    <p><strong>由教材描述整理的识别顺序：</strong></p>
+    <ol>
+      <li><strong>看"是不是中心"：</strong>性幻想、性冲动或性行为是否成为生活的中心和焦点，是否挤占了健康、兴趣与责任。</li>
+      <li><strong>看"能不能停"：</strong>是否多次尝试减少重复性行为而总归失败。</li>
+      <li><strong>看"有没有代价"：</strong>是否引起显著痛苦，或造成个人、家庭、社会、教育、职业等领域明显损害。</li>
+      <li><strong>看"够不够久"：</strong>性行为模式是否通常持续 6 个月或更长。</li>
+      <li><strong>看"是不是正常变异"：</strong>教材要求充分考虑正常状态的个体差异，不能只凭频率高诊断。</li>
+    </ol>
+    <p class="note">教材说明：诊断参照 ICD-11 中的核心（必要）特征；教材未列出逐条诊断标准，故本指南不擅自补写条目。</p>
+  </div>
+
+  <!-- 第五栏 -->
+  <div class="card orange" id="u4-5">
+    <h3 class="col-title"><span class="idx">第五栏</span>鉴别诊断对对碰</h3>
+    <p><strong>表 1　CSBD 与正常状态的鉴别（教材唯一明确要求的鉴别）</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>维度</th><th>正常状态的个体差异</th><th>CSBD</th></tr></thead>
+        <tbody>
+          <tr><td>性欲强度</td><td>个体差异较大，频率高低本身不构成病</td><td>性幻想、性冲动或性行为成为生活的中心和焦点</td></tr>
+          <tr><td>控制能力</td><td>能够按情境调整，不影响责任</td><td>减少重复性行为的努力总归失败</td></tr>
+          <tr><td>功能影响</td><td>不影响健康、兴趣、工作与人际</td><td>忽视健康、兴趣、活动和责任，造成明显损害</td></tr>
+          <tr><td>主观痛苦</td><td>无明显痛苦</td><td>引起显著痛苦；不满足时焦虑不安、痛苦不堪</td></tr>
+          <tr><td>病程</td><td>随情境波动</td><td>通常持续 6 个月或更长</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p><strong>表 2　CSBD 与本章其他冲动控制障碍的横向对比</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>对比点</th><th>CSBD</th><th>纵火狂</th><th>偷窃狂</th><th>IED</th></tr></thead>
+        <tbody>
+          <tr><td>行为</td><td>性幻想、性冲动、性行为</td><td>纵火</td><td>偷窃</td><td>言语／躯体攻击、破坏财产</td></tr>
+          <tr><td>教材是否强调"无明确动机"</td><td>未用此表述</td><td>是</td><td>是</td><td>非预谋、没有其他获益</td></tr>
+          <tr><td>行为前后体验</td><td>不满足则焦虑痛苦；事后自责悔恨</td><td>前紧张、后兴奋释放</td><td>前紧张、后释放</td><td>前可有先兆，后疲劳后悔</td></tr>
+          <tr><td>教材给出的性别数字</td><td>男∶女 4∶1</td><td>通常男性</td><td>女∶男 3∶1</td><td>男性高于女性，OR 1.4～2.3</td></tr>
+          <tr><td>教材给出的病程</td><td>通常 6 个月或更长</td><td>未给固定病程，阵发、频率起伏</td><td>未给固定病程</td><td>持续模式超过 3 个月</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout key"><span class="ct">📌 一句话鉴别总结</span>CSBD 与"性欲强"的分界线不是次数，而是<strong>中心化、失控、损害</strong>三件事同时成立；教材也未给出它与强迫症、躁狂或物质所致障碍的正式鉴别条目，答题时不要自行编造。</div>
+  </div>
+
+  <!-- 第六栏 -->
+  <div class="card green" id="u4-6">
+    <h3 class="col-title"><span class="idx">第六栏</span>治疗方案工具箱</h3>
+    <p>教材对 CSBD 的治疗不是"先给药"，而是<strong>按可能病因逐层处理</strong>。这是一条很典型的"病因导向"治疗路径：</p>
+    <div class="timeline">
+      <div class="tl-item"><h4>第一步 · 找生物学病因</h4><p>首先应寻找可能的生物学病因；如果是<strong>内分泌疾病</strong>引起，则应及时予以治疗。</p></div>
+      <div class="tl-item"><h4>第二步 · 处理压力</h4><p>若与心理压力过大有关，则宜采用健康方式（如<strong>体育运动和文娱活动</strong>等）减压，来替代痴迷于性活动的减压方式。</p></div>
+      <div class="tl-item"><h4>第三步 · 修复关系</h4><p>若与家庭亲密关系或人际关系有关，则应<strong>重建与伴侣的亲密关系与和谐的人际关系</strong>。</p></div>
+      <div class="tl-item"><h4>第四步 · 处理网络性爱</h4><p>若痴迷于网络性爱者，需要<strong>同时戒除网瘾</strong>。</p></div>
+      <div class="tl-item"><h4>第五步 · 治疗共病</h4><p>若由精神心理障碍所致，则应及时求助于精神专科医师，<strong>积极治疗焦虑、强迫等心理问题</strong>，继而减少强迫性性行为。</p></div>
+    </div>
+    <p><strong>教材给出的具体行为策略：</strong></p>
+    <ul>
+      <li>制定具体的改变时间表；</li>
+      <li>逐步减少性伴侣；</li>
+      <li>延长间歇时间；</li>
+      <li>直到恢复适度的性行为。</li>
+    </ul>
+    <div class="callout key">
+      <span class="ct">📌 教材原话，也是本题的高频考点</span>
+      总之，强迫性性行为障碍患者的康复<strong>并不是禁欲</strong>，而是让其<strong>重拾健康的性行为</strong>。
+    </div>
+    <p class="note">教材未给出针对 CSBD 本身的药物、剂量或疗程；也未给出心理治疗的具体流派、次数与随访安排。</p>
+  </div>
+
+  <!-- 第七栏 -->
+  <div class="card purple" id="u4-7">
+    <h3 class="col-title"><span class="idx">第七栏</span>记忆工具箱</h3>
+    <div class="callout tip">
+      <span class="ct">🔧 方法一：数字编码法</span>
+      记 <strong>"4—1—80—6"</strong>：男女之比 <strong>4∶1</strong>；<strong>80%</strong> 同时有酗酒、赌博等其他行为问题；病程通常 <strong>6 个月</strong>或更长。再加一个"0"：教材明确流行病学资料<strong>匮乏</strong>，没有患病率。<br>
+      <em>为什么这样记：</em>四个数字把 CSBD 的全部"可考数据"一次打包，看到题干出现别的百分数就能立刻警觉。
+    </div>
+    <div class="callout tip">
+      <span class="ct">🔧 方法二：三联记忆法</span>
+      记 <strong>"中心—失控—损害"</strong>：<br>
+      ① <strong>中心</strong>：性成为生活的中心和焦点；<br>
+      ② <strong>失控</strong>：减少重复性行为的努力总归失败；<br>
+      ③ <strong>损害</strong>：显著痛苦，或个人、家庭、社会、教育、职业功能明显损害。<br>
+      <em>为什么这样记：</em>三个词就是定义的骨架；考试给一段描述时，逐项对照这三词即可，不必回忆整段原文。
+    </div>
+    <div class="callout tip">
+      <span class="ct">🔧 方法三：反常识记忆法</span>
+      记一句"<strong>康复不是禁欲，而是重拾健康性行为</strong>"。<br>
+      <em>为什么这样记：</em>这句话与直觉相反，反而最容易记住；同时它也是教材对治疗目标的明确表述，答题时能直接区分"禁欲"这一常见错误选项。
+    </div>
+    <div class="callout tip">
+      <span class="ct">🔧 方法四：五步流程法</span>
+      <strong>"查因—减压—修关系—戒网—治共病"</strong>。<br>
+      <em>为什么这样记：</em>五个动作对应教材五个"若……则……"的病因分支，按顺序回忆就不会漏掉"先查内分泌"这一步。
+    </div>
+  </div>
+
+  <!-- 第八栏 -->
+  <div class="card cyan" id="u4-8">
+    <h3 class="col-title"><span class="idx">第八栏</span>知识联动</h3>
+    <ul>
+      <li><strong>与成瘾行为：</strong>教材提到 80% 的 CSBD 患者同时具有酗酒、赌博等其他行为问题；病理性赌博在 ICD-11 中被归入"成瘾行为所致障碍"，两者在"失控—持续—功能损害"的结构上可对照理解。</li>
+      <li><strong>与强迫及相关障碍：</strong>教材在治疗中要求"积极治疗焦虑、强迫等心理问题"，但并未把 CSBD 归入强迫障碍；名称里的"强迫性"不能当作分类依据。</li>
+      <li><strong>与内分泌／性医学：</strong>教材要求先寻找可能的生物学病因，内分泌疾病引起者应及时治疗；这是本章少见的"先排躯体病"路径。</li>
+      <li><strong>与婚姻家庭治疗：</strong>治疗第三步明确要求重建与伴侣的亲密关系与和谐人际关系。</li>
+      <li><strong>与网络成瘾：</strong>痴迷网络性爱者需同时戒除网瘾。</li>
+      <li><strong>与司法／伦理：</strong>教材未讨论 CSBD 的法律问题；本章开篇的司法鉴定提示适用于全章，但教材没有针对 CSBD 展开，答题时不要延伸。</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===== 09 间歇性暴怒障碍 ===== -->
+<section id="u5">
+  <div class="sec-head"><div class="badge">09</div><h2>间歇性暴怒障碍<span class="en">Intermittent Explosive Disorder · 第一节（p.199–200）</span></h2></div>
+  <p class="sec-lead">全章"数字最密"的一个病：终生 7%、年 2.7%、OR 1.4～2.3、持续超过 3 个月、单次暴发不足 30 分钟。记住这五个数字，再记住六组鉴别。</p>
+
+  <!-- 第一栏 -->
+  <div class="card red" id="u5-1">
+    <h3 class="col-title"><span class="idx">第一栏</span>疾病画像</h3>
+    <div class="quote"><span class="lab">教材原文</span>间歇性暴怒障碍（intermittent explosive disorder）的特征是反复出现短暂的、无法控制的言语或躯体攻击或破坏财产的冲动和行为，冲动性攻击暴发的强度或程度明显与被挑衅或诱发的心理社会应激源不成比例，足以导致个人、家庭、社会、教育、职业或其他重要功能领域的严重损害。</div>
+    <p><strong>一句话画像：</strong>像一根被调到极敏感的"引信"——别人只是轻轻碰了一下，爆炸却像被重击后的反应；炸完很快熄火，留下本人后悔与疲惫。<span class="note">（类比理解式概括，非教材原文）</span></p>
+    <div class="grid4">
+      <div class="mini"><h4>① 短暂</h4><p>暴发持续时间通常少于 30 分钟。</p></div>
+      <div class="mini"><h4>② 不成比例</h4><p>强度或程度明显与被挑衅或心理社会应激源不成比例。</p></div>
+      <div class="mini"><h4>③ 非预谋</h4><p>无计划性、无目标性，没有其他获益。</p></div>
+      <div class="mini"><h4>④ 有损害</h4><p>足以导致多个重要功能领域的严重损害。</p></div>
+    </div>
+    <div class="stat">
+      <span>美国终生患病率 7%</span>
+      <span>年患病率约 2.7%（狭义）</span>
+      <span>男性高于女性，OR 1.4～2.3</span>
+      <span>40 岁及以下更常见</span>
+      <span>多数高中学历以下</span>
+    </div>
+    <p class="note">教材把 7% 与 2.7% 明确写成"美国人群"，答题时不要改写成中国或全球数据。</p>
+  </div>
+
+  <!-- 第二栏 -->
+  <div class="card blue" id="u5-2">
+    <h3 class="col-title"><span class="idx">第二栏</span>病因探秘</h3>
+    <div class="grid2">
+      <div class="mini">
+        <h4>① 早年创伤</h4>
+        <p>儿童青少年时期有<strong>躯体和情感创伤史</strong>的个体，罹患间歇性暴怒障碍的风险更高。这是教材列在最前面的风险因素。</p>
+      </div>
+      <div class="mini">
+        <h4>② 家族与遗传</h4>
+        <p>患者<strong>一级亲属</strong>中该病罹患风险增加；<strong>双生子研究</strong>也证明冲动型攻击有显著的遗传影响。</p>
+      </div>
+      <div class="mini">
+        <h4>③ 5-HT 异常</h4>
+        <p>神经生物学研究显示，患者<strong>整个大脑或大脑边缘系统（前扣带回）和眶额叶皮质存在 5-羟色胺的异常</strong>。</p>
+      </div>
+      <div class="mini">
+        <h4>④ 杏仁核反应</h4>
+        <p>在功能磁共振成像扫描中，患者的<strong>杏仁核对愤怒刺激的反应更强烈</strong>。教材只给这一条影像学发现，未给其他参数。</p>
+      </div>
+    </div>
+    <div class="callout tip">
+      <span class="ct">💡 把四条串成因果链（学习用，非教材原文）</span>
+      早年创伤与遗传提高易感 → 5-HT 系统与前扣带回／眶额叶皮质调节异常 → 杏仁核对愤怒刺激过度反应 → 在轻微激惹下迅速升级为攻击暴发。教材分别给出这些片段，但未这样整合成一条链。
+    </div>
+    <p class="note">教材未给出 IED 的患病率性别差异机制、社会阶层机制或具体基因；不要补写。</p>
+  </div>
+
+  <!-- 第三栏 -->
+  <div class="card red" id="u5-3">
+    <h3 class="col-title"><span class="idx">第三栏</span>临床表现拼图</h3>
+    <div class="timeline">
+      <div class="tl-item"><h4>① 激惹源 · 往往很轻</h4><p>患者常在很轻微的激惹或几乎没有被激惹的情况下突然做出攻击行为，如面对朋友的即兴评论、与路人的偶然碰撞等。</p></div>
+      <div class="tl-item"><h4>② 先兆 · 有时出现</h4><p>有时冲动性攻击行为发生前可有<strong>震颤、胸闷、紧张或兴奋</strong>等先兆。</p></div>
+      <div class="tl-item"><h4>③ 暴发 · 迅速升级</h4><p>迅速发生言语攻击或肢体冲突，冲突场面会迅速升级，最终完全失控；形式包括言语攻击、躯体攻击或财产破坏。</p></div>
+      <div class="tl-item"><h4>④ 收场 · 短、悔、可能涉法</h4><p>暴发持续时间通常<strong>少于 30 分钟</strong>，多以个体表达悔意或缴纳保释金来收场；攻击行为暴发无计划性、无目标性，是对激惹物的过度反应。</p></div>
+      <div class="tl-item"><h4>⑤ 暴发后 · 疲劳与自责</h4><p>常有疲劳、后悔、自责、内疚、羞愧或抑郁体验。</p></div>
+    </div>
+    <div class="callout key"><span class="ct">📌 三个"不"</span><strong>不成比例、不预谋、没有获益</strong>。这三条把 IED 与"有目的的报复""有预谋的伤害""慢性愤怒模式"分开。</div>
+  </div>
+
+  <!-- 第四栏 -->
+  <div class="card orange" id="u5-4">
+    <h3 class="col-title"><span class="idx">第四栏</span>教材典型案例</h3>
+    <div class="callout book">
+      <span class="ct">📖 教材未提供具体临床案例</span>
+      教材在本节没有患者个案、暴发次数、伤害后果、影像或化验数据。本栏不虚构案例，只把诊断要点转成"暴发访谈提纲"。
+    </div>
+    <p><strong>暴发访谈提纲（由教材诊断要点整理）：</strong></p>
+    <ol>
+      <li><strong>频率与形式：</strong>是否反复出现言语攻击、躯体攻击或破坏财产的暴发？</li>
+      <li><strong>比例：</strong>暴发强度或攻击性程度是否明显与被挑衅或心理社会应激源不成比例？</li>
+      <li><strong>发育常模：</strong>暴发频率和程度是否超出与其年龄及发育水平相符的正常范围？</li>
+      <li><strong>预谋与获益：</strong>暴发是否非预谋，或没有其他获益？</li>
+      <li><strong>病程：</strong>是否已构成<strong>超过 3 个月</strong>的持续攻击行为模式？</li>
+      <li><strong>损害：</strong>是否足以导致个人、家庭、社会、教育、职业或其他重要功能领域的严重损害？</li>
+      <li><strong>排除：</strong>能否用其他精神障碍、躯体疾病、物质使用更好地解释？是否只是慢性愤怒和易激惹模式的一部分（如 ODD）？</li>
+    </ol>
+    <p class="note">以上七问是把教材诊断要点按顺序展开，不是教材原文病例，也不是诊断标准全文。</p>
+  </div>
+
+  <!-- 第五栏 -->
+  <div class="card orange" id="u5-5">
+    <h3 class="col-title"><span class="idx">第五栏</span>鉴别诊断对对碰</h3>
+    <p><strong>表 1　IED 的六组鉴别（教材原文顺序）</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>易混诊断</th><th>教材给出的核心区别</th><th>一句话抓手</th></tr></thead>
+        <tbody>
+          <tr><td>对立违抗性障碍（ODD）</td><td>ODD 通常表现为发脾气并与权威人士口头争辩，<strong>一般不存在明显的言语攻击或躯体性攻击</strong></td><td>ODD 以"顶嘴、对抗"为主，IED 以"攻击暴发"为主</td></tr>
+          <tr><td>破坏性心境失调障碍（DMDD）</td><td>DMDD 在冲动性攻击暴发之前特征性地表现为<strong>持续性的负性心境</strong>（易激惹或愤怒），诊断年龄为 <strong>6～18 岁</strong>；两者诊断<strong>不能共存</strong></td><td>先有持续坏心情 → DMDD；平时心情基线正常、突然爆炸 → IED</td></tr>
+          <tr><td>去社会品行障碍</td><td>具有更普遍的去社会特征（如违反规则、撒谎、盗窃），其攻击行为往往<strong>有预谋的和获益性的</strong></td><td>有预谋、有获益、广泛违规 → 去社会品行障碍</td></tr>
+          <tr><td>反社会型或边缘型人格障碍</td><td>该两型人格障碍个体的<strong>冲动性攻击水平低于</strong>有间歇性暴怒障碍的个体</td><td>人格障碍是持久模式，IED 的攻击暴发更冲动、更不成比例</td></tr>
+          <tr><td>注意缺陷多动障碍（ADHD）</td><td>ADHD 表现为<strong>持续性的、普遍存在的行为冲动</strong>，另外还具有注意缺陷、多动、学习障碍等特征</td><td>冲动"全天候、跨情境" → ADHD；攻击"阵发性" → IED</td></tr>
+          <tr><td>适应障碍</td><td>当冲动性攻击暴发出现在适应障碍的背景下，特别是 <strong>6～18 岁</strong>儿童青少年中时，不应诊断 IED</td><td>暴发紧跟应激事件、整体符合适应障碍 → 不诊断 IED</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout key"><span class="ct">📌 一句话鉴别总结</span>IED 的鉴别先问三件事：<strong>平时心情是否持续坏（DMDD）、攻击是否有预谋获益（去社会品行障碍）、冲动是否全天候跨情境（ADHD）</strong>；再问年龄与应激背景（适应障碍），最后看攻击强度是否超过人格障碍的基线。</div>
+  </div>
+
+  <!-- 第六栏 -->
+  <div class="card green" id="u5-6">
+    <h3 class="col-title"><span class="idx">第六栏</span>治疗方案工具箱</h3>
+    <div class="quote"><span class="lab">教材原文</span>间歇性暴怒障碍的治疗应早发现、早干预、防止恶化。目前尚缺乏特效干预方法。通常采用心理干预与药物治疗为主的综合性个体化干预方法。</div>
+    <div class="grid3">
+      <div class="mini">
+        <h4>总原则</h4>
+        <ul>
+          <li>早发现、早干预、防止恶化。</li>
+          <li>目前尚缺乏特效干预方法。</li>
+          <li>心理干预与药物治疗为主的综合性个体化干预。</li>
+        </ul>
+      </div>
+      <div class="mini">
+        <h4>药物治疗</h4>
+        <ul>
+          <li>心理干预的同时根据症状选择必要的药物。</li>
+          <li>教材点名的类别：<strong>抗惊厥药和抗抑郁药</strong>。</li>
+          <li>有循证医学证据显示<strong>奥卡西平</strong>和<strong>氟西汀</strong>有效。</li>
+        </ul>
+      </div>
+      <div class="mini">
+        <h4>教材未给出</h4>
+        <ul>
+          <li>奥卡西平、氟西汀的具体剂量与疗程。</li>
+          <li>心理干预的具体流派、次数与随访安排。</li>
+          <li>疗效评定工具与复发率数据。</li>
+        </ul>
+      </div>
+    </div>
+    <div class="callout warn">
+      <span class="ct">⚠️ 不要把"有循证证据"扩大成"一线首选"</span>
+      教材的原意是：在抗惊厥药与抗抑郁药中，有循证医学证据显示奥卡西平和氟西汀<strong>有效</strong>。教材没有写"首选奥卡西平"或"首选氟西汀"，也没有给剂量。答题时按原文表述，不额外升级。
+    </div>
+    <div class="timeline">
+      <div class="tl-item"><h4>识别</h4><p>早发现：反复、短暂、不成比例的攻击暴发，持续超过 3 个月。</p></div>
+      <div class="tl-item"><h4>心理干预</h4><p>教材未展开具体技术，只列为综合干预的一部分。</p></div>
+      <div class="tl-item"><h4>药物选择</h4><p>按症状选择抗惊厥药或抗抑郁药；奥卡西平、氟西汀有循证证据。</p></div>
+      <div class="tl-item"><h4>防止恶化</h4><p>早干预，避免攻击模式固化并造成更严重的功能与法律后果。</p></div>
+    </div>
+  </div>
+
+  <!-- 第七栏 -->
+  <div class="card purple" id="u5-7">
+    <h3 class="col-title"><span class="idx">第七栏</span>记忆工具箱</h3>
+    <div class="callout tip">
+      <span class="ct">🔧 方法一：数字编码法（"3—30—3"）</span>
+      记 <strong>"3—30—3"</strong>：持续攻击模式<strong>超过 3 个月</strong>；单次暴发通常<strong>不足 30 分钟</strong>；三个"不"——<strong>不成比例、不预谋、没有获益</strong>。<br>
+      <em>为什么这样记：</em>三个数字／三字组全部围绕诊断要点，且 3 与 30 的对比很醒目，最不容易和 ODD 的 6 个月、去社会的 1 年混淆。
+    </div>
+    <div class="callout tip">
+      <span class="ct">🔧 方法二：口诀歌谣法（六组鉴别）</span>
+      口诀：<strong>"对立、心淡、去社会；人格、多动、适应障。"</strong><br>
+      解释：对立违抗（ODD）、破坏性心境失调（DMDD，取"心"）、去社会品行障碍、反社会／边缘型人格障碍、ADHD、适应障碍。<br>
+      <em>为什么这样记：</em>六个词按教材顺序排成两句，考场先背口诀，再逐项展开鉴别点。
+    </div>
+    <div class="callout tip">
+      <span class="ct">🔧 方法三：药物配对法</span>
+      记 <strong>"奥 + 氟"</strong>：奥卡西平（抗惊厥药）＋氟西汀（抗抑郁药），教材明确"有循证医学证据显示有效"。<br>
+      <em>为什么这样记：</em>只记两个药名和一个"有效"，不记剂量——因为教材本来就没给剂量，多记反而容易错。
+    </div>
+    <div class="callout key"><span class="ct">📌 一句话总记</span>IED＝<strong>轻激惹、猛升级、不足 30 分钟、超过 3 个月、事后后悔</strong>；治疗＝<strong>早干预、心理 + 药物、奥卡西平与氟西汀有效</strong>。</div>
+  </div>
+
+  <!-- 第八栏 -->
+  <div class="card cyan" id="u5-8">
+    <h3 class="col-title"><span class="idx">第八栏</span>知识联动</h3>
+    <ul>
+      <li><strong>与心境障碍章（DMDD）：</strong>DMDD 在攻击暴发前有持续性负性心境，诊断年龄 6～18 岁，且与 IED 诊断不能共存；这是本章最需要精确区分的横向联系。</li>
+      <li><strong>与双相障碍：</strong>教材未在 IED 鉴别中单列双相，但"攻击或对抗行为伴明确情感高涨或低落"在 CD 鉴别中被归入心境障碍；两者应采用同一思路：先看情绪发作是否独立、间歇。</li>
+      <li><strong>与人格障碍章：</strong>反社会型、边缘型人格障碍的冲动性攻击水平低于 IED，这是教材给出的量化方向。</li>
+      <li><strong>与 ADHD：</strong>ADHD 的冲动是持续性、普遍存在的，并伴注意缺陷、多动、学习障碍；IED 是阵发性攻击暴发。</li>
+      <li><strong>与物质使用／躯体疾病：</strong>诊断要点明确要求排除其他精神障碍、躯体疾病、物质使用。</li>
+      <li><strong>与司法／法律：</strong>教材写到暴发"多以个体表达悔意或缴纳保释金来收场"，提示这类行为常进入法律程序；但教材没有展开刑事责任能力评定，不能自行延伸。</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===== 10 第二节总论 ===== -->
+<section id="u6">
+  <div class="sec-head"><div class="badge">10</div><h2>第二节总论：破坏性行为或去社会障碍<span class="en">第二节 · 概述（p.200）</span></h2></div>
+  <p class="sec-lead">第二节是一条"连续谱"：从 ODD 的对立违抗，走到 CD 的侵害他人权益，再到 ICD-11 的去社会品行障碍。三者的分界不在"坏不坏"，而在"有没有侵权、有没有内省、持续多久"。</p>
+
+  <!-- 第一栏 -->
+  <div class="card cyan" id="u6-1">
+    <h3 class="col-title"><span class="idx">第一栏</span>疾病画像</h3>
+    <div class="quote"><span class="lab">教材原文</span>破坏性行为或去社会障碍（disruptive behaviour or dissocial disorder）的特征是持续存在的行为问题，具有破坏性的临床特征，从显著而持续的对立、违抗、挑衅或恶意行为，到持续地侵犯他人基本权益或违反与年龄相对应的主要社会规范、规则或法律的行为。</div>
+    <div class="quote"><span class="lab">教材原文</span>这类行为障碍问题必须明显地偏离同样社会文化背景下相同年龄和性别的正常范围。多起病于（但并非仅起病于）儿童期，一旦起病，通常可持续至成年期。</div>
+    <p><strong>一句话画像：</strong>不是"孩子不听话"那么简单，而是一条从"顶嘴、对抗"延伸到"侵害他人权益、违反法律"的行为连续谱；判断的尺子是<strong>同龄、同文化背景的正常范围</strong>。<span class="note">（类比理解式概括，非教材原文）</span></p>
+    <div class="grid2">
+      <div class="mini">
+        <h4>谱系低端 · 对立违抗</h4>
+        <p>显著而持续的对立、违抗、挑衅或恶意行为。教材在 ODD 鉴别中明确：ODD 一般不存在明显的言语攻击或躯体性攻击，也缺乏冒犯法律和他人权利的行为。</p>
+      </div>
+      <div class="mini">
+        <h4>谱系高端 · 侵权与违法</h4>
+        <p>持续侵犯他人基本权益，或违反与年龄相对应的主要社会规范、规则或法律。CD 的本质是"主观故意的恶意违规、违纪、违法，缺乏内省自责"。</p>
+      </div>
+    </div>
+    <div class="stat">
+      <span>本节 3 个独立障碍</span>
+      <span>ODD：持续 6 个月以上</span>
+      <span>CD：持续 6 个月以上</span>
+      <span>去社会品行障碍：至少 1 年</span>
+      <span>关键年龄：10 岁（儿童期起病界限）</span>
+    </div>
+    <p class="note">教材在第二节只明确"主要介绍对立违抗性障碍、（去社会）品行障碍等"，并未单列其他诊断单元。</p>
+  </div>
+
+  <!-- 第二栏 -->
+  <div class="card blue" id="u6-2">
+    <h3 class="col-title"><span class="idx">第二栏</span>病因探秘</h3>
+    <p>教材没有为第二节写一个统一病因段落，但在 ODD 与 CD 两处给出了较完整的"遗传—家庭—心理社会—神经生物学"框架。把两处合并，可以得到本节共同的病因地图；具体到某一病时，仍以该单元的原文为准。</p>
+    <div class="grid3">
+      <div class="mini">
+        <h4>遗传与家族</h4>
+        <ul>
+          <li>ODD 有明显家族聚集性，具有高度遗传性，为多基因遗传方式，但没有可靠的遗传多态性。</li>
+          <li>CD 的遗传因素包括反社会行为或物质滥用家族史。</li>
+        </ul>
+      </div>
+      <div class="mini">
+        <h4>家庭养育</h4>
+        <ul>
+          <li>父母罹患精神疾病、物质依赖、精神发育迟滞。</li>
+          <li>频繁更换照顾者，亲子间缺乏亲密感情联系。</li>
+          <li>被冷漠、忽视、挑剔、粗暴对待、虐待，或过分放纵、不予管教。</li>
+          <li>父母不和睦、争吵打斗、分居离异；父母有违法犯罪行为。</li>
+        </ul>
+      </div>
+      <div class="mini">
+        <h4>心理社会</h4>
+        <ul>
+          <li>心理发育差、自信心不足、缺乏自制力、不良认知、敌意与情绪紊乱。</li>
+          <li>亲社会行为及技能发育障碍，与同伴建立亲近合作的能力低。</li>
+          <li>经常接触暴力或黄色媒体，接受不正确道德观价值观，结交不良同伴。</li>
+        </ul>
+      </div>
+      <div class="mini">
+        <h4>神经生化</h4>
+        <ul>
+          <li>单胺类神经递质与情感表达、调节及冲动控制有关。</li>
+          <li>男童脑脊液 5-HT 水平与攻击行为呈负相关；6～17 岁患者脑脊液 5-HIAA 与冲动行为负相关。</li>
+          <li>CD 患者脑脊液 5-HT 降低，可引起情绪调节能力和控制能力降低。</li>
+        </ul>
+      </div>
+      <div class="mini">
+        <h4>神经生理与影像</h4>
+        <ul>
+          <li>ODD 患者皮肤电导反应较低，静息平均心率慢；雄激素水平高的男童攻击和破坏行为倾向增加。</li>
+          <li>ODD 前额叶皮质、杏仁核、脑岛等情感调节相关脑区结构功能异常。</li>
+          <li>CD 有额颞叶及边缘系统异常。</li>
+        </ul>
+      </div>
+      <div class="mini">
+        <h4>自主神经与 HPA 轴</h4>
+        <ul>
+          <li>CD 自主神经系统功能失调：基础心率、皮肤电传导及皮电活动降低，行为去抑制与冲动行为增多。</li>
+          <li>下丘脑-垂体-肾上腺轴失调：多数研究支持 CD 患者皮质醇水平低。</li>
+          <li>ODD 的皮质醇水平变化也有"一致的研究发现"。</li>
+        </ul>
+      </div>
+    </div>
+    <div class="callout warn"><span class="ct">⚠️ 教材表述的强弱</span>ODD 的遗传写"高度遗传性、多基因遗传方式"，但紧接着说"没有可靠的遗传多态性"；CD 的多项神经生物学发现前有"多数研究支持"。学习时要保留这些限定词，不能把"相关"写成"决定"。</div>
+  </div>
+
+  <!-- 第三栏 -->
+  <div class="card red" id="u6-3">
+    <h3 class="col-title"><span class="idx">第三栏</span>临床表现拼图</h3>
+    <p><strong>按"谱系"看，三病的临床表现是逐级加重的；按"维度"看，教材对 CD 与去社会品行障碍给出了几乎相同的四组行为。</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>维度</th><th>ODD</th><th>CD</th><th>去社会品行障碍</th></tr></thead>
+        <tbody>
+          <tr><td>对抗／情绪</td><td>争辩对抗；消极、愤怒、易激惹的心境；报复。有情绪失调，但无侵权</td><td>没有明显情绪失调；对立违抗行为更显著、更严重</td><td>教材未单列情绪维度，核心是持续侵权或违规</td></tr>
+          <tr><td>攻击人或动物</td><td>教材在 IED 鉴别中述"一般不存在明显的言语攻击或躯体性攻击"；但 ODD 的报复条目也提到"甚至出现攻击行为"，需结合是否构成侵权判断</td><td>经常攻击人或动物，可恃强凌弱、威胁恐吓、残忍伤害、使用武器、强行发生性行为</td><td>欺凌或恐吓、挑起肢体冲突、残忍伤害他人或动物、暴力盗窃、强迫发生性行为</td></tr>
+          <tr><td>破坏财产</td><td>不属于 ODD 的核心表现</td><td>蓄意破坏他人或公共财物，甚至故意纵火企图造成严重损失</td><td>蓄意纵火意图造成严重损害、蓄意破坏他人财物</td></tr>
+          <tr><td>欺诈或盗窃</td><td>不属于 ODD 的核心表现；有则排除 ODD</td><td>经常说谎、偷窃、强占他人财物、破门闯入盗窃</td><td>盗窃贵重物品、撒谎获得物品或好处或逃避责任、强行闯入房屋建筑车辆</td></tr>
+          <tr><td>严重违反规则</td><td>可违反校规或集体纪律，但达不到"严重违反社会规范"</td><td>13 岁前旷课逃学、外出游荡、夜不归宿</td><td>不顾父母禁止反复在外过夜、反复离家出走、经常逃课或旷工</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout key"><span class="ct">📌 一条最实用的分界规则</span>教材原文：ODD"缺乏冒犯法律和他人权利的行为，如偷窃、施虐、霸道、攻击和破坏性，<strong>肯定存在上述任何一项即可排除 ODD 的诊断</strong>"。也就是说，一旦出现侵权或严重违规，诊断就要往 CD／去社会品行障碍方向走。</div>
+    <p class="note">说明：本表把教材分散在 ODD、CD、去社会品行障碍三处的描述按统一维度重组；教材未用同一张表列出三病，表中空白处表示教材未把该项写为该病的核心表现。</p>
+  </div>
+
+  <!-- 第四栏 -->
+  <div class="card orange" id="u6-4">
+    <h3 class="col-title"><span class="idx">第四栏</span>教材典型案例</h3>
+    <div class="callout book">
+      <span class="ct">📖 教材未提供具体临床案例</span>
+      第二节总论及 ODD、CD、去社会品行障碍三节，教材均未给出患者个案、家庭访谈记录、学校表现或检查数据。本栏不虚构案例。
+    </div>
+    <p><strong>由教材要点整理的"谱系定位四问"：</strong></p>
+    <ol>
+      <li><strong>问侵权：</strong>有没有攻击人或动物、破坏财产、欺诈盗窃、严重违反规则？有 → 先考虑 CD／去社会品行障碍，不诊断 ODD。</li>
+      <li><strong>问情绪：</strong>是否以持久的易激惹、愤怒、争辩、报复为主，而缺乏侵权？是 → 考虑 ODD。</li>
+      <li><strong>问病程：</strong>ODD、CD 是否持续 6 个月以上？去社会品行障碍是否至少 1 年？</li>
+      <li><strong>问发育与排除：</strong>行为是否明显偏离同龄同文化正常范围？能否用心理发育障碍、其他精神障碍或神经系统疾病更好解释？</li>
+    </ol>
+    <p class="note">以上为按教材诊断逻辑整理的学习工具，不是教材原文病例。</p>
+  </div>
+
+  <!-- 第五栏 -->
+  <div class="card orange" id="u6-5">
+    <h3 class="col-title"><span class="idx">第五栏</span>鉴别诊断对对碰</h3>
+    <p><strong>表 1　ODD、CD、DMDD、IED 四者鉴别（本节最重要的一张表）</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>对比点</th><th>ODD</th><th>CD</th><th>DMDD</th><th>IED</th></tr></thead>
+        <tbody>
+          <tr><td>核心</td><td>持久对立、不服从、消极抵抗、易激惹、挑衅、敌对</td><td>反复持续的对抗、攻击、去社会行为，侵犯他人基本权利</td><td>持续性负性心境（易激惹或愤怒），伴严重情绪暴发</td><td>反复、短暂、冲动性攻击暴发</td></tr>
+          <tr><td>情绪失调</td><td>明显（易激惹、愤怒）</td><td>没有明显情绪失调</td><td>核心就是持续负性心境</td><td>暴发前后可有情绪体验，但基线不一定是持续坏心情</td></tr>
+          <tr><td>是否侵权</td><td>无；有偷窃、施虐、霸道、攻击、破坏性任一项即排除 ODD</td><td>有</td><td>教材未写侵权</td><td>有攻击或破坏财产，但非预谋、无获益</td></tr>
+          <tr><td>病程／年龄</td><td>6 个月以上；多见于 10 岁以下</td><td>6 个月以上</td><td>诊断年龄 6～18 岁</td><td>持续模式超过 3 个月；单次暴发不足 30 分钟</td></tr>
+          <tr><td>能否共存</td><td>可见于其他类型 CD，此时优先诊断其他类型 CD</td><td>—</td><td>与 ODD 不能共存；符合 DMDD 时只诊断 DMDD</td><td>与 DMDD 不能共存（教材在 IED 鉴别中明确）</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p><strong>表 2　正常对立违抗行为 vs ODD（教材给出的频度尺子）</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>维度</th><th>正常对立违抗行为</th><th>ODD</th></tr></thead>
+        <tbody>
+          <tr><td>发生频度</td><td>每月发生几次，或每周 1～2 次</td><td>可达每周 5～7 次或每天发生</td></tr>
+          <tr><td>功能影响</td><td>心理社会功能影响不大</td><td>严重损害心理社会功能</td></tr>
+          <tr><td>诊断门槛</td><td>只有严重的调皮捣蛋或淘气不足以作出 ODD 诊断</td><td>行为模式持续 6 个月以上，频率高于相应年龄和发育水平</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout key"><span class="ct">📌 一句话鉴别总结</span><strong>ODD 是"有情绪失调、无侵权"；CD 是"有侵权、无明显情绪失调"；DMDD 是"持续坏心情打底"；IED 是"平时基线正常、突然爆炸"。</strong>四条一句话，足以切开本节最常见的四个易混诊断。</div>
+  </div>
+
+  <!-- 第六栏 -->
+  <div class="card green" id="u6-6">
+    <h3 class="col-title"><span class="idx">第六栏</span>治疗方案工具箱</h3>
+    <p>第二节三病的治疗有一个共同骨架：<strong>多系统参与、心理社会干预为主、药物只处理共病或特定症状</strong>。具体技术在各单元展开，这里先给总原则。</p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>层级</th><th>ODD</th><th>CD</th><th>去社会品行障碍</th></tr></thead>
+        <tbody>
+          <tr><td>治疗前</td><td>充分评估</td><td>对患儿及其家庭进行综合评估</td><td>多方了解生长发育史与行为表现</td></tr>
+          <tr><td>主力</td><td>家庭、学校和社区共同参与的心理家庭社会干预为主</td><td>心理专业人员、家长、学校及社区共同参与；针对个体、父母或照顾者、家庭环境或同伴群体的行为干预</td><td>针对个体、父母或基于家庭的心理社会干预为主</td></tr>
+          <tr><td>具体心理干预</td><td>家庭治疗、行为治疗（阳性强化、消退、游戏疗法）、认知治疗</td><td>父母管理培训（一线）；7 岁以上认知行为技能训练；青少年多系统干预</td><td>按人群分组：提高认同感、愤怒控制、改善教养、积极亲子情感联结</td></tr>
+          <tr><td>药物</td><td>仅用于共病其他精神心理障碍</td><td>有时需要联合精神药物治疗</td><td>有时需要联合精神药物治疗</td></tr>
+          <tr><td>教材未给</td><td>药物剂量、疗程</td><td>药物剂量、疗程</td><td>药物剂量、疗程</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout key">
+      <span class="ct">📌 本节治疗的总纲</span>
+      三病都以<strong>心理社会干预</strong>为主，药物不是主角；ODD 的表述最严格——"精神药物治疗<strong>仅用于共病其他精神心理障碍的患者</strong>"。不要把成人精神科"先上药"的思路套到儿童青少年。
+    </div>
+  </div>
+
+  <!-- 第七栏 -->
+  <div class="card purple" id="u6-7">
+    <h3 class="col-title"><span class="idx">第七栏</span>记忆工具箱</h3>
+    <div class="callout tip">
+      <span class="ct">🔧 方法一：数字编码法（"6—6—1—10"）</span>
+      记 <strong>"6—6—1—10"</strong>：ODD <strong>6 个月</strong>；CD <strong>6 个月</strong>；去社会品行障碍<strong>至少 1 年</strong>；儿童期起病界限<strong>10 岁前</strong>。<br>
+      <em>为什么这样记：</em>四个数字就是第二节全部病程与年龄考点，按顺序背一遍即可覆盖 ODD、CD、去社会三病。
+    </div>
+    <div class="callout tip">
+      <span class="ct">🔧 方法二：谱系阶梯法</span>
+      把三病想成三级台阶：<br>
+      <strong>第一级 ODD：</strong>顶嘴、对抗、发脾气、报复——"我不服你"，但还不侵犯你的权利。<br>
+      <strong>第二级 CD：</strong>攻击、破坏、偷窃、严重违规——"我侵犯你"，且缺乏内省。<br>
+      <strong>第三级去社会：</strong>ICD-11 的持续侵权／违法模式，至少 1 年，可按 10 岁前起病分型。<br>
+      <em>为什么这样记：</em>用"服不服—侵不侵权—持续多久"的阶梯，把三个诊断变成一条连续线，比孤立背定义更稳。
+    </div>
+    <div class="callout tip">
+      <span class="ct">🔧 方法三：一句话规则法</span>
+      记 <strong>"有侵权，就不是 ODD"</strong>。教材原文列出偷窃、施虐、霸道、攻击、破坏性，肯定存在任何一项即排除 ODD。<br>
+      <em>为什么这样记：</em>这是本节最高频的鉴别规则；先用它切掉 ODD，再在 CD 与去社会之间按"6 个月 vs 1 年、ICD-10 vs ICD-11"细分。
+    </div>
+  </div>
+
+  <!-- 第八栏 -->
+  <div class="card cyan" id="u6-8">
+    <h3 class="col-title"><span class="idx">第八栏</span>知识联动</h3>
+    <ul>
+      <li><strong>与 ICD-10／ICD-11／DSM-5：</strong>ODD 在 ICD-10 属 F91.3（品行障碍中的一种），在 ICD-11 为 6C90，在 DSM-5 为 313.81；CD 为 ICD-10 F91；去社会品行障碍为 ICD-11 6C91，类似 ICD-10 未社会化品行障碍，DSM-5 只有品行障碍、没有去社会品行障碍。</li>
+      <li><strong>与心境障碍章：</strong>DMDD 与 ODD、IED 的诊断不能共存；CD 与心境障碍的鉴别在于"间歇性病程 vs 持久行为模式"。</li>
+      <li><strong>与 ADHD：</strong>ODD、CD 都与 ADHD 高共病；ADHD 本身没有违反社会规范或侵害他人利益的意图。</li>
+      <li><strong>与人格障碍章：</strong>ODD 可发展为 CD 或更严重的反社会性人格；CD 约半数在成年期有违法犯罪行为或反社会型人格障碍。</li>
+      <li><strong>与儿童青少年精神医学：</strong>治疗方案必须依据儿童发育发展的年龄阶段；儿童早中期最经济有效的是改善养育质量。</li>
+      <li><strong>与司法精神病学：</strong>CD 与去社会品行障碍的行为可触及法律；教材开篇提示本章常涉及刑事责任能力认定，但未在第二节展开具体评定标准。</li>
+    </ul>
+  </div>
+</section>
+<!-- ===== 11 对立违抗障碍 ===== -->
+<section id="u7">
+  <div class="sec-head"><div class="badge">11</div><h2>对立违抗障碍（ODD）<span class="en">Oppositional Defiant Disorder · 第二节（p.200–203）</span></h2></div>
+  <p class="sec-lead">本节内容最丰富、治疗写得最细的一个病。核心只有一句："有情绪失调、无侵权"；再加 6 个月病程、两套亚型标注、四组鉴别。</p>
+
+  <!-- 第一栏 -->
+  <div class="card red" id="u7-1">
+    <h3 class="col-title"><span class="idx">第一栏</span>疾病画像</h3>
+    <div class="quote"><span class="lab">教材原文</span>对立违抗障碍（oppositional defiant disorder，ODD）是指一般在儿童发育过程中出现的，以持久的对立、不服从、消极抵抗、易激惹、挑衅和敌对等为行为特征的一类心理障碍。</div>
+    <p><strong>一句话画像：</strong>不是"偶尔顶嘴"，而是一种持续半年以上、频率远高于同龄人的"对抗模式"——你说东，他偏西；你批评，他怪别人；你生气，他更怒。<span class="note">（类比理解式概括，非教材原文）</span></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>分类系统</th><th>ODD 的位置</th></tr></thead>
+        <tbody>
+          <tr><td>ICD-10</td><td>归于"通常起病于童年与少年期的行为与情绪障碍"中"品行障碍"中的一种（<strong>F91.3</strong>）</td></tr>
+          <tr><td>ICD-11</td><td>作为"破坏性行为或去社会障碍"的诊断单元（<strong>6C90</strong>）</td></tr>
+          <tr><td>DSM-5</td><td>作为"破坏性、冲动控制及品行障碍"的诊断单元（<strong>313.81</strong>）</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="stat">
+      <span>DSM-5 患病率 1%～11%</span>
+      <span>平均患病率约 3.3%</span>
+      <span>青春期前男女比 1.4∶1</span>
+      <span>我国五省（市）调查 3.6%</span>
+      <span>多见于 10 岁以下</span>
+    </div>
+    <p><strong>起病与性别：</strong>最早在学龄前期起病，通常（但不总是）发生在童年时期，多见于 10 岁以下儿童。在学龄期起病者，男孩多于女孩；在青春期起病者，男女比例接近。</p>
+    <p class="note">注意：教材原文是"我国五个省（市）6～16 岁在校学生调查显示其患病率为 3.6%"，不是"六省"。</p>
+  </div>
+
+  <!-- 第二栏 -->
+  <div class="card blue" id="u7-2">
+    <h3 class="col-title"><span class="idx">第二栏</span>病因探秘</h3>
+    <div class="quote"><span class="lab">教材原文</span>ODD 由生物学因素、家庭因素和心理社会因素等相互作用所致。</div>
+    <div class="tabs" data-tabs>
+      <div class="tabbar">
+        <button class="on" data-tab="e1">生物学因素</button>
+        <button data-tab="e2">家庭因素</button>
+        <button data-tab="e3">心理社会因素</button>
+      </div>
+      <div class="panel on" data-panel="e1">
+        <div class="grid3">
+          <div class="mini">
+            <h4>遗传</h4>
+            <p>ODD 有明显家族聚集性。研究发现 ODD 具有<strong>高度遗传性，为多基因遗传方式</strong>，但<strong>没有可靠的遗传多态性</strong>。也有研究探索其表观遗传学和基因与环境的交互作用。</p>
+          </div>
+          <div class="mini">
+            <h4>神经生化</h4>
+            <p>单胺类神经递质与情感的表达、调节及冲动控制有关。男童脑脊液中 <strong>5-HT 水平与攻击行为呈负相关</strong>；6～17 岁患者脑脊液中 <strong>5-HIAA 水平与冲动行为负相关</strong>。相关皮质醇水平的变化也有一致的研究发现。</p>
+          </div>
+          <div class="mini">
+            <h4>神经生理与影像</h4>
+            <p>患者<strong>皮肤电导反应较低，静息平均心率慢</strong>；雄激素水平高的男性儿童出现攻击和破坏行为的倾向增加。影像研究集中于前额叶皮质、杏仁核和脑岛，发现情感调节和加工脑区结构与功能异常。智商、围产期并发症等也与 ODD 发生有关。</p>
+          </div>
+        </div>
+        <p class="note">教材未给具体基因位点、激素阈值或影像定量指标。</p>
+      </div>
+      <div class="panel" data-panel="e2">
+        <p><strong>教材原文：</strong>不良的家庭因素也是重要发病因素。可归为四组：</p>
+        <div class="grid2">
+          <div class="mini"><h4>① 父母自身问题</h4><p>父母罹患精神疾病、物质依赖、精神发育迟滞。</p></div>
+          <div class="mini"><h4>② 照顾关系不稳</h4><p>频繁更换照顾者，亲子间缺乏亲密感情联系。</p></div>
+          <div class="mini"><h4>③ 教养方式两端</h4><p>孩子被冷漠或忽视、挑剔、粗暴对待、虐待；或者对孩子过分放纵、不予管教。</p></div>
+          <div class="mini"><h4>④ 家庭氛围与示范</h4><p>父母之间不和睦、经常争吵或打斗、分居或离异；父母有违法犯罪行为。</p></div>
+        </div>
+      </div>
+      <div class="panel" data-panel="e3">
+        <div class="grid2">
+          <div class="mini">
+            <h4>心理因素</h4>
+            <ul>
+              <li>心理发育差、自信心不足、缺乏自制力。</li>
+              <li>对客观事物、他人及自己均存在不良认知，易产生敌意及情绪紊乱。</li>
+              <li>存在亲社会行为及技能发育障碍，与同伴建立亲近及合作关系的能力低。</li>
+              <li><strong>优势反应抑制能力较差</strong>：对已启动的反应不能适时抑制，由此推测这是其冲动性特征行为的内在加工机制。</li>
+            </ul>
+          </div>
+          <div class="mini">
+            <h4>社会环境因素</h4>
+            <ul>
+              <li>经常接触暴力或黄色媒体宣传。</li>
+              <li>接受周围人不正确的道德观和价值观。</li>
+              <li>结交有抽烟、酗酒、打架斗殴、敲诈、欺骗、偷窃等行为的同伴。</li>
+            </ul>
+          </div>
+        </div>
+        <div class="callout tip"><span class="ct">💡 一句话串起来</span>易感（遗传、神经生化、气质）＋不良家庭教养＋不良同伴与媒体 → 形成"对抗—被批评—更对抗"的循环。教材在临床表现中也明确写到：父母的退让会使对抗挑衅行为得到强化而愈演愈烈。</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 第三栏 -->
+  <div class="card red" id="u7-3">
+    <h3 class="col-title"><span class="idx">第三栏</span>临床表现拼图</h3>
+    <p><strong>教材把 ODD 的临床表现写成三组行为，并额外交代"情景局限"与"严重度指征"。</strong></p>
+    <div class="grid3">
+      <div class="mini">
+        <h4>① 争辩的、对抗的行为</h4>
+        <ul>
+          <li>很难服从管教，不服从、不理睬或拒绝成人的要求或规定。</li>
+          <li>受批评时总是强调客观，经常与家长、老师等成人争辩。</li>
+          <li>对同伴充满敌意、对成人不尊重，故意打扰、言语攻击来惹恼他人，甚至违反校规或集体纪律。</li>
+          <li>自己有错误或不当行为造成不良后果时，常归咎于他人，甚至指责他人。</li>
+        </ul>
+      </div>
+      <div class="mini">
+        <h4>② 消极、愤怒、易激惹的心境</h4>
+        <ul>
+          <li>情绪不稳，对挫折耐受力差，常因小事发脾气。</li>
+          <li>内心常感无助，但无明显负性心境。</li>
+          <li>敏感多思，曲解别人意思，善意之言也易招来恼怒。</li>
+          <li>可由愤怒或挫折激发冲动性攻击，过后会有内疚和悔恨。</li>
+          <li>通常不认为自己是愤怒的、对立的或违抗的，而认为自己的行为是对无理要求或境遇的<strong>正当反应</strong>。</li>
+        </ul>
+      </div>
+      <div class="mini">
+        <h4>③ 报复</h4>
+        <ul>
+          <li>时常怨恨他人，怀恨在心或心存报复。</li>
+          <li>常与父母、老师、同伴产生冲突，甚至出现攻击行为。</li>
+        </ul>
+      </div>
+    </div>
+    <div class="grid2">
+      <div class="mini">
+        <h4>情景局限与严重度</h4>
+        <p>症状通常只局限于一种情景，最常发生在家庭与亲属成员的互动中。严重案例中症状可出现在学校、工作或与同伴交往等多种情景中。<strong>症状出现在多种情景中（即症状的广泛性）是 ODD 严重程度的指征</strong>，由此应在不同情景和关系中评估个体的行为。</p>
+      </div>
+      <div class="mini">
+        <h4>评估时容易漏掉的两点</h4>
+        <p>① 上述行为在兄弟姐妹中很普遍，应观察个体与<strong>兄弟姐妹以外的他人</strong>互动的表现；② 症状通常在与熟悉的成年人或同伴的互动中更明显，<strong>在临床检查中可能表现得不明显</strong>。</p>
+      </div>
+    </div>
+    <p><strong>两套亚型标注（教材明确给出）：</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>标注维度</th><th>类型</th><th>教材给出的识别要点</th></tr></thead>
+        <tbody>
+          <tr><td rowspan="2">是否伴慢性易激惹／愤怒</td><td>伴慢性易激惹／愤怒</td><td>以普遍持续的易激惹或愤怒情绪为特征，几乎每天存在，存在于家庭、学校、社会关系等多个情景，不仅限于与父母或监护人的互动，强度或持续时间与挑衅程度不成比例</td></tr>
+          <tr><td>不伴慢性易激惹／愤怒</td><td>以任性、好争辩和挑衅行为为特征，而非普遍持续的易激惹／愤怒</td></tr>
+          <tr><td rowspan="2">亲社会情感</td><td>伴亲社会情感受限</td><td>常表现出"冷酷无情"特质：对他人感受缺乏共情或敏感性；对他人痛苦缺乏关心；对自己行为缺乏悔过、羞耻或自责；对可能惩罚漠不关心；对学校或工作中的表现不佳缺乏关心；情感表达受限</td></tr>
+          <tr><td>伴亲社会情感正常</td><td>没有"冷酷无情"特质</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note">教材原文用"亲社会情感"标注，而非"冷酷无情特质"单独成为一个诊断；"冷酷无情"是描述性特质。</p>
+  </div>
+
+  <!-- 第四栏 -->
+  <div class="card orange" id="u7-4">
+    <h3 class="col-title"><span class="idx">第四栏</span>教材典型案例</h3>
+    <div class="callout book">
+      <span class="ct">📖 教材未提供具体临床案例</span>
+      教材在本节给出定义、病因、三组表现、诊断与治疗，但没有患者个案、家庭互动记录、学校表现或量表分数。本栏不虚构案例。
+    </div>
+    <p><strong>教材明确要求的诊断信息采集：</strong>需要从患者<strong>父母及其他家庭成员、老师、同伴等多方</strong>详细了解患者生长发育史、日常行为表现等。这一点本身就是 ODD 诊断的关键，因为症状在临床检查中可能不明显。</p>
+    <p><strong>由教材整理的四步诊断路径：</strong></p>
+    <ol>
+      <li><strong>行为模式：</strong>是否呈现显著的反抗、不听话、挑衅或恶意行为，且持续<strong>6 个月或更长时间</strong>。</li>
+      <li><strong>频率与常模：</strong>发生频率是否高于相应年龄和发育水平的个体，且<strong>不限于与兄弟姐妹的互动</strong>。</li>
+      <li><strong>功能损害：</strong>行为模式的严重程度是否足以导致个人、家庭、社会、教育、职业或其他重要功能领域的严重损害。</li>
+      <li><strong>排除：</strong>行为问题是否由心理发育障碍、其他精神障碍或神经系统疾病所致。</li>
+    </ol>
+    <p class="note">以上为教材诊断段落的操作化整理，不是教材原文病例。</p>
+  </div>
+
+  <!-- 第五栏 -->
+  <div class="card orange" id="u7-5">
+    <h3 class="col-title"><span class="idx">第五栏</span>鉴别诊断对对碰</h3>
+    <p><strong>表 1　ODD 的四组鉴别（教材原文顺序）</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>易混情况</th><th>教材给出的鉴别点</th><th>一句话抓手</th></tr></thead>
+        <tbody>
+          <tr><td>儿童少年正常的对立违抗行为</td><td>正常对立违抗行为<strong>每月发生几次或每周 1～2 次</strong>，心理社会功能影响不大；ODD 可达<strong>每周 5～7 次或每天发生</strong>，严重损害心理社会功能。只有严重的调皮捣蛋或淘气不足以诊断 ODD</td><td>看频度与功能损害，不看"有没有顶嘴"</td></tr>
+          <tr><td>品行障碍（CD）</td><td>CD 的对立违抗行为更显著、更严重，并且存在攻击人或动物、破坏他人财产、说谎、盗窃和严重违反规则的行为，而<strong>没有明显情绪失调</strong>；ODD 有明显情绪失调，但缺乏冒犯法律和他人权利的行为。<strong>肯定存在偷窃、施虐、霸道、攻击、破坏性任一项即可排除 ODD</strong>。ODD 常可见于其他类型 CD，此时应优先诊断其他类型 CD</td><td>有侵权 → 不是 ODD；有情绪失调且无侵权 → ODD</td></tr>
+          <tr><td>破坏性心境失调障碍（DMDD）</td><td>DMDD 情绪暴发的严重性、频率和慢性化更严重于 ODD。当心境紊乱严重到符合 DMDD 诊断标准时，<strong>即使同时符合 ODD 的全部诊断标准，也只能诊断 DMDD</strong>，两者诊断不能共存</td><td>DMDD 优先，ODD 让位</td></tr>
+          <tr><td>注意缺陷多动障碍（ADHD）</td><td>ADHD 在完成任务、组织性、计划性、善始善终、等待等方面均有困难；单纯 ODD 一般没有上述问题，做不好作业多是对立违抗行为的一部分。一般只出现亲子冲突但没有学习问题多是 ODD；临床上两者经常同时存在</td><td>有学习与执行功能问题 → 想 ADHD；只有亲子冲突 → 想 ODD</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout key"><span class="ct">📌 一句话鉴别总结</span>ODD 的三条边界：<strong>频度不够 → 正常；出现侵权 → CD；心境更重 → DMDD；执行功能差 → ADHD。</strong>四条都排除后，才轮到 ODD。</div>
+  </div>
+
+  <!-- 第六栏 -->
+  <div class="card green" id="u7-6">
+    <h3 class="col-title"><span class="idx">第六栏</span>治疗方案工具箱</h3>
+    <div class="quote"><span class="lab">教材原文</span>治疗前需要充分评估。多采用家庭、学校和社区共同参与的心理家庭社会干预为主的综合性个体化治疗方案。尽量在行为问题出现早期及时干预，持续足够时间，才能取得较好效果。精神药物治疗仅用于共病其他精神心理障碍的患者。</div>
+    <div class="grid3">
+      <div class="mini">
+        <h4>① 家庭治疗</h4>
+        <ul>
+          <li>协调家庭成员之间（特别是亲子之间）的关系。</li>
+          <li>纠正父母对子女不良行为采用的熟视无睹或严厉惩罚的处理方式。</li>
+          <li>训练父母用适当方法与子女交流：讨论和协商、正面行为强化辅以轻度惩罚。</li>
+          <li>减少家庭应激性生活事件及父母不良行为。</li>
+        </ul>
+      </div>
+      <div class="mini">
+        <h4>② 行为治疗</h4>
+        <ul>
+          <li>根据年龄和行为表现，选择性使用<strong>阳性强化法、消退法和游戏疗法</strong>等。</li>
+          <li>逐渐消除不良行为，重塑健康行为模式，促进社会适应行为。</li>
+        </ul>
+      </div>
+      <div class="mini">
+        <h4>③ 认知治疗</h4>
+        <ul>
+          <li>帮助患者自我发现问题、分析原因、面对后果，找到问题解决办法。</li>
+          <li>认知治疗与行为治疗相结合，可更好地促使认知、情感及行为发生改变。</li>
+        </ul>
+      </div>
+    </div>
+    <p><strong>药物治疗（仅用于共病，教材原文逐条）：</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>共病或靶症状</th><th>教材点名的药物</th></tr></thead>
+        <tbody>
+          <tr><td>合并注意缺陷多动障碍</td><td>哌甲酯、托莫西汀</td></tr>
+          <tr><td>伴有抑郁、焦虑</td><td>抗抑郁药物或抗焦虑药物</td></tr>
+          <tr><td>急性或慢性攻击行为</td><td>小剂量抗精神病药物</td></tr>
+          <tr><td>冲动攻击行为</td><td>锂盐有效</td></tr>
+          <tr><td>青少年的暴怒和情绪不稳定</td><td>丙戊酸盐有效</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout warn"><span class="ct">⚠️ 三句必须保留的限定</span>① 目前尚无特效药物；② 药物"仅为短暂对症治疗以及共患精神障碍的治疗"；③ 教材未给任何剂量与疗程。不要把"锂盐有效"写成"锂盐是一线"，也不要把成人剂量套到儿童。</div>
+    <div class="callout book">
+      <span class="ct">📖 预后（教材原文要点）</span>
+      ODD 通常始于学龄前期。一些患者可逐渐发展为品行障碍或更为严重的反社会性人格，另一些并未发展为品行障碍。<strong>发病越早，预后越差</strong>，早发者较晚发者最终发展为品行障碍的风险<strong>高 3 倍</strong>。随着年龄增长，ODD 共病 ADHD、焦虑障碍、抑郁障碍、物质使用障碍的情况也逐渐增多。
+    </div>
+  </div>
+
+  <!-- 第七栏 -->
+  <div class="card purple" id="u7-7">
+    <h3 class="col-title"><span class="idx">第七栏</span>记忆工具箱</h3>
+    <div class="callout tip">
+      <span class="ct">🔧 方法一：口诀歌谣法（三组表现）</span>
+      口诀：<strong>"争、怒、报"</strong>——争辩对抗、消极愤怒易激惹、报复。<br>
+      解释：教材把 ODD 临床表现写成三组：①争辩的、对抗的行为；②消极、愤怒、易激惹的心境；③报复。三字刚好一组一字。<br>
+      <em>为什么这样记：</em>先记三个"抽屉"，再往每个抽屉里放细节；答题时不会把 ODD 与 CD 的攻击、破坏混在一起。
+    </div>
+    <div class="callout tip">
+      <span class="ct">🔧 方法二：数字编码法（"6—3.3—3.6—5～7"）</span>
+      记 <strong>"6—3.3—3.6—5～7"</strong>：病程 <strong>6 个月</strong>以上；DSM-5 平均患病率 <strong>3.3%</strong>；我国五省（市）调查 <strong>3.6%</strong>；ODD 的对立违抗可达<strong>每周 5～7 次</strong>（正常为每月几次或每周 1～2 次）。<br>
+      <em>为什么这样记：</em>四个数字覆盖病程、患病率与"正常 vs 病"的频度尺子，都是选择题的高频数据点。
+    </div>
+    <div class="callout tip">
+      <span class="ct">🔧 方法三：对比表记忆法（ODD vs CD）</span>
+      只记两行：<br>
+      <strong>ODD：</strong>情绪失调（+）／侵权（−）／病程 6 个月。<br>
+      <strong>CD：</strong>情绪失调（−）／侵权（+）／病程 6 个月。<br>
+      再加一条规则："有偷窃、施虐、霸道、攻击、破坏性任一项 → 排除 ODD"。<br>
+      <em>为什么这样记：</em>用"＋／−"两列把最易混的两病压成一张两行表，考场几秒钟就能判定。
+    </div>
+    <div class="callout key"><span class="ct">📌 两套标注别漏</span>ODD 可按"是否伴慢性易激惹／愤怒"分两型，再按"亲社会情感是否受限"标注。"冷酷无情"特质＝亲社会情感受限，不等于另一个独立诊断。</div>
+  </div>
+
+  <!-- 第八栏 -->
+  <div class="card cyan" id="u7-8">
+    <h3 class="col-title"><span class="idx">第八栏</span>知识联动</h3>
+    <ul>
+      <li><strong>与品行障碍单元：</strong>ODD 可发展为 CD，也可见于其他类型 CD；此时优先诊断其他类型 CD。早发 ODD 发展为 CD 的风险高 3 倍。</li>
+      <li><strong>与心境障碍章：</strong>DMDD 与 ODD 不能共存；符合 DMDD 时即使符合全部 ODD 标准也只诊断 DMDD。</li>
+      <li><strong>与 ADHD：</strong>两者临床经常同时存在；ODD 合并 ADHD 时可选用哌甲酯、托莫西汀。</li>
+      <li><strong>与焦虑、抑郁、物质使用：</strong>随年龄增长，ODD 共病这些障碍的情况逐渐增多。</li>
+      <li><strong>与人格障碍章：</strong>部分 ODD 可发展为更严重的反社会性人格。</li>
+      <li><strong>与家庭治疗／社会学习理论：</strong>教材的家庭治疗与 CD 的父母管理培训都强调"正面强化 + 轻度惩罚""讨论协商"，这是同一套行为主义思路在儿童青少年领域的应用。</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===== 12 品行障碍 ===== -->
+<section id="u8">
+  <div class="sec-head"><div class="badge">12</div><h2>品行障碍（CD）<span class="en">Conduct Disorder · 第二节（p.203–204）</span></h2></div>
+  <p class="sec-lead">与 ODD 最大的区别不是"更凶"，而是"更故意"：CD 的本质是主观故意的恶意违规、违纪、违法，且缺乏内省自责。治疗一线不是药，而是父母管理培训。</p>
+
+  <!-- 第一栏 -->
+  <div class="card red" id="u8-1">
+    <h3 class="col-title"><span class="idx">第一栏</span>疾病画像</h3>
+    <div class="quote"><span class="lab">教材原文</span>品行障碍（conduct disorder，CD）是指一般在儿童青少年时期出现的、反复持续的对抗性、攻击性、去社会性等行为，侵犯他人的基本权利，违反与年龄相适应的社会行为规范和道德准则，影响了其自身的社交、学业和职业功能。其本质是主观故意的恶意违规、违纪、违法，缺乏内省自责，不同于冲动控制障碍与 ODD。</div>
+    <p><strong>一句话画像：</strong>不是"控制不住"，而是"明知故犯且不觉得错"——行为是有意选择的违规、侵权，事后缺乏内省与自责。<span class="note">（类比理解式概括，非教材原文）</span></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>分类系统</th><th>CD 的位置</th></tr></thead>
+        <tbody>
+          <tr><td>ICD-10</td><td>诊断类别 <strong>F91</strong>，归类于"通常起病于童年与少年期的行为与情绪障碍"；包括局限于家庭的品行障碍、未社会化品行障碍、社会化品行障碍、ODD 和其他品行障碍等</td></tr>
+          <tr><td>ICD-11</td><td>相关类别为<strong>去社会品行障碍（6C91）</strong>，教材称其类似 ICD-10 的未社会化品行障碍</td></tr>
+          <tr><td>DSM-5</td><td>有"品行障碍"诊断类别，<strong>没有</strong>"去社会品行障碍"诊断类别</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="stat">
+      <span>全球患病率 2%～2.5%</span>
+      <span>男性 3%～4%</span>
+      <span>女性 1%～2%</span>
+      <span>学龄儿童患病率不到 3%</span>
+      <span>约半数成年期违法犯罪或反社会型人格</span>
+    </div>
+    <p class="note">教材未给出中国患病率；上述数字均为教材原文给出的全球与性别数据。</p>
+  </div>
+
+  <!-- 第二栏 -->
+  <div class="card blue" id="u8-2">
+    <h3 class="col-title"><span class="idx">第二栏</span>病因探秘</h3>
+    <div class="quote"><span class="lab">教材原文</span>具体病因与发病机制较复杂，由遗传因素、家庭因素和心理社会因素相互作用所致。</div>
+    <div class="grid3">
+      <div class="mini">
+        <h4>遗传因素</h4>
+        <p>包括<strong>反社会行为或物质滥用家族史</strong>等。教材未给遗传率或具体基因。</p>
+      </div>
+      <div class="mini">
+        <h4>家庭因素</h4>
+        <ul>
+          <li>父母犯罪和物质滥用。</li>
+          <li>养育方式粗暴、做事言行不一。</li>
+          <li>经常吵架和发生暴力冲突。</li>
+          <li>虐待儿童。</li>
+        </ul>
+      </div>
+      <div class="mini">
+        <h4>心理社会因素</h4>
+        <ul>
+          <li>社会经济水平低。</li>
+          <li>过早失去父母。</li>
+          <li>在学校不顺利或被霸凌。</li>
+          <li>被社会孤立、经历社会暴力。</li>
+        </ul>
+      </div>
+    </div>
+    <p><strong>四条神经生物学机制（教材原文）：</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>机制</th><th>教材给出的具体表述</th><th>与行为的关系</th></tr></thead>
+        <tbody>
+          <tr><td>脑区结构改变</td><td>额颞叶及边缘系统异常</td><td>教材只给部位，未给具体影像表现</td></tr>
+          <tr><td>5-HT 改变</td><td>脑脊液中 5-HT 降低</td><td>可引起情绪调节能力和控制能力降低</td></tr>
+          <tr><td>自主神经系统功能失调</td><td>基础心率、皮肤电传导及皮电活动降低</td><td>行为去抑制与冲动行为增多</td></tr>
+          <tr><td>下丘脑-垂体-肾上腺轴失调</td><td>多数研究支持 CD 患者皮质醇水平低</td><td>教材未进一步解释因果方向</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout tip"><span class="ct">💡 把四层串起来（学习用，非教材原文）</span>家族易感与不良养育 → 早年逆境（失去父母、被霸凌、社会暴力）→ 5-HT 降低与自主神经低唤醒 → 情绪调节与冲动控制下降 → 以攻击、破坏、欺诈、违规的方式应对环境。教材给出的是并列机制，未整合成这条链。</div>
+  </div>
+
+  <!-- 第三栏 -->
+  <div class="card red" id="u8-3">
+    <h3 class="col-title"><span class="idx">第三栏</span>临床表现拼图</h3>
+    <p><strong>教材把 CD 的临床表现分为五组，其中前四组是行为，第五组是共病。</strong>前四组都带有"随年龄升级"的轨迹，值得按发展阶段看。</p>
+    <div class="timeline">
+      <div class="tl-item"><h4>① 攻击行为</h4><p>经常攻击人或动物。2～3 岁时表现为暴怒发作和吵闹，以后逐渐变为违抗或拒绝服从成人指令，推拉或动手打其他小孩。到学龄期后攻击行为更加明朗化：言语伤人、扰乱课堂纪律；对抗老师、恃强凌弱、威胁或恐吓他人；索要或抢劫、敲诈财物，经常挑起矛盾、打架，残忍伤害、虐待他人和动物，使用可能造成严重躯体伤害的武器等；强行与他人发生性行为。</p></div>
+      <div class="tl-item"><h4>② 破坏性行为</h4><p>破坏他人或公共财物。年幼时多半出于好奇而摆弄、砸坏自家物品；学龄期后则表现为蓄意破坏自家或别人的东西，甚至故意纵火企图造成严重损失。</p></div>
+      <div class="tl-item"><h4>③ 欺诈或盗窃</h4><p>经常说谎以获得物品、好处或规避责任。偷窃行为往往开始于学龄期，最初是偷拿自家钱财或物品，逐渐发展为强占别人物品；少年期后主要表现为盗窃，甚至破门闯入他人房间、建筑或汽车盗窃，走向犯罪。</p></div>
+      <div class="tl-item"><h4>④ 严重违反规则</h4><p>13 岁前就开始旷课逃学、外出游荡、夜不归宿。逃学和离家出走游玩会带来愉快和满足感，进而形成违反规则的行为习惯。</p></div>
+      <div class="tl-item"><h4>⑤ 共病其他精神障碍</h4><p>常常合并注意缺陷多动障碍、抑郁、焦虑、情绪不稳或易激惹，也可伴有语言、阅读、运动、智力发育障碍等。</p></div>
+    </div>
+    <div class="callout key"><span class="ct">📌 一条时间线</span><strong>2～3 岁暴怒 → 学龄期攻击明朗化、开始偷拿自家东西 → 少年期盗窃、破门闯入 → 13 岁前逃学游荡。</strong>教材把"起病早、行为升级"写进了临床表现本身，这也是预后判断的依据。</div>
+  </div>
+
+  <!-- 第四栏 -->
+  <div class="card orange" id="u8-4">
+    <h3 class="col-title"><span class="idx">第四栏</span>教材典型案例</h3>
+    <div class="callout book">
+      <span class="ct">📖 教材未提供具体临床案例</span>
+      教材在本节没有患者个案、家庭访谈、学校记录、量表或影像数据。本栏不虚构案例，只整理教材的诊断采集与判断顺序。
+    </div>
+    <p><strong>教材明确要求的诊断信息：</strong>需要从患者父母及其他家庭成员、老师、同伴等多方详细了解患者的生长发育史、日常行为表现等。</p>
+    <p><strong>由教材整理的诊断路径：</strong></p>
+    <ol>
+      <li><strong>行为特征：</strong>是否符合 CD 的临床特征——反复持续的对抗性、攻击性、去社会性行为，侵犯他人基本权利，违反与年龄相适应的社会行为规范和道德准则。</li>
+      <li><strong>病程与损害：</strong>是否持续<strong>6 个月以上</strong>，明显影响社交、学业、职业或其他重要功能。</li>
+      <li><strong>排除：</strong>品行问题是否由心理发育障碍、其他精神障碍或神经系统疾病所致。</li>
+      <li><strong>对照标准：</strong>具体可参照 ICD-10 诊断要点或 DSM-5 诊断标准（教材未在本章抄录全文）。</li>
+    </ol>
+    <p class="note">以上为教材诊断段落的操作化整理，不是教材原文病例。</p>
+  </div>
+
+  <!-- 第五栏 -->
+  <div class="card orange" id="u8-5">
+    <h3 class="col-title"><span class="idx">第五栏</span>鉴别诊断对对碰</h3>
+    <p><strong>表 1　CD 的鉴别（教材在本节明确点名的两组，加上前文已述的 ODD／DMDD／IED）</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>易混诊断</th><th>教材给出的鉴别点</th><th>一句话抓手</th></tr></thead>
+        <tbody>
+          <tr><td>注意缺陷多动障碍（ADHD）</td><td>ADHD 患者由于多动和冲动行为造成破坏，但<strong>本身没有违反社会规范或侵害他人利益的意图</strong>；两种障碍共病率高，若同时符合诊断标准，可作出<strong>共病诊断</strong></td><td>ADHD 是"坐不住"，CD 是"故意侵权"；可共存</td></tr>
+          <tr><td>心境障碍</td><td>心境障碍为<strong>间歇性病程</strong>，CD 为<strong>持久的行为模式</strong>；心境障碍的攻击或对抗行为伴有明确的情感高涨或低落，行为异常只是临床表现的一部分；心境障碍经相应药物治疗后，攻击或对抗行为会随情绪症状改善而消失</td><td>情绪发作期才有行为问题 → 心境障碍；长期如此 → CD</td></tr>
+          <tr><td>ODD</td><td>ODD 有明显情绪失调但无侵权；CD 有侵权而<strong>没有明显情绪失调</strong>。肯定存在偷窃、施虐、霸道、攻击、破坏性任一项即可排除 ODD；ODD 常可见于其他类型 CD，此时优先诊断其他类型 CD</td><td>有侵权 → CD；只有对抗 → ODD</td></tr>
+          <tr><td>破坏性心境失调障碍（DMDD）／间歇性暴怒障碍（IED）</td><td>教材在本节写"参见本章前述内容"：DMDD 有持续性负性心境、诊断年龄 6～18 岁；IED 是短暂、不成比例、非预谋的攻击暴发</td><td>持续坏心情 → DMDD；阵发爆炸 → IED；广泛侵权 → CD</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p><strong>表 2　CD 与去社会品行障碍的关键差别</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>对比点</th><th>品行障碍（CD）</th><th>去社会品行障碍</th></tr></thead>
+        <tbody>
+          <tr><td>分类系统</td><td>ICD-10 F91</td><td>ICD-11 6C91</td></tr>
+          <tr><td>DSM-5</td><td>有该诊断类别</td><td>无该诊断类别</td></tr>
+          <tr><td>病程要求</td><td>持续 6 个月以上</td><td>至少持续 1 年</td></tr>
+          <tr><td>与 ICD-10 的关系</td><td>CD 本身</td><td>类似 ICD-10 的未社会化品行障碍</td></tr>
+          <tr><td>分型</td><td>教材未在本节按起病年龄分型</td><td>按儿童期／青少年期起病，及亲社会情感是否受限标注</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout key"><span class="ct">📌 一句话鉴别总结</span>CD 的鉴别先问"是不是故意侵权"（对 ODD）、"是不是只在情绪发作期"（对心境障碍）、"有没有侵害他人意图"（对 ADHD）；CD 与去社会品行障碍则按"6 个月 vs 1 年、ICD-10 vs ICD-11"分开。</div>
+  </div>
+
+  <!-- 第六栏 -->
+  <div class="card green" id="u8-6">
+    <h3 class="col-title"><span class="idx">第六栏</span>治疗方案工具箱</h3>
+    <p><strong>治疗前：</strong>需要对患儿及其家庭进行综合评估。有效的治疗需要心理专业人员、家长、学校及社区等共同参与实施。</p>
+    <p><strong>教材列出的治疗目标：</strong></p>
+    <ul>
+      <li>减少攻击破坏行为；</li>
+      <li>减少共病精神和发育障碍的症状；</li>
+      <li>提高情绪调控及社交技能；</li>
+      <li>促进道德发展；</li>
+      <li>提升学业成绩；</li>
+      <li>减少慢性精神障碍及人格障碍的发生。</li>
+    </ul>
+    <div class="timeline">
+      <div class="tl-item"><h4>① 儿童早中期 · 一线</h4><p>最经济有效的方法是<strong>改善养育质量</strong>，可选择基于社会学习理论的<strong>养育行为父母管理培训</strong>作为一线治疗方法。核心内容包括：提升父母对孩子良性行为的情感反馈和正性强化技能；培训父母对孩子发出有效指令并保持一致；训练父母以非攻击性方式对孩子的不良行为进行设限；治疗师通过行为示范、角色扮演、家庭作业等对父母进行技能培训。</p></div>
+      <div class="tl-item"><h4>② 7 岁以上 · 认知行为技能训练</h4><p>可直接进行认知行为技能训练，包括学习解决社交问题、改善社会认知及情绪调节等。</p></div>
+      <div class="tl-item"><h4>③ 青少年 · 多维干预</h4><p>提高家庭功能和父母养育技能；增加青少年与亲社会同龄人的连接；提高社交、情绪调节和解决问题的技能；改善学校表现；提供社区支持。</p></div>
+      <div class="tl-item"><h4>④ 药物 · 辅助</h4><p>主要采用针对儿童个体、父母或照顾者、家庭环境或同伴群体的行为干预，<strong>有时需要联合精神药物治疗</strong>。教材未给具体药物、剂量或疗程。</p></div>
+    </div>
+    <div class="callout book">
+      <span class="ct">📖 预后（教材原文要点）</span>
+      预后差异较大。部分患者随年龄增长或经过教育与治疗可逐渐恢复，但有些患者的行为异常可持续到少年期甚至成年期，导致成年期就业、婚姻、人际关系等诸多困难，其中<strong>约半数在成年期有违法犯罪行为或反社会型人格障碍</strong>。
+    </div>
+    <p><strong>预后影响因素（教材列四条）：</strong></p>
+    <div class="grid2">
+      <div class="mini">
+        <h4>① 病情严重程度</h4>
+        <p>轻症者大部分完全恢复正常，重症者多发展为慢性过程。</p>
+      </div>
+      <div class="mini">
+        <h4>② 发病年龄</h4>
+        <p>一般发病年龄越早，预后越差。</p>
+      </div>
+      <div class="mini">
+        <h4>③ 行为类型</h4>
+        <p>攻击型比非攻击型差，违法型比非违法型差；有多种反社会行为或在多个场合存在紊乱性行为者预后差；有纵火行为、智力低下、神经系统受损体征、药物依赖和其他精神症状者预后差；智商高和学业成就高者预后好。</p>
+      </div>
+      <div class="mini">
+        <h4>④ 家庭环境</h4>
+        <p>家庭矛盾冲突多、缺乏家庭温暖及存在家庭暴力者预后差。</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 第七栏 -->
+  <div class="card purple" id="u8-7">
+    <h3 class="col-title"><span class="idx">第七栏</span>记忆工具箱</h3>
+    <div class="callout tip">
+      <span class="ct">🔧 方法一：数字编码法（"五组表现"）</span>
+      记 <strong>"攻、破、欺、规、病"</strong>：攻击行为、破坏性行为、欺诈或盗窃、严重违反规则、共病其他精神障碍。共 5 组。<br>
+      <em>为什么这样记：</em>五个字覆盖教材全部临床表现；最后一项"共病"常被漏掉，单独用一个字提醒自己。
+    </div>
+    <div class="callout tip">
+      <span class="ct">🔧 方法二：数字锚定法（"2～2.5—6—13—半数"）</span>
+      记 <strong>"2～2.5—6—13—半数"</strong>：全球患病率 2%～2.5%；病程 6 个月以上；13 岁前开始旷课逃学、外出游荡、夜不归宿；约半数成年期有违法犯罪行为或反社会型人格障碍。<br>
+      <em>为什么这样记：</em>四个数字分别对应患病率、病程、违规年龄与预后，是 CD 最常考的四类数据。
+    </div>
+    <div class="callout tip">
+      <span class="ct">🔧 方法三：关键词拆解法（本质）</span>
+      把定义拆成四个词：<strong>反复持续 / 侵权违规 / 故意 / 缺乏内省自责</strong>。<br>
+      <em>为什么这样记：</em>CD 与冲动控制障碍的分水岭就在"故意 + 缺乏内省"；抓住这两个词，就能解释为什么 CD 不属于"控制不住"的冲动障碍。
+    </div>
+    <div class="callout tip">
+      <span class="ct">🔧 方法四：一线治疗锚定法</span>
+      记 <strong>"父母管理培训 = 一线；社会学习理论 = 理论基础；7 岁 = CBT 起点"</strong>。<br>
+      <em>为什么这样记：</em>教材把"最经济有效"和"一线"都给了父母管理培训，这是 CD 治疗题的唯一正确答案方向；7 岁则是认知行为技能训练的年龄门槛。
+    </div>
+  </div>
+
+  <!-- 第八栏 -->
+  <div class="card cyan" id="u8-8">
+    <h3 class="col-title"><span class="idx">第八栏</span>知识联动</h3>
+    <ul>
+      <li><strong>与 ODD 单元：</strong>ODD 可发展为 CD；ODD 也可见于其他类型 CD，此时优先诊断其他类型 CD。早发 ODD 发展为 CD 的风险高 3 倍。</li>
+      <li><strong>与去社会品行障碍单元：</strong>CD 为 ICD-10 F91，去社会品行障碍为 ICD-11 6C91，后者类似 ICD-10 未社会化品行障碍；DSM-5 只有 CD。</li>
+      <li><strong>与心境障碍章：</strong>心境障碍为间歇性病程，CD 为持久行为模式；情绪症状改善后攻击对抗行为消失，支持心境障碍。</li>
+      <li><strong>与 ADHD：</strong>共病率高，可作共病诊断；ADHD 本身没有侵害他人利益的意图。</li>
+      <li><strong>与人格障碍章：</strong>约半数 CD 成年期有违法犯罪行为或反社会型人格障碍；预后与发病年龄、行为类型、家庭环境密切相关。</li>
+      <li><strong>与儿童青少年精神医学／社会学习理论：</strong>父母管理培训是教材明确的"一线"，其理论基础为社会学习理论；这是跨到心理学与家庭治疗的直接接口。</li>
+      <li><strong>与司法精神病学：</strong>CD 的本质包含"违法"，是本章与法律联系最直接的单位之一；教材未展开刑事责任能力评定标准。</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===== 13 去社会品行障碍 ===== -->
+<section id="u9">
+  <div class="sec-head"><div class="badge">13</div><h2>去社会品行障碍<span class="en">Conduct-Dissocial Disorder · 第二节（p.204–205）</span></h2></div>
+  <p class="sec-lead">ICD-11 的类别，核心特征与 DSM-5 的 CD 基本相同，但多了两个"标签"：起病年龄（10 岁前／后）与亲社会情感（受限／正常）。记住"1 年、4 核心、10 岁、两类人"。</p>
+
+  <!-- 第一栏 -->
+  <div class="card red" id="u9-1">
+    <h3 class="col-title"><span class="idx">第一栏</span>疾病画像</h3>
+    <div class="quote"><span class="lab">教材原文</span>去社会品行障碍（conduct-dissocial disorder）是一种反复而持续的侵犯他人基本权益或是违反主要的适龄社会规范、规则或法律的行为模式。行为模式的严重程度足以导致个人、家庭、社交、学业、职业或其他重要功能领域的严重损害。行为模式至少持续1年，部分会迁延为成年后的反社会人格障碍。</div>
+    <p><strong>一句话画像：</strong>不是"一次犯错"，而是一年以上的持续侵权或违法模式；它像一条已经铺好的轨道，把少年一路推向成年后的反社会人格。<span class="note">（类比理解式概括，非教材原文）</span></p>
+    <div class="grid4">
+      <div class="mini"><h4>① 攻击</h4><p>攻击人或动物，如欺凌恐吓、挑起肢体冲突、残忍伤害、暴力盗窃、强迫性行为。</p></div>
+      <div class="mini"><h4>② 破坏</h4><p>蓄意纵火意图造成严重损害、蓄意破坏他人财物。</p></div>
+      <div class="mini"><h4>③ 欺诈盗窃</h4><p>盗窃贵重物品、撒谎获利或逃避责任、强行闯入房屋建筑车辆。</p></div>
+      <div class="mini"><h4>④ 严重违规</h4><p>不顾父母禁止反复在外过夜、反复离家出走、经常逃课或旷工。</p></div>
+    </div>
+    <div class="stat">
+      <span>ICD-11 6C91</span>
+      <span>行为模式至少持续 1 年</span>
+      <span>儿童期起病：10 岁前</span>
+      <span>青少年期起病：10 岁前无特征</span>
+      <span>可按亲社会情感标注</span>
+    </div>
+    <p class="note">教材未给出患病率、性别比或独立的病因数据；这些空白不能用 CD 的数字直接替代并写成"去社会品行障碍的患病率"。</p>
+  </div>
+
+  <!-- 第二栏 -->
+  <div class="card blue" id="u9-2">
+    <h3 class="col-title"><span class="idx">第二栏</span>病因探秘</h3>
+    <div class="callout book">
+      <span class="ct">📖 教材在本病未单列病因与发病机制</span>
+      教材对去社会品行障碍只写定义、核心特征、分型、诊断与治疗，没有单独给出遗传、神经生化或家庭因素。以下内容取自<strong>同一节上一小节"品行障碍"</strong>，因为教材明确说去社会品行障碍"核心特征描述基本与 DSM-5 中的品行障碍相同"。
+    </div>
+    <div class="grid2">
+      <div class="mini">
+        <h4>遗传与家庭（引自 CD 段）</h4>
+        <p>反社会行为或物质滥用家族史；父母犯罪和物质滥用、养育方式粗暴、言行不一、经常吵架和暴力冲突、虐待儿童。</p>
+      </div>
+      <div class="mini">
+        <h4>心理社会（引自 CD 段）</h4>
+        <p>社会经济水平低、过早失去父母、在学校不顺利或被霸凌、被社会孤立、经历社会暴力。</p>
+      </div>
+      <div class="mini">
+        <h4>神经生物学（引自 CD 段）</h4>
+        <p>额颞叶及边缘系统异常；脑脊液 5-HT 降低；自主神经功能失调（基础心率、皮肤电传导及皮电活动降低）；HPA 轴失调（多数研究支持皮质醇水平低）。</p>
+      </div>
+      <div class="mini">
+        <h4>教材在本病补充的家庭线索</h4>
+        <p>童年起病者通常来自具有<strong>长久反社会行为历史的家庭</strong>或<strong>父母教养方式不一致的家庭</strong>，很难获得正确的社会技巧和内化规范的社会行为规则，容易在学习上以及和同伴交往上存在困难。</p>
+      </div>
+    </div>
+    <div class="callout warn"><span class="ct">⚠️ 引用要标注来源</span>上述前三条来自教材 CD 段，不是教材为去社会品行障碍单独写的病因。答题时若问"去社会品行障碍的病因"，应说明教材未单列，可参照同节的品行障碍；不要把 CD 的患病率一并搬过来。</div>
+  </div>
+
+  <!-- 第三栏 -->
+  <div class="card red" id="u9-3">
+    <h3 class="col-title"><span class="idx">第三栏</span>临床表现拼图</h3>
+    <p><strong>先看四组核心特征，再看两个分型标签。</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>核心特征</th><th>教材给出的具体表现</th></tr></thead>
+        <tbody>
+          <tr><td>① 攻击人或动物</td><td>欺凌或恐吓他人、挑起肢体冲突、残忍伤害他人或动物、暴力盗窃行为或强迫发生性行为</td></tr>
+          <tr><td>② 破坏财产</td><td>蓄意纵火意图造成严重损害、蓄意破坏他人财物</td></tr>
+          <tr><td>③ 欺诈或盗窃</td><td>盗窃贵重物品，撒谎以获得物品或好处或逃避责任，强行闯入他人房屋、建筑或车辆中</td></tr>
+          <tr><td>④ 严重违反规则</td><td>不顾父母禁止而反复在外过夜、反复离家出走、经常逃课或旷工</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="grid2">
+      <div class="mini">
+        <h4>标签一 · 起病年龄</h4>
+        <ul>
+          <li><strong>儿童期起病：</strong>必须在青春期之前的童年时期（<strong>10 岁之前</strong>）起病。</li>
+          <li><strong>青少年期起病：</strong>在青春期之前的童年时期（<strong>10 岁之前</strong>）不存在去社会品行障碍的特征。</li>
+        </ul>
+      </div>
+      <div class="mini">
+        <h4>标签二 · 亲社会情感</h4>
+        <ul>
+          <li><strong>亲社会情感受限：</strong>常表现出"冷酷无情"特质（具体参见 ODD 单元：缺乏共情、对他人痛苦缺乏关心、缺乏悔过羞耻自责、对惩罚漠不关心、对表现不佳缺乏关心、情感表达受限）。</li>
+          <li><strong>亲社会情感正常：</strong>没有"冷酷无情"特质。</li>
+        </ul>
+      </div>
+    </div>
+    <p><strong>两种起病类型的对照（教材原文要点）：</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>对比点</th><th>童年期起病</th><th>青少年期起病</th></tr></thead>
+        <tbody>
+          <tr><td>起病时间</td><td>10 岁之前</td><td>10 岁之前不存在特征</td></tr>
+          <tr><td>品行问题程度</td><td>出现早，程度相对较重</td><td>更多局限于青少年期，程度相对较轻</td></tr>
+          <tr><td>成年后风险</td><td>发展为成人期反社会行为、暴力和犯罪的可能性更高</td><td>成年期出现犯罪行为的可能更小</td></tr>
+          <tr><td>家庭背景</td><td>通常来自有长久反社会行为历史的家庭或父母教养方式不一致的家庭；很难获得正确社会技巧、内化规范的社会行为规则；容易在学习与同伴交往上存在困难</td><td>受环境因素影响较大；去社会程度相对较轻，气质缺陷相对较轻，仅存在少量攻击和暴力行为</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- 第四栏 -->
+  <div class="card orange" id="u9-4">
+    <h3 class="col-title"><span class="idx">第四栏</span>教材典型案例</h3>
+    <div class="callout book">
+      <span class="ct">📖 教材未提供具体临床案例</span>
+      教材在本节没有患者个案、家庭史、学校记录或司法材料。本栏不虚构案例，只整理教材的诊断采集与操作顺序。
+    </div>
+    <p><strong>诊断采集（教材原文）：</strong>需要从患者父母及其他家庭成员、老师、同伴等多方详细了解患者生长发育史、行为表现等。</p>
+    <p><strong>由教材整理的诊断路径：</strong></p>
+    <ol>
+      <li><strong>行为模式：</strong>是否符合去社会品行障碍的临床特征——反复而持续的侵犯他人基本权益，或违反主要的适龄社会规范、规则或法律；至少具备 1 项核心特征。</li>
+      <li><strong>病程：</strong>行为模式是否<strong>至少持续 1 年</strong>。</li>
+      <li><strong>损害：</strong>严重程度是否足以导致个人、家庭、社交、学业、职业或其他重要功能领域的严重损害。</li>
+      <li><strong>排除：</strong>品行问题是否由心理发育障碍、其他精神障碍或神经系统疾病所致。</li>
+      <li><strong>分型：</strong>按起病年龄标注儿童期／青少年期；按亲社会情感标注受限／正常。</li>
+    </ol>
+    <p class="note">教材说明：具体可参照 ICD-11 中的核心（必要）特征；教材未在本章抄录完整诊断标准。</p>
+  </div>
+
+  <!-- 第五栏 -->
+  <div class="card orange" id="u9-5">
+    <h3 class="col-title"><span class="idx">第五栏</span>鉴别诊断对对碰</h3>
+    <p><strong>表 1　去社会品行障碍的纵向与横向鉴别</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>易混诊断</th><th>教材给出的鉴别点</th><th>一句话抓手</th></tr></thead>
+        <tbody>
+          <tr><td>品行障碍（CD）</td><td>CD 为 ICD-10 F91，病程 6 个月以上；去社会品行障碍为 ICD-11 6C91，类似 ICD-10 未社会化品行障碍，病程至少 1 年。DSM-5 只有 CD。两者核心特征基本相同</td><td>6 个月 / ICD-10 → CD；1 年 / ICD-11 → 去社会</td></tr>
+          <tr><td>ODD</td><td>ODD 有情绪失调但无侵权；有偷窃、施虐、霸道、攻击、破坏性任一项即排除 ODD。去社会品行障碍的核心是持续侵权与严重违规</td><td>无侵权 → ODD；有侵权 → 去社会/CD</td></tr>
+          <tr><td>间歇性暴怒障碍（IED）</td><td>IED 的攻击暴发短暂、不成比例、非预谋、没有获益；去社会品行障碍的攻击往往有预谋和获益性，且有更广泛的去社会特征（违反规则、撒谎、盗窃）</td><td>阵发爆炸 → IED；有预谋获益 + 广泛违规 → 去社会</td></tr>
+          <tr><td>反社会型人格障碍</td><td>教材写去社会品行障碍"部分会迁延为成年后的反社会人格障碍"，即时间上的延续关系；未给出两者并存的鉴别条目</td><td>未成年期的持续侵权模式 → 去社会；成年后的持久人格模式 → 反社会型人格</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p><strong>表 2　两种起病类型的鉴别（同一诊断内部）</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>维度</th><th>儿童期起病</th><th>青少年期起病</th></tr></thead>
+        <tbody>
+          <tr><td>10 岁前是否有特征</td><td>必须有（10 岁前起病）</td><td>必须没有</td></tr>
+          <tr><td>严重度</td><td>相对较重</td><td>相对较轻</td></tr>
+          <tr><td>环境因素权重</td><td>家庭反社会史与教养不一致突出</td><td>受环境因素影响较大</td></tr>
+          <tr><td>成年犯罪风险</td><td>更高</td><td>更小</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout key"><span class="ct">📌 一句话鉴别总结</span>去社会品行障碍的鉴别有两层：<strong>对外</strong>用"1 年 + 4 核心 + 有预谋获益"与 ODD、IED 分开；<strong>对内</strong>用"10 岁前有没有特征"分成儿童期型与青少年期型。</div>
+  </div>
+
+  <!-- 第六栏 -->
+  <div class="card green" id="u9-6">
+    <h3 class="col-title"><span class="idx">第六栏</span>治疗方案工具箱</h3>
+    <div class="quote"><span class="lab">教材原文</span>去社会品行障碍的治疗常采取针对个体、父母或基于家庭的以心理社会干预为主的综合性个体化治疗方案。有时需要联合精神药物治疗。综合性个体化治疗可能对年龄大的去社会儿童和青少年更有效。</div>
+    <p><strong>教材按人群给出的三套策略：</strong></p>
+    <div class="grid3">
+      <div class="mini">
+        <h4>① 处于青春期者</h4>
+        <p>干预方案集中在<strong>提高其认同感</strong>，加强其与<strong>良好品行同伴</strong>的联系。</p>
+      </div>
+      <div class="mini">
+        <h4>② 情绪和行为管理失调者</h4>
+        <p>进行<strong>愤怒控制</strong>，或<strong>减少苛刻、无效的教养方式</strong>更有效。</p>
+      </div>
+      <div class="mini">
+        <h4>③ 冷酷无情特质者</h4>
+        <p>进行<strong>积极的亲子情感联结</strong>、<strong>积极强化其亲社会行为</strong>可能更有效。</p>
+      </div>
+    </div>
+    <div class="callout key">
+      <span class="ct">📌 治疗的两个关键词</span>
+      ① <strong>综合性个体化</strong>：不是一套方案包打所有人，而是按年龄、情绪管理能力、亲社会情感分型。<br>
+      ② <strong>年龄大的更有效</strong>：教材明确"综合性个体化治疗可能对年龄大的去社会儿童和青少年更有效"，这与"越早干预越好"的直觉形成对照，答题时要按教材写。
+    </div>
+    <p class="note">教材未给出具体心理治疗流派、次数、药物名称、剂量或疗程；只写"有时需要联合精神药物治疗"。</p>
+  </div>
+
+  <!-- 第七栏 -->
+  <div class="card purple" id="u9-7">
+    <h3 class="col-title"><span class="idx">第七栏</span>记忆工具箱</h3>
+    <div class="callout tip">
+      <span class="ct">🔧 方法一：数字编码法（"1—4—10—2"）</span>
+      记 <strong>"1—4—10—2"</strong>：病程至少 <strong>1 年</strong>；<strong>4</strong> 组核心特征（攻击、破坏、欺诈盗窃、严重违规）；儿童期起病界限 <strong>10 岁</strong>；<strong>2</strong> 种起病类型（儿童期／青少年期），另加 2 种亲社会情感标注。<br>
+      <em>为什么这样记：</em>四个数字覆盖定义、表现、分型三大块；尤其"1 年"是全章最长的病程阈值，和 CD 的 6 个月形成对照。
+    </div>
+    <div class="callout tip">
+      <span class="ct">🔧 方法二：对比记忆法（CD vs 去社会）</span>
+      只记三行：<br>
+      <strong>CD：</strong>ICD-10 F91／6 个月／DSM-5 有。<br>
+      <strong>去社会：</strong>ICD-11 6C91／1 年／DSM-5 无。<br>
+      再补一句："核心特征基本相同，去社会多了起病年龄与亲社会情感两个标签。"<br>
+      <em>为什么这样记：</em>两病内容高度重叠，死背两套定义容易串；用三行差异表反而更清楚。
+    </div>
+    <div class="callout tip">
+      <span class="ct">🔧 方法三：人群策略法（治疗）</span>
+      记 <strong>"青春期提认同、失调者控愤怒、冷酷者连情感"</strong>。<br>
+      <em>为什么这样记：</em>三句对应教材三类人群的三套策略，且每句都押住一个关键词（认同／愤怒／情感），比背整段原文更高效。
+    </div>
+    <div class="callout key"><span class="ct">📌 一句话总记</span>去社会品行障碍＝<strong>ICD-11、1 年、4 核心、10 岁分型、亲社会情感标注</strong>；治疗＝<strong>综合个体化、按人群分策略、年龄大的可能更有效</strong>。</div>
+  </div>
+
+  <!-- 第八栏 -->
+  <div class="card cyan" id="u9-8">
+    <h3 class="col-title"><span class="idx">第八栏</span>知识联动</h3>
+    <ul>
+      <li><strong>与品行障碍单元：</strong>去社会品行障碍类似 ICD-10 未社会化品行障碍，核心特征与 DSM-5 的 CD 基本相同；主要差别在分类系统与病程（1 年 vs 6 个月）。</li>
+      <li><strong>与 ODD 单元：</strong>ODD 的情绪失调与"亲社会情感受限"标注相连；去社会品行障碍同样可按亲社会情感标注，"冷酷无情"特质的定义参见 ODD。</li>
+      <li><strong>与人格障碍章：</strong>部分去社会品行障碍会迁延为成年后的反社会人格障碍；这是本章与人格障碍章最直接的时间线联系。</li>
+      <li><strong>与司法精神病学：</strong>持续侵权或违法的行为模式与法律直接相关；教材未展开刑事责任能力评定，不能自行补写。</li>
+      <li><strong>与儿童青少年精神医学：</strong>起病年龄分型提示"10 岁前起病"是预后与干预强度的重要分水岭。</li>
+      <li><strong>与家庭治疗：</strong>治疗以个体、父母或基于家庭的心理社会干预为主；对冷酷无情特质者尤其强调积极的亲子情感联结。</li>
+    </ul>
+  </div>
+</section>
+<!-- ===== 14 核心要点 ===== -->
+<section id="summary">
+  <div class="sec-head"><div class="badge">14</div><h2>全章核心要点速览<span class="en">20 key points</span></h2></div>
+  <p class="sec-lead">考前最后一遍只看这里。每条都能独立成题，建议逐条自问"教材原话是什么"。</p>
+  <div class="card blue">
+    <div class="grid2">
+      <ol>
+        <li>本章对应 ICD-11 第六章的两节：冲动控制障碍、破坏性行为或去社会障碍；DSM-5 表述为"破坏性、冲动控制及品行障碍"。常造成法律困境，涉及司法鉴定与刑事责任能力认定。</li>
+        <li>冲动控制障碍的核心：反复、无法控制地实施某种行为的冲动；行为至少在短期内对个人有益，长期对个人及他人有害，或造成重要功能领域明显损害。</li>
+        <li>第一节 4 型：纵火狂、偷窃狂、强迫性性行为障碍、间歇性暴怒障碍。</li>
+        <li>ICD-10"习惯与冲动障碍"包括病理性赌博、纵火狂、偷窃狂、拔发狂；ICD-11 中病理性赌博归入"成瘾行为所致障碍"的赌博障碍，拔发狂归入"以身体为中心的重复行为障碍"的拔毛癖。</li>
+        <li>纵火狂：没有明确动机；对燃火强烈迷恋；纵火前紧张增强、纵火后兴奋释放；只求心理满足。3.3% 的分母是"反复纵火、达到犯罪程度的人群样本"，人群患病率尚不清楚。</li>
+        <li>纵火狂六组排除：无精神障碍的故意纵火、品行障碍青少年、人格障碍成人、精神分裂症（妄想／命令性幻听）、器质性精神障碍、痴呆／意识障碍／醉酒／药物中毒。治疗无特效，SSRIs、心境稳定剂可尝试；成人动机差，重在儿童期预防。</li>
+        <li>偷窃狂：普通人群 0.3%～0.6%，被捕商店行窃者 4%～24%，女性多于男性 3∶1；"三不"——不值钱、不需要、买得起；常单独行动，紧张—释放，知道错但抵抗失败。</li>
+        <li>偷窃狂药物：SSRIs、锂盐、丙戊酸盐、纳曲酮等<strong>主要用于合并的精神心理障碍的治疗</strong>；与纵火狂"可尝试用于本病"的表述不同。</li>
+        <li>CSBD：男女之比 4∶1，80% 合并酗酒、赌博等行为问题，模式通常持续 6 个月或更长；诊断支点为生活中心化、反复失败、显著痛苦／功能损害。</li>
+        <li>CSBD 治疗按病因分层：查内分泌—健康减压—修复伴侣关系—戒网瘾—治疗焦虑强迫等共病；康复不是禁欲，而是重拾健康性行为。</li>
+      </ol>
+      <ol start="11">
+        <li>IED：美国终生患病率 7%、年患病率约 2.7%（狭义）；男性高于女性（OR 1.4～2.3）；单次暴发通常不足 30 分钟；持续攻击模式超过 3 个月；暴发不成比例、非预谋、无获益。</li>
+        <li>IED 六组鉴别：ODD、DMDD（6～18 岁，不能共存）、去社会品行障碍（有预谋和获益）、反社会型／边缘型人格障碍（冲动攻击水平更低）、ADHD（冲动持续且跨情境）、适应障碍（6～18 岁背景下不诊断 IED）。</li>
+        <li>IED 治疗：早发现、早干预、防止恶化；心理干预 + 药物；抗惊厥药与抗抑郁药中，奥卡西平和氟西汀有循证证据显示有效。</li>
+        <li>第二节核心：持续的行为问题，从显著而持续的对立、违抗、挑衅或恶意，到持续侵犯他人基本权益或违反适龄社会规范、规则或法律；必须明显偏离同龄同文化正常范围；多起病于儿童期，可持续至成年。</li>
+        <li>ODD：ICD-10 F91.3、ICD-11 6C90、DSM-5 313.81；患病率 1%～11%、平均约 3.3%，我国五省（市）6～16 岁在校学生 3.6%；病程 6 个月以上；三组表现——争辩对抗、消极愤怒易激惹、报复。</li>
+        <li>ODD 两套标注：伴／不伴慢性易激惹／愤怒；再按亲社会情感标注为受限（冷酷无情特质）或正常。正常对立违抗每月几次或每周 1～2 次，ODD 可达每周 5～7 次或每天。</li>
+        <li>ODD 治疗：家庭、学校、社区共同参与的心理家庭社会干预为主；家庭治疗、行为治疗（阳性强化、消退、游戏疗法）、认知治疗；药物仅用于共病——ADHD 用哌甲酯／托莫西汀，抑郁焦虑用抗抑郁／抗焦虑药，攻击行为可用小剂量抗精神病药，锂盐对冲动攻击有效，丙戊酸盐对青少年暴怒和情绪不稳定有效。</li>
+        <li>ODD 预后：发病越早预后越差；早发者最终发展为 CD 的风险高 3 倍；随年龄增长共病 ADHD、焦虑、抑郁、物质使用障碍增多。</li>
+        <li>CD：ICD-10 F91；全球患病率 2%～2.5%，男 3%～4%、女 1%～2%，学龄儿童不到 3%；本质是主观故意的恶意违规、违纪、违法，缺乏内省自责；五组表现——攻击、破坏、欺诈或盗窃、严重违反规则、共病其他精神障碍；病程 6 个月以上；约半数成年期有违法犯罪行为或反社会型人格障碍。治疗一线为基于社会学习理论的父母管理培训，7 岁以上可做认知行为技能训练，青少年加多系统干预，有时联合药物；预后四因素为病情严重程度、发病年龄、行为类型、家庭环境。</li>
+        <li>去社会品行障碍：ICD-11 6C91，类似 ICD-10 未社会化品行障碍；4 组核心特征（攻击、破坏财产、欺诈或盗窃、严重违反规则）；病程至少 1 年；儿童期起病须在 10 岁前，青少年期起病者 10 岁前无特征；童年型更重、成年犯罪风险更高；治疗按人群分策略，年龄大的可能更有效。</li>
+      </ol>
+    </div>
+    <div class="callout warn"><span class="ct">⚠️ 全章剂量与疗程</span>教材在本章<strong>未给出任何具体药物剂量、疗程或血药浓度</strong>。所有涉及数字的考点都是患病率、性别比、病程阈值与年龄界限，不是剂量。</div>
+  </div>
+</section>
+
+<!-- ===== 15 易混 ===== -->
+<section id="pitfalls">
+  <div class="sec-head"><div class="badge">15</div><h2>易混易错点警示<span class="en">Common traps</span></h2></div>
+  <p class="sec-lead">这些点不是"没背到"，而是"背反了"。逐条核对你的第一反应。</p>
+  <div class="card danger">
+    <details open>
+      <summary>① 纵火狂 ≠ 任何纵火</summary>
+      <div class="dbody">纵火狂的钥匙是"<strong>没有明确动机</strong>"。有金钱、报复、宣泄愤怒或复仇、表达社会政治观点、隐瞒犯罪等动机的故意纵火，不是纵火狂；品行障碍青少年、人格障碍成人、精神分裂症（妄想／命令性幻听）、器质性精神障碍、痴呆／意识障碍／醉酒／药物中毒导致的纵火，也都不诊断纵火狂。</div>
+    </details>
+    <details>
+      <summary>② 3.3% 不是人群患病率</summary>
+      <div class="dbody">教材原文：在"反复纵火、达到犯罪程度的人群样本"中，只有 3.3% 符合纵火狂的诊断标准。纵火狂<strong>人群患病率尚不清楚</strong>。把 3.3% 写成"患病率 3.3%"是最常见的数字陷阱。</div>
+    </details>
+    <details>
+      <summary>③ 偷窃狂的药物"主要用于共病"，不是治疗偷窃狂本身</summary>
+      <div class="dbody">教材对偷窃狂的原文是：SSRIs、锂盐、丙戊酸盐、纳曲酮等"<strong>主要用于偷窃狂合并的精神心理障碍的治疗</strong>"。纵火狂才是"可尝试用于纵火狂的治疗以及合并精神心理障碍的治疗"。两句互换即错。</div>
+    </details>
+    <details>
+      <summary>④ 四个病程数字最容易串</summary>
+      <div class="dbody">CSBD 通常 <strong>6 个月或更长</strong>；IED 持续攻击模式<strong>超过 3 个月</strong>、单次暴发通常<strong>不足 30 分钟</strong>；ODD 与 CD 均<strong>6 个月以上</strong>；去社会品行障碍<strong>至少 1 年</strong>。答题时先问"问的是哪个病"，再写数字。</div>
+    </details>
+    <details>
+      <summary>⑤ ODD 与 DMDD 不是"可以共存"，而是 DMDD 优先</summary>
+      <div class="dbody">教材明确：当心境紊乱严重到符合 DMDD 诊断标准时，<strong>即使同时符合 ODD 的全部诊断标准，也只能诊断 DMDD</strong>，两者诊断不能共存。IED 与 DMDD 在教材的 IED 鉴别中同样写明不能共存。</div>
+    </details>
+    <details>
+      <summary>⑥ 有侵权，就不是 ODD</summary>
+      <div class="dbody">教材原文列出：偷窃、施虐、霸道、攻击和破坏性，<strong>肯定存在上述任何一项即可排除 ODD 的诊断</strong>。ODD 可有情绪失调，但不能有冒犯法律和他人权利的行为。若 ODD 见于其他类型 CD，应优先诊断其他类型 CD。</div>
+    </details>
+    <details>
+      <summary>⑦ 正常对立违抗的频度别记反</summary>
+      <div class="dbody">正常对立违抗行为<strong>每月发生几次或每周 1～2 次</strong>，心理社会功能影响不大；ODD 可达<strong>每周 5～7 次或每天发生</strong>，严重损害功能。不要把它记成"每周 5～7 次才算正常"。</div>
+    </details>
+    <details>
+      <summary>⑧ 去社会品行障碍的 10 岁分型别记反</summary>
+      <div class="dbody">儿童期起病者<strong>必须在 10 岁之前</strong>起病；青少年期起病者<strong>在 10 岁之前不存在</strong>去社会品行障碍的特征。两者不是"10 岁前后都可以"，而是互斥的起病窗口。</div>
+    </details>
+    <details>
+      <summary>⑨ CSBD 不是"性欲强"，治疗也不是"禁欲"</summary>
+      <div class="dbody">教材要求诊断时充分考虑与正常状态（较大的个体差异）的鉴别；关键在生活中心化、反复失败、显著痛苦／功能损害，而不是频率。治疗目标原文是：康复<strong>并不是禁欲</strong>，而是让其<strong>重拾健康的性行为</strong>。</div>
+    </details>
+    <details>
+      <summary>⑩ 全章没有剂量与疗程，不要从别处移植</summary>
+      <div class="dbody">教材本章只点药名与类别（SSRIs、心境稳定剂、锂盐、丙戊酸盐、纳曲酮、哌甲酯、托莫西汀、奥卡西平、氟西汀等），<strong>未给任何剂量、疗程、血药浓度</strong>。凡题目问剂量，正确应对是"教材未涉及"。</div>
+    </details>
+  </div>
+</section>
+
+<!-- ===== 16 自测 ===== -->
+<section id="quiz">
+  <div class="sec-head"><div class="badge">16</div><h2>章节自测系统<span class="en">14 questions · 6 types</span></h2></div>
+  <p class="sec-lead">覆盖单选、多选、判断、名词解释、简答、案例分析六种题型，按易→中→难排列。先作答，再展开解析。</p>
+
+  <div class="quiz-q">
+    <div class="qh"><span class="qno">第 1 题</span><span class="qtype">单选题</span><span class="diff">易</span></div>
+    <p class="brief">下列哪一项是教材对冲动控制障碍共同特征的描述？</p>
+    <div class="opts">
+      <div class="opt"><span class="l">A.</span>反复、无法控制地实施某种行为的冲动，短期对个人有益而长期有害</div>
+      <div class="opt"><span class="l">B.</span>所有患者都有明确的获利动机</div>
+      <div class="opt"><span class="l">C.</span>均起病于成年早期</div>
+      <div class="opt"><span class="l">D.</span>均缺乏内省自责</div>
+    </div>
+    <details><summary>查看答案与解析</summary><div class="dbody"><strong>答案：A</strong><br>教材定义：反复、无法控制地实施某种行为的冲动；行为至少在短期内对个人有益，但长期对个人及他人均有损害或明显困扰，或造成重要功能领域明显损害。B 错：纵火狂、偷窃狂明确"没有明显动机"；C 错：本章多起病于儿童青少年期；D 错：偷窃狂能意识到错误并内疚，IED 事后也常后悔，缺乏内省自责是 CD 的本质。</div></details>
+  </div>
+
+  <div class="quiz-q">
+    <div class="qh"><span class="qno">第 2 题</span><span class="qtype">单选题</span><span class="diff">易</span></div>
+    <p class="brief">纵火狂的核心特征中，教材反复强调的是下列哪一项？</p>
+    <div class="opts">
+      <div class="opt"><span class="l">A.</span>为获得保险赔偿而纵火</div>
+      <div class="opt"><span class="l">B.</span>在没有明确动机的情况下反复纵火</div>
+      <div class="opt"><span class="l">C.</span>受命令性幻听驱使而纵火</div>
+      <div class="opt"><span class="l">D.</span>醉酒后意识模糊时意外纵火</div>
+    </div>
+    <details><summary>查看答案与解析</summary><div class="dbody"><strong>答案：B</strong><br>纵火狂的定义与诊断要点第一条都是"没有明确动机"。A 是有获利动机的故意纵火；C 是精神分裂症的表现；D 是中毒／意识障碍导致的非故意纵火。三者都属于教材列出的"不应诊断纵火狂"的情形。</div></details>
+  </div>
+
+  <div class="quiz-q">
+    <div class="qh"><span class="qno">第 3 题</span><span class="qtype">单选题</span><span class="diff">中</span></div>
+    <p class="brief">教材所述偷窃狂的性别比例是？</p>
+    <div class="opts">
+      <div class="opt"><span class="l">A.</span>男性多于女性，3∶1</div>
+      <div class="opt"><span class="l">B.</span>女性多于男性，3∶1</div>
+      <div class="opt"><span class="l">C.</span>男女之比 4∶1</div>
+      <div class="opt"><span class="l">D.</span>男女比例接近 1∶1</div>
+    </div>
+    <details><summary>查看答案与解析</summary><div class="dbody"><strong>答案：B</strong><br>教材原文：偷窃狂中女性多于男性，比例为 3∶1。C 的 4∶1 是 CSBD 的男女之比，不要混。纵火狂"通常见于男性"，IED 男性患病率高于女性（OR 1.4～2.3）。</div></details>
+  </div>
+
+  <div class="quiz-q">
+    <div class="qh"><span class="qno">第 4 题</span><span class="qtype">单选题</span><span class="diff">中</span></div>
+    <p class="brief">间歇性暴怒障碍的一次攻击行为暴发，持续时间通常为？</p>
+    <div class="opts">
+      <div class="opt"><span class="l">A.</span>少于 30 分钟</div>
+      <div class="opt"><span class="l">B.</span>3 小时以上</div>
+      <div class="opt"><span class="l">C.</span>持续 1 天以上</div>
+      <div class="opt"><span class="l">D.</span>持续 3 个月以上</div>
+    </div>
+    <details><summary>查看答案与解析</summary><div class="dbody"><strong>答案：A</strong><br>教材原文：攻击行为暴发持续时间通常少于 30 分钟，多以个体表达悔意或缴纳保释金来收场。D 的"3 个月"是教材 IED 诊断要点中的"超过 3 个月的持续攻击行为模式"，不是单次暴发时长。</div></details>
+  </div>
+
+  <div class="quiz-q">
+    <div class="qh"><span class="qno">第 5 题</span><span class="qtype">多选题</span><span class="diff">中</span></div>
+    <p class="brief">下列哪些情况，教材明确"不应诊断为纵火狂"？</p>
+    <div class="opts">
+      <div class="opt"><span class="l">A.</span>无精神障碍表现、有明确纵火动机的故意纵火</div>
+      <div class="opt"><span class="l">B.</span>有品行障碍的青少年纵火，同时伴偷窃、攻击或逃学</div>
+      <div class="opt"><span class="l">C.</span>精神分裂症患者对妄想或命令性幻听的反应性纵火</div>
+      <div class="opt"><span class="l">D.</span>无明确动机、迷恋燃火、纵火前紧张后兴奋的反复纵火</div>
+    </div>
+    <details><summary>查看答案与解析</summary><div class="dbody"><strong>答案：ABC</strong><br>A、B、C 分别对应教材列出的"无精神障碍的故意纵火""有品行障碍的青少年纵火""精神分裂症患者纵火"。D 恰恰是纵火狂的典型表现，不是排除项。教材还列出人格障碍成人、器质性精神障碍、痴呆／意识障碍／醉酒／药物中毒等排除情形。</div></details>
+  </div>
+
+  <div class="quiz-q">
+    <div class="qh"><span class="qno">第 6 题</span><span class="qtype">多选题</span><span class="diff">难</span></div>
+    <p class="brief">关于间歇性暴怒障碍，下列哪些说法符合教材？</p>
+    <div class="opts">
+      <div class="opt"><span class="l">A.</span>美国人群终生患病率高达 7%，年患病率约 2.7%（狭义）</div>
+      <div class="opt"><span class="l">B.</span>攻击行为暴发持续时间通常少于 30 分钟</div>
+      <div class="opt"><span class="l">C.</span>诊断要求超过 3 个月的持续攻击行为模式</div>
+      <div class="opt"><span class="l">D.</span>有循证医学证据显示奥卡西平和氟西汀有效</div>
+    </div>
+    <details><summary>查看答案与解析</summary><div class="dbody"><strong>答案：ABCD</strong><br>四项均可在教材原文找到对应：7%／2.7% 为美国数据；暴发通常少于 30 分钟；诊断要点含"超过 3 个月的持续攻击行为模式"；治疗段写明"有循证医学证据显示奥卡西平和氟西汀有效"。注意教材未给这两个药的具体剂量。</div></details>
+  </div>
+
+  <div class="quiz-q">
+    <div class="qh"><span class="qno">第 7 题</span><span class="qtype">判断题</span><span class="diff">易</span></div>
+    <p class="brief">偷窃狂所偷物品多为价值较高、自己确实需要的物品。</p>
+    <div class="opts">
+      <div class="opt"><span class="l">A.</span>正确</div>
+      <div class="opt"><span class="l">B.</span>错误</div>
+    </div>
+    <details><summary>查看答案与解析</summary><div class="dbody"><strong>答案：B（错误）</strong><br>教材原文：所偷物品常为日常生活用品，并不值钱，自身也不需要，个体完全有能力支付；通常所偷并非钱财。这正是偷窃狂与有获利动机的商店行窃的关键差别。</div></details>
+  </div>
+
+  <div class="quiz-q">
+    <div class="qh"><span class="qno">第 8 题</span><span class="qtype">判断题</span><span class="diff">中</span></div>
+    <p class="brief">ODD 与破坏性心境失调障碍（DMDD）的诊断不能共存；符合 DMDD 时，即使符合全部 ODD 标准也只诊断 DMDD。</p>
+    <div class="opts">
+      <div class="opt"><span class="l">A.</span>正确</div>
+      <div class="opt"><span class="l">B.</span>错误</div>
+    </div>
+    <details><summary>查看答案与解析</summary><div class="dbody"><strong>答案：A（正确）</strong><br>教材原文：当心境紊乱严重到符合 DMDD 诊断标准时，即使同时符合 ODD 的全部诊断标准，也只能诊断为 DMDD，两者的诊断不能共存。这条规则在 IED 的鉴别中也出现：DMDD 与 IED 不能共存。</div></details>
+  </div>
+
+  <div class="quiz-q">
+    <div class="qh"><span class="qno">第 9 题</span><span class="qtype">判断题</span><span class="diff">难</span></div>
+    <p class="brief">去社会品行障碍的青少年期起病者，要求在 10 岁之前不存在该障碍的特征。</p>
+    <div class="opts">
+      <div class="opt"><span class="l">A.</span>正确</div>
+      <div class="opt"><span class="l">B.</span>错误</div>
+    </div>
+    <details><summary>查看答案与解析</summary><div class="dbody"><strong>答案：A（正确）</strong><br>教材原文：童年期起病者必须在青春期之前的童年时期（10 岁之前）起病；青少年期起病者在青春期之前的童年时期（10 岁之前）不存在去社会品行障碍的特征。两者是互斥的起病窗口。</div></details>
+  </div>
+
+  <div class="quiz-q">
+    <div class="qh"><span class="qno">第 10 题</span><span class="qtype">名词解释</span><span class="diff">中</span></div>
+    <p class="brief">请解释"纵火狂"。</p>
+    <details><summary>查看答案与解析</summary><div class="dbody"><strong>参考答案：</strong>纵火狂的特征是在<strong>没有明确动机</strong>的情况下，反复出现无法控制的强烈纵火冲动，导致多次纵火或企图纵火烧毁财物或其他物品。患者对燃火及相关场景存在持续的迷恋或专注；纵火前有逐渐增强的紧张感，纵火后有轻松愉悦、兴奋、释放或满足感。诊断还要求对观看燃火有强烈兴趣，且不能用智力障碍、另一种精神和行为障碍或物质中毒更好地解释。治疗无特效，以综合个体化治疗为主。</div></details>
+  </div>
+
+  <div class="quiz-q">
+    <div class="qh"><span class="qno">第 11 题</span><span class="qtype">名词解释</span><span class="diff">中</span></div>
+    <p class="brief">请解释"间歇性暴怒障碍"。</p>
+    <details><summary>查看答案与解析</summary><div class="dbody"><strong>参考答案：</strong>间歇性暴怒障碍的特征是反复出现短暂的、无法控制的言语或躯体攻击或破坏财产的冲动和行为；冲动性攻击暴发的强度或程度明显与被挑衅或诱发的心理社会应激源<strong>不成比例</strong>，足以导致个人、家庭、社会、教育、职业或其他重要功能领域的严重损害。暴发通常少于 30 分钟，非预谋、没有其他获益，事后常有疲劳、后悔、自责、内疚、羞愧或抑郁。诊断要求超过 3 个月的持续攻击行为模式，并排除其他精神障碍、躯体疾病与物质使用。</div></details>
+  </div>
+
+  <div class="quiz-q">
+    <div class="qh"><span class="qno">第 12 题</span><span class="qtype">名词解释</span><span class="diff">难</span></div>
+    <p class="brief">请解释 ODD 中的"亲社会情感受限"。</p>
+    <details><summary>查看答案与解析</summary><div class="dbody"><strong>参考答案：</strong>教材在 ODD 的亚型标注中提出"伴亲社会情感受限"与"伴亲社会情感正常"。亲社会情感受限者常表现出<strong>"冷酷无情"特质</strong>：对他人的感受缺乏共情或敏感性；对他人的痛苦缺乏关心；对自己的行为缺乏悔过、羞耻或自责；对可能的惩罚漠不关心；对学校里的或工作中的表现不佳缺乏关心；以及情感表达受限。亲社会情感正常者没有这些"冷酷无情"特质。</div></details>
+  </div>
+
+  <div class="quiz-q">
+    <div class="qh"><span class="qno">第 13 题</span><span class="qtype">简答题</span><span class="diff">难</span></div>
+    <p class="brief">简述 ODD 与品行障碍（CD）的鉴别要点。</p>
+    <details><summary>查看答案与解析</summary><div class="dbody">
+      <strong>参考答案：</strong>
+      <ol>
+        <li><strong>情绪与侵权：</strong>ODD 存在明显的情绪失调，如易激惹、愤怒，但缺乏冒犯法律和他人权利的行为；CD 的对立违抗行为更显著、更严重，并且存在攻击人或动物、破坏他人财产、说谎、盗窃和严重违反规则的行为，而<strong>没有明显情绪失调</strong>。</li>
+        <li><strong>排除规则：</strong>教材明确列出偷窃、施虐、霸道、攻击和破坏性，<strong>肯定存在上述任何一项即可排除 ODD 的诊断</strong>。</li>
+        <li><strong>共现处理：</strong>ODD 常可见于其他类型的品行障碍，此时应<strong>优先诊断为其他类型的品行障碍</strong>。</li>
+        <li><strong>共同点：</strong>两者都要求行为持续 6 个月以上，明显影响社交、学业、职业或其他重要功能，并排除心理发育障碍、其他精神障碍或神经系统疾病所致。</li>
+      </ol>
+    </div></details>
+  </div>
+
+  <div class="quiz-q">
+    <div class="qh"><span class="qno">第 14 题</span><span class="qtype">案例分析题</span><span class="diff">难</span></div>
+    <p class="brief">15 岁男生，近 8 个月几乎每天因小事与父母争吵、顶撞老师；受批评时总强调客观、责怪同学；常发脾气、摔门，但无偷窃、攻击他人、破坏他人财物、逃学或离家出走。学习成绩中等，老师反映其上课能坐住，完成作业无明显困难，也无持续一整天的易激惹或愤怒。请回答：最可能诊断、主要鉴别、处理原则。</p>
+    <details><summary>查看答案与解析</summary><div class="dbody">
+      <strong>1. 最可能诊断：</strong>对立违抗障碍（ODD）。依据：持续 8 个月（超过 6 个月）的对抗、争辩、易激惹与责怪他人；有明显情绪失调；<strong>没有任何侵权或严重违规行为</strong>；功能受影响但未达到 CD 的程度。<br>
+      <strong>2. 主要鉴别：</strong><br>
+      ① <strong>正常对立违抗行为：</strong>正常为每月几次或每周 1～2 次、功能影响不大；本例几乎每天发生，已明显高于正常频度，并持续 8 个月。<br>
+      ② <strong>CD：</strong>本例无偷窃、攻击他人、破坏财物、逃学等，暂不支持；一旦出现任一项，即排除 ODD。<br>
+      ③ <strong>DMDD：</strong>本例无持续性负性心境，情绪暴发也不符合"严重、频繁、慢性化"的 DMDD 特征。<br>
+      ④ <strong>ADHD：</strong>老师反映能坐住、作业无明显困难，暂不支持；但临床仍需评估注意与执行功能。<br>
+      <strong>3. 处理原则：</strong>治疗前充分评估；以家庭、学校和社区共同参与的心理家庭社会干预为主。家庭治疗：协调亲子关系、纠正熟视无睹或严厉惩罚、训练讨论协商与正面强化辅以轻度惩罚；行为治疗：阳性强化、消退、游戏疗法；认知治疗与行为治疗结合。精神药物<strong>仅用于共病</strong>其他精神心理障碍，且教材未给剂量。<br>
+      <span class="note">本案例为模拟临床情境，依据教材 ODD 的典型表现与诊断要点构建，不含虚构的检查数值、违法事实或教材原案例。</span>
+    </div></details>
+  </div>
+</section>
+
+<!-- ===== 17 速记卡 ===== -->
+<section id="cards">
+  <div class="sec-head"><div class="badge">17</div><h2>考点速记卡<span class="en">20 flip cards</span></h2></div>
+  <p class="sec-lead">正面是问题，点击翻面看答案。建议按"概念→诊断→治疗→数据"四轮刷，每轮只追求快速反应。</p>
+  <div class="flashcard-grid">
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag concept">概念</span><p>本章对应 ICD-11 的哪两节？DSM-5 叫什么？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">ICD-11 第六章的两节：冲动控制障碍、破坏性行为或去社会障碍。DSM-5 表述为"破坏性、冲动控制及品行障碍"。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag concept">概念</span><p>第一节的四种冲动控制障碍是？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">纵火狂、偷窃狂、强迫性性行为障碍（CSBD）、间歇性暴怒障碍（IED）。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag data">数据</span><p>纵火狂的 3.3% 是什么的分母？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">"反复纵火、达到犯罪程度的人群样本"中符合纵火狂诊断的比例。人群患病率教材写"尚不清楚"。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag diag">诊断</span><p>纵火狂的四条诊断要点？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">①反复纵火且没有任何明显动机；②对观看燃火有强烈兴趣；③纵火前不断增强的紧张感，纵火后有强烈兴奋；④不能用智力障碍、另一种精神和行为障碍或物质中毒更好地解释。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag diag">诊断</span><p>纵火狂要排除哪六类纵火？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">①无精神障碍的故意纵火（有动机）；②品行障碍青少年纵火；③人格障碍成人纵火；④精神分裂症（妄想／命令性幻听）；⑤器质性精神障碍；⑥痴呆／意识障碍／急性醉酒／慢性酒精依赖／其他药物中毒。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag data">数据</span><p>偷窃狂的三个关键数字？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">普通人群患病率 0.3%～0.6%；被捕商店行窃者中 4%～24%；女性多于男性，3∶1。起病通常从青春期开始。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag diag">诊断</span><p>偷窃狂的"三不"是什么？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">不值钱、不需要、买得起。教材原文：所偷物品常为日常生活用品，并不值钱，自身也不需要，个体完全有能力支付；通常所偷并非钱财。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag treat">治疗</span><p>偷窃狂的药物定位是什么？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">SSRIs、锂盐、丙戊酸盐、纳曲酮等"主要用于偷窃狂合并的精神心理障碍的治疗"，不是偷窃狂本身的特效治疗。教材未给剂量。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag concept">概念</span><p>CSBD 的三条诊断支点是？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">①性幻想、性冲动或性行为成为生活的中心和焦点；②减少重复性行为的努力总归失败；③引起显著痛苦或造成重要功能领域明显损害。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag data">数据</span><p>CSBD 的三个关键数字？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">男女之比 4∶1；80% 同时有酗酒、赌博等其他行为问题；性行为模式通常持续 6 个月或更长。流行病学资料匮乏，无患病率。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag treat">治疗</span><p>CSBD 的康复目标是"禁欲"吗？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">不是。教材原文：康复并不是禁欲，而是让其重拾健康的性行为。策略包括制定改变时间表、逐步减少性伴侣、延长间歇时间。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag data">数据</span><p>IED 的五个关键数字？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">美国终生患病率 7%；年患病率约 2.7%（狭义）；男性∶女性 OR 1.4～2.3；持续攻击模式超过 3 个月；单次暴发通常少于 30 分钟。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag diag">诊断</span><p>IED 的攻击暴发有哪三个"不"？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">不成比例（强度明显超过挑衅或应激源）、不预谋（非预谋）、没有获益（没有其他获益）。另要求超出年龄与发育水平的正常范围。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag treat">治疗</span><p>IED 教材点名哪两个药"有效"？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">奥卡西平（抗惊厥药）和氟西汀（抗抑郁药）。教材写"有循证医学证据显示有效"，未给剂量，也未写"首选"。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag concept">概念</span><p>第二节"破坏性行为或去社会障碍"的谱系范围？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">从显著而持续的对立、违抗、挑衅或恶意行为，到持续侵犯他人基本权益或违反适龄社会规范、规则或法律的行为。必须明显偏离同龄同文化正常范围。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag diag">诊断</span><p>ODD 的三组临床表现与两套标注？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">三组：争辩对抗、消极愤怒易激惹、报复。两套标注：伴／不伴慢性易激惹／愤怒；亲社会情感受限（冷酷无情特质）／正常。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag treat">治疗</span><p>ODD 的治疗原则与药物边界？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">家庭、学校、社区共同参与的心理家庭社会干预为主（家庭治疗、行为治疗、认知治疗）。药物仅用于共病：ADHD 用哌甲酯／托莫西汀，抑郁焦虑用抗抑郁／抗焦虑药，攻击行为用小剂量抗精神病药，锂盐、丙戊酸盐对冲动攻击或暴怒有效。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag diag">诊断</span><p>CD 的本质与五组表现？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">本质：主观故意的恶意违规、违纪、违法，缺乏内省自责，不同于冲动控制障碍与 ODD。五组：攻击行为、破坏性行为、欺诈或盗窃、严重违反规则、共病其他精神障碍。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag treat">治疗</span><p>CD 的一线治疗是什么？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">基于社会学习理论的养育行为父母管理培训（儿童早中期最经济有效，一线）。7 岁以上可直接做认知行为技能训练；青少年加多系统干预；有时联合药物。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag diag">诊断</span><p>去社会品行障碍的 4 核心、1 年、10 岁分别指什么？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">4 核心：攻击、破坏财产、欺诈或盗窃、严重违反规则。病程至少 1 年。儿童期起病须在 10 岁前；青少年期起病者 10 岁前无特征。</div>
+    </div></div>
+  </div>
+</section>
+
+<!-- ===== 18 病例挑战 ===== -->
+<section id="cases">
+  <div class="sec-head"><div class="badge">18</div><h2>病例挑战<span class="en">3 simulated cases · increasing difficulty</span></h2></div>
+  <p class="sec-lead">以下均为<strong>模拟临床情境</strong>：依据教材对该障碍的典型描述与诊断要点构建，<strong>不是教材原案例</strong>，也不含虚构的案情细节、财物数额、伤害后果或检查数值。</p>
+
+  <div class="case">
+    <span class="ctag">难度 ★ · 识别与核心特征</span>
+    <h3>案例 1：停不下来的"点火冲动"</h3>
+    <div class="scene">19 岁男性，由家人陪同就诊。近两年反复出现难以控制的强烈纵火冲动，曾数次在自家院内的空地上点燃废弃纸箱，均由自己主动扑灭。他说点火前会越来越紧张，看到火焰后会感到轻松、兴奋和满足；平时特别喜欢观看燃烧场面，会反复盯着火苗看。他否认想通过纵火得到金钱、报复他人或宣泄愤怒，也否认听到声音指使自己。家人反映他社交技能较差，学习成绩一直不好，朋友很少。</div>
+    <ol class="ques">
+      <li>最可能的诊断是什么？诊断的四条核心依据是什么？</li>
+      <li>需要与哪些情况鉴别？本例有哪些支持／不支持点？</li>
+      <li>教材对治疗与预后怎么说？</li>
+    </ol>
+    <details><summary>查看答案与解析</summary><div class="dbody">
+      <strong>1.</strong>最可能为<strong>纵火狂</strong>。四条依据：①反复纵火且没有任何明显动机；②对观看燃火有强烈兴趣；③纵火前紧张不断增强，纵火后有强烈兴奋；④不能用智力障碍、另一种精神和行为障碍或物质中毒更好地解释。本例还符合教材对人群的描述：男性、社交技能差、学习困难。<br>
+      <strong>2.</strong>需与六类情况鉴别：无精神障碍的故意纵火（本例无金钱、报复等动机，不支持）；有品行障碍的青少年纵火（本例无偷窃、攻击、逃学等其他品行证据，不支持）；有人格障碍的成人纵火（本例未见持久的社会行为紊乱，暂不支持）；精神分裂症（无妄想、命令性幻听，不支持）；器质性精神障碍（无意识模糊、记忆减退，暂不支持）；痴呆／醉酒／药物中毒（无相关病史，暂不支持）。<br>
+      <strong>3.</strong>治疗无特效，需在全面分析纵火原因、诱因、不良后果的基础上综合个体化：认知治疗改善人际社会关系；行为治疗可选厌恶疗法与系统脱敏；SSRIs、心境稳定剂等可尝试用于本病及合并的精神心理障碍。成人常缺乏治疗动机，疗效常不满意；有学者认为监禁也许是防止反复纵火的唯一有效方法，强调在监控或封闭管理基础上选择治疗。预后方面应重视预防：儿童期纵火行为及时干预多可完全缓解。<br>
+      <span class="note">本案例为模拟情境，行为描述取自教材对纵火狂的典型描述，不含具体案情、损失数额或检查结果。</span>
+    </div></details>
+  </div>
+
+  <div class="case">
+    <span class="ctag">难度 ★★ · 鉴别与治疗定位</span>
+    <h3>案例 2：只偷"没用的小东西"</h3>
+    <div class="scene">24 岁女性，独自就诊。近一年反复出现无法克制的偷窃冲动，多在商店发生。她说下手前会越来越紧张，拿到东西后立刻轻松、兴奋，甚至有释放感；所拿多为牙刷、笔记本、发夹等日用品，家里已有许多，自己完全买得起，也从未转卖。她总是单独行动，知道这样做不对，害怕被抓，事后常内疚、情绪低落，但下次仍控制不住。她否认事前策划，也否认在情绪特别高涨、精力旺盛的时期发生。无神经系统疾病史。</div>
+    <ol class="ques">
+      <li>最可能的诊断是什么？教材的五条诊断要点如何对应？</li>
+      <li>需要与哪四类情况鉴别？</li>
+      <li>药物治疗的准确定位是什么？</li>
+    </ol>
+    <details><summary>查看答案与解析</summary><div class="dbody">
+      <strong>1.</strong>最可能为<strong>偷窃狂</strong>。五条要点：①反复偷窃且无明显动机（物品不为个人使用或金钱利益）；②偷窃前紧张增强、偷窃后有满足感；③单独进行、没有同伙；④间歇期有焦虑、沮丧、内疚，但不阻止重复；⑤不能用智力障碍、另一种精神和行为障碍或物质中毒更好地解释。补充支持点：女性（教材述女∶男 3∶1）、起病于成年早期（教材述也可成年早期起病）、所偷不值钱、不需要、买得起。<br>
+      <strong>2.</strong>四组鉴别：①无精神障碍的反复商店偷窃——计划周密、有明显个人获利动机（本例无策划、无转卖，不支持）；②器质性精神障碍——记忆减退、智能减退导致反复不付款（本例无神经系统病史，暂不支持）；③抑郁障碍——偷窃可能是为了被抓现行而获取处罚（本例虽有内疚低落，但无此目的，需进一步评估抑郁）；④去社会品行障碍或躁狂发作——此两类情况下的偷窃不应单独诊断偷窃狂（本例无广泛违规，也无情感高涨或精力旺盛期，暂不支持）。<br>
+      <strong>3.</strong>教材原文：SSRIs、锂盐、丙戊酸盐、纳曲酮等<strong>主要用于偷窃狂合并的精神心理障碍的治疗</strong>，不是偷窃狂本身的特效治疗；教材未给剂量与疗程。心理治疗方面可选认知治疗（改善不良人际社会关系）与行为治疗（厌恶疗法、系统脱敏）。<br>
+      <span class="note">本案例为模拟情境，依据教材偷窃狂的典型描述构建，不含具体案情、物品清单、法律处理或检查结果。</span>
+    </div></details>
+  </div>
+
+  <div class="case">
+    <span class="ctag">难度 ★★★ · 综合鉴别</span>
+    <h3>案例 3："一句话就炸"的成年人</h3>
+    <div class="scene">28 岁男性，因反复与人冲突就诊。近三年，他多次在同事一句随意的评论、路人偶然碰撞后突然爆发：大声辱骂、推搡对方、摔砸手边物品，场面迅速升级，每次持续约十几分钟，随后自行停止。他说爆发前有时会胸闷、手抖、莫名紧张，事后常疲惫、后悔、自责，甚至羞愧。他否认事前计划，也否认从冲突中得到任何好处；平时情绪基线并不持续低落或易激惹，工作与社交之外无偷窃、破坏或逃学等行为。无物质使用史，无明确躯体疾病史。</div>
+    <ol class="ques">
+      <li>最可能的诊断是什么？诊断要点如何对应？</li>
+      <li>教材要求与哪六种情况鉴别？本例分别如何判断？</li>
+      <li>治疗原则与教材点名的药物是什么？</li>
+    </ol>
+    <details><summary>查看答案与解析</summary><div class="dbody">
+      <strong>1.</strong>最可能为<strong>间歇性暴怒障碍（IED）</strong>。诊断要点：反复、短暂、冲动性的攻击行为暴发；暴发强度明显与被挑衅或心理社会应激源不成比例；频率和程度超出年龄与发育水平正常范围；暴发非预谋、没有其他获益；超过 3 个月的持续攻击行为模式（本例近三年）；足以导致重要功能领域严重损害；不能用其他精神障碍、躯体疾病、物质使用更好解释，也不是慢性愤怒和易激惹模式的一部分。<br>
+      <strong>2.</strong>六组鉴别：①ODD——以发脾气和与权威口头争辩为主，一般无明显言语或躯体攻击（本例为明显攻击暴发，不支持）；②DMDD——暴发前有持续性负性心境，诊断年龄 6～18 岁，与 IED 不能共存（本例基线情绪不持续坏，且 28 岁，不支持）；③去社会品行障碍——有更普遍的去社会特征，攻击有预谋和获益性（本例无预谋、无获益、无广泛违规，不支持）；④反社会型／边缘型人格障碍——冲动性攻击水平低于 IED（需评估持久人格模式，本例信息不足，但攻击的阵发性与不成比例更支持 IED）；⑤ADHD——冲动持续、普遍存在，伴注意缺陷、多动、学习障碍（本例为阵发性攻击，不支持）；⑥适应障碍——暴发出现在适应障碍背景下，尤其 6～18 岁，不应诊断 IED（本例无明确应激源后的整体适应障碍表现，暂不支持）。<br>
+      <strong>3.</strong>治疗应早发现、早干预、防止恶化；目前尚缺乏特效干预方法，通常采用心理干预与药物治疗为主的综合性个体化干预。药物方面根据症状选择抗惊厥药和抗抑郁药；有循证医学证据显示<strong>奥卡西平</strong>和<strong>氟西汀</strong>有效。教材未给剂量与疗程。<br>
+      <span class="note">本案例为模拟情境，依据教材 IED 的典型描述与六组鉴别条目构建，不含虚构的检查数值、伤害后果或教材原案例。</span>
+    </div></details>
+  </div>
+</section>
+
+<!-- ===== 19 拓展 ===== -->
+<section id="ext">
+  <div class="sec-head"><div class="badge">19</div><h2>拓展延伸<span class="en">Beyond the chapter</span></h2></div>
+  <p class="sec-lead">本章教材已提及但未展开的内容，集中列在这里；同时明确标出"教材未涉及"的空白，避免把课外知识误当成教材结论。</p>
+  <div class="grid2">
+    <div class="card cyan">
+      <h3>教材提及、但仅一笔带过的内容</h3>
+      <ul>
+        <li><strong>分类变迁：</strong>ICD-10"习惯与冲动障碍"中的病理性赌博，在 ICD-11 归入"成瘾行为所致障碍"的"赌博障碍"；拔发狂归入"以身体为中心的重复行为障碍"的"拔毛癖（拔毛障碍）"。教材只给归属，未展开临床描述。</li>
+        <li><strong>DSM-5 对应：</strong>本章内容在 DSM-5 中表述为"破坏性、冲动控制及品行障碍"；DSM-5 有品行障碍、无去社会品行障碍。</li>
+        <li><strong>色情纵火狂：</strong>教材仅点名"个别人纵火时可产生特殊的性快感或伴手淫射精"，未给诊断或治疗。</li>
+        <li><strong>司法鉴定：</strong>教材开篇提到本章障碍常涉及精神疾病司法鉴定，特别是刑事责任能力认定，但全章未展开评定标准或操作流程。</li>
+        <li><strong>精神分析解释：</strong>教材把纵火理解为无意识性活动的象征、取得性满足的代替，属于学派解释，教材未给出实证研究支持。</li>
+        <li><strong>共病数据：</strong>CSBD 患者 80% 同时有酗酒、赌博等其他行为问题；ODD 随年龄增长共病 ADHD、焦虑、抑郁、物质使用障碍增多；CD 常合并 ADHD、抑郁、焦虑及发育障碍。</li>
+      </ul>
+    </div>
+    <div class="card orange">
+      <h3>教材未涉及 / 本指南不补写的内容</h3>
+      <ul>
+        <li><strong>纵火狂的人群患病率</strong>——教材明确"尚不清楚"。</li>
+        <li><strong>CSBD 的患病率</strong>——教材明确"流行病学资料匮乏"。</li>
+        <li><strong>去社会品行障碍的独立患病率、性别比与病因</strong>——教材未给，只写核心特征、分型与治疗。</li>
+        <li><strong>所有药物的具体剂量、疗程、血药浓度</strong>——本章只点药名与类别。</li>
+        <li><strong>CSBD 的逐条诊断标准</strong>——教材只说"参照 ICD-11 核心（必要）特征"。</li>
+        <li><strong>心理治疗的具体流派、次数、操作手册与随访安排</strong>——教材只给治疗方向与部分技术名称。</li>
+        <li><strong>刑事责任能力的评定标准与司法流程</strong>——教材只提示"涉及"，未展开。</li>
+        <li><strong>各障碍的长期随访数据、复发率、疗效评估工具</strong>——教材未涉及。</li>
+      </ul>
+    </div>
+  </div>
+  <div class="callout ext">
+    <span class="ct">📖 使用提醒</span>
+    本指南所有定义、诊断要点、鉴别条目、治疗手段与数字均取自教材第十六章原文；凡标注"教材未涉及／未给"的地方，不要用其他资料的数字或标准替代，以免与教材答案冲突。教材未提供任何临床案例，正文第四栏与病例挑战均已如实标注。
+  </div>
+  <div class="hr"></div>
+  <p class="note" style="text-align:center">精神病学（第9版）· 第十六章 冲动控制障碍、破坏性行为或去社会障碍 · 印刷页 197–205 · 学习指南完</p>
+</section>
+</div>
+<nav class="chapter-pager" aria-label="章节间导航"><a class="cp-prev" href="精神病学_第十五章_物质使用及成瘾行为所致障碍_学习指南.html">← 上一章：第十五章</a><a class="cp-toc" href="index.html">目录</a><a class="cp-next" href="精神病学_第十七章_人格障碍及相关人格特质_学习指南.html">下一章：第十七章 →</a></nav>
+</main>
+
+<button class="top" id="topBtn" aria-label="回到顶部">↑</button>
+<script>
+/* ============================================================
+   精神病学学习指南 · 统一交互层 v1（构建期注入，整体替换原 IIFE）
+   兼容 A 族（.tabbar button + [data-panel] + .panel.on）与
+   B 族（.tab-nav + .tab-panel.active）两套 DOM 约定。
+   特性检测 + 防御式查询 + 幂等；不引入任何外部依赖。
+   ============================================================ */
+(function () {
+  'use strict';
+  if (window.__PSY_GUIDE_APP__) { return; }
+  window.__PSY_GUIDE_APP__ = true;
+
+  var d = document;
+
+  function all(sel, root) {
+    return Array.prototype.slice.call((root || d).querySelectorAll(sel));
+  }
+  function on(el, ev, fn, opt) {
+    if (el) { el.addEventListener(ev, fn, opt || false); }
+  }
+  function norm(s) {
+    return String(s || '').replace(/\s+/g, '').toUpperCase();
+  }
+
+  /* ---------- 1. Tab 切换（两族约定都支持） ---------- */
+  function initTabs() {
+    all('.tabs, [data-tabs]').forEach(function (g) {
+      if (g.__psyTabs) { return; }
+      g.__psyTabs = true;
+      var isA = !!g.querySelector('.tabbar button');
+      var btns = all(isA ? '.tabbar button' : '.tab-nav .tab-btn', g);
+      if (!btns.length) { return; }
+      var cls = isA ? 'on' : 'active';
+      var nav = btns[0].closest('.tabbar') || btns[0].closest('.tab-nav');
+      if (nav && !nav.hasAttribute('role')) { nav.setAttribute('role', 'tablist'); }
+      all(isA ? '.panel' : '.tab-panel', g).forEach(function (p) {
+        if (!p.hasAttribute('role')) { p.setAttribute('role', 'tabpanel'); }
+      });
+      function activate(btn) {
+        btns.forEach(function (b) {
+          b.classList.remove(cls);
+          b.setAttribute('aria-selected', 'false');
+        });
+        btn.classList.add(cls);
+        btn.setAttribute('aria-selected', 'true');
+        var id = btn.getAttribute('data-tab');
+        if (!id) { return; }
+        var target = isA
+          ? g.querySelector('[data-panel="' + id + '"]')
+          : (g.querySelector('.tab-panel#' + id) || d.getElementById(id));
+        all(isA ? '.panel' : '.tab-panel', g).forEach(function (p) {
+          var show = isA ? (p.getAttribute('data-panel') === id) : (p === target);
+          p.classList.toggle(cls, show);
+        });
+      }
+      btns.forEach(function (btn, i) {
+        if (!btn.hasAttribute('role')) { btn.setAttribute('role', 'tab'); }
+        btn.setAttribute('aria-selected', btn.classList.contains(cls) ? 'true' : 'false');
+        if (!btn.hasAttribute('tabindex') && !btn.classList.contains(cls)) { btn.setAttribute('tabindex', '0'); }
+        on(btn, 'click', function () { activate(btn); });
+        on(btn, 'keydown', function (e) {
+          if (e.key !== 'ArrowRight' && e.key !== 'ArrowLeft') { return; }
+          e.preventDefault();
+          var nx = btns[(i + (e.key === 'ArrowRight' ? 1 : btns.length - 1)) % btns.length];
+          if (nx) { nx.focus(); activate(nx); }
+        });
+      });
+    });
+  }
+
+  /* ---------- 2. 速记卡：点击/键盘翻转 + 可达性 ---------- */
+  function initCards() {
+    all('.flashcard').forEach(function (card) {
+      if (card.__psyCard) { return; }
+      card.__psyCard = true;
+      card.setAttribute('tabindex', '0');
+      card.setAttribute('role', 'button');
+      function sync() {
+        card.setAttribute('aria-pressed', card.classList.contains('flipped') ? 'true' : 'false');
+      }
+      function flip() { card.classList.toggle('flipped'); sync(); }
+      on(card, 'click', flip);
+      on(card, 'keydown', function (e) {
+        if (e.key === 'Enter' || e.key === ' ' || e.key === 'Spacebar') {
+          e.preventDefault();
+          flip();
+        }
+      });
+      sync();
+    });
+  }
+
+  /* ---------- 3. 自测题交互化（核心新功能） ---------- */
+  function initQuiz() {
+    var questions = all('.quiz-q, .quiz-item');
+    if (!questions.length) { return; }
+    var groups = {};
+
+    function keyOf(o) {
+      var L = o.getAttribute('data-letter');
+      if (L && String(L).replace(/\s+/g, '') !== '') { return norm(L); }
+      var sp = o.querySelector('.l');
+      if (sp) {
+        var t = norm(sp.textContent).replace(/[.．、:：]/g, '');
+        if (t !== '') { return t; }
+      }
+      var txt = norm(o.textContent);
+      if (txt.indexOf('正确') >= 0 || txt.indexOf('错误') >= 0) { return txt; }
+      return txt.charAt(0);
+    }
+
+    function getGroup(q) {
+      var sec = q.closest('.quiz-block') || q.closest('section') || d.body;
+      if (!groups[sec.__psyGid]) {
+        sec.__psyGid = 'g' + (Object.keys(groups).length + 1);
+        groups[sec.__psyGid] = { sec: sec, total: 0, score: 0, row: null, first: null };
+      }
+      var g = groups[sec.__psyGid];
+      if (!g.first) { g.first = q; }
+      return g;
+    }
+
+    function ensureRow(g) {
+      if (g.row) { return g.row; }
+      var row = d.createElement('div');
+      row.className = 'quiz-score';
+      row.setAttribute('role', 'status');
+      row.setAttribute('aria-live', 'polite');
+      row.innerHTML = '<span class="qs-label">自测计分</span>' +
+        '<span class="qs-num">得分 0 / ' + g.total + '</span>' +
+        '<span class="qs-bar"><i></i></span>';
+      g.first.parentNode.insertBefore(row, g.first);
+      g.row = row;
+      return row;
+    }
+
+    function updateRow(g) {
+      var row = ensureRow(g);
+      var num = row.querySelector('.qs-num');
+      var bar = row.querySelector('.qs-bar i');
+      if (num) { num.textContent = '得分 ' + g.score + ' / ' + g.total; }
+      if (bar) { bar.style.width = (g.total ? Math.round(g.score / g.total * 100) : 0) + '%'; }
+    }
+
+    questions.forEach(function (q) {
+      if (q.__psyQuiz) { return; }
+      q.__psyQuiz = true;
+      var opts = all('.opt', q);
+      if (!opts.length) { opts = all('.quiz-options > li', q); }
+      if (!opts.length) { return; }
+
+      /* 正确答案先记入内存：预标 correct 优先（记录后立即移除，消除剧透），
+         否则从解析文本「答案：X / 答案 X」提取（不改动任何文字） */
+      var ansKeys = [];
+      var preset = opts.filter(function (o) { return o.classList.contains('correct'); });
+      preset.forEach(function (o) { o.classList.remove('correct'); });
+      if (preset.length) {
+        ansKeys = preset.map(keyOf);
+      } else {
+        var dt = q.querySelector('details');
+        var txt = dt ? dt.textContent : '';
+        var m = txt.match(/答案\s*[:：]?\s*([A-Za-z](?:[\s、,，·和及]*[A-Za-z])*)/);
+        if (m) {
+          ansKeys = m[1].match(/[A-Za-z]/g) || [];
+        } else {
+          var m2 = txt.match(/答案\s*[:：]?\s*(正确|错误)/);
+          if (m2) { ansKeys = [m2[1]]; }
+        }
+      }
+      if (!ansKeys.length) { return; } /* 无可判定答案（名词解释等），保持原样 */
+
+      var g = getGroup(q);
+      g.total += 1;
+      var multi = ansKeys.length > 1;
+      var ansSet = ansKeys.map(norm);
+      var locked = false;
+      var picked = [];
+
+      function revealAll() {
+        opts.forEach(function (o) {
+          if (ansSet.indexOf(keyOf(o)) >= 0) { o.classList.add('is-reveal'); }
+        });
+      }
+      function finish(ok) {
+        locked = true;
+        q.classList.add('is-locked');
+        var dt = q.querySelector('details');
+        if (dt) { dt.open = true; }
+        if (ok) { g.score += 1; }
+        updateRow(g);
+      }
+
+      opts.forEach(function (o) {
+        o.setAttribute('tabindex', '0');
+        function pick() {
+          if (locked) { return; }
+          var k = keyOf(o);
+          if (ansSet.indexOf(k) >= 0) {
+            o.classList.add('is-right');
+            if (picked.indexOf(k) < 0) { picked.push(k); }
+            if (multi) {
+              if (picked.length === ansSet.length) { finish(true); }
+            } else {
+              finish(true);
+            }
+          } else {
+            o.classList.add('is-wrong');
+            revealAll();
+            finish(false);
+          }
+        }
+        on(o, 'click', pick);
+        on(o, 'keydown', function (e) {
+          if (e.key === 'Enter' || e.key === ' ' || e.key === 'Spacebar') {
+            e.preventDefault();
+            pick();
+          }
+        });
+      });
+    });
+
+    Object.keys(groups).forEach(function (id) {
+      if (groups[id].total > 0) { updateRow(groups[id]); }
+    });
+  }
+
+  /* ---------- 4. 侧栏 scroll spy（本页锚点高亮） ---------- */
+  function initSpy() {
+    var links = all('#sidebar a[href^="#"]');
+    if (!links.length || !('IntersectionObserver' in window)) { return; }
+    var map = {};
+    links.forEach(function (a) {
+      var id = a.getAttribute('href').slice(1);
+      if (id) { map[id] = a; }
+    });
+    var secs = [];
+    Object.keys(map).forEach(function (id) {
+      var s = d.getElementById(id);
+      if (s) { secs.push(s); }
+    });
+    if (!secs.length) { return; }
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting && map[e.target.id]) {
+          links.forEach(function (a) { a.classList.remove('active'); });
+          map[e.target.id].classList.add('active');
+        }
+      });
+    }, { rootMargin: '-15% 0px -70% 0px', threshold: 0 });
+    secs.forEach(function (s) { io.observe(s); });
+  }
+
+  /* ---------- 5. 阅读进度条 + 回顶 ---------- */
+  function initScroll() {
+    var bar = d.getElementById('readbar');
+    var topBtn = d.getElementById('topBtn') || d.getElementById('backTop');
+    var ticking = false;
+    function step() {
+      ticking = false;
+      var h = d.documentElement;
+      var y = window.pageYOffset || h.scrollTop || 0;
+      if (bar) {
+        var max = h.scrollHeight - h.clientHeight;
+        bar.style.width = (max > 0 ? (y / max) * 100 : 0) + '%';
+      }
+      if (topBtn) {
+        topBtn.classList.toggle('show', y > 400);     /* A 族类名 */
+        topBtn.classList.toggle('visible', y > 400);  /* B 族类名 */
+      }
+    }
+    on(window, 'scroll', function () {
+      if (!ticking) { ticking = true; window.requestAnimationFrame(step); }
+    }, { passive: true });
+    step();
+    on(topBtn, 'click', function () {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
+
+  /* ---------- 6. 侧栏开合（存在才绑定；抽屉打开时锁定背景滚动） ---------- */
+  function initSidebar() {
+    var sidebar = d.getElementById('sidebar');
+    if (!sidebar) { return; }
+    var btn = d.getElementById('menuBtn') || d.getElementById('navToggle');
+    var ov = d.getElementById('overlay') || d.getElementById('sidebarOverlay');
+    function lock(open) {
+      /* 仅移动抽屉断点（≤900px）锁滚动；宽屏兜底解除，防布局残留 */
+      d.body.classList.toggle('nav-locked', !!open && window.innerWidth <= 900);
+    }
+    function close() {
+      sidebar.classList.remove('open');
+      if (ov) { ov.classList.remove('show'); }
+      lock(false);
+    }
+    on(btn, 'click', function () {
+      var open = !sidebar.classList.contains('open');
+      sidebar.classList.toggle('open');
+      if (ov) { ov.classList.toggle('show'); }
+      lock(open);
+    });
+    on(ov, 'click', close);
+    all('a', sidebar).forEach(function (a) {
+      on(a, 'click', function () {
+        if (window.innerWidth <= 900) { close(); }
+      });
+    });
+    on(window, 'resize', function () {
+      if (window.innerWidth > 900) { lock(false); }
+    });
+  }
+
+  /* ---------- 启动（脚本位于 body 末尾，DOM 已就绪；防御兜底） ---------- */
+  function boot() {
+    initTabs();
+    initCards();
+    initQuiz();
+    initSpy();
+    initScroll();
+    initSidebar();
+  }
+  if (d.readyState === 'loading') {
+    on(d, 'DOMContentLoaded', boot);
+  } else {
+    boot();
+  }
+})();
+</script>
+
+</body>
+</html>

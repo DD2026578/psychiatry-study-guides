@@ -1,0 +1,1944 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>精神病学 第三章 精神障碍的检查与诊断 - 学习指南</title>
+<style>
+/* ===== 设计系统（请完整复制，勿修改变量与组件样式） ===== */
+:root{
+  --bg:#F0F7FA; --card:#FFFFFF; --ink:#0F172A; --muted:#64748B; --border:#E2E8F0;
+  --primary:#0EA5E9; --accent:#10B981; --symptom:#EF4444; --treatment:#10B981;
+  --cause:#3B82F6; --diagnosis:#F59E0B; --memory:#8B5CF6; --danger:#DC2626;
+  --quiz:#EC4899; --flashcard:#06B6D4;
+  --symptom-bg:#FEF2F2; --treatment-bg:#ECFDF5; --cause-bg:#EFF6FF;
+  --diagnosis-bg:#FFFBEB; --memory-bg:#F5F3FF; --quiz-bg:#FDF2F8; --flash-bg:#ECFEFF;
+  --gradient-main:linear-gradient(135deg,#0EA5E9 0%,#06B6D4 50%,#10B981 100%);
+  --gradient-soft:linear-gradient(135deg,rgba(14,165,233,.08),rgba(6,182,212,.05) 50%,rgba(16,185,129,.08));
+  --radius-sm:8px; --radius-md:12px; --radius-lg:18px;
+  --shadow-sm:0 1px 3px rgba(15,23,42,.06),0 1px 2px rgba(15,23,42,.04);
+  --shadow-md:0 6px 18px rgba(14,165,233,.10),0 2px 6px rgba(15,23,42,.05);
+  --shadow-lg:0 14px 38px rgba(14,165,233,.16),0 4px 12px rgba(15,23,42,.06);
+  --sidebar-w:262px; --content-max:980px;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:"Microsoft YaHei","PingFang SC","Segoe UI",system-ui,sans-serif;
+  font-size:16px;line-height:1.75;color:var(--ink);background:var(--bg);
+  background-image:radial-gradient(ellipse 620px 420px at 8% 0%,rgba(14,165,233,.09),transparent 70%),
+                    radial-gradient(ellipse 520px 380px at 92% 16%,rgba(16,185,129,.07),transparent 70%),
+                    radial-gradient(ellipse 700px 520px at 50% 100%,rgba(6,182,212,.05),transparent 70%);
+  min-height:100vh;
+}
+img{max-width:100%}
+a{color:var(--primary)}
+p{margin-bottom:12px}
+strong{font-weight:700;color:var(--ink)}
+mark.key{background:none;color:var(--primary);font-weight:700}
+.page-wrapper{display:flex;max-width:1420px;margin:0 auto;padding:0 24px}
+.main-content{flex:1;min-width:0;max-width:var(--content-max);padding:36px 0 88px}
+
+/* ===== 侧边导航 ===== */
+.sidebar{width:var(--sidebar-w);flex-shrink:0;position:sticky;top:20px;align-self:flex-start;
+  max-height:calc(100vh - 40px);overflow-y:auto;padding:22px 0;margin-right:30px}
+.sidebar-brand{font-size:.78rem;font-weight:700;letter-spacing:.06em;color:var(--muted);
+  padding:0 14px 12px;border-bottom:1px dashed var(--border);margin-bottom:10px}
+.sidebar-nav ul{list-style:none}
+.sidebar-nav>ul>li>a{display:flex;align-items:center;gap:9px;padding:9px 14px;border-radius:var(--radius-sm);
+  color:var(--ink);text-decoration:none;font-size:.9rem;font-weight:500;border-left:3px solid transparent;
+  transition:all .2s ease;margin-left:-3px}
+.sidebar-nav>ul>li>a:hover{background:rgba(14,165,233,.06);color:var(--primary)}
+.sidebar-nav>ul>li>a.active{background:rgba(14,165,233,.1);color:var(--primary);
+  border-left-color:var(--primary);font-weight:700}
+.toc-num{font-family:Consolas,monospace;font-size:.72rem;color:var(--muted);min-width:22px}
+.sidebar-nav .sub-list{margin:2px 0 8px 22px;padding-left:12px;border-left:1px solid var(--border)}
+.sidebar-nav .sub-list li a{display:block;padding:5px 10px;color:var(--muted);text-decoration:none;
+  font-size:.8rem;border-radius:4px}
+.sidebar-nav .sub-list li a:hover{color:var(--primary);background:rgba(14,165,233,.05)}
+
+/* ===== 封面 ===== */
+.hero{position:relative;overflow:hidden;text-align:center;padding:54px 34px 46px;margin-bottom:48px;
+  background:var(--gradient-soft);border:1px solid rgba(14,165,233,.12);border-radius:var(--radius-lg)}
+.hero::before{content:"";position:absolute;inset:-40% -20% auto;height:180%;
+  background:radial-gradient(circle at 28% 30%,rgba(14,165,233,.1),transparent 55%),
+             radial-gradient(circle at 74% 68%,rgba(16,185,129,.09),transparent 55%);pointer-events:none}
+.hero>*{position:relative}
+.hero-badge{display:inline-flex;align-items:center;gap:6px;padding:6px 15px;border-radius:100px;
+  background:rgba(14,165,233,.12);border:1px solid rgba(14,165,233,.22);color:var(--primary);
+  font-size:.8rem;font-weight:700;margin-bottom:18px}
+.hero h1{font-size:2.35rem;line-height:1.28;font-weight:800;margin-bottom:12px;
+  background:var(--gradient-main);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.hero .subtitle{max-width:680px;margin:0 auto;color:var(--muted);font-size:1.02rem}
+.hero-meta{display:flex;justify-content:center;gap:34px;flex-wrap:wrap;margin-top:26px}
+.hero-meta-item .num{font-size:1.7rem;font-weight:800;line-height:1.2;color:var(--primary)}
+.hero-meta-item .label{font-size:.78rem;color:var(--muted)}
+.hero-quote{margin:24px auto 0;max-width:720px;padding:12px 18px;border-radius:10px;
+  background:rgba(255,255,255,.66);border:1px dashed rgba(14,165,233,.3);
+  font-size:.9rem;color:var(--muted);text-align:left}
+
+/* ===== 区块 ===== */
+.section{margin-bottom:56px;scroll-margin-top:20px}
+.section-header{display:flex;align-items:center;gap:13px;margin-bottom:22px;padding-bottom:12px;
+  border-bottom:2px solid transparent;border-image:var(--gradient-main) 1}
+.section-number{width:40px;height:40px;border-radius:var(--radius-sm);display:inline-flex;
+  align-items:center;justify-content:center;background:var(--gradient-main);color:#fff;
+  font-weight:800;font-size:1rem;flex-shrink:0}
+.section-header h2{font-size:1.55rem;font-weight:800;line-height:1.35}
+.subsection{margin:30px 0;scroll-margin-top:20px}
+.subsection h3{font-size:1.18rem;font-weight:700;margin-bottom:12px;display:flex;align-items:center;gap:8px}
+.sub-subsection{margin:18px 0}
+.sub-subsection h4{font-size:1rem;font-weight:700;margin-bottom:8px}
+.lead{font-size:1rem;color:var(--muted);margin-bottom:18px}
+
+/* ===== 疾病页眉 / 八栏 ===== */
+.disease-hero{background:linear-gradient(135deg,#0f2b46,#155e75 60%,#0f766e);color:#fff;
+  border-radius:var(--radius-lg);padding:28px 30px;margin:26px 0 22px;box-shadow:var(--shadow-md)}
+.disease-hero .en{font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;color:#99f6e4}
+.disease-hero h3{font-size:1.5rem;margin:4px 0 8px;color:#fff}
+.disease-hero p{color:#e0f2fe;font-size:.92rem;margin:0}
+.disease-hero .quick-tags{margin-top:14px;display:flex;gap:8px;flex-wrap:wrap}
+.disease-hero .quick-tags span{background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.28);
+  color:#fff;border-radius:100px;padding:3px 11px;font-size:.76rem}
+.module{background:var(--card);border:1px solid var(--border);border-radius:var(--radius-md);
+  padding:22px 24px;margin:16px 0;box-shadow:var(--shadow-sm)}
+.module-head{display:flex;align-items:center;gap:10px;margin-bottom:14px;padding-bottom:10px;
+  border-bottom:1px solid var(--border)}
+.module-index{font-family:Consolas,monospace;font-size:.72rem;font-weight:700;color:#fff;
+  background:var(--gradient-main);padding:3px 9px;border-radius:100px;white-space:nowrap}
+.module-head h3{font-size:1.08rem;font-weight:700;margin:0}
+.module-head .module-en{font-size:.74rem;color:var(--muted);font-weight:400}
+.module-cause .module-index{background:var(--cause)}
+.module-symptom .module-index{background:var(--symptom)}
+.module-case .module-index{background:var(--diagnosis)}
+.module-diff .module-index{background:#0F766E}
+.module-treat .module-index{background:var(--treatment)}
+.module-memory .module-index{background:var(--memory)}
+.module-link .module-index{background:#475569}
+
+/* ===== 卡片 ===== */
+.card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius-md);
+  padding:18px 20px;box-shadow:var(--shadow-sm);transition:.2s}
+.card:hover{box-shadow:var(--shadow-md);transform:translateY(-1px)}
+.card-header{display:flex;align-items:center;gap:9px;margin-bottom:10px;padding-bottom:9px;
+  border-bottom:1px solid var(--border)}
+.card-icon{font-size:1.2rem}
+.card-title{font-size:1rem;font-weight:700}
+.card-body{font-size:.94rem}
+.card-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px;margin:16px 0}
+.card-grid .card{margin:0}
+.card-symptom{border-left:4px solid var(--symptom)}
+.card-treatment{border-left:4px solid var(--treatment)}
+.card-cause{border-left:4px solid var(--cause)}
+.card-diagnosis{border-left:4px solid var(--diagnosis)}
+.card-memory{border-left:4px solid var(--memory)}
+.card-quiz{border-left:4px solid var(--quiz)}
+.quick-facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin:14px 0}
+.fact{background:var(--bg);border:1px solid var(--border);border-radius:10px;padding:12px 14px}
+.fact b{display:block;font-size:.76rem;color:var(--muted);font-weight:600;margin-bottom:2px}
+.fact span{font-size:.95rem;font-weight:700;color:var(--ink)}
+
+/* ===== 提示框 ===== */
+.callout{display:flex;gap:11px;padding:14px 18px;border-radius:var(--radius-md);margin:14px 0;
+  border-left:4px solid;font-size:.92rem}
+.callout-icon{font-size:1.15rem;flex-shrink:0;margin-top:1px}
+.callout-body{flex:1}
+.callout-body strong{display:block;margin-bottom:3px}
+.callout-info{background:var(--cause-bg);border-left-color:var(--cause)}
+.callout-success{background:var(--treatment-bg);border-left-color:var(--treatment)}
+.callout-warning{background:var(--diagnosis-bg);border-left-color:var(--diagnosis)}
+.callout-danger{background:var(--symptom-bg);border-left-color:var(--danger)}
+.callout-memory{background:var(--memory-bg);border-left-color:var(--memory)}
+.callout-example{background:var(--flash-bg);border-left-color:var(--flashcard)}
+
+/* ===== 列表 ===== */
+.icon-list{list-style:none;margin:10px 0}
+.icon-list li{position:relative;padding-left:26px;margin-bottom:9px;font-size:.94rem;line-height:1.65}
+.icon-list li::before{content:"✦";position:absolute;left:0;top:2px;color:var(--primary);font-size:.8rem}
+.icon-list.check li::before{content:"✓";color:var(--treatment);font-weight:800}
+.icon-list.cross li::before{content:"✗";color:var(--symptom);font-weight:800}
+.numbered-list{list-style:none;counter-reset:n;margin:10px 0}
+.numbered-list li{position:relative;padding-left:38px;margin-bottom:10px;font-size:.94rem;counter-increment:n}
+.numbered-list li::before{content:counter(n);position:absolute;left:0;top:0;width:24px;height:24px;
+  border-radius:50%;background:var(--gradient-main);color:#fff;font-size:.76rem;font-weight:800;
+  display:flex;align-items:center;justify-content:center}
+
+/* ===== 表格 ===== */
+.table-wrap{overflow-x:auto;margin:14px 0;border:1px solid var(--border);border-radius:var(--radius-md)}
+table{width:100%;border-collapse:collapse;font-size:.89rem;min-width:560px}
+thead{background:linear-gradient(135deg,#0EA5E9,#0891B2)}
+thead th{padding:11px 14px;text-align:left;color:#fff;font-size:.84rem;font-weight:700;white-space:nowrap}
+tbody tr{border-bottom:1px solid var(--border)}
+tbody tr:nth-child(even){background:#FAFCFE}
+tbody tr:hover{background:rgba(14,165,233,.05)}
+tbody tr:last-child{border-bottom:0}
+tbody td{padding:10px 14px;vertical-align:top;line-height:1.6}
+tbody td:first-child{font-weight:700;color:#0F766E;background:rgba(14,165,233,.04)}
+.table-note{font-size:.78rem;color:var(--muted);margin-top:-6px}
+
+/* ===== 标签 ===== */
+.tag{display:inline-flex;align-items:center;padding:2px 9px;border-radius:100px;
+  font-size:.75rem;font-weight:700;line-height:1.6}
+.tag-core{background:var(--symptom-bg);color:var(--danger)}
+.tag-master{background:var(--treatment-bg);color:var(--treatment)}
+.tag-understand{background:var(--cause-bg);color:var(--cause)}
+.tag-know{background:var(--diagnosis-bg);color:#B45309}
+.tag-info{background:rgba(14,165,233,.1);color:var(--primary)}
+.tag-memory{background:var(--memory-bg);color:var(--memory)}
+
+/* ===== Tab ===== */
+.tabs{margin:14px 0}
+.tab-nav{display:flex;gap:4px;flex-wrap:wrap;border-bottom:2px solid var(--border);margin-bottom:14px}
+.tab-btn{border:0;background:none;cursor:pointer;font-family:inherit;font-size:.88rem;
+  font-weight:600;color:var(--muted);padding:9px 16px;border-radius:var(--radius-sm) var(--radius-sm) 0 0;
+  border-bottom:2px solid transparent;margin-bottom:-2px}
+.tab-btn:hover{color:var(--primary);background:rgba(14,165,233,.05)}
+.tab-btn.active{color:var(--primary);border-bottom-color:var(--primary)}
+.tab-panel{display:none}
+.tab-panel.active{display:block;animation:fadeIn .25s ease}
+@keyframes fadeIn{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}
+
+/* ===== 折叠问答 ===== */
+details.qa{background:var(--card);border:1px solid var(--border);border-radius:var(--radius-md);
+  margin:10px 0;overflow:hidden}
+details.qa[open]{box-shadow:var(--shadow-sm)}
+details.qa summary{cursor:pointer;padding:13px 16px;font-weight:600;font-size:.94rem;
+  display:flex;align-items:center;gap:10px;list-style:none;user-select:none}
+details.qa summary::-webkit-details-marker{display:none}
+details.qa summary::after{content:"▾";margin-left:auto;color:var(--muted);transition:.2s}
+details.qa[open] summary::after{transform:rotate(180deg)}
+details.qa summary:hover{background:rgba(14,165,233,.04)}
+.qa-body{padding:0 16px 15px 52px;font-size:.92rem;border-top:1px solid var(--border);padding-top:12px}
+.qa-num{display:inline-flex;align-items:center;justify-content:center;min-width:26px;height:26px;
+  border-radius:7px;background:rgba(14,165,233,.1);color:var(--primary);font-size:.78rem;
+  font-weight:800;flex-shrink:0}
+
+/* ===== 自测题 ===== */
+.quiz-block{background:var(--quiz-bg);border:1px solid #FBCFE8;border-radius:var(--radius-md);
+  padding:20px 22px;margin:18px 0}
+.quiz-item{background:#fff;border:1px solid #F9D5E5;border-radius:10px;padding:16px 18px;margin:12px 0}
+.quiz-stem{font-weight:600;font-size:.95rem;margin-bottom:10px;display:flex;gap:8px;align-items:flex-start}
+.q-type{display:inline-block;padding:1px 8px;border-radius:5px;background:var(--quiz-bg);
+  color:var(--quiz);font-size:.72rem;font-weight:800;white-space:nowrap;margin-top:2px}
+.quiz-options{list-style:none;margin:8px 0}
+.quiz-options li{position:relative;padding:6px 10px 6px 30px;font-size:.9rem;border-radius:6px;margin:3px 0}
+.quiz-options li::before{content:attr(data-letter);position:absolute;left:8px;top:6px;
+  font-weight:800;color:var(--quiz)}
+.quiz-options li.correct{background:#DCFCE7;font-weight:600}
+.quiz-options li.correct::after{content:" ✓ 正确";color:#15803D;font-size:.76rem;font-weight:700}
+.quiz-options li.wrong{background:#FEE2E2}
+.quiz-options li.wrong::after{content:" ✗";color:var(--danger);font-size:.76rem;font-weight:700}
+.answer-key{display:inline-block;background:#DCFCE7;color:#15803D;border-radius:6px;
+  padding:2px 9px;font-size:.8rem;font-weight:800;margin-right:6px}
+.difficulty{color:#B45309;font-size:.8rem;letter-spacing:1px;white-space:nowrap}
+
+/* ===== 闪卡 ===== */
+.flashcard-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:14px;margin:18px 0}
+.flashcard{perspective:1000px;height:210px;cursor:pointer}
+.flashcard-inner{position:relative;width:100%;height:100%;transition:transform .55s;
+  transform-style:preserve-3d}
+.flashcard.flipped .flashcard-inner{transform:rotateY(180deg)}
+.flashcard-face{position:absolute;inset:0;backface-visibility:hidden;border-radius:var(--radius-md);
+  padding:18px 18px 14px;display:flex;flex-direction:column;justify-content:center;
+  border:1px solid var(--border);background:#fff;box-shadow:var(--shadow-sm)}
+.flashcard-front{border-top:5px solid var(--flashcard)}
+.flashcard-back{transform:rotateY(180deg);background:var(--flash-bg);border-top:5px solid var(--primary);
+  justify-content:flex-start;overflow-y:auto;font-size:.88rem;line-height:1.65}
+.flashcard-front p{font-size:.95rem;font-weight:600;margin:0;text-align:center}
+.card-tag{align-self:center;margin-bottom:10px;padding:2px 9px;border-radius:100px;
+  font-size:.72rem;font-weight:800;background:var(--flash-bg);color:#0E7490}
+.card-tag.concept{background:var(--cause-bg);color:var(--cause)}
+.card-tag.diagnosis{background:var(--diagnosis-bg);color:#B45309}
+.card-tag.treatment{background:var(--treatment-bg);color:#047857}
+.card-tag.memory{background:var(--memory-bg);color:var(--memory)}
+.flip-hint{text-align:center;font-size:.74rem;color:var(--muted);margin-top:auto;padding-top:8px}
+
+/* ===== 病例挑战 ===== */
+.case-card{background:#fff;border:1px solid var(--border);border-top:5px solid var(--diagnosis);
+  border-radius:var(--radius-md);padding:20px 22px;margin:18px 0;box-shadow:var(--shadow-sm)}
+.case-meta{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:10px}
+.case-meta span{background:var(--diagnosis-bg);color:#B45309;border-radius:100px;
+  padding:2px 10px;font-size:.75rem;font-weight:700}
+.case-title{font-size:1.02rem;font-weight:800;margin-bottom:8px}
+.case-body{font-size:.93rem;color:var(--ink)}
+.case-questions{margin:12px 0 0;padding:12px 16px;background:var(--bg);border-radius:10px}
+.case-questions li{margin-bottom:6px;font-size:.9rem}
+
+/* ===== 记忆工具箱 ===== */
+.memory-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px;margin:14px 0}
+.memory-card{background:var(--memory-bg);border:1px solid #DDD6FE;border-radius:var(--radius-md);padding:16px 18px}
+.memory-card .m-title{font-weight:800;color:var(--memory);font-size:.9rem;margin-bottom:6px}
+.memory-card .m-type{display:inline-block;font-size:.7rem;font-weight:700;color:var(--memory);
+  background:#fff;border:1px solid #DDD6FE;border-radius:100px;padding:1px 8px;margin-left:6px}
+.memory-card .m-formula{font-weight:700;background:#fff;border-left:3px solid var(--memory);
+  padding:8px 10px;border-radius:6px;margin:8px 0;font-size:.92rem}
+.memory-card p{font-size:.88rem;margin:6px 0}
+
+/* ===== 学习路线 / 知识地图 ===== */
+.route-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin:16px 0}
+.route-card{background:#fff;border:1px solid var(--border);border-radius:var(--radius-md);padding:16px 18px}
+.route-card h4{font-size:.95rem;margin-bottom:6px;color:var(--primary)}
+.route-card p{font-size:.86rem;color:var(--muted);margin:0}
+.priority{display:inline-flex;gap:2px;font-size:.8rem;color:#F59E0B;margin-left:4px}
+.knowledge-map{display:grid;grid-template-columns:repeat(auto-fit,minmax(165px,1fr));gap:12px;margin:16px 0}
+.km-card{background:#fff;border:1px solid var(--border);border-radius:var(--radius-md);
+  padding:15px 12px;text-align:center;transition:.2s}
+.km-card:hover{border-color:var(--primary);transform:translateY(-2px);box-shadow:var(--shadow-md)}
+.km-icon{font-size:1.8rem;margin-bottom:6px}
+.km-title{font-weight:700;font-size:.9rem;margin-bottom:2px}
+.km-count{font-size:.76rem;color:var(--muted)}
+.km-count strong{color:var(--primary);font-size:1rem}
+
+/* ===== 数据 / 时间线 ===== */
+.stat-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(135px,1fr));gap:12px;margin:16px 0}
+.stat-card{background:#fff;border:1px solid var(--border);border-radius:var(--radius-md);
+  padding:16px 12px;text-align:center}
+.stat-num{font-size:1.65rem;font-weight:800;color:var(--primary);line-height:1.2}
+.stat-label{font-size:.77rem;color:var(--muted);margin-top:3px}
+.timeline{position:relative;margin:18px 0;padding-left:28px}
+.timeline::before{content:"";position:absolute;left:8px;top:4px;bottom:4px;width:2px;
+  background:linear-gradient(to bottom,var(--primary),var(--accent));border-radius:2px}
+.tl-item{position:relative;margin-bottom:18px}
+.tl-item::before{content:"";position:absolute;left:-25px;top:5px;width:11px;height:11px;
+  border-radius:50%;background:#fff;border:3px solid var(--primary)}
+.tl-title{font-weight:700;font-size:.94rem;margin-bottom:3px}
+.tl-desc{font-size:.86rem;color:var(--muted)}
+.progress-item{margin-bottom:12px}
+.progress-label{display:flex;justify-content:space-between;font-size:.84rem;margin-bottom:4px}
+.progress-bar{height:8px;background:var(--border);border-radius:100px;overflow:hidden}
+.progress-fill{height:100%;border-radius:100px;background:var(--gradient-main)}
+
+/* ===== 易错警示 ===== */
+.exam-alert{background:#FFF7ED;border:1px solid #FED7AA;border-left:5px solid var(--diagnosis);
+  border-radius:var(--radius-md);padding:18px 22px;margin:18px 0}
+.exam-alert h3{color:#C2410C;font-size:1rem;margin-bottom:10px}
+.exam-alert li{font-size:.92rem;margin-bottom:8px}
+.exam-alert li::before{content:"⚠️"}
+
+/* ===== 页脚 ===== */
+.footer{margin-top:56px;padding-top:28px;border-top:1px solid var(--border);
+  text-align:center;font-size:.82rem;color:var(--muted)}
+.footer .footer-tag{display:inline-block;padding:6px 16px;border-radius:100px;color:#fff;
+  background:var(--gradient-main);font-weight:700;margin-bottom:10px}
+.disclaimer{font-size:.78rem;color:var(--muted);background:#fff;border:1px dashed var(--border);
+  border-radius:10px;padding:12px 16px;margin:18px 0;text-align:left}
+
+/* ===== 浮动按钮 ===== */
+.back-to-top{position:fixed;right:22px;bottom:22px;width:44px;height:44px;border:0;border-radius:50%;
+  background:var(--gradient-main);color:#fff;font-size:1.05rem;cursor:pointer;box-shadow:var(--shadow-lg);
+  opacity:0;visibility:hidden;transform:translateY(10px);transition:.25s;z-index:60}
+.back-to-top.visible{opacity:1;visibility:visible;transform:none}
+.mobile-nav-toggle{display:none;position:fixed;top:14px;left:14px;z-index:100;width:44px;height:44px;
+  border:1px solid var(--border);border-radius:var(--radius-sm);background:#fff;box-shadow:var(--shadow-md);
+  cursor:pointer;font-size:1.15rem;align-items:center;justify-content:center}
+.sidebar-overlay{display:none;position:fixed;inset:0;background:rgba(15,23,42,.35);z-index:98}
+
+/* ===== 响应式 ===== */
+@media(max-width:1100px){.sidebar{width:220px;margin-right:22px}.main-content{max-width:100%}}
+@media(max-width:900px){
+  .mobile-nav-toggle{display:flex}
+  .sidebar{position:fixed;left:-290px;top:0;height:100vh;width:270px;background:#fff;
+    border-right:1px solid var(--border);z-index:99;transition:left .28s ease;padding:70px 16px 24px;
+    margin:0;max-height:100vh}
+  .sidebar.open{left:0}
+  .sidebar-overlay.show{display:block}
+  .page-wrapper{padding:0 16px}
+  .main-content{padding-top:66px}
+  .hero{padding:38px 20px 30px}.hero h1{font-size:1.75rem}
+  .section-header h2{font-size:1.3rem}
+  .module{padding:18px 16px}
+  .qa-body{padding-left:16px}
+}
+@media(max-width:680px){
+  body{font-size:15px}
+  .hero h1{font-size:1.45rem}
+  .hero-meta{gap:18px}
+  .knowledge-map{grid-template-columns:repeat(2,1fr)}
+  .flashcard-grid{grid-template-columns:1fr}
+  .flashcard{height:200px}
+  .stat-row{grid-template-columns:repeat(2,1fr)}
+  .section{margin-bottom:40px}
+  table{min-width:520px}
+}
+@media print{
+  .sidebar,.mobile-nav-toggle,.back-to-top,.sidebar-overlay{display:none!important}
+  .page-wrapper{display:block;padding:0}
+  .main-content{max-width:100%}
+  details.qa{break-inside:avoid}
+  details.qa .qa-body{display:block}
+}
+::-webkit-scrollbar{width:8px;height:8px}
+::-webkit-scrollbar-thumb{background:var(--border);border-radius:4px}
+::-webkit-scrollbar-thumb:hover{background:var(--muted)}
+</style>
+<style data-refactor="v1">
+/* ============================================================
+   精神病学学习指南 · 统一交互层增量覆盖样式 v1
+   构建期由 apply-refactor.ps1 注入 </head> 前，仅追加修正，
+   不改动 A/B 两族基础样式。全部使用字面色值，兼容两族设计变量。
+   ============================================================ */
+
+/* ---- 1. 全局键盘焦点可见 ---- */
+:focus-visible{outline:2px solid #0EA5E9;outline-offset:2px}
+
+/* ---- 2. 章节导航条（胶囊式三段：上一章 / 目录 / 下一章） ---- */
+.chapter-pager{display:flex;align-items:stretch;justify-content:center;gap:10px;margin:36px 0 10px;flex-wrap:wrap}
+.chapter-pager a,.chapter-pager span{flex:1 1 200px;display:flex;align-items:center;justify-content:center;min-height:44px;padding:10px 18px;border:1px solid #E2E8F0;border-radius:999px;background:#FFFFFF;color:#0F172A;font-size:14px;font-weight:600;line-height:1.4;text-decoration:none;text-align:center;box-shadow:0 1px 2px rgba(15,23,42,.06);transition:border-color .15s ease,box-shadow .15s ease,color .15s ease}
+.chapter-pager a:hover{border-color:#0EA5E9;color:#0EA5E9;box-shadow:0 4px 14px rgba(14,165,233,.18);text-decoration:none}
+.chapter-pager .cp-toc{flex:0 0 auto;min-width:104px;background:linear-gradient(135deg,#0EA5E9,#10B981);border-color:transparent;color:#FFFFFF}
+.chapter-pager .cp-toc:hover{border-color:transparent;color:#FFFFFF;opacity:.92}
+.chapter-pager .cp-disabled{opacity:.45;background:#F8FAFC;box-shadow:none;cursor:default}
+@media (max-width:680px){.chapter-pager{gap:8px;margin:28px 0 8px}.chapter-pager a,.chapter-pager span{flex:1 1 100%}}
+
+/* ---- 3. 自测题交互态（兼容 A 族 .opt 与 B 族 .quiz-options li） ---- */
+/* 3.1 基础可点击 */
+.quiz-q .opt{cursor:pointer}
+.quiz-item .quiz-options li{cursor:pointer}
+/* 3.2 hover / 焦点态 */
+.quiz-q .opt:hover,.quiz-q .opt:focus-visible{border-color:#7DD3FC;background:#F0F9FF}
+.quiz-item .quiz-options li:hover,.quiz-item .quiz-options li:focus-visible{background:#FFFFFF;box-shadow:inset 0 0 0 1px #7DD3FC}
+/* 3.3 判定结果态 */
+.quiz-q .opt.is-right{border-color:#34D399;background:#ECFDF5;color:#065F46;font-weight:600}
+.quiz-q .opt.is-right::after{content:" ✓";color:#059669;font-weight:800}
+.quiz-q .opt.is-right .l{color:#047857}
+.quiz-item .quiz-options li.is-right{background:#DCFCE7;box-shadow:inset 0 0 0 1px #34D399;font-weight:600}
+.quiz-item .quiz-options li.is-right::after{content:" ✓";color:#15803D;font-weight:800}
+.quiz-q .opt.is-wrong{border-color:#FCA5A5;background:#FEF2F2;color:#B91C1C;font-weight:600}
+.quiz-q .opt.is-wrong::after{content:" ✗";color:#DC2626;font-weight:800}
+.quiz-q .opt.is-wrong .l{color:#B91C1C}
+.quiz-item .quiz-options li.is-wrong{background:#FEE2E2;box-shadow:inset 0 0 0 1px #FCA5A5;font-weight:600}
+.quiz-item .quiz-options li.is-wrong::after{content:" ✗";color:#DC2626;font-weight:800}
+.quiz-q .opt.is-reveal{border-color:#6EE7B7;background:#ECFDF5;color:#065F46}
+.quiz-q .opt.is-reveal .l{color:#047857}
+.quiz-item .quiz-options li.is-reveal{background:#ECFDF5;box-shadow:inset 0 0 0 1px #6EE7B7;color:#065F46}
+/* 3.4 已锁定禁用态 */
+.quiz-q.is-locked .opt,.quiz-item.is-locked .quiz-options li{cursor:default;pointer-events:none}
+.quiz-q.is-locked .opt:not(.is-right):not(.is-wrong):not(.is-reveal){opacity:.55}
+.quiz-item.is-locked .quiz-options li:not(.is-right):not(.is-wrong):not(.is-reveal){opacity:.55}
+/* 3.5 计分行（运行时注入） */
+.quiz-score{display:flex;align-items:center;gap:12px;margin:14px 0 18px;padding:12px 18px;border:1px dashed #7DD3FC;border-radius:12px;background:#F0F9FF;font-size:14px;font-weight:700;color:#0F172A}
+.quiz-score .qs-label{white-space:nowrap}
+.quiz-score .qs-num{white-space:nowrap;color:#0284C7;font-size:16px}
+.quiz-score .qs-bar{flex:1 1 60px;min-width:60px;height:8px;border-radius:999px;background:#E2E8F0;overflow:hidden}
+.quiz-score .qs-bar i{display:block;height:100%;width:0;border-radius:999px;background:linear-gradient(90deg,#0EA5E9,#10B981);transition:width .35s ease}
+
+/* ---- 4. 速记卡可达性与长内容 ---- */
+.fc-hint,.flip-hint{color:#64748B}
+.flashcard-face{overflow:auto}
+.flashcard[tabindex]{outline:none}
+.flashcard[tabindex]:focus-visible{outline:3px solid #0EA5E9;outline-offset:3px}
+
+/* ---- 5. 侧栏目录 ---- */
+/* B 族 sticky 侧栏内目录限高滚动（A 族 aside 本身已可滚动，此规则空匹配无害） */
+.sidebar .sidebar-nav{max-height:calc(100vh - 60px);overflow-y:auto;scrollbar-width:thin}
+/* A 族 scroll spy 高亮（B 族高亮由其基础样式提供） */
+.sidebar a.toc.active{background:#E0F2FE;color:#0369A1;font-weight:600}
+
+/* ---- 6. 响应式补充：681–900px 时 grid3 降为两列 ---- */
+@media (min-width:681px) and (max-width:900px){
+  .grid3{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+
+/* ---- 7. 打印样式补充（A 族新增；B 族已有 print，重复声明无害） ---- */
+@media print{
+  .sidebar,.overlay,.sidebar-overlay,#menuBtn,#navToggle,#overlay,#sidebarOverlay,#readbar,#topBtn,#backTop,.chapter-pager,.quiz-score{display:none!important}
+}
+
+/* ---- 8. 手机端增强 v2（触控体验 / 防溢出 / 抽屉滚动锁定） ---- */
+/* 8.1 触控体验：去点按高亮、消除双击缩放延迟（flashcard 高 190-200px 天然达标，不另设 min-height） */
+.opt,.tabbar button,.tab-btn,.quiz-options li,.flashcard,.chapter-pager a,.chapter-pager span,.menu-btn,.mobile-nav-toggle{-webkit-tap-highlight-color:transparent;touch-action:manipulation}
+/* 8.2 触控目标最小 44px（自测选项与 tab 胶囊原高约 33px） */
+.opt,.tabbar button,.tab-btn,.quiz-options li{min-height:44px}
+/* 8.3 防溢出：内容图自适应；svg 不设 height:auto，避免定尺寸图标塌陷 */
+img{max-width:100%;height:auto}
+svg{max-width:100%}
+/* 8.4 长词/URL 断行 */
+body{overflow-wrap:break-word}
+/* 8.5 表格容器触摸惯性滚动（A 族已有同值规则，重复声明无害） */
+.table-wrap{-webkit-overflow-scrolling:touch}
+/* 8.6 抽屉打开时锁定背景滚动（两族抽屉断点均为 900px；类由统一脚本增删） */
+@media (max-width:900px){
+  body.nav-locked{overflow:hidden}
+}
+</style>
+</head>
+<body>
+<button class="mobile-nav-toggle" id="navToggle" aria-label="打开目录">☰</button>
+<div class="sidebar-overlay" id="sidebarOverlay"></div>
+<div class="page-wrapper">
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-brand">《精神病学》第9版 · 学习指南</div>
+    <nav class="sidebar-nav">
+      <ul>
+        <li><a href="#cover" class="active"><span class="toc-num">00</span>章节封面</a></li>
+        <li><a href="#position"><span class="toc-num">01</span>本章地位速览</a></li>
+        <li><a href="#map"><span class="toc-num">02</span>本章知识地图</a></li>
+        <li><a href="#route"><span class="toc-num">03</span>学习路线图</a></li>
+        <li><a href="#nav"><span class="toc-num">04</span>章节导航</a></li>
+        <li><a href="#m1"><span class="toc-num">05</span>模块一 精神科医患关系</a></li>
+        <li><a href="#m2"><span class="toc-num">06</span>模块二 精神检查</a></li>
+        <li><a href="#m3"><span class="toc-num">07</span>模块三 病史采集</a></li>
+        <li><a href="#m4"><span class="toc-num">08</span>模块四 躯体检查与辅助检查</a></li>
+        <li><a href="#m5"><span class="toc-num">09</span>模块五 诊断原则与诊断思路</a></li>
+        <li><a href="#m6"><span class="toc-num">10</span>模块六 精神科病历书写</a></li>
+        <li><a href="#summary"><span class="toc-num">11</span>全章核心要点</a></li>
+        <li><a href="#pitfalls"><span class="toc-num">12</span>易混易错点警示</a></li>
+        <li><a href="#quiz"><span class="toc-num">13</span>章节自测</a></li>
+        <li><a href="#flashcards"><span class="toc-num">14</span>考点速记卡</a></li>
+        <li><a href="#cases"><span class="toc-num">15</span>病例挑战</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <main class="main-content">
+    <section id="cover" class="section">
+      <div class="hero">
+        <div class="hero-badge">《精神病学》第9版（2024） · 第三章</div>
+        <h1>精神障碍的检查与诊断</h1>
+        <p class="subtitle">从“会问”到“会写诊断”：精神科临床检查与诊断方法的总纲</p>
+        <div class="hero-meta">
+          <div class="hero-meta-item"><div class="num">6</div><div class="label">能力模块</div></div>
+          <div class="hero-meta-item"><div class="num">8</div><div class="label">常用量表</div></div>
+          <div class="hero-meta-item"><div class="num">14</div><div class="label">自测题目</div></div>
+        </div>
+        <div class="hero-quote">本章是症状学与各疾病章之间的桥梁：先把症状“问出来、查出来”，再按诊断原则“想清楚、写下来”。</div>
+      </div>
+
+      <div class="callout callout-info">
+        <div class="callout-icon">💡</div>
+        <div class="callout-body"><strong>本章为临床检查与诊断方法章节，八栏按能力模块适配</strong>本章不按“每病八栏”组织，而是把教材四节内容重组为六个能力模块；每个模块统一按“是什么 → 怎么做 → 常见错误 → 示例/话术 → 记忆”展开。</div>
+      </div>
+
+      <div class="card-grid">
+        <div class="card card-cause">
+          <div class="card-header"><div class="card-title"><span class="tag tag-know">了解</span> 本章位置</div></div>
+          <div class="card-body">理解检查与诊断在精神科临床工作中的起点地位，以及本章与症状学、各疾病章的衔接关系。</div>
+        </div>
+        <div class="card card-cause">
+          <div class="card-header"><div class="card-title"><span class="tag tag-understand">理解</span> 医患关系（doctor–patient relationship）</div></div>
+          <div class="card-body">理解精神科医患关系的特殊性、建立良好关系的六条原则与边界意识。</div>
+        </div>
+        <div class="card card-symptom">
+          <div class="card-header"><div class="card-title"><span class="tag tag-master">掌握</span> 精神检查（interview）</div></div>
+          <div class="card-body">掌握面谈步骤、九项技巧、六方面内容，以及意识障碍和不合作患者的特殊检查方法。</div>
+        </div>
+        <div class="card card-symptom">
+          <div class="card-header"><div class="card-title"><span class="tag tag-master">掌握</span> 病史采集（history taking）</div></div>
+          <div class="card-body">掌握病史六项内容、现病史五要点、起病缓急划分与四种采信情形。</div>
+        </div>
+        <div class="card card-diagnosis">
+          <div class="card-header"><div class="card-title"><span class="tag tag-core">必考</span> 诊断与病历</div></div>
+          <div class="card-body">掌握症状学诊断（symptomatic diagnosis）、等级诊断（hierarchical diagnosis）、共病（comorbidity）三大原则，SSD 诊断思路，以及病历（medical record）七要素。</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="position" class="section">
+      <div class="section-header"><span class="section-number">01</span><h2>本章地位速览</h2></div>
+      <p class="lead">如果把精神科临床工作看成一棵树，症状学是“识别叶片”，本章是“画出枝干”，各疾病章则是“结出果实”。本章不直接教某个病，而是教你把症状收集成诊断、把诊断写成病历。</p>
+      <div class="card-grid">
+        <div class="card card-cause">
+          <div class="card-header"><div class="card-icon">🧭</div><div class="card-title">章节定位</div></div>
+          <div class="card-body">精神科方法论总纲。教材开篇即指出：发现与识别症状和体征是临床检查，根据检查结果做出疾病学推断是诊断过程。</div>
+        </div>
+        <div class="card card-symptom">
+          <div class="card-header"><div class="card-icon">🩺</div><div class="card-title">临床意义</div></div>
+          <div class="card-body">精神科缺乏可靠的客观诊断指标，诊断在很大程度上依赖完整、真实的病史和全面、有效的精神检查。</div>
+        </div>
+        <div class="card card-cause">
+          <div class="card-header"><div class="card-icon">⬅️</div><div class="card-title">前置知识</div></div>
+          <div class="card-body">第二章精神症状学。本章的“症状（S）”正是症状学所描述的各种精神症状，二者是“词汇”与“造句”的关系。</div>
+        </div>
+        <div class="card card-treatment">
+          <div class="card-header"><div class="card-icon">➡️</div><div class="card-title">后续延伸</div></div>
+          <div class="card-body">各疾病章。每一疾病的诊断，都要用本章的检查方法收集症状、用本章的诊断原则作出判断。</div>
+        </div>
+        <div class="card card-link">
+          <div class="card-header"><div class="card-icon">🔗</div><div class="card-title">横向交叉</div></div>
+          <div class="card-body">神经内科、内科、急诊科。躯体疾病可伴发精神症状，精神障碍患者也常伴躯体疾病，故躯体及神经系统检查不可省略。</div>
+        </div>
+        <div class="card card-diagnosis">
+          <div class="card-header"><div class="card-icon">🎯</div><div class="card-title">考试地位</div></div>
+          <div class="card-body">本章是“过程性考点”集中区：步骤、技巧、内容、时间标准、量表用途、诊断原则，均易以选择题、简答题和案例题出现。</div>
+        </div>
+      </div>
+      <div class="callout callout-warning">
+        <div class="callout-icon">🧩</div>
+        <div class="callout-body"><strong>本章的两点独特性（教材开篇强调）</strong>①精神检查的发现很多是主观报告，医师形成症状学判断也带有一定主观性，但不能因此把主观报告等同于“臆断”；②做好检查与诊断，除知识与沟通技巧外，还需培养宽容接纳的人文主义精神。</div>
+      </div>
+    </section>
+
+    <section id="map" class="section">
+      <div class="section-header"><span class="section-number">02</span><h2>本章知识地图</h2></div>
+      <p class="lead">六个能力模块、一条主线：关系 → 检查 → 病史 → 辅助检查 → 诊断 → 病历。下方数字是各模块需要掌握的“最小知识单元”数量。</p>
+      <div class="knowledge-map">
+        <div class="km-card"><div class="km-icon">🤝</div><div class="km-title">医患关系</div><div class="km-count"><strong>6</strong> 条原则</div></div>
+        <div class="km-card"><div class="km-icon">💬</div><div class="km-title">精神检查</div><div class="km-count"><strong>3</strong> 步 · <strong>9</strong> 技巧 · <strong>6</strong> 内容</div></div>
+        <div class="km-card"><div class="km-icon">📋</div><div class="km-title">病史采集</div><div class="km-count"><strong>6</strong> 项内容 · <strong>4</strong> 种采信</div></div>
+        <div class="km-card"><div class="km-icon">🧪</div><div class="km-title">辅助检查</div><div class="km-count"><strong>8</strong> 个量表 · <strong>6</strong> 类特殊检查</div></div>
+        <div class="km-card"><div class="km-icon">🧠</div><div class="km-title">诊断思路</div><div class="km-count"><strong>3</strong> 原则 · <strong>5</strong> 步 SSD</div></div>
+        <div class="km-card"><div class="km-icon">📝</div><div class="km-title">病历书写</div><div class="km-count"><strong>7</strong> 要素</div></div>
+      </div>
+      <div class="table-wrap"><table class="comparison-table">
+        <thead><tr><th>模块</th><th>教材对应内容</th><th>核心产出</th><th>常见考法</th></tr></thead>
+        <tbody>
+          <tr><td>模块一</td><td>第一节 精神科医患关系</td><td>能解释为何精神科关系本身就是治疗关系</td><td>原则、边界、治疗联盟</td></tr>
+          <tr><td>模块二</td><td>第二节 一、精神检查</td><td>能独立完成一次结构化面谈</td><td>步骤、技巧、六内容、特殊情况</td></tr>
+          <tr><td>模块三</td><td>第二节 二、病史采集</td><td>能写出有信息量的现病史</td><td>六项、现病史五要点、采信</td></tr>
+          <tr><td>模块四</td><td>第二节 三至六</td><td>能合理选择并解释辅助检查</td><td>量表用途与数字、EEG/CT 定位</td></tr>
+          <tr><td>模块五</td><td>第三节</td><td>能按 SSD 与等级原则形成诊断</td><td>三原则、共病、SSD、多轴</td></tr>
+          <tr><td>模块六</td><td>第四节</td><td>能把上述结果写成规范病历</td><td>病历结构、现病史、精神检查记录</td></tr>
+        </tbody>
+      </table></div>
+      <p class="table-note">一句话总结：六个模块不是并列的检查项目，而是一条从“建立关系”到“写出诊断”的临床工作流。</p>
+    </section>
+
+    <section id="route" class="section">
+      <div class="section-header"><span class="section-number">03</span><h2>学习路线图</h2></div>
+      <p class="lead">建议按临床工作发生顺序学习，而不是按教材页码死记。每学完一个模块，就用下一个模块“接住”它。</p>
+      <div class="route-grid">
+        <div class="route-card"><h4>第一步 · 关系与框架</h4><p>先读医患关系六原则，再记住面谈的五个目的。理解“关系先于技术”。 <span class="priority">⭐⭐</span></p></div>
+        <div class="route-card"><h4>第二步 · 面谈四动作</h4><p>环境与开场 → 开放交谈 → 主导深入 → 小结结束。把教材三步细化为可操作的四个动作。 <span class="priority">⭐⭐⭐</span></p></div>
+        <div class="route-card"><h4>第三步 · 技巧与内容</h4><p>九技巧逐条配一句“易错提醒”；六内容逐项配一个“观察点”。这是本章最重的考点。 <span class="priority">⭐⭐⭐</span></p></div>
+        <div class="route-card"><h4>第四步 · 病史与采信</h4><p>六项内容用清单卡过一遍，重点练现病史的时间线和四种采信情形。 <span class="priority">⭐⭐</span></p></div>
+        <div class="route-card"><h4>第五步 · 辅助检查</h4><p>量表只记“用途 + 特点 + 一个数字”；实验室与特殊检查记“能做什么、不能做什么”。 <span class="priority">⭐⭐</span></p></div>
+        <div class="route-card"><h4>第六步 · 诊断与病历</h4><p>用 SSD 五步和等级原则做诊断，再用七要素把结果写成病历。 <span class="priority">⭐⭐⭐</span></p></div>
+      </div>
+      <div class="callout callout-info">
+        <div class="callout-icon">🗓️</div>
+        <div class="callout-body"><strong>复习节奏建议</strong>首轮按六模块顺序通读并完成自测；第二轮只看“易混易错点 + 闪卡”；第三轮用两个病例做口头推演，要求自己说出“下一步做什么、为什么”。</div>
+      </div>
+      <div class="callout callout-memory">
+        <div class="callout-icon">🧠</div>
+        <div class="callout-body"><strong>记忆策略</strong>本章概念多但不难，适合“组块 + 首字 + 数字挂钩”：先把六模块缩成六个动词（建关系、做面谈、采病史、做检查、下诊断、写病历），再往每个动词下挂细节。</div>
+      </div>
+    </section>
+
+    <section id="nav" class="section">
+      <div class="section-header"><span class="section-number">04</span><h2>章节导航</h2></div>
+      <p class="lead">按能力模块跳转。每个模块内部都按“是什么 → 怎么做 → 常见错误 → 示例/话术 → 记忆”统一展开。</p>
+      <div class="card-grid">
+        <div class="card card-cause"><div class="card-header"><div class="card-icon">🤝</div><div class="card-title"><a href="#m1">模块一 精神科医患关系</a></div></div><div class="card-body">为什么良好的医患关系本身就是治疗关系；六条原则与边界。</div></div>
+        <div class="card card-symptom"><div class="card-header"><div class="card-icon">💬</div><div class="card-title"><a href="#m2">模块二 精神检查</a></div></div><div class="card-body">四动作面谈、九项技巧、六方面内容、两类特殊情况。</div></div>
+        <div class="card card-cause"><div class="card-header"><div class="card-icon">📋</div><div class="card-title"><a href="#m3">模块三 病史采集</a></div></div><div class="card-body">六项内容清单、现病史五要点、四种采信情形与采集方法。</div></div>
+        <div class="card card-diagnosis"><div class="card-header"><div class="card-icon">🧪</div><div class="card-title"><a href="#m4">模块四 躯体检查与辅助检查</a></div></div><div class="card-body">躯体与神经系统检查、八个常用量表、实验室与特殊检查。</div></div>
+        <div class="card card-diagnosis"><div class="card-header"><div class="card-icon">🧠</div><div class="card-title"><a href="#m5">模块五 诊断原则与诊断思路</a></div></div><div class="card-body">症状学、等级、共病三原则；SSD 五步；多轴与标准化访谈。</div></div>
+        <div class="card card-treatment"><div class="card-header"><div class="card-icon">📝</div><div class="card-title"><a href="#m6">模块六 精神科病历书写</a></div></div><div class="card-body">病历七要素、教材病例节选、现病史与精神检查的写法。</div></div>
+      </div>
+    </section>
+
+    <section id="m1" class="section">
+      <div class="section-header"><span class="section-number">05</span><h2>模块一 精神科医患关系</h2></div>
+      <p class="lead">医患关系（doctor–patient relationship）不是检查前的“客套”，而是精神科诊断与治疗能够成立的前提。教材把它放在第一章位置，正是因为它贯穿全章。</p>
+
+      <div class="module module-cause">
+        <div class="module-head"><span class="module-index">是什么</span><h3>一种特殊人际关系，也是治疗关系</h3></div>
+        <p>医患关系是医师和患者在围绕寻求与提供医疗服务的过程中建立起来的特殊人际关系。教材明确：建立这种关系的唯一目的是促进患者的健康。</p>
+        <div class="card-grid">
+          <div class="card card-cause"><div class="card-body"><strong>诊断依赖</strong><br>精神科缺乏可靠的客观诊断指标，诊断在很大程度上依赖完整、真实的病史和全面、有效的精神检查。</div></div>
+          <div class="card card-cause"><div class="card-body"><strong>治疗联盟</strong><br>部分患者自知力缺乏、排斥甚至抗拒治疗，此时与家人建立密切合作关系，可形成广泛治疗联盟，提高依从性。</div></div>
+          <div class="card card-treatment"><div class="card-body"><strong>社交范本</strong><br>几乎所有的精神疾患都会损害社交技巧；良好的医患关系为患者提供学习范本，让其学会沟通与信任。</div></div>
+        </div>
+        <div class="callout callout-warning">
+          <div class="callout-icon">🩺</div>
+          <div class="callout-body"><strong>教材原文的关键判断</strong>“精神科医师本身既是可靠的诊断工具，也是有效的治疗工具，而发挥其诊断和治疗功效，是通过建立良好的医患关系来实现的。”</div>
+        </div>
+      </div>
+
+      <div class="module module-symptom">
+        <div class="module-head"><span class="module-index">怎么做</span><h3>建立良好医患关系的六条原则</h3></div>
+        <div class="card-grid">
+          <div class="card card-treatment"><div class="card-header"><div class="card-title">① 信任</div></div><div class="card-body">相信医患之间可以建立彼此信任的关系，患者是可以交流、沟通的。</div></div>
+          <div class="card card-treatment"><div class="card-header"><div class="card-title">② 尊重</div></div><div class="card-body">不以医师本人的价值取向评判患者的价值观和生活态度，尊重患者的人格、信仰和文化。</div></div>
+          <div class="card card-treatment"><div class="card-header"><div class="card-title">③ 个体化</div></div><div class="card-body">因时、因人采用不同方法建立疾病的因果联系或做出有意义的解释，充分了解患者的疾病行为和情绪反应。</div></div>
+          <div class="card card-treatment"><div class="card-header"><div class="card-title">④ 人本主义</div></div><div class="card-body">在诊断和治疗过程中，以人本主义态度给患者切实的医疗帮助。</div></div>
+          <div class="card card-treatment"><div class="card-header"><div class="card-title">⑤ 动态</div></div><div class="card-body">理解医患关系是一个动态的关系，医师应根据情况适时做出调整。</div></div>
+          <div class="card card-treatment"><div class="card-header"><div class="card-title">⑥ 边界</div></div><div class="card-body">医患关系围绕疾病诊疗而形成，也只应局限于求医和提供医疗帮助的过程，不应发展任何超出此范围的人际关系。</div></div>
+        </div>
+        <div class="callout callout-info">
+          <div class="callout-icon">👨‍👩‍👧</div>
+          <div class="callout-body"><strong>与家属结盟的边界</strong>与家属建立合作有助于形成治疗联盟，但家属是“治疗的正性因素”，不是替代患者本人。涉及患者隐私与知情同意的环节，仍应尊重患者。</div>
+        </div>
+      </div>
+
+      <div class="module module-diff">
+        <div class="module-head"><span class="module-index">常见错误</span><h3>把关系当成“软技能”，或把关系越过边界</h3></div>
+        <ul class="icon-list cross">
+          <li><strong>只问病、不看人：</strong>把患者当成“症状载体”，忽略其恐惧、羞耻与无奈，导致患者不敢说真话。</li>
+          <li><strong>以价值观评判：</strong>对患者的信仰、生活方式、性取向等作出道德评价，破坏信任。</li>
+          <li><strong>边界模糊：</strong>与患者发展朋友、金钱或其他私人关系，超出“求医与提供医疗帮助”的范围。</li>
+          <li><strong>把家属联盟变成“绕过患者”：</strong>只与家属沟通，不向患者说明，患者感到被排除。</li>
+          <li><strong>对拒诊者强行说服：</strong>忽视其自知力缺乏与抗拒心理，未先建立关系、未借助家属。</li>
+        </ul>
+      </div>
+
+      <div class="module module-case">
+        <div class="module-head"><span class="module-index">示例 / 话术</span><h3>三句开场，定下平等与安全的基调</h3></div>
+        <div class="callout callout-example">
+          <div class="callout-icon">💬</div>
+          <div class="callout-body"><strong>示教话术（教学示例，非教材原文）</strong>
+            <p>①自我介绍：“我是这里的住院医师，接下来我会先和您聊一聊您最近的情况，您可以叫我××医生。”</p>
+            <p>②隐私承诺：“我们谈话的内容只有您的医疗团队会了解，不会随便告诉别人。”</p>
+            <p>③征求称谓：“您希望我怎么称呼您比较合适？”</p>
+          </div>
+        </div>
+        <p class="table-note">教材给出的原则是“简单介绍自己的背景状况，为医患关系定下平等基调；根据年龄身份确定称谓，最好询问患者希望怎么称呼”。</p>
+      </div>
+
+      <div class="module module-memory">
+        <div class="module-head"><span class="module-index">记忆</span><h3>六字口诀：信、尊、个、人、动、边</h3></div>
+        <div class="callout callout-memory">
+          <div class="callout-icon">🧠</div>
+          <div class="callout-body"><strong>口诀</strong>“信尊个，人本动边”——信任、尊重、个体化、人本主义、动态、边界。<br><strong>记忆原理</strong>首字提取把六条原则压缩成六个“钩子”，再按“从态度（信任、尊重）到方法（个体化、人本）再到关系维护（动态、边界）”的逻辑串联，比逐条背诵更稳。</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="m2" class="section">
+      <div class="section-header"><span class="section-number">06</span><h2>模块二 精神检查</h2></div>
+      <p class="lead">精神检查（interview，教材原文即用 interview）中文可译为晤谈、面谈检查。它与其他临床学科最大的不同是：医师与患者见面交谈，不仅收集信息以明确诊断，同时也意味着治疗的开始。</p>
+
+      <div class="module module-cause">
+        <div class="module-head"><span class="module-index">是什么</span><h3>一次面谈，五个目的</h3></div>
+        <ul class="numbered-list">
+          <li>获取必要信息以便确立诊断。</li>
+          <li>从完整的“人”的角度了解患者。</li>
+          <li>了解患者所处的环境。</li>
+          <li>形成良好的医患治疗关系。</li>
+          <li>向患者进行初步的精神卫生知识宣教，让患者了解自己的病情。</li>
+        </ul>
+        <div class="callout callout-info">
+          <div class="callout-icon">💡</div>
+          <div class="callout-body"><strong>为什么叫“检查”而不是“聊天”</strong>面谈既有明确的信息目标，也有观察与关系目标；教材把“治疗开始”写进定义，意味着访谈本身就有干预作用。</div>
+        </div>
+      </div>
+
+      <div class="module module-symptom">
+        <div class="module-head"><span class="module-index">怎么做</span><h3>把教材三步细化为四个可操作动作</h3></div>
+        <div class="tabs">
+          <div class="tab-nav">
+            <button class="tab-btn active" data-tab="step1">① 环境与开场</button>
+            <button class="tab-btn" data-tab="step2">② 开放交谈</button>
+            <button class="tab-btn" data-tab="step3">③ 主导深入</button>
+            <button class="tab-btn" data-tab="step4">④ 小结结束</button>
+          </div>
+          <div class="tab-panel active" id="step1">
+            <h4>对应教材“开始”阶段</h4>
+            <ul class="icon-list check">
+              <li><strong>不受干扰的环境：</strong>安静，理想状况是只有检查者和被检查者两人；谈话内容保证无外人听见，使患者感到隐私受尊重；频繁打断会令受检查者不安。</li>
+              <li><strong>自我介绍：</strong>对初次就诊者简单介绍自己的背景状况（工作经验、专长等），为医患关系定下平等基调。</li>
+              <li><strong>称谓：</strong>根据患者的年龄身份确定称谓，最好的办法是询问患者希望医师怎么称呼。</li>
+              <li><strong>寒暄：</strong>了解一般状况和就医的主要问题；若患者仍紧张，仔细寻找紧张原因。</li>
+              <li><strong>隐私承诺：</strong>患者担心内容泄露，或因性发育和性取向相关问题而不情愿就诊时，需做出保护隐私的承诺。</li>
+              <li><strong>识别特殊状态：</strong>若患者最初显得迷惑混乱，应考虑焦虑、意识障碍、智力低下或痴呆；确认存在严重认知功能损害或意识障碍，应考虑向知情者询问病史，并用其他方式完成精神检查。</li>
+            </ul>
+          </div>
+          <div class="tab-panel" id="step2">
+            <h4>对应教材“深入”阶段的前半</h4>
+            <ul class="icon-list check">
+              <li><strong>对象：</strong>意识清楚的合作者。</li>
+              <li><strong>方式：</strong>以开放性交谈为主。教材示例：“你哪里不舒服？”“你的心情怎么样？”“这种不舒服是怎么发生的？”“你能不能比较详细地谈谈你的病情？”</li>
+              <li><strong>与封闭式问题对比：</strong>封闭式问题患者只能以“是”或“否”回答（如“你最近是不是经常失眠？”）；开放式交谈可以启发患者自己谈出内心体验。</li>
+              <li><strong>同时观察：</strong>表情、情绪变化，以及异常姿势、动作、行为和意向要求。</li>
+            </ul>
+          </div>
+          <div class="tab-panel" id="step3">
+            <h4>对应教材“深入”阶段的后半</h4>
+            <ul class="icon-list check">
+              <li><strong>主导谈话：</strong>让患者轻松自然，同时使谈话集中在相关话题上，不能过多纠缠细枝末节，避免头绪不清。</li>
+              <li><strong>必要时打断：</strong>确有必要时可直接询问关键性问题，但这种方式应尽量少用。</li>
+              <li><strong>非言语引导：</strong>用眼神、手势、身体姿态等引导患者略去枝蔓、开掘要点。</li>
+              <li><strong>能力要求：</strong>驾驭谈话需要交谈技巧，更需要丰富的精神科知识和临床经验。</li>
+            </ul>
+          </div>
+          <div class="tab-panel" id="step4">
+            <h4>对应教材“结束”阶段</h4>
+            <ul class="icon-list check">
+              <li><strong>时间：</strong>深入交谈的时间视问题复杂性而定，一般持续 20～45 分钟。</li>
+              <li><strong>小结：</strong>做一个简短的小结。</li>
+              <li><strong>查漏：</strong>询问患者是否还有未提及的很重要的问题。</li>
+              <li><strong>解释与保证：</strong>对患者的疑问做出解释和保证。</li>
+              <li><strong>安排：</strong>如果对进一步治疗有安排，应向患者说明；最后道别或安排下次就诊时间。</li>
+            </ul>
+          </div>
+        </div>
+        <div class="callout callout-info">
+          <div class="callout-icon">🧭</div>
+          <div class="callout-body"><strong>结构提示</strong>教材把面谈步骤写为“开始—深入—结束”三步；上面的四动作是把“开始”和“深入”中各含的两个关键动作拆开，便于操作与记忆，不改变教材原意。</div>
+        </div>
+      </div>
+
+      <div class="module module-symptom">
+        <div class="module-head"><span class="module-index">怎么做</span><h3>九项沟通技巧：每一项都配一个“易错提醒”</h3></div>
+        <div class="table-wrap"><table class="comparison-table">
+          <thead><tr><th>技巧</th><th>核心做法</th><th>易错提醒</th></tr></thead>
+          <tbody>
+            <tr><td>观察</td><td>观察患者表情、眼神、姿势、说话方式与交流方式、穿着、一般状态和意识；同时观察伴诊者的态度、情绪状态、身份。</td><td>只看患者不看伴诊者；忽略伴诊者对风险评估和家庭关系判断的价值。</td></tr>
+            <tr><td>倾听</td><td>教材称其“最重要也是最基本的一项技术”；耐心、专心倾听，体会言语内容背后的情感需求；离题时提醒，给患者充裕时间。</td><td>忙于记录或唐突打断；教材提醒，唐突打断可能在刹那间丧失患者信任。</td></tr>
+            <tr><td>提问</td><td>“先开放，后封闭”；既不像提审犯人连珠炮步步紧逼，也不像求职面试千人一律。</td><td>一上来就连环封闭式问题；用暗示性提问替患者“说出答案”。</td></tr>
+            <tr><td>非言语沟通</td><td>眼神、手势、身体姿态；身体前倾、眼神凝视、频频点头可鼓励，后倾、垂目、双手规律敲击表示兴趣不大；适当身体接触可缓解焦虑。</td><td>身体接触不看对方反应；姿态与语言传递相反信息。</td></tr>
+            <tr><td>肯定</td><td>肯定患者感受的真实性；并非赞同其病态信念或幻觉体验，而是表明医师理解他所叙述的感觉。</td><td>把“肯定感受”误解为“认同妄想”；或简单否定、反驳。</td></tr>
+            <tr><td>澄清</td><td>弄清楚事情的实际经过及整个过程中患者的情感体验；让患者完整叙述事件经过，了解各阶段感受。</td><td>刨根问底式追问，使患者对医师动机产生猜疑。</td></tr>
+            <tr><td>代述</td><td>患者不好意思或不愿明说、但对病情判断很重要的内容，由医师代为表达。教材示例：“我想别人处于您这样的状况，也会出现一些问题……”</td><td>替患者下结论；把代述变成诱导。</td></tr>
+            <tr><td>重构</td><td>用不同的措辞和句子复述或总结，但不改变患者说话的意图和目的；突出重点，也向患者表明医师能理解其感受。</td><td>改变原意；把自己的判断塞进“总结”。</td></tr>
+            <tr><td>鼓励表达</td><td>用未完成句鼓励患者继续说；适当举例或用医师本人经历引发共鸣。</td><td>过度自我暴露，把访谈变成医师的个人故事。</td></tr>
+          </tbody>
+        </table></div>
+        <p class="table-note">一句话鉴别：观察是“看”，倾听是“接”，提问是“引”，非言语是“调”，肯定/澄清/代述/重构是“加工”，鼓励表达是“推”。</p>
+      </div>
+
+      <div class="module module-symptom">
+        <div class="module-head"><span class="module-index">怎么做</span><h3>精神检查的六方面内容</h3></div>
+        <div class="card-grid">
+          <div class="card card-symptom"><div class="card-header"><div class="card-icon">1</div><div class="card-title">外表与行为</div></div><div class="card-body">
+            外表包括体格、体质状况、发型、装束、衣饰。严重自我忽视（污秽、邋遢）提示精神分裂症、酒精或药物依赖及痴呆的可能；躁狂患者往往有过分招摇的外表；明显消瘦除考虑严重躯体疾病外，年轻女性也应考虑神经性厌食。行为包括活动的量和性质：躁狂活动过多、抑郁少动而迟缓、焦虑运动性不安或伴震颤；注意不自主运动。还要了解与周围环境的接触、合作程度、社交状况及生活自理。
+          </div></div>
+          <div class="card card-symptom"><div class="card-header"><div class="card-icon">2</div><div class="card-title">情绪状态</div></div><div class="card-body">
+            情感活动从客观表现与主观体验两方面评估。客观表现可根据面部表情、姿态、动作、语音、语调、自主神经反应判断；主观体验通过交谈了解内心世界。评估强度、持续时间和性质，确定优势情感（情感高涨、情感低落、焦虑、恐惧、情感淡漠等）；了解情感诱发是否正常（如易激惹）、是否易于起伏变动（情感脆弱）、有无与环境不适切的情感（如情感倒错）。<strong>发现抑郁情绪，一定要询问是否有自杀观念。</strong>
+          </div></div>
+          <div class="card card-symptom"><div class="card-header"><div class="card-icon">3</div><div class="card-title">言谈与思维</div></div><div class="card-body">
+            言谈的速度和量反映思维奔逸、思维迟缓、思维贫乏、思维中断等；言谈的形式与逻辑反映思维松弛、思维破裂、象征性思维、逻辑倒错或语词新作、病理性赘述等；言谈内容反映妄想、超价观念、强迫观念等。了解妄想的种类、内容、性质、出现时间、发展趋势、涉及范围、原发还是继发、是否系统化、内容荒谬还是接近现实、与其他症状的关系。
+          </div></div>
+          <div class="card card-symptom"><div class="card-header"><div class="card-icon">4</div><div class="card-title">感知觉</div></div><div class="card-body">
+            有无错觉或幻觉；错/幻觉的种类、内容、出现时间和频率、与其他精神症状的关系。
+          </div></div>
+          <div class="card card-symptom"><div class="card-header"><div class="card-icon">5</div><div class="card-title">认知功能</div></div><div class="card-body">
+            定向力：自我定向（姓名、年龄、职业）及时间（特别是时段估计）、地点、人物、周围环境。注意力：有无注意减退或注意涣散、集中困难。记忆：即刻记忆、近记忆、远记忆，有无遗忘、错构、虚构。智能：根据文化教育水平提问，包括一般常识、专业知识、计算力、理解力、分析综合能力及抽象概括能力；必要时专门智能测查。
+          </div></div>
+          <div class="card card-symptom"><div class="card-header"><div class="card-icon">6</div><div class="card-title">自知力</div></div><div class="card-body">
+            经过病史采集和全面精神状况检查后，了解患者对自己精神状况的认识。可就个别症状询问认识程度，再要求患者对整体精神状况做出判断，由此推断自知力，进而推断今后诊疗的合作程度。
+          </div></div>
+        </div>
+      </div>
+
+      <div class="module module-case">
+        <div class="module-head"><span class="module-index">怎么做</span><h3>两类特殊情况：不能按常规问，就按特殊方式查</h3></div>
+        <div class="card-grid">
+          <div class="card card-diagnosis"><div class="card-header"><div class="card-icon">🌫️</div><div class="card-title">意识障碍患者</div></div><div class="card-body">
+            <strong>提示：</strong>神情恍惚、言语无条理、行为无目的、睡眠节律紊乱，高度提示意识障碍。<br>
+            <strong>评估：</strong>从定向力、即刻记忆、注意力等方面评估；判断严重程度、分析原因，以便紧急采取挽救生命的措施。
+          </div></div>
+          <div class="card card-diagnosis"><div class="card-header"><div class="card-icon">🔇</div><div class="card-title">不合作患者</div></div><div class="card-body">
+            <strong>原因：</strong>过度兴奋、过度抑制（如缄默或木僵）或敌意。<br>
+            <strong>三条观察线：</strong>①一般外貌（意识、仪表、接触、合作、饮食、睡眠、自理）；②言语（自发言语、缄默、模仿言语、持续言语、能否用文字表达、表情、对医务人员和亲友的态度）；③动作行为（姿势、动作增多或减少、刻板/模仿动作、目的性、违拗/被动服从、冲动/伤人/自伤）。<br>
+            <strong>安全：</strong>对有攻击行为的患者，避免正面冲突，必要时可适当约束，帮助患者平静。
+          </div></div>
+        </div>
+      </div>
+
+      <div class="module module-diff">
+        <div class="module-head"><span class="module-index">常见错误</span><h3>看似在“谈”，其实没“查”</h3></div>
+        <ul class="icon-list cross">
+          <li><strong>连珠炮式封闭提问：</strong>只得到“是/否”，听不到患者的内心体验。</li>
+          <li><strong>频繁打断：</strong>急于求证诊断假设，丢失患者信任与关键信息。</li>
+          <li><strong>只问不观：</strong>忽略表情、姿态、穿着、伴诊者态度等重要线索。</li>
+          <li><strong>漏问自杀观念：</strong>发现抑郁情绪却不评估自杀风险，是重大疏漏。</li>
+          <li><strong>对不合作者直接放弃：</strong>不观察、不向知情者补充，导致检查记录空泛。</li>
+          <li><strong>把“不配合”写成结论：</strong>只写“患者不合作”，却不描述具体言语、动作与反应。</li>
+        </ul>
+      </div>
+
+      <div class="module module-case">
+        <div class="module-head"><span class="module-index">示例 / 话术</span><h3>教材原文中的开放提问与代述</h3></div>
+        <div class="callout callout-example">
+          <div class="callout-icon">📖</div>
+          <div class="callout-body"><strong>教材原文</strong>
+            <p>开放提问：“你哪里不舒服？”“你的心情怎么样？”“这种不舒服是怎么发生的？”“你能不能比较详细地谈谈你的病情？”</p>
+            <p>代述示例（性功能障碍话题）：“我想别人处于您这样的状况，也会出现一些问题……”</p>
+          </div>
+        </div>
+        <p class="table-note">话术的共同点：把“我问你答”变成“你说我听”，再用最小的干预把话题拉回关键处。</p>
+      </div>
+
+      <div class="module module-memory">
+        <div class="module-head"><span class="module-index">记忆</span><h3>两组口诀，覆盖“怎么做”和“查什么”</h3></div>
+        <div class="memory-grid">
+          <div class="memory-card"><div class="m-title">方法一：九技巧口诀<span class="m-type">口诀</span></div><div class="m-formula">“观听提非，肯清代重鼓”</div><p>观察、倾听、提问、非言语沟通、肯定、澄清、代述、重构、鼓励表达。记忆原理：九字压成“四 + 五”两段，先记前四项“基础动作”，再记后五项“加工动作”。</p></div>
+          <div class="memory-card"><div class="m-title">方法二：六内容字头<span class="m-type">首字母</span></div><div class="m-formula">“外、情、言、感、认、自”</div><p>外表与行为、情绪状态、言谈与思维、感知觉、认知功能、自知力。记忆原理：按“看外表 → 看情绪 → 听言语思维 → 问感知觉 → 查认知 → 判自知力”的检查顺序串联，字头只是提取线索。</p></div>
+          <div class="memory-card"><div class="m-title">方法三：四动作流程<span class="m-type">流程</span></div><div class="m-formula">环境 → 开放 → 主导 → 小结</div><p>对应教材“开始—深入—结束”。记忆原理：用临床动作序列替代抽象步骤名，形成“肌肉记忆”。</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="m3" class="section">
+      <div class="section-header"><span class="section-number">07</span><h2>模块三 病史采集</h2></div>
+      <p class="lead">病史采集（history taking）是精神科诊断的另一条腿。病史主要来源于患者和知情者；患者自述常因缺乏认识、紧张拘束或不合作而不全面，因此向知情者补充常常是必要的。</p>
+
+      <div class="module module-cause">
+        <div class="module-head"><span class="module-index">是什么</span><h3>患者 + 知情者：两条信息源，一个目标</h3></div>
+        <p>知情者包括与患者共同生活的亲属（配偶、父母、子女），共同学习和工作的同学、同事，关系密切的朋友、邻里，以及既往曾为其诊疗过的医务人员。知情者可以补充患者处无法得到的信息，尤其是既往人格；通常年长的亲属对家族史了解比患者多。</p>
+        <div class="callout callout-info">
+          <div class="callout-icon">🤝</div>
+          <div class="callout-body"><strong>程序上的尊重</strong>一般情况下，医师应首先同患者谈话，其次才是家属；同家属交谈前应先征得患者同意，使患者感到自己受尊重。同家属谈话时，患者是否在场，可由患者自己决定。教材也指出，我国精神科医师习惯先向家属或知情人采集病史，这与非自愿住院患者占绝大多数有关；不同方式各有优劣，可根据患者具体情况而定。</div>
+        </div>
+      </div>
+
+      <div class="module module-symptom">
+        <div class="module-head"><span class="module-index">怎么做</span><h3>病史采集六项内容：清单卡</h3></div>
+        <div class="card-grid">
+          <div class="card card-cause"><div class="card-header"><div class="card-icon">1</div><div class="card-title">一般资料</div></div><div class="card-body"><ul class="icon-list check">
+            <li>姓名、性别、年龄、婚姻、民族、籍贯、职业、文化程度</li>
+            <li>住址、电话号码、电子邮件地址（或其他患者愿意提供的社交账号）</li>
+            <li>入院日期、病史提供者及对病史资料可靠性的估计</li>
+          </ul></div></div>
+          <div class="card card-cause"><div class="card-header"><div class="card-icon">2</div><div class="card-title">主诉</div></div><div class="card-body"><ul class="icon-list check">
+            <li>主要精神症状及病程，即就诊理由</li>
+          </ul></div></div>
+          <div class="card card-symptom"><div class="card-header"><div class="card-icon">3</div><div class="card-title">现病史（核心）</div></div><div class="card-body"><ul class="icon-list check">
+            <li>发病条件及发病的相关因素</li>
+            <li>起病缓急及早期症状表现</li>
+            <li>疾病发展及演变过程</li>
+            <li>病时的一般情况</li>
+            <li>既往与之有关的诊断、治疗用药及疗效详情</li>
+          </ul></div></div>
+          <div class="card card-cause"><div class="card-header"><div class="card-icon">4</div><div class="card-title">既往史</div></div><div class="card-body"><ul class="icon-list check">
+            <li>发热、抽搐、昏迷、药物过敏史</li>
+            <li>感染、中毒及躯体疾病史，特别是中枢神经系统疾病（脑炎、脑外伤）</li>
+            <li>注意这些疾病与精神障碍在时间上有无关系、是否存在因果关系</li>
+            <li>酗酒、吸毒、性病、自杀史及其他精神病史</li>
+          </ul></div></div>
+          <div class="card card-cause"><div class="card-header"><div class="card-icon">5</div><div class="card-title">个人史</div></div><div class="card-body"><ul class="icon-list check">
+            <li>一般指从母亲妊娠到发病前的整个生活经历</li>
+            <li>儿童青少年：母亲孕期健康与分娩史、生长发育史、神经系统病史、学习与家庭教育、与双亲关系、学业成绩</li>
+            <li>成人：工作及表现、学习工作能力变化、特殊遭遇、重大精神刺激、婚姻与配偶个性、性格兴趣交友信仰、居住与经济状况、犯罪记录</li>
+            <li>女性：月经史、月经周期心理生理变化、生育史</li>
+          </ul></div></div>
+          <div class="card card-cause"><div class="card-header"><div class="card-icon">6</div><div class="card-title">家族史</div></div><div class="card-body"><ul class="icon-list check">
+            <li>双亲年龄、职业、人格特点；亡故者了解死因和死亡年龄</li>
+            <li>家庭结构、经济状况、社会地位、家庭成员关系（双亲关系、亲子关系）、家庭特殊事件</li>
+            <li>精神病家族史：精神障碍、人格障碍、癫痫、精神发育迟滞、自杀、近亲婚配</li>
+            <li>家族史阳性提示发病原因可能具有遗传特质</li>
+          </ul></div></div>
+        </div>
+      </div>
+
+      <div class="module module-symptom">
+        <div class="module-head"><span class="module-index">怎么做</span><h3>现病史五要点与起病时间标尺</h3></div>
+        <div class="quick-facts">
+          <div class="fact"><b>发病条件及因素</b><span>环境背景 + 生物/心理/社会因素；感染、中毒、躯体疾病；社会心理因素是原因还是诱因</span></div>
+          <div class="fact"><b>起病缓急及早期症状</b><span>急性、亚急性、慢性；谵妄多急性，痴呆多慢性</span></div>
+          <div class="fact"><b>发展与演变</b><span>按时间纵向描述；首发症状、时程、症状间关系、与生活事件/药物关系、功能变化、病程特点</span></div>
+          <div class="fact"><b>病时一般情况</b><span>工作学习睡眠饮食、自理、环境接触、对疾病态度；有无消极厌世、自伤自杀、伤人冲动</span></div>
+          <div class="fact"><b>既往诊疗详情</b><span>诊断、治疗用药及疗效</span></div>
+        </div>
+        <div class="table-wrap"><table class="comparison-table">
+          <thead><tr><th>起病类型</th><th>时间标准（教材原文）</th><th>教材举例</th></tr></thead>
+          <tbody>
+            <tr><td>急性起病</td><td>精神状态大致正常至出现明显精神障碍的时间在 2 周之内</td><td>谵妄多为急性起病</td></tr>
+            <tr><td>亚急性起病</td><td>2 周到 3 个月</td><td>—</td></tr>
+            <tr><td>慢性起病</td><td>3 个月以上</td><td>痴呆多为慢性起病</td></tr>
+          </tbody>
+        </table></div>
+        <p class="table-note">一句话鉴别：2 周是“急/亚急”的分界，3 个月是“亚急/慢性”的分界。</p>
+      </div>
+
+      <div class="module module-diff">
+        <div class="module-head"><span class="module-index">怎么做</span><h3>病史资料的四种采信情形</h3></div>
+        <div class="table-wrap"><table class="comparison-table">
+          <thead><tr><th>情形</th><th>教材描述</th><th>处理要点</th></tr></thead>
+          <tbody>
+            <tr><td>① 全面、明确、无矛盾</td><td>患者陈述、家属和知情人提供的情况、既往病史记录等，内容基本一致。</td><td>可较完整地作为诊断和治疗的依据。</td></tr>
+            <tr><td>② 欠全面，但明确且无矛盾</td><td>患者有陈述，医师也检查或观察到，但家属和知情人没有反映。</td><td>对该部分信息可采信，同时继续补充其他来源。</td></tr>
+            <tr><td>③ 不全面、不明确，但高度怀疑</td><td>患者否认，但医师和家属均怀疑存在。</td><td>教材仅描述该情形，未规定直接采信；应继续观察、检查与核实。</td></tr>
+            <tr><td>④ 不同来源相互矛盾</td><td>涉及法律诉讼的病例中尤需小心处理。</td><td>尽量不要把矛盾信息直接应用于诊断依据；与信息提供者真诚、深入沟通；全部或部分得到一致认可后才能采信。</td></tr>
+          </tbody>
+        </table></div>
+        <p class="table-note">采信的核心不是“谁说得对”，而是“信息能否经得起交叉验证”。</p>
+      </div>
+
+      <div class="module module-case">
+        <div class="module-head"><span class="module-index">怎么做</span><h3>采集方法：四条渠道 + 一条分析原则</h3></div>
+        <div class="card-grid">
+          <div class="card card-treatment"><div class="card-body"><strong>与患者晤谈</strong><br>获取主观体验与就诊理由。</div></div>
+          <div class="card card-treatment"><div class="card-body"><strong>与家属和知情人晤谈</strong><br>补充既往人格、家族史、旁观观察。</div></div>
+          <div class="card card-treatment"><div class="card-body"><strong>收集患者的书写材料</strong><br>日记、信件、笔记等。</div></div>
+          <div class="card card-treatment"><div class="card-body"><strong>复习既往病历记录</strong><br>核对既往诊断、用药与疗效。</div></div>
+        </div>
+        <div class="callout callout-warning">
+          <div class="callout-icon">🔁</div>
+          <div class="callout-body"><strong>教材强调的分析原则</strong>资料收集过程应体现精神科资料分析的基本思路：一边收集一边分析，不断通过分析结果来指导下一步资料收集的内容和方式。</div>
+        </div>
+      </div>
+
+      <div class="module module-diff">
+        <div class="module-head"><span class="module-index">常见错误</span><h3>病史采集的五个“坑”</h3></div>
+        <ul class="icon-list cross">
+          <li><strong>只问家属，不问患者：</strong>把家属转述当成患者体验，忽略患者的主观世界。</li>
+          <li><strong>不征得同意：</strong>当着患者面追问家属敏感信息，患者感到不被尊重。</li>
+          <li><strong>时间线混乱：</strong>把起病时间、加重时间、就诊与用药经过混在一起，无法判断起病缓急与演变。</li>
+          <li><strong>遗漏风险信息：</strong>不问消极厌世、自伤、自杀、伤人、冲动行为，护理防范失去依据。</li>
+          <li><strong>把诱因当病因：</strong>未区分社会心理因素是发病原因还是诱因，也未排查感染、中毒、躯体疾病。</li>
+        </ul>
+      </div>
+
+      <div class="module module-case">
+        <div class="module-head"><span class="module-index">示例 / 话术</span><h3>如何开始问家属</h3></div>
+        <div class="callout callout-example">
+          <div class="callout-icon">💬</div>
+          <div class="callout-body"><strong>示教话术（教学示例，非教材原文）</strong>
+            <p>对患者：“接下来我想和您的家人了解一些您平时的情况，这样能帮助我更全面地判断。您愿意让他们一起谈吗？您希望在不在场？”</p>
+            <p>对家属：“我想先了解他/她发病前是个什么样的人，以及最近这几年变化是怎么一步步发生的，越具体越好。”</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="module module-memory">
+        <div class="module-head"><span class="module-index">记忆</span><h3>六项数字编码 + 时间双界标</h3></div>
+        <div class="callout callout-memory">
+          <div class="callout-icon">🧠</div>
+          <div class="callout-body"><strong>六项编码</strong>“1 资、2 主、3 现、4 既、5 个、6 家”——一般资料、主诉、现病史、既往史、个人史、家族史。<br><strong>时间双界标</strong>“2 周、3 月”：2 周内为急性，2 周至 3 月为亚急性，3 月以上为慢性。<br><strong>记忆原理</strong>数字挂钩给六项内容一个固定“抽屉顺序”；双界标用两个数字锚点代替整段文字，提取时先想“2”和“3”。</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="m4" class="section">
+      <div class="section-header"><span class="section-number">08</span><h2>模块四 躯体检查与辅助检查</h2></div>
+      <p class="lead">躯体检查（physical examination）、标准化量表（standardized rating scales）、实验室检查（laboratory examination）与特殊检查（special examination）共同回答两个问题：精神症状是否由躯体/神经系统疾病或物质引起？症状严重程度如何、如何复评？</p>
+
+      <div class="module module-cause">
+        <div class="module-head"><span class="module-index">是什么</span><h3>为什么精神科也必须做躯体检查</h3></div>
+        <div class="card-grid">
+          <div class="card card-cause"><div class="card-header"><div class="card-icon">🩺</div><div class="card-title">躯体检查</div></div><div class="card-body">重点：血压、脉搏、呼吸、体温等生命体征；自主神经功能紊乱症状；躯体外伤瘢痕（特别注意自伤自杀的痕迹）；甲状腺；水肿征象。</div></div>
+          <div class="card card-cause"><div class="card-header"><div class="card-icon">🧠</div><div class="card-title">神经系统检查</div></div><div class="card-body">对每个精神科患者评估时非常重要的一部分。老年人及怀疑神经系统病变者要仔细全面检查，必要时请神经科会诊。</div></div>
+        </div>
+        <div class="callout callout-info">
+          <div class="callout-icon">📌</div>
+          <div class="callout-body"><strong>教材给出的理由</strong>许多躯体疾病会伴发精神症状，甚至以精神行为症状作为首发表现；相当比例的精神障碍患者也同时伴有躯体疾病。因此，无论门诊还是急诊，都应对患者进行全面的躯体及神经系统检查。</div>
+        </div>
+        <div class="sub-subsection">
+          <h4>神经系统检查的四点价值</h4>
+          <ul class="numbered-list">
+            <li>精神症状可能由潜在的神经系统病变直接导致，如脑卒中、帕金森病伴发的情感症状；发现相关感觉和运动症状有助于找到根源。</li>
+            <li>精神症状可能是某些神经系统疾病的首发症状或主要临床相，完整检查可避免误诊和漏诊。</li>
+            <li>在甄别神经系统损害和分离转换性障碍时，神经系统检查至关重要。</li>
+            <li>精神药物可以影响患者的感觉和运动系统，精神科医师需要有能力评估这些副作用的严重程度。</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="module module-symptom">
+        <div class="module-head"><span class="module-index">怎么做</span><h3>常用量表对比：名称 / 用途 / 特点 / 注意</h3></div>
+        <div class="callout callout-warning">
+          <div class="callout-icon">⚠️</div>
+          <div class="callout-body"><strong>总原则</strong>标准化量表的开发主要用于评估某组精神症状的严重程度，<strong>而非诊断精神障碍</strong>。量表分数不能替代精神检查与临床判断。</div>
+        </div>
+        <div class="table-wrap"><table class="comparison-table">
+          <thead><tr><th>名称</th><th>用途</th><th>特点</th><th>注意</th></tr></thead>
+          <tbody>
+            <tr><td>韦氏成人智力量表（WAIS）</td><td>智力测验</td><td>适用于 16 岁以上人群；11 个分测验，言语量表 6 个（知识、领悟、算术、相似性、数字广度、词汇）+ 操作量表 5 个（数字符号、图画填充、木块图、图片排列、图形拼凑）</td><td>分数越高，智商越高</td></tr>
+            <tr><td>明尼苏达多相人格问卷（MMPI）</td><td>人格测验</td><td>共 566 道题，13 个分量表，包括疑病（Hs）、抑郁（D）、癔症（Hy）、病态人格（Pd）、男性-女性倾向（Mf）、妄想（Pa）、精神衰弱（Pt）、精神分裂症（Sc）、轻躁狂（Ma）、社会内向（Si）等</td><td>可了解个性特征，对精神科诊断有一定提示；不是诊断工具</td></tr>
+            <tr><td>阳性和阴性精神症状评定量表（PANSS）</td><td>评定精神分裂症的阳性、阴性和一般精神病理学症状</td><td>共 30 项，采用 1～7 分的 7 级评分</td><td>评分越高，精神症状越重</td></tr>
+            <tr><td>汉密尔顿抑郁量表（HAMD）</td><td>评估成人抑郁症状应用最广泛的他评工具</td><td>有 17 项、21 项、24 项三种版本；大部分项目 0～4 分 5 级评分，少数项目 0～2 分 3 级评分</td><td>评分越高，抑郁越重</td></tr>
+            <tr><td>汉密尔顿焦虑量表（HAMA）</td><td>评估成人焦虑症状应用最广泛的他评工具</td><td>共 14 项，采用 0～4 分的 5 级评分</td><td>评分越高，焦虑越重</td></tr>
+            <tr><td>治疗伴发症状量表（TESS）</td><td>评估服用精神药物患者出现的副作用</td><td>既包括常见症状和体征，又包括实验室检查结果；每项症状作三方面评定：严重程度、症状与药物的关系、采取的措施</td><td>用于副反应监测，不是诊断量表</td></tr>
+            <tr><td>简易智力状态检查量表（MMSE）</td><td>最常用的认知筛查工具</td><td>包括定向力、记忆力、注意力和计算力、语言功能等</td><td>评分越低，认知功能越差</td></tr>
+            <tr><td>患者健康问卷抑郁自评量表（PHQ-9）</td><td>筛查抑郁障碍的自评工具</td><td>采用 0～3 分的 4 级评分；临界分 5、10、15、20，分别代表轻度、中度、中重度、重度抑郁</td><td>自评工具，用于筛查与严重度评估</td></tr>
+          </tbody>
+        </table></div>
+        <p class="table-note">一句话鉴别：WAIS/MMPI 看“能力与人格”，PANSS/HAMD/HAMA 看“症状严重度”，TESS 看“副反应”，MMSE 看“认知”，PHQ-9 看“抑郁自评”。</p>
+      </div>
+
+      <div class="module module-symptom">
+        <div class="module-head"><span class="module-index">怎么做</span><h3>实验室检查：四类用途</h3></div>
+        <div class="card-grid">
+          <div class="card card-cause"><div class="card-header"><div class="card-icon">🧫</div><div class="card-title">常规筛查</div></div><div class="card-body">血尿便常规、生化常规、肝肾功能、血糖、电解质等。必要时加做血脂、催乳素、脑脊液、妊娠反应、代谢产物测定（如苯丙酮尿症）、基础代谢率、骨密度、遗传学检查（基因多态性检测以指导用药）。</div></div>
+          <div class="card card-diagnosis"><div class="card-header"><div class="card-icon">🧪</div><div class="card-title">毒理学检查</div></div><div class="card-body">患者出现精神状态改变时，需考虑物质滥用和戒断反应。酒精等可在血液中检测；甲基苯丙胺、可卡因、阿片类、大麻等可在尿液中检测，帮助医师进行临床判断。</div></div>
+          <div class="card card-treatment"><div class="card-header"><div class="card-icon">💊</div><div class="card-title">血药浓度监测</div></div><div class="card-body">使用得当有助于优化治疗和确保依从性。检测前需确定：测定方法是否已在临床验证；药物是否已达稳态；取血时间是否正确。正确检测有助于确定依从性、是否中毒、药物相互作用、临床疗效，减少窄治疗窗药物（如锂盐）的中毒风险。</div></div>
+          <div class="card card-diagnosis"><div class="card-header"><div class="card-icon">🦠</div><div class="card-title">病原学/病因学检测</div></div><div class="card-body">中枢神经系统感染所致精神障碍可通过血液（梅毒血清学筛查、HIV 抗体检测）及脑脊液病原学检查确诊。脑脊液 PCR 诊断单纯疱疹性脑炎特异性和敏感性高，可用于早期诊断；阿尔茨海默病也可通过脑脊液中 AD 相关生物标志物辅助诊断。</div></div>
+        </div>
+      </div>
+
+      <div class="module module-symptom">
+        <div class="module-head"><span class="module-index">怎么做</span><h3>特殊检查：能做什么，不能做什么</h3></div>
+        <div class="table-wrap"><table class="comparison-table">
+          <thead><tr><th>检查</th><th>原理/特点</th><th>精神科应用与定位</th></tr></thead>
+          <tbody>
+            <tr><td>脑电图（EEG）</td><td>通过置于头皮的电极测量大脑低电压的电活动</td><td>主要用于评估癫痫和其他神经系统疾病，也可评估器质性疾病所致精神症状（如谵妄、痴呆）。很多精神障碍存在脑电图异常，但目前仍非有决定性意义的诊断手段。</td></tr>
+            <tr><td>头颅 CT</td><td>使用多管 X 线提供大脑横断面影像；对 X 线吸收系数高的组织显示为白色（如颅骨），低的显示为黑色（如气体）</td><td>有助于识别器质性精神障碍的结构异常，也能发现精神障碍患者中一些非特异性结构改变（如精神分裂症的脑室扩大），但尚不能作为诊断精神障碍的主要方法。</td></tr>
+            <tr><td>磁共振成像（MRI）</td><td>利用质子和外部磁场的交互作用成像；提供横断面、矢状位、冠状位结构细节</td><td>对痴呆患者的脑萎缩、白质病变等敏感性更高。功能磁共振利用大脑加工过程中继发性的血流改变成像，扩展对精神疾病和精神药物的理解，有助于指导药物研发和临床研究。</td></tr>
+            <tr><td>功能性近红外光谱（fNIRS）</td><td>利用脑组织对 650～950nm 近红外光良好的穿透性和散射性，测量大脑皮质氧合血红蛋白和脱氧血红蛋白的相对浓度，观察血流动力学变化</td><td>可作为精神分裂症、抑郁症等临床诊断和疗效评估的辅助工具。</td></tr>
+            <tr><td>心率变异性（HRV）</td><td>逐个心动周期的微小差异及其规律；受交感神经和副交感神经调节</td><td>反映自主神经系统灵活性和压力的指标，客观评价情绪心理状态；焦虑、抑郁状态下 HRV 指标通常异常。</td></tr>
+            <tr><td>眼动检查</td><td>基于电流记录法、电磁感应法、图像/录像和瞳孔-角膜反射技术的眼动仪，追踪记录和分析眼球运动轨迹及特征</td><td>有助于某些精神障碍（如精神分裂症）的辅助诊断和认知功能评估。</td></tr>
+          </tbody>
+        </table></div>
+        <p class="table-note">一句话鉴别：EEG 主要看“癫痫与器质性”，CT/MRI 看“结构”，fNIRS/HRV/眼动看“辅助与评估”；没有任何一项能单独“确诊”精神障碍。</p>
+      </div>
+
+      <div class="module module-diff">
+        <div class="module-head"><span class="module-index">常见错误</span><h3>把辅助检查当成“诊断机器”</h3></div>
+        <ul class="icon-list cross">
+          <li><strong>量表评分 = 诊断：</strong>忽略教材明确说明“量表主要用于评估严重程度，而非诊断”。</li>
+          <li><strong>只做精神检查，不做躯体/神经系统检查：</strong>漏掉躯体疾病所致精神症状或药物副作用。</li>
+          <li><strong>脑电图/CT 异常即下诊断：</strong>教材明确二者目前仍非决定性诊断手段，CT 也不能作为主要诊断方法。</li>
+          <li><strong>血药浓度检测不看前提：</strong>未确认方法验证、药物稳态、取血时间，结果难以解释。</li>
+          <li><strong>精神状态改变不查毒理：</strong>遗漏物质滥用和戒断反应这一可逆原因。</li>
+        </ul>
+      </div>
+
+      <div class="module module-case">
+        <div class="module-head"><span class="module-index">示例 / 话术</span><h3>如何向患者解释量表</h3></div>
+        <div class="callout callout-example">
+          <div class="callout-icon">💬</div>
+          <div class="callout-body"><strong>示教话术（教学示例，非教材原文）</strong>“这个量表不是用来给您‘贴标签’的，它帮我们记录症状的严重程度，过一段时间再评一次，就能看出有没有好转。”</div>
+        </div>
+        <div class="callout callout-info">
+          <div class="callout-icon">🔍</div>
+          <div class="callout-body"><strong>教材举例</strong>明显消瘦除考虑伴发严重躯体疾病外，年轻女性患者也应考虑神经性厌食的可能——这提示躯体检查与精神症状评估要相互印证。</div>
+        </div>
+      </div>
+
+      <div class="module module-memory">
+        <div class="module-head"><span class="module-index">记忆</span><h3>量表“五组”与关键数字</h3></div>
+        <div class="memory-grid">
+          <div class="memory-card"><div class="m-title">方法一：五组归类<span class="m-type">归类</span></div><div class="m-formula">智（WAIS）· 人（MMPI）· 症（PANSS/HAMD/HAMA）· 副（TESS）· 筛（MMSE/PHQ-9）</div><p>记忆原理：先按“测什么”分五组，再在组内记具体量表，避免八个名词混在一起。</p></div>
+          <div class="memory-card"><div class="m-title">方法二：数字挂钩<span class="m-type">数字</span></div><div class="m-formula">16／11；566／13；30／1～7；17·21·24；14；5·10·15·20</div><p>WAIS 16 岁以上、11 个分测验；MMPI 566 题、13 个分量表；PANSS 30 项、1～7 分；HAMD 三种版本；HAMA 14 项；PHQ-9 临界分。记忆原理：每个量表只挂“一个最像它的数字”。</p></div>
+          <div class="memory-card"><div class="m-title">方法三：检查定位<span class="m-type">对比</span></div><div class="m-formula">结构看 CT/MRI，电活动看 EEG，辅助评估看 fNIRS/HRV/眼动</div><p>记忆原理：按“结构—电—功能”三层归类，避免把辅助检查抬成确诊工具。</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="m5" class="section">
+      <div class="section-header"><span class="section-number">09</span><h2>模块五 诊断原则与诊断思路</h2></div>
+      <p class="lead">诊断原则回答“凭什么这样诊断”，诊断思路回答“从症状到诊断怎么走”。教材给出三条原则（症状学诊断 symptomatic diagnosis、等级诊断 hierarchical diagnosis、共病诊断 comorbidity）和一条 SSD 路径，并介绍多轴诊断（multi-axial diagnosis）与标准化诊断性精神检查工具（standardized diagnostic interview）。</p>
+
+      <div class="module module-cause">
+        <div class="module-head"><span class="module-index">是什么</span><h3>三大诊断原则，各管一段逻辑</h3></div>
+        <div class="card-grid">
+          <div class="card card-diagnosis"><div class="card-header"><div class="card-icon">①</div><div class="card-title">症状学诊断</div></div><div class="card-body">大多数精神障碍病因不明，ICD-10 中的精神和行为障碍基本采用症状学分类原则。它避免病因学争论，允许在无法确立疾病分类学诊断时先按症状治疗，并保留观察和更改诊断的途径。</div></div>
+          <div class="card card-diagnosis"><div class="card-header"><div class="card-icon">②</div><div class="card-title">等级诊断</div></div><div class="card-body">诊断“功能性”精神障碍前，首先要排除器质性障碍和物质依赖。诊断标准中的排除标准要求排除“更高级别的诊断”后，才能作出该类疾病诊断。</div></div>
+          <div class="card card-diagnosis"><div class="card-header"><div class="card-icon">③</div><div class="card-title">共病诊断</div></div><div class="card-body">共病由范斯坦（Feinstein）在 20 世纪 70 年代提出，指同一患者患有两种及以上疾病。精神科共病常因各种精神障碍病因不明而产生。</div></div>
+        </div>
+      </div>
+
+      <div class="module module-symptom">
+        <div class="module-head"><span class="module-index">怎么做</span><h3>把三条原则落到具体判断上</h3></div>
+        <div class="sub-subsection">
+          <h4>1. 症状学诊断：先解决“现在怎么治”</h4>
+          <ul class="icon-list check">
+            <li>避免病因学上的争论。</li>
+            <li>使临床医师在暂时无法确立疾病分类学诊断时，依据症状学诊断采取及时的治疗措施。</li>
+            <li>保留观察和更改诊断的途径。</li>
+          </ul>
+        </div>
+        <div class="sub-subsection">
+          <h4>2. 等级诊断：先排除“更高级别”</h4>
+          <p>教材举例：确立“抑郁状态”的症状学诊断后，必须首先排除之前的三类精神障碍——器质性精神障碍、精神活性物质所致精神障碍、精神分裂症相关障碍，才能诊断为“抑郁障碍”。</p>
+          <div class="callout callout-warning">
+            <div class="callout-icon">⚠️</div>
+            <div class="callout-body"><strong>教材同时指出其局限</strong>等级诊断试图用一元论观点简化复杂临床问题，建立在一个并不牢固的假设上——认为某种障碍比其他障碍更基础或更重要。其好处是“更高级别”疾病优先处置、处置更具特异性（如边缘性脑炎所致幻觉妄想，首先治疗边缘性脑炎）；但临床上共病（如焦虑、抑郁）常同时出现，有时很难区分谁更基础、更重要。</div>
+          </div>
+        </div>
+        <div class="sub-subsection">
+          <h4>3. 共病诊断：三种情况、三点好处、三条注意</h4>
+          <div class="card-grid">
+            <div class="card card-diagnosis"><div class="card-body"><strong>情况① 同时独立</strong><br>A 与 B 同时存在但相互独立、具有不同病因，如精神障碍与白内障共病，以“多元病论”解释。</div></div>
+            <div class="card card-diagnosis"><div class="card-body"><strong>情况② 同时相关</strong><br>A 与 B 同时存在且可能具有一些相同的病理基础，如癫痫与抑郁障碍、抑郁障碍与物质滥用、神经性厌食与边缘型人格障碍。</div></div>
+            <div class="card card-diagnosis"><div class="card-body"><strong>情况③ 先后相关</strong><br>A 与 B 先后存在但可能具有相同病理基础，如既往焦虑障碍、本次抑郁障碍；不能据等级原则否定焦虑障碍，宜诊断共病。</div></div>
+          </div>
+          <p><strong>三点好处：</strong>①有利于确定治疗范围（如抑郁与酒精滥用共病，需考虑戒断及药物相互作用）；②有利于判断预后（如抑郁与焦虑共病可能病程更长、自杀风险更高、抗抑郁药反应欠佳、生活质量更差）；③有助于对易感障碍做出预测（如双相情感障碍患者即使目前无物质滥用证据，也要警惕日后发生，谨慎使用苯二氮䓬类药物）。</p>
+          <p><strong>三条注意：</strong>①主要诊断能否解释患者所有症状，如果不能，再考虑添加一种诊断；②作出共病诊断有何益处，能否提醒医师“患者还存在另外一种可治性障碍”；③另一种诊断是否符合共病障碍的诊断标准。</p>
+          <p class="table-note">教材引用的流行病学数据：20 世纪 90 年代早期美国调查发现，15～54 岁人群中，48% 在一生中某一阶段患有一种精神障碍，27% 至少患有两种，14% 患有三种及以上。</p>
+        </div>
+      </div>
+
+      <div class="module module-symptom">
+        <div class="module-head"><span class="module-index">怎么做</span><h3>诊断思路：从症状到诊断的五步</h3></div>
+        <div class="timeline">
+          <div class="tl-item"><div class="tl-title">第一步 · 确认症状（Symptoms，S）</div><div class="tl-desc">先确认患者存在哪些精神症状。症状是本章与第二章症状学的接口。</div></div>
+          <div class="tl-item"><div class="tl-title">第二步 · 构筑综合征（Syndrome，S）</div><div class="tl-desc">根据症状组合形成综合征，把零散症状归并为有临床意义的模式。</div></div>
+          <div class="tl-item"><div class="tl-title">第三步 · 提出假设诊断（hypothesis diagnoses，D1）</div><div class="tl-desc">由综合征引出各种可能的疾病学诊断，允许并列多个假设。</div></div>
+          <div class="tl-item"><div class="tl-title">第四步 · 鉴别诊断（differentiated diagnoses，D2）</div><div class="tl-desc">逐一鉴别和排除假设诊断，优先排除器质性、物质所致等“更高级别”诊断。</div></div>
+          <div class="tl-item"><div class="tl-title">第五步 · 疾病分类学诊断（nosology diagnosis，D3）</div><div class="tl-desc">最终作出疾病分类学诊断，并在需要时补充共病诊断。</div></div>
+        </div>
+        <div class="callout callout-danger">
+          <div class="callout-icon">🚫</div>
+          <div class="callout-body"><strong>教材明确反对的做法</strong>在实际工作中要避免先入为主地认定某个诊断，然后寻找症状和其他信息来证明这个诊断。</div>
+        </div>
+        <div class="sub-subsection">
+          <h4>临床整合流程（学习整合，非教材原文顺序）</h4>
+          <div class="timeline">
+            <div class="tl-item"><div class="tl-title">① 收集症状与病史</div><div class="tl-desc">用精神检查与病史采集确认症状（S），同时完成躯体、神经系统与必要的辅助检查。</div></div>
+            <div class="tl-item"><div class="tl-title">② 排除器质性/物质</div><div class="tl-desc">按等级诊断，先排除器质性精神障碍、精神活性物质所致精神障碍等“更高级别”诊断。</div></div>
+            <div class="tl-item"><div class="tl-title">③ 等级诊断</div><div class="tl-desc">在排除之后，判断现有症状群最符合哪一类功能性精神障碍。</div></div>
+            <div class="tl-item"><div class="tl-title">④ 评估共病</div><div class="tl-desc">检查主要诊断能否解释全部症状；若不能，再评估是否存在符合标准的共病。</div></div>
+            <div class="tl-item"><div class="tl-title">⑤ 形成诊断</div><div class="tl-desc">作出疾病分类学诊断（D3），并按教材第五版理念量化严重程度、功能损害及相关因素。</div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="module module-symptom">
+        <div class="module-head"><span class="module-index">怎么做</span><h3>多轴诊断与标准化诊断性精神检查工具</h3></div>
+        <div class="sub-subsection">
+          <h4>多轴诊断（multi-axial diagnosis）</h4>
+          <p>教材介绍 DSM-Ⅳ 的五轴诊断观点：有助于医师进行全面资料收集，也能指导资料分析过程使之系统、综合、逻辑清晰；五轴所涵盖的范围比单一诊断更能全面描述患者整体状况，并为治疗方案制定及结局预测提供信息。轴Ⅰ至轴Ⅲ都可以作为临床的主要诊断，轴Ⅳ和轴Ⅴ作为补充资料。教材未逐一列出五个轴的具体名称。</p>
+          <p>第五版虽不再采用五轴体系，但仍保留其理念：在疾病诊断做出后，需要对疾病的严重程度、功能损害情况及与疾病相关的因素进行量化评估。</p>
+        </div>
+        <div class="sub-subsection">
+          <h4>标准化诊断性精神检查工具（standardized diagnostic interview）</h4>
+          <p>世界卫生组织曾对不同社会文化背景下精神障碍诊断的可靠性、一致性进行研究，发现临床医师之间诊断存在差异。原因包括：所收集的资料来源不同；医师所使用的术语和对术语含义的理解不同；交谈检查的方法不同；所采用的疾病分类法和诊断标准不同。</p>
+          <p>标准化工具由有临床经验的精神病专家根据诊断要点和/或诊断标准设计，包括一系列条目，每一条目代表一个症状或临床变量、规定的检查程序、提问方式和评分标准，并附有词条解释。它是定式或半定式的面谈检查工具，医师或研究者严格按规定询问和检查，遵循词条定义评分编码，确定症状是否存在并判断严重度，从而提高诊断一致性。</p>
+          <div class="table-wrap"><table class="comparison-table">
+            <thead><tr><th>工具</th><th>英文/缩写</th><th>教材定位</th></tr></thead>
+            <tbody>
+              <tr><td>DSM-Ⅳ 临床定式访谈（患者版）</td><td>SCID-I/P</td><td>目前常用的标准化诊断性精神检查工具之一。</td></tr>
+              <tr><td>简明国际神经精神访谈</td><td>M.I.N.I.</td><td>目前常用的标准化诊断性精神检查工具之一。</td></tr>
+              <tr><td>复合性国际诊断交谈检查表</td><td>CIDI</td><td>目前常用的标准化诊断性精神检查工具之一。</td></tr>
+            </tbody>
+          </table></div>
+          <p class="table-note">教材未对三种工具作进一步比较，也未说明其适用场景差异，本表只列教材明确给出的定位。</p>
+        </div>
+      </div>
+
+      <div class="module module-diff">
+        <div class="module-head"><span class="module-index">常见错误</span><h3>诊断思维的四类偏差</h3></div>
+        <ul class="icon-list cross">
+          <li><strong>跳过排除：</strong>未排除器质性障碍和物质依赖，就直接诊断精神分裂症或抑郁障碍。</li>
+          <li><strong>把等级诊断绝对化：</strong>用“更高等级”否定先前已明确的焦虑障碍，忽视先后共病。</li>
+          <li><strong>共病随意添加：</strong>不检查“主要诊断能否解释全部症状”“共病是否有益”“是否符合标准”。</li>
+          <li><strong>先入为主：</strong>先认定诊断，再挑选支持它的症状，忽略反证。</li>
+          <li><strong>量表代替诊断：</strong>用 HAMD、PHQ-9 的分数直接下抑郁障碍诊断。</li>
+        </ul>
+      </div>
+
+      <div class="module module-case">
+        <div class="module-head"><span class="module-index">示例 / 话术</span><h3>教材举例：从“抑郁状态”到“抑郁障碍”</h3></div>
+        <div class="callout callout-example">
+          <div class="callout-icon">📖</div>
+          <div class="callout-body"><strong>教材原文举例</strong>确立了“抑郁状态”的症状学诊断后，必须首先排除之前的三类精神障碍（器质性精神障碍、精神活性物质所致精神障碍、精神分裂症相关障碍），才能诊断为“抑郁障碍”。</div>
+        </div>
+        <p>临床推演时可对自己说：“我现在只有症状学诊断，还不能叫疾病诊断；先把器质性、物质、精神分裂症相关三类排除，再谈抑郁障碍。”这不是套话，而是教材给出的排除顺序。</p>
+      </div>
+
+      <div class="module module-memory">
+        <div class="module-head"><span class="module-index">记忆</span><h3>三原则口诀 + 五步链条 + 共病“三三制”</h3></div>
+        <div class="memory-grid">
+          <div class="memory-card"><div class="m-title">方法一：三原则口诀<span class="m-type">口诀</span></div><div class="m-formula">“症、等、共”</div><p>症状学诊断、等级诊断、共病诊断。记忆原理：三字分别对应“先描述、再排除、后补充”三个动作，顺序本身有逻辑。</p></div>
+          <div class="memory-card"><div class="m-title">方法二：SSD 五步链<span class="m-type">首字母</span></div><div class="m-formula">S → S → D1 → D2 → D3</div><p>症状、综合征、假设诊断、鉴别诊断、疾病分类学诊断。记忆原理：把五个抽象名词压成五个符号，符号再展开为动作。</p></div>
+          <div class="memory-card"><div class="m-title">方法三：共病“三三制”<span class="m-type">数字</span></div><div class="m-formula">3 种情况 · 3 点好处 · 3 条注意</div><p>记忆原理：用“三”作为组块边界，每块只记三个关键词，降低记忆负担。</p></div>
+          <div class="memory-card"><div class="m-title">方法四：排除顺序<span class="m-type">流程</span></div><div class="m-formula">器质性 → 物质 → 精神分裂症相关 → 抑郁障碍</div><p>教材举例中的排除链。记忆原理：把“最高级别”放最前，形成一条单向排查路线。</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="m6" class="section">
+      <div class="section-header"><span class="section-number">10</span><h2>模块六 精神科病历书写</h2></div>
+      <p class="lead">病历（medical record）是检查与诊断的最终书面呈现。教材说：一份好的精神科病历，能让读者对患者的精神症状和生活经历有栩栩如生之感，并以一位 14 岁女性患者的病历作为示例。</p>
+
+      <div class="module module-cause">
+        <div class="module-head"><span class="module-index">是什么</span><h3>病历要回答三个“如何描述”</h3></div>
+        <div class="card-grid">
+          <div class="card card-cause"><div class="card-header"><div class="card-icon">🕰️</div><div class="card-title">如何描述病情演变</div></div><div class="card-body">对应现病史：按时间先后描述起病、发展、演变、治疗与疗效。</div></div>
+          <div class="card card-cause"><div class="card-header"><div class="card-icon">👤</div><div class="card-title">如何描述经历和处境</div></div><div class="card-body">对应个人史：从母亲妊娠到发病前的生活经历、人格特点与社会处境。</div></div>
+          <div class="card card-symptom"><div class="card-header"><div class="card-icon">🔍</div><div class="card-title">如何描述精神状态</div></div><div class="card-body">对应精神检查：一般检查、认知活动、情感活动、意志行为。</div></div>
+        </div>
+        <div class="callout callout-info">
+          <div class="callout-icon">📌</div>
+          <div class="callout-body"><strong>教材病例的边界</strong>教材第四节给出的是一位 14 岁女性患者的病历示例，但明确写“体格检查、诊断及鉴别诊断、治疗计划略”。因此，<strong>教材未提供完整病历范例</strong>，本指南只按教材可见结构整理。</div>
+        </div>
+      </div>
+
+      <div class="module module-symptom">
+        <div class="module-head"><span class="module-index">怎么做</span><h3>教材要求的结构清单：病历七要素</h3></div>
+        <ul class="icon-list check">
+          <li><strong>一般资料：</strong>姓名、性别、年龄、婚姻、民族、籍贯、职业、文化程度、住址、联系方式、入院日期、病史提供者及可靠性估计。</li>
+          <li><strong>主诉：</strong>主要精神症状及病程（就诊理由）。</li>
+          <li><strong>现病史：</strong>发病条件及因素、起病缓急及早期症状、发展与演变、病时一般情况、既往诊疗详情。</li>
+          <li><strong>既往史：</strong>躯体疾病、中枢神经系统疾病、感染中毒、过敏、酗酒吸毒、自杀史及其他精神病史。</li>
+          <li><strong>个人史：</strong>从母亲妊娠到发病前的整个生活经历；按年龄与病种重点询问；女性加月经婚育史。</li>
+          <li><strong>家族史：</strong>家庭结构、关系、特殊事件、精神病家族史、近亲婚配。</li>
+          <li><strong>精神检查：</strong>一般检查；认知活动（感知觉、思维和思维障碍、注意力、记忆力及智商、自知力）；情感活动；意志行为。</li>
+        </ul>
+        <div class="sub-subsection">
+          <h4>精神检查的记录框架（教材病例所用）</h4>
+          <div class="table-wrap"><table class="comparison-table">
+            <thead><tr><th>层级</th><th>记录内容</th><th>教材病例示例要点</th></tr></thead>
+            <tbody>
+              <tr><td>（一）一般检查</td><td>年貌、衣着、入院方式、意识、定向力、合作程度、生活自理、睡眠、大小便</td><td>青少年女性，年貌相当，衣着欠整齐，由家属协助背入病室；意识清晰，问答及指令均不配合。</td></tr>
+              <tr><td>（二）认知活动</td><td>感知觉；思维和思维障碍；注意力；记忆力及智商；自知力</td><td>不语，钝针触之无回应；问话不答，保持缄默；无法确定注意力、记忆力、智商及自知力。</td></tr>
+              <tr><td>（三）情感活动</td><td>面部表情、眼神接触、内心体验、情绪反应</td><td>表情几乎无变化，无眼神接触；提及父母时短暂流泪；检查肌张力时发出低微哼哼声并轻微皱眉。</td></tr>
+              <tr><td>（四）意志行为</td><td>意志活动、姿势、动作、违拗、被动服从、冲动/自伤/伤人</td><td>缄默不语、不主动活动、固定姿势；可查及“空气枕头”“蜡样屈曲”、被动违拗；钝刺无反应；睡眠时肌肉放松、有翻身。</td></tr>
+            </tbody>
+          </table></div>
+        </div>
+      </div>
+
+      <div class="module module-diff">
+        <div class="module-head"><span class="module-index">常见错误</span><h3>病历写成“流水账”或“判决书”</h3></div>
+        <ul class="icon-list cross">
+          <li><strong>只有时间，没有演变：</strong>罗列就诊经过，却不写症状如何起病、加重、变化。</li>
+          <li><strong>只有结论，没有例证：</strong>写“情感淡漠”“不合作”，却不描述具体表情、言语、动作。</li>
+          <li><strong>把家属转述写成患者自述：</strong>信息来源混淆，影响采信与法律风险判断。</li>
+          <li><strong>精神检查漏项：</strong>只写认知，不写情感与意志行为；或只写“自知力缺失”一句。</li>
+          <li><strong>把推断当事实：</strong>用“因为…所以…”替代客观描述，读者无法复核。</li>
+        </ul>
+        <div class="callout callout-warning">
+          <div class="callout-icon">✍️</div>
+          <div class="callout-body"><strong>类比理解（非教材原文）</strong>好病历像纪录片：让读者看见患者怎样说话、怎样走路、怎样吃饭；坏病历像判决书：只有结论，没有证据。</div>
+        </div>
+      </div>
+
+      <div class="module module-case">
+        <div class="module-head"><span class="module-index">示例 / 话术</span><h3>教材原文节选：主诉与意志行为记录</h3></div>
+        <div class="callout callout-example">
+          <div class="callout-icon">📖</div>
+          <div class="callout-body"><strong>教材原文（主诉）</strong>
+            <p>“患者，女，14 岁。言行渐迟缓四年，不语、不动两年，间断打骂家人一年余。”</p>
+            <strong>教材原文（精神检查·意志行为，节选）</strong>
+            <p>“患者缄默不语，不主动活动，常常保持一个固定不变的姿势。可查及‘空气枕头’现象……可查及‘蜡样屈曲’……存在被动违拗……”</p>
+          </div>
+        </div>
+        <p class="table-note">这段记录的示范意义：不只写“患者木僵”这一概括词，而是写出“缄默、固定姿势、空气枕头、蜡样屈曲、被动违拗”等可观察的事实。</p>
+      </div>
+
+      <div class="module module-case">
+        <div class="module-head"><span class="module-index">示例 / 话术</span><h3>现病史写法：时间 + 诱因 + 表现 + 功能 + 诊疗</h3></div>
+        <div class="sub-subsection">
+          <h4>可套用的句式（教学示例，非教材原文）</h4>
+          <p>“×年×月（时间），在……之后（诱因/背景）出现……（具体表现及频率），以致……（学习/工作/生活功能变化）；曾到……就诊，诊断为……，予……治疗，疗效……；此后……（演变）。”</p>
+          <p>教材病例正是按这种纵向顺序展开：2010 年下半年写作业变慢 → 2011 年 5 月行动缓慢加重、成绩下降 → 2012 年 4 月做事缓慢加重 → 多次住院与用药 → 2013—2014 年出现发脾气、打骂家人 → 门诊以“木僵状态”收入。</p>
+        </div>
+      </div>
+
+      <div class="module module-memory">
+        <div class="module-head"><span class="module-index">记忆</span><h3>七要素数字编码 + 精神检查四层</h3></div>
+        <div class="memory-grid">
+          <div class="memory-card"><div class="m-title">方法一：病历七要素数字编码<span class="m-type">数字</span></div><div class="m-formula">1 资 · 2 主 · 3 现 · 4 既 · 5 个 · 6 家 · 7 精</div><p>一般资料、主诉、现病史、既往史、个人史、家族史、精神检查。记忆原理：给七个抽屉编号，写作时按号取用，避免漏项。</p></div>
+          <div class="memory-card"><div class="m-title">方法二：精神检查四层<span class="m-type">口诀</span></div><div class="m-formula">“一认情意”</div><p>一般检查、认知活动、情感活动、意志行为。记忆原理：四字对应四个记录层级，按“从外到内、从静到动”的顺序展开。</p></div>
+          <div class="memory-card"><div class="m-title">方法三：现病史五问<span class="m-type">提问</span></div><div class="m-formula">何时起？为何起？怎么变？影响什么？怎么治过？</div><p>记忆原理：把五个书面要点转成五个口语问题，写作时逐问逐答。</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="summary" class="section">
+      <div class="section-header"><span class="section-number">11</span><h2>全章核心要点</h2></div>
+      <p class="lead">以下 18 条覆盖本章全部可考主线。建议先遮住答案自述，再对照补漏。</p>
+      <ol class="numbered-list">
+        <li><strong>本章两点独特性：</strong>精神检查发现多为主观报告、医师判断也带主观性，但不能等同于“臆断”；同时需要人文主义精神。</li>
+        <li><strong>医师的双重工具性：</strong>精神科医师本身既是可靠的诊断工具，也是有效的治疗工具。</li>
+        <li><strong>医患关系的唯一目的：</strong>促进患者的健康；良好关系在精神科也是一种治疗关系。</li>
+        <li><strong>六条原则：</strong>信任、尊重、个体化、人本主义、动态、边界。</li>
+        <li><strong>面谈检查的英文：</strong>interview；它既收集信息，也意味着治疗的开始。</li>
+        <li><strong>面谈五个目的：</strong>确立诊断、从完整的人了解患者、了解环境、形成治疗关系、初步宣教。</li>
+        <li><strong>面谈三步：</strong>开始（放松、环境、自我介绍、称谓）→ 深入（开放为主、主导谈话）→ 结束（小结、查漏、解释保证、安排）；深入交谈一般 20～45 分钟。</li>
+        <li><strong>九项技巧：</strong>观察、倾听、提问、非言语沟通、肯定、澄清、代述、重构、鼓励表达；倾听最重要也最基本。</li>
+        <li><strong>六方面内容：</strong>外表与行为、情绪状态、言谈与思维、感知觉、认知功能、自知力。</li>
+        <li><strong>两类特殊情况：</strong>意识障碍患者评估定向力、即刻记忆、注意力；不合作患者观察一般外貌、言语、动作行为。</li>
+        <li><strong>病史六项：</strong>一般资料、主诉、现病史、既往史、个人史、家族史；现病史是核心。</li>
+        <li><strong>起病时间：</strong>2 周内急性，2 周至 3 个月亚急性，3 个月以上慢性；谵妄多急性，痴呆多慢性。</li>
+        <li><strong>四种采信：</strong>全面明确无矛盾；欠全面但明确无矛盾；不全面不明确但高度怀疑；相互矛盾需沟通一致后采信。</li>
+        <li><strong>躯体与神经检查：</strong>所有患者都应全面检查；神经系统检查有助于找病因、防漏诊、甄别分离转换性障碍、评估药物副作用。</li>
+        <li><strong>量表定位：</strong>评估症状严重程度，不用于诊断；八个常用量表的用途与数字要记牢。</li>
+        <li><strong>辅助检查定位：</strong>EEG 主要用于癫痫和神经系统疾病；CT/MRI 识别结构异常；均不能单独确诊精神障碍；实验室还包括毒理、血药浓度、病原学。</li>
+        <li><strong>三大诊断原则：</strong>症状学（避免病因争论、及时治疗、保留更改途径）、等级（先排除器质性与物质）、共病（同一患者两种及以上疾病）。</li>
+        <li><strong>SSD 五步与病历七要素：</strong>症状 → 综合征 → 假设诊断 → 鉴别诊断 → 分类诊断；病历按一般资料、主诉、现病史、既往史、个人史、家族史、精神检查书写。</li>
+      </ol>
+
+      <div class="memory-grid">
+        <div class="memory-card"><div class="m-title">方法一：精神检查提纲首字母<span class="m-type">首字母</span></div><div class="m-formula">外 · 情 · 言 · 感 · 认 · 自</div><p>外表与行为、情绪状态、言谈与思维、感知觉、认知功能、自知力。<strong>记忆原理：</strong>首字母是“提取钩子”，把六个长名词压成六个字；再按检查顺序复述，钩子就能带出完整内容。</p></div>
+        <div class="memory-card"><div class="m-title">方法二：诊断原则口诀<span class="m-type">口诀</span></div><div class="m-formula">“症、等、共”</div><p>症状学、等级、共病。<strong>记忆原理：</strong>三字对应“先描述—再排除—后补充”的逻辑链，口诀短、顺序稳，适合考场快速回忆。</p></div>
+        <div class="memory-card"><div class="m-title">方法三：病历七要素数字编码<span class="m-type">数字</span></div><div class="m-formula">1 资 2 主 3 现 4 既 5 个 6 家 7 精</div><p><strong>记忆原理：</strong>数字是固定“抽屉”，把自由回忆变成按号提取；写作时从 1 到 7 过一遍，天然防漏项。</p></div>
+        <div class="memory-card"><div class="m-title">方法四：九技巧分段口诀<span class="m-type">口诀</span></div><div class="m-formula">“观听提非，肯清代重鼓”</div><p><strong>记忆原理：</strong>“四 + 五”分组形成节奏，前四为基本动作、后五为加工动作；押韵降低遗忘率。</p></div>
+      </div>
+    </section>
+
+    <section id="pitfalls" class="section">
+      <div class="section-header"><span class="section-number">12</span><h2>易混易错点警示</h2></div>
+      <div class="exam-alert">
+        <h3>这些地方最容易“差一点就错”</h3>
+        <ul>
+          <li><strong>“精神检查”不是只聊天：</strong>它既有信息目标，也有观察与关系目标，且访谈本身意味着治疗开始。</li>
+          <li><strong>量表不是诊断工具：</strong>教材明确“主要用于评估某组精神症状的严重程度，而非诊断精神障碍”。</li>
+          <li><strong>等级诊断不能跳过排除：</strong>诊断功能性精神障碍前，先排除器质性障碍和物质依赖。</li>
+          <li><strong>共病不是“症状叠加”：</strong>先后存在的焦虑与抑郁，不能因等级原则否定先前的焦虑障碍；共病要检查是否符合标准、是否有益。</li>
+          <li><strong>起病时间两个界标：</strong>2 周内为急性，2 周至 3 个月为亚急性，3 个月以上为慢性；不要把“2 个月”说成急性。</li>
+          <li><strong>只向家属采集病史：</strong>应先与患者谈话，向家属采集前征得患者同意；患者是否在场由其自己决定。</li>
+          <li><strong>脑电图/CT 异常不等于诊断：</strong>教材明确二者目前仍非决定性诊断手段，CT 也不能作为主要诊断方法。</li>
+          <li><strong>“不合作”不是一句结论：</strong>对不合作患者要写清一般外貌、言语、动作行为的具体观察，否则无法复核。</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="quiz" class="section">
+      <div class="section-header"><span class="section-number">13</span><h2>章节自测</h2></div>
+      <div class="quiz-block">
+        <p class="lead">共 14 题：单选 4、多选 2、判断 3、名词解释 2、简答 2、案例 1。答案默认折叠，先作答再展开。</p>
+
+        <div class="quiz-item">
+          <div class="quiz-stem"><span class="q-type">单选</span><span>1. 教材称精神检查中“最重要也是最基本的一项技术”，却最容易被繁忙医师忽视的是</span><span class="difficulty">⭐</span></div>
+          <ul class="quiz-options">
+            <li data-letter="A">观察</li>
+            <li data-letter="B" class="correct">倾听</li>
+            <li data-letter="C">澄清</li>
+            <li data-letter="D">重构</li>
+          </ul>
+          <details class="qa"><summary><span class="qa-num">答</span>答案与解析</summary><div class="qa-body"><span class="answer-key">答案 B</span>教材原文明确“倾听这是最重要也是最基本的一项技术”。观察同样重要，但教材没有给它这一最高定位；澄清与重构属于具体沟通技巧。</div></details>
+        </div>
+
+        <div class="quiz-item">
+          <div class="quiz-stem"><span class="q-type">单选</span><span>2. 按教材标准，精神状态大致正常至出现明显精神障碍的时间在 2 周之内，称为</span><span class="difficulty">⭐⭐</span></div>
+          <ul class="quiz-options">
+            <li data-letter="A" class="correct">急性起病</li>
+            <li data-letter="B">亚急性起病</li>
+            <li data-letter="C">慢性起病</li>
+            <li data-letter="D">隐匿起病</li>
+          </ul>
+          <details class="qa"><summary><span class="qa-num">答</span>答案与解析</summary><div class="qa-body"><span class="answer-key">答案 A</span>教材将 2 周之内定为急性起病，2 周至 3 个月为亚急性，3 个月以上为慢性。谵妄多为急性起病，痴呆多为慢性起病。</div></details>
+        </div>
+
+        <div class="quiz-item">
+          <div class="quiz-stem"><span class="q-type">单选</span><span>3. 关于标准化量表，下列说法正确的是</span><span class="difficulty">⭐⭐</span></div>
+          <ul class="quiz-options">
+            <li data-letter="A">主要用于诊断精神障碍</li>
+            <li data-letter="B" class="correct">主要用于评估某组精神症状的严重程度</li>
+            <li data-letter="C">可以完全替代精神检查</li>
+            <li data-letter="D">评分越高说明病情越轻</li>
+          </ul>
+          <details class="qa"><summary><span class="qa-num">答</span>答案与解析</summary><div class="qa-body"><span class="answer-key">答案 B</span>教材开宗明义：标准化量表的开发主要用于评估某组精神症状的严重程度，而非诊断精神障碍。不同量表分值方向不同，不能一概说“越高越轻”。</div></details>
+        </div>
+
+        <div class="quiz-item">
+          <div class="quiz-stem"><span class="q-type">单选</span><span>4. 等级诊断要求在诊断“功能性”精神障碍之前，首先排除</span><span class="difficulty">⭐⭐⭐</span></div>
+          <ul class="quiz-options">
+            <li data-letter="A" class="correct">器质性障碍和物质依赖</li>
+            <li data-letter="B">人格障碍</li>
+            <li data-letter="C">应激相关障碍</li>
+            <li data-letter="D">焦虑障碍</li>
+          </ul>
+          <details class="qa"><summary><span class="qa-num">答</span>答案与解析</summary><div class="qa-body"><span class="answer-key">答案 A</span>教材原文：精神科诊断“功能性”精神障碍之前首先要排除器质性障碍和物质依赖。其余选项不是教材在这一位置要求优先排除的对象。</div></details>
+        </div>
+
+        <div class="quiz-item">
+          <div class="quiz-stem"><span class="q-type">多选</span><span>5. 面谈检查的目的包括</span><span class="difficulty">⭐⭐</span></div>
+          <ul class="quiz-options">
+            <li data-letter="A" class="correct">获取必要信息以便确立诊断</li>
+            <li data-letter="B" class="correct">从完整的“人”的角度了解患者</li>
+            <li data-letter="C" class="correct">了解患者所处的环境</li>
+            <li data-letter="D" class="correct">形成良好的医患治疗关系</li>
+            <li data-letter="E">替代全面的躯体检查</li>
+          </ul>
+          <details class="qa"><summary><span class="qa-num">答</span>答案与解析</summary><div class="qa-body"><span class="answer-key">答案 ABCD</span>A、B、C、D 均为教材列出的面谈目的；教材还列出“向患者进行初步的精神卫生知识宣教”。E 错：面谈不能替代躯体及神经系统检查。</div></details>
+        </div>
+
+        <div class="quiz-item">
+          <div class="quiz-stem"><span class="q-type">多选</span><span>6. 共病诊断的好处包括</span><span class="difficulty">⭐⭐⭐</span></div>
+          <ul class="quiz-options">
+            <li data-letter="A" class="correct">有利于确定治疗范围</li>
+            <li data-letter="B" class="correct">有利于判断预后</li>
+            <li data-letter="C" class="correct">有助于对易感障碍做出预测</li>
+            <li data-letter="D">可以否定等级诊断的全部价值</li>
+            <li data-letter="E">自动提高诊断一致性</li>
+          </ul>
+          <details class="qa"><summary><span class="qa-num">答</span>答案与解析</summary><div class="qa-body"><span class="answer-key">答案 ABC</span>教材列出三点好处：确定治疗范围、判断预后、预测易感障碍。D 错：共病对一元论和等级诊断提出挑战，但不是“全盘否定”；E 错：提高一致性主要靠标准化诊断工具与统一标准，共病诊断本身不会自动提高一致性。</div></details>
+        </div>
+
+        <div class="quiz-item">
+          <div class="quiz-stem"><span class="q-type">判断</span><span>7. 精神科医师与患者见面交谈仅用于收集信息，治疗要在明确诊断之后才开始。</span><span class="difficulty">⭐</span></div>
+          <ul class="quiz-options">
+            <li data-letter="A">正确</li>
+            <li data-letter="B" class="correct">错误</li>
+          </ul>
+          <details class="qa"><summary><span class="qa-num">答</span>答案与解析</summary><div class="qa-body"><span class="answer-key">答案 B（错误）</span>教材明确：与其他临床学科不同，精神科医师与患者见面交谈，不仅要收集信息以便明确诊断，同时也意味着治疗的开始。</div></details>
+        </div>
+
+        <div class="quiz-item">
+          <div class="quiz-stem"><span class="q-type">判断</span><span>8. 不同来源的病史信息相互矛盾时，医师可以直接把矛盾信息作为诊断依据。</span><span class="difficulty">⭐⭐</span></div>
+          <ul class="quiz-options">
+            <li data-letter="A">正确</li>
+            <li data-letter="B" class="correct">错误</li>
+          </ul>
+          <details class="qa"><summary><span class="qa-num">答</span>答案与解析</summary><div class="qa-body"><span class="answer-key">答案 B（错误）</span>教材要求：尽量不要把矛盾的信息直接应用于诊断依据，而应与信息提供者进行真诚、深入的沟通；当矛盾信息全部或部分得到一致认可时，才能采信。涉及法律诉讼时尤应小心。</div></details>
+        </div>
+
+        <div class="quiz-item">
+          <div class="quiz-stem"><span class="q-type">判断</span><span>9. 共病是指同一患者患有两种及以上疾病。</span><span class="difficulty">⭐⭐</span></div>
+          <ul class="quiz-options">
+            <li data-letter="A" class="correct">正确</li>
+            <li data-letter="B">错误</li>
+          </ul>
+          <details class="qa"><summary><span class="qa-num">答</span>答案与解析</summary><div class="qa-body"><span class="answer-key">答案 A（正确）</span>这正是教材对共病（comorbidity）的定义；该概念由范斯坦在 20 世纪 70 年代提出。</div></details>
+        </div>
+
+        <div class="quiz-item">
+          <div class="quiz-stem"><span class="q-type">名词解释</span><span>10. 共病（comorbidity）</span><span class="difficulty">⭐⭐</span></div>
+          <details class="qa"><summary><span class="qa-num">答</span>参考答案</summary><div class="qa-body"><span class="answer-key">要点</span>由范斯坦（Feinstein）在 20 世纪 70 年代提出，指同一患者患有两种及以上疾病。精神科共病常因各种精神障碍病因不明而产生。教材将其分为三种情况：同时存在但相互独立、不同病因；同时存在且可能有相同病理基础；先后存在且可能有相同病理基础。共病诊断有利于确定治疗范围、判断预后、预测易感障碍，但也对一元论和等级诊断提出挑战。</div></details>
+        </div>
+
+        <div class="quiz-item">
+          <div class="quiz-stem"><span class="q-type">名词解释</span><span>11. 等级诊断</span><span class="difficulty">⭐⭐</span></div>
+          <details class="qa"><summary><span class="qa-num">答</span>参考答案</summary><div class="qa-body"><span class="answer-key">要点</span>精神科诊断“功能性”精神障碍之前，首先要排除器质性障碍和物质依赖；诊断标准中规定排除标准，要求排除“更高级别的诊断”后才能作出该类疾病诊断。教材举例：确立“抑郁状态”后，必须先排除器质性精神障碍、精神活性物质所致精神障碍、精神分裂症相关障碍，才能诊断“抑郁障碍”。该原则试图用一元论简化临床问题，但建立在“某种障碍更基础或更重要”的并不牢固的假设上。</div></details>
+        </div>
+
+        <div class="quiz-item">
+          <div class="quiz-stem"><span class="q-type">简答</span><span>12. 简述精神检查的九项技巧。</span><span class="difficulty">⭐⭐</span></div>
+          <details class="qa"><summary><span class="qa-num">答</span>参考答案</summary><div class="qa-body"><span class="answer-key">要点</span>①观察（患者与伴诊者）；②倾听（最重要最基本，体会言语背后的情感需求）；③提问（先开放、后封闭）；④非言语沟通（眼神、手势、身体姿态）；⑤肯定（肯定感受真实性，不赞同病态信念）；⑥澄清（弄清实际经过与情感体验）；⑦代述（替患者说出难以启齿的内容）；⑧重构（换措辞复述总结，不改变原意）；⑨鼓励表达（未完成句、举例、共鸣）。</div></details>
+        </div>
+
+        <div class="quiz-item">
+          <div class="quiz-stem"><span class="q-type">简答</span><span>13. 简述精神检查内容的六个方面，并各举一个观察点。</span><span class="difficulty">⭐⭐⭐</span></div>
+          <details class="qa"><summary><span class="qa-num">答</span>参考答案</summary><div class="qa-body"><span class="answer-key">要点</span>①外表与行为：衣着、姿势、活动量、社交接触、生活自理；②情绪状态：表情、语音语调、优势情感、情感反应是否适切，抑郁者必问自杀观念；③言谈与思维：语速与量、形式逻辑、妄想/超价观念/强迫观念；④感知觉：错觉、幻觉的种类内容与频率；⑤认知功能：定向力、注意力、记忆、智能；⑥自知力：对个别症状及整体精神状况的认识，推断合作程度。</div></details>
+        </div>
+
+        <div class="quiz-item">
+          <div class="quiz-stem"><span class="q-type">案例</span><span>14. 一名中年男性近数月情绪低落、兴趣减退、入睡困难，每晚饮酒“助眠”；家属诉其明显消瘦、易怒。既往体健。请回答：①按等级诊断思路，下一步首先应做什么？②如果抑郁症状与饮酒关系密切，诊断时应注意什么？</span><span class="difficulty">⭐⭐⭐</span></div>
+          <details class="qa"><summary><span class="qa-num">析</span>答案与诊断思路</summary><div class="qa-body"><span class="answer-key">思路</span>①先做全面的躯体及神经系统检查，并按教材选择常规实验室检查、毒理学检查（酒精）等，排除器质性疾病和物质所致精神障碍；不能仅凭情绪低落直接诊断抑郁障碍。②若精神状态的改变与饮酒、戒断关系密切，应优先考虑精神活性物质所致精神障碍；若抑郁症状与饮酒相互独立或先后存在且不能用单一疾病解释，再按共病诊断的三条注意评估（主要诊断能否解释全部症状、共病是否有益、是否符合诊断标准）。量表可用于评估抑郁严重度，但不能代替诊断。<br><em>本题为经典临床情境（教学演练，非教材原文），仅使用教材描述过的检查与原则，未给出具体化验值与剂量。</em></div></details>
+        </div>
+      </div>
+    </section>
+
+    <section id="flashcards" class="section">
+      <div class="section-header"><span class="section-number">14</span><h2>考点速记卡</h2></div>
+      <p class="lead">16 张翻转卡，覆盖定义、步骤、数字与诊断原则。点击卡片翻面。</p>
+      <div class="flashcard-grid">
+        <div class="flashcard"><div class="flashcard-inner">
+          <div class="flashcard-face flashcard-front"><span class="card-tag concept">概念</span><p>建立医患关系的唯一目的是什么？</p><span class="flip-hint">点击翻转</span></div>
+          <div class="flashcard-face flashcard-back"><p>促进患者的健康。</p></div>
+        </div></div>
+        <div class="flashcard"><div class="flashcard-inner">
+          <div class="flashcard-face flashcard-front"><span class="card-tag memory">记忆</span><p>医患关系六原则口诀？</p><span class="flip-hint">点击翻转</span></div>
+          <div class="flashcard-face flashcard-back"><p>“信尊个，人本动边”——信任、尊重、个体化、人本主义、动态、边界。</p></div>
+        </div></div>
+        <div class="flashcard"><div class="flashcard-inner">
+          <div class="flashcard-face flashcard-front"><span class="card-tag concept">概念</span><p>面谈检查的英文原文与五个目的？</p><span class="flip-hint">点击翻转</span></div>
+          <div class="flashcard-face flashcard-back"><p>interview。①获取信息确立诊断；②从完整的人了解患者；③了解环境；④形成治疗关系；⑤初步精神卫生宣教。</p></div>
+        </div></div>
+        <div class="flashcard"><div class="flashcard-inner">
+          <div class="flashcard-face flashcard-front"><span class="card-tag concept">概念</span><p>精神检查的步骤与深入交谈时长？</p><span class="flip-hint">点击翻转</span></div>
+          <div class="flashcard-face flashcard-back"><p>开始 → 深入 → 结束；深入交谈一般持续 20～45 分钟。</p></div>
+        </div></div>
+        <div class="flashcard"><div class="flashcard-inner">
+          <div class="flashcard-face flashcard-front"><span class="card-tag memory">记忆</span><p>九项沟通技巧口诀？</p><span class="flip-hint">点击翻转</span></div>
+          <div class="flashcard-face flashcard-back"><p>“观听提非，肯清代重鼓”——观察、倾听、提问、非言语沟通、肯定、澄清、代述、重构、鼓励表达。</p></div>
+        </div></div>
+        <div class="flashcard"><div class="flashcard-inner">
+          <div class="flashcard-face flashcard-front"><span class="card-tag concept">概念</span><p>精神检查六方面内容？</p><span class="flip-hint">点击翻转</span></div>
+          <div class="flashcard-face flashcard-back"><p>外表与行为、情绪状态、言谈与思维、感知觉、认知功能、自知力。</p></div>
+        </div></div>
+        <div class="flashcard"><div class="flashcard-inner">
+          <div class="flashcard-face flashcard-front"><span class="card-tag diagnosis">诊断</span><p>不合作患者要观察哪三方面？</p><span class="flip-hint">点击翻转</span></div>
+          <div class="flashcard-face flashcard-back"><p>一般外貌（意识、仪表、接触、合作、饮食、睡眠、自理）；言语（自发言语、缄默、模仿言语、持续言语、表情、态度）；动作行为（姿势、刻板/模仿、违拗/被动服从、冲动/自伤）。</p></div>
+        </div></div>
+        <div class="flashcard"><div class="flashcard-inner">
+          <div class="flashcard-face flashcard-front"><span class="card-tag concept">概念</span><p>病史采集六项内容？</p><span class="flip-hint">点击翻转</span></div>
+          <div class="flashcard-face flashcard-back"><p>一般资料、主诉、现病史、既往史、个人史、家族史。</p></div>
+        </div></div>
+        <div class="flashcard"><div class="flashcard-inner">
+          <div class="flashcard-face flashcard-front"><span class="card-tag diagnosis">数据</span><p>起病缓急的时间标准？</p><span class="flip-hint">点击翻转</span></div>
+          <div class="flashcard-face flashcard-back"><p>2 周之内为急性；2 周至 3 个月为亚急性；3 个月以上为慢性。谵妄多急性，痴呆多慢性。</p></div>
+        </div></div>
+        <div class="flashcard"><div class="flashcard-inner">
+          <div class="flashcard-face flashcard-front"><span class="card-tag diagnosis">诊断</span><p>病史来源相互矛盾时如何处理？</p><span class="flip-hint">点击翻转</span></div>
+          <div class="flashcard-face flashcard-back"><p>不直接把矛盾信息作为诊断依据；与信息提供者真诚深入沟通；全部或部分获得一致认可后才采信。涉法律诉讼尤应小心。</p></div>
+        </div></div>
+        <div class="flashcard"><div class="flashcard-inner">
+          <div class="flashcard-face flashcard-front"><span class="card-tag diagnosis">诊断</span><p>标准化量表的主要用途？</p><span class="flip-hint">点击翻转</span></div>
+          <div class="flashcard-face flashcard-back"><p>评估某组精神症状的严重程度，而非诊断精神障碍。</p></div>
+        </div></div>
+        <div class="flashcard"><div class="flashcard-inner">
+          <div class="flashcard-face flashcard-front"><span class="card-tag memory">记忆</span><p>八个常用量表如何配对？</p><span class="flip-hint">点击翻转</span></div>
+          <div class="flashcard-face flashcard-back"><p>WAIS 智力；MMPI 人格；PANSS 精神分裂症症状；HAMD 抑郁他评；HAMA 焦虑他评；TESS 药物副反应；MMSE 认知筛查；PHQ-9 抑郁自评。</p></div>
+        </div></div>
+        <div class="flashcard"><div class="flashcard-inner">
+          <div class="flashcard-face flashcard-front"><span class="card-tag diagnosis">诊断</span><p>等级诊断的教材举例顺序？</p><span class="flip-hint">点击翻转</span></div>
+          <div class="flashcard-face flashcard-back"><p>确立“抑郁状态”后，先排除器质性精神障碍、精神活性物质所致精神障碍、精神分裂症相关障碍，才能诊断“抑郁障碍”。</p></div>
+        </div></div>
+        <div class="flashcard"><div class="flashcard-inner">
+          <div class="flashcard-face flashcard-front"><span class="card-tag concept">概念</span><p>共病的定义与提出者？</p><span class="flip-hint">点击翻转</span></div>
+          <div class="flashcard-face flashcard-back"><p>同一患者患有两种及以上疾病；由范斯坦（Feinstein）在 20 世纪 70 年代提出。</p></div>
+        </div></div>
+        <div class="flashcard"><div class="flashcard-inner">
+          <div class="flashcard-face flashcard-front"><span class="card-tag diagnosis">诊断</span><p>SSD 诊断五步？</p><span class="flip-hint">点击翻转</span></div>
+          <div class="flashcard-face flashcard-back"><p>症状（S）→ 综合征（S）→ 假设诊断（D1）→ 鉴别诊断（D2）→ 疾病分类学诊断（D3）。</p></div>
+        </div></div>
+        <div class="flashcard"><div class="flashcard-inner">
+          <div class="flashcard-face flashcard-front"><span class="card-tag memory">记忆</span><p>精神科病历七要素？</p><span class="flip-hint">点击翻转</span></div>
+          <div class="flashcard-face flashcard-back"><p>一般资料、主诉、现病史、既往史、个人史、家族史、精神检查。</p></div>
+        </div></div>
+      </div>
+    </section>
+
+    <section id="cases" class="section">
+      <div class="section-header"><span class="section-number">15</span><h2>病例挑战</h2></div>
+      <p class="lead">两个病例，难度递进：第一个来自教材第四节的病历示例，第二个是用于练习诊断思路的教学情境。</p>
+
+      <div class="case-card">
+        <div class="case-meta"><span>病例 1</span><span>难度 ⭐⭐</span><span>教材病例（据原文整理）</span></div>
+        <div class="case-title">以木僵状态入院、几乎不语不动的 14 岁女性患者</div>
+        <div class="case-body">
+          <p>患者，女，14 岁。主诉“言行渐迟缓四年，不语、不动两年，间断打骂家人一年余”。2010 年下半年读小学五年级时无明显诱因出现写作业速度变慢，写一句话用几分钟，有时拿着笔不动；2011 年 5 月行动缓慢加重，洗一双袜子需 20 多分钟，成绩明显下降。此后多次就诊，先后被考虑“抑郁症”“分裂情感障碍”“精神分裂症”等，接受过舍曲林、阿立哌唑、奥氮平、利培酮、帕利哌酮、舒必利及电抽搐治疗，疗效不佳。2012 年 11 月出院时行为更缓慢，很少说话，不能自己走路，一碗饭需 8 小时才能吃完。2013 年 3 月头颅 CT 示无明显异常。2014 年 3 月出现不顺心意时打骂父母、摔东西，曾用头撞墙、爬椅子欲跳楼，均被家人制止。门诊以“木僵状态”收入院。</p>
+          <p>入院精神检查：青少年女性，年貌相当，衣着欠整齐，由家属协助背入病室；意识清晰，定向力及其他精神检查时均不语、不动；仅检查眼球运动时能配合向各方向转动，较灵活。表情几乎无变化，无眼神接触；医师提及父母、是否想回去、是否伤心时，患者出现短暂流泪，但仍不语、不动。可查及“空气枕头”现象（拿走枕头后短时间内约 10 秒保持头不落床面）、“蜡样屈曲”（上肢被摆放后较长时间保持姿势）、被动违拗；用叩诊锤末端钝刺皮肤，无反应及躲避行为。睡眠时观察肌肉放松，有翻身、伸腿动作。教材注明“体格检查、诊断及鉴别诊断、治疗计划略”。</p>
+        </div>
+        <ol class="case-questions">
+          <li>该患者精神检查中，哪些阳性体征支持“木僵状态”的临床印象？</li>
+          <li>面对不合作患者，检查者应如何调整检查方式？</li>
+          <li>这份现病史在写法上体现了哪些教材要求？</li>
+        </ol>
+        <details class="qa"><summary><span class="qa-num">析</span>答案与诊断思路</summary><div class="qa-body">
+          <p><strong>①阳性体征：</strong>缄默不语、不主动活动、长时间保持固定姿势；空气枕头；蜡样屈曲；被动违拗；钝刺无反应及躲避；生活不能自理、进食极慢。教材正是用这些可观察事实来记录“木僵状态”，而不是只写一句结论。</p>
+          <p><strong>②不合作患者的检查：</strong>按教材三条观察线记录——一般外貌（意识、仪表、接触、合作、饮食、睡眠、自理）、言语（有无自发言语、缄默、模仿/持续言语、能否用文字表达、表情与态度）、动作行为（姿势、动作多少、刻板/模仿、目的性、违拗/被动服从、冲动/自伤）。同时向知情者补充病史；对有攻击行为者避免正面冲突，必要时适当约束。</p>
+          <p><strong>③现病史写法：</strong>按时间先后纵向描述；写清起病诱因与早期表现、发展与演变、功能变化（学习、行走、进食、自理）、既往诊断治疗及疗效；把“4 年、2 年、1 年余”的时间层次分开。教材此例还示范了“用具体事例说明功能损害”，如洗袜子 20 多分钟、一碗饭 8 小时。</p>
+          <p><em>说明：教材未给出该患者的最终诊断，本题只讨论精神检查记录与病历写法，不推断教材以外的诊断。</em></p>
+          </div></details>
+      </div>
+
+      <div class="case-card">
+        <div class="case-meta"><span>病例 2</span><span>难度 ⭐⭐⭐</span><span>经典临床情境（教学演练，非教材原文）</span></div>
+        <div class="case-title">情绪低落伴饮酒、消瘦的中年男性：先想什么，再诊断什么</div>
+        <div class="case-body">
+          <p>一名中年男性，近数月逐渐出现情绪低落、兴趣减退、入睡困难，白天疲乏，工作能力下降；家属称其近来明显消瘦、容易发脾气。患者每晚饮酒，自称“喝了才能睡”。既往体健，无明确中枢神经系统疾病史。家属希望医师“直接开点抗抑郁药”。</p>
+          <p>门诊条件下，患者意识清楚，能配合交谈；情绪低落，语速偏慢；未引出明确幻觉，但反复说“活着没意思”。家属补充：患者饮酒量较以前明显增加，减少饮酒时曾出现不适。</p>
+        </div>
+        <ol class="case-questions">
+          <li>按等级诊断思路，下一步首先应做哪些评估？</li>
+          <li>如果抑郁症状与饮酒、停酒关系密切，应如何考虑诊断？</li>
+          <li>如果抑郁与饮酒不能用一个疾病解释，诊断与量表应如何使用？</li>
+        </ol>
+        <details class="qa"><summary><span class="qa-num">析</span>答案与诊断思路</summary><div class="qa-body">
+          <p><strong>①下一步：</strong>不能直接开药。先完成全面躯体及神经系统检查（生命体征、甲状腺、有无外伤/自伤痕迹、神经系统体征），并按教材安排常规实验室检查（血尿便常规、生化、肝肾功能、血糖、电解质等）与毒理学检查（酒精）；同时评估自杀观念与风险。教材强调，许多躯体疾病可伴发精神症状甚至以精神行为症状为首发表现，精神状态改变时需考虑物质滥用和戒断反应。</p>
+          <p><strong>②若与饮酒/戒断密切相关：</strong>按等级诊断，先考虑精神活性物质所致精神障碍，优先处理物质相关问题；不能仅凭“情绪低落”诊断抑郁障碍。教材的排除链是：器质性精神障碍 → 精神活性物质所致精神障碍 → 精神分裂症相关障碍 → 才能诊断抑郁障碍。</p>
+          <p><strong>③若不能用一个疾病解释：</strong>考虑共病诊断，但要过“三条注意”：主要诊断能否解释全部症状；作出共病诊断有何益处（是否能提醒还存在另一种可治性障碍）；另一诊断是否符合诊断标准。量表（如 HAMD、PHQ-9）只用于评估抑郁严重程度与复评，不能替代诊断；同时要关注两种障碍治疗药物之间的相互作用。</p>
+          <p><em>本题为教学演练，仅使用教材描述过的检查项目、症状与诊断原则，未编造化验值、剂量或教材以外的时间阈值。</em></p>
+          </div></details>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-tag">精神病学 · 第三章 · 学习指南</div>
+      <p>内容依据《精神病学》第9版（2024）第三章整理，仅供学习复习使用。</p>
+      <p>诊断与治疗请以教材原文、现行诊疗规范及专科医师判断为准。</p>
+      <div class="disclaimer">免责声明：本指南为学习资料，不构成医疗建议。文中标注“教学示例/教学演练”的话术与情境仅用于练习，不代表教材原文；教材未提供的内容已明确标注。临床实践请遵循所在机构的规范与上级医师指导。</div>
+    </footer>
+  <nav class="chapter-pager" aria-label="章节间导航"><a class="cp-prev" href="精神病学_第二章_精神障碍的症状学_学习指南.html">← 上一章：第二章</a><a class="cp-toc" href="index.html">目录</a><a class="cp-next" href="精神病学_第四章_精神障碍分类与诊断标准_学习指南.html">下一章：第四章 →</a></nav>
+</main>
+</div>
+<button class="back-to-top" id="backTop" aria-label="回到顶部">↑</button>
+
+<script>
+/* ============================================================
+   精神病学学习指南 · 统一交互层 v1（构建期注入，整体替换原 IIFE）
+   兼容 A 族（.tabbar button + [data-panel] + .panel.on）与
+   B 族（.tab-nav + .tab-panel.active）两套 DOM 约定。
+   特性检测 + 防御式查询 + 幂等；不引入任何外部依赖。
+   ============================================================ */
+(function () {
+  'use strict';
+  if (window.__PSY_GUIDE_APP__) { return; }
+  window.__PSY_GUIDE_APP__ = true;
+
+  var d = document;
+
+  function all(sel, root) {
+    return Array.prototype.slice.call((root || d).querySelectorAll(sel));
+  }
+  function on(el, ev, fn, opt) {
+    if (el) { el.addEventListener(ev, fn, opt || false); }
+  }
+  function norm(s) {
+    return String(s || '').replace(/\s+/g, '').toUpperCase();
+  }
+
+  /* ---------- 1. Tab 切换（两族约定都支持） ---------- */
+  function initTabs() {
+    all('.tabs, [data-tabs]').forEach(function (g) {
+      if (g.__psyTabs) { return; }
+      g.__psyTabs = true;
+      var isA = !!g.querySelector('.tabbar button');
+      var btns = all(isA ? '.tabbar button' : '.tab-nav .tab-btn', g);
+      if (!btns.length) { return; }
+      var cls = isA ? 'on' : 'active';
+      var nav = btns[0].closest('.tabbar') || btns[0].closest('.tab-nav');
+      if (nav && !nav.hasAttribute('role')) { nav.setAttribute('role', 'tablist'); }
+      all(isA ? '.panel' : '.tab-panel', g).forEach(function (p) {
+        if (!p.hasAttribute('role')) { p.setAttribute('role', 'tabpanel'); }
+      });
+      function activate(btn) {
+        btns.forEach(function (b) {
+          b.classList.remove(cls);
+          b.setAttribute('aria-selected', 'false');
+        });
+        btn.classList.add(cls);
+        btn.setAttribute('aria-selected', 'true');
+        var id = btn.getAttribute('data-tab');
+        if (!id) { return; }
+        var target = isA
+          ? g.querySelector('[data-panel="' + id + '"]')
+          : (g.querySelector('.tab-panel#' + id) || d.getElementById(id));
+        all(isA ? '.panel' : '.tab-panel', g).forEach(function (p) {
+          var show = isA ? (p.getAttribute('data-panel') === id) : (p === target);
+          p.classList.toggle(cls, show);
+        });
+      }
+      btns.forEach(function (btn, i) {
+        if (!btn.hasAttribute('role')) { btn.setAttribute('role', 'tab'); }
+        btn.setAttribute('aria-selected', btn.classList.contains(cls) ? 'true' : 'false');
+        if (!btn.hasAttribute('tabindex') && !btn.classList.contains(cls)) { btn.setAttribute('tabindex', '0'); }
+        on(btn, 'click', function () { activate(btn); });
+        on(btn, 'keydown', function (e) {
+          if (e.key !== 'ArrowRight' && e.key !== 'ArrowLeft') { return; }
+          e.preventDefault();
+          var nx = btns[(i + (e.key === 'ArrowRight' ? 1 : btns.length - 1)) % btns.length];
+          if (nx) { nx.focus(); activate(nx); }
+        });
+      });
+    });
+  }
+
+  /* ---------- 2. 速记卡：点击/键盘翻转 + 可达性 ---------- */
+  function initCards() {
+    all('.flashcard').forEach(function (card) {
+      if (card.__psyCard) { return; }
+      card.__psyCard = true;
+      card.setAttribute('tabindex', '0');
+      card.setAttribute('role', 'button');
+      function sync() {
+        card.setAttribute('aria-pressed', card.classList.contains('flipped') ? 'true' : 'false');
+      }
+      function flip() { card.classList.toggle('flipped'); sync(); }
+      on(card, 'click', flip);
+      on(card, 'keydown', function (e) {
+        if (e.key === 'Enter' || e.key === ' ' || e.key === 'Spacebar') {
+          e.preventDefault();
+          flip();
+        }
+      });
+      sync();
+    });
+  }
+
+  /* ---------- 3. 自测题交互化（核心新功能） ---------- */
+  function initQuiz() {
+    var questions = all('.quiz-q, .quiz-item');
+    if (!questions.length) { return; }
+    var groups = {};
+
+    function keyOf(o) {
+      var L = o.getAttribute('data-letter');
+      if (L && String(L).replace(/\s+/g, '') !== '') { return norm(L); }
+      var sp = o.querySelector('.l');
+      if (sp) {
+        var t = norm(sp.textContent).replace(/[.．、:：]/g, '');
+        if (t !== '') { return t; }
+      }
+      var txt = norm(o.textContent);
+      if (txt.indexOf('正确') >= 0 || txt.indexOf('错误') >= 0) { return txt; }
+      return txt.charAt(0);
+    }
+
+    function getGroup(q) {
+      var sec = q.closest('.quiz-block') || q.closest('section') || d.body;
+      if (!groups[sec.__psyGid]) {
+        sec.__psyGid = 'g' + (Object.keys(groups).length + 1);
+        groups[sec.__psyGid] = { sec: sec, total: 0, score: 0, row: null, first: null };
+      }
+      var g = groups[sec.__psyGid];
+      if (!g.first) { g.first = q; }
+      return g;
+    }
+
+    function ensureRow(g) {
+      if (g.row) { return g.row; }
+      var row = d.createElement('div');
+      row.className = 'quiz-score';
+      row.setAttribute('role', 'status');
+      row.setAttribute('aria-live', 'polite');
+      row.innerHTML = '<span class="qs-label">自测计分</span>' +
+        '<span class="qs-num">得分 0 / ' + g.total + '</span>' +
+        '<span class="qs-bar"><i></i></span>';
+      g.first.parentNode.insertBefore(row, g.first);
+      g.row = row;
+      return row;
+    }
+
+    function updateRow(g) {
+      var row = ensureRow(g);
+      var num = row.querySelector('.qs-num');
+      var bar = row.querySelector('.qs-bar i');
+      if (num) { num.textContent = '得分 ' + g.score + ' / ' + g.total; }
+      if (bar) { bar.style.width = (g.total ? Math.round(g.score / g.total * 100) : 0) + '%'; }
+    }
+
+    questions.forEach(function (q) {
+      if (q.__psyQuiz) { return; }
+      q.__psyQuiz = true;
+      var opts = all('.opt', q);
+      if (!opts.length) { opts = all('.quiz-options > li', q); }
+      if (!opts.length) { return; }
+
+      /* 正确答案先记入内存：预标 correct 优先（记录后立即移除，消除剧透），
+         否则从解析文本「答案：X / 答案 X」提取（不改动任何文字） */
+      var ansKeys = [];
+      var preset = opts.filter(function (o) { return o.classList.contains('correct'); });
+      preset.forEach(function (o) { o.classList.remove('correct'); });
+      if (preset.length) {
+        ansKeys = preset.map(keyOf);
+      } else {
+        var dt = q.querySelector('details');
+        var txt = dt ? dt.textContent : '';
+        var m = txt.match(/答案\s*[:：]?\s*([A-Za-z](?:[\s、,，·和及]*[A-Za-z])*)/);
+        if (m) {
+          ansKeys = m[1].match(/[A-Za-z]/g) || [];
+        } else {
+          var m2 = txt.match(/答案\s*[:：]?\s*(正确|错误)/);
+          if (m2) { ansKeys = [m2[1]]; }
+        }
+      }
+      if (!ansKeys.length) { return; } /* 无可判定答案（名词解释等），保持原样 */
+
+      var g = getGroup(q);
+      g.total += 1;
+      var multi = ansKeys.length > 1;
+      var ansSet = ansKeys.map(norm);
+      var locked = false;
+      var picked = [];
+
+      function revealAll() {
+        opts.forEach(function (o) {
+          if (ansSet.indexOf(keyOf(o)) >= 0) { o.classList.add('is-reveal'); }
+        });
+      }
+      function finish(ok) {
+        locked = true;
+        q.classList.add('is-locked');
+        var dt = q.querySelector('details');
+        if (dt) { dt.open = true; }
+        if (ok) { g.score += 1; }
+        updateRow(g);
+      }
+
+      opts.forEach(function (o) {
+        o.setAttribute('tabindex', '0');
+        function pick() {
+          if (locked) { return; }
+          var k = keyOf(o);
+          if (ansSet.indexOf(k) >= 0) {
+            o.classList.add('is-right');
+            if (picked.indexOf(k) < 0) { picked.push(k); }
+            if (multi) {
+              if (picked.length === ansSet.length) { finish(true); }
+            } else {
+              finish(true);
+            }
+          } else {
+            o.classList.add('is-wrong');
+            revealAll();
+            finish(false);
+          }
+        }
+        on(o, 'click', pick);
+        on(o, 'keydown', function (e) {
+          if (e.key === 'Enter' || e.key === ' ' || e.key === 'Spacebar') {
+            e.preventDefault();
+            pick();
+          }
+        });
+      });
+    });
+
+    Object.keys(groups).forEach(function (id) {
+      if (groups[id].total > 0) { updateRow(groups[id]); }
+    });
+  }
+
+  /* ---------- 4. 侧栏 scroll spy（本页锚点高亮） ---------- */
+  function initSpy() {
+    var links = all('#sidebar a[href^="#"]');
+    if (!links.length || !('IntersectionObserver' in window)) { return; }
+    var map = {};
+    links.forEach(function (a) {
+      var id = a.getAttribute('href').slice(1);
+      if (id) { map[id] = a; }
+    });
+    var secs = [];
+    Object.keys(map).forEach(function (id) {
+      var s = d.getElementById(id);
+      if (s) { secs.push(s); }
+    });
+    if (!secs.length) { return; }
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting && map[e.target.id]) {
+          links.forEach(function (a) { a.classList.remove('active'); });
+          map[e.target.id].classList.add('active');
+        }
+      });
+    }, { rootMargin: '-15% 0px -70% 0px', threshold: 0 });
+    secs.forEach(function (s) { io.observe(s); });
+  }
+
+  /* ---------- 5. 阅读进度条 + 回顶 ---------- */
+  function initScroll() {
+    var bar = d.getElementById('readbar');
+    var topBtn = d.getElementById('topBtn') || d.getElementById('backTop');
+    var ticking = false;
+    function step() {
+      ticking = false;
+      var h = d.documentElement;
+      var y = window.pageYOffset || h.scrollTop || 0;
+      if (bar) {
+        var max = h.scrollHeight - h.clientHeight;
+        bar.style.width = (max > 0 ? (y / max) * 100 : 0) + '%';
+      }
+      if (topBtn) {
+        topBtn.classList.toggle('show', y > 400);     /* A 族类名 */
+        topBtn.classList.toggle('visible', y > 400);  /* B 族类名 */
+      }
+    }
+    on(window, 'scroll', function () {
+      if (!ticking) { ticking = true; window.requestAnimationFrame(step); }
+    }, { passive: true });
+    step();
+    on(topBtn, 'click', function () {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
+
+  /* ---------- 6. 侧栏开合（存在才绑定；抽屉打开时锁定背景滚动） ---------- */
+  function initSidebar() {
+    var sidebar = d.getElementById('sidebar');
+    if (!sidebar) { return; }
+    var btn = d.getElementById('menuBtn') || d.getElementById('navToggle');
+    var ov = d.getElementById('overlay') || d.getElementById('sidebarOverlay');
+    function lock(open) {
+      /* 仅移动抽屉断点（≤900px）锁滚动；宽屏兜底解除，防布局残留 */
+      d.body.classList.toggle('nav-locked', !!open && window.innerWidth <= 900);
+    }
+    function close() {
+      sidebar.classList.remove('open');
+      if (ov) { ov.classList.remove('show'); }
+      lock(false);
+    }
+    on(btn, 'click', function () {
+      var open = !sidebar.classList.contains('open');
+      sidebar.classList.toggle('open');
+      if (ov) { ov.classList.toggle('show'); }
+      lock(open);
+    });
+    on(ov, 'click', close);
+    all('a', sidebar).forEach(function (a) {
+      on(a, 'click', function () {
+        if (window.innerWidth <= 900) { close(); }
+      });
+    });
+    on(window, 'resize', function () {
+      if (window.innerWidth > 900) { lock(false); }
+    });
+  }
+
+  /* ---------- 启动（脚本位于 body 末尾，DOM 已就绪；防御兜底） ---------- */
+  function boot() {
+    initTabs();
+    initCards();
+    initQuiz();
+    initSpy();
+    initScroll();
+    initSidebar();
+  }
+  if (d.readyState === 'loading') {
+    on(d, 'DOMContentLoaded', boot);
+  } else {
+    boot();
+  }
+})();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,3799 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>精神病学 第十九章 神经认知障碍 · 学习指南</title>
+<style>
+:root{
+  --primary:#0EA5E9; --accent:#10B981; --symptom:#EF4444; --treatment:#10B981;
+  --cause:#3B82F6; --diagnosis:#F59E0B; --memory:#8B5CF6; --danger:#DC2626;
+  --quiz:#EC4899; --flashcard:#06B6D4; --bg:#F0F7FA; --card:#FFFFFF;
+  --ink:#0F172A; --muted:#64748B; --border:#E2E8F0; --accent2:#10B981; --accent3:#06B6D4;
+  --shadow:0 4px 18px rgba(15,23,42,.06); --radius:14px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:'Microsoft YaHei','PingFang SC','Hiragino Sans GB',system-ui,-apple-system,sans-serif;font-size:16px;line-height:1.75;-webkit-font-smoothing:antialiased}
+#readbar{position:fixed;top:0;left:0;height:4px;width:0;background:linear-gradient(135deg,#0EA5E9 0%,#06B6D4 50%,#10B981 100%);z-index:300;transition:width .12s linear}
+a{color:var(--primary);text-decoration:none}
+a:hover{text-decoration:underline}
+.sidebar{position:fixed;top:0;left:0;width:272px;height:100vh;background:#fff;border-right:1px solid var(--border);overflow-y:auto;padding:20px 16px 40px;z-index:120}
+.sidebar h2{font-size:17px;margin:0 0 4px;line-height:1.5}
+.sidebar .sub{font-size:12px;color:var(--muted);line-height:1.6;margin-bottom:14px}
+.toc-group{font-size:12px;letter-spacing:.08em;color:var(--muted);margin:16px 0 6px;font-weight:700}
+.sidebar a.toc{display:block;padding:7px 10px;border-radius:8px;font-size:14px;color:var(--ink);line-height:1.5;margin:2px 0}
+.sidebar a.toc:hover{background:#E0F2FE;text-decoration:none}
+.sidebar a.toc .n{display:inline-block;min-width:26px;color:var(--primary);font-weight:700}
+.sidebar .unitlink{font-weight:600}
+.sidebar .sub2{padding-left:26px;font-size:13px;color:var(--muted)}
+.overlay{display:none}
+.menu-btn{display:none;position:fixed;top:14px;left:14px;z-index:200;width:46px;height:46px;border-radius:12px;border:1px solid var(--border);background:#fff;box-shadow:var(--shadow);font-size:22px;line-height:1;color:var(--primary);cursor:pointer}
+.main{margin-left:272px;padding:0 40px 90px;max-width:1240px}
+.wrap{max-width:980px;margin:0 auto}
+.hero{background:linear-gradient(135deg,#0EA5E9 0%,#06B6D4 50%,#10B981 100%);color:#fff;border-radius:0 0 26px 26px;padding:52px 44px 40px;margin:0 -40px 30px;box-shadow:0 12px 30px rgba(14,165,233,.18)}
+.hero .chap{display:inline-block;font-size:13px;letter-spacing:.22em;background:rgba(255,255,255,.18);padding:5px 14px;border-radius:999px;margin-bottom:16px}
+.hero h1{font-size:42px;line-height:1.25;margin:0 0 10px;font-weight:800}
+.hero .tagline{font-size:18px;opacity:.96;margin:0 0 6px}
+.hero .meta{font-size:13px;opacity:.85}
+.goalbox{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.28);border-radius:14px;padding:18px 20px;margin-top:22px}
+.goalbox h3{margin:0 0 10px;font-size:15px;letter-spacing:.06em}
+.goalbox ul{margin:0;padding-left:20px}
+.goalbox li{margin:4px 0;font-size:14.5px;line-height:1.65}
+.lv{display:inline-block;font-size:11px;font-weight:700;padding:1px 8px;border-radius:999px;background:#fff;color:#0369A1;margin-right:6px;vertical-align:1px}
+.lv.l2{color:#047857}.lv.l3{color:#B45309}.lv.l4{color:#B91C1C}
+section{scroll-margin-top:18px;margin:0 0 46px}
+.sec-head{display:flex;align-items:center;gap:12px;margin:0 0 8px}
+.sec-head .badge{flex:0 0 auto;width:44px;height:44px;border-radius:13px;background:linear-gradient(135deg,#0EA5E9,#06B6D4);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:17px;box-shadow:0 6px 14px rgba(14,165,233,.25)}
+.sec-head h2{font-size:27px;margin:0;line-height:1.35;font-weight:800}
+.sec-head .en{font-size:13px;color:var(--muted);font-weight:400;margin-left:6px}
+.sec-lead{color:#334155;background:#fff;border-left:4px solid var(--primary);border-radius:0 12px 12px 0;padding:13px 18px;margin:12px 0 22px;box-shadow:var(--shadow);font-size:15px}
+.card{background:var(--card);border:1px solid var(--border);border-left:6px solid var(--primary);border-radius:var(--radius);padding:20px 22px;margin:16px 0;box-shadow:var(--shadow)}
+.card.red{border-left-color:var(--symptom)} .card.green{border-left-color:var(--treatment)}
+.card.blue{border-left-color:var(--cause)} .card.orange{border-left-color:var(--diagnosis)}
+.card.purple{border-left-color:var(--memory)} .card.cyan{border-left-color:var(--flashcard)}
+.card.danger{border-left-color:var(--danger)} .card.pink{border-left-color:var(--quiz)}
+.card h3,.col-title{font-size:19px;margin:0 0 10px;line-height:1.45;display:flex;align-items:center;gap:9px;flex-wrap:wrap}
+.col-title .idx{font-size:12px;font-weight:800;color:#fff;background:var(--primary);padding:2px 9px;border-radius:999px;letter-spacing:.03em}
+.card p{margin:8px 0}
+.card ul,.card ol{margin:8px 0;padding-left:22px}
+.card li{margin:5px 0}
+.quote{background:#EFF8FF;border:1px dashed #7DD3FC;border-radius:10px;padding:12px 16px;margin:10px 0;font-size:15px;color:#0C4A6E}
+.quote .lab{display:inline-block;font-size:11px;font-weight:800;background:#0EA5E9;color:#fff;padding:1px 7px;border-radius:5px;margin-right:7px;vertical-align:1px}
+.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.grid4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.grid2>*,.grid3>*,.grid4>*{min-width:0}
+.mini{background:#F8FAFC;border:1px solid var(--border);border-radius:11px;padding:12px 14px}
+.mini h4{margin:0 0 5px;font-size:15px;color:#0F172A}
+.mini p,.mini ul{font-size:14px;color:#334155;margin:4px 0}
+.mini ul{padding-left:18px}
+.stat{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0}
+.stat span{font-size:13px;background:#E0F2FE;color:#075985;border-radius:999px;padding:3px 11px;font-weight:600}
+.table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:12px 0;border-radius:12px;border:1px solid var(--border)}
+table{border-collapse:collapse;width:100%;min-width:560px;background:#fff;font-size:14px}
+th{background:#0F172A;color:#fff;font-weight:700;padding:10px 12px;text-align:left;line-height:1.5;font-size:13.5px}
+td{padding:10px 12px;border-top:1px solid var(--border);vertical-align:top;line-height:1.65}
+tbody tr:nth-child(even){background:#F8FAFC}
+td strong{color:#0C4A6E}
+.callout{border-radius:12px;padding:13px 16px;margin:12px 0;border:1px solid;font-size:14.5px}
+.callout .ct{font-weight:800;display:block;margin-bottom:4px;font-size:14.5px}
+.callout.tip{background:#F5F3FF;border-color:#C4B5FD;color:#4C1D95}
+.callout.warn{background:#FEF2F2;border-color:#FCA5A5;color:#7F1D1D}
+.callout.key{background:#ECFDF5;border-color:#6EE7B7;color:#065F46}
+.callout.book{background:#EFF6FF;border-color:#93C5FD;color:#1E3A8A}
+.callout.quiz{background:#FDF2F8;border-color:#F9A8D4;color:#831843}
+.callout.ext{background:#F0F9FF;border-color:#7DD3FC;color:#0C4A6E}
+.timeline{border-left:3px solid #BAE6FD;margin:14px 0 6px 8px;padding-left:20px}
+.tl-item{position:relative;margin:0 0 16px}
+.tl-item:before{content:"";position:absolute;left:-28px;top:5px;width:13px;height:13px;border-radius:50%;background:#fff;border:3px solid var(--primary)}
+.tl-item h4{margin:0 0 3px;font-size:15px;color:#075985}
+.tl-item p{margin:0;font-size:14px;color:#334155}
+.bar{background:#E2E8F0;border-radius:999px;height:9px;overflow:hidden;margin:6px 0 10px}
+.bar i{display:block;height:100%;border-radius:999px;background:linear-gradient(90deg,#0EA5E9,#10B981)}
+.bar-label{display:flex;justify-content:space-between;font-size:13px;color:#334155}
+.tabs{margin:14px 0}
+.tabbar{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:12px}
+.tabbar button{border:1px solid var(--border);background:#fff;border-radius:999px;padding:7px 15px;font-size:14px;font-family:inherit;cursor:pointer;color:#334155}
+.tabbar button.on{background:var(--primary);color:#fff;border-color:var(--primary)}
+.panel{display:none}
+.panel.on{display:block;animation:fade .25s ease}
+@keyframes fade{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}
+details{background:#fff;border:1px solid var(--border);border-radius:11px;margin:10px 0;overflow:hidden}
+summary{cursor:pointer;padding:11px 15px;font-weight:700;color:#075985;list-style:none;font-size:14.5px;background:#F8FAFC}
+summary::-webkit-details-marker{display:none}
+summary:before{content:"▸";display:inline-block;margin-right:7px;color:var(--primary);transition:transform .2s}
+details[open] summary:before{transform:rotate(90deg)}
+details[open] summary{border-bottom:1px solid var(--border)}
+.dbody{padding:13px 16px;font-size:14.5px;color:#1E293B}
+.flashcard-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin:16px 0}
+.flashcard{perspective:1200px;height:200px;cursor:pointer}
+.fc-inner{position:relative;width:100%;height:100%;transition:transform .55s;transform-style:preserve-3d}
+.flashcard.flipped .fc-inner{transform:rotateY(180deg)}
+.fc-front,.fc-back{position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;border-radius:14px;padding:14px 16px;display:flex;flex-direction:column;justify-content:center;box-shadow:var(--shadow);overflow:auto}
+.fc-front{background:#fff;border:1px solid var(--border);border-top:5px solid var(--flashcard)}
+.fc-back{background:#ECFEFF;border:1px solid #A5F3FC;transform:rotateY(180deg);font-size:13.5px;line-height:1.65;color:#164E63}
+.tag{display:inline-block;align-self:flex-start;font-size:11px;font-weight:800;padding:1px 8px;border-radius:999px;margin-bottom:8px;letter-spacing:.04em}
+.tag.concept{background:#DBEAFE;color:#1E40AF}
+.tag.diag{background:#FFEDD5;color:#9A3412}
+.tag.treat{background:#D1FAE5;color:#065F46}
+.tag.data{background:#FCE7F3;color:#9D174D}
+.tag.risk{background:#FEE2E2;color:#991B1B}
+.fc-front p{margin:0;font-size:14.5px;font-weight:700;line-height:1.6}
+.fc-hint{position:absolute;bottom:10px;left:16px;font-size:11px;color:#94A3B8}
+.quiz-q{background:#fff;border:1px solid var(--border);border-left:5px solid var(--quiz);border-radius:12px;padding:16px 18px;margin:16px 0;box-shadow:var(--shadow)}
+.quiz-q .qh{display:flex;justify-content:space-between;gap:10px;align-items:flex-start;margin-bottom:8px;flex-wrap:wrap}
+.quiz-q .qno{font-size:12px;font-weight:800;color:#fff;background:var(--quiz);border-radius:999px;padding:2px 9px;letter-spacing:.04em}
+.diff{font-size:12px;color:#B45309;background:#FEF3C7;border-radius:999px;padding:2px 10px;font-weight:700;white-space:nowrap}
+.qtype{font-size:12px;color:#6B21A8;background:#F3E8FF;border-radius:999px;padding:2px 10px;font-weight:700;white-space:nowrap}
+.opts{margin:10px 0 4px;display:grid;gap:7px}
+.opt{border:1px solid var(--border);border-radius:9px;padding:8px 12px;font-size:14.5px;background:#F8FAFC}
+.opt.correct{border-color:#6EE7B7;background:#ECFDF5;color:#065F46;font-weight:600}
+.opt .l{font-weight:800;color:var(--primary);margin-right:7px}
+.opt.correct .l{color:#047857}
+.brief{font-size:14px;color:#334155;margin-top:4px}
+.case{border:1px solid var(--border);border-top:5px solid var(--danger);border-radius:14px;background:#fff;padding:20px 22px;margin:18px 0;box-shadow:var(--shadow)}
+.case h3{font-size:19px;margin:0 0 8px;color:#7F1D1D}
+.case .ctag{font-size:11.5px;font-weight:800;background:#FEE2E2;color:#991B1B;padding:2px 9px;border-radius:999px;display:inline-block;margin-bottom:10px}
+.case .scene{background:#FFF7ED;border-left:4px solid #FB923C;border-radius:0 10px 10px 0;padding:12px 16px;font-size:14.5px;margin:8px 0 14px}
+.case .ques{margin:8px 0;padding-left:2px}
+.case .ques li{margin:5px 0;font-size:14.5px}
+.top{position:fixed;right:24px;bottom:26px;width:48px;height:48px;border-radius:50%;background:var(--primary);color:#fff;border:none;font-size:20px;cursor:pointer;box-shadow:0 8px 20px rgba(14,165,233,.35);z-index:150;display:none;font-family:inherit}
+.top.show{display:block}
+.hr{height:1px;background:var(--border);margin:26px 0}
+.note{font-size:13px;color:var(--muted);margin-top:6px}
+.kv{display:flex;gap:10px;flex-wrap:wrap;margin:8px 0}
+.kv .k{font-size:12px;font-weight:800;color:#0369A1;background:#E0F2FE;border-radius:6px;padding:2px 8px;white-space:nowrap}
+.kv .v{font-size:14px;color:#334155}
+.starme{font-size:12.5px;color:#B45309;white-space:nowrap}
+@media (max-width:1100px){
+  .main{padding:0 22px 80px}
+  .hero{margin:0 -22px 26px;padding:44px 26px 34px}
+  .hero h1{font-size:34px}
+  .flashcard-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .grid4{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width:900px){
+  .sidebar{transform:translateX(-100%);transition:transform .25s ease;width:280px;box-shadow:0 0 30px rgba(0,0,0,.18)}
+  .sidebar.open{transform:none}
+  .overlay{display:none;position:fixed;inset:0;background:rgba(15,23,42,.42);z-index:110}
+  .overlay.show{display:block}
+  .menu-btn{display:block}
+  .main{margin-left:0;padding:0 18px 80px}
+  .hero{margin:0 -18px 24px;padding:64px 22px 30px;border-radius:0 0 20px 20px}
+  .hero h1{font-size:30px}
+  .sec-head h2{font-size:23px}
+}
+@media (max-width:680px){
+  .grid2,.grid3,.grid4{grid-template-columns:minmax(0,1fr)}
+  .flashcard-grid{grid-template-columns:minmax(0,1fr)}
+  .flashcard{height:190px}
+  table{min-width:500px}
+}
+</style>
+<style data-refactor="v1">
+/* ============================================================
+   精神病学学习指南 · 统一交互层增量覆盖样式 v1
+   构建期由 apply-refactor.ps1 注入 </head> 前，仅追加修正，
+   不改动 A/B 两族基础样式。全部使用字面色值，兼容两族设计变量。
+   ============================================================ */
+
+/* ---- 1. 全局键盘焦点可见 ---- */
+:focus-visible{outline:2px solid #0EA5E9;outline-offset:2px}
+
+/* ---- 2. 章节导航条（胶囊式三段：上一章 / 目录 / 下一章） ---- */
+.chapter-pager{display:flex;align-items:stretch;justify-content:center;gap:10px;margin:36px 0 10px;flex-wrap:wrap}
+.chapter-pager a,.chapter-pager span{flex:1 1 200px;display:flex;align-items:center;justify-content:center;min-height:44px;padding:10px 18px;border:1px solid #E2E8F0;border-radius:999px;background:#FFFFFF;color:#0F172A;font-size:14px;font-weight:600;line-height:1.4;text-decoration:none;text-align:center;box-shadow:0 1px 2px rgba(15,23,42,.06);transition:border-color .15s ease,box-shadow .15s ease,color .15s ease}
+.chapter-pager a:hover{border-color:#0EA5E9;color:#0EA5E9;box-shadow:0 4px 14px rgba(14,165,233,.18);text-decoration:none}
+.chapter-pager .cp-toc{flex:0 0 auto;min-width:104px;background:linear-gradient(135deg,#0EA5E9,#10B981);border-color:transparent;color:#FFFFFF}
+.chapter-pager .cp-toc:hover{border-color:transparent;color:#FFFFFF;opacity:.92}
+.chapter-pager .cp-disabled{opacity:.45;background:#F8FAFC;box-shadow:none;cursor:default}
+@media (max-width:680px){.chapter-pager{gap:8px;margin:28px 0 8px}.chapter-pager a,.chapter-pager span{flex:1 1 100%}}
+
+/* ---- 3. 自测题交互态（兼容 A 族 .opt 与 B 族 .quiz-options li） ---- */
+/* 3.1 基础可点击 */
+.quiz-q .opt{cursor:pointer}
+.quiz-item .quiz-options li{cursor:pointer}
+/* 3.2 hover / 焦点态 */
+.quiz-q .opt:hover,.quiz-q .opt:focus-visible{border-color:#7DD3FC;background:#F0F9FF}
+.quiz-item .quiz-options li:hover,.quiz-item .quiz-options li:focus-visible{background:#FFFFFF;box-shadow:inset 0 0 0 1px #7DD3FC}
+/* 3.3 判定结果态 */
+.quiz-q .opt.is-right{border-color:#34D399;background:#ECFDF5;color:#065F46;font-weight:600}
+.quiz-q .opt.is-right::after{content:" ✓";color:#059669;font-weight:800}
+.quiz-q .opt.is-right .l{color:#047857}
+.quiz-item .quiz-options li.is-right{background:#DCFCE7;box-shadow:inset 0 0 0 1px #34D399;font-weight:600}
+.quiz-item .quiz-options li.is-right::after{content:" ✓";color:#15803D;font-weight:800}
+.quiz-q .opt.is-wrong{border-color:#FCA5A5;background:#FEF2F2;color:#B91C1C;font-weight:600}
+.quiz-q .opt.is-wrong::after{content:" ✗";color:#DC2626;font-weight:800}
+.quiz-q .opt.is-wrong .l{color:#B91C1C}
+.quiz-item .quiz-options li.is-wrong{background:#FEE2E2;box-shadow:inset 0 0 0 1px #FCA5A5;font-weight:600}
+.quiz-item .quiz-options li.is-wrong::after{content:" ✗";color:#DC2626;font-weight:800}
+.quiz-q .opt.is-reveal{border-color:#6EE7B7;background:#ECFDF5;color:#065F46}
+.quiz-q .opt.is-reveal .l{color:#047857}
+.quiz-item .quiz-options li.is-reveal{background:#ECFDF5;box-shadow:inset 0 0 0 1px #6EE7B7;color:#065F46}
+/* 3.4 已锁定禁用态 */
+.quiz-q.is-locked .opt,.quiz-item.is-locked .quiz-options li{cursor:default;pointer-events:none}
+.quiz-q.is-locked .opt:not(.is-right):not(.is-wrong):not(.is-reveal){opacity:.55}
+.quiz-item.is-locked .quiz-options li:not(.is-right):not(.is-wrong):not(.is-reveal){opacity:.55}
+/* 3.5 计分行（运行时注入） */
+.quiz-score{display:flex;align-items:center;gap:12px;margin:14px 0 18px;padding:12px 18px;border:1px dashed #7DD3FC;border-radius:12px;background:#F0F9FF;font-size:14px;font-weight:700;color:#0F172A}
+.quiz-score .qs-label{white-space:nowrap}
+.quiz-score .qs-num{white-space:nowrap;color:#0284C7;font-size:16px}
+.quiz-score .qs-bar{flex:1 1 60px;min-width:60px;height:8px;border-radius:999px;background:#E2E8F0;overflow:hidden}
+.quiz-score .qs-bar i{display:block;height:100%;width:0;border-radius:999px;background:linear-gradient(90deg,#0EA5E9,#10B981);transition:width .35s ease}
+
+/* ---- 4. 速记卡可达性与长内容 ---- */
+.fc-hint,.flip-hint{color:#64748B}
+.flashcard-face{overflow:auto}
+.flashcard[tabindex]{outline:none}
+.flashcard[tabindex]:focus-visible{outline:3px solid #0EA5E9;outline-offset:3px}
+
+/* ---- 5. 侧栏目录 ---- */
+/* B 族 sticky 侧栏内目录限高滚动（A 族 aside 本身已可滚动，此规则空匹配无害） */
+.sidebar .sidebar-nav{max-height:calc(100vh - 60px);overflow-y:auto;scrollbar-width:thin}
+/* A 族 scroll spy 高亮（B 族高亮由其基础样式提供） */
+.sidebar a.toc.active{background:#E0F2FE;color:#0369A1;font-weight:600}
+
+/* ---- 6. 响应式补充：681–900px 时 grid3 降为两列 ---- */
+@media (min-width:681px) and (max-width:900px){
+  .grid3{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+
+/* ---- 7. 打印样式补充（A 族新增；B 族已有 print，重复声明无害） ---- */
+@media print{
+  .sidebar,.overlay,.sidebar-overlay,#menuBtn,#navToggle,#overlay,#sidebarOverlay,#readbar,#topBtn,#backTop,.chapter-pager,.quiz-score{display:none!important}
+}
+
+/* ---- 8. 手机端增强 v2（触控体验 / 防溢出 / 抽屉滚动锁定） ---- */
+/* 8.1 触控体验：去点按高亮、消除双击缩放延迟（flashcard 高 190-200px 天然达标，不另设 min-height） */
+.opt,.tabbar button,.tab-btn,.quiz-options li,.flashcard,.chapter-pager a,.chapter-pager span,.menu-btn,.mobile-nav-toggle{-webkit-tap-highlight-color:transparent;touch-action:manipulation}
+/* 8.2 触控目标最小 44px（自测选项与 tab 胶囊原高约 33px） */
+.opt,.tabbar button,.tab-btn,.quiz-options li{min-height:44px}
+/* 8.3 防溢出：内容图自适应；svg 不设 height:auto，避免定尺寸图标塌陷 */
+img{max-width:100%;height:auto}
+svg{max-width:100%}
+/* 8.4 长词/URL 断行 */
+body{overflow-wrap:break-word}
+/* 8.5 表格容器触摸惯性滚动（A 族已有同值规则，重复声明无害） */
+.table-wrap{-webkit-overflow-scrolling:touch}
+/* 8.6 抽屉打开时锁定背景滚动（两族抽屉断点均为 900px；类由统一脚本增删） */
+@media (max-width:900px){
+  body.nav-locked{overflow:hidden}
+}
+</style>
+</head>
+<body>
+<div id="readbar"></div>
+<button class="menu-btn" id="menuBtn" aria-label="打开目录">☰</button>
+<div class="overlay" id="overlay"></div>
+<aside class="sidebar" id="sidebar">
+  <h2>第十九章 神经认知障碍</h2>
+  <div class="sub">精神病学（第9版）· 印刷页 222–239<br>学习指南 · 技能标准版</div>
+  <div class="toc-group">开篇</div>
+  <a class="toc" href="#cover"><span class="n">00</span>章节封面与学习目标</a>
+  <a class="toc" href="#status"><span class="n">01</span>本章地位速览</a>
+  <a class="toc" href="#navmap"><span class="n">02</span>章节导航图</a>
+  <a class="toc" href="#mindmap"><span class="n">03</span>本章知识地图</a>
+  <a class="toc" href="#route"><span class="n">04</span>学习路线图</a>
+  <div class="toc-group">正文（十单元八栏）</div>
+  <a class="toc unitlink" href="#u1"><span class="n">05</span>第一节 · 谵妄</a>
+  <a class="toc sub2" href="#u1-6">└ 治疗方案工具箱</a>
+  <a class="toc unitlink" href="#u2"><span class="n">06</span>第二节 · 轻度神经认知障碍</a>
+  <a class="toc unitlink" href="#u3"><span class="n">07</span>第三节 · 遗忘障碍</a>
+  <a class="toc unitlink" href="#u4"><span class="n">08</span>第四节 · 痴呆总论与 BPSD</a>
+  <a class="toc sub2" href="#u4-6">└ 治疗方案工具箱</a>
+  <a class="toc unitlink" href="#u5"><span class="n">09</span>阿尔茨海默病所致痴呆</a>
+  <a class="toc sub2" href="#u5-6">└ 治疗方案工具箱</a>
+  <a class="toc unitlink" href="#u6"><span class="n">10</span>脑血管病所致痴呆</a>
+  <a class="toc sub2" href="#u6-6">└ 治疗方案工具箱</a>
+  <a class="toc unitlink" href="#u7"><span class="n">11</span>路易体病所致痴呆</a>
+  <a class="toc unitlink" href="#u8"><span class="n">12</span>额颞叶痴呆</a>
+  <a class="toc unitlink" href="#u9"><span class="n">13</span>精神活性物质所致痴呆</a>
+  <a class="toc unitlink" href="#u10"><span class="n">14</span>其他疾病所致痴呆</a>
+  <div class="toc-group">结尾</div>
+  <a class="toc" href="#summary"><span class="n">15</span>全章核心要点速览</a>
+  <a class="toc" href="#pitfalls"><span class="n">16</span>易混易错点警示</a>
+  <a class="toc" href="#quiz"><span class="n">17</span>章节自测系统</a>
+  <a class="toc" href="#cards"><span class="n">18</span>考点速记卡</a>
+  <a class="toc" href="#cases"><span class="n">19</span>病例挑战</a>
+  <a class="toc" href="#ext"><span class="n">20</span>拓展延伸</a>
+</aside>
+<main class="main">
+<div class="wrap">
+<!-- ===== 00 封面 ===== -->
+<section id="cover">
+  <div class="hero">
+    <span class="chap">第十九章 · CHAPTER 19</span>
+    <h1>神经认知障碍</h1>
+    <p class="tagline">从急性、可逆的谵妄，到慢性、进行性的痴呆——一条以"认知功能下降"为主线的疾病谱。</p>
+    <p class="meta">教材：精神病学（第9版）｜印刷页 222–239｜全章 4 节：谵妄、轻度神经认知障碍、遗忘障碍、痴呆</p>
+    <div class="goalbox">
+      <h3>学习目标（四级分层）</h3>
+      <ul>
+        <li><span class="lv">了解</span>说出神经认知障碍的定义与病因范围；列出谵妄的九类临床表现、痴呆的三方面表现与教材所列痴呆病因。</li>
+        <li><span class="lv l2">理解</span>解释谵妄"注意障碍 + 意识障碍 + 急性起病 + 日内波动 + 可逆"的诊断逻辑；说明轻度神经认知障碍介于正常老化与痴呆之间的位置；解释各型痴呆的病理差异如何决定临床表现。</li>
+        <li><span class="lv l3">掌握</span>谵妄的三型划分与处理原则；MND 的四条诊断标准与两亚型；遗忘障碍的核心特征与 ICD-11 五类；AD、VaD、DLB、FTD 的诊断要点与相互鉴别。</li>
+        <li><span class="lv l4">重点</span>谵妄与痴呆的鉴别及其共病；AD 的病理三联与早中晚分期；DLB 的四大核心特征；VaD 的"3 个月 / 6 个月"诊断时间点；BPSD 的"非药物优先"管理——高频考点与临床安全底线。</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 01 地位 ===== -->
+<section id="status">
+  <div class="sec-head"><div class="badge">01</div><h2>本章地位速览<span class="en">Why this chapter matters</span></h2></div>
+  <p class="sec-lead">前面的章节多从"精神症状"入手，本章换了一个入口——<strong>脑部病变与损伤</strong>。它把"急性可逆的意识-注意障碍"和"慢性不可逆的认知衰退"放在同一条连续谱上。</p>
+  <div class="grid3">
+    <div class="card blue">
+      <h3>章节定位与重要性</h3>
+      <p>本章为第十九章（印刷页 222–239），是教材中集中论述<strong>认知功能障碍</strong>的章节。全章 4 节，依次为谵妄、轻度神经认知障碍、遗忘障碍、痴呆；其中第四节"痴呆"又按病因分述 AD、VaD、DLB、FTD、物质所致痴呆及其他疾病所致痴呆，并单列"痴呆引起的行为或精神紊乱（BPSD）"。</p>
+      <p class="note">考试权重集中于：谵妄的识别与处理、AD 的病理与分期、各型痴呆的鉴别、MND 与痴呆的界限。</p>
+    </div>
+    <div class="card red">
+      <h3>临床意义</h3>
+      <p>教材给出的一组数字说明了谵妄的普遍性：一般住院患者发生率可高达 <strong>30%</strong>，术后患者 <strong>10%～50%</strong>，ICU 患者 <strong>15%～20%</strong>；痴呆患者发生谵妄的风险是非痴呆患者的 <strong>2.5～3 倍</strong>。</p>
+      <p>痴呆则以慢性进行性、大多不可逆为特点，直接侵蚀日常生活、学习、工作与社会交往能力；BPSD 还会加重家属与照料者负担，甚至导致患者早期住院。</p>
+    </div>
+    <div class="card green">
+      <h3>与前后章节关联</h3>
+      <p><strong>前置：</strong>意识、注意、记忆、定向力等精神症状学基础，以及器质性精神障碍的一般思路。</p>
+      <p><strong>后续延伸：</strong>老年精神卫生服务、会诊-联络精神病学、照料者支持与长期照护。</p>
+      <p><strong>横向交叉：</strong>神经病学（卒中、帕金森病、路易体病）、内科学（电解质、感染、代谢）、老年医学与康复医学。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 02 导航 ===== -->
+<section id="navmap">
+  <div class="sec-head"><div class="badge">02</div><h2>章节导航图<span class="en">Section map</span></h2></div>
+  <p class="sec-lead">按教材四节顺序排列，第四节内部再按"总论 → 独立疾病"拆分。点击卡片直接跳到对应单元。</p>
+  <div class="grid3">
+    <a class="card cyan" href="#u1" style="display:block;color:inherit">
+      <h3>第一节 · 谵妄</h3>
+      <p>急性脑病综合征：注意与意识障碍、日内波动、可逆；三型划分与病因处理。</p>
+      <p class="note">关键词：1%～2% · 住院 30% · 混合型最多见</p>
+    </a>
+    <a class="card blue" href="#u2" style="display:block;color:inherit">
+      <h3>第二节 · 轻度神经认知障碍</h3>
+      <p>正常老化与痴呆之间的过渡带；遗忘型 / 非遗忘型；随访 1 年。</p>
+      <p class="note">关键词：15.5% · 3 877 万 · 1 年随访</p>
+    </a>
+    <a class="card purple" href="#u3" style="display:block;color:inherit">
+      <h3>第三节 · 遗忘障碍</h3>
+      <p>记忆障碍为核心，无意识障碍、无广泛认知损害；ICD-11 五类病因。</p>
+      <p class="note">关键词：近事重于远事 · 虚构 · 科萨科夫综合征</p>
+    </a>
+    <a class="card orange" href="#u4" style="display:block;color:inherit">
+      <h3>第四节 · 痴呆总论与 BPSD</h3>
+      <p>定义、病因表、三方面表现、诊断流程、治疗原则，以及贯穿全病程的 BPSD 管理。</p>
+      <p class="note">关键词：获得性 · 三方面 · MMSE/MoCA/NPI/ADLS</p>
+    </a>
+    <a class="card red" href="#u5" style="display:block;color:inherit">
+      <h3>阿尔茨海默病所致痴呆</h3>
+      <p>占重度神经认知障碍 60%～70%；Aβ、NFT、胆碱能缺陷；早中晚三期。</p>
+      <p class="note">关键词：APP/PSEN1/PSEN2/APOE · 5～10 年</p>
+    </a>
+    <a class="card green" href="#u6" style="display:block;color:inherit">
+      <h3>脑血管病所致痴呆</h3>
+      <p>阶梯式恶化、卒中后 3 个月内起病并持续 6 个月以上；防治卒中为先。</p>
+      <p class="note">关键词：1.2%～4.2% · 5 年死亡率 61%</p>
+    </a>
+    <a class="card cyan" href="#u7" style="display:block;color:inherit">
+      <h3>路易体病所致痴呆</h3>
+      <p>波动性认知、反复生动幻视、帕金森综合征、RBD 四大核心。</p>
+      <p class="note">关键词：α-突触核蛋白 · 3.2%～7.1% · 抗精神病药高度敏感</p>
+    </a>
+    <a class="card purple" href="#u8" style="display:block;color:inherit">
+      <h3>额颞叶痴呆</h3>
+      <p>早发、人格行为改变突出；bvFTD、SD、PNFA 三亚型。</p>
+      <p class="note">关键词：45～64 岁 · MAPT/GRN · 5～10 年</p>
+    </a>
+    <a class="card orange" href="#u9" style="display:block;color:inherit">
+      <h3>精神活性物质所致痴呆</h3>
+      <p>酒精、镇静催眠药、挥发性吸入剂、其他物质；损害超出中毒与戒断病程。</p>
+      <p class="note">关键词：持续使用超过 50 年 · 一般不可逆</p>
+    </a>
+    <a class="card red" href="#u10" style="display:block;color:inherit">
+      <h3>其他疾病所致痴呆</h3>
+      <p>帕金森病、梅毒、颅内感染、颅内肿瘤四类；各自有可识别的线索。</p>
+      <p class="note">关键词：PD-MND 20%～30% · 10% 神经梅毒 · 阿-罗瞳孔</p>
+    </a>
+  </div>
+  <div class="callout book">
+    <span class="ct">📖 关于本章单元拆分与八栏适配的说明</span>
+    ① 前三节各为一个独立综合征，各设 1 个单元。<br>
+    ② 第四节"痴呆"在教材中先有总论（定义、病因、临床表现、诊断、治疗），再分六类独立疾病逐一论述；<strong>阿尔茨海默病、脑血管病所致痴呆、路易体病所致痴呆、额颞叶痴呆、精神活性物质所致痴呆</strong>均有各自的概述、病因、临床表现、诊断与治疗，故各设独立单元、各配完整八栏。<br>
+    ③ <strong>"其他疾病所致痴呆"</strong>在教材中以并列短篇分述帕金森病、梅毒、颅内感染、颅内肿瘤，四者共用同一标题且篇幅有限，故合并为 1 个单元，四病在第三栏逐一展开、在第五栏逐一鉴别，<strong>不遗漏教材列出的任何一种</strong>。<br>
+    ④ <strong>BPSD</strong> 不是独立疾病，而是跨病种的行为与精神症状群，教材将其作为痴呆的第七个小节，故并入"痴呆总论"单元集中处理。<br>
+    ⑤ 本章教材<strong>未提供任何具体临床案例</strong>，故十个单元的第四栏均如实标注，不做虚构病例。
+  </div>
+</section>
+
+<!-- ===== 03 知识地图 ===== -->
+<section id="mindmap">
+  <div class="sec-head"><div class="badge">03</div><h2>本章知识地图<span class="en">Knowledge map</span></h2></div>
+  <p class="sec-lead">按"时间轴 + 可逆性"重组，而非照抄目录：<strong>谵妄（急、可逆）→ MND（轻度、过渡）→ 遗忘障碍（选择性记忆缺失）→ 痴呆（慢性、多域、大多不可逆）</strong>。痴呆内部再按"变性性 / 血管性 / 继发性"三条病因线展开。</p>
+  <div class="stat">
+    <span>4 节</span><span>10 个正文单元</span><span>4 个核心综合征 / 状态</span><span>6 类痴呆</span><span>教材点名痴呆相关疾病 4 类（其他疾病单元）</span><span>10 组鉴别对比</span>
+  </div>
+  <p class="note">统计口径：核心综合征 / 状态指谵妄、轻度神经认知障碍、遗忘障碍、痴呆；6 类痴呆指 AD、VaD、DLB、FTD、精神活性物质所致、其他疾病所致。教材未涉及全章疾病总数的统一统计，此处为按原文标题整理。</p>
+  <div class="grid3">
+    <div class="card cyan">
+      <h3>① 谵妄 · 急性可逆</h3>
+      <ul>
+        <li>核心：注意障碍 + 意识障碍</li>
+        <li>时间：数小时到数天，日内波动</li>
+        <li>九类表现：注意、记忆、定向、知觉、思维、妄想、情绪、精神运动、睡眠</li>
+        <li>三型：高活动 / 低活动 / 混合（混合最多见）</li>
+        <li>处理：病因 → 支持 → 对症；低活动型避免抗精神病药</li>
+      </ul>
+    </div>
+    <div class="card blue">
+      <h3>② MND · 过渡带</h3>
+      <ul>
+        <li>定义：介于正常老年认知衰退与痴呆之间</li>
+        <li>两亚型：aMND → 很可能 AD；naMND → VaD、FTD 等</li>
+        <li>五领域：记忆、注意、执行、语言、视空间</li>
+        <li>四条诊断标准；随访至少 1 年</li>
+        <li>无特效药：生活方式 + 运动 + 认知训练</li>
+      </ul>
+    </div>
+    <div class="card purple">
+      <h3>③ 遗忘障碍 · 选择性缺失</h3>
+      <ul>
+        <li>核心：与年龄 / 智力不匹配的记忆障碍</li>
+        <li>两个"不"：无意识障碍、无广泛认知损害</li>
+        <li>近事重于远事；即刻记忆通常不受影响</li>
+        <li>可有虚构，短暂性遗忘障碍更常见</li>
+        <li>ICD-11 五类：酒精、镇静催眠抗焦虑药、其他物质、吸入剂、其他疾病</li>
+      </ul>
+    </div>
+    <div class="card orange">
+      <h3>④ 痴呆总论 · 共同底座</h3>
+      <ul>
+        <li>定义：获得性认知损害 + 日常生活能力明显减退</li>
+        <li>三方面：认知功能、非认知性精神行为、社会生活功能</li>
+        <li>诊断三步：定痴呆 → 定病因 → 定程度</li>
+        <li>工具：MMSE、MoCA、NPI、ADLS</li>
+        <li>治疗：ChEI / 美金刚 + 社会心理 + 支持</li>
+      </ul>
+    </div>
+    <div class="card green">
+      <h3>⑤ 变性性痴呆 · 三大代表</h3>
+      <ul>
+        <li>AD：Aβ + NFT + 神经元缺失 + 胶质增生；记忆起病</li>
+        <li>DLB：α-突触核蛋白；波动 + 幻视 + 帕金森 + RBD</li>
+        <li>FTD：tau / GRN；人格行为早、语言损害突出</li>
+        <li>共同点：起病隐匿、进行性、不可逆</li>
+        <li>鉴别靠"首发症状 + 核心特征 + 影像分布"</li>
+      </ul>
+    </div>
+    <div class="card red">
+      <h3>⑥ 血管性与继发性痴呆</h3>
+      <ul>
+        <li>VaD：阶梯式、卒中后 3 个月内、持续 6 个月以上</li>
+        <li>物质所致：损害超出中毒 / 戒断病程</li>
+        <li>其他疾病：PD、梅毒、颅内感染、颅内肿瘤</li>
+        <li>可治性线索：甲状腺、B12、梅毒、硬膜下血肿、正常压力脑积水</li>
+        <li>BPSD：非药物干预是首选一线</li>
+      </ul>
+    </div>
+  </div>
+  <div class="callout tip">
+    <span class="ct">💡 一条主线记住全章</span>
+    <strong>"急可逆是谵妄，轻过渡是 MND，单记忆是遗忘，慢多域是痴呆"</strong>——先问<strong>起病速度</strong>，再问<strong>意识是否清楚</strong>，三问<strong>认知域有几个</strong>，四问<strong>日常生活是否失守</strong>。四问走完，大类基本落定。
+  </div>
+</section>
+
+<!-- ===== 04 路线 ===== -->
+<section id="route">
+  <div class="sec-head"><div class="badge">04</div><h2>学习路线图<span class="en">Study route</span></h2></div>
+  <p class="sec-lead">本章病种多、数字多、鉴别密。建议"先建四段谱、再攻谵妄与 AD、最后横向拉表鉴别"，不要按页码平推。</p>
+  <div class="grid2">
+    <div class="card blue">
+      <h3>推荐学习路径</h3>
+      <div class="timeline">
+        <div class="tl-item"><h4>第 1 步 · 建谱（约 25 分钟）</h4><p>读本章知识地图与总论，先记住四段谱：谵妄（急可逆）、MND（轻度）、遗忘障碍（单记忆）、痴呆（慢多域）。</p></div>
+        <div class="tl-item"><h4>第 2 步 · 攻谵妄（约 45 分钟）</h4><p>抓住"注意 + 意识 + 波动 + 可逆"四要素，背九类表现与三型，再记处理顺序（病因→支持→对症）。</p></div>
+        <div class="tl-item"><h4>第 3 步 · 攻 MND 与遗忘障碍（约 35 分钟）</h4><p>用"正常老化—MND—痴呆"三级台阶理解界限；遗忘障碍只记"一核心、两不伴、五类病因"。</p></div>
+        <div class="tl-item"><h4>第 4 步 · 攻痴呆总论 + AD（约 60 分钟）</h4><p>先背三方面表现与诊断三步，再背 AD 的四个基因、两类病理、三个分期。</p></div>
+        <div class="tl-item"><h4>第 5 步 · 横向鉴别 + 刷题（约 60 分钟）</h4><p>把 VaD、DLB、FTD、物质所致、其他疾病做成一张鉴别大表；再做自测、翻速记卡、走病例挑战。</p></div>
+      </div>
+      <p class="note">总时长约 3.5～4 小时；建议分 2 次完成，次日用"鉴别表 + 速记卡"复习 30 分钟。</p>
+    </div>
+    <div class="card purple">
+      <h3>重点优先级与记忆策略</h3>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>内容</th><th>优先级</th><th>推荐记忆法</th></tr></thead>
+          <tbody>
+            <tr><td>谵妄的核心特征与三型</td><td class="starme">⭐⭐⭐</td><td>首字口诀 + 对比表</td></tr>
+            <tr><td>谵妄与痴呆的鉴别及共病</td><td class="starme">⭐⭐⭐</td><td>对比记忆法</td></tr>
+            <tr><td>AD 的病理与早中晚分期</td><td class="starme">⭐⭐⭐</td><td>数字编码 + 时间轴</td></tr>
+            <tr><td>VaD 诊断的 3 个月 / 6 个月</td><td class="starme">⭐⭐⭐</td><td>数字锚定</td></tr>
+            <tr><td>DLB 的四大核心特征</td><td class="starme">⭐⭐⭐</td><td>首字母缩拼 + 场景联想</td></tr>
+            <tr><td>FTD 三亚型与 bvFTD 诊断</td><td class="starme">⭐⭐⭐</td><td>归类记忆法</td></tr>
+            <tr><td>MND 与正常老化 / 痴呆的界限</td><td class="starme">⭐⭐</td><td>三级台阶图</td></tr>
+            <tr><td>遗忘障碍五类病因</td><td class="starme">⭐⭐</td><td>归类 + 数字编码</td></tr>
+            <tr><td>BPSD 的管理顺序</td><td class="starme">⭐⭐</td><td>流程记忆法</td></tr>
+            <tr><td>其他疾病所致痴呆的识别线索</td><td class="starme">⭐</td><td>关键词联想</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="callout tip"><span class="ct">💡 记忆策略总原则</span>先按"起病速度 / 意识 / 认知域 / 日常生活"四问定位大类，再用"首发症状 + 核心特征 + 影像分布"区分痴呆亚型。所有数字只在教材原文出现时才记，教材没给的不补。</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 05 谵妄 ===== -->
+<section id="u1">
+  <div class="sec-head"><div class="badge">05</div><h2>谵妄<span class="en">第一节 · Delirium（p.222–224）</span></h2></div>
+  <p class="sec-lead">谵妄是本章唯一"急性、可逆"的综合征。它的诊断不靠仪器，靠四件事：起病快、意识不清、注意涣散、一天之内忽好忽坏。</p>
+
+  <!-- 第一栏 -->
+  <div class="card cyan" id="u1-1">
+    <h3 class="col-title"><span class="idx">第一栏</span>疾病画像</h3>
+    <div class="quote"><span class="lab">教材原文</span>谵妄（delirium）是以注意障碍（指向、集中、维持以及转移注意能力减弱）和意识障碍（对环境定向能力减弱）为特征，在短时间内产生且症状在一天内呈现波动变化的一组综合征，通常伴随着其他认知损伤，如记忆障碍、语言障碍、视觉空间障碍、感知觉障碍以及睡眠-觉醒周期改变等。</div>
+    <p><strong>一句话画像：</strong>脑功能突然"短路"——人还在，但注意力抓不住、环境认不清，症状像潮水一样涨落；去除病因后大多能恢复。教材亦称其为<strong>急性脑病综合征</strong>（acute brain syndrome）。</p>
+    <p class="note">类比理解（非教材原文）：谵妄像电脑突然死机或系统卡顿，重启（去除病因）后多半能恢复；痴呆则像硬盘逐渐出现坏道，越用越慢且难以复原。</p>
+    <div class="stat">
+      <span>社区患病率 1%～2%</span>
+      <span>85 岁以上 14%</span>
+      <span>一般住院 30%</span>
+      <span>癌症患者 25%</span>
+      <span>术后 10%～50%</span>
+      <span>ICU 15%～20%</span>
+      <span>入院急性期 5%～15%</span>
+      <span>痴呆患者为非痴呆的 2.5～3 倍</span>
+    </div>
+    <p>教材明确：谵妄<strong>起病较急、具有可逆性</strong>，常伴广泛认知功能障碍和精神行为症状。除颅内病变外，其他原因引起的谵妄一般只造成脑组织的非特异性改变（如充血、水肿），因而病变可逆、预后较好。</p>
+  </div>
+
+  <!-- 第二栏 -->
+  <div class="card blue" id="u1-2">
+    <h3 class="col-title"><span class="idx">第二栏</span>病因探秘</h3>
+    <p><strong>教材把病因分成两层，这是谵妄最实用的思维模型：</strong>一层是患者自带的"火药"（素质性因素），一层是点燃它的"火星"（诱因）。</p>
+    <div class="grid2">
+      <div class="mini">
+        <h4>素质性因素（底子）</h4>
+        <ul>
+          <li>高龄、痴呆、功能性残疾、共病</li>
+          <li>视听力受损、抑郁症状</li>
+          <li>轻度认知损害（MCI）</li>
+          <li>实验室指标异常</li>
+          <li>物质滥用（如酒精）</li>
+        </ul>
+      </div>
+      <div class="mini">
+        <h4>诱因（火星）</h4>
+        <ul>
+          <li>药物，尤其是<strong>镇静催眠药、抗胆碱能药</strong></li>
+          <li>外科手术、麻醉</li>
+          <li>严重疼痛</li>
+          <li>感染</li>
+          <li>急性疾病，或慢性疾病突然加重</li>
+        </ul>
+      </div>
+    </div>
+    <div class="callout key"><span class="ct">📌 一条极重要的定量关系</span>教材原文：<strong>患者存在的素质性因素越多，谵妄发生所需要的诱因越少。</strong>——底子越差，一点小事就能诱发；这也解释了为什么老年住院患者一次便秘、一次尿潴留就可能"糊涂"。<span class="note">（"便秘、尿潴留"见教材表 19-1"其他"栏；此句为学习推演）</span></div>
+    <p><strong>表 19-1 的七类病因（教材归纳）：</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>因素分类</th><th>教材列举的具体情况</th></tr></thead>
+        <tbody>
+          <tr><td>药物（物质）使用 / 中毒</td><td>抗胆碱能药、镇静催眠药中毒；毒物中毒；重金属（铅或汞）中毒；使用新药、调整剂量、药物相互作用、非处方药和酒精使用</td></tr>
+          <tr><td>电解质紊乱</td><td>低血糖症；甲状腺功能亢进或减退、甲状旁腺功能减退、肾上腺功能障碍等引起的电解质紊乱</td></tr>
+          <tr><td>药物停用</td><td>戒酒；长期服用镇静剂后突然停用</td></tr>
+          <tr><td>感染</td><td>中枢神经系统感染（脑膜炎、脑膜脑炎）；外周感染（尿路、呼吸道及软组织）</td></tr>
+          <tr><td>颅脑疾病</td><td>颅内感染、脑出血、脑梗死、脑肿瘤、脑外伤或癫痫</td></tr>
+          <tr><td>躯体疾病</td><td>心肌梗死、心律失常、心衰、低血压、严重贫血、肝性脑病、慢阻肺恶化、低氧血症及高碳酸血症</td></tr>
+          <tr><td>其他</td><td>营养缺乏（维生素 B1、B12、叶酸）；尿潴留；便秘；视听水平下降</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p><strong>发病机制：</strong>迄今尚不十分清楚，目前较公认的是<strong>胆碱能低下-多巴胺能过度活动假说</strong>。</p>
+    <div class="quote"><span class="lab">教材原文</span>该假说认为谵妄发生与乙酰胆碱合成减少、多巴胺功能亢进相关，应用抗胆碱能药物能够诱发谵妄，多巴胺通过影响乙酰胆碱的释放与谵妄发生有关。</div>
+    <p class="note">记忆抓手：<strong>乙酰胆碱↓、多巴胺↑</strong>。这也直接解释了治疗上的两条禁忌思路——少用抗胆碱能药、慎用会加重意识障碍的苯二氮䓬类。</p>
+  </div>
+
+  <!-- 第三栏 -->
+  <div class="card red" id="u1-3">
+    <h3 class="col-title"><span class="idx">第三栏</span>临床表现拼图</h3>
+    <p>教材把谵妄的表现拆成九类。核心始终是<strong>注意障碍 + 意识障碍</strong>，其余都是围绕核心展开的"卫星症状"。</p>
+    <div class="grid3">
+      <div class="mini"><h4>① 注意与意识障碍</h4><p>定向、聚焦、维持、转移注意力下降；对话常停留在先前问题，需重复提问，易被无关刺激带走。意识水平下降，对环境甚至自身定向减弱。</p></div>
+      <div class="mini"><h4>② 记忆障碍</h4><p>多为<strong>即刻回忆和近记忆</strong>受损，<strong>远记忆相对完好</strong>。</p></div>
+      <div class="mini"><h4>③ 定向力障碍</h4><p>尤其时间、地点定向；严重者可出现人物定向力障碍。</p></div>
+      <div class="mini"><h4>④ 知觉障碍</h4><p>错觉或幻觉，内容多恐怖性、迫害性，<strong>以幻视多见</strong>。</p></div>
+      <div class="mini"><h4>⑤ 思维障碍</h4><p>答非所问、表达混乱、言语不连贯。</p></div>
+      <div class="mini"><h4>⑥ 妄想</h4><p>短暂、片段的妄想，内容多为被害。</p></div>
+      <div class="mini"><h4>⑦ 情绪障碍</h4><p>焦虑、抑郁、恐惧、易激惹、欣快、情感淡漠；情绪状态间可<strong>快速、不可预测地转换</strong>。</p></div>
+      <div class="mini"><h4>⑧ 精神运动性紊乱</h4><p>可兴奋、喊叫、冲动、无目的行为增多，出现逃避或攻击；也可抑制、淡漠、迟钝、活动减少，甚至亚木僵。活动过多与减少之间<strong>不可预测地转变</strong>。</p></div>
+      <div class="mini"><h4>⑨ 睡眠-觉醒障碍</h4><p>日间困倦、夜间激越、入睡困难、整夜不睡；部分患者昼夜颠倒。</p></div>
+    </div>
+    <p><strong>三种临床类型（教材原文分类）：</strong></p>
+    <div class="tabs" data-tabs>
+      <div class="tabbar">
+        <button class="on" data-tab="d1">高活动型</button>
+        <button data-tab="d2">低活动型</button>
+        <button data-tab="d3">混合型</button>
+      </div>
+      <div class="panel on" data-panel="d1">
+        <ul>
+          <li>活动水平<strong>增高</strong>、动作速度加快</li>
+          <li>丧失对活动的控制、盲目活动</li>
+          <li>攻击行为、语量多、语速快、大喊大叫</li>
+          <li>幻觉妄想多见</li>
+        </ul>
+        <p class="note">临床上"最吵闹"，最容易被发现，也最容易因冲动而需要药物干预。</p>
+      </div>
+      <div class="panel" data-panel="d2">
+        <ul>
+          <li>活动水平<strong>下降</strong>、反应迟缓</li>
+          <li>淡漠、言语少</li>
+          <li>嗜睡较多</li>
+        </ul>
+        <p class="note">教材明确：<strong>容易被忽视</strong>。治疗上以病因治疗和支持治疗为主，避免使用抗精神病药。</p>
+      </div>
+      <div class="panel" data-panel="d3">
+        <ul>
+          <li>高活动型与低活动型表现<strong>交替出现或混合</strong></li>
+        </ul>
+        <p class="note">教材明确：临床上<strong>混合型最为多见</strong>。</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 第四栏 -->
+  <div class="card orange" id="u1-4">
+    <h3 class="col-title"><span class="idx">第四栏</span>教材典型案例</h3>
+    <div class="callout book">
+      <span class="ct">📖 教材未提供具体临床案例</span>
+      本节教材以定义、患病率、病因表、症状条目和诊断要点为主，<strong>没有给出患者年龄、病史、检查或病程记录</strong>。因此本栏不虚构病例，只把教材中可直接用于"想象临床画面"的原文症状描述集中列出。
+    </div>
+    <p><strong>教材原文中的"画面感"描述（可直接当作问诊观察点）：</strong></p>
+    <ul>
+      <li>「患者在对话过程中常停留在先前的问题中，而不能随着问题的改变恰当转移注意力」——提示<strong>注意转移困难</strong>。</li>
+      <li>「提问患者问题时，往往需要重复」——提示<strong>注意维持差</strong>。</li>
+      <li>「容易被无关刺激影响而出现注意力转移」——提示<strong>注意易被拉走</strong>。</li>
+      <li>「幻觉内容多为恐怖性或迫害性，以幻视多见」；「妄想短暂、片段，内容多为被害」。</li>
+      <li>「活动过多和活动减少之间会出现不可预测的转变」——这是<strong>混合型</strong>的临床底色。</li>
+    </ul>
+    <p><strong>由教材诊断要点整理的就诊思路（学习推演，不是教材原案例）：</strong></p>
+    <ol>
+      <li><strong>先定时间：</strong>症状是否在数小时到数天内发生？一天之内是否有波动？</li>
+      <li><strong>再定核心：</strong>是否存在注意障碍与意识（环境定向）障碍？</li>
+      <li><strong>再看伴随：</strong>记忆、定向、语言、视空间、知觉是否同时受损？</li>
+      <li><strong>最后找因：</strong>病史、体格检查、实验室检查是否指向躯体疾病、药物 / 物质中毒或戒断、毒素？</li>
+    </ol>
+    <p class="note">以上四步完全对应教材"谵妄的诊断要点"1、2、3、5 条，只作学习整理，不含任何虚构的患者信息。</p>
+  </div>
+
+  <!-- 第五栏 -->
+  <div class="card orange" id="u1-5">
+    <h3 class="col-title"><span class="idx">第五栏</span>鉴别诊断对对碰</h3>
+    <p><strong>表 1　谵妄的四个"对手"</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>对照疾病</th><th>核心症状</th><th>病程特点</th><th>关键鉴别点</th></tr></thead>
+        <tbody>
+          <tr><td>痴呆</td><td>获得性认知损害，多域，日常生活能力明显减退</td><td>慢性进行性，大多不可逆</td><td>谵妄<strong>起病急、有意识障碍、认知损害波动</strong>；还需了解谵妄发生前的认知状况、追踪缓解后的认知功能，判断是否<strong>共病</strong></td></tr>
+          <tr><td>伴精神病性症状的情感障碍 / 精神分裂症</td><td>幻觉、妄想、言行及情感紊乱</td><td>依原发病</td><td>谵妄<strong>有意识及定向力障碍</strong>，可资鉴别</td></tr>
+          <tr><td>急性应激障碍</td><td>恐惧、紧张等情绪反应，意识状态改变</td><td>由严重应激生活事件所致</td><td>谵妄起病急但<strong>有明确的躯体 / 药物病因线索</strong>；急性应激障碍由严重应激生活事件所致</td></tr>
+          <tr><td>昏迷</td><td>觉醒水平严重降低</td><td>—</td><td>教材诊断要点明确：谵妄<strong>不是发生在觉醒水平严重降低的状态</strong>（如昏迷）</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout key"><span class="ct">📌 一句话鉴别总结</span>谵妄与痴呆的鉴别不在"谁更糊涂"，而在<strong>"急不急、清不清、稳不稳"</strong>：急起、意识不清、日内波动 → 谵妄；缓慢、无意识障碍、持续下坡 → 痴呆；两者完全可以同时存在。</div>
+    <p><strong>表 2　三型谵妄的床旁识别</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>类型</th><th>活动水平</th><th>典型表现</th><th>识别风险</th></tr></thead>
+        <tbody>
+          <tr><td>高活动型</td><td>增高</td><td>盲目活动、攻击、语量多语速快、大喊大叫、幻觉妄想多见</td><td>易被发现，也易被误认为"精神分裂症发作"</td></tr>
+          <tr><td>低活动型</td><td>下降</td><td>反应迟缓、淡漠、言语少、嗜睡</td><td><strong>容易被忽视</strong>，易被误认为"累了、抑郁"</td></tr>
+          <tr><td>混合型</td><td>交替</td><td>高低活动不可预测地转换</td><td><strong>临床最多见</strong></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- 第六栏 -->
+  <div class="card green" id="u1-6">
+    <h3 class="col-title"><span class="idx">第六栏</span>治疗方案工具箱</h3>
+    <p><strong>治疗的总顺序（教材原文逻辑）：病因 → 支持 → 对症；手段分非药物与药物。</strong></p>
+    <div class="timeline">
+      <div class="tl-item"><h4>第一步 · 纠正病因</h4><p>针对原发脑器质性疾病或躯体疾病积极治疗：纠正电解质紊乱、控制感染、减停导致谵妄的药物。</p></div>
+      <div class="tl-item"><h4>第二步 · 支持治疗</h4><p>积极加强支持治疗，预防并发症。</p></div>
+      <div class="tl-item"><h4>第三步 · 非药物干预（贯穿全程）</h4><p>环境、陪护、交流、节律、活动、助听助视——详见下方清单。</p></div>
+      <div class="tl-item"><h4>第四步 · 药物对症（有严格指征）</h4><p>仅用于严重感知觉紊乱、妄想及冲动激越，且语言安抚无效或行为可能对自身 / 他人造成危险。</p></div>
+    </div>
+    <p><strong>药物治疗（教材给出的药物与原则）：</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>情形</th><th>教材推荐</th><th>要点</th></tr></thead>
+        <tbody>
+          <tr><td>兴奋躁动，需快速控制</td><td><strong>小剂量氟哌啶醇肌内注射</strong></td><td>教材未涉及具体剂量</td></tr>
+          <tr><td>症状较轻</td><td>小剂量非典型抗精神病药口服：<strong>喹硫平、奥氮平、利培酮</strong></td><td>教材未涉及具体剂量</td></tr>
+          <tr><td>所有抗精神病药</td><td>推荐使用，但须充分权衡利弊</td><td>权衡"激越、幻觉及妄想能否快速消除"与"镇静及其他并发症风险"</td></tr>
+          <tr><td>剂量策略</td><td>小剂量起始，缓慢滴定</td><td>剂量范围个体差异相当大；<strong>症状好转时尽早停用</strong></td></tr>
+          <tr><td>用药监测</td><td>意识、呼吸、锥体外系副作用</td><td>便于及时处理和调整</td></tr>
+          <tr><td>苯二氮䓬类</td><td><strong>一般慎用</strong></td><td>会加重意识障碍；<strong>但酒精或镇静催眠药戒断相关谵妄推荐使用</strong></td></tr>
+          <tr><td>低活动型</td><td>以病因治疗和支持治疗为主</td><td><strong>避免使用抗精神病药</strong></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p><strong>非药物干预清单（教材逐条给出）：</strong></p>
+    <div class="grid2">
+      <div class="mini"><h4>环境</h4><p>相对安静舒适、<strong>昼夜分明</strong>；由亲属陪护。</p></div>
+      <div class="mini"><h4>交流</h4><p>清醒时适当交流，消除患者对住院治疗的恐惧，加强心理干预。</p></div>
+      <div class="mini"><h4>节律</h4><p>限制白天睡眠，保持昼夜节律。</p></div>
+      <div class="mini"><h4>活动</h4><p>尽量维持适当活动水平，如由他人陪同散步或在床上活动。</p></div>
+      <div class="mini"><h4>感知辅助</h4><p>平常使用眼镜或助听器者，应让其获得这些辅助设备以改善感知。</p></div>
+      <div class="mini"><h4>安全</h4><p>教材在 AD 的护理段强调防止摔伤、自伤、外出不归；谵妄的冲动、逃避行为同样需要看护。</p></div>
+    </div>
+    <p><strong>预后（教材列出的四种走向）：</strong></p>
+    <div class="grid4">
+      <div class="mini"><h4>① 完全缓解</h4><p>短时间内完全缓解。</p></div>
+      <div class="mini"><h4>② 病程迁延</h4><p>持续数月。</p></div>
+      <div class="mini"><h4>③ 慢性脑病综合征</h4><p>残留认知损害及人格改变等器质性损害症状。</p></div>
+      <div class="mini"><h4>④ 恶化</h4><p>进展至昏迷，并发其他疾病，甚至死亡。</p></div>
+    </div>
+    <div class="callout warn"><span class="ct">⚠️ 最容易考错的两句</span>① 苯二氮䓬类<strong>不是</strong>谵妄的常规用药，它加重意识障碍；只有<strong>酒精 / 镇静催眠药戒断</strong>相关谵妄才推荐。② <strong>低活动型避免抗精神病药</strong>，不要因为"患者很闹"的惯性思维给淡漠嗜睡者加药。</div>
+  </div>
+
+  <!-- 第七栏 -->
+  <div class="card purple" id="u1-7">
+    <h3 class="col-title"><span class="idx">第七栏</span>记忆工具箱</h3>
+    <p><strong>🔧 方法一：首字口诀法</strong></p>
+    <p>口诀：<strong>"急、波、注、意、逆"</strong>——<strong>急</strong>性起病、日内<strong>波</strong>动、<strong>注</strong>意障碍、<strong>意</strong>识障碍、可<strong>逆</strong>。</p>
+    <p class="note">为什么这样记：这五个字正好覆盖教材诊断要点的第 1、2 条与预后定性（起病急、日内波动、注意障碍、意识障碍、可逆）。考场上一旦写出这五个字，"谵妄"的核心画面就自动浮现。</p>
+    <p><strong>🔧 方法二：数字编码法（9 类表现）</strong></p>
+    <p>口诀：<strong>"注、记、定、知、思、妄、情、动、睡"</strong>——注意意识、记忆、定向、知觉、思维、妄想、情绪、精神运动、睡眠觉醒，共 9 项。</p>
+    <p class="note">为什么这样记：用"9"这个数字锚定清单长度，回忆时按顺序清点，避免只记得"幻觉妄想"而漏掉睡眠-觉醒和情绪快速转换这两个高频细节。</p>
+    <p><strong>🔧 方法三：对比记忆法（谵妄 vs 痴呆）</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>维度</th><th>谵妄</th><th>痴呆</th></tr></thead>
+        <tbody>
+          <tr><td>起病</td><td>急，数小时到数天</td><td>隐匿、缓慢</td></tr>
+          <tr><td>意识</td><td><strong>有意识障碍</strong></td><td><strong>无意识障碍</strong>（教材痴呆定义明确）</td></tr>
+          <tr><td>波动</td><td>一天内波动</td><td>持续、进行性</td></tr>
+          <tr><td>可逆性</td><td>多可逆</td><td>大多不可逆</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note">为什么这样记：把四个最容易考反的维度并排放在一张表里，形成"急-清-波-逆"的对照轴；答题时先问"急不急"，再问"清不清"，答案基本不会错。</p>
+    <p><strong>🔧 方法四：场景联想法（三型）</strong></p>
+    <p>联想两个病房画面：一位老人半夜拔输液管、大喊大叫、说"有人要抓我"——<strong>高活动型</strong>；另一位老人整天嗜睡、问一句答半句、被当成"年纪大了没精神"——<strong>低活动型</strong>；同一位患者上午吵闹、下午嗜睡——<strong>混合型</strong>（且最常见）。</p>
+    <p class="note">为什么这样记：三型的分界本来就是"活动水平"这一个轴，用两个极端画面加一个"来回切换"的画面，比背三条定义更牢。</p>
+    <div class="callout tip"><span class="ct">💡 四种方法怎么配合</span>口诀定框架（5 个字），数字查漏（9 项），对比防混淆（谵妄 vs 痴呆），场景认类型（三型）。前两个用于笔试，后两个用于床旁。</div>
+  </div>
+
+  <!-- 第八栏 -->
+  <div class="card blue" id="u1-8">
+    <h3 class="col-title"><span class="idx">第八栏</span>知识联动</h3>
+    <div class="grid2">
+      <div class="mini">
+        <h4>与痴呆（本章 u4、u5）</h4>
+        <p>教材明确：痴呆和谵妄共病常见，痴呆患者中谵妄的发生率是非痴呆患者的 <strong>2.5～3 倍</strong>。临床要点是"了解谵妄发生前的认知状况、追踪缓解后的认知功能"，才能判断是单纯谵妄、单纯痴呆，还是两者并存。</p>
+      </div>
+      <div class="mini">
+        <h4>与遗忘障碍（本章 u3）</h4>
+        <p>遗忘障碍以记忆障碍为核心，<strong>无意识障碍、无广泛认知损害</strong>；谵妄恰恰以意识与注意障碍为核心。两者是"意识清不清"的分水岭。</p>
+      </div>
+      <div class="mini">
+        <h4>与物质使用 / 戒断（本章 u9）</h4>
+        <p>表 19-1 把"药物（物质）使用 / 中毒"和"药物停用（戒酒、长期镇静剂突然停用）"列为两类病因；治疗段又明确<strong>酒精或镇静催眠药戒断相关谵妄推荐苯二氮䓬类</strong>——诊断与治疗在此闭环。</p>
+      </div>
+      <div class="mini">
+        <h4>与颅内感染、颅内肿瘤（本章 u10）</h4>
+        <p>教材在"其他疾病所致痴呆"中写明：颅内感染在<strong>急性期较容易出现谵妄</strong>，恢复期及后遗期才可能出现 MND 或痴呆。这提示同一疾病在不同阶段可呈现不同的神经认知综合征。</p>
+      </div>
+      <div class="mini">
+        <h4>与器质性精神障碍总论</h4>
+        <p>谵妄是"急性脑病综合征"，其精神行为症状（幻觉、妄想、冲动）是<strong>躯体疾病的表症</strong>，不能按原发性精神病性障碍处理。</p>
+      </div>
+      <div class="mini">
+        <h4>跨学科：老年医学与内科</h4>
+        <p>教材列出的诱因——感染、电解质紊乱、低血糖、心衰、低氧血症、尿潴留、便秘——几乎都属内科 / 老年科日常问题；谵妄的防治本质上是<strong>多学科协作</strong>。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 06 轻度神经认知障碍 ===== -->
+<section id="u2">
+  <div class="sec-head"><div class="badge">06</div><h2>轻度神经认知障碍<span class="en">第二节 · MND（p.224–226）</span></h2></div>
+  <p class="sec-lead">MND 是"还没到痴呆，但已经不完全是正常老化"的灰色地带。它的价值不在于治疗，而在于<strong>识别、分类与随访</strong>。</p>
+
+  <!-- 第一栏 -->
+  <div class="card cyan" id="u2-1">
+    <h3 class="col-title"><span class="idx">第一栏</span>疾病画像</h3>
+    <div class="quote"><span class="lab">教材原文</span>轻度神经认知障碍（mild neurocognitive disorder，MND）是一种介于正常老年认知衰退和痴呆之间的病理状态。患者在认知功能方面表现出轻微下降，但日常生活能力尚未受到明显影响。</div>
+    <p><strong>一句话画像：</strong>认知已经"掉队"，但日子还能自理——检查能查出问题，生活还没被拖垮。</p>
+    <p><strong>概念沿革（教材明确给出）：</strong>2013 年 DSM-5 首次将痴呆更名为<strong>重度神经认知障碍</strong>，并相应提出 MND 概念；2018 年 WHO 发布的 ICD-11 依旧保留"痴呆"的说法，并延续 MND 概念。</p>
+    <div class="quote"><span class="lab">教材原文</span>ICD-11 延续 MND 的概念，指主观体验到的认知功能比之前水平下降，在考虑个人年龄和智力一般水平的情况下，伴随有一个或多个认知领域受损的客观证据，其程度不足以严重影响个人日常生活。</div>
+    <p><strong>两个亚型：</strong></p>
+    <div class="grid2">
+      <div class="mini"><h4>遗忘型 MND（aMND）</h4><p>主要表现为<strong>明显的记忆功能损伤</strong>；教材明确"很可能进展为阿尔茨海默病"。</p></div>
+      <div class="mini"><h4>非遗忘型 MND（naMND）</h4><p>主要表现为其他认知功能损伤，如<strong>注意力、语言、视空间或执行功能</strong>；可能进展为其他类型痴呆，如血管性痴呆、额颞叶痴呆等。</p></div>
+    </div>
+    <div class="stat">
+      <span>60 岁以上患病率 15.5%</span>
+      <span>约 3 877 万人（2020 年全国调查）</span>
+      <span>随访至少 1 年</span>
+      <span>年转化率 12%～20%</span>
+    </div>
+    <p class="note">教材给出的危险因素：高龄、痴呆家族史、载脂蛋白 E ε4 携带、吸烟、高血压、高脂血症、糖尿病、心脏病和颅内血管性疾病、维生素 D 缺乏。</p>
+  </div>
+
+  <!-- 第二栏 -->
+  <div class="card blue" id="u2-2">
+    <h3 class="col-title"><span class="idx">第二栏</span>病因探秘</h3>
+    <p>教材对 MND 的定性是<strong>"具有异质性的临床综合征"</strong>，病因与发病机制尚未明确。所谓异质性，意思是"同一个 MND 标签下，装着不同来源的病人"。</p>
+    <div class="grid3">
+      <div class="mini">
+        <h4>神经退行性疾病的早期阶段</h4>
+        <ul>
+          <li>阿尔茨海默病</li>
+          <li>额颞叶痴呆</li>
+          <li>路易体痴呆</li>
+          <li>帕金森病</li>
+        </ul>
+        <p class="note">对应 aMND → AD、naMND → FTD / VaD 的转归路径。</p>
+      </div>
+      <div class="mini">
+        <h4>血管性因素</h4>
+        <ul>
+          <li>多发性梗死</li>
+          <li>颈动脉闭塞</li>
+          <li>脑血管病变</li>
+          <li>高血压、糖尿病</li>
+        </ul>
+      </div>
+      <div class="mini">
+        <h4>精神疾病</h4>
+        <ul>
+          <li>抑郁障碍</li>
+          <li>焦虑障碍</li>
+        </ul>
+        <p class="note">这也是 MND 必须与老年抑郁鉴别的病因学理由。</p>
+      </div>
+    </div>
+    <p><strong>可能的发病机制（教材列举，均属"可能涉及"，不是定论）：</strong></p>
+    <div class="stat">
+      <span>中枢胆碱能系统功能降低</span>
+      <span>氧自由基过高</span>
+      <span>甲状腺激素水平不足</span>
+      <span>神经炎症</span>
+      <span>免疫</span>
+    </div>
+    <div class="callout warn"><span class="ct">⚠️ 表述边界</span>教材在本节用的是"病因与发病机制尚未明确""可能与以下因素有关""可能涉及"——答题时不要写成"MND 由某某引起"的确定句。</div>
+  </div>
+
+  <!-- 第三栏 -->
+  <div class="card red" id="u2-3">
+    <h3 class="col-title"><span class="idx">第三栏</span>临床表现拼图</h3>
+    <p>教材按<strong>认知领域</strong>逐项描述，共五个领域。记住"五个领域"比记住零散症状更有用，因为诊断流程正是按领域做分类的。</p>
+    <div class="grid3">
+      <div class="mini"><h4>① 记忆力受损</h4><p>新近学习的事物难以回忆，<strong>近记忆较远记忆受损更明显</strong>。表现：健忘更频繁持久、重复提问或赘述、记不清时间和预约事件、用便签记事本代偿；记新人名能力较同龄老人下降，无法识别熟人相貌。</p></div>
+      <div class="mini"><h4>② 注意力受损</h4><p>注意力不集中，无法长时间保持；完成任务需比先前更长时间，日常工作中容易出现失误。</p></div>
+      <div class="mini"><h4>③ 执行功能受损</h4><p>计划、组织、灵活性、抽象思维、决策能力减退；面对复杂任务无法有效制定计划、安排先后顺序、组织复杂活动。</p></div>
+      <div class="mini"><h4>④ 语言功能受损</h4><p>找词困难，经常忘记常用词语，说话反复停顿；短语或句子重复障碍、命名困难。</p></div>
+      <div class="mini"><h4>⑤ 视空间功能受损</h4><p>物品识别障碍；对空间关系和形状的感知问题；定向力障碍，在熟悉或不熟悉环境迷路、导航困难。</p></div>
+      <div class="mini"><h4>共同底色</h4><p>损害<strong>轻微</strong>、<strong>不足以严重影响个人日常生活</strong>；这是与痴呆划界的关键。</p></div>
+    </div>
+    <p><strong>按领域组合的四种临床分类（教材诊断流程第 ② 步）：</strong></p>
+    <div class="grid4">
+      <div class="mini"><h4>单域遗忘型</h4><p>仅记忆领域受损。</p></div>
+      <div class="mini"><h4>单域非遗忘型</h4><p>仅一个非记忆领域受损。</p></div>
+      <div class="mini"><h4>多域遗忘型</h4><p>记忆 + 其他领域受损。</p></div>
+      <div class="mini"><h4>多域非遗忘型</h4><p>多个非记忆领域受损。</p></div>
+    </div>
+    <p class="note">教材未涉及各亚型的比例数据，故不列具体数字。</p>
+  </div>
+
+  <!-- 第四栏 -->
+  <div class="card orange" id="u2-4">
+    <h3 class="col-title"><span class="idx">第四栏</span>教材典型案例</h3>
+    <div class="callout book">
+      <span class="ct">📖 教材未提供具体临床案例</span>
+      本节教材只给出定义、患病率、危险因素、症状条目、诊断标准与流程，<strong>没有患者个案</strong>。本栏不虚构人物与量表分数，仅整理教材原文中可观察的行为线索。
+    </div>
+    <p><strong>教材原文中可作为"家属描述"的线索：</strong></p>
+    <ul>
+      <li>「健忘更为频繁和持久、出现重复提问或赘述」</li>
+      <li>「无法记清时间和预约事件、使用便签和记事本记录代偿」</li>
+      <li>「记忆新人名的能力较同龄老年人下降，无法识别熟人的相貌」</li>
+      <li>「需要比先前更长的时间完成任务，并且在日常工作中容易出现失误」</li>
+      <li>「在熟悉或不熟悉的环境中出现迷路、导航困难」</li>
+    </ul>
+    <p><strong>由教材诊断标准整理的四步核查（学习推演，非教材案例）：</strong></p>
+    <ol>
+      <li>有没有"比之前下降"的<strong>主观报告</strong>（患者或知情者），或由有经验的临床医师发现？</li>
+      <li>有没有<strong>客观证据</strong>（如神经心理测试）证明一个或多个认知领域受损，且已考虑年龄与智力水平？</li>
+      <li><strong>工具性日常生活能力</strong>是否仅有轻微损害，而<strong>独立日常生活能力仍保持</strong>？</li>
+      <li>是否<strong>未达到痴呆诊断标准</strong>？</li>
+    </ol>
+    <p class="note">四条全部对应教材 MND 诊断标准 ①～④，未添加任何教材外的量表分值或影像描述。</p>
+  </div>
+
+  <!-- 第五栏 -->
+  <div class="card orange" id="u2-5">
+    <h3 class="col-title"><span class="idx">第五栏</span>鉴别诊断对对碰</h3>
+    <p><strong>表 1　正常老化 vs MND vs 痴呆（教材只直接对比前两者，第三列由痴呆定义整理）</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>维度</th><th>正常老化</th><th>MND</th><th>痴呆</th></tr></thead>
+        <tbody>
+          <tr><td>认知下降性质</td><td>缓慢衰老过程，大多存在记忆下降</td><td>认知功能比之前下降，有客观证据</td><td>获得性认知损害，多域</td></tr>
+          <tr><td>学习新知识</td><td><strong>仍能学习和掌握新知识</strong></td><td><strong>学习新知识有困难</strong></td><td>学习新知识能力下降</td></tr>
+          <tr><td>社会功能</td><td>基本不影响社会活动、人际交往、工作能力</td><td>工具性日常生活可轻微损害，<strong>独立生活能力保持</strong></td><td><strong>日常生活、学习、工作和社会交往能力明显减退</strong></td></tr>
+          <tr><td>量表</td><td>得分在正常范围内</td><td>低于同年龄、同教育程度者</td><td>认知评估提示损害</td></tr>
+          <tr><td>影像</td><td>老年脑：脑室、脑池轻度扩大，脑沟轻度增宽</td><td>教材未涉及 MND 的特异性影像表现</td><td>因病因不同而异（如 AD 的颞顶叶、海马萎缩）</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout key"><span class="ct">📌 一句话鉴别总结</span>正常老化"还能学、还能干、量表正常"；MND"学起来费劲、量表掉分、但生活自理"；痴呆"生活失守"。</div>
+    <p><strong>表 2　MND vs 老年抑郁障碍</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>维度</th><th>MND</th><th>老年抑郁障碍</th></tr></thead>
+        <tbody>
+          <tr><td>原发特征</td><td>认知功能下降</td><td><strong>心境低落为原发特征</strong></td></tr>
+          <tr><td>认知损害与情绪的关系</td><td>认知受损<strong>持续存在、渐进性</strong></td><td>认知功能<strong>受情绪和心理状态影响</strong></td></tr>
+          <tr><td>起病方式</td><td>患者逐渐感受到认知能力下降</td><td>认知受损症状<strong>可能会随抑郁发作突然出现</strong></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout key"><span class="ct">📌 一句话鉴别总结</span>MND 是"慢慢忘"，抑郁是"情绪塌了以后才忘"；前者渐进持续，后者随情绪波动、可突然出现。</div>
+  </div>
+
+  <!-- 第六栏 -->
+  <div class="card green" id="u2-6">
+    <h3 class="col-title"><span class="idx">第六栏</span>治疗方案工具箱</h3>
+    <div class="quote"><span class="lab">教材原文</span>目前尚无特效药物用于治疗 MND，但以下措施可帮助患者缓解症状和延缓疾病进展。</div>
+    <p><strong>三条干预措施（教材全部内容）：</strong></p>
+    <div class="grid3">
+      <div class="mini">
+        <h4>① 生活方式干预</h4>
+        <p>针对危险因素制定预防策略：<strong>控制血压血糖、戒烟、佩戴助听器、补充维生素 B12 或叶酸</strong>等。</p>
+      </div>
+      <div class="mini">
+        <h4>② 运动训练</h4>
+        <p>进行适当的<strong>有氧运动</strong>可能对 MND 患者的认知功能产生<strong>微小但有益</strong>的影响。</p>
+        <p class="note">教材用词很克制："可能""微小但有益"，不要夸大为"显著改善"。</p>
+      </div>
+      <div class="mini">
+        <h4>③ 认知训练</h4>
+        <p>针对受损认知维度开展<strong>针对性认知训练</strong>，如计算机辅助认知干预等。</p>
+      </div>
+    </div>
+    <p><strong>诊断与随访流程（治疗之外，教材同样重视"管到底"）：</strong></p>
+    <div class="timeline">
+      <div class="tl-item"><h4>① 判定是否符合 MND</h4><p>依据认知功能与日常生活能力评估。</p></div>
+      <div class="tl-item"><h4>② 分类</h4><p>单域遗忘型、单域非遗忘型、多域遗忘型、多域非遗忘型。</p></div>
+      <div class="tl-item"><h4>③ 病因学诊断</h4><p>结合起病形式、受损维度、有无神经系统 / 躯体原发病体征，以及必要辅助检查。</p></div>
+      <div class="tl-item"><h4>④ 随访至少 1 年</h4><p>教材明确建议：以进一步明确诊断。</p></div>
+    </div>
+    <p><strong>常用评估工具（教材点名）：</strong>临床痴呆评估量表、简易智力状态检查量表（MMSE）、蒙特利尔认知评估量表（MoCA）、日常生活能力评定量表；影像为头颅 MRI 或 CT（排除其他结构性病变）。</p>
+    <p><strong>体液检查的两条线：</strong></p>
+    <div class="grid2">
+      <div class="mini">
+        <h4>血液学：找可逆因素</h4>
+        <p>全血细胞计数、电解质、葡萄糖、钙、甲状腺功能、维生素 B12 和叶酸。目的是确定潜在可逆因素：感染、肾衰竭、低镁或高镁血症、高血糖、低钙或高钙血症、甲减或甲亢、维生素 B12 或叶酸缺乏等。</p>
+      </div>
+      <div class="mini">
+        <h4>脑脊液：找病因线索</h4>
+        <p><strong>Aβ42、磷酸化 tau 蛋白、总 tau 蛋白（t-tau）</strong>三项核心标志物与 <strong>AD 源性 MND 高度相关</strong>；细胞计数、蛋白质、葡萄糖和蛋白电泳分析可帮助判断感染、血管炎或脱髓鞘等脑部疾病所致认知损害。</p>
+      </div>
+    </div>
+    <p><strong>预后（教材数字）：</strong>约 <strong>40%～70%</strong> 的 MND 患者即使 10 年以后也不进展成痴呆；约 <strong>10%～20%</strong> 在 1～2 年认知功能改善，但后续仍可能转化为痴呆，也可能维持稳定；另一些最终进展为痴呆。MND 转化为痴呆的年发生率已从不足 5% 上升为 <strong>12%～20%</strong>。</p>
+    <p><strong>进展的危险因素：</strong>年龄大、受教育年限少、卒中、糖尿病、遗忘型 MND 亚型、存在载脂蛋白 E（ApoE）ε4 等位基因。</p>
+    <div class="callout key"><span class="ct">📌 临床落点</span>MND 的处理不是"开药"，而是<strong>控危险因素 + 运动 + 认知训练 + 定期随访</strong>；教材强调"定期随访和监测是预后评估的重要手段"。</div>
+  </div>
+
+  <!-- 第七栏 -->
+  <div class="card purple" id="u2-7">
+    <h3 class="col-title"><span class="idx">第七栏</span>记忆工具箱</h3>
+    <p><strong>🔧 方法一：三级台阶图法</strong></p>
+    <p>把三个状态画成台阶：<strong>正常老化（还能学、生活不受影响）→ MND（学新知识困难、工具性日常轻微受损、独立生活保持）→ 痴呆（多域损害、日常生活明显减退）</strong>。</p>
+    <p class="note">为什么这样记：MND 的本质就是"位置"——它既不正常也不够痴呆。用台阶的空间位置替代文字定义，答题时先定位再回忆标准。</p>
+    <p><strong>🔧 方法二：四条标准数字编码法</strong></p>
+    <p>口诀：<strong>"一降、一证、一轻、一未"</strong>——①认知比之前<strong>下降</strong>（主观报告或医师发现）；②一个或多个领域受损的<strong>客观证据</strong>；③工具性日常活动<strong>轻微</strong>损害、独立生活保持；④<strong>未</strong>达痴呆标准。</p>
+    <p class="note">为什么这样记：四个"一"把教材四条诊断标准压成等长结构，避免漏掉第 ③ 条那个容易被忽略的"工具性 / 独立性"区分。</p>
+    <p><strong>🔧 方法三：五领域口诀法</strong></p>
+    <p>口诀：<strong>"记、注、执、语、视"</strong>——记忆力、注意力、执行功能、语言功能、视空间功能。</p>
+    <p class="note">为什么这样记：教材的诊断流程要求按领域分类（单域 / 多域、遗忘 / 非遗忘），只有先把五个领域背成一句顺口溜，分类才不会临时卡壳。</p>
+    <p><strong>🔧 方法四：转归配对法</strong></p>
+    <p>配对：<strong>aMND → AD</strong>；<strong>naMND → VaD、FTD 等</strong>。联想：遗忘型"忘"得最像 AD，非遗忘型"别的功能先坏"，所以走向血管性或额颞叶。</p>
+    <p class="note">为什么这样记：教材明确写出两条转归路径，用"配对"把亚型和后续单元（u5 AD、u6 VaD、u8 FTD）绑定，形成跨节记忆。</p>
+  </div>
+
+  <!-- 第八栏 -->
+  <div class="card blue" id="u2-8">
+    <h3 class="col-title"><span class="idx">第八栏</span>知识联动</h3>
+    <div class="grid2">
+      <div class="mini">
+        <h4>与 AD（本章 u5）</h4>
+        <p>aMND 很可能进展为 AD；脑脊液 Aβ42、p-tau、t-tau 三项核心标志物与 AD 源性 MND 高度相关。MND 是 AD 的"前哨站"。</p>
+      </div>
+      <div class="mini">
+        <h4>与 VaD、FTD（本章 u6、u8）</h4>
+        <p>naMND 可能进展为血管性痴呆、额颞叶痴呆等；教材把"卒中、糖尿病"列为 MND 进展的危险因素，与 VaD 的危险因素高度重叠。</p>
+      </div>
+      <div class="mini">
+        <h4>与谵妄（本章 u1）</h4>
+        <p>教材把 MND 列为谵妄的<strong>素质性因素</strong>之一：已有轻度认知损害者更容易在诱因作用下发生谵妄。</p>
+      </div>
+      <div class="mini">
+        <h4>与抑郁障碍</h4>
+        <p>抑郁障碍既是 MND 的可能病因之一，也是最重要的鉴别对象；教材强调 MND 的认知损害"持续、渐进"，而老年抑郁的认知受损可随抑郁发作突然出现。</p>
+      </div>
+      <div class="mini">
+        <h4>与预防医学</h4>
+        <p>教材把高血压、高脂血症、糖尿病、吸烟、维生素 D 缺乏列为危险因素，干预措施直接对应"控制血压血糖、戒烟、补充 B12 / 叶酸"——把危险因素表变成处方。</p>
+      </div>
+      <div class="mini">
+        <h4>与神经心理学</h4>
+        <p>MMSE、MoCA、临床痴呆评估量表、日常生活能力评定量表构成 MND 的评估骨架；教材未涉及具体分界值，故本指南不列具体数值。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 07 遗忘障碍 ===== -->
+<section id="u3">
+  <div class="sec-head"><div class="badge">07</div><h2>遗忘障碍<span class="en">第三节 · Amnesic disorder（p.226–227）</span></h2></div>
+  <p class="sec-lead">遗忘障碍是本章"最窄"的一个单元：只坏记忆，不坏意识，也不广泛波及其他认知域。诊断的关键是"窄得符合定义"。</p>
+
+  <!-- 第一栏 -->
+  <div class="card cyan" id="u3-1">
+    <h3 class="col-title"><span class="idx">第一栏</span>疾病画像</h3>
+    <div class="quote"><span class="lab">教材原文</span>遗忘障碍（amnesic disorder）是一组以与个人年龄和一般智力水平不匹配的记忆障碍为核心特征，但无意识障碍及广泛性认知功能损害的综合征。</div>
+    <p><strong>一句话画像：</strong>意识清醒、谈吐尚可，唯独"记不住、存不下、取不出"；像一台运行正常但硬盘写入失败的电脑。<span class="note">（类比理解，非教材原文）</span></p>
+    <div class="grid2">
+      <div class="mini"><h4>核心特征</h4><p>与个人年龄和一般智力水平<strong>不匹配</strong>的严重记忆障碍。</p></div>
+      <div class="mini"><h4>两个"不"</h4><p><strong>无意识障碍</strong>；<strong>无广泛性认知功能损害</strong>。</p></div>
+    </div>
+    <p class="note">教材在本节<strong>未涉及患病率、性别比或发病年龄</strong>等流行病学数据，故不列数字。</p>
+  </div>
+
+  <!-- 第二栏 -->
+  <div class="card blue" id="u3-2">
+    <h3 class="col-title"><span class="idx">第二栏</span>病因探秘</h3>
+    <p>教材的因果链很短、很明确：<strong>大脑受损 → 记忆障碍</strong>。受损来源分两大类。</p>
+    <div class="grid2">
+      <div class="mini">
+        <h4>① 神经系统疾病</h4>
+        <ul>
+          <li>脑血管病</li>
+          <li>创伤</li>
+          <li>感染</li>
+          <li>肿瘤</li>
+        </ul>
+      </div>
+      <div class="mini">
+        <h4>② 长期使用特定物质或药物</h4>
+        <ul>
+          <li>酒精</li>
+          <li>镇静剂</li>
+          <li>催眠药</li>
+          <li>汞</li>
+        </ul>
+      </div>
+    </div>
+    <p><strong>ICD-11 的五类病因（教材逐条给出定义要点）：</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>类型</th><th>教材给出的判定要点</th></tr></thead>
+        <tbody>
+          <tr><td>酒精所致的遗忘障碍</td><td>饮酒后出现遗忘症状；记忆损害可在酒精中毒、戒断期间或之后不久出现，但<strong>严重程度及持续时间远远超过</strong>与之相关的记忆障碍；不能用其他情况解释；若遗忘障碍出现在饮酒之前，则应用其他情况解释。<strong>酒精滥用导致硫胺素缺乏而引起的遗忘障碍，称为科萨科夫综合征。</strong></td></tr>
+          <tr><td>镇静、催眠或抗焦虑药使用所致遗忘障碍</td><td>用药的<strong>直接后果</strong>；记忆障碍持续时间<strong>超过</strong>药物中毒或撤药的常见持续时间；使用剂量及持续时间能够造成记忆损害，且不能用其他情况更好解释。</td></tr>
+          <tr><td>其他特定的精神活性物质（包括治疗药物）使用所致遗忘障碍</td><td>使用特定精神活性物质的直接后果，持续时间<strong>远超过</strong>中毒或戒断病程；剂量及持续时间能造成记忆损害，且不能用其他情况更好解释。</td></tr>
+          <tr><td>挥发性吸入剂所致的遗忘障碍</td><td>使用挥发性吸入剂的直接后果，持续时间<strong>远远超过</strong>中毒或戒断的相关病程；使用强度及持续时间能造成记忆损害，且不能用其他情况解释。</td></tr>
+          <tr><td>其他疾病所致的遗忘障碍</td><td>符合遗忘障碍的所有定义；根据病史、体格检查、实验室检查，判定记忆障碍是由其他分类的紊乱或疾病引起的<strong>直接病理生理改变</strong>。</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout tip"><span class="ct">💡 五类的共同句式</span>"直接后果 + 超出中毒/戒断病程 + 不能用其他情况解释"。三句话是 ICD-11 分类逻辑的骨架；把"酒精"换成"镇静催眠药""其他物质""吸入剂"，句式几乎不变。</div>
+  </div>
+
+  <!-- 第三栏 -->
+  <div class="card red" id="u3-3">
+    <h3 class="col-title"><span class="idx">第三栏</span>临床表现拼图</h3>
+    <p>教材对这一节的临床表现着墨不多，但每一句都是"排他性"的关键：既要说清"有什么"，更要说清"没有什么"。</p>
+    <div class="grid2">
+      <div class="mini">
+        <h4>有：严重记忆障碍</h4>
+        <ul>
+          <li>是<strong>先前达到的功能水平下降</strong>，而非神经发育障碍</li>
+          <li>记忆障碍<strong>与其他认知域的损害不成比例</strong></li>
+          <li>获得记忆、学习新信息、回忆以前学习信息<strong>严重缺陷</strong></li>
+          <li><strong>近事记忆障碍比远事记忆障碍更严重</strong></li>
+        </ul>
+      </div>
+      <div class="mini">
+        <h4>没有：意识与广泛认知损害</h4>
+        <ul>
+          <li><strong>不伴有意识障碍</strong></li>
+          <li><strong>不伴有广泛性认知功能障碍</strong></li>
+          <li><strong>即刻记忆通常不受影响</strong></li>
+        </ul>
+      </div>
+    </div>
+    <p><strong>症状差异与虚构：</strong>教材明确，症状及严重程度因<strong>大脑损伤部位及严重程度</strong>不同而存在较大差异；<strong>部分患者可存在虚构</strong>，这在<strong>短暂性遗忘障碍</strong>患者中更常见。</p>
+    <div class="callout key"><span class="ct">📌 三个"记忆层次"的定位</span>即刻记忆<strong>通常不受影响</strong>；近事记忆<strong>受损最重</strong>；远事记忆<strong>相对较轻</strong>。把这条顺序记住，就抓住了遗忘障碍的"记忆剖面"。</div>
+  </div>
+
+  <!-- 第四栏 -->
+  <div class="card orange" id="u3-4">
+    <h3 class="col-title"><span class="idx">第四栏</span>教材典型案例</h3>
+    <div class="callout book">
+      <span class="ct">📖 教材未提供具体临床案例</span>
+      本节教材没有患者个案、也没有虚构或记忆测试的具体得分；仅以定义、病因、症状条目与 ICD-11 分类呈现。本栏因此不编造病例。
+    </div>
+    <p><strong>教材原文中可作为"典型画面"的句子：</strong></p>
+    <ul>
+      <li>「获得记忆、学习新信息或回忆以前学习信息的严重缺陷」——三类记忆操作同时出问题。</li>
+      <li>「近事记忆障碍比远事记忆障碍更严重，即刻记忆通常不受影响」——刚发生的事最容易丢。</li>
+      <li>「部分患者可存在虚构，这在短暂性遗忘障碍患者中更常见」——患者会用编造的内容填补记忆空白，且自己并不觉得在说谎。</li>
+    </ul>
+    <p><strong>由教材定义整理的"三步窄化"思路（学习推演，非教材案例）：</strong></p>
+    <ol>
+      <li><strong>先确认是记忆为核心</strong>：记忆损害与其他认知域损害<strong>不成比例</strong>，而不是全面变差。</li>
+      <li><strong>再排除意识问题</strong>：无意识障碍 → 不是谵妄。</li>
+      <li><strong>再排除广泛损害</strong>：无广泛性认知功能障碍、日常生活未达痴呆程度的全面失守 → 不是痴呆。</li>
+    </ol>
+    <p class="note">以上三步完全取自教材定义与鉴别段，不含任何虚构病史或检查值。</p>
+  </div>
+
+  <!-- 第五栏 -->
+  <div class="card orange" id="u3-5">
+    <h3 class="col-title"><span class="idx">第五栏</span>鉴别诊断对对碰</h3>
+    <p><strong>表 1　遗忘障碍 vs 谵妄 vs 痴呆（教材本节直接给出的两组鉴别 + 痴呆定义）</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>维度</th><th>遗忘障碍</th><th>谵妄</th><th>痴呆</th></tr></thead>
+        <tbody>
+          <tr><td>意识</td><td><strong>无意识障碍</strong></td><td><strong>有意识障碍</strong></td><td>教材定义明确<strong>无意识障碍</strong></td></tr>
+          <tr><td>认知域范围</td><td>记忆为核心，<strong>无广泛损害</strong>，与其他域损害不成比例</td><td>广泛认知功能受损，伴注意障碍</td><td><strong>两个或以上认知域损害</strong></td></tr>
+          <tr><td>起病与病程</td><td>与脑损伤或物质使用相关</td><td><strong>短时间内发生</strong>，一天中波动</td><td>缓慢出现、慢性进行性</td></tr>
+          <tr><td>日常生活</td><td>教材未强调明显失守</td><td>可因意识与行为紊乱而受影响</td><td><strong>严重影响日常生活</strong></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout key"><span class="ct">📌 一句话鉴别总结</span>谵妄"意识不清"、痴呆"两域以上且生活失守"、遗忘障碍"只有记忆、意识清楚"——三句话各砍掉一个错误选项。</div>
+    <p><strong>表 2　遗忘障碍内部：物质所致 vs 其他疾病所致</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>维度</th><th>物质所致（酒精 / 镇静催眠 / 其他物质 / 吸入剂）</th><th>其他疾病所致</th></tr></thead>
+        <tbody>
+          <tr><td>必要条件</td><td>有明确使用；损害是使用的<strong>直接后果</strong></td><td>符合遗忘障碍全部定义</td></tr>
+          <tr><td>时间关系</td><td>持续时间<strong>超过</strong>中毒或戒断的常见病程</td><td>由其他疾病引起<strong>直接病理生理改变</strong></td></tr>
+          <tr><td>排除要求</td><td>不能用其他情况更好解释</td><td>依据病史、体格检查、实验室检查判定</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout key"><span class="ct">📌 一句话鉴别总结</span>物质所致看"停用后还超时"，其他疾病所致看"检查能找到原病"。</div>
+  </div>
+
+  <!-- 第六栏 -->
+  <div class="card green" id="u3-6">
+    <h3 class="col-title"><span class="idx">第六栏</span>治疗方案工具箱</h3>
+    <div class="quote"><span class="lab">教材原文</span>目前尚无能确切有效逆转遗忘障碍的治疗方法，临床上主要根据病因及临床表现，进行病因治疗及对症处理。</div>
+    <div class="grid2">
+      <div class="mini">
+        <h4>病因治疗</h4>
+        <p>针对原发神经系统疾病（脑血管病、创伤、感染、肿瘤等）或致病物质 / 药物进行处理。教材未涉及具体药物、剂量或疗程。</p>
+      </div>
+      <div class="mini">
+        <h4>对症处理</h4>
+        <p>教材仅作原则性表述"根据病因及临床表现，进行病因治疗及对症处理"，未列出具体对症药物。</p>
+      </div>
+    </div>
+    <p><strong>预防（教材明确三条）：</strong></p>
+    <div class="grid3">
+      <div class="mini"><h4>避免环境毒素</h4><p>减少与有害环境因素的接触。</p></div>
+      <div class="mini"><h4>避免滥用酒精或其他物质</h4><p>这是针对物质所致遗忘障碍最直接的一级预防。</p></div>
+      <div class="mini"><h4>保持平衡饮食</h4><p>教材原文：可能有助于预防相关的遗忘障碍。</p></div>
+    </div>
+    <div class="callout warn"><span class="ct">⚠️ 教材的"留白"</span>本节<strong>没有</strong>具体药物、剂量、疗程或康复训练方案；教材也未讨论科萨科夫综合征的特定治疗。凡标注"教材未涉及"处，不要用课外资料补成教材结论。</div>
+  </div>
+
+  <!-- 第七栏 -->
+  <div class="card purple" id="u3-7">
+    <h3 class="col-title"><span class="idx">第七栏</span>记忆工具箱</h3>
+    <p><strong>🔧 方法一：核心口诀法</strong></p>
+    <p>口诀：<strong>"一核心、两不伴、三层次"</strong>——<strong>一核心</strong>：与年龄和智力不匹配的记忆障碍；<strong>两不伴</strong>：不伴意识障碍、不伴广泛认知损害；<strong>三层次</strong>：即刻记忆多不受影响、近事最重、远事相对轻。</p>
+    <p class="note">为什么这样记：这三组词正好覆盖定义、排除条件和记忆剖面，是名词解释与鉴别的全部采分点。</p>
+    <p><strong>🔧 方法二：对比记忆法（与谵妄、痴呆）</strong></p>
+    <p>口诀：<strong>"谵妄昏、痴呆广、遗忘窄"</strong>——谵妄有意识障碍（昏），痴呆累及两个以上认知域且生活失守（广），遗忘障碍只坏记忆（窄）。</p>
+    <p class="note">为什么这样记：三病同属"认知出问题"，最容易混。用一个字概括各自"越界"的范围，比背三段定义更快。</p>
+    <p><strong>🔧 方法三：五类病因归类法</strong></p>
+    <p>归为"四物质 + 一其他"：<strong>酒精、镇静催眠抗焦虑药、其他精神活性物质（含治疗药物）、挥发性吸入剂</strong>，加<strong>其他疾病</strong>。</p>
+    <p class="note">为什么这样记：ICD-11 的分类逻辑就是"四种物质来源 + 一个非物质的兜底类"。先记 4+1 的骨架，再逐条补"超出中毒/戒断病程"的判定句。</p>
+    <p><strong>🔧 方法四：关键词联想法（科萨科夫）</strong></p>
+    <p>联想：<strong>酒精 → 硫胺素（维生素 B1）缺乏 → 科萨科夫综合征</strong>。教材在"酒精所致遗忘障碍"段明确写出这条因果链。</p>
+    <p class="note">为什么这样记：科萨科夫综合征是本节唯一有专名的疾病，用"酒精-硫胺素"两词锁定，避免与"酒精所致痴呆"混淆。</p>
+  </div>
+
+  <!-- 第八栏 -->
+  <div class="card blue" id="u3-8">
+    <h3 class="col-title"><span class="idx">第八栏</span>知识联动</h3>
+    <div class="grid2">
+      <div class="mini">
+        <h4>与谵妄（u1）</h4>
+        <p>两者都可有记忆损害，但谵妄<strong>有意识障碍且日内波动</strong>，遗忘障碍意识清楚。教材把谵妄列为遗忘障碍的第一位鉴别对象。</p>
+      </div>
+      <div class="mini">
+        <h4>与痴呆（u4）</h4>
+        <p>痴呆要求<strong>两个或以上认知域损害</strong>且<strong>严重影响日常生活</strong>；遗忘障碍恰好在这两点上都"不够"。</p>
+      </div>
+      <div class="mini">
+        <h4>与精神活性物质所致痴呆（u9）</h4>
+        <p>同一类物质（酒精、镇静催眠药、吸入剂）既能造成遗忘障碍，也能造成痴呆，分界在于<strong>认知损害是否已符合痴呆标准、是否多域并影响日常生活</strong>。</p>
+      </div>
+      <div class="mini">
+        <h4>与酒精戒断谵妄（u1）</h4>
+        <p>教材在谵妄治疗段明确：酒精或镇静催眠药戒断相关谵妄<strong>推荐苯二氮䓬类</strong>；而遗忘障碍的治疗原则是病因处理与对症，不涉及该用药逻辑。</p>
+      </div>
+      <div class="mini">
+        <h4>与神经病学</h4>
+        <p>病因表里的脑血管病、创伤、感染、肿瘤提示：遗忘障碍常是<strong>神经科疾病的认知后遗表现</strong>，需要影像与实验室检查支撑病因判断。</p>
+      </div>
+      <div class="mini">
+        <h4>与营养学</h4>
+        <p>教材把"硫胺素缺乏"与科萨科夫综合征绑定，又把"保持平衡饮食"写进预防——营养是本节唯一被点名的可干预环节。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 08 痴呆总论 ===== -->
+<section id="u4">
+  <div class="sec-head"><div class="badge">08</div><h2>痴呆总论与 BPSD<span class="en">第四节 · Dementia（p.227–229、238–239）</span></h2></div>
+  <p class="sec-lead">本节先给"痴呆"画一张共同的脸：什么是痴呆、由什么引起、表现成什么样、怎么一步步诊断、治疗的大原则是什么；最后单列贯穿全病程的 BPSD。</p>
+
+  <!-- 第一栏 -->
+  <div class="card cyan" id="u4-1">
+    <h3 class="col-title"><span class="idx">第一栏</span>疾病画像</h3>
+    <div class="quote"><span class="lab">教材原文</span>痴呆（dementia）是指以获得性认知功能损害为核心，并导致患者日常生活、学习、工作和社会交往能力明显减退的综合征。临床上以缓慢出现的认知功能减退为主要表现，伴有不同程度的人格改变，但无意识障碍。痴呆的病程呈慢性进行性发展，大多属于不可逆性。</div>
+    <p><strong>一句话画像：</strong>不是"记性差一点"，而是<strong>获得性的、多域的、进行性的</strong>认知衰退，已经拖垮了日常生活；意识始终清楚，人格却在悄悄改变。</p>
+    <div class="grid2">
+      <div class="mini"><h4>四个关键词</h4><ul><li><strong>获得性</strong>——不是先天发育问题</li><li><strong>认知损害为核心</strong>——不是以情绪或精神病性症状起病</li><li><strong>功能明显减退</strong>——日常生活、学习、工作、社交都受影响</li><li><strong>慢性进行性、大多不可逆</strong>——与谵妄的"急、可逆"正相反</li></ul></div>
+      <div class="mini"><h4>一条必须记住的"阴性体征"</h4><p>教材在定义中明确：痴呆<strong>无意识障碍</strong>。这是与谵妄划界的第一道门槛。</p><p class="note">教材未涉及"痴呆"整体的患病率数字；各亚型的数字见后续单元。</p></div>
+    </div>
+    <p><strong>临床表现的三条主干（教材原分类）：</strong></p>
+    <div class="grid3">
+      <div class="mini"><h4>① 认知功能障碍</h4><p>最早出现的核心表现，近记忆最先受损。</p></div>
+      <div class="mini"><h4>② 非认知性精神行为紊乱</h4><p>情绪不稳、淡漠、幻觉妄想、人格改变。</p></div>
+      <div class="mini"><h4>③ 社会生活功能减退</h4><p>先丢工作与高级社交能力，再丢基本日常生活能力。</p></div>
+    </div>
+  </div>
+
+  <!-- 第二栏 -->
+  <div class="card blue" id="u4-2">
+    <h3 class="col-title"><span class="idx">第二栏</span>病因探秘</h3>
+    <p>教材表 19-2 把病因分成<strong>十大类</strong>。这张表的最大价值不是背诵，而是提醒：<strong>痴呆不都是阿尔茨海默病，其中有一部分是可逆、可治的</strong>。</p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>病因类别</th><th>教材列举的疾病</th></tr></thead>
+        <tbody>
+          <tr><td>中枢神经系统变性疾病</td><td>阿尔茨海默病、额颞叶痴呆、路易体痴呆、帕金森病、亨廷顿病、皮质-纹状体-脊髓联合变性等</td></tr>
+          <tr><td>脑血管病变</td><td>多发梗死性痴呆、颈动脉闭塞、皮质下动脉硬化性脑病、血栓性血管炎等</td></tr>
+          <tr><td>代谢性疾病</td><td>黏液水肿、甲状腺功能亢进或减退、甲状旁腺功能亢进或减退、肾上腺皮质功能亢进、肝豆状核变性、尿毒症、慢性肝功能不全、艾迪生病、库欣综合征、高胰岛素血症</td></tr>
+          <tr><td>颅内感染</td><td>各种脑炎、脑膜脑炎、神经梅毒、艾滋病及库鲁病等</td></tr>
+          <tr><td>颅内占位性病变</td><td>肿瘤、硬膜下血肿等</td></tr>
+          <tr><td>缺氧和低氧血症</td><td>缺血性（心脏骤停、严重出血和贫血）、缺氧性（呼吸衰竭、哮喘、窒息、麻醉）、淤滞性（心力衰竭）和组织中毒性等</td></tr>
+          <tr><td>营养缺乏性脑病</td><td>维生素 B1 缺乏性脑病、糙皮病以及维生素 B12 和叶酸缺乏等</td></tr>
+          <tr><td>中毒性脑病</td><td>酒精、重金属、一氧化碳及有机物中毒等</td></tr>
+          <tr><td>颅脑外伤</td><td>头部的开放性或者闭合性外伤、拳击性痴呆等</td></tr>
+          <tr><td>其他</td><td>正常压力性脑积水、类肉瘤病等</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout key">
+      <span class="ct">📌 为什么要背这张表</span>
+      教材在诊断流程中特别强调：明确病因时要<strong>"尤其是识别可逆性、可治性痴呆"</strong>。表 19-2 中代谢性疾病、营养缺乏、颅内感染、颅内占位（如硬膜下血肿）、正常压力性脑积水等，都是需要优先排查的方向——它们决定了"能不能治"，而不只是"是什么病"。
+    </div>
+    <p class="note">教材未涉及各类病因在痴呆人群中的构成比；本节不列比例数字。各主要亚型的流行病学数据见 u5～u10。</p>
+  </div>
+
+  <!-- 第三栏 -->
+  <div class="card red" id="u4-3">
+    <h3 class="col-title"><span class="idx">第三栏</span>临床表现拼图</h3>
+    <p>教材明确把痴呆的临床表现分为<strong>认知功能障碍、非认知性的精神行为紊乱、社会生活功能减退</strong>三方面。三者不是并列的"三种症状"，而是同一病程的三层塌陷。</p>
+    <div class="tabs" data-tabs>
+      <div class="tabbar">
+        <button class="on" data-tab="z1">认知功能障碍</button>
+        <button data-tab="z2">精神行为紊乱</button>
+        <button data-tab="z3">社会生活功能</button>
+      </div>
+      <div class="panel on" data-panel="z1">
+        <ul>
+          <li><strong>最早的核心表现之一：</strong>首要表现为<strong>近记忆受损</strong>，再出现远记忆障碍，伴学习新知识能力下降。</li>
+          <li><strong>随病情进展：</strong>出现记忆以外的认知障碍（注意、执行功能、言语功能），表现为计算困难、抽象思维缺失、理解和判断力下降、语言理解和表达能力障碍。</li>
+          <li><strong>定向：</strong>部分患者出现时间、空间和人物定向问题。</li>
+        </ul>
+        <p class="note">记忆的"由近及远"顺序，与 AD 单元的分期描述完全一致。</p>
+      </div>
+      <div class="panel" data-panel="z2">
+        <ul>
+          <li><strong>情绪不稳：</strong>焦虑、抑郁、易哭易笑、勃然大怒等。</li>
+          <li><strong>进展期：</strong>淡漠、迟钝。</li>
+          <li><strong>后期：</strong>幻觉、妄想等精神病性症状。</li>
+          <li><strong>人格改变：</strong>性格变得固执、多疑，出现违反社会道德准则的行为等。</li>
+        </ul>
+        <p class="note">这一组症状正是 BPSD 的核心内容，管理原则见本单元第六栏。</p>
+      </div>
+      <div class="panel" data-panel="z3">
+        <ul>
+          <li><strong>先丢"高级功能"：</strong>工作能力受损及高级社会生活能力下降——工作效率下降、难以学习新的生活技能、财务管理能力下降。</li>
+          <li><strong>再丢"基本生活"：</strong>不会挑选合适的衣服、洗澡需要协助、外出迷路。</li>
+          <li><strong>疾病后期：</strong>大小便失禁、不能进食、四肢屈曲性痉挛瘫痪等。</li>
+        </ul>
+        <p class="note">教材用"先高级、后基本"的顺序描述功能塌陷，这也是判断严重程度的重要参照。</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 第四栏 -->
+  <div class="card orange" id="u4-4">
+    <h3 class="col-title"><span class="idx">第四栏</span>教材典型案例</h3>
+    <div class="callout book">
+      <span class="ct">📖 教材未提供具体临床案例</span>
+      本节为痴呆的总论，教材只给出定义、病因表、三方面表现、诊断流程、量表名称与治疗原则，<strong>没有患者个案或检查数据</strong>。本栏不虚构病例、不编造量表分数或影像结论。
+    </div>
+    <p><strong>教材原文中可直接引用的"功能塌陷"描述：</strong></p>
+    <ul>
+      <li>「工作效率下降、难以学习新的生活技能、财务管理能力下降」——高级社会生活能力下降。</li>
+      <li>「不会挑选合适的衣服、洗澡需要协助、外出迷路」——日常生活能力下降。</li>
+      <li>「大小便失禁、不能进食、四肢屈曲性痉挛瘫痪」——疾病后期表现。</li>
+      <li>「性格变得固执、多疑及出现违反社会道德准则的行为」——人格改变。</li>
+    </ul>
+    <p><strong>由教材诊断流程整理的三步核查（学习推演，非教材案例）：</strong></p>
+    <ol>
+      <li><strong>是不是痴呆？</strong>全面了解病史（起病形式、病程），完善认知功能检查与精神检查，评估工作及生活能力；同时做神经系统体格检查、生化检查、电生理检查及影像学检查。</li>
+      <li><strong>是什么病因？</strong>结合认知障碍的起病形式、各认知域与精神行为损害的先后顺序及特征、病情发展特点、既往史、体格检查，尤其识别<strong>可逆性、可治性痴呆</strong>。</li>
+      <li><strong>有多重？</strong>依据临床表现、日常能力受损情况或认知评估判定严重程度。</li>
+    </ol>
+    <p class="note">三步完全对应教材"痴呆的诊断流程"①②③，未添加任何虚构患者信息。</p>
+  </div>
+
+  <!-- 第五栏 -->
+  <div class="card orange" id="u4-5">
+    <h3 class="col-title"><span class="idx">第五栏</span>鉴别诊断对对碰</h3>
+    <p><strong>表 1　痴呆 vs 谵妄（教材直接给出的两组鉴别之一）</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>维度</th><th>痴呆</th><th>谵妄</th></tr></thead>
+        <tbody>
+          <tr><td>起病与病程</td><td>缓慢出现，慢性进行性，病程较长</td><td><strong>起病急、病程较短</strong></td></tr>
+          <tr><td>意识</td><td><strong>无意识障碍</strong></td><td><strong>以意识障碍、注意障碍和感知障碍为主要表现</strong></td></tr>
+          <tr><td>特征性表现</td><td>多域认知损害、人格改变、生活功能减退</td><td>可伴幻视和短暂性妄想，<strong>具有昼轻夜重特点</strong></td></tr>
+          <tr><td>共病提醒</td><td colspan="2">教材原文：痴呆患者多伴有躯体疾病不稳定，<strong>容易导致谵妄</strong>；需要了解谵妄发生前后的认知功能情况，以明确两者是否同时并存</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout key"><span class="ct">📌 一句话鉴别总结</span>"慢、清、久"是痴呆；"急、昏、短、昼轻夜重"是谵妄；痴呆患者一旦"突然变糊涂"，先想谵妄叠加。</div>
+    <p><strong>表 2　痴呆 vs 抑郁障碍（假性痴呆）</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>维度</th><th>痴呆</th><th>抑郁障碍（假性痴呆）</th></tr></thead>
+        <tbody>
+          <tr><td>起病时间</td><td>隐匿、缓慢</td><td><strong>多有明确的起病时间</strong></td></tr>
+          <tr><td>核心症状</td><td>认知损害为核心</td><td><strong>情绪低落、兴趣缺乏、精力 / 活动下降</strong>为核心</td></tr>
+          <tr><td>认知表现</td><td>进行性、多域</td><td>记忆力、注意力下降，反应迟钝</td></tr>
+          <tr><td>转归</td><td>大多不可逆</td><td><strong>抑郁症状缓解后，认知功能恢复既往水平</strong></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout key"><span class="ct">📌 一句话鉴别总结</span>抑郁性"假性痴呆"是<strong>情绪先塌、认知后塌、情绪好了认知也回来</strong>；真痴呆是<strong>认知先塌且一路下坡</strong>。</div>
+    <p><strong>表 3　痴呆 vs MND（由 MND 诊断标准第 ④ 条整理）</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>维度</th><th>MND</th><th>痴呆</th></tr></thead>
+        <tbody>
+          <tr><td>认知域</td><td>一个或多个领域受损，程度轻微</td><td>通常多域，进行性加重</td></tr>
+          <tr><td>日常生活</td><td>工具性活动可轻微损害，<strong>独立生活能力保持</strong></td><td><strong>日常生活、学习、工作、社交能力明显减退</strong></td></tr>
+          <tr><td>界限表述</td><td colspan="2">MND 诊断标准第 ④ 条即"<strong>未达到痴呆诊断标准</strong>"——这是教材给出的最直接分界句</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- 第六栏 -->
+  <div class="card green" id="u4-6">
+    <h3 class="col-title"><span class="idx">第六栏</span>治疗方案工具箱</h3>
+    <p><strong>一、先诊断：三步流程 + 四类工具</strong></p>
+    <div class="timeline">
+      <div class="tl-item"><h4>① 确定是否存在痴呆</h4><p>病史（起病形式、病程）+ 认知功能检查 + 精神检查 + 工作及生活能力评估；配合神经系统体格检查、生化检查、电生理检查及影像学检查。</p></div>
+      <div class="tl-item"><h4>② 明确病因</h4><p>结合起病形式、各认知域与精神行为损害的先后顺序及特征、病情发展特点、既往史、体格检查；<strong>尤其识别可逆性、可治性痴呆</strong>。</p></div>
+      <div class="tl-item"><h4>③ 判定严重程度</h4><p>依据临床表现、日常能力受损情况或认知评估确定。</p></div>
+    </div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>工具</th><th>教材定位与内容</th></tr></thead>
+        <tbody>
+          <tr><td>MMSE</td><td>操作简便，耗时约 <strong>15 分钟</strong>；评估整体认知功能，包括定向力、注意力、计算力、瞬时和短时记忆、言语及视空间认知水平。</td></tr>
+          <tr><td>MoCA</td><td>主要用于<strong>受教育程度较高、痴呆程度较轻的患者和轻度认知功能障碍患者</strong>。</td></tr>
+          <tr><td>NPI（神经精神问卷）</td><td>请<strong>照料者</strong>评估，反映<strong>过去一个月内</strong>患者的精神状态，包括抑郁、焦虑、幻觉、妄想、睡眠、异常行为等。</td></tr>
+          <tr><td>ADLS（日常生活能力评定量表）</td><td>评估患者的生活能力。</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p><strong>二、治疗总原则（教材原文）：提高患者生活质量、减轻照料者负担，包括药物治疗和社会心理治疗。</strong></p>
+    <div class="grid2">
+      <div class="mini">
+        <h4>药物治疗（总论层面）</h4>
+        <ul>
+          <li>主要抗痴呆药物：<strong>胆碱酯酶抑制剂多奈哌齐</strong>、<strong>谷氨酸受体拮抗剂美金刚</strong>等。</li>
+          <li>合并<strong>激越攻击行为及幻觉、妄想</strong>等精神行为症状者：可<strong>短期小剂量</strong>使用抗精神病药物控制症状。</li>
+          <li>风险提醒：须注意<strong>心血管意外和肺部感染</strong>等风险。</li>
+        </ul>
+        <p class="note">教材总论未涉及具体剂量；各亚型单元给出的药名同样未附剂量。</p>
+      </div>
+      <div class="mini">
+        <h4>社会心理治疗</h4>
+        <p>教材在总论只作原则性表述"包括药物治疗和社会心理治疗"；具体形式在 AD 单元展开为职业训练、音乐治疗、群体治疗、环境调整与护理（见 u5-6）。</p>
+      </div>
+    </div>
+    <p><strong>三、BPSD（痴呆的行为和精神症状）的识别与管理</strong></p>
+    <div class="quote"><span class="lab">教材原文</span>痴呆患者除了认知功能损害，还常表现出思维活动、情感表达以及行为举止方面的异常，被称为痴呆的行为和精神症状（behavioral and psychological symptoms of dementia，BPSD）。这些症状包括焦虑、抑郁、精神病性表现，以及攻击、淡漠、激越、脱抑制行为、游荡、昼夜作息紊乱等行为问题。</div>
+    <p><strong>BPSD 为什么发生？教材给出四条线索：</strong></p>
+    <div class="grid2">
+      <div class="mini"><h4>① 神经生物学基础</h4><p>BPSD 的发生与神经生物学基础有关。</p></div>
+      <div class="mini"><h4>② 躯体状况</h4><p><strong>未被及时诊治的躯体疾病是重要的造成 BPSD 的因素</strong>。</p></div>
+      <div class="mini"><h4>③ 心理因素：需求未满足理论</h4><p>患者的需求未能得到及时满足，其自身躯体、心理、情感以及社交等方面活动目标未得到充分表达。</p></div>
+      <div class="mini"><h4>④ 照料者与环境互动</h4><p>管理 BPSD 会增加照料者压力和抑郁；反之，照料者的压力和抑郁也可能诱发或加重 BPSD。环境方面，日常活动频繁改变、刺激过度、环境过于嘈杂带来的压力可能超过其已降低的压力阈值，诱发严重焦虑和重度激越。</p></div>
+    </div>
+    <p><strong>BPSD 的处理顺序（教材原文流程）：</strong></p>
+    <div class="timeline">
+      <div class="tl-item"><h4>第 1 步 · 预防</h4><p>管理应贯穿全病程，包括预防和治疗；<strong>环境设计有助于预防行为问题</strong>。</p></div>
+      <div class="tl-item"><h4>第 2 步 · 专业人员评估处理</h4><p>问题行为出现，首先由专业人员评估并处理。</p></div>
+      <div class="tl-item"><h4>第 3 步 · 查急性躯体疾病</h4><p>如果问题仍存在，应检查是否有急性身体疾病。</p></div>
+      <div class="tl-item"><h4>第 4 步 · 转诊精神科</h4><p>如果没有急性躯体疾病，建议转诊至精神科专业人员；对干预技术应进行持续评估。</p></div>
+      <div class="tl-item"><h4>第 5 步 · 非药物干预（首选一线）</h4><p>强调<strong>以人为本</strong>，包括感官刺激治疗、行为干预、音乐治疗等。</p></div>
+      <div class="tl-item"><h4>第 6 步 · 药物（非药物无效时）</h4><p>综合疾病类型、行为问题可能原因、严重程度及有无其他解决方案，再决定是否使用<strong>抗精神病药、抗抑郁药、心境稳定药</strong>等；密切观察治疗反应与不良反应，适时调整剂量。</p></div>
+    </div>
+    <div class="callout warn"><span class="ct">⚠️ BPSD 最容易考反的一句</span>教材明确：<strong>非药物干预是首选的一线干预方法</strong>，药物是在非药物干预无效时才考虑。不要一看到"激越、攻击"就直接上抗精神病药。</div>
+  </div>
+
+  <!-- 第七栏 -->
+  <div class="card purple" id="u4-7">
+    <h3 class="col-title"><span class="idx">第七栏</span>记忆工具箱</h3>
+    <p><strong>🔧 方法一：三面结构法</strong></p>
+    <p>把痴呆表现记成一张"三面桌"：<strong>认知面</strong>（近记忆→远记忆→注意/执行/言语→定向）、<strong>精神行为面</strong>（情绪不稳→淡漠迟钝→幻觉妄想→人格改变）、<strong>功能面</strong>（工作与高级社交→基本日常→大小便失禁/卧床）。</p>
+    <p class="note">为什么这样记：教材明确按这三方面分类，且三面都遵循"由轻到重"的顺序；记住三面桌，就同时记住了分类和进展。</p>
+    <p><strong>🔧 方法二：诊断三步数字编码法</strong></p>
+    <p>口诀：<strong>"一查、二因、三度"</strong>——①查是否痴呆；②查病因（尤其可逆可治）；③查严重程度。</p>
+    <p class="note">为什么这样记：教材诊断流程就是三步，用三个动词锁定顺序，避免答题时把"定程度"写在"定病因"前面。</p>
+    <p><strong>🔧 方法三：鉴别口诀法</strong></p>
+    <p>口诀：<strong>"谵妄急昏昼轻重，痴呆慢清久下坡，抑郁先郁后可复"</strong>。</p>
+    <p class="note">为什么这样记：三病最易混，用三句各七个字分别抓住"起病+意识+转归"的核心差异；"昼轻夜重"是教材给谵妄的原文特征，"可复"对应抑郁缓解后认知恢复。</p>
+    <p><strong>🔧 方法四：BPSD 流程法</strong></p>
+    <p>流程压缩为五个字：<strong>"防、评、查、转、非"</strong>——预防（环境设计）→ 专业评估 → 查躯体病 → 转诊精神科 → 非药物优先；非药物无效才用药。</p>
+    <p class="note">为什么这样记：BPSD 的考点几乎都落在"顺序"上（先排除躯体病、再非药物、最后药物）。用五字流程替代长段落，答题时按序展开即可。</p>
+  </div>
+
+  <!-- 第八栏 -->
+  <div class="card blue" id="u4-8">
+    <h3 class="col-title"><span class="idx">第八栏</span>知识联动</h3>
+    <div class="grid2">
+      <div class="mini">
+        <h4>向下：各亚型单元（u5～u10）</h4>
+        <p>总论提供共同框架（定义、三方面、诊断三步、治疗原则），各亚型单元提供"病因 + 特征 + 鉴别"的差异信息；先总后分，才不会把各病记成一团。</p>
+      </div>
+      <div class="mini">
+        <h4>与谵妄（u1）</h4>
+        <p>痴呆是谵妄的重要<strong>素质性因素</strong>，痴呆患者谵妄发生率是非痴呆的 2.5～3 倍；临床遇"痴呆患者突然变糊涂"，必须按谵妄排查。</p>
+      </div>
+      <div class="mini">
+        <h4>与抑郁障碍</h4>
+        <p>抑郁可表现为"假性痴呆"；教材给出的鉴别点是起病时间、核心症状与"抑郁缓解后认知恢复"。这是老年精神科最常见的双向误诊。</p>
+      </div>
+      <div class="mini">
+        <h4>与 MND（u2）</h4>
+        <p>MND 的诊断标准本身就以"未达痴呆标准"为界；两者是同一连续谱上的相邻两格。</p>
+      </div>
+      <div class="mini">
+        <h4>与内科 / 神经科</h4>
+        <p>表 19-2 的代谢、营养、感染、占位、缺氧等类别，决定了痴呆诊断必须做生化、影像与必要的实验室检查，不能只靠量表。</p>
+      </div>
+      <div class="mini">
+        <h4>与照料者 / 社会支持</h4>
+        <p>教材把"减轻照料者负担"写进治疗原则，又把照料者压力列为 BPSD 的诱因与后果——治疗对象不只是患者，还包括照护系统。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 09 AD ===== -->
+<section id="u5">
+  <div class="sec-head"><div class="badge">09</div><h2>阿尔茨海默病所致痴呆<span class="en">Alzheimer disease（p.229–231）</span></h2></div>
+  <p class="sec-lead">AD 是重度神经认知障碍的"最大票仓"（60%～70%）。它的考点集中在三处：<strong>四个基因、两类病理、早中晚三期</strong>，再加上一套与其他痴呆的鉴别。</p>
+
+  <!-- 第一栏 -->
+  <div class="card cyan" id="u5-1">
+    <h3 class="col-title"><span class="idx">第一栏</span>疾病画像</h3>
+    <div class="quote"><span class="lab">教材原文</span>阿尔茨海默病（Alzheimer disease，AD）所致痴呆是重度神经认知障碍的最常见类型，约占其总数的 60%～70%。病理学特征为 Aβ 沉积、神经原纤维缠结、神经元缺失和胶质细胞增生等。</div>
+    <p><strong>一句话画像：</strong>最常见的变性性痴呆，以<strong>近记忆</strong>悄悄起病，靠 Aβ 与 tau 两套病理"慢慢啃掉"皮质与海马，病程 5～10 年。</p>
+    <div class="stat">
+      <span>占重度神经认知障碍 60%～70%</span>
+      <span>我国 65 岁以上患病率 3%～7%</span>
+      <span>85 岁以上 20%～50%</span>
+      <span>病程约 5～10 年</span>
+    </div>
+    <p><strong>教材列出的危险因素：</strong>抑郁、糖尿病、吸烟、中年肥胖、高血压、低教育程度和缺乏锻炼。</p>
+    <p class="note">注意：这里的 3%～7% 是"我国 65 岁以上老年人 AD 患病率"，20%～50% 是"85 岁以上老年人群患病率"，两句话的主语和年龄段不要混。</p>
+  </div>
+
+  <!-- 第二栏 -->
+  <div class="card blue" id="u5-2">
+    <h3 class="col-title"><span class="idx">第二栏</span>病因探秘</h3>
+    <p>教材明确：AD 的病因和发病机制<strong>尚未明确</strong>，但已发现若干因素与脑内异常变化参与其发生发展。可拆成三条线：<strong>基因 → 病理 → 神经生化</strong>。</p>
+    <div class="quote"><span class="lab">教材原文</span>目前已确定 AD 相关的基因有 4 种，分别为位于 21 号染色体的淀粉样蛋白前体蛋白基因（APP）、位于 14 号染色体的早老素 1 基因（PSEN1）、位于 1 号染色体的早老素 2 基因（PSEN2）和位于 19 号染色体的载脂蛋白 E 基因（APOE）。</div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>基因</th><th>染色体</th><th>教材定位</th></tr></thead>
+        <tbody>
+          <tr><td>APP（淀粉样蛋白前体蛋白基因）</td><td>21 号</td><td rowspan="3">与<strong>早发性家族性 AD</strong> 有关</td></tr>
+          <tr><td>PSEN1（早老素 1 基因）</td><td>14 号</td></tr>
+          <tr><td>PSEN2（早老素 2 基因）</td><td>1 号</td></tr>
+          <tr><td>APOE（载脂蛋白 E 基因）</td><td>19 号</td><td>与<strong>散发性 AD</strong> 关系密切</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p><strong>APOE 的三个亚型（教材明确排序与作用）：</strong></p>
+    <div class="grid3">
+      <div class="mini"><h4>APOE ε3</h4><p><strong>最普遍</strong>的亚型。</p></div>
+      <div class="mini"><h4>APOE ε4</h4><p>次之；<strong>为致病基因</strong>，可使 AD 发病年龄<strong>提前</strong>。</p></div>
+      <div class="mini"><h4>APOE ε2</h4><p>最少；<strong>具有保护作用</strong>。</p></div>
+    </div>
+    <p class="note">教材还提到一批候选基因（CHRNB2、TF、ER-α、Apo AIV 等），但明确"均需进一步确定其在 AD 发病中的作用"，故不作考点主体。</p>
+    <p><strong>神经病理：肉眼与镜下</strong></p>
+    <div class="grid2">
+      <div class="mini">
+        <h4>肉眼（大体）</h4>
+        <p>大脑皮质<strong>弥漫性脑萎缩</strong>，重量减轻，脑回变窄，脑室扩大；其中以<strong>颞、顶叶和海马</strong>萎缩最为明显。</p>
+      </div>
+      <div class="mini">
+        <h4>镜下（四联）</h4>
+        <ul>
+          <li>神经炎性斑块（NP）</li>
+          <li>神经原纤维缠结（NFTs）</li>
+          <li>神经元缺失</li>
+          <li>胶质细胞增生</li>
+        </ul>
+      </div>
+    </div>
+    <div class="grid2">
+      <div class="mini">
+        <h4>神经炎性斑块（NP）</h4>
+        <p>分布于大脑皮质、海马、杏仁核、前脑基底神经核团和丘脑；主要形成于<strong>神经细胞外</strong>，以 <strong>Aβ 沉积为核心</strong>，周边为变性的星状细胞和小胶质细胞。皮质 NP 数目与临床症状有关；NP 形成同时伴广泛突触丢失，与早期短时记忆下降有关。</p>
+      </div>
+      <div class="mini">
+        <h4>神经原纤维缠结（NFTs）</h4>
+        <p>大脑皮质和海马大量存在，部分可扩展至近端树突干；电镜下呈<strong>螺旋样细丝</strong>，主要成分是<strong>高度磷酸化的 tau 蛋白</strong>。tau 分布于神经元轴突、稳定微管；高度磷酸化后丧失稳定作用，导致细胞骨架结构分离破坏。</p>
+      </div>
+    </div>
+    <p><strong>神经生化：三种递质减少，胆碱能最关键。</strong></p>
+    <ul>
+      <li>脑内<strong>乙酰胆碱、去甲肾上腺素及 5-羟色胺均减少</strong>，<strong>海马部位乙酰胆碱减少最为明显</strong>。</li>
+      <li>胆碱能系统缺陷在 AD 中起重要作用；胆碱能细胞丧失的严重程度与 AD 病理改变有关。</li>
+      <li>尸检及脑活检提示：AD 患者前脑基底核内 <strong>70%～80% 的胆碱能神经元变性甚至死亡</strong>。</li>
+      <li>乙酰胆碱缺乏与认知功能障碍密切相关，<strong>这也是目前 AD 治疗获得有限疗效的基础</strong>。</li>
+    </ul>
+  </div>
+
+  <!-- 第三栏 -->
+  <div class="card red" id="u5-3">
+    <h3 class="col-title"><span class="idx">第三栏</span>临床表现拼图</h3>
+    <p>教材对 AD 的临床描述是一条清晰的时间线：<strong>起病隐匿、持续进行性发展</strong>，主要表现为认知功能减退和非认知性神经精神症状。以下按早、中、晚三期呈现。</p>
+    <div class="timeline">
+      <div class="tl-item"><h4>早期 · 记忆先亮红灯</h4><p>症状轻微，典型表现为<strong>记忆障碍，以近记忆受损为主</strong>；可伴有人格改变、主动性缺乏、冷漠、情绪不稳等<strong>非认知症状</strong>。</p></div>
+      <div class="tl-item"><h4>中期 · 功能与语言开始失守</h4><p>认知功能障碍加重：掌握、运用新知识的能力及社交能力下降；严重时出现<strong>定向力障碍</strong>，一般<strong>先时间定向、再空间定向</strong>。此期需家人日常监护；出现语言障碍（言语沟通不畅、理解及复述能力差）；不同程度<strong>失用</strong>（吃饭、穿衣、抄几何图案和数字等感到困难）；对简单计算感到吃力。常伴情绪不稳、激惹、挫折感强；部分患者出现典型幻觉和妄想，<strong>幻觉以幻视较多见，妄想以被窃妄想和嫉妒妄想为主</strong>。</p></div>
+      <div class="tl-item"><h4>晚期 · 判断与自知几乎消失</h4><p>判断力、认知力几乎消失殆尽；幻觉和妄想更显著；行为愈发难以被理解；自我约束能力丧失，可显得好斗，或完全处于远离社会状态；自理能力和社会功能极差。</p></div>
+    </div>
+    <p><strong>神经系统体征（按病程）：</strong></p>
+    <div class="grid3">
+      <div class="mini"><h4>早、中期</h4><p>查体<strong>一般无阳性体征</strong>；部分患者可出现病理征。</p></div>
+      <div class="mini"><h4>晚期 · 锥体系 / 锥体外系</h4><p>肌张力增高、运动迟缓、拖拽步态、姿势异常；最终可呈<strong>强直性或屈曲性四肢瘫痪</strong>。</p></div>
+      <div class="mini"><h4>晚期 · 原始反射</h4><p>可出现<strong>强握反射、吸吮反射</strong>等。</p></div>
+    </div>
+    <div class="callout tip"><span class="ct">💡 记忆抓手</span>AD 的三期可以压成一句话：<strong>"早记（近记忆）、中定（定向+失用+语言）、晚瘫（四肢瘫痪+原始反射）"</strong>。</div>
+  </div>
+
+  <!-- 第四栏 -->
+  <div class="card orange" id="u5-4">
+    <h3 class="col-title"><span class="idx">第四栏</span>教材典型案例</h3>
+    <div class="callout book">
+      <span class="ct">📖 教材未提供具体临床案例</span>
+      本节教材只有概述、病因机制、分期描述、辅助检查清单、诊断要点与鉴别条目，<strong>没有患者个案，也没有给出 MMSE / CDR 分值或影像报告实例</strong>。本栏不虚构病例、不编造量表分数与影像结论。
+    </div>
+    <p><strong>教材原文中可作"临床表现素材"的句子：</strong></p>
+    <ul>
+      <li>「在疾病早期，患者症状轻微，典型表现为记忆障碍，以近记忆受损为主」。</li>
+      <li>「严重时出现定向力障碍，一般先出现时间定向力障碍再出现空间定向力障碍」。</li>
+      <li>「部分患者会出现典型的幻觉和妄想，幻觉以幻视较为多见，妄想以被窃妄想和嫉妒妄想为主」。</li>
+      <li>「疾病晚期可出现锥体系和锥体外系体征……最终可呈强直性或屈曲性四肢瘫痪」。</li>
+    </ul>
+    <p><strong>由教材诊断要点整理的四步判断（学习推演，非教材案例）：</strong></p>
+    <ol>
+      <li><strong>先有痴呆：</strong>符合重度神经认知障碍判断。</li>
+      <li><strong>再看起病：</strong>隐袭起病、缓慢进展。</li>
+      <li><strong>排除其他：</strong>无临床证据或特殊检查结果提示其他可引起痴呆的全身疾病或脑部疾病（如甲状腺功能减退、高血钙、维生素 B12 缺乏、烟酸缺乏、神经梅毒、正常压力脑积水或硬膜下血肿）。</li>
+      <li><strong>看卒中与局灶体征：</strong>无卒中样发作；疾病早期无局限性神经系统损害体征（如感觉缺失、视野缺损及共济失调），晚期可出现。</li>
+    </ol>
+    <p class="note">四步完全对应教材 AD 诊断要点①～④，未添加任何教材外的病例细节。</p>
+  </div>
+
+  <!-- 第五栏 -->
+  <div class="card orange" id="u5-5">
+    <h3 class="col-title"><span class="idx">第五栏</span>鉴别诊断对对碰</h3>
+    <p>教材在 AD 单元列出五个鉴别对象。下表把每个对象的"一句话抓手"集中呈现。</p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>鉴别疾病</th><th>起病 / 病程</th><th>核心临床特征</th><th>关键鉴别点</th></tr></thead>
+        <tbody>
+          <tr><td>血管性神经认知障碍（VaD）</td><td>急性起病，偶可亚急性或慢性；<strong>波动性进展或阶梯性恶化</strong></td><td>有神经系统定位体征；既往高血压、动脉粥样硬化或糖尿病史；可能多次脑卒中史</td><td>影像学可发现<strong>脑血管性病灶</strong>；AD 为隐袭缓慢进展、早期无局灶体征</td></tr>
+          <tr><td>额颞叶神经认知障碍（FTD）</td><td>起病较早（教材另述 45～70 岁）</td><td><strong>早期出现人格和行为改变，精神异常突出</strong>，遗忘出现较晚</td><td>影像显示<strong>额叶和颞叶萎缩</strong>，与 AD 的弥漫性脑萎缩不同</td></tr>
+          <tr><td>路易体痴呆（DLB）</td><td>进行性</td><td><strong>波动性认知功能障碍、反复的幻视、自发性锥体外系功能障碍</strong></td><td>患者一般<strong>对镇静药异常敏感</strong></td></tr>
+          <tr><td>克-雅病（CJD）</td><td>急性或亚急性起病</td><td><strong>迅速进行性智力丧失伴肌阵挛</strong></td><td>脑电图在慢波背景上出现<strong>广泛双侧同步双相或三相周期性尖-慢复合波</strong></td></tr>
+          <tr><td>老年抑郁障碍</td><td>有明确发病时间</td><td>精神运动性抑制、思维困难、行动迟缓，可表现为<strong>假性痴呆</strong></td><td>精神检查可发现<strong>抑郁情绪</strong>；<strong>晨重夜轻</strong>；<strong>定向力完好</strong>；<strong>抗抑郁药治疗有效</strong></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout key"><span class="ct">📌 一句话鉴别总结</span><strong>VaD 看"阶梯 + 卒中灶"，FTD 看"人格早 + 额颞萎缩"，DLB 看"波动 + 幻视 + 帕金森"，CJD 看"快 + 肌阵挛 + 周期波"，老年抑郁看"晨重夜轻 + 定向完好 + 抗抑郁有效"</strong>。</div>
+    <p><strong>表 2　AD 与 VaD 的"三问"速判</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>三问</th><th>答"AD"</th><th>答"VaD"</th></tr></thead>
+        <tbody>
+          <tr><td>起病快不快？</td><td>隐匿、缓慢</td><td>较急，常因卒中样发作加剧</td></tr>
+          <tr><td>有没有卒中 / 血管危险因素？</td><td>诊断要点要求"无卒中样发作"</td><td>有高血压、动脉粥样硬化、糖尿病史，可能多次卒中</td></tr>
+          <tr><td>记忆是不是主战场？</td><td>近记忆最先、最重</td><td>可轻微记忆受损，甚至无记忆受损；注意与执行更突出</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout key"><span class="ct">📌 一句话鉴别总结</span>AD 是"慢慢忘"，VaD 是"摔一跤、坏一截"；前者记忆打头，后者执行与注意打头、记忆可轻可无。</div>
+  </div>
+
+  <!-- 第六栏 -->
+  <div class="card green" id="u5-6">
+    <h3 class="col-title"><span class="idx">第六栏</span>治疗方案工具箱</h3>
+    <p><strong>一、诊断所需的六类辅助检查（教材逐条给出）</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>类别</th><th>教材给出的具体内容</th></tr></thead>
+        <tbody>
+          <tr><td>① 影像</td><td>MRI 见大脑皮质弥漫性萎缩，以<strong>颞、顶叶及海马</strong>萎缩为主；PET、SPECT、fMRI 提示<strong>颞、顶叶代谢降低</strong>；PET 扫描显示 <strong>Aβ 及 tau 阳性</strong>。</td></tr>
+          <tr><td>② 脑脊液</td><td><strong>Aβ 蛋白水平降低</strong>，<strong>总 tau 和磷酸化 tau 蛋白水平升高</strong>。</td></tr>
+          <tr><td>③ 遗传学</td><td>对有家族史者可行基因突变检测：<strong>APP、PSEN1、PSEN2</strong>。</td></tr>
+          <tr><td>④ 神经心理学</td><td>综合认知评估及单认知域评估；常用 <strong>MMSE、WAIS-RC、HDS（长谷川痴呆量表）、CDR（临床痴呆量表）</strong>。</td></tr>
+          <tr><td>⑤ 脑电图</td><td>早期通常<strong>正常</strong>；以后逐渐出现 α 节律丧失及电位降低，可见<strong>弥漫性慢波</strong>；减慢程度与神经认知障碍程度具有相关性。</td></tr>
+          <tr><td>⑥ 血液学</td><td><strong>Aβ 浓度降低或 Aβ-42/Aβ-40 比值降低，p-tau181 升高</strong>。首次就诊还应查全血细胞计数、肝肾功能、电解质、维生素 B12、血糖、甲状腺素水平、梅毒血清学、HIV 等，以揭示病因或发现伴随疾病。</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note">教材未涉及上述检查的具体判读阈值、灵敏度或特异度，本指南不补。</p>
+    <p><strong>二、治疗：三条路径（教材明确"目前尚无法逆转或阻止 AD 的病情进展"）</strong></p>
+    <div class="grid3">
+      <div class="mini">
+        <h4>① 心理社会治疗</h4>
+        <ul>
+          <li>鼓励尽可能参加各种社会活动、处理自己的日常生活</li>
+          <li>提供<strong>职业训练、音乐治疗和群体治疗</strong>等，可延缓衰退速度</li>
+          <li>调整生活环境，防止<strong>摔伤、自伤、外出不归</strong>等意外</li>
+          <li>有效的护理能延长生命、改善生活质量</li>
+        </ul>
+      </div>
+      <div class="mini">
+        <h4>② 改善认知功能</h4>
+        <ul>
+          <li><strong>胆碱酯酶抑制剂（ChEI）</strong>：用于<strong>轻、中度</strong> AD；改善认知功能与日常生活能力，对<strong>早期精神行为异常有效</strong>；代表药<strong>多奈哌齐、卡巴拉汀、加兰他敏、石杉碱甲</strong></li>
+          <li><strong>NMDA 受体拮抗剂</strong>：代表药<strong>美金刚</strong>，用于<strong>中、重度</strong> AD</li>
+        </ul>
+      </div>
+      <div class="mini">
+        <h4>③ 支持治疗</h4>
+        <p>重度患者生活能力严重减退，常导致<strong>营养不良、肺部感染、泌尿系统感染、压疮</strong>等并发症，应加强支持治疗和对症治疗。</p>
+      </div>
+    </div>
+    <p><strong>控制精神行为症状（教材原文）</strong></p>
+    <div class="quote"><span class="lab">教材原文</span>在使用促认知药物后精神行为症状无改善时可酌情使用抗抑郁药或抗精神病药，前者常用 5-HT 再摄取抑制剂（如氟西汀、帕罗西汀、西酞普兰、舍曲林等），后者常用不典型抗精神病药（如喹硫平、奥氮平、利培酮等）。</div>
+    <p><strong>用药原则（教材逐句）：</strong></p>
+    <div class="grid2">
+      <div class="mini">
+        <h4>五条原则</h4>
+        <ul>
+          <li>小剂量起始</li>
+          <li>缓慢增量</li>
+          <li>增量间隔时间稍长</li>
+          <li>尽量使用最小有效剂量</li>
+          <li>短期使用、治疗个体化</li>
+        </ul>
+      </div>
+      <div class="mini">
+        <h4>两条边界</h4>
+        <ul>
+          <li>注意药物间相互作用</li>
+          <li>一旦精神病性症状消失或缓解，应尽量尝试<strong>减量或暂停抗精神病药</strong>；<strong>慎用</strong>可加重认知功能障碍的<strong>抗惊厥药和苯二氮䓬类</strong></li>
+        </ul>
+      </div>
+    </div>
+    <p class="note">教材未涉及 ChEI、美金刚、抗抑郁药或抗精神病药的具体剂量与疗程，故本指南不列数字。教材只明确 ChEI 用于轻中度、美金刚用于中重度。</p>
+    <p><strong>三、预后：</strong>AD 病程约 <strong>5～10 年</strong>，部分患者可存活 10 年或更长时间；多死于<strong>肺部感染、泌尿系统感染及压疮</strong>等并发症。</p>
+  </div>
+
+  <!-- 第七栏 -->
+  <div class="card purple" id="u5-7">
+    <h3 class="col-title"><span class="idx">第七栏</span>记忆工具箱</h3>
+    <p><strong>🔧 方法一：病理四联口诀法</strong></p>
+    <p>口诀：<strong>"斑、缠、失、增"</strong>——神经炎性<strong>斑</strong>块（Aβ 为核心）、神经原纤维<strong>缠</strong>结（高度磷酸化 tau）、神经元<strong>失</strong>缺失、胶质细胞<strong>增</strong>生。</p>
+    <p class="note">为什么这样记：教材在同一句里并列这四个病理特征，压成四字正好覆盖"镜下四联"；再补一句"斑在细胞外、缠在细胞内"，位置关系也不会混。</p>
+    <p><strong>🔧 方法二：基因染色体数字编码法</strong></p>
+    <p>口诀：<strong>"21-14-1-19"</strong>——APP 在 21 号、PSEN1 在 14 号、PSEN2 在 1 号、APOE 在 19 号；前三个管<strong>早发家族性</strong>，APOE 管<strong>散发</strong>。</p>
+    <p class="note">为什么这样记：四个数字从小到大排成一条"染色体密码"，比记四个基因名更容易先建立索引；再记"ε4 致病、ε2 保护"。<span class="note">注意：教材原文为"位于 1 号染色体的早老素 2 基因（PSEN2）"。</span></p>
+    <p><strong>🔧 方法三：三期时间轴法</strong></p>
+    <p>时间轴：<strong>早期"记"（近记忆 + 人格/淡漠/情绪不稳）→ 中期"定、语、用"（先时间后空间定向、语言障碍、失用、计算吃力、幻视与被窃/嫉妒妄想）→ 晚期"瘫"（判断力几乎消失、行为难理解、强直性或屈曲性四肢瘫痪、原始反射）</strong>。</p>
+    <p class="note">为什么这样记：AD 的考点最爱问"某表现属于哪一期"。把每期压成一个字（记、定、瘫），再往外扩细节，答题时先定期、再展开。</p>
+    <p><strong>🔧 方法四：五鉴别"关键词挂钩法"</strong></p>
+    <p>挂钩：<strong>VaD—阶梯 + 卒中灶</strong>；<strong>FTD—人格早 + 额颞萎缩</strong>；<strong>DLB—波动 + 幻视 + 帕金森</strong>；<strong>CJD—快 + 肌阵挛 + 周期波</strong>；<strong>老年抑郁—晨重夜轻 + 定向完好 + 抗抑郁有效</strong>。</p>
+    <p class="note">为什么这样记：五个鉴别各挂 2～3 个"硬词"，考场上看到题干出现哪个硬词，就直接锁定对应疾病，不必从头推演。</p>
+  </div>
+
+  <!-- 第八栏 -->
+  <div class="card blue" id="u5-8">
+    <h3 class="col-title"><span class="idx">第八栏</span>知识联动</h3>
+    <div class="grid2">
+      <div class="mini">
+        <h4>与 MND（u2）</h4>
+        <p>aMND"很可能进展为阿尔茨海默病"；脑脊液 Aβ42、p-tau、t-tau 三项核心标志物与 <strong>AD 源性 MND 高度相关</strong>。MND 是 AD 的早期窗口。</p>
+      </div>
+      <div class="mini">
+        <h4>与 VaD、DLB、FTD（u6～u8）</h4>
+        <p>三者都在 AD 的鉴别清单里；教材用"起病方式、首发症状、影像分布、对镇静药敏感性"四把尺子把它们分开。</p>
+      </div>
+      <div class="mini">
+        <h4>与谵妄（u1）</h4>
+        <p>AD 患者是谵妄的高危人群（痴呆为谵妄的素质性因素）；AD 晚期合并感染、电解质紊乱时极易叠加谵妄。</p>
+      </div>
+      <div class="mini">
+        <h4>与抑郁障碍</h4>
+        <p>抑郁既是 AD 的危险因素（教材列入危险因素表），又是 AD 的鉴别对象（老年抑郁的假性痴呆）。同一疾病在两个位置上出现，注意区分"因果"与"鉴别"。</p>
+      </div>
+      <div class="mini">
+        <h4>与影像学 / 生物标志物</h4>
+        <p>MRI 的颞顶叶与海马萎缩、PET 的 Aβ/tau 阳性、脑脊液与血液的 Aβ/tau 组合，构成 AD 的"结构—分子"证据链。</p>
+      </div>
+      <div class="mini">
+        <h4>与药理学</h4>
+        <p>"胆碱能缺陷是治疗有限疗效的基础"直接解释了 ChEI 的用法；美金刚作用于谷氨酸系统，用于中重度。教材未展开受体机制细节。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 10 VaD ===== -->
+<section id="u6">
+  <div class="sec-head"><div class="badge">10</div><h2>脑血管病所致痴呆<span class="en">Vascular dementia（p.231–232）</span></h2></div>
+  <p class="sec-lead">VaD 是"唯一能靠防卒中改写结局"的痴呆。它的三个关键词：<strong>阶梯式、卒中后 3 个月内、持续 6 个月以上</strong>。</p>
+
+  <!-- 第一栏 -->
+  <div class="card cyan" id="u6-1">
+    <h3 class="col-title"><span class="idx">第一栏</span>疾病画像</h3>
+    <div class="quote"><span class="lab">教材原文</span>脑血管病所致痴呆又称血管性痴呆（vascular dementia，VaD），是指由缺血性卒中、出血性卒中和与记忆、执行、注意等相关的脑区的低灌注脑血管疾病所致的重度神经认知障碍，是血管性认知障碍（vascular cognitive impairment，VCI）的一大类型。</div>
+    <p><strong>一句话画像：</strong>脑血管"堵一次、坏一块"，认知随之"下一级台阶"；记忆未必是主角，<strong>注意与执行</strong>常常更差。</p>
+    <div class="stat">
+      <span>65 岁以后发病率 1.2%～4.2%</span>
+      <span>仅次于阿尔茨海默病的痴呆类型</span>
+      <span>5 年死亡率约 61%</span>
+      <span>平均生存时间 8～10 年</span>
+    </div>
+    <p><strong>教材对危险因素的表述很谨慎：</strong>"VaD 的危险因素目前还不清楚，但通常认为包括高血压、高血脂、糖尿病、高龄、房颤、吸烟等危险因素。"</p>
+    <p class="note">起病特点：<strong>起病较急</strong>，常因卒中样发作导致病情加剧，呈<strong>阶梯式发展</strong>。</p>
+  </div>
+
+  <!-- 第二栏 -->
+  <div class="card blue" id="u6-2">
+    <h3 class="col-title"><span class="idx">第二栏</span>病因探秘</h3>
+    <p>教材的机制表述很直接：<strong>脑梗死、脑出血或脑血管狭窄 → 多个神经元或轴突损失 → 大脑功能受损</strong>。</p>
+    <p><strong>病理形态学改变（教材分四型）：</strong></p>
+    <div class="grid2">
+      <div class="mini">
+        <h4>① 多发性梗死性痴呆</h4>
+        <p>VaD 中<strong>最常见</strong>类型；由多发性脑梗死累及<strong>大脑皮质或皮质下区域</strong>引起。</p>
+      </div>
+      <div class="mini">
+        <h4>② 关键部位梗死性痴呆</h4>
+        <p>由与认知功能密切相关的脑梗死灶所致，<strong>可以是单个梗死灶</strong>引起。</p>
+      </div>
+      <div class="mini">
+        <h4>③ 分水岭梗死性痴呆</h4>
+        <p>属于<strong>低灌注痴呆</strong>；在缺血状态下弥漫性或局限性大脑损害后出现，也可继发于心搏骤停或严重低血压。</p>
+      </div>
+      <div class="mini">
+        <h4>④ 出血性痴呆</h4>
+        <p>脑实质内出血、蛛网膜下腔出血后引起；其中以<strong>丘脑出血</strong>导致认知功能障碍最为常见。老年人<strong>硬膜下血肿</strong>可引发缓慢出现的认知功能障碍。</p>
+      </div>
+    </div>
+    <p><strong>临床表现层面的五个类型（教材在"临床表现"段列出，注意与上方的病理分型不完全同名）：</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>类型</th><th>教材给出的界定</th></tr></thead>
+        <tbody>
+          <tr><td>多发腔梗性痴呆</td><td>小血管受累</td></tr>
+          <tr><td>多发梗死性痴呆</td><td>中等大小血管受累</td></tr>
+          <tr><td>单一部位梗死性痴呆</td><td>累及单个重要脑区，如<strong>角回、丘脑</strong>的梗死</td></tr>
+          <tr><td>皮质下动脉硬化性脑病</td><td>一种<strong>少见变异类型</strong>，与严重控制不佳的高血压和系统性血管疾病有关；引起广泛胶质增生的轴突和髓鞘弥漫性、不规则缺失，出现梗死导致的组织死亡，或脑白质血液供应的损失</td></tr>
+          <tr><td>遗传性血管性痴呆</td><td><strong>CADASIL</strong>：伴有皮质下梗死伴白质脑病的常染色体显性遗传性脑动脉病</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout warn"><span class="ct">⚠️ 两个"容易混"的层面</span>教材先用"病理形态学"给出四型（多发梗死、关键部位、分水岭、出血），再在"临床表现"给出五型（多发腔梗、多发梗死、单一部位、皮质下动脉硬化性脑病、遗传性）。<strong>前者讲病灶怎么形成，后者讲临床怎么分型</strong>，答题时看清问的是哪一层。</div>
+  </div>
+
+  <!-- 第三栏 -->
+  <div class="card red" id="u6-3">
+    <h3 class="col-title"><span class="idx">第三栏</span>临床表现拼图</h3>
+    <div class="grid2">
+      <div class="mini">
+        <h4>起病与病程</h4>
+        <ul>
+          <li>起病常为<strong>突发性或亚急性</strong></li>
+          <li>症状可能在<strong>一次或多次脑血管事件后迅速出现</strong></li>
+          <li>呈<strong>阶段性加重或改善</strong>（教材另一处表述为"阶梯式发展""阶梯性恶化"）</li>
+        </ul>
+      </div>
+      <div class="mini">
+        <h4>认知损害的特点</h4>
+        <ul>
+          <li>除记忆受损外，<strong>注意力、执行功能、语言能力和空间感知</strong>等方面可能表现出更明显的问题</li>
+          <li>与 AD 的"记忆打头"不同，VaD 的<strong>复杂注意力与执行功能受损更突出</strong>，记忆可轻微受损甚至不存在</li>
+        </ul>
+      </div>
+      <div class="mini">
+        <h4>神经系统体征</h4>
+        <ul>
+          <li>步态异常</li>
+          <li>肌力下降</li>
+          <li>肌张力异常</li>
+        </ul>
+        <p class="note">教材明确：这些体征与脑血管病变的位置和范围有关。</p>
+      </div>
+      <div class="mini">
+        <h4>影像</h4>
+        <p><strong>CT 及 MRI 可见多发性梗死灶</strong>。这是 VaD 诊断中"存在脑血管疾病证据"的重要来源。</p>
+      </div>
+    </div>
+    <div class="callout key"><span class="ct">📌 与 AD 最直观的差别</span>同样是"痴呆"，AD 是"记忆越来越差 + 脑皮质弥漫萎缩"；VaD 是"注意力/执行越来越差 + 影像上的梗死灶 + 神经定位体征"。</div>
+  </div>
+
+  <!-- 第四栏 -->
+  <div class="card orange" id="u6-4">
+    <h3 class="col-title"><span class="idx">第四栏</span>教材典型案例</h3>
+    <div class="callout book">
+      <span class="ct">📖 教材未提供具体临床案例</span>
+      本节教材没有患者个案、卒中次数、影像报告或量表分值，只有定义、发病率、病理分型、临床表现、诊断条目与治疗原则。本栏不虚构病例与检查结果。
+    </div>
+    <p><strong>教材原文中可作"临床画面"的句子：</strong></p>
+    <ul>
+      <li>「症状可能在一次或多次脑血管事件后迅速出现，呈阶段性加重或改善」。</li>
+      <li>「VaD 患者在注意力、执行功能、语言能力和空间感知等方面可能表现出更明显的问题」。</li>
+      <li>「VaD 患者可出现神经系统体征，如步态异常、肌力下降、肌张力异常等」。</li>
+      <li>「CT 及 MRI 可见多发性梗死灶」。</li>
+    </ul>
+    <p><strong>由教材诊断条目整理的五步核查（学习推演，非教材案例）：</strong></p>
+    <ol>
+      <li>是否符合<strong>痴呆诊断标准</strong>？</li>
+      <li>是否存在<strong>脑血管疾病的证据</strong>（病史 / 体格检查 / 神经影像学）？</li>
+      <li>时间关系是否成立——痴呆发生于<strong>卒中后 3 个月内</strong>，并且<strong>持续 6 个月以上</strong>？认知障碍是否突然加重、波动或呈阶梯样进展？</li>
+      <li>认知损害是否<strong>不均衡</strong>，以复杂注意力和执行功能受损为主，记忆轻微或不受损？</li>
+      <li>自知力和判断力是否保持较好？症状能否用其他脑疾病或精神障碍解释？</li>
+    </ol>
+    <p class="note">五步对应教材 VaD 诊断六条中的（1）～（6），未添加任何虚构患者信息。</p>
+  </div>
+
+  <!-- 第五栏 -->
+  <div class="card orange" id="u6-5">
+    <h3 class="col-title"><span class="idx">第五栏</span>鉴别诊断对对碰</h3>
+    <p><strong>表 1　VaD 的三个主要对手（教材原文）</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>维度</th><th>VaD</th><th>阿尔茨海默病</th><th>路易体痴呆</th><th>帕金森病痴呆</th></tr></thead>
+        <tbody>
+          <tr><td>起病</td><td>较急，卒中后迅速出现</td><td>缓慢、隐匿</td><td>进行性</td><td>在帕金森病病程中出现</td></tr>
+          <tr><td>记忆</td><td>轻微受损或<strong>不存在记忆受损</strong></td><td><strong>以记忆力下降为主</strong></td><td>近事记忆<strong>早期受损较轻</strong></td><td>记忆可受损，但以注意、计算、视空间为主</td></tr>
+          <tr><td>核心特征</td><td>阶梯式/波动性进展，神经定位体征，脑血管病史</td><td>进行性记忆减退，显著脑皮质萎缩</td><td><strong>波动性认知、反复生动幻视、锥体外系症状</strong>，三者往往<strong>一年内同时出现</strong></td><td><strong>早期锥体外系受累</strong>：静止性震颤、肌强直等</td></tr>
+          <tr><td>关键鉴别</td><td>存在脑血管疾病及影像梗死灶</td><td>无卒中样发作，早期无局灶体征</td><td>幻视 + 波动 + 帕金森</td><td><strong>一般无卒中病史</strong></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout key"><span class="ct">📌 一句话鉴别总结</span>VaD"有卒中、有阶梯、有灶"；AD"慢慢忘、皮质萎缩"；DLB"波动 + 幻视 + 帕金森三件套一年内凑齐"；PD 痴呆"先有帕金森、后坏认知，通常无卒中史"。</div>
+    <p><strong>表 2　VaD 内部：四个病理类型的"定位"</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>类型</th><th>一句话定位</th></tr></thead>
+        <tbody>
+          <tr><td>多发性梗死性痴呆</td><td>VaD 最常见；多发梗死累及皮质或皮质下</td></tr>
+          <tr><td>关键部位梗死性痴呆</td><td>单个梗死灶也能致病，关键在"位置重要"</td></tr>
+          <tr><td>分水岭梗死性痴呆</td><td>低灌注；可继发心搏骤停或严重低血压</td></tr>
+          <tr><td>出血性痴呆</td><td>脑实质出血 / 蛛网膜下腔出血；丘脑出血最常见；老年硬膜下血肿可缓慢起病</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- 第六栏 -->
+  <div class="card green" id="u6-6">
+    <h3 class="col-title"><span class="idx">第六栏</span>治疗方案工具箱</h3>
+    <p><strong>一、诊断六条（教材原文逐条）</strong></p>
+    <div class="grid2">
+      <div class="mini">
+        <h4>（1）～（3）</h4>
+        <ol>
+          <li>符合痴呆的诊断标准。</li>
+          <li>存在脑血管疾病的证据（病史 / 体格检查 / 神经影像学）。</li>
+          <li>痴呆与脑血管事件密切相关；<strong>痴呆发生于卒中后 3 个月内，并且持续 6 个月以上</strong>；认知功能障碍突然加重，或波动，或呈<strong>阶梯样逐渐进展</strong>。</li>
+        </ol>
+      </div>
+      <div class="mini">
+        <h4>（4）～（6）</h4>
+        <ol start="4">
+          <li>认知功能的损害<strong>不均衡</strong>，存在明显的复杂注意力和执行功能受损，轻微记忆受损或者不存在记忆受损。</li>
+          <li>自知力和判断力可保持较好。</li>
+          <li>症状不能用其他脑疾病或者精神障碍解释。</li>
+        </ol>
+      </div>
+    </div>
+    <div class="callout warn"><span class="ct">⚠️ 两个时间数字不要写反</span><strong>3 个月内</strong>是"痴呆发生于卒中后"的时间窗；<strong>6 个月以上</strong>是"持续"的时长。一个管起点，一个管持续性。</div>
+    <p><strong>二、治疗三条主线</strong></p>
+    <div class="timeline">
+      <div class="tl-item"><h4>① 防治卒中（根本）</h4><p>治疗卒中和控制认知障碍的危险因素：高血压、血脂异常、糖尿病及心脏病、戒烟等；早期诊断和治疗卒中、预防卒中再发，如<strong>抗血小板聚集、抗凝治疗</strong>等。</p></div>
+      <div class="tl-item"><h4>② 改善认知功能障碍</h4><p>研究证据显示<strong>胆碱酯酶抑制剂</strong>（多奈哌齐、加兰他敏、卡巴拉汀）和 <strong>NMDA 受体拮抗剂美金刚</strong>等对 VaD 的认知功能有改善作用。其他<strong>脑代谢药物、脑血管扩张药物和促进神经递质功能药物</strong>（如吡拉西坦、吡硫醇、尼莫地平、银杏叶制剂、脑活素等）也可选用，但<strong>需要更多的临床研究验证其疗效</strong>。</p></div>
+      <div class="tl-item"><h4>③ 控制行为和精神症状</h4><p>胆碱酯酶抑制剂与 NMDA 受体拮抗剂对精神症状和行为有一定改善作用；建议<strong>从小剂量开始，缓慢加量</strong>，症状控制良好后<strong>逐步减少抗精神病药</strong>的使用。</p></div>
+    </div>
+    <p class="note">教材未涉及上述药物的具体剂量与疗程；对"脑代谢药、扩血管药"的疗效明确加了"需要更多临床研究验证"的限定，答题时不要写成"证实有效"。</p>
+    <p><strong>三、预后：</strong>VaD 的 <strong>5 年死亡率约为 61%</strong>；预后与引起血管损害的基础疾病和颅内血管病灶的部位有关；<strong>平均生存时间为 8～10 年</strong>，主要死亡原因为<strong>肺部感染和心脑血管疾病</strong>。</p>
+    <div class="callout key"><span class="ct">📌 治疗落点</span>VaD 的"特效药"其实不是药，而是<strong>把卒中管住</strong>：控制血压和其他危险因素（房颤、颈动脉狭窄、高血脂、糖尿病）以降低发病率。</div>
+  </div>
+
+  <!-- 第七栏 -->
+  <div class="card purple" id="u6-7">
+    <h3 class="col-title"><span class="idx">第七栏</span>记忆工具箱</h3>
+    <p><strong>🔧 方法一：阶梯图像法</strong></p>
+    <p>把病程画成楼梯：每发生一次脑血管事件，认知就<strong>下一级台阶</strong>，两次事件之间可以"平台期"稳定甚至略有好转。教材用的词正是"阶梯式发展""阶梯性恶化""阶段性加重或改善"。</p>
+    <p class="note">为什么这样记：一个图同时装下了"突发、多次事件、阶梯、波动"四个特征，比背四句话省力，也不容易把 VaD 误记成"持续平滑下降"。</p>
+    <p><strong>🔧 方法二：数字锚定法（诊断时间点）</strong></p>
+    <p>口诀：<strong>"3 个月起病，6 个月持续"</strong>——痴呆发生于卒中后 3 个月内；并持续 6 个月以上。</p>
+    <p class="note">为什么这样记：这两个数字是 VaD 诊断最容易混的一对。用"起点 3、时长 6"的语序固定，考试时按顺序写就不会颠倒。</p>
+    <p><strong>🔧 方法三：四型病理归类法</strong></p>
+    <p>归为四类：<strong>多发梗死（最常见）、关键部位（单个也够）、分水岭（低灌注）、出血（丘脑出血最常见 / 老年硬膜下血肿缓慢起病）</strong>。</p>
+    <p class="note">为什么这样记：每型只留一个"最"字标签（最常见 / 单个也够 / 低灌注 / 丘脑最常见），用标签替代长定义，先记骨架再补细节。</p>
+    <p><strong>🔧 方法四：与 AD 对比记忆法</strong></p>
+    <p>对比轴：<strong>起病（VaD 急 / AD 慢）· 进展（阶梯 / 平滑）· 记忆（可轻可无 / 首选最重）· 影像（梗死灶 / 弥漫萎缩）· 体征（定位体征 / 早期无）</strong>。</p>
+    <p class="note">为什么这样记：这五组对比正是教材 AD 鉴别段与 VaD 诊断段的原文要点；把它们并排，等于把两道题的答案写在一张表上。</p>
+  </div>
+
+  <!-- 第八栏 -->
+  <div class="card blue" id="u6-8">
+    <h3 class="col-title"><span class="idx">第八栏</span>知识联动</h3>
+    <div class="grid2">
+      <div class="mini">
+        <h4>与 AD（u5）</h4>
+        <p>AD 鉴别清单的第一位就是 VaD；两者共享"痴呆"的共同底座，但起病方式、记忆地位、影像与体征完全相反。</p>
+      </div>
+      <div class="mini">
+        <h4>与 DLB、PD 痴呆（u7、u10）</h4>
+        <p>三者都可有锥体外系表现，但 VaD 的关键是<strong>脑血管事件与影像梗死灶</strong>；PD 痴呆一般无卒中史，DLB 以波动 + 幻视 + 帕金森为核心。</p>
+      </div>
+      <div class="mini">
+        <h4>与 MND（u2）</h4>
+        <p>naMND 可能进展为血管性痴呆；"卒中、糖尿病"既是 MND 进展的危险因素，也是 VaD 的危险因素。</p>
+      </div>
+      <div class="mini">
+        <h4>与神经内科</h4>
+        <p>抗血小板、抗凝、控制血压血脂血糖——VaD 的治疗主体属于卒中二级预防，精神科负责认知与行为症状的评估与对症。</p>
+      </div>
+      <div class="mini">
+        <h4>与影像学</h4>
+        <p>CT/MRI 的多发梗死灶是诊断条目（2）的直接证据；教材也提醒老年硬膜下血肿可"缓慢出现认知功能障碍"，属于可治性病因。</p>
+      </div>
+      <div class="mini">
+        <h4>与谵妄（u1）</h4>
+        <p>脑血管病患者常伴躯体疾病不稳定，是谵妄的高危人群；"突然加重"既可能是新发卒中，也可能是叠加谵妄，需要区分。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 11 DLB ===== -->
+<section id="u7">
+  <div class="sec-head"><div class="badge">11</div><h2>路易体病所致痴呆<span class="en">Dementia with Lewy body（p.232–234）</span></h2></div>
+  <p class="sec-lead">DLB 是"最会伪装"的痴呆：一会儿清楚一会儿糊涂，反复看见生动的人影动物，还带着帕金森样的动作迟缓。<strong>四大核心特征</strong>是它的身份证。</p>
+
+  <!-- 第一栏 -->
+  <div class="card cyan" id="u7-1">
+    <h3 class="col-title"><span class="idx">第一栏</span>疾病画像</h3>
+    <div class="quote"><span class="lab">教材原文</span>路易体痴呆（dementia with Lewy body，DLB）是一种常见的神经系统变性疾病，主要临床表现为波动性认知障碍、帕金森综合征、反复鲜明生动的幻视和快速眼动期睡眠行为障碍（RBD）。</div>
+    <p><strong>一句话画像：</strong>认知像"接触不良的灯泡"忽明忽暗，眼前反复出现生动的人或动物，手脚又越来越像帕金森病——三者同框，就要想到 DLB。</p>
+    <div class="stat">
+      <span>占整个痴呆人群 3.2%～7.1%</span>
+      <span>仅次于 AD 的神经变性痴呆</span>
+      <span>波动性认知 70%～90%</span>
+      <span>早期幻视 50%～80%</span>
+      <span>左旋多巴改善运动 32%～50%</span>
+    </div>
+    <p class="note">教材明确：DLB 是"仅次于 AD 的神经变性痴呆"，注意限定语是"神经变性痴呆"，不是"所有痴呆"。</p>
+  </div>
+
+  <!-- 第二栏 -->
+  <div class="card blue" id="u7-2">
+    <h3 class="col-title"><span class="idx">第二栏</span>病因探秘</h3>
+    <p>教材明确：DLB 的病因和发病机制<strong>尚未明确</strong>；多为散发，虽然偶有家族性发病，但<strong>并没有明确的遗传倾向</strong>。</p>
+    <div class="quote"><span class="lab">教材原文</span>病理提示路易体中的物质为 α-突触核蛋白（α-synuclein）和泛素（ubiquitin）等，异常蛋白的沉积可能导致神经元功能紊乱和凋亡。</div>
+    <p><strong>两条机制假设（教材明确"沉积机制仍不明确"）：</strong></p>
+    <div class="grid2">
+      <div class="mini">
+        <h4>① α-突触核蛋白基因突变</h4>
+        <ul>
+          <li>α-突触核蛋白是由 <strong>140 个氨基酸</strong>组成的前突触蛋白</li>
+          <li>在新皮质、海马、嗅球、纹状体和丘脑含量较高</li>
+          <li>正常情况下二级结构为 <strong>α 螺旋</strong></li>
+          <li>基因突变可导致<strong>蛋白折叠错误和排列混乱</strong></li>
+          <li>纤维状呈凝团状态的 α-突触核蛋白积聚物，与其他蛋白质一起形成包涵物，即<strong>路易体</strong></li>
+        </ul>
+      </div>
+      <div class="mini">
+        <h4>② Parkin 基因突变</h4>
+        <ul>
+          <li>泛素-蛋白水解酶系统位于真核细胞内质网和细胞质，含<strong>泛素</strong>与<strong>蛋白水解酶</strong>，高效、高选择性地降解受损蛋白</li>
+          <li>受损蛋白必须与泛素结合才能被识别，此过程称<strong>泛素化</strong></li>
+          <li><strong>parkin 蛋白（E3 酶）</strong>是底物识别蛋白，由 <strong>Parkin 基因</strong>编码</li>
+          <li>Parkin 基因突变 → 底物识别蛋白功能损害或丧失 → 变异的 α-突触核蛋白<strong>不能被泛素化降解</strong>而在细胞内聚集 → 细胞死亡</li>
+        </ul>
+      </div>
+    </div>
+    <div class="callout tip"><span class="ct">💡 一条因果链记住全部</span><strong>α-突触核蛋白折叠错误 → 不能被泛素化降解 → 在细胞内聚集 → 形成路易体 → 神经元功能紊乱与凋亡</strong>。Parkin 突变正是卡在"泛素化"这一步。</div>
+  </div>
+
+  <!-- 第三栏 -->
+  <div class="card red" id="u7-3">
+    <h3 class="col-title"><span class="idx">第三栏</span>临床表现拼图</h3>
+    <p>教材把 DLB 的临床表现写成"三大主征 + 其他症状"。三大主征即波动性认知、反复生动幻视、帕金森综合征；"其他"里最重要的是 RBD 与自主神经功能紊乱。</p>
+    <div class="tabs" data-tabs>
+      <div class="tabbar">
+        <button class="on" data-tab="l1">波动性认知</button>
+        <button data-tab="l2">反复生动幻视</button>
+        <button data-tab="l3">帕金森综合征</button>
+        <button data-tab="l4">其他症状</button>
+      </div>
+      <div class="panel on" data-panel="l1">
+        <p><strong>DLB 最主要的特征</strong>，<strong>70%～90%</strong> 的患者会出现<strong>突发而又短暂</strong>的认知功能障碍，可持续<strong>几分钟、几小时或几天</strong>，同时伴有<strong>谵妄</strong>和注意力、警觉性的显著下降。</p>
+        <p>认知功能障碍常表现为<strong>执行能力和视空间功能</strong>的障碍，而<strong>近事记忆功能早期受损较轻</strong>。</p>
+      </div>
+      <div class="panel" data-panel="l2">
+        <p>幻视是 DLB <strong>最常见的精神症状</strong>，<strong>50%～80%</strong> 的患者在<strong>疾病早期</strong>就有幻视。</p>
+        <ul>
+          <li>内容<strong>鲜明生动</strong>，常在<strong>夜间反复出现</strong></li>
+          <li>对象多为患者<strong>熟悉的人或动物</strong></li>
+          <li>视觉形象常常是<strong>活动的</strong>，可<strong>扭曲变形</strong></li>
+          <li>部分患者伴妄想，多为<strong>被害妄想</strong></li>
+          <li>幻听多伴随幻视出现，内容多不清晰</li>
+        </ul>
+      </div>
+      <div class="panel" data-panel="l3">
+        <p>主要包括<strong>运动迟缓、肌张力增高和静止性震颤</strong>。</p>
+        <p>教材特别指出：DLB 的帕金森症状<strong>极少呈单侧性或不对称</strong>；随着病情日益严重，运动症状逐步加重。</p>
+      </div>
+      <div class="panel" data-panel="l4">
+        <ul>
+          <li><strong>快速眼动期睡眠行为障碍（RBD）</strong>：被认为是 DLB <strong>最早出现的症状</strong>，甚至在认知功能障碍和运动障碍出现前<strong>多年</strong>即可发生；表现为反复的噩梦和行为，从说梦话、肢体舞动到拳打脚踢，<strong>醒后患者不能回忆</strong>。</li>
+          <li><strong>自主神经功能紊乱</strong>：直立性低血压、多汗、便秘、尿潴留、性功能障碍等。</li>
+        </ul>
+      </div>
+    </div>
+    <div class="callout key"><span class="ct">📌 两个"最"要记牢</span>波动性认知功能障碍是 DLB <strong>最主要的特征</strong>（70%～90%）；幻视是 DLB <strong>最常见的精神症状</strong>（50%～80% 早期出现）；RBD 是 <strong>最早出现的症状</strong>，可早于认知与运动障碍多年。</div>
+  </div>
+
+  <!-- 第四栏 -->
+  <div class="card orange" id="u7-4">
+    <h3 class="col-title"><span class="idx">第四栏</span>教材典型案例</h3>
+    <div class="callout book">
+      <span class="ct">📖 教材未提供具体临床案例</span>
+      本节教材只有概述、机制假设、症状比例、2017 年 McKeith 诊断标准条目与鉴别要点，<strong>没有患者个案、幻视内容记录或影像 / 睡眠监测实例</strong>。本栏不虚构病例与检查数据。
+    </div>
+    <p><strong>教材原文中可作"床旁画面"的句子：</strong></p>
+    <ul>
+      <li>「突发而又短暂的认知功能障碍，可持续几分钟、几小时或几天，同时伴有谵妄和注意力、警觉性的显著下降」。</li>
+      <li>「幻视的内容鲜明生动，常在夜间反复出现；幻觉的对象多为患者熟悉的人或动物，视觉形象常常是活动的，可扭曲变形」。</li>
+      <li>「反复的噩梦和行为，从说梦话、肢体舞动到拳打脚踢，醒后患者不能回忆」。</li>
+      <li>「DLB 的帕金森症状极少呈单侧性或不对称」。</li>
+    </ul>
+    <p><strong>由教材诊断标准整理的四步判断（学习推演，非教材案例）：</strong></p>
+    <ol>
+      <li>数<strong>核心临床特征</strong>：波动性认知、反复生动幻视、RBD、一个或多个帕金森综合征核心症状（运动迟缓、肌强直、静止性震颤）——共 4 项。</li>
+      <li>看<strong>支持性临床特征</strong>与<strong>生物标志物</strong>（提示性与支持性）。</li>
+      <li>套"很可能 / 可能"的层级：两项或以上核心（±提示性标志）→ 很可能；仅一项核心 + 一项或以上提示性标志 → 很可能；仅一项核心且提示性标志阳性，或仅标志物阳性而无核心 → 可能。</li>
+      <li>排除"DLB 可能性很小"的情形：其他躯体或脑部疾病足以部分或全部解释症状；严重痴呆中核心特征仅有帕金森综合征且作为首发。</li>
+    </ol>
+    <p class="note">四步完全对应教材 2017 年 McKeith 诊断标准的（1）（5）（6）（7），未添加任何虚构患者信息。</p>
+  </div>
+
+  <!-- 第五栏 -->
+  <div class="card orange" id="u7-5">
+    <h3 class="col-title"><span class="idx">第五栏</span>鉴别诊断对对碰</h3>
+    <p><strong>表 1　DLB vs 帕金森病痴呆（教材原文对比）</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>维度</th><th>DLB</th><th>帕金森病痴呆（PDD）</th></tr></thead>
+        <tbody>
+          <tr><td>锥体外系症状</td><td><strong>多对称</strong></td><td>帕金森病本身可有静止性震颤、肌强直等</td></tr>
+          <tr><td>静止性震颤</td><td><strong>少见</strong></td><td>帕金森病的典型表现之一</td></tr>
+          <tr><td>左旋多巴疗效</td><td><strong>较差</strong></td><td>教材未就 PDD 的左旋多巴疗效作对比</td></tr>
+          <tr><td>注意 / 精神症状 / 认知波动</td><td><strong>更明显</strong></td><td>相对不突出</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout key"><span class="ct">📌 一句话鉴别总结</span>DLB"对称、少抖、多动、多波动、多幻视"；PDD"先有帕金森、后有认知"，且一般无卒中史。</div>
+    <p><strong>表 2　DLB vs 阿尔茨海默病（教材原文对比）</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>维度</th><th>DLB</th><th>AD</th></tr></thead>
+        <tbody>
+          <tr><td>有助于诊断的线索</td><td><strong>幻视、注意力下降、视空间障碍、早期出现锥体外系症状</strong></td><td><strong>早期显著的情节记忆损害、显著的内侧颞叶萎缩</strong></td></tr>
+          <tr><td>记忆</td><td>近事记忆早期受损较轻</td><td>近记忆最先、最突出</td></tr>
+          <tr><td>进阶手段</td><td colspan="2">教材原文：<strong>联合检测脑脊液可提高鉴别诊断的效能</strong>（教材未列出具体指标组合）</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout key"><span class="ct">📌 一句话鉴别总结</span>DLB 是"幻视 + 波动 + 早期帕金森、记忆反而轻"；AD 是"记忆最重 + 内侧颞叶萎缩、没有早期锥体外系"。</div>
+    <p><strong>表 3　DLB vs VaD</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>维度</th><th>DLB</th><th>VaD</th></tr></thead>
+        <tbody>
+          <tr><td>起病与病程</td><td>进行性，认知波动但无卒中事件</td><td>较急，卒中后阶梯式恶化</td></tr>
+          <tr><td>核心表现</td><td>波动性认知 + 反复生动幻视 + 帕金森综合征 + RBD</td><td>注意 / 执行受损突出，神经定位体征，阶梯式</td></tr>
+          <tr><td>影像</td><td>教材列出的支持性标志为<strong>颞叶内侧结构相对保存</strong>等</td><td><strong>多发性梗死灶</strong></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- 第六栏 -->
+  <div class="card green" id="u7-6">
+    <h3 class="col-title"><span class="idx">第六栏</span>治疗方案工具箱</h3>
+    <p><strong>一、诊断标准（2017 年 McKeith 等修订，教材全文给出）</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>层级</th><th>教材内容</th></tr></thead>
+        <tbody>
+          <tr><td>核心临床特征（4 项）</td><td>①波动性认知功能障碍；②反复出现的生动幻视；③快速眼动期睡眠行为障碍；④一个或多个帕金森综合征核心症状：运动迟缓、肌强直、静止性震颤</td></tr>
+          <tr><td>支持性临床特征</td><td>①对抗精神病药高度敏感；②姿势障碍；③反复发作跌倒；④晕厥或短暂发作无法解释的意识丧失；⑤严重的自主神经功能障碍（便秘、直立性低血压、尿失禁）；⑥嗜睡；⑦嗅觉减退；⑧幻觉；⑨妄想；⑩淡漠；⑪焦虑和抑郁</td></tr>
+          <tr><td>提示性生物标志物</td><td>①SPECT 或 PET 显示<strong>基底节多巴胺转运体摄取减少</strong>；②<strong>123I-MIBG 心肌扫描成像异常（摄取减低）</strong>；③多导睡眠监测提示<strong>快速眼动期肌肉弛缓消失</strong></td></tr>
+          <tr><td>支持性生物标志物</td><td>①CT/MRI 显示<strong>颞叶内侧结构相对保存</strong>；②SPECT/PET 灌注或代谢扫描提示普遍低灌注 / 低代谢，<strong>FDG-PET 显示枕部活性下降</strong>，伴或不伴"扣带回岛征"；③脑电图出现<strong>显著的后部慢波</strong>，且出现前 α 波和 θ 波之间的周期性波动</td></tr>
+          <tr><td>很可能的 DLB</td><td>①两项或两项以上核心临床特征，伴或不伴提示性生物标志物阳性；②仅一项核心临床特征，但伴有一项或以上提示性生物标志物阳性。<strong>仅基于生物标志物并不能诊断为很可能的 DLB</strong></td></tr>
+          <tr><td>可能的 DLB</td><td>①仅一项核心临床特征，提示性生物标志物阳性；②仅一项或多项提示性生物标志物阳性，但<strong>缺乏核心临床特征</strong></td></tr>
+          <tr><td>DLB 可能性很小</td><td>①其他任何躯体或脑部疾病足以部分或全部解释临床症状（即使不能完全排除 DLB，也需考虑混合性或多发性病变）；②严重痴呆患者中，核心临床特征<strong>仅有帕金森综合征且作为首发症状</strong></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note">教材把支持性临床特征编号列到"11 焦虑和抑郁"（原文如此），本表按原文顺序整理，未增删条目。</p>
+    <p><strong>二、治疗（教材原文）</strong></p>
+    <div class="quote"><span class="lab">教材原文</span>目前尚无特异性治疗方法，主要是对症治疗。胆碱酯酶抑制剂多奈哌齐和卡巴拉汀可以改善 DLB 患者的认知功能和精神行为症状。对于 DLB 患者的帕金森综合征，左旋多巴可改善 32%～50% 的 DLB 患者的运动功能。</div>
+    <div class="grid2">
+      <div class="mini">
+        <h4>认知与精神行为</h4>
+        <p><strong>多奈哌齐、卡巴拉汀</strong>可改善认知功能和精神行为症状。教材未涉及剂量与疗程。</p>
+      </div>
+      <div class="mini">
+        <h4>帕金森综合征</h4>
+        <p><strong>左旋多巴</strong>可改善 <strong>32%～50%</strong> 患者的运动功能。教材未涉及剂量。</p>
+      </div>
+    </div>
+    <div class="callout warn"><span class="ct">⚠️ 用药安全提示（教材依据）</span>教材把「<strong>对抗精神病药高度敏感</strong>」列为 DLB 的支持性临床特征；在 AD 鉴别段也写明 DLB 患者「一般对镇静药异常敏感」。这两条是教材自己给出的用药相关事实。</div>
+    <p><strong>三、预后：</strong>DLB 是一种<strong>不可逆转的进行性加重</strong>的神经变性疾病，进展速度因人而异，一般认为其病程要<strong>快于 AD</strong>；患者最终死于<strong>瘫痪、营养不良及感染</strong>等并发症。</p>
+  </div>
+
+  <!-- 第七栏 -->
+  <div class="card purple" id="u7-7">
+    <h3 class="col-title"><span class="idx">第七栏</span>记忆工具箱</h3>
+    <p><strong>🔧 方法一：四核心首字口诀法</strong></p>
+    <p>口诀：<strong>"波、幻、帕、睡"</strong>——<strong>波</strong>动性认知、反复生动<strong>幻</strong>视、<strong>帕</strong>金森综合征、快速眼动期<strong>睡</strong>眠行为障碍（RBD）。</p>
+    <p class="note">为什么这样记：教材 2017 标准把四项列为"核心临床特征"，四字口诀正好一一对应；"睡"字还顺带提示 RBD 是最早出现的症状。</p>
+    <p><strong>🔧 方法二：数字锚定法（三个比例）</strong></p>
+    <p>数字：<strong>70%～90% 波动、50%～80% 早期幻视、32%～50% 左旋多巴改善运动</strong>。</p>
+    <p class="note">为什么这样记：三个比例都带"50"这个锚点（70-90、50-80、32-50），先记"三个都和 50 有关"，再补各自的上限；考数据题时不会张冠李戴。</p>
+    <p><strong>🔧 方法三：生物标志物"三件套"归类法</strong></p>
+    <p>提示性标志三件套：<strong>基底节多巴胺转运体摄取↓（SPECT/PET）、123I-MIBG 心肌摄取↓、多导睡眠监测 REM 期肌肉弛缓消失</strong>。</p>
+    <p class="note">为什么这样记：三者分别对应"多巴胺能神经元、交感神经、睡眠结构"三条通路，用"三条通路各一个标志"归类，比孤立背三个检查更稳。</p>
+    <p><strong>🔧 方法四：场景联想法</strong></p>
+    <p>联想一位老人：白天一会儿认出家人、一会儿茫然（<strong>波动</strong>）→ 夜里说看见已故亲人和小动物在屋里走动（<strong>幻视</strong>）→ 走路越来越慢、手抖不明显但动作僵硬（<strong>帕金森</strong>）→ 家属说他睡梦中拳打脚踢、醒来不记得（<strong>RBD</strong>）。四个画面拼成 DLB。</p>
+    <p class="note">为什么这样记：DLB 的四项核心本来就常在同一个患者身上先后出现，用"一天里的四个镜头"串起来，比背四条定义更贴近临床。</p>
+  </div>
+
+  <!-- 第八栏 -->
+  <div class="card blue" id="u7-8">
+    <h3 class="col-title"><span class="idx">第八栏</span>知识联动</h3>
+    <div class="grid2">
+      <div class="mini">
+        <h4>与帕金森病（u10）</h4>
+        <p>两者同属路易体病理谱系：PD 以黑质多巴胺能神经元丢失和路易体形成为特征；PD 痴呆与 DLB 的鉴别见本单元表 1。</p>
+      </div>
+      <div class="mini">
+        <h4>与 AD（u5）</h4>
+        <p>AD 的鉴别清单列有 DLB；"早期记忆损害 + 内侧颞叶萎缩"偏 AD，"幻视 + 波动 + 早期锥体外系"偏 DLB；教材提示联合脑脊液检测可提高效能。</p>
+      </div>
+      <div class="mini">
+        <h4>与谵妄（u1）</h4>
+        <p>教材描述 DLB 的波动性认知时明确"同时伴有谵妄和注意力、警觉性的显著下降"；临床上 DLB 的波动极易与谵妄混淆，需看是否有躯体诱因与意识水平改变。</p>
+      </div>
+      <div class="mini">
+        <h4>与睡眠医学</h4>
+        <p>RBD 是 DLB 最早出现的症状，可早于认知和运动障碍多年；多导睡眠监测的"REM 期肌肉弛缓消失"又是提示性生物标志物——睡眠是 DLB 的早期窗口。</p>
+      </div>
+      <div class="mini">
+        <h4>与药学 / 精神科用药安全</h4>
+        <p>"对抗精神病药高度敏感"与"对镇静药异常敏感"是教材给出的两条用药警示，直接关系到精神科会诊时的选药。</p>
+      </div>
+      <div class="mini">
+        <h4>与自主神经</h4>
+        <p>直立性低血压、便秘、尿潴留、性功能障碍等自主神经功能紊乱，是 DLB 支持性特征与"其他症状"的交汇点。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 12 FTD ===== -->
+<section id="u8">
+  <div class="sec-head"><div class="badge">12</div><h2>额颞叶痴呆<span class="en">Frontotemporal dementia（p.234–237）</span></h2></div>
+  <p class="sec-lead">FTD 是"先坏人格与语言、后坏记忆"的痴呆。它发病早（45～64 岁最常见），最容易在精神科被误诊为原发性精神障碍。</p>
+
+  <!-- 第一栏 -->
+  <div class="card cyan" id="u8-1">
+    <h3 class="col-title"><span class="idx">第一栏</span>疾病画像</h3>
+    <div class="quote"><span class="lab">教材原文</span>额颞叶痴呆（frontotemporal dementia，FTD）是一组以额叶和 / 或颞叶萎缩为特征的中枢神经系统退行性临床综合征，其显著特征是进行性精神行为异常、执行功能障碍和语言损害。</div>
+    <p><strong>一句话画像：</strong>大脑的"额叶刹车"先失灵——人变得不顾场合、冷漠、刻板、贪吃，而记忆还能撑一阵；或者先丢"词义"与"流利度"。</p>
+    <div class="grid3">
+      <div class="mini"><h4>行为变异型（bvFTD）</h4><p>FTD 中<strong>最常见</strong>的类型，约占 FTD 的 <strong>50%</strong>（教材另一处表述为"约占 FTD 患者总数的 50% 以上"）。</p></div>
+      <div class="mini"><h4>语义性痴呆（SD）</h4><p>以<strong>命名性失语</strong>为主要临床表现，对词语及客体的理解进行性减退。</p></div>
+      <div class="mini"><h4>进行性非流利性失语（PNFA）</h4><p>以<strong>言语功能障碍</strong>为主要临床表现；SD 与 PNFA 可归为<strong>原发性进行性失语（PPA）</strong>。</p></div>
+    </div>
+    <div class="stat">
+      <span>西方国家总发病率（0～33）/10 万</span>
+      <span>发病年龄 45～64 岁最常见</span>
+      <span>我国尚无 FTD 流行病学数据</span>
+      <span>30%～50% 有家族遗传史</span>
+      <span>病程 5～10 年</span>
+    </div>
+    <p class="note">教材明确：FTD 可与帕金森综合征或运动神经元病等神经变性疾病共存，作为 FTD 的特殊类型。</p>
+  </div>
+
+  <!-- 第二栏 -->
+  <div class="card blue" id="u8-2">
+    <h3 class="col-title"><span class="idx">第二栏</span>病因探秘</h3>
+    <p>教材明确：FTD 的病因与发病机制<strong>尚不明确</strong>。已发现的线索分为"递质"与"基因"两条。</p>
+    <div class="grid2">
+      <div class="mini">
+        <h4>递质改变（教材原文）</h4>
+        <ul>
+          <li>额叶及颞叶皮质 <strong>5-羟色胺能递质减少</strong></li>
+          <li>脑组织和脑脊液中<strong>多巴胺释放下降</strong></li>
+          <li><strong>胆碱能系统常未见异常</strong></li>
+        </ul>
+        <p class="note">这一条很重要：AD 的核心是胆碱能缺陷，而 FTD 的胆碱能系统常无异常——这解释了两者治疗反应不同。</p>
+      </div>
+      <div class="mini">
+        <h4>遗传（教材原文）</h4>
+        <ul>
+          <li>约 <strong>30%～50%</strong> 的患者有家族遗传史</li>
+          <li>以 <strong>17 号染色体</strong>微管结合蛋白 tau 基因（<strong>MAPT</strong>）和颗粒体蛋白（<strong>granulin，GRN</strong>）基因突变为主</li>
+        </ul>
+      </div>
+    </div>
+    <p><strong>两条基因的致病逻辑：</strong></p>
+    <div class="grid2">
+      <div class="mini">
+        <h4>MAPT（tau 基因）</h4>
+        <p>突变可导致 tau 蛋白<strong>过度磷酸化</strong>，干扰微管形成、加速微管降解，从而在神经元内形成<strong>不可溶沉淀物</strong>，导致神经元损害。</p>
+      </div>
+      <div class="mini">
+        <h4>GRN（颗粒体蛋白基因）</h4>
+        <p>GRN 蛋白是<strong>多功能生长因子</strong>，对个体发育、细胞周期进展、损伤修复和免疫炎症具有重要作用；基因突变可导致相关功能下降或缺失。</p>
+      </div>
+    </div>
+    <div class="callout tip"><span class="ct">💡 与 AD 的机制对位</span>AD 的关键是<strong>胆碱能缺陷 + Aβ/tau</strong>；FTD 的关键是<strong>5-HT 与多巴胺下降、胆碱能常正常 + tau/GRN</strong>。所以 FTD 的治疗更偏向 5-HT 能药物，而 ChEI 并非其主力。</div>
+  </div>
+
+  <!-- 第三栏 -->
+  <div class="card red" id="u8-3">
+    <h3 class="col-title"><span class="idx">第三栏</span>临床表现拼图</h3>
+    <p>教材先给总体：发病年龄 <strong>45～70 岁</strong>，大部分患者在 <strong>65 岁前</strong>发病，起病<strong>隐匿、缓慢进行性进展</strong>，未见明显性别差异。再按三亚型分述。</p>
+    <div class="tabs" data-tabs>
+      <div class="tabbar">
+        <button class="on" data-tab="f1">bvFTD</button>
+        <button data-tab="f2">SD</button>
+        <button data-tab="f3">PNFA</button>
+      </div>
+      <div class="panel on" data-panel="f1">
+        <p><strong>最常见亚型，约占 FTD 患者总数的 50% 以上。主要表现为精神行为症状和人格改变。</strong></p>
+        <ul>
+          <li>典型症状：<strong>脱抑制、淡漠、缺乏同情心、饮食行为改变以及强迫行为</strong>。</li>
+          <li>随病情进展：逐渐出现认知功能损害，以<strong>判断、言语功能障碍</strong>为主，<strong>定向力基本保留</strong>。</li>
+          <li>疾病晚期：可出现<strong>妄想</strong>等精神病性症状，部分患者伴发<strong>锥体系和锥体外系损害</strong>。</li>
+        </ul>
+        <p class="note">记忆损害出现较晚，这是与 AD 最重要的临床差别。</p>
+      </div>
+      <div class="panel" data-panel="f2">
+        <ul>
+          <li>以<strong>命名性失语</strong>为主要临床表现，为对词语及客体的理解<strong>进行性减退</strong>。</li>
+          <li><strong>自发言语表达流利</strong>，<strong>复述能力保留</strong>，没有发音和语法错误，<strong>但不能被他人理解</strong>。</li>
+          <li><strong>丧失物品常识</strong>，可伴有不同程度的面孔失认。</li>
+          <li>其他认知功能（如<strong>记忆力、注意力和视空间能力</strong>）相对保留。</li>
+        </ul>
+      </div>
+      <div class="panel" data-panel="f3">
+        <ul>
+          <li>约在 <strong>60 岁</strong>缓慢起病，以<strong>言语功能障碍</strong>为主要临床表现。</li>
+          <li>表现：语言吞吐缓慢、发音困难、找词困难、<strong>语法缺失</strong>、阅读和书写困难。</li>
+          <li><strong>词语理解能力保留</strong>。</li>
+          <li><strong>行为改变和人格改变较为少见</strong>。</li>
+        </ul>
+      </div>
+    </div>
+    <div class="callout key"><span class="ct">📌 三亚型的"一句话分辨"</span><strong>bvFTD 先坏"人"</strong>（人格行为）；<strong>SD 先坏"词义"</strong>（说得流利但听不懂、叫不出名字）；<strong>PNFA 先坏"说法"</strong>（说不动、语法丢，但听得懂）。</div>
+  </div>
+
+  <!-- 第四栏 -->
+  <div class="card orange" id="u8-4">
+    <h3 class="col-title"><span class="idx">第四栏</span>教材典型案例</h3>
+    <div class="callout book">
+      <span class="ct">📖 教材未提供具体临床案例</span>
+      本节教材没有患者个案，也没有量表评分、影像报告或语言测试记录；诊断内容以表 19-3～表 19-5 的标准条目呈现。本栏不虚构病例。
+    </div>
+    <p><strong>教材原文中可作"行为观察点"的句子：</strong></p>
+    <ul>
+      <li>「典型症状有脱抑制、淡漠、缺乏同情心、饮食行为改变以及强迫行为」。</li>
+      <li>「自发言语表达流利，复述能力保留，没有发音和语法错误，但不能被他人理解」。</li>
+      <li>「语言吞吐缓慢、发音困难、找词困难、语法缺失、阅读和书写困难，但词语理解能力保留」。</li>
+      <li>「定向力基本保留」；「记忆损害于较晚期出现」。</li>
+    </ul>
+    <p><strong>由教材诊断标准整理的识别顺序（学习推演，非教材案例）：</strong></p>
+    <ol>
+      <li><strong>先看起病年龄与首发症状：</strong>45～70 岁、以人格行为或语言问题起病，而不是以记忆起病。</li>
+      <li><strong>再数 bvFTD 的 A～F：</strong>早期去抑制、早期冷漠/迟钝、早期同情/同理心丧失、早期持续强迫/刻板行为、口欲亢进与饮食习惯改变、神经心理表现——疑似 bvFTD 需<strong>至少 3 项</strong>且持续或复发。</li>
+      <li><strong>看功能与影像：</strong>生活或社会功能受损证据 + 额叶和/或前颞叶萎缩（或低灌注/低代谢）→ 可能为 bvFTD。</li>
+      <li><strong>排除：</strong>其他神经系统非退行性疾病或内科疾病、更符合精神病学诊断、生物标志物强烈提示 AD 或其他神经退行性病变。</li>
+    </ol>
+    <p class="note">四步对应教材表 19-3 的"疑似 / 可能 / 排除标准"，未添加任何虚构患者信息。</p>
+  </div>
+
+  <!-- 第五栏 -->
+  <div class="card orange" id="u8-5">
+    <h3 class="col-title"><span class="idx">第五栏</span>鉴别诊断对对碰</h3>
+    <p><strong>表 1　FTD vs AD（教材直接给出）</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>维度</th><th>FTD</th><th>AD</th></tr></thead>
+        <tbody>
+          <tr><td>起病与病程</td><td>发病较早（45～70 岁，多 65 岁前）；隐匿、缓慢进行性</td><td>起病隐匿，慢性进行性</td></tr>
+          <tr><td>首发与早期核心</td><td><strong>性格改变于较早期出现</strong>；<strong>语言功能下降显著</strong></td><td>主要表现为<strong>记忆力下降</strong>，逐渐发展为学习能力、注意力、语言能力和执行能力下降</td></tr>
+          <tr><td>记忆损害时点</td><td><strong>较晚期出现</strong></td><td><strong>早期即出现</strong>，以近记忆为主</td></tr>
+          <tr><td>精神行为</td><td>早期即突出（脱抑制、淡漠、缺乏同情心、饮食行为改变、强迫）</td><td>后期出现精神行为症状、性格改变</td></tr>
+          <tr><td>影像</td><td>额叶和 / 或前颞叶萎缩（SD 为前颞叶；PNFA 为左额叶后部和岛叶）</td><td>弥漫性脑萎缩，以颞、顶叶及海马为主</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout key"><span class="ct">📌 一句话鉴别总结</span><strong>"先变人、后忘事"是 FTD；"先忘事、后变人"是 AD"</strong>。再加一句：FTD 语言损害早而重，AD 记忆损害早而重。</div>
+    <p><strong>表 2　FTD 三亚型的核心识别</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>维度</th><th>bvFTD</th><th>SD</th><th>PNFA</th></tr></thead>
+        <tbody>
+          <tr><td>核心</td><td>精神行为症状 + 人格改变</td><td><strong>命名障碍 + 词汇理解受损</strong></td><td><strong>语法错误 / 说话费力断续、发音错误或扭曲（言语失用）</strong></td></tr>
+          <tr><td>语言表现</td><td>晚期言语功能障碍</td><td>自发言语流利、复述保留、无发音语法错误，但不被理解</td><td>吞吐缓慢、发音困难、找词困难、语法缺失、阅读书写困难</td></tr>
+          <tr><td>理解</td><td>相对保留</td><td><strong>词汇理解受损</strong></td><td><strong>词语理解能力保留</strong></td></tr>
+          <tr><td>影像支持</td><td>额叶和 / 或前颞叶萎缩或低灌注/低代谢</td><td><strong>前颞叶</strong>萎缩或低灌注/低代谢</td><td><strong>左侧额叶后部和岛叶</strong>萎缩或低灌注/低代谢</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout key"><span class="ct">📌 一句话鉴别总结</span>bvFTD"人格先坏"，SD"词义先丢、复述还在"，PNFA"说话先坏、理解还在"。</div>
+    <p><strong>表 3　bvFTD 诊断标准的"三层"（教材表 19-3 压缩）</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>层级</th><th>核心要求</th></tr></thead>
+        <tbody>
+          <tr><td>疑似 bvFTD</td><td>行为 / 认知表现 <strong>A～F 至少 3 项</strong>，且<strong>持续或复发</strong>，而非单一或罕见事件</td></tr>
+          <tr><td>可能 bvFTD</td><td>符合疑似 + <strong>生活或社会功能受损证据</strong> + 影像符合（额叶和/或前颞叶萎缩，或低灌注/低代谢）</td></tr>
+          <tr><td>病理学确诊</td><td>符合疑似或可能 + 活体/尸体组织病理学证据，或存在已知致病基因突变</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- 第六栏 -->
+  <div class="card green" id="u8-6">
+    <h3 class="col-title"><span class="idx">第六栏</span>治疗方案工具箱</h3>
+    <p><strong>一、诊断标准要点（教材表 19-3～19-5）</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>亚型</th><th>临床诊断核心</th><th>其他条件</th></tr></thead>
+        <tbody>
+          <tr><td>bvFTD</td><td>A 早期去抑制（不恰当社会行为 / 缺乏礼仪或社会尊严感缺失 / 冲动鲁莽或粗心大意）；B 早期冷漠和 / 或迟钝；C 早期同情或同理心丧失；D 早期持续 / 强迫 / 刻板行为；E 口欲亢进和饮食习惯改变；F 神经心理表现（执行功能障碍 / 相对较轻的情景记忆障碍 / 相对较轻的视觉功能障碍）</td><td><strong>至少 3 项</strong>，持续或复发</td></tr>
+          <tr><td>SD</td><td>核心：<strong>A 命名障碍；B 词汇理解受损</strong>（必须同时具有）</td><td>其他症状至少 <strong>3 条</strong>：物品识别受损（尤其低频或不熟悉词条）、朗读或书写困难、无复述障碍、无言语（语法或口语）产生障碍</td></tr>
+          <tr><td>PNFA</td><td>核心至少 <strong>1 项</strong>：A 语法错误；B 说话费力、断续，发音错误或扭曲（言语失用）</td><td>其他 3 条中至少 <strong>2 条</strong>：复杂语句理解障碍、无词汇理解障碍、无物品识别障碍</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note">三型的"病理学确诊"均要求：临床诊断 + 组织学证据（FTLD-tau、FTLD-TDP、AD 等）或已知致病基因突变；教材未涉及具体检测流程。</p>
+    <p><strong>二、治疗（教材原文）</strong></p>
+    <div class="quote"><span class="lab">教材原文</span>目前尚无批准用于 FTD 治疗的药物，临床上主要是针对 FTD 患者行为、运动、认知功能障碍的对症治疗。许多广泛用于治疗其他类型痴呆和神经退行性疾病的药物常被用于 FTD 的对症治疗，其疗效参差不齐。</div>
+    <div class="grid2">
+      <div class="mini">
+        <h4>药物（教材点名）</h4>
+        <ul>
+          <li><strong>选择性 5-羟色胺再摄取抑制剂</strong></li>
+          <li><strong>非典型抗精神病药物</strong></li>
+          <li><strong>N-甲基-D-天冬氨酸受体拮抗剂</strong></li>
+        </ul>
+        <p class="note">教材原文在此处重复列出"非典型抗精神病药物"，本指南按原意合并为一项，不额外补充药物。</p>
+      </div>
+      <div class="mini">
+        <h4>非药物（教材强调）</h4>
+        <p>药物治疗并不能完全消除 FTD 患者的负面行为症状，因此需在药物治疗的基础上，联用<strong>行为、物理和环境改善策略</strong>等非药物疗法。</p>
+      </div>
+    </div>
+    <div class="callout warn"><span class="ct">⚠️ 三句"限定语"不能省</span>① <strong>尚无批准用于 FTD 治疗的药物</strong>；② 其他痴呆药物用于 FTD 属"对症"，<strong>疗效参差不齐</strong>；③ 药物<strong>不能完全消除</strong>负面行为症状，必须联用非药物疗法。答题时若写成"FTD 首选某某药"，即偏离教材。</div>
+    <p><strong>三、预后：</strong>FTD 是<strong>不可逆性疾病，预后较差</strong>，病程 <strong>5～10 年</strong>，多死于<strong>躯体并发症</strong>，如肺部感染、压疮等。</p>
+  </div>
+
+  <!-- 第七栏 -->
+  <div class="card purple" id="u8-7">
+    <h3 class="col-title"><span class="idx">第七栏</span>记忆工具箱</h3>
+    <p><strong>🔧 方法一：三亚型"三字"口诀法</strong></p>
+    <p>口诀：<strong>"人、义、流"</strong>——bvFTD 坏"<strong>人</strong>"（人格行为），SD 坏"词<strong>义</strong>"（命名与理解），PNFA 坏"<strong>流</strong>"（流利度与语法）。</p>
+    <p class="note">为什么这样记：三个亚型的名字长且相似，用一个字抓住各自"最先塌陷的功能"，先分类再展开，答题不会张冠李戴。</p>
+    <p><strong>🔧 方法二：bvFTD 六项首字记忆法</strong></p>
+    <p>六项：<strong>A 去抑制、B 冷漠、C 同情丧失、D 刻板、E 口欲、F 神经心理</strong>，压成<strong>"抑、冷、同、刻、食、执"</strong>；诊断要求<strong>至少 3 项、持续或复发</strong>。</p>
+    <p class="note">为什么这样记：表 19-3 的 A～F 是 bvFTD 诊断的骨架，六个字正好一一对应；再单记"≥3 项 + 持续/复发"这个阈值，选择题的坑就填上了。</p>
+    <p><strong>🔧 方法三：影像"对位"记忆法</strong></p>
+    <p>对位：<strong>bvFTD → 额叶和/或前颞叶</strong>；<strong>SD → 前颞叶</strong>；<strong>PNFA → 左侧额叶后部和岛叶</strong>。</p>
+    <p class="note">为什么这样记：三型的影像分布与语言/行为功能高度对应（前颞叶管词义、左额后部与岛叶管言语产出），理解"功能定位"后就不需要死背。</p>
+    <p><strong>🔧 方法四：与 AD 对照法</strong></p>
+    <p>对照：<strong>FTD"先变人、语言早、记忆晚"；AD"先忘事、记忆早、人格晚"</strong>；再加递质对照：<strong>FTD 胆碱能常正常、5-HT 与多巴胺下降；AD 胆碱能缺陷为核心</strong>。</p>
+    <p class="note">为什么这样记：这组对照同时覆盖临床表现与机制两层，是 FTD 与 AD 鉴别题、机制题的双用答案。</p>
+  </div>
+
+  <!-- 第八栏 -->
+  <div class="card blue" id="u8-8">
+    <h3 class="col-title"><span class="idx">第八栏</span>知识联动</h3>
+    <div class="grid2">
+      <div class="mini">
+        <h4>与 AD（u5）</h4>
+        <p>AD 的鉴别清单直接列出 FTD：AD"记忆下降为主、后期人格改变"，FTD"性格改变早、语言下降显著、记忆损害晚"。</p>
+      </div>
+      <div class="mini">
+        <h4>与 MND（u2）</h4>
+        <p>naMND 可能进展为额颞叶痴呆；MND 的非遗忘型亚型正是 FTD 的早期窗口。</p>
+      </div>
+      <div class="mini">
+        <h4>与帕金森综合征 / 运动神经元病</h4>
+        <p>教材明确 FTD 可与帕金森综合征或运动神经元病等神经变性疾病共存，作为 FTD 的特殊类型。</p>
+      </div>
+      <div class="mini">
+        <h4>与语言障碍 / 康复医学</h4>
+        <p>SD 与 PNFA 归为原发性进行性失语（PPA），其核心是语言功能；评估与康复需语言治疗参与。</p>
+      </div>
+      <div class="mini">
+        <h4>与精神科误诊风险</h4>
+        <p>bvFTD 以人格行为改变起病，教材的排除标准明确要求排除"行为异常更符合精神病学诊断"的情形——这是精神科最需要警惕的界面。</p>
+      </div>
+      <div class="mini">
+        <h4>与遗传咨询</h4>
+        <p>30%～50% 有家族遗传史，以 MAPT 与 GRN 突变为主；教材在病理学确诊条目中把"已知致病基因突变"作为确诊依据之一。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 13 物质所致痴呆 ===== -->
+<section id="u9">
+  <div class="sec-head"><div class="badge">13</div><h2>精神活性物质（包括治疗药物）所致痴呆<span class="en">Substance-induced dementia（p.237）</span></h2></div>
+  <p class="sec-lead">这一类痴呆的判决标准只有一句话：<strong>认知损害超出了中毒与戒断的常见病程</strong>。超时，才叫痴呆；没超时，只是中毒或戒断。</p>
+
+  <!-- 第一栏 -->
+  <div class="card cyan" id="u9-1">
+    <h3 class="col-title"><span class="idx">第一栏</span>疾病画像</h3>
+    <div class="quote"><span class="lab">教材原文</span>精神活性物质（包括治疗药物）所致痴呆指精神活性物质（包括治疗药物）使用后出现的持续性认知功能障碍（例如记忆问题、语言障碍和无法执行复杂的运动任务等），是精神活性物质（包括治疗药物）使用后的直接结果。</div>
+    <p><strong>一句话画像：</strong>不是"喝多了当下的迷糊"，而是<strong>物质作用过去之后，认知仍然回不来</strong>；损害已经符合痴呆标准，且能归因于该物质。</p>
+    <div class="stat">
+      <span>风险因素：年龄</span>
+      <span>风险因素：物质使用时间</span>
+      <span>风险因素：持续使用超过 50 年</span>
+    </div>
+    <p class="note">教材本节未涉及患病率、性别比等流行病学数字；只列出上述三个风险因素。</p>
+    <p><strong>教材列出的四类物质来源：</strong>酒精；镇静、催眠或抗焦虑药；挥发性吸入剂；其他特指的精神活性物质（如苯丙胺类兴奋剂、可卡因、阿片类等）。</p>
+  </div>
+
+  <!-- 第二栏 -->
+  <div class="card blue" id="u9-2">
+    <h3 class="col-title"><span class="idx">第二栏</span>病因探秘</h3>
+    <p>教材把机制分成"直接神经毒性"与"间接脑损害"两条路径。</p>
+    <div class="grid2">
+      <div class="mini">
+        <h4>直接损害</h4>
+        <ul>
+          <li><strong>酒精</strong>：长期、大量饮酒后出现持续性认知功能减退</li>
+          <li><strong>镇静催眠 / 抗焦虑药</strong>：长期服用<strong>苯二氮䓬类、苯巴比妥类</strong>所致认知功能减退</li>
+          <li><strong>挥发性吸入剂</strong>：使用或暴露的直接后果</li>
+          <li><strong>苯丙胺类兴奋剂</strong>：损害<strong>边缘系统、皮质、海马及杏仁核</strong>等多个认知功能相关区域，导致注意、记忆、学习功能障碍</li>
+        </ul>
+      </div>
+      <div class="mini">
+        <h4>间接损害</h4>
+        <ul>
+          <li><strong>可卡因、阿片类</strong>等可造成<strong>间接的脑损害</strong>，继而出现神经认知障碍</li>
+          <li>教材在"风险及预后"段补充：<strong>长期营养缺乏、肝脏疾病、血管风险因素、心血管病和脑血管病</strong>可增加酒精所致痴呆的风险</li>
+        </ul>
+      </div>
+    </div>
+    <div class="callout tip"><span class="ct">💡 记忆抓手</span>把机制记成"<strong>直接毒脑（酒精、镇静催眠、吸入剂、兴奋剂）+ 间接伤脑（可卡因、阿片类）+ 风险叠加（营养、肝病、血管）</strong>"三层，比逐个药物背更清楚。</div>
+  </div>
+
+  <!-- 第三栏 -->
+  <div class="card red" id="u9-3">
+    <h3 class="col-title"><span class="idx">第三栏</span>临床表现拼图</h3>
+    <div class="tabs" data-tabs>
+      <div class="tabbar">
+        <button class="on" data-tab="s1">酒精</button>
+        <button data-tab="s2">镇静催眠 / 抗焦虑药</button>
+        <button data-tab="s3">挥发性吸入剂</button>
+        <button data-tab="s4">其他物质</button>
+      </div>
+      <div class="panel on" data-panel="s1">
+        <ul>
+          <li>长期、大量饮酒后出现的<strong>持续性认知功能减退</strong></li>
+          <li>多表现为<strong>执行功能、记忆和学习功能障碍</strong></li>
+          <li>部分患者可有人格改变及<strong>皮质功能受损表现</strong>，如失语、失认、失用等</li>
+          <li>病程持续，<strong>一般不可逆</strong></li>
+        </ul>
+      </div>
+      <div class="panel" data-panel="s2">
+        <ul>
+          <li>一般指长期服用<strong>苯二氮䓬类、苯巴比妥类</strong>药物所致认知功能减退</li>
+          <li>相比其他维度的认知功能障碍，临床表现<strong>主要以记忆障碍为主</strong></li>
+        </ul>
+      </div>
+      <div class="panel" data-panel="s3">
+        <ul>
+          <li><strong>持续性认知功能障碍</strong>（记忆问题、语言障碍、无法执行复杂的运动任务）</li>
+          <li>这些障碍<strong>符合痴呆的诊断标准</strong></li>
+          <li>被判断为吸入剂使用或暴露的<strong>直接后果</strong></li>
+          <li>并且<strong>超过通常的作用持续时间或与该物质相关的戒断综合征病程</strong></li>
+        </ul>
+      </div>
+      <div class="panel" data-panel="s4">
+        <ul>
+          <li><strong>苯丙胺类兴奋剂</strong>：损害边缘系统、皮质、海马及杏仁核等，导致注意、记忆、学习功能障碍</li>
+          <li><strong>可卡因、阿片类</strong>等：造成间接脑损害，继而出现神经认知障碍</li>
+        </ul>
+      </div>
+    </div>
+    <p><strong>除认知损害之外的精神行为异常（教材按药物效应方向分组）：</strong></p>
+    <div class="grid3">
+      <div class="mini"><h4>中枢抑制效应药物</h4><p>主要表现为<strong>易激惹增加、焦虑、睡眠障碍和烦躁</strong>。</p></div>
+      <div class="mini"><h4>兴奋剂药物</h4><p>主要表现为<strong>反跳性的抑郁、嗜睡和情感淡漠</strong>。</p></div>
+      <div class="mini"><h4>长期使用精神活性药物</h4><p>可有显著<strong>运动障碍</strong>（如共济失调、运动迟缓等），也可能会出现<strong>情绪不稳、攻击性强、不恰当的情感或情感淡漠</strong>等表现。</p></div>
+    </div>
+    <div class="callout key"><span class="ct">📌 一条"反向"规律</span>抑制性药物（镇静催眠、抗焦虑）反而表现为<strong>易激惹、焦虑、烦躁、睡眠差</strong>；兴奋剂停药后反而出现<strong>抑郁、嗜睡、淡漠</strong>。这种"反向"表现是本节最容易记反的地方。</div>
+  </div>
+
+  <!-- 第四栏 -->
+  <div class="card orange" id="u9-4">
+    <h3 class="col-title"><span class="idx">第四栏</span>教材典型案例</h3>
+    <div class="callout book">
+      <span class="ct">📖 教材未提供具体临床案例</span>
+      本节教材只有概述、四类物质的表现、诊断五条与治疗原则，<strong>没有患者个案、饮酒量、用药年限或检查结果</strong>。本栏不虚构病例与数据。
+    </div>
+    <p><strong>教材原文中可作"病史线索"的句子：</strong></p>
+    <ul>
+      <li>「长期、大量饮酒后出现的持续性认知功能减退」。</li>
+      <li>「一般是指长期服用苯二氮䓬类、苯巴比妥类药物所致认知功能减退」。</li>
+      <li>「持续性认知功能障碍……被判断为吸入剂使用或暴露的直接后果，并且超过通常的作用持续时间或与该物质相关的戒断综合征病程」。</li>
+      <li>「长期使用精神活性药物所致痴呆患者可以有显著的运动障碍（如共济失调、运动迟缓等）」。</li>
+    </ul>
+    <p><strong>由教材诊断五条整理的核查顺序（学习推演，非教材案例）：</strong></p>
+    <ol>
+      <li>是否符合<strong>痴呆诊断标准</strong>？</li>
+      <li>神经认知损害持续时间是否<strong>超出物质或药物所致中毒与急性戒断的常见病程</strong>？</li>
+      <li>所使用的物质或药物，在使用时间段或使用范围内，是否<strong>能够产生神经认知损害</strong>？</li>
+      <li>痴呆发生的时间与物质或药物的<strong>使用和停止时间是否相符</strong>？</li>
+      <li>痴呆产生的原因能否被<strong>其他躯体疾病或其他精神障碍解释</strong>？</li>
+    </ol>
+    <p class="note">五条完全对应教材诊断段，未添加任何虚构的患者信息。</p>
+  </div>
+
+  <!-- 第五栏 -->
+  <div class="card orange" id="u9-5">
+    <h3 class="col-title"><span class="idx">第五栏</span>鉴别诊断对对碰</h3>
+    <p><strong>表 1　物质所致痴呆 vs 物质所致遗忘障碍（本章 u3）</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>维度</th><th>物质所致痴呆</th><th>物质所致遗忘障碍</th></tr></thead>
+        <tbody>
+          <tr><td>认知域</td><td>持续性认知功能障碍，可涉及记忆、语言、复杂运动任务等，<strong>符合痴呆标准</strong></td><td><strong>以记忆为核心</strong>，无广泛性认知功能损害</td></tr>
+          <tr><td>日常生活</td><td>达痴呆标准（日常生活能力明显减退）</td><td>教材未强调明显失守</td></tr>
+          <tr><td>共同点</td><td colspan="2">都要求损害是物质使用的<strong>直接后果</strong>，且<strong>超出中毒或戒断的常见病程</strong>，不能用其他情况解释</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout key"><span class="ct">📌 一句话鉴别总结</span>同一物质、同样的"超时"要求；分野在<strong>损害范围</strong>——只坏记忆是遗忘障碍，多域且生活失守是痴呆。</div>
+    <p><strong>表 2　物质所致痴呆 vs 谵妄（本章 u1）</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>维度</th><th>物质所致痴呆</th><th>谵妄（含物质中毒 / 戒断所致）</th></tr></thead>
+        <tbody>
+          <tr><td>起病</td><td>使用后持续存在</td><td><strong>短时间内发生</strong></td></tr>
+          <tr><td>病程</td><td><strong>超出中毒与急性戒断的常见病程</strong></td><td>急性期表现，一天内波动</td></tr>
+          <tr><td>意识</td><td>痴呆定义要求<strong>无意识障碍</strong></td><td><strong>有意识障碍</strong></td></tr>
+          <tr><td>转归</td><td>持续，酒精所致一般不可逆</td><td>去除病因后多可逆</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout key"><span class="ct">📌 一句话鉴别总结</span>先问"过去没有"——还在中毒/戒断窗口内、意识不清，是谵妄；窗口过了、意识清楚、认知仍差，才考虑物质所致痴呆。</div>
+    <p><strong>表 3　物质所致痴呆 vs 原发性痴呆（如 AD）</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>维度</th><th>物质所致痴呆</th><th>AD 等原发性痴呆</th></tr></thead>
+        <tbody>
+          <tr><td>病因证据</td><td>有明确物质使用，且剂量/时间足以造成损害</td><td>无物质使用因果关系，有特征性病理与生物标志物</td></tr>
+          <tr><td>时间关系</td><td>痴呆发生与使用、停止时间<strong>相符</strong></td><td>隐袭起病、缓慢进展，与物质无关</td></tr>
+          <tr><td>排除要求</td><td>不能用其他躯体疾病或精神障碍解释</td><td>需排除其他可治性病因</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- 第六栏 -->
+  <div class="card green" id="u9-6">
+    <h3 class="col-title"><span class="idx">第六栏</span>治疗方案工具箱</h3>
+    <div class="quote"><span class="lab">教材原文</span>针对原发病治疗，减少或暂停精神活性物质或药物的使用。针对持续出现的痴呆症状，可考虑使用抗痴呆药物等治疗手段。</div>
+    <div class="grid2">
+      <div class="mini">
+        <h4>第一步 · 处理物质 / 药物</h4>
+        <p><strong>减少或暂停</strong>精神活性物质或药物的使用；同时针对原发病治疗。教材未涉及具体的减量方案或替代药物。</p>
+      </div>
+      <div class="mini">
+        <h4>第二步 · 处理持续痴呆症状</h4>
+        <p>可考虑使用<strong>抗痴呆药物</strong>等治疗手段。教材未指明具体药物、剂量或疗程。</p>
+      </div>
+    </div>
+    <div class="callout warn"><span class="ct">⚠️ 教材的留白</span>本节<strong>没有</strong>戒断方案、替代治疗、具体抗痴呆药物名称与剂量；只在"风险及预后"段列出可增加酒精所致痴呆风险的因素。不要用课外戒酒方案补写。</div>
+    <p><strong>风险及预后（教材原文）：</strong>长期<strong>营养缺乏、肝脏疾病、血管风险因素、心血管病和脑血管病</strong>可增加酒精所致痴呆的风险。教材在本节未涉及该类痴呆的病程年限或死亡率。</p>
+  </div>
+
+  <!-- 第七栏 -->
+  <div class="card purple" id="u9-7">
+    <h3 class="col-title"><span class="idx">第七栏</span>记忆工具箱</h3>
+    <p><strong>🔧 方法一：诊断五条"五字"口诀法</strong></p>
+    <p>口诀：<strong>"标、超、能、符、排"</strong>——符合痴呆<strong>标</strong>准；损害<strong>超</strong>出中毒/戒断病程；物质<strong>能</strong>造成该损害；时间<strong>符</strong>合使用与停止；<strong>排</strong>除其他躯体疾病或精神障碍。</p>
+    <p class="note">为什么这样记：五条诊断标准各取一个动词/名词，形成不可乱序的链条；考试答"诊断依据"时按五字展开即可。</p>
+    <p><strong>🔧 方法二：四类物质归类法</strong></p>
+    <p>归为<strong>"酒、镇静、吸入、其他"</strong>：酒精；镇静催眠或抗焦虑药（苯二氮䓬类、苯巴比妥类）；挥发性吸入剂；其他特指物质（苯丙胺类、可卡因、阿片类）。</p>
+    <p class="note">为什么这样记：教材的四类就是按"最常见 → 医源性 → 滥用方式 → 其他"排列，先记四类名，再各挂一个代表物质。</p>
+    <p><strong>🔧 方法三：反向表现对照法</strong></p>
+    <p>对照：<strong>抑制性药物 → 易激惹、焦虑、烦躁、睡眠障碍</strong>；<strong>兴奋剂 → 反跳性抑郁、嗜睡、淡漠</strong>；<strong>长期使用 → 共济失调、运动迟缓、情绪不稳、攻击性</strong>。</p>
+    <p class="note">为什么这样记："反向"本身就是记忆钩子——越觉得"抑制药应该让人安静"，越容易记住它其实让人烦躁；用反差强化记忆。</p>
+    <p><strong>🔧 方法四：数字锚定法（50 年）</strong></p>
+    <p>数字：风险因素之一是<strong>持续使用超过 50 年</strong>。</p>
+    <p class="note">为什么这样记：本节数字极少，"50 年"是唯一醒目的量化风险点，单独锚定，避免与其他单元的 50% 比例混淆。</p>
+  </div>
+
+  <!-- 第八栏 -->
+  <div class="card blue" id="u9-8">
+    <h3 class="col-title"><span class="idx">第八栏</span>知识联动</h3>
+    <div class="grid2">
+      <div class="mini">
+        <h4>与遗忘障碍（u3）</h4>
+        <p>同一类物质（酒精、镇静催眠药、吸入剂）既可引起遗忘障碍，也可引起痴呆；分界在于认知损害的范围与是否达痴呆标准。</p>
+      </div>
+      <div class="mini">
+        <h4>与谵妄（u1）</h4>
+        <p>表 19-1 把物质中毒与戒断列为谵妄病因；治疗段明确酒精/镇静催眠药戒断相关谵妄<strong>推荐苯二氮䓬类</strong>。物质使用在"急性"与"慢性"两端各占一个位置。</p>
+      </div>
+      <div class="mini">
+        <h4>与 AD（u5）</h4>
+        <p>AD 治疗段明确"慎用可加重认知功能障碍的抗惊厥药和苯二氮䓬类"；本节又指出长期苯二氮䓬类可致记忆为主的认知减退——两条合起来，是老年痴呆患者用药安全的重要提醒。</p>
+      </div>
+      <div class="mini">
+        <h4>与肝病 / 营养</h4>
+        <p>教材把长期营养缺乏、肝脏疾病、血管风险因素、心血管病和脑血管病列为酒精所致痴呆的风险增加因素，提示"戒酒"之外还要管肝、管血管、管营养。</p>
+      </div>
+      <div class="mini">
+        <h4>与成瘾医学</h4>
+        <p>治疗第一步是减少或暂停物质 / 药物；教材未展开戒断管理细节，临床上需与成瘾专科衔接。</p>
+      </div>
+      <div class="mini">
+        <h4>与职业 / 环境暴露</h4>
+        <p>挥发性吸入剂所致痴呆强调的是"使用或暴露"的直接后果，提示职业与环境暴露史也应纳入痴呆的病因询问。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 14 其他疾病所致痴呆 ===== -->
+<section id="u10">
+  <div class="sec-head"><div class="badge">14</div><h2>其他疾病所致痴呆<span class="en">Dementia due to other diseases（p.237–238）</span></h2></div>
+  <p class="sec-lead">本单元合并教材"其他疾病所致痴呆"下的四种疾病：<strong>帕金森病、梅毒、颅内感染、颅内肿瘤</strong>。它们的共同点是"痴呆背后还有一个可命名、可处理的躯体病"。</p>
+
+  <!-- 第一栏 -->
+  <div class="card cyan" id="u10-1">
+    <h3 class="col-title"><span class="idx">第一栏</span>疾病画像</h3>
+    <p>教材把四种疾病并列在"其他疾病所致痴呆"之下。四者的"一句话画像"如下：</p>
+    <div class="grid4">
+      <div class="mini">
+        <h4>帕金森病所致痴呆</h4>
+        <p>先有<strong>静止性震颤、肌张力增高、运动迟缓、姿势平衡障碍</strong>，并常伴<strong>皮质下认知损害</strong>（执行、注意、视空间）。</p>
+      </div>
+      <div class="mini">
+        <h4>梅毒所致痴呆</h4>
+        <p>未经治疗的梅毒中约 <strong>10%</strong> 发展为神经梅毒，严重者出现<strong>麻痹性痴呆</strong>；症状多样、无特异性。</p>
+      </div>
+      <div class="mini">
+        <h4>颅内感染所致痴呆</h4>
+        <p><strong>急性期易谵妄</strong>，恢复期及后遗期可出现 MND 或痴呆，全程伴复杂精神行为异常。</p>
+      </div>
+      <div class="mini">
+        <h4>颅内肿瘤所致痴呆</h4>
+        <p>肿瘤损害脑组织、压迫邻近结构、颅内压增高，出现<strong>局灶神经症状、癫痫或精神症状</strong>。</p>
+      </div>
+    </div>
+    <div class="stat">
+      <span>PD-MND 患病率 20%～30%</span>
+      <span>PD 所致痴呆约 30%</span>
+      <span>神经梅毒约占未治梅毒 10%</span>
+    </div>
+    <p class="note">教材未涉及颅内感染、颅内肿瘤所致痴呆的患病率；也不给 PD 痴呆的年龄别患病率，只说明"随年龄和病程增长而增高"。</p>
+  </div>
+
+  <!-- 第二栏 -->
+  <div class="card blue" id="u10-2">
+    <h3 class="col-title"><span class="idx">第二栏</span>病因探秘</h3>
+    <div class="grid2">
+      <div class="mini">
+        <h4>帕金森病</h4>
+        <ul>
+          <li>常见的神经系统变性疾病，主要发生于中老年人</li>
+          <li>以<strong>黑质多巴胺能神经元丢失和路易体形成</strong>为特征</li>
+          <li>认知功能障碍与<strong>胆碱能神经递质不足</strong>密切相关</li>
+          <li>认知损害可表现为 MND 或痴呆；<strong>PD-MND 20%～30%，PD 痴呆约 30%</strong>，随年龄和病程增长而增高</li>
+        </ul>
+      </div>
+      <div class="mini">
+        <h4>梅毒</h4>
+        <ul>
+          <li>主要通过<strong>性传播</strong>的疾病</li>
+          <li>未经治疗的梅毒患者中约 <strong>10%</strong> 会发展为神经梅毒，严重者出现<strong>麻痹性痴呆</strong></li>
+          <li>梅毒分三期：一期局部溃疡；二期中枢神经系统可能受累；三期包括良性梅毒瘤、心血管梅毒和<strong>神经梅毒</strong></li>
+        </ul>
+      </div>
+      <div class="mini">
+        <h4>颅内感染</h4>
+        <ul>
+          <li>病毒性脑（膜）炎由<strong>病毒直接感染</strong>所致，以<strong>单纯疱疹病毒性脑（膜）炎</strong>最常见；一般无季节性与区域性，常为散发性</li>
+          <li>化脓性脑（膜）炎常见病原菌：脑膜炎双球菌、肺炎双球菌、链球菌、葡萄球菌、流感杆菌和大肠埃希菌等</li>
+        </ul>
+      </div>
+      <div class="mini">
+        <h4>颅内肿瘤</h4>
+        <ul>
+          <li>损害正常脑组织，<strong>压迫邻近脑实质或脑血管</strong>，造成<strong>颅内压增高</strong></li>
+          <li>出现局灶性神经系统症状、癫痫发作或精神症状</li>
+          <li>精神症状受<strong>肿瘤性质、部位、生长速度、有无颅内高压及患者个性特征</strong>影响</li>
+        </ul>
+      </div>
+    </div>
+    <div class="callout tip"><span class="ct">💡 一条共同逻辑</span>四者都不是"脑自己慢慢退化"，而是<strong>有一个可命名的躯体 / 感染 / 占位病因</strong>。因此诊断的共同动作是"找原病"，治疗共同的第一步是"治原病"。</div>
+  </div>
+
+  <!-- 第三栏 -->
+  <div class="card red" id="u10-3">
+    <h3 class="col-title"><span class="idx">第三栏</span>临床表现拼图</h3>
+    <div class="tabs" data-tabs>
+      <div class="tabbar">
+        <button class="on" data-tab="o1">帕金森病</button>
+        <button data-tab="o2">梅毒</button>
+        <button data-tab="o3">颅内感染</button>
+        <button data-tab="o4">颅内肿瘤</button>
+      </div>
+      <div class="panel on" data-panel="o1">
+        <ul>
+          <li><strong>运动症状：</strong>静止性震颤、肌张力增高、运动迟缓和姿势平衡障碍；中晚期常伴<strong>症状波动及异动症</strong>。</li>
+          <li><strong>非运动症状：</strong>认知功能障碍、精神行为症状、自主神经功能紊乱等。</li>
+          <li><strong>认知损害特点：</strong><strong>皮质下认知损害</strong>，主要表现为<strong>执行功能障碍、注意缺陷和视空间功能障碍</strong>，但也可出现记忆减退、语言障碍等。</li>
+          <li><strong>诊断工具：</strong>PD-MND 与 PD 所致痴呆的诊断标准由<strong>国际运动障碍协会（MDS）</strong>制定，并推荐了适用于 PD 的认知功能评价量表。</li>
+        </ul>
+      </div>
+      <div class="panel" data-panel="o2">
+        <ul>
+          <li><strong>神经精神症状多样化、无特异性</strong>，因此很难根据临床症状作出正确诊断。</li>
+          <li>除<strong>脑膜刺激征</strong>外，还可表现<strong>淡漠、易激惹、情绪不稳及人格改变、记忆和注意障碍</strong>等。</li>
+          <li><strong>诊断依据：</strong>冶游史；明确的脑膜、脑血管损害症状体征（如<strong>典型麻痹性痴呆症状和阿-罗瞳孔</strong>、<strong>血清和脑脊液梅毒试验阳性</strong>）。</li>
+        </ul>
+      </div>
+      <div class="panel" data-panel="o3">
+        <ul>
+          <li><strong>病程分期：</strong>急性期较容易出现<strong>谵妄</strong>；恢复期及后遗期则可能出现<strong>MND 或痴呆</strong>；整个疾病过程中伴较复杂的精神行为异常。</li>
+          <li><strong>化脓性脑（膜）炎：</strong>起病急，可表现为<strong>头痛、发热、呕吐、怕光、易激惹、癫痫发作</strong>等。</li>
+          <li><strong>临床症状以谵妄为主</strong>，可有倦怠，可表现为意识障碍（嗜睡、昏睡甚至昏迷），可伴幻觉、精神运动性兴奋等。</li>
+          <li><strong>体征：</strong><strong>颈部强直及克尼格征阳性是诊断的重要依据</strong>。</li>
+        </ul>
+      </div>
+      <div class="panel" data-panel="o4">
+        <ul>
+          <li>除了神经认知障碍的表现外，尚有<strong>其他情感症状及精神病性症状</strong>。</li>
+          <li><strong>不同部位颅内肿瘤常有不同特点的精神症状。</strong></li>
+          <li>肿瘤的性质、部位、生长速度、有无颅内高压及患者的个性特征等因素均可影响精神症状的产生与表现。</li>
+          <li><strong>辅助检查：</strong>详细准确的病史采集，仔细的躯体及神经系统检查，脑脊液检查、脑电图、CT、MRI、PET 等有助于明确诊断。</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- 第四栏 -->
+  <div class="card orange" id="u10-4">
+    <h3 class="col-title"><span class="idx">第四栏</span>教材典型案例</h3>
+    <div class="callout book">
+      <span class="ct">📖 教材未提供具体临床案例</span>
+      本节四种疾病均为纲要式描述，<strong>没有患者个案、冶游史细节、脑脊液结果或影像报告</strong>。本栏不虚构病例，也不编造"阿-罗瞳孔"等体征的具体描述。
+    </div>
+    <p><strong>教材原文中可作"识别线索"的句子：</strong></p>
+    <ul>
+      <li>PD：「认知功能障碍是 PD 的重要非运动症状之一，可表现为轻度神经认知障碍（MND）或痴呆」；「特点是皮质下认知损害」。</li>
+      <li>梅毒：「严重者可出现麻痹性痴呆。麻痹性痴呆的神经精神症状多样化、无特异性，因此很难根据临床症状作出正确的诊断」。</li>
+      <li>颅内感染：「临床症状以谵妄为主」；「颈部强直及克尼格征阳性是诊断的重要依据」。</li>
+      <li>颅内肿瘤：「不同部位颅内肿瘤常有不同特点的精神症状」。</li>
+    </ul>
+    <p><strong>由教材诊断线索整理的四条路径（学习推演，非教材案例）：</strong></p>
+    <ol>
+      <li><strong>PD：</strong>先确认帕金森病，再按 MDS 标准评估认知（MND 还是痴呆）；注意"皮质下认知损害"以执行、注意、视空间为主。</li>
+      <li><strong>梅毒：</strong>追问冶游史 → 查脑膜 / 脑血管损害体征（典型麻痹性痴呆症状、阿-罗瞳孔）→ 血清和脑脊液梅毒试验。</li>
+      <li><strong>颅内感染：</strong>急性期按谵妄识别（发热、头痛、颈强直、克尼格征）；恢复期 / 后遗期按 MND 或痴呆评估。</li>
+      <li><strong>颅内肿瘤：</strong>结合病史、躯体与神经系统检查、脑脊液、脑电图、CT/MRI/PET；注意精神症状可先于肿瘤确诊出现。</li>
+    </ol>
+    <p class="note">四条路径均取自教材原文，未添加任何虚构患者信息或化验数值。</p>
+  </div>
+
+  <!-- 第五栏 -->
+  <div class="card orange" id="u10-5">
+    <h3 class="col-title"><span class="idx">第五栏</span>鉴别诊断对对碰</h3>
+    <p><strong>表 1　帕金森病痴呆 vs 路易体痴呆（与 u7 衔接）</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>维度</th><th>帕金森病痴呆（PDD）</th><th>路易体痴呆（DLB）</th></tr></thead>
+        <tbody>
+          <tr><td>锥体外系表现</td><td><strong>早期出现锥体外系受累</strong>（静止性震颤、肌强直等）</td><td>教材鉴别段强调 DLB 的锥体外系<strong>多对称、静止性震颤少见</strong>，且左旋多巴疗效较差</td></tr>
+          <tr><td>认知损害特点</td><td>以<strong>注意力、计算力、视空间、记忆力</strong>等维度受损为主</td><td>以<strong>执行能力和视空间功能</strong>障碍为主，<strong>近事记忆早期受损较轻</strong></td></tr>
+          <tr><td>卒中史</td><td><strong>一般无卒中病史</strong></td><td>教材未以卒中史作为鉴别点</td></tr>
+          <tr><td>其他核心</td><td>教材未列幻视、波动等核心特征</td><td><strong>波动性认知、反复生动幻视、RBD</strong> 等核心特征</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout key"><span class="ct">📌 一句话鉴别总结</span>"先抖后傻、无卒中"偏 PDD；"波动 + 幻视 + 对称帕金森"偏 DLB。</div>
+    <p><strong>表 2　四种"其他疾病所致痴呆"的识别锚点</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>疾病</th><th>最该问的一句话</th><th>最该查的一件事</th><th>教材给出的治疗核心</th></tr></thead>
+        <tbody>
+          <tr><td>帕金森病痴呆</td><td>运动症状是不是早就有了？</td><td>按 MDS 标准做认知评估</td><td><strong>胆碱酯酶抑制剂</strong>改善认知和精神行为，应作为<strong>首选</strong></td></tr>
+          <tr><td>梅毒所致痴呆</td><td>有没有冶游史？</td><td><strong>血清和脑脊液梅毒试验</strong>；查阿-罗瞳孔</td><td><strong>青霉素或其他抗生素</strong>为核心，剂量需确保脑脊液有效浓度</td></tr>
+          <tr><td>颅内感染所致痴呆</td><td>有没有发热、头痛、颈强直？</td><td><strong>颈部强直、克尼格征</strong>；脑脊液</td><td><strong>抗生素为主</strong>，配合对症与支持疗法</td></tr>
+          <tr><td>颅内肿瘤所致痴呆</td><td>精神症状是不是伴局灶体征或癫痫？</td><td><strong>CT / MRI / PET</strong>，脑脊液、脑电图</td><td><strong>手术、化疗、放疗</strong>为基础；精神症状用精神药物；颅压高及时降颅压</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout key"><span class="ct">📌 一句话鉴别总结</span>四病都靠"一个关键问句 + 一个关键检查"落地：PD 问运动史、梅毒问冶游史、感染问发热颈强、肿瘤看影像与局灶体征。</div>
+    <p><strong>表 3　颅内感染所致谵妄 vs 原发性精神病性障碍</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>维度</th><th>颅内感染所致谵妄</th><th>原发性精神病性障碍</th></tr></thead>
+        <tbody>
+          <tr><td>起病</td><td>急，常伴<strong>发热、头痛、呕吐、怕光</strong></td><td>依原发病，通常无急性感染征象</td></tr>
+          <tr><td>意识与体征</td><td><strong>意识障碍</strong>（嗜睡、昏睡甚至昏迷）；<strong>颈部强直、克尼格征阳性</strong></td><td>意识清楚，无脑膜刺激征</td></tr>
+          <tr><td>核心表现</td><td><strong>以谵妄为主</strong>，可伴幻觉、精神运动性兴奋</td><td>以幻觉、妄想、思维障碍为主</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout key"><span class="ct">📌 一句话鉴别总结</span>有感染征象 + 脑膜刺激征 + 意识障碍，先把"器质性"排在前面。</div>
+  </div>
+
+  <!-- 第六栏 -->
+  <div class="card green" id="u10-6">
+    <h3 class="col-title"><span class="idx">第六栏</span>治疗方案工具箱</h3>
+    <div class="grid2">
+      <div class="mini">
+        <h4>帕金森病所致痴呆</h4>
+        <ul>
+          <li>认知功能障碍与<strong>胆碱能神经递质不足</strong>密切相关</li>
+          <li><strong>胆碱酯酶抑制剂可改善认知功能和精神行为症状，应作为首选治疗</strong></li>
+          <li>伴精神行为症状者：应<strong>排除药物不良反应</strong>，并<strong>慎用抗精神病药</strong></li>
+        </ul>
+        <p class="note">教材未涉及 ChEI 的具体药物、剂量与疗程。</p>
+      </div>
+      <div class="mini">
+        <h4>梅毒所致痴呆</h4>
+        <ul>
+          <li>神经梅毒的治疗以<strong>青霉素或其他抗生素为核心</strong></li>
+          <li>治疗剂量需<strong>确保脑脊液中达到有效治疗浓度</strong></li>
+          <li><strong>抗精神病药和抗抑郁药</strong>可用于对症治疗</li>
+        </ul>
+        <p class="note">教材未涉及青霉素具体剂量与疗程。</p>
+      </div>
+      <div class="mini">
+        <h4>颅内感染所致痴呆</h4>
+        <ul>
+          <li><strong>治疗以抗生素为主</strong>，配合<strong>对症治疗和支持疗法</strong></li>
+          <li>教材未涉及具体抗生素种类、剂量或疗程</li>
+        </ul>
+      </div>
+      <div class="mini">
+        <h4>颅内肿瘤所致痴呆</h4>
+        <ul>
+          <li>确诊患者以<strong>手术、化疗和放疗</strong>为基础治疗方法</li>
+          <li>若出现精神症状，可给予<strong>精神药物治疗</strong></li>
+          <li>对于<strong>颅内压升高</strong>的患者应及时<strong>控制颅内压</strong></li>
+        </ul>
+      </div>
+    </div>
+    <div class="callout warn"><span class="ct">⚠️ 两条"反直觉"提醒</span>① PD 伴精神行为症状时，教材要求<strong>先排除药物不良反应</strong>，并<strong>慎用抗精神病药</strong>——不是一看到幻觉就加抗精神病药。② 梅毒治疗的关键不是"用不用青霉素"，而是<strong>剂量要保证脑脊液浓度</strong>——教材特意点出这一句。</div>
+    <p class="note">本单元四种疾病的治疗，教材均<strong>未涉及剂量与疗程</strong>；本指南不补。</p>
+  </div>
+
+  <!-- 第七栏 -->
+  <div class="card purple" id="u10-7">
+    <h3 class="col-title"><span class="idx">第七栏</span>记忆工具箱</h3>
+    <p><strong>🔧 方法一：四病"四字"归类法</strong></p>
+    <p>口诀：<strong>"帕、梅、感、瘤"</strong>——帕金森病、梅毒、颅内感染、颅内肿瘤。</p>
+    <p class="note">为什么这样记：教材把四病并列在同一标题下，先用四个字建立"抽屉"，再往每个抽屉里放"线索 + 检查 + 治疗"三样东西。</p>
+    <p><strong>🔧 方法二：PD 痴呆"皮质下三联"法</strong></p>
+    <p>三联：<strong>执行功能障碍、注意缺陷、视空间功能障碍</strong>；病因锚点：<strong>黑质多巴胺能神经元丢失 + 路易体形成</strong>；治疗锚点：<strong>胆碱能不足 → ChEI 首选</strong>。</p>
+    <p class="note">为什么这样记：PD 痴呆的认知特点、病理与治疗各自只有一个核心，用"三联 + 两锚点"串起来，避免与 DLB、AD 混淆。</p>
+    <p><strong>🔧 方法三：梅毒"三件套"法</strong></p>
+    <p>三件套：<strong>冶游史 + 阿-罗瞳孔等体征 + 血清和脑脊液梅毒试验阳性</strong>；治疗：<strong>青霉素，剂量保证脑脊液浓度</strong>。</p>
+    <p class="note">为什么这样记：教材明确"很难根据临床症状作出正确诊断"，所以诊断必须靠"病史 + 体征 + 血清学"三件套；把三件套与治疗绑在一起，形成一条完整链路。</p>
+    <p><strong>🔧 方法四：感染 / 肿瘤"两个体征"法</strong></p>
+    <p>感染：<strong>颈部强直 + 克尼格征阳性</strong>（诊断重要依据），急性期以<strong>谵妄</strong>为主；肿瘤：<strong>局灶体征 + 颅内压增高</strong>，影像靠 CT/MRI/PET，治疗靠手术 / 化疗 / 放疗。</p>
+    <p class="note">为什么这样记：两者都属"占位 / 炎症"的器质性思路，用两个体征把"该做什么检查"直接带出来。</p>
+  </div>
+
+  <!-- 第八栏 -->
+  <div class="card blue" id="u10-8">
+    <h3 class="col-title"><span class="idx">第八栏</span>知识联动</h3>
+    <div class="grid2">
+      <div class="mini">
+        <h4>与 DLB（u7）</h4>
+        <p>帕金森病与 DLB 同属路易体病理：PD 以黑质多巴胺能神经元丢失和路易体形成为特征；PDD 与 DLB 的鉴别见本单元表 1。</p>
+      </div>
+      <div class="mini">
+        <h4>与谵妄（u1）</h4>
+        <p>颅内感染"急性期较容易出现谵妄"，且"临床症状以谵妄为主"；这直接对应谵妄单元的感染病因与鉴别思路。</p>
+      </div>
+      <div class="mini">
+        <h4>与 MND（u2）</h4>
+        <p>PD 的认知损害可表现为 MND 或痴呆；颅内感染恢复期 / 后遗期也可出现 MND——MND 不是"只有变性病才有"。</p>
+      </div>
+      <div class="mini">
+        <h4>与 AD（u5）</h4>
+        <p>AD 诊断要点要求排除"神经梅毒、正常压力脑积水或硬膜下血肿"等；本单元的梅毒与颅内占位正是这些"必须排除"的对象。</p>
+      </div>
+      <div class="mini">
+        <h4>与感染科 / 神经外科</h4>
+        <p>梅毒与颅内感染的治疗主体在感染科；颅内肿瘤在神经外科 / 肿瘤科。精神科的角色是识别、评估与对症。</p>
+      </div>
+      <div class="mini">
+        <h4>与用药安全</h4>
+        <p>PD 伴精神症状"先排除药物不良反应、慎用抗精神病药"；这条原则与 DLB"对抗精神病药高度敏感"形成呼应。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 15 核心要点 ===== -->
+<section id="summary">
+  <div class="sec-head"><div class="badge">15</div><h2>全章核心要点速览<span class="en">20 key points</span></h2></div>
+  <p class="sec-lead">考前最后一遍只看这里。每条都能独立成题，建议逐条自问"为什么"。</p>
+  <div class="card blue">
+    <div class="grid2">
+      <ol>
+        <li>神经认知障碍是一组以<strong>谵妄、遗忘障碍、痴呆</strong>等认知功能障碍为主要临床表现的<strong>获得性</strong>疾病，由脑部病变或损伤引起，存在肯定的病理生理和形态结构变化。</li>
+        <li>谵妄的核心是<strong>注意障碍 + 意识障碍</strong>，数小时到数天内发生、<strong>一天内波动</strong>，多可逆，亦称急性脑病综合征。</li>
+        <li>谵妄患病率：社区 1%～2%，85 岁以上 14%；一般住院可高达 30%，术后 10%～50%，ICU 15%～20%；痴呆患者中谵妄的发生率是非痴呆患者的 2.5～3 倍。</li>
+        <li>谵妄九类表现：注意/意识、记忆、定向、知觉、思维、妄想、情绪、精神运动、睡眠-觉醒；<strong>混合型最常见</strong>。</li>
+        <li>谵妄处理顺序：<strong>纠正病因 → 支持治疗 → 非药物干预 → 有指征时药物</strong>；低活动型避免抗精神病药。</li>
+        <li>谵妄药物：小剂量氟哌啶醇肌注控制兴奋躁动；症状轻可用小剂量喹硫平、奥氮平、利培酮口服；<strong>小剂量起始、缓慢滴定、好转尽早停</strong>。</li>
+        <li>苯二氮䓬类一般加重意识障碍、需慎用，<strong>但酒精或镇静催眠药戒断相关谵妄推荐使用</strong>。</li>
+        <li>谵妄四种预后：短时间完全缓解；迁延数月；进展为慢性脑病综合征；进展至昏迷、并发其他疾病甚至死亡。</li>
+        <li>MND 是正常老年认知衰退与痴呆之间的病理状态：认知轻微下降，<strong>日常生活能力尚未明显受影响</strong>；分 aMND 与 naMND。</li>
+        <li>MND 诊断四标准：认知较前下降；一个或多个领域受损的客观证据；工具性日常可轻微损害但<strong>独立生活能力保持</strong>；<strong>未达痴呆标准</strong>；建议随访至少 1 年。</li>
+      </ol>
+      <ol start="11">
+        <li>MND 无特效药：生活方式干预（控血压血糖、戒烟、助听器、补 B12/叶酸）、有氧运动、认知训练；40%～70% 十年不进展为痴呆。</li>
+        <li>遗忘障碍：与年龄和智力不匹配的<strong>记忆障碍</strong>为核心，<strong>无意识障碍、无广泛认知损害</strong>；近事重于远事，即刻记忆通常不受影响，可有虚构。</li>
+        <li>遗忘障碍 ICD-11 五类：酒精、镇静催眠或抗焦虑药、其他精神活性物质、挥发性吸入剂、其他疾病；酒精滥用致<strong>硫胺素缺乏</strong>者为<strong>科萨科夫综合征</strong>。</li>
+        <li>痴呆定义：<strong>获得性认知损害为核心</strong>，日常生活、学习、工作和社会交往能力<strong>明显减退</strong>，伴人格改变但<strong>无意识障碍</strong>，慢性进行性、大多不可逆。</li>
+        <li>痴呆三方面表现：认知功能障碍（近记忆最先）、非认知性精神行为紊乱、社会生活功能减退（先高级后基本）。</li>
+        <li>痴呆诊断三步：确定是否痴呆 → 明确病因（尤其识别<strong>可逆性、可治性</strong>）→ 判定严重程度；工具 MMSE、MoCA、NPI、ADLS。</li>
+        <li>痴呆治疗原则：提高生活质量、减轻照料者负担；主要抗痴呆药为<strong>多奈哌齐</strong>（ChEI）与<strong>美金刚</strong>（谷氨酸受体拮抗剂）；BPSD <strong>非药物干预为首选一线</strong>。</li>
+        <li>AD：占重度神经认知障碍 60%～70%；病理四联为 Aβ 沉积（神经炎性斑块）、神经原纤维缠结（高度磷酸化 tau）、神经元缺失、胶质细胞增生；关键基因 APP(21)、PSEN1(14)、PSEN2(1)、APOE(19)。</li>
+        <li>AD 三期：早期近记忆 + 人格/淡漠；中期定向（先时间后空间）、语言障碍、失用、计算吃力、幻视与被窃/嫉妒妄想；晚期判断力几乎消失、四肢强直或屈曲性瘫痪、原始反射；病程 5～10 年。</li>
+        <li>VaD：阶梯式恶化，痴呆发生于<strong>卒中后 3 个月内</strong>并<strong>持续 6 个月以上</strong>；注意与执行受损突出、记忆可轻微或无；5 年死亡率约 61%。DLB 四核心：波动性认知、反复生动幻视、RBD、帕金森综合征；FTD 三亚型：bvFTD、SD、PNFA。</li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 16 易混 ===== -->
+<section id="pitfalls">
+  <div class="sec-head"><div class="badge">16</div><h2>易混易错点警示<span class="en">Common traps</span></h2></div>
+  <p class="sec-lead">这些点不是"没背到"，而是"背反了"。逐条核对你的第一反应。</p>
+  <div class="card danger">
+    <details open>
+      <summary>① 谵妄"可逆" ≠ 每个患者都能完全恢复</summary>
+      <div class="dbody">教材给出四种预后：短时间内完全缓解；病程迁延持续数月；进展为慢性脑病综合征、残留认知损害及人格改变；进展至昏迷、并发其他疾病甚至死亡。"可逆"是相对痴呆而言的总体定性，不是每个人的结局保证。</div>
+    </details>
+    <details>
+      <summary>② 低活动型谵妄不是"病情轻"，更不能加抗精神病药</summary>
+      <div class="dbody">低活动型表现为活动水平下降、反应迟缓、淡漠、言语少、嗜睡，教材明确<strong>容易被忽视</strong>；治疗以病因治疗和支持治疗为主，<strong>避免使用抗精神病药</strong>。不要因为它"安静"就当作没事，也不要因为它"糊涂"就按高活动型加药。</div>
+    </details>
+    <details>
+      <summary>③ 苯二氮䓬类：一般慎用，但戒断谵妄是例外</summary>
+      <div class="dbody">教材明确苯二氮䓬类会加重意识障碍，需谨慎使用；<strong>但与酒精或镇静催眠类药物戒断相关的谵妄推荐使用苯二氮䓬类药物</strong>。前半句和后半句都要答，只答一半就是错。</div>
+    </details>
+    <details>
+      <summary>④ "痴呆无意识障碍" ≠ 痴呆患者不会谵妄</summary>
+      <div class="dbody">痴呆定义确实写明无意识障碍，但教材同时指出：痴呆和谵妄<strong>共病常见</strong>，痴呆患者谵妄发生率是非痴呆的 2.5～3 倍；痴呆患者多伴躯体疾病不稳定，容易导致谵妄。遇到"痴呆患者突然变糊涂"，要按谵妄排查，并比较发生前后的认知功能。</div>
+    </details>
+    <details>
+      <summary>⑤ MND 不是"准痴呆"，更不是"早晚必痴呆"</summary>
+      <div class="dbody">教材数字：约 <strong>40%～70%</strong> 的 MND 患者即使 10 年以后也不进展成痴呆；约 10%～20% 在 1～2 年认知改善，但后续仍可能转化或维持稳定。MND 的诊断标准第 ④ 条是"未达到痴呆诊断标准"，两者是相邻台阶，不是同一级。</div>
+    </details>
+    <details>
+      <summary>⑥ 遗忘障碍不是"什么都忘"</summary>
+      <div class="dbody">教材明确：<strong>即刻记忆通常不受影响</strong>，近事记忆障碍比远事记忆障碍更严重；且<strong>无意识障碍、无广泛性认知功能障碍</strong>。把遗忘障碍答成"全面痴呆"或"意识不清"都是错的。</div>
+    </details>
+    <details>
+      <summary>⑦ AD 的 60%～70% 是"重度神经认知障碍中的占比"，不是人群患病率</summary>
+      <div class="dbody">教材原文：AD 所致痴呆是重度神经认知障碍的最常见类型，<strong>约占其总数的 60%～70%</strong>。我国 65 岁以上老年人 AD 患病率是 <strong>3%～7%</strong>；85 岁以上为 <strong>20%～50%</strong>。三个数字各有分母，不能互换。</div>
+    </details>
+    <details>
+      <summary>⑧ VaD 的两个时间：3 个月是起点，6 个月是持续</summary>
+      <div class="dbody">教材原文：痴呆发生于<strong>卒中后 3 个月内</strong>，并且<strong>持续 6 个月以上</strong>。答题时写反（"6 个月内发生、持续 3 个月"）即错。此外 VaD 的认知损害<strong>不均衡</strong>，复杂注意力与执行功能受损明显，记忆可轻微受损或不存在。</div>
+    </details>
+    <details>
+      <summary>⑨ DLB 的幻视 ≠ 谵妄的幻视</summary>
+      <div class="dbody">DLB 幻视：<strong>反复、鲜明生动、常在夜间</strong>，对象多为<strong>熟悉的人或动物</strong>，形象<strong>活动、可扭曲变形</strong>，50%～80% 在疾病早期出现。谵妄的知觉障碍：内容多<strong>恐怖性或迫害性</strong>，以幻视多见，且伴<strong>意识障碍与注意障碍、日内波动</strong>。两者描述相似，但"意识清不清、波动有没有"是分水岭。</div>
+    </details>
+    <details>
+      <summary>⑩ FTD"记忆损害较晚" ≠ 没有记忆损害</summary>
+      <div class="dbody">教材原文：FTD 性格改变于较早期出现，语言功能下降显著，<strong>记忆损害于较晚期出现</strong>；bvFTD 的诊断标准 F 项还列有"相对较轻的情景记忆障碍"。所以不能把 FTD 记成"完全不影响记忆"，也不能把"记忆晚"当成"记忆好"。</div>
+    </details>
+    <details>
+      <summary>⑪ 物质所致痴呆的关键不是"用过"，而是"超时 + 归因"</summary>
+      <div class="dbody">诊断要求：神经认知损害持续时间<strong>超出物质或药物所致中毒与急性戒断的常见病程</strong>；物质在使用时间段或范围内<strong>能产生</strong>该损害；痴呆发生时间与使用、停止时间<strong>相符</strong>；且不能用其他躯体疾病或精神障碍解释。四条缺一不可。</div>
+    </details>
+    <details>
+      <summary>⑫ BPSD 不是"先上药"，而是"先查躯体病、先非药物"</summary>
+      <div class="dbody">教材流程：环境设计预防 → 专业人员评估处理 → 仍存在则<strong>检查是否有急性身体疾病</strong> → 无躯体病则转诊精神科 → <strong>非药物干预是首选一线</strong>（感官刺激、行为干预、音乐治疗）→ 无效才考虑抗精神病药、抗抑郁药、心境稳定药。把顺序答反，是 BPSD 题最常见的失分点。</div>
+    </details>
+  </div>
+</section>
+
+<!-- ===== 17 自测 ===== -->
+<section id="quiz">
+  <div class="sec-head"><div class="badge">17</div><h2>章节自测系统<span class="en">14 questions · 6 types</span></h2></div>
+  <p class="sec-lead">覆盖单选、多选、判断、名词解释、简答、案例分析六种题型，按易→中→难排列。先作答，再展开解析。</p>
+
+  <div class="quiz-q">
+    <div class="qh"><span class="qno">第 1 题</span><span class="qtype">单选题</span><span class="diff">易</span></div>
+    <p class="brief">谵妄的核心症状是？</p>
+    <div class="opts">
+      <div class="opt"><span class="l">A.</span>记忆障碍和定向力障碍</div>
+      <div class="opt"><span class="l">B.</span>注意障碍和意识障碍</div>
+      <div class="opt"><span class="l">C.</span>幻觉和妄想</div>
+      <div class="opt"><span class="l">D.</span>情感淡漠和意志减退</div>
+    </div>
+    <details><summary>查看答案与解析</summary><div class="dbody"><strong>答案：B</strong><br>教材开篇即明确：谵妄是以<strong>注意障碍和意识障碍</strong>为特征的一组综合征，其余记忆、定向、知觉、思维、妄想、情绪、精神运动、睡眠等均为伴随表现。</div></details>
+  </div>
+
+  <div class="quiz-q">
+    <div class="qh"><span class="qno">第 2 题</span><span class="qtype">单选题</span><span class="diff">中</span></div>
+    <p class="brief">谵妄的三种临床类型中，临床上<strong>最为多见</strong>的是？</p>
+    <div class="opts">
+      <div class="opt"><span class="l">A.</span>高活动型</div>
+      <div class="opt"><span class="l">B.</span>低活动型</div>
+      <div class="opt"><span class="l">C.</span>混合型</div>
+      <div class="opt"><span class="l">D.</span>亚临床型</div>
+    </div>
+    <details><summary>查看答案与解析</summary><div class="dbody"><strong>答案：C</strong><br>教材原文：混合型是以上两种类型交替出现或混合表现，"在临床上，混合型最为多见"。高活动型易被发现，低活动型<strong>容易被忽视</strong>；教材未设"亚临床型"这一分类。</div></details>
+  </div>
+
+  <div class="quiz-q">
+    <div class="qh"><span class="qno">第 3 题</span><span class="qtype">单选题</span><span class="diff">中</span></div>
+    <p class="brief">下列哪一项最符合轻度神经认知障碍（MND）的诊断标准？</p>
+    <div class="opts">
+      <div class="opt"><span class="l">A.</span>认知功能较前下降，有客观证据，工具性日常活动轻微受损但保持独立生活能力，未达痴呆标准</div>
+      <div class="opt"><span class="l">B.</span>认知功能下降且日常生活完全不能自理</div>
+      <div class="opt"><span class="l">C.</span>意识不清、注意涣散，症状一天内波动</div>
+      <div class="opt"><span class="l">D.</span>仅患者自诉记忆力差，量表得分在正常范围</div>
+    </div>
+    <details><summary>查看答案与解析</summary><div class="dbody"><strong>答案：A</strong><br>A 完整对应教材四条标准。B 是痴呆（日常生活明显减退）；C 是谵妄；D 更接近正常老化（教材：老化者量表得分在正常范围内，仍能学习新知识）。</div></details>
+  </div>
+
+  <div class="quiz-q">
+    <div class="qh"><span class="qno">第 4 题</span><span class="qtype">单选题</span><span class="diff">难</span></div>
+    <p class="brief">按教材所述，与<strong>早发性家族性阿尔茨海默病</strong>相关的基因组合是？</p>
+    <div class="opts">
+      <div class="opt"><span class="l">A.</span>APP、PSEN1、PSEN2</div>
+      <div class="opt"><span class="l">B.</span>APOE、APP、PSEN1</div>
+      <div class="opt"><span class="l">C.</span>APOE、PSEN2、GRN</div>
+      <div class="opt"><span class="l">D.</span>MAPT、GRN、APOE</div>
+    </div>
+    <details><summary>查看答案与解析</summary><div class="dbody"><strong>答案：A</strong><br>教材原文：APP、PSEN1 和 PSEN2 与<strong>早发性家族性 AD</strong> 有关，而 APOE 与<strong>散发性 AD</strong> 关系密切。MAPT 与 GRN 是额颞叶痴呆（FTD）的主要相关基因，不是 AD 的早发家族性基因。</div></details>
+  </div>
+
+  <div class="quiz-q">
+    <div class="qh"><span class="qno">第 5 题</span><span class="qtype">多选题</span><span class="diff">中</span></div>
+    <p class="brief">关于谵妄的处理，下列哪些说法符合教材？</p>
+    <div class="opts">
+      <div class="opt"><span class="l">A.</span>首先纠正病因，针对原发脑器质性疾病或躯体疾病积极治疗</div>
+      <div class="opt"><span class="l">B.</span>低活动型谵妄以病因治疗和支持治疗为主，避免使用抗精神病药</div>
+      <div class="opt"><span class="l">C.</span>所有谵妄患者均应常规使用苯二氮䓬类药物</div>
+      <div class="opt"><span class="l">D.</span>与酒精或镇静催眠药戒断相关的谵妄推荐使用苯二氮䓬类药物</div>
+    </div>
+    <details><summary>查看答案与解析</summary><div class="dbody"><strong>答案：ABD</strong><br>C 错：苯二氮䓬类会加重意识障碍，一般需谨慎使用；只有酒精 / 镇静催眠药戒断相关谵妄才推荐使用。A、B、D 均为教材原文。</div></details>
+  </div>
+
+  <div class="quiz-q">
+    <div class="qh"><span class="qno">第 6 题</span><span class="qtype">多选题</span><span class="diff">中</span></div>
+    <p class="brief">教材把痴呆的临床表现分为哪三个方面？</p>
+    <div class="opts">
+      <div class="opt"><span class="l">A.</span>认知功能障碍</div>
+      <div class="opt"><span class="l">B.</span>非认知性的精神行为紊乱</div>
+      <div class="opt"><span class="l">C.</span>社会生活功能减退</div>
+      <div class="opt"><span class="l">D.</span>意识水平波动</div>
+    </div>
+    <details><summary>查看答案与解析</summary><div class="dbody"><strong>答案：ABC</strong><br>教材原文明确为认知功能障碍、非认知性的精神行为紊乱、社会生活功能减退三方面。D 是谵妄的特征；痴呆定义明确"无意识障碍"。</div></details>
+  </div>
+
+  <div class="quiz-q">
+    <div class="qh"><span class="qno">第 7 题</span><span class="qtype">多选题</span><span class="diff">难</span></div>
+    <p class="brief">按 2017 年 McKeith 等修订的 DLB 诊断标准，下列哪些属于<strong>核心临床特征</strong>？</p>
+    <div class="opts">
+      <div class="opt"><span class="l">A.</span>波动性认知功能障碍</div>
+      <div class="opt"><span class="l">B.</span>反复出现的生动幻视</div>
+      <div class="opt"><span class="l">C.</span>快速眼动期睡眠行为障碍（RBD）</div>
+      <div class="opt"><span class="l">D.</span>一个或多个帕金森综合征核心症状（运动迟缓、肌强直、静止性震颤）</div>
+    </div>
+    <details><summary>查看答案与解析</summary><div class="dbody"><strong>答案：ABCD</strong><br>教材列出四项核心临床特征，正好为 A～D。注意"对抗精神病药高度敏感""姿势障碍""反复跌倒""嗅觉减退"等属于<strong>支持性临床特征</strong>，不是核心。</div></details>
+  </div>
+
+  <div class="quiz-q">
+    <div class="qh"><span class="qno">第 8 题</span><span class="qtype">判断题</span><span class="diff">易</span></div>
+    <p class="brief">痴呆患者不会发生谵妄，因为痴呆的定义明确"无意识障碍"。</p>
+    <div class="opts">
+      <div class="opt"><span class="l">A.</span>正确</div>
+      <div class="opt"><span class="l">B.</span>错误</div>
+    </div>
+    <details><summary>查看答案与解析</summary><div class="dbody"><strong>答案：B（错误）</strong><br>痴呆本身无意识障碍，但教材明确"痴呆和谵妄共病常见"，痴呆患者谵妄发生率是非痴呆患者的 2.5～3 倍；痴呆患者多伴躯体疾病不稳定，容易导致谵妄。两者可以同时存在。</div></details>
+  </div>
+
+  <div class="quiz-q">
+    <div class="qh"><span class="qno">第 9 题</span><span class="qtype">判断题</span><span class="diff">中</span></div>
+    <p class="brief">遗忘障碍的即刻记忆通常不受影响，近事记忆障碍比远事记忆障碍更严重。</p>
+    <div class="opts">
+      <div class="opt"><span class="l">A.</span>正确</div>
+      <div class="opt"><span class="l">B.</span>错误</div>
+    </div>
+    <details><summary>查看答案与解析</summary><div class="dbody"><strong>答案：A（正确）</strong><br>教材原文：近事记忆障碍比远事记忆障碍更严重，即刻记忆通常不受影响。这正是遗忘障碍"记忆剖面"的核心。</div></details>
+  </div>
+
+  <div class="quiz-q">
+    <div class="qh"><span class="qno">第 10 题</span><span class="qtype">判断题</span><span class="diff">难</span></div>
+    <p class="brief">VaD 的诊断要求痴呆发生于卒中后 6 个月内，并持续 3 个月以上。</p>
+    <div class="opts">
+      <div class="opt"><span class="l">A.</span>正确</div>
+      <div class="opt"><span class="l">B.</span>错误</div>
+    </div>
+    <details><summary>查看答案与解析</summary><div class="dbody"><strong>答案：B（错误）</strong><br>教材原文：痴呆发生于<strong>卒中后 3 个月内</strong>，并且<strong>持续 6 个月以上</strong>。题干把两个数字对调了。</div></details>
+  </div>
+
+  <div class="quiz-q">
+    <div class="qh"><span class="qno">第 11 题</span><span class="qtype">名词解释</span><span class="diff">中</span></div>
+    <p class="brief">请解释"谵妄（delirium）"。</p>
+    <details><summary>查看答案与解析</summary><div class="dbody"><strong>参考答案：</strong>谵妄是以<strong>注意障碍</strong>（指向、集中、维持以及转移注意能力减弱）和<strong>意识障碍</strong>（对环境定向能力减弱）为特征，在短时间内产生且症状在<strong>一天内呈现波动变化</strong>的一组综合征；常伴记忆、语言、视觉空间、感知觉及睡眠-觉醒周期改变等认知损伤。起病较急、具有可逆性，亦称<strong>急性脑病综合征</strong>。</div></details>
+  </div>
+
+  <div class="quiz-q">
+    <div class="qh"><span class="qno">第 12 题</span><span class="qtype">名词解释</span><span class="diff">中</span></div>
+    <p class="brief">请解释"BPSD"。</p>
+    <details><summary>查看答案与解析</summary><div class="dbody"><strong>参考答案：</strong>BPSD 即<strong>痴呆的行为和精神症状</strong>（behavioral and psychological symptoms of dementia）。指痴呆患者除认知功能损害外，还表现出的思维活动、情感表达及行为举止异常，包括<strong>焦虑、抑郁、精神病性表现</strong>，以及<strong>攻击、淡漠、激越、脱抑制行为、游荡、昼夜作息紊乱</strong>等行为问题。</div></details>
+  </div>
+
+  <div class="quiz-q">
+    <div class="qh"><span class="qno">第 13 题</span><span class="qtype">简答题</span><span class="diff">难</span></div>
+    <p class="brief">简述谵妄的治疗原则与药物选择要点。</p>
+    <details><summary>查看答案与解析</summary><div class="dbody">
+      <strong>参考答案：</strong>
+      <ol>
+        <li><strong>病因治疗：</strong>针对原发脑器质性疾病或躯体疾病积极治疗，如纠正电解质紊乱、控制感染、减停导致谵妄的药物。</li>
+        <li><strong>支持治疗：</strong>加强支持治疗，预防并发症。</li>
+        <li><strong>非药物干预：</strong>安静舒适、昼夜分明的环境；亲属陪护；清醒时适当交流、消除住院恐惧；限制白天睡眠、保持昼夜节律；维持适当活动；提供眼镜 / 助听器改善感知。</li>
+        <li><strong>药物指征：</strong>仅用于严重感知觉紊乱、妄想及冲动激越行为，且语言安抚无效或行为可能对自身 / 他人造成危险。</li>
+        <li><strong>药物选择：</strong>推荐抗精神病药，并充分权衡利弊；兴奋躁动用<strong>小剂量氟哌啶醇肌内注射</strong>；症状较轻可用小剂量<strong>喹硫平、奥氮平、利培酮</strong>口服；小剂量起始、缓慢滴定、好转尽早停用；监测意识、呼吸和锥体外系副作用。</li>
+        <li><strong>两类特殊情形：</strong>苯二氮䓬类一般慎用（加重意识障碍），但<strong>酒精或镇静催眠药戒断相关谵妄推荐使用</strong>；<strong>低活动型避免抗精神病药</strong>。</li>
+      </ol>
+      <span class="note">教材未涉及具体剂量与疗程，本答案不补。</span>
+    </div></details>
+  </div>
+
+  <div class="quiz-q">
+    <div class="qh"><span class="qno">第 14 题</span><span class="qtype">案例分析题</span><span class="diff">难</span></div>
+    <p class="brief">某 80 岁男性，既往记忆力逐渐下降 2 年，尚能自行穿衣、吃饭。3 天前受凉后发热、咳嗽，昨夜突然烦躁、拉扯被褥、说"屋里有坏人"，今天上午又变得安静嗜睡、问话不答，傍晚再次躁动。家属称其"一天一个样"。请回答：①最可能的诊断是什么？②需要与哪些情况鉴别？③处理原则是什么？</p>
+    <details><summary>查看答案与解析</summary><div class="dbody">
+      <p class="note">本题为模拟临床情境，依据教材知识点构建，<strong>不是教材原案例</strong>；不含虚构的化验值与量表分数。</p>
+      <strong>① 最可能：</strong>在原有认知下降基础上发生<strong>谵妄</strong>（痴呆与谵妄共病）。依据：急性起病（3 天内）、<strong>一天内症状波动</strong>（夜间躁动、上午嗜睡、傍晚再躁动）、注意与意识障碍、出现恐怖性幻觉内容；同时存在感染诱因。<br>
+      <strong>② 鉴别：</strong>
+      <ol>
+        <li><strong>单纯痴呆进展：</strong>痴呆起病缓慢、无意识障碍；但本例"突然变糊涂 + 波动"，提示叠加谵妄，需比较发生前后的认知功能。</li>
+        <li><strong>伴精神病性症状的情感障碍 / 精神分裂症：</strong>谵妄有意识及定向力障碍，可资鉴别。</li>
+        <li><strong>急性应激障碍：</strong>由严重应激生活事件所致；本例有明确感染诱因与意识改变。</li>
+      </ol>
+      <strong>③ 处理：</strong>①<strong>纠正病因</strong>——控制感染、纠正可能的电解质紊乱、复核并减停可能致谵妄的药物；②<strong>支持治疗</strong>、预防并发症；③<strong>非药物干预</strong>——安静舒适、昼夜分明的环境，亲属陪护，清醒时交流，限制白天睡眠、保持昼夜节律，维持适当活动，提供眼镜/助听器；④<strong>药物</strong>仅在严重感知觉紊乱、妄想及冲动激越且语言安抚无效或可能危险时使用：小剂量氟哌啶醇肌注，或小剂量喹硫平、奥氮平、利培酮口服；小剂量起始、缓慢滴定、好转尽早停；监测意识、呼吸、锥体外系副作用。<br>
+      <span class="note">本例以躁动为主，属偏"高活动 / 混合"表现，可按上述指征用药；若为低活动型则避免抗精神病药。教材未涉及具体剂量。</span>
+    </div></details>
+  </div>
+</section>
+
+<!-- ===== 18 速记卡 ===== -->
+<section id="cards">
+  <div class="sec-head"><div class="badge">18</div><h2>考点速记卡<span class="en">20 flip cards</span></h2></div>
+  <p class="sec-lead">正面是问题，点击翻面看答案。建议按"概念→鉴别→治疗"三轮刷，每轮只追求快速反应。</p>
+  <div class="flashcard-grid">
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag concept">概念</span><p>什么是谵妄？核心特征是什么？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">以<strong>注意障碍</strong>和<strong>意识障碍</strong>为特征、短时间内发生、一天内波动的一组综合征；常伴其他认知损伤，起病急、多可逆，亦称急性脑病综合征。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag diag">分型</span><p>谵妄分哪三型？哪型最多见？哪型易被忽视？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">高活动型、低活动型、混合型；<strong>混合型最多见</strong>；<strong>低活动型容易被忽视</strong>，且治疗上避免抗精神病药。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag data">数据</span><p>谵妄在住院、术后、ICU 患者中的发生率？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">一般住院患者可高达 <strong>30%</strong>；术后 <strong>10%～50%</strong>；ICU <strong>15%～20%</strong>；癌症患者 25%；社区人群 1%～2%，85 岁以上 14%。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag treat">治疗</span><p>谵妄治疗的四步顺序？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">①纠正病因（原发脑 / 躯体病、电解质、感染、致谵妄药物）→ ②支持治疗、预防并发症 → ③非药物干预（环境、陪护、节律、活动、助视助听）→ ④有指征时药物对症。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag risk">风险</span><p>谵妄患者的四种预后走向？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">①短时间内完全缓解；②病程迁延持续数月；③进展为慢性脑病综合征，残留认知损害及人格改变；④进展至昏迷、并发其他疾病甚至死亡。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag concept">概念</span><p>什么是 MND？两个亚型及其转归？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">介于正常老年认知衰退与痴呆之间的病理状态，认知轻微下降、日常生活能力尚未明显受影响。aMND（记忆损伤）很可能进展为 AD；naMND（注意/语言/视空间/执行）可能进展为 VaD、FTD 等。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag diag">标准</span><p>MND 的四条诊断标准？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">①认知较前下降（患者/知情者报告或医师发现）；②一个或多个领域受损的客观证据（已考虑年龄与智力）；③工具性日常可轻微损害，但保持独立生活能力；④未达痴呆诊断标准。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag data">数据</span><p>MND 的患病率、随访要求与转化率？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">2020 年全国调查：60 岁以上患病率 <strong>15.5%</strong>，约 <strong>3 877 万</strong>人；建议随访<strong>至少 1 年</strong>；转化为痴呆的年发生率为 <strong>12%～20%</strong>（此前不足 5%）。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag concept">概念</span><p>遗忘障碍的定义与"两个不"？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">以与个人年龄和一般智力水平不匹配的<strong>记忆障碍</strong>为核心，但<strong>无意识障碍</strong>及<strong>无广泛性认知功能损害</strong>的综合征。近事重于远事，即刻记忆通常不受影响。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag diag">分类</span><p>遗忘障碍 ICD-11 的五类病因？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">①酒精所致；②镇静、催眠或抗焦虑药使用所致；③其他特定精神活性物质（包括治疗药物）所致；④挥发性吸入剂所致；⑤其他疾病所致。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag concept">概念</span><p>什么是科萨科夫综合征？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">教材原文：酒精滥用导致<strong>硫胺素缺乏</strong>而引起的遗忘障碍，称为科萨科夫综合征。属于"酒精所致的遗忘障碍"。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag concept">概念</span><p>痴呆的定义（四个关键词）？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back"><strong>获得性</strong>认知损害为核心；日常生活、学习、工作和社会交往能力<strong>明显减退</strong>；伴人格改变但<strong>无意识障碍</strong>；<strong>慢性进行性、大多不可逆</strong>。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag diag">分型</span><p>痴呆临床表现的三方面？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">①认知功能障碍（近记忆最先）；②非认知性的精神行为紊乱（情绪不稳、淡漠、幻觉妄想、人格改变）；③社会生活功能减退（工作与高级社交→基本日常→大小便失禁、卧床）。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag diag">流程</span><p>痴呆的诊断三步与四个常用工具？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">三步：确定是否痴呆 → 明确病因（尤其识别可逆、可治性）→ 判定严重程度。工具：MMSE、MoCA、NPI（照料者、过去一个月）、ADLS。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag concept">病理</span><p>AD 的病理四联？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">Aβ 沉积（神经炎性斑块）、神经原纤维缠结（高度磷酸化 tau）、神经元缺失、胶质细胞增生。肉眼见颞、顶叶及海马最明显的弥漫性脑萎缩。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag data">数据</span><p>AD 的四个相关基因与染色体？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">APP（21 号）、PSEN1（14 号）、PSEN2（1 号）与早发家族性 AD 有关；APOE（19 号）与散发性 AD 关系密切。APOE ε4 致病，ε2 保护。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag diag">鉴别</span><p>VaD 诊断的两个时间数字？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">痴呆发生于<strong>卒中后 3 个月内</strong>，并且<strong>持续 6 个月以上</strong>；认知损害不均衡，复杂注意力与执行功能受损明显，记忆可轻微或不存在。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag diag">核心</span><p>DLB 的四大核心临床特征？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">①波动性认知功能障碍；②反复出现的生动幻视；③快速眼动期睡眠行为障碍（RBD）；④一个或多个帕金森综合征核心症状（运动迟缓、肌强直、静止性震颤）。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag diag">分型</span><p>FTD 的三个亚型及各自核心？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">bvFTD：精神行为症状与人格改变（最常见，约 50%）；SD：命名性失语、词语与客体理解进行性减退；PNFA：言语功能障碍、语法缺失，词语理解保留。SD 与 PNFA 归为 PPA。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag diag">标准</span><p>精神活性物质所致痴呆的诊断五条？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">①符合痴呆标准；②损害持续时间<strong>超出中毒与急性戒断的常见病程</strong>；③物质在使用时间段或范围内能产生该损害；④痴呆发生时间与使用、停止时间相符；⑤不能用其他躯体疾病或精神障碍解释。</div>
+    </div></div>
+  </div>
+</section>
+
+<!-- ===== 19 病例挑战 ===== -->
+<section id="cases">
+  <div class="sec-head"><div class="badge">19</div><h2>病例挑战<span class="en">3 cases · increasing difficulty</span></h2></div>
+  <p class="sec-lead">以下均为<strong>模拟临床情境</strong>：依据教材所述典型表现与处理原则构建，用于训练临床推理，<strong>不是教材原案例</strong>，也不含虚构的化验数值与量表分数。教材本章未提供任何原始病例。</p>
+
+  <div class="case">
+    <span class="ctag">难度 ★ · 识别与分型</span>
+    <h3>案例 1：术后第三天的"两个样子"</h3>
+    <div class="scene">某 76 岁男性，因股骨骨折接受手术。术后第二天夜间出现烦躁、拉扯输液管、大喊"有人要抓我"，语速快、拒绝配合。第三天上午查房时却安静嗜睡、问话只答一两个字，家属说"他白天像变了个人，晚上又闹"。既往有高血压、糖尿病，听力较差。</div>
+    <ol class="ques">
+      <li>最可能的诊断是什么？诊断依据有哪些？</li>
+      <li>该患者属于谵妄的哪一型？为什么不能因为"上午很安静"就放松警惕？</li>
+      <li>处理的第一步和用药指征分别是什么？</li>
+    </ol>
+    <details><summary>查看答案与解析</summary><div class="dbody">
+      <p class="note">模拟临床情境，依据教材知识点构建，不是教材原案例。</p>
+      <strong>1.</strong> 谵妄。依据：<strong>急性起病</strong>（术后数天内）、<strong>注意与意识障碍</strong>、<strong>一天内波动</strong>（夜间躁动、白天嗜睡）、恐怖性幻觉内容（"有人要抓我"）、有明确诱因（<strong>外科手术、麻醉</strong>），并存在素质性因素（高龄、共病、听力受损）。<br>
+      <strong>2.</strong> 表现为<strong>高活动与低活动交替</strong>，符合<strong>混合型</strong>；教材明确混合型临床上最为多见。不能因白天安静就放松：<strong>低活动型容易被忽视</strong>，且活动过多与减少之间会出现<strong>不可预测的转变</strong>。<br>
+      <strong>3.</strong> 第一步是<strong>纠正病因</strong>：针对原发躯体疾病 / 手术相关因素（如感染、电解质紊乱、疼痛、致谵妄药物）积极处理，并加强支持治疗、预防并发症。用药指征：仅当存在<strong>严重感知觉紊乱、妄想及冲动激越行为，且语言安抚无效或行为可能对自身 / 他人造成危险</strong>时，才考虑抗精神病药；兴奋躁动用小剂量氟哌啶醇肌注，症状较轻可用小剂量喹硫平、奥氮平、利培酮口服；小剂量起始、缓慢滴定、好转尽早停。<br>
+      <span class="note">若转为低活动型为主，则避免使用抗精神病药。教材未涉及具体剂量。</span>
+    </div></details>
+  </div>
+
+  <div class="case">
+    <span class="ctag">难度 ★★ · 亚型鉴别</span>
+    <h3>案例 2："摔一跤，糊涂一截"</h3>
+    <div class="scene">某 72 岁女性，有高血压、糖尿病史。半年前一次"中风"后出现反应变慢、做事没条理，近三个月记性也差了些，但还能自己买菜。家属描述她的状态"时好时坏，像下台阶一样，一次不如一次"。查体可见一侧肢体肌力下降。影像学检查提示脑血管性病灶（模拟情境设定，不列具体数值）。</div>
+    <ol class="ques">
+      <li>最可能是什么类型的痴呆？诊断需要满足哪些条件？</li>
+      <li>与阿尔茨海默病如何鉴别？</li>
+      <li>治疗的第一位是什么？</li>
+    </ol>
+    <details><summary>查看答案与解析</summary><div class="dbody">
+      <p class="note">模拟临床情境，依据教材知识点构建，不是教材原案例；影像仅作定性表述。</p>
+      <strong>1.</strong> 脑血管病所致痴呆（VaD）。诊断条件：①符合痴呆诊断标准；②存在脑血管疾病证据（病史 / 体格检查 / 神经影像学）；③痴呆与脑血管事件密切相关——<strong>发生于卒中后 3 个月内，并持续 6 个月以上</strong>，认知障碍突然加重、波动或阶梯样进展；④认知损害不均衡，<strong>复杂注意力与执行功能受损明显</strong>，记忆轻微或不存在；⑤自知力和判断力可保持较好；⑥不能用其他脑疾病或精神障碍解释。<br>
+      <strong>2.</strong> AD <strong>起病缓慢、以记忆力下降为主</strong>，影像为<strong>显著的脑皮质萎缩</strong>；VaD <strong>起病较急、阶梯式</strong>，存在<strong>轻微记忆受损或不存在记忆受损</strong>，并有<strong>脑血管疾病与影像病灶</strong>。本例"卒中后起病 + 阶梯式 + 偏执行/注意 + 肌力下降"更符合 VaD。<br>
+      <strong>3.</strong> 第一位是<strong>防治卒中</strong>：控制高血压、血脂异常、糖尿病、心脏病，戒烟；早期诊断和治疗卒中、预防再发（抗血小板聚集、抗凝治疗等）。同时改善认知（ChEI、美金刚等）并控制行为精神症状（小剂量开始、缓慢加量，控制良好后逐步减少抗精神病药）。<br>
+      <span class="note">教材未涉及药物剂量；对脑代谢药、扩血管药明确注明"需要更多临床研究验证其疗效"。</span>
+    </div></details>
+  </div>
+
+  <div class="case">
+    <span class="ctag">难度 ★★★ · 综合判断与用药安全</span>
+    <h3>案例 3：夜里看见"熟悉的人在屋里走动"</h3>
+    <div class="scene">某 74 岁男性，近一年来认知状态"忽明忽暗"，有时几分钟内从清楚变得茫然；夜里常看见已故的妻子和一只猫在房间里走动，形象生动、会动，他也因此害怕。家属发现他动作越来越慢、双手僵硬，但抖得不明显；他还多次在睡梦中大喊、拳打脚踢，醒后完全不记得。因夜间吵闹，外院曾拟加用抗精神病药。</div>
+    <ol class="ques">
+      <li>最可能的诊断是什么？四大核心特征是否齐备？</li>
+      <li>与帕金森病痴呆、阿尔茨海默病如何鉴别？</li>
+      <li>针对"夜间吵闹"，用药上最需要提醒什么？教材推荐的改善认知药物是什么？</li>
+    </ol>
+    <details><summary>查看答案与解析</summary><div class="dbody">
+      <p class="note">模拟临床情境，依据教材知识点构建，不是教材原案例。</p>
+      <strong>1.</strong> 路易体痴呆（DLB）。四大核心：①<strong>波动性认知功能障碍</strong>（忽明忽暗、突发短暂）；②<strong>反复生动的幻视</strong>（熟悉的人 / 动物、形象活动、夜间反复）；③<strong>RBD</strong>（睡中大喊、拳打脚踢、醒后不能回忆，且为最早出现的症状之一）；④<strong>帕金森综合征核心症状</strong>（运动迟缓、肌张力增高、静止性震颤；本例抖不明显但僵硬、变慢）。四项齐备，符合"很可能 DLB"的方向。<br>
+      <strong>2.</strong> 与 <strong>PD 痴呆</strong>：DLB 的锥体外系症状<strong>多对称、静止性震颤少见、左旋多巴疗效较差</strong>，且注意障碍、精神症状及认知波动<strong>更明显</strong>；PD 痴呆早期即有锥体外系受累（静止性震颤、肌强直），一般无卒中史。与 <strong>AD</strong>：幻视、注意力下降、视空间障碍和<strong>早期锥体外系症状</strong>支持 DLB；<strong>早期显著情节记忆损害与显著内侧颞叶萎缩</strong>支持 AD；教材提示联合脑脊液检测可提高鉴别效能。<br>
+      <strong>3.</strong> 最需要提醒：教材把「<strong>对抗精神病药高度敏感</strong>」列为 DLB 的支持性临床特征，并在 AD 鉴别段写明 DLB 患者「一般对镇静药异常敏感」——加用抗精神病药必须格外谨慎、充分权衡。改善认知与精神行为：<strong>多奈哌齐、卡巴拉汀</strong>；帕金森综合征可用<strong>左旋多巴</strong>（可改善 32%～50% 患者的运动功能）。<br>
+      <span class="note">教材未涉及上述药物剂量与疗程。</span>
+    </div></details>
+  </div>
+</section>
+
+<!-- ===== 20 拓展 ===== -->
+<section id="ext">
+  <div class="sec-head"><div class="badge">20</div><h2>拓展延伸<span class="en">Beyond the chapter</span></h2></div>
+  <p class="sec-lead">本章教材已提及但未展开的内容集中列在这里；同时明确标出"教材未涉及"的空白，避免把课外知识误当成教材结论。</p>
+  <div class="grid2">
+    <div class="card cyan">
+      <h3>教材提及、但仅一笔带过的内容</h3>
+      <ul>
+        <li><strong>DSM-5 与 ICD-11 的命名差异：</strong>教材写明 DSM-5 将痴呆更名为"重度神经认知障碍"并提出 MND，ICD-11 保留"痴呆"说法并延续 MND 概念；但教材<strong>未列出两套体系的具体诊断条目</strong>。</li>
+        <li><strong>谵妄的评估工具：</strong>教材点名 MMSE、CAM（意识模糊评定法）、DRS（谵妄分级量表），但<strong>未涉及各量表的条目、分值或 cutoff</strong>。</li>
+        <li><strong>AD 的生物标志物：</strong>教材给出脑脊液 Aβ42、p-tau、t-tau 与血液 Aβ42/Aβ40、p-tau181 的变化方向，但<strong>未涉及参考值与判读阈值</strong>。</li>
+        <li><strong>CADASIL：</strong>教材只给出全称"伴有皮质下梗死伴白质脑病的常染色体显性遗传性脑动脉病"，未展开诊断标准。</li>
+        <li><strong>BPSD 的"需求未满足理论"：</strong>教材只作概念性介绍，未给出评估工具或干预手册。</li>
+        <li><strong>PD 的 MDS 诊断标准：</strong>教材提到由国际运动障碍协会制定并推荐认知评价量表，未列具体条目。</li>
+      </ul>
+    </div>
+    <div class="card orange">
+      <h3>教材未涉及 / 本指南不补写的内容</h3>
+      <ul>
+        <li>谵妄、AD、VaD、DLB、FTD 各药的<strong>具体剂量、滴定速度与疗程</strong>——教材全章均未涉及。</li>
+        <li>MMSE、MoCA、CDR、NPI、ADLS 的<strong>具体分值界限与评分方法</strong>。</li>
+        <li>痴呆<strong>轻、中、重度的分级标准</strong>——教材只要求"判定严重程度"，未涉及分级条目。</li>
+        <li><strong>中国 FTD 的流行病学数据</strong>——教材明确"我国尚无 FTD 的流行病学数据"。</li>
+        <li>谵妄的<strong>非药物干预方案细节</strong>（如具体刺激类型、频次、时长）。</li>
+        <li>痴呆的<strong>疾病修饰治疗</strong>（如针对 Aβ 的单克隆抗体等）——教材未提及，本指南不引入。</li>
+        <li>照料者<strong>结构化支持方案的组成与频次</strong>——教材只强调"减轻照料者负担"与照料者压力对 BPSD 的影响。</li>
+      </ul>
+    </div>
+  </div>
+  <div class="callout ext">
+    <span class="ct">📖 使用提醒</span>
+    本指南所有定义、诊断条目、患病率、药物名称与时间节点均取自教材第十九章原文（印刷页 222–239）。凡标注"教材未涉及"的地方，不要用其他资料的数字替代，以免与教材答案冲突；教材本章<strong>没有任何原始临床案例</strong>，文中"病例挑战"全部为模拟情境并已显著标注。
+  </div>
+  <div class="hr"></div>
+  <p class="note" style="text-align:center">精神病学（第9版）· 第十九章 神经认知障碍 · 印刷页 222–239 · 学习指南完</p>
+</section>
+
+</div>
+<nav class="chapter-pager" aria-label="章节间导航"><a class="cp-prev" href="精神病学_第十八章_性心理障碍和做作性障碍_学习指南.html">← 上一章：第十八章</a><a class="cp-toc" href="index.html">目录</a><a class="cp-next" href="精神病学_第二十章_与妊娠、分娩或产褥期有关的精神或行为障碍_学习指南.html">下一章：第二十章 →</a></nav>
+</main>
+
+<button class="top" id="topBtn" aria-label="回到顶部">↑</button>
+<script>
+/* ============================================================
+   精神病学学习指南 · 统一交互层 v1（构建期注入，整体替换原 IIFE）
+   兼容 A 族（.tabbar button + [data-panel] + .panel.on）与
+   B 族（.tab-nav + .tab-panel.active）两套 DOM 约定。
+   特性检测 + 防御式查询 + 幂等；不引入任何外部依赖。
+   ============================================================ */
+(function () {
+  'use strict';
+  if (window.__PSY_GUIDE_APP__) { return; }
+  window.__PSY_GUIDE_APP__ = true;
+
+  var d = document;
+
+  function all(sel, root) {
+    return Array.prototype.slice.call((root || d).querySelectorAll(sel));
+  }
+  function on(el, ev, fn, opt) {
+    if (el) { el.addEventListener(ev, fn, opt || false); }
+  }
+  function norm(s) {
+    return String(s || '').replace(/\s+/g, '').toUpperCase();
+  }
+
+  /* ---------- 1. Tab 切换（两族约定都支持） ---------- */
+  function initTabs() {
+    all('.tabs, [data-tabs]').forEach(function (g) {
+      if (g.__psyTabs) { return; }
+      g.__psyTabs = true;
+      var isA = !!g.querySelector('.tabbar button');
+      var btns = all(isA ? '.tabbar button' : '.tab-nav .tab-btn', g);
+      if (!btns.length) { return; }
+      var cls = isA ? 'on' : 'active';
+      var nav = btns[0].closest('.tabbar') || btns[0].closest('.tab-nav');
+      if (nav && !nav.hasAttribute('role')) { nav.setAttribute('role', 'tablist'); }
+      all(isA ? '.panel' : '.tab-panel', g).forEach(function (p) {
+        if (!p.hasAttribute('role')) { p.setAttribute('role', 'tabpanel'); }
+      });
+      function activate(btn) {
+        btns.forEach(function (b) {
+          b.classList.remove(cls);
+          b.setAttribute('aria-selected', 'false');
+        });
+        btn.classList.add(cls);
+        btn.setAttribute('aria-selected', 'true');
+        var id = btn.getAttribute('data-tab');
+        if (!id) { return; }
+        var target = isA
+          ? g.querySelector('[data-panel="' + id + '"]')
+          : (g.querySelector('.tab-panel#' + id) || d.getElementById(id));
+        all(isA ? '.panel' : '.tab-panel', g).forEach(function (p) {
+          var show = isA ? (p.getAttribute('data-panel') === id) : (p === target);
+          p.classList.toggle(cls, show);
+        });
+      }
+      btns.forEach(function (btn, i) {
+        if (!btn.hasAttribute('role')) { btn.setAttribute('role', 'tab'); }
+        btn.setAttribute('aria-selected', btn.classList.contains(cls) ? 'true' : 'false');
+        if (!btn.hasAttribute('tabindex') && !btn.classList.contains(cls)) { btn.setAttribute('tabindex', '0'); }
+        on(btn, 'click', function () { activate(btn); });
+        on(btn, 'keydown', function (e) {
+          if (e.key !== 'ArrowRight' && e.key !== 'ArrowLeft') { return; }
+          e.preventDefault();
+          var nx = btns[(i + (e.key === 'ArrowRight' ? 1 : btns.length - 1)) % btns.length];
+          if (nx) { nx.focus(); activate(nx); }
+        });
+      });
+    });
+  }
+
+  /* ---------- 2. 速记卡：点击/键盘翻转 + 可达性 ---------- */
+  function initCards() {
+    all('.flashcard').forEach(function (card) {
+      if (card.__psyCard) { return; }
+      card.__psyCard = true;
+      card.setAttribute('tabindex', '0');
+      card.setAttribute('role', 'button');
+      function sync() {
+        card.setAttribute('aria-pressed', card.classList.contains('flipped') ? 'true' : 'false');
+      }
+      function flip() { card.classList.toggle('flipped'); sync(); }
+      on(card, 'click', flip);
+      on(card, 'keydown', function (e) {
+        if (e.key === 'Enter' || e.key === ' ' || e.key === 'Spacebar') {
+          e.preventDefault();
+          flip();
+        }
+      });
+      sync();
+    });
+  }
+
+  /* ---------- 3. 自测题交互化（核心新功能） ---------- */
+  function initQuiz() {
+    var questions = all('.quiz-q, .quiz-item');
+    if (!questions.length) { return; }
+    var groups = {};
+
+    function keyOf(o) {
+      var L = o.getAttribute('data-letter');
+      if (L && String(L).replace(/\s+/g, '') !== '') { return norm(L); }
+      var sp = o.querySelector('.l');
+      if (sp) {
+        var t = norm(sp.textContent).replace(/[.．、:：]/g, '');
+        if (t !== '') { return t; }
+      }
+      var txt = norm(o.textContent);
+      if (txt.indexOf('正确') >= 0 || txt.indexOf('错误') >= 0) { return txt; }
+      return txt.charAt(0);
+    }
+
+    function getGroup(q) {
+      var sec = q.closest('.quiz-block') || q.closest('section') || d.body;
+      if (!groups[sec.__psyGid]) {
+        sec.__psyGid = 'g' + (Object.keys(groups).length + 1);
+        groups[sec.__psyGid] = { sec: sec, total: 0, score: 0, row: null, first: null };
+      }
+      var g = groups[sec.__psyGid];
+      if (!g.first) { g.first = q; }
+      return g;
+    }
+
+    function ensureRow(g) {
+      if (g.row) { return g.row; }
+      var row = d.createElement('div');
+      row.className = 'quiz-score';
+      row.setAttribute('role', 'status');
+      row.setAttribute('aria-live', 'polite');
+      row.innerHTML = '<span class="qs-label">自测计分</span>' +
+        '<span class="qs-num">得分 0 / ' + g.total + '</span>' +
+        '<span class="qs-bar"><i></i></span>';
+      g.first.parentNode.insertBefore(row, g.first);
+      g.row = row;
+      return row;
+    }
+
+    function updateRow(g) {
+      var row = ensureRow(g);
+      var num = row.querySelector('.qs-num');
+      var bar = row.querySelector('.qs-bar i');
+      if (num) { num.textContent = '得分 ' + g.score + ' / ' + g.total; }
+      if (bar) { bar.style.width = (g.total ? Math.round(g.score / g.total * 100) : 0) + '%'; }
+    }
+
+    questions.forEach(function (q) {
+      if (q.__psyQuiz) { return; }
+      q.__psyQuiz = true;
+      var opts = all('.opt', q);
+      if (!opts.length) { opts = all('.quiz-options > li', q); }
+      if (!opts.length) { return; }
+
+      /* 正确答案先记入内存：预标 correct 优先（记录后立即移除，消除剧透），
+         否则从解析文本「答案：X / 答案 X」提取（不改动任何文字） */
+      var ansKeys = [];
+      var preset = opts.filter(function (o) { return o.classList.contains('correct'); });
+      preset.forEach(function (o) { o.classList.remove('correct'); });
+      if (preset.length) {
+        ansKeys = preset.map(keyOf);
+      } else {
+        var dt = q.querySelector('details');
+        var txt = dt ? dt.textContent : '';
+        var m = txt.match(/答案\s*[:：]?\s*([A-Za-z](?:[\s、,，·和及]*[A-Za-z])*)/);
+        if (m) {
+          ansKeys = m[1].match(/[A-Za-z]/g) || [];
+        } else {
+          var m2 = txt.match(/答案\s*[:：]?\s*(正确|错误)/);
+          if (m2) { ansKeys = [m2[1]]; }
+        }
+      }
+      if (!ansKeys.length) { return; } /* 无可判定答案（名词解释等），保持原样 */
+
+      var g = getGroup(q);
+      g.total += 1;
+      var multi = ansKeys.length > 1;
+      var ansSet = ansKeys.map(norm);
+      var locked = false;
+      var picked = [];
+
+      function revealAll() {
+        opts.forEach(function (o) {
+          if (ansSet.indexOf(keyOf(o)) >= 0) { o.classList.add('is-reveal'); }
+        });
+      }
+      function finish(ok) {
+        locked = true;
+        q.classList.add('is-locked');
+        var dt = q.querySelector('details');
+        if (dt) { dt.open = true; }
+        if (ok) { g.score += 1; }
+        updateRow(g);
+      }
+
+      opts.forEach(function (o) {
+        o.setAttribute('tabindex', '0');
+        function pick() {
+          if (locked) { return; }
+          var k = keyOf(o);
+          if (ansSet.indexOf(k) >= 0) {
+            o.classList.add('is-right');
+            if (picked.indexOf(k) < 0) { picked.push(k); }
+            if (multi) {
+              if (picked.length === ansSet.length) { finish(true); }
+            } else {
+              finish(true);
+            }
+          } else {
+            o.classList.add('is-wrong');
+            revealAll();
+            finish(false);
+          }
+        }
+        on(o, 'click', pick);
+        on(o, 'keydown', function (e) {
+          if (e.key === 'Enter' || e.key === ' ' || e.key === 'Spacebar') {
+            e.preventDefault();
+            pick();
+          }
+        });
+      });
+    });
+
+    Object.keys(groups).forEach(function (id) {
+      if (groups[id].total > 0) { updateRow(groups[id]); }
+    });
+  }
+
+  /* ---------- 4. 侧栏 scroll spy（本页锚点高亮） ---------- */
+  function initSpy() {
+    var links = all('#sidebar a[href^="#"]');
+    if (!links.length || !('IntersectionObserver' in window)) { return; }
+    var map = {};
+    links.forEach(function (a) {
+      var id = a.getAttribute('href').slice(1);
+      if (id) { map[id] = a; }
+    });
+    var secs = [];
+    Object.keys(map).forEach(function (id) {
+      var s = d.getElementById(id);
+      if (s) { secs.push(s); }
+    });
+    if (!secs.length) { return; }
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting && map[e.target.id]) {
+          links.forEach(function (a) { a.classList.remove('active'); });
+          map[e.target.id].classList.add('active');
+        }
+      });
+    }, { rootMargin: '-15% 0px -70% 0px', threshold: 0 });
+    secs.forEach(function (s) { io.observe(s); });
+  }
+
+  /* ---------- 5. 阅读进度条 + 回顶 ---------- */
+  function initScroll() {
+    var bar = d.getElementById('readbar');
+    var topBtn = d.getElementById('topBtn') || d.getElementById('backTop');
+    var ticking = false;
+    function step() {
+      ticking = false;
+      var h = d.documentElement;
+      var y = window.pageYOffset || h.scrollTop || 0;
+      if (bar) {
+        var max = h.scrollHeight - h.clientHeight;
+        bar.style.width = (max > 0 ? (y / max) * 100 : 0) + '%';
+      }
+      if (topBtn) {
+        topBtn.classList.toggle('show', y > 400);     /* A 族类名 */
+        topBtn.classList.toggle('visible', y > 400);  /* B 族类名 */
+      }
+    }
+    on(window, 'scroll', function () {
+      if (!ticking) { ticking = true; window.requestAnimationFrame(step); }
+    }, { passive: true });
+    step();
+    on(topBtn, 'click', function () {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
+
+  /* ---------- 6. 侧栏开合（存在才绑定；抽屉打开时锁定背景滚动） ---------- */
+  function initSidebar() {
+    var sidebar = d.getElementById('sidebar');
+    if (!sidebar) { return; }
+    var btn = d.getElementById('menuBtn') || d.getElementById('navToggle');
+    var ov = d.getElementById('overlay') || d.getElementById('sidebarOverlay');
+    function lock(open) {
+      /* 仅移动抽屉断点（≤900px）锁滚动；宽屏兜底解除，防布局残留 */
+      d.body.classList.toggle('nav-locked', !!open && window.innerWidth <= 900);
+    }
+    function close() {
+      sidebar.classList.remove('open');
+      if (ov) { ov.classList.remove('show'); }
+      lock(false);
+    }
+    on(btn, 'click', function () {
+      var open = !sidebar.classList.contains('open');
+      sidebar.classList.toggle('open');
+      if (ov) { ov.classList.toggle('show'); }
+      lock(open);
+    });
+    on(ov, 'click', close);
+    all('a', sidebar).forEach(function (a) {
+      on(a, 'click', function () {
+        if (window.innerWidth <= 900) { close(); }
+      });
+    });
+    on(window, 'resize', function () {
+      if (window.innerWidth > 900) { lock(false); }
+    });
+  }
+
+  /* ---------- 启动（脚本位于 body 末尾，DOM 已就绪；防御兜底） ---------- */
+  function boot() {
+    initTabs();
+    initCards();
+    initQuiz();
+    initSpy();
+    initScroll();
+    initSidebar();
+  }
+  if (d.readyState === 'loading') {
+    on(d, 'DOMContentLoaded', boot);
+  } else {
+    boot();
+  }
+})();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,3240 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>精神病学 第五章 神经发育障碍 · 学习指南</title>
+<style>
+:root{
+  --primary:#0EA5E9; --accent:#10B981; --symptom:#EF4444; --treatment:#10B981;
+  --cause:#3B82F6; --diagnosis:#F59E0B; --memory:#8B5CF6; --danger:#DC2626;
+  --quiz:#EC4899; --flashcard:#06B6D4; --bg:#F0F7FA; --card:#FFFFFF;
+  --ink:#0F172A; --muted:#64748B; --border:#E2E8F0; --accent2:#10B981; --accent3:#06B6D4;
+  --shadow:0 4px 18px rgba(15,23,42,.06); --radius:14px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:'Microsoft YaHei','PingFang SC','Hiragino Sans GB',system-ui,-apple-system,sans-serif;font-size:16px;line-height:1.75;-webkit-font-smoothing:antialiased}
+#readbar{position:fixed;top:0;left:0;height:4px;width:0;background:linear-gradient(135deg,#0EA5E9 0%,#06B6D4 50%,#10B981 100%);z-index:300;transition:width .12s linear}
+a{color:var(--primary);text-decoration:none}
+a:hover{text-decoration:underline}
+.sidebar{position:fixed;top:0;left:0;width:272px;height:100vh;background:#fff;border-right:1px solid var(--border);overflow-y:auto;padding:20px 16px 40px;z-index:120}
+.sidebar h2{font-size:17px;margin:0 0 4px;line-height:1.5}
+.sidebar .sub{font-size:12px;color:var(--muted);line-height:1.6;margin-bottom:14px}
+.toc-group{font-size:12px;letter-spacing:.08em;color:var(--muted);margin:16px 0 6px;font-weight:700}
+.sidebar a.toc{display:block;padding:7px 10px;border-radius:8px;font-size:14px;color:var(--ink);line-height:1.5;margin:2px 0}
+.sidebar a.toc:hover{background:#E0F2FE;text-decoration:none}
+.sidebar a.toc .n{display:inline-block;min-width:26px;color:var(--primary);font-weight:700}
+.sidebar .unitlink{font-weight:600}
+.sidebar .sub2{padding-left:26px;font-size:13px;color:var(--muted)}
+.overlay{display:none}
+.menu-btn{display:none;position:fixed;top:14px;left:14px;z-index:200;width:46px;height:46px;border-radius:12px;border:1px solid var(--border);background:#fff;box-shadow:var(--shadow);font-size:22px;line-height:1;color:var(--primary);cursor:pointer}
+.main{margin-left:272px;padding:0 40px 90px;max-width:1240px}
+.wrap{max-width:980px;margin:0 auto}
+.hero{background:linear-gradient(135deg,#0EA5E9 0%,#06B6D4 50%,#10B981 100%);color:#fff;border-radius:0 0 26px 26px;padding:52px 44px 40px;margin:0 -40px 30px;box-shadow:0 12px 30px rgba(14,165,233,.18)}
+.hero .chap{display:inline-block;font-size:13px;letter-spacing:.22em;background:rgba(255,255,255,.18);padding:5px 14px;border-radius:999px;margin-bottom:16px}
+.hero h1{font-size:42px;line-height:1.25;margin:0 0 10px;font-weight:800}
+.hero .tagline{font-size:18px;opacity:.96;margin:0 0 6px}
+.hero .meta{font-size:13px;opacity:.85}
+.goalbox{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.28);border-radius:14px;padding:18px 20px;margin-top:22px}
+.goalbox h3{margin:0 0 10px;font-size:15px;letter-spacing:.06em}
+.goalbox ul{margin:0;padding-left:20px}
+.goalbox li{margin:4px 0;font-size:14.5px;line-height:1.65}
+.lv{display:inline-block;font-size:11px;font-weight:700;padding:1px 8px;border-radius:999px;background:#fff;color:#0369A1;margin-right:6px;vertical-align:1px}
+.lv.l2{color:#047857}.lv.l3{color:#B45309}.lv.l4{color:#B91C1C}
+section{scroll-margin-top:18px;margin:0 0 46px}
+.sec-head{display:flex;align-items:center;gap:12px;margin:0 0 8px}
+.sec-head .badge{flex:0 0 auto;width:44px;height:44px;border-radius:13px;background:linear-gradient(135deg,#0EA5E9,#06B6D4);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:17px;box-shadow:0 6px 14px rgba(14,165,233,.25)}
+.sec-head h2{font-size:27px;margin:0;line-height:1.35;font-weight:800}
+.sec-head .en{font-size:13px;color:var(--muted);font-weight:400;margin-left:6px}
+.sec-lead{color:#334155;background:#fff;border-left:4px solid var(--primary);border-radius:0 12px 12px 0;padding:13px 18px;margin:12px 0 22px;box-shadow:var(--shadow);font-size:15px}
+.card{background:var(--card);border:1px solid var(--border);border-left:6px solid var(--primary);border-radius:var(--radius);padding:20px 22px;margin:16px 0;box-shadow:var(--shadow)}
+.card.red{border-left-color:var(--symptom)} .card.green{border-left-color:var(--treatment)}
+.card.blue{border-left-color:var(--cause)} .card.orange{border-left-color:var(--diagnosis)}
+.card.purple{border-left-color:var(--memory)} .card.cyan{border-left-color:var(--flashcard)}
+.card.danger{border-left-color:var(--danger)} .card.pink{border-left-color:var(--quiz)}
+.card h3,.col-title{font-size:19px;margin:0 0 10px;line-height:1.45;display:flex;align-items:center;gap:9px;flex-wrap:wrap}
+.col-title .idx{font-size:12px;font-weight:800;color:#fff;background:var(--primary);padding:2px 9px;border-radius:999px;letter-spacing:.03em}
+.card p{margin:8px 0}
+.card ul,.card ol{margin:8px 0;padding-left:22px}
+.card li{margin:5px 0}
+.quote{background:#EFF8FF;border:1px dashed #7DD3FC;border-radius:10px;padding:12px 16px;margin:10px 0;font-size:15px;color:#0C4A6E}
+.quote .lab{display:inline-block;font-size:11px;font-weight:800;background:#0EA5E9;color:#fff;padding:1px 7px;border-radius:5px;margin-right:7px;vertical-align:1px}
+.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.grid4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.grid2>*,.grid3>*,.grid4>*{min-width:0}
+.mini{background:#F8FAFC;border:1px solid var(--border);border-radius:11px;padding:12px 14px}
+.mini h4{margin:0 0 5px;font-size:15px;color:#0F172A}
+.mini p,.mini ul{font-size:14px;color:#334155;margin:4px 0}
+.mini ul{padding-left:18px}
+.stat{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0}
+.stat span{font-size:13px;background:#E0F2FE;color:#075985;border-radius:999px;padding:3px 11px;font-weight:600}
+.table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:12px 0;border-radius:12px;border:1px solid var(--border)}
+table{border-collapse:collapse;width:100%;min-width:560px;background:#fff;font-size:14px}
+th{background:#0F172A;color:#fff;font-weight:700;padding:10px 12px;text-align:left;line-height:1.5;font-size:13.5px}
+td{padding:10px 12px;border-top:1px solid var(--border);vertical-align:top;line-height:1.65}
+tbody tr:nth-child(even){background:#F8FAFC}
+td strong{color:#0C4A6E}
+.callout{border-radius:12px;padding:13px 16px;margin:12px 0;border:1px solid;font-size:14.5px}
+.callout .ct{font-weight:800;display:block;margin-bottom:4px;font-size:14.5px}
+.callout.tip{background:#F5F3FF;border-color:#C4B5FD;color:#4C1D95}
+.callout.warn{background:#FEF2F2;border-color:#FCA5A5;color:#7F1D1D}
+.callout.key{background:#ECFDF5;border-color:#6EE7B7;color:#065F46}
+.callout.book{background:#EFF6FF;border-color:#93C5FD;color:#1E3A8A}
+.callout.quiz{background:#FDF2F8;border-color:#F9A8D4;color:#831843}
+.callout.ext{background:#F0F9FF;border-color:#7DD3FC;color:#0C4A6E}
+.timeline{border-left:3px solid #BAE6FD;margin:14px 0 6px 8px;padding-left:20px}
+.tl-item{position:relative;margin:0 0 16px}
+.tl-item:before{content:"";position:absolute;left:-28px;top:5px;width:13px;height:13px;border-radius:50%;background:#fff;border:3px solid var(--primary)}
+.tl-item h4{margin:0 0 3px;font-size:15px;color:#075985}
+.tl-item p{margin:0;font-size:14px;color:#334155}
+.bar{background:#E2E8F0;border-radius:999px;height:9px;overflow:hidden;margin:6px 0 10px}
+.bar i{display:block;height:100%;border-radius:999px;background:linear-gradient(90deg,#0EA5E9,#10B981)}
+.bar-label{display:flex;justify-content:space-between;font-size:13px;color:#334155}
+.tabs{margin:14px 0}
+.tabbar{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:12px}
+.tabbar button{border:1px solid var(--border);background:#fff;border-radius:999px;padding:7px 15px;font-size:14px;font-family:inherit;cursor:pointer;color:#334155}
+.tabbar button.on{background:var(--primary);color:#fff;border-color:var(--primary)}
+.panel{display:none}
+.panel.on{display:block;animation:fade .25s ease}
+@keyframes fade{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}
+details{background:#fff;border:1px solid var(--border);border-radius:11px;margin:10px 0;overflow:hidden}
+summary{cursor:pointer;padding:11px 15px;font-weight:700;color:#075985;list-style:none;font-size:14.5px;background:#F8FAFC}
+summary::-webkit-details-marker{display:none}
+summary:before{content:"▸";display:inline-block;margin-right:7px;color:var(--primary);transition:transform .2s}
+details[open] summary:before{transform:rotate(90deg)}
+details[open] summary{border-bottom:1px solid var(--border)}
+.dbody{padding:13px 16px;font-size:14.5px;color:#1E293B}
+.flashcard-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin:16px 0}
+.flashcard{perspective:1200px;height:200px;cursor:pointer}
+.fc-inner{position:relative;width:100%;height:100%;transition:transform .55s;transform-style:preserve-3d}
+.flashcard.flipped .fc-inner{transform:rotateY(180deg)}
+.fc-front,.fc-back{position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;border-radius:14px;padding:14px 16px;display:flex;flex-direction:column;justify-content:center;box-shadow:var(--shadow);overflow:auto}
+.fc-front{background:#fff;border:1px solid var(--border);border-top:5px solid var(--flashcard)}
+.fc-back{background:#ECFEFF;border:1px solid #A5F3FC;transform:rotateY(180deg);font-size:13.5px;line-height:1.65;color:#164E63}
+.tag{display:inline-block;align-self:flex-start;font-size:11px;font-weight:800;padding:1px 8px;border-radius:999px;margin-bottom:8px;letter-spacing:.04em}
+.tag.concept{background:#DBEAFE;color:#1E40AF}
+.tag.diag{background:#FFEDD5;color:#9A3412}
+.tag.treat{background:#D1FAE5;color:#065F46}
+.tag.data{background:#FCE7F3;color:#9D174D}
+.tag.risk{background:#FEE2E2;color:#991B1B}
+.fc-front p{margin:0;font-size:14.5px;font-weight:700;line-height:1.6}
+.fc-hint{position:absolute;bottom:10px;left:16px;font-size:11px;color:#94A3B8}
+.quiz-q{background:#fff;border:1px solid var(--border);border-left:5px solid var(--quiz);border-radius:12px;padding:16px 18px;margin:16px 0;box-shadow:var(--shadow)}
+.quiz-q .qh{display:flex;justify-content:space-between;gap:10px;align-items:flex-start;margin-bottom:8px;flex-wrap:wrap}
+.quiz-q .qno{font-size:12px;font-weight:800;color:#fff;background:var(--quiz);border-radius:999px;padding:2px 9px;letter-spacing:.04em}
+.diff{font-size:12px;color:#B45309;background:#FEF3C7;border-radius:999px;padding:2px 10px;font-weight:700;white-space:nowrap}
+.qtype{font-size:12px;color:#6B21A8;background:#F3E8FF;border-radius:999px;padding:2px 10px;font-weight:700;white-space:nowrap}
+.opts{margin:10px 0 4px;display:grid;gap:7px}
+.opt{border:1px solid var(--border);border-radius:9px;padding:8px 12px;font-size:14.5px;background:#F8FAFC}
+.opt.correct{border-color:#6EE7B7;background:#ECFDF5;color:#065F46;font-weight:600}
+.opt .l{font-weight:800;color:var(--primary);margin-right:7px}
+.opt.correct .l{color:#047857}
+.brief{font-size:14px;color:#334155;margin-top:4px}
+.case{border:1px solid var(--border);border-top:5px solid var(--danger);border-radius:14px;background:#fff;padding:20px 22px;margin:18px 0;box-shadow:var(--shadow)}
+.case h3{font-size:19px;margin:0 0 8px;color:#7F1D1D}
+.case .ctag{font-size:11.5px;font-weight:800;background:#FEE2E2;color:#991B1B;padding:2px 9px;border-radius:999px;display:inline-block;margin-bottom:10px}
+.case .scene{background:#FFF7ED;border-left:4px solid #FB923C;border-radius:0 10px 10px 0;padding:12px 16px;font-size:14.5px;margin:8px 0 14px}
+.case .ques{margin:8px 0;padding-left:2px}
+.case .ques li{margin:5px 0;font-size:14.5px}
+.top{position:fixed;right:24px;bottom:26px;width:48px;height:48px;border-radius:50%;background:var(--primary);color:#fff;border:none;font-size:20px;cursor:pointer;box-shadow:0 8px 20px rgba(14,165,233,.35);z-index:150;display:none;font-family:inherit}
+.top.show{display:block}
+.hr{height:1px;background:var(--border);margin:26px 0}
+.note{font-size:13px;color:var(--muted);margin-top:6px}
+.kv{display:flex;gap:10px;flex-wrap:wrap;margin:8px 0}
+.kv .k{font-size:12px;font-weight:800;color:#0369A1;background:#E0F2FE;border-radius:6px;padding:2px 8px;white-space:nowrap}
+.kv .v{font-size:14px;color:#334155}
+.starme{font-size:12.5px;color:#B45309;white-space:nowrap}
+@media (max-width:1100px){
+  .main{padding:0 22px 80px}
+  .hero{margin:0 -22px 26px;padding:44px 26px 34px}
+  .hero h1{font-size:34px}
+  .flashcard-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .grid4{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width:900px){
+  .sidebar{transform:translateX(-100%);transition:transform .25s ease;width:280px;box-shadow:0 0 30px rgba(0,0,0,.18)}
+  .sidebar.open{transform:none}
+  .overlay{display:none;position:fixed;inset:0;background:rgba(15,23,42,.42);z-index:110}
+  .overlay.show{display:block}
+  .menu-btn{display:block}
+  .main{margin-left:0;padding:0 18px 80px}
+  .hero{margin:0 -18px 24px;padding:64px 22px 30px;border-radius:0 0 20px 20px}
+  .hero h1{font-size:30px}
+  .sec-head h2{font-size:23px}
+}
+@media (max-width:680px){
+  .grid2,.grid3,.grid4{grid-template-columns:minmax(0,1fr)}
+  .flashcard-grid{grid-template-columns:minmax(0,1fr)}
+  .flashcard{height:190px}
+  table{min-width:500px}
+}
+</style>
+<style data-refactor="v1">
+/* ============================================================
+   精神病学学习指南 · 统一交互层增量覆盖样式 v1
+   构建期由 apply-refactor.ps1 注入 </head> 前，仅追加修正，
+   不改动 A/B 两族基础样式。全部使用字面色值，兼容两族设计变量。
+   ============================================================ */
+
+/* ---- 1. 全局键盘焦点可见 ---- */
+:focus-visible{outline:2px solid #0EA5E9;outline-offset:2px}
+
+/* ---- 2. 章节导航条（胶囊式三段：上一章 / 目录 / 下一章） ---- */
+.chapter-pager{display:flex;align-items:stretch;justify-content:center;gap:10px;margin:36px 0 10px;flex-wrap:wrap}
+.chapter-pager a,.chapter-pager span{flex:1 1 200px;display:flex;align-items:center;justify-content:center;min-height:44px;padding:10px 18px;border:1px solid #E2E8F0;border-radius:999px;background:#FFFFFF;color:#0F172A;font-size:14px;font-weight:600;line-height:1.4;text-decoration:none;text-align:center;box-shadow:0 1px 2px rgba(15,23,42,.06);transition:border-color .15s ease,box-shadow .15s ease,color .15s ease}
+.chapter-pager a:hover{border-color:#0EA5E9;color:#0EA5E9;box-shadow:0 4px 14px rgba(14,165,233,.18);text-decoration:none}
+.chapter-pager .cp-toc{flex:0 0 auto;min-width:104px;background:linear-gradient(135deg,#0EA5E9,#10B981);border-color:transparent;color:#FFFFFF}
+.chapter-pager .cp-toc:hover{border-color:transparent;color:#FFFFFF;opacity:.92}
+.chapter-pager .cp-disabled{opacity:.45;background:#F8FAFC;box-shadow:none;cursor:default}
+@media (max-width:680px){.chapter-pager{gap:8px;margin:28px 0 8px}.chapter-pager a,.chapter-pager span{flex:1 1 100%}}
+
+/* ---- 3. 自测题交互态（兼容 A 族 .opt 与 B 族 .quiz-options li） ---- */
+/* 3.1 基础可点击 */
+.quiz-q .opt{cursor:pointer}
+.quiz-item .quiz-options li{cursor:pointer}
+/* 3.2 hover / 焦点态 */
+.quiz-q .opt:hover,.quiz-q .opt:focus-visible{border-color:#7DD3FC;background:#F0F9FF}
+.quiz-item .quiz-options li:hover,.quiz-item .quiz-options li:focus-visible{background:#FFFFFF;box-shadow:inset 0 0 0 1px #7DD3FC}
+/* 3.3 判定结果态 */
+.quiz-q .opt.is-right{border-color:#34D399;background:#ECFDF5;color:#065F46;font-weight:600}
+.quiz-q .opt.is-right::after{content:" ✓";color:#059669;font-weight:800}
+.quiz-q .opt.is-right .l{color:#047857}
+.quiz-item .quiz-options li.is-right{background:#DCFCE7;box-shadow:inset 0 0 0 1px #34D399;font-weight:600}
+.quiz-item .quiz-options li.is-right::after{content:" ✓";color:#15803D;font-weight:800}
+.quiz-q .opt.is-wrong{border-color:#FCA5A5;background:#FEF2F2;color:#B91C1C;font-weight:600}
+.quiz-q .opt.is-wrong::after{content:" ✗";color:#DC2626;font-weight:800}
+.quiz-q .opt.is-wrong .l{color:#B91C1C}
+.quiz-item .quiz-options li.is-wrong{background:#FEE2E2;box-shadow:inset 0 0 0 1px #FCA5A5;font-weight:600}
+.quiz-item .quiz-options li.is-wrong::after{content:" ✗";color:#DC2626;font-weight:800}
+.quiz-q .opt.is-reveal{border-color:#6EE7B7;background:#ECFDF5;color:#065F46}
+.quiz-q .opt.is-reveal .l{color:#047857}
+.quiz-item .quiz-options li.is-reveal{background:#ECFDF5;box-shadow:inset 0 0 0 1px #6EE7B7;color:#065F46}
+/* 3.4 已锁定禁用态 */
+.quiz-q.is-locked .opt,.quiz-item.is-locked .quiz-options li{cursor:default;pointer-events:none}
+.quiz-q.is-locked .opt:not(.is-right):not(.is-wrong):not(.is-reveal){opacity:.55}
+.quiz-item.is-locked .quiz-options li:not(.is-right):not(.is-wrong):not(.is-reveal){opacity:.55}
+/* 3.5 计分行（运行时注入） */
+.quiz-score{display:flex;align-items:center;gap:12px;margin:14px 0 18px;padding:12px 18px;border:1px dashed #7DD3FC;border-radius:12px;background:#F0F9FF;font-size:14px;font-weight:700;color:#0F172A}
+.quiz-score .qs-label{white-space:nowrap}
+.quiz-score .qs-num{white-space:nowrap;color:#0284C7;font-size:16px}
+.quiz-score .qs-bar{flex:1 1 60px;min-width:60px;height:8px;border-radius:999px;background:#E2E8F0;overflow:hidden}
+.quiz-score .qs-bar i{display:block;height:100%;width:0;border-radius:999px;background:linear-gradient(90deg,#0EA5E9,#10B981);transition:width .35s ease}
+
+/* ---- 4. 速记卡可达性与长内容 ---- */
+.fc-hint,.flip-hint{color:#64748B}
+.flashcard-face{overflow:auto}
+.flashcard[tabindex]{outline:none}
+.flashcard[tabindex]:focus-visible{outline:3px solid #0EA5E9;outline-offset:3px}
+
+/* ---- 5. 侧栏目录 ---- */
+/* B 族 sticky 侧栏内目录限高滚动（A 族 aside 本身已可滚动，此规则空匹配无害） */
+.sidebar .sidebar-nav{max-height:calc(100vh - 60px);overflow-y:auto;scrollbar-width:thin}
+/* A 族 scroll spy 高亮（B 族高亮由其基础样式提供） */
+.sidebar a.toc.active{background:#E0F2FE;color:#0369A1;font-weight:600}
+
+/* ---- 6. 响应式补充：681–900px 时 grid3 降为两列 ---- */
+@media (min-width:681px) and (max-width:900px){
+  .grid3{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+
+/* ---- 7. 打印样式补充（A 族新增；B 族已有 print，重复声明无害） ---- */
+@media print{
+  .sidebar,.overlay,.sidebar-overlay,#menuBtn,#navToggle,#overlay,#sidebarOverlay,#readbar,#topBtn,#backTop,.chapter-pager,.quiz-score{display:none!important}
+}
+
+/* ---- 8. 手机端增强 v2（触控体验 / 防溢出 / 抽屉滚动锁定） ---- */
+/* 8.1 触控体验：去点按高亮、消除双击缩放延迟（flashcard 高 190-200px 天然达标，不另设 min-height） */
+.opt,.tabbar button,.tab-btn,.quiz-options li,.flashcard,.chapter-pager a,.chapter-pager span,.menu-btn,.mobile-nav-toggle{-webkit-tap-highlight-color:transparent;touch-action:manipulation}
+/* 8.2 触控目标最小 44px（自测选项与 tab 胶囊原高约 33px） */
+.opt,.tabbar button,.tab-btn,.quiz-options li{min-height:44px}
+/* 8.3 防溢出：内容图自适应；svg 不设 height:auto，避免定尺寸图标塌陷 */
+img{max-width:100%;height:auto}
+svg{max-width:100%}
+/* 8.4 长词/URL 断行 */
+body{overflow-wrap:break-word}
+/* 8.5 表格容器触摸惯性滚动（A 族已有同值规则，重复声明无害） */
+.table-wrap{-webkit-overflow-scrolling:touch}
+/* 8.6 抽屉打开时锁定背景滚动（两族抽屉断点均为 900px；类由统一脚本增删） */
+@media (max-width:900px){
+  body.nav-locked{overflow:hidden}
+}
+</style>
+</head>
+<body>
+<div id="readbar"></div>
+<button class="menu-btn" id="menuBtn" aria-label="打开目录">☰</button>
+<div class="overlay" id="overlay"></div>
+<aside class="sidebar" id="sidebar">
+  <h2>第五章 神经发育障碍</h2>
+  <div class="sub">精神病学（第9版）· 印刷页 47–66<br>学习指南 · 技能标准版</div>
+  <div class="toc-group">开篇</div>
+  <a class="toc" href="#cover"><span class="n">00</span>章节封面与学习目标</a>
+  <a class="toc" href="#status"><span class="n">01</span>本章地位速览</a>
+  <a class="toc" href="#navmap"><span class="n">02</span>章节导航图</a>
+  <a class="toc" href="#mindmap"><span class="n">03</span>本章知识地图</a>
+  <a class="toc" href="#route"><span class="n">04</span>学习路线图</a>
+  <div class="toc-group">正文（疾病单元八栏）</div>
+  <a class="toc unitlink" href="#u1"><span class="n">05</span>智力发育障碍</a>
+  <a class="toc sub2" href="#u1-4">└ 教材典型案例</a>
+  <a class="toc unitlink" href="#u2"><span class="n">06</span>发育性言语或语言障碍</a>
+  <a class="toc sub2" href="#u2-5">└ 鉴别诊断对对碰</a>
+  <a class="toc unitlink" href="#u3"><span class="n">07</span>孤独症谱系障碍</a>
+  <a class="toc sub2" href="#u3-4">└ 教材典型案例</a>
+  <a class="toc unitlink" href="#u4"><span class="n">08</span>发育性学习障碍</a>
+  <a class="toc sub2" href="#u4-3">└ 三类受损拼图</a>
+  <a class="toc unitlink" href="#u5"><span class="n">09</span>发育性运动协调障碍</a>
+  <a class="toc sub2" href="#u5-5">└ 鉴别诊断对对碰</a>
+  <a class="toc unitlink" href="#u6"><span class="n">10</span>注意缺陷多动障碍</a>
+  <a class="toc sub2" href="#u6-6">└ 治疗方案工具箱</a>
+  <a class="toc unitlink" href="#u7"><span class="n">11</span>抽动障碍</a>
+  <a class="toc sub2" href="#u7-5">└ 鉴别诊断对对碰</a>
+  <div class="toc-group">结尾</div>
+  <a class="toc" href="#summary"><span class="n">12</span>全章核心要点速览</a>
+  <a class="toc" href="#pitfalls"><span class="n">13</span>易混易错点警示</a>
+  <a class="toc" href="#quiz"><span class="n">14</span>章节自测系统</a>
+  <a class="toc" href="#cards"><span class="n">15</span>考点速记卡</a>
+  <a class="toc" href="#cases"><span class="n">16</span>病例挑战</a>
+  <a class="toc" href="#ext"><span class="n">17</span>拓展延伸</a>
+</aside>
+<main class="main">
+<div class="wrap">
+
+<!-- ===== 00 封面 ===== -->
+<section id="cover">
+  <div class="hero">
+    <span class="chap">第五章 · CHAPTER 5</span>
+    <h1>神经发育障碍</h1>
+    <p class="tagline">从"发育"这条时间轴上看精神障碍：起病于发育期、损害贯穿一生、干预越早越值。</p>
+    <p class="meta">教材：精神病学（第9版）｜印刷页 47–66｜全章 7 节：智力发育障碍、发育性言语或语言障碍、孤独症谱系障碍、发育性学习障碍、发育性运动协调障碍、注意缺陷多动障碍、抽动障碍</p>
+    <div class="goalbox">
+      <h3>学习目标（四级分层）</h3>
+      <ul>
+        <li><span class="lv">了解</span>说出神经发育障碍的定义与 ICD-11 所列类型；说出本章 7 种疾病的患病率量级、性别比与起病年龄窗口。</li>
+        <li><span class="lv l2">理解</span>解释"遗传为主、环境促成"的共同病因框架；理解发育期起病为何决定了"早发现、早干预"的治疗逻辑；理解同一损害（如语言落后）在不同疾病中的不同含义。</li>
+        <li><span class="lv l3">掌握</span>按教材分级标准判定智力发育障碍的四个严重程度（IQ 区间、智龄、适应能力缺陷标准差、占比）；掌握 ASD、ADHD、抽动障碍的诊断要点与分型；能完成本章核心鉴别（ID／ASD／ADHD／言语语言障碍／学习障碍／运动协调障碍）。</li>
+        <li><span class="lv l4">重点</span>智力发育障碍四级 IQ 与占比的准确数字、ASD 两大核心维度、ADHD 的"6 个月＋两个场合＋12 岁前"三要素、抽动障碍三型的病程界线（2 周／1 年）、各病"教材有案例／无案例"的边界——高频考点与不可编造的数据红线。</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 01 地位 ===== -->
+<section id="status">
+  <div class="sec-head"><div class="badge">01</div><h2>本章地位速览<span class="en">Why this chapter matters</span></h2></div>
+  <p class="sec-lead">这是全书唯一整章以"发育期"为共同起点的疾病章。它把精神障碍从"成年人的病"拉回到生命最早阶段，也把治疗的重心从"控制症状"移到"抢发育窗口"。</p>
+  <div class="grid3">
+    <div class="card blue">
+      <h3>章节定位与重要性</h3>
+      <p>本章位于教材第五章（印刷页 47–66），上承第四章"精神障碍的分类与诊断"的分类框架，下启儿童少年期其他行为与情绪障碍。全章 7 节、7 种疾病，是<strong>疾病单元最多、鉴别关系最密</strong>的一章。</p>
+      <p>教材开篇即给出统一定义：神经发育障碍是"一组在发育期间出现的行为和认知障碍"，可同时导致个体、家庭、教育、职业等社会功能的严重损害。</p>
+      <p class="note">考试权重集中于：ID 四级分级数字、ASD 两大核心症状与共病、ADHD 诊断三要素与用药、抽动障碍三型病程、六组高频鉴别。</p>
+    </div>
+    <div class="card red">
+      <h3>临床意义</h3>
+      <p>这类障碍<strong>起病早、病程长、共病多</strong>：智力发育障碍患者发生精神障碍的概率高达 50% 以上，是一般人群的 3～4 倍；孤独症谱系障碍约 80% 至少共患一种精神病性障碍；注意缺陷多动障碍 75% 以上至少存在一种共病。</p>
+      <p>教材反复强调"早期发现、早期诊断、早期干预"，因为发育期是不可逆的时间窗：智力发育障碍"一旦发生难以逆转，因此重在预防"。</p>
+    </div>
+    <div class="card green">
+      <h3>与前后章节关联</h3>
+      <p><strong>前置：</strong>第四章的分类与诊断思路（症状学诊断、多轴评估）、第二章的精神检查与心理评估方法。</p>
+      <p><strong>后续延伸：</strong>儿童少年期情绪与行为障碍、精神分裂症（儿童期起病）、强迫及相关障碍（Tourette 综合征同时并列其中）、癫痫所致精神障碍。</p>
+      <p><strong>横向交叉：</strong>儿科学（生长与发育里程碑、遗传代谢病）、遗传学（染色体微阵列、脆性 X 检测）、康复医学（特殊教育、言语治疗、感觉统合）、教育学（分层支持教学）。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 02 导航 ===== -->
+<section id="navmap">
+  <div class="sec-head"><div class="badge">02</div><h2>章节导航图<span class="en">Section map</span></h2></div>
+  <p class="sec-lead">按教材 7 节一一对应 7 个疾病单元，不做合并、不删疾病。点击卡片直达对应单元。</p>
+  <div class="grid2">
+    <a class="card cyan" href="#u1" style="display:block;color:inherit">
+      <h3>单元一 · 智力发育障碍</h3>
+      <p>第一节（p.47–50）。定义与流行病学、遗传与环境病因、四级严重程度分级、诊断与三类鉴别、以预防和康复为主的治疗。</p>
+      <p class="note">关键词：1.268% · IQ 50～69／35～49／20～34／＜20 · 85%／10%／3%～4%／1%～2%</p>
+    </a>
+    <a class="card blue" href="#u2" style="display:block;color:inherit">
+      <h3>单元二 · 发育性言语或语言障碍</h3>
+      <p>第二节（p.51–52）。语音障碍、言语流畅性障碍、语言障碍三型；遗传与脑结构；听力障碍、选择性缄默、ASD 三组鉴别。</p>
+      <p class="note">关键词：5%～12% · FOXP2 · 2.5～4 岁 · 65%～85%</p>
+    </a>
+    <a class="card orange" href="#u3" style="display:block;color:inherit">
+      <h3>单元三 · 孤独症谱系障碍</h3>
+      <p>第三节（p.52–55）。两大核心维度、遗传度 64%～91%、六类发病机制假说、五组临床表现与共病谱、四类治疗。</p>
+      <p class="note">关键词：3∶1 · 全球 1% · 我国 0.7% · 87% 语言迟缓 · 80% 共病</p>
+    </a>
+    <a class="card green" href="#u4" style="display:block;color:inherit">
+      <h3>单元四 · 发育性学习障碍</h3>
+      <p>第四节（p.56–58）。ICD-11 五个分型、阅读／数学／书面表达三类受损拼图、共病与预后、三组鉴别与"介入反应模式"。</p>
+      <p class="note">关键词：5%～15% · 阅读障碍 5%～17% · 遗传度 0.53 · 95% 共病</p>
+    </a>
+    <a class="card purple" href="#u5" style="display:block;color:inherit">
+      <h3>单元五 · 发育性运动协调障碍</h3>
+      <p>第五节（p.58–59）。运动里程碑延迟、三种表现（动作笨拙／视觉空间／特殊技能运用）、5 岁前不诊断、早期干预四法。</p>
+      <p class="note">关键词：5%～6% · 7.0%／4.7%／3.5%／2.7% · 50%～70% 持续</p>
+    </a>
+    <a class="card pink" href="#u6" style="display:block;color:inherit">
+      <h3>单元六 · 注意缺陷多动障碍</h3>
+      <p>第六节（p.60–63）。注意缺陷／多动-冲动／学习困难／共病四维、三型分型、两组用药机制与不良反应、学校支持。</p>
+      <p class="note">关键词：6.4% · 遗传度 0.76 · 6 个月 · 12 岁前 · 哌甲酯 75%～80%</p>
+    </a>
+    <a class="card danger" href="#u7" style="display:block;color:inherit">
+      <h3>单元七 · 抽动障碍</h3>
+      <p>第七节（p.63–66）。运动性／发声性／感觉性抽动、三型临床亚型、七组鉴别、两线用药与行为治疗。</p>
+      <p class="note">关键词：20% · 3～4∶1 · 2 周／1 年 · PANDAS · CBIT／HRT／ERP</p>
+    </a>
+  </div>
+  <div class="callout book">
+    <span class="ct">📖 关于单元划分与"每病八栏"的说明</span>
+    <p>本章教材共 7 节，每节对应一种独立疾病，故正文设 <strong>7 个疾病单元</strong>，每单元完整 8 栏，共 <strong>7×8＝56 栏</strong>。其中：</p>
+    <ul>
+      <li><strong>第二节</strong>原文"可分为发育性语音障碍、发育性言语流畅性障碍和发育性语言障碍三种类型"；<strong>第四节</strong>原文"ICD-11 中发育性学习障碍的分型包括……"；<strong>第七节</strong>原文"按临床特征和病程特征可分为三种类型"——三者均为<strong>同一疾病内的亚型／分型</strong>，教材在同一节内连续叙述，故按节合并为 1 个单元，亚型在第三栏与第五栏内用表格／标签完整呈现，不遗漏。</li>
+      <li>本章不含"刻板运动障碍"独立单元：教材开篇仅在 ICD-11 列举中提到该名称，未设节、未展开叙述，故不编造内容。</li>
+      <li><strong>第四栏</strong>：第一节、第三节、第六节教材有【典型病例】，标「教材原文」；其余四节教材未提供具体临床案例，如实标注，不虚构病史与检查。</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===== 03 知识地图 ===== -->
+<section id="mindmap">
+  <div class="sec-head"><div class="badge">03</div><h2>本章知识地图<span class="en">Knowledge map</span></h2></div>
+  <p class="sec-lead">不按目录顺序平铺，而按"一个底座 → 三条损害线 → 一条诊治主线"重组。损害线回答"落后在哪里"，诊治主线回答"什么时候动手"。</p>
+  <div class="stat"><span>7 节</span><span>7 个疾病单元</span><span>56 栏</span><span>3 类损害线</span><span>15 组以上鉴别关系</span><span>教材案例 3 个</span></div>
+  <div class="grid2">
+    <div class="card cyan">
+      <h3>底座 · 一个共同定义</h3>
+      <div class="quote"><span class="lab">教材原文</span>神经发育障碍（neurodevelopmental disorders）是一组在发育期间出现的行为和认知障碍，可同时导致个体、家庭、教育、职业等社会功能的严重损害。</div>
+      <ul>
+        <li><strong>共同点 1：</strong>起病于发育期（ID 明确为 18 岁之前）。</li>
+        <li><strong>共同点 2：</strong>病因复杂且多数尚不明确，一般认为由遗传或其他因素导致的中枢神经系统损害。</li>
+        <li><strong>共同点 3：</strong>"缺少适当的环境刺激和足够的学习机会"常被看作<strong>促成因素</strong>，而非唯一病因。</li>
+        <li><strong>ICD-11 谱系：</strong>智力发育障碍、发育性言语或语言障碍、孤独症谱系障碍、发育性学习障碍、发育性运动协调障碍、注意缺陷多动障碍、刻板运动障碍和其他特定的神经发育障碍；抽动障碍并列其中。</li>
+      </ul>
+    </div>
+    <div class="card red">
+      <h3>损害线 A · 认知与学业</h3>
+      <ul>
+        <li><strong>智力发育障碍：</strong>智能＋社会适应能力<strong>全面</strong>低于平均水平，按 IQ 分四级。</li>
+        <li><strong>发育性学习障碍：</strong>智力正常，仅阅读／书面表达／数学等<strong>特定</strong>学业技能受损。</li>
+        <li><strong>一句话分界：</strong>全面落后 vs 特定技能落后；ID 的学业始终困难，学习障碍是"与智能不匹配"的学业成就。</li>
+      </ul>
+    </div>
+    <div class="card blue">
+      <h3>损害线 B · 语言与社交</h3>
+      <ul>
+        <li><strong>发育性言语或语言障碍：</strong>语音、流畅性、语言理解／表达／运用受损，<strong>非语言交流与社会交往动机保留</strong>。</li>
+        <li><strong>孤独症谱系障碍：</strong>社交互动与社交交流<strong>质的缺陷</strong>＋局限重复刻板兴趣行为，语用障碍是核心之一。</li>
+        <li><strong>一句话分界：</strong>语言障碍是"工具坏了"，ASD 是"用工具跟人打交道的能力坏了"。</li>
+      </ul>
+    </div>
+    <div class="card orange">
+      <h3>损害线 C · 运动与动作</h3>
+      <ul>
+        <li><strong>发育性运动协调障碍：</strong>粗大／精细运动获得延迟，动作笨拙、协调差，视觉空间与书写也受累。</li>
+        <li><strong>抽动障碍：</strong>不随意、突发、快速、重复、非节律、刻板单一或多部位肌肉运动和／或发声抽动。</li>
+        <li><strong>一句话分界：</strong>运动协调障碍是"做不好"，抽动障碍是"停不下"。</li>
+      </ul>
+    </div>
+    <div class="card green">
+      <h3>诊治主线 · 早发现 → 病因 → 康复 → 对症</h3>
+      <ul>
+        <li><strong>预防优先：</strong>ID 一旦发生难以逆转，重在预防（新生儿筛查、遗传咨询、围产期保健）。</li>
+        <li><strong>病因治疗：</strong>苯丙酮尿症出生后 3 周内低苯丙氨酸饮食；半乳糖血症停乳类；先天性甲减激素替代；克汀病补碘。</li>
+        <li><strong>教育与康复训练：</strong>ID 教材称"目前最有效的治疗方法之一"；ASD 以应用行为分析和结构化教学循证依据较充分。</li>
+        <li><strong>对症药物：</strong>只针对共病与靶症状（如 ASD 的易激惹用利培酮、阿立哌唑；ADHD 用哌甲酯、托莫西汀）。</li>
+      </ul>
+    </div>
+    <div class="card purple">
+      <h3>贯穿全章的三个数字锚</h3>
+      <ul>
+        <li><strong>18 岁：</strong>智力发育障碍的起病上限（发育期间）。</li>
+        <li><strong>6 个月 / 2 个场合 / 12 岁前：</strong>ADHD 诊断三要素。</li>
+        <li><strong>2 周 / 1 年：</strong>抽动障碍的病程分界——短暂性＞2 周但≤1 年；慢性与 Tourette 至少 1 年。</li>
+      </ul>
+      <p class="note">统计口径：本章"核心疾病 7 种、核心概念约 18 个（神经发育障碍、智力残疾、综合征性／非综合征性智力障碍、暂时性发育迟缓、语用障碍、选择性缄默、共情力与系统化、介入反应模式、感觉统合、双通道模型等），均取自教材本章原文。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 04 路线 ===== -->
+<section id="route">
+  <div class="sec-head"><div class="badge">04</div><h2>学习路线图<span class="en">Study route</span></h2></div>
+  <p class="sec-lead">本章疾病多、数字多、鉴别关系交叉。建议"先建共同底座 → 再按损害线成对学 → 最后集中刷鉴别与数字"。</p>
+  <div class="card blue">
+    <h3>推荐学习路径（约 4 小时，可分 3 次）</h3>
+    <div class="timeline">
+      <div class="tl-item"><h4>第 1 步 · 建底座（约 20 分钟）</h4><p>读本章开篇定义与 ICD-11 谱系，记住"发育期起病＋遗传为主＋环境促成＋功能损害"四句话。</p></div>
+      <div class="tl-item"><h4>第 2 步 · 攻智力发育障碍（约 50 分钟）</h4><p>先背四级分级表（IQ、智龄、标准差、占比四列一起背），再看病因三段（出生前／出生时／出生后）与三类鉴别。</p></div>
+      <div class="tl-item"><h4>第 3 步 · 成对学语言与孤独症（约 50 分钟）</h4><p>把"语言障碍 vs ASD"作为一组对照学：前者社会交往动机在，后者社交质缺陷＋刻板兴趣。</p></div>
+      <div class="tl-item"><h4>第 4 步 · 学习障碍与运动协调（约 35 分钟）</h4><p>抓住"特定技能 vs 全面落后""做不好 vs 停不下"两组一句话分界，数字只记量级与性别比。</p></div>
+      <div class="tl-item"><h4>第 5 步 · 攻 ADHD 与抽动（约 55 分钟）</h4><p>ADHD 记"三要素＋三型＋两药"；抽动记"三类抽动＋三型病程＋七组鉴别"。两者共病关系要能互相解释。</p></div>
+      <div class="tl-item"><h4>第 6 步 · 刷鉴别与自测（约 30 分钟）</h4><p>回到知识地图的"三句话分界"，再做自测、翻闪卡、看病例挑战。</p></div>
+    </div>
+    <p class="note">复习节奏：当天 1 遍 → 次日 30 分钟（闪卡＋易混点）→ 第 7 天 20 分钟（只做自测错题与四级分级表）。</p>
+  </div>
+  <div class="grid2">
+    <div class="card purple">
+      <h3>重点优先级</h3>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>内容</th><th>优先级</th><th>推荐记忆法</th></tr></thead>
+          <tbody>
+            <tr><td>ID 四级 IQ 区间与占比</td><td class="starme">⭐⭐⭐</td><td>数字编码＋阶梯图</td></tr>
+            <tr><td>ASD 两大核心维度与四类治疗</td><td class="starme">⭐⭐⭐</td><td>口诀＋双轴图</td></tr>
+            <tr><td>ADHD 诊断三要素与两药机制</td><td class="starme">⭐⭐⭐</td><td>数字锚定＋对比表</td></tr>
+            <tr><td>抽动三型病程界线（2 周／1 年）</td><td class="starme">⭐⭐⭐</td><td>时间轴＋数字编码</td></tr>
+            <tr><td>ID／学习障碍／ADHD／ASD 交叉鉴别</td><td class="starme">⭐⭐⭐</td><td>对比记忆＋一句话分界</td></tr>
+            <tr><td>言语语言障碍三型与三组鉴别</td><td class="starme">⭐⭐</td><td>归类＋场景联想</td></tr>
+            <tr><td>运动协调障碍三种表现与 5 岁门槛</td><td class="starme">⭐⭐</td><td>年龄轴＋口诀</td></tr>
+            <tr><td>各病患病率、性别比、遗传度数字</td><td class="starme">⭐⭐</td><td>数字卡片分组记</td></tr>
+            <tr><td>抽动七组鉴别（小舞蹈症、亨廷顿、肝豆等）</td><td class="starme">⭐⭐</td><td>特征词对照表</td></tr>
+            <tr><td>PANDAS、双通道模型、介入反应模式等名词</td><td class="starme">⭐</td><td>首字母＋解释</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="card green">
+      <h3>本章记忆策略推荐</h3>
+      <ul>
+        <li><strong>首选：对比记忆法。</strong>本章 7 病彼此高度重叠，单背一病必混；把"全面 vs 特定""工具 vs 社交""做不好 vs 停不下"三组一句话分界先钉死，再填细节。</li>
+        <li><strong>次选：数字编码法。</strong>把 18 岁、6 个月、2 个场合、12 岁前、2 周、1 年、四级 IQ 串成"时间—数量"锚点。</li>
+        <li><strong>辅助：场景联想法。</strong>为每个病想一个诊室画面（如"拉大人的手去拿东西"对应 ASD），用画面替代条款。</li>
+        <li><strong>不推荐：</strong>按教材页序逐字背病因清单——本章病因条目长且各病重复，逐字背性价比最低。</li>
+      </ul>
+      <p class="note">原则：先理解"这一病损害了哪条发育线"，再记表现与数字；理解在前，记忆在后。</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- ===== 05 智力发育障碍 ===== -->
+<section id="u1">
+  <div class="sec-head"><div class="badge">05</div><h2>智力发育障碍<span class="en">第一节 · p.47–50</span></h2></div>
+  <p class="sec-lead">本章的"总纲式"疾病：它把"发育期起病、全面功能落后、病因复杂、重在预防"四件事一次讲透。四级分级表是全章最硬的一组数字。</p>
+
+  <!-- 第一栏 -->
+  <div class="card cyan" id="u1-1">
+    <h3 class="col-title"><span class="idx">第一栏</span>疾病画像</h3>
+    <div class="quote"><span class="lab">教材原文</span>智力发育障碍（intellectual developmental disorder）又称智力残疾（intellectual disability）是一组病因多样、起病于 18 岁之前（发育期间）的疾病，其临床特征是智能和社会适应能力明显低于平均水平。</div>
+    <p><strong>一句话画像：</strong>不是"某一门功课差"，而是<strong>智力与社会适应两条腿一起短</strong>，且从 18 岁前就开始短。</p>
+    <p><strong>类比理解：</strong>把智力比作"发动机功率"，社会适应比作"上路能力"。智力发育障碍不是发动机某个零件坏了，而是<strong>整机功率偏低，同时也不足以独立应对路上的各种情况</strong>；只修一个零件（如只补课）解决不了问题。<span class="note">（此句为类比理解，非教材原文）</span></p>
+    <div class="stat">
+      <span>全球患病率 1%～3%</span><span>男∶女 ≈ 1.5∶1</span><span>我国 29 省市 1.268%</span><span>起病上限 18 岁</span><span>四级严重程度</span>
+    </div>
+    <div class="grid2">
+      <div class="mini">
+        <h4>三条核心特征</h4>
+        <ul>
+          <li><strong>起病时点：</strong>18 岁之前（发育期间）。</li>
+          <li><strong>智能：</strong>明显低于平均水平。</li>
+          <li><strong>社会适应：</strong>同样明显低于平均水平——两条都要满足，缺一不成立。</li>
+        </ul>
+      </div>
+      <div class="mini">
+        <h4>流行病学要点</h4>
+        <ul>
+          <li>WHO 估计全球患病率 <strong>1%～3%</strong>；男性高于女性，约 <strong>1.5∶1</strong>；<strong>农村高于城市</strong>。</li>
+          <li>我国 29 个省市调查患病率 <strong>1.268%</strong>。</li>
+          <li>教材未提供我国城乡分层或年龄分层的具体数字，故不补写。</li>
+        </ul>
+      </div>
+    </div>
+    <p class="note">术语提示：教材同时使用"智力发育障碍"与"智力残疾"两个名称，ICD-11 语境下二者指同一类临床对象。</p>
+  </div>
+
+  <!-- 第二栏 -->
+  <div class="card blue" id="u1-2">
+    <h3 class="col-title"><span class="idx">第二栏</span>病因探秘</h3>
+    <p><strong>总纲：</strong>病因复杂，"从孕前期开始到 18 岁以前各种影响中枢神经系统发育的因素都可能致病"。教材明确<strong>遗传因素是主要原因</strong>，环境因素按"出生前—出生时—出生后"三段展开。</p>
+    <div class="grid2">
+      <div class="card blue" style="margin:0">
+        <h3>（一）遗传因素 · 主要原因</h3>
+        <ul>
+          <li><strong>家族聚集性：</strong>现已发现超过 <strong>1 000 个基因</strong>与之有关，还包括特定染色体或基因缺陷。</li>
+          <li><strong>检出率：</strong>通过基因检测，约 <strong>75% 的重度</strong>和 <strong>50% 的轻度</strong>智力障碍患者能明确致病基因。</li>
+          <li><strong>两类分型：</strong>综合征性智力障碍（除智力障碍外还有特定临床表型或已知共病，如唐氏综合征、雷特综合征）；非综合征性智力障碍。</li>
+          <li><strong>染色体异常：</strong>数目与结构异常；<strong>唐氏综合征和脆性 X 染色体综合征</strong>是导致<strong>中度以上</strong>智力残疾的两种最常见原因。</li>
+          <li><strong>基因异常：</strong>单基因变异、拷贝数变异、多基因遗传；如苯丙酮尿症、半乳糖血症、黏多糖病、脑白质营养不良、Rett 综合征、结节性硬化、神经纤维瘤、先天性甲状腺功能减退等。</li>
+        </ul>
+      </div>
+      <div class="card blue" style="margin:0">
+        <h3>（二）环境因素 · 三段式</h3>
+        <ul>
+          <li><strong>出生前：</strong>①感染——巨细胞病毒、风疹病毒、流感病毒、肝炎病毒、HIV、弓形虫、梅毒螺旋体等；②致畸药物或环境毒物——铅、汞、放射线、电磁波、抗肿瘤药物等；③母体因素——严重贫血、糖尿病、甲状腺疾病、风湿免疫性疾病、先兆流产、妊娠高血压、先兆子痫、多胎妊娠；妊娠年龄偏大、营养不良、抽烟、饮酒；强烈或长期心理刺激导致的持续情绪抑郁、焦虑。</li>
+          <li><strong>出生时：</strong>前置胎盘、胎盘早剥、胎儿宫内窘迫、脐带绕颈、产程过长、产伤、早产等导致的<strong>颅脑损伤或缺氧</strong>。</li>
+          <li><strong>出生后：</strong>①脑损伤——脑炎、脑膜炎等中枢神经系统感染、颅内出血、颅脑外伤、脑缺氧、甲状腺功能减退、重度营养不良；②听觉或视觉障碍——成长环境中听觉和视觉刺激过少；③教育和社会环境——贫困、与社会隔离使儿童缺乏文化教育或人际交往。</li>
+        </ul>
+      </div>
+    </div>
+    <div class="callout tip">
+      <span class="ct">🧠 病因学的"确定性"要分清</span>
+      教材对遗传因素用"主要原因""已发现"，对母孕期情绪问题用"<strong>都可能与</strong>胎儿智力发育障碍有关"，对教育社会环境用"<strong>往往可看作促成因素</strong>"。答题时不要把这些相关／促成因素写成"已证实病因"。
+    </div>
+    <p class="note">教材未逐一给出各类病因的构成比（如染色体异常占多少百分比），故不补写比例。</p>
+  </div>
+
+  <!-- 第三栏 -->
+  <div class="card red" id="u1-3">
+    <h3 class="col-title"><span class="idx">第三栏</span>临床表现拼图</h3>
+    <p><strong>主线：</strong>智力低下＋社会适应能力差，可伴精神症状和躯体疾病；不同类型、不同程度的临床表现各异。</p>
+    <div class="tabs" data-tabs>
+      <div class="tabbar">
+        <button class="on" data-tab="u1a">早期症状与心理行为特征</button>
+        <button data-tab="u1b">四级严重程度（表 5-1）</button>
+        <button data-tab="u1c">其他症状与躯体线索</button>
+      </div>
+      <div class="panel on" data-panel="u1a">
+        <p><strong>早期可观察到的信号：</strong>喂养困难、睡眠过多、哭声异常、对外界刺激缺乏反应、表情呆滞、言语发育落后、特殊面容。</p>
+        <p><strong>心理行为特征（教材原文归纳为六组）：</strong></p>
+        <div class="grid2">
+          <div class="mini"><h4>① 感受与领悟</h4><p>感受缓慢、肤浅、范围狭窄；领悟力迟钝，缺乏抽象概括、推理判断和思维的能力。</p></div>
+          <div class="mini"><h4>② 注意与记忆</h4><p>注意力不集中、记忆力差、识记速度慢。</p></div>
+          <div class="mini"><h4>③ 情感</h4><p>幼稚、情感体验简单肤浅。</p></div>
+          <div class="mini"><h4>④ 动作</h4><p>动作笨拙或过度活动。</p></div>
+          <div class="mini"><h4>⑤ 自控</h4><p>易兴奋、自控力差。</p></div>
+          <div class="mini"><h4>⑥ 性格倾向</h4><p>胆小、退缩、依赖性大、不成熟、易受暗示。</p></div>
+        </div>
+        <p class="note">注意：这些是"特征"而非诊断条目，教材未给出条目化标准。</p>
+      </div>
+      <div class="panel" data-panel="u1b">
+        <p>ICD-11 根据<strong>智力低下程度</strong>和<strong>日常社会适应能力缺陷程度</strong>分为四级；一般依据智力功能与适应行为的标准化测试区分，无标准化测试时依靠行为指标作临床判断。</p>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>分级</th><th>智商（IQ）</th><th>智龄</th><th>适应能力缺陷</th><th>从特殊教育中受益水平</th></tr></thead>
+            <tbody>
+              <tr><td><strong>轻度</strong></td><td>50～69</td><td>约 9～12 岁儿童</td><td>低于均值 2～3 个标准差</td><td>可获得实际技巧及实用的阅读和计算能力，指导下适应社会，可独立生活</td></tr>
+              <tr><td><strong>中度</strong></td><td>35～49</td><td>约 6～9 岁儿童</td><td>低于均值 3～4 个标准差</td><td>可学会简单人际交往、基本卫生习惯和简单手工技巧；阅读计算不能进步；半独立生活</td></tr>
+              <tr><td><strong>重度</strong></td><td>20～34</td><td>约 3～6 岁儿童</td><td>低于均值 4 个或 4 个以上标准差</td><td>可从系统训练中受益；生活自理能力差，需要监护</td></tr>
+              <tr><td><strong>极重度</strong></td><td>＜20</td><td>低于 3 岁儿童</td><td>低于均值 4 个或 4 个以上标准差</td><td>对进食、大小便训练有反应；无生活自理能力，需要监护</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p><strong>四个等级的关键补充（教材正文数字，必须与表一致）：</strong></p>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>分级</th><th>人群中所处位置</th><th>占全部 ID 患者</th><th>特征性描述</th></tr></thead>
+            <tbody>
+              <tr><td>轻度</td><td>约 0.1%～2.3% 位</td><td><strong>85%</strong></td><td>外观不显著，感觉或运动缺陷轻微；能简单语言交流；勉强完成小学学业；成年后能从事简单非技术性工作</td></tr>
+              <tr><td>中度</td><td>约 0.003%～0.1% 位</td><td><strong>10%</strong></td><td>语言理解与言语发育明显迟缓、水平有限；计算仅达个位数加减；有时情绪不稳、易冲动</td></tr>
+              <tr><td>重度</td><td>落后于 0.003% 位</td><td><strong>3%～4%</strong></td><td>普遍合并器质性疾病，运动功能受损明显；能学会单词和短语；无社会行为能力与劳动能力；极少数可能自伤</td></tr>
+              <tr><td>极重度</td><td>落后于 0.003% 位</td><td><strong>1%～2%</strong></td><td>大多无法活动或活动严重受限；大小便失禁、无言语、不认亲人；仅有原始情绪反应；多数早年夭折</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="callout warn"><span class="ct">⚠️ 易错点</span>轻、中度用"2～3／3～4 个标准差"，重、极重度都用"4 个或 4 个以上标准差"；重度与极重度在"人群位置"上表述相同（落后于 0.003% 位），区别在 IQ（20～34 vs ＜20）与智龄。</div>
+      </div>
+      <div class="panel" data-panel="u1c">
+        <p><strong>常见躯体发育及功能异常：</strong>头颅畸形、面部畸形、唇裂或腭裂、四肢及性器官畸形、癫痫、先天性心脏病等。</p>
+        <p><strong>提示病因的特殊躯体特征（教材点名三种）：</strong></p>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>病因</th><th>教材描述的特征</th></tr></thead>
+            <tbody>
+              <tr><td>唐氏综合征</td><td>头小且前后径短、双睑裂向外上方斜、眼距宽、鼻梁低、张口伸舌、耳位低、通贯掌</td></tr>
+              <tr><td>脆性 X 综合征</td><td>头大、脸长、前额突出、耳大且向前、巨睾</td></tr>
+              <tr><td>苯丙酮尿症</td><td>金发、皮肤白皙、蓝色虹膜</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p><strong>精神共病：</strong>ID 患者发生精神障碍的概率高达 <strong>50% 以上</strong>，是一般人群的 <strong>3～4 倍</strong>。几乎所有的精神疾病或问题都可能共同发生，较常见的有易激惹、破坏性行为、自伤行为、精神分裂症、心境障碍、注意缺陷多动障碍、孤独症谱系障碍等。</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 第四栏 -->
+  <div class="card orange" id="u1-4">
+    <h3 class="col-title"><span class="idx">第四栏</span>教材典型案例</h3>
+    <div class="quote">
+      <span class="lab">教材原文</span>
+      患者，女，8 岁，小学二年级学生。因学习成绩差就诊。患者 7 岁入学，老师发现患者上课时能安静听课，但反应速度慢，记忆力差，经常不能独自完成课堂作业，需要老师辅导。家庭作业也需要母亲辅导才能完成。考试成绩不及格。在学校与同学和睦相处，在家听话，能做整理被子、扫地等简单家务。患者是第一胎，母孕期正常，分娩时脐带绕颈。2 岁开始学步，2 岁半开始学喊"爸爸、妈妈"。4 岁时进幼儿园，基本能适应，但学东西明显不如其他同龄儿童快。既往无重大疾病史。父母非近亲结婚，无精神和神经疾病家族史。躯体检查无阳性体征。精神检查时合作、安静，能认真回答问题，语言表达简短。韦氏儿童智力测验智商 63，言语智商 61，操作智商 64；社会适应：轻度问题。<strong>诊断：轻度智力发育障碍。</strong>
+    </div>
+    <div class="grid3">
+      <div class="mini"><h4>① 起病与发育史</h4><p>2 岁学步、2 岁半才喊"爸爸、妈妈"，4 岁入园后"学东西明显不如同龄儿童快"——发育里程碑与学习速度都偏慢。</p></div>
+      <div class="mini"><h4>② 学业与社会适应分离</h4><p>成绩不及格、作业需辅导（学业受损），但能和睦相处、听话、做简单家务（社会适应仅"轻度问题"）。</p></div>
+      <div class="mini"><h4>③ 测评落点</h4><p>IQ 63（言语 61、操作 64）→ 落在 <strong>50～69</strong>；社会适应轻度问题 → 对应<strong>轻度</strong>。</p></div>
+    </div>
+    <p><strong>诊断思路拆解（按教材诊断路径重走一遍）：</strong></p>
+    <ol>
+      <li><strong>先看时点：</strong>8 岁，问题起于入学前后、发育早期，满足"18 岁之前"。</li>
+      <li><strong>再看两条腿：</strong>智力（IQ 63）低于均值，社会适应（轻度问题）也低于同龄要求。</li>
+      <li><strong>找程度：</strong>IQ 50～69 → 轻度；教材未再列标准差数值，按 IQ 与适应两者共同定级。</li>
+      <li><strong>找病因线索：</strong>母孕期正常，但<strong>分娩时脐带绕颈</strong>属"出生时因素"（颅脑损伤或缺氧）；教材未进一步做病因学诊断，故不推断具体病因。</li>
+      <li><strong>排除：</strong>躯体检查无阳性体征、无家族史，暂不支持遗传代谢病或神经系统疾病；教材亦未提及听力、视力筛查结果。</li>
+    </ol>
+    <div class="callout book"><span class="ct">📖 案例的价值</span>这是本章唯一一个"轻度 ID"的完整范例：<strong>成绩差是主诉，但真正的诊断依据是 IQ＋适应能力＋发育史</strong>。临床上最容易犯的错，是只凭"成绩差"就下结论。</div>
+  </div>
+
+  <!-- 第五栏 -->
+  <div class="card orange" id="u1-5">
+    <h3 class="col-title"><span class="idx">第五栏</span>鉴别诊断对对碰</h3>
+    <p>教材明确列出三组：暂时性发育迟缓、发育性学习障碍、孤独症谱系障碍。</p>
+    <p><strong>表 1　ID vs 暂时性发育迟缓（全面发育迟缓）</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>维度</th><th>智力发育障碍</th><th>暂时性发育迟缓</th></tr></thead>
+        <tbody>
+          <tr><td>性质</td><td>确定的疾病诊断</td><td>因年龄或评估条件受限而给的<strong>临时性诊断</strong></td></tr>
+          <tr><td>年龄条件</td><td>起病于 18 岁前，任何发育阶段可诊断</td><td>儿童<strong>小于 4 岁</strong>，难以判断是否为短暂状态</td></tr>
+          <tr><td>判断受限原因</td><td>—</td><td>视力、听力障碍或其他躯体、精神障碍导致无法有效评估智能与适应功能</td></tr>
+          <tr><td>处理</td><td>明确分级并长期干预</td><td>先给临时诊断，待可评估时再定性</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note">一句话鉴别总结：<strong>不到 4 岁、测不准，就先叫"暂时性"；满 4 岁、测得准，才谈 ID。</strong></p>
+    <p><strong>表 2　ID vs 发育性学习障碍</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>维度</th><th>智力发育障碍</th><th>发育性学习障碍</th></tr></thead>
+        <tbody>
+          <tr><td>受损范围</td><td>语言、认知、运动、社会性等<strong>全面</strong>发育落后</td><td>阅读、写作或算术等<strong>特定</strong>学习技能显著且持续困难</td></tr>
+          <tr><td>其他方面</td><td>全面低于同龄</td><td>心理的其他方面发育<strong>完全正常</strong></td></tr>
+          <tr><td>关键鉴别</td><td>整体智能与适应能力均低</td><td>不涉及这些特定技能时，可以完成学习任务</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note">一句话鉴别总结：<strong>ID 是"整栋楼矮"，学习障碍是"某一层漏水"。</strong></p>
+    <p><strong>表 3　ID vs 孤独症谱系障碍</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>维度</th><th>智力发育障碍</th><th>孤独症谱系障碍</th></tr></thead>
+        <tbody>
+          <tr><td>语言交流与社会交往</td><td>与其<strong>智力水平相当</strong></td><td>显著<strong>落后于</strong>其智力发育水平</td></tr>
+          <tr><td>刻板行为</td><td>也可有，尤其重度 ID</td><td>兴趣狭窄、行为方式刻板是核心表现</td></tr>
+          <tr><td>智能水平</td><td>全面低于均值</td><td>可呈现各种智能水平；伴智力低下时作<strong>共病诊断</strong></td></tr>
+          <tr><td>关键鉴别</td><td colspan="2"><strong>语言交流和社会交往能力是否与其智力水平相当</strong>——相当支持 ID，明显落后于智力水平支持 ASD</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note">一句话鉴别总结：<strong>看"社交是否配得上智商"：配得上＝ID，配不上＝ASD；两者可共病。</strong></p>
+  </div>
+
+  <!-- 第六栏 -->
+  <div class="card green" id="u1-6">
+    <h3 class="col-title"><span class="idx">第六栏</span>治疗方案工具箱</h3>
+    <div class="callout key"><span class="ct">📌 总原则</span>ID 一旦发生难以逆转，<strong>重在预防</strong>。治疗顺序为：如有可能先针对病因治疗 → 教育与康复训练 → 辅以心理治疗 → 必要时针对伴发的神经精神症状对症治疗。</div>
+    <div class="grid2">
+      <div class="card green" style="margin:0">
+        <h3>① 预防（教材列出的措施）</h3>
+        <ul>
+          <li><strong>原发疾病防治：</strong>苯丙酮尿症、同型胱氨酸尿症、组氨酸血症、半乳糖血症、先天性甲状腺功能减退——若能在<strong>新生儿期</strong>诊断并及时治疗，多数儿童智力可免受损害。</li>
+          <li>产前遗传性疾病监测与遗传咨询。</li>
+          <li>围产期保健，积极治疗围产期并发症。</li>
+          <li>产前先天性疾病诊断。</li>
+          <li>新生儿遗传代谢性疾病筛查。</li>
+          <li>高危儿童健康监测；预防和尽早治疗中枢神经系统疾病。</li>
+          <li>全社会健康教育和科普宣传；提倡非近亲结婚、科学健康的生活方式。</li>
+        </ul>
+      </div>
+      <div class="card green" style="margin:0">
+        <h3>② 病因治疗（教材举例）</h3>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>病因</th><th>教材给出的处理</th></tr></thead>
+            <tbody>
+              <tr><td>苯丙酮尿症</td><td>最好在<strong>出生后 3 周内</strong>开始低苯丙氨酸饮食</td></tr>
+              <tr><td>半乳糖血症</td><td>及早停止服食乳类食物</td></tr>
+              <tr><td>先天性甲状腺功能减退</td><td>甲状腺激素替代治疗</td></tr>
+              <tr><td>地方性克汀病</td><td>及时补碘</td></tr>
+              <tr><td>先天性脑积水、神经管闭合不全等颅脑畸形</td><td>相应外科治疗</td></tr>
+              <tr><td>部分单基因遗传性疾病</td><td>关注基因治疗的临床进展</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <h3 style="font-size:16px;margin:16px 0 4px">③ 教育与康复训练（教材称"目前最有效的治疗方法之一"）</h3>
+    <div class="timeline">
+      <div class="tl-item"><h4>轻、中度</h4><p>尽早开始语言、劳动和生活技能教育；通过长期、耐心、科学的特殊教育，很多患者成年后基本上可过接近正常的生活。</p></div>
+      <div class="tl-item"><h4>重度、极重度</h4><p>需终身照顾，重点指导，训练基本生活技能。</p></div>
+    </div>
+    <h3 style="font-size:16px;margin:16px 0 4px">④ 心理治疗与对症／共病治疗</h3>
+    <ul>
+      <li><strong>心理治疗：</strong>支持性心理治疗、行为治疗、认知治疗、家庭治疗；行为治疗能建立和巩固正常行为模式，减少攻击行为或自伤行为。</li>
+      <li><strong>共病 ADHD（轻度患者）：</strong>可选用中枢兴奋剂或托莫西汀等药物。</li>
+      <li><strong>共病抑郁障碍、双相障碍、焦虑障碍：</strong>分别选用抗抑郁药、心境稳定剂、抗焦虑药物。</li>
+      <li><strong>幻觉、妄想等精神病性症状，或严重易激惹、攻击行为和破坏行为：</strong>可选用抗精神病药物，如利培酮、阿立哌唑等；<strong>治疗剂量视患者的年龄和精神症状的严重程度而定</strong>。</li>
+    </ul>
+    <div class="callout warn"><span class="ct">⚠️ 边界提醒</span>教材在本节<strong>未给出任何具体剂量</strong>（仅写"视年龄和症状严重程度而定"）。任何具体 mg 数都不属于本章内容，不得补写。</div>
+  </div>
+
+  <!-- 第七栏 -->
+  <div class="card purple" id="u1-7">
+    <h3 class="col-title"><span class="idx">第七栏</span>记忆工具箱</h3>
+    <div class="callout tip">
+      <span class="ct">🔧 方法一：数字阶梯法（数字编码法）</span>
+      把四级 IQ 记成四级台阶，<strong>从下往上</strong>数：<br>
+      <strong>＜20 → 20～34 → 35～49 → 50～69</strong>；每级下界正好是上一级的上界＋1，台阶连续不断档。<br>
+      占比记成"<strong>八五、十、三四、一二</strong>"：轻度 85%、中度 10%、重度 3%～4%、极重度 1%～2%（由多到少，像金字塔）。<br>
+      <em>为什么这样记：</em>IQ 是连续数轴，用"台阶"记不会漏掉边界；占比用"金字塔"记，能立刻判断"轻度占绝大多数"这一临床常识。
+    </div>
+    <div class="callout tip">
+      <span class="ct">🔧 方法二：口诀歌谣法</span>
+      口诀：<strong>"轻度能上学，中度能自理，重度要监护，极重度靠人活"</strong>。<br>
+      对应教材的"从特殊教育中受益水平"：轻度可独立生活；中度半独立生活；重度生活自理差、需监护；极重度无生活自理能力、需监护。<br>
+      <em>为什么这样记：</em>用"生活独立度"这一条主线串起四级，比死背四段长描述更符合临床直觉；口诀不改变事实，只是压缩表述。
+    </div>
+    <div class="callout tip">
+      <span class="ct">🔧 方法三：场景联想法</span>
+      想象一个诊室里的 8 岁女孩（教材案例）：<br>
+      ① 妈妈说"2 岁半才会喊爸爸妈妈"（发育史）→ ② 老师说她"能安静听课，但作业得有人陪"（学业）→ ③ 她会给家里叠被子、扫地（适应尚可）→ ④ 测出来 IQ 63（轻度）。<br>
+      <em>为什么这样记：</em>把"起病时点—两条腿—分级"绑在一个具体人身上，回忆时先想起画面，再还原条款。
+    </div>
+    <div class="callout tip">
+      <span class="ct">🔧 方法四：对比记忆法</span>
+      一张纸画两列：<strong>ID（全面落后）｜学习障碍（特定技能落后）</strong>，各写三个词：<strong>"全面／适应低／IQ 低"</strong> vs <strong>"特定／其他正常／IQ 正常"</strong>。<br>
+      <em>为什么这样记：</em>本章最容易混的就是这两个病；用两列对照，把差异压缩成三对反义词，考场上一秒可判。
+    </div>
+    <div class="callout key"><span class="ct">📌 四种方法怎么搭配</span>数字阶梯管"记数字"，口诀管"记生活结局"，场景管"记诊断链条"，对比管"防混淆"。四者覆盖数字型、语义型、画面型、辨析型四种学习风格。</div>
+  </div>
+
+  <!-- 第八栏 -->
+  <div class="card cyan" id="u1-8">
+    <h3 class="col-title"><span class="idx">第八栏</span>知识联动</h3>
+    <ul>
+      <li><strong>与本章第二节（发育性言语或语言障碍）：</strong>ID 是"语言、认知、运动、社会性全面落后"，语言障碍只损语言这条线；ID 儿童的语言落后不能用"语言障碍"解释全部。</li>
+      <li><strong>与本章第三节（孤独症谱系障碍）：</strong>教材明确二者是最常需鉴别的组合；ASD 可伴智力低下并作<strong>共病诊断</strong>，鉴别关键是社交能力是否与智力水平相当。</li>
+      <li><strong>与本章第四节（发育性学习障碍）：</strong>学习障碍"多发生在正常智力水平的个体"，这是与 ID 的分水岭。</li>
+      <li><strong>与本章第六节（注意缺陷多动障碍）：</strong>ID 常共病 ADHD，且轻度 ID 刚入小学时易被误认为 ADHD；教材给出的鉴别点是"ADHD 治疗后学业能提高到与智力相当的水平，而 ID 学业始终困难"。</li>
+      <li><strong>与精神分裂症、心境障碍章：</strong>教材指出 ID 患者中精神障碍发生率达 50% 以上，精神分裂症、心境障碍均可共病，需按"共病诊断"处理而不是归因于智力低。</li>
+      <li><strong>与遗传学／儿科学：</strong>染色体微阵列芯片分析与脆性 X 综合征遗传学检测是病因不明者的一线检查；苯丙酮尿症、先天性甲减等属儿科可筛查、可治疗的病因，是"预防胜于治疗"的典型。</li>
+      <li><strong>与康复医学／特殊教育：</strong>教材把教育与康复训练列为"目前最有效的治疗方法之一"，说明本病的处置主力不在精神科药物，而在长期康复与教育支持。</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===== 06 发育性言语或语言障碍 ===== -->
+<section id="u2">
+  <div class="sec-head"><div class="badge">06</div><h2>发育性言语或语言障碍<span class="en">第二节 · p.51–52</span></h2></div>
+  <p class="sec-lead">一节讲三种"说不出来"的方式：音发不准、话说不顺、语言用不对。它的鉴别核心不是"会不会说"，而是"换个场合还说不说、跟人交流的意愿在不在"。</p>
+
+  <!-- 第一栏 -->
+  <div class="card cyan" id="u2-1">
+    <h3 class="col-title"><span class="idx">第一栏</span>疾病画像</h3>
+    <div class="quote"><span class="lab">教材原文</span>发育性言语或语言障碍（developmental speech or language disorders），起病于发育期间，其特征是理解或产生言语（speech）和语言（language）的困难，或在交流的背景下使用语言的困难。</div>
+    <p><strong>一句话画像：</strong>孩子的"语言工具"在发育期没跟上：可能发不准音、可能说不流畅、可能理解／表达／运用语言都吃力，但<strong>不是耳朵坏了，也不是脑子结构坏了</strong>。</p>
+    <p><strong>类比理解：</strong>言语像"发音的口技"，语言像"遣词造句的语法系统"，语用像"看场合说话的分寸"。三者可以单独坏，也可以一起坏；本病的三种类型正好对应这三层。<span class="note">（此句为类比理解，非教材原文）</span></p>
+    <div class="stat"><span>2～5 岁患病率 5%～12%</span><span>男性多于女性</span><span>随年龄增长患病率下降</span><span>三种类型</span></div>
+    <div class="grid3">
+      <div class="mini"><h4>发育性语音障碍</h4><p>发音错误、构音障碍、语音语调异常。</p></div>
+      <div class="mini"><h4>发育性言语流畅性障碍</h4><p>说话停顿、阻塞、延长、重复、回避或替换单词。</p></div>
+      <div class="mini"><h4>发育性语言障碍</h4><p>理解、产生或使用语言的能力明显低于同龄人。</p></div>
+    </div>
+    <p class="note">教材未给出三型各自的患病率拆分，也未给出我国全国性患病率数据，故只保留"2～5 岁 5%～12%"这一总体数字。</p>
+  </div>
+
+  <!-- 第二栏 -->
+  <div class="card blue" id="u2-2">
+    <h3 class="col-title"><span class="idx">第二栏</span>病因探秘</h3>
+    <p><strong>主线：</strong>遗传增加易感性，环境决定"练语言的机会"，脑结构与功能异常提供生物学基础。三者不是并列清单，而是"底子—机会—落点"的链条。</p>
+    <div class="grid3">
+      <div class="card blue" style="margin:0">
+        <h3>（一）遗传因素 · 主导</h3>
+        <ul>
+          <li>起重要作用，<strong>增加个体患病易感性</strong>。</li>
+          <li>明显家族聚集性；<strong>同卵双生同患率明显高于异卵双生</strong>。</li>
+          <li>阳性家族史的患病率是阴性的 <strong>3 倍</strong>。</li>
+          <li><strong>FOXP2</strong> 是最早确定与言语或语言障碍相关的特定基因；<strong>CNTNAP2、ATP2C2、CMIP</strong> 等基因变异也已被证实相关。</li>
+        </ul>
+      </div>
+      <div class="card blue" style="margin:0">
+        <h3>（二）环境因素 · 促成</h3>
+        <ul>
+          <li>教材明确：除极端情况，<strong>几乎没有证据表明仅环境因素就足以导致</strong>本病。</li>
+          <li>但环境对语言发育影响重大：社会经济地位、父母教育程度、父母健康状况、父母与孩子的互动情况。</li>
+          <li>在<strong>孤儿院</strong>长大的婴儿，言语和语言发育有严重延迟。</li>
+          <li><strong>长期暴露在噪声环境、使用电子产品时间过长</strong>也与语言发育障碍相关。</li>
+        </ul>
+      </div>
+      <div class="card blue" style="margin:0">
+        <h3>（三）脑结构与功能 · 落点</h3>
+        <ul>
+          <li>教材坦言：言语或语言障碍的脑影像学研究<strong>很少</strong>，证据来自小样本。</li>
+          <li><strong>言语障碍儿童：</strong>左侧缘上回、双侧小脑后部结构与功能异常。</li>
+          <li><strong>语言障碍儿童：</strong>颞上回结构与功能异常。</li>
+          <li>提示：不同亚型可能对应不同脑区，不能用一套机制解释三型。</li>
+        </ul>
+      </div>
+    </div>
+    <div class="callout tip"><span class="ct">💡 为什么"环境不足以单独致病"很重要</span>这句话直接决定了预防策略：教材把一级预防定位为"提供家长教育或其他公共卫生项目，为儿童提供适宜语言发育的环境"——环境是<strong>放大器</strong>，不是<strong>开关</strong>。答题时若把"电子产品看多了"写成病因，就超出了教材的表述强度。</div>
+  </div>
+
+  <!-- 第三栏 -->
+  <div class="card red" id="u2-3">
+    <h3 class="col-title"><span class="idx">第三栏</span>临床表现拼图</h3>
+    <p>教材按三型呈现，每型的症状都给了可观察的细节。以下为原文要点。</p>
+    <div class="tabs" data-tabs>
+      <div class="tabbar">
+        <button class="on" data-tab="u2a">语音障碍</button>
+        <button data-tab="u2b">言语流畅性障碍</button>
+        <button data-tab="u2c">语言障碍</button>
+      </div>
+      <div class="panel on" data-panel="u2a">
+        <p><strong>机制性描述：</strong>由于语言的习得、产生和感知方面的困难，导致<strong>发音错误、构音障碍和语音语调的异常</strong>。</p>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>表现类型</th><th>教材举例</th></tr></thead>
+            <tbody>
+              <tr><td>省略语音的某些部分</td><td>省略辅音"j"，把"飞机"说成"飞一"</td></tr>
+              <tr><td>用已知语音代替更困难的声音</td><td>把"兔（tu）子"说成"裤（ku）子"</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p><strong>后果：</strong>语言的可理解性降低，<strong>并严重影响沟通</strong>。</p>
+        <p class="note">注意：教材举的是"替代、省略"两类错误，未列全部构音障碍分类，不补写。</p>
+      </div>
+      <div class="panel" data-panel="u2b">
+        <p><strong>核心表现：</strong>说话中有<strong>停顿、阻塞、延长、重复、回避或替换单词</strong>的现象。</p>
+        <p><strong>伴随表现：</strong></p>
+        <ul>
+          <li>说话的<strong>预期焦虑</strong>和<strong>避免说话</strong>的行为。</li>
+          <li>身体紧张、挣扎行为和其他习惯性行为，如<strong>拍腿、握拳</strong>。</li>
+        </ul>
+        <div class="stat"><span>常开始于 2.5～4 岁</span><span>60% 同时存在其他发育性言语或语言障碍</span></div>
+        <p class="note">"回避／替换单词"和"预期焦虑"是本型与单纯发音不准最容易区分的地方。</p>
+      </div>
+      <div class="panel" data-panel="u2c">
+        <p><strong>定义性描述：</strong>个体理解、产生或使用语言的能力明显低于同龄人。</p>
+        <p><strong>关键特征——理解与表达"不同步"：</strong>正常儿童语言发展中，理解与表达紧密相关、同步发展；而在发育性语言障碍中，这种关联可能<strong>不同步</strong>。</p>
+        <p><strong>受损形式（一种或多种语言技能、不同程度）：</strong></p>
+        <div class="grid2">
+          <div class="mini"><h4>语言理解困难</h4><p>听不懂别人说的话。</p></div>
+          <div class="mini"><h4>讲话晚</h4><p>开口时间明显晚于同龄。</p></div>
+          <div class="mini"><h4>语言表达能力差</h4><p>说不出、说不完整。</p></div>
+          <div class="mini"><h4>语法错误或语用困难</h4><p>句子结构错；不会按场合使用语言。</p></div>
+        </div>
+      </div>
+    </div>
+    <div class="callout warn"><span class="ct">⚠️ 诊断前必须先排除</span>教材明确：本病<strong>不包括</strong>由于神经系统疾病、感觉障碍或结构异常（如<strong>脑瘫、重症肌无力、感觉神经性耳聋、腭裂</strong>）等引起的发音及语言问题。这不是"鉴别诊断的可选项"，而是诊断的前置条件。</div>
+  </div>
+
+  <!-- 第四栏 -->
+  <div class="card orange" id="u2-4">
+    <h3 class="col-title"><span class="idx">第四栏</span>教材典型案例</h3>
+    <div class="callout book">
+      <span class="ct">📖 教材未提供具体临床案例</span>
+      本节教材只给出了<strong>症状举例</strong>（"飞机"说成"飞一"、"兔子"说成"裤子"）与流行病学、机制描述，<strong>没有</strong>患者年龄、病史、检查结果或诊断结论。本栏不虚构病例。
+    </div>
+    <p><strong>教材提供的"可用素材"清单：</strong></p>
+    <ul>
+      <li>语音障碍的两个真实语料例子（省略辅音 j；t 替代为 k）。</li>
+      <li>流畅性障碍的伴随行为：拍腿、握拳、预期焦虑、避免说话。</li>
+      <li>评估工具名称：早期语言发育进程量表、汉语沟通发展量表。</li>
+      <li>辅助检查：听力测试、声阻抗测听法、脑干听觉诱发电位。</li>
+    </ul>
+    <p><strong>可迁移的诊断思路（按教材诊断段落整理，不是教材病例）：</strong></p>
+    <ol>
+      <li><strong>先确认"是不是语言问题"：</strong>发音、理解、表达、运用四条线，哪条明显延迟或异常。</li>
+      <li><strong>再排除"器质性与感觉性原因"：</strong>查口腔及发音器官（有无腭裂、舌系带异常）；听力测试、声阻抗、脑干听觉诱发电位（排除感觉神经性耳聋）。</li>
+      <li><strong>做标准化评估：</strong>早期语言发育进程量表、汉语沟通发展量表。</li>
+      <li><strong>最后查共病：</strong>不少病例与其他神经发育障碍共病，<strong>按疾病的重要性依次诊断</strong>。</li>
+    </ol>
+    <p class="note">以上四步均可在教材原文找到对应句子；未给具体阈值与评分，不补写。</p>
+  </div>
+
+  <!-- 第五栏 -->
+  <div class="card orange" id="u2-5">
+    <h3 class="col-title"><span class="idx">第五栏</span>鉴别诊断对对碰</h3>
+    <p>教材列三组：听力障碍、选择性缄默症、孤独症谱系障碍。三组都表现为"不说话／说得少"，但机制完全不同。</p>
+    <p><strong>表 1　vs 听力障碍</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>维度</th><th>发育性言语或语言障碍</th><th>听力障碍</th></tr></thead>
+        <tbody>
+          <tr><td>核心问题</td><td>语言习得、产生、感知或运用困难</td><td>听觉输入受损</td></tr>
+          <tr><td>教材关键数据</td><td>2～5 岁患病率 5%～12%</td><td>平均听力损失 <strong>41～55dB</strong> 时，对普通音量说话声感到听辨困难</td></tr>
+          <tr><td>起病影响</td><td>发育期语言能力落后</td><td>发生于婴幼儿期可导致语言发育迟缓，影响语言学习</td></tr>
+          <tr><td>处理原则</td><td>言语-语言治疗、家长指导</td><td><strong>所有出现语言障碍的儿童都应常规排除听力障碍</strong></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note">一句话鉴别总结：<strong>先查耳朵，再谈语言。</strong></p>
+    <p><strong>表 2　vs 选择性缄默症</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>维度</th><th>发育性言语或语言障碍</th><th>选择性缄默症</th></tr></thead>
+        <tbody>
+          <tr><td>场合差异</td><td>各场合普遍存在语言困难</td><td>某些社交场合（如学校）不讲话或语音很低</td></tr>
+          <tr><td>关键鉴别</td><td>语言能力本身落后</td><td><strong>至少在一种场合（通常在家里）可以正常交流</strong></td></tr>
+          <tr><td>易误判</td><td>—</td><td>可能被误认为"语言表达能力差"</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note">一句话鉴别总结：<strong>在家说得好、只在学校不说 → 选择性缄默；到哪都说不清 → 语言障碍。</strong></p>
+    <p><strong>表 3　vs 孤独症谱系障碍</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>维度</th><th>发育性言语或语言障碍</th><th>孤独症谱系障碍</th></tr></thead>
+        <tbody>
+          <tr><td>核心缺陷</td><td>语言理解／表达／运用</td><td>语用障碍是核心之一，<strong>同时</strong>有社会交往困难</td></tr>
+          <tr><td>兴趣与行为</td><td>无特征性刻板</td><td>局限、刻板的兴趣与行为</td></tr>
+          <tr><td>共病关系</td><td>—</td><td>约 <strong>50%</strong> 的 ASD 伴发育性言语或语言障碍，<strong>可做共病诊断</strong></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note">一句话鉴别总结：<strong>只有语言这条线坏 → 语言障碍；语言＋社交＋刻板三条线一起坏 → ASD。</strong></p>
+    <div class="callout key"><span class="ct">📌 三组鉴别的共同逻辑</span>语言障碍是"输出端"问题；听力障碍是"输入端"问题；选择性缄默是"场合开关"问题；ASD 是"整条社交沟通回路"问题。<strong>先定输入，再定输出，最后定场合与社交。</strong></div>
+  </div>
+
+  <!-- 第六栏 -->
+  <div class="card green" id="u2-6">
+    <h3 class="col-title"><span class="idx">第六栏</span>治疗方案工具箱</h3>
+    <div class="callout key"><span class="ct">📌 治疗总纲</span>教材明确：治疗"<strong>不能只关注语言水平，而更应注重其功能</strong>"。这意味着目标不是"发音标准"，而是"能在生活里用得上"。</div>
+    <div class="grid2">
+      <div class="card green" style="margin:0">
+        <h3>① 预防（三级）</h3>
+        <ul>
+          <li><strong>一级预防：</strong>提供家长教育或其他公共卫生项目，为儿童提供适宜语言发育的环境。</li>
+          <li><strong>二级、三级预防：</strong>及早发现与遗传、神经系统疾病、其他躯体疾病有关的言语和语言障碍儿童。</li>
+          <li><strong>早期发现的前提：</strong>临床医师或其他相关专业人员掌握<strong>语言发育的里程碑</strong>并识别疾病的<strong>高危信号</strong>，实施早期干预。</li>
+        </ul>
+      </div>
+      <div class="card green" style="margin:0">
+        <h3>② 家长咨询与指导</h3>
+        <ul>
+          <li>即便部分患儿不接受干预也可能随年龄增长自然痊愈，家长仍需<strong>心理教育</strong>，缓解其焦虑。</li>
+          <li>为孩子提供<strong>丰富的语言环境</strong>，并在<strong>自然情景</strong>下展开训练。</li>
+          <li>接受培训后，部分家长有能力在家庭环境中提供语言治疗。</li>
+        </ul>
+      </div>
+    </div>
+    <h3 style="font-size:16px;margin:16px 0 4px">③ 言语-语言治疗（核心手段）</h3>
+    <div class="timeline">
+      <div class="tl-item"><h4>证据基础</h4><p>已有充分证据表明言语-语言治疗的有效性，<strong>特别对于表达性语言障碍的儿童效果更佳</strong>。</p></div>
+      <div class="tl-item"><h4>强度</h4><p>原则上<strong>低强度就足够</strong>；有研究提示持续时间<strong>超过 8 周</strong>的治疗比少于 8 周更有效。</p></div>
+      <div class="tl-item"><h4>模式转变</h4><p>基于社会学习理论，近年已从"训练模式"转向<strong>自然情景下的干预</strong>：家长、幼儿园老师在接受培训后可提供训练。</p></div>
+    </div>
+    <div class="callout tip"><span class="ct">💡 预后数字（教材原文）</span>多数语言障碍患者即使没有干预也能康复，康复通常发生在起病后的<strong>前两年</strong>；2 岁大的语言发育迟缓儿童到 3～4 岁时已有 <strong>50%</strong> 达到正常发育水平；约 <strong>65%～85%</strong> 的言语流畅性障碍儿童在没有干预的前提下，于<strong>青春期之前</strong>可以康复。</div>
+    <div class="callout warn"><span class="ct">⚠️ 边界提醒</span>教材未给出任何药物、剂量或疗程天数（仅"超过 8 周更有效"这一研究性表述），本节治疗<strong>不涉及药物</strong>，不得添加。</div>
+  </div>
+
+  <!-- 第七栏 -->
+  <div class="card purple" id="u2-7">
+    <h3 class="col-title"><span class="idx">第七栏</span>记忆工具箱</h3>
+    <div class="callout tip">
+      <span class="ct">🔧 方法一：归类记忆法（三型＝三层）</span>
+      把三种类型按"语言的层次"归类：<br>
+      <strong>语音障碍 = 发音层</strong>（音准不准）→ <strong>言语流畅性障碍 = 输出层</strong>（话说得顺不顺）→ <strong>语言障碍 = 理解／表达／运用层</strong>（词句和场合会不会用）。<br>
+      <em>为什么这样记：</em>三型不是三个并列的病，而是语言产生链条上的三个环节；按链条记，能自然推出"三型可以单独出现，也可以合并出现"。
+    </div>
+    <div class="callout tip">
+      <span class="ct">🔧 方法二：场景联想法（用教材语料当画面）</span>
+      脑中放两个镜头：<br>
+      ① 孩子指着天空说"<strong>飞一</strong>"——省掉了"机"的 j 音（语音障碍）；<br>
+      ② 孩子想说"<strong>兔子</strong>"，出口变成"<strong>裤子</strong>"——用容易的音替代难的音（语音障碍）。<br>
+      再放一个镜头：孩子说话时<strong>拍腿、握拳、不敢开口</strong>——流畅性障碍的伴随行为。<br>
+      <em>为什么这样记：</em>教材原句本身就有画面感，直接把它当"记忆锚"最省力，也不容易记错类型。
+    </div>
+    <div class="callout tip">
+      <span class="ct">🔧 方法三：对比记忆法（一句话分界）</span>
+      写三行对照：<br>
+      <strong>听力障碍</strong>——"先查耳朵"（41～55dB）；<br>
+      <strong>选择性缄默</strong>——"换个场合就好了"；<br>
+      <strong>ASD</strong>——"语言＋社交＋刻板，三条都坏"。<br>
+      <em>为什么这样记：</em>三组鉴别题的干扰项几乎都在这三行里；把每组的"唯一抓手"压成一句话，比背整段定义快。
+    </div>
+    <div class="callout tip">
+      <span class="ct">🔧 方法四：数字编码法</span>
+      记一组"<strong>3—3—60—8</strong>"：阳性家族史患病率是阴性 <strong>3 倍</strong>；同卵双生同患率高于异卵（教材只作比较，未给具体倍数）；流畅性障碍 <strong>60%</strong> 合并其他言语语言障碍；治疗<strong>超过 8 周</strong>比少于 8 周更有效。<br>
+      <em>为什么这样记：</em>本节数字少，用四个锚点就够；数字少时更要精确，避免与其他节的比例混在一起。
+    </div>
+  </div>
+
+  <!-- 第八栏 -->
+  <div class="card cyan" id="u2-8">
+    <h3 class="col-title"><span class="idx">第八栏</span>知识联动</h3>
+    <ul>
+      <li><strong>与第一节（智力发育障碍）：</strong>ID 是"语言、认知、运动、社会性全面落后"；语言障碍只损语言线。若儿童只有语言落后而其他发育正常，应先考虑本病而非 ID。</li>
+      <li><strong>与第三节（孤独症谱系障碍）：</strong>教材明确约 50% 的 ASD 伴发本病并可共病诊断；ASD 的语用障碍"不同于语言发育水平的障碍"，是"有语言内容及形式的异常"。</li>
+      <li><strong>与第四节（发育性学习障碍）：</strong>语言能力是阅读与书面表达的基础；教材把发育性言语或语言障碍列为学习障碍的常见共病之一，二者可同时存在但损害焦点不同。</li>
+      <li><strong>与耳鼻喉科／听力学：</strong>听力测试、声阻抗测听法、脑干听觉诱发电位是诊断流程的常规排除项；"所有语言障碍儿童都应常规排除听力障碍"是跨科协作的硬要求。</li>
+      <li><strong>与康复医学／学前教育：</strong>治疗从"训练室模式"转向"自然情景干预"，家长与幼儿园老师经培训即可参与，说明本病的干预主战场在家庭与教室。</li>
+      <li><strong>与焦虑障碍章：</strong>选择性缄默症以"特定场合不说话"为核心，教材将其列为鉴别对象；其与社交焦虑的边界需回到焦虑障碍章判断，本章不展开。</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===== 07 孤独症谱系障碍 ===== -->
+<section id="u3">
+  <div class="sec-head"><div class="badge">07</div><h2>孤独症谱系障碍<span class="en">第三节 · p.52–55</span></h2></div>
+  <p class="sec-lead">本章的"核心疾病"：两条社交线（互动＋交流）持续缺陷，加一条兴趣行为的"窄、重复、刻板"。诊断靠行为，治疗靠教育，药物只治共病。</p>
+
+  <!-- 第一栏 -->
+  <div class="card cyan" id="u3-1">
+    <h3 class="col-title"><span class="idx">第一栏</span>疾病画像</h3>
+    <div class="quote"><span class="lab">教材原文</span>孤独症谱系障碍（autism spectrum disorder）发生在儿童早期，临床特征是在启动和维持社会互动和社会沟通的能力上存在持续的缺陷，伴有一系列的局限、重复和刻板的兴趣和行为模式。</div>
+    <p><strong>一句话画像：</strong>不是"不想理人"，而是<strong>不会按社会规则发起和维持互动</strong>；不是"兴趣少"，而是<strong>兴趣窄、重复、刻板到影响功能</strong>。</p>
+    <p><strong>类比理解：</strong>普通人交流像打一场"双向传球"的游戏——看眼神、接话、调整节奏；ASD 的孩子往往只在"自己这一侧"玩，球传不出去，也不太接得住。<span class="note">（此句为类比理解，非教材原文）</span></p>
+    <div class="stat">
+      <span>欧洲 4.2‰～31.3‰</span><span>北美 8.7‰～18.5‰</span><span>男∶女＝3∶1</span><span>WHO 全球平均 1%</span><span>我国 6～12 岁 0.7%</span>
+    </div>
+    <p class="note">教材原文说明：上述欧洲、北美数据为 2014 年以来报告的范围；我国数据来自 2020 年 6～12 岁群体流行病学调查。教材未给出我国成人患病率。</p>
+    <div class="grid2">
+      <div class="mini">
+        <h4>核心维度一 · 社交</h4>
+        <p>启动和维持<strong>社会互动</strong>与<strong>社会沟通</strong>的能力持续缺陷——两条线合起来才是"社交"，不能只记"不爱说话"。</p>
+      </div>
+      <div class="mini">
+        <h4>核心维度二 · 兴趣行为</h4>
+        <p>局限、重复、刻板的兴趣和行为模式——"窄"（范围小）、"重复"（反复做）、"刻板"（必须一样）。</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 第二栏 -->
+  <div class="card blue" id="u3-2">
+    <h3 class="col-title"><span class="idx">第二栏</span>病因探秘</h3>
+    <p><strong>总纲：</strong>遗传因素是主要病因；环境因素（特别是在胎儿大脑发育关键期接触的环境因素）也会增加发病可能性。</p>
+    <div class="grid2">
+      <div class="card blue" style="margin:0">
+        <h3>（一）遗传因素 · 主要病因</h3>
+        <ul>
+          <li><strong>双生子研究：</strong>64%～91% 的 ASD 风险由遗传因素引起。</li>
+          <li><strong>核型异常：</strong>约占 1%～3%；已鉴定多个候选致病基因，如 <strong>NLGN4、NLGN3、SHANK3、CNTNAP2、NRXN1</strong>。</li>
+          <li><strong>拷贝数变异：</strong>患者中占 6%～10%，高于正常群体的 1%～3%。</li>
+          <li><strong>新生突变：</strong>主要影响与<strong>突触可塑性、β-连环蛋白、染色质重塑</strong>等神经发育相关的基因。</li>
+          <li><strong>解释力有限：</strong>已涉及 100 多个基因、400 多个位点，但仍只能解释 <strong>30%～40%</strong> 患者的发病原因。</li>
+          <li><strong>综合征性 ASD：</strong>脆性 X 综合征、结节性硬化等伴孤独症样表型。</li>
+        </ul>
+      </div>
+      <div class="card blue" style="margin:0">
+        <h3>（二）环境因素 · 增加可能性</h3>
+        <p><strong>可能机制：</strong>炎症、免疫激活、氧化应激、缺氧、内分泌干扰。</p>
+        <p><strong>教材列为"确定的环境因素"：</strong></p>
+        <ul>
+          <li><strong>父母生育年龄。</strong></li>
+          <li>孕妇患有<strong>高血压、超重、先兆子痫、自身免疫性疾病</strong>等。</li>
+          <li>妊娠期间使用<strong>抗抑郁药或对乙酰氨基酚</strong>等。</li>
+        </ul>
+        <p class="note">教材用"确定的环境因素"这一表述，与"可能机制"区分；不要把机制当成已证实病因。</p>
+      </div>
+    </div>
+    <h3 style="font-size:16px;margin:16px 0 8px">（三）发病机制 · 六条证据线</h3>
+    <div class="grid3">
+      <div class="mini"><h4>① 神经生化</h4><p>多种递质异常，但<strong>只有 5-羟色胺水平增高是较为一致</strong>的发现：约 <strong>25%～50%</strong> 患者全血或血小板 5-HT 增高。另有兴奋-抑制（E-I）失衡假说。</p></div>
+      <div class="mini"><h4>② 神经电生理</h4><p><strong>4%～86%</strong> 患者存在癫痫样或非癫痫样脑电图异常，但<strong>无特异性</strong>；异常偏侧化和 E-I 失衡有较一致报道。</p></div>
+      <div class="mini"><h4>③ 神经病理</h4><p>脑灰质、白质组织无序，神经元数量增加、胞体体积减小、神经纤维网络增加；前额叶、梭状回、额叶、岛叶、扣带、海马、杏仁核、小脑、脑干区域特异性改变报道相对一致。</p></div>
+      <div class="mini"><h4>④ 神经影像</h4><p>边缘系统、脑干、小脑及相关皮质存在结构与代谢异常；fMRI 发现集中在与心理理论相关的<strong>"社会脑"</strong>功能异常及<strong>突显网络</strong>异常。</p></div>
+      <div class="mini"><h4>⑤ 神经免疫</h4><p>部分患者长期处于慢性炎症状态，存在<strong>干扰素-γ、白细胞介素-1β、白细胞介素-6</strong> 等细胞因子和趋化因子异常。</p></div>
+      <div class="mini"><h4>⑥ 心理学假说</h4><p>心理盲点理论、中枢协调缺陷理论、执行功能异常理论、共情力和系统化两维理论。</p></div>
+    </div>
+    <div class="callout tip"><span class="ct">🧠 一句话把握病因</span>遗传像"地基"（解释 30%～40%），环境像"施工期的意外"（增加可能性），机制研究像"事后取证"（六条证据线各自只解释一部分）。<strong>没有任何单一因素能解释全部 ASD。</strong></div>
+  </div>
+
+  <!-- 第三栏 -->
+  <div class="card red" id="u3-3">
+    <h3 class="col-title"><span class="idx">第三栏</span>临床表现拼图</h3>
+    <div class="tabs" data-tabs>
+      <div class="tabbar">
+        <button class="on" data-tab="u3a">社会交往障碍</button>
+        <button data-tab="u3b">社会交流障碍</button>
+        <button data-tab="u3c">兴趣狭窄与刻板</button>
+        <button data-tab="u3d">感知觉异常</button>
+        <button data-tab="u3e">共患病谱</button>
+      </div>
+      <div class="panel on" data-panel="u3a">
+        <ul>
+          <li><strong>早期：</strong>对人脸缺乏兴趣，很少用面部表情表达情绪。</li>
+          <li><strong>依恋：</strong>难以发展正常的依恋关系。</li>
+          <li><strong>叫名：</strong>叫名反应不敏感。</li>
+          <li><strong>共同注意：</strong>与共同注意相关的沟通水平较低。</li>
+          <li><strong>互动：</strong>发起和回应社交互动困难。</li>
+          <li><strong>分享：</strong>缺乏或很少分享自己的兴趣、快乐。</li>
+          <li><strong>情感：</strong>情感活动比较原始、单调、平淡；难以体验别人的情绪、情感，也很难与他人建立情感联系。</li>
+        </ul>
+      </div>
+      <div class="panel" data-panel="u3b">
+        <p><strong>非语言交流障碍：</strong>很少使用手势、姿势和面部表情进行交流；不使用点头、摇头、摆手等表达意愿。</p>
+        <p><strong>语言发育：</strong>约 <strong>87%</strong> 的患者在 <strong>3 岁</strong>时存在语言发育迟缓；少数患儿在 2 岁前有语言表达，<strong>起病后语言逐渐减少、消失</strong>。</p>
+        <p><strong>语用障碍（关键）：</strong>不同于语言发育水平的障碍——表现为<strong>有语言内容及形式的异常</strong>：</p>
+        <ul>
+          <li>不能理解语言情境和社交用途。</li>
+          <li>有刻板重复性语言或模仿性语言。</li>
+          <li>不能理解别人正在谈论的主题，维持交谈困难。</li>
+          <li>有的存在语音、语调和语速异常。</li>
+        </ul>
+      </div>
+      <div class="panel" data-panel="u3c">
+        <ul>
+          <li><strong>兴趣狭窄或异常：</strong>喜欢单调、重复的事物（如圆的、旋转的物体）；对一些不是玩具的物体特别喜欢甚至着迷（如交通标志、马桶）；对物体的非功能特征感兴趣（如用手转玩具车的车轮子）；对数字、文字或绘画等表现出特殊兴趣和才能。</li>
+          <li><strong>刻板重复动作：</strong>反复看手、扑翼样动作、转圈、踮脚尖走、撞头、摇晃身体等。</li>
+          <li><strong>坚持同一性：</strong>拒绝改变日常生活习惯（出门走固定路线、按特定位置摆放物体、拒绝没吃过的食物）；被迫改变时往往出现<strong>焦虑不安</strong>。</li>
+        </ul>
+      </div>
+      <div class="panel" data-panel="u3d">
+        <p><strong>三种异常：</strong>感觉过敏、感觉迟钝、不寻常的感觉偏好。</p>
+        <p><strong>可涉及的感觉通道：</strong>视觉、听觉、触觉、痛觉、温度觉、味觉、嗅觉。</p>
+        <p class="note">教材未给出各通道异常的具体发生率，故不补写数字。</p>
+      </div>
+      <div class="panel" data-panel="u3e">
+        <p>大约 <strong>80%</strong> 的患者至少共患一种精神病性障碍。</p>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>共病</th><th>教材给出的比例</th></tr></thead>
+            <tbody>
+              <tr><td>智力发育障碍</td><td>30%～70%</td></tr>
+              <tr><td>运动障碍</td><td>约 30%</td></tr>
+              <tr><td>注意缺陷多动障碍</td><td>22%～53%</td></tr>
+              <tr><td>对立违抗性障碍或品行障碍</td><td>7%～23%</td></tr>
+              <tr><td>焦虑障碍</td><td>约 50%</td></tr>
+              <tr><td>睡眠问题</td><td>50%～80%</td></tr>
+              <tr><td>易激惹、脾气爆发</td><td>约 85%</td></tr>
+              <tr><td>自伤行为</td><td>27%～50%</td></tr>
+              <tr><td>癫痫</td><td>约 11%</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="note">上述比例均来自教材原文；"至少一种共病 80%"是总括数字，不与分项相加。</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 第四栏 -->
+  <div class="card orange" id="u3-4">
+    <h3 class="col-title"><span class="idx">第四栏</span>教材典型案例</h3>
+    <div class="quote">
+      <span class="lab">教材原文</span>
+      患者，男，6 岁，因语言表达能力差就诊。围产期及出生后体格发育正常。2 岁时不会说完整句子，3 岁进幼儿园后很少与其他儿童一起玩耍，且没有参与其中的意愿。与亲人和周围的人很少有目光的接触，当需要东西时不会用语言说出来，而是拉着大人的手走到自己想要的东西旁边。喜欢玩纸盒或排列麻将牌，有时一个人可以玩耍两、三个小时，在玩耍时父母喊他都不予理睬。曾因此被怀疑为先天性耳聋，到耳科就诊并接受听力检查，但未发现异常。精神检查见患者只会说"妈妈""爸爸"或一些物品的名字，认识 100 多个汉字，但不能说出完整的一句话。无重大疾病史、精神和神经疾病家族史。<strong>诊断：孤独症谱系障碍。</strong>
+    </div>
+    <div class="grid2">
+      <div class="mini">
+        <h4>社会交往障碍的证据</h4>
+        <ul>
+          <li>与亲人、周围的人<strong>很少有目光接触</strong>。</li>
+          <li>3 岁进幼儿园后<strong>很少与其他儿童玩耍</strong>，且<strong>没有参与意愿</strong>。</li>
+          <li>玩耍时父母喊他<strong>不予理睬</strong>（叫名反应不敏感）。</li>
+        </ul>
+      </div>
+      <div class="mini">
+        <h4>社会交流障碍的证据</h4>
+        <ul>
+          <li>2 岁不会说完整句子；只会"妈妈""爸爸"或物品名，<strong>不能说出完整一句话</strong>。</li>
+          <li>需要东西时<strong>不会用语言说，而是拉着大人的手走过去</strong>——典型的非语言交流替代。</li>
+          <li>认识 100 多个汉字，说明并非完全没有语言符号能力，但<strong>语用与表达</strong>明显异常。</li>
+        </ul>
+      </div>
+      <div class="mini">
+        <h4>兴趣狭窄与刻板的证据</h4>
+        <ul>
+          <li>喜欢玩<strong>纸盒</strong>或<strong>排列麻将牌</strong>——非玩具物体、排列/重复性玩法。</li>
+          <li>一个人可玩<strong>两三个小时</strong>，沉浸且难以被打断。</li>
+        </ul>
+      </div>
+      <div class="mini">
+        <h4>已排除的方向</h4>
+        <ul>
+          <li>围产期及出生后体格发育正常。</li>
+          <li>曾疑先天性耳聋，<strong>耳科听力检查未发现异常</strong>——排除听力障碍。</li>
+          <li>无重大疾病史、无精神神经疾病家族史。</li>
+        </ul>
+      </div>
+    </div>
+    <p><strong>诊断思路拆解：</strong></p>
+    <ol>
+      <li><strong>主诉是"语言差"，但不能只看语言：</strong>语言落后同时伴<strong>目光接触少、不参与同伴、叫名不理</strong>，说明缺陷已超出"语言"这条线。</li>
+      <li><strong>找到第二个核心维度：</strong>纸盒、排列麻将牌、长时间独自重复玩耍——兴趣狭窄＋重复刻板。</li>
+      <li><strong>排除听力：</strong>教材特意写入"耳科听力检查未发现异常"，对应诊断要点中"不能用听力障碍解释"。</li>
+      <li><strong>对照诊断要点：</strong>起病于发育早期（2 岁语言落后）；多场合持续缺陷（家里＋幼儿园）；导致功能损害；不能用心智障碍或全面发育迟缓解释。</li>
+      <li><strong>不下 ID 共病诊断：</strong>教材未给出智力测验结果，故只诊断 ASD，不擅自加 ID。</li>
+    </ol>
+    <div class="callout book"><span class="ct">📖 案例最值钱的一句</span>"需要东西时不会用语言说出来，而是拉着大人的手走到自己想要的东西旁边"——这是<strong>非语言交流障碍＋共同注意缺陷</strong>的经典画面，比"不会说话"更能指向 ASD。</div>
+  </div>
+
+  <!-- 第五栏 -->
+  <div class="card orange" id="u3-5">
+    <h3 class="col-title"><span class="idx">第五栏</span>鉴别诊断对对碰</h3>
+    <p>教材指出：<strong>智力发育障碍和发育性言语或语言障碍</strong>是最常需鉴别的疾病（要点见第一、二节）；另列 ADHD、选择性缄默、精神分裂症三组。</p>
+    <p><strong>表 1　ASD vs 智力发育障碍 / 发育性言语或语言障碍（跨节速查）</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>维度</th><th>ASD</th><th>智力发育障碍</th><th>发育性言语或语言障碍</th></tr></thead>
+        <tbody>
+          <tr><td>社交能力</td><td>显著落后于智力水平（质的缺陷）</td><td>与智力水平<strong>相当</strong></td><td>基本保留，主要是语言工具受损</td></tr>
+          <tr><td>兴趣行为</td><td>局限、重复、刻板</td><td>可有刻板，尤其重度</td><td>无特征性刻板</td></tr>
+          <tr><td>智能</td><td>可各种水平</td><td>全面低于均值</td><td>一般正常</td></tr>
+          <tr><td>共病关系</td><td>可伴 ID，作共病诊断</td><td>可与 ASD 共病</td><td>约 50% ASD 伴本病，可共病</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note">一句话鉴别总结：<strong>社交是否"配得上"智力与语言水平——配不上，就要想到 ASD。</strong></p>
+    <p><strong>表 2　ASD vs ADHD / 选择性缄默 / 精神分裂症</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>维度</th><th>ASD</th><th>ADHD</th><th>选择性缄默</th><th>精神分裂症</th></tr></thead>
+        <tbody>
+          <tr><td>核心</td><td>社交互动与交流持续缺陷＋局限重复刻板</td><td>注意缺陷、活动过度、易冲动</td><td>特定社交场合不能语言表达</td><td>幻觉、妄想、思维障碍等精神病性症状</td></tr>
+          <tr><td>社交性质</td><td><strong>质的损害</strong></td><td>影响同伴关系，但<strong>无社会交往质的损害</strong></td><td>限于特定场合；其他场合言语交流良好</td><td>可孤僻退缩，但属精神病性表现的一部分</td></tr>
+          <tr><td>兴趣刻板</td><td>明显</td><td>无</td><td>无明显兴趣狭窄和刻板重复行为</td><td>可有怪异动作，但非兴趣狭窄</td></tr>
+          <tr><td>病程线索</td><td>起病于发育早期</td><td>起病于生长发育期</td><td>有语言功能的儿童，场合选择性</td><td>一般有<strong>正常发育阶段</strong>，发病后出现病理性幻想或幻听等</td></tr>
+          <tr><td>治疗反应</td><td>教育行为干预为主</td><td>药物＋行为治疗</td><td>心理治疗为主（本节未展开）</td><td><strong>抗精神病药物治疗有效</strong></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note">一句话鉴别总结：<strong>ADHD 是"坐不住"，选择性缄默是"看场合"，精神分裂症是"原来正常、后来出现精神病性症状"，ASD 是"从小社交就不对劲"。</strong></p>
+    <div class="callout key"><span class="ct">📌 最容易漏的一步</span>ASD 患儿可能因活动过度、兴奋、话多而<strong>被先按 ADHD 处理</strong>。教材提醒：ADHD "无社会交往质的损害，也没有明显的兴趣狭窄和刻板重复行为"——这两句是否定式鉴别，答题时要写出。</div>
+  </div>
+
+  <!-- 第六栏 -->
+  <div class="card green" id="u3-6">
+    <h3 class="col-title"><span class="idx">第六栏</span>治疗方案工具箱</h3>
+    <div class="callout key"><span class="ct">📌 总纲</span>除针对综合征性 ASD 做遗传咨询外，<strong>目前尚无有效预防方法</strong>，只能优化治疗。<strong>早期诊断和早期干预是最有效的方法</strong>，可改善行为、技能和认知发展；恰当干预在任何年龄段都有帮助，虽不能消除症状，但可提高社会适应能力。</div>
+    <div class="grid2">
+      <div class="card green" style="margin:0">
+        <h3>① 教育行为和交流性干预（主力）</h3>
+        <ul>
+          <li><strong>目标：</strong>不只减轻核心症状、减少不适当行为，还要促进语言、认知与社会适应能力发展。</li>
+          <li><strong>循证依据较充分：</strong>应用行为分析（ABA）和结构化教学。</li>
+          <li><strong>ABA 较成熟的技术：</strong>回合式教学、关键反应训练、随机教学法。</li>
+          <li><strong>不伴明显智力、语言落后的患者：</strong>聚焦社交技巧，针对社会交流缺陷干预；方法有<strong>社交故事、录像示范、同伴示范</strong>。</li>
+        </ul>
+      </div>
+      <div class="card green" style="margin:0">
+        <h3>② 药物治疗（只治伴发问题）</h3>
+        <div class="quote"><span class="lab">教材原文</span>迄今为止没有特效药物可以治愈孤独症谱系障碍，但可以用于伴发问题的治疗。</div>
+        <ul>
+          <li><strong>易激惹、攻击、自伤：</strong>利培酮、阿立哌唑。</li>
+          <li><strong>共患 ADHD：</strong>哌甲酯、托莫西汀。</li>
+          <li><strong>共患睡眠障碍：</strong>褪黑素。</li>
+        </ul>
+        <p class="note">教材未给出上述药物的具体剂量与疗程，本指南不补写。</p>
+      </div>
+      <div class="card green" style="margin:0">
+        <h3>③ 心理治疗</h3>
+        <ul>
+          <li>行为治疗原理在 ASD 行为干预中应用广泛，不少已发展成专门的训练技术。</li>
+          <li>已有较好证据表明：<strong>基于孤独症特征修订的认知行为疗法</strong>对 ASD 伴发的<strong>焦虑等情绪障碍</strong>有效。</li>
+        </ul>
+      </div>
+      <div class="card green" style="margin:0">
+        <h3>④ 其他补充替代医疗</h3>
+        <ul>
+          <li>包括饮食干预、动物辅助治疗、补充维生素 B6、高压氧、生物反馈等。</li>
+          <li>教材的态度：广为流传，但<strong>很难判断有效性</strong>，很少有严格研究设计，更<strong>没有研究探讨其可能的有害性</strong>。</li>
+          <li>结论：运用循证方法评估、去伪存真，<strong>综合性干预非常关键</strong>。</li>
+        </ul>
+      </div>
+    </div>
+    <div class="timeline" style="margin-top:16px">
+      <div class="tl-item"><h4>第一步 · 早识别</h4><p>用筛查量表（孤独症行为量表、婴幼儿孤独症筛查量表-修订版、社交反应量表）与诊断量表（ADI-R、ADOS、CARS）辅助。</p></div>
+      <div class="tl-item"><h4>第二步 · 早干预</h4><p>以教育行为干预为骨架，按是否伴智力／语言落后选择"全面干预"或"聚焦社交技巧"。</p></div>
+      <div class="tl-item"><h4>第三步 · 治共病</h4><p>易激惹／攻击／自伤、ADHD、睡眠障碍分别对应上述药物；焦虑用修订版 CBT。</p></div>
+      <div class="tl-item"><h4>第四步 · 长期支持</h4><p>教材预后数据：约 19.7% 社交和学业正常或接近正常；31.1% 社交异常但可进步；47.7% 存在严重障碍，需持续支持与协助。</p></div>
+    </div>
+  </div>
+
+  <!-- 第七栏 -->
+  <div class="card purple" id="u3-7">
+    <h3 class="col-title"><span class="idx">第七栏</span>记忆工具箱</h3>
+    <div class="callout tip">
+      <span class="ct">🔧 方法一：口诀歌谣法（两大维度＋四组表现）</span>
+      口诀：<strong>"社交互动加交流，兴趣狭窄刻板留；感觉异常常相伴，共病八成要查透。"</strong><br>
+      解释：前两句锁定 ASD 的两大核心维度（社交互动＋社会交流；兴趣狭窄＋刻板重复＋坚持同一性），第三句补感知觉异常，第四句记"80% 至少一种共病"。<br>
+      <em>为什么这样记：</em>诊断要点只考"两大维度"，口诀先保框架；共病数字单独一句，避免与诊断标准混在一起。
+    </div>
+    <div class="callout tip">
+      <span class="ct">🔧 方法二：场景联想法（把教材案例拆成三个镜头）</span>
+      镜头 1：<strong>拉大人的手去拿东西</strong>——不会说，用身体替代（社会交流障碍）。<br>
+      镜头 2：<strong>父母喊他，他不理</strong>——叫名反应不敏感（社会交往障碍）。<br>
+      镜头 3：<strong>一个人排麻将牌两三个小时</strong>——窄、重复、沉浸（兴趣狭窄与刻板）。<br>
+      <em>为什么这样记：</em>三个镜头分别对应三类核心症状，考试给病例描述时，只要认出其中一个就能启动诊断假设。
+    </div>
+    <div class="callout tip">
+      <span class="ct">🔧 方法三：数字编码法（记四个高频数字）</span>
+      记 <strong>"3∶1 · 87% · 80% · 11%"</strong>：<br>
+      男女比 <strong>3∶1</strong>；3 岁时语言发育迟缓约 <strong>87%</strong>；至少一种共病约 <strong>80%</strong>；共患癫痫约 <strong>11%</strong>。<br>
+      <em>为什么这样记：</em>本节数字多，但考试最常考这四个；用"性别—语言—共病—癫痫"四条线各取一个数，避免把 30%～70%、22%～53% 等区间混进来。
+    </div>
+    <div class="callout tip">
+      <span class="ct">🔧 方法四：对比记忆法（ASD vs ADHD 的"两无一有"）</span>
+      ADHD：<strong>无</strong>社会交往质的损害、<strong>无</strong>明显兴趣狭窄和刻板重复行为、<strong>有</strong>注意缺陷／多动／冲动。<br>
+      ASD：<strong>有</strong>社交质缺陷、<strong>有</strong>兴趣狭窄刻板、注意问题只是可能共病。<br>
+      <em>为什么这样记：</em>这两病常被互相误诊；用"两无一有"反向记，比正面背 ASD 症状更能防干扰项。
+    </div>
+  </div>
+
+  <!-- 第八栏 -->
+  <div class="card cyan" id="u3-8">
+    <h3 class="col-title"><span class="idx">第八栏</span>知识联动</h3>
+    <ul>
+      <li><strong>与第一节（智力发育障碍）：</strong>30%～70% 的 ASD 共患 ID；鉴别关键是"社交能力是否与智力水平相当"，伴 ID 时作共病诊断而非二选一。</li>
+      <li><strong>与第二节（发育性言语或语言障碍）：</strong>约 50% 的 ASD 伴本病；ASD 的语用障碍"不同于语言发育水平的障碍"，是"有语言内容及形式的异常"，这是两节的分水岭。</li>
+      <li><strong>与第六节（注意缺陷多动障碍）：</strong>22%～53% 的 ASD 共患 ADHD；二者可共病，但"社会交往质的损害"与"兴趣狭窄刻板"是 ASD 的独有维度。</li>
+      <li><strong>与精神分裂症章：</strong>教材把儿童精神分裂症列为鉴别对象，关键在"一般有正常发育阶段"与"病理性幻想或幻听等确切精神病性症状"，且抗精神病药治疗有效。</li>
+      <li><strong>与焦虑障碍章：</strong>约 50% 的 ASD 伴焦虑障碍；教材明确指出"基于孤独症特征修订的 CBT"对伴发焦虑有效，说明标准 CBT 需按 ASD 特点改造。</li>
+      <li><strong>与睡眠医学／神经科：</strong>50%～80% 睡眠问题（褪黑素）、约 11% 癫痫——ASD 的躯体共病需要儿科、神经科共同管理。</li>
+      <li><strong>与遗传咨询：</strong>综合征性 ASD（脆性 X、结节性硬化）可做遗传咨询；核型异常、拷贝数变异、单核苷酸变异的检测属病因学诊断路径。</li>
+      <li><strong>与特殊教育：</strong>结构化教学、社交故事、同伴示范均需学校配合，说明 ASD 的干预是"医院—家庭—学校"三方工程。</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===== 08 发育性学习障碍 ===== -->
+<section id="u4">
+  <div class="sec-head"><div class="badge">08</div><h2>发育性学习障碍<span class="en">第四节 · p.56–58</span></h2></div>
+  <p class="sec-lead">"智力正常，却偏偏读、写、算某一项学不会"——这是本节与智力发育障碍的分水岭。诊断的关键不是分数低，而是<strong>学业成就与智力不匹配</strong>。</p>
+
+  <!-- 第一栏 -->
+  <div class="card cyan" id="u4-1">
+    <h3 class="col-title"><span class="idx">第一栏</span>疾病画像</h3>
+    <div class="quote"><span class="lab">教材原文</span>发育性学习障碍（developmental learning disorders）是一组发生在儿童期的神经发育障碍性疾病，这类儿童在阅读、理解、书写、计算等方面的基本心理过程存在一种或一种以上的特殊性障碍。一般在个体进入小学学习学业技能时开始显现。</div>
+    <p><strong>一句话画像：</strong>智力<strong>正常</strong>，但阅读、书面表达或数学中的某一项（或几项）存在<strong>显著而持续</strong>的困难，且这种困难不能归因于智力低、感官障碍或没受过教育。</p>
+    <p><strong>类比理解：</strong>像一台配置正常的电脑，装某个特定软件时总出错——不是整机性能差（排除了 ID），也不是没开机（排除了缺乏教育机会），而是<strong>那一个模块的处理过程出了问题</strong>。<span class="note">（此句为类比理解，非教材原文）</span></p>
+    <div class="stat"><span>学龄儿童 5%～15%</span><span>男∶女＝（2～3）∶1</span><span>阅读障碍 5%～17%</span><span>书面表达 7%～15%</span><span>数学 6%～7%</span></div>
+    <div class="grid2">
+      <div class="mini">
+        <h4>ICD-11 五个分型（教材原文列举）</h4>
+        <ul>
+          <li>伴阅读功能损害（reading）</li>
+          <li>伴书面表达功能损害（written expression）</li>
+          <li>伴数学能力的损害（mathematics）</li>
+          <li>伴其他特定的学习功能损害</li>
+          <li>未特定的发育性学习障碍</li>
+        </ul>
+      </div>
+      <div class="mini">
+        <h4>三个数字的门道</h4>
+        <ul>
+          <li>总体患病率 <strong>5%～15%</strong>，是学龄儿童中的常见问题。</li>
+          <li>阅读功能损害又称<strong>阅读障碍（dyslexia）</strong>，是<strong>最常见</strong>的发育性学习障碍，占 <strong>5%～17%</strong>。</li>
+          <li>三型比例区间有重叠，教材未要求相加等于总体，<strong>不要做加法</strong>。</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- 第二栏 -->
+  <div class="card blue" id="u4-2">
+    <h3 class="col-title"><span class="idx">第二栏</span>病因探秘</h3>
+    <p><strong>总纲：</strong>遗传提供易感，围产期与器质性因素提供"生物学损伤"，环境决定"练与不练"。教材把环境称为"重要预测因子"，但未说它是唯一病因。</p>
+    <div class="grid2">
+      <div class="card blue" style="margin:0">
+        <h3>（一）遗传因素</h3>
+        <ul>
+          <li><strong>家族聚集性：</strong>无阅读障碍史家庭中，子代患病率约 <strong>11.6%</strong>；有阅读障碍史家庭中，子代约 <strong>45%</strong>。</li>
+          <li><strong>双生子研究：</strong>阅读障碍遗传度 <strong>0.53</strong>。</li>
+          <li><strong>相关染色体区域：</strong>15q21、6p21、2p、3p、18p11、1p、Xq27。</li>
+          <li><strong>候选基因位点：</strong>6p 的 <strong>DCDC2、KIAA0319</strong>；15q21 的 <strong>DYX1C1</strong>。</li>
+        </ul>
+      </div>
+      <div class="card blue" style="margin:0">
+        <h3>（二）器质性因素</h3>
+        <ul>
+          <li><strong>围产期损害：</strong>窒息、产伤、宫内感染、妊娠期服药、难产、早产、低体重儿等。</li>
+          <li><strong>共病提示：</strong>脑瘫和癫痫患者阅读障碍的患病率较高。</li>
+          <li><strong>尚有争议的说法：</strong>"也有人认为"本病与颅脑外伤、感染、铅中毒有关——教材用"也有人认为"，属<strong>假说</strong>而非定论。</li>
+        </ul>
+      </div>
+      <div class="card blue" style="margin:0">
+        <h3>（三）环境因素</h3>
+        <ul>
+          <li>教材称环境因素是"重要预测因子"，"渗透到儿童生态系统的各个层次"。</li>
+          <li>具体包括：各地不同的识字率、不同社会经济水平、学校环境、家庭环境、阅读材料的可获得性、家庭对阅读的重视程度、同伴等。</li>
+        </ul>
+      </div>
+      <div class="card blue" style="margin:0">
+        <h3>（四）神经影像</h3>
+        <ul>
+          <li><strong>阅读障碍：</strong>额叶-纹状体-顶叶认知控制系统、胼胝体后部、左弓状束等组成的神经环路异常；与半球间神经环路交流功能失调有关。</li>
+          <li><strong>数学相关障碍：</strong>可能是一个或多个相关网络的紊乱，或它们之间相互作用异常。</li>
+        </ul>
+      </div>
+    </div>
+    <div class="callout tip"><span class="ct">🧠 把四类因素串成一条因果链</span>遗传（家族史 45% 对 11.6%、遗传度 0.53）→ 围产期损害（窒息、早产等）→ 脑环路异常（左弓状束、额叶-纹状体-顶叶）→ 在"识字率低、阅读材料少、家庭不重视"的环境中被放大 → 入学后显现为学业技能落后。<strong>链条上的每一环，教材都只给"相关"强度，未给因果定论。</strong></div>
+  </div>
+
+  <!-- 第三栏 -->
+  <div class="card red" id="u4-3">
+    <h3 class="col-title"><span class="idx">第三栏</span>临床表现拼图</h3>
+    <p><strong>三类受损</strong>对应 ICD-11 的三个主要分型，教材逐一给出了可观察的细节。</p>
+    <div class="tabs" data-tabs>
+      <div class="tabbar">
+        <button class="on" data-tab="u4a">阅读功能受损</button>
+        <button data-tab="u4b">数学功能受损</button>
+        <button data-tab="u4c">书面表达障碍</button>
+        <button data-tab="u4d">共病与继发问题</button>
+      </div>
+      <div class="panel on" data-panel="u4a">
+        <p><strong>核心：</strong>阅读能力发育明显损害，<strong>而智力水平正常</strong>。困难集中在三个方面：</p>
+        <div class="grid3">
+          <div class="mini"><h4>① 阅读的准确性</h4><p>诵读时常添字或漏字，错读或漏读，甚至遗漏整行文字；有些患者语速过急或出现"语塞"，字词音节顺序混乱。</p></div>
+          <div class="mini"><h4>② 阅读的流畅性</h4><p>阅读速度较慢，需<strong>借助手指逐字指点</strong>进行阅读。</p></div>
+          <div class="mini"><h4>③ 阅读理解能力</h4><p>朗读时不能按词组或意群停顿，缺乏抑扬顿挫，对内容很难理解。</p></div>
+        </div>
+        <p><strong>更深一层：</strong>患儿正确阅读单词的能力也较差，阅读时主要依靠<strong>语音信息</strong>来理解单词；阅读障碍者捕捉语音信息和上下文中提供的信息非常困难，并因此出现阅读和理解困难。</p>
+      </div>
+      <div class="panel" data-panel="u4b">
+        <p><strong>核心缺陷：</strong>数学计算和／或数学推理困难。教材列三种表现：</p>
+        <div class="grid3">
+          <div class="mini"><h4>① 数学符号语言障碍</h4><p>理解和命名数学术语、概念以及进行数学运算非常困难；有的患儿<strong>用数学符号表达语言文字的能力很差</strong>，如将"5 的平方"写成"52"。</p></div>
+          <div class="mini"><h4>② 感知障碍</h4><p>认识和朗读数字、数学符号非常困难；排列数字能力很差；不会分门别类地归纳。</p></div>
+          <div class="mini"><h4>③ 数学能力障碍</h4><p>最基本的数学运算很困难，包括<strong>数数、乘法、四则运算</strong>等。</p></div>
+        </div>
+        <p><strong>延伸：</strong>部分患儿不仅在数学方面有问题，在<strong>理解抽象概念或视觉空间能力</strong>方面也存在缺陷。</p>
+      </div>
+      <div class="panel" data-panel="u4c">
+        <p><strong>前提：</strong>粗大运动发展是正常的，但在完成涉及<strong>眼-手协调</strong>的任务时经常出现问题。</p>
+        <p><strong>书写与动作：</strong></p>
+        <ul>
+          <li>缺乏主动书写的兴趣；手部技巧笨拙，如使用筷子或执笔困难，系纽扣、系鞋带动作笨拙。</li>
+          <li>不善绘画；笔画潦草；涂改过多；字迹难认。</li>
+          <li>常遗漏偏旁部首或"张冠李戴"；错别字过多。</li>
+          <li>字迹排列不整齐，常溢出格外或难以成行。</li>
+        </ul>
+        <p><strong>写作：</strong>文章中常出现拼写、造句和语法错误，以及标点符号使用错误；语句组织能力很差，作文缺乏主题内容，或主题、人物、情节、事情经过不能清楚描述，结构松散、单调。</p>
+      </div>
+      <div class="panel" data-panel="u4d">
+        <p><strong>神经发育共病：</strong>常与注意缺陷多动障碍、发育性言语或语言障碍、发育性运动协调障碍等共同出现。</p>
+        <p><strong>关键数字：</strong>约 <strong>95%</strong> 阅读障碍的儿童同时并发<strong>一种或多种</strong>神经发育障碍。</p>
+        <p><strong>继发问题：</strong>经常继发情绪行为问题，如焦虑或行为问题、社会适应和人际关系不良、品行问题等。</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 第四栏 -->
+  <div class="card orange" id="u4-4">
+    <h3 class="col-title"><span class="idx">第四栏</span>教材典型案例</h3>
+    <div class="callout book">
+      <span class="ct">📖 教材未提供具体临床案例</span>
+      本节教材只给出临床表现描述、诊断要点与评估工具，<strong>没有</strong>患者年龄、主诉、病史、测验分数或诊断结论。本栏不虚构病例。
+    </div>
+    <p><strong>教材提供的"可用素材"清单：</strong></p>
+    <ul>
+      <li>典型错误样例：将"5 的平方"写成"52"。</li>
+      <li>典型阅读行为：需借助手指逐字指点；朗读不能按词组或意群停顿。</li>
+      <li>典型书写表现：遗漏偏旁部首、字迹溢出格外、作文结构松散单调。</li>
+      <li>诊断模式与弊端："智商-成就差异"模式，存在"等待失败"、无法提供有效干预的弊端。</li>
+      <li>评估工具：学习障碍儿童筛查量表、汉语阅读技能诊断测验、中国小学生数学基本能力测验、韦氏个别成就测验、韦氏智力测试。</li>
+    </ul>
+    <p><strong>可迁移的诊断思路（按教材诊断段落整理，不是教材病例）：</strong></p>
+    <ol>
+      <li><strong>看显现时点：</strong>症状是否在早期学业学习中就显现（入学后）。</li>
+      <li><strong>看受损领域：</strong>阅读、书写、计算中是否有<strong>严重且持续</strong>的困难。</li>
+      <li><strong>看匹配度：</strong>受影响技能是否明显低于其年龄和智力应达到的预期水平，并严重影响学业与职业。</li>
+      <li><strong>排他：</strong>排除智力发育障碍、感觉障碍（视力或听力）、神经或运动障碍、缺乏教育机会、缺乏学业指导语言能力、心理社会逆境。</li>
+      <li><strong>用工具：</strong>标准化评定学习成绩、综合智力与信息加工；不单靠"分数差"下诊断。</li>
+    </ol>
+    <p class="note">以上五步均可在教材原文找到对应句子；教材未给各工具的切分与评分标准，不补写。</p>
+  </div>
+
+  <!-- 第五栏 -->
+  <div class="card orange" id="u4-5">
+    <h3 class="col-title"><span class="idx">第五栏</span>鉴别诊断对对碰</h3>
+    <p>教材列三组：智力发育障碍、注意缺陷多动障碍、发育性言语或语言障碍。</p>
+    <p><strong>表 1　vs 智力发育障碍</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>维度</th><th>发育性学习障碍</th><th>智力发育障碍</th></tr></thead>
+        <tbody>
+          <tr><td>智力水平</td><td>多发生在<strong>正常智力水平</strong>的个体</td><td>智力全面低于平均水平</td></tr>
+          <tr><td>学业成就</td><td>与智能<strong>不相匹配</strong>的学业成就</td><td>学业困难与整体智力水平一致</td></tr>
+          <tr><td>受损焦点</td><td>突出的阅读、书面表达或计算障碍</td><td>语言、认知、运动、社会性全面落后</td></tr>
+          <tr><td>关键鉴别</td><td colspan="2">学业困难是否"配得上"智力：配不上＝学习障碍；整体都低＝ID。</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note">一句话鉴别总结：<strong>ID 是"智力拖了学业"，学习障碍是"学业拖了智力"。</strong></p>
+    <p><strong>表 2　vs 注意缺陷多动障碍</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>维度</th><th>发育性学习障碍</th><th>注意缺陷多动障碍</th></tr></thead>
+        <tbody>
+          <tr><td>出现时点</td><td><strong>一进入小学</strong>就表现出突出的学习相关技能障碍与学习困难</td><td>因注意缺陷或多动冲动引发的学习问题<strong>不能代偿时</strong>，才表现出明显学业功能受损</td></tr>
+          <tr><td>自我调节</td><td>许多患者也存在明显的自我调节注意力困难（可共病）</td><td>注意缺陷是核心症状</td></tr>
+          <tr><td>核心损害</td><td>特定学业技能</td><td>注意的选择、维持、转移；多动与冲动</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note">一句话鉴别总结：<strong>学习障碍"一上学就露"，ADHD 是"先坐不住，学业后才塌"。</strong></p>
+    <p><strong>表 3　vs 发育性言语或语言障碍</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>维度</th><th>发育性学习障碍</th><th>发育性言语或语言障碍</th></tr></thead>
+        <tbody>
+          <tr><td>损害焦点</td><td>特指<strong>阅读、书写或计算</strong>能力受损</td><td>语言的理解、表达和运用受损</td></tr>
+          <tr><td>学业表现</td><td>特定学业技能显著落后</td><td>也可能出现学业困难（语言是学习的基础）</td></tr>
+          <tr><td>关键鉴别</td><td colspan="2">问"哪条线坏了"：语言工具坏＝语言障碍；用语言去读、写、算的学业技能坏＝学习障碍。</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note">一句话鉴别总结：<strong>语言障碍是"不会说"，学习障碍是"不会读、写、算"。</strong></p>
+  </div>
+
+  <!-- 第六栏 -->
+  <div class="card green" id="u4-6">
+    <h3 class="col-title"><span class="idx">第六栏</span>治疗方案工具箱</h3>
+    <div class="callout key"><span class="ct">📌 总纲</span>目前<strong>尚无有效预防</strong>发育性学习障碍的方法。治疗包括：特殊教育、技能训练、社会心理干预和药物治疗（药物只针对共病）。</div>
+    <div class="grid2">
+      <div class="card green" style="margin:0">
+        <h3>① 特殊教育（核心）</h3>
+        <ul>
+          <li>强调<strong>评估与介入并行</strong>。</li>
+          <li>主张采用"<strong>介入反应模式</strong>"。</li>
+          <li>采用<strong>分层支持教学模式</strong>：在识别的<strong>同时</strong>为儿童提供多层次的介入和支持。</li>
+          <li>研究显示，"<strong>意义强化</strong>"和"<strong>代码强化</strong>"等训练项目对<strong>阅读障碍</strong>的治疗有效。</li>
+        </ul>
+      </div>
+      <div class="card green" style="margin:0">
+        <h3>② 技能训练与社会心理干预</h3>
+        <ul>
+          <li>技能训练是治疗组成部分（教材与特殊教育并列提出）。</li>
+          <li>社会心理干预包括：支持性心理治疗、家长指导、社会技能训练、放松训练、行为矫正治疗等。</li>
+          <li>针对伴发的共病，可给予相应的药物治疗。</li>
+        </ul>
+      </div>
+    </div>
+    <div class="timeline" style="margin-top:16px">
+      <div class="tl-item"><h4>第一步 · 识别即介入</h4><p>不等"智商-成就差异"达标才动手；教材批评该模式存在"等待失败"的弊端，故采用"介入反应模式"。</p></div>
+      <div class="tl-item"><h4>第二步 · 分层支持</h4><p>按障碍程度提供多层次支持，评估与教学同步进行。</p></div>
+      <div class="tl-item"><h4>第三步 · 针对性训练</h4><p>阅读障碍可用"意义强化""代码强化"训练；书面表达与数学按受损模块设计技能训练（教材未展开具体教案）。</p></div>
+      <div class="tl-item"><h4>第四步 · 处理共病与情绪</h4><p>共病 ADHD、语言障碍、运动协调障碍分别处理；对继发的焦虑、行为问题、人际关系问题给予心理干预。</p></div>
+    </div>
+    <div class="callout warn"><span class="ct">⚠️ 边界提醒</span>教材在本节<strong>没有</strong>给出针对学习障碍核心症状的任何药物、剂量或疗程；药物仅"针对伴发的共病"。不得把 ADHD 的哌甲酯等写成"治疗学习障碍"。</div>
+  </div>
+
+  <!-- 第七栏 -->
+  <div class="card purple" id="u4-7">
+    <h3 class="col-title"><span class="idx">第七栏</span>记忆工具箱</h3>
+    <div class="callout tip">
+      <span class="ct">🔧 方法一：三分法（归类记忆法）</span>
+      把 ICD-11 的五个分型压成"<strong>读、写、算＋其他＋未特定</strong>"：<br>
+      读＝伴阅读功能损害（阅读障碍）；写＝伴书面表达功能损害；算＝伴数学能力损害；其他＝伴其他特定学习功能损害；未特定＝未特定的发育性学习障碍。<br>
+      <em>为什么这样记：</em>五个分型里三个有明确名字、两个是"兜底项"；先记三个实项，再补两个兜底，符合"3＋2"的记忆结构。
+    </div>
+    <div class="callout tip">
+      <span class="ct">🔧 方法二：场景联想法（用教材错例当锚）</span>
+      镜头 1：孩子把"<strong>5 的平方</strong>"写成"<strong>52</strong>"——数学符号语言障碍。<br>
+      镜头 2：孩子读书时<strong>手指逐字点</strong>，读得慢——阅读流畅性受损。<br>
+      镜头 3：孩子写字<strong>漏偏旁、字溢出格子</strong>——书面表达障碍。<br>
+      <em>为什么这样记：</em>三个画面分别绑定三类受损，病例题只要出现任一细节，就能立刻定位分型。
+    </div>
+    <div class="callout tip">
+      <span class="ct">🔧 方法三：数字编码法</span>
+      记 <strong>"5～15、95、20、0.53"</strong>：<br>
+      总体患病率 <strong>5%～15%</strong>；阅读障碍儿童约 <strong>95%</strong> 共病一种或多种神经发育障碍；约 <strong>20%</strong> 患者可能继发品行障碍和反社会行为或长期社会适应不良；阅读障碍遗传度 <strong>0.53</strong>。<br>
+      <em>为什么这样记：</em>这四个数字分别对应"患病、共病、预后、遗传"四个考点，按"病—共—后—遗"顺序回忆，不易串位。
+    </div>
+    <div class="callout tip">
+      <span class="ct">🔧 方法四：对比记忆法（三句话分界）</span>
+      <strong>vs ID：</strong>"智力正常，学业不匹配"。<br>
+      <strong>vs ADHD：</strong>"一上学就露，不是先坐不住"。<br>
+      <strong>vs 语言障碍：</strong>"不会读写算，不是不会说"。<br>
+      <em>为什么这样记：</em>三组鉴别是本节高频题；每句只留一个"抓手词"，比背整段定义更抗干扰。
+    </div>
+  </div>
+
+  <!-- 第八栏 -->
+  <div class="card cyan" id="u4-8">
+    <h3 class="col-title"><span class="idx">第八栏</span>知识联动</h3>
+    <ul>
+      <li><strong>与第一节（智力发育障碍）：</strong>两病都表现为学业困难，但 ID 的智力全面低于均值，学习障碍的智力正常且成就与智力不匹配。</li>
+      <li><strong>与第二节（发育性言语或语言障碍）：</strong>语言是阅读与写作的地基；语言障碍可致学业困难，但损害焦点在语言理解／表达／运用，而非特定学业技能。</li>
+      <li><strong>与第五节（发育性运动协调障碍）：</strong>书面表达障碍涉及眼-手协调与精细动作，与运动协调障碍有重叠；教材把运动协调障碍列为学习障碍的常见共病之一。</li>
+      <li><strong>与第六节（注意缺陷多动障碍）：</strong>约 95% 的阅读障碍儿童共病一种或多种神经发育障碍，ADHD 是其中之一；ADHD 的学业受损多在"注意问题不能代偿"后才突出。</li>
+      <li><strong>与教育学／特殊教育：</strong>"介入反应模式""分层支持教学"直接来自教育干预研究，说明本病的处置主力在学校与课堂。</li>
+      <li><strong>与神经科学：</strong>额叶-纹状体-顶叶认知控制系统、胼胝体后部、左弓状束的环路异常，为"阅读障碍是神经发育问题而非懒惰"提供依据。</li>
+      <li><strong>与品行障碍／情绪障碍章：</strong>教材指出约 20% 患者可能继发品行障碍和反社会行为，或长期社会适应不良——学业失败可成为情绪行为问题的起点，需早识别、早干预。</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===== 09 发育性运动协调障碍 ===== -->
+<section id="u5">
+  <div class="sec-head"><div class="badge">09</div><h2>发育性运动协调障碍<span class="en">第五节 · p.58–59</span></h2></div>
+  <p class="sec-lead">最容易被当成"笨手笨脚"而漏诊的一节。它的核心不是力量或肌张力，而是<strong>运动协调</strong>：该会的动作会得晚、会了也做得笨、做得不准。</p>
+
+  <!-- 第一栏 -->
+  <div class="card cyan" id="u5-1">
+    <h3 class="col-title"><span class="idx">第一栏</span>疾病画像</h3>
+    <div class="quote"><span class="lab">教材原文</span>发育性运动协调障碍（developmental motor coordination disorder）的特征为个体获得粗大运动和精细运动能力的显著延迟，且运动协调性差，表现为动作笨拙、缓慢或不准确。个体的运动协调能力明显低于其实际年龄或其智力应达到的水平。</div>
+    <p><strong>一句话画像：</strong>不是"没力气"，而是"<strong>协调不上</strong>"：跑跳拍球幅度大、效率低，握笔用筷子笨拙，迷宫积木做不好，且明显低于同龄应有水平。</p>
+    <p><strong>类比理解：</strong>像一支乐队，每个乐手单独都能演奏（肌力、肌张力正常），但合奏时节奏对不上——问题在"指挥与配合"，不在"乐器本身好坏"。<span class="note">（此句为类比理解，非教材原文）</span></p>
+    <div class="stat"><span>5～11 岁学龄儿童 5%～6%</span><span>患病率随年龄增长下降</span><span>5 岁前一般不诊断</span><span>50%～70% 症状持续至青春期和成年期</span></div>
+    <div class="callout book"><span class="ct">📖 上海数据的正确读法</span>教材引用：上海市 3～6 岁各年龄组儿童<strong>疑似</strong>发育性协调障碍的检出率分别为 <strong>7.0%、4.7%、3.5%、2.7%</strong>。关键词是"<strong>疑似</strong>"——不是确诊患病率，且呈逐年下降趋势，正好印证"患病率随年龄增长逐渐下降"。</div>
+  </div>
+
+  <!-- 第二栏 -->
+  <div class="card blue" id="u5-2">
+    <h3 class="col-title"><span class="idx">第二栏</span>病因探秘</h3>
+    <div class="grid3">
+      <div class="card blue" style="margin:0">
+        <h3>（一）遗传因素</h3>
+        <ul>
+          <li>与注意缺陷多动障碍、孤独症谱系障碍、阅读障碍等其他神经发育障碍有<strong>共同的遗传风险</strong>。</li>
+          <li>教材未点名具体基因或遗传度，只给"共同遗传风险"这一层结论——不要补写数字。</li>
+        </ul>
+      </div>
+      <div class="card blue" style="margin:0">
+        <h3>（二）环境因素</h3>
+        <ul>
+          <li><strong>增加风险：</strong>早产、低出生体重、产后类固醇暴露、肥胖。</li>
+          <li><strong>尚未明确：</strong>体育活动及设备的可及性等特定环境因素与运动技能发育落后的关联。</li>
+          <li><strong>文化线索：</strong>不同国家患病率差异较大，提示可能与文化背景有关。</li>
+        </ul>
+      </div>
+      <div class="card blue" style="margin:0">
+        <h3>（三）脑结构与功能</h3>
+        <ul>
+          <li><strong>皮质：</strong>与正常儿童相比存在<strong>脑皮质厚度减少</strong>。</li>
+          <li><strong>白质：</strong>感觉运动束中<strong>皮质脊髓束、丘脑后辐射、胼胝体</strong>白质微结构改变。</li>
+          <li><strong>镜像神经元系统</strong>异常。</li>
+          <li><strong>功能网络：</strong>前额叶、顶叶和小脑的脑功能网络激活降低。</li>
+        </ul>
+      </div>
+    </div>
+    <div class="callout tip"><span class="ct">🧠 机制一句话</span>"皮质变薄＋感觉运动束白质微结构改变＋镜像神经元异常＋前额叶-顶叶-小脑激活降低"——四条都指向<strong>感觉-运动整合环路</strong>，正好解释为什么表现为"协调差"而不是"肌力弱"。</div>
+    <p class="note">教材未给出各病因的构成比或遗传度，故本栏不列具体百分比。</p>
+  </div>
+
+  <!-- 第三栏 -->
+  <div class="card red" id="u5-3">
+    <h3 class="col-title"><span class="idx">第三栏</span>临床表现拼图</h3>
+    <p><strong>先看年龄轴：</strong>症状在不同年龄段表现不同——这是本节最容易出病例题的地方。</p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>年龄段</th><th>教材描述的表现</th></tr></thead>
+        <tbody>
+          <tr><td>学龄前</td><td>一个或多个运动里程碑（<strong>坐、爬、走</strong>）落后，或发展特定技能（<strong>爬楼梯、扣扣子、系鞋带</strong>）落后</td></tr>
+          <tr><td>学龄期</td><td><strong>书写、做手工</strong>等时出现困难</td></tr>
+          <tr><td>青春期和成年期</td><td>学习<strong>驾驶、使用工具</strong>等新技能时体现困难</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p><strong>再看三大表现（教材原文）：</strong></p>
+    <div class="grid3">
+      <div class="mini">
+        <h4>① 动作笨拙</h4>
+        <p>复杂动作的组织能力存在障碍，或完成技能性动作时笨拙；爬、跑、跳跃、跳绳、拍球时不协调、<strong>幅度大、效率低</strong>；难以长时间维持静态姿势；<strong>手-眼协调能力差</strong>。</p>
+      </div>
+      <div class="mini">
+        <h4>② 视觉空间障碍</h4>
+        <p>完成涉及立体视知觉、认知作业时有困难；在<strong>走迷宫、搭积木、搭模型、玩球、绘画、认识地图</strong>时表现较差。</p>
+      </div>
+      <div class="mini">
+        <h4>③ 特殊技能运用障碍</h4>
+        <p><strong>书写不能或书写困难</strong>、绘画和建构障碍等。</p>
+      </div>
+    </div>
+    <p><strong>共病：</strong>更容易共患其他神经发育障碍；同时易共患<strong>破坏性行为障碍、焦虑障碍和／或抑郁障碍</strong>。</p>
+    <p class="note">教材未给出各表现的百分比或严重度分级，故只做定性描述。</p>
+  </div>
+
+  <!-- 第四栏 -->
+  <div class="card orange" id="u5-4">
+    <h3 class="col-title"><span class="idx">第四栏</span>教材典型案例</h3>
+    <div class="callout book">
+      <span class="ct">📖 教材未提供具体临床案例</span>
+      本节教材只有定义、病因、表现、诊断要点与干预方法，<strong>没有</strong>患者年龄、病史、运动评估分数或诊断结论。本栏不虚构病例。
+    </div>
+    <p><strong>教材提供的"可用素材"清单：</strong></p>
+    <ul>
+      <li>具体动作清单：坐、爬、走、爬楼梯、扣扣子、系鞋带、书写、做手工、驾驶、使用工具。</li>
+      <li>具体评估情境：走迷宫、搭积木、搭模型、玩球、绘画、认识地图。</li>
+      <li>评估工具：儿童发育性协调障碍问卷、儿童运动协调能力评估量表、Bruininks-Oseretsky 动作熟练度测验第 2 版。</li>
+      <li>筛查手段：神经软体征检查、神经检查量表、儿童神经系统微体征检查。</li>
+    </ul>
+    <p><strong>可迁移的诊断思路（按教材诊断段落整理，不是教材病例）：</strong></p>
+    <ol>
+      <li><strong>看发生时点：</strong>运动协调障碍是否发生在发育期，通常在儿童早期就显现。</li>
+      <li><strong>看表现性质：</strong>粗大或精细运动技能发育落后、协调性差、动作笨拙／缓慢／不准确。</li>
+      <li><strong>看功能损害：</strong>是否导致日常生活、学校适应、职业、休闲活动或其他重要功能领域受到<strong>严重而持续</strong>的限制。</li>
+      <li><strong>排他：</strong>排除神经系统疾病、肌肉骨骼系统或结缔组织疾病、感觉障碍、智力发育障碍。</li>
+      <li><strong>守住年龄门槛：</strong>5 岁前一般不诊断——因为儿童早期运动发育和技能掌握差异大，很难与正常发育区分。</li>
+    </ol>
+    <p class="note">以上五步均可在教材原文找到对应句子；教材未给评估工具的切分与诊断阈值，不补写。</p>
+  </div>
+
+  <!-- 第五栏 -->
+  <div class="card orange" id="u5-5">
+    <h3 class="col-title"><span class="idx">第五栏</span>鉴别诊断对对碰</h3>
+    <p>教材列三组：智力发育障碍、孤独症谱系障碍、注意缺陷多动障碍。三组都可能"看起来笨"，但原因不同。</p>
+    <p><strong>表 1　vs 智力发育障碍</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>维度</th><th>发育性运动协调障碍</th><th>智力发育障碍</th></tr></thead>
+        <tbody>
+          <tr><td>运动表现</td><td>粗大／精细运动发育落后、协调差、动作笨拙</td><td><strong>同样可</strong>出现上述运动表现</td></tr>
+          <tr><td>其他领域</td><td>语言、认知、社会性一般不全面落后</td><td>语言、认知、社会性等<strong>各个方面</strong>相应落后</td></tr>
+          <tr><td>关键鉴别</td><td colspan="2">是否"只有运动这条线落后"：只有运动落后＝运动协调障碍；多领域同时落后＝ID。</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note">一句话鉴别总结：<strong>ID 是"全身都慢"，运动协调障碍是"只有手脚不听话"。</strong></p>
+    <p><strong>表 2　vs 孤独症谱系障碍</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>维度</th><th>发育性运动协调障碍</th><th>孤独症谱系障碍</th></tr></thead>
+        <tbody>
+          <tr><td>运动差的原因</td><td>协调能力本身落后</td><td>可能因<strong>兴趣狭窄</strong>，不愿意从事需要复杂运动协调技能的活动</td></tr>
+          <tr><td>社交</td><td>无明显质的损害</td><td>存在社会交往与社会交流<strong>质的损害</strong></td></tr>
+          <tr><td>兴趣行为</td><td>无特征性刻板</td><td>兴趣狭窄、刻板行为</td></tr>
+          <tr><td>关键鉴别</td><td colspan="2">"是不愿做，还是做不好"：不愿做＋社交质损害＝ASD；想做但做不好＝运动协调障碍。</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note">一句话鉴别总结：<strong>ASD 是"不想玩"，运动协调障碍是"玩不转"。</strong></p>
+    <p><strong>表 3　vs 注意缺陷多动障碍</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>维度</th><th>发育性运动协调障碍</th><th>注意缺陷多动障碍</th></tr></thead>
+        <tbody>
+          <tr><td>动作表现</td><td>协调差、笨拙、缓慢、不准确</td><td>可能因注意力不集中、冲动而<strong>行为莽撞、动作夸张</strong></td></tr>
+          <tr><td>动作性质</td><td>"做不准"</td><td>"做得太猛、太急"</td></tr>
+          <tr><td>共病关系</td><td colspan="2">同时符合两个疾病的诊断也是<strong>常见现象</strong>，此时可做<strong>共病诊断</strong></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note">一句话鉴别总结：<strong>ADHD 是"刹车失灵"，运动协调障碍是"方向盘不准"；两者常同车。</strong></p>
+    <div class="callout key"><span class="ct">📌 三组鉴别的共同逻辑</span>先问"运动落后是不是孤立存在"（排除 ID），再问"是能力问题还是意愿问题"（排除 ASD），最后问"是协调问题还是冲动问题"（区分 ADHD）。<strong>三个问题按顺序问，就不会混。</strong></div>
+  </div>
+
+  <!-- 第六栏 -->
+  <div class="card green" id="u5-6">
+    <h3 class="col-title"><span class="idx">第六栏</span>治疗方案工具箱</h3>
+    <div class="callout key"><span class="ct">📌 总纲</span><strong>早期预防和早期干预是最有效的策略。</strong>本节治疗<strong>不涉及药物</strong>，以运动治疗、感觉统合与补偿技术为主。</div>
+    <div class="grid2">
+      <div class="card green" style="margin:0">
+        <h3>① 抓住三个发育窗口</h3>
+        <ul>
+          <li><strong>0～3 岁：</strong>运动技能发展的主要阶段。</li>
+          <li><strong>0～1 岁：</strong>粗大运动发展的重要时期。</li>
+          <li><strong>1～3 岁：</strong>精细运动发展的重要时期。</li>
+        </ul>
+        <div class="callout warn" style="margin-top:10px"><span class="ct">⚠️ 干预门槛低于诊断门槛</span>5 岁以下儿童如果表现出明显的运动问题，<strong>即使达不到诊断标准，也应开始早期干预</strong>。这与"5 岁前一般不诊断"并不矛盾：<strong>可以晚点下诊断，但不能晚点开始干预</strong>。</div>
+      </div>
+      <div class="card green" style="margin:0">
+        <h3>② 四种干预方法</h3>
+        <ul>
+          <li><strong>家长指导：</strong>把训练融入日常照养（教材与运动治疗并列提出，未展开具体课程）。</li>
+          <li><strong>运动治疗：</strong>针对粗大与精细运动技能的训练。</li>
+          <li><strong>感觉统合功能训练：</strong>针对感觉-运动整合。</li>
+          <li><strong>补偿技术：</strong>对难以改善的功能提供替代策略（教材未展开具体工具）。</li>
+        </ul>
+      </div>
+    </div>
+    <h3 style="font-size:16px;margin:16px 0 4px">③ 按年龄安排干预重点（教材年龄轴的反向应用）</h3>
+    <div class="timeline">
+      <div class="tl-item"><h4>学龄前</h4><p>重点看运动里程碑（坐、爬、走）与生活技能（爬楼梯、扣扣子、系鞋带），落后即介入。</p></div>
+      <div class="tl-item"><h4>学龄期</h4><p>重点看书写、手工等学校任务；与老师沟通，减少"笨手笨脚"带来的挫败与耻感。</p></div>
+      <div class="tl-item"><h4>青春期／成年期</h4><p>重点看驾驶、使用工具等新技能的学习；教材提醒 50%～70% 的患者部分症状会持续到青春期和成年期。</p></div>
+    </div>
+    <div class="callout warn"><span class="ct">⚠️ 边界提醒</span>教材本节<strong>没有</strong>任何药物治疗、剂量或疗程。不要把"感觉统合训练"写成已被证实的一线疗法——教材只把它列为干预方法之一，未评价证据等级。</div>
+  </div>
+
+  <!-- 第七栏 -->
+  <div class="card purple" id="u5-7">
+    <h3 class="col-title"><span class="idx">第七栏</span>记忆工具箱</h3>
+    <div class="callout tip">
+      <span class="ct">🔧 方法一：年龄轴记忆法（图解记忆法）</span>
+      画一条横轴，标四个点：<br>
+      <strong>学龄前</strong>（坐爬走、爬楼梯扣扣子系鞋带）→ <strong>学龄期</strong>（书写、手工）→ <strong>青春期</strong>（驾驶、工具）→ <strong>成年期</strong>（新技能仍笨拙）。<br>
+      <em>为什么这样记：</em>本节症状按年龄变化，用一条轴把散落的动作串起来，比按"三大表现"平铺更符合教材原意，也更容易接病例题。
+    </div>
+    <div class="callout tip">
+      <span class="ct">🔧 方法二：口诀歌谣法（三大表现）</span>
+      口诀：<strong>"动作笨、空间差、技能难"</strong>。<br>
+      动作笨＝动作笨拙（跑跳拍球不协调、手-眼协调差）；空间差＝视觉空间障碍（迷宫积木地图）；技能难＝特殊技能运用障碍（书写不能、绘画建构障碍）。<br>
+      <em>为什么这样记：</em>七个字锁三类，顺序与教材一致；考"以下哪项不属于"时，按三类清点即可。
+    </div>
+    <div class="callout tip">
+      <span class="ct">🔧 方法三：数字编码法</span>
+      记 <strong>"5～6、5 岁、50～70"</strong>：<br>
+      5～11 岁学龄儿童患病率 <strong>5%～6%</strong>；<strong>5 岁前一般不诊断</strong>；<strong>50%～70%</strong> 部分症状持续到青春期和成年期。<br>
+      再加上海四个"疑似"检出率 <strong>7.0／4.7／3.5／2.7</strong>（3～6 岁，逐年下降）。<br>
+      <em>为什么这样记：</em>三个数字各管"患病、诊断门槛、预后"，上海四个数字管"年龄趋势"，分组记不会互相污染。
+    </div>
+    <div class="callout tip">
+      <span class="ct">🔧 方法四：对比记忆法（两句话）</span>
+      <strong>vs ASD：</strong>"不想玩 vs 玩不转"。<br>
+      <strong>vs ADHD：</strong>"方向盘不准 vs 刹车失灵"。<br>
+      <em>为什么这样记：</em>这两组是本节最常考的鉴别；两个比喻各有画面，能在题干信息不足时先给出方向。
+    </div>
+  </div>
+
+  <!-- 第八栏 -->
+  <div class="card cyan" id="u5-8">
+    <h3 class="col-title"><span class="idx">第八栏</span>知识联动</h3>
+    <ul>
+      <li><strong>与第一节（智力发育障碍）：</strong>ID 可表现为运动发育落后与动作笨拙，鉴别靠"是否多领域全面落后"；运动协调障碍不应伴全面智力落后。</li>
+      <li><strong>与第三节（孤独症谱系障碍）：</strong>ASD 可因兴趣狭窄而不愿做复杂运动，易被误认为运动协调差；教材提示要看"社会交往与社会交流质的损害"。</li>
+      <li><strong>与第六节（注意缺陷多动障碍）：</strong>两病有共同遗传风险，且可共病；ADHD 的"动作夸张"与运动协调障碍的"动作不准"需分开描述。</li>
+      <li><strong>与第四节（发育性学习障碍）：</strong>书写困难在两节都出现：学习障碍的书面表达障碍偏"眼-手协调与写作组织"，运动协调障碍偏"特殊技能运用"；教材把运动协调障碍列为学习障碍常见共病。</li>
+      <li><strong>与康复医学（PT／OT）：</strong>运动治疗、感觉统合训练、补偿技术均属作业治疗与物理治疗范畴，说明本病的主力处置不在精神科药物。</li>
+      <li><strong>与儿童保健／学校体育：</strong>0～3 岁是运动技能发展主要阶段，儿保随访与幼儿园体育活动是早期发现的第一道关口。</li>
+      <li><strong>与情绪障碍章：</strong>教材指出本病易共患破坏性行为障碍、焦虑和／或抑郁障碍，需在随访中一并评估。</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===== 10 注意缺陷多动障碍 ===== -->
+<section id="u6">
+  <div class="sec-head"><div class="badge">10</div><h2>注意缺陷多动障碍<span class="en">第六节 · p.60–63</span></h2></div>
+  <p class="sec-lead">本章临床权重最高的一节。抓住"注意缺陷是主症状、多动-冲动是第二主线、诊断要三要素、治疗要两药＋行为"这条骨架，就不会被繁杂的表现淹没。</p>
+
+  <!-- 第一栏 -->
+  <div class="card cyan" id="u6-1">
+    <h3 class="col-title"><span class="idx">第一栏</span>疾病画像</h3>
+    <div class="quote"><span class="lab">教材原文</span>注意缺陷多动障碍（attention deficit hyperactivity disorder）是一种起病于生长发育期，以持续性的注意缺陷和／或多动-冲动的行为模式为主要临床特征的神经发育障碍，其注意缺陷和多动-冲动的程度已超出了年龄和智能的正常变异范围。</div>
+    <p><strong>一句话画像：</strong>不是"孩子不听话"，而是<strong>注意的选择／维持／转移</strong>出了毛病，加上<strong>与年龄不相称的活动水平过高和冲动</strong>，且已超出年龄与智能的正常变异范围。</p>
+    <p><strong>类比理解：</strong>像一台"聚光灯"失灵：该照的地方照不住（主动注意差），余光里一点动静就被带走（易受干扰）；同时"油门"又太灵敏（多动、冲动）。<span class="note">（此句为类比理解，非教材原文）</span></p>
+    <div class="stat"><span>全球 5.9%～7.2%</span><span>我国 6～16 岁 6.4%</span><span>成人约 2.5%</span><span>儿童男∶女≈2∶1</span><span>成人男∶女≈1.6∶1</span></div>
+    <div class="grid2">
+      <div class="mini">
+        <h4>两条核心主线</h4>
+        <ul>
+          <li><strong>注意缺陷</strong>：教材明确"是本病最主要的症状"。</li>
+          <li><strong>多动-冲动</strong>：与年龄发育不相称的活动水平过高＋做事唐突、鲁莽、不顾后果。</li>
+        </ul>
+      </div>
+      <div class="mini">
+        <h4>流行病学要点</h4>
+        <ul>
+          <li>荟萃分析全球平均患病率 <strong>5.9%～7.2%</strong>。</li>
+          <li>我国 2021 年 6～16 岁儿童青少年调查 <strong>6.4%</strong>；成年人约 <strong>2.5%</strong>。</li>
+          <li>男性高于女性：儿童约 <strong>2∶1</strong>，成人约 <strong>1.6∶1</strong>。</li>
+        </ul>
+      </div>
+    </div>
+    <p class="note">教材特别提醒：3 岁之前很难与正常的好动区分，一般不予诊断——这直接决定了第四栏诊断要点的第一条。</p>
+  </div>
+
+  <!-- 第二栏 -->
+  <div class="card blue" id="u6-2">
+    <h3 class="col-title"><span class="idx">第二栏</span>病因探秘</h3>
+    <div class="quote"><span class="lab">教材原文</span>多数情况下是由遗传和环境危险因素的相互作用所致，其中生物学因素起主要作用。</div>
+    <div class="grid2">
+      <div class="card blue" style="margin:0">
+        <h3>（一）遗传因素</h3>
+        <ul>
+          <li><strong>家族聚集性：</strong>一级亲属患病率是普通人群的 <strong>5～6 倍</strong>。</li>
+          <li><strong>双生子：</strong>平均遗传度 <strong>0.76</strong>。</li>
+          <li><strong>全基因组关联研究：</strong>精神病学基因组学联盟（PGC）在超过 <strong>2 万例患者和 3 万例对照</strong>中发现 <strong>12 个</strong>关联位点，所在基因包括微管骨架成分、钙黏素家族、转录因子、轴突导向基因等。</li>
+          <li><strong>分子遗传：</strong>多巴胺、5-羟色胺、去甲肾上腺素三类递质及其代谢相关受体（如多巴胺 D4 受体、多巴胺转运蛋白、5-羟色胺受体等）的基因多态性增加易感性。</li>
+        </ul>
+      </div>
+      <div class="card blue" style="margin:0">
+        <h3>（二）其他危险因素</h3>
+        <ul>
+          <li>母亲怀孕年龄较大、怀孕前超重。</li>
+          <li>孕期烟草和酒精接触史、孕期肥胖和糖尿病。</li>
+          <li>出生时的并发症、早产、极低出生体重。</li>
+          <li>环境因素：铅中毒、大量食品添加剂等也可能增加患病风险。</li>
+        </ul>
+        <p class="note">教材用"风险因素""也可能增加"而非"病因"，答题时注意措辞强度。</p>
+      </div>
+    </div>
+    <h3 style="font-size:16px;margin:16px 0 8px">（三）发病机制 · 四条证据线</h3>
+    <div class="grid2">
+      <div class="mini">
+        <h4>① 脑结构与功能</h4>
+        <ul>
+          <li>脑发育轨迹：大脑皮质厚度达峰时间约比正常儿童<strong>落后 3 年</strong>，<strong>前额叶尤甚</strong>。</li>
+          <li>结构 MRI 荟萃分析：总体积、额叶、扣带、颞叶皮质厚度以及基底节、杏仁核、海马体积减小。</li>
+          <li>fMRI：背外侧前额叶、腹外侧前额叶、前扣带回皮质、纹状体可能是疾病相关的重要结构。</li>
+        </ul>
+      </div>
+      <div class="mini">
+        <h4>② 神经电生理</h4>
+        <ul>
+          <li>定量脑电图：<strong>慢波（θ 波）活动增加</strong>，α 波功率减小、平均功率下降。</li>
+          <li>约 <strong>1/3</strong> 患儿存在脑电 θ/β 比值升高。</li>
+          <li>提示：中枢神经系统<strong>成熟延迟</strong>和<strong>大脑皮质觉醒不足</strong>。</li>
+        </ul>
+      </div>
+      <div class="mini">
+        <h4>③ 神经生化</h4>
+        <ul>
+          <li>生化改变主要指<strong>儿茶酚胺类递质水平或功能低下</strong>。</li>
+          <li>包括多巴胺、肾上腺素、去甲肾上腺素及 5-羟色胺等单胺类神经递质。</li>
+        </ul>
+      </div>
+      <div class="mini">
+        <h4>④ 神经心理学机制</h4>
+        <ul>
+          <li>五个理论模型：行为的抑制／激活模型、延迟满足困难模型、执行功能模型、抑制模型、认知能量模型。</li>
+          <li><strong>双通道模型逐渐成为主流</strong>：从动机和抑制两条途径解释症状——注意涣散可能由抑制缺损导致自我调节功能异常；冲动性可能由受情境制约的动机缺陷所致。</li>
+        </ul>
+      </div>
+    </div>
+    <div class="callout tip"><span class="ct">🧠 把机制连成一句话</span>基因（遗传度 0.76）→ 儿茶酚胺功能低下 → 前额叶皮质成熟延迟约 3 年 → 执行功能（抑制、计划、延迟满足）受损 → 临床上表现为"注意抓不住＋行为刹不住"。<span class="note">（此链条为对教材四线证据的整合，非教材原文原句）</span></div>
+  </div>
+
+  <!-- 第三栏 -->
+  <div class="card red" id="u6-3">
+    <h3 class="col-title"><span class="idx">第三栏</span>临床表现拼图</h3>
+    <p><strong>先看年龄：</strong>同一疾病，不同年龄的"主画面"不同。</p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>年龄阶段</th><th>教材描述</th></tr></thead>
+        <tbody>
+          <tr><td>学龄前</td><td>最突出的是<strong>多动-冲动</strong>：过分喧闹和捣乱，身体活动明显比同龄儿童多</td></tr>
+          <tr><td>学龄期</td><td><strong>核心症状表现最为丰富</strong>：多动-冲动仍存在，同时注意力难以集中</td></tr>
+          <tr><td>青少年</td><td>多动症状随年龄增长<strong>减轻</strong>，注意缺陷及冲动症状<strong>持续存在</strong></td></tr>
+          <tr><td>成年</td><td>约 <strong>50%～60%</strong> 仍有注意集中困难、坐立不安、情绪不稳、易冲动、工作效率低、人际关系差</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="tabs" data-tabs>
+      <div class="tabbar">
+        <button class="on" data-tab="u6a">注意缺陷（主症状）</button>
+        <button data-tab="u6b">多动-冲动</button>
+        <button data-tab="u6c">学习困难与功能损害</button>
+        <button data-tab="u6d">共病</button>
+      </div>
+      <div class="panel on" data-panel="u6a">
+        <p><strong>本质：</strong>注意力的<strong>选择、维持、转移</strong>发生障碍。</p>
+        <div class="grid2">
+          <div class="mini"><h4>主动 vs 被动</h4><p>主动注意力差，集中于目标的有意注意能力弱（如学习）；<strong>被动注意力尚可</strong>（如看电视、玩电脑）。</p></div>
+          <div class="mini"><h4>易受干扰</h4><p>非常容易受外界细微干扰而转移注意力，或集中注意力的时间短。</p></div>
+        </div>
+        <p><strong>具体表现：</strong>上课不能专心听讲，无法持续注意力于较枯燥重复的内容；粗心大意、忽视细节；注意力易分散，听别人讲话时心不在焉；没耐心听完指示或吩咐；需要不停提醒日常生活的事情，丢三落四，没有时间观念。</p>
+      </div>
+      <div class="panel" data-panel="u6b">
+        <p><strong>多动（与年龄发育不相称的活动水平过高）：</strong></p>
+        <ul>
+          <li>跑来跑去，爬高爬低；不安宁，小动作多，在座位上扭来扭去。</li>
+          <li>在教室或其他要求安静的场合坐不住，甚至擅自离开座位，到处乱跑或攀爬。</li>
+          <li>难以从事安静的活动或游戏，仿佛精力特别旺盛。</li>
+          <li>话多插嘴，不顾场合高声喧哗或追逐打闹，好争吵。</li>
+        </ul>
+        <p><strong>行为冲动（做事唐突、鲁莽、不顾后果，对小刺激作出过分反应）：</strong></p>
+        <ul>
+          <li>缺乏耐心，在需要轮流进行的游戏或活动中不愿等候。</li>
+          <li>对挫折的忍耐性差；爱招惹别人，容易与同伴冲突，经常与人滋事、争吵、打架。</li>
+          <li>情绪不稳：高兴时容易过度兴奋，遇小事易激惹，脾气急躁、易怒。</li>
+        </ul>
+      </div>
+      <div class="panel" data-panel="u6c">
+        <ul>
+          <li><strong>学业：</strong>注意缺陷和／或多动症状影响课堂听课效果、完成作业的速度和质量，致使其学业成绩<strong>低于其智力所应该达到的水平</strong>。</li>
+          <li><strong>家庭：</strong>行为及情绪冲动问题导致家庭关系紧张。</li>
+          <li><strong>社交与职业：</strong>人际关系不良、职业表现差等。</li>
+        </ul>
+        <p class="note">注意"低于其智力所应达到的水平"这一表述——它是与 ID 鉴别的关键伏笔。</p>
+      </div>
+      <div class="panel" data-panel="u6d">
+        <p><strong>总量：</strong><strong>75% 以上</strong>至少存在一种共病，<strong>50% 以上</strong>有两种精神共病。</p>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>共病层次</th><th>教材列举</th></tr></thead>
+            <tbody>
+              <tr><td><strong>最常见</strong></td><td>对立违抗／品行障碍</td></tr>
+              <tr><td><strong>其次</strong></td><td>发育性学习障碍、焦虑障碍、发育性运动协调障碍、破坏性情绪失调障碍</td></tr>
+              <tr><td><strong>再者</strong></td><td>抽动障碍、抑郁障碍、孤独症谱系障碍、物质使用障碍等</td></tr>
+              <tr><td><strong>成年人</strong></td><td>常与反社会型和其他类型的人格障碍共病</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <p><strong>病程数据（教材原文）：</strong>慢性持续性病程；到青春期约 <strong>70%～85%</strong> 仍符合诊断；到青春期末期还有 <strong>30%～50%</strong> 符合完整诊断；症状和社会功能完全缓解者仅 <strong>15%～30%</strong>。</p>
+  </div>
+
+  <!-- 第四栏 -->
+  <div class="card orange" id="u6-4">
+    <h3 class="col-title"><span class="idx">第四栏</span>教材典型案例</h3>
+    <div class="quote">
+      <span class="lab">教材原文</span>
+      患者，男，12 岁，5 年级学生。因好动、上课注意力不集中就诊。患者幼儿期活动多，喜欢与小朋友追逐打闹，经常主动挑起事端、好冒险，不顾后果，不能安静下来看图书或听故事。进入小学后上课不能安静听讲，不停玩弄文具，不能按时完成课堂作业。做家庭作业时拖拉，边做边玩，需要大人督促才能完成。考试、做题时粗心大意，学习成绩差。经常遗失书本和其他物品。不受同学欢迎，不时与同学发生摩擦及打架事件。出生时有产钳助产史，新生儿评分 7 分。父亲常年酗酒，对患者训斥、打骂多。精神检查合作，但随着接谈时间的延长，患者变得不能专心听医师讲话，翻弄桌上的东西，踢翻凳子。韦氏智力测验智商 102，言语智商 109，操作智商 89。<strong>诊断：注意缺陷多动障碍。</strong>
+    </div>
+    <div class="grid3">
+      <div class="mini">
+        <h4>注意缺陷的证据</h4>
+        <p>上课不能安静听讲、不能按时完成课堂作业、家庭作业拖拉、考试粗心、经常遗失物品；接谈时间一长就"不能专心听医师讲话"。</p>
+      </div>
+      <div class="mini">
+        <h4>多动-冲动的证据</h4>
+        <p>幼儿期活动多、追逐打闹、主动挑起事端、好冒险不顾后果；不停玩弄文具；踢翻凳子；与同学摩擦打架。</p>
+      </div>
+      <div class="mini">
+        <h4>功能损害的证据</h4>
+        <p>学习成绩差、不受同学欢迎、与同学冲突——学业与同伴关系两大领域均受损。</p>
+      </div>
+    </div>
+    <p><strong>诊断思路拆解：</strong></p>
+    <ol>
+      <li><strong>起病时点：</strong>幼儿期即活动多，小学后症状明显——符合"12 岁以前、儿童早期显现"。</li>
+      <li><strong>跨场合：</strong>学校（上课、作业、同学）与家庭（家庭作业需督促）都有表现——符合"两个以上场合"。</li>
+      <li><strong>持续时间：</strong>教材未写具体月数，但"幼儿期—小学—12 岁"的持续过程支持慢性持续，而非短暂阶段。</li>
+      <li><strong>功能损害：</strong>学业差＋同伴关系差，达到"社会功能显著受损"。</li>
+      <li><strong>排除 ID：</strong>韦氏 IQ 102，属正常范围——学业差<strong>低于其智力应达到的水平</strong>，正符合 ADHD 而非 ID。</li>
+      <li><strong>风险因素记录：</strong>产钳助产史、新生儿评分 7 分（出生并发症）；父亲酗酒、训斥打骂（家庭环境）——教材如实记录，但未据此下病因结论。</li>
+    </ol>
+    <div class="callout book"><span class="ct">📖 案例最值钱的一处</span>"<strong>随着接谈时间的延长</strong>，患者变得不能专心听医师讲话，翻弄桌上的东西，踢翻凳子"——这是把症状<strong>在诊室里现场演示</strong>出来。病例题若给这类描述，几乎可以直接指向 ADHD。</div>
+  </div>
+
+  <!-- 第五栏 -->
+  <div class="card orange" id="u6-5">
+    <h3 class="col-title"><span class="idx">第五栏</span>鉴别诊断对对碰</h3>
+    <p>教材先指向本章第三、四、五节（ASD、学习障碍、运动协调障碍），再单列四组：智力发育障碍、焦虑障碍、心境障碍、正常活泼儿童。</p>
+    <p><strong>表 1　vs 智力发育障碍 / 焦虑障碍 / 心境障碍 / 正常活泼儿童</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>维度</th><th>ADHD</th><th>智力发育障碍</th><th>焦虑障碍</th><th>心境障碍</th><th>正常活泼儿童</th></tr></thead>
+        <tbody>
+          <tr><td>核心</td><td>持续注意缺陷＋多动-冲动</td><td>智力与社会适应全面低</td><td>焦虑、烦躁、不快乐的主观体验</td><td>首发与主要症状是情绪问题</td><td>活泼好动，但限于特定情景</td></tr>
+          <tr><td>起病／病程</td><td>发育早期起病，<strong>持续</strong></td><td>发育早期，持续</td><td>往往有<strong>明显起病过程</strong>，也有正常发展阶段</td><td><strong>发作性</strong>，间歇期正常</td><td>无病理性病程</td></tr>
+          <tr><td>关键鉴别</td><td>治疗后注意改善，学业可提高至与智力相当</td><td>学业<strong>始终</strong>存在困难</td><td>伴出汗、心搏加快等躯体化症状</td><td>情绪问题是主线，注意问题随情绪出现</td><td>在需要安静或有纪律约束的场合<strong>多能保持不动</strong></td></tr>
+          <tr><td>场景表现</td><td>学校、家庭等多场合</td><td>多场合</td><td>多场合，常伴躯体症状</td><td>随发作周期变化</td><td>课后游戏、户外活动等特定情景</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note">一句话鉴别总结：<strong>看"是不是一直这样、是不是哪儿都这样、是不是只有情绪坏的时候才这样"。</strong></p>
+    <p><strong>表 2　与本章其他疾病的交叉速查</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>鉴别对象</th><th>教材给出的核心区别</th></tr></thead>
+        <tbody>
+          <tr><td>孤独症谱系障碍</td><td>ADHD <strong>无社会交往质的损害</strong>，也<strong>无</strong>明显兴趣狭窄和刻板重复行为；ASD 有</td></tr>
+          <tr><td>发育性学习障碍</td><td>学习障碍<strong>一进入小学</strong>就表现出学习相关技能障碍；ADHD 是注意问题<strong>不能代偿</strong>后才明显学业受损</td></tr>
+          <tr><td>发育性运动协调障碍</td><td>运动协调障碍是协调差、动作笨拙；ADHD 是注意不集中、冲动导致行为莽撞、动作夸张；两者可共病</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note">一句话鉴别总结：<strong>先排"社交质缺陷"（ASD），再排"一上学就露"（学习障碍），最后排"动作不准"（运动协调障碍）。</strong></p>
+    <div class="callout key"><span class="ct">📌 诊断三要素（比鉴别更重要）</span>①症状发生在<strong>生长发育期（12 岁以前）</strong>；②症状持续 <strong>6 个月以上</strong>，且在学校、家庭等<strong>两个以上场合</strong>都有；③社会功能（学业、人际关系）<strong>显著受损</strong>。另需排除精神分裂症等其他精神病性障碍所致。</div>
+  </div>
+
+  <!-- 第六栏 -->
+  <div class="card green" id="u6-6">
+    <h3 class="col-title"><span class="idx">第六栏</span>治疗方案工具箱</h3>
+    <div class="quote"><span class="lab">教材原文</span>注意缺陷多动障碍的治疗原则是根据患儿的个体特征与需求，合理选择运用心理教育、药物治疗、心理行为治疗、个体化教育等综合干预措施，最大程度地缓解症状，促进功能恢复。</div>
+    <div class="grid2">
+      <div class="card green" style="margin:0">
+        <h3>① 心理教育</h3>
+        <p>主要针对患者及其家长，帮助他们了解疾病的成因、可能伴发的问题、治疗方法与过程，以及家庭应该如何配合。</p>
+      </div>
+      <div class="card green" style="margin:0">
+        <h3>② 心理行为治疗</h3>
+        <ul>
+          <li><strong>以行为矫正为主：</strong>强化、惩罚、隔离、消退（减少对不良行为的关注）。</li>
+          <li><strong>学龄前儿童：</strong>强调针对家长的<strong>行为管理技能培训</strong>；系统家长培训可纠正错误认知、改善自身情绪、重建亲子关系、用行为方法矫正不良行为。</li>
+          <li><strong>社会技能训练：</strong>人际交往技能（倾听、沟通、寻求帮助）；控制不良情绪（放松、暂停）；替代攻击行为。</li>
+          <li><strong>自我监控训练、问题解决训练。</strong></li>
+        </ul>
+      </div>
+    </div>
+    <h3 style="font-size:16px;margin:18px 0 6px">③ 药物治疗（教材重点）</h3>
+    <div class="callout key"><span class="ct">📌 用药定位</span>ADHD 治疗以<strong>药物和行为治疗为主</strong>；行为治疗需<strong>配合药物治疗</strong>才能获得显著疗效，因此合理的药物治疗十分重要。短期疗效已有大量随机对照研究证实。</div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>类别</th><th>代表药</th><th>机制</th><th>适用 / 疗效</th><th>关键不良反应与注意</th></tr></thead>
+        <tbody>
+          <tr>
+            <td><strong>中枢兴奋剂</strong></td>
+            <td>哌甲酯（速释剂、控释剂）、安非他明</td>
+            <td>抑制脑内突触前膜<strong>多巴胺转运体</strong>，提高突触间隙多巴胺水平</td>
+            <td>有效率 <strong>75%～80%</strong>；显著减少多动和冲动、提高注意力，改善执行功能与特殊学习技能</td>
+            <td>早期：食欲降低、胃痛、头痛、入睡困难；其他：情绪不稳、烦躁易怒、心率增快、血压增高；早期体重下降，长期对生长发育无显著影响；<strong>潜在心功能不全者猝死风险升高</strong>；<strong>心脏结构性损害患者禁用</strong></td>
+          </tr>
+          <tr>
+            <td><strong>非中枢兴奋剂</strong></td>
+            <td>托莫西汀；另有缓释胍法辛、可乐定</td>
+            <td>抑制突触前<strong>去甲肾上腺素转运体</strong>，增加突触间隙去甲肾上腺素；也抑制前额叶皮质等部位的多巴胺转运体</td>
+            <td>用于<strong>7 岁以上儿童及成人</strong>；耐受性较好，不良反应少见</td>
+            <td>常见：食欲减退、恶心、疲劳、眩晕、情绪不稳；<strong>优点：改善晚间症状，对合并抽动或焦虑障碍者优于兴奋剂</strong></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout tip"><span class="ct">💡 关于"成瘾"的教材结论</span>长期研究显示，哌甲酯<strong>在治疗剂量下不会成瘾</strong>，相反能显著<strong>减少未来物质滥用的发生率</strong>。这是家长最常问、也最容易被误解的一点。</div>
+    <div class="grid2">
+      <div class="card green" style="margin:0">
+        <h3>④ 学习干预与学校支持</h3>
+        <p>教育对患儿发展至关重要。无论是否合并学习障碍，都应按需要给予<strong>个体化的特殊教育</strong>：基于教室的行为管理、有针对性的小班教学、个别辅导、社交能力训练等。</p>
+      </div>
+      <div class="card green" style="margin:0">
+        <h3>⑤ 其他治疗（辅助，证据待论证）</h3>
+        <p>有氧运动、认知训练、脑电生物反馈、平衡训练、饮食干预、中药治疗等可作为辅助治疗，但<strong>其效果还有待进一步论证</strong>。</p>
+      </div>
+    </div>
+    <div class="timeline" style="margin-top:16px">
+      <div class="tl-item"><h4>第一步 · 早发现</h4><p>临床医师、家长或教师掌握疾病线索和诊断要点，实施早期诊断与早期干预。</p></div>
+      <div class="tl-item"><h4>第二步 · 综合干预</h4><p>心理教育＋行为治疗＋药物＋学校支持，按个体特征与需求组合。</p></div>
+      <div class="tl-item"><h4>第三步 · 防共病与风险行为</h4><p>ADHD 与意外伤害、药物滥用、暴饮暴食、肥胖、不安全性行为等健康风险行为增加有关，也增加对立违抗、焦虑、抑郁、双相的风险，需早期筛查、优化治疗。</p></div>
+    </div>
+  </div>
+
+  <!-- 第七栏 -->
+  <div class="card purple" id="u6-7">
+    <h3 class="col-title"><span class="idx">第七栏</span>记忆工具箱</h3>
+    <div class="callout tip">
+      <span class="ct">🔧 方法一：数字锚定法（诊断三要素）</span>
+      记 <strong>"12—6—2—1"</strong>：<br>
+      <strong>12 岁前</strong>起病；症状持续 <strong>6 个月</strong>以上；<strong>2 个以上</strong>场合都有；社会功能<strong>显著受损（1 条硬指标）</strong>。<br>
+      <em>为什么这样记：</em>诊断标准最容易漏的是"跨场合"和"6 个月"；用四个数字当检查表，答题时逐项打勾，不会只凭"多动"就下诊断。
+    </div>
+    <div class="callout tip">
+      <span class="ct">🔧 方法二：口诀歌谣法（四维表现）</span>
+      口诀：<strong>"注意为主，多动冲动；学习受累，共病七五。"</strong><br>
+      解释：注意缺陷是最主要症状；多动-冲动是第二主线；学习困难与功能损害是后果；75% 以上至少一种共病。<br>
+      <em>为什么这样记：</em>四句话覆盖临床表现与共病两大块；先有"主—次—果—共"的层级，再填细节，避免把四个维度背成平铺清单。
+    </div>
+    <div class="callout tip">
+      <span class="ct">🔧 方法三：对比记忆法（三组反义）</span>
+      <strong>vs ID：</strong>"治疗后能追上智力" vs "学业始终困难"。<br>
+      <strong>vs 心境障碍：</strong>"持续" vs "发作性、间歇期正常"。<br>
+      <strong>vs 正常活泼：</strong>"哪儿都坐不住" vs "该安静时能安静"。<br>
+      <em>为什么这样记：</em>三组都是"看起来像、其实不同"的干扰项；每组只留一对反义词，考场上一秒可判。
+    </div>
+    <div class="callout tip">
+      <span class="ct">🔧 方法四：药物对比法（两个转运体）</span>
+      画一张两列表：<br>
+      <strong>哌甲酯</strong>——堵<strong>多巴胺</strong>转运体（DAT）→ 突触间隙多巴胺↑ → 有效率 <strong>75%～80%</strong>。<br>
+      <strong>托莫西汀</strong>——堵<strong>去甲肾上腺素</strong>转运体（NET）→ 突触间隙 NE↑（也抑制前额叶 DAT）→ 7 岁以上可用。<br>
+      再加一句：合并抽动或焦虑，托莫西汀优于兴奋剂。<br>
+      <em>为什么这样记：</em>两药机制只差一个"转运体名字"，用对照表记最不容易张冠李戴；"合并抽动/焦虑"是高频选择题。
+    </div>
+  </div>
+
+  <!-- 第八栏 -->
+  <div class="card cyan" id="u6-8">
+    <h3 class="col-title"><span class="idx">第八栏</span>知识联动</h3>
+    <ul>
+      <li><strong>与第一节（智力发育障碍）：</strong>ID 可伴上课不集中、好动、坐不住，轻度 ID 刚入小学易误认为 ADHD；教材给出的关键鉴别是"ADHD 治疗后学业能提高到与智力相当的水平，ID 学业始终困难"。</li>
+      <li><strong>与第三节（孤独症谱系障碍）：</strong>22%～53% 的 ASD 共患 ADHD；ASD 有社会交往质的损害与兴趣狭窄刻板，ADHD 没有——这是双向鉴别的锚点。</li>
+      <li><strong>与第四节（发育性学习障碍）：</strong>学习障碍"一进小学就露"，ADHD 的学业受损在注意问题不能代偿后才突出；两者常共病，需按"损害焦点"分别诊断。</li>
+      <li><strong>与第五节（发育性运动协调障碍）：</strong>两病有共同遗传风险且常共病；ADHD 是"行为莽撞、动作夸张"，运动协调障碍是"动作笨拙、协调差"。</li>
+      <li><strong>与第七节（抽动障碍）：</strong>抽动障碍约 50% 合并 ADHD，ADHD 的共病清单也包含抽动障碍；治疗上托莫西汀"对合并抽动或焦虑障碍者优于兴奋剂"，是两节的关键接口。</li>
+      <li><strong>与对立违抗／品行障碍章：</strong>教材把对立违抗／品行障碍列为 ADHD <strong>最常见</strong>的共病；成人期则常与反社会型和其他类型人格障碍共病。</li>
+      <li><strong>与心境障碍、焦虑障碍章：</strong>ADHD 增加焦虑障碍、抑郁障碍和双相情感障碍的风险；鉴别上要抓"持续 vs 发作性"。</li>
+      <li><strong>与物质使用／公共卫生：</strong>ADHD 与药物滥用等健康风险行为增加有关；而哌甲酯治疗剂量不增加成瘾、反而减少未来物质滥用——治疗本身就是预防。</li>
+      <li><strong>与教育学：</strong>基于教室的行为管理、小班教学、个别辅导是治疗的一部分，说明 ADHD 的干预必须延伸到校园。</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===== 11 抽动障碍 ===== -->
+<section id="u7">
+  <div class="sec-head"><div class="badge">11</div><h2>抽动障碍<span class="en">第七节 · p.63–66</span></h2></div>
+  <p class="sec-lead">本章最后一节，也是最"像神经科"的一节：症状是看得见的动作和声音，鉴别却要一路排到风湿、遗传代谢与药物反应。</p>
+
+  <!-- 第一栏 -->
+  <div class="card cyan" id="u7-1">
+    <h3 class="col-title"><span class="idx">第一栏</span>疾病画像</h3>
+    <div class="quote"><span class="lab">教材原文</span>抽动障碍（tic disorder）是一种起病于儿童和青少年时期，以不随意的突发、快速、重复、非节律性、刻板单一或多部位肌肉运动和／或发声抽动为特点的复杂的慢性神经精神障碍。</div>
+    <p><strong>一句话画像：</strong>不是"坏习惯"，而是<strong>不随意、突发、快速、重复、非节律、刻板</strong>的动作或声音；可以短暂忍住，睡着会轻，紧张会重。</p>
+    <p><strong>类比理解：</strong>像身体里有个"不受指挥的开关"，隔一阵就"啪"地弹一下——眨眼、耸肩、清嗓子；越紧张，开关越频繁。<span class="note">（此句为类比理解，非教材原文）</span></p>
+    <div class="stat"><span>学龄儿童短暂性可达 20%</span><span>慢性 0.3%～5.0%</span><span>Tourette 0.3%～1.0%</span><span>我国总患病率 6.1%</span><span>男∶女≈3～4∶1</span></div>
+    <div class="grid3">
+      <div class="mini"><h4>短暂性抽动障碍</h4><p>又称一过性抽动障碍；儿童期最常见。</p></div>
+      <div class="mini"><h4>慢性运动或发声抽动障碍</h4><p>运动与发声<strong>不同时</strong>存在，一般以运动抽动多见。</p></div>
+      <div class="mini"><h4>Tourette 综合征</h4><p>又称发声和多种运动联合抽动性障碍、抽动秽语综合征；多部位运动抽动与发声抽动<strong>共存</strong>。</p></div>
+    </div>
+    <p class="note">我国荟萃分析：抽动障碍总患病率 6.1%，其中短暂性 1.7%、慢性运动或发声抽动障碍 1.2%、Tourette 综合征 0.3%——三个分项与总率的口径不同，不要相加后强行对齐。</p>
+  </div>
+
+  <!-- 第二栏 -->
+  <div class="card blue" id="u7-2">
+    <h3 class="col-title"><span class="idx">第二栏</span>病因探秘</h3>
+    <div class="quote"><span class="lab">教材原文</span>抽动障碍的病因不明，可能是遗传因素以及环境因素在发育过程中相互作用的结果。</div>
+    <div class="grid2">
+      <div class="card blue" style="margin:0">
+        <h3>（一）遗传因素</h3>
+        <ul>
+          <li><strong>遗传度估计 0.77</strong>，具有明显家族聚集性。</li>
+          <li><strong>双生子：</strong>同卵双生子共患率 <strong>77%</strong>，异卵双生子 <strong>23%</strong>。</li>
+          <li>同卵双生子中症状与严重程度的差异，说明<strong>非遗传因素</strong>决定了相同遗传易感个体的临床表型表达。</li>
+          <li><strong>易感区域：</strong>Tourette 综合征多项全基因组扫描提示 4q、8p、11q 等染色体区域。</li>
+          <li><strong>候选基因：</strong>家系研究显示<strong>组氨酸脱羧酶基因</strong>可能参与，但<strong>未获得一致性验证</strong>。</li>
+          <li>抽动障碍与<strong>强迫症</strong>可能具有共同的遗传基础。</li>
+        </ul>
+      </div>
+      <div class="card blue" style="margin:0">
+        <h3>（二）神经生物学</h3>
+        <ul>
+          <li><strong>核心通路：</strong>皮质-纹状体-丘脑-皮质通路参与 Tourette 综合征及其伴随神经精神症状的表达。</li>
+          <li><strong>通路上的递质系统：</strong>多巴胺能、5-羟色胺能、胆碱能、去甲肾上腺能、组胺能以及阿片类系统。</li>
+          <li><strong>最实质的角色：</strong>多巴胺能系统在 Tourette 综合征中起了最实质性的作用。</li>
+        </ul>
+      </div>
+      <div class="card blue" style="margin:0">
+        <h3>（三）神经免疫</h3>
+        <ul>
+          <li>约 <strong>20%～35%</strong> 的抽动障碍与<strong>感染后自身免疫的病理损害</strong>有关。</li>
+          <li>研究较多的是与 <strong>A 组乙型溶血性链球菌</strong>感染的关系，称为<strong>PANDAS</strong>（与链球菌感染有关的儿童自身免疫性神经精神疾病）。</li>
+          <li>临床也发现：<strong>感染发热可使抽动和强迫的症状加重</strong>。</li>
+        </ul>
+      </div>
+      <div class="card blue" style="margin:0">
+        <h3>（四）社会心理因素 +（五）其他</h3>
+        <ul>
+          <li><strong>心理：</strong>起病可能与应激有关，如强烈精神创伤或其他重大生活事件；家庭、学校、社会中的心理因素引发的<strong>紧张、焦虑</strong>可诱发或加重抽动。</li>
+          <li><strong>围产期：</strong>部分患者有产伤、窒息、早产、低出生体重等并发症。</li>
+          <li><strong>外伤：</strong>少数患者有头部外伤史。</li>
+        </ul>
+      </div>
+    </div>
+    <div class="callout tip"><span class="ct">🧠 五类因素怎么排优先级</span>遗传是"底子"（0.77，同卵 77% vs 异卵 23%）；神经生物学是"通路"（皮质-纹状体-丘脑-皮质，多巴胺最实质）；神经免疫是"触发"（20%～35%，PANDAS）；社会心理是"放大器"（紧张焦虑加重）；围产期与外伤是"背景损伤"。<strong>教材开篇已定性"病因不明"——不要把任何一条写成唯一病因。</strong></div>
+  </div>
+
+  <!-- 第三栏 -->
+  <div class="card red" id="u7-3">
+    <h3 class="col-title"><span class="idx">第三栏</span>临床表现拼图</h3>
+    <p><strong>先记抽动的"两种分法"：</strong>按性质分运动性／发声性；按复杂程度分简单性／复杂性。另有一种<strong>感觉性抽动</strong>（先兆冲动）。</p>
+    <div class="grid2">
+      <div class="mini">
+        <h4>运动性抽动</h4>
+        <ul>
+          <li><strong>简单：</strong>突然、迅速、孤立、无意义的运动——眨眼、挤眉、皱额、吸鼻、张口、伸脖、摇头、耸肩。</li>
+          <li><strong>复杂：</strong>突然的、似有目的的复杂行为动作——做鬼脸、眼球转动、拍手、弯腰、扭动躯干、跺脚；还包括<strong>模仿行为、猥亵行为</strong>。</li>
+        </ul>
+      </div>
+      <div class="mini">
+        <h4>发声性抽动</h4>
+        <ul>
+          <li><strong>简单：</strong>反复发出不自主、无意义、单调的声音——"嗯""啊"，或类似动物叫声、清嗓声、吸鼻声。</li>
+          <li><strong>复杂：</strong>反复发出似有意义的词语声——单词、词组、短句、<strong>秽语</strong>、模仿性语言、重复性语言。</li>
+        </ul>
+      </div>
+      <div class="mini">
+        <h4>感觉性抽动（先兆冲动）</h4>
+        <p>部分患者抽动前出现<strong>先兆性感觉和冲动</strong>；感觉性抽动<strong>先于抽动</strong>，给患者带来明显痛苦感，抽动发生后痛苦感减轻。</p>
+      </div>
+      <div class="mini">
+        <h4>三条共同特点</h4>
+        <ul>
+          <li>可受<strong>意志短暂控制</strong>。</li>
+          <li><strong>睡眠时症状减轻或消失</strong>。</li>
+          <li><strong>紧张时加重</strong>。</li>
+        </ul>
+      </div>
+    </div>
+    <p><strong>三种临床亚型（教材原文，注意病程界线）：</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>亚型</th><th>核心表现</th><th>起病与病程</th><th>其他要点</th></tr></thead>
+        <tbody>
+          <tr>
+            <td><strong>短暂性抽动障碍</strong></td>
+            <td>突然、重复、刻板的一种或多种运动性抽动和／或发声性抽动；大多数为<strong>简单运动性抽动</strong>，少数为单纯发声性抽动</td>
+            <td>起病于学龄早期，<strong>4～7 岁</strong>最常见；一天内多次发生，<strong>持续 2 周以上，但不超过 1 年</strong></td>
+            <td>儿童期最常见的抽动障碍类型</td>
+          </tr>
+          <tr>
+            <td><strong>慢性运动或发声抽动障碍</strong></td>
+            <td>简单或复杂的运动或发声抽动，但<strong>运动与发声两种症状不同时存在</strong>，一般以运动抽动多见</td>
+            <td>病程<strong>持续至少 1 年</strong>；以病程长、症状持久且刻板不变为特点</td>
+            <td>多见于成年人，但常发生于儿童少年期</td>
+          </tr>
+          <tr>
+            <td><strong>Tourette 综合征</strong></td>
+            <td>进行性发展的<strong>多部位运动抽动和发声抽动共存</strong>；首发多为简单运动抽动（面部肌肉最多、间断性），少数为首发简单发声</td>
+            <td>病程<strong>至少持续 1 年以上</strong>；随病程部位增多（肩、颈、四肢、躯干），由简单抽动发展为复杂抽动</td>
+            <td>部分伴重复动作、模仿语言、秽语或猥亵行为；<strong>20%～60% 合并强迫症状，50% 合并 ADHD</strong></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p><strong>病程与预后：</strong>起病于 <strong>4～6 岁</strong>，<strong>10～15 岁</strong>症状波动明显，<strong>18～19 岁</strong>之后趋于稳定。短暂性一般预后良好，大多数可自行好转；慢性多数在青春期缓解，对社会功能影响不大；Tourette 缓慢进展、症状起伏、新症状可代替旧症状，估计 <strong>30%～40%</strong> 的抽动症状到青春期后期缓解。</p>
+  </div>
+
+  <!-- 第四栏 -->
+  <div class="card orange" id="u7-4">
+    <h3 class="col-title"><span class="idx">第四栏</span>教材典型案例</h3>
+    <div class="callout book">
+      <span class="ct">📖 教材未提供具体临床案例</span>
+      本节教材只有定义、病因、抽动形式、三型亚型、鉴别与治疗，<strong>没有</strong>患者年龄、抽动部位演变、量表分数或诊断结论。本栏不虚构病例。
+    </div>
+    <p><strong>教材提供的"可用素材"清单：</strong></p>
+    <ul>
+      <li>具体抽动词表：眨眼、挤眉、皱额、吸鼻、张口、伸脖、摇头、耸肩；做鬼脸、眼球转动、拍手、弯腰、扭动躯干、跺脚；"嗯""啊"、动物叫声、清嗓声；秽语、模仿性语言。</li>
+      <li>三型病程界线：短暂性＞2 周且≤1 年；慢性与 Tourette 至少 1 年。</li>
+      <li>评估工具：耶鲁大体抽动严重程度量表。</li>
+      <li>辅助检查：血沉、抗"O"、血浆铜蓝蛋白测定、脑电图、头颅 CT 或 MRI。</li>
+    </ul>
+    <p><strong>可迁移的诊断思路（按教材诊断段落整理，不是教材病例）：</strong></p>
+    <ol>
+      <li><strong>问病程：</strong>起病过程、起病年龄、诱发因素、抽动首发症状、涉及部位及发展过程。</li>
+      <li><strong>看抽动：</strong>部位、频率、持续时间、复杂性、干扰性。</li>
+      <li><strong>查家族：</strong>家庭成员有无类似疾病。</li>
+      <li><strong>做体检与辅助检查：</strong>全面体格检查；必要时血沉、抗"O"、血浆铜蓝蛋白、脑电图、头颅 CT／MRI。</li>
+      <li><strong>依据诊断标准诊断并准确分型：</strong>先用"2 周／1 年"定亚型，再看"运动与发声是否共存"定慢性 vs Tourette。</li>
+      <li><strong>评严重度：</strong>耶鲁大体抽动严重程度量表等有助于评价。</li>
+    </ol>
+    <p class="note">以上六步均可在教材原文找到对应句子；教材未给量表切分与诊断阈值，不补写。</p>
+  </div>
+
+  <!-- 第五栏 -->
+  <div class="card orange" id="u7-5">
+    <h3 class="col-title"><span class="idx">第五栏</span>鉴别诊断对对碰</h3>
+    <p>教材列出<strong>七组</strong>鉴别，几乎覆盖"所有会不自主动的病"。表按教材顺序排列。</p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>疾病</th><th>年龄／性质</th><th>核心特征</th><th>与本病的鉴别抓手</th></tr></thead>
+        <tbody>
+          <tr><td><strong>小舞蹈症</strong></td><td>风湿性感染所致，多见 5～15 岁儿童少年</td><td>舞蹈样异常运动，伴肌张力减低等风湿热体征</td><td>血沉增快、抗链球菌溶血素 O 及黏蛋白增高；病程<strong>自限性</strong>；<strong>无发声性抽动</strong>；<strong>抗风湿治疗有效</strong></td></tr>
+          <tr><td><strong>亨廷顿病</strong></td><td>大多 30～50 岁成年人，偶见儿童型；常染色体显性遗传</td><td>进行性不自主舞蹈样运动和痴呆</td><td>CT 可见<strong>尾状核萎缩</strong>；成年起病＋痴呆，与本病儿童起病不同</td></tr>
+          <tr><td><strong>肝豆状核变性（Wilson 病）</strong></td><td>铜代谢障碍</td><td>肝损害、锥体外系体征及精神障碍</td><td><strong>角膜 K-F 环</strong>；<strong>血浆铜蓝蛋白减低</strong></td></tr>
+          <tr><td><strong>肌阵挛</strong></td><td>可发生于任何年龄，多种病因</td><td>癫痫的一种发作类型，每次发作短暂</td><td>常伴<strong>意识障碍</strong>；脑电图<strong>高度节律异常</strong>；<strong>抗痉药物可控制</strong></td></tr>
+          <tr><td><strong>迟发性运动障碍</strong></td><td>主要见于应用抗精神病药期间或突然停药后</td><td>不自主运动障碍</td><td><strong>明确用药史</strong>是最关键线索</td></tr>
+          <tr><td><strong>急性运动性障碍</strong></td><td>常为某些药物引起</td><td>突然不自主运动、震颤、张力障碍、扭转痉挛或舞蹈样动作</td><td>药物包括<strong>左旋多巴、甲氧氯普胺（胃复安）、中枢兴奋剂、抗精神病药</strong>；<strong>一般停药后症状消失</strong></td></tr>
+          <tr><td><strong>分离性障碍</strong></td><td>儿童分离性障碍发作时可表现为抽动样或痉挛样行为异常</td><td>症状变化与心理因素相关</td><td>有<strong>确切的强烈心理因素</strong>作为病因；消除心理因素、经心理治疗后可<strong>完全缓解</strong></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note">一句话鉴别总结：<strong>看年龄（儿童 vs 成年）、看用药史（迟发／急性）、看实验室（抗"O"、铜蓝蛋白、K-F 环）、看意识与脑电（肌阵挛）、看心理因素（分离性障碍）——五把尺子依次量。</strong></p>
+    <div class="callout key"><span class="ct">📌 最容易记混的三组</span>① <strong>小舞蹈症 vs Tourette</strong>：前者无发声抽动、抗风湿有效；后者运动＋发声共存。② <strong>肝豆状核变性 vs 抽动</strong>：前者有肝损害、K-F 环、铜蓝蛋白低。③ <strong>迟发性运动障碍 vs 抽动</strong>：前者有抗精神病药使用或停药史。</div>
+  </div>
+
+  <!-- 第六栏 -->
+  <div class="card green" id="u7-6">
+    <h3 class="col-title"><span class="idx">第六栏</span>治疗方案工具箱</h3>
+    <div class="quote"><span class="lab">教材原文</span>对于每一个已经来就诊的患儿及家长，提供详细的评估、健康教育和社会支持是必须的，然后根据临床类型和严重程度选用合理的治疗方案。对短暂性抽动障碍或症状较轻者的慢性抽动障碍可采用心理治疗。对于症状较重的慢性抽动障碍和 Tourette 综合征，则以药物治疗为主，联合心理治疗。</div>
+    <div class="grid2">
+      <div class="card green" style="margin:0">
+        <h3>① 心理教育（所有患者都要做）</h3>
+        <ul>
+          <li>医师用<strong>与患儿年龄相匹配的沟通方式</strong>，解释抽动症状，降低<strong>耻感</strong>以及紧张焦虑情绪。</li>
+          <li><strong>对家长的心理教育：</strong>告知抽动症状特点及病程的<strong>波动性</strong>；探讨与抽动关联的社会心理因素；告知可能的功能损害；探讨可能的治疗选择；合理安排作息，避免过度紧张和疲劳，开展<strong>韵律性体育活动</strong>锻炼。</li>
+          <li>提供抽动相关健康宣教材料给<strong>家长、老师和同伴</strong>。</li>
+        </ul>
+      </div>
+      <div class="card green" style="margin:0">
+        <h3>② 心理行为治疗（循证较充分的三法）</h3>
+        <ul>
+          <li><strong>抽动综合行为干预（CBIT）</strong></li>
+          <li><strong>反向习惯训练（HRT）</strong></li>
+          <li><strong>暴露反应预防（ERP）</strong></li>
+        </ul>
+        <p class="note">教材只列名称与"循证医学证据较充分"，未展开操作步骤，不补写。</p>
+      </div>
+    </div>
+    <h3 style="font-size:16px;margin:18px 0 6px">③ 药物治疗（按严重度分两线）</h3>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>线别</th><th>适用</th><th>教材列出的药物</th></tr></thead>
+        <tbody>
+          <tr><td><strong>第一类：非精神抑制药物</strong></td><td><strong>轻度抽动</strong></td><td>可乐定、胍法辛、巴氯芬、抗癫痫药</td></tr>
+          <tr><td><strong>第二类：经典或非典型抗精神病药物</strong></td><td><strong>严重抽动障碍</strong></td><td><strong>非典型：</strong>阿立哌唑、利培酮、奥氮平、喹硫平；<strong>经典：</strong>氟哌啶醇、硫必利、匹莫齐特、舒必利、氟奋乃静</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout key"><span class="ct">📌 治疗目标（教材原话）</span>治疗的总体目标<strong>不是完全控制症状</strong>，而是<strong>减轻症状</strong>和<strong>不再产生进一步的心理社会功能损害</strong>。这句话决定了用药的"度"：不追求零抽动。</div>
+    <div class="grid2" style="margin-top:10px">
+      <div class="card green" style="margin:0">
+        <h3>④ 神经调控与神经外科</h3>
+        <p>有研究提示，对于<strong>药物及行为治疗效果均不佳</strong>的难治性 Tourette 综合征，可考虑<strong>深部脑刺激（DBS）</strong>，但需<strong>十分慎重</strong>。</p>
+      </div>
+      <div class="card green" style="margin:0">
+        <h3>⑤ 中医中药</h3>
+        <p>以<strong>息风止动</strong>为基本治疗原则，根据证候和阶段分清正虚与邪实，辨证论治。常用中成药：<strong>菖麻熄风片、芍麻止痉颗粒、九味熄风颗粒</strong>；研究还提示<strong>针灸、推拿</strong>对抽动障碍有效。</p>
+      </div>
+    </div>
+    <div class="timeline" style="margin-top:16px">
+      <div class="tl-item"><h4>第一步 · 评估与教育</h4><p>详细评估＋健康教育＋社会支持，先降低耻感与焦虑。</p></div>
+      <div class="tl-item"><h4>第二步 · 分型定策略</h4><p>短暂性或轻症慢性 → 心理治疗；重症慢性／Tourette → 药物为主＋心理治疗。</p></div>
+      <div class="tl-item"><h4>第三步 · 行为治疗</h4><p>CBIT／HRT／ERP，作为药物之外的核心非药物手段。</p></div>
+      <div class="tl-item"><h4>第四步 · 难治性再升级</h4><p>药物＋行为均不佳的 Tourette，才谨慎考虑 DBS；中医可作为辅助。</p></div>
+    </div>
+    <div class="callout warn"><span class="ct">⚠️ 边界提醒</span>教材<strong>未给出任何具体剂量与疗程天数</strong>，只给药物名单与"按严重程度选用"。本指南不补写 mg 数。</div>
+  </div>
+
+  <!-- 第七栏 -->
+  <div class="card purple" id="u7-7">
+    <h3 class="col-title"><span class="idx">第七栏</span>记忆工具箱</h3>
+    <div class="callout tip">
+      <span class="ct">🔧 方法一：二维矩阵法（图解记忆法）</span>
+      画一个 2×2 表格：<br>
+      横轴＝<strong>运动</strong>／<strong>发声</strong>；纵轴＝<strong>简单</strong>／<strong>复杂</strong>。<br>
+      运动简单：眨眼、挤眉、皱额、吸鼻、张口、伸脖、摇头、耸肩。<br>
+      运动复杂：做鬼脸、眼球转动、拍手、弯腰、扭动躯干、跺脚（＋模仿、猥亵）。<br>
+      发声简单："嗯""啊"、动物叫声、清嗓、吸鼻。<br>
+      发声复杂：单词、词组、短句、秽语、模仿性语言、重复性语言。<br>
+      <em>为什么这样记：</em>教材的分类本身就是二维的；用矩阵记，四个格子各自成组，不会把"清嗓子"误归到运动抽动。
+    </div>
+    <div class="callout tip">
+      <span class="ct">🔧 方法二：时间轴＋数字编码法（三型病程）</span>
+      画一条时间轴，标三个刻度：<br>
+      <strong>2 周</strong> → 抽动"一天内多次发生、持续 2 周以上"才算短暂性抽动障碍；<br>
+      <strong>1 年</strong> → 不超过 1 年＝短暂性；<strong>至少 1 年</strong>＝慢性或 Tourette；<br>
+      再看"运动与发声是否共存"：<strong>不同时存在</strong>＝慢性；<strong>共存</strong>＝Tourette。<br>
+      <em>为什么这样记：</em>三型的唯一硬分界就是时间与"是否共存"；用一条轴＋一个问题，两个条件就能锁定分型。
+    </div>
+    <div class="callout tip">
+      <span class="ct">🔧 方法三：口诀歌谣法</span>
+      口诀：<strong>"两周起，一年分；单发单动是慢性，运动发声一起来，Tourette 跑不掉。"</strong><br>
+      解释："两周起"指短暂性要求症状持续 2 周以上；"一年分"指 1 年是短暂性与慢性／Tourette 的分界；"单发单动"指慢性型运动与发声不同时存在；"一起来"指 Tourette 要求两者共存。<br>
+      <em>为什么这样记：</em>把三条诊断条件压成押韵短句，考场先背口诀再核对病例，能避免"看到抽动就写 Tourette"的惯性错误。
+    </div>
+    <div class="callout tip">
+      <span class="ct">🔧 方法四：数字卡片法（病因与共病）</span>
+      记四张卡：<strong>"0.77／77-23"</strong>（遗传度 0.77；同卵 77%、异卵 23%）；<strong>"20～35"</strong>（感染后自身免疫相关比例，PANDAS）；<strong>"20～60／50"</strong>（Tourette 合并强迫 20%～60%、合并 ADHD 50%）；<strong>"30～40"</strong>（青春期后期缓解比例）。<br>
+      <em>为什么这样记：</em>本节数字集中在"遗传—免疫—共病—预后"四块；分卡片存放，比混在一起背更抗遗忘。
+    </div>
+  </div>
+
+  <!-- 第八栏 -->
+  <div class="card cyan" id="u7-8">
+    <h3 class="col-title"><span class="idx">第八栏</span>知识联动</h3>
+    <ul>
+      <li><strong>与第六节（注意缺陷多动障碍）：</strong>约 50% 的 Tourette 综合征合并 ADHD；ADHD 的共病清单也包含抽动障碍。治疗上托莫西汀"对合并抽动或焦虑障碍者优于兴奋剂"，是两节最实用的交叉点。</li>
+      <li><strong>与强迫及相关障碍章：</strong>20%～60% 的 Tourette 合并强迫症状；教材指出抽动障碍与强迫症"可能具有共同的遗传基础"，且 ICD-11 将 Tourette 综合征同时并列在强迫及相关障碍中。</li>
+      <li><strong>与神经科（风湿／遗传代谢）：</strong>小舞蹈症（风湿性）、亨廷顿病（常染色体显性、尾状核萎缩）、肝豆状核变性（铜代谢、K-F 环）都以"不自主运动"为共同表现，是本节鉴别的主体。</li>
+      <li><strong>与药理学／药物不良反应：</strong>迟发性运动障碍与抗精神病药相关；急性运动性障碍与左旋多巴、甲氧氯普胺、中枢兴奋剂、抗精神病药相关——提示"先问用药史"是临床第一步。</li>
+      <li><strong>与儿科／感染科：</strong>PANDAS 把 A 组乙型溶血性链球菌感染与儿童自身免疫性神经精神疾病联系起来；感染发热可使抽动和强迫加重，提示躯体感染可影响精神症状。</li>
+      <li><strong>与癫痫／神经电生理：</strong>肌阵挛是癫痫的一种发作类型，脑电图高度节律异常、抗痉药可控制，与抽动的"可短暂意志控制、睡眠减轻"形成对照。</li>
+      <li><strong>与中医学：</strong>教材专列"息风止动"治则与三种中成药，并提及针灸、推拿，是本章唯一明确写入中医药治疗的疾病。</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===== 12 要点 ===== -->
+<section id="summary">
+  <div class="sec-head"><div class="badge">12</div><h2>全章核心要点速览<span class="en">20 key points</span></h2></div>
+  <p class="sec-lead">考前最后一遍只看这里。每条都能独立成题；数字类条目请回到原文核对，不要凭印象。</p>
+  <div class="card blue">
+    <div class="grid2">
+      <div>
+      <ol>
+        <li>神经发育障碍是"一组在发育期间出现的行为和认知障碍"，可导致个体、家庭、教育、职业等社会功能严重损害；病因复杂、多数尚不明确，遗传或其他因素导致的中枢神经系统损害是主流解释。ICD-11 所列包括智力发育障碍、发育性言语或语言障碍、孤独症谱系障碍、发育性学习障碍、发育性运动协调障碍、注意缺陷多动障碍、刻板运动障碍和其他特定的神经发育障碍；抽动障碍并列其中，Tourette 综合征同时并列于强迫及相关障碍。</li>
+        <li>智力发育障碍：起病于 <strong>18 岁之前</strong>，智能与社会适应能力<strong>均</strong>明显低于平均水平；全球 <strong>1%～3%</strong>，男∶女约 <strong>1.5∶1</strong>，农村高于城市，我国 29 省市 <strong>1.268%</strong>。</li>
+        <li>ID 遗传是主要原因：<strong>超过 1 000 个基因</strong>相关；基因检测可明确约 <strong>75% 重度</strong>、<strong>50% 轻度</strong>的致病基因；唐氏综合征与脆性 X 染色体综合征是导致<strong>中度以上</strong>智力残疾的两种最常见原因。</li>
+        <li>ID 四级：轻度 IQ <strong>50～69</strong>（占 85%，智龄 9～12 岁）；中度 <strong>35～49</strong>（10%，6～9 岁）；重度 <strong>20～34</strong>（3%～4%，3～6 岁）；极重度 <strong>＜20</strong>（1%～2%，低于 3 岁）。轻／中度 2～3、3～4 个标准差，重／极重度 4 个或以上。</li>
+        <li>ID 治疗：<strong>重在预防</strong>（新生儿筛查、遗传咨询、围产期保健）；病因明确者对因治疗（苯丙酮尿症出生后 3 周内低苯丙氨酸饮食、半乳糖血症停乳类、先天性甲减激素替代、克汀病补碘）；教育与康复训练是"目前最有效的治疗方法之一"；药物只针对共病与靶症状，剂量"视年龄和症状严重程度而定"。</li>
+        <li>ID 三组鉴别：暂时性发育迟缓是<strong>小于 4 岁</strong>、评估受限时的临时诊断；发育性学习障碍是<strong>特定技能</strong>受损而其他方面正常；ASD 的语言交流与社会交往<strong>显著落后于智力水平</strong>，而 ID 是"与其智力水平相当"。</li>
+        <li>发育性言语或语言障碍分三型：语音障碍、言语流畅性障碍、语言障碍；<strong>2～5 岁患病率 5%～12%</strong>，男性多于女性，随年龄增长下降。</li>
+        <li>语言障碍病因：<strong>FOXP2</strong> 是最早确定的特定基因，CNTNAP2、ATP2C2、CMIP 亦相关；阳性家族史患病率是阴性的 <strong>3 倍</strong>；言语障碍对应左侧缘上回与双侧小脑后部，语言障碍对应颞上回。</li>
+        <li>语言障碍治疗重功能：家长咨询与指导＋言语-语言治疗；低强度即足够，持续<strong>超过 8 周</strong>比少于 8 周更有效；预后较好（2 岁语言迟缓者 3～4 岁 <strong>50%</strong> 达正常；流畅性障碍 <strong>65%～85%</strong> 青春期前康复）。</li>
+      </ol>
+      </div>
+      <div>
+      <ol start="11">
+        <li>ASD 两大核心：<strong>启动和维持社会互动与社会沟通</strong>的持续缺陷＋<strong>局限、重复、刻板</strong>的兴趣和行为；欧洲 4.2‰～31.3‰、北美 8.7‰～18.5‰，男∶女 <strong>3∶1</strong>，WHO 全球平均 <strong>1%</strong>，我国 2020 年 6～12 岁 <strong>0.7%</strong>。</li>
+        <li>ASD 遗传为主：双生子研究 <strong>64%～91%</strong> 风险由遗传引起；核型异常 1%～3%、拷贝数变异 6%～10%（正常 1%～3%）；已涉及 100 多个基因 400 多个位点，但只能解释 <strong>30%～40%</strong>；环境因素包括父母生育年龄、母孕期高血压／超重／先兆子痫／自身免疫病、妊娠期抗抑郁药或对乙酰氨基酚。</li>
+        <li>ASD 临床：<strong>87%</strong> 在 3 岁时语言发育迟缓；<strong>80%</strong> 至少共患一种精神病性障碍（ID 30%～70%、ADHD 22%～53%、焦虑约 50%、睡眠 50%～80%、癫痫约 11%）。</li>
+        <li>ASD 诊断四要点：起病于发育早期；多场合社交互动与交流持续缺陷＋受限重复的行为／兴趣／活动；症状是普遍性特征并导致临床意义的功能损害；不能用智力障碍或全面发育迟缓解释。治疗四类：教育行为与交流性干预（ABA、结构化教学）、药物（仅治伴发问题）、心理治疗（修订版 CBT 对焦虑有效）、补充替代医疗（有效性难判断）。</li>
+        <li>发育性学习障碍：阅读、理解、书写、计算等基本心理过程存在一种或以上特殊障碍，入学后显现；患病率 <strong>5%～15%</strong>，男∶女 <strong>（2～3）∶1</strong>；阅读障碍最常见（<strong>5%～17%</strong>），书面表达 7%～15%，数学 6%～7%。</li>
+        <li>学习障碍 ICD-11 五型：伴阅读损害、伴书面表达损害、伴数学损害、伴其他特定学习功能损害、未特定；约 <strong>95%</strong> 阅读障碍儿童共病一种或多种神经发育障碍；约 <strong>20%</strong> 可能继发品行障碍／反社会行为或长期社会适应不良。</li>
+        <li>发育性运动协调障碍：粗大与精细运动获得显著延迟、协调差、动作笨拙／缓慢／不准确；5～11 岁 <strong>5%～6%</strong>；三大表现——动作笨拙、视觉空间障碍、特殊技能运用障碍；<strong>5 岁前一般不诊断</strong>，但明显运动问题即使不达标准也应早期干预；<strong>50%～70%</strong> 部分症状持续至青春期和成年期。</li>
+        <li>ADHD：持续性注意缺陷和／或多动-冲动，超出年龄与智能的正常变异范围；全球 <strong>5.9%～7.2%</strong>，我国 6～16 岁 <strong>6.4%</strong>，成人约 <strong>2.5%</strong>；儿童男∶女约 2∶1，成人约 1.6∶1；诊断三要素——<strong>12 岁前</strong>起病、持续 <strong>6 个月</strong>以上且<strong>两个以上场合</strong>、社会功能显著受损。</li>
+        <li>ADHD 临床：注意缺陷是<strong>最主要症状</strong>（主动注意差、被动注意尚可）；多动-冲动；学习困难与功能损害；<strong>75% 以上</strong>至少一种共病、<strong>50% 以上</strong>两种，最常见对立违抗／品行障碍。</li>
+        <li>ADHD 治疗：心理教育＋行为矫正（强化、惩罚、隔离、消退）＋家长培训＋社会技能／自我监控／问题解决训练＋药物＋学校支持。哌甲酯抑制突触前多巴胺转运体，有效率 <strong>75%～80%</strong>，治疗剂量不成瘾、反减少未来物质滥用，心脏结构性损害禁用；托莫西汀抑制去甲肾上腺素转运体，<strong>7 岁以上</strong>可用，合并抽动或焦虑优于兴奋剂。</li>
+        <li>抽动障碍：不随意、突发、快速、重复、非节律、刻板单一或多部位肌肉运动和／或发声抽动；短暂性（症状一天内多次、<strong>＞2 周且≤1 年</strong>，4～7 岁最常见）、慢性（运动与发声<strong>不同时</strong>存在、<strong>≥1 年</strong>）、Tourette（运动与发声<strong>共存</strong>、<strong>≥1 年</strong>，20%～60% 合并强迫、50% 合并 ADHD）；治疗目标<strong>不是完全控制症状</strong>，而是减轻症状、避免进一步心理社会功能损害。</li>
+      </ol>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 13 易混 ===== -->
+<section id="pitfalls">
+  <div class="sec-head"><div class="badge">13</div><h2>易混易错点警示<span class="en">Common traps</span></h2></div>
+  <p class="sec-lead">这些不是"没背到"，而是"背反了"。逐条核对你的第一反应，尤其是数字与归属。</p>
+  <div class="card danger">
+    <details open>
+      <summary>① 轻度 ID 占 85%，不是 10%</summary>
+      <div class="dbody">四级占比由多到少为：轻度 <strong>85%</strong>、中度 <strong>10%</strong>、重度 <strong>3%～4%</strong>、极重度 <strong>1%～2%</strong>。把"中度 10%"错记成"轻度 10%"是最常见的数字错位。轻度 IQ 50～69，中度 35～49。</div>
+    </details>
+    <details>
+      <summary>② 不要把 DSM 式"70／75 分界"套进本章</summary>
+      <div class="dbody">教材采用 ICD-11 分级：轻度 <strong>50～69</strong>、中度 <strong>35～49</strong>、重度 <strong>20～34</strong>、极重度 <strong>＜20</strong>。四个区间连续无重叠，<strong>不要</strong>写成"70～79 轻度"或"55～70 轻度"等其他体系的分界。</div>
+    </details>
+    <details>
+      <summary>③ 学习障碍不是"智力低"，ID 不是"某一科差"</summary>
+      <div class="dbody">学习障碍多发生在<strong>正常智力</strong>个体，核心是"与智能不相匹配的学业成就"；ID 是语言、认知、运动、社会性<strong>全面</strong>落后。一句话：ID 是"整栋楼矮"，学习障碍是"某一层漏水"。</div>
+    </details>
+    <details>
+      <summary>④ 语言障碍 ≠ ASD：差在"社交是否也坏"</summary>
+      <div class="dbody">语言障碍只损语言这条线；ASD 的语用障碍"不同于语言发育水平的障碍"，同时有社会交往困难与局限刻板兴趣。约 50% 的 ASD 伴语言障碍，<strong>可共病诊断</strong>，不是二选一。</div>
+    </details>
+    <details>
+      <summary>⑤ 选择性缄默不是"语言表达能力差"</summary>
+      <div class="dbody">关键在<strong>场合选择性</strong>：至少一种场合（通常在家）可以正常交流；语言障碍则是各场合普遍存在困难。教材还把"无明显兴趣狭窄和刻板重复行为"作为与 ASD 的鉴别点。</div>
+    </details>
+    <details>
+      <summary>⑥ "ASD 有特效药"是错的，药物只治伴发问题</summary>
+      <div class="dbody">教材明确：<strong>迄今没有特效药物可以治愈 ASD</strong>；利培酮、阿立哌唑用于易激惹／攻击／自伤；哌甲酯、托莫西汀用于共患 ADHD；褪黑素用于共患睡眠障碍。不要写成"抗精神病药治疗 ASD 核心症状"。</div>
+    </details>
+    <details>
+      <summary>⑦ ADHD 不是 3 岁前就能诊断，也不是只看"多动"</summary>
+      <div class="dbody">教材明确：<strong>3 岁之前很难与正常的好动区分，一般不予诊断</strong>；诊断还要求症状持续 <strong>6 个月以上</strong>、在<strong>两个以上场合</strong>出现、社会功能显著受损，且不是其他精神病性障碍所致。</div>
+    </details>
+    <details>
+      <summary>⑧ 哌甲酯"成瘾"是常见误解；真正禁忌是心脏结构性问题</summary>
+      <div class="dbody">教材：长期研究显示哌甲酯<strong>在治疗剂量下不会成瘾</strong>，相反能减少未来物质滥用发生率。需警惕的是<strong>潜在心功能不全者猝死风险升高</strong>，<strong>心脏结构性损害患者禁用</strong>。</div>
+    </details>
+    <details>
+      <summary>⑨ 抽动的两个时间界线：2 周与 1 年</summary>
+      <div class="dbody">短暂性：症状一天内多次发生，<strong>持续 2 周以上、不超过 1 年</strong>；慢性与 Tourette：<strong>至少 1 年</strong>。再把"运动与发声是否同时存在"加上：不同时＝慢性，共存＝Tourette。只记"1 年"会漏掉 2 周这一条。</div>
+    </details>
+    <details>
+      <summary>⑩ 抽动治疗不追求"零抽动"</summary>
+      <div class="dbody">教材原话：治疗总体目标<strong>不是完全控制症状</strong>，而是<strong>减轻症状</strong>和<strong>不再产生进一步的心理社会功能损害</strong>。因此轻度／短暂性可只用心理治疗，重症才以药物为主。</div>
+    </details>
+    <details>
+      <summary>⑪ "5 岁前不诊断"不等于"5 岁前不干预"</summary>
+      <div class="dbody">发育性运动协调障碍：5 岁前一般不给予诊断，因为儿童早期运动发育差异大、难与正常区分；但 5 岁以下若表现出明显运动问题，<strong>即使达不到诊断标准，也应开始早期干预</strong>。诊断门槛与干预门槛是两件事。</div>
+    </details>
+    <details>
+      <summary>⑫ 各病性别比、患病率不能跨节混用</summary>
+      <div class="dbody">ID 男∶女 <strong>1.5∶1</strong>；ASD <strong>3∶1</strong>；ADHD 儿童约 <strong>2∶1</strong>、成人 1.6∶1；抽动障碍男∶女约 <strong>3～4∶1</strong>；学习障碍 <strong>（2～3）∶1</strong>。五个比例相近但不同，答题时按病名对号，不要"就近取数"。</div>
+    </details>
+  </div>
+</section>
+
+<!-- ===== 14 自测 ===== -->
+<section id="quiz">
+  <div class="sec-head"><div class="badge">14</div><h2>章节自测系统<span class="en">13 questions · 6 types</span></h2></div>
+  <p class="sec-lead">覆盖单选、多选、判断、名词解释、简答、案例分析六种题型，按易→中→难排列。先作答，再展开解析。</p>
+
+  <div class="quiz-q">
+    <div class="qh"><span class="qno">第 1 题</span><span class="qtype">单选题</span><span class="diff">易</span></div>
+    <p class="brief">按教材表 5-1，轻度智力发育障碍的 IQ 区间是？</p>
+    <div class="opts">
+      <div class="opt"><span class="l">A.</span>50～69</div>
+      <div class="opt"><span class="l">B.</span>35～49</div>
+      <div class="opt"><span class="l">C.</span>20～34</div>
+      <div class="opt"><span class="l">D.</span>＜20</div>
+    </div>
+    <details><summary>查看答案与解析</summary><div class="dbody"><strong>答案：A</strong><br>四级为轻度 50～69、中度 35～49、重度 20～34、极重度＜20。轻度约占全部 ID 患者的 85%，智龄大致相当于 9～12 岁儿童。</div></details>
+  </div>
+
+  <div class="quiz-q">
+    <div class="qh"><span class="qno">第 2 题</span><span class="qtype">单选题</span><span class="diff">易</span></div>
+    <p class="brief">教材给出的孤独症谱系障碍男女性别比为？</p>
+    <div class="opts">
+      <div class="opt"><span class="l">A.</span>1.5∶1</div>
+      <div class="opt"><span class="l">B.</span>2∶1</div>
+      <div class="opt"><span class="l">C.</span>3∶1</div>
+      <div class="opt"><span class="l">D.</span>3～4∶1</div>
+    </div>
+    <details><summary>查看答案与解析</summary><div class="dbody"><strong>答案：C</strong><br>ASD 男女性别比为 3∶1。干扰项来源：1.5∶1 是 ID；2∶1 是 ADHD 儿童；3～4∶1 是抽动障碍。教材数字必须按病名对号，不能"就近取数"。</div></details>
+  </div>
+
+  <div class="quiz-q">
+    <div class="qh"><span class="qno">第 3 题</span><span class="qtype">单选题</span><span class="diff">中</span></div>
+    <p class="brief">注意缺陷多动障碍的诊断要点要求症状持续至少多长时间？</p>
+    <div class="opts">
+      <div class="opt"><span class="l">A.</span>2 周</div>
+      <div class="opt"><span class="l">B.</span>1 个月</div>
+      <div class="opt"><span class="l">C.</span>6 个月</div>
+      <div class="opt"><span class="l">D.</span>1 年</div>
+    </div>
+    <details><summary>查看答案与解析</summary><div class="dbody"><strong>答案：C</strong><br>教材诊断要点：症状持续 <strong>6 个月以上</strong>，且在学校、家庭等两个以上场合都有。2 周与 1 年是抽动障碍的分界数字，不要混入 ADHD。</div></details>
+  </div>
+
+  <div class="quiz-q">
+    <div class="qh"><span class="qno">第 4 题</span><span class="qtype">单选题</span><span class="diff">难</span></div>
+    <p class="brief">下列哪项最符合 Tourette 综合征的诊断特征？</p>
+    <div class="opts">
+      <div class="opt"><span class="l">A.</span>只有运动抽动，持续 8 个月</div>
+      <div class="opt"><span class="l">B.</span>只有发声抽动，持续 3 年</div>
+      <div class="opt"><span class="l">C.</span>运动抽动与发声抽动共存，持续 14 个月</div>
+      <div class="opt"><span class="l">D.</span>运动抽动与发声抽动交替出现，但从未同时存在，持续 2 年</div>
+    </div>
+    <details><summary>查看答案与解析</summary><div class="dbody"><strong>答案：C</strong><br>Tourette 要求"进行性发展的多部位运动抽动和发声抽动<strong>共存</strong>，病程至少持续 1 年以上"。A 不足 1 年且仅运动；B 仅发声；D 是慢性运动或发声抽动障碍的特点（两种症状<strong>不同时</strong>存在）。</div></details>
+  </div>
+
+  <div class="quiz-q">
+    <div class="qh"><span class="qno">第 5 题</span><span class="qtype">多选题</span><span class="diff">中</span></div>
+    <p class="brief">关于孤独症谱系障碍的治疗，下列哪些说法正确？</p>
+    <div class="opts">
+      <div class="opt"><span class="l">A.</span>应用行为分析和结构化教学是目前循证依据比较充分的干预方法</div>
+      <div class="opt"><span class="l">B.</span>利培酮、阿立哌唑可缓解易激惹、攻击、自伤等症状</div>
+      <div class="opt"><span class="l">C.</span>共患注意缺陷多动障碍时可使用哌甲酯和托莫西汀</div>
+      <div class="opt"><span class="l">D.</span>目前已有特效药物可以治愈孤独症谱系障碍</div>
+    </div>
+    <details><summary>查看答案与解析</summary><div class="dbody"><strong>答案：ABC</strong><br>D 错：教材明确"迄今为止没有特效药物可以治愈孤独症谱系障碍，但可以用于伴发问题的治疗"。C 正确：共患睡眠障碍时还可用褪黑素。</div></details>
+  </div>
+
+  <div class="quiz-q">
+    <div class="qh"><span class="qno">第 6 题</span><span class="qtype">多选题</span><span class="diff">难</span></div>
+    <p class="brief">关于抽动障碍的鉴别，下列哪些说法正确？</p>
+    <div class="opts">
+      <div class="opt"><span class="l">A.</span>小舞蹈症无发声性抽动，抗风湿治疗有效</div>
+      <div class="opt"><span class="l">B.</span>肝豆状核变性可见角膜 K-F 环、血浆铜蓝蛋白减低</div>
+      <div class="opt"><span class="l">C.</span>迟发性运动障碍主要见于应用抗精神病药期间或突然停药后</div>
+      <div class="opt"><span class="l">D.</span>肌阵挛常伴意识障碍，脑电图高度节律异常，抗痉药物可控制</div>
+    </div>
+    <details><summary>查看答案与解析</summary><div class="dbody"><strong>答案：ABCD</strong><br>四项均来自教材鉴别段落。补充：亨廷顿病多有 CT 尾状核萎缩；急性运动性障碍常由左旋多巴、甲氧氯普胺、中枢兴奋剂、抗精神病药引起，停药后症状可消失；分离性障碍有确切强烈心理因素，心理治疗后可完全缓解。</div></details>
+  </div>
+
+  <div class="quiz-q">
+    <div class="qh"><span class="qno">第 7 题</span><span class="qtype">判断题</span><span class="diff">易</span></div>
+    <p class="brief">发育性学习障碍多发生在智力正常个体，其核心是与智能不相匹配的学业成就。</p>
+    <div class="opts">
+      <div class="opt"><span class="l">A.</span>正确</div>
+      <div class="opt"><span class="l">B.</span>错误</div>
+    </div>
+    <details><summary>查看答案与解析</summary><div class="dbody"><strong>答案：A（正确）</strong><br>教材鉴别段落原文："发育性学习障碍多发生在正常智力水平的个体，其主要的特征是与智能不相匹配的学业成就，以及突出的阅读、书面表达或计算的障碍。"</div></details>
+  </div>
+
+  <div class="quiz-q">
+    <div class="qh"><span class="qno">第 8 题</span><span class="qtype">判断题</span><span class="diff">中</span></div>
+    <p class="brief">注意缺陷多动障碍在 3 岁之前即可明确诊断。</p>
+    <div class="opts">
+      <div class="opt"><span class="l">A.</span>正确</div>
+      <div class="opt"><span class="l">B.</span>错误</div>
+    </div>
+    <details><summary>查看答案与解析</summary><div class="dbody"><strong>答案：B（错误）</strong><br>教材：症状"发生在生长发育期（12 岁以前），多数在儿童早期就显现出来，但<strong>3 岁之前很难与正常的好动区分，一般不予诊断</strong>"。诊断还需满足持续 6 个月以上、两个以上场合、功能显著受损。</div></details>
+  </div>
+
+  <div class="quiz-q">
+    <div class="qh"><span class="qno">第 9 题</span><span class="qtype">判断题</span><span class="diff">中</span></div>
+    <p class="brief">抽动症状可受意志短暂控制，睡眠时减轻或消失，紧张时加重。</p>
+    <div class="opts">
+      <div class="opt"><span class="l">A.</span>正确</div>
+      <div class="opt"><span class="l">B.</span>错误</div>
+    </div>
+    <details><summary>查看答案与解析</summary><div class="dbody"><strong>答案：A（正确）</strong><br>这是教材对抽动特点的原文明示："抽动症状可受意志短暂控制，睡眠时症状减轻或消失，紧张时加重。"这三句话也是与肌阵挛、舞蹈症等鉴别的重要临床线索。</div></details>
+  </div>
+
+  <div class="quiz-q">
+    <div class="qh"><span class="qno">第 10 题</span><span class="qtype">名词解释</span><span class="diff">中</span></div>
+    <p class="brief">暂时性发育迟缓（全面发育迟缓）</p>
+    <details><summary>查看答案与解析</summary><div class="dbody"><strong>答案：</strong>指有明确的发育迟缓临床表现，但由于儿童年龄<strong>小于 4 岁</strong>，目前很难确定是否只是一种短暂的状态；或由于视力、听力障碍或其他躯体、精神障碍而无法有效进行智能和适应功能评估时，给予的一个<strong>临时性诊断</strong>。<br><span class="note">来源：教材第一节鉴别诊断第 1 条。</span></div></details>
+  </div>
+
+  <div class="quiz-q">
+    <div class="qh"><span class="qno">第 11 题</span><span class="qtype">名词解释</span><span class="diff">难</span></div>
+    <p class="brief">PANDAS</p>
+    <details><summary>查看答案与解析</summary><div class="dbody"><strong>答案：</strong>即"与链球菌感染有关的儿童自身免疫性神经精神疾病"（pediatric autoimmune neuropsychiatric disorders associated with streptococcal infections）。教材在抽动障碍神经免疫机制中提出：约 <strong>20%～35%</strong> 的抽动障碍与感染后自身免疫的病理损害有关，其中研究较多的是与 <strong>A 组乙型溶血性链球菌</strong>感染的关系；临床也发现感染发热可使抽动和强迫症状加重。<br><span class="note">教材未给出 PANDAS 的诊断标准与治疗方案，不补写。</span></div></details>
+  </div>
+
+  <div class="quiz-q">
+    <div class="qh"><span class="qno">第 12 题</span><span class="qtype">简答题</span><span class="diff">难</span></div>
+    <p class="brief">简述智力发育障碍与孤独症谱系障碍的鉴别要点。</p>
+    <details><summary>查看答案与解析</summary><div class="dbody"><strong>参考答案：</strong><br>① <strong>社交与智力的匹配度</strong>：ASD 的语言交流能力、社会交往能力<strong>显著落后于</strong>患者的智力发育水平；ID 患者的语言交流和社会交往能力<strong>与其智力水平相当</strong>——这是两者鉴别的关键。<br>② <strong>刻板行为</strong>：ASD 以兴趣狭窄、行为方式刻板为核心表现；ID 患者也可以有刻板行为，尤其在重度 ID 中，但并非核心维度。<br>③ <strong>智能水平</strong>：ASD 可呈现各种智能水平；当伴发智力低下时可作<strong>共病诊断</strong>，不是排除关系。<br><span class="note">来源：教材第一节"（三）鉴别诊断"第 3 条。</span></div></details>
+  </div>
+
+  <div class="quiz-q">
+    <div class="qh"><span class="qno">第 13 题</span><span class="qtype">案例分析题</span><span class="diff">难</span></div>
+    <p class="brief">男孩，5 岁。2 岁前会说少量单词，此后语言逐渐减少，现只会说"要""不要"；叫名常不回应，与人对视少；想要东西时拉着大人的手去取，不会指；喜欢把塑料瓶排成一排，反复旋转瓶盖，能独自玩很久；在幼儿园不参与同伴游戏。听力检查正常，运动发育正常。请回答：最可能的诊断、需鉴别的疾病、治疗原则。</p>
+    <details><summary>查看答案与解析</summary><div class="dbody">
+      <strong>1. 最可能诊断：</strong>孤独症谱系障碍（ASD）。依据：起病于发育早期；<strong>社会交往障碍</strong>（叫名不回应、对视少、不参与同伴）；<strong>社会交流障碍</strong>（语言倒退、不会指、以拉手替代）；<strong>兴趣狭窄与刻板</strong>（排列塑料瓶、反复旋转瓶盖、长时间独自重复玩耍）；听力正常可排除听力障碍。<br>
+      <strong>2. 需鉴别：</strong>①智力发育障碍——看社交能力是否"与其智力水平相当"，本案例未给智力测验，不能擅自诊断共病；②发育性言语或语言障碍——本例除语言外还有社交与刻板行为，故不支持单一语言障碍；③选择性缄默——本例各场合均少交流，不是"只在学校不说"；④注意缺陷多动障碍——本例无显著多动冲动，且有社交质缺陷与刻板行为。<br>
+      <strong>3. 治疗原则：</strong>早期诊断、早期干预；以教育行为和交流性干预为主（应用行为分析、结构化教学；社交故事、录像示范、同伴示范）；药物只用于伴发问题（易激惹／攻击／自伤可用利培酮、阿立哌唑；共患 ADHD 用哌甲酯、托莫西汀；睡眠障碍用褪黑素）；对伴发焦虑可用基于 ASD 特征修订的 CBT；补充替代医疗需循证评估。<br>
+      <span class="note">本题为模拟临床情境，依据教材诊断要点构建，不是教材原案例。</span>
+    </div></details>
+  </div>
+</section>
+
+<!-- ===== 15 闪卡 ===== -->
+<section id="cards">
+  <div class="sec-head"><div class="badge">15</div><h2>考点速记卡<span class="en">19 flip cards</span></h2></div>
+  <p class="sec-lead">正面是问题，点击翻面看答案。建议按"概念→诊断→数据→治疗"四轮刷，每轮只求快速反应。</p>
+  <div class="flashcard-grid">
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag concept">概念</span><p>什么是神经发育障碍？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">一组在发育期间出现的行为和认知障碍，可同时导致个体、家庭、教育、职业等社会功能的严重损害。病因复杂且多数尚不明确，一般认为由遗传或其他因素导致的中枢神经系统损害。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag diag">诊断</span><p>智力发育障碍的定义与起病时限？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">又称智力残疾；一组病因多样、起病于 18 岁之前（发育期间）的疾病，临床特征是智能和社会适应能力明显低于平均水平。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag data">数据</span><p>ID 四级 IQ 区间与占比？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">轻度 50～69（85%）；中度 35～49（10%）；重度 20～34（3%～4%）；极重度＜20（1%～2%）。智龄分别约 9～12、6～9、3～6 岁、低于 3 岁。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag data">数据</span><p>ID 的流行病学三数字？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">全球患病率 1%～3%；男∶女约 1.5∶1；我国 29 个省市调查 1.268%。农村高于城市。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag diag">鉴别</span><p>ID 与发育性学习障碍的一句话分界？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">ID 是语言、认知、运动、社会性全面落后；学习障碍是阅读、写作或算术等特定技能显著持续困难，心理其他方面发育完全正常。一句话：全面落后 vs 特定技能落后。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag concept">概念</span><p>发育性言语或语言障碍的三型？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">发育性语音障碍、发育性言语流畅性障碍、发育性语言障碍。2～5 岁患病率 5%～12%，男性多于女性，随年龄增长下降。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag data">数据</span><p>语言障碍的遗传与脑区要点？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">FOXP2 是最早确定的特定基因，CNTNAP2、ATP2C2、CMIP 亦相关；阳性家族史患病率是阴性的 3 倍；言语障碍见左侧缘上回、双侧小脑后部异常，语言障碍见颞上回异常。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag diag">鉴别</span><p>选择性缄默与语言障碍怎么分？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">选择性缄默只在某些社交场合（如学校）不讲话或语音很低，但至少一种场合（通常在家）可以正常交流；语言障碍是各场合普遍存在语言困难。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag concept">概念</span><p>ASD 的两大核心维度？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">①在启动和维持社会互动与社会沟通的能力上存在持续缺陷；②伴有一系列局限、重复和刻板的兴趣和行为模式。发生在儿童早期。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag data">数据</span><p>ASD 的四个关键数字？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">男∶女 3∶1；WHO 全球平均 1%；我国 2020 年 6～12 岁 0.7%；约 87% 在 3 岁时存在语言发育迟缓。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag treat">治疗</span><p>ASD 治疗分哪四类？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">①教育行为和交流性干预（ABA、结构化教学；社交故事、录像示范、同伴示范）；②药物（只治伴发问题）；③心理治疗（修订版 CBT 对焦虑有效）；④补充替代医疗（有效性难判断）。核心是早期诊断、早期干预。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag diag">诊断</span><p>发育性学习障碍的 ICD-11 五型？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">伴阅读功能损害、伴书面表达功能损害、伴数学能力损害、伴其他特定学习功能损害、未特定。阅读障碍最常见，占发育性学习障碍的 5%～17%。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag data">数据</span><p>学习障碍的三个关键比例？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">学龄儿童患病率 5%～15%；约 95% 阅读障碍儿童同时并发一种或多种神经发育障碍；约 20% 可能继发品行障碍和反社会行为或长期社会适应不良。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag diag">诊断</span><p>发育性运动协调障碍的三大表现与年龄门槛？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">三大表现：动作笨拙、视觉空间障碍、特殊技能运用障碍（书写不能／困难、绘画建构障碍）。5 岁前一般不诊断；但 5 岁以下明显运动问题即使不达标准也应早期干预。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag diag">诊断</span><p>ADHD 诊断三要素？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">①12 岁以前起病；②症状持续 6 个月以上，且在学校、家庭等两个以上场合都有；③社会功能（学业、人际关系）显著受损。3 岁前难与正常好动区分，一般不诊断。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag treat">治疗</span><p>ADHD 两药机制怎么区分？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">哌甲酯（中枢兴奋剂）抑制突触前多巴胺转运体，提高突触间隙多巴胺，有效率 75%～80%；托莫西汀（非中枢兴奋剂）抑制突触前去甲肾上腺素转运体，7 岁以上可用，合并抽动或焦虑优于兴奋剂。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag diag">鉴别</span><p>ADHD 与 ID 的关键鉴别？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">ADHD 经治疗注意缺陷改善后，学业成绩能提高，达到与智力相当的水平；ID 患者的学业始终存在困难。轻度 ID 刚入小学易被误认为 ADHD。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag diag">诊断</span><p>抽动障碍三型的病程界线？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">短暂性：一天内多次发生，持续 2 周以上但不超过 1 年；慢性：运动或发声不同时存在，至少 1 年；Tourette：运动与发声共存，至少 1 年。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag data">数据</span><p>Tourette 的两组共病比例？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">20%～60% 合并强迫症状；50% 合并注意缺陷多动障碍。治疗目标不是完全控制症状，而是减轻症状、避免进一步心理社会功能损害。</div>
+    </div></div>
+  </div>
+</section>
+
+<!-- ===== 16 病例挑战 ===== -->
+<section id="cases">
+  <div class="sec-head"><div class="badge">16</div><h2>病例挑战<span class="en">3 cases · increasing difficulty</span></h2></div>
+  <p class="sec-lead"><strong>以下均为模拟临床情境</strong>：依据教材所述典型表现与诊断、处理原则构建，用于训练临床推理，<strong>不是教材原案例</strong>，也不含虚构的化验数值。</p>
+
+  <div class="case">
+    <span class="ctag">难度 ★ · 识别核心症状</span>
+    <h3>案例 1：叫名不应的男孩</h3>
+    <div class="scene">男孩，5 岁。2 岁前会说少量单词，此后语言逐渐减少，现只会说"要""不要"等几个词。叫名常不回应，与人对视少；想要东西时不会指，而是拉着大人的手走到物品旁。喜欢把塑料瓶排成一排，反复旋转瓶盖，能独自玩很久；在幼儿园不参与同伴游戏。听力检查正常，运动发育正常，无重大疾病史。</div>
+    <ol class="ques">
+      <li>最可能的诊断是什么？请用教材的两大核心维度说明依据。</li>
+      <li>需要与哪些疾病鉴别？各写出一个关键鉴别点。</li>
+      <li>治疗应以什么为主？药物能解决什么问题、不能解决什么问题？</li>
+    </ol>
+    <details><summary>查看答案与解析</summary><div class="dbody">
+      <strong>1.</strong>孤独症谱系障碍。依据：①社会互动与社会沟通持续缺陷——叫名不回应、对视少、不参与同伴、不会指而以拉手替代；②局限、重复、刻板的兴趣和行为——排列塑料瓶、反复旋转瓶盖、长时间独自重复玩耍。起病于发育早期（2 岁后语言倒退）。<br>
+      <strong>2.</strong>①智力发育障碍：看语言交流与社会交往能力是否<strong>与其智力水平相当</strong>；本例未给智力测验，不能擅自下共病诊断。②发育性言语或语言障碍：本例除语言落后外，还有社交缺陷与刻板行为，单一语言障碍不能解释。③选择性缄默：本例各场合均少交流，不是"只在学校不说、在家正常"。④ADHD：本例无显著多动冲动，且有社交质缺陷与兴趣刻板。<br>
+      <strong>3.</strong>以<strong>教育行为和交流性干预</strong>为主（应用行为分析、结构化教学；社交故事、录像示范、同伴示范）。药物<strong>不能治愈 ASD</strong>，只能治疗伴发问题：易激惹／攻击／自伤可用利培酮、阿立哌唑；共患 ADHD 可用哌甲酯、托莫西汀；睡眠障碍可用褪黑素。
+    </div></details>
+  </div>
+
+  <div class="case">
+    <span class="ctag">难度 ★★ · 学业问题的分流</span>
+    <h3>案例 2：读书总添字漏字的女孩</h3>
+    <div class="scene">女孩，9 岁，小学三年级。语文成绩明显落后：朗读时常添字、漏字，甚至漏读整行，语速时急时"语塞"；阅读需用手指逐字点，读完不理解内容。数学成绩与同龄相符，上课能安静听讲，作业能按时完成。视力、听力检查正常。韦氏智力测验智商 98。老师反映她"其他方面都正常，就是一读书就卡"。</div>
+    <ol class="ques">
+      <li>最可能的诊断及分型是什么？诊断要点有哪些？</li>
+      <li>需要与哪些疾病鉴别？为什么本例不支持这些诊断？</li>
+      <li>干预的第一原则是什么？教材提到哪两类训练对阅读障碍有效？</li>
+    </ol>
+    <details><summary>查看答案与解析</summary><div class="dbody">
+      <strong>1.</strong>发育性学习障碍，伴阅读功能损害（阅读障碍）。诊断要点：①症状在早期学业学习中显现；②阅读技能严重且持续困难（准确性、流畅性、理解三方面均受累）；③受影响技能明显低于其年龄和智力应达到的预期水平（IQ 98，阅读显著落后）；④不是由智力发育障碍、感觉障碍、神经或运动障碍、缺乏教育机会、缺乏学业指导语言能力或心理社会逆境引起（视力听力正常、数学与课堂表现正常）。<br>
+      <strong>2.</strong>①智力发育障碍：本例 IQ 98，仅阅读受损，其他学业与适应正常，不支持全面落后。②ADHD：本例能安静听讲、按时完成作业，无注意缺陷或多动的核心表现；ADHD 的学业受损多在注意问题不能代偿后才突出。③发育性言语或语言障碍：本例日常语言理解与表达正常，损害集中在阅读这一学业技能。<br>
+      <strong>3.</strong>第一原则是<strong>评估与介入并行</strong>，采用"介入反应模式"、分层支持教学，<strong>不要等"智商-成就差异"达标才干预</strong>（教材批评该模式存在"等待失败"的弊端）。教材提到"<strong>意义强化</strong>"和"<strong>代码强化</strong>"等训练项目对阅读障碍有效。
+    </div></details>
+  </div>
+
+  <div class="case">
+    <span class="ctag">难度 ★★★ · 抽动与鉴别</span>
+    <h3>案例 3：眨眼、耸肩、清嗓子的男孩</h3>
+    <div class="scene">男孩，10 岁。近 14 个月反复眨眼、挤眉、耸肩，间或清嗓子、吸鼻，紧张或考试前明显加重，专注看电视时可短暂减轻，入睡后消失。无用药史，无风湿热病史。体格检查未见肌张力减低、肝肿大或角膜异常；血沉、抗"O"、血浆铜蓝蛋白未见异常，脑电图未见高度节律异常。耶鲁大体抽动严重程度量表提示中度。</div>
+    <ol class="ques">
+      <li>最可能的诊断及分型是什么？诊断依据有哪些？</li>
+      <li>需要与哪些疾病鉴别？本例已用哪些检查排除了哪些疾病？</li>
+      <li>治疗目标是什么？轻中度与重症的处理路径有何不同？</li>
+    </ol>
+    <details><summary>查看答案与解析</summary><div class="dbody">
+      <strong>1.</strong>Tourette 综合征。依据：多部位运动抽动（眨眼、挤眉、耸肩）与发声抽动（清嗓子、吸鼻）<strong>共存</strong>；病程 <strong>14 个月≥1 年</strong>；起病于儿童期；症状可受意志短暂控制、睡眠时消失、紧张时加重——均符合教材对抽动的描述。分型依据教材三型标准，运动与发声共存且≥1 年即 Tourette。<br>
+      <strong>2.</strong>需鉴别：①小舞蹈症——本例无肌张力减低等风湿热体征，血沉、抗"O"正常，且小舞蹈症无发声性抽动；②肝豆状核变性——本例无肝损害、无 K-F 环、血浆铜蓝蛋白正常；③肌阵挛——本例无意识障碍、脑电图无高度节律异常；④迟发性运动障碍——本例无抗精神病药使用或停药史；⑤急性运动性障碍——无相关药物史；⑥分离性障碍——症状随紧张波动，但本例有典型抽动形式与睡眠消失特点，且教材强调分离性障碍需有确切强烈心理因素、心理治疗后可完全缓解。<br>
+      <strong>3.</strong>治疗总体目标<strong>不是完全控制症状</strong>，而是<strong>减轻症状</strong>和<strong>不再产生进一步的心理社会功能损害</strong>。短暂性或轻症慢性以心理治疗为主；症状较重的慢性与 Tourette 以药物为主、联合心理治疗——第一类非精神抑制药（可乐定、胍法辛、巴氯芬、抗癫痫药）用于轻度；第二类经典或非典型抗精神病药（阿立哌唑、利培酮、奥氮平、喹硫平；氟哌啶醇、硫必利、匹莫齐特、舒必利、氟奋乃静）用于严重抽动。心理行为治疗可选 CBIT、HRT、ERP；药物与行为均不佳的难治性病例才谨慎考虑 DBS。
+    </div></details>
+  </div>
+</section>
+
+<!-- ===== 17 拓展 ===== -->
+<section id="ext">
+  <div class="sec-head"><div class="badge">17</div><h2>拓展延伸<span class="en">Beyond the chapter</span></h2></div>
+  <p class="sec-lead">只列教材明确提到但未展开的内容，以及教材的空白处；不把课外知识包装成教材结论。</p>
+  <div class="grid2">
+    <div class="card cyan">
+      <h3>教材提及、但仅一笔带过的内容</h3>
+      <ul>
+        <li><strong>综合征性智力障碍：</strong>教材点名唐氏综合征、雷特（Rett）综合征，并指出"随着遗传学研究的深入和对临床表型认识的提高，越来越多的综合征性智力障碍被发现"——未逐一展开各综合征的完整表型。</li>
+        <li><strong>基因治疗：</strong>教材仅写"对一些单基因遗传性疾病，可关注基因治疗的临床进展"，未给具体病种、技术路线或疗效数据。</li>
+        <li><strong>综合征性 ASD：</strong>脆性 X 综合征、结节性硬化仅作为"伴孤独症样临床表型"的例子出现，未展开其诊断与处理。</li>
+        <li><strong>PANDAS：</strong>教材给出名称与链球菌感染关联，未给诊断标准、检查流程或治疗方案。</li>
+        <li><strong>深部脑刺激（DBS）：</strong>仅写"难治性 Tourette 综合征可考虑，但需十分慎重"，未给适应证细则、参数或疗效数据。</li>
+        <li><strong>中医治疗：</strong>给出"息风止动"治则、三种中成药名称，并提及针灸、推拿"有效"，未给方证细节与疗程。</li>
+      </ul>
+    </div>
+    <div class="card orange">
+      <h3>教材未涉及 / 本指南不补写的内容</h3>
+      <ul>
+        <li><strong>刻板运动障碍：</strong>仅在 ICD-11 列举中出现名称，教材未设节、未描述临床表现与诊断标准——本指南不补写。</li>
+        <li><strong>各类药物具体剂量与疗程：</strong>ASD 的利培酮／阿立哌唑、ADHD 的哌甲酯／托莫西汀、抽动的两线药物，教材均只给药名、机制与注意事项，未给 mg 数与疗程天数。</li>
+        <li><strong>ADHD 各评定量表的切分与阈值：</strong>教材只列工具名称（康氏量表、SNAP、长处与困难问卷、成人自评量表、K-SADS-PL），未给评分标准。</li>
+        <li><strong>抽动严重度量表的评分细则：</strong>教材只写"耶鲁大体抽动严重程度量表等有助于评价严重程度"。</li>
+        <li><strong>各病患病率的国别差异原因：</strong>教材给出欧洲、北美、我国数据与"随年龄增长下降"趋势，未解释差异成因。</li>
+        <li><strong>康复训练／特殊教育的具体课程设计：</strong>教材给原则（分层支持、介入反应模式、自然情景干预），未给教案与课时安排。</li>
+        <li><strong>ADHD 的成人诊断标准细节：</strong>教材给出成人患病率与共病人格障碍，未展开成人期诊断条目。</li>
+      </ul>
+    </div>
+  </div>
+  <div class="callout ext">
+    <span class="ct">📖 使用提醒</span>
+    本指南所有定义、分级数字、患病率、性别比、药物名称与治疗原则均取自教材第五章原文；凡标注"教材未给／未展开／未涉及"的地方，不要用其他资料的数字或标准替代，以免与教材答案冲突。
+  </div>
+  <div class="hr"></div>
+  <p class="note" style="text-align:center">精神病学（第9版）· 第五章 神经发育障碍 · 印刷页 47–66 · 学习指南完</p>
+</section>
+
+</div>
+<nav class="chapter-pager" aria-label="章节间导航"><a class="cp-prev" href="精神病学_第四章_精神障碍分类与诊断标准_学习指南.html">← 上一章：第四章</a><a class="cp-toc" href="index.html">目录</a><a class="cp-next" href="精神病学_第六章_精神分裂症及其他原发性精神病性障碍_学习指南.html">下一章：第六章 →</a></nav>
+</main>
+
+<button class="top" id="topBtn" aria-label="回到顶部">↑</button>
+<script>
+/* ============================================================
+   精神病学学习指南 · 统一交互层 v1（构建期注入，整体替换原 IIFE）
+   兼容 A 族（.tabbar button + [data-panel] + .panel.on）与
+   B 族（.tab-nav + .tab-panel.active）两套 DOM 约定。
+   特性检测 + 防御式查询 + 幂等；不引入任何外部依赖。
+   ============================================================ */
+(function () {
+  'use strict';
+  if (window.__PSY_GUIDE_APP__) { return; }
+  window.__PSY_GUIDE_APP__ = true;
+
+  var d = document;
+
+  function all(sel, root) {
+    return Array.prototype.slice.call((root || d).querySelectorAll(sel));
+  }
+  function on(el, ev, fn, opt) {
+    if (el) { el.addEventListener(ev, fn, opt || false); }
+  }
+  function norm(s) {
+    return String(s || '').replace(/\s+/g, '').toUpperCase();
+  }
+
+  /* ---------- 1. Tab 切换（两族约定都支持） ---------- */
+  function initTabs() {
+    all('.tabs, [data-tabs]').forEach(function (g) {
+      if (g.__psyTabs) { return; }
+      g.__psyTabs = true;
+      var isA = !!g.querySelector('.tabbar button');
+      var btns = all(isA ? '.tabbar button' : '.tab-nav .tab-btn', g);
+      if (!btns.length) { return; }
+      var cls = isA ? 'on' : 'active';
+      var nav = btns[0].closest('.tabbar') || btns[0].closest('.tab-nav');
+      if (nav && !nav.hasAttribute('role')) { nav.setAttribute('role', 'tablist'); }
+      all(isA ? '.panel' : '.tab-panel', g).forEach(function (p) {
+        if (!p.hasAttribute('role')) { p.setAttribute('role', 'tabpanel'); }
+      });
+      function activate(btn) {
+        btns.forEach(function (b) {
+          b.classList.remove(cls);
+          b.setAttribute('aria-selected', 'false');
+        });
+        btn.classList.add(cls);
+        btn.setAttribute('aria-selected', 'true');
+        var id = btn.getAttribute('data-tab');
+        if (!id) { return; }
+        var target = isA
+          ? g.querySelector('[data-panel="' + id + '"]')
+          : (g.querySelector('.tab-panel#' + id) || d.getElementById(id));
+        all(isA ? '.panel' : '.tab-panel', g).forEach(function (p) {
+          var show = isA ? (p.getAttribute('data-panel') === id) : (p === target);
+          p.classList.toggle(cls, show);
+        });
+      }
+      btns.forEach(function (btn, i) {
+        if (!btn.hasAttribute('role')) { btn.setAttribute('role', 'tab'); }
+        btn.setAttribute('aria-selected', btn.classList.contains(cls) ? 'true' : 'false');
+        if (!btn.hasAttribute('tabindex') && !btn.classList.contains(cls)) { btn.setAttribute('tabindex', '0'); }
+        on(btn, 'click', function () { activate(btn); });
+        on(btn, 'keydown', function (e) {
+          if (e.key !== 'ArrowRight' && e.key !== 'ArrowLeft') { return; }
+          e.preventDefault();
+          var nx = btns[(i + (e.key === 'ArrowRight' ? 1 : btns.length - 1)) % btns.length];
+          if (nx) { nx.focus(); activate(nx); }
+        });
+      });
+    });
+  }
+
+  /* ---------- 2. 速记卡：点击/键盘翻转 + 可达性 ---------- */
+  function initCards() {
+    all('.flashcard').forEach(function (card) {
+      if (card.__psyCard) { return; }
+      card.__psyCard = true;
+      card.setAttribute('tabindex', '0');
+      card.setAttribute('role', 'button');
+      function sync() {
+        card.setAttribute('aria-pressed', card.classList.contains('flipped') ? 'true' : 'false');
+      }
+      function flip() { card.classList.toggle('flipped'); sync(); }
+      on(card, 'click', flip);
+      on(card, 'keydown', function (e) {
+        if (e.key === 'Enter' || e.key === ' ' || e.key === 'Spacebar') {
+          e.preventDefault();
+          flip();
+        }
+      });
+      sync();
+    });
+  }
+
+  /* ---------- 3. 自测题交互化（核心新功能） ---------- */
+  function initQuiz() {
+    var questions = all('.quiz-q, .quiz-item');
+    if (!questions.length) { return; }
+    var groups = {};
+
+    function keyOf(o) {
+      var L = o.getAttribute('data-letter');
+      if (L && String(L).replace(/\s+/g, '') !== '') { return norm(L); }
+      var sp = o.querySelector('.l');
+      if (sp) {
+        var t = norm(sp.textContent).replace(/[.．、:：]/g, '');
+        if (t !== '') { return t; }
+      }
+      var txt = norm(o.textContent);
+      if (txt.indexOf('正确') >= 0 || txt.indexOf('错误') >= 0) { return txt; }
+      return txt.charAt(0);
+    }
+
+    function getGroup(q) {
+      var sec = q.closest('.quiz-block') || q.closest('section') || d.body;
+      if (!groups[sec.__psyGid]) {
+        sec.__psyGid = 'g' + (Object.keys(groups).length + 1);
+        groups[sec.__psyGid] = { sec: sec, total: 0, score: 0, row: null, first: null };
+      }
+      var g = groups[sec.__psyGid];
+      if (!g.first) { g.first = q; }
+      return g;
+    }
+
+    function ensureRow(g) {
+      if (g.row) { return g.row; }
+      var row = d.createElement('div');
+      row.className = 'quiz-score';
+      row.setAttribute('role', 'status');
+      row.setAttribute('aria-live', 'polite');
+      row.innerHTML = '<span class="qs-label">自测计分</span>' +
+        '<span class="qs-num">得分 0 / ' + g.total + '</span>' +
+        '<span class="qs-bar"><i></i></span>';
+      g.first.parentNode.insertBefore(row, g.first);
+      g.row = row;
+      return row;
+    }
+
+    function updateRow(g) {
+      var row = ensureRow(g);
+      var num = row.querySelector('.qs-num');
+      var bar = row.querySelector('.qs-bar i');
+      if (num) { num.textContent = '得分 ' + g.score + ' / ' + g.total; }
+      if (bar) { bar.style.width = (g.total ? Math.round(g.score / g.total * 100) : 0) + '%'; }
+    }
+
+    questions.forEach(function (q) {
+      if (q.__psyQuiz) { return; }
+      q.__psyQuiz = true;
+      var opts = all('.opt', q);
+      if (!opts.length) { opts = all('.quiz-options > li', q); }
+      if (!opts.length) { return; }
+
+      /* 正确答案先记入内存：预标 correct 优先（记录后立即移除，消除剧透），
+         否则从解析文本「答案：X / 答案 X」提取（不改动任何文字） */
+      var ansKeys = [];
+      var preset = opts.filter(function (o) { return o.classList.contains('correct'); });
+      preset.forEach(function (o) { o.classList.remove('correct'); });
+      if (preset.length) {
+        ansKeys = preset.map(keyOf);
+      } else {
+        var dt = q.querySelector('details');
+        var txt = dt ? dt.textContent : '';
+        var m = txt.match(/答案\s*[:：]?\s*([A-Za-z](?:[\s、,，·和及]*[A-Za-z])*)/);
+        if (m) {
+          ansKeys = m[1].match(/[A-Za-z]/g) || [];
+        } else {
+          var m2 = txt.match(/答案\s*[:：]?\s*(正确|错误)/);
+          if (m2) { ansKeys = [m2[1]]; }
+        }
+      }
+      if (!ansKeys.length) { return; } /* 无可判定答案（名词解释等），保持原样 */
+
+      var g = getGroup(q);
+      g.total += 1;
+      var multi = ansKeys.length > 1;
+      var ansSet = ansKeys.map(norm);
+      var locked = false;
+      var picked = [];
+
+      function revealAll() {
+        opts.forEach(function (o) {
+          if (ansSet.indexOf(keyOf(o)) >= 0) { o.classList.add('is-reveal'); }
+        });
+      }
+      function finish(ok) {
+        locked = true;
+        q.classList.add('is-locked');
+        var dt = q.querySelector('details');
+        if (dt) { dt.open = true; }
+        if (ok) { g.score += 1; }
+        updateRow(g);
+      }
+
+      opts.forEach(function (o) {
+        o.setAttribute('tabindex', '0');
+        function pick() {
+          if (locked) { return; }
+          var k = keyOf(o);
+          if (ansSet.indexOf(k) >= 0) {
+            o.classList.add('is-right');
+            if (picked.indexOf(k) < 0) { picked.push(k); }
+            if (multi) {
+              if (picked.length === ansSet.length) { finish(true); }
+            } else {
+              finish(true);
+            }
+          } else {
+            o.classList.add('is-wrong');
+            revealAll();
+            finish(false);
+          }
+        }
+        on(o, 'click', pick);
+        on(o, 'keydown', function (e) {
+          if (e.key === 'Enter' || e.key === ' ' || e.key === 'Spacebar') {
+            e.preventDefault();
+            pick();
+          }
+        });
+      });
+    });
+
+    Object.keys(groups).forEach(function (id) {
+      if (groups[id].total > 0) { updateRow(groups[id]); }
+    });
+  }
+
+  /* ---------- 4. 侧栏 scroll spy（本页锚点高亮） ---------- */
+  function initSpy() {
+    var links = all('#sidebar a[href^="#"]');
+    if (!links.length || !('IntersectionObserver' in window)) { return; }
+    var map = {};
+    links.forEach(function (a) {
+      var id = a.getAttribute('href').slice(1);
+      if (id) { map[id] = a; }
+    });
+    var secs = [];
+    Object.keys(map).forEach(function (id) {
+      var s = d.getElementById(id);
+      if (s) { secs.push(s); }
+    });
+    if (!secs.length) { return; }
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting && map[e.target.id]) {
+          links.forEach(function (a) { a.classList.remove('active'); });
+          map[e.target.id].classList.add('active');
+        }
+      });
+    }, { rootMargin: '-15% 0px -70% 0px', threshold: 0 });
+    secs.forEach(function (s) { io.observe(s); });
+  }
+
+  /* ---------- 5. 阅读进度条 + 回顶 ---------- */
+  function initScroll() {
+    var bar = d.getElementById('readbar');
+    var topBtn = d.getElementById('topBtn') || d.getElementById('backTop');
+    var ticking = false;
+    function step() {
+      ticking = false;
+      var h = d.documentElement;
+      var y = window.pageYOffset || h.scrollTop || 0;
+      if (bar) {
+        var max = h.scrollHeight - h.clientHeight;
+        bar.style.width = (max > 0 ? (y / max) * 100 : 0) + '%';
+      }
+      if (topBtn) {
+        topBtn.classList.toggle('show', y > 400);     /* A 族类名 */
+        topBtn.classList.toggle('visible', y > 400);  /* B 族类名 */
+      }
+    }
+    on(window, 'scroll', function () {
+      if (!ticking) { ticking = true; window.requestAnimationFrame(step); }
+    }, { passive: true });
+    step();
+    on(topBtn, 'click', function () {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
+
+  /* ---------- 6. 侧栏开合（存在才绑定；抽屉打开时锁定背景滚动） ---------- */
+  function initSidebar() {
+    var sidebar = d.getElementById('sidebar');
+    if (!sidebar) { return; }
+    var btn = d.getElementById('menuBtn') || d.getElementById('navToggle');
+    var ov = d.getElementById('overlay') || d.getElementById('sidebarOverlay');
+    function lock(open) {
+      /* 仅移动抽屉断点（≤900px）锁滚动；宽屏兜底解除，防布局残留 */
+      d.body.classList.toggle('nav-locked', !!open && window.innerWidth <= 900);
+    }
+    function close() {
+      sidebar.classList.remove('open');
+      if (ov) { ov.classList.remove('show'); }
+      lock(false);
+    }
+    on(btn, 'click', function () {
+      var open = !sidebar.classList.contains('open');
+      sidebar.classList.toggle('open');
+      if (ov) { ov.classList.toggle('show'); }
+      lock(open);
+    });
+    on(ov, 'click', close);
+    all('a', sidebar).forEach(function (a) {
+      on(a, 'click', function () {
+        if (window.innerWidth <= 900) { close(); }
+      });
+    });
+    on(window, 'resize', function () {
+      if (window.innerWidth > 900) { lock(false); }
+    });
+  }
+
+  /* ---------- 启动（脚本位于 body 末尾，DOM 已就绪；防御兜底） ---------- */
+  function boot() {
+    initTabs();
+    initCards();
+    initQuiz();
+    initSpy();
+    initScroll();
+    initSidebar();
+  }
+  if (d.readyState === 'loading') {
+    on(d, 'DOMContentLoaded', boot);
+  } else {
+    boot();
+  }
+})();
+</script>
+
+</body>
+</html>

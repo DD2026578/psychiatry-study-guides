@@ -1,0 +1,1853 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>精神病学 第二十五章 精神障碍的预防和康复 · 学习指南</title>
+<style>
+:root{
+  --primary:#0EA5E9; --accent:#10B981; --symptom:#EF4444; --treatment:#10B981;
+  --cause:#3B82F6; --diagnosis:#F59E0B; --memory:#8B5CF6; --danger:#DC2626;
+  --quiz:#EC4899; --flashcard:#06B6D4; --bg:#F0F7FA; --card:#FFFFFF;
+  --ink:#0F172A; --muted:#64748B; --border:#E2E8F0; --accent2:#10B981; --accent3:#06B6D4;
+  --shadow:0 4px 18px rgba(15,23,42,.06); --radius:14px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:'Microsoft YaHei','PingFang SC','Hiragino Sans GB',system-ui,-apple-system,sans-serif;font-size:16px;line-height:1.75;-webkit-font-smoothing:antialiased}
+#readbar{position:fixed;top:0;left:0;height:4px;width:0;background:linear-gradient(135deg,#0EA5E9 0%,#06B6D4 50%,#10B981 100%);z-index:300;transition:width .12s linear}
+a{color:var(--primary);text-decoration:none}
+a:hover{text-decoration:underline}
+.sidebar{position:fixed;top:0;left:0;width:272px;height:100vh;background:#fff;border-right:1px solid var(--border);overflow-y:auto;padding:20px 16px 40px;z-index:120}
+.sidebar h2{font-size:17px;margin:0 0 4px;line-height:1.5}
+.sidebar .sub{font-size:12px;color:var(--muted);line-height:1.6;margin-bottom:14px}
+.toc-group{font-size:12px;letter-spacing:.08em;color:var(--muted);margin:16px 0 6px;font-weight:700}
+.sidebar a.toc{display:block;padding:7px 10px;border-radius:8px;font-size:14px;color:var(--ink);line-height:1.5;margin:2px 0}
+.sidebar a.toc:hover{background:#E0F2FE;text-decoration:none}
+.sidebar a.toc .n{display:inline-block;min-width:26px;color:var(--primary);font-weight:700}
+.sidebar .unitlink{font-weight:600}
+.sidebar .sub2{padding-left:26px;font-size:13px;color:var(--muted)}
+.overlay{display:none}
+.menu-btn{display:none;position:fixed;top:14px;left:14px;z-index:200;width:46px;height:46px;border-radius:12px;border:1px solid var(--border);background:#fff;box-shadow:var(--shadow);font-size:22px;line-height:1;color:var(--primary);cursor:pointer}
+.main{margin-left:272px;padding:0 40px 90px;max-width:1240px}
+.wrap{max-width:980px;margin:0 auto}
+.hero{background:linear-gradient(135deg,#0EA5E9 0%,#06B6D4 50%,#10B981 100%);color:#fff;border-radius:0 0 26px 26px;padding:52px 44px 40px;margin:0 -40px 30px;box-shadow:0 12px 30px rgba(14,165,233,.18)}
+.hero .chap{display:inline-block;font-size:13px;letter-spacing:.22em;background:rgba(255,255,255,.18);padding:5px 14px;border-radius:999px;margin-bottom:16px}
+.hero h1{font-size:42px;line-height:1.25;margin:0 0 10px;font-weight:800}
+.hero .tagline{font-size:18px;opacity:.96;margin:0 0 6px}
+.hero .meta{font-size:13px;opacity:.85}
+.goalbox{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.28);border-radius:14px;padding:18px 20px;margin-top:22px}
+.goalbox h3{margin:0 0 10px;font-size:15px;letter-spacing:.06em}
+.goalbox ul{margin:0;padding-left:20px}
+.goalbox li{margin:4px 0;font-size:14.5px;line-height:1.65}
+.lv{display:inline-block;font-size:11px;font-weight:700;padding:1px 8px;border-radius:999px;background:#fff;color:#0369A1;margin-right:6px;vertical-align:1px}
+.lv.l2{color:#047857}.lv.l3{color:#B45309}.lv.l4{color:#B91C1C}
+section{scroll-margin-top:18px;margin:0 0 46px}
+.sec-head{display:flex;align-items:center;gap:12px;margin:0 0 8px}
+.sec-head .badge{flex:0 0 auto;width:44px;height:44px;border-radius:13px;background:linear-gradient(135deg,#0EA5E9,#06B6D4);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:17px;box-shadow:0 6px 14px rgba(14,165,233,.25)}
+.sec-head h2{font-size:27px;margin:0;line-height:1.35;font-weight:800}
+.sec-head .en{font-size:13px;color:var(--muted);font-weight:400;margin-left:6px}
+.sec-lead{color:#334155;background:#fff;border-left:4px solid var(--primary);border-radius:0 12px 12px 0;padding:13px 18px;margin:12px 0 22px;box-shadow:var(--shadow);font-size:15px}
+.card{background:var(--card);border:1px solid var(--border);border-left:6px solid var(--primary);border-radius:var(--radius);padding:20px 22px;margin:16px 0;box-shadow:var(--shadow)}
+.card.red{border-left-color:var(--symptom)} .card.green{border-left-color:var(--treatment)}
+.card.blue{border-left-color:var(--cause)} .card.orange{border-left-color:var(--diagnosis)}
+.card.purple{border-left-color:var(--memory)} .card.cyan{border-left-color:var(--flashcard)}
+.card.danger{border-left-color:var(--danger)} .card.pink{border-left-color:var(--quiz)}
+.card h3,.col-title{font-size:19px;margin:0 0 10px;line-height:1.45;display:flex;align-items:center;gap:9px;flex-wrap:wrap}
+.col-title .idx{font-size:12px;font-weight:800;color:#fff;background:var(--primary);padding:2px 9px;border-radius:999px;letter-spacing:.03em}
+.card p{margin:8px 0}
+.card ul,.card ol{margin:8px 0;padding-left:22px}
+.card li{margin:5px 0}
+.quote{background:#EFF8FF;border:1px dashed #7DD3FC;border-radius:10px;padding:12px 16px;margin:10px 0;font-size:15px;color:#0C4A6E}
+.quote .lab{display:inline-block;font-size:11px;font-weight:800;background:#0EA5E9;color:#fff;padding:1px 7px;border-radius:5px;margin-right:7px;vertical-align:1px}
+.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.grid4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.grid2>*,.grid3>*,.grid4>*{min-width:0}
+.mini{background:#F8FAFC;border:1px solid var(--border);border-radius:11px;padding:12px 14px}
+.mini h4{margin:0 0 5px;font-size:15px;color:#0F172A}
+.mini p,.mini ul{font-size:14px;color:#334155;margin:4px 0}
+.mini ul{padding-left:18px}
+.stat{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0}
+.stat span{font-size:13px;background:#E0F2FE;color:#075985;border-radius:999px;padding:3px 11px;font-weight:600}
+.table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:12px 0;border-radius:12px;border:1px solid var(--border)}
+table{border-collapse:collapse;width:100%;min-width:560px;background:#fff;font-size:14px}
+th{background:#0F172A;color:#fff;font-weight:700;padding:10px 12px;text-align:left;line-height:1.5;font-size:13.5px}
+td{padding:10px 12px;border-top:1px solid var(--border);vertical-align:top;line-height:1.65}
+tbody tr:nth-child(even){background:#F8FAFC}
+td strong{color:#0C4A6E}
+.callout{border-radius:12px;padding:13px 16px;margin:12px 0;border:1px solid;font-size:14.5px}
+.callout .ct{font-weight:800;display:block;margin-bottom:4px;font-size:14.5px}
+.callout.tip{background:#F5F3FF;border-color:#C4B5FD;color:#4C1D95}
+.callout.warn{background:#FEF2F2;border-color:#FCA5A5;color:#7F1D1D}
+.callout.key{background:#ECFDF5;border-color:#6EE7B7;color:#065F46}
+.callout.book{background:#EFF6FF;border-color:#93C5FD;color:#1E3A8A}
+.callout.quiz{background:#FDF2F8;border-color:#F9A8D4;color:#831843}
+.callout.ext{background:#F0F9FF;border-color:#7DD3FC;color:#0C4A6E}
+.timeline{border-left:3px solid #BAE6FD;margin:14px 0 6px 8px;padding-left:20px}
+.tl-item{position:relative;margin:0 0 16px}
+.tl-item:before{content:"";position:absolute;left:-28px;top:5px;width:13px;height:13px;border-radius:50%;background:#fff;border:3px solid var(--primary)}
+.tl-item h4{margin:0 0 3px;font-size:15px;color:#075985}
+.tl-item p{margin:0;font-size:14px;color:#334155}
+.bar{background:#E2E8F0;border-radius:999px;height:9px;overflow:hidden;margin:6px 0 10px}
+.bar i{display:block;height:100%;border-radius:999px;background:linear-gradient(90deg,#0EA5E9,#10B981)}
+.bar-label{display:flex;justify-content:space-between;font-size:13px;color:#334155}
+.tabs{margin:14px 0}
+.tabbar{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:12px}
+.tabbar button{border:1px solid var(--border);background:#fff;border-radius:999px;padding:7px 15px;font-size:14px;font-family:inherit;cursor:pointer;color:#334155}
+.tabbar button.on{background:var(--primary);color:#fff;border-color:var(--primary)}
+.panel{display:none}
+.panel.on{display:block;animation:fade .25s ease}
+@keyframes fade{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}
+details{background:#fff;border:1px solid var(--border);border-radius:11px;margin:10px 0;overflow:hidden}
+summary{cursor:pointer;padding:11px 15px;font-weight:700;color:#075985;list-style:none;font-size:14.5px;background:#F8FAFC}
+summary::-webkit-details-marker{display:none}
+summary:before{content:"▸";display:inline-block;margin-right:7px;color:var(--primary);transition:transform .2s}
+details[open] summary:before{transform:rotate(90deg)}
+details[open] summary{border-bottom:1px solid var(--border)}
+.dbody{padding:13px 16px;font-size:14.5px;color:#1E293B}
+.flashcard-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin:16px 0}
+.flashcard{perspective:1200px;height:200px;cursor:pointer}
+.fc-inner{position:relative;width:100%;height:100%;transition:transform .55s;transform-style:preserve-3d}
+.flashcard.flipped .fc-inner{transform:rotateY(180deg)}
+.fc-front,.fc-back{position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;border-radius:14px;padding:14px 16px;display:flex;flex-direction:column;justify-content:center;box-shadow:var(--shadow);overflow:auto}
+.fc-front{background:#fff;border:1px solid var(--border);border-top:5px solid var(--flashcard)}
+.fc-back{background:#ECFEFF;border:1px solid #A5F3FC;transform:rotateY(180deg);font-size:13.5px;line-height:1.65;color:#164E63}
+.tag{display:inline-block;align-self:flex-start;font-size:11px;font-weight:800;padding:1px 8px;border-radius:999px;margin-bottom:8px;letter-spacing:.04em}
+.tag.concept{background:#DBEAFE;color:#1E40AF}
+.tag.diag{background:#FFEDD5;color:#9A3412}
+.tag.treat{background:#D1FAE5;color:#065F46}
+.tag.data{background:#FCE7F3;color:#9D174D}
+.tag.risk{background:#FEE2E2;color:#991B1B}
+.fc-front p{margin:0;font-size:14.5px;font-weight:700;line-height:1.6}
+.fc-hint{position:absolute;bottom:10px;left:16px;font-size:11px;color:#94A3B8}
+.quiz-q{background:#fff;border:1px solid var(--border);border-left:5px solid var(--quiz);border-radius:12px;padding:16px 18px;margin:16px 0;box-shadow:var(--shadow)}
+.quiz-q .qh{display:flex;justify-content:space-between;gap:10px;align-items:flex-start;margin-bottom:8px;flex-wrap:wrap}
+.quiz-q .qno{font-size:12px;font-weight:800;color:#fff;background:var(--quiz);border-radius:999px;padding:2px 9px;letter-spacing:.04em}
+.diff{font-size:12px;color:#B45309;background:#FEF3C7;border-radius:999px;padding:2px 10px;font-weight:700;white-space:nowrap}
+.qtype{font-size:12px;color:#6B21A8;background:#F3E8FF;border-radius:999px;padding:2px 10px;font-weight:700;white-space:nowrap}
+.opts{margin:10px 0 4px;display:grid;gap:7px}
+.opt{border:1px solid var(--border);border-radius:9px;padding:8px 12px;font-size:14.5px;background:#F8FAFC}
+.opt.correct{border-color:#6EE7B7;background:#ECFDF5;color:#065F46;font-weight:600}
+.opt .l{font-weight:800;color:var(--primary);margin-right:7px}
+.opt.correct .l{color:#047857}
+.brief{font-size:14px;color:#334155;margin-top:4px}
+.case{border:1px solid var(--border);border-top:5px solid var(--danger);border-radius:14px;background:#fff;padding:20px 22px;margin:18px 0;box-shadow:var(--shadow)}
+.case h3{font-size:19px;margin:0 0 8px;color:#7F1D1D}
+.case .ctag{font-size:11.5px;font-weight:800;background:#FEE2E2;color:#991B1B;padding:2px 9px;border-radius:999px;display:inline-block;margin-bottom:10px}
+.case .scene{background:#FFF7ED;border-left:4px solid #FB923C;border-radius:0 10px 10px 0;padding:12px 16px;font-size:14.5px;margin:8px 0 14px}
+.case .ques{margin:8px 0;padding-left:2px}
+.case .ques li{margin:5px 0;font-size:14.5px}
+.top{position:fixed;right:24px;bottom:26px;width:48px;height:48px;border-radius:50%;background:var(--primary);color:#fff;border:none;font-size:20px;cursor:pointer;box-shadow:0 8px 20px rgba(14,165,233,.35);z-index:150;display:none;font-family:inherit}
+.top.show{display:block}
+.hr{height:1px;background:var(--border);margin:26px 0}
+.note{font-size:13px;color:var(--muted);margin-top:6px}
+.kv{display:flex;gap:10px;flex-wrap:wrap;margin:8px 0}
+.kv .k{font-size:12px;font-weight:800;color:#0369A1;background:#E0F2FE;border-radius:6px;padding:2px 8px;white-space:nowrap}
+.kv .v{font-size:14px;color:#334155}
+.starme{font-size:12.5px;color:#B45309;white-space:nowrap}
+@media (max-width:1100px){
+  .main{padding:0 22px 80px}
+  .hero{margin:0 -22px 26px;padding:44px 26px 34px}
+  .hero h1{font-size:34px}
+  .flashcard-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .grid4{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width:900px){
+  .sidebar{transform:translateX(-100%);transition:transform .25s ease;width:280px;box-shadow:0 0 30px rgba(0,0,0,.18)}
+  .sidebar.open{transform:none}
+  .overlay{display:none;position:fixed;inset:0;background:rgba(15,23,42,.42);z-index:110}
+  .overlay.show{display:block}
+  .menu-btn{display:block}
+  .main{margin-left:0;padding:0 18px 80px}
+  .hero{margin:0 -18px 24px;padding:64px 22px 30px;border-radius:0 0 20px 20px}
+  .hero h1{font-size:30px}
+  .sec-head h2{font-size:23px}
+}
+@media (max-width:680px){
+  .grid2,.grid3,.grid4{grid-template-columns:minmax(0,1fr)}
+  .flashcard-grid{grid-template-columns:minmax(0,1fr)}
+  .flashcard{height:190px}
+  table{min-width:500px}
+}
+</style>
+<style data-refactor="v1">
+/* ============================================================
+   精神病学学习指南 · 统一交互层增量覆盖样式 v1
+   构建期由 apply-refactor.ps1 注入 </head> 前，仅追加修正，
+   不改动 A/B 两族基础样式。全部使用字面色值，兼容两族设计变量。
+   ============================================================ */
+
+/* ---- 1. 全局键盘焦点可见 ---- */
+:focus-visible{outline:2px solid #0EA5E9;outline-offset:2px}
+
+/* ---- 2. 章节导航条（胶囊式三段：上一章 / 目录 / 下一章） ---- */
+.chapter-pager{display:flex;align-items:stretch;justify-content:center;gap:10px;margin:36px 0 10px;flex-wrap:wrap}
+.chapter-pager a,.chapter-pager span{flex:1 1 200px;display:flex;align-items:center;justify-content:center;min-height:44px;padding:10px 18px;border:1px solid #E2E8F0;border-radius:999px;background:#FFFFFF;color:#0F172A;font-size:14px;font-weight:600;line-height:1.4;text-decoration:none;text-align:center;box-shadow:0 1px 2px rgba(15,23,42,.06);transition:border-color .15s ease,box-shadow .15s ease,color .15s ease}
+.chapter-pager a:hover{border-color:#0EA5E9;color:#0EA5E9;box-shadow:0 4px 14px rgba(14,165,233,.18);text-decoration:none}
+.chapter-pager .cp-toc{flex:0 0 auto;min-width:104px;background:linear-gradient(135deg,#0EA5E9,#10B981);border-color:transparent;color:#FFFFFF}
+.chapter-pager .cp-toc:hover{border-color:transparent;color:#FFFFFF;opacity:.92}
+.chapter-pager .cp-disabled{opacity:.45;background:#F8FAFC;box-shadow:none;cursor:default}
+@media (max-width:680px){.chapter-pager{gap:8px;margin:28px 0 8px}.chapter-pager a,.chapter-pager span{flex:1 1 100%}}
+
+/* ---- 3. 自测题交互态（兼容 A 族 .opt 与 B 族 .quiz-options li） ---- */
+/* 3.1 基础可点击 */
+.quiz-q .opt{cursor:pointer}
+.quiz-item .quiz-options li{cursor:pointer}
+/* 3.2 hover / 焦点态 */
+.quiz-q .opt:hover,.quiz-q .opt:focus-visible{border-color:#7DD3FC;background:#F0F9FF}
+.quiz-item .quiz-options li:hover,.quiz-item .quiz-options li:focus-visible{background:#FFFFFF;box-shadow:inset 0 0 0 1px #7DD3FC}
+/* 3.3 判定结果态 */
+.quiz-q .opt.is-right{border-color:#34D399;background:#ECFDF5;color:#065F46;font-weight:600}
+.quiz-q .opt.is-right::after{content:" ✓";color:#059669;font-weight:800}
+.quiz-q .opt.is-right .l{color:#047857}
+.quiz-item .quiz-options li.is-right{background:#DCFCE7;box-shadow:inset 0 0 0 1px #34D399;font-weight:600}
+.quiz-item .quiz-options li.is-right::after{content:" ✓";color:#15803D;font-weight:800}
+.quiz-q .opt.is-wrong{border-color:#FCA5A5;background:#FEF2F2;color:#B91C1C;font-weight:600}
+.quiz-q .opt.is-wrong::after{content:" ✗";color:#DC2626;font-weight:800}
+.quiz-q .opt.is-wrong .l{color:#B91C1C}
+.quiz-item .quiz-options li.is-wrong{background:#FEE2E2;box-shadow:inset 0 0 0 1px #FCA5A5;font-weight:600}
+.quiz-item .quiz-options li.is-wrong::after{content:" ✗";color:#DC2626;font-weight:800}
+.quiz-q .opt.is-reveal{border-color:#6EE7B7;background:#ECFDF5;color:#065F46}
+.quiz-q .opt.is-reveal .l{color:#047857}
+.quiz-item .quiz-options li.is-reveal{background:#ECFDF5;box-shadow:inset 0 0 0 1px #6EE7B7;color:#065F46}
+/* 3.4 已锁定禁用态 */
+.quiz-q.is-locked .opt,.quiz-item.is-locked .quiz-options li{cursor:default;pointer-events:none}
+.quiz-q.is-locked .opt:not(.is-right):not(.is-wrong):not(.is-reveal){opacity:.55}
+.quiz-item.is-locked .quiz-options li:not(.is-right):not(.is-wrong):not(.is-reveal){opacity:.55}
+/* 3.5 计分行（运行时注入） */
+.quiz-score{display:flex;align-items:center;gap:12px;margin:14px 0 18px;padding:12px 18px;border:1px dashed #7DD3FC;border-radius:12px;background:#F0F9FF;font-size:14px;font-weight:700;color:#0F172A}
+.quiz-score .qs-label{white-space:nowrap}
+.quiz-score .qs-num{white-space:nowrap;color:#0284C7;font-size:16px}
+.quiz-score .qs-bar{flex:1 1 60px;min-width:60px;height:8px;border-radius:999px;background:#E2E8F0;overflow:hidden}
+.quiz-score .qs-bar i{display:block;height:100%;width:0;border-radius:999px;background:linear-gradient(90deg,#0EA5E9,#10B981);transition:width .35s ease}
+
+/* ---- 4. 速记卡可达性与长内容 ---- */
+.fc-hint,.flip-hint{color:#64748B}
+.flashcard-face{overflow:auto}
+.flashcard[tabindex]{outline:none}
+.flashcard[tabindex]:focus-visible{outline:3px solid #0EA5E9;outline-offset:3px}
+
+/* ---- 5. 侧栏目录 ---- */
+/* B 族 sticky 侧栏内目录限高滚动（A 族 aside 本身已可滚动，此规则空匹配无害） */
+.sidebar .sidebar-nav{max-height:calc(100vh - 60px);overflow-y:auto;scrollbar-width:thin}
+/* A 族 scroll spy 高亮（B 族高亮由其基础样式提供） */
+.sidebar a.toc.active{background:#E0F2FE;color:#0369A1;font-weight:600}
+
+/* ---- 6. 响应式补充：681–900px 时 grid3 降为两列 ---- */
+@media (min-width:681px) and (max-width:900px){
+  .grid3{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+
+/* ---- 7. 打印样式补充（A 族新增；B 族已有 print，重复声明无害） ---- */
+@media print{
+  .sidebar,.overlay,.sidebar-overlay,#menuBtn,#navToggle,#overlay,#sidebarOverlay,#readbar,#topBtn,#backTop,.chapter-pager,.quiz-score{display:none!important}
+}
+
+/* ---- 8. 手机端增强 v2（触控体验 / 防溢出 / 抽屉滚动锁定） ---- */
+/* 8.1 触控体验：去点按高亮、消除双击缩放延迟（flashcard 高 190-200px 天然达标，不另设 min-height） */
+.opt,.tabbar button,.tab-btn,.quiz-options li,.flashcard,.chapter-pager a,.chapter-pager span,.menu-btn,.mobile-nav-toggle{-webkit-tap-highlight-color:transparent;touch-action:manipulation}
+/* 8.2 触控目标最小 44px（自测选项与 tab 胶囊原高约 33px） */
+.opt,.tabbar button,.tab-btn,.quiz-options li{min-height:44px}
+/* 8.3 防溢出：内容图自适应；svg 不设 height:auto，避免定尺寸图标塌陷 */
+img{max-width:100%;height:auto}
+svg{max-width:100%}
+/* 8.4 长词/URL 断行 */
+body{overflow-wrap:break-word}
+/* 8.5 表格容器触摸惯性滚动（A 族已有同值规则，重复声明无害） */
+.table-wrap{-webkit-overflow-scrolling:touch}
+/* 8.6 抽屉打开时锁定背景滚动（两族抽屉断点均为 900px；类由统一脚本增删） */
+@media (max-width:900px){
+  body.nav-locked{overflow:hidden}
+}
+</style>
+</head>
+<body>
+<div id="readbar"></div>
+<button class="menu-btn" id="menuBtn" aria-label="打开目录">☰</button>
+<div class="overlay" id="overlay"></div>
+<aside class="sidebar" id="sidebar">
+  <h2>第二十五章 精神障碍的预防和康复</h2>
+  <div class="sub">精神病学（第9版）· 印刷页 307–318<br>学习指南 · 技能标准版</div>
+  <div class="toc-group">开篇</div>
+  <a class="toc" href="#cover"><span class="n">00</span>章节封面与学习目标</a>
+  <a class="toc" href="#status"><span class="n">01</span>本章地位速览</a>
+  <a class="toc" href="#navmap"><span class="n">02</span>章节导航图与八栏适配</a>
+  <a class="toc" href="#mindmap"><span class="n">03</span>本章知识地图</a>
+  <a class="toc" href="#route"><span class="n">04</span>学习路线图</a>
+  <div class="toc-group">正文（主题单元八栏）</div>
+  <a class="toc unitlink" href="#u1"><span class="n">05</span>精神障碍的预防</a>
+  <a class="toc sub2" href="#u1-3">└ 预防布局拼图</a>
+  <a class="toc sub2" href="#u1-5">└ 概念辨析</a>
+  <a class="toc sub2" href="#u1-6">└ 预防措施工具箱</a>
+  <a class="toc unitlink" href="#u2"><span class="n">06</span>精神障碍的康复</a>
+  <a class="toc sub2" href="#u2-3">└ 康复服务版图</a>
+  <a class="toc sub2" href="#u2-5">└ 康复概念辨析</a>
+  <a class="toc sub2" href="#u2-6">└ 康复干预工具箱</a>
+  <div class="toc-group">结尾</div>
+  <a class="toc" href="#summary"><span class="n">07</span>全章核心要点速览</a>
+  <a class="toc" href="#pitfalls"><span class="n">08</span>易混易错点警示</a>
+  <a class="toc" href="#quiz"><span class="n">09</span>章节自测系统</a>
+  <a class="toc" href="#cards"><span class="n">10</span>考点速记卡</a>
+  <a class="toc" href="#cases"><span class="n">11</span>病例挑战</a>
+  <a class="toc" href="#ext"><span class="n">12</span>拓展延伸</a>
+</aside>
+<main class="main">
+<div class="wrap">
+
+<!-- ===== 00 封面 ===== -->
+<section id="cover">
+  <div class="hero">
+    <span class="chap">第二十五章 · CHAPTER 25</span>
+    <h1>精神障碍的预防和康复</h1>
+    <p class="tagline">从"治已病"到"防未病、复其能"：三级预防分层把关，医院—日间医院—社区接力康复。</p>
+    <p class="meta">教材：精神病学（第9版）｜印刷页 307–318｜全章 2 节：精神障碍的预防、精神障碍的康复</p>
+    <div class="goalbox">
+      <h3>学习目标（四级分层）</h3>
+      <ul>
+        <li><span class="lv">了解</span>说出精神障碍预防与康复工作的重要性、全球与我国现状，理解"旋转门"现象及预防悖论的含义。</li>
+        <li><span class="lv l2">理解</span>解释三级预防（一级/二级/三级）与一般性/选择性/指征性预防干预的对应关系与区别，理解医院—日间医院—社区康复的衔接逻辑。</li>
+        <li><span class="lv l3">掌握</span>三级预防各自的侧重点；一般性预防干预的 7 项内容；医院康复的 7 项训练措施；社区康复的目的、个案管理、个体服务计划五步、工作体系与服务流程。</li>
+        <li><span class="lv l4">重点</span>三级预防层级与三个干预层次的适配；康复人员配置（医疗组、护理组、社会防卫组、音乐治疗组、职业治疗组、康复设备训练组；个案管理者多专业组成）；服务流程中的"1 个月""每 3 个月"节点——高频考点。</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 01 地位 ===== -->
+<section id="status">
+  <div class="sec-head"><div class="badge">01</div><h2>本章地位速览<span class="en">Why this chapter matters</span></h2></div>
+  <p class="sec-lead">前面的章节回答"是什么病、怎么治"，本章回答"怎么少发病、怎么少复发、怎么把功能还给人"。它不是疾病章，而是精神障碍全程管理的工作章。</p>
+  <div class="grid3">
+    <div class="card blue">
+      <h3>章节定位与重要性</h3>
+      <p>本章位于教材后部（第二十五章，印刷页 307–318），紧接第二十四章治疗学之后。全章只有两节：<strong>精神障碍的预防</strong>与<strong>精神障碍的康复</strong>，不按疾病组织，而按"工作模块"组织。</p>
+      <p>教材开篇即定性：预防、治疗与康复是疾病管理的三大组成部分；精神疾病具有慢性化特点，大多数患者需要长期治疗，更需要长期康复预防复发。</p>
+      <p class="note">考试权重集中于：三级预防的层级与重点、三个预防干预层次的对象、康复训练项目与人员配置、社区康复的服务流程与时间节点。</p>
+    </div>
+    <div class="card red">
+      <h3>临床意义</h3>
+      <p>教材用"高患病率、高致残率、低治疗率、低康复率"概括精神障碍的特点。当前"重治疗、轻康复"的临床模式，使患者急性期治疗后因缺少生活、社交等技能训练和过渡性服务，难以融入社会，导致病情反复，出现<strong>"旋转门"现象</strong>。</p>
+      <p>因此在疾病发生前预防，可从源头减少精神障碍的发生；在疾病管理后期从治疗转向康复，可促进社会适应和功能恢复，帮助患者回归家庭和社会。</p>
+    </div>
+    <div class="card green">
+      <h3>与前后章节关联</h3>
+      <p><strong>前置：</strong>各疾病章的症状学、前驱症状与病程特点，是二级预防"早期识别"的依据；第二十四章治疗学提供药物、物理与心理治疗手段，是症状康复的基础。</p>
+      <p><strong>本章内部：</strong>预防的第三级与康复直接重叠——教材明确"三级预防强调的是精神障碍的康复"。</p>
+      <p><strong>横向交叉：</strong>公共卫生与流行病学（监测、筛查）、社区医学（社区康复网络）、康复医学（功能训练）、社会工作（个案管理、三社联动）、卫生政策与伦理法律（权益保障、病耻感）。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 02 导航 ===== -->
+<section id="navmap">
+  <div class="sec-head"><div class="badge">02</div><h2>章节导航图<span class="en">Section map</span></h2></div>
+  <p class="sec-lead">全章按教材两节划分为 2 个主题单元。点击卡片可直接跳到对应单元。</p>
+  <div class="grid2">
+    <a class="card red" href="#u1" style="display:block;color:inherit">
+      <h3>第一节 · 精神障碍的预防</h3>
+      <p>预防工作的重要性与国内外现状、全生命周期预防模式、三级预防、三个预防干预层次（一般性/选择性/指征性）。</p>
+      <p class="note">关键词：Caplan 1964 · 预防悖论 · 全生命周期 · 三早 · 前驱症状</p>
+    </a>
+    <a class="card green" href="#u2" style="display:block;color:inherit">
+      <h3>第二节 · 精神障碍的康复</h3>
+      <p>康复的重要性与任务、医院康复、日间医院、社区康复（目的、个案管理、个体服务计划、工作体系与服务流程）。</p>
+      <p class="note">关键词：症状康复 · 认知康复 · 回归社会 · 职业康复 · CBR · ISP</p>
+    </a>
+  </div>
+
+  <div class="card cyan">
+    <h3>关于八栏适配的说明</h3>
+    <p>本章不是疾病章，教材按"预防工作"与"康复工作"两节叙述，没有独立的疾病单元，也没有诊断标准、鉴别诊断与药物治疗方案。为满足技能标准的"每单元八栏"要求，本指南<strong>保留八栏标题与顺序不变</strong>，按主题改写栏目内涵：</p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>原栏名</th><th>本章适配后的写法</th><th>适配理由</th></tr></thead>
+        <tbody>
+          <tr><td>第一栏 疾病画像</td><td>预防/康复<strong>工作画像</strong></td><td>本章对象是"工作体系"而非某一疾病，故画像描述工作定位、定义、负担与核心特征。</td></tr>
+          <tr><td>第二栏 病因探秘</td><td>预防单元为<strong>风险与保护因素探秘</strong>；康复单元为<strong>康复需求探秘</strong></td><td>预防有明确的风险/保护因素论述；康复单元教材不讨论病因，改写为"为什么需要康复"。</td></tr>
+          <tr><td>第三栏 临床表现拼图</td><td><strong>预防布局拼图 / 康复服务版图</strong></td><td>用分层、分模块的方式呈现工作布局，替代症状维度。</td></tr>
+          <tr><td>第四栏 教材典型案例</td><td>如实标注<strong>教材未提供具体临床案例</strong></td><td>全章无患者个案、病史或检查资料，不编造康复病例。</td></tr>
+          <tr><td>第五栏 鉴别诊断对对碰</td><td><strong>概念/模式辨析</strong></td><td>本章易混点是"三级预防 vs 三个干预层次""医院 vs 日间 vs 社区康复"等，不是疾病鉴别。</td></tr>
+          <tr><td>第六栏 治疗方案工具箱</td><td><strong>预防措施 / 康复干预工具箱</strong></td><td>本章的"治疗"体现为公共卫生措施与康复训练项目。</td></tr>
+          <tr><td>第七栏 记忆工具箱</td><td>不变，按主题编制记忆方法</td><td>方法数量与类型要求同样适用。</td></tr>
+          <tr><td>第八栏 知识联动</td><td>不变，只写教材有依据的跨章/跨学科联系</td><td>与疾病章、治疗学、公共卫生、康复医学、社会工作联动。</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note">说明：两节各自独立成单元，是因为教材本身以两节分述预防与康复，且二者的对象、措施与评价指标不同；合并会丢失"三级预防强调康复"这一关键衔接。</p>
+  </div>
+</section>
+
+<!-- ===== 03 知识地图 ===== -->
+<section id="mindmap">
+  <div class="sec-head"><div class="badge">03</div><h2>本章知识地图<span class="en">Knowledge map</span></h2></div>
+  <p class="sec-lead">按"为什么防 → 防什么 → 怎么防 → 怎么康复 → 谁来康复"的逻辑重组，而非目录复制。全章可压缩为一条主线：<strong>识别风险与保护因素 → 分层预防 → 急性期即开始康复 → 医院—日间—社区接力 → 回归社会</strong>。</p>
+  <div class="stat">
+    <span>2 节</span><span>2 个主题单元</span><span>三级预防</span><span>3 个预防干预层次</span><span>7 项一般性预防内容</span><span>7 项医院康复训练</span><span>5 步个体服务计划</span><span>4 大工作体系</span><span>5 项工作职能</span><span>5 步服务流程</span>
+  </div>
+  <p class="note">统计口径：按教材原文明确列出的条目计数；教材未给出统一的条目编号，此处为学习整理，不改变原文含义。</p>
+  <div class="grid3">
+    <div class="card red">
+      <h3>① 预防的总论</h3>
+      <ul>
+        <li>预防、治疗、康复三大组成部分</li>
+        <li>"重治疗、轻康复" → 旋转门</li>
+        <li>全球/我国患病与负担数据</li>
+        <li>生物-心理-社会医学模式</li>
+        <li>全生命周期：胚胎婴幼儿→儿童青少年→成年→老年</li>
+      </ul>
+    </div>
+    <div class="card blue">
+      <h3>② 三级预防</h3>
+      <ul>
+        <li>Caplan 1964 提出三级预防</li>
+        <li>一级：病因预防，最积极最主动</li>
+        <li>二级：早期发现、早期诊断、早期治疗</li>
+        <li>三级：防复发、康复训练、减少残疾</li>
+        <li>三级预防强调康复</li>
+      </ul>
+    </div>
+    <div class="card orange">
+      <h3>③ 三个干预层次</h3>
+      <ul>
+        <li>Mrazek &amp; Haggerty 精细框架</li>
+        <li>预防＝发生前干预；原二三级＝治疗与康复</li>
+        <li>一般性：一般公众与普通人群（7 项）</li>
+        <li>选择性：高危人群（如灾难幸存者）</li>
+        <li>指征性：有先兆/前驱症状或素质因素但未达诊断</li>
+      </ul>
+    </div>
+    <div class="card green">
+      <h3>④ 康复总论</h3>
+      <ul>
+        <li>PRA 与英国学者对精神康复的定义</li>
+        <li>以人为中心、以证据为基础的动态模式</li>
+        <li>家庭参与、同伴支持、辅助就业</li>
+        <li>三大任务：症状康复、认知康复、回归社会</li>
+        <li>回归社会是最终治疗目标</li>
+      </ul>
+    </div>
+    <div class="card purple">
+      <h3>⑤ 医院与日间康复</h3>
+      <ul>
+        <li>医院康复始于治疗伊始</li>
+        <li>人员：医疗/护理/社会防卫/音乐治疗/职业治疗/康复设备训练组</li>
+        <li>7 项训练：生活技能、人际交往、职业、躯体健康、教育、药物管理、认知</li>
+        <li>日间医院：白天来院、晚上回家</li>
+        <li>对象：即将出院、反复复发、阴性症状与功能衰退者</li>
+      </ul>
+    </div>
+    <div class="card cyan">
+      <h3>⑥ 社区康复</h3>
+      <ul>
+        <li>CBR 与 WHO 定义</li>
+        <li>三目的：减轻残疾、提高社会适应、预防复发</li>
+        <li>个案管理：多专业共同担任，5 项职责</li>
+        <li>ISP 五步：评估→目标→计划→执行调整→评估反馈</li>
+        <li>体系 4 方面、职能 5 项、流程 5 步</li>
+        <li>2025 年：80% 以上县（市、区）开展、60% 以上居家患者接受</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 04 路线 ===== -->
+<section id="route">
+  <div class="sec-head"><div class="badge">04</div><h2>学习路线图<span class="en">Study route</span></h2></div>
+  <p class="sec-lead">本章概念多、政策数字集中，但逻辑清晰。建议按"先框架、再分层、后康复、最后刷题"的顺序推进，不要一上来就背数字。</p>
+  <div class="grid2">
+    <div class="card blue">
+      <h3>推荐学习路径</h3>
+      <div class="timeline">
+        <div class="tl-item"><h4>第 1 步 · 建框架（约 20 分钟）</h4><p>读章首导言与两节"概述"，先弄清预防、治疗、康复三者的关系，理解"旋转门"为什么发生。</p></div>
+        <div class="tl-item"><h4>第 2 步 · 攻三级预防（约 35 分钟）</h4><p>先把一级/二级/三级的"一句话重点"背熟，再回头区分 Caplan 三级预防与 Mrazek 三个干预层次。</p></div>
+        <div class="tl-item"><h4>第 3 步 · 记预防措施（约 35 分钟）</h4><p>用"7 项一般性 + 选择性 1 类对象 + 指征性 3 项"压缩记忆；全生命周期四阶段用时间轴记。</p></div>
+        <div class="tl-item"><h4>第 4 步 · 攻康复（约 45 分钟）</h4><p>按"总论三任务 → 医院康复七项 → 日间医院 → 社区康复（目的/个案管理/ISP/体系流程）"顺序推进。</p></div>
+        <div class="tl-item"><h4>第 5 步 · 自测与回查（约 30 分钟）</h4><p>做自测题、翻速记卡、看病例挑战；错题回到对应栏目原文核对，不另找课外资料。</p></div>
+      </div>
+      <p class="note">总时长约 2.5 小时；建议分 2 次完成，次日用速记卡复习 20 分钟。政策数字只在教材出现处记，不额外扩展。</p>
+    </div>
+    <div class="card purple">
+      <h3>重点优先级与记忆策略</h3>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>内容</th><th>优先级</th><th>推荐记忆法</th></tr></thead>
+          <tbody>
+            <tr><td>三级预防的层级与重点</td><td class="starme">⭐⭐⭐</td><td>口诀 + 对比表</td></tr>
+            <tr><td>三级预防 vs 三个干预层次</td><td class="starme">⭐⭐⭐</td><td>对比记忆法</td></tr>
+            <tr><td>一般性/选择性/指征性的对象</td><td class="starme">⭐⭐⭐</td><td>对象锚定 + 举例</td></tr>
+            <tr><td>医院康复 7 项训练</td><td class="starme">⭐⭐⭐</td><td>数字编码 + 场景联想</td></tr>
+            <tr><td>康复人员配置 6 组</td><td class="starme">⭐⭐⭐</td><td>首字母缩拼</td></tr>
+            <tr><td>社区康复流程与 1 个月/3 个月节点</td><td class="starme">⭐⭐⭐</td><td>时间轴</td></tr>
+            <tr><td>个案管理 5 项职责</td><td class="starme">⭐⭐</td><td>关键词串联</td></tr>
+            <tr><td>ISP 五步</td><td class="starme">⭐⭐</td><td>数字编码</td></tr>
+            <tr><td>全生命周期四阶段</td><td class="starme">⭐⭐</td><td>时间轴 + 关键词</td></tr>
+            <tr><td>患病率/负担/政策数字</td><td class="starme">⭐</td><td>只记教材出现的数字，不扩展</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="note">记忆总原则：先理解"这一层解决什么问题"，再记条目；政策数字属于"教材给定值"，不要用其他资料替换。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 05 预防 ===== -->
+<section id="u1">
+  <div class="sec-head"><div class="badge">05</div><h2>精神障碍的预防<span class="en">第一节 · 预防（p.307–312）</span></h2></div>
+  <p class="sec-lead">这一节回答三个问题：为什么要防、防谁、怎么分层防。核心是把"三级预防"与"三个预防干预层次"这两套语言对齐。</p>
+
+  <!-- 第一栏 -->
+  <div class="card cyan" id="u1-1">
+    <h3 class="col-title"><span class="idx">第一栏</span>疾病画像 → 预防工作画像</h3>
+    <div class="quote"><span class="lab">教材原文</span>预防、治疗与康复是疾病管理中的三大组成部分，由于精神疾病具有慢性化特点，大多数患者需要长期治疗，更需要长期康复预防复发。</div>
+    <p><strong>一句话画像：</strong>精神障碍的预防，是在疾病发生前或发生早期主动降低风险、阻断病程的工作；它像给整条疾病河流"修上游、设拦污、护下游"，而不是等洪水来了才抢救。<span class="note">（此句为类比理解，非教材原文）</span></p>
+    <p><strong>教材对现状的定性：</strong></p>
+    <div class="quote"><span class="lab">教材原文</span>当前"重治疗、轻康复"的临床模式，使得患者经过急性期治疗后，因缺少必要的生活、社交等技能训练和过渡性服务医疗，难以较好地融入社会，进而导致病情反复，出现"旋转门"现象。</div>
+    <div class="grid2">
+      <div class="mini">
+        <h4>为什么必须防</h4>
+        <ul>
+          <li>精神障碍<strong>高患病率、高致残率、低治疗率、低康复率</strong>。</li>
+          <li>治疗技术与手段有局限性，疗效欠佳、致残率高，增加复发概率与医疗资源负担。</li>
+          <li>仅靠治疗无法减少精神残疾与各种负担，<strong>预防疾病复发是当务之急</strong>。</li>
+          <li>部分风险因素可预防、可改变，预防机会贯穿整个生命周期。</li>
+        </ul>
+      </div>
+      <div class="mini">
+        <h4>预防工作的两套"语言"</h4>
+        <ul>
+          <li><strong>三级预防</strong>（Caplan，1964）：一级病因预防、二级三早、三级防复发与康复。</li>
+          <li><strong>三个干预层次</strong>（Mrazek &amp; Haggerty）：一般性、选择性、指征性。</li>
+          <li>教材明确：后者把"预防"收窄为发生前干预，原来的二级与三级相当于<strong>治疗与康复</strong>。</li>
+        </ul>
+      </div>
+    </div>
+    <p><strong>教材给出的负担数据（仅列原文出现者）：</strong></p>
+    <div class="stat">
+      <span>全球成年男性终生患病率 28.6%</span>
+      <span>全球成年女性终生患病率 29.8%</span>
+      <span>我国心境障碍终生患病率 7.8%</span>
+      <span>我国焦虑障碍终生患病率 7.6%</span>
+      <span>新冠后抑郁新增 5 320 万例</span>
+      <span>新冠后焦虑新增 7 600 万例</span>
+      <span>全球 DALYs 1.253 亿人年</span>
+    </div>
+    <p class="note">教材还引述 2018 年《柳叶刀》全球精神卫生与可持续发展委员会报告：若问题得不到有效解决，2010—2030 年精神健康问题给全球经济造成的损失可能高达 16 万亿美元。此为教材转述的预测值，不是我国数据。</p>
+    <div class="callout warn"><span class="ct">⚠️ 边界提醒</span>本栏只使用教材给出的患病率、疾病负担与政策目标；教材未给出的发病率、康复覆盖率、机构数量、人员配比等数字，一律标注<strong>「教材未涉及」</strong>，不补充课外政策指标。</div>
+  </div>
+
+  <!-- 第二栏 -->
+  <div class="card blue" id="u1-2">
+    <h3 class="col-title"><span class="idx">第二栏</span>病因探秘 → 风险与保护因素探秘</h3>
+    <p><strong>教材的逻辑起点：</strong>精神障碍的病因尚不完全清楚，因此本节谈的是<strong>风险性因素与保护性因素</strong>，而不是已经确定的病因。新医学模式（生物-心理-社会医学模式）强调服务对象是完整的人，是生活在社会环境中、具有复杂心理活动的人。</p>
+    <div class="grid3">
+      <div class="mini"><h4>生物学因素</h4><p>教材点名遗传、感染等生物因素；母亲孕期潜在的致畸和神经毒性暴露、新生儿产伤与缺血缺氧损害也属于可干预的生物学风险。</p></div>
+      <div class="mini"><h4>心理因素</h4><p>心理弹性、认知储备等心理素质；个人心理因素如<strong>问题解决技能和人际关系技能欠缺</strong>。儿童青少年期的学习压力、人际交往困难亦在此列。</p></div>
+      <div class="mini"><h4>社会因素</h4><p>家庭支持与社会环境起到重要"催化"作用；家庭不和、父母离异或分居、居丧、父母有精神障碍病史；学校环境、工作压力、组织管理不公平、重大社会变革、大型公共卫生事件。</p></div>
+    </div>
+    <p><strong>教材明确"可以预防及改变"的风险因素：</strong></p>
+    <ul>
+      <li>不良的生活方式因素：<strong>抽烟、饮食不当、缺乏锻炼</strong>等。</li>
+      <li>社会因素、生物学因素、个人心理因素、家庭环境因素和学校环境因素。</li>
+      <li>成年期的<strong>压力</strong>是可改变的风险因素之一（工作、家庭、社区三个来源）。</li>
+    </ul>
+    <p><strong>保护性因素：</strong>教材强调保护性因素在精神障碍发生发展中的重要预防作用，并点名<strong>心理弹性、认知储备、家庭支持、社会环境</strong>等；但教材<strong>未提供完整的保护因素清单或量化指标</strong>，本指南不补写。</p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>生命周期阶段</th><th>教材列出的主要风险因素</th><th>教材给出的预防切入点</th></tr></thead>
+        <tbody>
+          <tr><td>胚胎期及婴幼儿期</td><td>母亲心理健康状态不佳、生活行为方式不健康、潜在致畸和神经毒性暴露、新生儿产伤与缺血缺氧</td><td>孕妇心理健康教育、优生优育与科学育儿、孕末期临产检查与围产期安全、培养育儿技能与安全型依恋</td></tr>
+          <tr><td>儿童期与青少年期</td><td>学校/家庭/同伴的人际交往困难与学习压力、家庭不和、不良生活事件、父母有精神障碍病史</td><td>深入大中小学与幼儿园科普、联合学校与家庭、重点关注注意缺陷多动障碍与智力发育障碍儿童</td></tr>
+          <tr><td>成年期</td><td>工作压力与组织管理不公平、夫妻关系与亲子关系、重大社会变革与大型公共卫生事件</td><td>员工帮助计划、社区心理健康援助、家庭心理健康教育、科普与早期疏导</td></tr>
+          <tr><td>老年期</td><td>躯体疾病（高血压、冠心病、糖尿病）、社会连接减少、孤独感、罪恶感、记忆力下降、激越行为、持续性失眠</td><td>提高心理健康水平、改善生活方式、丰富社区生活、增强社会连接、拓展社会支持</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout key"><span class="ct">📌 一句话总结</span>预防不是"消灭病因"，而是<strong>识别可改变的风险、放大可用的保护因素</strong>；教材的落点是全生命周期，而不是某一个危险因素。</div>
+  </div>
+
+  <!-- 第三栏 -->
+  <div class="card red" id="u1-3">
+    <h3 class="col-title"><span class="idx">第三栏</span>临床表现拼图 → 预防布局拼图</h3>
+    <div class="tabs" data-tabs>
+      <div class="tabbar">
+        <button class="on" data-tab="p1">三级预防</button>
+        <button data-tab="p2">三个干预层次</button>
+        <button data-tab="p3">全生命周期</button>
+        <button data-tab="p4">重点与特殊人群</button>
+      </div>
+      <div class="panel on" data-panel="p1">
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>层级</th><th>教材定位</th><th>核心动作</th><th>关键词</th></tr></thead>
+            <tbody>
+              <tr><td><strong>一级预防</strong><br>primary prevention</td><td>病因预防</td><td>消除或减少精神障碍的病因或致病因素</td><td>最积极、最主动；病因尚不完全清楚；加强学科建设、提高全民心理健康素质、营造良好家庭和社会环境</td></tr>
+              <tr><td><strong>二级预防</strong><br>secondary prevention</td><td>早发现、早诊断、早治疗</td><td>争取疾病缓解后获得良好预后，防止复发</td><td>"三早"；识别<strong>前驱症状</strong>；减少漏诊误诊；减少已发生疾病的影响</td></tr>
+              <tr><td><strong>三级预防</strong><br>tertiary prevention</td><td>防复发与康复</td><td>康复训练、最大限度促进社会功能恢复、控制复发、减少精神残疾、延缓疾病进程、提高生活质量</td><td>力争重新融入社会；<strong>三级预防强调的是精神障碍的康复</strong></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="note">教材特别说明：精神障碍慢性或亚急性起病、症状隐匿、临床表现缺乏明确特征性，临床漏诊或误诊发生率高，患者从发病到真正接受有效治疗的时间延长，严重影响预后——这是二级预防尤为重要的原因。</p>
+      </div>
+      <div class="panel" data-panel="p2">
+        <p><strong>Mrazek 与 Haggerty 的精细概念框架：</strong>精神障碍的预防实际上指精神障碍发生前的干预（即一级预防）；原来的二级与三级预防相当于<strong>治疗与康复</strong>。在此基础上，预防干预分为三个层次：</p>
+        <div class="grid3">
+          <div class="mini"><h4>一般性预防干预</h4><p><strong>对象：</strong>一般公众和普通人群。<br><strong>内容：</strong>心理健康促进与教育、心理咨询与心理治疗服务、心理健康服务体系与人才队伍、重点人群、特殊人群、遗传咨询与围产期保健、学科建设与流行病学调查（共 7 项）。</p></div>
+          <div class="mini"><h4>选择性预防干预</h4><p><strong>对象：</strong>具有易患精神障碍危险因素的高危人群，如对灾难幸存者进行心理危机干预，以避免或减少应激相关精神障碍等疾病的发生。</p></div>
+          <div class="mini"><h4>指征性预防干预</h4><p><strong>对象：</strong>具有精神障碍的先兆或前驱症状，或具有明显的精神障碍素质因素，但<strong>尚不符合诊断标准</strong>的个体。</p></div>
+        </div>
+        <div class="callout warn"><span class="ct">⚠️ 最容易记混</span>三级预防是"按疾病进程分层"，三个干预层次是"按风险人群分层"。二者不能简单一一对应：一般性≈面向普通人群的一级预防思路，选择性≈面向高危人群，指征性≈面向有前驱症状但未达诊断者。</div>
+      </div>
+      <div class="panel" data-panel="p3">
+        <div class="timeline">
+          <div class="tl-item"><h4>胚胎期及婴幼儿期</h4><p>关注和优化孕妇身心健康；普及优生优育和科学育儿；孕妇心理健康教育、规律作息与合理饮食；孕末期临产检查和围产期安全；出生后培养育儿技能、促进皮肤接触、提高安全型依恋概率。目标：降低成年后犯罪、失业及不健康风险行为。</p></div>
+          <div class="tl-item"><h4>儿童期与青少年期</h4><p>教材给出：我国青少年抑郁症患者患病率高达 15%～20%，青少年终生患病率可能高达 20%。干预必须深入大、中、小学和幼儿园，联合学校与家庭；重点关注注意缺陷多动障碍、智力发育障碍儿童，积极开展心理干预和转介治疗。</p></div>
+          <div class="tl-item"><h4>成年期</h4><p>与企业、家庭和社区联合；开展员工帮助计划、社区心理健康援助、家庭心理健康教育；关注失眠、焦虑、抑郁等常见精神症状，早期发现、及时疏导和干预。</p></div>
+          <div class="tl-item"><h4>老年期</h4><p>针对躯体疾病、社会连接减少、孤独感、罪恶感、记忆力下降、激越行为和持续性失眠等风险；开展提高心理健康水平、改善生活方式、丰富社区生活、增强社会连接、拓展社会支持的活动，增强心理韧性与适应能力。</p></div>
+        </div>
+      </div>
+      <div class="panel" data-panel="p4">
+        <div class="grid2">
+          <div class="mini">
+            <h4>一般性预防中的重点人群</h4>
+            <ul>
+              <li>机关企业用人单位员工（员工心理援助计划）</li>
+              <li>学生（中小学心理健康教育；高校心理调适、自杀预防、心理危机干预）</li>
+              <li>老年人、妇女、儿童、残疾人及失独家庭</li>
+              <li>孕产期、围绝经期妇女</li>
+              <li>遭受创伤的重点人群</li>
+            </ul>
+          </div>
+          <div class="mini">
+            <h4>特殊人群</h4>
+            <ul>
+              <li>流浪乞讨人员、服刑人员、刑满释放人员</li>
+              <li>强制隔离戒毒人员、社区矫正人员、社会吸毒人员</li>
+              <li>易肇事肇祸人员、严重精神障碍患者</li>
+              <li>服务方式：政府、社会、家庭"三位一体"帮扶体系；精神卫生综合管理小组；日常发现、登记、随访、危险性评估和服药指导</li>
+            </ul>
+          </div>
+        </div>
+        <p class="note">教材未给出上述人群的具体人数、覆盖率或服务标准，相关数字标注「教材未涉及」。</p>
+      </div>
+    </div>
+    <p class="note">说明：本栏原用于疾病症状分维度呈现；本章无疾病单元，故改为"预防布局拼图"，全部内容取自教材第一节。</p>
+  </div>
+
+  <!-- 第四栏 -->
+  <div class="card orange" id="u1-4">
+    <h3 class="col-title"><span class="idx">第四栏</span>教材典型案例</h3>
+    <div class="callout book">
+      <span class="ct">📖 教材未提供具体临床案例</span>
+      本节为预防工作总论，教材只提供患病率/疾病负担数据、政策文件目标与人群层面的措施，<strong>没有给出任何患者个案、病史、检查结果或随访经过</strong>。因此本栏不编写"预防成功案例"，也不虚构康复故事。
+    </div>
+    <p><strong>可迁移的分析思路（按教材要点整理，不是教材原案例）：</strong></p>
+    <ol>
+      <li>面对一个人群或个体，先问：他处在<strong>疾病进程的哪一段</strong>（未发生、已发生未治疗、已治疗需防复发）？对应一级/二级/三级预防。</li>
+      <li>再问：他属于<strong>哪一类风险人群</strong>（普通人群、高危人群、有前驱症状但未达诊断）？对应一般性/选择性/指征性干预。</li>
+      <li>最后问：<strong>可改变的风险因素</strong>是什么（生活方式、家庭/学校/工作压力、躯体疾病、社会连接）？据此选择教材给出的措施。</li>
+    </ol>
+    <p class="note">以上为学习框架，不构成病例；教材未提供具体临床案例，故本栏不做"症状→鉴别→确诊"的病例拆解。</p>
+  </div>
+
+  <!-- 第五栏 -->
+  <div class="card orange" id="u1-5">
+    <h3 class="col-title"><span class="idx">第五栏</span>鉴别诊断对对碰 → 概念与模式辨析</h3>
+    <p><strong>表 1　三级预防（Caplan）与三个干预层次（Mrazek &amp; Haggerty）</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>比较维度</th><th>三级预防</th><th>三个预防干预层次</th></tr></thead>
+        <tbody>
+          <tr><td>分层依据</td><td>按<strong>疾病进程</strong>：未发生→已发生→已治疗</td><td>按<strong>风险人群</strong>：普通人群→高危人群→有前驱症状者</td></tr>
+          <tr><td>一级/第一层</td><td>一级预防＝病因预防</td><td>一般性预防干预＝一般公众和普通人群</td></tr>
+          <tr><td>二级/第二层</td><td>二级预防＝早期发现、早期诊断、早期治疗</td><td>选择性预防干预＝具有易患危险因素的高危人群</td></tr>
+          <tr><td>三级/第三层</td><td>三级预防＝防复发与康复</td><td>指征性预防干预＝有先兆/前驱症状或素质因素但未达诊断标准</td></tr>
+          <tr><td>教材对关系的说明</td><td colspan="2">Mrazek 与 Haggerty 认为：预防实际上指发生前的干预（即一级预防），原来的二级与三级预防则相当于<strong>治疗与康复</strong>。</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note">一句话鉴别总结：<strong>三级预防看"病走到哪一步"，三个干预层次看"人站在哪一风险档"。</strong></p>
+
+    <p><strong>表 2　普遍性/选择性/指示性预防的对象辨析</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>类型</th><th>教材对象</th><th>教材举例/落点</th><th>最易混点</th></tr></thead>
+        <tbody>
+          <tr><td>普遍性预防</td><td>普通人群</td><td>国外预防工作主要侧重普通人群，同时重点关注中高风险人群</td><td>不是"只做全民宣传"，也包括社区层面的普遍服务</td></tr>
+          <tr><td>选择性预防</td><td>精神障碍患病风险显著增加的个人或亚群体</td><td>灾难幸存者的心理危机干预</td><td>对象尚未发病，但风险已明显升高</td></tr>
+          <tr><td>指示性预防</td><td>具有明显躯体症状或生物标志物异常的高危人群</td><td>教材在"国外现状"中以此表述；与"指征性预防干预"的对象表述相近但语境不同</td><td>不是已确诊患者；是"有指征、未达诊断"</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note">一句话鉴别总结：<strong>普通人群→普遍性；风险升高→选择性；有指征/前驱但未达诊断→指示性（指征性）。</strong></p>
+
+    <p><strong>表 3　一级预防与一般性预防干预：像，但不等同</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>维度</th><th>一级预防</th><th>一般性预防干预</th></tr></thead>
+        <tbody>
+          <tr><td>理论来源</td><td>Caplan 三级预防模式（1964）</td><td>Mrazek 与 Haggerty 的精细概念框架</td></tr>
+          <tr><td>核心含义</td><td>消除或减少病因或致病因素，是最积极、最主动的预防</td><td>面向一般公众和普通人群开展的预防干预（教材列 7 项内容）</td></tr>
+          <tr><td>关系</td><td colspan="2">二者都强调"发生前"，但一般性预防干预是操作层面的分层，不能反过来把一级预防等同于"只做普通人群"。</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note">一句话鉴别总结：<strong>一级预防是理论层级，一般性预防干预是操作分层；二者都指向"发生前"，但不能互相替代。</strong></p>
+    <div class="callout key"><span class="ct">📌 一句话鉴别总结</span>本章的概念辨析不是"辨病"，而是辨<strong>分层逻辑</strong>：先确定用哪套分层语言，再确定对象与措施；不要把两套体系混着答题。</div>
+  </div>
+
+  <!-- 第六栏 -->
+  <div class="card green" id="u1-6">
+    <h3 class="col-title"><span class="idx">第六栏</span>治疗方案工具箱 → 预防措施工具箱</h3>
+    <p><strong>一、三级预防的落点（教材原文要点）</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>层级</th><th>教材给出的措施落点</th></tr></thead>
+        <tbody>
+          <tr><td>一级预防</td><td>加强学科建设、深入研究精神疾病病因、提高全民心理健康素质、营造良好的家庭和社会环境；从生物-心理-社会模式与素质-压力模型出发减少致病因素。</td></tr>
+          <tr><td>二级预防</td><td>早期发现、早期诊断、早期治疗；识别发病及复发前的<strong>前驱症状</strong>，实施早期诊疗，及早控制病情；争取缓解后良好预后，防止复发。</td></tr>
+          <tr><td>三级预防</td><td>防止疾病复发，进行康复训练，最大限度促进社会功能恢复，控制复发，减少精神残疾，延缓疾病进程，提高生活质量，力争重新融入社会。</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p><strong>二、一般性预防干预的 7 项内容</strong></p>
+    <div class="grid2">
+      <div class="mini"><h4>① 心理健康促进与教育</h4><p>《健康中国行动（2019—2030 年）》提出心理健康促进行动，到 2030 年居民心理健康素养水平提升到 30%。通过网站、社交媒体、广播、电视、书刊、影视、动漫、情景剧等形式普及知识；创作公益广告；用讲座、直播、沙龙、交流会传播心理调节技巧。</p></div>
+      <div class="mini"><h4>② 心理咨询与心理治疗服务</h4><p>帮助个性发展、人格完善、发展潜能；解决生活、学习、职业发展、婚姻、亲子关系、人际交往等困扰；消除病耻感，引导心理异常人群主动求助；医疗机构主动发现并提供规范诊疗。</p></div>
+      <div class="mini"><h4>③ 服务体系与人才队伍</h4><p>建立各部门各行业心理健康服务网络；教育系统、公安、司法行政单位设心理辅导室；基层平台配备心理辅导人员或社会工作者；完善社区、社会组织、社会工作者"三社联动"；支持省、市、县三级精神卫生专业机构；鼓励综合医院开设精神（心理）科；完善人才激励与行业组织作用。</p></div>
+      <div class="mini"><h4>④ 重点人群心理健康服务</h4><p>用人单位实施员工心理援助计划；学校开展心理健康教育，高校重视自杀预防与心理危机干预；关注老年人、妇女、儿童、残疾人、失独家庭；加强孕产期、围绝经期妇女心理关怀；为遭受创伤者及时提供心理援助。</p></div>
+      <div class="mini"><h4>⑤ 特殊人群服务</h4><p>政府、社会、家庭"三位一体"帮扶；关注流浪乞讨、服刑、刑满释放、强制隔离戒毒、社区矫正、社会吸毒、易肇事肇祸人员及严重精神障碍患者；建立精神卫生综合管理小组，提供日常发现、登记、随访、危险性评估和服药指导，动员社区组织与家属参与居家管理。</p></div>
+      <div class="mini"><h4>⑥ 遗传咨询与围产期保健</h4><p>依法禁止近亲婚配；开展遗传咨询和生育指导，减少和避免精神障碍患者之间或患者与精神障碍高发家系成员婚配生育；加强围产期保健，避免接触有害因素，预防或减少感染，做好优生优育。</p></div>
+    </div>
+    <div class="mini"><h4>⑦ 学科建设与流行病学调查</h4><p>加强精神障碍研究，促进多学科合作，深入探讨病因与发病机制；定期调查人群发生率、发病规律、影响因素和分布；结合循证证据与我国实际，为预防规划、决策提供依据。</p></div>
+
+    <p><strong>三、选择性预防干预与指征性预防干预</strong></p>
+    <div class="grid2">
+      <div class="mini">
+        <h4>选择性预防干预</h4>
+        <ul>
+          <li>对象：具有易患精神障碍危险因素的高危人群。</li>
+          <li>示例：对灾难幸存者进行心理危机干预，避免或减少应激相关精神障碍。</li>
+          <li>建立心理健康教育—心理热线—心理评估—心理咨询—心理治疗—精神科治疗的<strong>衔接递进</strong>服务模式。</li>
+          <li>把心理危机干预和心理援助纳入各类突发事件应急预案和技术方案；重视自杀预防；善后与恢复重建阶段持续提供心理援助。</li>
+        </ul>
+      </div>
+      <div class="mini">
+        <h4>指征性预防干预（3 项）</h4>
+        <ul>
+          <li>广泛宣传精神障碍知识，提高公众早期识别能力，减少讳疾忌医，鼓励及时就医，把疾病控制在萌芽状态。</li>
+          <li>对疑似或已确诊患者：指导及时就诊、明确诊断、接受合理充分系统的药物和心理治疗，争取完全缓解；开展疾病教育；定期复诊、坚持服药、参与随访与巩固治疗，减少和防止复燃复发。</li>
+          <li>综合医院设立精神科和心理咨询科；培训各类临床科室医务人员，提高非精神科医师对常见精神障碍的筛查、识别和处置能力；加强会诊-联络和专科咨询。</li>
+        </ul>
+      </div>
+    </div>
+
+    <p><strong>四、我国预防工作的改进方向（教材原文）</strong></p>
+    <div class="timeline">
+      <div class="tl-item"><h4>补能力</h4><p>加强对普通基层医疗机构医师的精神专科知识普及和临床实践技能培训，使其能够有效管理和处理精神卫生问题。</p></div>
+      <div class="tl-item"><h4>建模式</h4><p>发挥专科医院技术优势与带头引领作用，探索建立以专科医院为依托的<strong>"防治康一体化"</strong>新型管理模式，加强与基层医院和社区的合作。</p></div>
+      <div class="tl-item"><h4>去偏见</h4><p>加大心理健康知识与精神卫生知识科普教育力度，消除社会偏见；基层社区医院和专科医院共同承担，发挥专科医院带头作用。</p></div>
+    </div>
+    <div class="callout tip"><span class="ct">💡 提示</span>本栏所有措施均来自教材第一节；教材未给出的具体服务标准、人员编制、经费投入、考核指标，均标注「教材未涉及」，不补写。</div>
+  </div>
+
+  <!-- 第七栏 -->
+  <div class="card purple" id="u1-7">
+    <h3 class="col-title"><span class="idx">第七栏</span>记忆工具箱</h3>
+    <div class="callout tip">
+      <span class="ct">🔧 方法一：口诀歌谣法</span>
+      口诀：<strong>"一级防病因，二级抓三早，三级防复发、康复少残疾。"</strong><br>
+      解释：一级预防的关键词是"病因"；二级预防的关键词是"早期发现、早期诊断、早期治疗"；三级预防的关键词是"防复发＋康复训练＋减少精神残疾"。<br>
+      <em>为什么这样记：</em>三句话对应三个层级，每句只保留一个动作核心，避免把"二级也防复发"与"三级防复发"混为一谈——二级的落点是"早"，三级的落点是"康复"。
+    </div>
+    <div class="callout tip">
+      <span class="ct">🔧 方法二：数字编码法</span>
+      记 <strong>"3-3-7"</strong>：3 级预防；3 个预防干预层次；一般性预防干预 7 项内容。<br>
+      再记 <strong>"4 个生命周期阶段"</strong>：胚胎及婴幼儿期 → 儿童期与青少年期 → 成年期 → 老年期。<br>
+      <em>为什么这样记：</em>数字当"目录页码"，先回忆数量，再逐条清点；漏项时能立刻发现。全生命周期四阶段则像一条时间轴，把零散措施挂上去。
+    </div>
+    <div class="callout tip">
+      <span class="ct">🔧 方法三：类比理解（标注：类比理解，非医学事实）</span>
+      把预防想成<strong>三道闸门</strong>：一级是"上游关水源"（减少病因与风险因素）；二级是"中游早拦污"（早发现、早诊断、早治疗）；三级是"下游修生态"（防复发、做康复、恢复社会功能）。<br>
+      再把三个干预层次想成<strong>三张网</strong>：一般性是"大网"罩普通人群；选择性是"中网"罩高危人群；指征性是"细网"捞有前驱症状但未达诊断的人。<br>
+      <em>为什么这样记：</em>用"闸门"绑住三级预防的进程逻辑，用"网眼大小"绑住三个层次的对象范围，两组图景互不干扰。
+    </div>
+    <div class="callout key"><span class="ct">📌 组合使用建议</span>口诀先定层级，数字再查条目，类比最后串逻辑。三步走完，再回到第五栏的对比表做一次"反向核对"。</div>
+  </div>
+
+  <!-- 第八栏 -->
+  <div class="card cyan" id="u1-8">
+    <h3 class="col-title"><span class="idx">第八栏</span>知识联动</h3>
+    <ul>
+      <li><strong>与各疾病章：</strong>精神分裂症、抑郁障碍、双相障碍等章节描述的前驱症状与病程特点，是二级预防"早期识别"的直接依据；教材强调发病及复发前通常表现出前驱症状。</li>
+      <li><strong>与第二十四章治疗学：</strong>药物、物理与心理治疗是二级预防"早期治疗"和三级预防"症状康复"的手段；治疗依从性直接影响复发。</li>
+      <li><strong>与公共卫生/流行病学：</strong>教材要求定期进行流行病学调查，监测发生率、发病规律、影响因素和分布，为预防规划与决策提供依据。</li>
+      <li><strong>与社区医学/社会工作：</strong>一般性预防要求搭建基层心理健康服务平台、配备心理辅导人员或社会工作者，完善"三社联动"；这与第二节社区康复的服务网络直接衔接。</li>
+      <li><strong>与伦理法律：</strong>教材提到保障精神障碍者的合法权益、消除歧视与病耻感；这是预防与康复工作能够落地的前提。</li>
+      <li><strong>与本章第二节：</strong>三级预防强调康复，第二节的医院康复、日间医院、社区康复就是三级预防的具体展开。</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===== 06 康复 ===== -->
+<section id="u2">
+  <div class="sec-head"><div class="badge">06</div><h2>精神障碍的康复<span class="en">第二节 · 康复（p.312–318）</span></h2></div>
+  <p class="sec-lead">这一节回答：康复要恢复什么、在哪儿康复、谁来康复、怎么把康复从医院接到社区。主线是"症状康复打底—认知康复加码—回归社会收口"。</p>
+
+  <!-- 第一栏 -->
+  <div class="card cyan" id="u2-1">
+    <h3 class="col-title"><span class="idx">第一栏</span>疾病画像 → 康复工作画像</h3>
+    <div class="quote"><span class="lab">教材原文</span>根据美国精神康复协会（Psychiatric Rehabilitation Association，PRA）的定义，精神康复是指通过促进社区整合，改善那些由于各种精神障碍而严重妨碍其享受有意义生活的精神障碍患者的生活质量。</div>
+    <p><strong>教材同时给出的英国学者定义：</strong>精神障碍康复是一种从精神疾病中恢复的<strong>整体、系统的方法</strong>，通过鼓励患者的技能发展，促进他们的独立性和自主性，最大限度地提高个人的生活质量和社会融入，从而为他们创造未来的希望，并通过适当的支持帮助他们成功地融入社区生活。</p>
+    <p><strong>一句话画像：</strong>康复不是"把症状压下去就结束"，而是把被疾病削掉的生活能力、社会角色和希望一点点补回来；它像一场接力赛，医院跑第一棒，日间医院跑过渡棒，社区跑融入棒。<span class="note">（此句为类比理解，非教材原文）</span></p>
+    <div class="grid3">
+      <div class="mini"><h4>症状康复</h4><p><strong>心理社会康复的前提。</strong>初始阶段始于急性期，目标是控制和稳定严重精神疾病中的异常症状，包括思维、机体和情感方面的异常；通常采用药物干预或物理治疗辅助，药物干预是减少或消除精神症状的关键。</p></div>
+      <div class="mini"><h4>认知康复</h4><p>通过策略性学习式的认知康复训练改善认知功能、缓解精神症状、促进社会功能康复；针对注意力、言语和视觉工作记忆、执行功能、加工处理速度、情感识别等缺陷。</p></div>
+      <div class="mini"><h4>回归社会</h4><p><strong>康复的最终治疗目标。</strong>增加社会归属感和自我价值认同感，保护自尊心，减轻负面心理因素；在认知纠正之后，还需社会技能培训或职业康复等心理康复计划。</p></div>
+    </div>
+    <p><strong>教材对当代康复服务现状的定位：</strong></p>
+    <ul>
+      <li>心理社会康复和心理健康康复是一种<strong>以人为中心、以证据为基础</strong>的动态模式，为患有严重且持续精神疾病的患者提供全面康复计划。</li>
+      <li>与社区融合密切相关，通过社区融合培养患者的归属感；全面的精神健康服务需要促进<strong>家庭参与、同伴支持和辅助就业</strong>。</li>
+      <li>主要目标：优化临床和功能结果、持续恢复和提高生活质量。</li>
+      <li>主要组成部分：促进症状缓解、社会认知训练、改善人际关系、提升认知和功能表现。</li>
+      <li>康复目标已从"坚持服药、减少住院"演变为帮助患者获得<strong>独立、掌握和归属感、就业机会、有意义的人际关系和改善生活质量</strong>。</li>
+    </ul>
+    <p class="note">教材未给出康复机构的数量、床位、覆盖率或人员配比等统计数据，本栏不补写；相关服务标准标注「教材未涉及」。</p>
+  </div>
+
+  <!-- 第二栏 -->
+  <div class="card blue" id="u2-2">
+    <h3 class="col-title"><span class="idx">第二栏</span>病因探秘 → 康复需求探秘</h3>
+    <div class="callout book"><span class="ct">📖 栏目适配说明</span>本节不讨论疾病病因，故本栏按"为什么需要康复"改写；以下均为教材对康复必要性的论述，不是病因学结论。</div>
+    <p><strong>为什么"症状好了"仍然需要康复？教材给出四条理由：</strong></p>
+    <div class="grid2">
+      <div class="mini"><h4>① 残留功能损害</h4><p>住院治疗可以缓解精神障碍患者的症状，但许多患者仍旧残留<strong>认知功能和/或社会功能损害以及躯体问题</strong>，影响其全面康复。</p></div>
+      <div class="mini"><h4>② 社区资源与家庭支持有限</h4><p>我国精神障碍社区康复资源以及机构十分有限，并非所有工作单位或家庭都有能力为患者提供充分支持，并愿意取代医疗康复系统的部分功能。</p></div>
+      <div class="mini"><h4>③ 长期滞留与封闭管理</h4><p>大量患者，尤其是严重的慢性精神障碍患者，长期滞留在精神病院内；大多数专科医院仍采用封闭式管理模式，患者长期脱离家庭与社会，导致<strong>人格衰退、继发残疾</strong>。</p></div>
+      <div class="mini"><h4>④ 患者的主体诉求</h4><p>精神障碍患者往往希望作为<strong>自主的个体</strong>得到尊重，并尽可能过正常的生活、参与工作和融入社会。</p></div>
+    </div>
+    <p><strong>疾病慢性化带来的长期需求：</strong>教材开篇指出，精神疾病具有慢性化特点，大多数患者需要长期治疗，更需要长期康复预防复发；精神康复在精神疾病的急性阶段开始，并在整个生命周期中持续。</p>
+    <div class="callout key"><span class="ct">📌 一句话总结</span>康复的需求不是"病还没好"，而是<strong>症状缓解后仍有功能损害、社区支持不足、长期住院导致继发残疾</strong>；因此康复必须早开始、连续做、接到社区。</div>
+  </div>
+
+  <!-- 第三栏 -->
+  <div class="card red" id="u2-3">
+    <h3 class="col-title"><span class="idx">第三栏</span>临床表现拼图 → 康复服务版图</h3>
+    <div class="tabs" data-tabs>
+      <div class="tabbar">
+        <button class="on" data-tab="r1">医院康复</button>
+        <button data-tab="r2">日间医院</button>
+        <button data-tab="r3">社区康复</button>
+        <button data-tab="r4">人员配置</button>
+      </div>
+      <div class="panel on" data-panel="r1">
+        <p><strong>医院康复的时机与定位：</strong>时机应始于治疗伊始；以康复为导向、以患者为中心；在给予医学治疗和护理的同时，以<strong>限制最少</strong>的方式允许患者从事康复训练。</p>
+        <p><strong>主要任务：</strong>帮助患者正确认识疾病、学会按时按量服药、提高个人生活自理能力、建立正常和规律的生活作息、改善社交技巧和工作能力，使患者逐步具备生活、社交和职业技能，促进回归社会。</p>
+        <p><strong>开展条件：</strong>建立康复部门，设立工娱治疗场所；实行<strong>开放和半开放式</strong>的患者管理模式；尽可能提供宽松的生活和人际交往环境，训练社会功能。</p>
+        <p><strong>七项训练措施（详见第六栏）：</strong>生活技能训练、人际交往技能训练、职业康复训练、躯体健康管理、教育疗法、药物自我管理及服药依从性培训、认知障碍康复。</p>
+      </div>
+      <div class="panel" data-panel="r2">
+        <p><strong>日间医院的定义：</strong>为了帮助精神障碍患者从住院环境<strong>平稳过渡到社区生活</strong>而设立的康复机构，是从医院向社区延伸的重要一环。</p>
+        <div class="grid2">
+          <div class="mini">
+            <h4>服务对象（教材列三类）</h4>
+            <ul>
+              <li>即将出院的患者</li>
+              <li>反复复发的门诊患者</li>
+              <li>主要表现为阴性症状和长期社会功能衰退的患者</li>
+            </ul>
+          </div>
+          <div class="mini">
+            <h4>运作方式</h4>
+            <ul>
+              <li>日间来院：白天来医院接受治疗，晚上返回家中居住。</li>
+              <li>提供与一般家庭居所相似的环境，室内配备家庭必备的生活物品。</li>
+              <li>在工作人员指导下完成家务活动、训练各种生活技能，为重新融入社会做准备。</li>
+            </ul>
+          </div>
+        </div>
+        <p class="note">教材未给出日间医院的床位数、开放时间、收费标准或人员配比，标注「教材未涉及」。</p>
+      </div>
+      <div class="panel" data-panel="r3">
+        <div class="quote"><span class="lab">教材原文</span>社区康复（community-based rehabilitation，CBR）是在社会变迁和社区发展环境下，发展起来的一种立足于社区资源，通过多种方法使有需求的人在社区生活中获得平等健康、教育、谋生、社会赋能机会的服务方式。</div>
+        <p><strong>WHO 定义：</strong>启用和开发社区资源，将患者及其家庭和社区视为一个整体，对疾病的康复和预防所采取的一切措施。</p>
+        <p><strong>定位：</strong>社区康复服务是精神障碍患者恢复生活自理能力和社会适应能力、最终回归社会的重要途径，是多学科、多专业融合发展的社会服务。</p>
+        <p><strong>教材给出的政策目标（2017 年，民政部会同财政部、国家卫生计生委、中国残联起草的《关于加快精神障碍社区康复服务发展的意见》）：</strong></p>
+        <div class="stat">
+          <span>到 2025 年，80% 以上县（市、区）广泛开展精神障碍社区康复服务</span>
+          <span>开展社区康复的县（市、区），60% 以上居家患者接受社区康复</span>
+          <span>基本建立家庭为基础、机构为支撑、"社会化、综合性、开放式"的服务体系</span>
+        </div>
+        <p><strong>三大目的：</strong>减轻精神障碍患者的残疾程度；提高社会适应能力；预防精神障碍的复发。</p>
+        <p><strong>管理工具：</strong>个案管理（case management）与个体服务计划（individual service plan，ISP），详见第六栏。</p>
+      </div>
+      <div class="panel" data-panel="r4">
+        <div class="grid2">
+          <div class="mini">
+            <h4>医院康复部门（教材列 6 组）</h4>
+            <ul>
+              <li>医疗组</li>
+              <li>护理组</li>
+              <li>社会防卫组</li>
+              <li>音乐治疗组</li>
+              <li>职业治疗组</li>
+              <li>康复设备训练组</li>
+            </ul>
+            <p>可定期邀请专业培训人员参与培训，联合医院多学科、多部门统筹制定及实施康复训练计划。</p>
+          </div>
+          <div class="mini">
+            <h4>社区康复的相关人员</h4>
+            <ul>
+              <li><strong>个案管理者：</strong>通常由社会工作者、精神科医师、精神科护士、心理治疗师或职业治疗师多方共同担任，在住院部、社区和家庭之间移动服务。</li>
+              <li><strong>ISP 制定者：</strong>一组专业健康护理工作者，包括精神科医师、心理咨询师、社会工作者等。</li>
+              <li><strong>基层平台：</strong>配备心理辅导人员或社会工作者（见第一节一般性预防）。</li>
+              <li><strong>社区精神卫生服务中心：</strong>教材介绍国外做法时提到，每个社区配备专门的精神科医师。</li>
+            </ul>
+          </div>
+        </div>
+        <p class="note">教材未给出各类人员的数量配比、资质等级或考核标准，标注「教材未涉及」；上述仅为教材明确点名的人员类别。</p>
+      </div>
+    </div>
+    <p class="note">说明：本栏原用于疾病症状分维度呈现；本章无疾病单元，故改为"康复服务版图"，按服务场所与人员配置分块。</p>
+  </div>
+
+  <!-- 第四栏 -->
+  <div class="card orange" id="u2-4">
+    <h3 class="col-title"><span class="idx">第四栏</span>教材典型案例</h3>
+    <div class="callout book">
+      <span class="ct">📖 教材未提供具体临床案例</span>
+      本节为康复工作体系的总论，教材只描述服务对象类别、训练项目、机构功能与管理流程，<strong>没有给出任何患者的病史、精神检查、功能评定分数或康复随访记录</strong>。因此本栏不编写"某患者康复成功"的案例。
+    </div>
+    <p><strong>可迁移的康复评估思路（按教材要点整理，不是教材原案例）：</strong></p>
+    <ol>
+      <li><strong>先看处在哪个康复场景：</strong>急性期住院→医院康复；即将出院/反复复发/阴性症状与功能衰退→日间医院；居家且社区有资源→社区康复。</li>
+      <li><strong>再看缺什么功能：</strong>日常生活、理财、工娱、人际交往、职业、躯体健康、教育、药物管理、认知——对应七项训练。</li>
+      <li><strong>最后看谁来牵头：</strong>医院多学科团队；社区由个案管理者协调，按 ISP 五步制定与调整计划。</li>
+    </ol>
+    <p class="note">以上为学习框架，不构成病例；教材未提供具体临床案例，故不做"症状→诊断→康复处方"的病例拆解。</p>
+  </div>
+
+  <!-- 第五栏 -->
+  <div class="card orange" id="u2-5">
+    <h3 class="col-title"><span class="idx">第五栏</span>鉴别诊断对对碰 → 康复模式与概念辨析</h3>
+    <p><strong>表 1　医院康复、日间医院、社区康复</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>维度</th><th>医院康复</th><th>日间医院</th><th>社区康复（CBR）</th></tr></thead>
+        <tbody>
+          <tr><td>场所</td><td>精神专科医院/综合医院康复部门</td><td>设在医院、向社区延伸的过渡康复机构</td><td>社区，立足社区资源</td></tr>
+          <tr><td>主要对象</td><td>住院患者，尤其长期住院的慢性严重精神障碍患者</td><td>即将出院者、反复复发的门诊患者、阴性症状与长期社会功能衰退者</td><td>社区中的精神障碍患者及其家庭</td></tr>
+          <tr><td>核心目标</td><td>症状稳定基础上恢复生活、社交、职业技能，促进回归社会</td><td>从住院环境平稳过渡到社区生活</td><td>社会功能最大化、独立生活与社会参与、降低对专业服务依赖、预防复发</td></tr>
+          <tr><td>典型安排</td><td>开放/半开放管理，工娱治疗场所，多学科康复训练</td><td>白天来院治疗与训练，晚上回家居住</td><td>个案管理＋ISP＋社区服务网络＋转介机制</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note">一句话鉴别总结：<strong>医院康复"把功能练起来"，日间医院"把出院的路铺平"，社区康复"把生活接回去"。</strong></p>
+
+    <p><strong>表 2　个案管理与个体服务计划（ISP）</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>维度</th><th>个案管理</th><th>个体服务计划（ISP）</th></tr></thead>
+        <tbody>
+          <tr><td>是什么</td><td>一种既能满足医院临时照料、又能满足社区长期照料的全面精神卫生服务；是适应患者复杂多变情况的干预措施</td><td>社区康复中非常重要的个性化康复方案</td></tr>
+          <tr><td>核心</td><td>以患者为中心，根据个体实际需要制定<strong>持续性的整合服务</strong></td><td>以患者为中心，以改善生活质量和社会功能为目标，全面考虑身心状况和生活需求</td></tr>
+          <tr><td>谁来做</td><td>社会工作者、精神科医师、精神科护士、心理治疗师或职业治疗师多方共同担任</td><td>一组专业健康护理工作者，包括精神科医师、心理咨询师、社会工作者等</td></tr>
+          <tr><td>主要产出</td><td>确保服务接触与利用、建立关系、帮助定义并实现目标、处理危机、定期评估需求与服务</td><td>需求评估→目标设定→服务计划→执行和调整→评估和反馈</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note">一句话鉴别总结：<strong>个案管理是"谁来协调、协调什么"；ISP 是"具体给这个人做什么"。</strong></p>
+
+    <p><strong>表 3　康复三大任务与两类职业训练</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>概念</th><th>教材定位</th><th>关键区别</th></tr></thead>
+        <tbody>
+          <tr><td>症状康复</td><td>心理社会康复的<strong>前提</strong>，始于急性期</td><td>控制与稳定思维、机体、情感方面的异常症状，药物干预是关键</td></tr>
+          <tr><td>认知康复</td><td>改善认知缺陷、缓解症状、促进社会功能</td><td>策略性学习式训练，采用自上而下的目标方法训练高级认知过程；强调激活内在动力</td></tr>
+          <tr><td>回归社会</td><td>康复的<strong>最终治疗目标</strong></td><td>归属感、自我价值、自尊；需社会技能培训或职业康复等综合计划</td></tr>
+          <tr><td>工作适应性训练</td><td>职业康复训练的一类</td><td>在<strong>安全庇护</strong>条件下提供简单产品制作、加工、包装，以及维持秩序、被服管理、文书、接待引导、清洁维修等多样化任务</td></tr>
+          <tr><td>职业技能训练</td><td>职业康复训练的一类</td><td>培养对工作要求和压力的身体与情感耐受力，改善工作习惯、道德观和基本人际交往能力，以在竞争激烈的就业市场中生存；可与合适企业合作并给予一定报酬奖励</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note">一句话鉴别总结：<strong>工作适应性训练是"庇护性练工"，职业技能训练是"面向竞争性就业练本事"。</strong></p>
+
+    <div class="callout key"><span class="ct">📌 一句话鉴别总结</span>本单元的"鉴别"不是辨病，而是辨<strong>场景、角色与工具</strong>：在哪个场景康复、谁负责协调、用哪份计划落地。</div>
+  </div>
+
+  <!-- 第六栏 -->
+  <div class="card green" id="u2-6">
+    <h3 class="col-title"><span class="idx">第六栏</span>治疗方案工具箱 → 康复干预工具箱</h3>
+    <p><strong>一、医院康复七项训练措施</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>训练项目</th><th>教材给出的内容要点</th></tr></thead>
+        <tbody>
+          <tr><td>1. 生活技能训练</td><td><strong>日常生活能力：</strong>身体、衣物、个人空间清洁；日常作息、进食进水、女性生理周期管理；家务劳动、乘坐交通工具、基本急救与危机处理；家庭责任、家庭角色、家庭事务、照顾家人。<strong>理财：</strong>有效且有计划地用钱，记录每月开支，分析不良开支原因；分阶段从了解理财→短期支出计划→长期开支规划。<strong>工娱：</strong>手工制作、歌舞表演、运动健身、读书看报；节假日团体活动；专业人员开展音乐疗法和运动治疗。</td></tr>
+          <tr><td>2. 人际交往技能训练</td><td>提高主动与他人交往及参加社会活动的能力；基本社交技巧、使用社区设施、辨认并遵守社会规则、增强融入社区与社会的信心。训练方式：目标设定、角色示范、行为演练、正向强化、纠正反馈、解决问题的技巧练习、家庭作业练习；通常两名治疗师指导、小组形式。长期住院者还需学习表达感受、用语言/书信表达意愿、适应不同场合社交礼仪、与家庭成员和睦相处。</td></tr>
+          <tr><td>3. 职业康复训练</td><td><strong>职业康复是精神康复的核心内容。</strong>目标：提高学习和劳动能力，包括工作适应性训练与职业技能训练；设定合理工作目标，培养工作相关能力，维持稳定工作状态；改善求职技巧、与同事及上司相处技巧。医院可创建或提供合适岗位，实地培训和模拟真实社会环境训练；有条件的医院与社会机构合作提供院内就业岗位，或聘请专业职业培训人员提供职前培训。</td></tr>
+          <tr><td>4. 躯体健康管理</td><td>针对营养不良、体能和抵抗力下降、代谢综合征或肥胖、共病慢性躯体疾病；制定个体化躯体管理计划。内容：超重/肥胖者的训练计划与体重管理计划；营养不良者的多学科综合营养计划；药物不良反应干预。关注精神分裂症患者的性功能障碍（可能由疾病本身或治疗药物导致），干预包括精神药理学和心理社会干预；同时关注代谢综合征。</td></tr>
+          <tr><td>5. 教育疗法</td><td>分<strong>学习行为训练</strong>与<strong>心理教育</strong>。学习行为训练：时事教育、常识教育、科普教育、历史教育，提高知识水平，培养学习新鲜事物的兴趣和习惯。心理教育：向患者传授疾病及其治疗的系统性、结构化信息，包括情感整合，使患者和家属能与医护人员合作、合理应对疾病、改善生活质量。一般每次学习时间<strong>不超过 1 小时</strong>；形式包括医务人员授课、患者小组讨论、个别辅导、患者家属专家交流互助。</td></tr>
+          <tr><td>6. 药物自我管理及服药依从性培训</td><td>目标：提高患者在治疗过程中的自主权，增加对治疗的接受度和责任感；教育患者正确认识疾病，养成遵照医嘱按时按量服药的习惯。内容：药物治疗的重要性和复发的严重性教育；熟悉所服药物名称、剂量；了解可能出现的不良反应；学习向医师寻求帮助的方法。</td></tr>
+          <tr><td>7. 认知障碍康复</td><td>精神障碍患者常伴认知功能障碍，症状缓解后仍可能存在，严重影响社会功能并降低康复效果。教材指出：在精神康复基础上提供<strong>认知矫正</strong>有助于更大程度改善认知、社会和职业功能。认知矫正是一种基于行为训练的康复训练干预措施，改善注意力、记忆力、执行功能等认知过程；方法包括传统认知功能训练、基于计算机或虚拟现实的认知功能训练、针对特定认知领域的训练。</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p><strong>二、日间医院：从医院到社区的过渡环节</strong></p>
+    <div class="timeline">
+      <div class="tl-item"><h4>谁适合</h4><p>即将出院的患者、反复复发的门诊患者、主要表现为阴性症状和长期社会功能衰退的患者。</p></div>
+      <div class="tl-item"><h4>怎么运作</h4><p>白天来院接受治疗与训练，晚上回家居住；环境接近一般家庭居所，配备家庭必备生活物品。</p></div>
+      <div class="tl-item"><h4>练什么</h4><p>在工作人员指导下完成家务活动、训练各种生活技能，为重新融入社会做好充分准备。</p></div>
+    </div>
+
+    <p><strong>三、社区康复：目的、个案管理与 ISP</strong></p>
+    <div class="grid3">
+      <div class="mini"><h4>三大目的</h4><ul><li>减轻残疾程度：防止"高功能"患者功能衰退，提升"低功能"患者生活自理能力。</li><li>提高社会适应能力：社区教育宣传、减少歧视、保障健康权/教育权/就业权、社交活动与职业技能训练。</li><li>预防复发：疾病缓解期家庭、社区、医院三方合作，加强巩固治疗。</li></ul></div>
+      <div class="mini"><h4>个案管理 5 项职责</h4><ul><li>提供全面而广泛的心理评估和心理康复服务。</li><li>协调多方服务内容，保证照料的连续性。</li><li>协助制定、实施并督促个体服务计划。</li><li>建立多功能团队，提高服务连续性与质量，综合判断环境与问题，给患者更多选择。</li><li>促进患者与社区的再融合。</li></ul></div>
+      <div class="mini"><h4>ISP 五步</h4><ul><li>需求评估：躯体、心理、生活技能、工作技能、社交关系。</li><li>目标设定：符合需求与期望，也符合实际能力。</li><li>服务计划：心理咨询、药物治疗、日常生活技能、职业技能、社区参与、亲属支持等。</li><li>执行和调整：监测评估，适时调整。</li><li>评估和反馈：定期评估、反馈、必要时修订。</li></ul></div>
+    </div>
+
+    <p><strong>四、社区康复工作体系（4 方面）与工作职能（5 项）</strong></p>
+    <p><strong>表 A　工作体系</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>工作体系</th><th>教材内容</th></tr></thead>
+        <tbody>
+          <tr><td>政策制度</td><td>国家层面的精神疾病防治法和相关政策，确保精神障碍者合法权益；制定地方性法规和规章</td></tr>
+          <tr><td>监测评估</td><td>建立全国性精神疾病流行病学监测系统，动态监测和评估发病、流行和死亡情况</td></tr>
+          <tr><td>服务系统</td><td>以社区为基础，结合医疗、康复、健康教育和社会支持等多领域，构建连贯、全面、易获取的服务系统</td></tr>
+          <tr><td>人才队伍</td><td>通过培训和引导，形成专业化、多学科的精神障碍防治人才队伍</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p><strong>表 B　工作职能</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>工作职能</th><th>教材内容</th></tr></thead>
+        <tbody>
+          <tr><td>疾病防控</td><td>流行病学调查，找出危险因素，制订和实施预防策略，降低发病率和死亡率</td></tr>
+          <tr><td>康复</td><td>专业化康复治疗，提高生活质量，助力重返社会</td></tr>
+          <tr><td>支持与保障</td><td>创造利于康复的环境，提供物质和心理支持，保障合法权益</td></tr>
+          <tr><td>教育与宣传</td><td>健康教育和宣传，提高公众认识，减少歧视与偏见</td></tr>
+          <tr><td>研究</td><td>开展精神疾病研究，改进防治技术和方法，提高防治效果</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p><strong>五、社区康复服务流程（5 步）</strong></p>
+    <div class="timeline">
+      <div class="tl-item"><h4>① 转入</h4><p>由精神卫生专业机构、基层医疗卫生机构的医师、护士、康复治疗师等评估后转介；居家患者也可自行前往社区康复机构申请加入，并提供诊断、治疗等材料。</p></div>
+      <div class="tl-item"><h4>② 登记建档</h4><p>及时登记建档；主动告知患者和监护人社区康复服务的内容、权益和义务；签订社区康复服务协议，明确责任、权利，维护双方合法权益。</p></div>
+      <div class="tl-item"><h4>③ 功能评估与服务提供</h4><p>服务团队与患者及监护人面谈，详细了解当前精神和身体健康状况；<strong>在 1 个月内</strong>根据评估结果制定个性化康复计划并开始提供针对性服务；<strong>每 3 个月</strong>进行阶段性评估，回顾总结前阶段康复情况。达到预期目标者提出新目标、新措施和计划；效果不理想者修正原计划、调整目标和措施。</p></div>
+      <div class="tl-item"><h4>④ 转出</h4><p>康复良好的患者可离开社区康复机构、回归社会；康复需求变化者可转介至其他相应康复机构，原机构将相关档案复印后交给患者带至新机构。</p></div>
+      <div class="tl-item"><h4>⑤ 特殊情况及处置</h4><p>病情变化时，工作人员与监护人随时沟通，必要时转介至精神卫生专业机构治疗；康复活动中突发紧急情况，通知家属并做好急救及转诊；患者缺席康复活动时，及时了解情况并采取相应措施。</p></div>
+    </div>
+    <div class="callout tip"><span class="ct">💡 提示</span>本栏的"1 个月""每 3 个月""每次学习不超过 1 小时"均为教材明确给出的时间节点；教材未给出的其他时限（如随访频次、疗程上限）标注「教材未涉及」，不补写。</div>
+  </div>
+
+  <!-- 第七栏 -->
+  <div class="card purple" id="u2-7">
+    <h3 class="col-title"><span class="idx">第七栏</span>记忆工具箱</h3>
+    <div class="callout tip">
+      <span class="ct">🔧 方法一：数字编码法</span>
+      记 <strong>"7-5-4-5-5"</strong>：医院康复 7 项训练；ISP 五步；社区康复工作体系 4 方面；工作职能 5 项；服务流程 5 步。<br>
+      再加两个时间锚：<strong>"1 个月"</strong>内制定个性化康复计划，<strong>"每 3 个月"</strong>阶段性评估。<br>
+      <em>为什么这样记：</em>本章康复条目多而散，用数字先搭"骨架"，回忆时按数量清点；时间锚单独拎出来，避免和预防单元的政策年份混在一起。
+    </div>
+    <div class="callout tip">
+      <span class="ct">🔧 方法二：口诀歌谣法</span>
+      口诀一（三大任务）：<strong>"症状打底，认知加码，回归社会收口。"</strong><br>
+      口诀二（医院康复人员六组）：<strong>"医护社音职设"</strong>——医疗组、护理组、社会防卫组、音乐治疗组、职业治疗组、康复设备训练组。<br>
+      <em>为什么这样记：</em>"打底—加码—收口"对应康复的先后逻辑，不容易把"回归社会"误记成起点；六组人员压缩成六个字，朗朗上口，补全时再展开。
+    </div>
+    <div class="callout tip">
+      <span class="ct">🔧 方法三：类比理解（标注：类比理解，非医学事实）</span>
+      把康复想成<strong>接力赛</strong>：医院康复是第一棒（急性期就开始，把症状与基本功能稳住）→日间医院是过渡棒（白天来院、晚上回家，把出院的路铺平）→社区康复是最后一棒（在真实生活里练独立、就业与融入）。<br>
+      把<strong>个案管理者</strong>想成"导航员"：他不替患者走路，但负责规划路线、协调各方、处理路上的突发情况；<strong>ISP</strong>就是那份不断更新的路线图。<br>
+      <em>为什么这样记：</em>"接力赛"绑住三类机构的衔接顺序，"导航员＋路线图"绑住个案管理与 ISP 的分工，两个画面互补。
+    </div>
+    <div class="callout key"><span class="ct">📌 组合使用建议</span>先用数字骨架查漏，再用口诀定顺序，最后用接力赛图景讲清"为什么社区康复是最终落点"。</div>
+  </div>
+
+  <!-- 第八栏 -->
+  <div class="card cyan" id="u2-8">
+    <h3 class="col-title"><span class="idx">第八栏</span>知识联动</h3>
+    <ul>
+      <li><strong>与第二十四章治疗学：</strong>药物干预是症状康复的关键；药物自我管理与服药依从性培训直接连接治疗章的用药原则；物理治疗可作为症状康复的辅助。</li>
+      <li><strong>与精神分裂症章：</strong>阴性症状、认知损害与长期社会功能衰退，是日间医院与社区康复的重点对象；抗精神病药治疗后的残留症状需要康复接续。</li>
+      <li><strong>与抑郁障碍/双相障碍章：</strong>复发预防需要家庭、社区、医院三方合作加强巩固治疗；康复期的社会角色恢复与职业康复可减轻经济与心理负担。</li>
+      <li><strong>与公共卫生/社区医学：</strong>社区康复（CBR）与 WHO 定义、社区精神卫生服务中心、基层心理健康服务平台相衔接；教材要求各级民政部门协调卫生健康部门、建立快速转介机制。</li>
+      <li><strong>与康复医学/职业医学：</strong>日常生活能力、人际交往、工作适应性、职业技能、认知矫正均是教材列出的康复训练内容；其中职业康复是精神康复的核心内容。</li>
+      <li><strong>与护理学/社会工作：</strong>护理组参与医院康复；社会工作者是个案管理者与 ISP 团队的重要成员；"三社联动"承接社区支持。</li>
+      <li><strong>与本章第一节：</strong>三级预防强调康复；社区康复的"预防复发"目的与三级预防直接对应，形成"预防—治疗—康复"闭环。</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===== 07 要点 ===== -->
+<section id="summary">
+  <div class="sec-head"><div class="badge">07</div><h2>全章核心要点速览<span class="en">18 key points</span></h2></div>
+  <p class="sec-lead">考前最后一遍只看这里。每条都能独立成题，建议逐条自问"为什么"。</p>
+  <div class="card blue">
+    <div class="grid2">
+      <ol>
+        <li>预防、治疗与康复是疾病管理的三大组成部分；精神疾病慢性化，需要长期治疗，更需要长期康复预防复发。</li>
+        <li>"重治疗、轻康复"导致患者缺少生活、社交技能训练和过渡性服务，难以融入社会，病情反复，出现<strong>"旋转门"现象</strong>。</li>
+        <li>全球成年男性/女性精神障碍终生患病率分别为 28.6% 和 29.8%；我国心境障碍 7.8%、焦虑障碍 7.6%。</li>
+        <li>新冠后全球抑郁障碍新增 5 320 万例、焦虑障碍新增 7 600 万例；精神障碍所致全球 DALYs 高达 1.253 亿人年。</li>
+        <li>新医学模式为生物-心理-社会医学模式；预防要寻找风险性与保护性因素，部分风险因素可预防、可改变。</li>
+        <li>国外预防分三类型：普遍性（普通人群）、选择性（风险显著增加的个人或亚群体）、指示性（有明显躯体症状或生物标志物异常的高危人群）。</li>
+        <li><strong>预防悖论：</strong>大多数疾病人群来自低或中风险人群，只有少数来自高风险人群；大规模有效预防对大多数人只有相对较小但可察觉的益处。</li>
+        <li>国外预防主要在社区开展：社区建立精神卫生服务中心，每个社区配备专门精神科医师；以社区服务为主逐步替代部分住院功能。</li>
+        <li>我国 1991 年起按"社会化、综合性、开放式"推广社区防治康复；不足是基层专科能力不足、管理机制不完善、科普率低与社会偏见。</li>
+        <li>全生命周期预防：胚胎及婴幼儿期、儿童期与青少年期、成年期、老年期；教材给出我国青少年抑郁症患病率高达 15%～20%。</li>
+      </ol>
+      <ol start="11">
+        <li>Caplan 于 1964 年提出<strong>三级预防</strong>：一级病因预防，二级早期发现/诊断/治疗，三级防复发与康复。</li>
+        <li>一级预防是最积极、最主动的预防；二级预防强调识别<strong>前驱症状</strong>，减少漏诊误诊；三级预防<strong>强调的是精神障碍的康复</strong>。</li>
+        <li>Mrazek 与 Haggerty 认为：预防实际指发生前干预（一级预防），原来的二级与三级预防相当于<strong>治疗与康复</strong>。</li>
+        <li>三个预防干预层次：一般性（一般公众和普通人群，7 项内容）、选择性（高危人群，如灾难幸存者危机干预）、指征性（有先兆/前驱症状或素质因素但未达诊断标准）。</li>
+        <li>一般性预防 7 项：心理健康促进与教育、心理咨询与心理治疗、服务体系与人才队伍、重点人群、特殊人群、遗传咨询与围产期保健、学科建设与流行病学调查。</li>
+        <li>康复三大任务：<strong>症状康复</strong>是前提、<strong>认知康复</strong>改善认知缺陷、<strong>回归社会</strong>是最终治疗目标；PRA 定义强调促进社区整合、改善生活质量。</li>
+        <li>医院康复始于治疗伊始，以限制最少的方式开展；康复部门配备医疗组、护理组、社会防卫组、音乐治疗组、职业治疗组、康复设备训练组；七项训练覆盖生活、人际、职业、躯体、教育、药物、认知。</li>
+        <li>日间医院帮助患者从住院平稳过渡到社区（白天来院、晚上回家）；社区康复含个案管理（多专业共同担任、5 项职责）、ISP 五步、工作体系 4 方面、职能 5 项、流程 5 步（1 个月内制定计划、每 3 个月阶段评估）。</li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 08 易混 ===== -->
+<section id="pitfalls">
+  <div class="sec-head"><div class="badge">08</div><h2>易混易错点警示<span class="en">Common traps</span></h2></div>
+  <p class="sec-lead">这些点不是"没背到"，而是"背反了"。逐条核对你的第一反应。</p>
+  <div class="card danger">
+    <details open>
+      <summary>① 三级预防 ≠ 三个预防干预层次，不能一一硬套</summary>
+      <div class="dbody">三级预防（Caplan）按<strong>疾病进程</strong>分层；一般性/选择性/指征性（Mrazek &amp; Haggerty）按<strong>风险人群</strong>分层。教材明确：后者把预防收窄为发生前干预，原来的二级与三级预防相当于治疗与康复。答题时先看题目问的是哪套体系。</div>
+    </details>
+    <details>
+      <summary>② 二级预防也写"防止复发"，但它的落点是"三早"</summary>
+      <div class="dbody">教材原文：二级预防的重点是早期发现、早期诊断、早期治疗，并争取在疾病缓解后获得良好的预后，防止复发。三级预防的重点才是防止疾病复发、进行康复训练、促进社会功能恢复。二者的区别在<strong>主要矛盾</strong>：二级是"早"，三级是"康复"。</div>
+    </details>
+    <details>
+      <summary>③ 一级预防不是"早发现"</summary>
+      <div class="dbody">一级预防＝病因预防，消除或减少病因或致病因素；"早期发现、早期诊断、早期治疗"属于二级预防。把"三早"写进一级预防，是最常见的层级错位。</div>
+    </details>
+    <details>
+      <summary>④ 普遍性/选择性/指示性：对象别记反</summary>
+      <div class="dbody">普遍性→普通人群；选择性→患病风险显著增加的个人或亚群体（如灾难幸存者）；指示性→有明显躯体症状或生物标志物异常的高危人群。指征性预防干预则强调"有先兆/前驱症状或素质因素但尚不符合诊断标准"。</div>
+    </details>
+    <details>
+      <summary>⑤ 预防悖论：大多数病人不在"高风险"里</summary>
+      <div class="dbody">教材原文：大多数疾病人群实际来自低或中风险人群，只有少数来自高风险人群。因此大规模有效的健康预防可能对大多数人的健康产生相对较小但可察觉的益处。不要把"重点关心中高风险"误读成"病人主要来自高风险"。</div>
+    </details>
+    <details>
+      <summary>⑥ 社区康复不是"社区自己搞"，需要专科机构支撑</summary>
+      <div class="dbody">教材要求各级民政部门主动协调卫生健康部门，组织精神卫生专业机构、基层医疗卫生机构为社区康复提供技术指导，并与社区康复机构建立<strong>快速转介机制</strong>。服务体系是"家庭为基础、机构为支撑"。</div>
+    </details>
+    <details>
+      <summary>⑦ 医院康复不是"出院后才开始"</summary>
+      <div class="dbody">教材明确：医院康复的时机应始于<strong>治疗伊始</strong>。精神康复在精神疾病的急性阶段开始，并在整个生命周期中持续；不是等急性期结束、出院以后再补康复。</div>
+    </details>
+    <details>
+      <summary>⑧ 工娱训练 ≠ 职业康复；职业康复才是"核心"</summary>
+      <div class="dbody">工娱训练属于生活技能训练，目的是参与群体活动、扩大交往、提高生活情趣；职业康复是<strong>精神康复的核心内容</strong>，目标是提高学习和劳动能力，含工作适应性训练与职业技能训练。二者不能互换。</div>
+    </details>
+    <details>
+      <summary>⑨ 个案管理 ≠ 个体服务计划（ISP）</summary>
+      <div class="dbody">个案管理是"服务模式与协调机制"，由社会工作者、精神科医师、精神科护士、心理治疗师或职业治疗师多方共同担任；ISP 是"针对某个患者的个性化康复方案"，由一组专业健康护理工作者制定，分需求评估、目标设定、服务计划、执行和调整、评估和反馈五步。</div>
+    </details>
+    <details>
+      <summary>⑩ 日间医院不是普通门诊，也不是住院</summary>
+      <div class="dbody">日间医院是为帮助患者从住院环境平稳过渡到社区生活而设的康复机构；服务对象是即将出院的患者、反复复发的门诊患者、主要表现为阴性症状和长期社会功能衰退的患者；运作方式是白天来院、晚上回家。</div>
+    </details>
+    <details>
+      <summary>⑪ 服务流程的时间节点：1 个月制定计划，每 3 个月阶段评估</summary>
+      <div class="dbody">教材原文：在<strong>1 个月内</strong>根据评估结果制定个性化康复计划并开始提供针对性康复服务；<strong>每 3 个月</strong>服务团队对患者进行阶段性评估。不要记成"每月评估"或"3 个月内制定计划"。</div>
+    </details>
+    <details>
+      <summary>⑫ 政策数字只认教材给定的口径，不套课外指标</summary>
+      <div class="dbody">教材出现的政策数字：到 2030 年居民心理健康素养水平提升到 30%；到 2025 年 80% 以上县（市、区）广泛开展社区康复、60% 以上居家患者接受社区康复。教材未给出的其他政策指标、服务标准、人员配比，一律标注「教材未涉及」，不得用网络资料替换。</div>
+    </details>
+  </div>
+</section>
+
+<!-- ===== 09 自测 ===== -->
+<section id="quiz">
+  <div class="sec-head"><div class="badge">09</div><h2>章节自测系统<span class="en">13 questions · 6 types</span></h2></div>
+  <p class="sec-lead">覆盖单选、多选、判断、名词解释、简答、案例分析六种题型，按易→中→难排列。先作答，再展开解析。</p>
+
+  <div class="quiz-q">
+    <div class="qh"><span class="qno">第 1 题</span><span class="qtype">单选题</span><span class="diff">易</span></div>
+    <p class="brief">首先提出三级预防模式、对精神病学实践产生巨大影响的是谁？</p>
+    <div class="opts">
+      <div class="opt"><span class="l">A.</span>卡普兰（Caplan），1964 年</div>
+      <div class="opt"><span class="l">B.</span>姆拉泽克（Mrazek），1964 年</div>
+      <div class="opt"><span class="l">C.</span>海格蒂（Haggerty）</div>
+      <div class="opt"><span class="l">D.</span>美国精神康复协会（PRA）</div>
+    </div>
+    <details><summary>查看答案与解析</summary><div class="dbody"><strong>答案：A</strong><br>教材原文：1964 年，卡普兰（Caplan）首先倡导对预防精神障碍给予重视，并提出了三级预防模式。Mrazek 与 Haggerty 提出的是更精细的概念框架（三个预防干预层次），PRA 提出的是精神康复定义。</div></details>
+  </div>
+
+  <div class="quiz-q">
+    <div class="qh"><span class="qno">第 2 题</span><span class="qtype">单选题</span><span class="diff">易</span></div>
+    <p class="brief">一级预防的核心是什么？</p>
+    <div class="opts">
+      <div class="opt"><span class="l">A.</span>早期发现、早期诊断、早期治疗</div>
+      <div class="opt"><span class="l">B.</span>病因预防，消除或减少病因或致病因素</div>
+      <div class="opt"><span class="l">C.</span>防止疾病复发，进行康复训练</div>
+      <div class="opt"><span class="l">D.</span>识别前驱症状并尽早转介</div>
+    </div>
+    <details><summary>查看答案与解析</summary><div class="dbody"><strong>答案：B</strong><br>一级预防即病因预防，旨在消除或减少精神障碍的病因或致病因素，是最积极和最主动的预防措施。A 为二级预防，C 为三级预防，D 属于二级预防中"早期识别前驱症状"的具体做法。</div></details>
+  </div>
+
+  <div class="quiz-q">
+    <div class="qh"><span class="qno">第 3 题</span><span class="qtype">单选题</span><span class="diff">中</span></div>
+    <p class="brief">教材强调二级预防在精神障碍防治中极为重要，主要原因是？</p>
+    <div class="opts">
+      <div class="opt"><span class="l">A.</span>精神障碍病因已经完全明确</div>
+      <div class="opt"><span class="l">B.</span>精神障碍慢性或亚急性起病、症状隐匿、缺乏明确特征性，漏诊误诊率高</div>
+      <div class="opt"><span class="l">C.</span>所有精神障碍患者都会主动就医</div>
+      <div class="opt"><span class="l">D.</span>二级预防可以替代康复训练</div>
+    </div>
+    <details><summary>查看答案与解析</summary><div class="dbody"><strong>答案：B</strong><br>教材原文指出：因精神障碍具有慢性或亚急性起病、症状隐匿、临床表现缺乏明确特征性的特点，临床上漏诊或误诊的发生率高，患者从发病到真正接受有效治疗的时间延长，严重影响预后。因此二级预防极为重要。A 与教材"病因尚不完全清楚"相反；C 与病耻感、讳疾忌医的现实相反；D 错，康复属于三级预防。</div></details>
+  </div>
+
+  <div class="quiz-q">
+    <div class="qh"><span class="qno">第 4 题</span><span class="qtype">单选题</span><span class="diff">中</span></div>
+    <p class="brief">教材明确"三级预防强调的是"下列哪一项？</p>
+    <div class="opts">
+      <div class="opt"><span class="l">A.</span>病因研究</div>
+      <div class="opt"><span class="l">B.</span>早期筛查</div>
+      <div class="opt"><span class="l">C.</span>精神障碍的康复</div>
+      <div class="opt"><span class="l">D.</span>遗传咨询</div>
+    </div>
+    <details><summary>查看答案与解析</summary><div class="dbody"><strong>答案：C</strong><br>教材原文：三级预防强调的是精神障碍的康复。其重点是防止疾病复发，进行精神障碍患者的康复训练，最大限度地促进社会功能恢复，控制复发，减少精神残疾，延缓疾病进程，提高生活质量，力争重新融入社会。</div></details>
+  </div>
+
+  <div class="quiz-q">
+    <div class="qh"><span class="qno">第 5 题</span><span class="qtype">多选题</span><span class="diff">中</span></div>
+    <p class="brief">下列哪些属于一般性预防干预的内容？</p>
+    <div class="opts">
+      <div class="opt"><span class="l">A.</span>全面开展心理健康促进与教育活动</div>
+      <div class="opt"><span class="l">B.</span>积极推动心理咨询和心理治疗服务</div>
+      <div class="opt"><span class="l">C.</span>加强重点人群与特殊人群的心理健康服务</div>
+      <div class="opt"><span class="l">D.</span>对灾难幸存者进行心理危机干预</div>
+    </div>
+    <details><summary>查看答案与解析</summary><div class="dbody"><strong>答案：ABC</strong><br>A、B、C 均在教材"一般性预防干预"的 7 项内容中。D 属于<strong>选择性预防干预</strong>：对象是具有易患精神障碍危险因素的高危人群，教材正是以"对灾难幸存者进行心理危机干预"为例。</div></details>
+  </div>
+
+  <div class="quiz-q">
+    <div class="qh"><span class="qno">第 6 题</span><span class="qtype">多选题</span><span class="diff">难</span></div>
+    <p class="brief">我国精神障碍社区康复与防治工作的工作体系包括哪些方面？</p>
+    <div class="opts">
+      <div class="opt"><span class="l">A.</span>政策制度</div>
+      <div class="opt"><span class="l">B.</span>监测评估</div>
+      <div class="opt"><span class="l">C.</span>服务系统</div>
+      <div class="opt"><span class="l">D.</span>人才队伍</div>
+    </div>
+    <details><summary>查看答案与解析</summary><div class="dbody"><strong>答案：ABCD</strong><br>教材明确：工作体系主要包括政策制度、监测评估、服务系统和人才队伍四个方面；职能则主要是疾病的防控、康复及提供必要的支持和保障。不要与"工作职能 5 项"混淆。</div></details>
+  </div>
+
+  <div class="quiz-q">
+    <div class="qh"><span class="qno">第 7 题</span><span class="qtype">判断题</span><span class="diff">易</span></div>
+    <p class="brief">预防悖论指出，大多数疾病人群实际来自高风险人群，只有少数来自低或中风险人群。</p>
+    <div class="opts">
+      <div class="opt"><span class="l">A.</span>正确</div>
+      <div class="opt"><span class="l">B.</span>错误</div>
+    </div>
+    <details><summary>查看答案与解析</summary><div class="dbody"><strong>答案：B（错误）</strong><br>教材原文：预防悖论指出，大多数疾病人群实际来自<strong>低或中风险人群</strong>，只有少数来自高风险人群。因此大规模有效的健康预防可能对大多数人的健康产生相对较小但可察觉的益处。</div></details>
+  </div>
+
+  <div class="quiz-q">
+    <div class="qh"><span class="qno">第 8 题</span><span class="qtype">判断题</span><span class="diff">中</span></div>
+    <p class="brief">日间医院通常采用日间来院的方式，患者白天来医院接受治疗，晚上返回家中居住。</p>
+    <div class="opts">
+      <div class="opt"><span class="l">A.</span>正确</div>
+      <div class="opt"><span class="l">B.</span>错误</div>
+    </div>
+    <details><summary>查看答案与解析</summary><div class="dbody"><strong>答案：A（正确）</strong><br>教材原文：日间医院通常采用日间来院的方式，患者可以在白天来医院接受治疗，晚上返回家中居住。它帮助患者从住院环境平稳过渡到社区生活。</div></details>
+  </div>
+
+  <div class="quiz-q">
+    <div class="qh"><span class="qno">第 9 题</span><span class="qtype">判断题</span><span class="diff">难</span></div>
+    <p class="brief">医院康复应在患者急性期治疗结束、准备出院时才开始。</p>
+    <div class="opts">
+      <div class="opt"><span class="l">A.</span>正确</div>
+      <div class="opt"><span class="l">B.</span>错误</div>
+    </div>
+    <details><summary>查看答案与解析</summary><div class="dbody"><strong>答案：B（错误）</strong><br>教材原文：医院康复的时机应<strong>始于治疗伊始</strong>；精神康复在精神疾病的急性阶段开始，并在整个生命周期中持续。不是等急性期结束或准备出院才开始。</div></details>
+  </div>
+
+  <div class="quiz-q">
+    <div class="qh"><span class="qno">第 10 题</span><span class="qtype">名词解释</span><span class="diff">中</span></div>
+    <p class="brief">请解释"三级预防"。</p>
+    <details><summary>查看答案与解析</summary><div class="dbody"><strong>参考答案：</strong>1964 年由卡普兰（Caplan）提出的预防模式，按疾病进程分三层：<strong>一级预防</strong>即病因预防，消除或减少病因或致病因素，是最积极、最主动的预防；<strong>二级预防</strong>的重点是早期发现、早期诊断、早期治疗，并争取疾病缓解后获得良好预后、防止复发；<strong>三级预防</strong>的重点是防止疾病复发，进行康复训练，最大限度促进社会功能恢复，控制复发，减少精神残疾，延缓疾病进程，提高生活质量，力争使患者重新融入社会。教材明确：三级预防强调的是精神障碍的康复。</div></details>
+  </div>
+
+  <div class="quiz-q">
+    <div class="qh"><span class="qno">第 11 题</span><span class="qtype">名词解释</span><span class="diff">中</span></div>
+    <p class="brief">请解释"个案管理"。</p>
+    <details><summary>查看答案与解析</summary><div class="dbody"><strong>参考答案：</strong>个案管理是一种既能满足在医院中提供临时照料、又能满足在社区中提供长期照料的全面精神卫生服务；也是既能满足患者个体复杂、多变的情况，又能与不同的人、不同的团体、不同的时间相适应的干预措施。其核心是以患者为中心，根据个体患者的实际需要制定<strong>持续性的整合服务</strong>。个案管理者通常由社会工作者、精神科医师、精神科护士、心理治疗师或职业治疗师多方共同担任，在住院部、社区和家庭之间移动服务。</div></details>
+  </div>
+
+  <div class="quiz-q">
+    <div class="qh"><span class="qno">第 12 题</span><span class="qtype">简答题</span><span class="diff">难</span></div>
+    <p class="brief">简述医院康复的主要训练措施（七项）。</p>
+    <details><summary>查看答案与解析</summary><div class="dbody">
+      <strong>参考答案：</strong>
+      <ol>
+        <li><strong>生活技能训练：</strong>日常生活能力、理财训练、工娱训练。</li>
+        <li><strong>人际交往技能训练：</strong>基本社交技巧、使用社区设施、遵守社会规则、角色示范与行为演练等。</li>
+        <li><strong>职业康复训练：</strong>工作适应性训练与职业技能训练；职业康复是精神康复的核心内容。</li>
+        <li><strong>躯体健康管理：</strong>体重/营养管理、药物不良反应干预、性功能障碍与代谢综合征关注。</li>
+        <li><strong>教育疗法：</strong>学习行为训练与心理教育；每次学习不超过 1 小时。</li>
+        <li><strong>药物自我管理及服药依从性培训：</strong>认识疾病、按时按量服药、了解药物名称剂量与不良反应、学会求助。</li>
+        <li><strong>认知障碍康复：</strong>认知矫正，包括传统训练、计算机或虚拟现实训练、针对特定认知领域的训练。</li>
+      </ol>
+    </div></details>
+  </div>
+
+  <div class="quiz-q">
+    <div class="qh"><span class="qno">第 13 题</span><span class="qtype">案例分析题</span><span class="diff">难</span></div>
+    <p class="brief">（模拟情境，依据教材知识点构建，不是教材原案例）某严重精神障碍患者急性期治疗后症状缓解出院，但生活懒散、社交退缩，家属无力长期照护，出院不久再次住院，反复多次。请分析：①这反映了教材所说的什么现象？②从预防层级看，应重点加强哪一级？③社区康复可为该患者提供哪些服务与流程？</p>
+    <details><summary>查看答案与解析</summary><div class="dbody">
+      <strong>参考答案：</strong><br>
+      ① 反映了<strong>"旋转门"现象</strong>：急性期治疗后缺少必要的生活、社交等技能训练和过渡性服务医疗，患者难以融入社会，导致病情反复、反复住院。<br>
+      ② 从预防层级看，应重点加强<strong>三级预防</strong>——防止疾病复发、进行康复训练、最大限度促进社会功能恢复、减少精神残疾；教材明确三级预防强调的是康复。同时二级预防的"坚持服药、定期复诊、随访与巩固治疗"也不可缺。<br>
+      ③ 社区康复可提供：转入评估与转介、登记建档并签订服务协议；<strong>1 个月内</strong>制定个性化康复计划并开始服务；<strong>每 3 个月</strong>阶段性评估并调整目标；由个案管理者协调多方服务、协助实施 ISP；训练内容包括生活技能、人际交往、职业康复、躯体健康管理、教育疗法、药物自我管理与认知康复；康复良好后转出回归社会，需求变化时转介其他机构。<br>
+      <span class="note">本案例为模拟情境，不含虚构的化验数据或政策数字；答案均依据教材第二节与第一节原文。</span>
+    </div></details>
+  </div>
+</section>
+
+<!-- ===== 10 速记卡 ===== -->
+<section id="cards">
+  <div class="sec-head"><div class="badge">10</div><h2>考点速记卡<span class="en">18 flip cards</span></h2></div>
+  <p class="sec-lead">正面是问题，点击翻面看答案。建议按"预防→康复→流程"三轮刷，每轮只追求快速反应。</p>
+  <div class="flashcard-grid">
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag concept">概念</span><p>精神障碍管理的三大组成部分是什么？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">预防、治疗与康复。精神疾病慢性化，大多数患者需要长期治疗，更需要长期康复预防复发。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag concept">概念</span><p>什么是"旋转门"现象？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">"重治疗、轻康复"使患者急性期治疗后缺少生活、社交等技能训练和过渡性服务，难以融入社会，病情反复、反复住院的现象。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag data">数据</span><p>全球成年男/女精神障碍终生患病率？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">男性 28.6%，女性 29.8%。我国最常见的是心境障碍（终生患病率 7.8%）和焦虑障碍（7.6%）。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag data">数据</span><p>新冠后全球抑郁、焦虑新增病例与 DALYs？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">抑郁障碍新增 5 320 万例，焦虑障碍新增 7 600 万例；精神障碍所致全球 DALYs 高达 1.253 亿人年。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag concept">概念</span><p>国外精神障碍预防的三种类型及对象？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">普遍性预防→普通人群；选择性预防→患病风险显著增加的个人或亚群体；指示性预防→具有明显躯体症状或生物标志物异常的高危人群。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag concept">概念</span><p>什么是预防悖论？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">大多数疾病人群实际来自低或中风险人群，只有少数来自高风险人群；因此大规模有效的健康预防可能对大多数人的健康产生相对较小但可察觉的益处。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag concept">概念</span><p>三级预防由谁、何时提出？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">1964 年，卡普兰（Caplan）首先倡导对预防精神障碍给予重视，并提出了三级预防模式。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag treat">预防</span><p>一级预防的核心与定位？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">病因预防：消除或减少精神障碍的病因或致病因素；是最积极和最主动的预防措施。教材同时指出目前精神障碍的病因尚不完全清楚。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag treat">预防</span><p>二级预防的重点？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">早期发现、早期诊断、早期治疗，并争取在疾病缓解后获得良好预后、防止复发；关键是识别发病及复发前的<strong>前驱症状</strong>。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag treat">预防</span><p>三级预防的重点？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">防止疾病复发，进行康复训练，最大限度促进社会功能恢复，控制复发，减少精神残疾，延缓疾病进程，提高生活质量，力争重新融入社会；教材明确"三级预防强调的是精神障碍的康复"。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag diag">辨析</span><p>Mrazek 与 Haggerty 如何看待"预防"与二、三级预防？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">他们认为精神障碍的预防实际上是指精神障碍发生前的干预（即一级预防），而原来的二级与三级预防则相当于治疗与康复。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag concept">概念</span><p>三个预防干预层次的名称与对象？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">一般性→一般公众和普通人群；选择性→具有易患精神障碍危险因素的高危人群（如灾难幸存者）；指征性→有先兆/前驱症状或明显素质因素、但尚不符合诊断标准的个体。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag data">数据</span><p>一般性预防干预的 7 项内容？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">心理健康促进与教育；心理咨询与心理治疗服务；心理健康服务体系与人才队伍；重点人群；特殊人群；遗传咨询与围产期保健；学科建设与流行病学调查。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag treat">康复</span><p>PRA 对精神康复的定义？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">通过促进社区整合，改善那些由于各种精神障碍而严重妨碍其享受有意义生活的精神障碍患者的生活质量。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag concept">概念</span><p>康复的三大任务及各自定位？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">症状康复——心理社会康复的前提，始于急性期；认知康复——改善认知缺陷、缓解症状、促进社会功能；回归社会——康复的最终治疗目标。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag treat">康复</span><p>医院康复部门配备哪 6 组人员？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">医疗组、护理组、社会防卫组、音乐治疗组、职业治疗组、康复设备训练组。口诀"医护社音职设"。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag data">数据</span><p>医院康复的七项训练措施？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">生活技能训练、人际交往技能训练、职业康复训练、躯体健康管理、教育疗法、药物自我管理及服药依从性培训、认知障碍康复。</div>
+    </div></div>
+
+    <div class="flashcard"><div class="fc-inner">
+      <div class="fc-front"><span class="tag diag">流程</span><p>社区康复服务流程 5 步与关键时间节点？</p><span class="fc-hint">点击翻面</span></div>
+      <div class="fc-back">转入→登记建档→功能评估与服务提供→转出→特殊情况及处置。功能评估后<strong>1 个月内</strong>制定个性化康复计划并开始服务；<strong>每 3 个月</strong>阶段性评估。</div>
+    </div></div>
+  </div>
+</section>
+
+<!-- ===== 11 病例挑战 ===== -->
+<section id="cases">
+  <div class="sec-head"><div class="badge">11</div><h2>病例挑战<span class="en">3 cases · increasing difficulty</span></h2></div>
+  <p class="sec-lead">以下为<strong>模拟临床情境</strong>：依据教材所述工作原则与服务流程构建，用于训练分析与处置思路，<strong>不是教材原案例</strong>，也不含虚构的化验数值或政策指标。</p>
+
+  <div class="case">
+    <span class="ctag">难度 ★ · 模拟情境 · 识别现象与分层</span>
+    <h3>案例 1：出院不久又住院</h3>
+    <div class="scene">某严重精神障碍患者急性期治疗后症状缓解出院。回家后生活懒散、不愿出门，家属不知如何督促服药和安排日常，也无力长期照护。不久病情反复再次住院，此后多次重复"出院—复发—再住院"。</div>
+    <ol class="ques">
+      <li>这一过程最符合教材所说的什么现象？其根源是什么？</li>
+      <li>从三级预防看，应重点加强哪一级？这一级强调什么？</li>
+      <li>如果要接入社区康复，第一步与后续关键时间节点是什么？</li>
+    </ol>
+    <details><summary>查看答案与解析</summary><div class="dbody">
+      <strong>1.</strong> <strong>"旋转门"现象</strong>。根源是"重治疗、轻康复"：急性期治疗后缺少必要的生活、社交等技能训练和过渡性服务医疗，患者难以较好融入社会，进而病情反复。<br>
+      <strong>2.</strong> 重点加强<strong>三级预防</strong>：防止疾病复发，进行康复训练，最大限度促进社会功能恢复，控制复发，减少精神残疾，延缓疾病进程，提高生活质量，力争重新融入社会；教材明确三级预防强调的是康复。二级预防中的定期复诊、坚持服药、随访与巩固治疗同样不可缺。<br>
+      <strong>3.</strong> 可由精神卫生专业机构或基层医疗卫生机构的医师、护士、康复治疗师等评估后<strong>转介</strong>，居家患者也可自行前往社区康复机构申请加入并提供诊断、治疗材料；随后<strong>登记建档</strong>、签订服务协议；服务团队面谈评估后<strong>1 个月内</strong>制定个性化康复计划并开始服务；<strong>每 3 个月</strong>阶段性评估并调整目标与措施。
+    </div></details>
+  </div>
+
+  <div class="case">
+    <span class="ctag">难度 ★★ · 模拟情境 · 康复计划与人员配置</span>
+    <h3>案例 2：长期住院患者的功能衰退</h3>
+    <div class="scene">某慢性严重精神障碍患者长期住在采用封闭式管理的专科医院，日常起居由工作人员代为安排，很少与家人联系，逐渐出现生活懒散、社交退缩、对外界漠不关心。医院准备为其制定系统康复训练计划。</div>
+    <ol class="ques">
+      <li>长期封闭管理可能带来什么后果？教材对医院康复的时机如何要求？</li>
+      <li>该患者的康复训练应覆盖哪些项目？请至少说出五项。</li>
+      <li>医院康复部门应配备哪些人员组？管理上宜采用什么模式？</li>
+    </ol>
+    <details><summary>查看答案与解析</summary><div class="dbody">
+      <strong>1.</strong> 长期脱离家庭与社会可导致<strong>人格衰退、继发残疾</strong>。教材要求医院康复的时机应<strong>始于治疗伊始</strong>，以康复为导向、以患者为中心，在医学治疗和护理的同时以限制最少的方式允许患者从事康复训练。<br>
+      <strong>2.</strong> 七项中任答五项即可：生活技能训练（日常生活能力、理财、工娱）、人际交往技能训练、职业康复训练、躯体健康管理、教育疗法、药物自我管理及服药依从性培训、认知障碍康复。<br>
+      <strong>3.</strong> 配备医疗组、护理组、社会防卫组、音乐治疗组、职业治疗组、康复设备训练组；实行<strong>开放和半开放式</strong>患者管理模式，尽可能提供宽松的生活和人际交往环境，并联合医院多学科、多部门统筹制定及实施康复训练计划。
+    </div></details>
+  </div>
+
+  <div class="case">
+    <span class="ctag">难度 ★★★ · 模拟情境 · 预防层次与转介</span>
+    <h3>案例 3：有前驱表现但未达诊断</h3>
+    <div class="scene">某高校学生近期出现持续失眠、情绪低落、注意力下降，学习成绩明显下滑，自述"压力很大、什么都做不好"，但尚未符合任何精神障碍的诊断标准。学校心理辅导室初步接触后，认为需要进一步评估与转介。</div>
+    <ol class="ques">
+      <li>按三个预防干预层次，该学生最接近哪一层？对象特征是什么？</li>
+      <li>按三级预防，这属于哪一级的工作？该级的关键动作是什么？</li>
+      <li>教材对高校与综合医院分别提出了哪些相关要求？</li>
+    </ol>
+    <details><summary>查看答案与解析</summary><div class="dbody">
+      <strong>1.</strong> 最接近<strong>指征性预防干预</strong>：对象是具有精神障碍的先兆或前驱症状，或具有明显的精神障碍素质因素，但<strong>尚不符合诊断标准</strong>的个体。若仅按风险升高但无明确前驱症状，则可能归入选择性预防干预的高危人群；本题有明确前驱表现且未达诊断，故以指征性更贴切。<br>
+      <strong>2.</strong> 属于<strong>二级预防</strong>的工作：早期发现、早期诊断、早期治疗，争取良好预后、防止复发；关键动作是识别前驱症状、及时评估与转介，减少漏诊误诊和延误治疗。<br>
+      <strong>3.</strong> 高校应积极开设心理健康教育课程、开展心理健康教育活动，重视提升大学生心理调适能力，<strong>重视自杀预防，开展心理危机干预</strong>；综合医院应设立精神科和心理咨询科，提供便利、更易于接受的就诊环境，并加强对非精神科医师的培训，提高常见精神障碍的筛查、识别和处置能力，加强会诊-联络与专科咨询。<br>
+      <span class="note">本案例为模拟情境，依据教材第一节知识点构建，不是教材原案例；未虚构诊断、化验或政策数字。</span>
+    </div></details>
+  </div>
+</section>
+
+<!-- ===== 12 拓展 ===== -->
+<section id="ext">
+  <div class="sec-head"><div class="badge">12</div><h2>拓展延伸<span class="en">Beyond the chapter</span></h2></div>
+  <p class="sec-lead">本章教材已提及但未展开的内容，集中列在这里；同时明确标出"教材未涉及"的空白，避免把课外知识误当成教材结论。</p>
+  <div class="grid2">
+    <div class="card cyan">
+      <h3>教材提及、但仅一笔带过的内容</h3>
+      <ul>
+        <li><strong>《健康中国行动（2019—2030 年）》：</strong>教材只引用了"心理健康促进行动"及到 2030 年居民心理健康素养水平提升到 30% 这一目标，未展开具体行动指标。</li>
+        <li><strong>2017 年《关于加快精神障碍社区康复服务发展的意见》：</strong>教材只引用到 2025 年"80% 以上县（市、区）开展、60% 以上居家患者接受"及服务体系表述，未展开实施细则。</li>
+        <li><strong>国家层面的精神疾病防治法和相关政策：</strong>教材只说明其确保精神障碍者合法权益，未展开法律条文。</li>
+        <li><strong>"三社联动"：</strong>教材指社区、社会组织、社会工作者联动，未展开运行机制。</li>
+        <li><strong>认知矫正：</strong>教材提到传统训练、计算机或虚拟现实训练、针对特定认知领域训练，未给出具体课程与疗程。</li>
+        <li><strong>早期精神病服务机构参与职业康复：</strong>教材只提到这一趋势，未展开服务模式。</li>
+        <li><strong>WHO 社区康复定义：</strong>教材给出定义，未展开操作指南。</li>
+      </ul>
+    </div>
+    <div class="card orange">
+      <h3>教材未涉及 / 本指南不补写的内容</h3>
+      <ul>
+        <li>各省市社区康复机构的具体数量、床位、覆盖率与经费投入——<strong>教材未涉及</strong>。</li>
+        <li>康复人员的编制配比、资质等级、培训学时与考核标准——<strong>教材未涉及</strong>。</li>
+        <li>精神障碍社区康复的具体服务项目清单、收费与医保支付方式——<strong>教材未涉及</strong>。</li>
+        <li>功能评估的具体量表、评分标准与分界值——<strong>教材未涉及</strong>。</li>
+        <li>各类精神障碍的康复疗程、随访频次上限——<strong>教材未涉及</strong>。</li>
+        <li>具体药物名称、剂量与疗程——本章不涉及，详见第二十四章治疗学。</li>
+        <li>其他国家或地区的预防政策与立法细节——<strong>教材未涉及</strong>。</li>
+        <li>康复成本效益、就业率等效果数据——<strong>教材未涉及</strong>。</li>
+      </ul>
+    </div>
+  </div>
+  <div class="callout ext">
+    <span class="ct">📖 使用提醒</span>
+    本指南所有患病率、政策目标、时间节点、人员组别与流程步骤均取自教材第二十五章原文；凡标注「教材未涉及」的地方，不要用其他资料的数字替代，以免与教材答案冲突。
+  </div>
+  <div class="hr"></div>
+  <p class="note" style="text-align:center">精神病学（第9版）· 第二十五章 精神障碍的预防和康复 · 印刷页 307–318 · 学习指南完</p>
+</section>
+
+</div>
+<nav class="chapter-pager" aria-label="章节间导航"><a class="cp-prev" href="精神病学_第二十四章_治疗学_学习指南.html">← 上一章：第二十四章</a><a class="cp-toc" href="index.html">目录</a><a class="cp-next" href="精神病学_第二十六章_精神病学相关伦理与法律问题_学习指南.html">下一章：第二十六章 →</a></nav>
+</main>
+
+<button class="top" id="topBtn" aria-label="回到顶部">↑</button>
+<script>
+/* ============================================================
+   精神病学学习指南 · 统一交互层 v1（构建期注入，整体替换原 IIFE）
+   兼容 A 族（.tabbar button + [data-panel] + .panel.on）与
+   B 族（.tab-nav + .tab-panel.active）两套 DOM 约定。
+   特性检测 + 防御式查询 + 幂等；不引入任何外部依赖。
+   ============================================================ */
+(function () {
+  'use strict';
+  if (window.__PSY_GUIDE_APP__) { return; }
+  window.__PSY_GUIDE_APP__ = true;
+
+  var d = document;
+
+  function all(sel, root) {
+    return Array.prototype.slice.call((root || d).querySelectorAll(sel));
+  }
+  function on(el, ev, fn, opt) {
+    if (el) { el.addEventListener(ev, fn, opt || false); }
+  }
+  function norm(s) {
+    return String(s || '').replace(/\s+/g, '').toUpperCase();
+  }
+
+  /* ---------- 1. Tab 切换（两族约定都支持） ---------- */
+  function initTabs() {
+    all('.tabs, [data-tabs]').forEach(function (g) {
+      if (g.__psyTabs) { return; }
+      g.__psyTabs = true;
+      var isA = !!g.querySelector('.tabbar button');
+      var btns = all(isA ? '.tabbar button' : '.tab-nav .tab-btn', g);
+      if (!btns.length) { return; }
+      var cls = isA ? 'on' : 'active';
+      var nav = btns[0].closest('.tabbar') || btns[0].closest('.tab-nav');
+      if (nav && !nav.hasAttribute('role')) { nav.setAttribute('role', 'tablist'); }
+      all(isA ? '.panel' : '.tab-panel', g).forEach(function (p) {
+        if (!p.hasAttribute('role')) { p.setAttribute('role', 'tabpanel'); }
+      });
+      function activate(btn) {
+        btns.forEach(function (b) {
+          b.classList.remove(cls);
+          b.setAttribute('aria-selected', 'false');
+        });
+        btn.classList.add(cls);
+        btn.setAttribute('aria-selected', 'true');
+        var id = btn.getAttribute('data-tab');
+        if (!id) { return; }
+        var target = isA
+          ? g.querySelector('[data-panel="' + id + '"]')
+          : (g.querySelector('.tab-panel#' + id) || d.getElementById(id));
+        all(isA ? '.panel' : '.tab-panel', g).forEach(function (p) {
+          var show = isA ? (p.getAttribute('data-panel') === id) : (p === target);
+          p.classList.toggle(cls, show);
+        });
+      }
+      btns.forEach(function (btn, i) {
+        if (!btn.hasAttribute('role')) { btn.setAttribute('role', 'tab'); }
+        btn.setAttribute('aria-selected', btn.classList.contains(cls) ? 'true' : 'false');
+        if (!btn.hasAttribute('tabindex') && !btn.classList.contains(cls)) { btn.setAttribute('tabindex', '0'); }
+        on(btn, 'click', function () { activate(btn); });
+        on(btn, 'keydown', function (e) {
+          if (e.key !== 'ArrowRight' && e.key !== 'ArrowLeft') { return; }
+          e.preventDefault();
+          var nx = btns[(i + (e.key === 'ArrowRight' ? 1 : btns.length - 1)) % btns.length];
+          if (nx) { nx.focus(); activate(nx); }
+        });
+      });
+    });
+  }
+
+  /* ---------- 2. 速记卡：点击/键盘翻转 + 可达性 ---------- */
+  function initCards() {
+    all('.flashcard').forEach(function (card) {
+      if (card.__psyCard) { return; }
+      card.__psyCard = true;
+      card.setAttribute('tabindex', '0');
+      card.setAttribute('role', 'button');
+      function sync() {
+        card.setAttribute('aria-pressed', card.classList.contains('flipped') ? 'true' : 'false');
+      }
+      function flip() { card.classList.toggle('flipped'); sync(); }
+      on(card, 'click', flip);
+      on(card, 'keydown', function (e) {
+        if (e.key === 'Enter' || e.key === ' ' || e.key === 'Spacebar') {
+          e.preventDefault();
+          flip();
+        }
+      });
+      sync();
+    });
+  }
+
+  /* ---------- 3. 自测题交互化（核心新功能） ---------- */
+  function initQuiz() {
+    var questions = all('.quiz-q, .quiz-item');
+    if (!questions.length) { return; }
+    var groups = {};
+
+    function keyOf(o) {
+      var L = o.getAttribute('data-letter');
+      if (L && String(L).replace(/\s+/g, '') !== '') { return norm(L); }
+      var sp = o.querySelector('.l');
+      if (sp) {
+        var t = norm(sp.textContent).replace(/[.．、:：]/g, '');
+        if (t !== '') { return t; }
+      }
+      var txt = norm(o.textContent);
+      if (txt.indexOf('正确') >= 0 || txt.indexOf('错误') >= 0) { return txt; }
+      return txt.charAt(0);
+    }
+
+    function getGroup(q) {
+      var sec = q.closest('.quiz-block') || q.closest('section') || d.body;
+      if (!groups[sec.__psyGid]) {
+        sec.__psyGid = 'g' + (Object.keys(groups).length + 1);
+        groups[sec.__psyGid] = { sec: sec, total: 0, score: 0, row: null, first: null };
+      }
+      var g = groups[sec.__psyGid];
+      if (!g.first) { g.first = q; }
+      return g;
+    }
+
+    function ensureRow(g) {
+      if (g.row) { return g.row; }
+      var row = d.createElement('div');
+      row.className = 'quiz-score';
+      row.setAttribute('role', 'status');
+      row.setAttribute('aria-live', 'polite');
+      row.innerHTML = '<span class="qs-label">自测计分</span>' +
+        '<span class="qs-num">得分 0 / ' + g.total + '</span>' +
+        '<span class="qs-bar"><i></i></span>';
+      g.first.parentNode.insertBefore(row, g.first);
+      g.row = row;
+      return row;
+    }
+
+    function updateRow(g) {
+      var row = ensureRow(g);
+      var num = row.querySelector('.qs-num');
+      var bar = row.querySelector('.qs-bar i');
+      if (num) { num.textContent = '得分 ' + g.score + ' / ' + g.total; }
+      if (bar) { bar.style.width = (g.total ? Math.round(g.score / g.total * 100) : 0) + '%'; }
+    }
+
+    questions.forEach(function (q) {
+      if (q.__psyQuiz) { return; }
+      q.__psyQuiz = true;
+      var opts = all('.opt', q);
+      if (!opts.length) { opts = all('.quiz-options > li', q); }
+      if (!opts.length) { return; }
+
+      /* 正确答案先记入内存：预标 correct 优先（记录后立即移除，消除剧透），
+         否则从解析文本「答案：X / 答案 X」提取（不改动任何文字） */
+      var ansKeys = [];
+      var preset = opts.filter(function (o) { return o.classList.contains('correct'); });
+      preset.forEach(function (o) { o.classList.remove('correct'); });
+      if (preset.length) {
+        ansKeys = preset.map(keyOf);
+      } else {
+        var dt = q.querySelector('details');
+        var txt = dt ? dt.textContent : '';
+        var m = txt.match(/答案\s*[:：]?\s*([A-Za-z](?:[\s、,，·和及]*[A-Za-z])*)/);
+        if (m) {
+          ansKeys = m[1].match(/[A-Za-z]/g) || [];
+        } else {
+          var m2 = txt.match(/答案\s*[:：]?\s*(正确|错误)/);
+          if (m2) { ansKeys = [m2[1]]; }
+        }
+      }
+      if (!ansKeys.length) { return; } /* 无可判定答案（名词解释等），保持原样 */
+
+      var g = getGroup(q);
+      g.total += 1;
+      var multi = ansKeys.length > 1;
+      var ansSet = ansKeys.map(norm);
+      var locked = false;
+      var picked = [];
+
+      function revealAll() {
+        opts.forEach(function (o) {
+          if (ansSet.indexOf(keyOf(o)) >= 0) { o.classList.add('is-reveal'); }
+        });
+      }
+      function finish(ok) {
+        locked = true;
+        q.classList.add('is-locked');
+        var dt = q.querySelector('details');
+        if (dt) { dt.open = true; }
+        if (ok) { g.score += 1; }
+        updateRow(g);
+      }
+
+      opts.forEach(function (o) {
+        o.setAttribute('tabindex', '0');
+        function pick() {
+          if (locked) { return; }
+          var k = keyOf(o);
+          if (ansSet.indexOf(k) >= 0) {
+            o.classList.add('is-right');
+            if (picked.indexOf(k) < 0) { picked.push(k); }
+            if (multi) {
+              if (picked.length === ansSet.length) { finish(true); }
+            } else {
+              finish(true);
+            }
+          } else {
+            o.classList.add('is-wrong');
+            revealAll();
+            finish(false);
+          }
+        }
+        on(o, 'click', pick);
+        on(o, 'keydown', function (e) {
+          if (e.key === 'Enter' || e.key === ' ' || e.key === 'Spacebar') {
+            e.preventDefault();
+            pick();
+          }
+        });
+      });
+    });
+
+    Object.keys(groups).forEach(function (id) {
+      if (groups[id].total > 0) { updateRow(groups[id]); }
+    });
+  }
+
+  /* ---------- 4. 侧栏 scroll spy（本页锚点高亮） ---------- */
+  function initSpy() {
+    var links = all('#sidebar a[href^="#"]');
+    if (!links.length || !('IntersectionObserver' in window)) { return; }
+    var map = {};
+    links.forEach(function (a) {
+      var id = a.getAttribute('href').slice(1);
+      if (id) { map[id] = a; }
+    });
+    var secs = [];
+    Object.keys(map).forEach(function (id) {
+      var s = d.getElementById(id);
+      if (s) { secs.push(s); }
+    });
+    if (!secs.length) { return; }
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting && map[e.target.id]) {
+          links.forEach(function (a) { a.classList.remove('active'); });
+          map[e.target.id].classList.add('active');
+        }
+      });
+    }, { rootMargin: '-15% 0px -70% 0px', threshold: 0 });
+    secs.forEach(function (s) { io.observe(s); });
+  }
+
+  /* ---------- 5. 阅读进度条 + 回顶 ---------- */
+  function initScroll() {
+    var bar = d.getElementById('readbar');
+    var topBtn = d.getElementById('topBtn') || d.getElementById('backTop');
+    var ticking = false;
+    function step() {
+      ticking = false;
+      var h = d.documentElement;
+      var y = window.pageYOffset || h.scrollTop || 0;
+      if (bar) {
+        var max = h.scrollHeight - h.clientHeight;
+        bar.style.width = (max > 0 ? (y / max) * 100 : 0) + '%';
+      }
+      if (topBtn) {
+        topBtn.classList.toggle('show', y > 400);     /* A 族类名 */
+        topBtn.classList.toggle('visible', y > 400);  /* B 族类名 */
+      }
+    }
+    on(window, 'scroll', function () {
+      if (!ticking) { ticking = true; window.requestAnimationFrame(step); }
+    }, { passive: true });
+    step();
+    on(topBtn, 'click', function () {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
+
+  /* ---------- 6. 侧栏开合（存在才绑定；抽屉打开时锁定背景滚动） ---------- */
+  function initSidebar() {
+    var sidebar = d.getElementById('sidebar');
+    if (!sidebar) { return; }
+    var btn = d.getElementById('menuBtn') || d.getElementById('navToggle');
+    var ov = d.getElementById('overlay') || d.getElementById('sidebarOverlay');
+    function lock(open) {
+      /* 仅移动抽屉断点（≤900px）锁滚动；宽屏兜底解除，防布局残留 */
+      d.body.classList.toggle('nav-locked', !!open && window.innerWidth <= 900);
+    }
+    function close() {
+      sidebar.classList.remove('open');
+      if (ov) { ov.classList.remove('show'); }
+      lock(false);
+    }
+    on(btn, 'click', function () {
+      var open = !sidebar.classList.contains('open');
+      sidebar.classList.toggle('open');
+      if (ov) { ov.classList.toggle('show'); }
+      lock(open);
+    });
+    on(ov, 'click', close);
+    all('a', sidebar).forEach(function (a) {
+      on(a, 'click', function () {
+        if (window.innerWidth <= 900) { close(); }
+      });
+    });
+    on(window, 'resize', function () {
+      if (window.innerWidth > 900) { lock(false); }
+    });
+  }
+
+  /* ---------- 启动（脚本位于 body 末尾，DOM 已就绪；防御兜底） ---------- */
+  function boot() {
+    initTabs();
+    initCards();
+    initQuiz();
+    initSpy();
+    initScroll();
+    initSidebar();
+  }
+  if (d.readyState === 'loading') {
+    on(d, 'DOMContentLoaded', boot);
+  } else {
+    boot();
+  }
+})();
+</script>
+
+</body>
+</html>
