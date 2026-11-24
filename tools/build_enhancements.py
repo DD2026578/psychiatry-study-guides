@@ -17,6 +17,20 @@ CSS_START = '<!-- PSYX:CSS:START -->'
 CSS_END = '<!-- PSYX:CSS:END -->'
 UI_START = '<!-- PSYX:UI:START -->'
 UI_END = '<!-- PSYX:UI:END -->'
+ICON_MARK = '<!-- PSYX:ICON -->'
+
+# 站点图标：内联 SVG（Ψ 精神医学符号），零外部请求，避免线上 /favicon.ico 404
+ICON_SVG = (
+    "data:image/svg+xml,"
+    "%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 64 64%27%3E"
+    "%3Crect width=%2764%27 height=%2764%27 rx=%2714%27 fill=%27%230f6e56%27/%3E"
+    "%3Cg fill=%27none%27 stroke=%27%23ffffff%27 stroke-width=%276.5%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27%3E"
+    "%3Cpath d=%27M18 11V26a14 14 0 0 0 28 0V11%27/%3E"
+    "%3Cpath d=%27M32 40V56%27/%3E"
+    "%3Cpath d=%27M22 48H42%27/%3E"
+    "%3C/g%3E%3C/svg%3E"
+)
+ICON_BLOCK = ICON_MARK + '\n<link rel="icon" type="image/svg+xml" href="' + ICON_SVG + '">\n'
 
 EXTRA_PAGE = 'clinical-workflow.html'
 CHAPTER_ORDER = []
@@ -450,6 +464,7 @@ if(FILE==='index.html'){
 def clean(s):
     s = re.sub(re.escape(CSS_START) + r'[\s\S]*?' + re.escape(CSS_END) + r'\n?', '', s)
     s = re.sub(re.escape(UI_START) + r'[\s\S]*?' + re.escape(UI_END) + r'\n?', '', s)
+    s = re.sub(re.escape(ICON_MARK) + r'\n<link rel="icon"[^>]*>\n?', '', s)
     return s
 
 def real_close(s, close_tag, guard_tags):
@@ -499,10 +514,11 @@ def inject(fn, index_b64, family, title):
     css_block = CSS_START + '\n<style>\n' + CSS + '\n</style>\n' + CSS_END + '\n'
     ui_block = UI_START + '\n' + UI + '\n<script>\n' + js + '\n</script>\n' + UI_END + '\n'
     hi = real_close(s, '</head>', ('<style', '<script'))
+    head = ICON_BLOCK + css_block if (hi >= 0 and 'rel="icon"' not in s[:hi].lower()) else css_block
     if hi >= 0:
-        s = s[:hi] + css_block + s[hi:]
+        s = s[:hi] + head + s[hi:]
     else:
-        s = css_block + s
+        s = head + s
     bi = real_close(s, '</body>', ('<style', '<script'))
     if bi >= 0:
         s = s[:bi] + ui_block + s[bi:]
