@@ -32,7 +32,6 @@ ICON_SVG = (
 )
 ICON_BLOCK = ICON_MARK + '\n<link rel="icon" type="image/svg+xml" href="' + ICON_SVG + '">\n'
 
-EXTRA_PAGE = 'clinical-workflow.html'
 CHAPTER_ORDER = []
 CHUNK_CAP = 3  # 每节最多切 3 段，控制内嵌索引体积
 
@@ -50,7 +49,6 @@ def strip_tags(s):
 
 def family_of(fn):
     if fn == 'index.html': return 'index'
-    if fn == EXTRA_PAGE: return 'clinical'
     if fn == 'psychotropic-drugs.html': return 'drugs'
     if fn.startswith('沈渔邨'): return 'symptom'
     s = open(os.path.join(ROOT, fn), encoding='utf-8').read()
@@ -274,13 +272,11 @@ UI = r'''
     </div>
     <div class="psyx-links">
       <button type="button" class="psyx-close" id="psyx-bookmark">收藏本页</button>
-      <a href="clinical-workflow.html">临床工具箱</a>
-      <a href="textbook-guide.html">教材对照</a>
       <a href="index.html">总目录 / 继续学习</a>
       <button type="button" class="psyx-close" id="psyx-pclose">关闭</button>
     </div>
     <p id="psyx-books-list" style="margin-top:12px;font-size:13px;color:var(--psyx-ui-muted)"></p>
-    <h2 style="margin-top:18px">知识联动</h2>
+    <h2 style="margin-top:18px" id="psyx-related-h">知识联动</h2>
     <div class="psyx-links" id="psyx-related"></div>
   </div>
 </div>
@@ -426,7 +422,9 @@ function related(){
   if(i>0)h+='<a href="'+esc(ORDER[i-1])+'">← '+esc((IDX.t[IDX.n.indexOf(ORDER[i-1])]||'上一章').replace(/^精神病学\s*/,''))+'</a>';
   if(i<ORDER.length-1)h+='<a href="'+esc(ORDER[i+1])+'">'+esc((IDX.t[IDX.n.indexOf(ORDER[i+1])]||'下一章').replace(/^精神病学\s*/,''))+' →</a>';
  }
- h+='<a href="clinical-workflow.html#scales">量表速查</a><a href="clinical-workflow.html#evidence">证据来源说明</a>';
+ if(!h&&FILE!=='index.html')h='<a href="index.html">返回总目录</a>';
+ var hd=document.getElementById('psyx-related-h');
+ if(hd)hd.style.display=h?'':'none';
  box.innerHTML=h;
 }
 function refreshPanel(){
@@ -455,8 +453,7 @@ if(FILE==='index.html'){
  var lf=IDX.t[IDX.n.indexOf(last.file)]||last.file;
  box.innerHTML='<h2>继续学习</h2>'+
   (last.file?'<p>上次阅读：<a href="'+esc(last.file)+'">'+esc(lf||last.file)+'</a> · 完成度 '+(prog[last.file]||0)+'%</p>':'<p>还没有阅读记录，从下方任意章节开始。</p>')+
-  '<p>已读 '+visited+' / '+(IDX.n.length-1)+' 页 · 已收藏 '+bk.length+' 页 · 自测记录 '+Object.keys(qz).length+' 条</p>'+
-  '<p><a href="clinical-workflow.html">打开临床工具箱 →</a></p>';
+  '<p>已读 '+visited+' / '+(IDX.n.length-1)+' 页 · 已收藏 '+bk.length+' 页 · 自测记录 '+Object.keys(qz).length+' 条</p>';
 }
 })();
 '''
@@ -530,8 +527,6 @@ def inject(fn, index_b64, family, title):
 def main():
     global CHAPTER_ORDER
     files = pages()
-    if EXTRA_PAGE not in files:
-        raise SystemExit('缺少 ' + EXTRA_PAGE + '，请先生成临床工具页')
     idx_html = open(os.path.join(ROOT, 'index.html'), encoding='utf-8').read()
     CHAPTER_ORDER = re.findall(r'href="(精神病学_第[^"]+\.html)"', idx_html)
     idx = build_index(files)
