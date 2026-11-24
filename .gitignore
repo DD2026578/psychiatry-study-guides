@@ -8,3 +8,6 @@ _refactor/
 .trae-html-share-packages/
 AGENTS.md
 _commitmsg.txt
+
+# 内部工作记录（审计日志，Pages 会公开仓库根目录下的所有文件，故不入库）
+.workbuddy/
