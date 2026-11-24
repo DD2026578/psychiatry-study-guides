@@ -476,8 +476,7 @@ tr.is-hidden{display:none}
 }
 @media (max-width:760px){.shell{position:static;z-index:auto}}
 
-/* 移动抽屉与返回目录的视觉统一 */
-.back-home{color:var(--accent)!important;border-color:var(--rule)!important;background:var(--bg2)!important;font-weight:600}
+/* 移动抽屉顶部避让 */
 @media (max-width:760px){
   .sidebar{padding-top:72px}
   body.nav-locked .search-fab{display:none}
@@ -517,9 +516,9 @@ tr.is-hidden{display:none}
   <aside class="sidebar">
     <div class="side-brand">Clinical Psychopharmacology<br>Reference / 2026</div>
     <p class="side-title">精神科药物分类<br>临床药理学手册</p>
+        <a class="back-home" href="index.html" style="display:block;margin:0 16px 12px;padding:6px 12px;border:1px solid #E2E8F0;border-radius:8px;font-size:13px;font-weight:600;color:#0EA5E9;text-decoration:none;">&#8592; 返回总目录</a>
         <button type="button" class="search-btn" data-search-open aria-label="打开全站检索（Ctrl 或 Command 加 K）"><span>检索 / SEARCH</span><kbd>Ctrl K</kbd></button>
         <button type="button" class="search-btn print-btn" data-print aria-label="打印或导出 PDF"><span>打印 / 导出 PDF</span></button>
-        <a class="back-home" href="index.html" style="display:block;margin:0 16px 12px;padding:6px 12px;border:1px solid #E2E8F0;border-radius:8px;font-size:13px;font-weight:600;color:#0EA5E9;text-decoration:none;">&#8592; 返回总目录</a>
     <ul class="side-nav" id="sideNav">
       <li><a href="#s00"><span class="num">00</span>阅读导览与总览</a></li>
       <li><a href="#s01"><span class="num">01</span>抗抑郁药</a></li>
